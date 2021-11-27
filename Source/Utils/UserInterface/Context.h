@@ -1,0 +1,138 @@
+/*
+-------------------------------------------------------------------------------
+    Copyright (c) Charles Carley.
+
+  This software is provided 'as-is', without any express or implied
+  warranty. In no event will the authors be held liable for any damages
+  arising from the use of this software.
+
+  Permission is granted to anyone to use this software for any purpose,
+  including commercial applications, and to alter it and redistribute it
+  freely, subject to the following restrictions:
+
+  1. The origin of this software must not be misrepresented; you must not
+     claim that you wrote the original software. If you use this software
+     in a product, an acknowledgment in the product documentation would be
+     appreciated but is not required.
+  2. Altered source versions must be plainly marked as such, and must not be
+     misrepresented as being the original software.
+  3. This notice may not be removed or altered from any source distribution.
+-------------------------------------------------------------------------------
+*/
+#pragma once
+#include "Utils/String.h"
+#include "Utils/UserInterface/Common.h"
+#include "Utils/UserInterface/Math.h"
+
+namespace Hack::Ui
+{
+    class Context final
+    {
+    private:
+        Point        _size;
+        size_t       _capacity;
+        int          _pitch;
+        char*        _frameBuffer;
+        ColorBuffer* _colorBuffer;
+        uint16_t     _cbSize;
+        uint16_t     _cbCap;
+        uint32_t*    _colorMap;
+        Point        _color;
+        bool         _useExtended;
+        Platform*    _platform;
+        Path         _workingPath;
+
+        void initializePalette();
+
+        void putExtended(char ch) const;
+
+        void insertCharacter(char ch, int x, int y) const;
+
+        void resizeBuffers(const Point& newSize);
+
+    public:
+        Context();
+        ~Context();
+
+        const Point& size() const;
+
+        int width() const;
+
+        int height() const;
+
+        void initialize();
+
+        void useExtended(bool val);
+
+        void reset();
+
+        void clear(const char& ch = ' ') const;
+
+        void character(char ch, int x, int y) const;
+
+        void character(char ch, const Point& pt) const;
+
+        void string(const String& str, int x, int y) const;
+
+        void string(const String& str, const Point& pt) const;
+
+        void line(int x, int y, int length, int orientation) const;
+
+        void line(const Point& pt, int length, int orientation) const;
+
+        void rectangle(int x, int y, int w, int h) const;
+
+        void rectangle(const Rectangle& rect) const;
+
+        void flush() const;
+
+        int poll(bool block);
+
+        void foreground(const uint8_t& idx);
+
+        void background(const uint8_t& idx);
+
+        uint8_t createColor(const Color& col);
+
+        void moveTo(const int& x, const int& y);
+
+        void lineTo(const int& x, const int& y, const int& ori);
+
+        void addSegment(char ch);
+
+        void clearPath();
+
+        static void sleep(const uint32_t& ms);
+    };
+
+    inline void Context::useExtended(const bool val)
+    {
+        _useExtended = val;
+    }
+
+    inline const Point& Context::size() const
+    {
+        return _size;
+    }
+
+    inline int Context::width() const
+    {
+        return _size.x;
+    }
+
+    inline int Context::height() const
+    {
+        return _size.y;
+    }
+
+    inline void Context::foreground(const uint8_t& idx)
+    {
+        _color.x = idx;
+    }
+
+    inline void Context::background(const uint8_t& idx)
+    {
+        _color.y = idx;
+    }
+
+}  // namespace Hack::Ui

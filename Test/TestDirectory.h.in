@@ -1,0 +1,14 @@
+#ifndef __TestDirectory_h__
+#define __TestDirectory_h__
+
+
+// This is use to build an absolute path to local 
+// test files in the test directory.
+#cmakedefine ABSOLUTE_TEST_DIRECTORY "@ABSOLUTE_TEST_DIRECTORY@/"
+#cmakedefine ABSOLUTE_BUILD_DIRECTORY "@ABSOLUTE_BUILD_DIRECTORY@/"
+
+
+#define GetTestFilePath(localName) ABSOLUTE_TEST_DIRECTORY localName
+#define GetOutFilePath(localName) ABSOLUTE_BUILD_DIRECTORY localName
+
+#endif//__TestDirectory_h__

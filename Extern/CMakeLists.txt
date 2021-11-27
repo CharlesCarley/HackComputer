@@ -1,0 +1,5 @@
+if (USE_SDL)
+	if (NOT USING_EMSCRIPTEN)
+	   add_subdirectory(SDL)
+	endif()
+endif()
