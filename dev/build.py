@@ -43,7 +43,7 @@ def execProgram(args):
 
     print("".ljust(80, "="))
     print("Calling => ", args)
-    subprocess.run(args, shell=True, env=os.environ)
+    subprocess.run(args, shell=True, env=os.environ, stdout=None)
     print("".ljust(2, "\n"))
 
 
@@ -79,76 +79,126 @@ def buildClean():
     execProgram("flutter clean")
 
 
+class Path:
+
+    def __init__(self, directory=None):
+        if (directory != None):
+            self.path = directory
+            self.normalize()
+        else:
+            self.path = os.getcwd()
+            self.normalize()
+
+        if (not self.check()):
+            msg = "The supplied path %s is invalid" % self.path
+            raise Exception(msg)
+
+    def normalize(self):
+        if (sys.platform == "win32"):
+            self.path = self.path.replace('/', '\\')
+        else:
+            self.path = self.path.replace('\\', '/')
+        self.path = os.path.abspath(self.path)
+
+    def check(self):
+        return os.path.exists(self.path)
+
+    def __repr__(self) -> str:
+        return self.path
+
+    def back(self, n=1):
+
+        back = self.path
+        for i in range(n):
+            back = os.path.join(back, "../")
+
+        return Path(back)
+
+    def join(self, directory):
+        result = self.path
+        return Path(os.path.join(result, directory))
+
+    def file(self, path):
+        result = self.path
+        return os.path.join(result, path)
+
+    def create(self, relitave):
+        result = self.path
+        if (sys.platform == "win32"):
+            relitave = relitave.replace('/', '\\')
+        else:
+            relitave = relitave.replace('\\', '/')
+
+        joinResult = os.path.join(result, relitave)
+        if (not os.path.isdir(joinResult)):
+            os.makedirs(joinResult)
+        return Path(joinResult)
+
+    def remove(self):
+        result = self.path
+        if (os.path.isdir(result)):
+            print("Removing", result)
+            shutil.rmtree(result)
+
+    def copyTo(self, file, toPath):
+        shutil.copyfile(self.file(file), toPath().file(file))
+
+
+
 class Builder:
 
-    def __init__(self):
+    def __init__(self, verbose=True, release=False):
+
+        self.verbose = verbose
+        self.release = release
+
         self.opts = {}
-        self.opts['dev'] = normalize(os.path.abspath(os.getcwd()))
-        self.opts['source'] = normalize(
-            os.path.abspath(os.path.join(os.getcwd(), "..")))
-        self.opts['web'] = normalize(os.path.join(self.opts['source'], "Web"))
-        self.opts['web_test'] = normalize(
-            os.path.join(self.opts['web'], "test"))
-        self.opts['web_asset'] = normalize(
-            os.path.join(self.opts['web'], "assets"))
-        self.opts['web_content'] = normalize(
-            os.path.join(self.opts['web'], "content"))
+
+        thisDir = Path()
+        sourceDir = thisDir.back()
+        self.opts['dev'] = thisDir
+        self.opts['source'] = sourceDir
+
+        webDir = sourceDir.join("Web")
+        self.opts['web'] = webDir
+        self.opts['web_test'] = webDir.join("test")
+        self.opts['web_asset'] = webDir.join("assets")
+        self.opts['web_content'] = webDir.join("content")
 
         if (sys.platform == "win32"):
-            self.opts['platform'] = 'windows'
+            platname = "windows"
         else:
-            self.opts['platform'] = 'linux'
+            platname = 'linux'
 
-        self.ensureDirectory(self.opts['dev'], self.opts['platform'])
-        self.ensureDirectory(self.opts['dev'], self.opts['platform'] + "/cpp")
-        self.ensureDirectory(self.opts['dev'], self.opts['platform'] + "/em")
+        self.opts['platform'] = platname
 
-        self.opts['build_cpp'] = normalize(
-            self.opts['dev'] + '/' + self.opts['platform'] + "/cpp")
-        self.opts['build_em'] = normalize(
-            self.opts['dev'] + '/' + self.opts['platform'] + "/em")
+        buildDir = thisDir.create(platname)
 
-        # CMake will copy the files to
-        # ${CMAKE_BINARY_DIR}/build_files
+        self.opts['build_cpp'] = buildDir.create("cpp")
+        self.opts['build_em'] = buildDir.create("em")
 
-        if (sys.platform == 'win32'):
-            self.opts['bindings'] = self.opts['build_cpp'] + \
-                "/build_files/bindings.dll"
-            self.opts['computer'] = self.opts['build_cpp'] + \
-                "/build_files/Computer.dll"
+        buildOutput = self.opts['build_cpp'].create("build_files")
+        self.opts['build_files'] = buildOutput
+
+        if (sys.platform == "win32"):
+            self.opts['binding_file'] = buildOutput.file("bindings.dll")
         else:
-            self.opts['bindings'] = self.opts['build_cpp'] + \
-                "/build_files/libbindings.so"
-            self.opts['computer'] = self.opts['build_cpp'] + \
-                "/build_files/Computer"
-
-    def ensureDirectory(self, directory, makeDir):
-        absDir = normalize(os.path.abspath(os.path.join(directory, makeDir)))
-        if not os.path.isdir(absDir):
-            print("Creating directory, ", absDir)
-            os.mkdir(absDir)
-
-    def copyBindings(self):
-
-        if (sys.platform == 'win32'):
-            dest = os.path.join(self.webDir(), "build/windows/runner/Release/")
-            dest = os.path.join(dest, "bindings.dll")
-
-            shutil.copyfile(self.opts['bindings'], dest)
-
-            dest = os.path.join(self.webDir(), "bindings.dll")
-            shutil.copyfile(self.opts['bindings'], dest)
-
-    def copyEmBindings(self):
-        src = os.path.join(self.emDir(), "build_files/bindings.js")
-        dst = os.path.join(self.webDir(), "assets/bindings.js")
-        shutil.copyfile(src, dst)
+            self.opts['binding_file'] = buildOutput.file("libbindings.so")
 
 
-        src = os.path.join(self.emDir(), "build_files/bindings.wasm")
-        dst = os.path.join(self.webDir(), "assets/bindings.wasm")
-        shutil.copyfile(src, dst)
+        buildOutput = self.opts['build_em'].create("build_files")
+        self.opts['em_build_files'] = buildOutput
 
+    def dumpOpts(self):
+        for k in self.opts.keys():
+            print(k, " => ", self.opts[k])
+
+    def goto(self, path):
+        try:
+            os.chdir(path.path)
+        except:
+            msg = "Failed to change working directory to %s" % path.path
+            raise Exception(msg)
 
     def home(self):
         return self.opts['dev']
@@ -168,78 +218,142 @@ class Builder:
     def webTestDir(self):
         return self.opts['web_test']
 
+    def webAssetDir(self):
+        return self.opts['web_asset']
+
     def flutterPlatform(self):
         return self.opts['platform']
+
+    def buildOutput(self):
+        return self.opts['build_files']
+
+    def buildOutputEm(self):
+        return self.opts['em_build_files']
+
+    def bindingFile(self):
+        return self.opts['binding_file']
+
+    def configString(self):
+        config = "Debug"
+        if (self.release):
+            config = "Release"
+        return config
+
+    def flutterBuildMode(self):
+        config = ""
+        if (self.release):
+            config = "--release"
+        return config
+
+    def run(self, cmd):
+        print("".ljust(80, '='))
+        print("Calling => ", cmd)
+        subprocess.run(cmd, shell=True, env=os.environ)
+        print("".ljust(2, '\n'))
+
+    def copyBindings(self):
+
+        if (sys.platform == 'win32'):
+
+            buildDir = self.webDir().create("build/windows/runner/%s" %
+                                            self.configString())
+            shutil.copyfile(self.bindingFile(),
+                            buildDir.file("bindings.dll"))
+
+            shutil.copyfile(self.bindingFile(),
+                            self.webTestDir().file("bindings.dll"))
+
+    def copyEmBindings(self):
+
+        self.buildOutputEm().copyTo(
+            "bindings.js", 
+            self.webAssetDir()
+        )
+        self.buildOutputEm().copyTo(
+            "bindings.wasm", 
+            self.webAssetDir()
+        )
+    
+    def findOpt(self, argc, argv, opt):
+        for i in range(argc):
+            if (opt == argv[i]):
+                return True
+        return False
 
     def buildCpp(self, argc, argv):
         print("Building C++", argv)
 
-        changeDirectory(self.cppDir())
+        self.goto(self.cppDir())
 
         defines = "-DHack_BUILD_TEST=ON -DHack_AUTO_RUN_TEST=ON "
-        defines += "-DHack_USE_SDL=ON "
-        defines += "-DHack_IMPLEMENT_BLACK_BOX=OFF"
+        defines += "-DHack_IMPLEMENT_BLACK_BOX=OFF "
+        defines += "-DHack_USE_SDL=%s" %self.findOpt(argc, argv, "--with-sdl")
 
-        execProgram("cmake %s %s" % (self.sourceDir(), defines))
-        execProgram("cmake --build .")
+        self.run("cmake %s %s" % (self.sourceDir(), defines))
+        self.run("cmake --build %s --config %s" %
+                 (self.cppDir(), self.configString()))
+
+
+        
+
+
 
     def buildEm(self, argc, argv):
         print("Building Emscripten", argv)
 
-        changeDirectory(self.emDir())
+        self.goto(self.emDir())
 
         execStr = "emcmake.bat cmake "
-
         if (sys.platform == 'win32'):
             execStr += '-G "NMake Makefiles" '
-        execStr += self.sourceDir()
+
+        execStr += self.sourceDir().path
         execStr += " -DHack_IMPLEMENT_BLACK_BOX=OFF"
 
-        execProgram(execStr)
-        execProgram("cmake --build . --config MinSizeRel")
-
+        self.run(execStr)
+        self.run("cmake --build %s --config %s" %
+                 (self.emDir(), self.configString()))
 
     def buildClean(self):
-        print("".ljust(80, "="))
 
-        removeDirectory(self.cppDir())
-        removeDirectory(self.emDir())
-        changeDirectory(self.webDir())
+        self.cppDir().remove()
+        self.emDir().remove()
 
-        execProgram("flutter clean")
+        self.goto(self.webDir())
+        self.run("flutter clean")
 
     def buildFl(self, argc, argv):
-        print("".ljust(80, "="))
-        print("Building Flutter Source")
+        print("Building Flutter Source", argv)
 
-        if (argc == 0):
-            self.buildCpp(0, [])
 
-            self.copyBindings()
-            changeDirectory(self.webDir())
-            execProgram("flutter test")
-            dest = os.path.join(self.webDir(), "bindings.dll")
-            os.remove(dest)
+        if (self.findOpt(argc, argv, "web")):
 
-            changeDirectory(self.webDir())
-            execProgram("flutter run -d %s --release" % self.flutterPlatform())
+            self.buildEm(0, [])
+
+            self.copyEmBindings()
+
+            self.goto(self.webDir())
+            self.run("flutter run -d chrome %s" %
+                     self.flutterBuildMode())
+
         else:
 
-            if (argv[0]=='web'):
-                self.buildEm(0, [])
-                self.copyEmBindings()
+            self.buildCpp(0, [])
+            self.copyBindings()
 
-                changeDirectory(self.webDir())
-                execProgram("flutter run -d chrome --release")
-            else: 
-                self.buildCpp(0, [])
-                changeDirectory(self.webDir())
-                execProgram("flutter run -d %s --release" % self.flutterPlatform())
-                self.copyBindings()
+            self.goto(self.webTestDir())
+            self.run("flutter test")
+
+            self.goto(self.webDir())
+            self.run("flutter run -d %s %s" %
+                     (self.flutterPlatform(),
+                      self.flutterBuildMode()))
 
 
 def main(argc, argv):
+
     build = Builder()
+    build.release = build.findOpt(argc, argv, "--release")
 
     if (argc > 1):
         if (argv[1] == 'cpp'):
@@ -251,9 +365,9 @@ def main(argc, argv):
         elif (argv[1] == 'clean'):
             build.buildClean()
     else:
-        build.buildCpp(0, [])
+        build.buildCpp(argc, argv)
 
-    changeDirectory(build.home())
+    build.goto(build.home())
 
 
 if __name__ == '__main__':

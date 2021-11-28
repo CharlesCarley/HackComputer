@@ -108,9 +108,7 @@ namespace Hack::Computer
             load();
 
             _runtime->initialize(_computer);
-            // synchronize screen memory
-            _runtime->flushMemory(_computer);
-
+      
             while (!_runtime->exitRequest())
             {
                 // map keyboard events

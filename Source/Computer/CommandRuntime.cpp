@@ -491,6 +491,7 @@ namespace Hack::Computer
     void CommandRuntime::initialize(Chips::Computer* computer) const
     {
         _private->initialize(computer);
+        _private->flushMemory(computer);
     }
 
     bool CommandRuntime::exitRequest() const
