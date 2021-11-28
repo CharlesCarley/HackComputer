@@ -23,6 +23,7 @@ import os
 import subprocess
 import shutil
 
+
 def getPlatform():
     if (sys.platform == "win32"):
         return "windows"
@@ -30,13 +31,12 @@ def getPlatform():
         return "linux"
 
 
-
 def normalize(path):
     if (sys.platform == "win32"):
-        path = path.replace('/', '\\') 
+        path = path.replace('/', '\\')
     else:
         path = path.replace('\\', '/')
-    return path;
+    return path
 
 
 def execProgram(args):
@@ -48,9 +48,9 @@ def execProgram(args):
 
 
 def changeDirectory(directory):
-    directory = normalize(os.path.join(os.getcwd(), directory))
     try:
         os.chdir(directory)
+        print(directory)
         return directory == os.getcwd()
     except:
         print("Failed to change working directory to", directory)
@@ -70,73 +70,6 @@ def removeDirectory(directory):
         shutil.rmtree(absDir)
 
 
-def buildCpp(argc, argv):
-    print("Building C++", argv)
-    config = "Debug"
-    root = getPlatform() + "/cpp"
-
-    ensureDirectory(getPlatform())
-    ensureDirectory(root)
-    changeDirectory(root)
-
-    defines = "-DHack_BUILD_TEST=ON -DHack_AUTO_RUN_TEST=ON "
-    defines += "-DHack_USE_SDL=ON "
-    defines += "-DHack_IMPLEMENT_BLACK_BOX=OFF"
-
-    execProgram("cmake ../../../ %s" % defines)
-    execProgram("cmake --build . --config %s" % config)
-
-    if (sys.platform == "win32"):
-        shutil.copyfile("Source/Computer/%s/Computer.exe" %
-                        config, "../../Computer.exe")
-    else:
-        shutil.copyfile("Source/Computer/Computer", "../../Computer")
-
-    changeDirectory("../../")
-
-
-def buildEm(argc, argv):
-    print("Building Emscripten")
-
-    root = getPlatform() + "/em"
-    ensureDirectory(getPlatform())
-    ensureDirectory(root)
-    changeDirectory(root)
-
-    execProgram(
-        'emcmake.bat cmake -G "NMake Makefiles" ../../../ -DHack_IMPLEMENT_BLACK_BOX=OFF')
-    execProgram("cmake --build . --config MinSizeRel")
-    changeDirectory("../../")
-
-
-def buildFl(argc, argv):
-    print("Building Flutter")
-
-    plat = getPlatform()
-
-    if (argc > 0):
-        if argv[0] == 'win':
-            buildCpp(0, [])
-            changeDirectory("../Web")
-            execProgram("flutter run -d %s --release"%plat)
-
-        elif argv[0] == 'web':
-            buildEm(0, [])
-            changeDirectory("../Web")
-            execProgram("flutter run -d chrome --release")
-
-        else:
-            buildCpp(0, [])
-            changeDirectory("../Web")
-            execProgram("flutter run -d %s"%plat)
-    else:
-        buildCpp(0, [])
-        changeDirectory("../Web")
-        execProgram("flutter run -d %s"%plat)
-
-    changeDirectory("../")
-
-
 def buildClean():
     print("".ljust(80, "="))
     print("Cleaning...")
@@ -146,21 +79,181 @@ def buildClean():
     execProgram("flutter clean")
 
 
+class Builder:
+
+    def __init__(self):
+        self.opts = {}
+        self.opts['dev'] = normalize(os.path.abspath(os.getcwd()))
+        self.opts['source'] = normalize(
+            os.path.abspath(os.path.join(os.getcwd(), "..")))
+        self.opts['web'] = normalize(os.path.join(self.opts['source'], "Web"))
+        self.opts['web_test'] = normalize(
+            os.path.join(self.opts['web'], "test"))
+        self.opts['web_asset'] = normalize(
+            os.path.join(self.opts['web'], "assets"))
+        self.opts['web_content'] = normalize(
+            os.path.join(self.opts['web'], "content"))
+
+        if (sys.platform == "win32"):
+            self.opts['platform'] = 'windows'
+        else:
+            self.opts['platform'] = 'linux'
+
+        self.ensureDirectory(self.opts['dev'], self.opts['platform'])
+        self.ensureDirectory(self.opts['dev'], self.opts['platform'] + "/cpp")
+        self.ensureDirectory(self.opts['dev'], self.opts['platform'] + "/em")
+
+        self.opts['build_cpp'] = normalize(
+            self.opts['dev'] + '/' + self.opts['platform'] + "/cpp")
+        self.opts['build_em'] = normalize(
+            self.opts['dev'] + '/' + self.opts['platform'] + "/em")
+
+        # CMake will copy the files to
+        # ${CMAKE_BINARY_DIR}/build_files
+
+        if (sys.platform == 'win32'):
+            self.opts['bindings'] = self.opts['build_cpp'] + \
+                "/build_files/bindings.dll"
+            self.opts['computer'] = self.opts['build_cpp'] + \
+                "/build_files/Computer.dll"
+        else:
+            self.opts['bindings'] = self.opts['build_cpp'] + \
+                "/build_files/libbindings.so"
+            self.opts['computer'] = self.opts['build_cpp'] + \
+                "/build_files/Computer"
+
+    def ensureDirectory(self, directory, makeDir):
+        absDir = normalize(os.path.abspath(os.path.join(directory, makeDir)))
+        if not os.path.isdir(absDir):
+            print("Creating directory, ", absDir)
+            os.mkdir(absDir)
+
+    def copyBindings(self):
+
+        if (sys.platform == 'win32'):
+            dest = os.path.join(self.webDir(), "build/windows/runner/Release/")
+            dest = os.path.join(dest, "bindings.dll")
+
+            shutil.copyfile(self.opts['bindings'], dest)
+
+            dest = os.path.join(self.webDir(), "bindings.dll")
+            shutil.copyfile(self.opts['bindings'], dest)
+
+    def copyEmBindings(self):
+        src = os.path.join(self.emDir(), "build_files/bindings.js")
+        dst = os.path.join(self.webDir(), "assets/bindings.js")
+        shutil.copyfile(src, dst)
+
+
+        src = os.path.join(self.emDir(), "build_files/bindings.wasm")
+        dst = os.path.join(self.webDir(), "assets/bindings.wasm")
+        shutil.copyfile(src, dst)
+
+
+    def home(self):
+        return self.opts['dev']
+
+    def sourceDir(self):
+        return self.opts['source']
+
+    def cppDir(self):
+        return self.opts['build_cpp']
+
+    def emDir(self):
+        return self.opts['build_em']
+
+    def webDir(self):
+        return self.opts['web']
+
+    def webTestDir(self):
+        return self.opts['web_test']
+
+    def flutterPlatform(self):
+        return self.opts['platform']
+
+    def buildCpp(self, argc, argv):
+        print("Building C++", argv)
+
+        changeDirectory(self.cppDir())
+
+        defines = "-DHack_BUILD_TEST=ON -DHack_AUTO_RUN_TEST=ON "
+        defines += "-DHack_USE_SDL=ON "
+        defines += "-DHack_IMPLEMENT_BLACK_BOX=OFF"
+
+        execProgram("cmake %s %s" % (self.sourceDir(), defines))
+        execProgram("cmake --build .")
+
+    def buildEm(self, argc, argv):
+        print("Building Emscripten", argv)
+
+        changeDirectory(self.emDir())
+
+        execStr = "emcmake.bat cmake "
+
+        if (sys.platform == 'win32'):
+            execStr += '-G "NMake Makefiles" '
+        execStr += self.sourceDir()
+        execStr += " -DHack_IMPLEMENT_BLACK_BOX=OFF"
+
+        execProgram(execStr)
+        execProgram("cmake --build . --config MinSizeRel")
+
+
+    def buildClean(self):
+        print("".ljust(80, "="))
+
+        removeDirectory(self.cppDir())
+        removeDirectory(self.emDir())
+        changeDirectory(self.webDir())
+
+        execProgram("flutter clean")
+
+    def buildFl(self, argc, argv):
+        print("".ljust(80, "="))
+        print("Building Flutter Source")
+
+        if (argc == 0):
+            self.buildCpp(0, [])
+
+            self.copyBindings()
+            changeDirectory(self.webDir())
+            execProgram("flutter test")
+            dest = os.path.join(self.webDir(), "bindings.dll")
+            os.remove(dest)
+
+            changeDirectory(self.webDir())
+            execProgram("flutter run -d %s --release" % self.flutterPlatform())
+        else:
+
+            if (argv[0]=='web'):
+                self.buildEm(0, [])
+                self.copyEmBindings()
+
+                changeDirectory(self.webDir())
+                execProgram("flutter run -d chrome --release")
+            else: 
+                self.buildCpp(0, [])
+                changeDirectory(self.webDir())
+                execProgram("flutter run -d %s --release" % self.flutterPlatform())
+                self.copyBindings()
+
+
 def main(argc, argv):
-    currentDir = os.getcwd()
+    build = Builder()
+
     if (argc > 1):
         if (argv[1] == 'cpp'):
-            buildCpp(argc-2, argv[2:])
+            build.buildCpp(argc-2, argv[2:])
         elif (argv[1] == 'em'):
-            buildEm(argc-2, argv[2:])
+            build.buildEm(argc-2, argv[2:])
         elif (argv[1] == 'fl'):
-            buildFl(argc-2, argv[2:])
+            build.buildFl(argc-2, argv[2:])
         elif (argv[1] == 'clean'):
-            buildClean()
+            build.buildClean()
     else:
-        buildCpp(0, [])
+        build.buildCpp(0, [])
 
-    changeDirectory(currentDir)
+    changeDirectory(build.home())
 
 
 if __name__ == '__main__':

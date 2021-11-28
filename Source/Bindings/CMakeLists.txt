@@ -89,10 +89,7 @@ else()
 
     add_executable(${TargetName} ${Target_SRC})
 
-
-    set(Assets_DIR ${Hack_SOURCE_DIR}/Web/assets)
-
-    emscripten_copy_wasm_target_wasm_js(${TargetName} ${Assets_DIR})
+    emscripten_copy_wasm_target_wasm_js(${TargetName} ${Hack_BINARY_DIR}/build_files)
 
 endif()
 
@@ -104,16 +101,8 @@ target_link_libraries(
     Chips
     )
 
-if (WebRunner_DIR)
-
-    if (WIN32)
-        copy_target(${TargetName} ${WebRunner_DIR}/Debug)
-        copy_target(${TargetName} ${WebRunner_DIR}/Release)
-    else()
-        copy_target(${TargetName} ${WebRunner_DIR}/release/bundle/lib)
-        copy_target(${TargetName} ${WebRunner_DIR}/debug/bundle/lib)
-    endif()
-    copy_target(${TargetName} ${Test_DIR})
+if (BuildType STREQUAL "CPP")
+    copy_target(${TargetName} ${Hack_BINARY_DIR}/build_files)
 endif()
 
 if (TargetFolders)

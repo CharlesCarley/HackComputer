@@ -1,5 +1,6 @@
 name: hack_computer
 description: A demo implementation of the hack computer.
+repository: "https://github.com/CharlesCarley/HackComputer/"
 
 publish_to: 'none'
 version: 1.0.0+1
@@ -22,14 +23,16 @@ dev_dependencies:
 
 
 flutter:
-  uses-material-design: true
+  uses-material-design: false
+
   fonts:
     - family: Icons
       fonts:
         - asset: content/Icons.ttf
     - family: Mono
       fonts:
-        - asset: content/RedHatMono-VariableFont_wght.ttf
+        - asset: content/Mono.ttf
+
   assets:
       - assets/bindings.js
       - assets/bindings.wasm

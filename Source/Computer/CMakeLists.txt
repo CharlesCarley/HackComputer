@@ -18,10 +18,10 @@
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
 set(TargetName Computer)
-include(Application)
+include (CopyTarget)
 
 set(TargetName_DAT
-    Samples/Add.asm
+    Samples/Fill.asm
 )
 source_group("Content" FILES ${TargetName_DAT})
 
@@ -41,31 +41,31 @@ set(TargetName_SRC
     Runtime.cpp
 )
 
-
-# set the required add_application variables 
-
-set(Computer_INC 
+include_directories(    
     ${Utils_INCLUDE}
     ..
 )
 
-set(Computer_SRC 
+
+if (USE_SDL)
+    add_definitions(-DUSE_SDL)
+    include_directories(${SDL_INCLUDE})
+endif()
+
+
+add_executable(${TargetName} 
     ${TargetName_HDR}
     ${TargetName_SRC}
 )
 
-set(Computer_LIB
+target_link_libraries(${TargetName} 
     ${Utils_LIBRARY} 
     Chips 
     Assembler
 )
-set(Computer_DAT ${TargetName_DAT})
-
 
 if (USE_SDL)
-    add_definitions(-DUSE_SDL)
-    list(APPEND Computer_INC ${SDL_INCLUDE} )
-    list(APPEND Computer_LIB ${SDL_LIBRARY})
+    target_link_libraries(${TargetName} ${SDL_LIBRARY} )
 endif()
 
-add_application(${TargetName} ${TargetName_HDR})
+copy_target(${TargetName} ${Hack_BINARY_DIR}/build_files) 

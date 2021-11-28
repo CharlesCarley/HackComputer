@@ -79,7 +79,7 @@ DefineExternalTarget(FreeImage
 if (Hack_USE_SDL)
 
 	if (NOT USING_EMSCRIPTEN)
-		set(SDL_INCLUDE ${Extern_DIR}/Extern/SDL)
+		set(SDL_INCLUDE ${Extern_DIR}/SDL/SDL/include)
 		set(SDL_LIBRARY SDL2-static SDL2main)
 		set(SDL_FOLDER Extern)
 	endif()

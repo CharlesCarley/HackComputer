@@ -30,6 +30,7 @@ macro(copy_target TargetName Destination)
                        POST_BUILD
                        COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:${TargetName}> 
                        "${Destination}/$<TARGET_FILE_NAME:${TargetName}>"
+                       COMMENT "Copy  ${Destination}/${TargetName}"
                        )
 
     # Allow for optional files.

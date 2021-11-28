@@ -26,21 +26,28 @@ import 'palette.dart';
 class Metrics {
   /// padding variable that is used to measure and build the interface
   static const padding = 32.0;
+
   /// one half of the default padding
   static const paddingHalf = padding / 2;
+
   /// one forth of the default padding
   static const paddingForth = padding / 4;
+
   /// one eighth of the default padding
   static const paddingEighth = padding / 8;
+
   /// twice the default padding
   static const paddingDouble = padding * 2;
+
   /// three times the default padding
   static const paddingTriple = padding * 3;
+
   /// measurement that is slightly larger that the default text size of 14
   static const textSpacer = 20.0;
 
   /// The standard icon size
   static const iconSize = 24.0;
+
   /// the width of the outer cpu rectangle
   static const cpuWidth = 190.0;
 
@@ -140,7 +147,7 @@ class Common {
   );
 
   static const TextStyle editTextStyle = TextStyle(
-    fontSize: 16,
+    fontSize: 12,
     fontFamily: "Mono",
     color: Palette.editTextForeground,
   );
