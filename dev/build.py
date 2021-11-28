@@ -267,7 +267,7 @@ class Builder:
         print("Building Flutter Source", self.argv)
 
         if (self.findOpt("web")):
-            self.buildEm(0, [])
+            self.buildEm()
 
             self.copyEmBindings()
 
@@ -276,7 +276,7 @@ class Builder:
                      self.flutterBuildMode())
 
         else:
-            self.buildCpp(0, [])
+            self.buildCpp()
             self.copyBindings()
 
             self.goto(self.webTestDir())
@@ -289,9 +289,7 @@ class Builder:
 
 
 def main(argc, argv):
-
     build = Builder(argc, argv)
-
     if (build.findOpt("cpp")):
         build.buildCpp()
     elif (build.findOpt("em")):
@@ -302,9 +300,7 @@ def main(argc, argv):
         build.buildClean()
     else:
         build.buildCpp()
-
     build.goto(build.home())
-
 
 if __name__ == '__main__':
     main(len(sys.argv), sys.argv)
