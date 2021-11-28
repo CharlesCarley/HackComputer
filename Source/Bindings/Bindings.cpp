@@ -28,7 +28,6 @@
 #include "Assembler/Instruction.h"
 #include "Assembler/Parser.h"
 #include "Chips/Computer.h"
-#include "Chips/Timer.h"
 #include "Utils/Exceptions/Exception.h"
 
 typedef struct HandleType
@@ -294,9 +293,9 @@ EXPORT_API void* ComputerAllocate(size_t len)
     return malloc(len);
 }
 
-EXPORT_API void ComputerFree(const void* handle)
+EXPORT_API void ComputerFree(void* handle)
 {
-    return free((void*)handle);
+    return free(handle);
 }
 
 EXPORT_API Handle CreateComputer()

@@ -141,7 +141,7 @@ class Path:
             shutil.rmtree(result)
 
     def copyTo(self, file, toPath):
-        shutil.copyfile(self.file(file), toPath().file(file))
+        shutil.copyfile(self.file(file), toPath.file(file))
 
 
 
