@@ -24,61 +24,6 @@ import subprocess
 import shutil
 
 
-def getPlatform():
-    if (sys.platform == "win32"):
-        return "windows"
-    else:
-        return "linux"
-
-
-def normalize(path):
-    if (sys.platform == "win32"):
-        path = path.replace('/', '\\')
-    else:
-        path = path.replace('\\', '/')
-    return path
-
-
-def execProgram(args):
-
-    print("".ljust(80, "="))
-    print("Calling => ", args)
-    subprocess.run(args, shell=True, env=os.environ, stdout=None)
-    print("".ljust(2, "\n"))
-
-
-def changeDirectory(directory):
-    try:
-        os.chdir(directory)
-        print(directory)
-        return directory == os.getcwd()
-    except:
-        print("Failed to change working directory to", directory)
-        exit(1)
-
-
-def ensureDirectory(directory):
-    absDir = os.path.join(os.getcwd(), directory)
-    if not os.path.isdir(absDir):
-        os.mkdir(absDir)
-
-
-def removeDirectory(directory):
-    absDir = os.path.join(os.getcwd(), directory)
-    if os.path.isdir(absDir):
-        print("Removing ", absDir)
-        shutil.rmtree(absDir)
-
-
-def buildClean():
-    print("".ljust(80, "="))
-    print("Cleaning...")
-    removeDirectory(getPlatform())
-    print("".ljust(2, "\n"))
-    changeDirectory("../Web")
-    execProgram("flutter clean")
-
-
 class Path:
 
     def __init__(self, directory=None):
@@ -144,13 +89,15 @@ class Path:
         shutil.copyfile(self.file(file), toPath.file(file))
 
 
-
 class Builder:
 
-    def __init__(self, verbose=True, release=False):
+    def __init__(self, argc, argv):
 
-        self.verbose = verbose
-        self.release = release
+
+        self.argc = argc
+        self.argv = argv
+        
+        self.release = self.findOpt("--release")
 
         self.opts = {}
 
@@ -184,7 +131,6 @@ class Builder:
             self.opts['binding_file'] = buildOutput.file("bindings.dll")
         else:
             self.opts['binding_file'] = buildOutput.file("libbindings.so")
-
 
         buildOutput = self.opts['build_em'].create("build_files")
         self.opts['em_build_files'] = buildOutput
@@ -266,40 +212,35 @@ class Builder:
     def copyEmBindings(self):
 
         self.buildOutputEm().copyTo(
-            "bindings.js", 
+            "bindings.js",
             self.webAssetDir()
         )
         self.buildOutputEm().copyTo(
-            "bindings.wasm", 
+            "bindings.wasm",
             self.webAssetDir()
         )
-    
-    def findOpt(self, argc, argv, opt):
-        for i in range(argc):
-            if (opt == argv[i]):
+
+    def findOpt(self, opt):
+        for i in range(self.argc):
+            if (opt == self.argv[i]):
                 return True
         return False
 
-    def buildCpp(self, argc, argv):
-        print("Building C++", argv)
+    def buildCpp(self):
+        print("Building C++", self.argv)
 
         self.goto(self.cppDir())
 
         defines = "-DHack_BUILD_TEST=ON -DHack_AUTO_RUN_TEST=ON "
-        defines += "-DHack_IMPLEMENT_BLACK_BOX=OFF "
-        defines += "-DHack_USE_SDL=%s" %self.findOpt(argc, argv, "--with-sdl")
+        defines += "-DHack_IMPLEMENT_BLACK_BOX=%s "% self.findOpt("--with-black-box")
+        defines += "-DHack_USE_SDL=%s" % self.findOpt("--with-sdl")
 
         self.run("cmake %s %s" % (self.sourceDir(), defines))
         self.run("cmake --build %s --config %s" %
                  (self.cppDir(), self.configString()))
 
-
-        
-
-
-
-    def buildEm(self, argc, argv):
-        print("Building Emscripten", argv)
+    def buildEm(self):
+        print("Building Emscripten", self.argv)
 
         self.goto(self.emDir())
 
@@ -308,7 +249,7 @@ class Builder:
             execStr += '-G "NMake Makefiles" '
 
         execStr += self.sourceDir().path
-        execStr += " -DHack_IMPLEMENT_BLACK_BOX=OFF"
+        execStr += " -DHack_IMPLEMENT_BLACK_BOX=%s"% self.findOpt("--with-black-box")
 
         self.run(execStr)
         self.run("cmake --build %s --config %s" %
@@ -322,12 +263,10 @@ class Builder:
         self.goto(self.webDir())
         self.run("flutter clean")
 
-    def buildFl(self, argc, argv):
-        print("Building Flutter Source", argv)
+    def buildFl(self):
+        print("Building Flutter Source", self.argv)
 
-
-        if (self.findOpt(argc, argv, "web")):
-
+        if (self.findOpt("web")):
             self.buildEm(0, [])
 
             self.copyEmBindings()
@@ -337,7 +276,6 @@ class Builder:
                      self.flutterBuildMode())
 
         else:
-
             self.buildCpp(0, [])
             self.copyBindings()
 
@@ -352,20 +290,18 @@ class Builder:
 
 def main(argc, argv):
 
-    build = Builder()
-    build.release = build.findOpt(argc, argv, "--release")
+    build = Builder(argc, argv)
 
-    if (argc > 1):
-        if (argv[1] == 'cpp'):
-            build.buildCpp(argc-2, argv[2:])
-        elif (argv[1] == 'em'):
-            build.buildEm(argc-2, argv[2:])
-        elif (argv[1] == 'fl'):
-            build.buildFl(argc-2, argv[2:])
-        elif (argv[1] == 'clean'):
-            build.buildClean()
+    if (build.findOpt("cpp")):
+        build.buildCpp()
+    elif (build.findOpt("em")):
+        build.buildEm()
+    elif (build.findOpt("fl")):
+        build.buildFl()
+    elif (build.findOpt("clean")):
+        build.buildClean()
     else:
-        build.buildCpp(argc, argv)
+        build.buildCpp()
 
     build.goto(build.home())
 
