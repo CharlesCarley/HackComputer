@@ -869,12 +869,12 @@ V.eq(q)
 V.eq(t.mD)
 V.eq(t.FM)
 s=4
-return P.ab(T.aq5(H.a(["/assets/assets/bindings.js"],t.s)),$async$y_)
+return P.ab(T.aq5(H.a(["assets/bindings.js"],t.s)),$async$y_)
 case 4:p=$
 o=T
 n=H
 s=6
-return P.ab($.a63().cD(0,"/assets/assets/bindings.wasm"),$async$y_)
+return P.ab($.a63().cD(0,"assets/bindings.wasm"),$async$y_)
 case 6:s=5
 return P.ab(o.Pn(n.c4(b.buffer,0,null),"bindings"),$async$y_)
 case 5:p.a8N=b

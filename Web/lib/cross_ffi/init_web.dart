@@ -13,8 +13,8 @@ Future<void> initFfi() async {
     // extends Opaque, you would register it here
     // registerOpaqueType<MyOpaque>();
 
-    await importLibrary('/assets/assets/bindings.js');
-    final result = await rootBundle.load('/assets/assets/bindings.wasm');
+    await importLibrary('assets/bindings.js');
+    final result = await rootBundle.load('assets/bindings.wasm');
     final binary = result.buffer.asUint8List();
 
     _module = await EmscriptenModule.compile(binary, "bindings");
