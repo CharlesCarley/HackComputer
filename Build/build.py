@@ -79,6 +79,27 @@ class Path:
             os.makedirs(joinResult)
         return Path(joinResult)
 
+    def subdir(self, relitave):
+        result = self.path
+        if (sys.platform == "win32"):
+            relitave = relitave.replace('/', '\\')
+        else:
+            relitave = relitave.replace('\\', '/')
+
+        joinResult = os.path.join(result, relitave)
+        if (not os.path.isdir(joinResult)):
+            msg = "The path '%s' does not exist "%joinResult
+            raise Exception(msg)
+
+        return Path(joinResult)
+
+    def recreate(self):
+        result = self.path
+
+        os.makedirs(result)
+        return Path(result)
+
+
     def remove(self):
         result = self.path
         if (os.path.isdir(result)):
@@ -88,6 +109,8 @@ class Path:
     def copyTo(self, file, toPath):
         shutil.copyfile(self.file(file), toPath.file(file))
 
+    def copyTree(self, toPath):
+        shutil.copytree(self.path, toPath.path, dirs_exist_ok=True)
 
 class Builder:
 
@@ -104,6 +127,7 @@ class Builder:
         sourceDir = thisDir.back()
         self.opts['dev'] = thisDir
         self.opts['source'] = sourceDir
+        self.opts['publish'] = sourceDir.create("docs")
 
         webDir = sourceDir.join("Web")
         self.opts['web'] = webDir
@@ -143,6 +167,7 @@ class Builder:
     def buildOutput(self): return self.opts['build_files']
     def buildOutputEm(self): return self.opts['em_build_files']
     def bindingFile(self): return self.opts['binding_file']
+    def pubDir(self): return self.opts['publish']
 
     def dumpOpts(self):
         for k in self.opts.keys():
@@ -247,13 +272,18 @@ class Builder:
         self.run("cmake --build %s --config %s" %
                  (self.emDir(), self.configString()))
 
-    def buildClean(self):
+    def buildClean(self, reCreate=False):
 
         self.cppDir().remove()
         self.emDir().remove()
 
         self.goto(self.webDir())
         self.run("flutter clean")
+
+        if reCreate:
+            self.cppDir().recreate()
+            self.emDir().recreate()
+
 
     def buildFl(self):
         print("Building Flutter Source", self.argv)
@@ -279,6 +309,18 @@ class Builder:
                      (self.flutterPlatform(),
                       self.flutterBuildMode()))
 
+    def buildFlPub(self):
+        self.release = True
+        #self.buildClean(reCreate=True)
+        self.buildEm()
+        self.copyEmBindings()
+        self.goto(self.webDir())
+        self.run("flutter build web --release --suppress-analytics")
+
+        flBuild = self.webDir().subdir("build/web")
+        flBuild.copyTree(self.pubDir())
+
+
     def logUsage(self):
         print("build <kind> <options>")
         print("")
@@ -286,7 +328,8 @@ class Builder:
         print("")
         print("cpp    - Builds the c++ project")
         print("em     - Compile the project with emscripten")
-        print("fl     - Build the flutter application")
+        print("fpub   - Publish the application")
+        print("fls    - Build the flutter application")
         print("clean  - Remove the build directories for all the projects")
         print("")
         print("Where options is one or more of the following switches")
@@ -308,6 +351,8 @@ def main(argc, argv):
         build.buildEm()
     elif (build.findOpt("fl")):
         build.buildFl()
+    elif (build.findOpt("fpub")):
+        build.buildFlPub()
     elif (build.findOpt("clean")):
         build.buildClean()
     elif (build.findOpt("help")):

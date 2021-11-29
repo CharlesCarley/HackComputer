@@ -14,7 +14,7 @@ Future<void> initFfi() async {
     // registerOpaqueType<MyOpaque>();
 
     await importLibrary('assets/bindings.js');
-    final result = await rootBundle.load('assets/bindings.wasm');
+    final result = await rootBundle.load('assets/assets/bindings.wasm');
     final binary = result.buffer.asUint8List();
 
     _module = await EmscriptenModule.compile(binary, "bindings");
