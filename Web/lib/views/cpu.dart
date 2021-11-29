@@ -22,6 +22,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:hack_computer/models/cpu.dart';
+import 'package:hack_computer/palette.dart';
 import 'package:hack_computer/strings.dart';
 import 'package:hack_computer/views/box.dart';
 import 'package:hack_computer/views/label.dart';
@@ -40,7 +41,6 @@ class CpuWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final Offset offset = ViewUtils.size.center(-size.center(Offset.zero));
     final Rect bounds = Metrics.contentRect(context, offset, size);
 
@@ -50,6 +50,7 @@ class CpuWidget extends StatelessWidget {
         Strings.cpu,
         offset.dx + Metrics.paddingForth,
         offset.dy + Metrics.paddingEighth,
+        color: Palette.chipTitleForeground,
       ),
       Positioned.fromRect(
         rect: bounds,

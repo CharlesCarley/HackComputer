@@ -22,18 +22,16 @@
 import 'package:hack_computer/cross_ffi/proxy.dart';
 import 'types.dart';
 
-
 class Ram {
   final VoidHandleMethod _zero;
   final RamGetValue _get;
   static late int _handle;
 
   Ram(DynamicLibrary lib, int computer)
-      :
-        _get =lib
+      : _get = lib
             .lookup<NativeFunction<RamGetValueNative>>('RamGetValue')
             .asFunction(),
-        _zero =lib
+        _zero = lib
             .lookup<NativeFunction<VoidHandleMethodNative>>('RamZeroMemory')
             .asFunction() {
     final ComputerGetRam create = lib
@@ -47,7 +45,8 @@ class Ram {
   }
 
   void zeroMemory() {
-    return _zero.call(_handle);
+    Future.microtask(() {
+      _zero.call(_handle);
+    });
   }
 }
-

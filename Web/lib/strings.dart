@@ -40,10 +40,9 @@ class Strings {
 
   static String screenBufferTitle = "Screen Buffer";
   static String screenHelp =
-      "Screen (P) - Display the contents of the screen in a popup";
-
+      "Screen (P) - Display the contents of the screen buffer in a popup";
   static const powerHelp = "Reset (R) - reset the program counter to 0";
-  static const stepHelp = "Step (Up Arrow) - Advance one clock tick";
+  static const stepHelp = "Step (Up Arrow) - Advance one clock step";
   static var ramClear = "Clear - zeros the entire contents of RAM";
 }
 
@@ -58,27 +57,20 @@ class Samples {
 @R0      M=0
 @R3      M=!M
 (loopTop)
-// Move the screen's start address to R2
 @SCREEN  D=A
 @R2      M=D
 @R0      D=M
-// Store  the screen's address plus the current iteration in R4
 @R4      M=D
 @R2      D=M
 @R4      M=D+M
-// grab the value in R4 and place the it in R3
 @R3      D=M
 @R4      A=M 
          M=D
-// then increment the counter in R0
 @R0      M=M+1
          D=M
-// Move the counter into into R1 subtract it from the total 
-// and test for equality
 @R1      D=M
 @R0      D=D-M
 @fillTop D;JEQ
-// otherwise go to the next iteraton.
 @loopTop 0;JMP
 """;
 }

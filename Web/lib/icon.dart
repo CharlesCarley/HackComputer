@@ -76,15 +76,15 @@ class IconWidget extends StatelessWidget {
       child: TextButton(
         clipBehavior: Clip.none,
         onPressed: onClick,
-        style: TextButton.styleFrom(padding: Metrics.zero),
+        style: TextButton.styleFrom(padding: EdgeInsets.zero),
         child: Tooltip(
           message: tooltip,
           textStyle: const TextStyle(
-            color: Palette.highlight,
+            color: Palette.toolTipForeground,
             fontSize: 10,
           ),
           decoration: const BoxDecoration(
-            color: Palette.wireShadow,
+            color: Palette.toolTipBackground,
           ),
           child: Text(
             icon,

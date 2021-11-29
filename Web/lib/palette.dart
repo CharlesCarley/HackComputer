@@ -22,7 +22,7 @@
 import 'package:flutter/material.dart';
 
 class Palette {
-  static const background = Color(0xFF282827);
+  static const background = Color(0xFF323030);
   static const inactiveMemory = Color(0xFF3F3F4F);
   static const darkGrey = Color(0xFF181818);
   static const darkGrey1 = Color(0xFF2A2A2F);
@@ -37,34 +37,35 @@ class Palette {
   static const actionSecondary = Color(0xFF45E945);
   static const transparent = Color(0x00E94545);
 
-  static const wireNoChange = Color(0xFF3F3F4F);
-  static const wireChange = Color(0xFF5F5F79);
+  static const titleText = Color(0xFF9F9B9B);
+  static const titleIcon = Color(0xFFA5A1A0);
 
-  static const editTextForeground = Color(0xC08F8F98);
-  static const editTextBackground = Color(0xFF282828);
-  static const editTextWidgetBackground = Color(0xFF181819);
-  static const editTextWidgetInnerBorder = Color(0xFF282828);
-  static const editTextWidgetBorder = Color(0xFF3F3F4F);
-  static const editTextButtonBackground = Color(0x1F6A6A9F);
-  static const editTextButtonForeground = Color(0xFF5A5A7F);
+  static const wireNoChange = Color(0xFF585357);
+  static const wireChange = Color(0xFF716B71);
 
-  static const boxBackground = Color(0xFF181819);
-  static const memorySelection = Color(0xC030303F);
-  static const memorySelectionHighlight = Color(0x10E8E5EF);
+  static const editTextForeground = Color(0xFF918274);
+  static const editTextBackground = Color(0xFF323030);
+  static const editTextWidgetBackground = Color(0xFF252525);
+  static const editTextWidgetInnerBorder = Color(0xFF201E1F);
+  static const editTextWidgetBorder = Color(0xFF343334);
+  static const editTextButtonBackground = Color(0xFF1E1E1E);
+  static const editTextButtonForeground = Color(0xFF9F9B9B);
 
-  static const main = MaterialColor(
-    0xFF1A1A1A,
-    <int, Color>{
-      50: Color(0xFF1A1A1A),
-      100: Color(0xFF2A2A2A),
-      200: Color(0xFF3A3A3A),
-      300: Color(0xFF4A4A4A),
-      400: Color(0xFF6A6A6A),
-      500: Color(0xFF6A6A6A),
-      600: Color(0xFF6A6A6A),
-      700: Color(0xFF1A1A1A),
-      800: Color(0xFF6A6A6A),
-      900: Color(0xFF6A6A6A),
-    },
-  );
+  static const boxBackground = Color(0xFF1E1E1E);
+  static const pinBackground = Color(0xFF383439);
+  static const pinBorder = Color(0xFF716B71);
+
+  static const chipTitleForeground = Color(0xFF9F9B9B);
+  static const chipTitleBackground = Color(0xFF1E1E1E);
+
+  static const toolTipForeground = Color(0xFF9F9B9B);
+  static const toolTipBackground = Color(0x401E1E1E);
+
+  static const memoryAction = Color(0xFFE94545);
+  static const memoryHighlight = Color(0xFFBDB7B9);
+  static const memoryTextMiddle = Color(0xFF716E71);
+  static const memoryText = Color(0xFF575758);
+  static const memorySelection = Color(0xFF323234);
+  static const memorySelectionHighlight = Color(0x26646465);
+  static const memorySelectionBorder = Color(0x80505058);
 }

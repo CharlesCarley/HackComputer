@@ -36,6 +36,9 @@ class Metrics {
   /// one eighth of the default padding
   static const paddingEighth = padding / 8;
 
+  /// one sixteenth of the default padding
+  static const paddingSixteenth = padding / 16;
+
   /// twice the default padding
   static const paddingDouble = padding * 2;
 
@@ -69,17 +72,6 @@ class Metrics {
 
   static const lineWidth = 1.5;
 
-  // --------------------------
-  static const paddingAll = EdgeInsets.all(8.0);
-
-  static const paddingLarge = EdgeInsets.all(12.0);
-
-  static const zero = EdgeInsets.zero;
-
-  static const spacing = EdgeInsets.fromLTRB(8, 16, 8, 16);
-
-  static const paddingScene = EdgeInsets.all(padding);
-
   static double defaultTextSize(BuildContext context) {
     final textStyle = DefaultTextStyle.of(context).style;
     final double d = textStyle.fontSize ?? 14;
@@ -100,7 +92,6 @@ class Metrics {
   }
 
   static Size _maxIndex = Size.zero;
-
   static Size get maxIndex => _getMaxIndex();
 
   static Size _getMaxIndex() {
@@ -112,13 +103,11 @@ class Metrics {
   }
 
   static Size _maxInstruction = Size.zero;
-
   static Size get maxInstruction => _getMaxInstruction();
-
   static Size _getMaxInstruction() {
     // returns the length of the largest instruction string.
     if (_maxInstruction.isEmpty) {
-      _maxInstruction = measureText("@@@@@@@@@");
+      _maxInstruction = measureText("@@@@@@@@@@@@");
     }
     return _maxInstruction;
   }

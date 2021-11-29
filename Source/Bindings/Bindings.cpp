@@ -42,8 +42,8 @@ namespace Hack::Binding
     using namespace Assembler;
 
     constexpr uint64_t ComputerType = 0x6543F55D6F4A3D0F;
-    constexpr uint64_t RomType      = 0x06DDF543F556F4A3;
-    constexpr uint64_t RamType      = 0x3F55D6F4A3D0654F;
+    constexpr uint64_t RomType      = 0x06D5DAF556F4ADB3;
+    constexpr uint64_t RamType      = 0x3D654F7A36F4A3D0;
 
     class RomWrapper
     {
@@ -117,7 +117,7 @@ namespace Hack::Binding
                 _memory->zero();
         }
 
-        static const RamWrapper* cast(Handle handle)
+        static const RamWrapper* cast(const Handle handle)
         {
             if (handle != nullptr)
             {
@@ -156,9 +156,7 @@ namespace Hack::Binding
             delete _rom;
             delete _ram;
             delete _computer;
-
-            if (_bytes)
-                delete[] _bytes;
+            delete[] _bytes;
         }
 
         void update() const
@@ -173,7 +171,7 @@ namespace Hack::Binding
                 _computer->reset();
         }
 
-        int getScreenBufferSize() const
+        static int getScreenBufferSize()
         {
             return 0x80000;
         }

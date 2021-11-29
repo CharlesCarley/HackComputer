@@ -43,7 +43,6 @@ class CanvasChips extends StatefulWidget {
 }
 
 class _CanvasChipsState extends State<CanvasChips> with StackedCanvasListener {
-
   @override
   void initState() {
     super.initState();
@@ -70,12 +69,8 @@ class _CanvasChipsState extends State<CanvasChips> with StackedCanvasListener {
   }
 
   @override
-  void onRestart(Cpu current, Cpu previous) {
-    // TODO: implement onRestart
-  }
+  void onRestart(Cpu current, Cpu previous) {}
 
   @override
-  void onUpdate(Cpu current, Cpu previous) {
-    // TODO: implement onUpdate
-  }
+  void onUpdate(Cpu current, Cpu previous) {}
 }

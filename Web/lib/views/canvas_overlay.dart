@@ -22,6 +22,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:hack_computer/models/cpu.dart';
+import 'package:hack_computer/palette.dart';
 import 'package:hack_computer/views/view_utils.dart';
 
 import '../icon.dart';
@@ -79,6 +80,7 @@ class _CanvasOverlayState extends State<CanvasOverlay>
           Metrics.paddingEighth,
           Metrics.paddingEighth,
           fontSize: 18,
+          color: Palette.titleText,
         ),
 
         // Top - reset
@@ -90,6 +92,7 @@ class _CanvasOverlayState extends State<CanvasOverlay>
             widget.manager.resetComputer();
           },
           Strings.powerHelp,
+          color: Palette.titleIcon,
         ),
 
         IconWidget.tool(
@@ -100,6 +103,7 @@ class _CanvasOverlayState extends State<CanvasOverlay>
             widget.manager.update();
           },
           Strings.stepHelp,
+          color: Palette.titleIcon,
         ),
 
         IconWidget.tool(
@@ -110,6 +114,7 @@ class _CanvasOverlayState extends State<CanvasOverlay>
             widget.manager.displayScreen();
           },
           Strings.screenHelp,
+          color: Palette.titleIcon,
         ),
       ],
     );

@@ -88,7 +88,9 @@ class MemoryDisplayUtils {
           y: centerOffset,
 
           // apply a selection color for the current item
-          color: computedIndex == memoryOffset ? Palette.action : Palette.wire,
+          color: computedIndex == memoryOffset
+              ? Palette.memoryAction
+              : Palette.memoryText,
         ));
 
         widgets.add(Label(
@@ -98,15 +100,15 @@ class MemoryDisplayUtils {
           y: centerOffset,
 
           // apply a selection color for the current item
-          color:
-              computedIndex == memoryOffset ? Palette.highlight : Palette.wire,
+          color: computedIndex == memoryOffset
+              ? Palette.memoryHighlight
+              : Palette.memoryText,
         ));
-
 
         if (computedIndex == memoryOffset) {
           widgets.add(Box.create(
             0,
-            centerOffset + size/2-1.5,
+            centerOffset + size / 2 - 1.5,
             contentBounds.width,
             5,
             color: Palette.memorySelectionHighlight,

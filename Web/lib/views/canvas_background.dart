@@ -22,6 +22,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:hack_computer/models/cpu.dart';
+import 'package:hack_computer/views/pin.dart';
 
 import '../computer.dart';
 import '../metrics.dart';
@@ -55,6 +56,7 @@ class _CanvasBackgroundState extends State<CanvasBackground>
   late Color _instructionPointer;
   late Color _cpuOutput;
   late String _currentInstruction;
+  late String _currentCount;
 
   @override
   void initState() {
@@ -68,6 +70,8 @@ class _CanvasBackgroundState extends State<CanvasBackground>
     // the current decoded instruction
     _currentInstruction =
         ComputerBinding.instance.decode(widget.state.instruction);
+
+    _currentCount = widget.state.instructionPointer.toString();
 
     widget.manager.addListener(this);
     super.initState();
@@ -98,7 +102,7 @@ class _CanvasBackgroundState extends State<CanvasBackground>
 
     Size outputSize = Metrics.measureText(Strings.output);
 
-    double vot = hw + 75 + outputSize.width;
+    double vot = hw + 120 + outputSize.width;
     double rot = hw - Metrics.cpuHalfWidth - 2 * Metrics.maxIndex.width;
 
     final Rect cpuRect = Rect.fromLTWH(
@@ -116,6 +120,8 @@ class _CanvasBackgroundState extends State<CanvasBackground>
     );
 
     const fontSize = 12.0;
+    const fontSizeHalf = fontSize/2;
+
     final instScreenSize =
         Metrics.measureSizedText(_currentInstruction, fontSize);
 
@@ -124,79 +130,63 @@ class _CanvasBackgroundState extends State<CanvasBackground>
     final ramOutScreenSize = Metrics.measureSizedText(ramOut, fontSize);
     final outputScreenSize = Metrics.measureSizedText(Strings.output, fontSize);
 
+    final pcScreenSize = Metrics.measureSizedText(_currentCount, fontSize);
+
     return [
-      Label.position(
-        Strings.instruction,
-        romRect.right,
-        hh - fontSize - 3,
-        fontSize: fontSize,
-      ),
-      Label.position(
-        _currentInstruction,
-        cpuRect.left - instScreenSize.width,
-        hh - fontSize - 3,
-        color: Palette.action,
-        fontSize: fontSize,
-      ),
       LineListWidget(
         color: _instructionColor,
         segments: [
           LineSegment.horizontal(50, hh, hw, hh),
         ],
       ),
-
-      // CPU.ADR -> RAM
-      Label.position(
-        Strings.address,
-        cpuRect.right,
-        hh - fontSize - 3,
+      Pin.position(
+        Strings.instruction,
+        romRect.right,
+        hh - fontSizeHalf,
         fontSize: fontSize,
       ),
+      Pin.position(
+        _currentInstruction,
+        cpuRect.left - instScreenSize.width,
+        hh - fontSizeHalf,
+        color: Palette.action,
+        fontSize: fontSize,
+      ),
+
+      // CPU.ADR -> RAM
       LineListWidget(
         color: _addressColor,
         segments: [
           LineSegment.horizontal(hw, hh, w - 50, hh),
         ],
       ),
-
-      // CPU.OUT -> RAM + Write
-      Label.position(
-        Strings.output,
-        cpuRect.right,
-        hh + fontSize + 10,
+      Pin.position(
+        Strings.address,
+        cpuRect.right + 2,
+        hh - fontSizeHalf,
         fontSize: fontSize,
       ),
+
+      // CPU.OUT -> RAM + Write
       LineListWidget(
         color: _cpuOutput,
         segments: [
           // CPU.OUT
-          LineSegment.horizontal(hw, hh + 40, vot, hh + 40),
+          LineSegment.horizontal(cpuRect.right, hh + 40, vot, hh + 40),
           LineSegment.vertical(vot, hh + 40, vot, bt + 1),
           LineSegment.horizontal(vot, bt, rt, bt),
           LineSegment.vertical(rt, hh, rt, bt),
           LineSegment.horizontal(rt - 50, hh, rt, hh),
         ],
       ),
+      Pin.position(
+        Strings.output,
+        cpuRect.right + Metrics.paddingSixteenth,
+        hh + fontSize + 20,
+        fontSize: fontSize,
+      ),
 
       // RAM.OUT -> CPU.IN
-      Label.position(
-        ramOut,
-        cpuRect.left - ramOutScreenSize.width,
-        hh - (60 + fontSize + 3),
-        color: Palette.action,
-        fontSize: fontSize,
-      ),
-      Label.position(
-        Strings.output,
-        rt -
-            Metrics.memoryWidth -
-            outputScreenSize.width -
-            Metrics.paddingForth -
-            2,
-        Metrics.paddingTriple - fontSize - 3,
-        color: Palette.wireTitle,
-        fontSize: fontSize,
-      ),
       LineListWidget(
         color: _cpuInput,
         segments: [
@@ -210,7 +200,32 @@ class _CanvasBackgroundState extends State<CanvasBackground>
           LineSegment.horizontal(rot, hh - 60, hw, hh - 60),
         ],
       ),
+      Pin.position(
+        ramOut,
+        cpuRect.left - ramOutScreenSize.width,
+        hh - (60 + fontSizeHalf + 3),
+        color: Palette.action,
+        fontSize: fontSize,
+      ),
+      Pin.position(
+        Strings.output,
+        rt -
+            Metrics.memoryWidth -
+            outputScreenSize.width -
+            Metrics.paddingForth -
+            2,
+        Metrics.paddingTriple - fontSizeHalf,
+        fontSize: fontSize,
+      ),
+
       // CPU.PC -> ROM.IN
+      Label.position(
+        _currentCount,
+        hw - pcScreenSize.width,
+        bt - fontSize - 3,
+        color: Palette.action,
+        fontSize: fontSize,
+      ),
       LineListWidget(
         color: _instructionPointer,
         segments: [
@@ -237,7 +252,6 @@ class _CanvasBackgroundState extends State<CanvasBackground>
       ),
     ];
   }
-
 
   void _updateWireColors(Cpu current, Cpu previous) {
     if (previous.instruction != current.instruction) {
@@ -273,7 +287,7 @@ class _CanvasBackgroundState extends State<CanvasBackground>
 
   @override
   void onRestart(Cpu current, Cpu previous) {
-    // TODO: implement onRestart
+    onUpdate(current, previous);
   }
 
   @override
@@ -283,6 +297,7 @@ class _CanvasBackgroundState extends State<CanvasBackground>
       // the current decoded instruction
       _currentInstruction =
           ComputerBinding.instance.decode(widget.state.instruction);
+      _currentCount = current.instructionPointer.toString();
     });
   }
 }

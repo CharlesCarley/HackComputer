@@ -29,10 +29,12 @@ class Rom {
   final RomGetValueDecoded _decode;
 
   Rom(DynamicLibrary lib, int computer)
-      : _get =
-            lib.lookup<NativeFunction<RomGetValueNative>>('RomGetValue').asFunction(),
+      : _get = lib
+            .lookup<NativeFunction<RomGetValueNative>>('RomGetValue')
+            .asFunction(),
         _decode = lib
-            .lookup<NativeFunction<RomGetValueDecodedNative>>('RomGetValueDecoded')
+            .lookup<NativeFunction<RomGetValueDecodedNative>>(
+                'RomGetValueDecoded')
             .asFunction() {
     final ComputerGetRom computerGetRom = lib
         .lookup<NativeFunction<ComputerGetRomNative>>('ComputerGetRom')
@@ -46,7 +48,7 @@ class Rom {
   }
 
   String decode(int idx) {
-    var decoded= _decode.call(_handle, idx);
+    var decoded = _decode.call(_handle, idx);
     return WrapUtil.ptrToString(decoded);
   }
 }

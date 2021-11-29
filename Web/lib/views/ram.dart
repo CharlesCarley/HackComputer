@@ -47,7 +47,6 @@ class RamWidget extends StatefulWidget {
 class _RamWidgetState extends State<RamWidget> {
   @override
   Widget build(BuildContext context) {
-
     // overall black box size
     final size = Size(
       Metrics.memoryWidth,
@@ -69,11 +68,12 @@ class _RamWidgetState extends State<RamWidget> {
         Strings.ram,
         origin.dx + Metrics.paddingForth,
         origin.dy + Metrics.paddingEighth,
+        color: Palette.chipTitleForeground,
       ),
       IconWidget(
         x: broomLocation,
         y: origin.dy + Metrics.paddingEighth,
-        color: Palette.wireTitle,
+        color: Palette.chipTitleForeground,
         icon: IconMappings.brush,
         onClick: clearRam,
         tooltip: Strings.ramClear,
@@ -95,8 +95,7 @@ class _RamWidgetState extends State<RamWidget> {
   }
 
   void clearRam() async {
-
-    await Future((){
+    await Future(() {
       final ram = ComputerBinding.instance.getRam();
       ram.zeroMemory();
     });

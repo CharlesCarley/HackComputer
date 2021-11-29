@@ -48,7 +48,7 @@ class LineSegment {
       : dir = LineDirection.vertical;
 }
 
-class Line extends StatefulWidget {
+class Line extends StatelessWidget {
   final LineSegment segment;
   final Color color;
 
@@ -59,14 +59,10 @@ class Line extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<Line> createState() => _LineState();
-}
-
-class _LineState extends State<Line> {
-  @override
   Widget build(BuildContext context) {
     final double w, h;
-    if (widget.segment.dir == LineDirection.horizontal) {
+
+    if (segment.dir == LineDirection.horizontal) {
       h = Metrics.lineWidth;
       w = 0;
     } else {
@@ -75,15 +71,9 @@ class _LineState extends State<Line> {
     }
 
     return Positioned.fromRect(
-      rect: Rect.fromLTRB(
-        widget.segment.x0,
-        widget.segment.y0,
-        widget.segment.x1 + w,
-        widget.segment.y1 + h,
-      ),
-      child: ColoredBox(
-        color: widget.color,
-      ),
+      rect:
+          Rect.fromLTRB(segment.x0, segment.y0, segment.x1 + w, segment.y1 + h),
+      child: ColoredBox(color: color),
     );
   }
 }

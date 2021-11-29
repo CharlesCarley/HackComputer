@@ -23,32 +23,32 @@ import 'package:flutter/material.dart';
 import 'package:hack_computer/metrics.dart';
 import 'package:hack_computer/palette.dart';
 
-class Label extends StatelessWidget {
+class Pin extends StatelessWidget {
   final double x, y;
   final String label;
   final Color color;
   final double size;
 
-  Label.create(this.label, {Key? key, double? fontSize})
+  Pin.create(this.label, {Key? key, double? fontSize})
       : x = Metrics.paddingEighth,
         y = Metrics.paddingEighth,
         color = Palette.chipTitleForeground,
         size = (fontSize == null ? 14 : fontSize.toDouble()),
         super(key: key);
 
-  Label.position(
-    this.label,
-    this.x,
-    this.y, {
-    Key? key,
-    double? fontSize,
-    Color? color,
-  })  : size = (fontSize == null ? 14 : fontSize.toDouble()),
+  Pin.position(
+      this.label,
+      this.x,
+      this.y, {
+        Key? key,
+        double? fontSize,
+        Color? color,
+      })  : size = (fontSize == null ? 14 : fontSize.toDouble()),
         color =
-            (color == null ? Palette.chipTitleForeground : Color(color.value)),
+        (color == null ? Palette.chipTitleForeground : Color(color.value)),
         super(key: key);
 
-  const Label({
+  const Pin({
     Key? key,
     required this.label,
     required this.x,
@@ -60,11 +60,20 @@ class Label extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final metrics = Metrics.measureSizedText(label, size);
+
+
     return Positioned.fromRect(
-      rect: Rect.fromLTWH(x, y, metrics.width, metrics.height),
-      child: Text(
-        label,
-        style: TextStyle(color: color, fontSize: size),
+      rect: Rect.fromLTWH(x-Metrics.paddingEighth, y-Metrics.paddingEighth, metrics.width+Metrics.paddingForth, metrics.height+Metrics.paddingForth),
+      child: Container(
+        padding: const EdgeInsets.all(Metrics.paddingEighth/2),
+        decoration: BoxDecoration(
+          color: Palette.pinBackground,
+          border: Border.all(color: Palette.pinBorder),
+        ),
+        child: Text(
+          label,
+          style: TextStyle(color: color, fontSize: size),
+        ),
       ),
     );
   }

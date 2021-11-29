@@ -93,10 +93,9 @@ class Builder:
 
     def __init__(self, argc, argv):
 
-
         self.argc = argc
         self.argv = argv
-        
+
         self.release = self.findOpt("--release")
 
         self.opts = {}
@@ -112,10 +111,8 @@ class Builder:
         self.opts['web_asset'] = webDir.join("assets")
         self.opts['web_content'] = webDir.join("content")
 
-        if (sys.platform == "win32"):
-            platname = "windows"
-        else:
-            platname = 'linux'
+        if (sys.platform == "win32"): platname = "windows"
+        else: platname = 'linux'
 
         self.opts['platform'] = platname
 
@@ -135,6 +132,18 @@ class Builder:
         buildOutput = self.opts['build_em'].create("build_files")
         self.opts['em_build_files'] = buildOutput
 
+    def home(self): return self.opts['dev']
+    def sourceDir(self): return self.opts['source']
+    def cppDir(self): return self.opts['build_cpp']
+    def emDir(self): return self.opts['build_em']
+    def webDir(self): return self.opts['web']
+    def webTestDir(self): return self.opts['web_test']
+    def webAssetDir(self): return self.opts['web_asset']
+    def flutterPlatform(self): return self.opts['platform']
+    def buildOutput(self): return self.opts['build_files']
+    def buildOutputEm(self): return self.opts['em_build_files']
+    def bindingFile(self): return self.opts['binding_file']
+
     def dumpOpts(self):
         for k in self.opts.keys():
             print(k, " => ", self.opts[k])
@@ -146,38 +155,6 @@ class Builder:
             msg = "Failed to change working directory to %s" % path.path
             raise Exception(msg)
 
-    def home(self):
-        return self.opts['dev']
-
-    def sourceDir(self):
-        return self.opts['source']
-
-    def cppDir(self):
-        return self.opts['build_cpp']
-
-    def emDir(self):
-        return self.opts['build_em']
-
-    def webDir(self):
-        return self.opts['web']
-
-    def webTestDir(self):
-        return self.opts['web_test']
-
-    def webAssetDir(self):
-        return self.opts['web_asset']
-
-    def flutterPlatform(self):
-        return self.opts['platform']
-
-    def buildOutput(self):
-        return self.opts['build_files']
-
-    def buildOutputEm(self):
-        return self.opts['em_build_files']
-
-    def bindingFile(self):
-        return self.opts['binding_file']
 
     def configString(self):
         config = "Debug"
@@ -207,7 +184,7 @@ class Builder:
                             buildDir.file("bindings.dll"))
 
             shutil.copyfile(self.bindingFile(),
-                            self.webTestDir().file("bindings.dll"))
+                            self.webDir().file("bindings.dll"))
 
     def copyEmBindings(self):
 
@@ -232,7 +209,8 @@ class Builder:
         self.goto(self.cppDir())
 
         defines = "-DHack_BUILD_TEST=ON -DHack_AUTO_RUN_TEST=ON "
-        defines += "-DHack_IMPLEMENT_BLACK_BOX=%s "% self.findOpt("--with-black-box")
+        defines += "-DHack_IMPLEMENT_BLACK_BOX=%s " % self.findOpt(
+            "--with-black-box")
         defines += "-DHack_USE_SDL=%s" % self.findOpt("--with-sdl")
 
         self.run("cmake %s %s" % (self.sourceDir(), defines))
@@ -249,7 +227,8 @@ class Builder:
             execStr += '-G "NMake Makefiles" '
 
         execStr += self.sourceDir().path
-        execStr += " -DHack_IMPLEMENT_BLACK_BOX=%s"% self.findOpt("--with-black-box")
+        execStr += " -DHack_IMPLEMENT_BLACK_BOX=%s" % self.findOpt(
+            "--with-black-box")
 
         self.run(execStr)
         self.run("cmake --build %s --config %s" %
@@ -279,7 +258,7 @@ class Builder:
             self.buildCpp()
             self.copyBindings()
 
-            self.goto(self.webTestDir())
+            self.goto(self.webDir())
             self.run("flutter test")
 
             self.goto(self.webDir())
@@ -287,9 +266,29 @@ class Builder:
                      (self.flutterPlatform(),
                       self.flutterBuildMode()))
 
+    def logUsage(self):
+        print("build <kind> <options>")
+        print("")
+        print("Where kind is one of the following")
+        print("")
+        print("cpp    - Builds the c++ project")
+        print("em     - Compile the project with emscripten")
+        print("fl     - Build the flutter application")
+        print("clean  - Remove the build directories for all the projects")
+        print("")
+        print("Where options is one or more of the following switches")
+        print("")
+        print("--with-sdl       - Builds the SDL runtime for the C++ standalone")
+        print("--with-black-box - Bulids the chip library without any performance abastractions")
+        print("--release        - Compiles everything in release mode")
+        print("")
+        print("")
+
 
 def main(argc, argv):
     build = Builder(argc, argv)
+    build.dumpOpts()
+
     if (build.findOpt("cpp")):
         build.buildCpp()
     elif (build.findOpt("em")):
@@ -298,9 +297,12 @@ def main(argc, argv):
         build.buildFl()
     elif (build.findOpt("clean")):
         build.buildClean()
+    elif (build.findOpt("help")):
+        build.logUsage()
     else:
         build.buildCpp()
     build.goto(build.home())
+
 
 if __name__ == '__main__':
     main(len(sys.argv), sys.argv)

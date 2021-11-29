@@ -14,8 +14,12 @@ If SDL is enabled, the default runtime will open a window and map the screen reg
 Otherwise if SDL is disabled, the default runtime is the command line debugger.
 
 The [web library](Web/) Is a flutter version of the command line debugger. It binds the c++ computer library to dart with `dart:ffi` and [`web_ffi`](https://pub.dev/packages/web_ffi).
-
 It targets the window and web flutter platforms.
+
+## Current State
+
+The whole project is an evolving work in progress.
+The flutter application was a test to see how hard it would be to implement a non-standard UI (using stack/position widgets). The web platform is incredibly slow - there is lots of room for improvement. The demo can be found [here](#current-state)
 
 ## Building
 

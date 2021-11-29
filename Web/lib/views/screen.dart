@@ -107,7 +107,7 @@ class _ScreenState extends State<Screen> {
                   size: 14,
                   x: bounds.width / 2 - titleSize.width / 2,
                   y: titleSize.height / 2,
-                  color: Palette.wireLight,
+                  color: Palette.titleText,
                 ),
                 Positioned.fromRect(
                   rect: textBounds,

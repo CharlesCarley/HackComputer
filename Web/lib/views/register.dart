@@ -51,21 +51,22 @@ class Register extends StatelessWidget {
           label,
           x,
           y,
-          color: Palette.wire,
+          color: Palette.memoryText,
           fontSize: 10,
         ),
         Positioned.fromRect(
           rect: Rect.fromLTWH(x, y + size + 2, w, h),
           child: Container(
             decoration: BoxDecoration(
-              border: Border.all(color: Palette.inactiveMemory),
+              border: Border.all(color: Palette.memorySelectionBorder),
             ),
             child: ColoredBox(
               color: Palette.memorySelection,
               child: Text(
                 value,
                 textAlign: TextAlign.center,
-                style: const TextStyle(color: Palette.wireLight, fontSize: 12),
+                style: const TextStyle(
+                    color: Palette.memoryTextMiddle, fontSize: 12),
               ),
             ),
           ),

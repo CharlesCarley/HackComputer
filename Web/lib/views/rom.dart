@@ -63,11 +63,12 @@ class RomWidget extends StatelessWidget {
         Strings.rom,
         origin.dx + Metrics.paddingForth,
         origin.dy + Metrics.paddingEighth,
+        color: Palette.chipTitleForeground,
       ),
       IconWidget(
         x: iconLoc,
         y: origin.dy + Metrics.paddingEighth,
-        color: Palette.wireTitle,
+        color: Palette.chipTitleForeground,
         icon: IconMappings.edit,
         onClick: onEdit,
         tooltip: Strings.editHelp,

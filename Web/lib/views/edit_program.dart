@@ -154,7 +154,7 @@ class _EditProgramState extends State<EditProgram> {
                   size: 16,
                   x: windowBounds.width / 2 - titleSize.width / 2,
                   y: titleSize.height / 4,
-                  color: Palette.wireLight,
+                  color: Palette.titleText,
                 ),
                 TextEditor(
                   rect: textBounds,
@@ -193,14 +193,12 @@ class _EditProgramState extends State<EditProgram> {
 
   void _compile() async {
     await Future<void>(() {
-
       if (ComputerBinding.instance.load(_controller.text) == 1) {
         _errorText = ComputerBinding.instance.getCompileError();
       } else {
         _errorText = "";
       }
     }).whenComplete(() {
-
       if (_errorText.isEmpty) {
         widget.onOkClicked.call(_controller.text);
       }

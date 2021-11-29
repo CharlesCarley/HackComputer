@@ -169,14 +169,18 @@ class Computer {
   }
 
   void update() {
-    _previousState = _currentState;
-    _update.call(_handle);
-    _currentState = Cpu(_currentStateHandle);
+    Future.microtask(() {
+      _previousState = _currentState;
+      _update.call(_handle);
+      _currentState = Cpu(_currentStateHandle);
+    });
   }
 
   void restart() {
-    _restart.call(_handle);
-    _previousState = _currentState = Cpu(_currentStateHandle);
+    Future.microtask(() {
+      _restart.call(_handle);
+      _previousState = _currentState = Cpu(_currentStateHandle);
+    });
   }
 
   void updateScreen() {

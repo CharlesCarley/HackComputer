@@ -24,7 +24,7 @@ import 'package:hack_computer/palette.dart';
 
 class Box extends StatelessWidget {
   final double x, y, w, h;
-  final Color? color;
+  final Color color;
 
   Box.create(this.x, this.y, this.w, this.h, {Key? key, Color? color})
       : color = (color == null ? Palette.boxBackground : Color(color.value)),
@@ -35,7 +35,7 @@ class Box extends StatelessWidget {
     return Positioned.fromRect(
       rect: Rect.fromLTWH(x, y, w, h),
       child: ColoredBox(
-        color: color == null ? Palette.boxBackground : Color(color!.value),
+        color: Color(color.value),
       ),
     );
   }

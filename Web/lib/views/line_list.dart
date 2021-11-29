@@ -23,7 +23,7 @@
 import 'package:flutter/material.dart';
 import 'line.dart';
 
-class LineListWidget extends StatefulWidget {
+class LineListWidget extends StatelessWidget {
   final List<LineSegment> segments;
   final Color color;
 
@@ -34,29 +34,24 @@ class LineListWidget extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<LineListWidget> createState() => _LineListWidgetState();
-}
-
-class _LineListWidgetState extends State<LineListWidget> {
-  @override
   Widget build(BuildContext context) {
     return Stack(children: _getSegments());
   }
 
   List<Widget> _getSegments() {
     List<Widget> widgets = [];
-    for (int i = 0; i < widget.segments.length; ++i) {
-      LineSegment seg = widget.segments[i];
+    for (int i = 0; i < segments.length; ++i) {
+      LineSegment seg = segments[i];
 
       if (seg.dir == LineDirection.horizontal) {
         widgets.add(Line(
           segment: LineSegment.horizontal(seg.x0, seg.y0, seg.x1, seg.y1),
-          color: widget.color,
+          color: color,
         ));
       } else {
         widgets.add(Line(
           segment: LineSegment.vertical(seg.x0, seg.y0, seg.x1, seg.y1),
-          color: widget.color,
+          color: color,
         ));
       }
     }
