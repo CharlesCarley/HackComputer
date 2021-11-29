@@ -321,7 +321,7 @@ class Builder:
         self.copyEmBindings()
         self.goto(self.webDir())
         self.run("flutter pub get")
-        self.run("flutter build web --release")
+        self.run("flutter build web --release --base-href /HackComputer/")
 
         flBuild = self.webDir().subdir("build/web")
         self.pubDir().remove()
