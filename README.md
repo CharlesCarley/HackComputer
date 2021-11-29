@@ -11,7 +11,7 @@ The [assembler library](Source/Assembler/) implements the machine code compiler.
 
 The [computer library](Source/Computer/) ties together the ROM, RAM and CPU chips into multiple runtime versions.
 If SDL is enabled, the default runtime will open a window and map the screen region of memory to the SDL window.
-Otherwise if SDL is disabled, the default runtime is the command line debugger.
+Otherwise if SDL is disabled, the default runtime is the [command line debugger](Content/Debugger.png).
 
 The [web library](Web/) Is a flutter version of the command line debugger. It binds the c++ computer library to dart with `dart:ffi` and [`web_ffi`](https://pub.dev/packages/web_ffi).
 It targets the window and web flutter platforms.

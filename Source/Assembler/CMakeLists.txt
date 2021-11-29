@@ -56,7 +56,7 @@ if (BuildType STREQUAL "CPP")
     target_link_libraries(${TargetName} ${Utils_LIBRARY} Assembler)
 
 
-    copy_target(${TargetName} ${Hack_BINARY_DIR}/Bin)
+    copy_target(${TargetName} ${Hack_BINARY_DIR}/build_files) 
 
     if (TargetFolders)
         set_target_properties(${TargetName} PROPERTIES FOLDER "${TargetGroup}")

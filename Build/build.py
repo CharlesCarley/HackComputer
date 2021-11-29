@@ -217,6 +217,19 @@ class Builder:
         self.run("cmake --build %s --config %s" %
                  (self.cppDir(), self.configString()))
 
+
+
+
+        self.buildOutput().copyTo(
+            "Computer.exe",
+            self.home()
+        )
+        self.buildOutput().copyTo(
+            "Asm2Mc.exe",
+            self.home()
+        )
+
+
     def buildEm(self):
         print("Building Emscripten", self.argv)
 
