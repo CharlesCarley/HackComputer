@@ -53,7 +53,7 @@ class Palette {
 
   static const boxBackground = Color(0xFF1E1E1E);
   static const pinBackground = Color(0xFF383439);
-  static const pinBorder = Color(0xFF716B71);
+  static const pinBorder = Color(0xFF383439);
 
   static const chipTitleForeground = Color(0xFF9F9B9B);
   static const chipTitleBackground = Color(0xFF1E1E1E);
