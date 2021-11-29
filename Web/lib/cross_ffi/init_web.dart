@@ -5,6 +5,8 @@ import 'package:flutter/services.dart';
 
 Module? _module;
 
+const String _path = "assets";
+
 Future<void> initFfi() async {
   // Only initialize if there is no module yet
   if (_module == null) {
@@ -13,8 +15,8 @@ Future<void> initFfi() async {
     // extends Opaque, you would register it here
     // registerOpaqueType<MyOpaque>();
 
-    await importLibrary('assets/bindings.js');
-    final result = await rootBundle.load('assets/assets/bindings.wasm');
+    await importLibrary('$_path/assets/bindings.js');
+    final result = await rootBundle.load('$_path/assets/bindings.wasm');
     final binary = result.buffer.asUint8List();
 
     _module = await EmscriptenModule.compile(binary, "bindings");

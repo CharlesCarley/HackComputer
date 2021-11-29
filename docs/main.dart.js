@@ -869,7 +869,7 @@ V.eq(q)
 V.eq(t.mD)
 V.eq(t.FM)
 s=4
-return P.ab(T.aq5(H.a(["assets/bindings.js"],t.s)),$async$y_)
+return P.ab(T.aq5(H.a(["assets/assets/bindings.js"],t.s)),$async$y_)
 case 4:p=$
 o=T
 n=H

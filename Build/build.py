@@ -88,7 +88,7 @@ class Path:
 
         joinResult = os.path.join(result, relitave)
         if (not os.path.isdir(joinResult)):
-            msg = "The path '%s' does not exist "%joinResult
+            msg = "The path '%s' does not exist " % joinResult
             raise Exception(msg)
 
         return Path(joinResult)
@@ -99,18 +99,24 @@ class Path:
         os.makedirs(result)
         return Path(result)
 
-
     def remove(self):
-        result = self.path
-        if (os.path.isdir(result)):
-            print("Removing", result)
-            shutil.rmtree(result)
+        if (os.path.isdir(self.path)):
+            print("Removing".ljust(20), self.path)
+            shutil.rmtree(self.path, ignore_errors=True)
 
     def copyTo(self, file, toPath):
         shutil.copyfile(self.file(file), toPath.file(file))
 
     def copyTree(self, toPath):
         shutil.copytree(self.path, toPath.path, dirs_exist_ok=True)
+
+    def removeFile(self, file):
+        localFile = os.path.join(self.path, file)
+
+        if (os.path.isfile(localFile)):
+            print("Removing", localFile)
+            os.remove(localFile)
+
 
 class Builder:
 
@@ -135,8 +141,10 @@ class Builder:
         self.opts['web_asset'] = webDir.join("assets")
         self.opts['web_content'] = webDir.join("content")
 
-        if (sys.platform == "win32"): platname = "windows"
-        else: platname = 'linux'
+        if (sys.platform == "win32"):
+            platname = "windows"
+        else:
+            platname = 'linux'
 
         self.opts['platform'] = platname
 
@@ -170,8 +178,9 @@ class Builder:
     def pubDir(self): return self.opts['publish']
 
     def dumpOpts(self):
+        print("Current Options")
         for k in self.opts.keys():
-            print(k, " => ", self.opts[k])
+            print(k.ljust(20), "=>", self.opts[k])
 
     def goto(self, path):
         try:
@@ -179,7 +188,6 @@ class Builder:
         except:
             msg = "Failed to change working directory to %s" % path.path
             raise Exception(msg)
-
 
     def configString(self):
         config = "Debug"
@@ -194,15 +202,11 @@ class Builder:
         return config
 
     def run(self, cmd):
-        print("".ljust(80, '='))
-        print("Calling => ", cmd)
+        print("Calling".ljust(20), "=>", cmd)
         subprocess.run(cmd, shell=True, env=os.environ)
-        print("".ljust(2, '\n'))
 
     def copyBindings(self):
-
         if (sys.platform == 'win32'):
-
             buildDir = self.webDir().create("build/windows/runner/%s" %
                                             self.configString())
             shutil.copyfile(self.bindingFile(),
@@ -229,7 +233,7 @@ class Builder:
         return False
 
     def buildCpp(self):
-        print("Building C++", self.argv)
+        print("Building C++".ljust(20), self.argv)
 
         self.goto(self.cppDir())
 
@@ -242,9 +246,6 @@ class Builder:
         self.run("cmake --build %s --config %s" %
                  (self.cppDir(), self.configString()))
 
-
-
-
         self.buildOutput().copyTo(
             "Computer.exe",
             self.home()
@@ -254,9 +255,8 @@ class Builder:
             self.home()
         )
 
-
     def buildEm(self):
-        print("Building Emscripten", self.argv)
+        print("Building Emscripten".ljust(20), self.argv)
 
         self.goto(self.emDir())
 
@@ -273,9 +273,15 @@ class Builder:
                  (self.emDir(), self.configString()))
 
     def buildClean(self, reCreate=False):
+        print("Cleaning...".ljust(20), self.argv)
 
         self.cppDir().remove()
         self.emDir().remove()
+
+        self.webDir().removeFile("bindings.dll")
+        self.webAssetDir().removeFile("bindings.js")
+        self.webAssetDir().removeFile("bindings.wasm")
+        self.webTestDir().removeFile("bindings.dll")
 
         self.goto(self.webDir())
         self.run("flutter clean")
@@ -284,9 +290,8 @@ class Builder:
             self.cppDir().recreate()
             self.emDir().recreate()
 
-
     def buildFl(self):
-        print("Building Flutter Source", self.argv)
+        print("Building Flutter Source".ljust(20), self.argv)
 
         if (self.findOpt("web")):
             self.buildEm()
@@ -311,15 +316,16 @@ class Builder:
 
     def buildFlPub(self):
         self.release = True
-        #self.buildClean(reCreate=True)
+        # self.buildClean(reCreate=True)
         self.buildEm()
         self.copyEmBindings()
         self.goto(self.webDir())
-        self.run("flutter build web --release --suppress-analytics")
+        self.run("flutter pub get")
+        self.run("flutter build web --release")
 
         flBuild = self.webDir().subdir("build/web")
+        self.pubDir().remove()
         flBuild.copyTree(self.pubDir())
-
 
     def logUsage(self):
         print("build <kind> <options>")
@@ -328,8 +334,8 @@ class Builder:
         print("")
         print("cpp    - Builds the c++ project")
         print("em     - Compile the project with emscripten")
-        print("fpub   - Publish the application")
-        print("fls    - Build the flutter application")
+        print("flp    - Publish the application")
+        print("fl     - Build the flutter application")
         print("clean  - Remove the build directories for all the projects")
         print("")
         print("Where options is one or more of the following switches")
@@ -351,7 +357,7 @@ def main(argc, argv):
         build.buildEm()
     elif (build.findOpt("fl")):
         build.buildFl()
-    elif (build.findOpt("fpub")):
+    elif (build.findOpt("flp")):
         build.buildFlPub()
     elif (build.findOpt("clean")):
         build.buildClean()
