@@ -105,8 +105,10 @@ namespace Hack
             MapColor(__gForeground, false),
             MapColor(__gBackground, true),
         };
-
-        printf("\033[%dm\033[%dm", color[0], color[1]);
+        if (__gBackground != CS_BLACK)
+            printf("\033[%dm\033[%dm", color[0], color[1]);
+        else
+            printf("\033[%dm", color[0]);
 #endif
     }
 

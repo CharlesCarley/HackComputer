@@ -34,15 +34,14 @@ enum Options
     OP_MAX,
 };
 
-constexpr CommandLine::Switch Switches[OP_MAX] = {
-    {
-        OP_OUTPUT,
-        'o',
-        "output",
-        "Specify an output file",
-        true,
-        1,
-    }
+constexpr CommandLine::Switch Switches[OP_MAX] = {{
+    OP_OUTPUT,
+    'o',
+    "output",
+    "Specify an output file",
+    true,
+    1,
+}
 
 };
 
@@ -65,7 +64,11 @@ public:
 
         StringArray& args = p.getArgList();
         if (args.empty())
-            throw Exception("Missing input file");
+        {
+            String usage;
+            p.usage(usage);
+            throw Exception(usage, "Missing input file");
+        }
 
         _input = args[0];
         return true;

@@ -106,6 +106,7 @@ class Path:
 
     def copyTo(self, file, toPath):
         shutil.copyfile(self.file(file), toPath.file(file))
+        shutil.copymode(self.file(file), toPath.file(file))
 
     def copyTree(self, toPath):
         shutil.copytree(self.path, toPath.path, dirs_exist_ok=True)
@@ -246,14 +247,25 @@ class Builder:
         self.run("cmake --build %s --config %s" %
                  (self.cppDir(), self.configString()))
 
-        self.buildOutput().copyTo(
-            "Computer.exe",
-            self.home()
-        )
-        self.buildOutput().copyTo(
-            "Asm2Mc.exe",
-            self.home()
-        )
+        if sys.platform == 'win32':
+            self.buildOutput().copyTo(
+                "Computer.exe",
+                self.home()
+            )
+            self.buildOutput().copyTo(
+                "Asm2Mc.exe",
+                self.home()
+            )
+        else:
+            self.buildOutput().copyTo(
+                "Computer",
+                self.home()
+            )
+            self.buildOutput().copyTo(
+                "Asm2Mc",
+                self.home()
+            )
+
 
     def buildEm(self):
         print("Building Emscripten".ljust(20), self.argv)
