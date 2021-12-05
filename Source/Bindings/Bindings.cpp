@@ -333,7 +333,7 @@ EXPORT_API int ComputerGetScreenBufferSize(const Handle handle)
 {
     const ComputerWrapper* wrapper = ComputerWrapper::cast(handle);
     if (wrapper)
-        return wrapper->getScreenBufferSize();
+        return ComputerWrapper::getScreenBufferSize();
     return 0;
 }
 
@@ -426,7 +426,7 @@ EXPORT_API void RamZeroMemory(const Handle handle)
         wrapper->zeroMemory();
 }
 
-EXPORT_API int RomGetValue(const Handle handle, int index)
+EXPORT_API int RomGetValue(const Handle handle, const int index)
 {
     const RomWrapper* wrapper = RomWrapper::cast(handle);
     if (wrapper)

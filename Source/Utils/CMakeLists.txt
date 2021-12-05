@@ -62,9 +62,7 @@ set(Utils_HDR
     Char.h
     Common.h
     Console.h
-    MemoryStream.h
     String.h
-    Traits.h
 
     Exceptions/Exception.h
     Exceptions/IndexException.h
@@ -74,7 +72,6 @@ set(Utils_HDR
 set(Utils_SRC
     Char.cpp
     Console.cpp
-    MemoryStream.cpp
     String.cpp
 )
 

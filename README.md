@@ -34,27 +34,11 @@ The [computer](Source/Computer/) ties together the ROM, RAM and CPU chips and im
 
 If SDL is enabled, the default runtime will open a window and map the screen region of memory to the SDL window. Otherwise if SDL is disabled, the default and only runtime is the command line debugger. ![command line debugger](Content/Debugger.png)
 
-## Flutter
-
-The [web library](Web/) Is a flutter version of the command line debugger. It binds the computer library to dart with `dart:ffi` and [`web_ffi`](https://pub.dev/packages/web_ffi).
-
-It targets the desktop and web flutter platforms, and is still a _work in progress_.
-
-It allows directly editing and recompiling the source as well as mapping the screen to a flutter widget.
-
-![command line debugger](Content/Debugger1.png)
 
 ## Building
 
 It uses CMake to generate its make files.
 
-The [Build](Build) directory contains a utility python script that ties together different build types
-
-- cpp - Standard CMake/C++
-- em - Command line EMSDK tools
-- fl - flutter build
-
-for more info run the help command in the build directory:
 
 ```sh
 build help
