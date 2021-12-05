@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 
 Module? _module;
 
-const String _path = "assets";
+const String _path = "";
 
 Future<void> initFfi() async {
   // Only initialize if there is no module yet

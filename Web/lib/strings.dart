@@ -48,7 +48,7 @@ class Strings {
 
 class Samples {
   static const String fillScreen = """
-// Fills the screen buffer with with black pixels then with white pixels
+// Fills the screen buffer with black pixels then with white pixels
 (Start)
 @R0      M=0
 @8192    D=A
