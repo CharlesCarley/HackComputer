@@ -33,6 +33,7 @@ flutter:
       fonts:
         - asset: content/Mono.ttf
 
-  assets:
-      - assets/bindings.js
-      - assets/bindings.wasm
+  assets: 
+    - assets/libbindings.so
+    - assets/bindings.js
+    - assets/bindings.wasm

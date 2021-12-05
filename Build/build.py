@@ -105,6 +105,8 @@ class Path:
             shutil.rmtree(self.path, ignore_errors=True)
 
     def copyTo(self, file, toPath):
+        print("Copy", self.file(file), "=> ", toPath.file(file))
+
         shutil.copyfile(self.file(file), toPath.file(file))
         shutil.copymode(self.file(file), toPath.file(file))
 
@@ -179,9 +181,11 @@ class Builder:
     def pubDir(self): return self.opts['publish']
 
     def dumpOpts(self):
-        print("Current Options")
+        print("")
+        print("Build Paths")
         for k in self.opts.keys():
             print(k.ljust(20), "=>", self.opts[k])
+        print("")
 
     def goto(self, path):
         try:
@@ -203,7 +207,7 @@ class Builder:
         return config
 
     def run(self, cmd):
-        print("Calling".ljust(20), "=>", cmd)
+        print("Calling =>", cmd)
         subprocess.run(cmd, shell=True, env=os.environ)
 
     def copyBindings(self):
@@ -215,6 +219,10 @@ class Builder:
 
             shutil.copyfile(self.bindingFile(),
                             self.webDir().file("bindings.dll"))
+        else:
+            buildDir = self.webAssetDir()
+            shutil.copyfile(self.bindingFile(),
+                            buildDir.file("libbindings.so"))
 
     def copyEmBindings(self):
 
@@ -234,7 +242,7 @@ class Builder:
         return False
 
     def buildCpp(self):
-        print("Building C++".ljust(20), self.argv)
+        print("Building C++", self.argv)
 
         self.goto(self.cppDir())
 
@@ -247,34 +255,30 @@ class Builder:
         self.run("cmake --build %s --config %s" %
                  (self.cppDir(), self.configString()))
 
+        ext = ""
         if sys.platform == 'win32':
-            self.buildOutput().copyTo(
-                "Computer.exe",
-                self.home()
-            )
-            self.buildOutput().copyTo(
-                "Asm2Mc.exe",
-                self.home()
-            )
-        else:
-            self.buildOutput().copyTo(
-                "Computer",
-                self.home()
-            )
-            self.buildOutput().copyTo(
-                "Asm2Mc",
-                self.home()
-            )
+            ext = ".exe"
 
+        self.buildOutput().copyTo(
+            "Computer"+ext,
+            self.home()
+        )
+
+        self.buildOutput().copyTo(
+            "Asm2Mc"+ext,
+            self.home()
+        )
 
     def buildEm(self):
         print("Building Emscripten".ljust(20), self.argv)
 
         self.goto(self.emDir())
 
-        execStr = "emcmake.bat cmake "
         if (sys.platform == 'win32'):
+            execStr = "emcmake.bat cmake "
             execStr += '-G "NMake Makefiles" '
+        else:
+            execStr = "emcmake cmake "
 
         execStr += self.sourceDir().path
         execStr += " -DHack_IMPLEMENT_BLACK_BOX=%s" % self.findOpt(
@@ -333,7 +337,7 @@ class Builder:
         self.copyEmBindings()
         self.goto(self.webDir())
         self.run("flutter pub get")
-        self.run("flutter build web --release --base-href /HackComputer/")
+        self.run("flutter build web --release --base-href /")
 
         flBuild = self.webDir().subdir("build/web")
         self.pubDir().remove()

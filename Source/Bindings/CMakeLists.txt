@@ -96,9 +96,9 @@ endif()
 
 target_link_libraries(
     ${TargetName} 
-    ${Utils_LIBRARY} 
     Assembler 
     Chips
+    ${Utils_LIBRARY} 
     )
 
 if (BuildType STREQUAL "CPP")
