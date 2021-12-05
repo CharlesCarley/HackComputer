@@ -38,7 +38,7 @@ If SDL is enabled, the default runtime will open a window and map the screen reg
 
 The [web library](Web/) Is a flutter version of the command line debugger. It binds the computer library to dart with `dart:ffi` and [`web_ffi`](https://pub.dev/packages/web_ffi).
 
-It targets the window and web flutter platforms, and is still a _work in progress_.
+It targets the desktop and web flutter platforms, and is still a _work in progress_.
 
 It allows directly editing and recompiling the source as well as mapping the screen to a flutter widget.
 
