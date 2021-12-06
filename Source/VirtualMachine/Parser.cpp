@@ -19,43 +19,37 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#pragma once
-#include <exception>
-#include <stdexcept>
-#include <utility>
-#include "Utils/String.h"
+#include "VirtualMachine/Parser.h"
+#include <fstream>
 
-namespace Hack
+
+#include "Utils/Exceptions/Exception.h"
+
+namespace Hack::VirtualMachine
 {
-    class Exception : public std::exception
+    Parser::Parser()
     {
-    private:
-        String _string;
+    }
 
-    public:
-        explicit Exception(const char* what) : std::exception(), _string(what)
-        {
-        }
+    Parser::~Parser()
+    {
+    }
 
-        explicit Exception(String what) :
-            std::exception(), _string(std::move(what))
-        {
-        }
+    void Parser::parse(const String& file)
+    {
+        std::ifstream is(file);
+        if (!is.is_open())
+            throw Exception("Failed to open the input file '", file, "'");
 
-        template <typename... Args>
-        explicit Exception(const String& what, Args&&... args) :
-            std::exception()
-        {
-            OutputStringStream oss;
-            oss << what;
-            ((oss << std::forward<Args>(args)), ...);
-            _string = oss.str();
-        }
+        parse(is);
+    }
 
-        const char* what() const noexcept override
-        {
-            return _string.c_str();
-        }
-    };
+    void Parser::parse(IStream& is)
+    {
+    }
 
-}  // namespace Hack
+    void Parser::emit(OStream& dest)
+    {
+    }
+
+}  // namespace Hack::VirtualMachine

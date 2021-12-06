@@ -426,7 +426,7 @@ namespace Hack::Assembler
     {
         std::ifstream is(file);
         if (!is.is_open())
-            throw Exception("Failed to open the input file");
+            throw Exception("Failed to open the input file '", file, "'");
 
         parse(is);
     }

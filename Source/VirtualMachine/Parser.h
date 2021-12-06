@@ -20,42 +20,23 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#include <exception>
-#include <stdexcept>
-#include <utility>
 #include "Utils/String.h"
 
-namespace Hack
+namespace Hack::VirtualMachine
 {
-    class Exception : public std::exception
+    class Parser
     {
-    private:
-        String _string;
-
     public:
-        explicit Exception(const char* what) : std::exception(), _string(what)
-        {
-        }
+        Parser();
+        ~Parser();
 
-        explicit Exception(String what) :
-            std::exception(), _string(std::move(what))
-        {
-        }
+        
+        void parse(const String& file);
 
-        template <typename... Args>
-        explicit Exception(const String& what, Args&&... args) :
-            std::exception()
-        {
-            OutputStringStream oss;
-            oss << what;
-            ((oss << std::forward<Args>(args)), ...);
-            _string = oss.str();
-        }
+        void parse(IStream& is);
 
-        const char* what() const noexcept override
-        {
-            return _string.c_str();
-        }
+        void emit(OStream &dest);
     };
 
-}  // namespace Hack
+
+}  // namespace Hack::VirtualMachine

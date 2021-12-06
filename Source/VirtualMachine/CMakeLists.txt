@@ -19,18 +19,47 @@
 # ------------------------------------------------------------------------------
 set(TargetName VirtualMachine)
 
-set(Target_HDR 
+set(Target_HDR
+   Token.h
+   Scanner.h
+   Parser.h
+   VM.grm
 )
 
 set(Target_SRC 
-    Stub.cpp
+   Token.cpp
+   Scanner.cpp
+   Parser.cpp
 )
 
-include_directories(${Utils_INCLUDE} ${Hack_SOURCE_DIR}/Source)
-add_library(${TargetName} ${Target_SRC} ${Target_HDR})
-target_link_libraries(${TargetName} ${Utils_LIBRARY})
+include_directories(${Hack_SOURCE_DIR}/Source)
+add_library(${TargetName} 
+    ${Target_SRC} 
+    ${Target_HDR}
+)
+
 
 if (TargetFolders)
     set_target_properties(${TargetName} PROPERTIES FOLDER "${TargetGroup}")
+endif()
+
+
+
+#------------------------------------------------------
+
+unset(Target_HDR)
+unset(Target_SRC)
+set(Target_SRC Main.cpp)
+
+include_directories(${Hack_SOURCE_DIR}/Source)
+
+add_executable(VMTranslator 
+    ${Target_SRC} 
+)
+
+target_link_libraries(VMTranslator VirtualMachine Utils)
+
+if (TargetFolders)
+    set_target_properties(VMTranslator PROPERTIES FOLDER "${TargetGroup}")
 endif()
 
