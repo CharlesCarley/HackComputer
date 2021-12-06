@@ -21,8 +21,6 @@
 */
 #include "VirtualMachine/Parser.h"
 #include <fstream>
-
-
 #include "Utils/Exceptions/Exception.h"
 
 namespace Hack::VirtualMachine
@@ -35,21 +33,29 @@ namespace Hack::VirtualMachine
     {
     }
 
-    void Parser::parse(const String& file)
-    {
-        std::ifstream is(file);
-        if (!is.is_open())
-            throw Exception("Failed to open the input file '", file, "'");
-
-        parse(is);
-    }
-
     void Parser::parse(IStream& is)
     {
     }
 
     void Parser::emit(OStream& dest)
     {
+    }
+
+    void Parser::parse(const String& file)
+    {
+        std::ifstream fs(file);
+        if (!fs.is_open())
+            throw Exception("Failed to open the input file '", file, "'");
+        parse(fs);
+    }
+
+    void Parser::emit(const String& file)
+    {
+        std::ofstream fs(file);
+        if (!fs.is_open())
+            throw Exception("Failed to open the output file '", file, "'");
+
+        emit(fs);
     }
 
 }  // namespace Hack::VirtualMachine

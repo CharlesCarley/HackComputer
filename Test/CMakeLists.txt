@@ -25,6 +25,8 @@ set_group(TestTarget_Data
     Assembler/ASM:Assembler/*.asm
     Assembler/Cmp:Assembler/*.cmp
     ROM/ASM:Rom/*.asm
+    VirtualMachine/Cmp:VirtualMachine/*.cmp
+    VM/VM:VM/*.vm
     Inline:*.inl
 )
 
@@ -32,6 +34,7 @@ set(TestTarget_SOURCE
     Test1.cpp
     Test2.cpp
     Test3.cpp
+    Test4.cpp
     ${TestTarget_Data}
 )
 
@@ -58,6 +61,7 @@ target_link_libraries(${TestTargetName}
     ${GTEST_LIBRARY} 
     Chips 
     Assembler
+    VirtualMachine
     ${Utils_LIBRARY})
 
 if (TargetFolders)

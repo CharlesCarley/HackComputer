@@ -1,6 +1,6 @@
 # Hack Computer
 
-This repository is my implementation of the Hack computer in C++/Dart from the nand2Tetris [course #1](https://www.coursera.org/learn/build-a-computer).
+This repository is my implementation of the Hack computer in C++ from the nand2Tetris [course #1](https://www.coursera.org/learn/build-a-computer).
 
 ## Utils
 
@@ -38,11 +38,6 @@ If SDL is enabled, the default runtime will open a window and map the screen reg
 ## Building
 
 It uses CMake to generate its make files.
-
-
-```sh
-build help
-```
 
 ### Defines
 
