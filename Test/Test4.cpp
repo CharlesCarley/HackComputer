@@ -21,9 +21,9 @@
 */
 #include <cstdio>
 #include <fstream>
-#include "TestDirectory.h"
 #include "Assembler/Parser.h"
 #include "Chips/Computer.h"
+#include "TestDirectory.h"
 #include "VirtualMachine/Parser.h"
 #include "VirtualMachine/Scanner.h"
 #include "gtest/gtest.h"
@@ -34,7 +34,6 @@ void VmCompareSrc(const Hack::String& f0, const Hack::String& f1)
     std::ifstream if1(f1);
 
     Hack::String a, b;
-
     while (if1 >> b)
     {
         if0 >> a;
@@ -45,25 +44,30 @@ void VmCompareSrc(const Hack::String& f0, const Hack::String& f1)
     }
 }
 
-GTEST_TEST(VirtualMachine, Parser1)
+void VirtualMachineTestStack(const Hack::String& baseName,
+                             uint16_t            srcB,
+                             uint16_t            exp,
+                             uint16_t            destRegValue,
+                             uint16_t            destRegIndex)
 {
-    Hack::VirtualMachine::Parser psr;
+    using namespace Hack;
+    const String fNameSrc = GetTestFilePath("VM/" + baseName + ".vm");
+    const String fNameCmp = GetTestFilePath("VM/" + baseName + ".cmp");
+    const String fNameOut = GetOutFilePath("" + baseName + ".ans");
 
-    psr.parse(GetTestFilePath("VM/Test01.vm"));
-    psr.write(GetOutFilePath("Test01.ans"));
+    VirtualMachine::Parser psr;
 
-    VmCompareSrc(GetTestFilePath("VM/Test01.cmp"),
-                 GetOutFilePath("Test01.ans"));
+    psr.parse(fNameSrc);
+    psr.write(fNameOut);
 
-    Hack::Chips::Computer comp;
+    VmCompareSrc(fNameCmp, fNameOut);
 
+    Assembler::Parser loader;
+    loader.parse(fNameOut);
 
-    // from the output make sure that RAM[RAM[@LCL]] = (2 + 2) = 4
-    Hack::Assembler::Parser loader;
-    loader.parse(GetOutFilePath("Test01.ans"));
+    const Assembler::Parser::Instructions& inst = loader.getInstructions();
 
-    const Hack::Assembler::Parser::Instructions& inst = loader.getInstructions();
-
+    Chips::Computer comp;
     comp.load(inst.data(), inst.size());
 
     comp.reset();
@@ -76,12 +80,42 @@ GTEST_TEST(VirtualMachine, Parser1)
         comp.update(false);
     }
 
-    Hack::Chips::Memory *mem= comp.getRam();
+    Chips::Memory* mem = comp.getRam();
 
+    // assert the ram
 
-    uint16_t code = mem->get(Hack::VirtualMachine::LCL);
-    EXPECT_EQ(code, Hack::VirtualMachine::Local);
+    uint16_t code = mem->get(VirtualMachine::STP);
+    EXPECT_EQ(code, VirtualMachine::Stack);
+
+    uint16_t nc = code + 1;
+    code = mem->get(code);
+    EXPECT_EQ(code, exp);  // srcA should be overridden
+
+    code = mem->get(nc);
+    EXPECT_EQ(code, srcB);
+
+    // assert the pop destination
+    code = mem->get(destRegIndex);
+    EXPECT_EQ(code, destRegValue);
 
     code = mem->get(code);
-    EXPECT_EQ(code, 4);
+    EXPECT_EQ(code, exp);
+}
+
+GTEST_TEST(VirtualMachine, AddStackLocal)
+{
+    VirtualMachineTestStack("Test01",
+                            2,
+                            2+2,
+                            Hack::VirtualMachine::Local,
+                            Hack::VirtualMachine::LCL);
+}
+
+GTEST_TEST(VirtualMachine, SubStackLocal)
+{
+    VirtualMachineTestStack("Test02",
+                            2,
+                            (uint16_t)(0-2),
+                            Hack::VirtualMachine::Local,
+                            Hack::VirtualMachine::LCL);
 }

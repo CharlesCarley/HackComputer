@@ -174,7 +174,6 @@ namespace Hack::VirtualMachine
         w.write(R,            "D=M");
         w.write(R,            "A=A-1");
         w.write(R,            "M=M-D");
-        w.write();
         // clang-format on
     }
 
