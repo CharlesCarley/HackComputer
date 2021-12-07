@@ -51,7 +51,7 @@ include_directories(.
     ${GTEST_INCLUDE} 
     ${CMAKE_CURRENT_BINARY_DIR} 
     ${Hack_SOURCE_DIR}/Source
-    ${Utils_INCLUDE})
+)
 
 add_executable(
     ${TestTargetName}
@@ -63,7 +63,8 @@ target_link_libraries(${TestTargetName}
     Chips 
     Assembler
     VirtualMachine
-    ${Utils_LIBRARY})
+    Utils
+ )
 
 if (TargetFolders)
     set_target_properties(${TestTargetName} PROPERTIES FOLDER "${TargetGroup}")

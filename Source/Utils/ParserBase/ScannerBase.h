@@ -30,7 +30,7 @@ namespace Hack::ParserBase
     using StringTable = IndexCache<String>;
     using IntTable    = IndexCache<int32_t>;
 
-    class Scanner
+    class ScannerBase
     {
     protected:
         IStream*    _stream;
@@ -48,11 +48,11 @@ namespace Hack::ParserBase
         }
 
     public:
-        Scanner() : _stream(nullptr)
+        ScannerBase() : _stream(nullptr)
         {
         }
 
-        virtual ~Scanner() = default;
+        virtual ~ScannerBase() = default;
 
         virtual void attach(IStream* stream)
         {

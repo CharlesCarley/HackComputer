@@ -28,7 +28,7 @@
 namespace Hack::Assembler
 {
 
-    class Scanner final : public ParserBase::Scanner
+    class Scanner final : public ParserBase::ScannerBase
     {
     private:
 

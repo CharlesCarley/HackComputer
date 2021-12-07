@@ -24,7 +24,6 @@ set(Target_SRC
 )
 
 include_directories(
-    ${Utils_INCLUDE} 
     ${Hack_SOURCE_DIR}/Source
     )
 
@@ -98,7 +97,7 @@ target_link_libraries(
     ${TargetName} 
     Assembler 
     Chips
-    ${Utils_LIBRARY} 
+    Utils 
     )
 
 if (BuildType STREQUAL "CPP")

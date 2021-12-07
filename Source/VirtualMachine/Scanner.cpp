@@ -101,8 +101,6 @@ namespace Hack::VirtualMachine
         {"lt", TOK_LT},
     };
 
-
-
     void Scanner::scanLetter(Token& tok)
     {
         int ch = _stream->get();
@@ -118,14 +116,13 @@ namespace Hack::VirtualMachine
 
             _stream->putback((char)ch);
 
-            for (const KeywordTable& res: Reserved)
+            for (const KeywordTable& res : Reserved)
             {
                 if (cmp == res.str)
                 {
                     tok.setType(res.tok);
                     return;
                 }
-                
             }
 
             // if it's not a reserved word
@@ -148,7 +145,6 @@ namespace Hack::VirtualMachine
 
         tok.setType(TOK_INTEGER);
         tok.setIndex(saveString(v));
-
     }
 
     void Scanner::scan(Token& tok)

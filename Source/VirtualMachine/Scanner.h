@@ -25,7 +25,7 @@
 
 namespace Hack::VirtualMachine
 {
-    class Scanner final : public ParserBase::Scanner
+    class Scanner final : public ParserBase::ScannerBase
     {
     private:
         void scanLineComment() const;

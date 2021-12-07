@@ -23,23 +23,23 @@
 
 namespace Hack::ParserBase
 {
-    const String& Scanner::getString(const size_t& i) const
+    const String& ScannerBase::getString(const size_t& i) const
     {
         return _stringTable.get(i);
     }
 
-    void Scanner::getString(String& dest, const size_t& i) const
+    void ScannerBase::getString(String& dest, const size_t& i) const
     {
         _stringTable.get(dest, i);
     }
 
-    void Scanner::getInt(int32_t& dest, const size_t& i) const
+    void ScannerBase::getInt(int32_t& dest, const size_t& i) const
     {
         _intTable.get(dest, i);
     }
 
 
-    int32_t Scanner::getInt(const size_t& i) const
+    int32_t ScannerBase::getInt(const size_t& i) const
     {
         return _intTable.get(i);
     }

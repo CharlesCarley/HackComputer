@@ -111,7 +111,7 @@ set(Target_SRC
     ${Target_HDR}
 )
 
-include_directories(${Utils_INCLUDE} ${Hack_SOURCE_DIR}/Source)
+include_directories(${Hack_SOURCE_DIR}/Source)
 add_library(${TargetName} ${Target_SRC})
 
 if (TargetFolders)

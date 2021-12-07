@@ -26,7 +26,7 @@
 
 namespace Hack::ParserBase
 {
-    class Scanner;
+    class ScannerBase;
 
     class ParserBase
     {
@@ -36,7 +36,7 @@ namespace Hack::ParserBase
     protected:
         Tokens   _tokens;
         int32_t  _cursor;
-        Scanner* _scanner;
+        ScannerBase* _scanner;
 
         Token getToken(int32_t offs);
 

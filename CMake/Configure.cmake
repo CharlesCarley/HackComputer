@@ -62,20 +62,6 @@ set(GTEST_LIBRARY gtest_main)
 
 set(Extern_DIR ${Hack_SOURCE_DIR}/Extern)
 
-
-DefineExternalTarget(
-	Utils 
-	Modules 
-	${Hack_SOURCE_DIR}/Utils
-	${Hack_SOURCE_DIR}/Utils
-)
-
-DefineExternalTarget(FreeImage     
-	Modules 
-	${Hack_SOURCE_DIR}/FreeImage/Source
-)
-
-
 if (Hack_USE_SDL)
 
 	if (NOT USING_EMSCRIPTEN)

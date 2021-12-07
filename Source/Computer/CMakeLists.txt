@@ -42,7 +42,6 @@ set(TargetName_SRC
 )
 
 include_directories(    
-    ${Utils_INCLUDE}
     ..
 )
 
@@ -59,7 +58,7 @@ add_executable(${TargetName}
 )
 
 target_link_libraries(${TargetName} 
-    ${Utils_LIBRARY} 
+    Utils 
     Chips 
     Assembler
     VirtualMachine

@@ -36,8 +36,9 @@ set(Target_SRC
     Scanner.cpp
 )
 
-include_directories(${Utils_INCLUDE} ${Hack_SOURCE_DIR}/Source)
+include_directories(${Hack_SOURCE_DIR}/Source)
 add_library(${TargetName} ${Target_SRC} ${Target_HDR})
+target_link_libraries(${TargetName} Utils)
 
 if (TargetFolders)
     set_target_properties(${TargetName} PROPERTIES FOLDER "${TargetGroup}")
@@ -51,10 +52,9 @@ if (BuildType STREQUAL "CPP")
     set(TargetName Asm2Mc)
 
 
-    include_directories(${Utils_INCLUDE} ${Hack_SOURCE_DIR}/Source)
+    include_directories(${Hack_SOURCE_DIR}/Source)
     add_executable(${TargetName} Main.cpp)
-    target_link_libraries(${TargetName} ${Utils_LIBRARY} Assembler)
-
+    target_link_libraries(${TargetName} Utils Assembler)
 
     copy_target(${TargetName} ${Hack_BINARY_DIR}/build_files) 
 
