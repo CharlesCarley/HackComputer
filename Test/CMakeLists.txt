@@ -25,7 +25,8 @@ set_group(TestTarget_Data
     Assembler/ASM:Assembler/*.asm
     Assembler/Cmp:Assembler/*.cmp
     ROM/ASM:Rom/*.asm
-    VirtualMachine/Cmp:VirtualMachine/*.cmp
+    VM/Cmp:VM/*.cmp
+    VM/ASM:VM/*.asM
     VM/VM:VM/*.vm
     Inline:*.inl
 )

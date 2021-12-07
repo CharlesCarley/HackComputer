@@ -120,10 +120,19 @@ namespace Hack::Assembler
         }
 
         if (tok.getType() == TOK_INTEGER)
-            dest = Char::toUint16(scanner().getString(tok.getIndex()));
+        {
+            String tmp;
+            _scanner->getString(tmp, tok.getIndex());
+            dest = Char::toUint16(tmp);
+        }
         if (tok.getType() == TOK_LABEL)
         {
-            const String label = scanner().getString(tok.getIndex());
+            String label;
+            _scanner->getString(label, tok.getIndex());
+
+            if (label.empty())
+                throw Exception("Failed to extract a label at index ",
+                                tok.getIndex());
 
             const Labels::iterator it = _labels.find(label);
             if (it == _labels.end())
@@ -372,7 +381,8 @@ namespace Hack::Assembler
         const Token& t1 = getToken(1);
         advanceCursor(3);
 
-        const String label = scanner().getString(t1.getIndex());
+        String label;
+        _scanner->getString(label, t1.getIndex());
 
         const Labels::iterator it = _labels.find(label);
 
@@ -396,13 +406,6 @@ namespace Hack::Assembler
         }
         else
             expressionC();
-    }
-
-    const Scanner& Parser::scanner() const
-    {
-        if (!_scanner)
-            throw Exception("Invalid scanner");
-        return *(Scanner*)_scanner;
     }
 
     void Parser::parseImpl(IStream& is)

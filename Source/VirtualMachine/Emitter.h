@@ -19,29 +19,52 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
+#pragma once
 #include "Utils/ParserBase/ScannerBase.h"
+#include "VirtualMachine/Token.h"
 
-namespace Hack::ParserBase
+namespace Hack::VirtualMachine
 {
-    const String& Scanner::getString(const size_t& i) const
+    class CodeStream;
+
+    class Emitter
     {
-        return _stringTable.get(i);
-    }
+    private:
+        OutputStringStream _stream;
 
-    void Scanner::getString(String& dest, const size_t& i) const
-    {
-        _stringTable.get(dest, i);
-    }
+        static void popStackInto(const CodeStream& w,
+                                 const String&     idx,
+                                 const int32_t&    dest,
+                                 const int32_t&    swap);
 
-    void Scanner::getInt(int32_t& dest, const size_t& i) const
-    {
-        _intTable.get(dest, i);
-    }
+    public:
+        Emitter();
 
+        void clear();
 
-    int32_t Scanner::getInt(const size_t& i) const
-    {
-        return _intTable.get(i);
-    }
+        String toString() const;
 
-}  // namespace Hack::ParserBase
+        void setRam(int index, int value);
+
+        void pushConstant(const String& value);
+
+        void popLocal(const String& idx);
+
+        void popThis(const String& idx);
+
+        void popThat(const String& idx);
+
+        void popTemp(const String& idx);
+
+        void popArgument(const String& idx);
+
+        void writeOr();
+
+        void writeAnd();
+
+        void writeSub();
+
+        void writeAdd();
+    };
+
+}  // namespace Hack::VirtualMachine

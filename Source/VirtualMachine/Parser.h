@@ -20,7 +20,7 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#include "VirtualMachine/CodeWriter.h"
+#include "VirtualMachine/Emitter.h"
 #include "Utils/ParserBase/ParserBase.h"
 #include "Utils/String.h"
 
@@ -31,7 +31,7 @@ namespace Hack::VirtualMachine
     class Parser final : public ParserBase::ParserBase
     {
     private:
-        CodeWriter _writer;
+        Emitter _emitter;
         
 
     private:
@@ -45,6 +45,14 @@ namespace Hack::VirtualMachine
         void pushExpression();
 
         void popExpression();
+
+        void addExpression();
+
+        void subExpression();
+
+        void andExpression();
+
+        void orExpression();
 
     public:
         Parser();

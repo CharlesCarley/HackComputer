@@ -21,6 +21,7 @@
 */
 #include "Computer/Application.h"
 #include "Assembler/Parser.h"
+#include "VirtualMachine/Parser.h"
 #include "Computer/CommandRuntime.h"
 #ifdef USE_SDL
 #include "Computer/Runtime.h"
@@ -92,12 +93,31 @@ namespace Hack::Computer
         // caught here, so that if there is an error it will
         // be caught in the main catch statement and reported.
 
-        Assembler::Parser psr;
-        psr.parse(_input);
+        if (_input.find(".vm") != String::npos)
+        {
+            VirtualMachine::Parser vmp;
+            vmp.parse(_input);
 
-        const Instructions& instructions = psr.getInstructions();
+            StringStream ss;
+            vmp.write(ss);
 
-        _computer->load(instructions.data(), instructions.size());
+            Assembler::Parser psr;
+            psr.parse(ss);
+
+            const Instructions& instructions = psr.getInstructions();
+
+            _computer->load(instructions.data(), instructions.size());
+
+        }
+        else
+        {
+            Assembler::Parser psr;
+            psr.parse(_input);
+
+            const Instructions& instructions = psr.getInstructions();
+
+            _computer->load(instructions.data(), instructions.size());
+        }
     }
 
     int Application::go() const

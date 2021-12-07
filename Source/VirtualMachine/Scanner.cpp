@@ -179,6 +179,11 @@ namespace Hack::VirtualMachine
                 _stream->putback((char)ch);
                 scanLetter(tok);
                 return;
+            case '\r':
+            case '\n':
+                if (ch == '\r' && _stream->peek() == '\n')
+                    _stream->get();
+                break;
             case ' ':
             case '\t':
                 scanWhiteSpace();

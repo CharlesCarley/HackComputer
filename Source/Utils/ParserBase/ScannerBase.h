@@ -22,20 +22,30 @@
 #pragma once
 #include <istream>
 #include <unordered_map>
+#include "Utils/IndexCache.h"
 #include "Utils/ParserBase/TokenBase.h"
 
 namespace Hack::ParserBase
 {
-    using StringTable = std::unordered_map<std::string, size_t>;
+    using StringTable = IndexCache<String>;
+    using IntTable    = IndexCache<int32_t>;
 
     class Scanner
     {
     protected:
         IStream*    _stream;
         StringTable _stringTable;
-        StringArray _strings;
+        IntTable    _intTable;
 
-        size_t saveString(const String& str);
+        size_t saveString(const String& str)
+        {
+            return _stringTable.save(str);
+        }
+
+        size_t saveInt(const int32_t& value)
+        {
+            return _intTable.save(value);
+        }
 
     public:
         Scanner() : _stream(nullptr)
@@ -51,7 +61,15 @@ namespace Hack::ParserBase
 
         virtual void scan(Token& tok) = 0;
 
-        String getString(const size_t& i) const;
+
+        const String& getString(const size_t& i) const;
+
+        void getString(String& dest, const size_t& i) const;
+
+        void getInt(int32_t& dest, const size_t& i) const;
+
+        int32_t getInt(const size_t& i) const;
+
     };
 
 }  // namespace Hack::ParserBase

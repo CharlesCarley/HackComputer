@@ -42,42 +42,33 @@ namespace Hack::VirtualMachine
         const int8_t t0 = getToken(1).getType();
         const int8_t t1 = getToken(2).getType();
 
+        if (t1 != TOK_INTEGER)
+        {
+            throw Exception(
+                "Expected an integer to be the third argument to the push "
+                "expression");
+        }
+
+        const size_t idx = getToken(2).getIndex();
+        
         switch (t0)
         {
         case TOK_ARGUMENT:
-            break;
         case TOK_LOCAL:
-            break;
+        case TOK_THIS:
+        case TOK_THAT:
+        case TOK_POINTER:
+        case TOK_TEMP:
         case TOK_STATIC:
             break;
         case TOK_CONSTANT:
-            break;
-        case TOK_THIS:
-            break;
-        case TOK_THAT:
-            break;
-        case TOK_POINTER:
-            break;
-        case TOK_TEMP:
+            _emitter.pushConstant(_scanner->getString(idx));
             break;
         default:
             throw Exception(
                 "Unknown token parsed, expected "
                 "argument, local, static, constant, "
                 "this, that, pointer or temp");
-        }
-
-        if (t1 == TOK_INTEGER)
-        {
-            const String v = _scanner->getString(getToken(2).getIndex());
-
-            _writer.pushConstant(v);
-            // move the index into the D register on the CPU
-            advanceCursor(3);
-        }
-        else
-        {
-            throw Exception("expected an integer");
         }
     }
 
@@ -85,22 +76,37 @@ namespace Hack::VirtualMachine
     {
         const int8_t t0 = getToken(1).getType();
         const int8_t t1 = getToken(2).getType();
+
+        if (t1 != TOK_INTEGER)
+        {
+            throw Exception(
+                "Expected an integer to be the third argument to the pop "
+                "expression");
+        }
+
+        const size_t idx = getToken(2).getIndex();
+        
         switch (t0)
         {
-        case TOK_ARGUMENT:
         case TOK_LOCAL:
+            _emitter.popLocal(_scanner->getString(idx));
+            break;
+        case TOK_ARGUMENT:
+            _emitter.popArgument(_scanner->getString(idx));
+            break;
+        case TOK_THIS:
+            _emitter.popThis(_scanner->getString(idx));
+            break;
+        case TOK_THAT:
+            _emitter.popThat(_scanner->getString(idx));
+            break;
+        case TOK_TEMP:
+            _emitter.popTemp(_scanner->getString(idx));
+            break;
         case TOK_STATIC:
         case TOK_CONSTANT:
-        case TOK_THIS:
-        case TOK_THAT:
         case TOK_POINTER:
-        case TOK_TEMP:
-            if (t1 == TOK_INTEGER)
-            {
-                advanceCursor(3);
-                break;
-            }
-            [[fallthrough]];
+            break;
         default:
             throw Exception(
                 "Unknown token parsed, expected "
@@ -109,15 +115,60 @@ namespace Hack::VirtualMachine
         }
     }
 
+    void Parser::addExpression()
+    {
+        _emitter.writeAdd();
+    }
+
+    void Parser::subExpression()
+    {
+        _emitter.writeSub();
+    }
+
+    void Parser::andExpression()
+    {
+        _emitter.writeAnd();
+    }
+
+    void Parser::orExpression()
+    {
+        _emitter.writeOr();
+    }
+
     void Parser::expression()
     {
         const int8_t t0 = getToken(0).getType();
-        if (t0 == TOK_PUSH)
+        switch (t0)
+        {
+        case TOK_PUSH:
             pushExpression();
-        else if (t0 == TOK_POP)
+            advanceCursor(3);
+            break;
+        case TOK_POP:
             popExpression();
-        else
-            throw Exception("Unknown token parsed, expected push or pop");
+            advanceCursor(3);
+            break;
+        case TOK_AND:
+            andExpression();
+            advanceCursor();
+            break;
+        case TOK_OR:
+            orExpression();
+            advanceCursor();
+            break;
+        case TOK_ADD:
+            addExpression();
+            advanceCursor();
+            break;
+        case TOK_SUB:
+            subExpression();
+            advanceCursor();
+            break;
+        default:
+            throw Exception(
+                "Unknown rule, expected push, pop, "
+                "and, or, add or sub");
+        }
     }
 
     void Parser::parseImpl(IStream& is)
@@ -129,15 +180,15 @@ namespace Hack::VirtualMachine
         _scanner->attach(&is);
 
         // clear the stream
-        _writer.clear();
+        _emitter.clear();
         // load values into the correct
         // ram addresses
 
-        _writer.setRam(0, 256);
-        _writer.setRam(1, 300);
-        _writer.setRam(2, 400);
-        _writer.setRam(3, 3000);
-        _writer.setRam(4, 3010);
+        _emitter.setRam(0, 256);
+        _emitter.setRam(1, 300);
+        _emitter.setRam(2, 400);
+        _emitter.setRam(3, 3000);
+        _emitter.setRam(4, 3010);
 
         while (_cursor <= (int32_t)_tokens.size())
         {
@@ -153,15 +204,11 @@ namespace Hack::VirtualMachine
             if (op == _cursor)
                 advanceCursor();
         }
-
-
     }
 
     void Parser::writeImpl(OStream& os)
     {
-
-
-        os << _writer.toString();
+        os << _emitter.toString();
     }
 
 }  // namespace Hack::VirtualMachine

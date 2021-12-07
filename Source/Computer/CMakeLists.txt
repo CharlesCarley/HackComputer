@@ -62,6 +62,7 @@ target_link_libraries(${TargetName}
     ${Utils_LIBRARY} 
     Chips 
     Assembler
+    VirtualMachine
 )
 
 if (USE_SDL)

@@ -62,6 +62,7 @@ set(Utils_HDR
     Char.h
     Common.h
     Console.h
+    IndexCache.h
     String.h
     
     ParserBase/ParserBase.h

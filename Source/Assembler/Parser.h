@@ -61,9 +61,7 @@ namespace Hack::Assembler
         void label();
 
         void expression();
-
-        const Scanner& scanner() const;
-    
+        
         void parseImpl(IStream& is) override;
 
         void writeImpl(OStream& os) override;

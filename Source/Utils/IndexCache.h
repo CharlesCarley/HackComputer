@@ -20,34 +20,52 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#include "Utils/ParserBase/ScannerBase.h"
-#include "VirtualMachine/Token.h"
+#include <unordered_map>
+#include "Exceptions/Exception.h"
 
-namespace Hack::VirtualMachine
+namespace Hack
 {
-    class CodeWriter
+    template <typename T>
+    class IndexCache
     {
-    private:
-        OutputStringStream _stream;
+    public:
+        typedef std::unordered_map<T, size_t> Table;
+        typedef std::vector<T>                Array;
 
-        void nl(int n = 1);
+    private:
+        Table _elements;
+        Array _list;
 
     public:
-        CodeWriter();
-
-        void setRam(int index, int value);
-
-        void pushConstant(const String& value);
-
-        void clear()
+        size_t save(const T& value)
         {
-            _stream.str("");
+            size_t idx;
+
+            const typename Table::iterator it = _elements.find(value);
+
+            if (it == _elements.end())
+            {
+                idx = _elements.size();
+                _list.push_back(value);
+                _elements.insert(std::make_pair(value, idx));
+            }
+            else
+                idx = it->second;
+            return idx;
         }
 
-        String toString() const
+        void get(T& dest, const size_t& index) const
         {
-            return _stream.str();
+            if (index < _list.size())
+                dest = _list.at(index);
+        }
+
+        const T& get(const size_t& index) const
+        {
+            if (index < _list.size())
+                return _list.at(index);
+            throw Exception("Index out of bounds");
         }
     };
 
-}  // namespace Hack::VirtualMachine
+}  // namespace Hack
