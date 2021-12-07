@@ -81,12 +81,12 @@ public:
         VirtualMachine::Parser vmp;
         vmp.parse(_input);
         if (_output.empty())
-            vmp.emit(cout);
+            vmp.write(cout);
         else
         {
             std::ofstream out(_output.c_str());
             if (out.is_open())
-                vmp.emit(out);
+                vmp.write(out);
             else
                 throw Exception(
                     "Failed to open the supplied output file '", _output, "'");

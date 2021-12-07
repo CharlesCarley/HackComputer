@@ -19,7 +19,6 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#include <cstdio>
 #include <fstream>
 #include "Assembler/Parser.h"
 #include "Assembler/Scanner.h"
@@ -33,11 +32,13 @@ using namespace Hack::Assembler;
 GTEST_TEST(Assembler, Scanner1)
 {
     const Hack::String file = GetTestFilePath("Assembler/Scanner1.asm");
-    std::ifstream       fs(file);
+
+    std::ifstream fs(file);
+
     EXPECT_TRUE(fs.is_open());
 
     Scanner sc;
-    sc.load(&fs);
+    sc.attach(&fs);
     Token t;
     sc.scan(t);
     EXPECT_EQ(TOK_EOF, t.getType());
@@ -45,8 +46,7 @@ GTEST_TEST(Assembler, Scanner1)
 
 GTEST_TEST(Assembler, Scanner2)
 {
-    const Hack::String file =
-        GetTestFilePath("Assembler/Scanner2.asm");
+    const Hack::String file = GetTestFilePath("Assembler/Scanner2.asm");
 
     std::ifstream fs(file);
     EXPECT_TRUE(fs.is_open());
@@ -63,8 +63,9 @@ GTEST_TEST(Assembler, Scanner2)
     };
 
     Scanner scanner;
-    scanner.load(&fs);
-    Token   token;
+
+    scanner.attach(&fs);
+    Token token;
     scanner.scan(token);
     EXPECT_EQ(TOK_AT, token.getType());
     scanner.scan(token);
@@ -114,44 +115,39 @@ GTEST_TEST(Assembler, Parser1)
 {
     Parser psr;
     psr.parse(GetTestFilePath("Assembler/Parser1.asm"));
-    psr.writeInstructions(GetOutFilePath("Parser1.out"));
+    psr.write(GetOutFilePath("Parser1.out"));
 
-    Assembler_CompareSrc(
-        GetTestFilePath("Assembler/Parser1.cmp"),
-        GetOutFilePath("Parser1.out"));
+    Assembler_CompareSrc(GetTestFilePath("Assembler/Parser1.cmp"),
+                         GetOutFilePath("Parser1.out"));
 }
 
 GTEST_TEST(Assembler, Parser2)
 {
     Parser psr;
     psr.parse(GetTestFilePath("Assembler/Parser2.asm"));
-    psr.writeInstructions(GetOutFilePath("Parser2.out"));
+    psr.write(GetOutFilePath("Parser2.out"));
 
-    Assembler_CompareSrc(
-        GetTestFilePath("Assembler/Parser2.cmp"),
-        GetOutFilePath("Parser2.out"));
+    Assembler_CompareSrc(GetTestFilePath("Assembler/Parser2.cmp"),
+                         GetOutFilePath("Parser2.out"));
 }
-
 
 GTEST_TEST(Assembler, Add)
 {
     Parser psr;
     psr.parse(GetTestFilePath("Assembler/Add.asm"));
-    psr.writeInstructions(GetOutFilePath("Add.out"));
+    psr.write(GetOutFilePath("Add.out"));
 
-    Assembler_CompareSrc(
-        GetTestFilePath("Assembler/Add.cmp"),
-        GetOutFilePath("Add.out"));
+    Assembler_CompareSrc(GetTestFilePath("Assembler/Add.cmp"),
+                         GetOutFilePath("Add.out"));
 }
-
 
 GTEST_TEST(Assembler, Parser3)
 {
     Parser psr;
-    psr.parse(GetTestFilePath("Assembler/Parser3.asm"));
-    psr.writeInstructions(GetOutFilePath("Parser3.out"));
 
-    Assembler_CompareSrc(
-        GetTestFilePath("Assembler/Parser3.cmp"),
-        GetOutFilePath("Parser3.out"));
+    psr.parse(GetTestFilePath("Assembler/Parser3.asm"));
+    psr.write(GetOutFilePath("Parser3.out"));
+
+    Assembler_CompareSrc(GetTestFilePath("Assembler/Parser3.cmp"),
+                         GetOutFilePath("Parser3.out"));
 }

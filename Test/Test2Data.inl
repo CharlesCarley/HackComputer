@@ -20,6 +20,7 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
+#include "Assembler/Token.h"
 
 constexpr int Scan2Tokens[] = {
     TOK_PLUS,

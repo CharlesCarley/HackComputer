@@ -20,19 +20,29 @@
 -------------------------------------------------------------------------------
 */
 #include "Chips/CPU.h"
-#include "Chips/And16.h"
 #include "Chips/ALU.h"
-#include "Chips/Mux16.h"
 #include "Chips/ProgramCounter.h"
 #include "Chips/Register.h"
+#include "Chips/Timer.h"
+#ifdef IMPLEMENT_BLACK_BOX
+#include "Chips/And16.h"
+#include "Chips/Mux16.h"
+#endif
 
 namespace Hack::Chips
 {
-    Cpu::Cpu() :
-        _ins(0),
-        _in(0)
+#ifndef IMPLEMENT_BLACK_BOX
+    constexpr uint16_t RMask = 0b0111'1111'1111'1111;
+    constexpr uint16_t MLoad = 0b0'00'0'000000'001'000;
+    constexpr uint16_t DLoad = 0b0'00'0'000000'010'000;
+    constexpr uint16_t ALoad = 0b0'00'0'000000'100'000;
+    constexpr uint16_t ABits = 0b0'00'1'000000'000'000;
+    constexpr uint16_t CBits = 0b0'00'0'111111'000'000;
+#endif
+    Cpu::Cpu() : _ins(0), _in(0)
     {
-        assignBit(7);
+        // This should not be marked as dirty
+        // initially
     }
 
     void Cpu::lock(bool v)
@@ -118,88 +128,130 @@ namespace Hack::Chips
 
     void Cpu::evaluate()
     {
+#ifdef IMPLEMENT_BLACK_BOX
         And16 and16;
-        Mux16 m0, m1, mt;
+        Mux16 m0, m1;
 
         bool codes[16];
         B16::unpack(_ins, codes);
 
-        const bool clk = getBit(1);
+        const bool tick  = getBit(1);
+        const bool typeC = codes[15];
+        const bool typeA = Gates::Not(typeC);
 
-        const bool cIns = codes[15];
-
-        const bool aIns = Gates::Not(cIns);
-        // a
-        const bool ld0 = Gates::Or(aIns, codes[5]);
-
-        // Am
-        const bool ld1 = Gates::And(cIns, codes[12]);
-
-        // d
-        const bool ld2 = Gates::And(cIns, codes[4]);
-
-        // writeM
-        const bool ld3 = Gates::And(cIns, codes[3]);
-
-        // ------------------------ M0 ------------------------
         m0.setA(_alu.getOut());
         m0.setB(_ins);
-        m0.setSel(aIns);
-
-        // ------------------------ Ar ------------------------
-        _a.setLoad(ld0);
+        m0.setSel(typeA);
 
         and16.setA(m0.getOut());
         and16.setB(0b0111111111111111);
 
+        _a.setLoad(Gates::Or(typeA, Gates::And(typeC, codes[5])));
         _a.setIn(and16.getOut());
-        _a.setClock(clk);
+        _a.setClock(tick);
 
-        // ------------------------ M1 ------------------------
         m1.setA(_a.getOut());
         m1.setB(_in);
-        m1.setSel(ld1);
+        m1.setSel(Gates::And(typeC, codes[12]));
 
-        // ----------------------- ALU ------------------------
         bool c[6]{codes[6], codes[7], codes[8], codes[9], codes[10], codes[11]};
+
         _alu.setFlags(B8::pack<6>(c));
         _alu.setX(_d.getOut());
         _alu.setY(m1.getOut());
 
-        // ------------------------ Dr ------------------------
-        _d.setLoad(ld2);
+        _d.setLoad(Gates::And(typeC, codes[4]));
         _d.setIn(_alu.getOut());
-        _d.setClock(Gates::Not(clk));  // t-1
+        _d.setClock(Gates::Not(tick));  // t-1
 
-        // ------------------------ PC ------------------------
-        // J-bits
+        _pc.setLoad(Gates::Mux(
+            getBit(0),
+            true,
+            Gates::Or3(Gates::And(Gates::And(typeC, codes[0]),
+                                  Gates::And(Gates::Not(_alu.getZr()),
+                                             Gates::Not(_alu.getNe()))),
+                       Gates::And(Gates::And(typeC, codes[1]), _alu.getZr()),
+                       Gates::And(Gates::And(typeC, codes[2]), _alu.getNe())
+                           )));
+        _pc.setIn(_a.getOut());
+        _pc.setInc(true);
+        _pc.setReset(getBit(0));
+        _pc.setClock(tick);
 
-        const bool Zr = _alu.getZr();
-        const bool Ne = _alu.getNe();
+        applyBit(6, Gates::And(typeC, codes[3]));
 
-        const bool ZrNeI = Gates::And(Gates::Not(Zr), Gates::Not(Ne));
-        const bool ld4   = Gates::Or3(
-            Gates::And(Gates::And(cIns, codes[0]), ZrNeI),
-            Gates::And(Gates::And(cIns, codes[1]), Zr),
-            Gates::And(Gates::And(cIns, codes[2]), Ne)
+        _pc.getOut();
+        clearBit(7);
+#else
 
-        );
-        if (ld4)
-            _pc.setLoad(ld4);
+        // clock is in bit 1
+        const bool tick = getBit(1);
+
+        // if the highest bit is set, it is a c-type instruction
+        const bool typeC = (_ins & 1 << 15) != 0;
+
+        // otherwise it's an a-type instruction
+        const bool typeA = !typeC;
+
+        // load into the A register if it is an a-type
+        // or if it's a c-type and the a destination
+        // bit is set
+        _a.setLoad(typeA || typeC && (_ins & ALoad) != 0);
+
+        _a.setIn((typeA ? _ins : _alu.getOut()) & RMask);
+        _a.setClock(tick);
+
+        // The flags are the ALU ctrl-bits, so mask them off
+        // and shift them down so that they align in the lower
+        // six bits of an unsigned char.
+        _alu.setFlags((_ins & CBits) >> 6);
+
+        _alu.setX(_d.getOut());
+
+        // A/M the a-bit (12) controls the M type commands
+        // if it is set when the instruction is a c-type instruction,
+        // use the CPU input (when linked to RAM its the RAM'S output (M)).
+        // otherwise use the output from the internal (A) register.
+        _alu.setY(typeC && (_ins & ABits) != 0 ? _in : _a.getOut());
+
+        _d.setLoad(typeC && (_ins & DLoad) != 0);
+        _d.setIn(_alu.getOut());
+        _d.setClock(!tick);  // t-1
+
+        if (typeC)
+        {
+            const bool isZero = _alu.getZr();
+            const bool isNeg  = _alu.getNe();
+
+            const bool jgt = _ins & 0b001;
+            const bool jeq = _ins & 0b010;
+            const bool jlt = _ins & 0b100;
+
+            if (jgt && !isZero && !isNeg || jeq && isZero || jlt && isNeg)
+                _pc.setLoad(true);
+            else
+                _pc.setLoad(false);
+        }
         else
             _pc.setLoad(getBit(0));
 
         _pc.setIn(_a.getOut());
         _pc.setInc(true);
         _pc.setReset(getBit(0));
-        _pc.setClock(clk);
+        _pc.setClock(tick);
 
-        applyBit(6, ld3);
+        // bit 6 controls the write memory flag
+        // which should be linked to the load bit on the
+        // RAM.
+        applyBit(6, typeC && (_ins & MLoad) != 0);
 
-        _pc.getOut();
+        // evaluate the program counter
+        (void)_pc.getOut();
+
+        // clear the dirty flag
         clearBit(7);
+#endif
     }
-
 
     void Cpu::clear()
     {
@@ -207,7 +259,7 @@ namespace Hack::Chips
         _d.setLoad(true);
         _d.setClock(true);
 
-        _a.setIn(0);        
+        _a.setIn(0);
         _a.setLoad(true);
         _a.setClock(true);
 
@@ -216,7 +268,14 @@ namespace Hack::Chips
         _pc.setLoad(true);
         _pc.setClock(true);
 
-        evaluate();
+        _ins = 0;
+        _in  = 0;
+        _alu.setX(0);
+        _alu.setY(0);
+        _alu.setFlags(0);
+
+        _bits = 0;
+        Timer::reset();
     }
 
 }  // namespace Hack::Chips

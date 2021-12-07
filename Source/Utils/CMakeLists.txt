@@ -17,7 +17,7 @@
 #    misrepresented as being the original software.
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
-set( TargetName Utils )
+set(TargetName Utils )
 
 
 set(Utils_UI_HDR
@@ -63,6 +63,10 @@ set(Utils_HDR
     Common.h
     Console.h
     String.h
+    
+    ParserBase/ParserBase.h
+    ParserBase/ScannerBase.h
+    ParserBase/TokenBase.h
 
     Exceptions/Exception.h
     Exceptions/IndexException.h
@@ -73,6 +77,8 @@ set(Utils_SRC
     Char.cpp
     Console.cpp
     String.cpp
+    ParserBase/ParserBase.cpp
+    ParserBase/ScannerBase.cpp
 )
 
 source_group("Header" FILES ${Utils_HDR})

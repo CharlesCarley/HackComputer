@@ -20,25 +20,35 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
+#include "VirtualMachine/CodeWriter.h"
+#include "Utils/ParserBase/ParserBase.h"
 #include "Utils/String.h"
 
 namespace Hack::VirtualMachine
 {
-    class Parser
+    class Scanner;
+
+    class Parser final : public ParserBase::ParserBase
     {
+    private:
+        CodeWriter _writer;
+        
+
+    private:
+
+        void parseImpl(IStream& is) override;
+
+        void writeImpl(OStream& os) override;
+
+        void expression();
+
+        void pushExpression();
+
+        void popExpression();
+
     public:
         Parser();
-        ~Parser();
-
-        
-        void parse(const String& file);
-
-        void parse(IStream& is);
-
-        void emit(OStream &dest);
-
-        void emit(const String& file);
+        ~Parser() override;
     };
-
 
 }  // namespace Hack::VirtualMachine

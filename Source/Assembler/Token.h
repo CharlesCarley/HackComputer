@@ -20,7 +20,7 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#include "Utils/String.h"
+#include "Utils/ParserBase/TokenBase.h"
 
 namespace Hack::Assembler
 {
@@ -65,57 +65,5 @@ namespace Hack::Assembler
         TOK_LABEL
     };
 
-    class Token
-    {
-    private:
-        size_t _index;
-        int8_t _type;
-
-    public:
-        Token() :
-            _index(),
-            _type()
-        {
-            clear();
-        }
-
-        Token(const Token& tok) = default;
-
-        ~Token() = default;
-
-        void clear()
-        {
-            _index = -1;
-            _type  = TOK_NULL;
-        }
-
-        size_t getIndex() const;
-
-        int8_t getType() const;
-
-        void setType(int8_t type);
-
-        void setIndex(size_t i);
-    };
-
-    inline size_t Token::getIndex() const
-    {
-        return _index;
-    }
-
-    inline int8_t Token::getType() const
-    {
-        return _type;
-    }
-
-    inline void Token::setType(const int8_t type)
-    {
-        _type = type;
-    }
-
-    inline void Token::setIndex(const size_t i)
-    {
-        _index = i;
-    }
-
+    using Token = ParserBase::Token;
 }  // namespace Hack::Assembler

@@ -79,9 +79,9 @@ public:
         Assembler::Parser psr;
         psr.parse(_input);
         if (_output.empty())
-            psr.writeInstructions(cout);
+            psr.write(cout);
         else
-            psr.writeInstructions(_output);
+            psr.write(_output);
         return 0;
     }
 };

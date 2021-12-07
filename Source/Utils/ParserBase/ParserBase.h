@@ -19,36 +19,46 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#include <cstdio>
-#include <fstream>
-#include "TestDirectory.h"
-#include "VirtualMachine/Parser.h"
-#include "VirtualMachine/Scanner.h"
-#include "gtest/gtest.h"
+#pragma once
+#include <unordered_map>
+#include <vector>
+#include "Utils/ParserBase/TokenBase.h"
 
-void VmCompareSrc(const Hack::String& f0, const Hack::String& f1)
+namespace Hack::ParserBase
 {
-    std::ifstream if0(f0);
-    std::ifstream if1(f1);
+    class Scanner;
 
-    Hack::String a, b;
-
-    while (if1 >> b)
+    class ParserBase
     {
-        if0 >> a;
-        EXPECT_EQ(a, b);
+    public:
+        typedef std::vector<Token> Tokens;
 
-        a.clear();
-        b.clear();
-    }
-}
+    protected:
+        Tokens   _tokens;
+        int32_t  _cursor;
+        Scanner* _scanner;
 
-GTEST_TEST(VirtualMachine, Parser1)
-{
-    Hack::VirtualMachine::Parser psr;
-    psr.parse(GetTestFilePath("VM/Test01.vm"));
-    psr.write(GetTestFilePath("VM/Test01.asm"));
+        Token getToken(int32_t offs);
 
-    VmCompareSrc(GetTestFilePath("VM/Test01.cmp"),
-                 GetOutFilePath("VM/Test01.asm"));
-}
+        void advanceCursor(int32_t n = 1);
+
+        void readToken(int32_t n = 1);
+
+        virtual void parseImpl(IStream& is) = 0;
+
+        virtual void writeImpl(OStream& is) = 0;
+
+    public:
+        ParserBase();
+        virtual ~ParserBase();
+
+        void parse(const String& file);
+
+        void parse(IStream& is);
+
+        void write(const String& file);
+
+        void write(OStream& os);
+    };
+
+}  // namespace Hack::ParserBase

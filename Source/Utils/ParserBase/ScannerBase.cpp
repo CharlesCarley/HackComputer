@@ -19,36 +19,36 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#include <cstdio>
-#include <fstream>
-#include "TestDirectory.h"
-#include "VirtualMachine/Parser.h"
-#include "VirtualMachine/Scanner.h"
-#include "gtest/gtest.h"
+#include "Utils/ParserBase/ScannerBase.h"
 
-void VmCompareSrc(const Hack::String& f0, const Hack::String& f1)
+namespace Hack::ParserBase
 {
-    std::ifstream if0(f0);
-    std::ifstream if1(f1);
-
-    Hack::String a, b;
-
-    while (if1 >> b)
+    size_t Scanner::saveString(const String& str)
     {
-        if0 >> a;
-        EXPECT_EQ(a, b);
+        size_t idx;
 
-        a.clear();
-        b.clear();
+        const StringTable::iterator it = _stringTable.find(str);
+
+        if (it == _stringTable.end())
+        {
+            idx = _strings.size();
+
+            _strings.push_back(str);
+
+            _stringTable.insert(std::make_pair(str, idx));
+        }
+        else
+            idx = it->second;
+
+        return idx;
     }
-}
 
-GTEST_TEST(VirtualMachine, Parser1)
-{
-    Hack::VirtualMachine::Parser psr;
-    psr.parse(GetTestFilePath("VM/Test01.vm"));
-    psr.write(GetTestFilePath("VM/Test01.asm"));
+    String Scanner::getString(const size_t& i) const
+    {
+        if (i < _strings.size())
+            return _strings.at(i);
+        return "";
+    }
 
-    VmCompareSrc(GetTestFilePath("VM/Test01.cmp"),
-                 GetOutFilePath("VM/Test01.asm"));
-}
+
+}  // namespace Hack::ParserBase

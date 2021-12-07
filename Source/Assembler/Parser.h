@@ -22,36 +22,26 @@
 #pragma once
 #include <unordered_map>
 #include <vector>
-#include "Assembler/Token.h"
+#include "Utils/ParserBase/ParserBase.h"
 
 namespace Hack::Assembler
 {
     class Scanner;
 
-    class Parser
+    class Parser final : public ParserBase::ParserBase
     {
     public:
         typedef std::vector<uint16_t>              Instructions;
-        typedef std::vector<Token>                 Tokens;
         typedef std::unordered_map<String, size_t> Labels;
 
     private:
         Instructions _instructions;
-        Tokens       _tokens;
         Labels       _labels;
-        Scanner*     _scanner;
-        int32_t      _current;
         uint16_t     _cBits;
         uint8_t      _dBits;
         uint8_t      _aBit;
         uint8_t      _jBits;
-
-        Token getToken(int32_t offs);
-
-        void advanceToken(int32_t n = 1);
-
-        void readToken(int32_t n = 1);
-
+        
         void pushCInstruction();
 
         void compoundExpressionAZero();
@@ -72,17 +62,15 @@ namespace Hack::Assembler
 
         void expression();
 
+        const Scanner& scanner() const;
+    
+        void parseImpl(IStream& is) override;
+
+        void writeImpl(OStream& os) override;
+
     public:
         Parser();
-        ~Parser();
-
-        void parse(const String& file);
-
-        void parse(IStream& is);
-
-        void writeInstructions(OStream& os);
-
-        void writeInstructions(const String& file);
+        ~Parser() override;
 
         const Instructions& getInstructions() const;
     };

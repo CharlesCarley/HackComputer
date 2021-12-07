@@ -28,16 +28,12 @@ namespace Hack::Assembler
     class ParseError final : public Exception
     {
     public:
-        explicit ParseError() :
-            Exception((String("Parse error: "))
-                          .c_str())
+        explicit ParseError() : Exception(String("Parse error"))
         {
         }
 
         explicit ParseError(const String& message) :
-            Exception((String("Parse error: ") +
-                       message)
-                          .c_str())
+            Exception((String("Parse error: ") + message).c_str())
         {
         }
     };

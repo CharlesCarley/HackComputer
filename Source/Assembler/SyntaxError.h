@@ -20,7 +20,6 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#include "Assembler/Token.h"
 #include "Utils/Exceptions/Exception.h"
 
 namespace Hack::Assembler
@@ -28,8 +27,7 @@ namespace Hack::Assembler
     class SyntaxError final : public Exception
     {
     public:
-        SyntaxError() :
-            Exception("Syntax error: ")
+        SyntaxError() : Exception("Syntax error: ")
         {
         }
 

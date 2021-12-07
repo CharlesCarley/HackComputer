@@ -23,6 +23,7 @@ set(Target_HDR
    Token.h
    Scanner.h
    Parser.h
+   CodeWriter.h
    VM.grm
 )
 
@@ -30,6 +31,7 @@ set(Target_SRC
    Token.cpp
    Scanner.cpp
    Parser.cpp
+   CodeWriter.cpp
 )
 
 include_directories(${Hack_SOURCE_DIR}/Source)

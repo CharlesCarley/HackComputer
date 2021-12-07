@@ -52,10 +52,14 @@ namespace Hack::Chips
 
     void Computer::update(const bool saveState)
     {
-        if (_reset)
-            Timer::reset();
-
         const bool cycle = Timer::tick();
+        if (_reset)
+        {
+            _cpu->clear();
+            _ram->zero();
+            _cpuState = NullState;
+            Timer::reset();
+        }
 
         if (saveState)
         {
@@ -112,17 +116,7 @@ namespace Hack::Chips
 
     void Computer::reset()
     {
-        _cpuState = NullState;
-        _cpu->clear();
-        _ram->zero();
-        _rom->setIn(0);
-        (void)_rom->getOut();
-        _reset = true;
-        update(false);
-        _reset = true;
-        update(false);
-        _reset = true;
-        update(false);
+        _reset    = true;
     }
 
 }  // namespace Hack::Chips

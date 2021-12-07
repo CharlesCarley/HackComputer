@@ -19,36 +19,64 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#include <cstdio>
-#include <fstream>
-#include "TestDirectory.h"
-#include "VirtualMachine/Parser.h"
-#include "VirtualMachine/Scanner.h"
-#include "gtest/gtest.h"
+#pragma once
+#include "Utils/String.h"
 
-void VmCompareSrc(const Hack::String& f0, const Hack::String& f1)
+namespace Hack::ParserBase
 {
-    std::ifstream if0(f0);
-    std::ifstream if1(f1);
-
-    Hack::String a, b;
-
-    while (if1 >> b)
+    class Token
     {
-        if0 >> a;
-        EXPECT_EQ(a, b);
+    private:
+        size_t _index;
+        int8_t _type;
 
-        a.clear();
-        b.clear();
+    public:
+        Token() : _index(), _type()
+        {
+            clear();
+        }
+
+        Token(const Token& tok) = default;
+
+        ~Token() = default;
+
+        void clear()
+        {
+            _index = -1;
+
+            // the type here should pivot around zero,
+            // negative values are errors, positive values are
+            // possible tokens, and 0 indicates null
+            _type = 0;
+        }
+
+        size_t getIndex() const;
+
+        int8_t getType() const;
+
+        void setType(int8_t type);
+
+        void setIndex(size_t i);
+    };
+
+    inline size_t Token::getIndex() const
+    {
+        return _index;
     }
-}
 
-GTEST_TEST(VirtualMachine, Parser1)
-{
-    Hack::VirtualMachine::Parser psr;
-    psr.parse(GetTestFilePath("VM/Test01.vm"));
-    psr.write(GetTestFilePath("VM/Test01.asm"));
+    inline int8_t Token::getType() const
+    {
+        return _type;
+    }
 
-    VmCompareSrc(GetTestFilePath("VM/Test01.cmp"),
-                 GetOutFilePath("VM/Test01.asm"));
-}
+    inline void Token::setType(const int8_t type)
+    {
+        _type = type;
+    }
+
+    inline void Token::setIndex(const size_t i)
+    {
+        _index = i;
+    }
+
+}  // namespace Hack::ParserBase

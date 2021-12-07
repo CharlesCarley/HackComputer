@@ -19,36 +19,35 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#include <cstdio>
-#include <fstream>
-#include "TestDirectory.h"
-#include "VirtualMachine/Parser.h"
-#include "VirtualMachine/Scanner.h"
-#include "gtest/gtest.h"
+#pragma once
+#include "Utils/ParserBase/ScannerBase.h"
+#include "VirtualMachine/Token.h"
 
-void VmCompareSrc(const Hack::String& f0, const Hack::String& f1)
+namespace Hack::VirtualMachine
 {
-    std::ifstream if0(f0);
-    std::ifstream if1(f1);
-
-    Hack::String a, b;
-
-    while (if1 >> b)
+    class CodeWriter
     {
-        if0 >> a;
-        EXPECT_EQ(a, b);
+    private:
+        OutputStringStream _stream;
 
-        a.clear();
-        b.clear();
-    }
-}
+        void nl(int n = 1);
 
-GTEST_TEST(VirtualMachine, Parser1)
-{
-    Hack::VirtualMachine::Parser psr;
-    psr.parse(GetTestFilePath("VM/Test01.vm"));
-    psr.write(GetTestFilePath("VM/Test01.asm"));
+    public:
+        CodeWriter();
 
-    VmCompareSrc(GetTestFilePath("VM/Test01.cmp"),
-                 GetOutFilePath("VM/Test01.asm"));
-}
+        void setRam(int index, int value);
+
+        void pushConstant(const String& value);
+
+        void clear()
+        {
+            _stream.str("");
+        }
+
+        String toString() const
+        {
+            return _stream.str();
+        }
+    };
+
+}  // namespace Hack::VirtualMachine

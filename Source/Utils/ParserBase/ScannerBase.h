@@ -19,36 +19,39 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#include <cstdio>
-#include <fstream>
-#include "TestDirectory.h"
-#include "VirtualMachine/Parser.h"
-#include "VirtualMachine/Scanner.h"
-#include "gtest/gtest.h"
+#pragma once
+#include <istream>
+#include <unordered_map>
+#include "Utils/ParserBase/TokenBase.h"
 
-void VmCompareSrc(const Hack::String& f0, const Hack::String& f1)
+namespace Hack::ParserBase
 {
-    std::ifstream if0(f0);
-    std::ifstream if1(f1);
+    using StringTable = std::unordered_map<std::string, size_t>;
 
-    Hack::String a, b;
-
-    while (if1 >> b)
+    class Scanner
     {
-        if0 >> a;
-        EXPECT_EQ(a, b);
+    protected:
+        IStream*    _stream;
+        StringTable _stringTable;
+        StringArray _strings;
 
-        a.clear();
-        b.clear();
-    }
-}
+        size_t saveString(const String& str);
 
-GTEST_TEST(VirtualMachine, Parser1)
-{
-    Hack::VirtualMachine::Parser psr;
-    psr.parse(GetTestFilePath("VM/Test01.vm"));
-    psr.write(GetTestFilePath("VM/Test01.asm"));
+    public:
+        Scanner() : _stream(nullptr)
+        {
+        }
 
-    VmCompareSrc(GetTestFilePath("VM/Test01.cmp"),
-                 GetOutFilePath("VM/Test01.asm"));
-}
+        virtual ~Scanner() = default;
+
+        virtual void attach(IStream* stream)
+        {
+            _stream = stream;
+        }
+
+        virtual void scan(Token& tok) = 0;
+
+        String getString(const size_t& i) const;
+    };
+
+}  // namespace Hack::ParserBase

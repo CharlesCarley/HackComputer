@@ -23,22 +23,17 @@
 #include <istream>
 #include <unordered_map>
 #include "Assembler/Token.h"
+#include "Utils/ParserBase/ScannerBase.h"
 
 namespace Hack::Assembler
 {
-    using StringTable = std::unordered_map<std::string, size_t>;
 
-    class Scanner
+    class Scanner final : public ParserBase::Scanner
     {
     private:
-        IStream*    _stream;
-        StringTable _stringTable;
-        StringArray _strings;
 
         void initializeTables();
-
-        size_t saveString(const String& str);
-
+        
         void scanLineComment() const;
 
         void scanWhiteSpace() const;
@@ -58,13 +53,7 @@ namespace Hack::Assembler
     public:
         Scanner();
 
-        ~Scanner() = default;
-
-        void load(IStream* stream);
-
-        void scan(Token& tok);
-
-        String getString(const size_t& i);
+        void scan(Token& tok) override;
     };
 
 }  // namespace Hack::Assembler

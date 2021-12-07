@@ -113,4 +113,24 @@ namespace Hack
         static String toString(uint64_t v);
     };
 
+    inline bool isNewLine(const int ch)
+    {
+        return ch == '\r' || ch == '\n';
+    }
+
+    inline bool isWhiteSpace(const int ch)
+    {
+        return ch == ' ' || ch == '\t' || isNewLine(ch);
+    }
+
+    inline bool isDecimal(const int ch)
+    {
+        return ch >= '0' && ch <= '9';
+    }
+
+    inline bool isLetter(const int ch)
+    {
+        return ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z';
+    }
+
 }  // namespace Utils

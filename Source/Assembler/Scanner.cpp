@@ -49,26 +49,6 @@ using namespace Hack;
 
 namespace Hack::Assembler
 {
-    inline bool isNewLine(const int ch)
-    {
-        return ch == '\r' || ch == '\n';
-    }
-
-    inline bool isWhiteSpace(const int ch)
-    {
-        return ch == ' ' || ch == '\t' || isNewLine(ch);
-    }
-
-    inline bool isDecimal(const int ch)
-    {
-        return ch >= '0' && ch <= '9';
-    }
-
-    inline bool isLetter(const int ch)
-    {
-        return ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z';
-    }
-
     struct KwTable
     {
         char   a, b, c;
@@ -107,36 +87,11 @@ namespace Hack::Assembler
 
     };
 
-    Scanner::Scanner() :
-        _stream(nullptr)
+    Scanner::Scanner()
     {
         initializeTables();
     }
 
-    void Scanner::load(IStream* stream)
-    {
-        _stream = stream;
-    }
-
-    size_t Scanner::saveString(const String& str)
-    {
-        size_t idx;
-
-        const StringTable::iterator it = _stringTable.find(str);
-
-        if (it == _stringTable.end())
-        {
-            idx = _strings.size();
-
-            _strings.push_back(str);
-
-            _stringTable.insert(std::make_pair(str, idx));
-        }
-        else
-            idx = it->second;
-
-        return idx;
-    }
 
     void Scanner::scanLineComment() const
     {
@@ -413,13 +368,6 @@ namespace Hack::Assembler
         }
 
         tok.setType(TOK_EOF);
-    }
-
-    String Scanner::getString(const size_t& i)
-    {
-        if (i < _strings.size())
-            return _strings.at(i);
-        return "";
     }
 
 }  // namespace Hack::Assembler

@@ -53,11 +53,8 @@ namespace Hack::Assembler
 
     inline bool isOperatorToken(const int8_t type)
     {
-        return type == TOK_PLUS ||
-               type == TOK_MINUS ||
-               type == TOK_AND ||
-               type == TOK_OR ||
-               type == TOK_NOT;
+        return type == TOK_PLUS || type == TOK_MINUS || type == TOK_AND ||
+               type == TOK_OR || type == TOK_NOT;
     }
 
     inline bool isJumpToken(const int8_t type)
@@ -65,13 +62,7 @@ namespace Hack::Assembler
         return type >= TOK_JGT && type <= TOK_JMP;
     }
 
-    Parser::Parser() :
-        _scanner(nullptr),
-        _current(0),
-        _cBits(0),
-        _dBits(0),
-        _aBit(0),
-        _jBits(0)
+    Parser::Parser() : _cBits(0), _dBits(0), _aBit(0), _jBits(0)
     {
         _scanner = new Scanner();
     }
@@ -109,35 +100,6 @@ namespace Hack::Assembler
         _aBit = _dBits = _jBits = 0;
     }
 
-    void Parser::readToken(int32_t n)
-    {
-        do
-        {
-            Token tok;
-            _scanner->scan(tok);
-
-            _tokens.push_back(tok);
-        } while (--n > 0);
-    }
-
-    Token Parser::getToken(const int32_t offs)
-    {
-        const int32_t next = offs + _current;
-
-        while (next + 1 > (int32_t)_tokens.size())
-            readToken();
-
-        if (next < (int32_t)_tokens.size() && next >= 0)
-            return _tokens.at(next);
-
-        throw ParseError("Failed to read token");
-    }
-
-    void Parser::advanceToken(const int32_t n)
-    {
-        _current += n;
-    }
-
     void Parser::expressionA()
     {
         const Token& tok = getToken(1);
@@ -158,10 +120,10 @@ namespace Hack::Assembler
         }
 
         if (tok.getType() == TOK_INTEGER)
-            dest = Char::toUint16(_scanner->getString(tok.getIndex()));
+            dest = Char::toUint16(scanner().getString(tok.getIndex()));
         if (tok.getType() == TOK_LABEL)
         {
-            const String label = _scanner->getString(tok.getIndex());
+            const String label = scanner().getString(tok.getIndex());
 
             const Labels::iterator it = _labels.find(label);
             if (it == _labels.end())
@@ -174,7 +136,7 @@ namespace Hack::Assembler
         }
 
         _instructions.push_back(dest & 0b0111111111111111);
-        advanceToken(2);
+        advanceCursor(2);
     }
 
     void Parser::identityExpression()
@@ -195,7 +157,7 @@ namespace Hack::Assembler
             if (t1 == TOK_ONE)
             {
                 _cBits = 58;
-                advanceToken();
+                advanceCursor();
                 break;
             }
 
@@ -204,7 +166,7 @@ namespace Hack::Assembler
             throw ParseError("Expected a constant 1, -1, or 0");
         }
 
-        advanceToken();
+        advanceCursor();
     }
 
     void Parser::compoundExpressionAZero()
@@ -222,7 +184,7 @@ namespace Hack::Assembler
             else
                 throw ParseError("Expected -A or -D");
 
-            advanceToken(2);
+            advanceCursor(2);
         }
         else if (t0 == TOK_NOT)
         {
@@ -231,23 +193,28 @@ namespace Hack::Assembler
             else
                 throw ParseError("Expected !A or !D");
 
-            advanceToken(2);
+            advanceCursor(2);
         }
         else
         {
             if (testCompoundExpression(t0, t1, t2, TOK_D, TOK_PLUS, TOK_ONE))
                 _cBits = 31;
-            else if (testCompoundExpression(t0, t1, t2, TOK_D, TOK_MINUS, TOK_ONE))
+            else if (testCompoundExpression(
+                         t0, t1, t2, TOK_D, TOK_MINUS, TOK_ONE))
                 _cBits = 14;
-            else if (testCompoundExpression(t0, t1, t2, TOK_A, TOK_PLUS, TOK_ONE))
+            else if (testCompoundExpression(
+                         t0, t1, t2, TOK_A, TOK_PLUS, TOK_ONE))
                 _cBits = 55;
-            else if (testCompoundExpression(t0, t1, t2, TOK_A, TOK_MINUS, TOK_ONE))
+            else if (testCompoundExpression(
+                         t0, t1, t2, TOK_A, TOK_MINUS, TOK_ONE))
                 _cBits = 50;
             else if (testCompoundExpression(t0, t1, t2, TOK_D, TOK_PLUS, TOK_A))
                 _cBits = 2;
-            else if (testCompoundExpression(t0, t1, t2, TOK_D, TOK_MINUS, TOK_A))
+            else if (testCompoundExpression(
+                         t0, t1, t2, TOK_D, TOK_MINUS, TOK_A))
                 _cBits = 19;
-            else if (testCompoundExpression(t0, t1, t2, TOK_A, TOK_MINUS, TOK_D))
+            else if (testCompoundExpression(
+                         t0, t1, t2, TOK_A, TOK_MINUS, TOK_D))
                 _cBits = 7;
             else if (testCompoundExpression(t0, t1, t2, TOK_D, TOK_AND, TOK_A))
                 _cBits = 0;
@@ -258,9 +225,11 @@ namespace Hack::Assembler
             else if (t0 == TOK_D)
                 _cBits = 12;
             else
-                throw ParseError("expected one of: D+1, D-1, A+1, A-1, D+A, A-D, D&A, D|A, A, or D.");
+                throw ParseError(
+                    "expected one of: D+1, D-1, A+1, A-1, D+A, A-D, D&A, D|A, "
+                    "A, or D.");
 
-            advanceToken(_cBits == 48 || _cBits == 12 ? 1 : 3);
+            advanceCursor(_cBits == 48 || _cBits == 12 ? 1 : 3);
         }
     }
 
@@ -279,7 +248,7 @@ namespace Hack::Assembler
             else
                 throw ParseError("Expected -M");
 
-            advanceToken(2);
+            advanceCursor(2);
         }
         else if (t0 == TOK_NOT)
         {
@@ -288,19 +257,22 @@ namespace Hack::Assembler
             else
                 throw ParseError("Expected !M");
 
-            advanceToken(2);
+            advanceCursor(2);
         }
         else
         {
             if (testCompoundExpression(t0, t1, t2, TOK_M, TOK_PLUS, TOK_ONE))
                 _cBits = 55;
-            else if (testCompoundExpression(t0, t1, t2, TOK_M, TOK_MINUS, TOK_ONE))
+            else if (testCompoundExpression(
+                         t0, t1, t2, TOK_M, TOK_MINUS, TOK_ONE))
                 _cBits = 50;
             else if (testCompoundExpression(t0, t1, t2, TOK_D, TOK_PLUS, TOK_M))
                 _cBits = 2;
-            else if (testCompoundExpression(t0, t1, t2, TOK_D, TOK_MINUS, TOK_M))
+            else if (testCompoundExpression(
+                         t0, t1, t2, TOK_D, TOK_MINUS, TOK_M))
                 _cBits = 19;
-            else if (testCompoundExpression(t0, t1, t2, TOK_M, TOK_MINUS, TOK_D))
+            else if (testCompoundExpression(
+                         t0, t1, t2, TOK_M, TOK_MINUS, TOK_D))
                 _cBits = 7;
             else if (testCompoundExpression(t0, t1, t2, TOK_D, TOK_AND, TOK_M))
                 _cBits = 0;
@@ -309,9 +281,11 @@ namespace Hack::Assembler
             else if (t0 == TOK_M)
                 _cBits = 48;
             else
-                throw ParseError("expected one of: M+1, M-1, D+M, D-M, M+D, D&M, D|M, or M.");
+                throw ParseError(
+                    "expected one of: M+1, M-1, D+M, D-M, M+D, D&M, D|M, or "
+                    "M.");
 
-            advanceToken(_cBits == 48 ? 1 : 3);
+            advanceCursor(_cBits == 48 ? 1 : 3);
         }
     }
 
@@ -344,15 +318,17 @@ namespace Hack::Assembler
             if (isDestToken(t0))
             {
                 _dBits = t0;
-                advanceToken(2);
+                advanceCursor(2);
 
-                if (isConstantToken(t2) || t2 == TOK_MINUS && isConstantToken(t3))
+                if (isConstantToken(t2) ||
+                    t2 == TOK_MINUS && isConstantToken(t3))
                     identityExpression();
                 else
                     compoundExpression();
             }
             else
-                throw ParseError("Expected M, D, MD, A, AM, AD, AMD to precede '='");
+                throw ParseError(
+                    "Expected M, D, MD, A, AM, AD, AMD to precede '='");
         }
         else
             compoundExpression();
@@ -378,7 +354,7 @@ namespace Hack::Assembler
             if (isJumpToken(j))
             {
                 _jBits = j;
-                advanceToken(2);
+                advanceCursor(2);
             }
             else
                 throw ParseError("Expected a Jump statement to follow ';'");
@@ -394,9 +370,9 @@ namespace Hack::Assembler
         size_t last = _instructions.size();
 
         const Token& t1 = getToken(1);
-        advanceToken(3);
+        advanceCursor(3);
 
-        const String label = _scanner->getString(t1.getIndex());
+        const String label = scanner().getString(t1.getIndex());
 
         const Labels::iterator it = _labels.find(label);
 
@@ -422,48 +398,44 @@ namespace Hack::Assembler
             expressionC();
     }
 
-    void Parser::parse(const String& file)
+    const Scanner& Parser::scanner() const
     {
-        std::ifstream is(file);
-        if (!is.is_open())
-            throw Exception("Failed to open the input file '", file, "'");
-
-        parse(is);
+        if (!_scanner)
+            throw Exception("Invalid scanner");
+        return *(Scanner*)_scanner;
     }
 
-    void Parser::parse(IStream &is)
+    void Parser::parseImpl(IStream& is)
     {
-        _current = 0;
-        _scanner->load(&is);
+        // make sure the token cursor is at zero
+        // initially and attach the input stream
+        // to the scanner
+        _cursor = 0;
+        _scanner->attach(&is);
 
-        while (_current <= (int32_t)_tokens.size())
+        while (_cursor <= (int32_t)_tokens.size())
         {
             const int8_t tok = getToken(0).getType();
             if (tok == TOK_EOF)
                 break;
 
-            const int32_t op = _current;
+            const int32_t op = _cursor;
             expression();
 
-            if (op == _current)
-                advanceToken();
+            // if the cursor did not
+            // advance force it to.
+            if (op == _cursor)
+                advanceCursor();
         }
     }
 
-
-    void Parser::writeInstructions(OStream& os)
+    void Parser::writeImpl(OStream& os)
     {
         for (uint16_t& inst : _instructions)
         {
             std::bitset<16> v(inst);
             os << v << std::endl;
         }
-    }
-
-    void Parser::writeInstructions(const String& file)
-    {
-        std::ofstream os(file);
-        writeInstructions(os);
     }
 
 }  // namespace Hack::Assembler
