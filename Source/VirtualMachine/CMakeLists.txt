@@ -24,6 +24,7 @@ set(Target_HDR
    Scanner.h
    Parser.h
    Emitter.h
+   Constants.h
    VM.grm
 )
 

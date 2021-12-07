@@ -20,7 +20,6 @@
 -------------------------------------------------------------------------------
 */
 #include <TestDirectory.h>
-#include <cstdio>
 #include <fstream>
 #include "Assembler/Parser.h"
 #include "Chips/Rom32.h"
@@ -37,6 +36,6 @@ GTEST_TEST(LoadRom, Test1)
 
     const Parser::Instructions &inst= psr.getInstructions();
 
-    Hack::Chips::Rom32 rom;
+    const Hack::Chips::Rom32 rom;
     rom.load(inst.data(), inst.size());
 }

@@ -184,11 +184,11 @@ namespace Hack::VirtualMachine
         // load values into the correct
         // ram addresses
 
-        _emitter.setRam(0, 256);
-        _emitter.setRam(1, 300);
-        _emitter.setRam(2, 400);
-        _emitter.setRam(3, 3000);
-        _emitter.setRam(4, 3010);
+        _emitter.setRam(0, Stack);
+        _emitter.setRam(1, Local);
+        _emitter.setRam(2, Arguments);
+        _emitter.setRam(3, This);
+        _emitter.setRam(4, That);
 
         while (_cursor <= (int32_t)_tokens.size())
         {

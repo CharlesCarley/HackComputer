@@ -20,44 +20,29 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#include "VirtualMachine/Emitter.h"
-#include "VirtualMachine/Constants.h"
-#include "Utils/ParserBase/ParserBase.h"
-#include "Utils/String.h"
 
 namespace Hack::VirtualMachine
 {
-    class Scanner;
-
-    class Parser final : public ParserBase::ParserBase
+    enum RamAddresses
     {
-    private:
-        Emitter _emitter;
+        Stack     = 256,
+        Local     = 300,
+        Arguments = 400,
+        This      = 3000,
+        That      = 3010,
+    };
 
-    private:
-
-        void parseImpl(IStream& is) override;
-
-        void writeImpl(OStream& os) override;
-
-        void expression();
-
-        void pushExpression();
-
-        void popExpression();
-
-        void addExpression();
-
-        void subExpression();
-
-        void andExpression();
-
-        void orExpression();
-
-    public:
-        Parser();
-
-        ~Parser() override;
+    enum RamIndices
+    {
+        STP = 0,
+        LCL,
+        ARG,
+        THS,
+        THT,
+        TMP, // 8 entries
+        SW0 = 13,
+        SW1,
+        SW2
     };
 
 }  // namespace Hack::VirtualMachine

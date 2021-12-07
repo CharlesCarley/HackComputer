@@ -21,6 +21,8 @@
 */
 #include "VirtualMachine/Emitter.h"
 #include <iomanip>
+#include "VirtualMachine/Constants.h"
+
 #define lft(x) std::left, std::setw(x)
 #define rgt(x) std::right, std::setw(x), ' '
 #define P lft(8)
@@ -28,18 +30,6 @@
 
 namespace Hack::VirtualMachine
 {
-    enum Codes
-    {
-        STP = 0,
-        LCL,
-        ARG,
-        THS,
-        THT,
-        TMP,
-        SW0 = 13,
-        SW1,
-        SW2
-    };
 
     class CodeStream
     {
@@ -75,24 +65,18 @@ namespace Hack::VirtualMachine
     void Emitter::setRam(const int index, const int value)
     {
         const CodeStream w(&_stream);
-        w.write("# [ set ram ] ");
-        w.write();
-        w.write('@', P, value, "D=A     # CPU.D = ", value);
-        w.write('@', P, index, "M=D     # RAM[", index, "] = ", value);
-        w.write();
+        w.write('@', P, value, "D=A");
+        w.write('@', P, index, "M=D");
     }
 
     void Emitter::pushConstant(const String& value)
     {
         // clang-format off
         const CodeStream w(&_stream);
-        w.write("# [ push constant ] ");
-        w.write();
         w.write("@", P, value, "D=A");
         w.write('@', P, STP,   "M=M+1");
         w.write(R,             "A=M-1");
         w.write(R,             "M=D");
-        w.write();
         // clang-format on
     }
 
@@ -101,8 +85,7 @@ namespace Hack::VirtualMachine
                                const int32_t&    dest,
                                const int32_t&    swap)
     {
-        // assumes the the actual destination
-        // index is in RAM[dest]
+        // assumes the actual destination index is in RAM[dest]
 
         // clang-format off
         w.write('@', P, idx,   "D=A");
@@ -120,10 +103,7 @@ namespace Hack::VirtualMachine
     {
         // clang-format off
         const CodeStream w(&_stream);
-        w.write("# [ pop local ] ");
-        w.write();
         popStackInto(w, idx, LCL, SW2);
-        w.write();
         // clang-format on
     }
 
@@ -131,10 +111,7 @@ namespace Hack::VirtualMachine
     {
         // clang-format off
         const CodeStream w(&_stream);
-        w.write("# [ pop argument ] ");
-        w.write();
         popStackInto(w, idx, ARG, SW2);
-        w.write();
         // clang-format on
     }
 
@@ -142,10 +119,7 @@ namespace Hack::VirtualMachine
     {
         // clang-format off
         const CodeStream w(&_stream);
-        w.write("# [ pop this ] ");
-        w.write();
         popStackInto(w, idx, THS, SW2);
-        w.write();
         // clang-format on
     }
 
@@ -153,10 +127,7 @@ namespace Hack::VirtualMachine
     {
         // clang-format off
         const CodeStream w(&_stream);
-        w.write("# [ pop that ] ");
-        w.write();
         popStackInto(w, idx, THT, SW2);
-        w.write();
         // clang-format on
     }
 
@@ -164,9 +135,7 @@ namespace Hack::VirtualMachine
     {
         // clang-format off
         const CodeStream w(&_stream);
-        w.write("# [ pop temp ] ");
         popStackInto(w, idx, TMP, SW2);
-        w.write();
         // clang-format on
     }
 
@@ -174,7 +143,6 @@ namespace Hack::VirtualMachine
     {
         // clang-format off
         const CodeStream w(&_stream);
-        w.write("# [ or ] ");
         w.write('@', P, STP,  "M=M-1");
         w.write(R,            "A=M");
         w.write(R,            "D=M");
@@ -188,7 +156,6 @@ namespace Hack::VirtualMachine
     {
         // clang-format off
         const CodeStream w(&_stream);
-        w.write("# [ or ] ");
         w.write('@', P, STP,  "M=M-1");
         w.write(R,            "A=M");
         w.write(R,            "D=M");
@@ -202,7 +169,6 @@ namespace Hack::VirtualMachine
     {
         // clang-format off
         const CodeStream w(&_stream);
-        w.write("# [ sub ] ");
         w.write('@', P, STP,  "M=M-1");
         w.write(R,            "A=M");
         w.write(R,            "D=M");
@@ -216,13 +182,11 @@ namespace Hack::VirtualMachine
     {
         // clang-format off
         const CodeStream w(&_stream);
-        w.write("# [ add ] ");
         w.write('@', P, STP,  "M=M-1");
         w.write(R,            "A=M");
         w.write(R,            "D=M");
         w.write(R,            "A=A-1");
         w.write(R,            "M=D+M");
-        w.write();
         // clang-format on
     }
 
