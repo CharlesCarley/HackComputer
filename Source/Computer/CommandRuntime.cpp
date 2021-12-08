@@ -61,6 +61,7 @@ namespace Hack::Computer
     {
     private:
         int      _input;
+        int      _mode;
         bool     _block;
         Context* _ctx;
         Memory*  _ram;
@@ -71,6 +72,7 @@ namespace Hack::Computer
     public:
         CommandRuntimePrivate() :
             _input(PR_NO_INPUT),
+            _mode(0),
             _block(true),
             _ctx(nullptr),
             _ram(nullptr),
@@ -123,6 +125,15 @@ namespace Hack::Computer
                 _block = !_block;
             if (_input == PR_R)
                 computer->reset();
+            if (_input == PR_1)
+                _mode = 0;
+            if (_input == PR_2)
+                _mode = 1;
+            if (_input == PR_3)
+                _mode = 2;
+            if (_input == PR_4)
+                _mode = 3;
+
         }
 
         void flushMemory(Chips::Computer* computer)
@@ -220,10 +231,14 @@ namespace Hack::Computer
 
             ctx.reset();
 
+            int w = SideBarWidth;
+            if (_mode == 3)
+                w += 5;
+
             const Rectangle bounds = {
-                width - SideBarWidth - 3,
+                width - w - 3,
                 2,
-                SideBarWidth,
+                w,
                 height - 4,
             };
 
@@ -239,9 +254,21 @@ namespace Hack::Computer
             for (int i = -hh + 1; i < hh - 1; ++i)
             {
                 int iVal = _cpuState.addrM + i;
+
+                const uint16_t vi = _ram->get(iVal);
+                String   v;
+                if (_mode == 1)
+                    v = Char::toString((int16_t)vi);
+                else if (_mode == 2)
+                    v = Char::toHexString(vi);
+                else if (_mode == 3)
+                    v = Char::toBinaryString(vi);
+                else
+                    v = Char::toString(vi);
+
                 displayMemoryContents(ctx,
                                       bounds,
-                                      Char::toString(_ram->get(iVal)),
+                                      v,
                                       i,
                                       _cpuState.addrM,
                                       iVal == _cpuState.addrM);
@@ -374,10 +401,15 @@ namespace Hack::Computer
             ctx.string("Next", bounds.left() + 5, bounds.bottom() + 1);
 
             // RAM -> CPU
+
+            int boundsOffset = bounds.right() + 3;
+            if (_mode == 3)
+                boundsOffset -= 5;
+
             ctx.foreground(_prevCpuState.ram != _cpuState.ram ? WireLight
                                                               : Wire);
             ctx.moveTo(cpuRect.left() - halfOfHalfToEdge, bounds.top() + 1);
-            ctx.lineTo(bounds.right() + 3, bounds.top() + 1, OR_HORIZONTAL);
+            ctx.lineTo(boundsOffset, bounds.top() + 1, OR_HORIZONTAL);
             ctx.moveTo(cpuRect.left() - halfOfHalfToEdge, cpuRect.top() + 3);
             ctx.lineTo(cpuRect.left() - halfOfHalfToEdge,
                        bounds.top() + 1,

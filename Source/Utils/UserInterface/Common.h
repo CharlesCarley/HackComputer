@@ -93,6 +93,7 @@ namespace Hack::Ui
         PR_0 = '0',
         PR_1,
         PR_2,
+        PR_3,
         PR_4,
         PR_5,
         PR_6,

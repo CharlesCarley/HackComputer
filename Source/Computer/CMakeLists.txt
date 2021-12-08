@@ -69,3 +69,7 @@ if (USE_SDL)
 endif()
 
 copy_target(${TargetName} ${Hack_BINARY_DIR}/build_files) 
+
+if (NOT Hack_INSTALL_PATH STREQUAL  "")
+    copy_target(${TargetName} ${Hack_INSTALL_PATH}) 
+endif()

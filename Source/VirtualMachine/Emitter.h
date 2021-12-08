@@ -37,6 +37,10 @@ namespace Hack::VirtualMachine
                                  const int32_t&    dest,
                                  const int32_t&    swap);
 
+        static void pushIntoStack(const CodeStream& w,
+                                  const String&     idx,
+                                  const int32_t&    dest);
+
     public:
         Emitter();
 
@@ -46,7 +50,15 @@ namespace Hack::VirtualMachine
 
         void setRam(int index, int value);
 
-        void pushConstant(const String& value);
+        void pushConstant(const String& idx);
+
+        void pushLocal(const String& idx);
+
+        void pushArgument(const String& idx);
+
+        void pushThis(const String& idx);
+
+        void pushThat(const String& idx);
 
         void popLocal(const String& idx);
 
@@ -65,6 +77,10 @@ namespace Hack::VirtualMachine
         void writeSub();
 
         void writeAdd();
+
+        void writeNot();
+
+        void writeNeg();
     };
 
 }  // namespace Hack::VirtualMachine

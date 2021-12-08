@@ -50,19 +50,29 @@ endif()
 
 #------------------------------------------------------
 
-unset(Target_HDR)
-unset(Target_SRC)
-set(Target_SRC Main.cpp)
+if (BuildType STREQUAL "CPP")
 
-include_directories(${Hack_SOURCE_DIR}/Source)
+    # The command line application
+    set(TargetName Vm2Asm)
+    
+    unset(Target_HDR)
+    unset(Target_SRC)
+    set(Target_SRC Main.cpp)
 
-add_executable(VMTranslator 
-    ${Target_SRC} 
-)
+    include_directories(${Hack_SOURCE_DIR}/Source)
 
-target_link_libraries(VMTranslator VirtualMachine Utils)
+    add_executable(${TargetName}  ${Target_SRC})
 
-if (TargetFolders)
-    set_target_properties(VMTranslator PROPERTIES FOLDER "${TargetGroup}")
+    target_link_libraries(${TargetName} VirtualMachine Utils)
+
+    copy_target(${TargetName} ${Hack_BINARY_DIR}/build_files) 
+
+    if (NOT Hack_INSTALL_PATH STREQUAL  "")
+        copy_target(${TargetName} ${Hack_INSTALL_PATH}) 
+    endif()
+
+    if (TargetFolders)
+        set_target_properties(${TargetName} PROPERTIES FOLDER "${TargetGroup}")
+    endif()
+
 endif()
-

@@ -22,6 +22,7 @@
 #include "VirtualMachine/Scanner.h"
 #include "Utils/Char.h"
 #include "Utils/Exceptions/Exception.h"
+
 #define lowercase                                                         \
     'a' : case 'b' : case 'c' : case 'd' : case 'e' : case 'f' : case 'g' \
         : case 'h' : case 'i' : case 'j' : case 'k' : case 'l' : case 'm' \
@@ -36,13 +37,11 @@
         : case 'Z'
 #define digit                                                             \
     '0' : case '1' : case '2' : case '3' : case '4' : case '5' : case '6' \
-        : case '7' : case '8' : case '9'
+        : case '7' : case '8' : case '9' : case '-'
 
 namespace Hack::VirtualMachine
 {
-    Scanner::Scanner()
-    {
-    }
+    Scanner::Scanner() = default;
 
     void Scanner::scanLineComment() const
     {
@@ -136,10 +135,10 @@ namespace Hack::VirtualMachine
         int ch = _stream->peek();
 
         String v;
-        while (isDecimal(ch))
+        while (isDecimal(ch) || ch == '-')
         {
             ch = _stream->get();
-            if (isDecimal(ch))
+            if (isDecimal(ch) || ch == '-')
                 v.push_back((char)ch);
         }
 

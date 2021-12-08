@@ -23,335 +23,363 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #endif
 #include "Utils/Char.h"
+#include <bitset>
 #include <cstdlib>
 #include <cstring>
 #include <limits>
 #include <sstream>
 #include "String.h"
 
-using namespace Hack;
-
-size_t Char::length(const char* in)
+namespace Hack
 {
-    return in && *in ? (size_t)strlen(in) : 0;
-}
-
-void Char::copy(char* dest, const char* src)
-{
-    if (dest && src && *src)
-        strcpy(dest, src);
-}
-
-void Char::copy(char* dest, const char* src, size_t max)
-{
-    if (dest && src && *src)
+    size_t Char::length(const char* in)
     {
-        size_t len = length(src);
-
-        // restrict it to max
-        if (len > max)
-            len = max;
-
-        strncpy(dest, src, (size_t)len);
-
-        if (len <= max)
-            dest[len] = 0;
+        return in && *in ? (size_t)strlen(in) : 0;
     }
-}
 
-size_t Char::equals(const char* a, const char* b)
-{
-    if (!a || !b)
-        return 1;
-    if (*a != *b)
-        return 1;
-    return (size_t)strcmp(a, b);
-}
-
-size_t Char::equals(const char* a, const char* b, const size_t max)
-{
-    if (!a || !b)
-        return 1;
-    if (*a != *b)
-        return 1;
-    return (size_t)(size_t)strncmp(a, b, (size_t)max);
-}
-
-int16_t Char::toInt16(const char* in, int16_t def, int base)
-{
-    if (in && *in)
+    void Char::copy(char* dest, const char* src)
     {
-        const long long v = std::strtoll(in, nullptr, base);
-        if (v > std::numeric_limits<int16_t>::max())
-            return std::numeric_limits<int16_t>::max();
-        if (v < std::numeric_limits<int16_t>::min())
-            return std::numeric_limits<int16_t>::min();
-        return (int16_t)v;
+        if (dest && src && *src)
+            strcpy(dest, src);
     }
-    return def;
-}
 
-int32_t Char::toInt32(const char* in, int32_t def, int base)
-{
-    if (in && *in)
+    void Char::copy(char* dest, const char* src, size_t max)
     {
-        const long long v = std::strtoll(in, nullptr, base);
-        if (v > std::numeric_limits<int32_t>::max())
-            return std::numeric_limits<int32_t>::max();
-        if (v < std::numeric_limits<int32_t>::min())
-            return std::numeric_limits<int32_t>::min();
-        return (int32_t)v;
-    }
-    return def;
-}
-
-int64_t Char::toInt64(const char* in, int64_t def, int base)
-{
-    if (in && *in)
-        return (int64_t)std::strtoll(in, nullptr, base);
-    return def;
-}
-
-uint16_t Char::toUint16(const char* in, uint16_t def, int base)
-{
-    if (in && *in)
-    {
-        const unsigned long long v = std::strtoull(in, nullptr, base);
-        if (v > std::numeric_limits<uint16_t>::max())
-            return std::numeric_limits<uint16_t>::max();
-        return (uint16_t)v;
-    }
-    return def;
-}
-
-uint32_t Char::toUint32(const char* in, uint32_t def, int base)
-{
-    if (in && *in)
-    {
-        const unsigned long long v = std::strtoull(in, nullptr, base);
-        if (v > std::numeric_limits<uint32_t>::max())
-            return std::numeric_limits<uint32_t>::max();
-        return (uint32_t)v;
-    }
-    return def;
-}
-
-uint64_t Char::toUint64(const char* in, uint64_t def, int base)
-{
-    if (in && *in)
-        return (uint64_t)std::strtoull(in, nullptr, base);
-    return def;
-}
-
-int16_t Char::toInt16(const String& in, int16_t def, int base)
-{
-    return toInt16(in.c_str(), def, base);
-}
-
-int32_t Char::toInt32(const String& in, int32_t def, int base)
-{
-    return toInt32(in.c_str(), def, base);
-}
-
-int64_t Char::toInt64(const String& in, int64_t def, int base)
-{
-    return toInt64(in.c_str(), def, base);
-}
-
-uint16_t Char::toUint16(const String& in, uint16_t def, int base)
-{
-    return toUint16(in.c_str(), def, base);
-}
-
-uint32_t Char::toUint32(const String& in, uint32_t def, int base)
-{
-    return toUint32(in.c_str(), def, base);
-}
-
-uint64_t Char::toUint64(const String& in, uint64_t def, int base)
-{
-    return toUint64(in.c_str(), def, base);
-}
-
-bool Char::isNullOrEmpty(const char* in)
-{
-    return !in || !*in;
-}
-
-
-bool Char::toBool(const char* in)
-{
-    if (in)
-    {
-        switch (*in)
+        if (dest && src && *src)
         {
-        case 't':
-            return strncmp(in, "true", 4) == 0;
-        case 'y':
-            return strncmp(in, "yes", 3) == 0;
-        case '1':
-            return strncmp(in, "1", 1) == 0;
-        default:
-            break;
+            size_t len = length(src);
+
+            // restrict it to max
+            if (len > max)
+                len = max;
+
+            strncpy(dest, src, (size_t)len);
+
+            if (len <= max)
+                dest[len] = 0;
         }
     }
-    return false;
-}
 
-float Char::toFloat(const char* in, const float& def)
-{
-    if (in && *in)
-        return std::strtof(in, nullptr);
-    return def;
-}
+    size_t Char::equals(const char* a, const char* b)
+    {
+        if (!a || !b)
+            return 1;
+        if (*a != *b)
+            return 1;
+        return (size_t)strcmp(a, b);
+    }
 
-double Char::toDouble(const char* in, const double& def)
-{
-    if (in && *in)
-        return std::strtod(in, nullptr);
-    return def;
-}
+    size_t Char::equals(const char* a, const char* b, const size_t max)
+    {
+        if (!a || !b)
+            return 1;
+        if (*a != *b)
+            return 1;
+        return (size_t)(size_t)strncmp(a, b, (size_t)max);
+    }
 
-bool Char::toBool(const String& in)
-{
-    return toBool(in.c_str());
-}
+    int16_t Char::toInt16(const char* in, int16_t def, int base)
+    {
+        if (in && *in)
+        {
+            const long long v = std::strtoll(in, nullptr, base);
+            if (v > std::numeric_limits<int16_t>::max())
+                return std::numeric_limits<int16_t>::max();
+            if (v < std::numeric_limits<int16_t>::min())
+                return std::numeric_limits<int16_t>::min();
+            return (int16_t)v;
+        }
+        return def;
+    }
 
-float Char::toFloat(const String& in, const float& def)
-{
-    return toFloat(in.c_str(), def);
-}
+    int32_t Char::toInt32(const char* in, int32_t def, int base)
+    {
+        if (in && *in)
+        {
+            const long long v = std::strtoll(in, nullptr, base);
+            if (v > std::numeric_limits<int32_t>::max())
+                return std::numeric_limits<int32_t>::max();
+            if (v < std::numeric_limits<int32_t>::min())
+                return std::numeric_limits<int32_t>::min();
+            return (int32_t)v;
+        }
+        return def;
+    }
 
-double Char::toDouble(const String& in, const double& def)
-{
-    return toDouble(in.c_str(), def);
-}
+    int64_t Char::toInt64(const char* in, int64_t def, int base)
+    {
+        if (in && *in)
+            return (int64_t)std::strtoll(in, nullptr, base);
+        return def;
+    }
 
-void Char::toString(String& dest, float v)
-{
-    std::stringstream stream;
-    stream << v;
-    dest = stream.str();
-}
+    uint16_t Char::toUint16(const char* in, uint16_t def, int base)
+    {
+        if (in && *in)
+        {
+            const unsigned long long v = std::strtoull(in, nullptr, base);
+            //if (v > std::numeric_limits<uint16_t>::max())
+            //    return std::numeric_limits<uint16_t>::max();
+            return (uint16_t)v;
+        }
+        return def;
+    }
 
-void Char::toString(String& dest, double v)
-{
-    std::stringstream stream;
-    stream << v;
-    dest = stream.str();
-}
+    uint32_t Char::toUint32(const char* in, uint32_t def, int base)
+    {
+        if (in && *in)
+        {
+            const unsigned long long v = std::strtoull(in, nullptr, base);
+            if (v > std::numeric_limits<uint32_t>::max())
+                return std::numeric_limits<uint32_t>::max();
+            return (uint32_t)v;
+        }
+        return def;
+    }
 
-void Char::toString(String& dest, bool v)
-{
-    dest.reserve(2);
-    dest.resize(0);
-    if (v)
-        dest.push_back('1');
-    else
-        dest.push_back('0');
-}
+    uint64_t Char::toUint64(const char* in, uint64_t def, int base)
+    {
+        if (in && *in)
+            return (uint64_t)std::strtoull(in, nullptr, base);
+        return def;
+    }
 
-void Char::toString(String& dest, int16_t v)
-{
-    std::stringstream stream;
-    stream << v;
-    dest = stream.str();
-}
+    int16_t Char::toInt16(const String& in, int16_t def, int base)
+    {
+        return toInt16(in.c_str(), def, base);
+    }
 
-void Char::toString(String& dest, int32_t v)
-{
-    std::stringstream stream;
-    stream << v;
-    dest = stream.str();
-}
+    int32_t Char::toInt32(const String& in, int32_t def, int base)
+    {
+        return toInt32(in.c_str(), def, base);
+    }
 
-void Char::toString(String& dest, int64_t v)
-{
-    std::stringstream stream;
-    stream << v;
-    dest = stream.str();
-}
+    int64_t Char::toInt64(const String& in, int64_t def, int base)
+    {
+        return toInt64(in.c_str(), def, base);
+    }
 
-void Char::toString(String& dest, uint16_t v)
-{
-    std::stringstream stream;
-    stream << v;
-    dest = stream.str();
-}
+    uint16_t Char::toUint16(const String& in, uint16_t def, int base)
+    {
+        return toUint16(in.c_str(), def, base);
+    }
 
-void Char::toString(String& dest, uint32_t v)
-{
-    std::stringstream stream;
-    stream << v;
-    dest = stream.str();
-}
+    uint32_t Char::toUint32(const String& in, uint32_t def, int base)
+    {
+        return toUint32(in.c_str(), def, base);
+    }
 
-void Char::toString(String& dest, uint64_t v)
-{
-    std::stringstream stream;
-    stream << v;
-    dest = stream.str();
-}
+    uint64_t Char::toUint64(const String& in, uint64_t def, int base)
+    {
+        return toUint64(in.c_str(), def, base);
+    }
 
-String Char::toString(float v)
-{
-    String copyOnReturn;
-    toString(copyOnReturn, v);
-    return copyOnReturn;
-}
+    bool Char::isNullOrEmpty(const char* in)
+    {
+        return !in || !*in;
+    }
 
-String Char::toString(double v)
-{
-    String copyOnReturn;
-    toString(copyOnReturn, v);
-    return copyOnReturn;
-}
+    bool Char::toBool(const char* in)
+    {
+        if (in)
+        {
+            switch (*in)
+            {
+            case 't':
+                return strncmp(in, "true", 4) == 0;
+            case 'y':
+                return strncmp(in, "yes", 3) == 0;
+            case '1':
+                return strncmp(in, "1", 1) == 0;
+            default:
+                break;
+            }
+        }
+        return false;
+    }
 
-String Char::toString(bool v)
-{
-    String copyOnReturn;
-    toString(copyOnReturn, v);
-    return copyOnReturn;
-}
+    float Char::toFloat(const char* in, const float& def)
+    {
+        if (in && *in)
+            return std::strtof(in, nullptr);
+        return def;
+    }
 
-String Char::toString(int16_t v)
-{
-    String copyOnReturn;
-    toString(copyOnReturn, v);
-    return copyOnReturn;
-}
+    double Char::toDouble(const char* in, const double& def)
+    {
+        if (in && *in)
+            return std::strtod(in, nullptr);
+        return def;
+    }
 
-String Char::toString(int32_t v)
-{
-    String copyOnReturn;
-    toString(copyOnReturn, v);
-    return copyOnReturn;
-}
+    bool Char::toBool(const String& in)
+    {
+        return toBool(in.c_str());
+    }
 
-String Char::toString(int64_t v)
-{
-    String copyOnReturn;
-    toString(copyOnReturn, v);
-    return copyOnReturn;
-}
+    float Char::toFloat(const String& in, const float& def)
+    {
+        return toFloat(in.c_str(), def);
+    }
 
-String Char::toString(uint16_t v)
-{
-    String copyOnReturn;
-    toString(copyOnReturn, v);
-    return copyOnReturn;
-}
+    double Char::toDouble(const String& in, const double& def)
+    {
+        return toDouble(in.c_str(), def);
+    }
 
-String Char::toString(uint32_t v)
-{
-    String copyOnReturn;
-    toString(copyOnReturn, v);
-    return copyOnReturn;
-}
+    void Char::toString(String& dest, float v)
+    {
+        std::stringstream stream;
+        stream << v;
+        dest = stream.str();
+    }
 
-String Char::toString(uint64_t v)
-{
-    String copyOnReturn;
-    toString(copyOnReturn, v);
-    return copyOnReturn;
-}
+    void Char::toString(String& dest, double v)
+    {
+        std::stringstream stream;
+        stream << v;
+        dest = stream.str();
+    }
+
+    void Char::toString(String& dest, bool v)
+    {
+        dest.reserve(2);
+        dest.resize(0);
+        if (v)
+            dest.push_back('1');
+        else
+            dest.push_back('0');
+    }
+
+    void Char::toString(String& dest, int16_t v)
+    {
+        std::stringstream stream;
+        stream << v;
+        dest = stream.str();
+    }
+
+    void Char::toString(String& dest, int32_t v)
+    {
+        std::stringstream stream;
+        stream << v;
+        dest = stream.str();
+    }
+
+    void Char::toString(String& dest, int64_t v)
+    {
+        std::stringstream stream;
+        stream << v;
+        dest = stream.str();
+    }
+
+    void Char::toString(String& dest, uint16_t v)
+    {
+        std::stringstream stream;
+        stream << v;
+        dest = stream.str();
+    }
+
+    void Char::toString(String& dest, uint32_t v)
+    {
+        std::stringstream stream;
+        stream << v;
+        dest = stream.str();
+    }
+
+    void Char::toString(String& dest, uint64_t v)
+    {
+        std::stringstream stream;
+        stream << v;
+        dest = stream.str();
+    }
+
+    void Char::toHexString(String& dest, uint16_t v)
+    {
+        std::stringstream stream;
+        stream << std::hex << v;
+        dest = stream.str();
+    }
+
+    void Char::toBinaryString(String& dest, uint16_t v)
+    {
+        const std::bitset<16> bs(v);
+        dest = bs.to_string();
+    }
+
+    String Char::toString(float v)
+    {
+        String copyOnReturn;
+        toString(copyOnReturn, v);
+        return copyOnReturn;
+    }
+
+    String Char::toString(double v)
+    {
+        String copyOnReturn;
+        toString(copyOnReturn, v);
+        return copyOnReturn;
+    }
+
+    String Char::toString(bool v)
+    {
+        String copyOnReturn;
+        toString(copyOnReturn, v);
+        return copyOnReturn;
+    }
+
+    String Char::toString(int16_t v)
+    {
+        String copyOnReturn;
+        toString(copyOnReturn, v);
+        return copyOnReturn;
+    }
+
+    String Char::toString(int32_t v)
+    {
+        String copyOnReturn;
+        toString(copyOnReturn, v);
+        return copyOnReturn;
+    }
+
+    String Char::toString(int64_t v)
+    {
+        String copyOnReturn;
+        toString(copyOnReturn, v);
+        return copyOnReturn;
+    }
+
+    String Char::toString(uint16_t v)
+    {
+        String copyOnReturn;
+        toString(copyOnReturn, v);
+        return copyOnReturn;
+    }
+
+    String Char::toHexString(uint16_t v)
+    {
+        String copyOnReturn;
+        toHexString(copyOnReturn, v);
+        return copyOnReturn;
+    }
+
+    String Char::toBinaryString(uint16_t v)
+    {
+        String copyOnReturn;
+        toBinaryString(copyOnReturn, v);
+        return copyOnReturn;
+    }
+
+    String Char::toString(uint32_t v)
+    {
+        String copyOnReturn;
+        toString(copyOnReturn, v);
+        return copyOnReturn;
+    }
+
+    String Char::toString(uint64_t v)
+    {
+        String copyOnReturn;
+        toString(copyOnReturn, v);
+        return copyOnReturn;
+    }
+}  // namespace Hack

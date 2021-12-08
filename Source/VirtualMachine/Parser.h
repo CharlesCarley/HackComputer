@@ -46,14 +46,6 @@ namespace Hack::VirtualMachine
 
         void popExpression();
 
-        void addExpression();
-
-        void subExpression();
-
-        void andExpression();
-
-        void orExpression();
-
     public:
         Parser();
 

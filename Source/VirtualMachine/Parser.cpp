@@ -50,13 +50,21 @@ namespace Hack::VirtualMachine
         }
 
         const size_t idx = getToken(2).getIndex();
-        
+
         switch (t0)
         {
-        case TOK_ARGUMENT:
         case TOK_LOCAL:
+            _emitter.pushLocal(_scanner->getString(idx));
+            break;
+        case TOK_ARGUMENT:
+            _emitter.pushArgument(_scanner->getString(idx));
+            break;
         case TOK_THIS:
+            _emitter.pushThis(_scanner->getString(idx));
+            break;
         case TOK_THAT:
+            _emitter.pushThat(_scanner->getString(idx));
+            break;
         case TOK_POINTER:
         case TOK_TEMP:
         case TOK_STATIC:
@@ -85,7 +93,7 @@ namespace Hack::VirtualMachine
         }
 
         const size_t idx = getToken(2).getIndex();
-        
+
         switch (t0)
         {
         case TOK_LOCAL:
@@ -115,26 +123,6 @@ namespace Hack::VirtualMachine
         }
     }
 
-    void Parser::addExpression()
-    {
-        _emitter.writeAdd();
-    }
-
-    void Parser::subExpression()
-    {
-        _emitter.writeSub();
-    }
-
-    void Parser::andExpression()
-    {
-        _emitter.writeAnd();
-    }
-
-    void Parser::orExpression()
-    {
-        _emitter.writeOr();
-    }
-
     void Parser::expression()
     {
         const int8_t t0 = getToken(0).getType();
@@ -149,19 +137,27 @@ namespace Hack::VirtualMachine
             advanceCursor(3);
             break;
         case TOK_AND:
-            andExpression();
+            _emitter.writeAnd();
             advanceCursor();
             break;
         case TOK_OR:
-            orExpression();
+            _emitter.writeOr();
             advanceCursor();
             break;
         case TOK_ADD:
-            addExpression();
+            _emitter.writeAdd();
             advanceCursor();
             break;
         case TOK_SUB:
-            subExpression();
+            _emitter.writeSub();
+            advanceCursor();
+            break;
+        case TOK_NOT:
+            _emitter.writeNot();
+            advanceCursor();
+            break;
+        case TOK_NEG:
+            _emitter.writeNeg();
             advanceCursor();
             break;
         default:

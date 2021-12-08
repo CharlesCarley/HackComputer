@@ -44,23 +44,41 @@ namespace Hack
 
         static int64_t toInt64(const char* in, int64_t def = -1, int base = 10);
 
-        static uint16_t toUint16(const char* in, uint16_t def = (uint16_t)-1, int base = 10);
+        static uint16_t toUint16(const char* in,
+                                 uint16_t    def  = (uint16_t)-1,
+                                 int         base = 10);
 
-        static uint32_t toUint32(const char* in, uint32_t def = (uint32_t)-1, int base = 10);
+        static uint32_t toUint32(const char* in,
+                                 uint32_t    def  = (uint32_t)-1,
+                                 int         base = 10);
 
-        static uint64_t toUint64(const char* in, uint64_t def = (uint64_t)-1, int base = 10);
+        static uint64_t toUint64(const char* in,
+                                 uint64_t    def  = (uint64_t)-1,
+                                 int         base = 10);
 
-        static int16_t toInt16(const String& in, int16_t def = -1, int base = 10);
+        static int16_t toInt16(const String& in,
+                               int16_t       def  = -1,
+                               int           base = 10);
 
-        static int32_t toInt32(const String& in, int32_t def = -1, int base = 10);
+        static int32_t toInt32(const String& in,
+                               int32_t       def  = -1,
+                               int           base = 10);
 
-        static int64_t toInt64(const String& in, int64_t def = -1, int base = 10);
+        static int64_t toInt64(const String& in,
+                               int64_t       def  = -1,
+                               int           base = 10);
 
-        static uint16_t toUint16(const String& in, uint16_t def = (uint16_t)-1, int base = 10);
+        static uint16_t toUint16(const String& in,
+                                 uint16_t      def  = (uint16_t)-1,
+                                 int           base = 10);
 
-        static uint32_t toUint32(const String& in, uint32_t def = (uint32_t)-1, int base = 10);
+        static uint32_t toUint32(const String& in,
+                                 uint32_t      def  = (uint32_t)-1,
+                                 int           base = 10);
 
-        static uint64_t toUint64(const String& in, uint64_t def = (uint64_t)-1, int base = 10);
+        static uint64_t toUint64(const String& in,
+                                 uint64_t      def  = (uint64_t)-1,
+                                 int           base = 10);
 
         static bool isNullOrEmpty(const char* in);
 
@@ -90,6 +108,10 @@ namespace Hack
 
         static void toString(String& dest, uint16_t v);
 
+        static void toHexString(String& dest, uint16_t v);
+
+        static void toBinaryString(String& dest, uint16_t v);
+
         static void toString(String& dest, uint32_t v);
 
         static void toString(String& dest, uint64_t v);
@@ -107,6 +129,10 @@ namespace Hack
         static String toString(int64_t v);
 
         static String toString(uint16_t v);
+
+        static String toHexString(uint16_t v);
+
+        static String toBinaryString(uint16_t v);
 
         static String toString(uint32_t v);
 
@@ -133,4 +159,4 @@ namespace Hack
         return ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z';
     }
 
-}  // namespace Utils
+}  // namespace Hack

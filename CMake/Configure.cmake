@@ -18,23 +18,7 @@
 #    misrepresented as being the original software.
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
-find_package (Python COMPONENTS Interpreter)
-
-if(Python_Interpreter_FOUND)
-	
-	# Attempts to pull submodules with python.
-
-	if (NOT EXISTS ${CMAKE_SOURCE_DIR}/Test/googletest/CMakeLists.txt)
-		execute_process(COMMAND ${Python_EXECUTABLE} 
-				${CMAKE_SOURCE_DIR}/gitupdate.py
-				WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-				
-		)
-	endif()
-
-	endif()
-
-
+include(GitUpdate)
 # Include files in ${CMAKE_SOURCE_DIR}/CMake/Modules 
 include(StaticRuntime)
 include(ExternalTarget)
@@ -49,8 +33,11 @@ option(Hack_CHECK_INT_BOUNDS     "Throw an exception on overflow ." ON)
 option(Hack_IMPLEMENT_BLACK_BOX  "If this is true all chips will be implemented with logic gates." OFF)
 option(Hack_PRINT_CHIP_STATE     "Enables the print method defined in the Chip class" OFF)
 option(Hack_USE_SDL              "Enables or disables SDL" OFF)
-option(Hack_INSTALL_PATH         "Specify installation directory" "")
 
+set(Hack_INSTALL_PATH         
+	"" 
+	CACHE STRING 
+	"Specify installation directory")
 
 set(BUILD_GMOCK   OFF CACHE BOOL "" FORCE)
 set(INSTALL_GTEST OFF CACHE BOOL "" FORCE)
