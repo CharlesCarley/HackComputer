@@ -307,3 +307,15 @@ GTEST_TEST(VirtualMachine, BasicTest)
     code = mem->get(11);
     EXPECT_EQ(code, 510);
 }
+
+
+GTEST_TEST(VirtualMachine, StaticTest)
+{
+    Chips::Computer comp;
+    VirtualMachineTestStack(comp, "Test10");
+
+    Chips::Memory* mem = comp.getRam();
+
+    const uint16_t code = mem->get(256);
+    EXPECT_EQ(code, 1110);
+}

@@ -73,14 +73,8 @@ namespace Hack
 
         // save the base file name
         const std::filesystem::path pth = file;
-        _file                           = pth.filename().string();
 
-        if (pth.has_extension())
-        {
-            const size_t loc = _file.find(pth.extension().string());
-            if (loc != String::npos)
-                _file = file.substr(0, loc);
-        }
+        _file = pth.stem().string();
 
         parseImpl(is);
     }
