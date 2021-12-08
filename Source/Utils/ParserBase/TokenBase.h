@@ -22,23 +22,23 @@
 #pragma once
 #include "Utils/String.h"
 
-namespace Hack::ParserBase
+namespace Hack
 {
-    class Token
+    class TokenBase
     {
     private:
         size_t _index;
         int8_t _type;
 
     public:
-        Token() : _index(), _type()
+        TokenBase() : _index(), _type()
         {
             clear();
         }
 
-        Token(const Token& tok) = default;
+        TokenBase(const TokenBase& tok) = default;
 
-        ~Token() = default;
+        ~TokenBase() = default;
 
         void clear()
         {
@@ -59,24 +59,24 @@ namespace Hack::ParserBase
         void setIndex(size_t i);
     };
 
-    inline size_t Token::getIndex() const
+    inline size_t TokenBase::getIndex() const
     {
         return _index;
     }
 
-    inline int8_t Token::getType() const
+    inline int8_t TokenBase::getType() const
     {
         return _type;
     }
 
-    inline void Token::setType(const int8_t type)
+    inline void TokenBase::setType(const int8_t type)
     {
         _type = type;
     }
 
-    inline void Token::setIndex(const size_t i)
+    inline void TokenBase::setIndex(const size_t i)
     {
         _index = i;
     }
 
-}  // namespace Hack::ParserBase
+}  // namespace Hack::ParseInterface

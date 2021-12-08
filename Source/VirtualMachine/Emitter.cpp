@@ -136,6 +136,26 @@ namespace Hack::VirtualMachine
         pushIntoStack(w, idx, THT);
     }
 
+    void Emitter::pushTemp(const String& idx)
+    {
+        const CodeStream w(&_stream);
+        pushIntoStack(w, idx, TMP);
+    }
+
+    void Emitter::pushStatic(const String& context, const String& idx)
+    {
+        String loc = context + "." + idx;
+
+        const CodeStream w(&_stream);
+        // clang-format off
+        w.write('@', P, loc);
+        w.write(R,             "D=M");
+        w.write('@', P, STP,   "M=M+1");
+        w.write(R,             "A=M-1");
+        w.write(R,             "M=D");
+        // clang-format on
+    }
+
     void Emitter::popLocal(const String& idx)
     {
         // clang-format off
@@ -149,6 +169,24 @@ namespace Hack::VirtualMachine
         // clang-format off
         const CodeStream w(&_stream);
         popStackInto(w, idx, ARG, SW2);
+        // clang-format on
+    }
+
+    void Emitter::popStatic(const String& context, const String& idx)
+    {
+        String loc = context + "." + idx;
+
+        // clang-format off
+        const CodeStream w(&_stream);
+        // clang-format off
+        w.write('@', P, loc);
+        w.write(R,             "D=A");
+        w.write('@', P, SW0,   "M=D");
+        w.write('@', P, STP,   "M=M-1");
+        w.write(R,             "A=M");
+        w.write(R,             "D=M");
+        w.write('@', P, SW0,   "A=M");
+        w.write(R,             "M=D");
         // clang-format on
     }
 
@@ -175,6 +213,7 @@ namespace Hack::VirtualMachine
         popStackInto(w, idx, TMP, SW2);
         // clang-format on
     }
+
 
     void Emitter::writeOr()
     {

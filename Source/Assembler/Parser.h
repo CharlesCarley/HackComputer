@@ -23,12 +23,11 @@
 #include <unordered_map>
 #include <vector>
 #include "Utils/ParserBase/ParserBase.h"
+#include "Assembler/Scanner.h"
 
 namespace Hack::Assembler
 {
-    class Scanner;
-
-    class Parser final : public ParserBase::ParserBase
+    class Parser final : public ParserBase
     {
     public:
         typedef std::vector<uint16_t>              Instructions;

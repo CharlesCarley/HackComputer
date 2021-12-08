@@ -66,6 +66,11 @@ namespace Hack
                 return _list.at(index);
             throw Exception("Index out of bounds");
         }
+
+        size_t size()
+        {
+            return _list.size();
+        }
     };
 
 }  // namespace Hack

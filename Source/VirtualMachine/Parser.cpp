@@ -22,6 +22,7 @@
 #include "VirtualMachine/Parser.h"
 #include <fstream>
 #include "Utils/Exceptions/Exception.h"
+#include "VirtualMachine/Constants.h"
 #include "VirtualMachine/Scanner.h"
 
 namespace Hack::VirtualMachine
@@ -65,9 +66,13 @@ namespace Hack::VirtualMachine
         case TOK_THAT:
             _emitter.pushThat(_scanner->getString(idx));
             break;
-        case TOK_POINTER:
-        case TOK_TEMP:
         case TOK_STATIC:
+            _emitter.pushStatic(_file, _scanner->getString(idx));
+            break;
+        case TOK_TEMP:
+            _emitter.pushTemp(_scanner->getString(idx));
+            break;
+        case TOK_POINTER:
             break;
         case TOK_CONSTANT:
             _emitter.pushConstant(_scanner->getString(idx));
@@ -112,6 +117,8 @@ namespace Hack::VirtualMachine
             _emitter.popTemp(_scanner->getString(idx));
             break;
         case TOK_STATIC:
+            _emitter.popStatic(_file, _scanner->getString(idx));
+            break;
         case TOK_CONSTANT:
         case TOK_POINTER:
             break;
@@ -185,6 +192,7 @@ namespace Hack::VirtualMachine
         _emitter.setRam(2, Arguments);
         _emitter.setRam(3, This);
         _emitter.setRam(4, That);
+        _emitter.setRam(5, 5);
 
         while (_cursor <= (int32_t)_tokens.size())
         {

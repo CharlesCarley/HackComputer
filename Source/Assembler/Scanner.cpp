@@ -87,11 +87,10 @@ namespace Hack::Assembler
 
     };
 
-    Scanner::Scanner()
+    Scanner::Scanner() : _fsr(0)
     {
         initializeTables();
     }
-
 
     void Scanner::scanLineComment() const
     {
@@ -154,8 +153,15 @@ namespace Hack::Assembler
         for (int i = 0; i < 16; ++i)
             saveString(Char::toString(i));
 
+        _fsr = _stringTable.size();
+
         saveString(Char::toString(0x4000));  // SCREEN
         saveString(Char::toString(0x6000));  // KBD
+    }
+
+    size_t Scanner::firstStaticRegister() const
+    {
+        return _fsr;
     }
 
     bool Scanner::extractRSymbol(Token& tok)
@@ -190,7 +196,7 @@ namespace Hack::Assembler
         // The first should be a letter prior
         // to entry into this method.
 
-        while (isLetter(ch) || isDecimal(ch))
+        while (isLetter(ch) || isDecimal(ch) || ch == '.')
         {
             dest.push_back((char)ch);
             ch = _stream->get();
@@ -276,7 +282,8 @@ namespace Hack::Assembler
 
         for (const ReservedTable& ele : ReservedAddresses)
         {
-            if (Char::equals(buf.c_str(), ele.val, std::min(buf.size(), ele.len)) == 0)
+            if (Char::equals(
+                    buf.c_str(), ele.val, std::min(buf.size(), ele.len)) == 0)
             {
                 tok.setType(TOK_INTEGER);
 
@@ -363,7 +370,8 @@ namespace Hack::Assembler
                 scanWhiteSpace();
                 break;
             default:
-                throw SyntaxError(String("unknown character parsed") + (char)ch);
+                throw SyntaxError(String("unknown character parsed") +
+                                  (char)ch);
             }
         }
 

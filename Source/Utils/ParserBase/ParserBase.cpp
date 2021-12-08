@@ -20,14 +20,15 @@
 -------------------------------------------------------------------------------
 */
 #include "Utils/ParserBase/ParserBase.h"
+#include <filesystem>
 #include <fstream>
-#include <unordered_map>
 #include <vector>
+#include "Utils/Char.h"
 #include "Utils/Exceptions/Exception.h"
 #include "Utils/ParserBase/ScannerBase.h"
 #include "Utils/ParserBase/TokenBase.h"
 
-namespace Hack::ParserBase
+namespace Hack
 {
     ParserBase::ParserBase() : _cursor(0), _scanner(nullptr)
     {
@@ -39,14 +40,14 @@ namespace Hack::ParserBase
     {
         do
         {
-            Token tok;
+            TokenBase tok;
             _scanner->scan(tok);
 
             _tokens.push_back(tok);
         } while (--n > 0);
     }
 
-    Token ParserBase::getToken(const int32_t offs)
+    TokenBase ParserBase::getToken(const int32_t offs)
     {
         const int32_t next = offs + _cursor;
 
@@ -70,11 +71,25 @@ namespace Hack::ParserBase
         if (!is.is_open())
             throw Exception("Failed to open the input file '", file, "'");
 
+        // save the base file name
+        const std::filesystem::path pth = file;
+        _file                           = pth.filename().string();
+
+        if (pth.has_extension())
+        {
+            const size_t loc = _file.find(pth.extension().string());
+            if (loc != String::npos)
+                _file = file.substr(0, loc);
+        }
+
         parseImpl(is);
     }
 
     void ParserBase::parse(IStream& is)
     {
+        // save some relatively unique name for the file
+        _file = "ms" + Char::toString((size_t)this);
+
         parseImpl(is);
     }
 
@@ -92,4 +107,4 @@ namespace Hack::ParserBase
         writeImpl(os);
     }
 
-}  // namespace Hack::ParserBase
+}  // namespace Hack

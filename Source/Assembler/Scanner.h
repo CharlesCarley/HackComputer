@@ -20,20 +20,18 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#include <istream>
-#include <unordered_map>
 #include "Assembler/Token.h"
 #include "Utils/ParserBase/ScannerBase.h"
 
 namespace Hack::Assembler
 {
-
-    class Scanner final : public ParserBase::ScannerBase
+    class Scanner final : public ScannerBase
     {
     private:
+        size_t _fsr;
 
         void initializeTables();
-        
+
         void scanLineComment() const;
 
         void scanWhiteSpace() const;
@@ -54,6 +52,10 @@ namespace Hack::Assembler
         Scanner();
 
         void scan(Token& tok) override;
+
+        // gets the offset from zero for
+        // the first static register
+        size_t firstStaticRegister() const;
     };
 
 }  // namespace Hack::Assembler

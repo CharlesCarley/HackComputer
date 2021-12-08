@@ -21,7 +21,6 @@
 */
 #pragma once
 #include "VirtualMachine/Emitter.h"
-#include "VirtualMachine/Constants.h"
 #include "Utils/ParserBase/ParserBase.h"
 #include "Utils/String.h"
 
@@ -29,7 +28,7 @@ namespace Hack::VirtualMachine
 {
     class Scanner;
 
-    class Parser final : public ParserBase::ParserBase
+    class Parser final : public ParserBase
     {
     private:
         Emitter _emitter;

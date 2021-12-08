@@ -20,7 +20,6 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#include "Utils/String.h"
 
 namespace Hack::VirtualMachine
 {
@@ -59,6 +58,6 @@ namespace Hack::VirtualMachine
         TOK_NEG,
     };
 
-    using Token = ParserBase::Token;
+    using Token = TokenBase;
 
 }  // namespace Hack::VirtualMachine

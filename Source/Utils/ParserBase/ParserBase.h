@@ -24,21 +24,23 @@
 #include <vector>
 #include "Utils/ParserBase/TokenBase.h"
 
-namespace Hack::ParserBase
+namespace Hack
 {
     class ScannerBase;
 
     class ParserBase
     {
     public:
-        typedef std::vector<Token> Tokens;
+        typedef std::vector<TokenBase> Tokens;
 
     protected:
-        Tokens   _tokens;
-        int32_t  _cursor;
+        Tokens       _tokens;
+        int32_t      _cursor;
         ScannerBase* _scanner;
+        String       _file;
 
-        Token getToken(int32_t offs);
+
+        TokenBase getToken(int32_t offs);
 
         void advanceCursor(int32_t n = 1);
 

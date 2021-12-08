@@ -65,5 +65,5 @@ namespace Hack::Assembler
         TOK_LABEL
     };
 
-    using Token = ParserBase::Token;
+    using Token = TokenBase;
 }  // namespace Hack::Assembler

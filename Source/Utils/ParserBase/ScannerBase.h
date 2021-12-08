@@ -20,12 +20,10 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#include <istream>
-#include <unordered_map>
-#include "Utils/IndexCache.h"
 #include "Utils/ParserBase/TokenBase.h"
+#include "Utils/IndexCache.h"
 
-namespace Hack::ParserBase
+namespace Hack
 {
     using StringTable = IndexCache<String>;
     using IntTable    = IndexCache<int32_t>;
@@ -59,8 +57,7 @@ namespace Hack::ParserBase
             _stream = stream;
         }
 
-        virtual void scan(Token& tok) = 0;
-
+        virtual void scan(TokenBase& tok) = 0;
 
         const String& getString(const size_t& i) const;
 
@@ -69,7 +66,6 @@ namespace Hack::ParserBase
         void getInt(int32_t& dest, const size_t& i) const;
 
         int32_t getInt(const size_t& i) const;
-
     };
 
-}  // namespace Hack::ParserBase
+}  // namespace Hack::ParseInterface

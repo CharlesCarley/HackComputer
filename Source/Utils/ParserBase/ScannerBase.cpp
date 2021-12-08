@@ -21,7 +21,7 @@
 */
 #include "Utils/ParserBase/ScannerBase.h"
 
-namespace Hack::ParserBase
+namespace Hack
 {
     const String& ScannerBase::getString(const size_t& i) const
     {
@@ -38,10 +38,9 @@ namespace Hack::ParserBase
         _intTable.get(dest, i);
     }
 
-
     int32_t ScannerBase::getInt(const size_t& i) const
     {
         return _intTable.get(i);
     }
 
-}  // namespace Hack::ParserBase
+}  // namespace Hack

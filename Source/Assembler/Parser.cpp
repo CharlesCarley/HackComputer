@@ -137,7 +137,10 @@ namespace Hack::Assembler
             const Labels::iterator it = _labels.find(label);
             if (it == _labels.end())
             {
-                dest = (uint16_t)tok.getIndex();
+                Scanner* sc = (Scanner*)_scanner;
+
+                dest = (uint16_t)(sc->firstStaticRegister() + _labels.size());
+
                 _labels.insert(std::make_pair(label, dest));
             }
             else
