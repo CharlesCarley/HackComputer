@@ -136,3 +136,39 @@ GTEST_TEST(VirtualMachine, AndStackLocal)
                             Hack::VirtualMachine::Local,
                             Hack::VirtualMachine::LCL);
 }
+
+GTEST_TEST(VirtualMachine, AddStackArg)
+{
+    VirtualMachineTestStack("Test05",
+                            2,
+                            2 + 2,
+                            Hack::VirtualMachine::Arguments,
+                            Hack::VirtualMachine::ARG);
+}
+
+GTEST_TEST(VirtualMachine, SubStackArg)
+{
+    VirtualMachineTestStack("Test06",
+                            2,
+                            (uint16_t)(0 - 2),
+                            Hack::VirtualMachine::Arguments,
+                            Hack::VirtualMachine::ARG);
+}
+
+GTEST_TEST(VirtualMachine, OrStackArg)
+{
+    VirtualMachineTestStack("Test07",
+                            31,
+                            (uint16_t)(41 | 31),
+                            Hack::VirtualMachine::Arguments,
+                            Hack::VirtualMachine::ARG);
+}
+
+GTEST_TEST(VirtualMachine, AndStackArg)
+{
+    VirtualMachineTestStack("Test08",
+                            31,
+                            (uint16_t)(41 & 31),
+                            Hack::VirtualMachine::Arguments,
+                            Hack::VirtualMachine::ARG);
+}
