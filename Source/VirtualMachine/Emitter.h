@@ -21,7 +21,7 @@
 */
 #pragma once
 #include "Utils/ParserBase/ScannerBase.h"
-#include "VirtualMachine/Token.h"
+#include "Utils/String.h"
 
 namespace Hack::VirtualMachine
 {

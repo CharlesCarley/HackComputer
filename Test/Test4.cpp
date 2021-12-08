@@ -52,7 +52,7 @@ void VirtualMachineTestStack(const Hack::String& baseName,
 {
     using namespace Hack;
     const String fNameSrc = GetTestFilePath("VM/" + baseName + ".vm");
-    const String fNameCmp = GetTestFilePath("VM/" + baseName + ".cmp");
+    const String fNameCmp = GetTestFilePath("VM/" + baseName + ".asm");
     const String fNameOut = GetOutFilePath("" + baseName + ".ans");
 
     VirtualMachine::Parser psr;
@@ -83,7 +83,6 @@ void VirtualMachineTestStack(const Hack::String& baseName,
     Chips::Memory* mem = comp.getRam();
 
     // assert the ram
-
     uint16_t code = mem->get(VirtualMachine::STP);
     EXPECT_EQ(code, VirtualMachine::Stack);
 
@@ -116,6 +115,24 @@ GTEST_TEST(VirtualMachine, SubStackLocal)
     VirtualMachineTestStack("Test02",
                             2,
                             (uint16_t)(0-2),
+                            Hack::VirtualMachine::Local,
+                            Hack::VirtualMachine::LCL);
+}
+
+GTEST_TEST(VirtualMachine, OrStackLocal)
+{
+    VirtualMachineTestStack("Test03",
+                            31,
+                            (uint16_t)(41 | 31),
+                            Hack::VirtualMachine::Local,
+                            Hack::VirtualMachine::LCL);
+}
+
+GTEST_TEST(VirtualMachine, AndStackLocal)
+{
+    VirtualMachineTestStack("Test04",
+                            31,
+                            (uint16_t)(41 & 31),
                             Hack::VirtualMachine::Local,
                             Hack::VirtualMachine::LCL);
 }

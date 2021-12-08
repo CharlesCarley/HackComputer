@@ -8,11 +8,11 @@
 @3       M=D
 @3010    D=A
 @4       M=D
-@0       D=A
+@41      D=A
 @0       M=M+1
          A=M-1
          M=D
-@2       D=A
+@31      D=A
 @0       M=M+1
          A=M-1
          M=D
@@ -20,7 +20,7 @@
          A=M
          D=M
          A=A-1
-         M=M-D
+         M=D|M
 @0       D=A
 @1       D=D+M
 @15      M=D

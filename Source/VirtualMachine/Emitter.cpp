@@ -185,7 +185,6 @@ namespace Hack::VirtualMachine
         w.write(R,            "D=M");
         w.write(R,            "A=A-1");
         w.write(R,            "M=D|M");
-        w.write();
         // clang-format on
     }
 
@@ -198,7 +197,6 @@ namespace Hack::VirtualMachine
         w.write(R,            "D=M");
         w.write(R,            "A=A-1");
         w.write(R,            "M=D&M");
-        w.write();
         // clang-format on
     }
 
