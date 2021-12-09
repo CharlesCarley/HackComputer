@@ -74,7 +74,6 @@ namespace Hack::VirtualMachine
                                const int32_t&    swap)
     {
         // assumes the correct destination index is in RAM[dest]
-
         // clang-format off
         w.write('@', P, idx,   "D=A");
         w.write('@', P, dest,  "D=D+M");
@@ -139,8 +138,29 @@ namespace Hack::VirtualMachine
     void Emitter::pushTemp(const String& idx)
     {
         const CodeStream w(&_stream);
-        pushIntoStack(w, idx, TMP);
+        // clang-format off
+        w.write('@', P, idx,   "D=A");
+        w.write("@", P, TMP,   "A=D+A");
+        w.write(R,             "D=M");
+        w.write('@', P, STP,   "M=M+1");
+        w.write(R,             "A=M-1");
+        w.write(R,             "M=D");
+        // clang-format on
     }
+
+    void Emitter::pushPointer(const String& idx)
+    {
+        const CodeStream w(&_stream);
+        // clang-format off
+        w.write('@', P, idx,   "D=A");
+        w.write("@", P, THS,   "A=D+A");
+        w.write(R,             "D=M");
+        w.write('@', P, STP,   "M=M+1");
+        w.write(R,             "A=M-1");
+        w.write(R,             "M=D");
+        // clang-format on
+    }
+
 
     void Emitter::pushStatic(const String& context, const String& idx)
     {
@@ -210,10 +230,31 @@ namespace Hack::VirtualMachine
     {
         // clang-format off
         const CodeStream w(&_stream);
-        popStackInto(w, idx, TMP, SW2);
+        w.write('@', P, idx,   "D=A");
+        w.write('@', P, TMP,   "D=D+A");
+        w.write('@', P, SW2,   "M=D");
+        w.write('@', P, STP,   "M=M-1");
+        w.write(R,             "A=M");
+        w.write(R,             "D=M");
+        w.write('@', P, SW2,   "A=M");
+        w.write(R,             "M=D");
         // clang-format on
     }
 
+    void Emitter::popPointer(const String& idx)
+    {
+        // clang-format off
+        const CodeStream w(&_stream);
+        w.write('@', P, idx,   "D=A");
+        w.write('@', P, THS,   "D=D+A");
+        w.write('@', P, SW2,   "M=D");
+        w.write('@', P, STP,   "M=M-1");
+        w.write(R,             "A=M");
+        w.write(R,             "D=M");
+        w.write('@', P, SW2,   "A=M");
+        w.write(R,             "M=D");
+        // clang-format on
+    }
 
     void Emitter::writeOr()
     {

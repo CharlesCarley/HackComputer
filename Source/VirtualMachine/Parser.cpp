@@ -73,6 +73,7 @@ namespace Hack::VirtualMachine
             _emitter.pushTemp(_scanner->getString(idx));
             break;
         case TOK_POINTER:
+            _emitter.pushPointer(_scanner->getString(idx));
             break;
         case TOK_CONSTANT:
             _emitter.pushConstant(_scanner->getString(idx));
@@ -119,13 +120,14 @@ namespace Hack::VirtualMachine
         case TOK_STATIC:
             _emitter.popStatic(_file, _scanner->getString(idx));
             break;
-        case TOK_CONSTANT:
         case TOK_POINTER:
+            _emitter.popPointer(_scanner->getString(idx));
             break;
+        case TOK_CONSTANT:
         default:
             throw Exception(
                 "Unknown token parsed, expected "
-                "argument, local, static, constant, "
+                "argument, local, static, "
                 "this, that, pointer or temp");
         }
     }
@@ -192,8 +194,7 @@ namespace Hack::VirtualMachine
         _emitter.setRam(2, Arguments);
         _emitter.setRam(3, This);
         _emitter.setRam(4, That);
-        _emitter.setRam(5, 5);
-
+        
         while (_cursor <= (int32_t)_tokens.size())
         {
             const int8_t tok = getToken(0).getType();

@@ -62,6 +62,10 @@ namespace Hack::VirtualMachine
 
         void pushStatic(const String& context, const String& idx);
 
+        void pushTemp(const String& idx);
+
+        void pushPointer(const String& idx);
+
         void popLocal(const String& idx);
 
         void popThis(const String& idx);
@@ -70,7 +74,7 @@ namespace Hack::VirtualMachine
 
         void popTemp(const String& idx);
 
-        void pushTemp(const String& idx);
+        void popPointer(const String& idx);
 
         void popArgument(const String& idx);
 

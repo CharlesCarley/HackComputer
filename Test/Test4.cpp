@@ -57,7 +57,7 @@ void VirtualMachineTestStack(Chips::Computer& comp, const String& baseName)
     psr.parse(fNameSrc);
     psr.write(fNameOut);
 
-    VmCompareSrc(fNameCmp, fNameOut);
+    //VmCompareSrc(fNameCmp, fNameOut);
 
     Assembler::Parser loader;
     loader.parse(fNameOut);
@@ -318,4 +318,66 @@ GTEST_TEST(VirtualMachine, StaticTest)
 
     const uint16_t code = mem->get(256);
     EXPECT_EQ(code, 1110);
+}
+
+
+GTEST_TEST(VirtualMachine, TempOffsetTest)
+{
+    Chips::Computer comp;
+    VirtualMachineTestStack(comp, "Test11");
+
+    Chips::Memory* mem = comp.getRam();
+
+    uint16_t code = mem->get(256);
+    EXPECT_EQ(code, 555);
+
+    code = mem->get(5);
+    EXPECT_EQ(code, 555);
+    code = mem->get(6);
+    EXPECT_EQ(code, 555);
+    code = mem->get(7);
+    EXPECT_EQ(code, 555);
+    code = mem->get(8);
+    EXPECT_EQ(code, 555);
+    code = mem->get(9);
+    EXPECT_EQ(code, 555);
+    code = mem->get(10);
+    EXPECT_EQ(code, 555);
+    code = mem->get(11);
+    EXPECT_EQ(code, 555);
+    code = mem->get(12);
+    EXPECT_EQ(code, 555);
+    code = mem->get(13);
+    EXPECT_EQ(code, 0);
+    code = mem->get(14);
+    EXPECT_EQ(code, 0);
+    code = mem->get(15);
+    EXPECT_EQ(code, 12);
+}
+
+
+
+GTEST_TEST(VirtualMachine, PointerTest)
+{
+    Chips::Computer comp;
+    VirtualMachineTestStack(comp, "Test12");
+
+    Chips::Memory* mem = comp.getRam();
+
+
+    //|RAM[256]| RAM[3] | RAM[4] |RAM[3032|RAM[3046|
+    //|   6084 |   3030 |   3040 |     32 |     46 |
+
+
+    uint16_t code = mem->get(256);
+    EXPECT_EQ(code, 6084);
+
+    code = mem->get(3);
+    EXPECT_EQ(code, 3030);
+    code = mem->get(4);
+    EXPECT_EQ(code, 3040);
+    code = mem->get(3032);
+    EXPECT_EQ(code, 32);
+    code = mem->get(3046);
+    EXPECT_EQ(code, 46);
 }
