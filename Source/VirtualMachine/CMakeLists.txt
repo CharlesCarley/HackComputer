@@ -29,7 +29,6 @@ set(Target_HDR
 )
 
 set(Target_SRC 
-   Token.cpp
    Scanner.cpp
    Parser.cpp
    Emitter.cpp

@@ -23,7 +23,9 @@
 
 namespace Hack
 {
-    void StringUtils::split(StringArray& dest, const String& str, char sep)
+    void StringUtils::split(StringArray&  dest,
+                            const String& str,
+                            const char    sep)
     {
         String tmp = str;
 
@@ -39,4 +41,4 @@ namespace Hack
             dest.push_back(tmp);
     }
 
-}  // namespace Utils
+}  // namespace Hack

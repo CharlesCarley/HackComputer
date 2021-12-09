@@ -57,7 +57,7 @@ void VirtualMachineTestStack(Chips::Computer& comp, const String& baseName)
     psr.parse(fNameSrc);
     psr.write(fNameOut);
 
-    //VmCompareSrc(fNameCmp, fNameOut);
+    VmCompareSrc(fNameCmp, fNameOut);
 
     Assembler::Parser loader;
     loader.parse(fNameOut);

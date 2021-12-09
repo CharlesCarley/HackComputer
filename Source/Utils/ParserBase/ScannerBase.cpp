@@ -32,15 +32,5 @@ namespace Hack
     {
         _stringTable.get(dest, i);
     }
-
-    void ScannerBase::getInt(int32_t& dest, const size_t& i) const
-    {
-        _intTable.get(dest, i);
-    }
-
-    int32_t ScannerBase::getInt(const size_t& i) const
-    {
-        return _intTable.get(i);
-    }
-
+    
 }  // namespace Hack

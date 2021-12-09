@@ -56,11 +56,6 @@ namespace Hack::VirtualMachine
         _stream.str("");
     }
 
-    String Emitter::toString() const
-    {
-        return _stream.str();
-    }
-
     void Emitter::setRam(const int index, const int value)
     {
         const CodeStream w(&_stream);
@@ -160,7 +155,6 @@ namespace Hack::VirtualMachine
         w.write(R,             "M=D");
         // clang-format on
     }
-
 
     void Emitter::pushStatic(const String& context, const String& idx)
     {

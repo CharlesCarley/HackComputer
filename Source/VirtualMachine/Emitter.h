@@ -46,7 +46,10 @@ namespace Hack::VirtualMachine
 
         void clear();
 
-        String toString() const;
+        OutputStringStream& stream()
+        {
+            return _stream;
+        }
 
         void setRam(int index, int value);
 

@@ -213,7 +213,8 @@ namespace Hack::VirtualMachine
 
     void Parser::writeImpl(OStream& os)
     {
-        os << _emitter.toString();
+        const String str = _emitter.stream().str();
+        os.write(str.c_str(), str.size());
     }
 
 }  // namespace Hack::VirtualMachine

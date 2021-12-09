@@ -43,7 +43,7 @@ namespace Hack
             strcpy(dest, src);
     }
 
-    void Char::copy(char* dest, const char* src, size_t max)
+    void Char::copy(char* dest, const char* src, const size_t max)
     {
         if (dest && src && *src)
         {
@@ -78,7 +78,7 @@ namespace Hack
         return (size_t)(size_t)strncmp(a, b, (size_t)max);
     }
 
-    int16_t Char::toInt16(const char* in, int16_t def, int base)
+    int16_t Char::toInt16(const char* in, const int16_t def, const int base)
     {
         if (in && *in)
         {
@@ -92,7 +92,7 @@ namespace Hack
         return def;
     }
 
-    int32_t Char::toInt32(const char* in, int32_t def, int base)
+    int32_t Char::toInt32(const char* in, const int32_t def, const int base)
     {
         if (in && *in)
         {
@@ -106,26 +106,26 @@ namespace Hack
         return def;
     }
 
-    int64_t Char::toInt64(const char* in, int64_t def, int base)
+    int64_t Char::toInt64(const char* in, const int64_t def, const int base)
     {
         if (in && *in)
             return (int64_t)std::strtoll(in, nullptr, base);
         return def;
     }
 
-    uint16_t Char::toUint16(const char* in, uint16_t def, int base)
+    uint16_t Char::toUint16(const char* in, const uint16_t def, const int base)
     {
         if (in && *in)
         {
             const unsigned long long v = std::strtoull(in, nullptr, base);
-            //if (v > std::numeric_limits<uint16_t>::max())
-            //    return std::numeric_limits<uint16_t>::max();
+            if (v > std::numeric_limits<uint16_t>::max())
+                return std::numeric_limits<uint16_t>::max();
             return (uint16_t)v;
         }
         return def;
     }
 
-    uint32_t Char::toUint32(const char* in, uint32_t def, int base)
+    uint32_t Char::toUint32(const char* in, const uint32_t def, const int base)
     {
         if (in && *in)
         {
@@ -137,39 +137,45 @@ namespace Hack
         return def;
     }
 
-    uint64_t Char::toUint64(const char* in, uint64_t def, int base)
+    uint64_t Char::toUint64(const char* in, const uint64_t def, const int base)
     {
         if (in && *in)
             return (uint64_t)std::strtoull(in, nullptr, base);
         return def;
     }
 
-    int16_t Char::toInt16(const String& in, int16_t def, int base)
+    int16_t Char::toInt16(const String& in, const int16_t def, const int base)
     {
         return toInt16(in.c_str(), def, base);
     }
 
-    int32_t Char::toInt32(const String& in, int32_t def, int base)
+    int32_t Char::toInt32(const String& in, const int32_t def, const int base)
     {
         return toInt32(in.c_str(), def, base);
     }
 
-    int64_t Char::toInt64(const String& in, int64_t def, int base)
+    int64_t Char::toInt64(const String& in, const int64_t def, const int base)
     {
         return toInt64(in.c_str(), def, base);
     }
 
-    uint16_t Char::toUint16(const String& in, uint16_t def, int base)
+    uint16_t Char::toUint16(const String&  in,
+                            const uint16_t def,
+                            const int      base)
     {
         return toUint16(in.c_str(), def, base);
     }
 
-    uint32_t Char::toUint32(const String& in, uint32_t def, int base)
+    uint32_t Char::toUint32(const String&  in,
+                            const uint32_t def,
+                            const int      base)
     {
         return toUint32(in.c_str(), def, base);
     }
 
-    uint64_t Char::toUint64(const String& in, uint64_t def, int base)
+    uint64_t Char::toUint64(const String&  in,
+                            const uint64_t def,
+                            const int      base)
     {
         return toUint64(in.c_str(), def, base);
     }
@@ -227,21 +233,21 @@ namespace Hack
         return toDouble(in.c_str(), def);
     }
 
-    void Char::toString(String& dest, float v)
+    void Char::toString(String& dest, const float v)
     {
         std::stringstream stream;
         stream << v;
         dest = stream.str();
     }
 
-    void Char::toString(String& dest, double v)
+    void Char::toString(String& dest, const double v)
     {
         std::stringstream stream;
         stream << v;
         dest = stream.str();
     }
 
-    void Char::toString(String& dest, bool v)
+    void Char::toString(String& dest, const bool v)
     {
         dest.reserve(2);
         dest.resize(0);
@@ -251,135 +257,136 @@ namespace Hack
             dest.push_back('0');
     }
 
-    void Char::toString(String& dest, int16_t v)
+    void Char::toString(String& dest, const int16_t v)
     {
         std::stringstream stream;
         stream << v;
         dest = stream.str();
     }
 
-    void Char::toString(String& dest, int32_t v)
+    void Char::toString(String& dest, const int32_t v)
     {
         std::stringstream stream;
         stream << v;
         dest = stream.str();
     }
 
-    void Char::toString(String& dest, int64_t v)
+    void Char::toString(String& dest, const int64_t v)
     {
         std::stringstream stream;
         stream << v;
         dest = stream.str();
     }
 
-    void Char::toString(String& dest, uint16_t v)
+    void Char::toString(String& dest, const uint16_t v)
     {
         std::stringstream stream;
         stream << v;
         dest = stream.str();
     }
 
-    void Char::toString(String& dest, uint32_t v)
+    void Char::toString(String& dest, const uint32_t v)
     {
         std::stringstream stream;
         stream << v;
         dest = stream.str();
     }
 
-    void Char::toString(String& dest, uint64_t v)
+    void Char::toString(String& dest, const uint64_t v)
     {
         std::stringstream stream;
         stream << v;
         dest = stream.str();
     }
 
-    void Char::toHexString(String& dest, uint16_t v)
+    void Char::toHexString(String& dest, const uint16_t v)
     {
         std::stringstream stream;
         stream << std::hex << v;
         dest = stream.str();
     }
 
-    void Char::toBinaryString(String& dest, uint16_t v)
+    void Char::toBinaryString(String& dest, const uint16_t v)
     {
         const std::bitset<16> bs(v);
         dest = bs.to_string();
     }
 
-    String Char::toString(float v)
+    String Char::toString(const float v)
     {
         String copyOnReturn;
         toString(copyOnReturn, v);
         return copyOnReturn;
     }
 
-    String Char::toString(double v)
+    String Char::toString(const double v)
     {
         String copyOnReturn;
         toString(copyOnReturn, v);
         return copyOnReturn;
     }
 
-    String Char::toString(bool v)
+    String Char::toString(const bool v)
     {
         String copyOnReturn;
         toString(copyOnReturn, v);
         return copyOnReturn;
     }
 
-    String Char::toString(int16_t v)
+    String Char::toString(const int16_t v)
     {
         String copyOnReturn;
         toString(copyOnReturn, v);
         return copyOnReturn;
     }
 
-    String Char::toString(int32_t v)
+    String Char::toString(const int32_t v)
     {
         String copyOnReturn;
         toString(copyOnReturn, v);
         return copyOnReturn;
     }
 
-    String Char::toString(int64_t v)
+    String Char::toString(const int64_t v)
     {
         String copyOnReturn;
         toString(copyOnReturn, v);
         return copyOnReturn;
     }
 
-    String Char::toString(uint16_t v)
+    String Char::toString(const uint16_t v)
     {
         String copyOnReturn;
         toString(copyOnReturn, v);
         return copyOnReturn;
     }
 
-    String Char::toHexString(uint16_t v)
+    String Char::toHexString(const uint16_t v)
     {
         String copyOnReturn;
         toHexString(copyOnReturn, v);
         return copyOnReturn;
     }
 
-    String Char::toBinaryString(uint16_t v)
+    String Char::toBinaryString(const uint16_t v)
     {
         String copyOnReturn;
         toBinaryString(copyOnReturn, v);
         return copyOnReturn;
     }
 
-    String Char::toString(uint32_t v)
+    String Char::toString(const uint32_t v)
     {
         String copyOnReturn;
         toString(copyOnReturn, v);
         return copyOnReturn;
     }
 
-    String Char::toString(uint64_t v)
+    String Char::toString(const uint64_t v)
     {
         String copyOnReturn;
         toString(copyOnReturn, v);
         return copyOnReturn;
     }
+
 }  // namespace Hack

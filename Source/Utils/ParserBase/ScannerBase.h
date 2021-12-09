@@ -26,23 +26,16 @@
 namespace Hack
 {
     using StringTable = IndexCache<String>;
-    using IntTable    = IndexCache<int32_t>;
 
     class ScannerBase
     {
     protected:
         IStream*    _stream;
         StringTable _stringTable;
-        IntTable    _intTable;
 
         size_t saveString(const String& str)
         {
             return _stringTable.save(str);
-        }
-
-        size_t saveInt(const int32_t& value)
-        {
-            return _intTable.save(value);
         }
 
     public:
@@ -63,9 +56,6 @@ namespace Hack
 
         void getString(String& dest, const size_t& i) const;
 
-        void getInt(int32_t& dest, const size_t& i) const;
-
-        int32_t getInt(const size_t& i) const;
     };
 
 }  // namespace Hack::ParseInterface
