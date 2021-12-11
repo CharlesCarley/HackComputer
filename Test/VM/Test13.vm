@@ -1,0 +1,17 @@
+push constant 0
+label top1
+push constant 1
+add
+push constant 2
+lt
+if-goto top1
+pop local 0
+push local 0
+label top2
+push constant 1
+sub
+push constant 0
+eq not
+if-goto top2
+push local 0
+pop argument 0

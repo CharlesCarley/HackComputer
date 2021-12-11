@@ -63,7 +63,10 @@ namespace Hack::Assembler
     }
 
     Parser::Parser() :
-        _cBits(0), _dBits(0), _aBit(0), _jBits(0)
+        _cBits(0),
+        _dBits(0),
+        _aBit(0),
+        _jBits(0)
     {
         _scanner = new Scanner();
     }
@@ -393,16 +396,15 @@ namespace Hack::Assembler
                 Scanner* sc = (Scanner*)_scanner;
 
                 uint16_t sIdx = 0;
-                it            = staticRegisters.find(str);
+
+                it = staticRegisters.find(str);
                 if (it == staticRegisters.end())
                 {
                     sIdx = (uint16_t)sc->nextStaticRegister();
                     staticRegisters.insert(std::make_pair(str, sIdx));
                 }
                 else
-                {
                     sIdx = (uint16_t)it->second;
-                }
 
                 _instructions[idx] = sIdx & 0b0111111111111111;
             }

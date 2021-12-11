@@ -69,11 +69,15 @@ void VirtualMachineTestStack(Chips::Computer& comp, const String& baseName)
     comp.reset();
 
     int tot = (int)inst.size();
-    while (tot-- >= 0)
+
+    Chips::CpuState st = Chips::Computer::NullState;
+    while (st.pc < tot)
     {
         // ticks 0, 1
         comp.update(false);
-        comp.update(false);
+        comp.update(true);
+
+        st = comp.getState();
     }
 }
 
@@ -380,4 +384,23 @@ GTEST_TEST(VirtualMachine, PointerTest)
     EXPECT_EQ(code, 32);
     code = mem->get(3046);
     EXPECT_EQ(code, 46);
+}
+
+
+
+GTEST_TEST(VirtualMachine, JumpTest1)
+{
+    Chips::Computer comp;
+    VirtualMachineTestStack(comp, "Test13");
+
+    Chips::Memory* mem = comp.getRam();
+
+    //|RAM[300]| RAM[400] |
+    //|   2    |   2      |
+    
+    uint16_t code = mem->get(300);
+    EXPECT_EQ(code, 2);
+
+    code = mem->get(400);
+    EXPECT_EQ(code, 2);
 }

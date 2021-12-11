@@ -21,6 +21,8 @@
 */
 #include "VirtualMachine/Emitter.h"
 #include <iomanip>
+
+#include "Utils/Char.h"
 #include "VirtualMachine/Constants.h"
 
 #define lft(x) std::left, std::setw(x)
@@ -66,11 +68,23 @@ namespace Hack::VirtualMachine
         }
     };
 
-    Emitter::Emitter() = default;
+    Emitter::Emitter() :
+        _cmp(0)
+    {
+        
+    }
 
     void Emitter::clear()
     {
         _stream.str("");
+    }
+
+    void Emitter::getCmpLabels(String& valTrue, String& valFalse, String& valDone)
+    {
+        ++_cmp;
+        valTrue  = "true" + Char::toString(_cmp);
+        valFalse = "false" + Char::toString(_cmp);
+        valDone = "done" + Char::toString(_cmp);
     }
 
     void Emitter::setRam(const int index, const int value)
@@ -326,8 +340,8 @@ namespace Hack::VirtualMachine
         // clang-format off
         const CodeStream w(&_stream);
         w.write("// not ");
-        w.decrementStack();
-        w.write(R,            "M=!M");
+        w.write('@', P, STP, "A=M");
+        w.write(R, "M=!M");
         // clang-format on
     }
 
@@ -335,50 +349,79 @@ namespace Hack::VirtualMachine
     {
         const CodeStream w(&_stream);
         w.write("// neg ");
-        w.decrementStack();
+        w.write('@', P, STP, "A=M");
         w.write(R, "M=-M");
     }
 
     void Emitter::writeEq()
     {
+        String t, f, d;
+        getCmpLabels(t,f,d);
+
+
         // clang-format off
         const CodeStream w(&_stream);
         w.write("// eq ");
         w.decrementStack();
-        w.write(R,              "D=M");
-        w.write(R,              "A=A-1");
-        w.write(R,              "D=M-D");
-        w.write('@', P, "false","D;JNE");
-        w.write("(true)");
-        w.write(R,              "M=-1");
-        w.write('@', P, "done", "0;JMP");
-        w.write("(false)");
-        w.write(R,              "M=0");
-        w.write("(done)");
+        w.write(R,           "D=M");
+        w.write(R,           "A=A-1");
+        w.write(R,           "D=M-D");
+        w.write('@', P, f,   "D;JNE");
+        w.write('(', t, ')');
+        w.write(R,           "D=-1");
+        w.write('@', P, d,   "0;JMP");
+        w.write('(', f, ')');
+        w.write(R,           "D=0");
+        w.write('(', d, ')');
+        w.write('@', P, STP, "A=M");
+        w.write(R,           "M=D");
         // clang-format on
     }
 
     void Emitter::writeLt()
     {
+        String t, f, d;
+        getCmpLabels(t, f, d);
         // clang-format off
         const CodeStream w(&_stream);
         w.write("// lt ");
         w.decrementStack();
-        w.write(R,              "D=M");
-        w.write(R,              "A=A-1");
-        w.write(R,              "D=M-D");
+        w.write(R,            "D=M");
+        w.write(R,            "A=A-1");
+        w.write(R,            "D=M-D");
+        w.write('@', P, f,    "D;JLT");
+        w.write('(', t, ')');
+        w.write(R,            "D=-1");
+        w.write('@', P, d,    "0;JMP");
+        w.write('(', f, ')');
+        w.write(R,            "D=0");
+        w.write('(', d, ')');
+        w.write('@', P, STP,  "A=M");
+        w.write(R,            "M=D");
         // clang-format on
     }
 
     void Emitter::writeGt()
     {
+        String t, f, d;
+        getCmpLabels(t, f, d);
+
         // clang-format off
         const CodeStream w(&_stream);
         w.write("// gt ");
         w.decrementStack();
-        w.write(R,              "D=M");
-        w.write(R,              "A=A-1");
-        w.write(R,              "D=M-D");
+        w.write(R,             "D=M");
+        w.write(R,             "A=A-1");
+        w.write(R,             "D=M-D");
+        w.write('@', P, t,     "D;JGT");
+        w.write('(', f, ')');
+        w.write(R,             "D=-1");
+        w.write('@', P, d,     "D;JMP");
+        w.write('(', t, ')');
+        w.write(R,             "D=0");
+        w.write('(', d, ')');
+        w.write('@', P, STP,   "A=M");
+        w.write(R,             "M=D");
         // clang-format on
     }
 
@@ -394,10 +437,8 @@ namespace Hack::VirtualMachine
     void Emitter::writIfGoto(const String& value)
     {
         const CodeStream w(&_stream);
-        // clang-format off
         w.write("// if-goto ", value);
-        w.write('@', P, value,"D;JEQ");
-        // clang-format on
+        w.write('@', P, value, "D;JEQ");
     }
 
     void Emitter::writeLabel(const String& value)
@@ -407,5 +448,4 @@ namespace Hack::VirtualMachine
         w.write('(', value, ')');
         // clang-format on
     }
-
 }  // namespace Hack::VirtualMachine

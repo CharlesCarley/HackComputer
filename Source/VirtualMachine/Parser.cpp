@@ -216,6 +216,14 @@ namespace Hack::VirtualMachine
             _emitter.writeEq();
             advanceCursor();
             break;
+        case TOK_LT:
+            _emitter.writeLt();
+            advanceCursor();
+            break;
+        case TOK_GT:
+            _emitter.writeGt();
+            advanceCursor();
+            break;
         case TOK_IF_GOTO:
         case TOK_GOTO:
             gotoExpression();

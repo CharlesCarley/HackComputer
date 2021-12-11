@@ -31,6 +31,7 @@ namespace Hack::VirtualMachine
     {
     private:
         OutputStringStream _stream;
+        int                _cmp;
 
         static void popStackInto(const CodeStream& w,
                                  const String&     idx,
@@ -40,6 +41,8 @@ namespace Hack::VirtualMachine
         static void pushIntoStack(const CodeStream& w,
                                   const String&     idx,
                                   const int32_t&    dest);
+
+        void getCmpLabels(String& valTrue, String &valFalse, String &valDone);
 
     public:
         Emitter();
