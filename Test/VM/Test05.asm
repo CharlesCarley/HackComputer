@@ -1,26 +1,20 @@
-@256     D=A
-@0       M=D
-@300     D=A
-@1       M=D
-@400     D=A
-@2       M=D
-@3000    D=A
-@3       M=D
-@3010    D=A
-@4       M=D
+// push constant 2
 @2       D=A
 @0       M=M+1
          A=M-1
          M=D
+// push constant 2
 @2       D=A
 @0       M=M+1
          A=M-1
          M=D
+// add 
 @0       M=M-1
          A=M
          D=M
          A=A-1
          M=D+M
+// pop argument 0
 @0       D=A
 @2       D=D+M
 @15      M=D

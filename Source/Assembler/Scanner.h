@@ -28,7 +28,7 @@ namespace Hack::Assembler
     class Scanner final : public ScannerBase
     {
     private:
-        size_t _fsr;
+        size_t _fsr, _offs;
 
         void initializeTables();
 
@@ -56,6 +56,8 @@ namespace Hack::Assembler
         // gets the offset from zero for
         // the first static register
         size_t firstStaticRegister() const;
+
+        size_t nextStaticRegister();
     };
 
 }  // namespace Hack::Assembler

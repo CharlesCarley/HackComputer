@@ -53,6 +53,17 @@ namespace Hack::Chips
             _address = v;
     }
 
+    void Memory::setValue(const int& index, const uint16_t& v) const
+    {
+        if (index < MaxAddress && index >= 0)
+        {
+            if (index < ScreenAddress)
+                _ram16->setValue(index, v);
+            else
+                _screen->setValue(index - ScreenAddress, v);
+        }
+    }
+
     void Memory::setLoad(const bool v)
     {
         applyBit(0, v);
@@ -101,6 +112,12 @@ namespace Hack::Chips
     {
         _ram16->zero();
         _screen->zero();
+
+        _ram16->setValue(0, 256);
+        _ram16->setValue(1, 300);
+        _ram16->setValue(2, 400);
+        _ram16->setValue(3, 3000);
+        _ram16->setValue(4, 3010);
     }
 
     bool Memory::isDirty()

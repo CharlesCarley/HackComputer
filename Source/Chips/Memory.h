@@ -52,6 +52,8 @@ namespace Hack::Chips
 
         void setAddress(const uint16_t& v);
 
+        void setValue(const int& index, const uint16_t& v) const;
+
         void setLoad(bool v);
 
         void setClock(bool v);

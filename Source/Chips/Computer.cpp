@@ -45,9 +45,11 @@ namespace Hack::Chips
         delete _rom;
     }
 
-    void Computer::load(const uint16_t* data, const size_t size) const
+    void Computer::load(const uint16_t* data, const size_t size)
     {
         _rom->load(data, size);
+        _reset = true;
+        update(false);
     }
 
     void Computer::update(const bool saveState)
@@ -116,7 +118,7 @@ namespace Hack::Chips
 
     void Computer::reset()
     {
-        _reset    = true;
+        _reset = true;
     }
 
 }  // namespace Hack::Chips

@@ -36,7 +36,8 @@ namespace Hack::VirtualMachine
         OStream* _s;
 
     public:
-        explicit CodeStream(OStream* os) : _s(os)
+        explicit CodeStream(OStream* os) :
+            _s(os)
         {
         }
 
@@ -46,6 +47,22 @@ namespace Hack::VirtualMachine
             OutputStringStream oss;
             ((oss << std::forward<Args>(args)), ...);
             *_s << oss.str() << std::endl;
+        }
+
+        void incrementStack() const
+        {
+            // clang-format off
+            write('@', P, STP, "M=M+1");
+            write(R,           "A=M-1");
+            // clang-format on
+        }
+
+        void decrementStack() const
+        {
+            // clang-format off
+            write('@', P, STP, "M=M-1");
+            write(R,           "A=M");
+            // clang-format on
         }
     };
 
@@ -73,8 +90,9 @@ namespace Hack::VirtualMachine
         w.write('@', P, idx,   "D=A");
         w.write('@', P, dest,  "D=D+M");
         w.write('@', P, swap,  "M=D");
-        w.write('@', P, STP,   "M=M-1");
-        w.write(R,             "A=M");
+
+        w.decrementStack();
+
         w.write(R,             "D=M");
         w.write('@', P, swap,  "A=M");
         w.write(R,             "M=D");
@@ -89,44 +107,45 @@ namespace Hack::VirtualMachine
         w.write('@', P, idx,   "D=A");
         w.write("@", P, dest,  "A=D+M");
         w.write(R,             "D=M");
-        w.write('@', P, STP,   "M=M+1");
-        w.write(R,             "A=M-1");
+        w.incrementStack();
         w.write(R,             "M=D");
         // clang-format on
     }
 
     void Emitter::pushConstant(const String& idx)
     {
-        // clang-format off
         const CodeStream w(&_stream);
+        w.write("// push constant ", idx);
         w.write("@", P, idx, "D=A");
-        w.write('@', P, STP,   "M=M+1");
-        w.write(R,             "A=M-1");
-        w.write(R,             "M=D");
-        // clang-format on
+        w.incrementStack();
+        w.write(R, "M=D");
     }
 
     void Emitter::pushLocal(const String& idx)
     {
         const CodeStream w(&_stream);
+        w.write("// push local ", idx);
         pushIntoStack(w, idx, LCL);
     }
 
     void Emitter::pushArgument(const String& idx)
     {
         const CodeStream w(&_stream);
+        w.write("// push argument ", idx);
         pushIntoStack(w, idx, ARG);
     }
 
     void Emitter::pushThis(const String& idx)
     {
         const CodeStream w(&_stream);
+        w.write("// push this ", idx);
         pushIntoStack(w, idx, THS);
     }
 
     void Emitter::pushThat(const String& idx)
     {
         const CodeStream w(&_stream);
+        w.write("// push that ", idx);
         pushIntoStack(w, idx, THT);
     }
 
@@ -134,11 +153,11 @@ namespace Hack::VirtualMachine
     {
         const CodeStream w(&_stream);
         // clang-format off
+        w.write("// push temp ", idx);
         w.write('@', P, idx,   "D=A");
         w.write("@", P, TMP,   "A=D+A");
         w.write(R,             "D=M");
-        w.write('@', P, STP,   "M=M+1");
-        w.write(R,             "A=M-1");
+        w.incrementStack();
         w.write(R,             "M=D");
         // clang-format on
     }
@@ -147,11 +166,11 @@ namespace Hack::VirtualMachine
     {
         const CodeStream w(&_stream);
         // clang-format off
+        w.write("// push pointer", idx);
         w.write('@', P, idx,   "D=A");
         w.write("@", P, THS,   "A=D+A");
         w.write(R,             "D=M");
-        w.write('@', P, STP,   "M=M+1");
-        w.write(R,             "A=M-1");
+        w.incrementStack();
         w.write(R,             "M=D");
         // clang-format on
     }
@@ -162,10 +181,10 @@ namespace Hack::VirtualMachine
 
         const CodeStream w(&_stream);
         // clang-format off
+        w.write("// push static", idx);
         w.write('@', P, loc);
         w.write(R,             "D=M");
-        w.write('@', P, STP,   "M=M+1");
-        w.write(R,             "A=M-1");
+        w.incrementStack();
         w.write(R,             "M=D");
         // clang-format on
     }
@@ -174,6 +193,7 @@ namespace Hack::VirtualMachine
     {
         // clang-format off
         const CodeStream w(&_stream);
+        w.write("// pop local ", idx);
         popStackInto(w, idx, LCL, SW2);
         // clang-format on
     }
@@ -182,6 +202,7 @@ namespace Hack::VirtualMachine
     {
         // clang-format off
         const CodeStream w(&_stream);
+        w.write("// pop argument ", idx);
         popStackInto(w, idx, ARG, SW2);
         // clang-format on
     }
@@ -193,11 +214,11 @@ namespace Hack::VirtualMachine
         // clang-format off
         const CodeStream w(&_stream);
         // clang-format off
+        w.write("// pop static ", idx);
         w.write('@', P, loc);
         w.write(R,             "D=A");
         w.write('@', P, SW0,   "M=D");
-        w.write('@', P, STP,   "M=M-1");
-        w.write(R,             "A=M");
+        w.decrementStack();
         w.write(R,             "D=M");
         w.write('@', P, SW0,   "A=M");
         w.write(R,             "M=D");
@@ -208,6 +229,7 @@ namespace Hack::VirtualMachine
     {
         // clang-format off
         const CodeStream w(&_stream);
+        w.write("// pop this ", idx);
         popStackInto(w, idx, THS, SW2);
         // clang-format on
     }
@@ -216,6 +238,7 @@ namespace Hack::VirtualMachine
     {
         // clang-format off
         const CodeStream w(&_stream);
+        w.write("// pop that ", idx);
         popStackInto(w, idx, THT, SW2);
         // clang-format on
     }
@@ -224,11 +247,11 @@ namespace Hack::VirtualMachine
     {
         // clang-format off
         const CodeStream w(&_stream);
+        w.write("// pop temp ", idx);
         w.write('@', P, idx,   "D=A");
         w.write('@', P, TMP,   "D=D+A");
         w.write('@', P, SW2,   "M=D");
-        w.write('@', P, STP,   "M=M-1");
-        w.write(R,             "A=M");
+        w.decrementStack();
         w.write(R,             "D=M");
         w.write('@', P, SW2,   "A=M");
         w.write(R,             "M=D");
@@ -239,11 +262,11 @@ namespace Hack::VirtualMachine
     {
         // clang-format off
         const CodeStream w(&_stream);
+        w.write("// pop pointer ", idx);
         w.write('@', P, idx,   "D=A");
         w.write('@', P, THS,   "D=D+A");
         w.write('@', P, SW2,   "M=D");
-        w.write('@', P, STP,   "M=M-1");
-        w.write(R,             "A=M");
+        w.decrementStack();
         w.write(R,             "D=M");
         w.write('@', P, SW2,   "A=M");
         w.write(R,             "M=D");
@@ -254,8 +277,8 @@ namespace Hack::VirtualMachine
     {
         // clang-format off
         const CodeStream w(&_stream);
-        w.write('@', P, STP,  "M=M-1");
-        w.write(R,            "A=M");
+        w.write("// or ");
+        w.decrementStack();
         w.write(R,            "D=M");
         w.write(R,            "A=A-1");
         w.write(R,            "M=D|M");
@@ -266,8 +289,8 @@ namespace Hack::VirtualMachine
     {
         // clang-format off
         const CodeStream w(&_stream);
-        w.write('@', P, STP,  "M=M-1");
-        w.write(R,            "A=M");
+        w.write("// and ");
+        w.decrementStack();
         w.write(R,            "D=M");
         w.write(R,            "A=A-1");
         w.write(R,            "M=D&M");
@@ -278,8 +301,8 @@ namespace Hack::VirtualMachine
     {
         // clang-format off
         const CodeStream w(&_stream);
-        w.write('@', P, STP,  "M=M-1");
-        w.write(R,            "A=M");
+        w.write("// sub ");
+        w.decrementStack();
         w.write(R,            "D=M");
         w.write(R,            "A=A-1");
         w.write(R,            "M=M-D");
@@ -290,8 +313,8 @@ namespace Hack::VirtualMachine
     {
         // clang-format off
         const CodeStream w(&_stream);
-        w.write('@', P, STP,  "M=M-1");
-        w.write(R,            "A=M");
+        w.write("// add ");
+        w.decrementStack();
         w.write(R,            "D=M");
         w.write(R,            "A=A-1");
         w.write(R,            "M=D+M");
@@ -302,19 +325,86 @@ namespace Hack::VirtualMachine
     {
         // clang-format off
         const CodeStream w(&_stream);
-        w.write('@', P, STP,  "M=M-1");
-        w.write(R,            "A=M");
+        w.write("// not ");
+        w.decrementStack();
         w.write(R,            "M=!M");
         // clang-format on
     }
 
     void Emitter::writeNeg()
     {
+        const CodeStream w(&_stream);
+        w.write("// neg ");
+        w.decrementStack();
+        w.write(R, "M=-M");
+    }
+
+    void Emitter::writeEq()
+    {
         // clang-format off
         const CodeStream w(&_stream);
-        w.write('@', P, STP,  "M=M-1");
-        w.write(R,            "A=M");
-        w.write(R,            "M=-M");
+        w.write("// eq ");
+        w.decrementStack();
+        w.write(R,              "D=M");
+        w.write(R,              "A=A-1");
+        w.write(R,              "D=M-D");
+        w.write('@', P, "false","D;JNE");
+        w.write("(true)");
+        w.write(R,              "M=-1");
+        w.write('@', P, "done", "0;JMP");
+        w.write("(false)");
+        w.write(R,              "M=0");
+        w.write("(done)");
+        // clang-format on
+    }
+
+    void Emitter::writeLt()
+    {
+        // clang-format off
+        const CodeStream w(&_stream);
+        w.write("// lt ");
+        w.decrementStack();
+        w.write(R,              "D=M");
+        w.write(R,              "A=A-1");
+        w.write(R,              "D=M-D");
+        // clang-format on
+    }
+
+    void Emitter::writeGt()
+    {
+        // clang-format off
+        const CodeStream w(&_stream);
+        w.write("// gt ");
+        w.decrementStack();
+        w.write(R,              "D=M");
+        w.write(R,              "A=A-1");
+        w.write(R,              "D=M-D");
+        // clang-format on
+    }
+
+    void Emitter::writGoto(const String& value)
+    {
+        const CodeStream w(&_stream);
+        // clang-format off
+        w.write("// goto ", value);
+        w.write('@', P, value, "D=A;JMP");
+        // clang-format on
+    }
+
+    void Emitter::writIfGoto(const String& value)
+    {
+        const CodeStream w(&_stream);
+        // clang-format off
+        w.write("// if-goto ", value);
+        w.write('@', P, value,"D;JEQ");
+        // clang-format on
+    }
+
+    void Emitter::writeLabel(const String& value)
+    {
+        // clang-format off
+        const CodeStream w(&_stream);
+        w.write('(', value, ')');
         // clang-format on
     }
 

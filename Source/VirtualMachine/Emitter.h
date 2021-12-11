@@ -94,6 +94,19 @@ namespace Hack::VirtualMachine
         void writeNot();
 
         void writeNeg();
+
+        void writeEq();
+
+        void writeLt();
+
+        void writeGt();
+
+        void writGoto(const String& value);
+
+        void writIfGoto(const String& value);
+
+        void writeLabel(const String& value);
+
     };
 
 }  // namespace Hack::VirtualMachine

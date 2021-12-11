@@ -87,9 +87,30 @@ namespace Hack::Assembler
 
     };
 
-    Scanner::Scanner() : _fsr(0)
+    Scanner::Scanner() :
+        _fsr(0), _offs(0)
     {
         initializeTables();
+    }
+
+    void Scanner::initializeTables()
+    {
+        // Save 0 - 15 as a string.
+        for (int i = 0; i < 16; ++i)
+            saveString(Char::toString(i));
+
+        // determine the first static register.
+        _fsr = _stringTable.size();
+
+        // pre save all the reserved names
+        for (const ReservedTable& res : ReservedAddresses)
+        {
+            saveString(res.val);
+
+            // if it's not already saved, save it as well.
+            if (res.address > 16)
+                saveString(Char::toString(res.address));
+        }
     }
 
     void Scanner::scanLineComment() const
@@ -147,21 +168,16 @@ namespace Hack::Assembler
             _stream->putback((char)ch);
     }
 
-    void Scanner::initializeTables()
-    {
-        // 0 - 15 in string format
-        for (int i = 0; i < 16; ++i)
-            saveString(Char::toString(i));
-
-        _fsr = _stringTable.size();
-
-        saveString(Char::toString(0x4000));  // SCREEN
-        saveString(Char::toString(0x6000));  // KBD
-    }
-
     size_t Scanner::firstStaticRegister() const
     {
         return _fsr;
+    }
+
+    size_t Scanner::nextStaticRegister()
+    {
+        const size_t r = _fsr + _offs;
+        ++_offs;
+        return r;
     }
 
     bool Scanner::extractRSymbol(Token& tok)
@@ -207,7 +223,10 @@ namespace Hack::Assembler
 
     bool Scanner::testSingleRegister(Token& tok)
     {
-        // Check the single identifier case.
+        // This tries to resolve the case of
+        // a single destination register
+        //
+        // for example, A=<expression>
 
         const int ch = _stream->get();
         const int nx = _stream->peek();
@@ -241,14 +260,17 @@ namespace Hack::Assembler
 
     bool Scanner::testMultipleRegisterAndJump(Token& tok) const
     {
+        // This tries to resolve the case of
+        // a multiple destination registers
+        //
+        // for example, MD=<expression>
+
         const int pc = _stream->get();
         const int ch = _stream->get();
         int       nx = _stream->peek();
 
         if (!isLetter(nx))
             nx = '\0';
-
-        // Test the destination and jump table.
 
         for (const KwTable& djt : DestAndJumpTable)
         {
@@ -264,6 +286,7 @@ namespace Hack::Assembler
                 return true;
             }
         }
+
         _stream->putback((char)ch);
         _stream->putback((char)pc);
         return false;
@@ -271,33 +294,34 @@ namespace Hack::Assembler
 
     void Scanner::scanSymbol(Token& tok)
     {
+        // Test the simple case first
         if (testSingleRegister(tok))
             return;
 
+        // Test the multiple destination case, as
+        // well as the jump symbols.
         if (testMultipleRegisterAndJump(tok))
             return;
+
+        // nothing has been ruled out, so read what's
+        // available and test it against reserved words
 
         String buf;
         readSymbol(buf);
 
         for (const ReservedTable& ele : ReservedAddresses)
         {
-            if (Char::equals(
-                    buf.c_str(), ele.val, std::min(buf.size(), ele.len)) == 0)
+            if (Char::equals(buf.c_str(),
+                             ele.val,
+                             std::min(buf.size(), ele.len)) == 0)
             {
                 tok.setType(TOK_INTEGER);
-
-                // Serialize the address.
-
-                const size_t index = saveString(Char::toString(ele.address));
-
-                tok.setIndex(index);
+                tok.setIndex(_stringTable.get(Char::toString(ele.address)));
                 return;
             }
         }
 
-        // It needs looked up
-
+        // any other string should be saved and looked back up
         tok.setType(TOK_LABEL);
         tok.setIndex(saveString(buf));
     }

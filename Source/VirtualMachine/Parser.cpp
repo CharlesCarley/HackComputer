@@ -22,7 +22,6 @@
 #include "VirtualMachine/Parser.h"
 #include <fstream>
 #include "Utils/Exceptions/Exception.h"
-#include "VirtualMachine/Constants.h"
 #include "VirtualMachine/Scanner.h"
 
 namespace Hack::VirtualMachine
@@ -132,6 +131,50 @@ namespace Hack::VirtualMachine
         }
     }
 
+    void Parser::labelExpression()
+    {
+        const int8_t t0 = getToken(1).getType();
+        if (t0 != TOK_IDENTIFIER)
+        {
+            throw Exception(
+                "Expected an identifier to follow the label expression");
+        }
+
+        const size_t idx = getToken(1).getIndex();
+
+        String value;
+        _scanner->getString(value, idx);
+        if (value.empty())
+            throw Exception("An empty label was found");
+
+        _labels.save(value);
+
+        _emitter.writeLabel(value);
+    }
+
+    void Parser::gotoExpression()
+    {
+        const int8_t t0 = getToken(0).getType();
+        const int8_t t1 = getToken(1).getType();
+        if (t1 != TOK_IDENTIFIER)
+        {
+            throw Exception(
+                "Expected an identifier to follow the goto expression");
+        }
+
+        const size_t idx = getToken(1).getIndex();
+
+        String value;
+        _scanner->getString(value, idx);
+        if (value.empty())
+            throw Exception("An empty label was found");
+
+        if (t0 == TOK_IF_GOTO)
+            _emitter.writIfGoto(value);
+        else
+            _emitter.writGoto(value);
+    }
+
     void Parser::expression()
     {
         const int8_t t0 = getToken(0).getType();
@@ -169,10 +212,21 @@ namespace Hack::VirtualMachine
             _emitter.writeNeg();
             advanceCursor();
             break;
+        case TOK_EQ:
+            _emitter.writeEq();
+            advanceCursor();
+            break;
+        case TOK_IF_GOTO:
+        case TOK_GOTO:
+            gotoExpression();
+            advanceCursor(2);
+            break;
+        case TOK_LABEL:
+            labelExpression();
+            advanceCursor(2);
+            break;
         default:
-            throw Exception(
-                "Unknown rule, expected push, pop, "
-                "and, or, add or sub");
+            throw Exception("An unknown rule was found (id: ", (int)t0, ")");
         }
     }
 
@@ -186,14 +240,6 @@ namespace Hack::VirtualMachine
 
         // clear the stream
         _emitter.clear();
-        // load values into the correct
-        // ram addresses
-
-        _emitter.setRam(0, Stack);
-        _emitter.setRam(1, Local);
-        _emitter.setRam(2, Arguments);
-        _emitter.setRam(3, This);
-        _emitter.setRam(4, That);
         
         while (_cursor <= (int32_t)_tokens.size())
         {

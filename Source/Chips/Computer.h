@@ -56,7 +56,7 @@ namespace Hack::Chips
         Computer();
         ~Computer();
 
-        void load(const uint16_t* data, size_t size) const;
+        void load(const uint16_t* data, size_t size);
 
         void update(bool saveState);
 

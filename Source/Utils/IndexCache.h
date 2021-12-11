@@ -21,6 +21,7 @@
 */
 #pragma once
 #include <unordered_map>
+#include <unordered_set>
 #include "Exceptions/Exception.h"
 
 namespace Hack
@@ -51,6 +52,7 @@ namespace Hack
             }
             else
                 idx = it->second;
+
             return idx;
         }
 
@@ -58,6 +60,8 @@ namespace Hack
         {
             if (index < _list.size())
                 dest = _list.at(index);
+            else
+                throw Exception("Index out of bounds");
         }
 
         const T& get(const size_t& index) const
@@ -67,9 +71,49 @@ namespace Hack
             throw Exception("Index out of bounds");
         }
 
+        bool exists(const T& value) const
+        {
+            const typename Table::const_iterator it = _elements.find(value);
+            return it != _elements.end();
+        }
+
+        size_t get(const T& value) const
+        {
+            typename Table::const_iterator it = _elements.find(value);
+            if (it != _elements.end())
+                return it->second;
+
+            throw Exception("Missing cache string");
+        }
+
         size_t size()
         {
             return _list.size();
+        }
+    };
+
+    template <typename T>
+    class Cache
+    {
+    public:
+        typedef std::unordered_set<T> Table;
+
+    private:
+        Table _elements;
+
+    public:
+        void save(const T& value)
+        {
+            const typename Table::iterator it = _elements.find(value);
+
+            if (it == _elements.end())
+                _elements.insert(value);
+        }
+
+        bool exists(const T& value) const
+        {
+            const typename Table::iterator it = _elements.find(value);
+            return it != _elements.end();
         }
     };
 

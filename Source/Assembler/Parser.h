@@ -22,16 +22,21 @@
 #pragma once
 #include <unordered_map>
 #include <vector>
-#include "Utils/ParserBase/ParserBase.h"
 #include "Assembler/Scanner.h"
+#include "Utils/ParserBase/ParserBase.h"
 
 namespace Hack::Assembler
 {
+
+    using StringIndex = std::pair<String, size_t>;
+
+
     class Parser final : public ParserBase
     {
     public:
         typedef std::vector<uint16_t>              Instructions;
         typedef std::unordered_map<String, size_t> Labels;
+        typedef std::vector<StringIndex>           LabelLookup;
 
     private:
         Instructions _instructions;
@@ -40,7 +45,8 @@ namespace Hack::Assembler
         uint8_t      _dBits;
         uint8_t      _aBit;
         uint8_t      _jBits;
-        
+        LabelLookup  _resolution;
+
         void pushCInstruction();
 
         void compoundExpressionAZero();
@@ -60,7 +66,9 @@ namespace Hack::Assembler
         void label();
 
         void expression();
-        
+
+        void resolveLabels();
+
         void parseImpl(IStream& is) override;
 
         void writeImpl(OStream& os) override;

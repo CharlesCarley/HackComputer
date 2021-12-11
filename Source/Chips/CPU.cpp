@@ -45,7 +45,7 @@ namespace Hack::Chips
         // initially
     }
 
-    void Cpu::lock(bool v)
+    void Cpu::lock(const bool v)
     {
         applyBit(2, v);
     }

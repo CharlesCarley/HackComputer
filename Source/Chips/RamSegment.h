@@ -111,6 +111,12 @@ namespace Hack::Chips
             return nullptr;
         }
 
+        void setValue(const int& address, uint16_t v) const
+        {
+            if (address < Max)
+                _ram[address] = _ram[address + High] = v;
+        }
+
         void zero() const
         {
             memset(_ram, 0, sizeof(uint16_t) * Max);

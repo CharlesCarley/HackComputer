@@ -133,7 +133,6 @@ namespace Hack::Computer
                 _mode = 2;
             if (_input == PR_4)
                 _mode = 3;
-
         }
 
         void flushMemory(Chips::Computer* computer)
@@ -256,7 +255,7 @@ namespace Hack::Computer
                 int iVal = _cpuState.addrM + i;
 
                 const uint16_t vi = _ram->get(iVal);
-                String   v;
+                String         v;
                 if (_mode == 1)
                     v = Char::toString((int16_t)vi);
                 else if (_mode == 2)
@@ -504,7 +503,8 @@ namespace Hack::Computer
         }
     };
 
-    CommandRuntime::CommandRuntime() : _private(new CommandRuntimePrivate())
+    CommandRuntime::CommandRuntime() :
+        _private(new CommandRuntimePrivate())
     {
     }
 

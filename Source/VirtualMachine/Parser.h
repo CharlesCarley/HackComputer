@@ -20,21 +20,22 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#include "VirtualMachine/Emitter.h"
 #include "Utils/ParserBase/ParserBase.h"
 #include "Utils/String.h"
+#include "VirtualMachine/Emitter.h"
 
 namespace Hack::VirtualMachine
 {
     class Scanner;
+    using StringCache = Cache<String>;
 
     class Parser final : public ParserBase
     {
     private:
-        Emitter _emitter;
+        Emitter     _emitter;
+        StringCache _labels;
 
     private:
-
         void parseImpl(IStream& is) override;
 
         void writeImpl(OStream& os) override;
@@ -44,6 +45,10 @@ namespace Hack::VirtualMachine
         void pushExpression();
 
         void popExpression();
+
+        void gotoExpression();
+
+        void labelExpression();
 
     public:
         Parser();

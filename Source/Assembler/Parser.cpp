@@ -62,7 +62,8 @@ namespace Hack::Assembler
         return type >= TOK_JGT && type <= TOK_JMP;
     }
 
-    Parser::Parser() : _cBits(0), _dBits(0), _aBit(0), _jBits(0)
+    Parser::Parser() :
+        _cBits(0), _dBits(0), _aBit(0), _jBits(0)
     {
         _scanner = new Scanner();
     }
@@ -137,11 +138,8 @@ namespace Hack::Assembler
             const Labels::iterator it = _labels.find(label);
             if (it == _labels.end())
             {
-                Scanner* sc = (Scanner*)_scanner;
-
-                dest = (uint16_t)(sc->firstStaticRegister() + _labels.size());
-
-                _labels.insert(std::make_pair(label, dest));
+                // needs resolved
+                _resolution.push_back(std::make_pair(label, _instructions.size()));
             }
             else
                 dest = (uint16_t)it->second;
@@ -375,6 +373,42 @@ namespace Hack::Assembler
         pushCInstruction();
     }
 
+    void Parser::resolveLabels()
+    {
+        Labels staticRegisters;
+
+        for (auto& [str, idx] : _resolution)
+        {
+            // after everything has been parsed
+            // try to resolve via the label
+
+            if (idx > _instructions.size())
+                throw Exception("index out of bounds");
+
+            Labels::iterator it = _labels.find(str);
+            if (it != _labels.end())
+                _instructions[idx] = it->second & 0b0111111111111111;
+            else
+            {
+                Scanner* sc = (Scanner*)_scanner;
+
+                uint16_t sIdx = 0;
+                it            = staticRegisters.find(str);
+                if (it == staticRegisters.end())
+                {
+                    sIdx = (uint16_t)sc->nextStaticRegister();
+                    staticRegisters.insert(std::make_pair(str, sIdx));
+                }
+                else
+                {
+                    sIdx = (uint16_t)it->second;
+                }
+
+                _instructions[idx] = sIdx & 0b0111111111111111;
+            }
+        }
+    }
+
     void Parser::label()
     {
         // the lookup string needs to map to the address
@@ -433,6 +467,8 @@ namespace Hack::Assembler
             if (op == _cursor)
                 advanceCursor();
         }
+
+        resolveLabels();
     }
 
     void Parser::writeImpl(OStream& os)
