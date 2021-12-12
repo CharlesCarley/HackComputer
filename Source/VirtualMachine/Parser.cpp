@@ -176,6 +176,70 @@ namespace Hack::VirtualMachine
             _emitter.writGoto(value);
     }
 
+    void Parser::functionExpression()
+    {
+        
+        const int8_t t1 = getToken(1).getType();
+        if (t1 != TOK_IDENTIFIER)
+        {
+            throw Exception(
+                "Expected an identifier to "
+                "follow the function expression");
+        }
+
+        const int8_t t2 = getToken(2).getType();
+        if (t2 != TOK_INTEGER)
+        {
+            throw Exception(
+                "Expected an integer to "
+                "follow the after the function label");
+        }
+
+        String name;
+        _scanner->getString(name, getToken(1).getIndex());
+        if (name.empty())
+            throw Exception("An empty label was found");
+
+        String args;
+        _scanner->getString(args, getToken(2).getIndex());
+        if (args.empty())
+            throw Exception("An empty integer was found");
+
+        _emitter.writeFunction(name, args);
+    }
+
+    void Parser::callExpression()
+    {
+        const int8_t t1 = getToken(1).getType();
+        if (t1 != TOK_IDENTIFIER)
+        {
+            throw Exception(
+                "Expected an identifier to "
+                "follow the call expression");
+        }
+
+        const int8_t t2 = getToken(2).getType();
+        if (t2 != TOK_INTEGER)
+        {
+            throw Exception(
+                "Expected an integer to "
+                "follow the after the call label");
+        }
+
+        String name;
+        _scanner->getString(name, getToken(1).getIndex());
+        if (name.empty())
+            throw Exception("An empty label was found");
+
+        String args;
+        _scanner->getString(args, getToken(2).getIndex());
+        if (args.empty())
+            throw Exception("An empty integer was found");
+
+        _emitter.writeCall(name, args);
+        
+    }
+
     void Parser::expression()
     {
         const int8_t t0 = getToken(0).getType();
@@ -225,6 +289,14 @@ namespace Hack::VirtualMachine
             _emitter.writeGt();
             advanceCursor();
             break;
+        case TOK_RESET:
+            _emitter.writeReset();
+            advanceCursor();
+            break;
+        case TOK_HALT:
+            _emitter.writeHalt();
+            advanceCursor();
+            break;
         case TOK_IF_GOTO:
         case TOK_GOTO:
             gotoExpression();
@@ -233,6 +305,18 @@ namespace Hack::VirtualMachine
         case TOK_LABEL:
             labelExpression();
             advanceCursor(2);
+            break;
+        case TOK_RETURN:
+            _emitter.writeReturn();
+            advanceCursor();
+            break;
+        case TOK_CALL:
+            callExpression();
+            advanceCursor(3);
+            break;
+        case TOK_FUNCTION:
+            functionExpression();
+            advanceCursor(3);
             break;
         default:
             throw Exception("An unknown rule was found (id: ", (int)t0, ")");

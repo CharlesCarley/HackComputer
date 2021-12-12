@@ -20,6 +20,7 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
+#include <stack>
 #include "Utils/ParserBase/ScannerBase.h"
 #include "Utils/String.h"
 
@@ -29,9 +30,13 @@ namespace Hack::VirtualMachine
 
     class Emitter
     {
+    public:
+        typedef std::stack<String> StringStack;
+
     private:
         OutputStringStream _stream;
         int                _cmp;
+        StringStack        _functions;
 
         static void popStackInto(const CodeStream& w,
                                  const String&     idx,
@@ -104,12 +109,21 @@ namespace Hack::VirtualMachine
 
         void writeGt();
 
+        void writeReset();
+
+        void writeHalt();
+
         void writGoto(const String& value);
 
         void writIfGoto(const String& value);
 
         void writeLabel(const String& value);
 
+        void writeFunction(const String& name, const String& args);
+
+        void writeCall(const String& name, const String& args);
+
+        void writeReturn();
     };
 
 }  // namespace Hack::VirtualMachine

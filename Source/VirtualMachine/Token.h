@@ -56,6 +56,8 @@ namespace Hack::VirtualMachine
         TOK_OR,
         TOK_NOT,
         TOK_NEG,
+        TOK_RESET,
+        TOK_HALT
     };
 
     using Token = TokenBase;

@@ -32,11 +32,12 @@ namespace Hack::VirtualMachine
 
         void scanWhiteSpace() const;
 
-        void scanLetter(Token& tok);
+        void scanSymbol(Token& tok);
 
         void scanDigit(Token& tok);
 
     public:
+
         Scanner();
 
         void scan(Token& tok) override;

@@ -98,6 +98,8 @@ namespace Hack::VirtualMachine
         {"eq", TOK_EQ},
         {"gt", TOK_GT},
         {"lt", TOK_LT},
+        {"reset", TOK_RESET},
+        {"halt", TOK_HALT},
     };
 
     inline bool isValidCharacter(const int ch)
@@ -105,7 +107,7 @@ namespace Hack::VirtualMachine
         return isLetter(ch) || isDecimal(ch) || ch == '-' || ch == '_' || ch == '.';
     }
 
-    void Scanner::scanLetter(Token& tok)
+    void Scanner::scanSymbol(Token& tok)
     {
         int ch = _stream->get();
 
@@ -130,7 +132,7 @@ namespace Hack::VirtualMachine
             }
 
             // If it's not a reserved word save it as an identifier,
-            // and use it as as either a label or a static variable.
+            // and use it as either a label or a static variable.
 
             tok.setType(TOK_IDENTIFIER);
             tok.setIndex(saveString(cmp));
@@ -179,7 +181,7 @@ namespace Hack::VirtualMachine
             case uppercase:
             case lowercase:
                 _stream->putback((char)ch);
-                scanLetter(tok);
+                scanSymbol(tok);
                 return;
             case '\r':
             case '\n':

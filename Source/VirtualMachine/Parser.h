@@ -50,6 +50,10 @@ namespace Hack::VirtualMachine
 
         void labelExpression();
 
+        void functionExpression();
+
+        void callExpression();
+
     public:
         Parser();
 
