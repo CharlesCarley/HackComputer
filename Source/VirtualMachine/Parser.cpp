@@ -137,7 +137,8 @@ namespace Hack::VirtualMachine
         if (t0 != TOK_IDENTIFIER)
         {
             throw Exception(
-                "Expected an identifier to follow the label expression");
+                "Expected an identifier to "
+                "follow the label expression");
         }
 
         const size_t idx = getToken(1).getIndex();
@@ -148,7 +149,6 @@ namespace Hack::VirtualMachine
             throw Exception("An empty label was found");
 
         _labels.save(value);
-
         _emitter.writeLabel(value);
     }
 
@@ -159,7 +159,8 @@ namespace Hack::VirtualMachine
         if (t1 != TOK_IDENTIFIER)
         {
             throw Exception(
-                "Expected an identifier to follow the goto expression");
+                "Expected an identifier to "
+                "follow the goto expression");
         }
 
         const size_t idx = getToken(1).getIndex();
@@ -248,7 +249,7 @@ namespace Hack::VirtualMachine
 
         // clear the stream
         _emitter.clear();
-        
+
         while (_cursor <= (int32_t)_tokens.size())
         {
             const int8_t tok = getToken(0).getType();

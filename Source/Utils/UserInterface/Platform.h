@@ -34,7 +34,7 @@ namespace Hack::Ui
         constexpr const char* UseBackBuffer  = "\x1b[?1049h";
         constexpr const char* UseFrontBuffer = "\x1b[?1049l";
         constexpr const char* Clear          = "\x1b[2J";
-        constexpr const char* ZeroCursor     = "\x1b[1;1H";
+        constexpr const char* ZeroCursor     = "\x1b[0;0H";
         constexpr const char* ResetColor     = "\x1b[0m";
         constexpr const char* SetCursor      = "\x1b[%d;%dH";
 

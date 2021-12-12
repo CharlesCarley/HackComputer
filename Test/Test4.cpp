@@ -388,7 +388,7 @@ GTEST_TEST(VirtualMachine, PointerTest)
 
 
 
-GTEST_TEST(VirtualMachine, JumpTest1)
+GTEST_TEST(VirtualMachine, JumpTestLTEQ)
 {
     Chips::Computer comp;
     VirtualMachineTestStack(comp, "Test13");
@@ -403,4 +403,28 @@ GTEST_TEST(VirtualMachine, JumpTest1)
 
     code = mem->get(400);
     EXPECT_EQ(code, 2);
+}
+
+GTEST_TEST(VirtualMachine, JumpTestGT)
+{
+    Chips::Computer comp;
+    VirtualMachineTestStack(comp, "Test14");
+
+    Chips::Memory* mem = comp.getRam();
+
+    const uint16_t code = mem->get(300);
+    EXPECT_EQ(code, 987);
+}
+
+
+
+GTEST_TEST(VirtualMachine, JumpTest)
+{
+    Chips::Computer comp;
+    VirtualMachineTestStack(comp, "Test15");
+
+    Chips::Memory* mem = comp.getRam();
+
+    const uint16_t code = mem->get(300);
+    EXPECT_EQ(code, 25);
 }

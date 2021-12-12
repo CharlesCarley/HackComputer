@@ -100,6 +100,11 @@ namespace Hack::VirtualMachine
         {"lt", TOK_LT},
     };
 
+    inline bool isValidCharacter(const int ch)
+    {
+        return isLetter(ch) || isDecimal(ch) || ch == '-' || ch == '_' || ch == '.';
+    }
+
     void Scanner::scanLetter(Token& tok)
     {
         int ch = _stream->get();
@@ -107,7 +112,7 @@ namespace Hack::VirtualMachine
         if (isLetter(ch))
         {
             String cmp;
-            while (isLetter(ch) || ch == '-' || isDecimal(ch))
+            while (isValidCharacter(ch))
             {
                 cmp.push_back((char)ch);
                 ch = _stream->get();
@@ -124,7 +129,9 @@ namespace Hack::VirtualMachine
                 }
             }
 
-            // if it's not a reserved word
+            // If it's not a reserved word save it as an identifier,
+            // and use it as as either a label or a static variable.
+
             tok.setType(TOK_IDENTIFIER);
             tok.setIndex(saveString(cmp));
         }
@@ -184,9 +191,11 @@ namespace Hack::VirtualMachine
                 scanWhiteSpace();
                 break;
             default:
-                throw Exception("unknown character parsed '", (char)ch, "'");
+                throw Exception("Unknown character parsed '", (char)ch, "'");
             }
         }
+
         tok.setType(TOK_EOF);
     }
+
 }  // namespace Hack::VirtualMachine

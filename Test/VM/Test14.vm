@@ -1,0 +1,10 @@
+push constant 7
+label top1
+push constant 1
+sub
+push constant 0
+gt 
+if-goto top1
+push constant 987
+pop local 0
+
