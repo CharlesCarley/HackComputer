@@ -456,8 +456,8 @@ namespace Hack::VirtualMachine
         w.write('(', name, ')');
         for (uint16_t i=0; i<n; ++i)
         {
-            w.write('@', P, LCL,  "M=M+1");
-            w.write(R,            "A=M-1");
+            w.write('@', P, i,    "D=A");
+            w.write('@', P, LCL,  "A=D+M");
             w.write(R,            "M=0");
         }
         // clang-format on
@@ -467,56 +467,60 @@ namespace Hack::VirtualMachine
     {
         const CodeStream w(&_stream);
 
-        const String retAddr = "LR." + name;
+        const String retAddr = "LR." + name + Char::toHexString((uint16_t)_cmp++);
 
         // clang-format off
 
         // ARG = SP-N-5
+
+        // Save the current stack address in swap 2
         w.write('@', P, STP,    "D=M");
         w.write('@', P, SW2,    "M=D");
+
+        // calculate the base address from the number of
+        // arguments that are currently pushed
         w.write('@', P, args,   "D=A");
         w.write('@', P, SW2,    "M=M-D");
         
         // push the return address
-        
-
         w.write('@', P, retAddr, "D=A");
         w.incrementStack();
         w.write(R,               "M=D");
 
-        // push LCL
+        // push the local address
         w.write('@', P, LCL,     "D=M");
         w.incrementStack();
         w.write(R,               "M=D");
 
-        // push ARG
+        // push the argument address
         w.write('@', P, ARG,     "D=M");
         w.incrementStack();
         w.write(R,               "M=D");
 
-        // push THIS
+        // push the this address
         w.write('@', P, THS,     "D=M");
         w.incrementStack();
         w.write(R,               "M=D");
 
-
-        // push THAT
+        // push the that address
         w.write('@', P, THT,     "D=M");
         w.incrementStack();
         w.write(R,               "M=D");
 
+        // move the new ARG address into the
+        // old ARG address
         w.write('@', P, SW2,     "D=M");
         w.write('@', P, ARG,     "M=D");
+
+
+        // move the STP address into the
+        // LCL address
         w.write('@', P, STP,     "D=M");
         w.write('@', P, LCL,     "M=D");
 
         w.write('@', P, name,    "D=A;JMP");
-        w.write('(', retAddr, ')');
 
-        w.write('@', P, SW1,     "D=M");
-        w.decrementStack();
-        w.write(R,               "A=A-1");
-        w.write(R,               "M=D");
+        w.write('(', retAddr, ')');  // return cleanup
         
         // clang-format on
     }
@@ -526,12 +530,14 @@ namespace Hack::VirtualMachine
         const CodeStream w(&_stream);
 
         // clang-format off
-        w.write('@', P, LCL,    "D=M");
-        w.write('@', P, SW2,    "M=D");
+
+        // Grab the top of the stack
+        // and place it into the base address
+        // of the old stack top
         w.decrementStack();
         w.write(R,              "D=M");
-        w.write('@', P, SW1,    "M=D");
-        
+        w.write('@', P, ARG,    "A=M");
+        w.write(R,              "M=D");
 
         w.decrementStack();
         w.write(R,              "D=M");
