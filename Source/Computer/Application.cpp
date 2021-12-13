@@ -21,8 +21,8 @@
 */
 #include "Computer/Application.h"
 #include "Assembler/Parser.h"
-#include "VirtualMachine/Parser.h"
 #include "Computer/CommandRuntime.h"
+#include "Translator/VirtualMachine/Parser.h"
 #ifdef USE_SDL
 #include "Computer/Runtime.h"
 #endif
@@ -71,7 +71,7 @@ namespace Hack::Computer
         {
             String usage;
             cmd.usage(usage);
-            throw Exception("Missing input file", usage);
+            throw Exception(usage, "Missing input file");
         }
 
         _input = al[0];
@@ -107,7 +107,6 @@ namespace Hack::Computer
             const Instructions& instructions = psr.getInstructions();
 
             _computer->load(instructions.data(), instructions.size());
-
         }
         else
         {
@@ -128,7 +127,7 @@ namespace Hack::Computer
             load();
 
             _runtime->initialize(_computer);
-      
+
             while (!_runtime->exitRequest())
             {
                 // map keyboard events

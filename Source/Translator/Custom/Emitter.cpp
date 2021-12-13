@@ -19,10 +19,10 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#include "VirtualMachine/Emitter.h"
+#include "Translator/Custom/Emitter.h"
 #include <iomanip>
 #include "Utils/Char.h"
-#include "VirtualMachine/Constants.h"
+#include "Translator/Custom/Constants.h"
 
 #define lft(x) std::left, std::setw(x)
 #define rgt(x) std::right, std::setw(x), ' '

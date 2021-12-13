@@ -22,7 +22,7 @@
 #pragma once
 #include "Utils/ParserBase/ParserBase.h"
 #include "Utils/String.h"
-#include "VirtualMachine/Emitter.h"
+#include "Translator/VirtualMachine/Emitter.h"
 
 namespace Hack::VirtualMachine
 {

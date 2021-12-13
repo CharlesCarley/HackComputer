@@ -23,9 +23,9 @@
 #include "Assembler/Parser.h"
 #include "Chips/Computer.h"
 #include "TestDirectory.h"
-#include "VirtualMachine/Constants.h"
-#include "VirtualMachine/Parser.h"
-#include "VirtualMachine/Scanner.h"
+#include "Translator/VirtualMachine/Constants.h"
+#include "Translator/VirtualMachine/Parser.h"
+#include "Translator/VirtualMachine/Scanner.h"
 #include "gtest/gtest.h"
 
 using namespace Hack;

@@ -21,7 +21,7 @@
 */
 #include <fstream>
 #include <iostream>
-#include "VirtualMachine/Parser.h"
+#include "Translator/Custom/Parser.h"
 #include "Utils/CommandLine/Parser.h"
 #include "Utils/Console.h"
 #include "Utils/Exceptions/Exception.h"
