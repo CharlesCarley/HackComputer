@@ -27,6 +27,7 @@
 #include "Computer/Runtime.h"
 #endif
 
+#include <filesystem>
 #include "Chips/Computer.h"
 #include "Utils/CommandLine/Parser.h"
 #include "Utils/Exceptions/Exception.h"
@@ -92,8 +93,11 @@ namespace Hack::Computer
         // parser throws an exception but, it is not being
         // caught here, so that if there is an error it will
         // be caught in the main catch statement and reported.
+        std::filesystem::path path = _input;
 
-        if (_input.find(".vm") != String::npos)
+        String ext = path.extension().string();
+        
+        if (ext == ".vm")
         {
             VirtualMachine::Parser vmp;
             vmp.parse(_input);
