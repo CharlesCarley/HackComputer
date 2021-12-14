@@ -21,8 +21,8 @@
 */
 #include "Translator/VirtualMachine/Emitter.h"
 #include <iomanip>
-#include "Utils/Char.h"
 #include "Translator/VirtualMachine/Constants.h"
+#include "Utils/Char.h"
 
 #define lft(x) std::left, std::setw(x)
 #define rgt(x) std::right, std::setw(x), ' '
@@ -61,6 +61,10 @@ namespace Hack::VirtualMachine
         void decrementStack() const
         {
             // clang-format off
+#ifdef  DEBUG
+            write('@', P, STP, "A=M");
+            write(R,           "M=0");
+#endif
             write('@', P, STP, "M=M-1");
             write(R,           "A=M");
             // clang-format on
@@ -78,14 +82,12 @@ namespace Hack::VirtualMachine
     }
 
     void Emitter::getJumpLabels(String& valTrue,
-                                String& valFalse,
                                 String& valDone)
     {
         ++_cmp;
         String v;
         Char::toHexString(v, (uint16_t)_cmp);
         valTrue  = "L54" + v;
-        valFalse = "L46" + v;
         valDone  = "L44" + v;
     }
 
@@ -95,6 +97,20 @@ namespace Hack::VirtualMachine
         w.write('@', P, value, "D=A");
         w.write('@', P, index, "M=D");
     }
+
+    void Emitter::initialize()
+    {
+        const CodeStream w(&_stream);
+        w.write('@', P, 256, "D=A");
+        w.write('@', P, STP, "M=D");
+        w.write('@', P, LCL, "M=D");
+        w.write('@', P, ARG, "M=D");
+        w.write('@', P, THS, "M=D");
+        w.write('@', P, THT, "M=D");
+
+        
+    }
+
 
     void Emitter::popStackInto(const CodeStream& w,
                                const String&     idx,
@@ -106,7 +122,7 @@ namespace Hack::VirtualMachine
         // clang-format off
         w.write('@', P, idx,   "D=A");
         w.write('@', P, dest,  "D=D+M");
-        w.write('@', P, swap,  "M=D");
+        w.write('@', P, swap,  "M=D");  
         w.decrementStack();
         w.write(R,             "D=M");
         w.write('@', P, swap,  "A=M");
@@ -326,7 +342,7 @@ namespace Hack::VirtualMachine
         const CodeStream w(&_stream);
 
         // clang-format off
-        w.write('@', P, STP,  "A=M");
+        w.write('@', P, STP,  "A=M-1");
         w.write(R,            "M=!M");
         // clang-format on
     }
@@ -334,17 +350,16 @@ namespace Hack::VirtualMachine
     void Emitter::writeNeg()
     {
         const CodeStream w(&_stream);
-
         // clang-format off
-        w.write('@', P, STP, "A=M");
+        w.write('@', P, STP, "A=M-1");
         w.write(R,           "M=-M");
         // clang-format on
     }
 
     void Emitter::writeEq()
     {
-        String t, f, d;
-        getJumpLabels(t, f, d);
+        String t, d;
+        getJumpLabels(t, d);
         const CodeStream w(&_stream);
 
         // clang-format off
@@ -352,22 +367,21 @@ namespace Hack::VirtualMachine
         w.write(R,           "D=M");
         w.write(R,           "A=A-1");
         w.write(R,           "D=M-D");
-        w.write('@', P, f,   "D;JNE");
+        w.write('@', P, t,   "D;JEQ");
+        w.write(R,           "D=0");
+        w.write('@', P, d,   "0;JMP");
         w.write('(', t, ')');
         w.write(R,           "D=-1");
-        w.write('@', P, d,   "0;JMP");
-        w.write('(', f, ')');
-        w.write(R,           "D=0");
         w.write('(', d, ')');
-        w.write('@', P, STP, "A=M");
-        w.write(R,           "M=D");
+        w.write('@', P, STP,  "A=M-1");
+        w.write(R,            "M=D");
         // clang-format on
     }
 
     void Emitter::writeLt()
     {
-        String t, f, d;
-        getJumpLabels(t, f, d);
+        String t, d;
+        getJumpLabels(t, d);
         const CodeStream w(&_stream);
 
         // clang-format off
@@ -375,22 +389,21 @@ namespace Hack::VirtualMachine
         w.write(R,            "D=M");
         w.write(R,            "A=A-1");
         w.write(R,            "D=M-D");
-        w.write('@', P, f,    "D;JLT");
+        w.write('@', P, t,    "D;JLT");
+        w.write(R,            "D=0");
+        w.write('@', P, d,    "0;JMP");
         w.write('(', t, ')');
         w.write(R,            "D=-1");
-        w.write('@', P, d,    "0;JMP");
-        w.write('(', f, ')');
-        w.write(R,            "D=0");
         w.write('(', d, ')');
-        w.write('@', P, STP,  "A=M");
+        w.write('@', P, STP,  "A=M-1");
         w.write(R,            "M=D");
         // clang-format on
     }
 
     void Emitter::writeGt()
     {
-        String t, f, d;
-        getJumpLabels(t, f, d);
+        String t, d;
+        getJumpLabels(t, d);
 
         const CodeStream w(&_stream);
 
@@ -400,18 +413,16 @@ namespace Hack::VirtualMachine
         w.write(R,             "A=A-1");
         w.write(R,             "D=M-D");
         w.write('@', P, t,     "D;JGT");
-        w.write('(', f, ')');
-        w.write(R,             "D=-1");
-        w.write('@', P, d,     "D;JMP");
-        w.write('(', t, ')');
         w.write(R,             "D=0");
+        w.write('@', P, d,     "0;JMP");
+        w.write('(', t, ')');
+        w.write(R,             "D=-1");
         w.write('(', d, ')');
-        w.write('@', P, STP,   "A=M");
+        w.write('@', P, STP,   "A=M-1");
         w.write(R,             "M=D");
         // clang-format on
     }
 
-    
     void Emitter::writeReset()
     {
         const CodeStream w(&_stream);
@@ -425,17 +436,21 @@ namespace Hack::VirtualMachine
         writGoto(halt);
     }
 
-
     void Emitter::writGoto(const String& value)
     {
         const CodeStream w(&_stream);
-        w.write('@', P, value, "D=A;JMP");
+        w.write('@', P, value);
+        w.write(R, "D=A");
+        w.write(R, "0;JMP");
     }
 
     void Emitter::writIfGoto(const String& value)
     {
         const CodeStream w(&_stream);
-        w.write('@', P, value, "D;JEQ");
+        w.decrementStack();
+        w.write(R, "D=M");
+        w.write('@', P, value);
+        w.write(R, "D;JNE");
     }
 
     void Emitter::writeLabel(const String& value)
@@ -470,39 +485,36 @@ namespace Hack::VirtualMachine
         const String retAddr = "LR." + name + Char::toHexString((uint16_t)_cmp++);
 
         // clang-format off
-
-        // ARG = SP-N-5
-
-        // Save the current stack address in swap 2
         w.write('@', P, STP,    "D=M");
         w.write('@', P, SW2,    "M=D");
 
-        // calculate the base address from the number of
-        // arguments that are currently pushed
+        // Use that to calculate the base address from
+        // the number of arguments that are currently pushed.
         w.write('@', P, args,   "D=A");
         w.write('@', P, SW2,    "M=M-D");
         
-        // push the return address
-        w.write('@', P, retAddr, "D=A");
+        // Push the return address. 
+        w.write('@', P, retAddr);
+        w.write(R,               "D=A");
         w.incrementStack();
         w.write(R,               "M=D");
 
-        // push the local address
+        // Push the local segment address.
         w.write('@', P, LCL,     "D=M");
         w.incrementStack();
         w.write(R,               "M=D");
 
-        // push the argument address
+        // Push the argument segment address.
         w.write('@', P, ARG,     "D=M");
         w.incrementStack();
         w.write(R,               "M=D");
 
-        // push the this address
+        // Push the this segment address
         w.write('@', P, THS,     "D=M");
         w.incrementStack();
         w.write(R,               "M=D");
 
-        // push the that address
+        // Push the that segment address.
         w.write('@', P, THT,     "D=M");
         w.incrementStack();
         w.write(R,               "M=D");
@@ -513,15 +525,15 @@ namespace Hack::VirtualMachine
         w.write('@', P, ARG,     "M=D");
 
 
-        // move the STP address into the
-        // LCL address
+        // Move the current stack address into the LCL address.
         w.write('@', P, STP,     "D=M");
         w.write('@', P, LCL,     "M=D");
+        w.write('@', P, name);
+        w.write(R,               "D=A;JMP");
 
-        w.write('@', P, name,    "D=A;JMP");
+        // Write the return position.
+        w.write('(', retAddr, ')');
 
-        w.write('(', retAddr, ')');  // return cleanup
-        
         // clang-format on
     }
 
@@ -532,31 +544,34 @@ namespace Hack::VirtualMachine
         // clang-format off
 
         // Grab the top of the stack
-        // and place it into the base address
-        // of the old stack top
+        // and insert it into the previous stack's top.
+
+        w.write("// writeReturn");
         w.decrementStack();
-        w.write(R,              "D=M");
+        w.write(R,              "D=M // Grab the top of the stack.");
         w.write('@', P, ARG,    "A=M");
-        w.write(R,              "M=D");
+        w.write('@', P, SW1,    "M=D // Save ARG in SW1");
 
         w.decrementStack();
         w.write(R,              "D=M");
         w.write('@', P, THT,    "M=D");
-
         w.decrementStack();
         w.write(R,              "D=M");
         w.write('@', P, THS,    "M=D");
-
         w.decrementStack();
         w.write(R,              "D=M");
         w.write('@', P, ARG,    "M=D");
-
         w.decrementStack();
         w.write(R,              "D=M");
         w.write('@', P, LCL,    "M=D");
-
         w.decrementStack();
         w.write(R,              "D=M");
+        w.write('@', P, SW0,    "M=D");
+        w.write('@', P, SW1,    "D=M");
+        w.incrementStack();
+        w.write('@', P, STP,    "A=M-1");
+        w.write(R,              "M=D");
+        w.write('@', P, SW0,    "D=M");
         w.write(R,              "A=D;JMP");
         // clang-format on
     }

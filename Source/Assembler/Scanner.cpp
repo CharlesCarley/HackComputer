@@ -212,7 +212,7 @@ namespace Hack::Assembler
         // The first should be a letter prior
         // to entry into this method.
 
-        while (isLetter(ch) || isDecimal(ch) || ch == '.')
+        while (isLetter(ch) || isDecimal(ch) || ch == '.' || ch == '_')
         {
             dest.push_back((char)ch);
             ch = _stream->get();

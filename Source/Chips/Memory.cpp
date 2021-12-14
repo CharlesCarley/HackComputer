@@ -112,12 +112,6 @@ namespace Hack::Chips
     {
         _ram16->zero();
         _screen->zero();
-
-        _ram16->setValue(0, 256);
-        _ram16->setValue(1, 300);
-        _ram16->setValue(2, 400);
-        _ram16->setValue(3, 3000);
-        _ram16->setValue(4, 3010);
     }
 
     bool Memory::isDirty()

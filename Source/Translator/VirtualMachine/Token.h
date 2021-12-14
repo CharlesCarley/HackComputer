@@ -57,6 +57,7 @@ namespace Hack::VirtualMachine
         TOK_OR,
         TOK_NOT,
         TOK_NEG,
+        TOK_SET,
         TOK_RESET,
         TOK_HALT
     };

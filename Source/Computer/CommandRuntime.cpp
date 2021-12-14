@@ -72,7 +72,7 @@ namespace Hack::Computer
     public:
         CommandRuntimePrivate() :
             _input(PR_NO_INPUT),
-            _mode(0),
+            _mode(1),
             _block(true),
             _ctx(nullptr),
             _ram(nullptr),

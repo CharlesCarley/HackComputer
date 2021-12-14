@@ -47,7 +47,7 @@ namespace Hack::VirtualMachine
                                   const String&     idx,
                                   const int32_t&    dest);
 
-        void getJumpLabels(String& valTrue, String& valFalse, String& valDone);
+        void getJumpLabels(String& valTrue, String& valDone);
 
     public:
         Emitter();
@@ -58,6 +58,8 @@ namespace Hack::VirtualMachine
         {
             return _stream;
         }
+
+        void initialize();
 
         void setRam(int index, int value);
 

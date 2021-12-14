@@ -1,3 +1,9 @@
+@256     D=A
+@0       M=D
+@1       M=D
+@2       M=D
+@3       M=D
+@4       M=D
 @7       D=A
 @0       M=M+1
          A=M-1
@@ -22,15 +28,18 @@
          A=A-1
          D=M-D
 @L541    D;JGT
-(L461)
-         D=-1
-@L441    D;JMP
-(L541)
          D=0
+@L441    0;JMP
+(L541)
+         D=-1
 (L441)
-@0       A=M
+@0       A=M-1
          M=D
-@top1    D;JEQ
+@0       M=M-1
+         A=M
+         D=M
+@top1    
+         D;JNE
 @987     D=A
 @0       M=M+1
          A=M-1

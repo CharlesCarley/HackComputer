@@ -54,6 +54,8 @@ namespace Hack::VirtualMachine
 
         void callExpression();
 
+        void setExpression();
+
     public:
         Parser();
 

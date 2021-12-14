@@ -26,10 +26,10 @@ namespace Hack::VirtualMachine
     enum RamAddresses
     {
         Stack     = 256,
-        Local     = 300,
-        Arguments = 400,
-        This      = 3000,
-        That      = 3010,
+        Local     = Stack,
+        Arguments = Stack,
+        This      = Stack,
+        That      = Stack,
     };
 
     enum RamIndices

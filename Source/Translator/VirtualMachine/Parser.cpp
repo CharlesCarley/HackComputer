@@ -24,6 +24,7 @@
 #include "Utils/Exceptions/Exception.h"
 #include "Translator/VirtualMachine/Scanner.h"
 #include "Translator/VirtualMachine/Token.h"
+#include "Utils/Char.h"
 
 namespace Hack::VirtualMachine
 {
@@ -241,6 +242,38 @@ namespace Hack::VirtualMachine
         
     }
 
+    void Parser::setExpression()
+    {
+        const int8_t t1 = getToken(1).getType();
+        if (t1 != TOK_INTEGER)
+        {
+            throw Exception(
+                "Expected an integer to "
+                "follow the set expression");
+        }
+
+        const int8_t t2 = getToken(2).getType();
+        if (t2 != TOK_INTEGER)
+        {
+            throw Exception(
+                "Expected two integers to "
+                "follow the set expression");
+        }
+
+        String idx;
+        _scanner->getString(idx, getToken(1).getIndex());
+        if (idx.empty())
+            throw Exception("An empty integer was found");
+
+        String val;
+        _scanner->getString(val, getToken(2).getIndex());
+        if (val.empty())
+            throw Exception("An empty integer was found");
+
+        _emitter.setRam(Char::toInt32(idx), Char::toInt32(val));
+           
+    }
+
     void Parser::expression()
     {
         const int8_t t0 = getToken(0).getType();
@@ -315,6 +348,10 @@ namespace Hack::VirtualMachine
             callExpression();
             advanceCursor(3);
             break;
+        case TOK_SET:
+            setExpression();
+            advanceCursor(3);
+            break;
         case TOK_FUNCTION:
             functionExpression();
             advanceCursor(3);
@@ -334,6 +371,7 @@ namespace Hack::VirtualMachine
 
         // clear the stream
         _emitter.clear();
+        _emitter.initialize();
 
         while (_cursor <= (int32_t)_tokens.size())
         {

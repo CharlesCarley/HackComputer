@@ -101,6 +101,8 @@ namespace Hack::VirtualMachine
         {"eq", TOK_EQ},
         {"gt", TOK_GT},
         {"lt", TOK_LT},
+        {"set", TOK_SET},
+
         {"reset", TOK_RESET},
         {"halt", TOK_HALT},
     };

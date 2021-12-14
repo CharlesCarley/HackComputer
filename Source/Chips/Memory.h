@@ -26,6 +26,7 @@
 
 namespace Hack::Chips
 {
+
     class Memory final : public Chip<uint8_t, 8>
     {
     public:
