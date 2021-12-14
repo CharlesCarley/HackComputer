@@ -61,7 +61,7 @@ namespace Hack::VirtualMachine
         void decrementStack() const
         {
             // clang-format off
-#ifdef  DEBUG
+#if 0//  DEBUG
             write('@', P, STP, "A=M");
             write(R,           "M=0");
 #endif
@@ -546,12 +546,19 @@ namespace Hack::VirtualMachine
         // Grab the top of the stack
         // and insert it into the previous stack's top.
 
-        w.write("// writeReturn");
-        w.decrementStack();
-        w.write(R,              "D=M // Grab the top of the stack.");
-        w.write('@', P, ARG,    "A=M");
-        w.write('@', P, SW1,    "M=D // Save ARG in SW1");
+        w.write('@', P, LCL, "D=M");
+        w.write('@', P, SW0, "M=D"); // FRAME
+        w.write('@', P, 5,   "D=A");
+        w.write('@', P, SW0, "D=M-D");
+        w.write('@', P, SW2, "M=D"); // RET
 
+        w.decrementStack();
+        w.write(R, "D=A");
+        w.write('@', P, STP, "M=D"); // SP
+        w.write(R,           "A=D"); // SP
+        w.write(R,           "D=M"); // SP
+        w.write('@', P, SW1, "M=D"); // SP
+        
         w.decrementStack();
         w.write(R,              "D=M");
         w.write('@', P, THT,    "M=D");
@@ -565,15 +572,15 @@ namespace Hack::VirtualMachine
         w.write(R,              "D=M");
         w.write('@', P, LCL,    "M=D");
         w.decrementStack();
+
+        w.decrementStack();
         w.write(R,              "D=M");
         w.write('@', P, SW0,    "M=D");
         w.write('@', P, SW1,    "D=M");
-        w.incrementStack();
         w.write('@', P, STP,    "A=M-1");
         w.write(R,              "M=D");
         w.write('@', P, SW0,    "D=M");
         w.write(R,              "A=D;JMP");
-        // clang-format on
     }
 
 }  // namespace Hack::VirtualMachine

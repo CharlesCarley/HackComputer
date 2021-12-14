@@ -400,6 +400,7 @@ GTEST_TEST(VirtualMachine, LoopTest)
     const uint16_t val = mem->get(code);
     EXPECT_EQ(val, 55);
 }
+
 GTEST_TEST(VirtualMachine, FibonacciSeries)
 {
     Chips::Computer comp;
@@ -419,4 +420,27 @@ GTEST_TEST(VirtualMachine, FibonacciSeries)
     EXPECT_EQ(val, 3);
     val = mem->get(3005);
     EXPECT_EQ(val, 5);
+}
+
+
+GTEST_TEST(VirtualMachine, SimpleFunction)
+{
+    Chips::Computer comp;
+    VirtualMachineTestStack(comp, "Test18");
+
+    Chips::Memory* mem = comp.getRam();
+//    | RAM[0] | RAM[1] | RAM[2] | RAM[3] | RAM[4] |RAM[310]|
+//|    311 |    305 |    300 |   3010 |   4010 |   1044 |
+    uint16_t val = mem->get(0);
+    EXPECT_EQ(val, 311);
+    val = mem->get(1);
+    EXPECT_EQ(val, 305);
+    val = mem->get(2);
+    EXPECT_EQ(val, 300);
+    val = mem->get(3);
+    EXPECT_EQ(val, 3010);
+    val = mem->get(4);
+    EXPECT_EQ(val, 4010);
+    val = mem->get(310);
+    EXPECT_EQ(val, 1045);
 }
