@@ -1,13 +1,15 @@
-set 0   256
-set 1   300
-set 2   400
+set 0 256
+set 1 300
+set 2 400
 set 400 10
+
+
 push constant 0
-pop local     0
+pop local  0
 
 label ls
 push argument 0
-push local    0
+push local 0
 add
 pop local 0
 	

@@ -46,17 +46,7 @@ void VmCompareSrc(const String& f0, const String& f1)
     }
 }
 
-struct Addressing
-{
-    int stp;
-    int lcl;
-    int arg;
-    int ths;
-    int tht;
-};
-constexpr Addressing DefaultAddressing = {256, 256, 256, 256, 256};
-
-void VirtualMachineTestStack(Chips::Computer& comp, const String& baseName, Addressing addresses = DefaultAddressing)
+void VirtualMachineTestStack(Chips::Computer& comp, const String& baseName)
 {
     const String fNameSrc = GetTestFilePath("VM/" + baseName + ".vm");
     const String fNameCmp = GetTestFilePath("VM/" + baseName + ".asm");
@@ -78,22 +68,11 @@ void VirtualMachineTestStack(Chips::Computer& comp, const String& baseName, Addr
 
     comp.reset();
 
-
-
-    int tot = (int)inst.size(), i=0;
+    int tot = (int)inst.size();
 
     Chips::CpuState st = Chips::Computer::NullState;
     while (st.pc < tot)
     {
-        if (i++ == 13)
-        {
-            comp.getRam()->setValue(0, addresses.stp);
-            comp.getRam()->setValue(1, addresses.lcl);
-            comp.getRam()->setValue(2, addresses.arg);
-            comp.getRam()->setValue(3, addresses.ths);
-            comp.getRam()->setValue(4, addresses.tht);
-        }
-
         // ticks 0, 1
         comp.update(false);
         comp.update(true);
@@ -280,8 +259,7 @@ GTEST_TEST(VirtualMachine, BasicTest)
 {
     Chips::Computer comp;
 
-    Addressing addr = {256, 300, 400, 3000, 3010}; 
-    VirtualMachineTestStack(comp, "Test09", addr);
+    VirtualMachineTestStack(comp, "Test09");
 
     Chips::Memory* mem = comp.getRam();
 
