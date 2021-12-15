@@ -24,7 +24,7 @@
 #include "Utils/ParserBase/ScannerBase.h"
 #include "Utils/String.h"
 
-namespace Hack::VirtualMachine
+namespace Hack::Jack
 {
     class CodeStream;
 

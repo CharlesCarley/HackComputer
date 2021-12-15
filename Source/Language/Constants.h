@@ -20,46 +20,29 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#include "Utils/ParserBase/ParserBase.h"
-#include "Utils/String.h"
-#include "Translator/VirtualMachine/Emitter.h"
 
-namespace Hack::VirtualMachine
+namespace Hack::Jack
 {
-    class Scanner;
-    using StringCache = Cache<String>;
-
-    class Parser final : public ParserBase
+    enum RamAddresses
     {
-    private:
-        Emitter     _emitter;
-        StringCache _labels;
+        Stack     = 256,
+        Local     = Stack,
+        Arguments = Stack,
+        This      = Stack,
+        That      = Stack,
+    };
 
-    private:
-        void parseImpl(IStream& is) override;
-
-        void writeImpl(OStream& os) override;
-
-        void expression();
-
-        void pushExpression();
-
-        void popExpression();
-
-        void gotoExpression();
-
-        void labelExpression();
-
-        void functionExpression();
-
-        void callExpression();
-
-        void setExpression();
-
-    public:
-        Parser();
-
-        ~Parser() override;
+    enum RamIndices
+    {
+        STP = 0,
+        LCL,
+        ARG,
+        THS,
+        THT,
+        TMP, // 8 entries
+        SW0 = 13,
+        SW1,
+        SW2
     };
 
 }  // namespace Hack::VirtualMachine

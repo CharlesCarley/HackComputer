@@ -22,7 +22,7 @@
 #pragma once
 #include "Utils/ParserBase/TokenBase.h"
 
-namespace Hack::VirtualMachine
+namespace Hack::Jack
 {
     enum TokenType
     {

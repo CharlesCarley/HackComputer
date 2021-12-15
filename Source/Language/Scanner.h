@@ -20,29 +20,27 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
+#include "Utils/ParserBase/ScannerBase.h"
+#include "Language/Token.h"
 
-namespace Hack::VirtualMachine
+namespace Hack::Jack
 {
-    enum RamAddresses
+    class Scanner final : public ScannerBase
     {
-        Stack     = 256,
-        Local     = Stack,
-        Arguments = Stack,
-        This      = Stack,
-        That      = Stack,
-    };
+    private:
+        void scanLineComment() const;
 
-    enum RamIndices
-    {
-        STP = 0,
-        LCL,
-        ARG,
-        THS,
-        THT,
-        TMP, // 8 entries
-        SW0 = 13,
-        SW1,
-        SW2
+        void scanWhiteSpace() const;
+
+        void scanSymbol(Token& tok);
+
+        void scanDigit(Token& tok);
+
+    public:
+
+        Scanner();
+
+        void scan(Token& tok) override;
     };
 
 }  // namespace Hack::VirtualMachine

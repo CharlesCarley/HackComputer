@@ -19,14 +19,14 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#include "Translator/VirtualMachine/Parser.h"
+#include "Language/Parser.h"
 #include <fstream>
 #include "Utils/Exceptions/Exception.h"
-#include "Translator/VirtualMachine/Scanner.h"
-#include "Translator/VirtualMachine/Token.h"
+#include "Language/Scanner.h"
+#include "Language/Token.h"
 #include "Utils/Char.h"
 
-namespace Hack::VirtualMachine
+namespace Hack::Jack
 {
     Parser::Parser()
     {

@@ -21,7 +21,7 @@
 */
 #include <fstream>
 #include <iostream>
-#include "Translator/VirtualMachine/Parser.h"
+#include "Language/Parser.h"
 #include "Utils/CommandLine/Parser.h"
 #include "Utils/Console.h"
 #include "Utils/Exceptions/Exception.h"
@@ -78,7 +78,7 @@ public:
 
     int go() const
     {
-        VirtualMachine::Parser vmp;
+        Jack::Parser vmp;
         vmp.parse(_input);
         if (_output.empty())
             vmp.write(cout);

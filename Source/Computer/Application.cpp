@@ -25,7 +25,7 @@
 #include "Chips/Computer.h"
 #include "Computer/CommandRuntime.h"
 #include "Computer/DebugRuntime.h"
-#include "Translator/VirtualMachine/Parser.h"
+#include "VirtualMachine/Parser.h"
 #include "Utils/CommandLine/Parser.h"
 #include "Utils/Exceptions/Exception.h"
 

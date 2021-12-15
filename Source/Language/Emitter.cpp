@@ -19,9 +19,9 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#include "Translator/VirtualMachine/Emitter.h"
+#include "Language/Emitter.h"
 #include <iomanip>
-#include "Translator/VirtualMachine/Constants.h"
+#include "Language/Constants.h"
 #include "Utils/Char.h"
 
 #define LFT(x) std::left, std::setw(x)
@@ -29,7 +29,7 @@
 #define P LFT(20)
 #define R RGT(21)
 
-namespace Hack::VirtualMachine
+namespace Hack::Jack
 {
     class CodeStream
     {
