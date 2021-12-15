@@ -22,7 +22,6 @@ add_subdirectory(Chips)
 add_subdirectory(Assembler)
 add_subdirectory(Bindings)
 add_subdirectory(Translator/VirtualMachine)
-add_subdirectory(Translator/Custom)
 
 if (BuildType STREQUAL "CPP")
 	add_subdirectory(Computer)

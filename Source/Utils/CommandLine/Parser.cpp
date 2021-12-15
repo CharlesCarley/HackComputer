@@ -288,7 +288,7 @@ namespace Hack::CommandLine
         const int          w = max(_maxLongSwitch + 2, 4);
         OutputStringStream stream;
 
-        stream << "Usage: " << getBaseProgram() << " <options> <arg0 .. argN>" << endl << endl;
+        stream << "Usage: " << getBaseProgram() << " <options> <arg[0] .. arg[n]>" << endl << endl;
         stream << pad(4) << "-h, --help" << pad(w - 4)
                << "Display this help message" << endl;
 
@@ -303,7 +303,7 @@ namespace Hack::CommandLine
                 if (switchVal.longSwitch != nullptr)
                     stream << ", ";
                 else
-                    stream << pad(2);
+                    stream << pad(4);
             }
             else
                 stream << pad(4);
@@ -330,11 +330,10 @@ namespace Hack::CommandLine
                         stream << endl << pad(w + 10);
                     }
                 }
-                stream << endl;
             }
             stream << endl;
         }
-
+        stream << endl;
         dest = stream.str();
     }
 

@@ -36,6 +36,6 @@ GTEST_TEST(LoadRom, Test1)
 
     const Parser::Instructions &inst= psr.getInstructions();
 
-    const Hack::Chips::Rom32 rom;
+    Hack::Chips::Rom32 rom;
     rom.load(inst.data(), inst.size());
 }

@@ -29,6 +29,7 @@ source_group("Content" FILES ${TargetName_DAT})
 set(TargetName_HDR 
     Application.h
     CommandRuntime.h
+    DebugRuntime.h
     IRuntime.h
     Runtime.h
 )
@@ -37,6 +38,7 @@ set(TargetName_HDR
 set(TargetName_SRC 
     Application.cpp
     CommandRuntime.cpp
+    DebugRuntime.cpp
     Main.cpp
     Runtime.cpp
 )
@@ -62,7 +64,6 @@ target_link_libraries(${TargetName}
     Chips 
     Assembler
     VirtualMachine
-    ToyVm
 )
 
 if (USE_SDL)

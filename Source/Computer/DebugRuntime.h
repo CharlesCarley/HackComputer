@@ -20,46 +20,34 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
+#include "Computer/IRuntime.h"
 
-namespace Hack::ToyVm
+namespace Hack::Computer
 {
-    enum TokenType
-    {
-        TOK_ERROR = -2,
-        TOK_EOF,
-        TOK_NULL,
-        TOK_INTEGER,
-        TOK_IDENTIFIER,
+    class DebugRuntimePrivate;
 
-        TOK_PUSH,
-        TOK_POP,
-        TOK_ARGUMENT,
-        TOK_LOCAL,
-        TOK_STATIC,
-        TOK_CONSTANT,
-        TOK_THIS,
-        TOK_THAT,
-        TOK_POINTER,
-        TOK_TEMP,
-        TOK_IF_GOTO,
-        TOK_GOTO,
-        TOK_LABEL,
-        TOK_FUNCTION,
-        TOK_CALL,
-        TOK_RETURN,
-        TOK_EQ,
-        TOK_GT,
-        TOK_LT,
-        TOK_ADD,
-        TOK_SUB,
-        TOK_AND,
-        TOK_OR,
-        TOK_NOT,
-        TOK_NEG,
-        TOK_RESET,
-        TOK_HALT
+    class DebugRuntime final : public IRuntime
+    {
+    private:
+        DebugRuntimePrivate* _private;
+
+    public:
+        DebugRuntime();
+
+        ~DebugRuntime() override;
+
+        bool shouldUpdate() override;
+
+        void initialize(Chips::Computer* computer) const override;
+
+        bool exitRequest() const override;
+
+        void processEvents(Chips::Computer* computer) const override;
+
+        void flushMemory(Chips::Computer* computer) const override;
+
+        void update(Chips::Computer* computer) const override;
+
     };
 
-    using Token = TokenBase;
-
-}  // namespace Hack::VirtualMachine
+}  // namespace Hack::Computer

@@ -28,12 +28,13 @@ namespace Hack::Chips
     Rom32::Rom32() :
         _in(0),
         _out(0),
+        _size(0),
         _r(nullptr)
     {
         setBit(7);
-        _r = new uint16_t[0xFFFF];
+        _r = new uint16_t[0x7FFF+1];
 
-        memset(_r, 0, 0xFFFF);
+        memset(_r, 0, 0x7FFF);
     }
 
     Rom32::~Rom32()
@@ -83,33 +84,35 @@ namespace Hack::Chips
             _out = _r[_in];
     }
 
-    void Rom32::load(String& file) const
+    void Rom32::load(String& file)
     {
         std::ifstream fp(file);
         String        s;
 
-        for (uint16_t i = 0; i < 0x7FFF + 1; ++i)
+        
+        for (_size = 0; _size < 0x7FFF + 1; ++_size)
         {
             if (fp >> s)
-                _r[i] = B16::pack(s.c_str());
+                _r[_size] = B16::pack(s.c_str());
             else
                 break;
         }
     }
 
-    void Rom32::load(const uint16_t* data, size_t size) const
+    void Rom32::load(const uint16_t* data, size_t size)
     {
         if (data!= nullptr)
         {
             // zero any memory that is present
-            memset(_r, 0, 0xFFFF);
+            memset(_r, 0, 0x7FFF);
 
             // force the supplied size
             // to conform to the max
-            size = std::min<size_t>(size, 0x7FFF);
+
+            _size = std::min<uint16_t>((uint16_t)size, 0x7FFF);
 
             // copy the new amount
-            memcpy(_r, data, size * sizeof(uint16_t));
+            memcpy(_r, data, _size * sizeof(uint16_t));
         }
     }
 

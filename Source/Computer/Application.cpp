@@ -20,18 +20,18 @@
 -------------------------------------------------------------------------------
 */
 #include "Computer/Application.h"
+#include <filesystem>
 #include "Assembler/Parser.h"
+#include "Chips/Computer.h"
 #include "Computer/CommandRuntime.h"
+#include "Computer/DebugRuntime.h"
 #include "Translator/VirtualMachine/Parser.h"
-#include "Translator/Custom/Parser.h"
+#include "Utils/CommandLine/Parser.h"
+#include "Utils/Exceptions/Exception.h"
+
 #ifdef USE_SDL
 #include "Computer/Runtime.h"
 #endif
-
-#include <filesystem>
-#include "Chips/Computer.h"
-#include "Utils/CommandLine/Parser.h"
-#include "Utils/Exceptions/Exception.h"
 
 namespace Hack::Computer
 {
@@ -39,27 +39,71 @@ namespace Hack::Computer
 
     enum Options
     {
+        OP_CMD,
         OP_DEBUG,
+        OP_RUN_END,
+        OP_TRACE_MEM,
         OP_MAX,
     };
 
     constexpr CommandLine::Switch Switches[OP_MAX] = {
-        {OP_DEBUG, 'd', "debug", "Debug the supplied file", true, 0},
+        {
+            OP_CMD,
+            'c',
+            nullptr,
+            "Use the command line runtime",
+            true,
+            0,
+        },
+        {
+            OP_DEBUG,
+            'd',
+            nullptr,
+            "Debug the supplied file",
+            true,
+            0,
+        },
+        {
+            OP_RUN_END,
+            'r',
+            "run-end",
+            "Run the supplied file until it exits",
+            true,
+            0,
+        },
+        {
+            OP_TRACE_MEM,
+            't',
+            "trace",
+            "Output a dump of the non-zero portions of ram",
+            true,
+            0,
+        },
     };
 
     Application::Application() :
         _computer(new Chips::Computer()),
-        _runtime(nullptr)
+        _runtime(nullptr),
+        _trace(false)
     {
     }
 
     Application::~Application()
     {
-        delete _computer;
-        _computer = nullptr;
-
         delete _runtime;
         _runtime = nullptr;
+
+        try
+        {
+            if (_trace)
+                trace(_computer);
+        }
+        catch (Exception&)
+        {
+        }
+
+        delete _computer;
+        _computer = nullptr;
     }
 
     bool Application::parse(const int argc, char** argv)
@@ -80,12 +124,19 @@ namespace Hack::Computer
 
 #ifdef USE_SDL
         if (cmd.isPresent(OP_DEBUG))
+            _runtime = new DebugRuntime();
+        else if (cmd.isPresent(OP_CMD))
             _runtime = new CommandRuntime();
         else
             _runtime = new Runtime();
 #else
-        _runtime = new CommandRuntime();
+        if (cmd.isPresent(OP_DEBUG))
+            _runtime = new DebugRuntime();
+        else
+            _runtime = new CommandRuntime();
 #endif
+
+        _trace = cmd.isPresent(OP_TRACE_MEM);
         return true;
     }
 
@@ -97,25 +148,10 @@ namespace Hack::Computer
         std::filesystem::path path = _input;
 
         String ext = path.extension().string();
-        
+
         if (ext == ".vm")
         {
             VirtualMachine::Parser vmp;
-            vmp.parse(_input);
-
-            StringStream ss;
-            vmp.write(ss);
-
-            Assembler::Parser psr;
-            psr.parse(ss);
-
-            const Instructions& instructions = psr.getInstructions();
-
-            _computer->load(instructions.data(), instructions.size());
-        }
-        else if (ext == ".tvm")
-        {
-            ToyVm::Parser vmp;
             vmp.parse(_input);
 
             StringStream ss;
@@ -139,6 +175,31 @@ namespace Hack::Computer
         }
     }
 
+    void Application::trace(Chips::Computer* computer)
+    {
+        Chips::Memory* mem = computer->getRam();
+
+        OutputStringStream oss;
+
+        oss << "| Index |  Value   |" << std::endl;
+        oss << "|------:|---------:|" << std::endl;
+
+        for (int i = 0; i < Chips::Memory::MaxAddress; ++i)
+        {
+            const uint16_t v = mem->get(i);
+            if (v != 0)
+            {
+                oss << '|';
+                oss << std::right << std::setw(7) << i;
+                oss << '|';
+                oss << std::setw(10) << v;
+                oss << '|';
+                oss << std::endl;
+            }
+        }
+        Console::write(oss.str());
+    }
+
     int Application::go() const
     {
         if (_runtime)
@@ -160,6 +221,7 @@ namespace Hack::Computer
                 // synchronize screen memory
                 _runtime->flushMemory(_computer);
             }
+
             return 0;
         }
 

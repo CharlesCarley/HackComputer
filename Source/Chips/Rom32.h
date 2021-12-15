@@ -30,9 +30,9 @@ namespace Hack::Chips
         void evaluate() override;
         bool isDirty() override;
 
-        uint16_t _in, _out;
+        uint16_t  _in, _out, _size;
         uint16_t* _r;
-        
+
     public:
         Rom32();
         ~Rom32() override;
@@ -43,10 +43,18 @@ namespace Hack::Chips
 
         uint16_t get(const int& i) const;
 
+        uint16_t size() const;
+
         void lock(bool v);
 
-        void load(String& file) const;
-        void load(const uint16_t* data, size_t size) const;
+        void load(String& file);
+
+        void load(const uint16_t* data, size_t size);
     };
+
+    inline uint16_t Rom32::size() const
+    {
+        return _size;
+    }
 
 }  // namespace Hack::Chips

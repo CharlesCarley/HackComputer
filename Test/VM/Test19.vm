@@ -1,12 +1,13 @@
 set 1 272
 goto main
-halt 
-
+reset
 
 function main 0
 	push constant 1
 	push constant 2
 	call addStack 2
+	pop  local 2 
+	push local 2 
 	return
 
 function addStack1 2
@@ -20,4 +21,6 @@ function addStack 2
 	pop  local 0 
 	push local 0 
 	call addStack1 2
+	pop  local 2 
+	push local 2 
 	return

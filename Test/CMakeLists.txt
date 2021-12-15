@@ -22,13 +22,13 @@ include (GroupSet)
 set(TestTargetName ${TargetName}Test)
 
 set_group(TestTarget_Data
+    Inline:*.inl
     Assembler/ASM:Assembler/*.asm
     Assembler/Cmp:Assembler/*.cmp
     ROM/ASM:Rom/*.asm
     VM/Cmp:VM/*.cmp
-    VM/ASM:VM/*.asM
+    VM/ASM:VM/*.asm
     VM/VM:VM/*.vm
-    Inline:*.inl
 )
 
 set(TestTarget_SOURCE
@@ -43,8 +43,8 @@ set(ABSOLUTE_TEST_DIRECTORY  ${CMAKE_CURRENT_SOURCE_DIR})
 set(ABSOLUTE_BUILD_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 
 configure_file(
-	${CMAKE_CURRENT_SOURCE_DIR}/TestDirectory.h.in
-	${CMAKE_CURRENT_BINARY_DIR}/TestDirectory.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/TestDirectory.h.in
+    ${CMAKE_CURRENT_BINARY_DIR}/TestDirectory.h
 )
 
 include_directories(. 

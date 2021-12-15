@@ -47,7 +47,6 @@ namespace Hack::Computer
         void flushMemory(Chips::Computer* computer) const override;
 
         void update(Chips::Computer* computer) const override;
-
     };
 
 }  // namespace Hack::Computer

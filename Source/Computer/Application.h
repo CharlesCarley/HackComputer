@@ -27,11 +27,10 @@ namespace Hack::Chips
     class Computer;
 }
 
-
 namespace Hack::Computer
 {
     class IRuntime;
-    class CommandRuntime;
+    class DebugRuntime;
     class Runtime;
 
     class Application
@@ -40,8 +39,11 @@ namespace Hack::Computer
         Chips::Computer* _computer;
         IRuntime*        _runtime;
         String           _input;
+        bool             _trace;
 
         void load() const;
+
+        static void trace(Chips::Computer* computer);
 
     public:
         Application();
