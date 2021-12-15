@@ -24,10 +24,10 @@
 #include "Translator/VirtualMachine/Constants.h"
 #include "Utils/Char.h"
 
-#define lft(x) std::left, std::setw(x)
-#define rgt(x) std::right, std::setw(x), ' '
-#define P lft(8)
-#define R rgt(9)
+#define LFT(x) std::left, std::setw(x)
+#define RGT(x) std::right, std::setw(x), ' '
+#define P LFT(20)
+#define R RGT(21)
 
 namespace Hack::VirtualMachine
 {
@@ -61,10 +61,6 @@ namespace Hack::VirtualMachine
         void decrementStack() const
         {
             // clang-format off
-#if 0//  DEBUG
-            write('@', P, STP, "A=M");
-            write(R,           "M=0");
-#endif
             write('@', P, STP, "M=M-1");
             write(R,           "A=M");
             // clang-format on
@@ -348,8 +344,8 @@ namespace Hack::VirtualMachine
     {
         const CodeStream w(&_stream);
         // clang-format off
-        w.write('@', P, STP, "A=M-1");
-        w.write(R,           "M=-M");
+        w.write('@', P, STP,  "A=M-1");
+        w.write(R,            "M=-M");
         // clang-format on
     }
 
@@ -423,14 +419,16 @@ namespace Hack::VirtualMachine
     void Emitter::writeReset()
     {
         const CodeStream w(&_stream);
-        w.write('@', P, 32767, "D=A;JMP");
+        w.write('@', P, 32765, "D=A;JMP");
     }
 
     void Emitter::writeHalt()
     {
         const String halt = "L.halt" + Char::toHexString((uint16_t)++_cmp);
-        writeLabel(halt);
-        writGoto(halt);
+
+        const CodeStream w(&_stream);
+        w.write('(', halt, ')');
+        w.write('@', P, halt, "D=A;JMP");
     }
 
     void Emitter::writGoto(const String& value)
@@ -479,54 +477,46 @@ namespace Hack::VirtualMachine
     {
         const CodeStream w(&_stream);
 
-        const String retAddr = "LR." + name + Char::toHexString((uint16_t)_cmp++);
+        const String retAddr = "LR." + name + Char::toHexString((uint16_t)++_cmp);
 
-        // clang-format off
-        w.write('@', P, STP,    "D=M");
-        w.write('@', P, SW2,    "M=D");
-
-        // Use that to calculate the base address from
-        // the number of arguments that are currently pushed.
-        w.write('@', P, args,   "D=A");
-        w.write('@', P, SW2,    "M=M-D");
-        
-        // Push the return address. 
+        // Push the return address.
         w.write('@', P, retAddr);
-        w.write(R,               "D=A");
+        w.write(R,            "D=A");
         w.incrementStack();
-        w.write(R,               "M=D");
+        w.write(R,            "M=D");
 
         // Push the local segment address.
-        w.write('@', P, LCL,     "D=M");
+        w.write('@', P, LCL,  "D=M");
         w.incrementStack();
-        w.write(R,               "M=D");
+        w.write(R,            "M=D");
 
         // Push the argument segment address.
-        w.write('@', P, ARG,     "D=M");
+        w.write('@', P, ARG,  "D=M");
         w.incrementStack();
-        w.write(R,               "M=D");
+        w.write(R,            "M=D");
 
         // Push the this segment address
-        w.write('@', P, THS,     "D=M");
+        w.write('@', P, THS,  "D=M");
         w.incrementStack();
-        w.write(R,               "M=D");
+        w.write(R,            "M=D");
 
         // Push the that segment address.
-        w.write('@', P, THT,     "D=M");
+        w.write('@', P, THT,  "D=M");
         w.incrementStack();
-        w.write(R,               "M=D");
+        w.write(R,            "M=D");
 
-        // move the new ARG address into the
-        // old ARG address
-        w.write('@', P, SW2,     "D=M");
-        w.write('@', P, ARG,     "M=D");
-
+        // update the new Arg
+        w.write('@', P, args, "D=A");
+        w.write('@', P, 5,    "D=A-D");
+        w.write('@', P, STP,  "D=M-D");
+        w.write('@', P, ARG,  "M=D");
 
         // Move the current stack address into the LCL address.
-        w.write('@', P, STP,     "D=M");
-        w.write('@', P, LCL,     "M=D");
+        w.write('@', P, STP,  "D=M");
+        w.write('@', P, LCL,  "M=D");
         w.write('@', P, name);
-        w.write(R,               "D=A;JMP");
+        w.write(R,            "D=A");
+        w.write(R,            "D;JMP");
 
         // Write the return position.
         w.write('(', retAddr, ')');
@@ -540,38 +530,55 @@ namespace Hack::VirtualMachine
 
         // clang-format off
         
-        w.write('@', P, LCL, "D=M");
-        w.write('@', P, SW0, "M=D"); // FRAME
-        w.write('@', P, 5,   "D=A");
-        w.write('@', P, SW0, "D=M-D");
-        w.write('@', P, SW2, "M=D"); // RET
-        w.decrementStack();
-        w.write(R,           "D=A");
-        w.write('@', P, STP, "M=D"); 
-        w.write(R,           "A=D"); 
-        w.write(R,           "D=M"); 
-        w.write('@', P, SW1, "M=D"); 
-        w.decrementStack();
-        w.write(R,           "D=M");
-        w.write('@', P, THT, "M=D");
-        w.decrementStack();
-        w.write(R,           "D=M");
-        w.write('@', P, THS, "M=D");
-        w.decrementStack();
-        w.write(R,           "D=M");
-        w.write('@', P, ARG, "M=D");
-        w.decrementStack();
-        w.write(R,           "D=M");
-        w.write('@', P, LCL, "M=D");
-        w.decrementStack();
-        w.decrementStack();
-        w.write(R,           "D=M");
-        w.write('@', P, SW0, "M=D");
-        w.write('@', P, SW1, "D=M");
+        w.write('@', P, LCL, "D=M"); // Local
+        w.write('@', P, SW0, "M=D"); // FRAME = Local store in Swap 0
+
+        w.write('@', P, 5,   "D=D-A"); // Frame - 5
+        w.write('@', P, SW2, "M=D");   // Is the Return addr
+        w.write('@', P, SW1, "M=D");   // de-reference the  
+        w.write(R,           "A=D");  // vaLue at frame -5 
+        w.write(R,           "D=M");   //
+
+        w.write('@', P, SW1, "M=D");   // RET = *(frame-5)
         w.write('@', P, STP, "A=M-1");
-        w.write(R,           "M=D");
-        w.write('@', P, SW0, "D=M");
-        w.write(R,           "A=D;JMP");
+        w.write(R,           "A=M");
+        w.write(R,           "D=A");   // *ARG = return value
+        w.write('@', P, SW2, "D=M");   // RET addr
+        w.write('@', P, STP, "M=D+1"); // SP = ARG + 1 
+
+        w.write('@', P, SW0, "D=M");   // FRAME
+        w.write('@', P, 1,   "D=D-A"); // FRAME-1
+        w.write(R,           "A=D");   // de-reference 
+        w.write(R,           "D=M");   //
+        w.write('@', P, THT, "M=D");   // THAT
+
+        w.write('@', P, SW0, "D=M");   // FRAME
+        w.write('@', P, 2,   "D=D-A"); // FRAME-2
+        w.write(R,           "A=D");   // de-reference 
+        w.write(R,           "D=M");   //
+        w.write('@', P, THS, "M=D");   // THIS
+
+        w.write('@', P, SW0, "D=M");   // FRAME
+        w.write('@', P, 3,   "D=D-A"); // FRAME-3
+        w.write(R,           "A=D");   // de-reference 
+        w.write(R,           "D=M");   //
+        w.write('@', P, ARG, "M=D");   // ARG
+
+        w.write('@', P, SW0, "D=M");   // FRAME
+        w.write('@', P, 4,   "D=D-A"); // FRAME-4
+        w.write(R,           "A=D");   // de-reference 
+        w.write(R,           "D=M");   //
+        w.write('@', P, LCL, "M=D");   // LCL
+        
+        w.write('@', P, SW0, "D=M"); // Clear the Frame
+        w.write(R,           "A=D"); // RET
+        w.write(R,           "D=M"); // Pick up the value at the top of the frame
+
+        w.write('@', P, SW2, "A=M");
+        w.write(R,           "M=D"); // Function return, place it in RAM[Swap 2]
+        w.write('@', P, SW1, "D=M"); // Pick up the return address
+        w.write(R,           "A=D"); // set up the jump to the return address
+        w.write(R,           "0;JMP");
 
         // clang-format on
     }

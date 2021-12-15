@@ -90,20 +90,12 @@ namespace Hack::Computer
 
     Application::~Application()
     {
+        delete _computer;
+        _computer = nullptr;
+
         delete _runtime;
         _runtime = nullptr;
 
-        try
-        {
-            if (_trace)
-                trace(_computer);
-        }
-        catch (Exception&)
-        {
-        }
-
-        delete _computer;
-        _computer = nullptr;
     }
 
     bool Application::parse(const int argc, char** argv)
@@ -189,12 +181,16 @@ namespace Hack::Computer
             const uint16_t v = mem->get(i);
             if (v != 0)
             {
-                oss << '|';
-                oss << std::right << std::setw(7) << i;
-                oss << '|';
-                oss << std::setw(10) << v;
-                oss << '|';
-                oss << std::endl;
+                //if (i != 13 && i != 14 && i != 15)
+                {
+                    oss << '|';
+                    oss << std::right << std::setw(7) << i;
+                    oss << '|';
+                    oss << std::setw(10) << v;
+                    oss << '|';
+                    oss << std::endl;
+                    
+                }
             }
         }
         Console::write(oss.str());
@@ -221,6 +217,9 @@ namespace Hack::Computer
                 // synchronize screen memory
                 _runtime->flushMemory(_computer);
             }
+
+            if (_trace)
+                trace(_computer);
 
             return 0;
         }

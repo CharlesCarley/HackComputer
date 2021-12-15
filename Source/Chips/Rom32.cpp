@@ -34,7 +34,7 @@ namespace Hack::Chips
         setBit(7);
         _r = new uint16_t[0x7FFF+1];
 
-        memset(_r, 0, 0x7FFF);
+        memset(_r, 0, sizeof(uint16_t) * 0x7FFF+1);
     }
 
     Rom32::~Rom32()
@@ -104,7 +104,7 @@ namespace Hack::Chips
         if (data!= nullptr)
         {
             // zero any memory that is present
-            memset(_r, 0, 0x7FFF);
+            memset(_r, 0, sizeof(uint16_t) * 0x7FFF);
 
             // force the supplied size
             // to conform to the max

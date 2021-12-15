@@ -430,9 +430,9 @@ GTEST_TEST(VirtualMachine, SimpleFunction)
 
     Chips::Memory* mem = comp.getRam();
 //    | RAM[0] | RAM[1] | RAM[2] | RAM[3] | RAM[4] |RAM[310]|
-//|    311 |    305 |    300 |   3010 |   4010 |   1044 |
+//|    313 |    305 |    300 |   3010 |   4010 |   1016 |
     uint16_t val = mem->get(0);
-    EXPECT_EQ(val, 311);
+    EXPECT_EQ(val, 313);
     val = mem->get(1);
     EXPECT_EQ(val, 305);
     val = mem->get(2);
@@ -442,5 +442,7 @@ GTEST_TEST(VirtualMachine, SimpleFunction)
     val = mem->get(4);
     EXPECT_EQ(val, 4010);
     val = mem->get(310);
-    EXPECT_EQ(val, 1045);
+    EXPECT_EQ(val, 1234);
+    val = mem->get(312);
+    EXPECT_EQ(val, 1016);
 }

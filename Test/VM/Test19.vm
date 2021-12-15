@@ -1,26 +1,13 @@
-set 1 272
-goto main
+set 0 32
+set 1 64
+set 2 128
+set 3 0
+set 4 0
+
+call main 0
 reset
 
 function main 0
-	push constant 1
-	push constant 2
-	call addStack 2
-	pop  local 2 
-	push local 2 
-	return
-
-function addStack1 2
-	add 
-	pop  local 1 
-	push local 1 
-	return
-
-function addStack 2 
-	add 
-	pop  local 0 
-	push local 0 
-	call addStack1 2
-	pop  local 2 
-	push local 2 
+	push constant 123
+	pop local 0
 	return
