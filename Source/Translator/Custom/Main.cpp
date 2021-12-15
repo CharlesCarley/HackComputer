@@ -78,7 +78,7 @@ public:
 
     int go() const
     {
-        VirtualMachine::Parser vmp;
+        ToyVm::Parser vmp;
         vmp.parse(_input);
         if (_output.empty())
             vmp.write(cout);
