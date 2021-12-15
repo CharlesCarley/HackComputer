@@ -1,0 +1,23 @@
+set 1 272
+goto main
+halt 
+
+
+function main 0
+	push constant 1
+	push constant 2
+	call addStack 2
+	return
+
+function addStack1 2
+	add 
+	pop  local 1 
+	push local 1 
+	return
+
+function addStack 2 
+	add 
+	pop  local 0 
+	push local 0 
+	call addStack1 2
+	return

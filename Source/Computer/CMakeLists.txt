@@ -62,6 +62,7 @@ target_link_libraries(${TargetName}
     Chips 
     Assembler
     VirtualMachine
+    ToyVm
 )
 
 if (USE_SDL)

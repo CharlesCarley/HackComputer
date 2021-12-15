@@ -23,6 +23,7 @@
 #include "Assembler/Parser.h"
 #include "Computer/CommandRuntime.h"
 #include "Translator/VirtualMachine/Parser.h"
+#include "Translator/Custom/Parser.h"
 #ifdef USE_SDL
 #include "Computer/Runtime.h"
 #endif
@@ -100,6 +101,21 @@ namespace Hack::Computer
         if (ext == ".vm")
         {
             VirtualMachine::Parser vmp;
+            vmp.parse(_input);
+
+            StringStream ss;
+            vmp.write(ss);
+
+            Assembler::Parser psr;
+            psr.parse(ss);
+
+            const Instructions& instructions = psr.getInstructions();
+
+            _computer->load(instructions.data(), instructions.size());
+        }
+        else if (ext == ".tvm")
+        {
+            ToyVm::Parser vmp;
             vmp.parse(_input);
 
             StringStream ss;

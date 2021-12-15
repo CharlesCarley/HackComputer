@@ -17,13 +17,61 @@
 #    misrepresented as being the original software.
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
-add_subdirectory(Utils)
-add_subdirectory(Chips)
-add_subdirectory(Assembler)
-add_subdirectory(Bindings)
-add_subdirectory(Translator/VirtualMachine)
-add_subdirectory(Translator/Custom)
+set(TargetName ToyVm)
+
+set(Target_HDR
+   Token.h
+   Scanner.h
+   Parser.h
+   Emitter.h
+   Constants.h
+   VM.grm
+)
+
+set(Target_SRC 
+   Scanner.cpp
+   Parser.cpp
+   Emitter.cpp
+)
+
+include_directories(${Hack_SOURCE_DIR}/Source)
+add_library(${TargetName} 
+    ${Target_SRC} 
+    ${Target_HDR}
+)
+
+
+if (TargetFolders)
+    set_target_properties(${TargetName} PROPERTIES FOLDER "${TargetGroup}")
+endif()
+
+
+
+#------------------------------------------------------
 
 if (BuildType STREQUAL "CPP")
-	add_subdirectory(Computer)
+
+    # The command line application
+    set(TargetName ToyVm2Asm)
+    
+    unset(Target_HDR)
+    unset(Target_SRC)
+    set(Target_SRC Main.cpp)
+
+    include_directories(${Hack_SOURCE_DIR}/Source)
+
+    add_executable(${TargetName}  ${Target_SRC})
+
+    target_link_libraries(${TargetName} ToyVm Utils)
+
+    copy_target(${TargetName} ${Hack_BINARY_DIR}/build_files) 
+
+    if (NOT Hack_INSTALL_PATH STREQUAL  "")
+        copy_target(${TargetName} ${Hack_INSTALL_PATH}) 
+    endif()
+
+    if (TargetFolders)
+        set_target_properties(${TargetName} PROPERTIES FOLDER "${TargetGroup}")
+    endif()
+
 endif()
