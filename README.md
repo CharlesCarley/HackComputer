@@ -106,7 +106,17 @@ This project is a collection of tools that implements the recommended compiler s
 
 #### SyntaxAnalyzer
 
+The syntax analyzer takes an input `.jack` file and builds the parse tree which can be either, saved to `.xml` or used directly to emit `.vm` code.
+
 ##### Jack Grammar
+
+See the [Jack.grm](Source/Compiler/Analyzer/Jack.grm) for the implemented grammar.
+
+Extra options not in the main specification per personal preference.
+
+- __NOT__ `!`
+  - The not unary operator is implemented as '~' and '!', both have the same meaning. 
+
 
 #### Jack2XML
 
