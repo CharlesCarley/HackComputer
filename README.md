@@ -104,6 +104,8 @@ Usage: vm2mc <options> <arg[0] .. arg[n]>
 
 This project is a collection of tools that implements the recommended compiler structure.
 
+![Dia01](Content/Dia01.svg)
+
 #### SyntaxAnalyzer
 
 The syntax analyzer takes an input `.jack` file and builds the parse tree which can be either, saved to `.xml` or used directly to emit `.vm` code.
