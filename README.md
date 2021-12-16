@@ -1,8 +1,34 @@
 # Hack Computer
 
-This repository is my implementation of the Hack computer in C++ from the nand2Tetris [course #1](https://www.coursera.org/learn/build-a-computer).
+This repository is my implementation of the Hack computer in C++ from the nand2Tetris [course](https://www.coursera.org/learn/build-a-computer).
 
-## Utils
+
+## Project Structure
+
+This project is split into multiple namespaces.
+
+
+- [Hack Computer](#hack-computer)
+  - [Project Structure](#project-structure)
+    - [Utils](#utils)
+    - [Chips](#chips)
+    - [Assembler](#assembler)
+      - [Asm2Mc](#asm2mc)
+    - [Virtual Machine](#virtual-machine)
+      - [Vm2Asm](#vm2asm)
+    - [Compiler Tools](#compiler-tools)
+      - [SyntaxAnalyzer](#syntaxanalyzer)
+      - [Jack2XML](#jack2xml)
+      - [CompileUtils](#compileutils)
+      - [CodeGenerator](#codegenerator)
+      - [Compiler](#compiler)
+    - [Bindings](#bindings)
+    - [Computer](#computer)
+  - [Building](#building)
+    - [Defines](#defines)
+  - [Testing](#testing)
+
+### Utils
 
 The [utils](Source/Utils/) library implements basic utilities that are used project wide.
 
@@ -10,7 +36,7 @@ The [utils](Source/Utils/) library implements basic utilities that are used proj
 - [Source/Utils/CommandLine](Source/Utils/CommandLine/) implements a STL version of the [Utils](https://github.com/CharlesCarley/Utils) command line library (Non STL)  
 - [Source/Utils/UserInterface](Source/Utils/UserInterface/) provides a cross platform console drawing context
 
-## Chips
+### Chips
 
 The [chip library](Source/Chips/) implements the .hdl circuits in C++.
 
@@ -19,20 +45,47 @@ I wanted to keep the chip functionality present rather than abstract it away for
 
 The build option `Hack_IMPLEMENT_BLACK_BOX` will toggle it on or off.
 
-## Assembler
+### Assembler
 
 The [assembler](Source/Assembler/) implements the machine code compiler.
-It outputs two targets:
 
-- A static library so that the parser can be used in other areas of code
-- A program that takes an assembly file as input and outputs the binary instructions
+The primary target is a static library so that the parser can be used in other areas of code.
 
-## Computer
+#### Asm2Mc
+
+Is a program that takes an assembly file as input and outputs the binary instructions.
+
+### Virtual Machine
+
+The [VM](Source/VirtualMachine/) implements the vm code compiler.
+
+The primary target is a static library so that it can be used in other areas of code.
+
+#### Vm2Asm
+
+Is a program that takes a '.vm' file as input and emits assembly code.
+
+### Compiler Tools
+
+#### SyntaxAnalyzer
+
+#### Jack2XML
+
+#### CompileUtils
+
+#### CodeGenerator
+
+#### Compiler
+
+### Bindings
+
+Provides a binding interface to use in other languages.
+
+### Computer
 
 The [computer](Source/Computer/) ties together the ROM, RAM and CPU chips and implements multiple runtime targets.
 
-
-If SDL is enabled, the default runtime will open a window and map the screen region of memory to the SDL window. Otherwise if SDL is disabled, the default and only runtime is the command line debugger. ![command line debugger](Content/Debugger.png)
+If SDL is enabled, the default runtime will open a window and map the screen region of memory to the SDL window. Otherwise if SDL is disabled, the default and only runtime is the [command line debugger](Content/Debugger.png).
 
 
 ## Building
