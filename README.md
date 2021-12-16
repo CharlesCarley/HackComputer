@@ -1,23 +1,24 @@
 # Hack Computer
 
-This repository is my implementation of the Hack computer in C++ from the nand2Tetris [course](https://www.coursera.org/learn/build-a-computer).
-
+This repository is my implementation of the Hack computer in C++ from the [Nand2Tetris course](https://www.coursera.org/learn/build-a-computer).
 
 ## Project Structure
 
-This project is split into multiple namespaces.
-
+This project is split into multiple namespace projects under the primary Hack namespace.
 
 - [Hack Computer](#hack-computer)
   - [Project Structure](#project-structure)
     - [Utils](#utils)
     - [Chips](#chips)
     - [Assembler](#assembler)
+      - [ASM Grammar](#asm-grammar)
       - [Asm2Mc](#asm2mc)
     - [Virtual Machine](#virtual-machine)
+      - [VM Grammar](#vm-grammar)
       - [Vm2Asm](#vm2asm)
     - [Compiler Tools](#compiler-tools)
       - [SyntaxAnalyzer](#syntaxanalyzer)
+        - [Jack Grammar](#jack-grammar)
       - [Jack2XML](#jack2xml)
       - [CompileUtils](#compileutils)
       - [CodeGenerator](#codegenerator)
@@ -33,7 +34,7 @@ This project is split into multiple namespaces.
 The [utils](Source/Utils/) library implements basic utilities that are used project wide.
 
 - [Source/Utils](Source/Utils/) provides STL string conversion utilities, and console output utilities
-- [Source/Utils/CommandLine](Source/Utils/CommandLine/) implements a STL version of the [Utils](https://github.com/CharlesCarley/Utils) command line library (Non STL)  
+- [Source/Utils/CommandLine](Source/Utils/CommandLine/) implements a STL version of the [Utils](https://github.com/CharlesCarley/Utils) command line library
 - [Source/Utils/UserInterface](Source/Utils/UserInterface/) provides a cross platform console drawing context
 
 ### Chips
@@ -51,7 +52,7 @@ The [assembler](Source/Assembler/) implements the machine code compiler.
 
 The primary target is a static library so that the parser can be used in other areas of code.
 
-#### Grammar 
+#### ASM Grammar
 
 See the [ASM.grm](Source/Assembler/ASM.grm) for the implemented grammar.
 
@@ -72,19 +73,19 @@ The [VM](Source/VirtualMachine/) implements the vm code compiler.
 
 The primary target is a static library so that it can be used in other areas of code.
 
-#### Grammar 
+#### VM Grammar
 
 See the [VM.grm](Source/VirtualMachine/VM.grm) for the implemented grammar.
 
 Extra options not in the main specification.
 
 - __set__ `set <int> <int>`
-  - Allows directly setting RAM values 
+  - Allows directly setting RAM values
 - __reset__ `reset`
   - Forces a CPU reset by jumping to the end of ROM
     - `@32766 D=A;JMP`
 - __halt__ `halt`
-  - Will emit code that enters into an infinite loop. 
+  - Will emit code that enters into an infinite loop
 
 
 
@@ -99,18 +100,26 @@ Usage: vm2mc <options> <arg[0] .. arg[n]>
     -o, --output  Specify an output file
 ```
 
-
 ### Compiler Tools
 
+This project is a collection of tools that implements the recommended compiler structure.
+
 #### SyntaxAnalyzer
+
+##### Jack Grammar
 
 #### Jack2XML
 
 #### CompileUtils
 
+Utilities that tie together the syntax analyzer and the code generator
+
 #### CodeGenerator
 
 #### Compiler
+
+Is the compiler that ties together the whole system into a single executable file that can be executed with the computer 
+executable.
 
 ### Bindings
 
