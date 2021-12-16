@@ -19,8 +19,8 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#include "Language/Scanner.h"
-#include "Language/Token.h"
+#include "Compiler/Analyzer/Scanner.h"
+#include "Compiler/Analyzer/Token.h"
 #include "Utils/Char.h"
 #include "Utils/Exceptions/Exception.h"
 
@@ -42,7 +42,7 @@
     '0' : case '1' : case '2' : case '3' : case '4' : case '5' : case '6' \
         : case '7' : case '8' : case '9' : case '-'
 
-namespace Hack::Jack
+namespace Hack::Compiler::Analyzer
 {
     Scanner::Scanner() = default;
 

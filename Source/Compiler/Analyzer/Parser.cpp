@@ -19,14 +19,14 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#include "Language/Parser.h"
+#include "Compiler/Analyzer/Parser.h"
 #include <fstream>
 #include "Utils/Exceptions/Exception.h"
-#include "Language/Scanner.h"
-#include "Language/Token.h"
+#include "Compiler/Analyzer/Scanner.h"
+#include "Compiler/Analyzer/Token.h"
 #include "Utils/Char.h"
 
-namespace Hack::Jack
+namespace Hack::Compiler::Analyzer
 {
     Parser::Parser()
     {

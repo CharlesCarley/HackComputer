@@ -19,9 +19,6 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#include <fstream>
-#include <iostream>
-#include "Language/Parser.h"
 #include "Utils/CommandLine/Parser.h"
 #include "Utils/Console.h"
 #include "Utils/Exceptions/Exception.h"
@@ -78,19 +75,6 @@ public:
 
     int go() const
     {
-        Jack::Parser vmp;
-        vmp.parse(_input);
-        if (_output.empty())
-            vmp.write(cout);
-        else
-        {
-            std::ofstream out(_output.c_str());
-            if (out.is_open())
-                vmp.write(out);
-            else
-                throw Exception(
-                    "Failed to open the supplied output file '", _output, "'");
-        }
         return 0;
     }
 };

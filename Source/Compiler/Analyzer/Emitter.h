@@ -24,7 +24,7 @@
 #include "Utils/ParserBase/ScannerBase.h"
 #include "Utils/String.h"
 
-namespace Hack::Jack
+namespace Hack::Compiler::Analyzer
 {
     class CodeStream;
 

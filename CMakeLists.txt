@@ -63,7 +63,7 @@ add_subdirectory(Source)
 
 if (Hack_BUILD_TEST)
     if (BuildType STREQUAL "CPP")
-        set(TargetGroup Units)
+        set(TargetGroup Extern)
         add_subdirectory(${GTEST_DIR})
         if (TargetFolders)
             set_target_properties(gtest_main PROPERTIES FOLDER "${TargetGroup}")

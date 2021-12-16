@@ -20,46 +20,27 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#include "Utils/ParserBase/ParserBase.h"
-#include "Utils/String.h"
-#include "Language/Emitter.h"
+#include "Utils/ParserBase/ScannerBase.h"
+#include "Compiler/Analyzer/Token.h"
 
-namespace Hack::Jack
+namespace Hack::Compiler::Analyzer
 {
-    class Scanner;
-    using StringCache = Cache<String>;
-
-    class Parser final : public ParserBase
+    class Scanner final : public ScannerBase
     {
     private:
-        Emitter     _emitter;
-        StringCache _labels;
+        void scanLineComment() const;
 
-    private:
-        void parseImpl(IStream& is) override;
+        void scanWhiteSpace() const;
 
-        void writeImpl(OStream& os) override;
+        void scanSymbol(Token& tok);
 
-        void expression();
-
-        void pushExpression();
-
-        void popExpression();
-
-        void gotoExpression();
-
-        void labelExpression();
-
-        void functionExpression();
-
-        void callExpression();
-
-        void setExpression();
+        void scanDigit(Token& tok);
 
     public:
-        Parser();
 
-        ~Parser() override;
+        Scanner();
+
+        void scan(Token& tok) override;
     };
 
 }  // namespace Hack::VirtualMachine

@@ -19,9 +19,9 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#include "Language/Emitter.h"
+#include "Compiler/Analyzer/Emitter.h"
 #include <iomanip>
-#include "Language/Constants.h"
+#include "Compiler/Analyzer/Constants.h"
 #include "Utils/Char.h"
 
 #define LFT(x) std::left, std::setw(x)
@@ -29,7 +29,7 @@
 #define P LFT(20)
 #define R RGT(21)
 
-namespace Hack::Jack
+namespace Hack::Compiler::Analyzer
 {
     class CodeStream
     {

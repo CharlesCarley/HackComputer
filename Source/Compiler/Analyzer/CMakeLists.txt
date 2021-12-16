@@ -17,48 +17,56 @@
 #    misrepresented as being the original software.
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
-set(TargetName Assembler)
-set(TargetGroup Assembler)
+set(TargetName SyntaxAnalyzer)
+set(TargetGroup Compiler)
 
-set(Target_HDR 
-    Parser.h
-    Scanner.h
-    SyntaxError.h
-    Instruction.h
-    ParseError.h
-    Token.h
-    ASM.grm
+set(Target_HDR
+   Token.h
+   Scanner.h
+   Parser.h
+   Emitter.h
+   Constants.h
+   Jack.grm
 )
 
 set(Target_SRC 
-    Main.cpp
-    Parser.cpp
-    Instruction.cpp
-    Scanner.cpp
+   Scanner.cpp
+   Parser.cpp
+   Emitter.cpp
 )
 
 include_directories(${Hack_SOURCE_DIR}/Source)
-add_library(${TargetName} ${Target_SRC} ${Target_HDR})
-target_link_libraries(${TargetName} Utils)
+add_library(${TargetName} 
+    ${Target_SRC} 
+    ${Target_HDR}
+)
+
 
 if (TargetFolders)
     set_target_properties(${TargetName} PROPERTIES FOLDER "${TargetGroup}")
 endif()
 
 
+
+#------------------------------------------------------
+
 if (BuildType STREQUAL "CPP")
 
     # The command line application
-
-    set(TargetName Asm2Mc)
-
+    set(TargetName Jack2XML)
+    
+    unset(Target_HDR)
+    unset(Target_SRC)
+    set(Target_SRC Main.cpp)
 
     include_directories(${Hack_SOURCE_DIR}/Source)
-    add_executable(${TargetName} Main.cpp)
-    target_link_libraries(${TargetName} Utils Assembler)
+
+    add_executable(${TargetName}  ${Target_SRC})
+
+    target_link_libraries(${TargetName} SyntaxAnalyzer Utils)
 
     copy_target(${TargetName} ${Hack_BINARY_DIR}/build_files) 
-    
+
     if (NOT Hack_INSTALL_PATH STREQUAL  "")
         copy_target(${TargetName} ${Hack_INSTALL_PATH}) 
     endif()

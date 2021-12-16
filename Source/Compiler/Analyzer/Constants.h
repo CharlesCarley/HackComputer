@@ -21,7 +21,7 @@
 */
 #pragma once
 
-namespace Hack::Jack
+namespace Hack::Compiler::Analyzer
 {
     enum RamAddresses
     {

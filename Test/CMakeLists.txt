@@ -19,6 +19,7 @@
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
 include (GroupSet)
+set(TargetName     Unit)
 set(TestTargetName ${TargetName}Test)
 
 set_group(TestTarget_Data
@@ -66,9 +67,9 @@ target_link_libraries(${TestTargetName}
     Utils
  )
 
-if (TargetFolders)
-    set_target_properties(${TestTargetName} PROPERTIES FOLDER "${TargetGroup}")
-endif()
+#if (TargetFolders)
+#    set_target_properties(${TestTargetName} PROPERTIES FOLDER "${TargetGroup}")
+#endif()
 
 
 if (Hack_AUTO_RUN_TEST)

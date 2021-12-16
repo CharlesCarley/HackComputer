@@ -17,54 +17,25 @@
 #    misrepresented as being the original software.
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
-set(TargetName Assembler)
-set(TargetGroup Assembler)
+set(TargetName CompileUtils)
+set(TargetGroup Compiler)
 
-set(Target_HDR 
-    Parser.h
-    Scanner.h
-    SyntaxError.h
-    Instruction.h
-    ParseError.h
-    Token.h
-    ASM.grm
+set(Target_HDR
+   ParseTree.h
 )
 
 set(Target_SRC 
-    Main.cpp
-    Parser.cpp
-    Instruction.cpp
-    Scanner.cpp
+   ParseTree.cpp
 )
 
 include_directories(${Hack_SOURCE_DIR}/Source)
-add_library(${TargetName} ${Target_SRC} ${Target_HDR})
-target_link_libraries(${TargetName} Utils)
+add_library(${TargetName} 
+    ${Target_SRC} 
+    ${Target_HDR}
+)
+
 
 if (TargetFolders)
     set_target_properties(${TargetName} PROPERTIES FOLDER "${TargetGroup}")
 endif()
 
-
-if (BuildType STREQUAL "CPP")
-
-    # The command line application
-
-    set(TargetName Asm2Mc)
-
-
-    include_directories(${Hack_SOURCE_DIR}/Source)
-    add_executable(${TargetName} Main.cpp)
-    target_link_libraries(${TargetName} Utils Assembler)
-
-    copy_target(${TargetName} ${Hack_BINARY_DIR}/build_files) 
-    
-    if (NOT Hack_INSTALL_PATH STREQUAL  "")
-        copy_target(${TargetName} ${Hack_INSTALL_PATH}) 
-    endif()
-
-    if (TargetFolders)
-        set_target_properties(${TargetName} PROPERTIES FOLDER "${TargetGroup}")
-    endif()
-
-endif()

@@ -17,48 +17,23 @@
 #    misrepresented as being the original software.
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
-set(TargetName Assembler)
-set(TargetGroup Assembler)
-
-set(Target_HDR 
-    Parser.h
-    Scanner.h
-    SyntaxError.h
-    Instruction.h
-    ParseError.h
-    Token.h
-    ASM.grm
-)
-
-set(Target_SRC 
-    Main.cpp
-    Parser.cpp
-    Instruction.cpp
-    Scanner.cpp
-)
-
-include_directories(${Hack_SOURCE_DIR}/Source)
-add_library(${TargetName} ${Target_SRC} ${Target_HDR})
-target_link_libraries(${TargetName} Utils)
-
-if (TargetFolders)
-    set_target_properties(${TargetName} PROPERTIES FOLDER "${TargetGroup}")
-endif()
-
+set(TargetName Compiler)
+set(TargetGroup Compiler)
 
 if (BuildType STREQUAL "CPP")
 
-    # The command line application
-
-    set(TargetName Asm2Mc)
-
+    unset(Target_HDR)
+    unset(Target_SRC)
+    set(Target_SRC Main.cpp)
 
     include_directories(${Hack_SOURCE_DIR}/Source)
-    add_executable(${TargetName} Main.cpp)
-    target_link_libraries(${TargetName} Utils Assembler)
+
+    add_executable(${TargetName}  ${Target_SRC})
+
+    target_link_libraries(${TargetName} VirtualMachine Utils)
 
     copy_target(${TargetName} ${Hack_BINARY_DIR}/build_files) 
-    
+
     if (NOT Hack_INSTALL_PATH STREQUAL  "")
         copy_target(${TargetName} ${Hack_INSTALL_PATH}) 
     endif()
