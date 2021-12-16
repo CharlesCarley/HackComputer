@@ -41,7 +41,7 @@ The [utils](Source/Utils/) library implements basic utilities that are used proj
 The [chip library](Source/Chips/) implements the .hdl circuits in C++.
 
 The bulk of this library is split into two forms. The first form is with the black box implemented.
-I wanted to keep the chip functionality present rather than abstract it away for testing purposes. It links the circuits together in code but it is a lot slower. The second form is with the circuit behavior abstracted away and replaced C++.
+I wanted to keep the chip functionality present rather than abstract it away for testing purposes. It links the circuits together in code but it is a lot slower. The second form is with the circuit behavior abstracted away and replaced with C++.
 
 The build option `Hack_IMPLEMENT_BLACK_BOX` will toggle it on or off.
 
@@ -51,9 +51,20 @@ The [assembler](Source/Assembler/) implements the machine code compiler.
 
 The primary target is a static library so that the parser can be used in other areas of code.
 
+#### Grammar 
+
+See the [ASM.grm](Source/Assembler/ASM.grm) for the implemented grammar.
+
 #### Asm2Mc
 
 Is a program that takes an assembly file as input and outputs the binary instructions.
+
+```txt
+Usage: asm2mc <options> <arg[0] .. arg[n]>
+
+    -h, --help    Display this help message
+    -o, --output  Specify an output file
+```
 
 ### Virtual Machine
 
@@ -61,9 +72,33 @@ The [VM](Source/VirtualMachine/) implements the vm code compiler.
 
 The primary target is a static library so that it can be used in other areas of code.
 
+#### Grammar 
+
+See the [VM.grm](Source/VirtualMachine/VM.grm) for the implemented grammar.
+
+Extra options not in the main specification.
+
+- __set__ `set <int> <int>`
+  - Allows directly setting RAM values 
+- __reset__ `reset`
+  - Forces a CPU reset by jumping to the end of ROM
+    - `@32766 D=A;JMP`
+- __halt__ `halt`
+  - Will emit code that enters into an infinite loop. 
+
+
+
 #### Vm2Asm
 
 Is a program that takes a '.vm' file as input and emits assembly code.
+
+```txt
+Usage: vm2mc <options> <arg[0] .. arg[n]>
+
+    -h, --help    Display this help message
+    -o, --output  Specify an output file
+```
+
 
 ### Compiler Tools
 
@@ -87,6 +122,15 @@ The [computer](Source/Computer/) ties together the ROM, RAM and CPU chips and im
 
 If SDL is enabled, the default runtime will open a window and map the screen region of memory to the SDL window. Otherwise if SDL is disabled, the default and only runtime is the [command line debugger](Content/Debugger.png).
 
+```txt
+Usage: computer <options> <arg[0] .. arg[n]>
+
+    -h, --help     Display this help message
+    -c             Use the command line runtime
+    -d             Debug the supplied file
+    -r, --run-end  Run the supplied file until it exits
+    -t, --trace    Output a dump of the non-zero portions of ram
+```
 
 ## Building
 
