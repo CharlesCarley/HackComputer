@@ -21,344 +21,78 @@
 */
 #include "Compiler/Analyzer/Parser.h"
 #include <fstream>
-#include "Utils/Exceptions/Exception.h"
 #include "Compiler/Analyzer/Scanner.h"
 #include "Compiler/Analyzer/Token.h"
+#include "Compiler/Common/ParseTreeNode.h"
 #include "Utils/Char.h"
+#include "Utils/Exceptions/Exception.h"
 
 namespace Hack::Compiler::Analyzer
 {
     Parser::Parser()
     {
+        _tree    = new ParseTree();
         _scanner = new Scanner();
     }
 
     Parser::~Parser()
     {
+        delete _tree;
+        _tree = nullptr;
+
         delete _scanner;
         _scanner = nullptr;
     }
 
-    void Parser::pushExpression()
+    void Parser::classDescription()
     {
-        const int8_t t0 = getToken(1).getType();
-        const int8_t t1 = getToken(2).getType();
-
-        if (t1 != TOK_INTEGER)
-        {
-            throw Exception(
-                "Expected an integer to be the third argument to the push "
-                "expression");
-        }
-
-        const size_t idx = getToken(2).getIndex();
-
-        switch (t0)
-        {
-        case TOK_LOCAL:
-            _emitter.pushLocal(_scanner->getString(idx));
-            break;
-        case TOK_ARGUMENT:
-            _emitter.pushArgument(_scanner->getString(idx));
-            break;
-        case TOK_THIS:
-            _emitter.pushThis(_scanner->getString(idx));
-            break;
-        case TOK_THAT:
-            _emitter.pushThat(_scanner->getString(idx));
-            break;
-        case TOK_STATIC:
-            _emitter.pushStatic(_file, _scanner->getString(idx));
-            break;
-        case TOK_TEMP:
-            _emitter.pushTemp(_scanner->getString(idx));
-            break;
-        case TOK_POINTER:
-            _emitter.pushPointer(_scanner->getString(idx));
-            break;
-        case TOK_CONSTANT:
-            _emitter.pushConstant(_scanner->getString(idx));
-            break;
-        default:
-            throw Exception(
-                "Unknown token parsed, expected "
-                "argument, local, static, constant, "
-                "this, that, pointer or temp");
-        }
     }
 
-    void Parser::popExpression()
-    {
-        const int8_t t0 = getToken(1).getType();
-        const int8_t t1 = getToken(2).getType();
-
-        if (t1 != TOK_INTEGER)
-        {
-            throw Exception(
-                "Expected an integer to be the third argument to the pop "
-                "expression");
-        }
-
-        const size_t idx = getToken(2).getIndex();
-
-        switch (t0)
-        {
-        case TOK_LOCAL:
-            _emitter.popLocal(_scanner->getString(idx));
-            break;
-        case TOK_ARGUMENT:
-            _emitter.popArgument(_scanner->getString(idx));
-            break;
-        case TOK_THIS:
-            _emitter.popThis(_scanner->getString(idx));
-            break;
-        case TOK_THAT:
-            _emitter.popThat(_scanner->getString(idx));
-            break;
-        case TOK_TEMP:
-            _emitter.popTemp(_scanner->getString(idx));
-            break;
-        case TOK_STATIC:
-            _emitter.popStatic(_file, _scanner->getString(idx));
-            break;
-        case TOK_POINTER:
-            _emitter.popPointer(_scanner->getString(idx));
-            break;
-        case TOK_CONSTANT:
-        default:
-            throw Exception(
-                "Unknown token parsed, expected "
-                "argument, local, static, "
-                "this, that, pointer or temp");
-        }
-    }
-
-    void Parser::labelExpression()
-    {
-        const int8_t t0 = getToken(1).getType();
-        if (t0 != TOK_IDENTIFIER)
-        {
-            throw Exception(
-                "Expected an identifier to "
-                "follow the label expression");
-        }
-
-        const size_t idx = getToken(1).getIndex();
-
-        String value;
-        _scanner->getString(value, idx);
-        if (value.empty())
-            throw Exception("An empty label was found");
-
-        _labels.save(value);
-        _emitter.writeLabel(value);
-    }
-
-    void Parser::gotoExpression()
+    void Parser::classExpression()
     {
         const int8_t t0 = getToken(0).getType();
+        if (t0 != TOK_KW_CLASS)
+            throw Exception("Expected the class keyword");
+
         const int8_t t1 = getToken(1).getType();
         if (t1 != TOK_IDENTIFIER)
-        {
-            throw Exception(
-                "Expected an identifier to "
-                "follow the goto expression");
-        }
-
-        const size_t idx = getToken(1).getIndex();
-
-        String value;
-        _scanner->getString(value, idx);
-        if (value.empty())
-            throw Exception("An empty label was found");
-
-        if (t0 == TOK_IF_GOTO)
-            _emitter.writIfGoto(value);
-        else
-            _emitter.writGoto(value);
-    }
-
-    void Parser::functionExpression()
-    {
-        
-        const int8_t t1 = getToken(1).getType();
-        if (t1 != TOK_IDENTIFIER)
-        {
-            throw Exception(
-                "Expected an identifier to "
-                "follow the function expression");
-        }
+            throw Exception("Expected class <identifier>");
 
         const int8_t t2 = getToken(2).getType();
-        if (t2 != TOK_INTEGER)
-        {
+        if (t2 != TOK_L_BRACE)
+            throw Exception("Expected open brace, "
+                "class <identifier> '{'");
+
+
+        ParseTreeNode* root = _tree->getRoot();
+
+        ParseTreeNode* cls = new ParseTreeNode(TOK_KW_CLASS);
+        root->addChild(cls);
+
+        ParseTreeNode* clsId = new ParseTreeNode(TOK_IDENTIFIER,
+                                                 _scanner->getString(getToken(1).getIndex()));
+
+        cls->addChild(clsId);
+        cls->addChild(new ParseTreeNode(TOK_L_BRACE));
+
+        _stack.push(cls);
+
+        advanceCursor(3);
+        classDescription();
+
+        if (_stack.top() != cls)
+            cls->addChild(_stack.top());
+
+        _stack.pop();
+
+        const int8_t tf = getToken(0).getType();
+        if (tf != TOK_R_BRACE)
             throw Exception(
-                "Expected an integer to "
-                "follow the after the function label");
-        }
+                "Expected closing brace, "
+                "class <identifier> '{' <ClassDescription> '}'");
 
-        String name;
-        _scanner->getString(name, getToken(1).getIndex());
-        if (name.empty())
-            throw Exception("An empty label was found");
-
-        String args;
-        _scanner->getString(args, getToken(2).getIndex());
-        if (args.empty())
-            throw Exception("An empty integer was found");
-
-        _emitter.writeFunction(name, args);
-    }
-
-    void Parser::callExpression()
-    {
-        const int8_t t1 = getToken(1).getType();
-        if (t1 != TOK_IDENTIFIER)
-        {
-            throw Exception(
-                "Expected an identifier to "
-                "follow the call expression");
-        }
-
-        const int8_t t2 = getToken(2).getType();
-        if (t2 != TOK_INTEGER)
-        {
-            throw Exception(
-                "Expected an integer to "
-                "follow the after the call label");
-        }
-
-        String name;
-        _scanner->getString(name, getToken(1).getIndex());
-        if (name.empty())
-            throw Exception("An empty label was found");
-
-        String args;
-        _scanner->getString(args, getToken(2).getIndex());
-        if (args.empty())
-            throw Exception("An empty integer was found");
-
-        _emitter.writeCall(name, args);
-        
-    }
-
-    void Parser::setExpression()
-    {
-        const int8_t t1 = getToken(1).getType();
-        if (t1 != TOK_INTEGER)
-        {
-            throw Exception(
-                "Expected an integer to "
-                "follow the set expression");
-        }
-
-        const int8_t t2 = getToken(2).getType();
-        if (t2 != TOK_INTEGER)
-        {
-            throw Exception(
-                "Expected two integers to "
-                "follow the set expression");
-        }
-
-        String idx;
-        _scanner->getString(idx, getToken(1).getIndex());
-        if (idx.empty())
-            throw Exception("An empty integer was found");
-
-        String val;
-        _scanner->getString(val, getToken(2).getIndex());
-        if (val.empty())
-            throw Exception("An empty integer was found");
-
-        _emitter.setRam(Char::toInt32(idx), Char::toInt32(val));
-           
-    }
-
-    void Parser::expression()
-    {
-        const int8_t t0 = getToken(0).getType();
-        switch (t0)
-        {
-        case TOK_PUSH:
-            pushExpression();
-            advanceCursor(3);
-            break;
-        case TOK_POP:
-            popExpression();
-            advanceCursor(3);
-            break;
-        case TOK_AND:
-            _emitter.writeAnd();
-            advanceCursor();
-            break;
-        case TOK_OR:
-            _emitter.writeOr();
-            advanceCursor();
-            break;
-        case TOK_ADD:
-            _emitter.writeAdd();
-            advanceCursor();
-            break;
-        case TOK_SUB:
-            _emitter.writeSub();
-            advanceCursor();
-            break;
-        case TOK_NOT:
-            _emitter.writeNot();
-            advanceCursor();
-            break;
-        case TOK_NEG:
-            _emitter.writeNeg();
-            advanceCursor();
-            break;
-        case TOK_EQ:
-            _emitter.writeEq();
-            advanceCursor();
-            break;
-        case TOK_LT:
-            _emitter.writeLt();
-            advanceCursor();
-            break;
-        case TOK_GT:
-            _emitter.writeGt();
-            advanceCursor();
-            break;
-        case TOK_RESET:
-            _emitter.writeReset();
-            advanceCursor();
-            break;
-        case TOK_HALT:
-            _emitter.writeHalt();
-            advanceCursor();
-            break;
-        case TOK_IF_GOTO:
-        case TOK_GOTO:
-            gotoExpression();
-            advanceCursor(2);
-            break;
-        case TOK_LABEL:
-            labelExpression();
-            advanceCursor(2);
-            break;
-        case TOK_RETURN:
-            _emitter.writeReturn();
-            advanceCursor();
-            break;
-        case TOK_CALL:
-            callExpression();
-            advanceCursor(3);
-            break;
-        case TOK_SET:
-            setExpression();
-            advanceCursor(3);
-            break;
-        case TOK_FUNCTION:
-            functionExpression();
-            advanceCursor(3);
-            break;
-        default:
-            throw Exception("An unknown rule was found (id: ", (int)t0, ")");
-        }
+        cls->addChild(new ParseTreeNode(TOK_R_BRACE));
+        advanceCursor();
     }
 
     void Parser::parseImpl(IStream& is)
@@ -369,10 +103,6 @@ namespace Hack::Compiler::Analyzer
         _cursor = 0;
         _scanner->attach(&is);
 
-        // clear the stream
-        _emitter.clear();
-        _emitter.initialize();
-
         while (_cursor <= (int32_t)_tokens.size())
         {
             const int8_t tok = getToken(0).getType();
@@ -380,7 +110,7 @@ namespace Hack::Compiler::Analyzer
                 break;
 
             const int32_t op = _cursor;
-            expression();
+            classExpression();
 
             // if the cursor did not
             // advance force it to.
@@ -391,8 +121,10 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::writeImpl(OStream& os)
     {
-        const String str = _emitter.stream().str();
-        os.write(str.c_str(), str.size());
+        if (!_tree)
+            throw Exception("invalid parse tree");
+
+        _tree->write(os);
     }
 
-}  // namespace Hack::VirtualMachine
+}  // namespace Hack::Compiler::Analyzer

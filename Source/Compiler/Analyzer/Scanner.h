@@ -30,11 +30,15 @@ namespace Hack::Compiler::Analyzer
     private:
         void scanLineComment() const;
 
+        void scanMultiLineComment() const;
+
         void scanWhiteSpace() const;
 
         void scanSymbol(Token& tok);
 
         void scanDigit(Token& tok);
+
+        void scanString(Token& tok);
 
     public:
 

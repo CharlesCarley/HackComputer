@@ -22,10 +22,12 @@ set(TargetGroup Compiler)
 
 set(Target_HDR
    ParseTree.h
+   ParseTreeNode.h
 )
 
 set(Target_SRC 
    ParseTree.cpp
+   ParseTreeNode.cpp
 )
 
 include_directories(${Hack_SOURCE_DIR}/Source)

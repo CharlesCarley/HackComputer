@@ -40,7 +40,7 @@
 
 #define digit                                                             \
     '0' : case '1' : case '2' : case '3' : case '4' : case '5' : case '6' \
-        : case '7' : case '8' : case '9' : case '-'
+        : case '7' : case '8' : case '9'
 
 namespace Hack::Compiler::Analyzer
 {
@@ -54,6 +54,19 @@ namespace Hack::Compiler::Analyzer
             ch = _stream->get();
             if (ch == '\r' && _stream->peek() == '\n')
                 ch = _stream->get();
+        }
+    }
+
+    void Scanner::scanMultiLineComment() const
+    {
+        int ch = _stream->peek();
+        // save doc string?
+        // /** | /*!
+        while (ch > 0)
+        {
+            ch = _stream->get();
+            if (ch == '*' && _stream->peek() == '/')
+                break;
         }
     }
 
@@ -76,40 +89,32 @@ namespace Hack::Compiler::Analyzer
     };
 
     constexpr KeywordTable Reserved[] = {
-        {"argument", TOK_ARGUMENT},
-        {"constant", TOK_CONSTANT},
-        {"function", TOK_FUNCTION},
-        {"pointer", TOK_POINTER},
-        {"if-goto", TOK_IF_GOTO},
-        {"return", TOK_RETURN},
-        {"local", TOK_LOCAL},
-        {"label", TOK_LABEL},
-        {"static", TOK_STATIC},
-        {"call", TOK_CALL},
-        {"goto", TOK_GOTO},
-        {"this", TOK_THIS},
-        {"that", TOK_THAT},
-        {"temp", TOK_TEMP},
-        {"push", TOK_PUSH},
-        {"pop", TOK_POP},
-        {"add", TOK_ADD},
-        {"sub", TOK_SUB},
-        {"not", TOK_NOT},
-        {"neg", TOK_NEG},
-        {"and", TOK_AND},
-        {"or", TOK_OR},
-        {"eq", TOK_EQ},
-        {"gt", TOK_GT},
-        {"lt", TOK_LT},
-        {"set", TOK_SET},
-
-        {"reset", TOK_RESET},
-        {"halt", TOK_HALT},
+        {"class", TOK_KW_CLASS},
+        {"constructor", TOK_KW_CTOR},
+        {"function", TOK_KW_FUNCTION},
+        {"method", TOK_KW_METHOD},
+        {"field", TOK_KW_FIELD},
+        {"static", TOK_KW_STATIC},
+        {"var", TOK_KW_VAR},
+        {"int", TOK_KW_INT},
+        {"char", TOK_KW_CHAR},
+        {"bool", TOK_KW_BOOL},
+        {"void", TOK_KW_VOID},
+        {"let", TOK_KW_LET},
+        {"do", TOK_KW_DO},
+        {"if", TOK_KW_IF},
+        {"else", TOK_KW_ELSE},
+        {"while", TOK_KW_WHILE},
+        {"return", TOK_KW_RETURN},
+        {"true", TOK_CONST_TRUE},
+        {"false", TOK_CONST_FALSE},
+        {"null", TOK_CONST_NULL},
+        {"this", TOK_CONST_THIS},
     };
 
     inline bool isValidCharacter(const int ch)
     {
-        return isLetter(ch) || isDecimal(ch) || ch == '-' || ch == '_' || ch == '.';
+        return isLetter(ch) || isDecimal(ch) || ch == '_';
     }
 
     void Scanner::scanSymbol(Token& tok)
@@ -149,14 +154,74 @@ namespace Hack::Compiler::Analyzer
         int ch = _stream->peek();
 
         String v;
-        while (isDecimal(ch) || ch == '-')
+        while (isDecimal(ch))
         {
             ch = _stream->get();
-            if (isDecimal(ch) || ch == '-')
+            if (isDecimal(ch))
                 v.push_back((char)ch);
         }
 
         tok.setType(TOK_INTEGER);
+        tok.setIndex(saveString(v));
+    }
+
+    void Scanner::scanString(Token& tok)
+    {
+        int ch = _stream->get();
+
+        if (ch != '"')
+            throw Exception("Invalid string starting character. (", ch, ')');
+
+        ch = _stream->peek();
+
+        String v;
+        while (ch > 0 && ch != '"')
+        {
+            ch = _stream->get();
+            if (ch == '\\')
+            {
+
+
+                ch = _stream->get();
+                switch(ch)
+                {
+                case 'n':
+                    v.push_back('\n');
+                    break;
+                case 'r':
+                    v.push_back('\r');
+                    break;
+                case 't':
+                    v.push_back('\t');
+                    break;
+                case 'b':
+                    v.push_back('\b');
+                    break;
+
+                case '\'':
+                case '"':
+                    v.push_back((char)ch);
+                    break;
+                case '\\':
+                    v.push_back('\\');
+                    break;
+                default:
+                    throw Exception("invalid escape sequence");
+                }
+
+                if (ch == '"')
+                    ch = _stream->get();
+            }
+            else
+            {
+                if (ch > 0 && ch != '"')
+                    v.push_back((char)ch);
+                
+            }
+
+        }
+
+        tok.setType(TOK_STRING);
         tok.setIndex(saveString(v));
     }
 
@@ -178,6 +243,13 @@ namespace Hack::Compiler::Analyzer
             case '/':
                 if (_stream->peek() == '/')
                     scanLineComment();
+                else if (_stream->peek() == '*')
+                    scanMultiLineComment();
+                else
+                {
+                    tok.setType(TOK_OP_DIVIDE);
+                    return;
+                }
                 break;
             case digit:
                 _stream->putback((char)ch);
@@ -197,6 +269,65 @@ namespace Hack::Compiler::Analyzer
             case '\t':
                 scanWhiteSpace();
                 break;
+            case '"':
+                _stream->putback((char)ch);
+                scanString(tok);
+                return;
+            case '+':
+                tok.setType(TOK_OP_PLUS);
+                return;
+            case '-':
+                tok.setType(TOK_OP_MINUS);
+                return;
+            case '*':
+                tok.setType(TOK_OP_MULTIPLY);
+                return;
+            case '&':
+                tok.setType(TOK_OP_AND);
+                return;
+            case '|':
+                tok.setType(TOK_OP_OR);
+                return;
+            case '!':
+            case '~':
+                tok.setType(TOK_OP_NOT);
+                return;
+            case '=':
+                tok.setType(TOK_EQ);
+                return;
+            case '<':
+                tok.setType(TOK_LT);
+                return;
+            case '>':
+                tok.setType(TOK_GT);
+                return;
+            case '.':
+                tok.setType(TOK_PERIOD);
+                return;
+            case '{':
+                tok.setType(TOK_L_BRACE);
+                return;
+            case '}':
+                tok.setType(TOK_R_BRACE);
+                return;
+            case '[':
+                tok.setType(TOK_L_BRACKET);
+                return;
+            case ']':
+                tok.setType(TOK_R_BRACKET);
+                return;
+            case '(':
+                tok.setType(TOK_L_PAR);
+                return;
+            case ')':
+                tok.setType(TOK_R_PAR);
+                return;
+            case ',':
+                tok.setType(TOK_COMMA);
+                return;
+            case ';':
+                tok.setType(TOK_SEMICOLON);
+                return;
             default:
                 throw Exception("Unknown character parsed '", (char)ch, "'");
             }
@@ -205,4 +336,4 @@ namespace Hack::Compiler::Analyzer
         tok.setType(TOK_EOF);
     }
 
-}  // namespace Hack::VirtualMachine
+}  // namespace Hack::Compiler::Analyzer

@@ -30,6 +30,8 @@ set_group(TestTarget_Data
     VM/Cmp:VM/*.cmp
     VM/ASM:VM/*.asm
     VM/VM:VM/*.vm
+    Jack/Cmp:Jack/*.xml
+    Jack/Jack:Jack/*.jack
 )
 
 set(TestTarget_SOURCE
@@ -37,6 +39,7 @@ set(TestTarget_SOURCE
     Test2.cpp
     Test3.cpp
     Test4.cpp
+    Test5.cpp
     ${TestTarget_Data}
 )
 
@@ -65,6 +68,8 @@ target_link_libraries(${TestTargetName}
     Assembler
     VirtualMachine
     Utils
+    SyntaxAnalyzer
+    CompileUtils
  )
 
 #if (TargetFolders)

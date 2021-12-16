@@ -19,39 +19,54 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#pragma once
-#include <stack>
+#include <utility>
 
-#include "Compiler/Common/ParseTree.h"
-#include "Utils/ParserBase/ParserBase.h"
-#include "Utils/String.h"
+#include "Compiler/Common/ParseTreeNode.h"
+#include "Utils/Exceptions/Exception.h"
 
-namespace Hack::Compiler::Analyzer
+namespace Hack::Compiler
 {
-    class Scanner;
-
-    class Parser final : public ParserBase
+    ParseTreeNode::ParseTreeNode() :
+        _parent(nullptr),
+        _type(-1)
     {
-    public:
-        typedef std::stack<ParseTreeNode*> NodeStack;
+    }
 
-    private:
-        ParseTree* _tree;
-        NodeStack  _stack;
+    ParseTreeNode::ParseTreeNode(const int8_t type) :
+        _parent(nullptr),
+        _type(type)
+    {
+    }
 
-    private:
-        void parseImpl(IStream& is) override;
+    ParseTreeNode::ParseTreeNode(const int8_t type, String data) :
+        _parent(nullptr),
+        _type(type),
+        _data(std::move(data))
+    {
+    }
 
-        void writeImpl(OStream& os) override;
+    ParseTreeNode::~ParseTreeNode()
+    {
+        for (ParseTreeNode* chi : _children)
+            delete chi;
+        _children.clear();
+    }
 
-        void classExpression();
+    ParseTreeNode* ParseTreeNode::getChild(const size_t idx)
+    {
+        if (idx < _children.size())
+            return _children.at(idx);
 
-        void classDescription();
+        throw Exception("Index out of bounds");
+    }
 
-    public:
-        Parser();
+    void ParseTreeNode::addChild(ParseTreeNode* node)
+    {
+        if (!node)
+            throw Exception("Invalid argument");
 
-        ~Parser() override;
-    };
+        _children.push_back(node);
+        node->_parent = this;
+    }
 
-}  // namespace Hack::VirtualMachine
+}  // namespace Hack::Compiler
