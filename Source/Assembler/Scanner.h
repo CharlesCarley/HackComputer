@@ -32,7 +32,7 @@ namespace Hack::Assembler
 
         void initializeTables();
 
-        void scanLineComment() const;
+        void scanLineComment();
 
         void scanWhiteSpace() const;
 

@@ -19,23 +19,25 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#pragma once
-#include "Utils/Char.h"
-#include "Utils/Exceptions/Exception.h"
+#include "Utils/ParserBase/ParseError.h"
 
-namespace Hack::Assembler
+namespace Hack
 {
-    class ParseError final : public Exception
+    String ParseError::getError(int           stage,
+                                const String& file,
+                                const size_t& line,
+                                const String& message)
     {
-    public:
-        explicit ParseError() : Exception(String("Parse error"))
-        {
-        }
+        OutputStringStream oss;
+        oss << file << '(' << line << ')' << ':';
 
-        explicit ParseError(const String& message) :
-            Exception((String("Parse error: ") + message).c_str())
-        {
-        }
-    };
+        if (stage == 0)
+            oss << " syntax error: ";
+        else if (stage == 1)
+            oss << " parse error: ";
 
-}  // namespace Hack::Assembler
+        oss << message << std::endl;
+        return oss.str();
+    }
+
+}  // namespace Hack

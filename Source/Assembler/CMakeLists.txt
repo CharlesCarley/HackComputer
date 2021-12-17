@@ -23,9 +23,7 @@ set(TargetGroup Assembler)
 set(Target_HDR 
     Parser.h
     Scanner.h
-    SyntaxError.h
     Instruction.h
-    ParseError.h
     Token.h
     ASM.grm
 )

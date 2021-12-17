@@ -20,6 +20,7 @@
 -------------------------------------------------------------------------------
 */
 #include "Utils/ParserBase/ScannerBase.h"
+#include "Utils/ParserBase/ParseError.h"
 
 namespace Hack
 {
@@ -32,5 +33,11 @@ namespace Hack
     {
         _stringTable.get(dest, i);
     }
-    
+
+    [[noreturn]] void ScannerBase::syntaxErrorThrow(const String& message) const
+    {
+        throw ParseError(0, _file, _line, message);
+
+    }
+
 }  // namespace Hack

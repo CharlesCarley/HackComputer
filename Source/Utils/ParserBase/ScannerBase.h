@@ -20,8 +20,8 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#include "Utils/ParserBase/TokenBase.h"
 #include "Utils/IndexCache.h"
+#include "Utils/ParserBase/TokenBase.h"
 
 namespace Hack
 {
@@ -32,22 +32,39 @@ namespace Hack
     protected:
         IStream*    _stream;
         StringTable _stringTable;
+        String      _file;
+        size_t      _line;
 
         size_t saveString(const String& str)
         {
             return _stringTable.save(str);
         }
 
+        [[noreturn]] void syntaxErrorThrow(const String& message) const;
+
+        template <typename... Args>
+        [[noreturn]] void syntaxError(const String& what, Args&&... args)
+        {
+            OutputStringStream oss;
+            oss << what;
+            ((oss << std::forward<Args>(args)), ...);
+            syntaxErrorThrow(oss.str());
+        }
+
     public:
-        ScannerBase() : _stream(nullptr)
+        ScannerBase() :
+            _stream(nullptr),
+            _line(0)
         {
         }
 
         virtual ~ScannerBase() = default;
 
-        virtual void attach(IStream* stream)
+        virtual void attach(IStream* stream, const String& file)
         {
             _stream = stream;
+            _file   = file;
+            _line   = 1;
         }
 
         virtual void scan(TokenBase& tok) = 0;
@@ -56,6 +73,12 @@ namespace Hack
 
         void getString(String& dest, const size_t& i) const;
 
+        size_t  getLine() const;
     };
 
-}  // namespace Hack::ParseInterface
+    inline size_t ScannerBase::getLine() const
+    {
+        return _line;
+    }
+
+}  // namespace Hack

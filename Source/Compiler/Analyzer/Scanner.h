@@ -28,9 +28,9 @@ namespace Hack::Compiler::Analyzer
     class Scanner final : public ScannerBase
     {
     private:
-        void scanLineComment() const;
+        void scanLineComment();
 
-        void scanMultiLineComment() const;
+        void scanMultiLineComment();
 
         void scanWhiteSpace() const;
 

@@ -91,7 +91,7 @@ GTEST_TEST(Analyzer, TokenTest)
     };
 
     std::ifstream fs(GetTestFilePath("Jack/Scan.jack"));
-    scn.attach(&fs);
+    scn.attach(&fs, GetTestFilePath("Jack/Scan.jack"));
 
     String expString[] = {
         "0",

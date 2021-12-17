@@ -28,7 +28,7 @@ namespace Hack::VirtualMachine
     class Scanner final : public ScannerBase
     {
     private:
-        void scanLineComment() const;
+        void scanLineComment();
 
         void scanWhiteSpace() const;
 

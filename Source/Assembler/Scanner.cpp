@@ -20,49 +20,26 @@
 -------------------------------------------------------------------------------
 */
 #include "Assembler/Scanner.h"
-#include "SyntaxError.h"
 #include "Utils/Char.h"
-// clang-format off
-
-#define lowercase \
-         'a' : case 'b' : case 'c' : case 'd' : case 'e' : case 'f' : \
-    case 'g' : case 'h' : case 'i' : case 'j' : case 'k' : case 'l' : \
-    case 'm' : case 'n' : case 'o' : case 'p' : case 'q' : case 'r' : \
-    case 's' : case 't' : case 'u' : case 'v' : case 'w' : case 'x' : \
-    case 'y' : case 'z'
-
-#define uppercase \
-         'A' : case 'B' : case 'C' : case 'D' : case 'E' : case 'F' : \
-    case 'G' : case 'H' : case 'I' : case 'J' : case 'K' : case 'L' : \
-    case 'M' : case 'N' : case 'O' : case 'P' : case 'Q' : case 'R' : \
-    case 'S' : case 'T' : case 'U' : case 'V' : case 'W' : case 'X' : \
-    case 'Y' : case 'Z'
-
-#define digit \
-         '0' : case '1' : case '2' : case '3' : \
-    case '4' : case '5' : case '6' : case '7' : \
-    case '8' : case '9'
-
-// clang-format on
 
 using namespace Hack;
 
 namespace Hack::Assembler
 {
-    struct KwTable
+    struct KeywordTable
     {
         char   a, b, c;
         int8_t tok;
     };
 
-    struct ReservedTable
+    struct ReservedWordTable
     {
         const char* val;
         size_t      len;
         uint16_t    address;
     };
 
-    constexpr KwTable DestAndJumpTable[] = {
+    constexpr KeywordTable DestAndJumpTable[] = {
         {'J', 'M', 'P', TOK_JMP},
         {'J', 'G', 'T', TOK_JGT},
         {'J', 'E', 'Q', TOK_JEQ},
@@ -71,21 +48,22 @@ namespace Hack::Assembler
         {'J', 'N', 'E', TOK_JNE},
         {'J', 'L', 'E', TOK_JLE},
         {'A', 'M', 'D', TOK_AMD},
-        {'A', 'D', '\0', TOK_AD},
-        {'A', 'M', '\0', TOK_AM},
-        {'M', 'D', '\0', TOK_MD},
+        {'A', 'D', 0x0, TOK_AD},
+        {'A', 'M', 0x0, TOK_AM},
+        {'M', 'D', 0x0, TOK_MD},
     };
 
-    constexpr ReservedTable ReservedAddresses[] = {
-        {"SP", 2, 0x0000},
-        {"LCL", 3, 0x0001},
-        {"ARG", 3, 0x0002},
-        {"THIS", 4, 0x0003},
-        {"THAT", 4, 0x0004},
+    // clang-format off
+    constexpr ReservedWordTable ReservedAddresses[] = {
+        {"SP",     2, 0x0000},
+        {"LCL",    3, 0x0001},
+        {"ARG",    3, 0x0002},
+        {"THIS",   4, 0x0003},
+        {"THAT",   4, 0x0004},
         {"SCREEN", 5, 0x4000},
-        {"KBD", 3, 0x6000},
-
+        {"KBD",    3, 0x6000},
     };
+    // clang-format on
 
     Scanner::Scanner() :
         _fsr(0), _offs(0)
@@ -103,7 +81,7 @@ namespace Hack::Assembler
         _fsr = _stringTable.size();
 
         // pre save all the reserved names
-        for (const ReservedTable& res : ReservedAddresses)
+        for (const ReservedWordTable& res : ReservedAddresses)
         {
             saveString(res.val);
 
@@ -113,7 +91,7 @@ namespace Hack::Assembler
         }
     }
 
-    void Scanner::scanLineComment() const
+    void Scanner::scanLineComment()
     {
         int ch = _stream->peek();
         while (ch != '\r' && ch != '\n')
@@ -122,6 +100,7 @@ namespace Hack::Assembler
             if (ch == '\r' && _stream->peek() == '\n')
                 ch = _stream->get();
         }
+        ++_line;
     }
 
     void Scanner::scanWhiteSpace() const
@@ -272,7 +251,7 @@ namespace Hack::Assembler
         if (!isLetter(nx))
             nx = '\0';
 
-        for (const KwTable& djt : DestAndJumpTable)
+        for (const KeywordTable& djt : DestAndJumpTable)
         {
             if (pc == djt.a && ch == djt.b && nx == djt.c)
             {
@@ -309,7 +288,7 @@ namespace Hack::Assembler
         String buf;
         readSymbol(buf);
 
-        for (const ReservedTable& ele : ReservedAddresses)
+        for (const ReservedWordTable& ele : ReservedAddresses)
         {
             if (Char::equals(buf.c_str(),
                              ele.val,
@@ -375,12 +354,12 @@ namespace Hack::Assembler
             case ')':
                 tok.setType(TOK_R_PAREN);
                 return;
-            case digit:
+            case Digits09:
                 _stream->putback((char)ch);
                 scanDecimal(tok);
                 return;
-            case lowercase:
-            case uppercase:
+            case LowerCaseAz:
+            case UpperCaseAz:
                 _stream->putback((char)ch);
                 scanSymbol(tok);
                 return;
@@ -388,17 +367,16 @@ namespace Hack::Assembler
             case '\n':
                 if (ch == '\r' && _stream->peek() == '\n')
                     _stream->get();
+                _line++;
                 break;
             case ' ':
             case '\t':
                 scanWhiteSpace();
                 break;
             default:
-                throw SyntaxError(String("unknown character parsed") +
-                                  (char)ch);
+                syntaxError("unknown character parsed '", (char)ch, '\'');
             }
         }
-
         tok.setType(TOK_EOF);
     }
 

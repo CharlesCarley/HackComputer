@@ -24,29 +24,12 @@
 #include "Utils/Char.h"
 #include "Utils/Exceptions/Exception.h"
 
-#define lowercase                                                         \
-    'a' : case 'b' : case 'c' : case 'd' : case 'e' : case 'f' : case 'g' \
-        : case 'h' : case 'i' : case 'j' : case 'k' : case 'l' : case 'm' \
-        : case 'n' : case 'o' : case 'p' : case 'q' : case 'r' : case 's' \
-        : case 't' : case 'u' : case 'v' : case 'w' : case 'x' : case 'y' \
-        : case 'z'
-
-#define uppercase                                                         \
-    'A' : case 'B' : case 'C' : case 'D' : case 'E' : case 'F' : case 'G' \
-        : case 'H' : case 'I' : case 'J' : case 'K' : case 'L' : case 'M' \
-        : case 'N' : case 'O' : case 'P' : case 'Q' : case 'R' : case 'S' \
-        : case 'T' : case 'U' : case 'V' : case 'W' : case 'X' : case 'Y' \
-        : case 'Z'
-
-#define digit                                                             \
-    '0' : case '1' : case '2' : case '3' : case '4' : case '5' : case '6' \
-        : case '7' : case '8' : case '9'
 
 namespace Hack::Compiler::Analyzer
 {
     Scanner::Scanner() = default;
 
-    void Scanner::scanLineComment() const
+    void Scanner::scanLineComment()
     {
         int ch = _stream->peek();
         while (ch != '\r' && ch != '\n')
@@ -55,9 +38,10 @@ namespace Hack::Compiler::Analyzer
             if (ch == '\r' && _stream->peek() == '\n')
                 ch = _stream->get();
         }
+        ++_line;
     }
 
-    void Scanner::scanMultiLineComment() const
+    void Scanner::scanMultiLineComment()
     {
         int ch = _stream->peek();
         // save doc string?
@@ -67,6 +51,14 @@ namespace Hack::Compiler::Analyzer
             ch = _stream->get();
             if (ch == '*' && _stream->peek() == '/')
                 break;
+
+            if(ch == '\r' || ch == '\n')
+            {
+                ch = _stream->get();
+                if (ch == '\r' && _stream->peek() == '\n')
+                    ch = _stream->get();
+                ++_line;
+            }
         }
     }
 
@@ -170,7 +162,7 @@ namespace Hack::Compiler::Analyzer
         int ch = _stream->get();
 
         if (ch != '"')
-            throw Exception("Invalid string starting character. (", ch, ')');
+            syntaxError("Invalid string starting character. (", ch, ')');
 
         ch = _stream->peek();
 
@@ -206,7 +198,7 @@ namespace Hack::Compiler::Analyzer
                     v.push_back('\\');
                     break;
                 default:
-                    throw Exception("invalid escape sequence");
+                    syntaxError("invalid escape sequence");
                 }
 
                 if (ch == '"')
@@ -228,7 +220,7 @@ namespace Hack::Compiler::Analyzer
     void Scanner::scan(Token& tok)
     {
         if (_stream == nullptr)
-            throw Exception("No supplied stream");
+            syntaxError("No supplied stream");
 
         tok.clear();
 
@@ -251,12 +243,12 @@ namespace Hack::Compiler::Analyzer
                     return;
                 }
                 break;
-            case digit:
+            case Digits09:
                 _stream->putback((char)ch);
                 scanDigit(tok);
                 return;
-            case uppercase:
-            case lowercase:
+            case UpperCaseAz:
+            case LowerCaseAz:
                 _stream->putback((char)ch);
                 scanSymbol(tok);
                 return;
@@ -264,6 +256,7 @@ namespace Hack::Compiler::Analyzer
             case '\n':
                 if (ch == '\r' && _stream->peek() == '\n')
                     _stream->get();
+                ++_line;
                 break;
             case ' ':
             case '\t':
@@ -329,7 +322,7 @@ namespace Hack::Compiler::Analyzer
                 tok.setType(TOK_SEMICOLON);
                 return;
             default:
-                throw Exception("Unknown character parsed '", (char)ch, "'");
+                syntaxError("Unknown character parsed '", (char)ch, "'");
             }
         }
 

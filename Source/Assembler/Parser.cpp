@@ -22,7 +22,6 @@
 #include "Assembler/Parser.h"
 #include <bitset>
 #include <fstream>
-#include "Assembler/ParseError.h"
 #include "Assembler/Scanner.h"
 #include "Utils/Char.h"
 #include "Utils/Console.h"
@@ -120,7 +119,7 @@ namespace Hack::Assembler
         case TOK_LABEL:
             break;
         default:
-            throw ParseError("Expected a decimal to follow @");
+            parseError("Expected a decimal to follow @");
         }
 
         if (tok.getType() == TOK_INTEGER)
@@ -135,8 +134,10 @@ namespace Hack::Assembler
             _scanner->getString(label, tok.getIndex());
 
             if (label.empty())
-                throw Exception("Failed to extract a label at index ",
-                                tok.getIndex());
+            {
+                parseError("Failed to extract a label at index ",
+                           tok.getIndex());
+            }
 
             const Labels::iterator it = _labels.find(label);
             if (it == _labels.end())
@@ -176,7 +177,7 @@ namespace Hack::Assembler
 
             [[fallthrough]];
         default:
-            throw ParseError("Expected a constant 1, -1, or 0");
+            parseError("Expected a constant 1, -1, or 0");
         }
 
         advanceCursor();
@@ -195,7 +196,7 @@ namespace Hack::Assembler
             if (t1 == TOK_A || t1 == TOK_D)
                 _cBits = t1 == TOK_A ? 51 : 15;
             else
-                throw ParseError("Expected -A or -D");
+                parseError("Expected -A or -D");
 
             advanceCursor(2);
         }
@@ -204,7 +205,7 @@ namespace Hack::Assembler
             if (t1 == TOK_A || t1 == TOK_D)
                 _cBits = t1 == TOK_A ? 49 : 13;
             else
-                throw ParseError("Expected !A or !D");
+                parseError("Expected !A or !D");
 
             advanceCursor(2);
         }
@@ -238,7 +239,7 @@ namespace Hack::Assembler
             else if (t0 == TOK_D)
                 _cBits = 12;
             else
-                throw ParseError(
+                parseError(
                     "expected one of: D+1, D-1, A+1, A-1, D+A, A-D, D&A, D|A, "
                     "A, or D.");
 
@@ -259,7 +260,7 @@ namespace Hack::Assembler
             if (t1 == TOK_M)
                 _cBits = 51;
             else
-                throw ParseError("Expected -M");
+                parseError("Expected -M");
 
             advanceCursor(2);
         }
@@ -268,7 +269,7 @@ namespace Hack::Assembler
             if (t1 == TOK_M)
                 _cBits = 49;
             else
-                throw ParseError("Expected !M");
+                parseError("Expected !M");
 
             advanceCursor(2);
         }
@@ -294,7 +295,7 @@ namespace Hack::Assembler
             else if (t0 == TOK_M)
                 _cBits = 48;
             else
-                throw ParseError(
+                parseError(
                     "expected one of: M+1, M-1, D+M, D-M, M+D, D&M, D|M, or "
                     "M.");
 
@@ -340,7 +341,7 @@ namespace Hack::Assembler
                     compoundExpression();
             }
             else
-                throw ParseError(
+                parseError(
                     "Expected M, D, MD, A, AM, AD, AMD to precede '='");
         }
         else
@@ -370,7 +371,7 @@ namespace Hack::Assembler
                 advanceCursor(2);
             }
             else
-                throw ParseError("Expected a Jump statement to follow ';'");
+                parseError("Expected a Jump statement to follow ';'");
         }
 
         pushCInstruction();
@@ -386,7 +387,7 @@ namespace Hack::Assembler
             // try to resolve via the label
 
             if (idx > _instructions.size())
-                throw Exception("index out of bounds");
+                parseError("index out of bounds");
 
             Labels::iterator it = _labels.find(str);
             if (it != _labels.end())
@@ -439,7 +440,7 @@ namespace Hack::Assembler
         else if (t0 == TOK_L_PAREN)
         {
             if (t2 != TOK_R_PAREN)
-                throw ParseError("Expected a label declaration ([a-zA-Z0-9])");
+                parseError("Expected a label declaration ([a-zA-Z0-9])");
 
             label();
         }
@@ -453,7 +454,7 @@ namespace Hack::Assembler
         // initially and attach the input stream
         // to the scanner
         _cursor = 0;
-        _scanner->attach(&is);
+        _scanner->attach(&is, _filePath);
 
         while (_cursor <= (int32_t)_tokens.size())
         {

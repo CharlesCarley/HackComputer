@@ -24,13 +24,15 @@
 #include <fstream>
 #include <vector>
 #include "Utils/Char.h"
-#include "Utils/Exceptions/Exception.h"
+#include "Utils/ParserBase/ParseError.h"
 #include "Utils/ParserBase/ScannerBase.h"
 #include "Utils/ParserBase/TokenBase.h"
 
 namespace Hack
 {
-    ParserBase::ParserBase() : _cursor(0), _scanner(nullptr)
+    ParserBase::ParserBase() :
+        _cursor(0),
+        _scanner(nullptr)
     {
     }
 
@@ -57,12 +59,17 @@ namespace Hack
         if (next < (int32_t)_tokens.size() && next >= 0)
             return _tokens.at(next);
 
-        throw Exception("Failed to read token");
+        parseError("Failed to read token");
     }
 
     void ParserBase::advanceCursor(const int32_t n)
     {
         _cursor += n;
+    }
+
+    [[noreturn]] void ParserBase::parseErrorThrow(const String& message) const
+    {
+        throw ParseError(1, _filePath, _scanner->getLine(), message);
     }
 
     void ParserBase::parse(const String& file)
@@ -75,6 +82,8 @@ namespace Hack
         const std::filesystem::path pth = file;
 
         _file = pth.stem().string();
+        _filePath = absolute(pth).string();
+
 
         parseImpl(is);
     }

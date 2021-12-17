@@ -24,6 +24,7 @@
 #include "Assembler/Scanner.h"
 #include "TestDirectory.h"
 #include "gtest/gtest.h"
+#include "Utils/Console.h"
 
 using namespace Hack::Assembler;
 
@@ -38,7 +39,7 @@ GTEST_TEST(Assembler, Scanner1)
     EXPECT_TRUE(fs.is_open());
 
     Scanner sc;
-    sc.attach(&fs);
+    sc.attach(&fs, file);
     Token t;
     sc.scan(t);
     EXPECT_EQ(TOK_EOF, t.getType());
@@ -64,7 +65,7 @@ GTEST_TEST(Assembler, Scanner2)
 
     Scanner scanner;
 
-    scanner.attach(&fs);
+    scanner.attach(&fs, file);
     Token token;
     scanner.scan(token);
     EXPECT_EQ(TOK_AT, token.getType());
@@ -129,6 +130,21 @@ GTEST_TEST(Assembler, Parser2)
 
     Assembler_CompareSrc(GetTestFilePath("Assembler/Parser2.cmp"),
                          GetOutFilePath("Parser2.out"));
+}
+
+GTEST_TEST(Assembler, Error)
+{
+    try
+    {
+        Parser psr;
+        psr.parse(GetTestFilePath("Assembler/Error.asm"));
+
+        EXPECT_FALSE(true);
+    }
+    catch(Hack::Exception &ex)
+    {
+        Hack::Console::write(ex.what());
+    }
 }
 
 GTEST_TEST(Assembler, Add)

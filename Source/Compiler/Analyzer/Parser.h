@@ -49,7 +49,7 @@ namespace Hack::Compiler::Analyzer
 
         void classRule();
 
-        void identifier(ParseTreeNode *node);
+        void identifier(ParseTreeNode *rule);
 
         void identifierListRule();
 

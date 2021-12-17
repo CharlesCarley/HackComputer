@@ -22,19 +22,34 @@
 #pragma once
 #include "Utils/Exceptions/Exception.h"
 
-namespace Hack::Assembler
+namespace Hack
 {
-    class SyntaxError final : public Exception
+    class ParseError final : public Exception
     {
     public:
-        SyntaxError() : Exception("Syntax error: ")
+        explicit ParseError() :
+            Exception(getError(-1, "", 0))
         {
         }
 
-        explicit SyntaxError(const String& message) :
-            Exception((String("Syntax error: ") + message).c_str())
+        explicit ParseError(const String& message) :
+            Exception(getError(-1, "", 0, message))
         {
         }
+
+        explicit ParseError(const int     stage,
+                            const String& file,
+                            const size_t  line,
+                            const String& message) :
+            Exception(getError(stage, file, line, message))
+        {
+        }
+
+    private:
+        static String getError(int           stage,
+                               const String& file,
+                               const size_t& line,
+                               const String& message = "");
     };
 
-}  // namespace Hack::Assembler
+}  // namespace Hack

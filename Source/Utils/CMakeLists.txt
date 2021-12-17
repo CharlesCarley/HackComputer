@@ -59,17 +59,32 @@ set(Utils_CL_SRC
 source_group("CommandLine\\Header" FILES ${Utils_CL_HDR})
 source_group("CommandLine\\Source" FILES ${Utils_CL_SRC})
 
+
+set(Utils_PB_HDR
+    ParserBase/ParserBase.h
+    ParserBase/ScannerBase.h
+    ParserBase/TokenBase.h
+    ParserBase/ParseError.h
+
+)
+
+
+set(Utils_PB_SRC
+    ParserBase/ParserBase.cpp
+    ParserBase/ScannerBase.cpp
+    ParserBase/ParseError.cpp
+)
+
+
+source_group("ParserBase\\Header" FILES ${Utils_PB_HDR})
+source_group("ParserBase\\Source" FILES ${Utils_PB_SRC})
+
 set(Utils_HDR
     Char.h
     Common.h
     Console.h
     IndexCache.h
     String.h
-    
-    ParserBase/ParserBase.h
-    ParserBase/ScannerBase.h
-    ParserBase/TokenBase.h
-
     Exceptions/Exception.h
     Exceptions/IndexException.h
     Exceptions/NotImplementedException.h
@@ -79,8 +94,6 @@ set(Utils_SRC
     Char.cpp
     Console.cpp
     String.cpp
-    ParserBase/ParserBase.cpp
-    ParserBase/ScannerBase.cpp
 )
 
 source_group("Header" FILES ${Utils_HDR})
@@ -92,6 +105,7 @@ add_library(${TargetName}
     ${Utils_SRC}     ${Utils_HDR} 
     ${Utils_CL_SRC}  ${Utils_CL_HDR} 
     ${Utils_UI_SRC}  ${Utils_UI_HDR} 
+    ${Utils_PB_SRC}  ${Utils_PB_HDR} 
 )
 
 target_link_libraries(${TargetName})

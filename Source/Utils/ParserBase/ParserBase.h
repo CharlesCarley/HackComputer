@@ -38,7 +38,7 @@ namespace Hack
         int32_t      _cursor;
         ScannerBase* _scanner;
         String       _file;
-
+        String       _filePath;
 
         TokenBase getToken(int32_t offs);
 
@@ -49,6 +49,19 @@ namespace Hack
         virtual void parseImpl(IStream& is) = 0;
 
         virtual void writeImpl(OStream& is) = 0;
+
+
+        [[noreturn]] void parseErrorThrow(const String& message) const;
+
+
+        template <typename... Args>
+        [[noreturn]] void parseError(const String& what, Args&&... args)
+        {
+            OutputStringStream oss;
+            oss << what;
+            ((oss << std::forward<Args>(args)), ...);
+            parseErrorThrow(oss.str());
+        }
 
     public:
         ParserBase();
@@ -63,4 +76,4 @@ namespace Hack
         void write(OStream& os);
     };
 
-}  // namespace Hack::ParserBase
+}  // namespace Hack

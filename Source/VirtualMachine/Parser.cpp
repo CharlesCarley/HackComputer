@@ -46,7 +46,7 @@ namespace Hack::VirtualMachine
 
         if (t1 != TOK_INTEGER)
         {
-            throw Exception(
+            parseError(
                 "Expected an integer to be the third argument to the push "
                 "expression");
         }
@@ -80,7 +80,7 @@ namespace Hack::VirtualMachine
             _emitter.pushConstant(_scanner->getString(idx));
             break;
         default:
-            throw Exception(
+            parseError(
                 "Unknown token parsed, expected "
                 "argument, local, static, constant, "
                 "this, that, pointer or temp");
@@ -94,7 +94,7 @@ namespace Hack::VirtualMachine
 
         if (t1 != TOK_INTEGER)
         {
-            throw Exception(
+            parseError(
                 "Expected an integer to be the third argument to the pop "
                 "expression");
         }
@@ -126,7 +126,7 @@ namespace Hack::VirtualMachine
             break;
         case TOK_CONSTANT:
         default:
-            throw Exception(
+            parseError(
                 "Unknown token parsed, expected "
                 "argument, local, static, "
                 "this, that, pointer or temp");
@@ -138,7 +138,7 @@ namespace Hack::VirtualMachine
         const int8_t t0 = getToken(1).getType();
         if (t0 != TOK_IDENTIFIER)
         {
-            throw Exception(
+            parseError(
                 "Expected an identifier to "
                 "follow the label expression");
         }
@@ -148,7 +148,7 @@ namespace Hack::VirtualMachine
         String value;
         _scanner->getString(value, idx);
         if (value.empty())
-            throw Exception("An empty label was found");
+            parseError("An empty label was found");
 
         _labels.save(value);
         _emitter.writeLabel(value);
@@ -160,7 +160,7 @@ namespace Hack::VirtualMachine
         const int8_t t1 = getToken(1).getType();
         if (t1 != TOK_IDENTIFIER)
         {
-            throw Exception(
+            parseError(
                 "Expected an identifier to "
                 "follow the goto expression");
         }
@@ -170,7 +170,7 @@ namespace Hack::VirtualMachine
         String value;
         _scanner->getString(value, idx);
         if (value.empty())
-            throw Exception("An empty label was found");
+            parseError("An empty label was found");
 
         if (t0 == TOK_IF_GOTO)
             _emitter.writIfGoto(value);
@@ -184,7 +184,7 @@ namespace Hack::VirtualMachine
         const int8_t t1 = getToken(1).getType();
         if (t1 != TOK_IDENTIFIER)
         {
-            throw Exception(
+            parseError(
                 "Expected an identifier to "
                 "follow the function expression");
         }
@@ -192,7 +192,7 @@ namespace Hack::VirtualMachine
         const int8_t t2 = getToken(2).getType();
         if (t2 != TOK_INTEGER)
         {
-            throw Exception(
+            parseError(
                 "Expected an integer to "
                 "follow the after the function label");
         }
@@ -200,12 +200,12 @@ namespace Hack::VirtualMachine
         String name;
         _scanner->getString(name, getToken(1).getIndex());
         if (name.empty())
-            throw Exception("An empty label was found");
+            parseError("An empty label was found");
 
         String args;
         _scanner->getString(args, getToken(2).getIndex());
         if (args.empty())
-            throw Exception("An empty integer was found");
+            parseError("An empty integer was found");
 
         _emitter.writeFunction(name, args);
     }
@@ -215,7 +215,7 @@ namespace Hack::VirtualMachine
         const int8_t t1 = getToken(1).getType();
         if (t1 != TOK_IDENTIFIER)
         {
-            throw Exception(
+            parseError(
                 "Expected an identifier to "
                 "follow the call expression");
         }
@@ -223,7 +223,7 @@ namespace Hack::VirtualMachine
         const int8_t t2 = getToken(2).getType();
         if (t2 != TOK_INTEGER)
         {
-            throw Exception(
+            parseError(
                 "Expected an integer to "
                 "follow the after the call label");
         }
@@ -231,12 +231,12 @@ namespace Hack::VirtualMachine
         String name;
         _scanner->getString(name, getToken(1).getIndex());
         if (name.empty())
-            throw Exception("An empty label was found");
+            parseError("An empty label was found");
 
         String args;
         _scanner->getString(args, getToken(2).getIndex());
         if (args.empty())
-            throw Exception("An empty integer was found");
+            parseError("An empty integer was found");
 
         _emitter.writeCall(name, args);
         
@@ -247,7 +247,7 @@ namespace Hack::VirtualMachine
         const int8_t t1 = getToken(1).getType();
         if (t1 != TOK_INTEGER)
         {
-            throw Exception(
+            parseError(
                 "Expected an integer to "
                 "follow the set expression");
         }
@@ -255,7 +255,7 @@ namespace Hack::VirtualMachine
         const int8_t t2 = getToken(2).getType();
         if (t2 != TOK_INTEGER)
         {
-            throw Exception(
+            parseError(
                 "Expected two integers to "
                 "follow the set expression");
         }
@@ -263,12 +263,12 @@ namespace Hack::VirtualMachine
         String idx;
         _scanner->getString(idx, getToken(1).getIndex());
         if (idx.empty())
-            throw Exception("An empty integer was found");
+            parseError("An empty integer was found");
 
         String val;
         _scanner->getString(val, getToken(2).getIndex());
         if (val.empty())
-            throw Exception("An empty integer was found");
+            parseError("An empty integer was found");
 
         _emitter.setRam(Char::toInt32(idx), Char::toInt32(val));
            
@@ -357,7 +357,7 @@ namespace Hack::VirtualMachine
             advanceCursor(3);
             break;
         default:
-            throw Exception("An unknown rule was found (id: ", (int)t0, ")");
+            parseError("An unknown rule was found (id: ", (int)t0, ")");
         }
     }
 
@@ -367,7 +367,7 @@ namespace Hack::VirtualMachine
         // initially and attach the input stream
         // to the scanner
         _cursor = 0;
-        _scanner->attach(&is);
+        _scanner->attach(&is, _filePath);
 
         // clear the stream
         _emitter.clear();

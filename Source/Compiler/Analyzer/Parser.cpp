@@ -47,7 +47,7 @@ namespace Hack::Compiler::Analyzer
     void Parser::reduceRule(ParseTreeNode* node)
     {
         if (_stack.empty())
-            throw Exception("No rules on the stack");
+            parseError("No rules on the stack");
 
         if (_stack.top() != node)
         {
@@ -57,7 +57,7 @@ namespace Hack::Compiler::Analyzer
             if (type > Rule && type < RuleEnd)
                 node->addChild(resolved);
             else
-                throw Exception("Expected a reduced rule");
+                parseError("Expected a reduced rule");
 
             _stack.pop();
         }
@@ -74,7 +74,7 @@ namespace Hack::Compiler::Analyzer
     {
         const int8_t t0 = getToken(0).getType();
         if (t0 != TOK_IDENTIFIER)
-            throw Exception("expected an identifier");
+            parseError("expected an identifier");
 
         const size_t id = getToken(0).getIndex();
         rule->addChild(ConstantIdentifier, _scanner->getString(id));
@@ -101,7 +101,7 @@ namespace Hack::Compiler::Analyzer
 
                 t1 = getToken(0).getType();
                 if (t1 == TOK_EOF)
-                    throw Exception("expected a comma");
+                    parseError("expected a comma");
                 if (t1 == TOK_COMMA)
                     advanceCursor();
                 else
@@ -123,7 +123,7 @@ namespace Hack::Compiler::Analyzer
         else if (t0 == TOK_KW_STATIC)
             rule->addChild(KeywordStatic);
         else
-            throw Exception("Undefined field specifier");
+            parseError("Undefined field specifier");
 
         advanceCursor();
 
@@ -152,7 +152,7 @@ namespace Hack::Compiler::Analyzer
             rule->addChild(ConstantIdentifier, val);
             break;
         default:
-            throw Exception("Undefined data type");
+            parseError("Undefined data type");
         }
         advanceCursor();
 
@@ -174,7 +174,8 @@ namespace Hack::Compiler::Analyzer
 
         const int8_t t0 = getToken(0).getType();
         if (t0 != TOK_SEMICOLON)
-            throw Exception("Expected a semi colon");
+            parseError("Expected a semi colon");
+
         rule->addChild(SymbolSemiColon);
         advanceCursor();
     }
@@ -207,15 +208,15 @@ namespace Hack::Compiler::Analyzer
     {
         const int8_t t0 = getToken(0).getType();
         if (t0 != TOK_KW_CLASS)
-            throw Exception("Expected the class keyword");
+            parseError("Expected the class keyword");
 
         const int8_t t1 = getToken(1).getType();
         if (t1 != TOK_IDENTIFIER)
-            throw Exception("Expected class <identifier>");
+            parseError("Expected class <identifier>");
 
         const int8_t t2 = getToken(2).getType();
         if (t2 != TOK_L_BRACE)
-            throw Exception(
+            parseError(
                 "Expected open brace, "
                 "class <identifier> '{'");
 
@@ -239,7 +240,7 @@ namespace Hack::Compiler::Analyzer
         const int8_t tf = getToken(0).getType();
         if (tf != TOK_R_BRACE)
         {
-            throw Exception(
+            parseError(
                 "Expected closing brace, "
                 "class <identifier> '{' <ClassDescription> '}'");
         }
@@ -254,7 +255,7 @@ namespace Hack::Compiler::Analyzer
         // initially and attach the input stream
         // to the scanner
         _cursor = 0;
-        _scanner->attach(&is);
+        _scanner->attach(&is, _filePath);
 
         while (_cursor <= (int32_t)_tokens.size())
         {
@@ -275,7 +276,7 @@ namespace Hack::Compiler::Analyzer
     void Parser::writeImpl(OStream& os)
     {
         if (!_tree)
-            throw Exception("invalid parse tree");
+            parseError("invalid parse tree");
 
         _tree->write(os);
     }

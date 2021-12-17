@@ -20,33 +20,14 @@
 -------------------------------------------------------------------------------
 */
 #include "VirtualMachine/Scanner.h"
-#include "VirtualMachine/Token.h"
 #include "Utils/Char.h"
-#include "Utils/Exceptions/Exception.h"
-
-#define lowercase                                                         \
-    'a' : case 'b' : case 'c' : case 'd' : case 'e' : case 'f' : case 'g' \
-        : case 'h' : case 'i' : case 'j' : case 'k' : case 'l' : case 'm' \
-        : case 'n' : case 'o' : case 'p' : case 'q' : case 'r' : case 's' \
-        : case 't' : case 'u' : case 'v' : case 'w' : case 'x' : case 'y' \
-        : case 'z'
-
-#define uppercase                                                         \
-    'A' : case 'B' : case 'C' : case 'D' : case 'E' : case 'F' : case 'G' \
-        : case 'H' : case 'I' : case 'J' : case 'K' : case 'L' : case 'M' \
-        : case 'N' : case 'O' : case 'P' : case 'Q' : case 'R' : case 'S' \
-        : case 'T' : case 'U' : case 'V' : case 'W' : case 'X' : case 'Y' \
-        : case 'Z'
-
-#define digit                                                             \
-    '0' : case '1' : case '2' : case '3' : case '4' : case '5' : case '6' \
-        : case '7' : case '8' : case '9' : case '-'
+#include "VirtualMachine/Token.h"
 
 namespace Hack::VirtualMachine
 {
     Scanner::Scanner() = default;
 
-    void Scanner::scanLineComment() const
+    void Scanner::scanLineComment()
     {
         int ch = _stream->peek();
         while (ch != '\r' && ch != '\n')
@@ -55,6 +36,7 @@ namespace Hack::VirtualMachine
             if (ch == '\r' && _stream->peek() == '\n')
                 ch = _stream->get();
         }
+        ++_line;
     }
 
     void Scanner::scanWhiteSpace() const
@@ -101,8 +83,8 @@ namespace Hack::VirtualMachine
         {"eq", TOK_EQ},
         {"gt", TOK_GT},
         {"lt", TOK_LT},
-        {"set", TOK_SET},
 
+        {"set", TOK_SET},
         {"reset", TOK_RESET},
         {"halt", TOK_HALT},
     };
@@ -163,7 +145,7 @@ namespace Hack::VirtualMachine
     void Scanner::scan(Token& tok)
     {
         if (_stream == nullptr)
-            throw Exception("No supplied stream");
+            syntaxError("No supplied stream");
 
         tok.clear();
 
@@ -179,12 +161,13 @@ namespace Hack::VirtualMachine
                 if (_stream->peek() == '/')
                     scanLineComment();
                 break;
-            case digit:
+            case '-':
+            case Digits09:
                 _stream->putback((char)ch);
                 scanDigit(tok);
                 return;
-            case uppercase:
-            case lowercase:
+            case UpperCaseAz:
+            case LowerCaseAz:
                 _stream->putback((char)ch);
                 scanSymbol(tok);
                 return;
@@ -192,13 +175,14 @@ namespace Hack::VirtualMachine
             case '\n':
                 if (ch == '\r' && _stream->peek() == '\n')
                     _stream->get();
+                ++_line;
                 break;
             case ' ':
             case '\t':
                 scanWhiteSpace();
                 break;
             default:
-                throw Exception("Unknown character parsed '", (char)ch, "'");
+                syntaxError("Unknown character parsed '", (char)ch, "'");
             }
         }
 
