@@ -22,6 +22,8 @@
 #include <fstream>
 #include <iostream>
 #include "Compiler/Common/ParseTree.h"
+
+#include "ParseTreeWriter.h"
 #include "Compiler/Common/ParseTreeNode.h"
 
 namespace Hack::Compiler
@@ -41,27 +43,10 @@ namespace Hack::Compiler
     {
     }
 
-    void ParseTree::write(OStream& out)
+    void ParseTree::write(OStream& out) const
     {
-        OutputStringStream oss;
-        oss << "<?xml version='1.0'?>" << std::endl;
-        oss << "<tree>" << std::endl;
-
-        ParseTreeNode::Children& ch = _root->getChildren();
-        for (ParseTreeNode* nd : ch)
-        {
-            if (nd->getType() == 4)
-            {
-                oss << "<class>" << std::endl;
-                oss << "    <keyword> class </keyword>" << std::endl;
-                oss << "    <keyword> class </keyword>" << std::endl;
-                oss << "</class>" << std::endl;
-            }
-        }
-
-
-        oss << "</tree>" << std::endl;
-        out << oss.str();
+        const ParseTreeWriter writer(_root);
+        writer.write(out);
     }
 
 }  // namespace Hack::Compiler

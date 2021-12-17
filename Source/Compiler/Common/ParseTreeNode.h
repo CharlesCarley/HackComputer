@@ -25,6 +25,47 @@
 
 namespace Hack::Compiler
 {
+    enum NodeType
+    {
+        Rule,
+        RuleClass,
+        RuleClassDescription,
+        RuleField,
+        RuleDataType,
+        RuleFieldSpecification,
+        RuleMethod,
+        RuleIdentifierList,
+        RuleEnd,
+
+        Keyword,
+        KeywordClass,
+        KeywordConstructor,
+        KeywordFunction,
+        KeywordMethod,
+        KeywordField,
+        KeywordStatic,
+        KeywordInt,
+        KeywordChar,
+        KeywordBool,
+        KeywordEnd,
+
+        Symbol,
+        SymbolOpenBrace,
+        SymbolCloseBrace,
+        SymbolSemiColon,
+        SymbolComma,
+        SymbolEnd,
+
+        Constant,
+        ConstantIdentifier,
+        ConstantInteger,
+        ConstantString,
+        ConstantEnd,
+    };
+
+
+
+
     class ParseTreeNode
     {
     public:
@@ -49,6 +90,8 @@ namespace Hack::Compiler
 
         int8_t getType() const;
 
+        bool isRule() const;
+
         void setData(const String& data);
 
         const String& getData() const;
@@ -62,6 +105,10 @@ namespace Hack::Compiler
         ParseTreeNode* getChild(size_t idx);
 
         void addChild(ParseTreeNode* node);
+
+        void addChild(int8_t type, const String& data);
+
+        void addChild(int8_t type);
     };
 
     inline void ParseTreeNode::setType(const int8_t type)
@@ -72,6 +119,11 @@ namespace Hack::Compiler
     inline int8_t ParseTreeNode::getType() const
     {
         return _type;
+    }
+
+    inline bool ParseTreeNode::isRule() const
+    {
+        return _type > Rule && _type < RuleEnd;
     }
 
     inline void ParseTreeNode::setData(const String& data)

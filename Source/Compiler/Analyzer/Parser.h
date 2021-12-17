@@ -21,7 +21,6 @@
 */
 #pragma once
 #include <stack>
-
 #include "Compiler/Common/ParseTree.h"
 #include "Utils/ParserBase/ParserBase.h"
 #include "Utils/String.h"
@@ -44,9 +43,25 @@ namespace Hack::Compiler::Analyzer
 
         void writeImpl(OStream& os) override;
 
-        void classExpression();
+        void reduceRule(ParseTreeNode* node);
 
-        void classDescription();
+        ParseTreeNode* createRule(const int8_t& name);
+
+        void classRule();
+
+        void identifier(ParseTreeNode *node);
+
+        void identifierListRule();
+
+        void fieldRule();
+
+        void fieldSpecificationRule();
+
+        void dataTypeRule();
+
+        void methodRule();
+
+        void classDescriptionRule();
 
     public:
         Parser();
@@ -54,4 +69,4 @@ namespace Hack::Compiler::Analyzer
         ~Parser() override;
     };
 
-}  // namespace Hack::VirtualMachine
+}  // namespace Hack::Compiler::Analyzer

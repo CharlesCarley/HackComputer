@@ -22,11 +22,13 @@ set(TargetGroup Compiler)
 
 set(Target_HDR
    ParseTree.h
+   ParseTreeWriter.h
    ParseTreeNode.h
 )
 
 set(Target_SRC 
    ParseTree.cpp
+   ParseTreeWriter.cpp
    ParseTreeNode.cpp
 )
 

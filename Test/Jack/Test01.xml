@@ -1,7 +1,23 @@
 <?xml version='1.0'?>
-<tree>
-<class>
-    <keyword> class </keyword>
-    <keyword> class </keyword>
-</class>
-</tree>
+<ClassList>
+   <Class>
+       <Keyword> class </Keyword>
+       <Identifier> Test01 </Identifier>
+       <Symbol> { </Symbol>
+       <ClassDescription>
+           <Field>
+               <FieldSpecification>
+                   <Keyword> static </Keyword>
+               </FieldSpecification>
+               <DataType>
+                   <Keyword> int </Keyword>
+               </DataType>
+               <IdentifierList>
+                   <Identifier> x </Identifier>
+               </IdentifierList>
+               <Symbol> ; </Symbol>
+           </Field>
+       </ClassDescription>
+       <Symbol> } </Symbol>
+   </Class>
+</ClassList>

@@ -24,30 +24,18 @@
 
 namespace Hack::Compiler
 {
-    class ParseTreeNode; 
+    class ParseTreeNode;
 
-    class ParseTree
+    class ParseTreeWriter
     {
     private:
-        ParseTreeNode* _root;
-       
+        ParseTreeNode *_root;
     public:
-        ParseTree();
-
-        ~ParseTree();
-
-
-        ParseTreeNode* getRoot() const;
-
-        void read(IStream& in);
+        explicit ParseTreeWriter(ParseTreeNode * root);
+        ~ParseTreeWriter();
 
         void write(OStream& out) const;
-
     };
 
-    inline ParseTreeNode* ParseTree::getRoot() const
-    {
-        return _root;
-    }
 
 }  // namespace Hack::Compiler

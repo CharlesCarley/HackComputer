@@ -44,11 +44,166 @@ namespace Hack::Compiler::Analyzer
         _scanner = nullptr;
     }
 
-    void Parser::classDescription()
+    void Parser::reduceRule(ParseTreeNode* node)
     {
+        if (_stack.empty())
+            throw Exception("No rules on the stack");
+
+        if (_stack.top() != node)
+        {
+            ParseTreeNode* resolved = _stack.top();
+
+            const int8_t type = resolved->getType();
+            if (type > Rule && type < RuleEnd)
+                node->addChild(resolved);
+            else
+                throw Exception("Expected a reduced rule");
+
+            _stack.pop();
+        }
     }
 
-    void Parser::classExpression()
+    ParseTreeNode* Parser::createRule(const int8_t& name)
+    {
+        ParseTreeNode* rule = new ParseTreeNode(name);
+        _stack.push(rule);
+        return rule;
+    }
+
+    void Parser::identifier(ParseTreeNode* rule)
+    {
+        const int8_t t0 = getToken(0).getType();
+        if (t0 != TOK_IDENTIFIER)
+            throw Exception("expected an identifier");
+
+        const size_t id = getToken(0).getIndex();
+        rule->addChild(ConstantIdentifier, _scanner->getString(id));
+
+        
+    }
+
+    void Parser::identifierListRule()
+    {
+        ParseTreeNode* rule = createRule(RuleIdentifierList);
+
+        identifier(rule);
+      
+        int8_t t1 = getToken(1).getType();
+
+        if (t1 == TOK_COMMA)
+        {
+            advanceCursor(2);
+
+            while (t1 == TOK_COMMA)
+            {
+                identifier(rule);
+                advanceCursor();
+
+                t1 = getToken(0).getType();
+                if (t1 == TOK_EOF)
+                    throw Exception("expected a comma");
+                if (t1 == TOK_COMMA)
+                    advanceCursor();
+                else
+                    break;
+            }
+        }
+        else
+            advanceCursor();
+
+    }
+
+    void Parser::fieldSpecificationRule()
+    {
+        ParseTreeNode* rule = createRule(RuleFieldSpecification);
+
+        const int8_t t0 = getToken(0).getType();
+        if (t0 == TOK_KW_FIELD)
+            rule->addChild(KeywordField);
+        else if (t0 == TOK_KW_STATIC)
+            rule->addChild(KeywordStatic);
+        else
+            throw Exception("Undefined field specifier");
+
+        advanceCursor();
+
+    }
+
+
+    void Parser::dataTypeRule()
+    {
+        ParseTreeNode* rule = createRule(RuleDataType);
+        String         val;
+
+        const int8_t t0 = getToken(0).getType();
+        switch (t0)
+        {
+        case TOK_KW_INT:
+            rule->addChild(KeywordInt);
+            break;
+        case TOK_KW_CHAR:
+            rule->addChild(KeywordChar);
+            break;
+        case TOK_KW_BOOL:
+            rule->addChild(KeywordBool);
+            break;
+        case TOK_IDENTIFIER:
+            _scanner->getString(val, getToken(0).getIndex());
+            rule->addChild(ConstantIdentifier, val);
+            break;
+        default:
+            throw Exception("Undefined data type");
+        }
+        advanceCursor();
+
+    }
+
+
+    void Parser::fieldRule()
+    {
+        ParseTreeNode* rule = createRule(RuleField);
+
+        fieldSpecificationRule();
+        reduceRule(rule);
+
+        dataTypeRule();
+        reduceRule(rule);
+
+        identifierListRule();
+        reduceRule(rule);
+
+        const int8_t t0 = getToken(0).getType();
+        if (t0 != TOK_SEMICOLON)
+            throw Exception("Expected a semi colon");
+        rule->addChild(SymbolSemiColon);
+        advanceCursor();
+    }
+
+    void Parser::methodRule()
+    {
+        ParseTreeNode* rule = createRule(RuleMethod);
+    }
+
+    void Parser::classDescriptionRule()
+    {
+        ParseTreeNode* rule = createRule(RuleClassDescription);
+
+        int8_t t0 = getToken(0).getType();
+
+        //   <ClassList> <Field> | <ClassList> <Method>
+        while (t0 != TOK_R_BRACE && t0 != TOK_EOF)
+        {
+            if (t0 == TOK_KW_STATIC || t0 == TOK_KW_FIELD)
+                fieldRule();
+            else
+                methodRule();
+
+            reduceRule(rule);
+            t0 = getToken(0).getType();
+        }
+    }
+
+    void Parser::classRule()
     {
         const int8_t t0 = getToken(0).getType();
         if (t0 != TOK_KW_CLASS)
@@ -60,38 +215,36 @@ namespace Hack::Compiler::Analyzer
 
         const int8_t t2 = getToken(2).getType();
         if (t2 != TOK_L_BRACE)
-            throw Exception("Expected open brace, "
+            throw Exception(
+                "Expected open brace, "
                 "class <identifier> '{'");
-
 
         ParseTreeNode* root = _tree->getRoot();
 
-        ParseTreeNode* cls = new ParseTreeNode(TOK_KW_CLASS);
-        root->addChild(cls);
+        ParseTreeNode* rule = createRule(RuleClass);
+        root->addChild(rule);
 
-        ParseTreeNode* clsId = new ParseTreeNode(TOK_IDENTIFIER,
-                                                 _scanner->getString(getToken(1).getIndex()));
+        String val;
+        _scanner->getString(val, getToken(1).getIndex());
 
-        cls->addChild(clsId);
-        cls->addChild(new ParseTreeNode(TOK_L_BRACE));
-
-        _stack.push(cls);
+        rule->addChild(KeywordClass);
+        rule->addChild(ConstantIdentifier, val);
+        rule->addChild(SymbolOpenBrace);
 
         advanceCursor(3);
-        classDescription();
 
-        if (_stack.top() != cls)
-            cls->addChild(_stack.top());
-
-        _stack.pop();
+        classDescriptionRule();
+        reduceRule(rule);
 
         const int8_t tf = getToken(0).getType();
         if (tf != TOK_R_BRACE)
+        {
             throw Exception(
                 "Expected closing brace, "
                 "class <identifier> '{' <ClassDescription> '}'");
+        }
 
-        cls->addChild(new ParseTreeNode(TOK_R_BRACE));
+        rule->addChild(SymbolCloseBrace);
         advanceCursor();
     }
 
@@ -110,7 +263,7 @@ namespace Hack::Compiler::Analyzer
                 break;
 
             const int32_t op = _cursor;
-            classExpression();
+            classRule();
 
             // if the cursor did not
             // advance force it to.

@@ -69,4 +69,15 @@ namespace Hack::Compiler
         node->_parent = this;
     }
 
+    void ParseTreeNode::addChild(const int8_t type, const String& data)
+    {
+        addChild(new ParseTreeNode(type, data));
+    }
+
+    void ParseTreeNode::addChild(int8_t type)
+    {
+        addChild(new ParseTreeNode(type));
+    }
+
+
 }  // namespace Hack::Compiler
