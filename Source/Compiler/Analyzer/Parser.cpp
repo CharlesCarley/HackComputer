@@ -23,14 +23,14 @@
 #include <fstream>
 #include "Compiler/Analyzer/Scanner.h"
 #include "Compiler/Analyzer/Token.h"
-#include "Compiler/Common/ParseTreeNode.h"
+#include "Compiler/Common/Node.h"
 #include "Utils/Char.h"
 
 namespace Hack::Compiler::Analyzer
 {
     Parser::Parser()
     {
-        _tree    = new ParseTree();
+        _tree    = new Tree();
         _scanner = new Scanner();
     }
 
@@ -43,14 +43,14 @@ namespace Hack::Compiler::Analyzer
         _scanner = nullptr;
     }
 
-    void Parser::reduceRule(ParseTreeNode* node)
+    void Parser::reduceRule(Node* node)
     {
         if (_stack.empty())
             parseError("No rules on the stack");
 
         if (_stack.top() != node)
         {
-            ParseTreeNode* resolved = _stack.top();
+            Node* resolved = _stack.top();
             if (resolved->isRule())
                 node->addChild(resolved);
             else
@@ -62,9 +62,9 @@ namespace Hack::Compiler::Analyzer
             parseError("no rule was reduced");
     }
 
-    ParseTreeNode* Parser::createRule(const int8_t& name)
+    Node* Parser::createRule(const int8_t& name)
     {
-        ParseTreeNode* rule = new ParseTreeNode(name);
+        Node* rule = new Node(name);
         _stack.push(rule);
         return rule;
     }
@@ -144,7 +144,7 @@ namespace Hack::Compiler::Analyzer
             parseError("end of file reached while reducing rules");
     }
 
-    void Parser::identifier(ParseTreeNode* rule)
+    void Parser::identifier(Node* rule)
     {
         const int8_t t0 = getToken(0).getType();
         if (t0 != TOK_IDENTIFIER)
@@ -155,9 +155,9 @@ namespace Hack::Compiler::Analyzer
         rule->addChild(ConstantIdentifier, _scanner->getString(id));
     }
 
-    void Parser::identifier(ParseTreeNode* rule,
-                            const int8_t   symbolId,
-                            const int      token)
+    void Parser::identifier(Node*        rule,
+                            const int8_t symbolId,
+                            const int    token)
     {
         const int8_t t0 = getToken(0).getType();
         if (t0 != token)
@@ -172,10 +172,10 @@ namespace Hack::Compiler::Analyzer
         advanceCursor();
     }
 
-    void Parser::symbol(ParseTreeNode* rule,
-                        const int8_t   symbolId,
-                        const int      token,
-                        char           ch)
+    void Parser::symbol(Node*        rule,
+                        const int8_t symbolId,
+                        const int    token,
+                        char         ch)
     {
         const int8_t t0 = getToken(0).getType();
         if (t0 != token)
@@ -187,7 +187,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::symbol(int8_t symbolId)
     {
-        ParseTreeNode* rule = _stack.top();
+        Node* rule = _stack.top();
 
         switch (symbolId)
         {
@@ -253,10 +253,10 @@ namespace Hack::Compiler::Analyzer
         }
     }
 
-    void Parser::keyword(ParseTreeNode* rule,
-                         const int8_t   symbolId,
-                         const int      token,
-                         const char*    kw)
+    void Parser::keyword(Node*        rule,
+                         const int8_t symbolId,
+                         const int    token,
+                         const char*  kw)
     {
         const int8_t t0 = getToken(0).getType();
         if (t0 != token)
@@ -268,7 +268,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::keyword(int8_t symbolId)
     {
-        ParseTreeNode* rule = _stack.top();
+        Node* rule = _stack.top();
         switch (symbolId)
         {
         case KeywordClass:
@@ -329,7 +329,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::classRule()
     {
-        ParseTreeNode* rule = createRule(RuleClass);
+        Node* rule = createRule(RuleClass);
 
         keyword(KeywordClass);
 
@@ -347,7 +347,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::classDescriptionRule()
     {
-        ParseTreeNode* rule = createRule(RuleClassDescription);
+        Node* rule = createRule(RuleClassDescription);
 
         int8_t t0 = getToken(0).getType();
 
@@ -370,7 +370,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::identifierListRule()
     {
-        ParseTreeNode* rule = createRule(RuleIdentifierList);
+        Node* rule = createRule(RuleIdentifierList);
 
         identifier(rule, ConstantIdentifier, TOK_IDENTIFIER);
 
@@ -390,7 +390,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::fieldSpecificationRule()
     {
-        ParseTreeNode* rule = createRule(RuleFieldSpecification);
+        Node* rule = createRule(RuleFieldSpecification);
 
         const int8_t t0 = getToken(0).getType();
         if (t0 == TOK_KW_FIELD)
@@ -405,9 +405,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::dataTypeRule()
     {
-        // <DataType> ::= Int | Char | Boolean | Identifier
-
-        ParseTreeNode* rule = createRule(RuleDataType);
+        Node* rule = createRule(RuleDataType);
 
         String val;
 
@@ -435,7 +433,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::fieldRule()
     {
-        ParseTreeNode* rule = createRule(RuleField);
+        Node* rule = createRule(RuleField);
 
         fieldSpecificationRule();
         reduceRule(rule);
@@ -451,7 +449,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::methodRule()
     {
-        ParseTreeNode* rule = createRule(RuleMethod);
+        Node* rule = createRule(RuleMethod);
 
         methodSpecificationRule();
         reduceRule(rule);
@@ -474,7 +472,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::methodSpecificationRule()
     {
-        ParseTreeNode* rule = createRule(RuleMethodSpecification);
+        Node* rule = createRule(RuleMethodSpecification);
 
         const int8_t t0 = getToken(0).getType();
         switch (t0)
@@ -498,7 +496,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::methodReturnTypeRule()
     {
-        ParseTreeNode* rule = createRule(RuleMethodReturnType);
+        Node* rule = createRule(RuleMethodReturnType);
 
         const int8_t t0 = getToken(0).getType();
         if (t0 == TOK_KW_VOID)
@@ -515,7 +513,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::methodBodyRule()
     {
-        ParseTreeNode* rule = createRule(RuleMethodBody);
+        Node* rule = createRule(RuleMethodBody);
 
         symbol(SymbolOpenBrace);
 
@@ -527,7 +525,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::bodyRule()
     {
-        ParseTreeNode* rule = createRule(RuleBody);
+        Node* rule = createRule(RuleBody);
 
         int8_t t0 = getToken(0).getType();
         do
@@ -555,7 +553,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::variableRule()
     {
-        ParseTreeNode* rule = createRule(RuleVariable);
+        Node* rule = createRule(RuleVariable);
 
         keyword(KeywordVar);
 
@@ -570,7 +568,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::statementRule()
     {
-        ParseTreeNode* rule = createRule(RuleStatement);
+        Node* rule = createRule(RuleStatement);
 
         // flow pivots on the let, if, else, while, do and return keywords.
 
@@ -611,7 +609,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::letStatementRule()
     {
-        ParseTreeNode* rule = createRule(RuleLetStatement);
+        Node* rule = createRule(RuleLetStatement);
 
         keyword(KeywordLet);
 
@@ -647,7 +645,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::ifStatementRule()
     {
-        ParseTreeNode* rule = createRule(RuleIfStatement);
+        Node* rule = createRule(RuleIfStatement);
 
         keyword(KeywordIf);
 
@@ -668,7 +666,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::elseStatementRule()
     {
-        ParseTreeNode* rule = createRule(RuleElseStatement);
+        Node* rule = createRule(RuleElseStatement);
 
         keyword(KeywordElse);
 
@@ -682,7 +680,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::whileStatementRule()
     {
-        ParseTreeNode* rule = createRule(RuleWhileStatement);
+        Node* rule = createRule(RuleWhileStatement);
 
         keyword(KeywordWhile);
 
@@ -703,7 +701,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::doStatementRule()
     {
-        ParseTreeNode* rule = createRule(RuleDoStatement);
+        Node* rule = createRule(RuleDoStatement);
 
         keyword(KeywordDo);
 
@@ -715,9 +713,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::returnStatementRule()
     {
-        //  Return ';' | Return <Expression> ';'
-
-        ParseTreeNode* rule = createRule(RuleReturnStatement);
+        Node* rule = createRule(RuleReturnStatement);
 
         keyword(KeywordReturn);
 
@@ -727,13 +723,12 @@ namespace Hack::Compiler::Analyzer
             expressionRule();
             reduceRule(rule);
         }
-
         symbol(SymbolSemiColon);
     }
 
     void Parser::statementListRule()
     {
-        ParseTreeNode* rule = createRule(RuleStatementList);
+        Node* rule = createRule(RuleStatementList);
 
         int8_t t0 = getToken(0).getType();
 
@@ -754,7 +749,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::expressionRule()
     {
-        ParseTreeNode* rule = createRule(RuleExpression);
+        Node* rule = createRule(RuleExpression);
 
         int8_t t0;
         do
@@ -771,7 +766,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::singleExpressionRule()
     {
-        ParseTreeNode* rule = createRule(RuleSingleExpression);
+        Node* rule = createRule(RuleSingleExpression);
 
         const int8_t t0 = getToken(0).getType();
         const int8_t t1 = getToken(1).getType();
@@ -808,7 +803,7 @@ namespace Hack::Compiler::Analyzer
     {
         // <Term> ::= <SimpleTerm> | <ComplexTerm>
 
-        ParseTreeNode* rule = createRule(RuleTerm);
+        Node* rule = createRule(RuleTerm);
 
         const int8_t t0 = getToken(0).getType();
         const int8_t t1 = getToken(1).getType();
@@ -829,7 +824,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::simpleTermRule()
     {
-        ParseTreeNode* rule = createRule(RuleSimpleTerm);
+        Node* rule = createRule(RuleSimpleTerm);
 
         const int8_t t0 = getToken(0).getType();
         switch (t0)
@@ -862,11 +857,11 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::complexTermRule()
     {
-        ParseTreeNode* rule = createRule(RuleComplexTerm);
-        const int8_t   t0   = getToken(0).getType();
-        const int8_t   t1   = getToken(1).getType();
-        const int8_t   t2   = getToken(2).getType();
-        const int8_t   t3   = getToken(3).getType();
+        Node*        rule = createRule(RuleComplexTerm);
+        const int8_t t0   = getToken(0).getType();
+        const int8_t t1   = getToken(1).getType();
+        const int8_t t2   = getToken(2).getType();
+        const int8_t t3   = getToken(3).getType();
 
         if (t0 == TOK_L_PAR)
         {
@@ -900,7 +895,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::operatorRule()
     {
-        ParseTreeNode* rule = createRule(RuleOperator);
+        Node* rule = createRule(RuleOperator);
 
         const int8_t t0 = getToken(0).getType();
         switch (t0)
@@ -939,7 +934,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::unaryOperatorRule()
     {
-        ParseTreeNode* rule = createRule(RuleUnaryOperator);
+        Node* rule = createRule(RuleUnaryOperator);
 
         const int8_t t0 = getToken(0).getType();
 
@@ -953,7 +948,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::expressionListRule()
     {
-        ParseTreeNode* rule = createRule(RuleExpressionList);
+        Node* rule = createRule(RuleExpressionList);
 
         int8_t t0 = getToken(0).getType();
 
@@ -978,7 +973,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::callMethodRule()
     {
-        ParseTreeNode* rule = createRule(RuleCallMethod);
+        Node* rule = createRule(RuleCallMethod);
 
         const int8_t t0 = getToken(0).getType();
         const int8_t t1 = getToken(1).getType();
@@ -1020,8 +1015,8 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::parameterListRule()
     {
-        ParseTreeNode* rule = createRule(RuleParameterList);
-        int8_t         t0   = getToken(0).getType();
+        Node*  rule = createRule(RuleParameterList);
+        int8_t t0   = getToken(0).getType();
         if (t0 != TOK_R_PAR)
         {
             parameterRule();
@@ -1051,7 +1046,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::parameterRule()
     {
-        ParseTreeNode* rule = createRule(RuleParameter);
+        Node* rule = createRule(RuleParameter);
 
         dataTypeRule();
         reduceRule(rule);

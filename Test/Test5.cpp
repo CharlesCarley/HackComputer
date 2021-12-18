@@ -22,8 +22,8 @@
 #include <fstream>
 #include "Compiler/Analyzer/Parser.h"
 #include "Compiler/Analyzer/Scanner.h"
-#include "Compiler/Common/ParseTree.h"
-#include "Compiler/Common/ParseTreeNode.h"
+#include "Compiler/Common/Tree.h"
+#include "Compiler/Common/Node.h"
 #include "TestDirectory.h"
 #include "gtest/gtest.h"
 

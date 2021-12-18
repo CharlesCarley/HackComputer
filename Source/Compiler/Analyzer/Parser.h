@@ -21,7 +21,7 @@
 */
 #pragma once
 #include <stack>
-#include "Compiler/Common/ParseTree.h"
+#include "Compiler/Common/Tree.h"
 #include "Utils/ParserBase/ParserBase.h"
 #include "Utils/String.h"
 
@@ -32,20 +32,20 @@ namespace Hack::Compiler::Analyzer
     class Parser final : public ParserBase
     {
     public:
-        typedef std::stack<ParseTreeNode*> NodeStack;
+        typedef std::stack<Node*> NodeStack;
 
     private:
-        ParseTree* _tree;
-        NodeStack  _stack;
+        Tree*     _tree;
+        NodeStack _stack;
 
     private:
         void parseImpl(IStream& is) override;
 
         void writeImpl(OStream& os) override;
 
-        void reduceRule(ParseTreeNode* node);
+        void reduceRule(Node* node);
 
-        ParseTreeNode* createRule(const int8_t& name);
+        Node* createRule(const int8_t& name);
 
         static bool isOperator(int8_t id);
 
@@ -57,24 +57,23 @@ namespace Hack::Compiler::Analyzer
 
         static bool isComplexTerm(int8_t t0, int8_t t1, int8_t t2, int8_t t3);
 
-        void        checkEof();
+        void checkEof();
 
         void classRule();
 
         void classDescriptionRule();
 
-        void identifier(ParseTreeNode* rule);
+        void identifier(Node* rule);
 
-        void identifier(ParseTreeNode* rule, int8_t symbolId, int token);
+        void identifier(Node* rule, int8_t symbolId, int token);
 
-        void symbol(ParseTreeNode* rule, int8_t symbolId, int token, char ch);
+        void symbol(Node* rule, int8_t symbolId, int token, char ch);
 
         void symbol(int8_t symbolId);
 
-        void keyword(ParseTreeNode* rule, int8_t symbolId, int token, const char* kw);
+        void keyword(Node* rule, int8_t symbolId, int token, const char* kw);
 
         void keyword(int8_t symbolId);
-
 
         void identifierListRule();
 

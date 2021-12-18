@@ -21,31 +21,31 @@
 */
 #include <fstream>
 #include <iostream>
-#include "Compiler/Common/ParseTree.h"
+#include "Compiler/Common/Tree.h"
 
-#include "ParseTreeWriter.h"
-#include "Compiler/Common/ParseTreeNode.h"
+#include "XmlWriter.h"
+#include "Compiler/Common/Node.h"
 
 namespace Hack::Compiler
 {
-    ParseTree::ParseTree() :
-        _root(new ParseTreeNode())
+    Tree::Tree() :
+        _root(new Node())
     {
     }
 
-    ParseTree::~ParseTree()
+    Tree::~Tree()
     {
         delete _root;
         _root = nullptr;
     }
 
-    void ParseTree::read(IStream& in)
+    void Tree::read(IStream& in)
     {
     }
 
-    void ParseTree::write(OStream& out) const
+    void Tree::write(OStream& out) const
     {
-        const ParseTreeWriter writer(_root);
+        const XmlWriter writer(_root);
         writer.write(out);
     }
 

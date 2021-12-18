@@ -19,35 +19,65 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#pragma once
-#include "Utils/String.h"
+#include <utility>
+
+#include "Compiler/Common/Node.h"
+#include "Utils/Exceptions/Exception.h"
 
 namespace Hack::Compiler
 {
-    class ParseTreeNode; 
-
-    class ParseTree
+    Node::Node() :
+        _parent(nullptr),
+        _type(-1)
     {
-    private:
-        ParseTreeNode* _root;
-       
-    public:
-        ParseTree();
-
-        ~ParseTree();
-
-
-        ParseTreeNode* getRoot() const;
-
-        void read(IStream& in);
-
-        void write(OStream& out) const;
-
-    };
-
-    inline ParseTreeNode* ParseTree::getRoot() const
-    {
-        return _root;
     }
+
+    Node::Node(const int8_t type) :
+        _parent(nullptr),
+        _type(type)
+    {
+    }
+
+    Node::Node(const int8_t type, String data) :
+        _parent(nullptr),
+        _type(type),
+        _data(std::move(data))
+    {
+    }
+
+    Node::~Node()
+    {
+        for (Node* chi : _children)
+            delete chi;
+        _children.clear();
+    }
+
+    Node* Node::getChild(const size_t idx)
+    {
+        if (idx < _children.size())
+            return _children.at(idx);
+
+        throw Exception("Index out of bounds");
+    }
+
+    void Node::addChild(Node* node)
+    {
+        if (!node)
+            throw Exception("Invalid argument");
+
+        _children.push_back(node);
+        node->_parent = this;
+    }
+
+    void Node::addChild(const int8_t type, const String& data)
+    {
+        addChild(new Node(type, data));
+    }
+
+    void Node::addChild(int8_t type)
+    {
+        addChild(new Node(type));
+    }
+
 
 }  // namespace Hack::Compiler

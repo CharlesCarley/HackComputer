@@ -24,18 +24,19 @@
 
 namespace Hack::Compiler
 {
-    class ParseTreeNode;
+    class Node;
 
-    class ParseTreeWriter
+    class XmlWriter
     {
     private:
-        ParseTreeNode *_root;
+        Node* _root;
+
     public:
-        explicit ParseTreeWriter(ParseTreeNode * root);
-        ~ParseTreeWriter();
+        explicit XmlWriter(Node* root);
+
+        ~XmlWriter();
 
         void write(OStream& out) const;
     };
-
 
 }  // namespace Hack::Compiler

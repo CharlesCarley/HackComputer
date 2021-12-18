@@ -21,25 +21,21 @@ set(TargetName CompileUtils)
 set(TargetGroup Compiler)
 
 set(Target_HDR
-   ParseTree.h
-   ParseTreeWriter.h
-   ParseTreeNode.h
+   Tree.h
+   Node.h
+   XmlWriter.h
 )
 
 set(Target_SRC 
-   ParseTree.cpp
-   ParseTreeWriter.cpp
-   ParseTreeNode.cpp
+   Tree.cpp
+   Node.cpp
+   XmlWriter.cpp
 )
 
 include_directories(${Hack_SOURCE_DIR}/Source)
-add_library(${TargetName} 
-    ${Target_SRC} 
-    ${Target_HDR}
-)
 
+add_library(${TargetName} ${Target_SRC} ${Target_HDR})
 
 if (TargetFolders)
     set_target_properties(${TargetName} PROPERTIES FOLDER "${TargetGroup}")
 endif()
-

@@ -19,9 +19,9 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#include "Compiler/Common/ParseTreeWriter.h"
+#include "Compiler/Common/XmlWriter.h"
 #include <iomanip>
-#include "Compiler/Common/ParseTreeNode.h"
+#include "Compiler/Common/Node.h"
 
 namespace Hack::Compiler
 {
@@ -30,7 +30,7 @@ namespace Hack::Compiler
     class ParseTreeWriterImpl
     {
     private:
-        ParseTreeNode*     _root;
+        Node*     _root;
         OStream*           _stream;
         OutputStringStream _out;
 
@@ -58,10 +58,10 @@ namespace Hack::Compiler
             _out << '<' << '/' << name << '>' << std::endl;
         }
 
-        static void typeString(String& dest, ParseTreeNode* node);
+        static void typeString(String& dest, Node* node);
 
     public:
-        explicit ParseTreeWriterImpl(ParseTreeNode* root, OStream* stream) :
+        explicit ParseTreeWriterImpl(Node* root, OStream* stream) :
             _root(root),
             _stream(stream),
             _indent(0)
@@ -81,15 +81,15 @@ namespace Hack::Compiler
             _out << "</ClassList>" << std::endl;
         }
 
-        void writeRule(ParseTreeNode* node)
+        void writeRule(Node* node)
         {
             String name, typeValue;
             typeString(name, node);
             openTag(name);
 
-            const ParseTreeNode::Children& ch = node->getChildren();
+            const Node::Children& ch = node->getChildren();
 
-            for (ParseTreeNode* nd : ch)
+            for (Node* nd : ch)
             {
                 typeString(typeValue, nd);
 
@@ -110,9 +110,9 @@ namespace Hack::Compiler
         void write()
         {
             writeHeader();
-            const ParseTreeNode::Children& ch = _root->getChildren();
+            const Node::Children& ch = _root->getChildren();
 
-            for (ParseTreeNode* nd : ch)
+            for (Node* nd : ch)
             {
                 if (nd->isRule())
                     writeRule(nd);
@@ -125,20 +125,20 @@ namespace Hack::Compiler
         }
     };
 
-    ParseTreeWriter::ParseTreeWriter(ParseTreeNode* root) :
+    XmlWriter::XmlWriter(Node* root) :
         _root(root)
     {
     }
 
-    ParseTreeWriter::~ParseTreeWriter() = default;
+    XmlWriter::~XmlWriter() = default;
 
-    void ParseTreeWriter::write(OStream& out) const
+    void XmlWriter::write(OStream& out) const
     {
         ParseTreeWriterImpl impl(_root, &out);
         impl.write();
     }
 
-    void ParseTreeWriterImpl::typeString(String& dest, ParseTreeNode* node)
+    void ParseTreeWriterImpl::typeString(String& dest, Node* node)
     {
         switch (node->getType())
         {

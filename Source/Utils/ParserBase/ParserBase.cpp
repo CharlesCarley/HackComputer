@@ -81,9 +81,8 @@ namespace Hack
         // save the base file name
         const std::filesystem::path pth = file;
 
-        _file = pth.stem().string();
+        _file     = pth.stem().string();
         _filePath = absolute(pth).string();
-
 
         parseImpl(is);
     }

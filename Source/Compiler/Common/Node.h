@@ -114,25 +114,25 @@ namespace Hack::Compiler
         ConstantEnd,
     };
 
-    class ParseTreeNode
+    class Node
     {
     public:
-        typedef std::vector<ParseTreeNode*> Children;
+        typedef std::vector<Node*> Children;
 
     private:
-        ParseTreeNode* _parent;
-        Children       _children;
-        int8_t         _type;
-        String         _data;
+        Node*    _parent;
+        Children _children;
+        int8_t   _type;
+        String   _data;
 
     public:
-        ParseTreeNode();
+        Node();
 
-        explicit ParseTreeNode(int8_t type);
+        explicit Node(int8_t type);
 
-        ParseTreeNode(int8_t type, String data);
+        Node(int8_t type, String data);
 
-        ~ParseTreeNode();
+        ~Node();
 
         void setType(int8_t type);
 
@@ -154,68 +154,68 @@ namespace Hack::Compiler
 
         const Children& getChildren();
 
-        ParseTreeNode* getParent() const;
+        Node* getParent() const;
 
-        ParseTreeNode* getChild(size_t idx);
+        Node* getChild(size_t idx);
 
-        void addChild(ParseTreeNode* node);
+        void addChild(Node* node);
 
         void addChild(int8_t type, const String& data);
 
         void addChild(int8_t type);
     };
 
-    inline void ParseTreeNode::setType(const int8_t type)
+    inline void Node::setType(const int8_t type)
     {
         _type = type;
     }
 
-    inline int8_t ParseTreeNode::getType() const
+    inline int8_t Node::getType() const
     {
         return _type;
     }
 
-    inline bool ParseTreeNode::isRule() const
+    inline bool Node::isRule() const
     {
         return _type > Rule && _type < RuleEnd;
     }
 
-    inline bool ParseTreeNode::isKeyword() const
+    inline bool Node::isKeyword() const
     {
         return _type > Keyword && _type < KeywordEnd;
     }
 
-    inline bool ParseTreeNode::isConstant() const
+    inline bool Node::isConstant() const
     {
         return _type > Constant && _type < ConstantEnd;
     }
 
-    inline bool ParseTreeNode::isSymbol() const
+    inline bool Node::isSymbol() const
     {
         return _type > Symbol && _type < SymbolEnd;
     }
 
-    inline void ParseTreeNode::setData(const String& data)
+    inline void Node::setData(const String& data)
     {
         _data = data;
     }
 
-    inline const String& ParseTreeNode::getData() const
+    inline const String& Node::getData() const
     {
         return _data;
     }
 
-    inline size_t ParseTreeNode::getChildCount() const
+    inline size_t Node::getChildCount() const
     {
         return _children.size();
     }
 
-    inline const ParseTreeNode::Children& ParseTreeNode::getChildren()
+    inline const Node::Children& Node::getChildren()
     {
         return _children;
     }
 
-    inline ParseTreeNode* ParseTreeNode::getParent() const
+    inline Node* Node::getParent() const
     {
         return _parent;
     }
