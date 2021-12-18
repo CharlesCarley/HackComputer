@@ -24,6 +24,7 @@
 #include "Utils/CommandLine/Parser.h"
 #include "Utils/Console.h"
 #include "Utils/Exceptions/Exception.h"
+#include "Compiler/Analyzer/Parser.h"
 
 using namespace std;
 using namespace Hack;
@@ -38,8 +39,7 @@ constexpr CommandLine::Switch Switches[OP_MAX] = {{
     OP_OUTPUT,
     'o',
     "output",
-    "Specify an output file\n"
-    " -- If one is not supplied the program's output will be sent to stdout",
+    "Specify an output file",
     true,
     1,
 }
@@ -77,6 +77,19 @@ public:
 
     int go() const
     {
+
+        Compiler::Analyzer::Parser psr;
+        psr.parse(_input);
+
+
+        if (!_output.empty())
+        {
+            std::ofstream fs(_output);
+            psr.write(fs);
+        }
+        else
+            psr.write(cout);
+
         return 0;
     }
 };

@@ -24,7 +24,6 @@
 #include "Utils/Char.h"
 #include "Utils/Exceptions/Exception.h"
 
-
 namespace Hack::Compiler::Analyzer
 {
     Scanner::Scanner() = default;
@@ -52,7 +51,7 @@ namespace Hack::Compiler::Analyzer
             if (ch == '*' && _stream->peek() == '/')
                 break;
 
-            if(ch == '\r' || ch == '\n')
+            if (ch == '\r' || ch == '\n')
             {
                 ch = _stream->get();
                 if (ch == '\r' && _stream->peek() == '\n')
@@ -80,29 +79,32 @@ namespace Hack::Compiler::Analyzer
         int8_t      tok;
     };
 
+    // clang-format off
+
     constexpr KeywordTable Reserved[] = {
-        {"class", TOK_KW_CLASS},
+        {"class",       TOK_KW_CLASS},
         {"constructor", TOK_KW_CTOR},
-        {"function", TOK_KW_FUNCTION},
-        {"method", TOK_KW_METHOD},
-        {"field", TOK_KW_FIELD},
-        {"static", TOK_KW_STATIC},
-        {"var", TOK_KW_VAR},
-        {"int", TOK_KW_INT},
-        {"char", TOK_KW_CHAR},
-        {"bool", TOK_KW_BOOL},
-        {"void", TOK_KW_VOID},
-        {"let", TOK_KW_LET},
-        {"do", TOK_KW_DO},
-        {"if", TOK_KW_IF},
-        {"else", TOK_KW_ELSE},
-        {"while", TOK_KW_WHILE},
-        {"return", TOK_KW_RETURN},
-        {"true", TOK_CONST_TRUE},
-        {"false", TOK_CONST_FALSE},
-        {"null", TOK_CONST_NULL},
-        {"this", TOK_CONST_THIS},
+        {"function",    TOK_KW_FUNCTION},
+        {"method",      TOK_KW_METHOD},
+        {"field",       TOK_KW_FIELD},
+        {"static",      TOK_KW_STATIC},
+        {"var",         TOK_KW_VAR},
+        {"int",         TOK_KW_INT},
+        {"char",        TOK_KW_CHAR},
+        {"bool",        TOK_KW_BOOL},
+        {"void",        TOK_KW_VOID},
+        {"let",         TOK_KW_LET},
+        {"do",          TOK_KW_DO},
+        {"if",          TOK_KW_IF},
+        {"else",        TOK_KW_ELSE},
+        {"while",       TOK_KW_WHILE},
+        {"return",      TOK_KW_RETURN},
+        {"true",        TOK_CONST_TRUE},
+        {"false",       TOK_CONST_FALSE},
+        {"null",        TOK_CONST_NULL},
+        {"this",        TOK_CONST_THIS},
     };
+    // clang-format on
 
     inline bool isValidCharacter(const int ch)
     {
@@ -153,6 +155,8 @@ namespace Hack::Compiler::Analyzer
                 v.push_back((char)ch);
         }
 
+        _stream->putback((char)ch);
+
         tok.setType(TOK_INTEGER);
         tok.setIndex(saveString(v));
     }
@@ -172,10 +176,8 @@ namespace Hack::Compiler::Analyzer
             ch = _stream->get();
             if (ch == '\\')
             {
-
-
                 ch = _stream->get();
-                switch(ch)
+                switch (ch)
                 {
                 case 'n':
                     v.push_back('\n');
@@ -208,9 +210,7 @@ namespace Hack::Compiler::Analyzer
             {
                 if (ch > 0 && ch != '"')
                     v.push_back((char)ch);
-                
             }
-
         }
 
         tok.setType(TOK_STRING);
@@ -229,9 +229,6 @@ namespace Hack::Compiler::Analyzer
         {
             switch (ch)
             {
-            case '#':
-                scanLineComment();
-                break;
             case '/':
                 if (_stream->peek() == '/')
                     scanLineComment();

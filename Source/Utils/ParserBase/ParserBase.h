@@ -20,7 +20,6 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#include <unordered_map>
 #include <vector>
 #include "Utils/ParserBase/TokenBase.h"
 
@@ -40,19 +39,15 @@ namespace Hack
         String       _file;
         String       _filePath;
 
+        virtual void parseImpl(IStream& is) = 0;
+
+        virtual void writeImpl(OStream& is) = 0;
+
         TokenBase getToken(int32_t offs);
 
         void advanceCursor(int32_t n = 1);
 
         void readToken(int32_t n = 1);
-
-        virtual void parseImpl(IStream& is) = 0;
-
-        virtual void writeImpl(OStream& is) = 0;
-
-
-        [[noreturn]] void parseErrorThrow(const String& message) const;
-
 
         template <typename... Args>
         [[noreturn]] void parseError(const String& what, Args&&... args)
@@ -62,6 +57,9 @@ namespace Hack
             ((oss << std::forward<Args>(args)), ...);
             parseErrorThrow(oss.str());
         }
+
+    private:
+        [[noreturn]] void parseErrorThrow(const String& message) const;
 
     public:
         ParserBase();

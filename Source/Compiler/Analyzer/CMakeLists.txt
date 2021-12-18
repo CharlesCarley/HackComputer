@@ -63,7 +63,7 @@ if (BuildType STREQUAL "CPP")
 
     add_executable(${TargetName}  ${Target_SRC})
 
-    target_link_libraries(${TargetName} SyntaxAnalyzer Utils)
+    target_link_libraries(${TargetName} SyntaxAnalyzer Utils CompileUtils)
 
     copy_target(${TargetName} ${Hack_BINARY_DIR}/build_files) 
 

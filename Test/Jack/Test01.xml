@@ -1,23 +1,58 @@
 <?xml version='1.0'?>
 <ClassList>
-   <Class>
-       <Keyword> class </Keyword>
-       <Identifier> Test01 </Identifier>
-       <Symbol> { </Symbol>
-       <ClassDescription>
-           <Field>
-               <FieldSpecification>
-                   <Keyword> static </Keyword>
-               </FieldSpecification>
-               <DataType>
-                   <Keyword> int </Keyword>
-               </DataType>
-               <IdentifierList>
-                   <Identifier> x </Identifier>
-               </IdentifierList>
-               <Symbol> ; </Symbol>
-           </Field>
-       </ClassDescription>
-       <Symbol> } </Symbol>
-   </Class>
+ <Class>
+   <Keyword>class</Keyword>
+   <Identifier>A</Identifier>
+   <Symbol>{</Symbol>
+   <ClassDescription>
+     <Field>
+       <FieldSpecification>
+         <Keyword>field</Keyword>
+       </FieldSpecification>
+       <DataType>
+         <Keyword>int</Keyword>
+       </DataType>
+       <IdentifierList>
+         <Identifier>p</Identifier>
+         <Identifier>d</Identifier>
+         <Identifier>q</Identifier>
+       </IdentifierList>
+       <Symbol>;</Symbol>
+     </Field>
+     <Method>
+       <MethodSpecification>
+         <Keyword>method</Keyword>
+       </MethodSpecification>
+       <MethodReturnType>
+         <Keyword>void</Keyword>
+       </MethodReturnType>
+       <Identifier>SomeMethod</Identifier>
+       <Symbol>(</Symbol>
+       <ParameterList>
+       </ParameterList>
+       <Symbol>)</Symbol>
+       <MethodBody>
+         <Symbol>{</Symbol>
+         <Body>
+         </Body>
+         <Symbol>}</Symbol>
+       </MethodBody>
+     </Method>
+     <Field>
+       <FieldSpecification>
+         <Keyword>static</Keyword>
+       </FieldSpecification>
+       <DataType>
+         <Keyword>char</Keyword>
+       </DataType>
+       <IdentifierList>
+         <Identifier>x</Identifier>
+         <Identifier>y</Identifier>
+         <Identifier>c</Identifier>
+       </IdentifierList>
+       <Symbol>;</Symbol>
+     </Field>
+   </ClassDescription>
+   <Symbol>}</Symbol>
+ </Class>
 </ClassList>

@@ -24,6 +24,20 @@
 
 namespace Hack
 {
+
+    ScannerBase::ScannerBase() :
+        _stream(nullptr),
+        _line(0)
+    {
+    }
+
+    void ScannerBase::attach(IStream* stream, const String& file)
+    {
+        _stream = stream;
+        _file   = file;
+        _line   = 1;
+    }
+
     const String& ScannerBase::getString(const size_t& i) const
     {
         return _stringTable.get(i);

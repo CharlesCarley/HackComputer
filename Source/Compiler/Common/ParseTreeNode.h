@@ -33,8 +33,31 @@ namespace Hack::Compiler
         RuleField,
         RuleDataType,
         RuleFieldSpecification,
-        RuleMethod,
         RuleIdentifierList,
+        RuleMethod,
+        RuleMethodSpecification,
+        RuleMethodReturnType,
+        RuleMethodBody,
+        RuleBody,
+        RuleVariable,
+        RuleStatement,
+        RuleLetStatement,
+        RuleIfStatement,
+        RuleElseStatement,
+        RuleWhileStatement,
+        RuleDoStatement,
+        RuleReturnStatement,
+        RuleStatementList,
+        RuleExpression,
+        RuleTerm,
+        RuleSimpleTerm,
+        RuleComplexTerm,
+        RuleOperator,
+        RuleUnaryOperator,
+        RuleExpressionList,
+        RuleCallMethod,
+        RuleParameterList,
+        RuleParameter,
         RuleEnd,
 
         Keyword,
@@ -47,24 +70,47 @@ namespace Hack::Compiler
         KeywordInt,
         KeywordChar,
         KeywordBool,
+        KeywordVoid,
+        KeywordVar,
+        KeywordLet,
+        KeywordIf,
+        KeywordElse,
+        KeywordDo,
+        KeywordWhile,
+        KeywordReturn,
         KeywordEnd,
 
         Symbol,
         SymbolOpenBrace,
         SymbolCloseBrace,
         SymbolSemiColon,
+        SymbolLeftParenthesis,
+        SymbolRightParenthesis,
+        SymbolLeftBracket,
+        SymbolRightBracket,
         SymbolComma,
+        SymbolEquals,
+        SymbolPlus,
+        SymbolMinus,
+        SymbolMultiply,
+        SymbolDivide,
+        SymbolAnd,
+        SymbolOr,
+        SymbolGreater,
+        SymbolLess,
+        SymbolNot,
         SymbolEnd,
 
         Constant,
         ConstantIdentifier,
         ConstantInteger,
         ConstantString,
+        ConstantTrue,
+        ConstantFalse,
+        ConstantNull,
+        ConstantThis,
         ConstantEnd,
     };
-
-
-
 
     class ParseTreeNode
     {
@@ -92,13 +138,19 @@ namespace Hack::Compiler
 
         bool isRule() const;
 
+        bool isKeyword() const;
+
+        bool isConstant() const;
+
+        bool isSymbol() const;
+
         void setData(const String& data);
 
         const String& getData() const;
 
         size_t getChildCount() const;
 
-        Children& getChildren();
+        const Children& getChildren();
 
         ParseTreeNode* getParent() const;
 
@@ -126,6 +178,21 @@ namespace Hack::Compiler
         return _type > Rule && _type < RuleEnd;
     }
 
+    inline bool ParseTreeNode::isKeyword() const
+    {
+        return _type > Keyword && _type < KeywordEnd;
+    }
+
+    inline bool ParseTreeNode::isConstant() const
+    {
+        return _type > Constant && _type < ConstantEnd;
+    }
+
+    inline bool ParseTreeNode::isSymbol() const
+    {
+        return _type > Symbol && _type < SymbolEnd;
+    }
+
     inline void ParseTreeNode::setData(const String& data)
     {
         _data = data;
@@ -141,7 +208,7 @@ namespace Hack::Compiler
         return _children.size();
     }
 
-    inline ParseTreeNode::Children& ParseTreeNode::getChildren()
+    inline const ParseTreeNode::Children& ParseTreeNode::getChildren()
     {
         return _children;
     }

@@ -47,9 +47,21 @@ namespace Hack::Compiler::Analyzer
 
         ParseTreeNode* createRule(const int8_t& name);
 
+        static bool isOperator(int8_t id);
+
+        static bool testComplexTerm(int8_t t0, int8_t t1, int8_t t2, int8_t t3);
+
         void classRule();
 
-        void identifier(ParseTreeNode *rule);
+        void classDescriptionRule();
+
+        void identifier(ParseTreeNode* rule);
+
+        void identifier(ParseTreeNode* rule, int8_t symbolId, int token);
+
+        void symbol(ParseTreeNode* rule, int8_t symbolId, int token, char ch);
+
+        void keyword(ParseTreeNode* rule, int8_t symbolId, int token, const char* kw);
 
         void identifierListRule();
 
@@ -61,7 +73,51 @@ namespace Hack::Compiler::Analyzer
 
         void methodRule();
 
-        void classDescriptionRule();
+        void methodSpecificationRule();
+
+        void methodReturnTypeRule();
+
+        void methodBodyRule();
+
+        void bodyRule();
+
+        void variableRule();
+
+        void statementRule();
+
+        void letStatementRule();
+
+        void ifStatementRule();
+
+        void elseStatementRule();
+
+        void whileStatementRule();
+
+        void doStatementRule();
+
+        void returnStatementRule();
+
+        void statementListRule();
+
+        void expressionRule();
+
+        void termRule();
+
+        void simpleTermRule();
+
+        void complexTermRule();
+
+        void operatorRule();
+
+        void unaryOperatorRule();
+
+        void expressionListRule();
+
+        void callMethodRule();
+
+        void parameterListRule();
+
+        void parameterRule();
 
     public:
         Parser();
