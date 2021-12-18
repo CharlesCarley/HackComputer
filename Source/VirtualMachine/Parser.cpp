@@ -389,7 +389,7 @@ namespace Hack::VirtualMachine
         }
     }
 
-    void Parser::writeImpl(OStream& os)
+    void Parser::writeImpl(OStream& os, int)
     {
         const String str = _emitter.stream().str();
         os.write(str.c_str(), str.size());

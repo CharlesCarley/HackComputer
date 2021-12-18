@@ -27,10 +27,10 @@ namespace Hack::Compiler
 {
     constexpr size_t Indent = 2;
 
-    class ParseTreeWriterImpl
+    class XmlWriterImpl
     {
     private:
-        Node*     _root;
+        Node*              _root;
         OStream*           _stream;
         OutputStringStream _out;
 
@@ -53,15 +53,15 @@ namespace Hack::Compiler
         void inlineTag(const String& name, const String& value)
         {
             _out << std::setw((size_t)(_indent - 1)) << ' ';
-            _out << '<' << name << '>' << value;
-
+            _out << '<' << name << '>' << ' ' << value << ' ';
             _out << '<' << '/' << name << '>' << std::endl;
         }
 
         static void typeString(String& dest, Node* node);
 
     public:
-        explicit ParseTreeWriterImpl(Node* root, OStream* stream) :
+
+        explicit XmlWriterImpl(Node* root, OStream* stream) :
             _root(root),
             _stream(stream),
             _indent(0)
@@ -130,15 +130,13 @@ namespace Hack::Compiler
     {
     }
 
-    XmlWriter::~XmlWriter() = default;
-
     void XmlWriter::write(OStream& out) const
     {
-        ParseTreeWriterImpl impl(_root, &out);
+        XmlWriterImpl impl(_root, &out);
         impl.write();
     }
 
-    void ParseTreeWriterImpl::typeString(String& dest, Node* node)
+    void XmlWriterImpl::typeString(String& dest, Node* node)
     {
         switch (node->getType())
         {
@@ -297,7 +295,7 @@ namespace Hack::Compiler
         case KeywordReturn:
             dest = "return";
             break;
-        case SymbolOpenBrace :
+        case SymbolOpenBrace:
             dest = "{";
             break;
         case SymbolCloseBrace:

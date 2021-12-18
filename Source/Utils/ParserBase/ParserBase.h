@@ -41,7 +41,7 @@ namespace Hack
 
         virtual void parseImpl(IStream& is) = 0;
 
-        virtual void writeImpl(OStream& is) = 0;
+        virtual void writeImpl(OStream& is, int format = 0) = 0;
 
         TokenBase getToken(int32_t offs);
 
@@ -69,9 +69,9 @@ namespace Hack
 
         void parse(IStream& is);
 
-        void write(const String& file);
+        void write(const String& file, int format = 0);
 
-        void write(OStream& os);
+        void write(OStream& os, int format =0);
     };
 
 }  // namespace Hack

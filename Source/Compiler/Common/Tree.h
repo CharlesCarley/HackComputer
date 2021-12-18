@@ -39,7 +39,7 @@ namespace Hack::Compiler
 
         void read(IStream& in);
 
-        void write(OStream& out) const;
+        void write(OStream& out, int format) const;
     };
 
     inline Node* Tree::getRoot() const

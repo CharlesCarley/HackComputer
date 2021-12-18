@@ -19,12 +19,11 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
+#include "Compiler/Common/Tree.h"
 #include <fstream>
 #include <iostream>
-#include "Compiler/Common/Tree.h"
-
-#include "XmlWriter.h"
 #include "Compiler/Common/Node.h"
+#include "Compiler/Common/XmlWriter.h"
 
 namespace Hack::Compiler
 {
@@ -43,10 +42,16 @@ namespace Hack::Compiler
     {
     }
 
-    void Tree::write(OStream& out) const
+    void Tree::write(OStream& out, int format) const
     {
-        const XmlWriter writer(_root);
-        writer.write(out);
+        if (format == 0)
+        {
+            const XmlWriter writer(_root);
+            writer.write(out);
+        }
+        else
+        {
+        }
     }
 
 }  // namespace Hack::Compiler

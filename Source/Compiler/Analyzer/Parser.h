@@ -41,7 +41,7 @@ namespace Hack::Compiler::Analyzer
     private:
         void parseImpl(IStream& is) override;
 
-        void writeImpl(OStream& os) override;
+        void writeImpl(OStream& os, int format = 0) override;
 
         void reduceRule(Node* node);
 
@@ -67,6 +67,8 @@ namespace Hack::Compiler::Analyzer
 
         void identifier(Node* rule, int8_t symbolId, int token);
 
+        void constant(int8_t symbolId);
+
         void symbol(Node* rule, int8_t symbolId, int token, char ch);
 
         void symbol(int8_t symbolId);
@@ -74,6 +76,7 @@ namespace Hack::Compiler::Analyzer
         void keyword(Node* rule, int8_t symbolId, int token, const char* kw);
 
         void keyword(int8_t symbolId);
+
 
         void identifierListRule();
 

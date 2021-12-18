@@ -474,7 +474,7 @@ namespace Hack::Assembler
         resolveLabels();
     }
 
-    void Parser::writeImpl(OStream& os)
+    void Parser::writeImpl(OStream& os, int)
     {
         for (uint16_t& inst : _instructions)
         {

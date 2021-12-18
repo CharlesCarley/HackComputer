@@ -34,7 +34,7 @@ namespace Hack::Compiler
     public:
         explicit XmlWriter(Node* root);
 
-        ~XmlWriter();
+        ~XmlWriter() = default;
 
         void write(OStream& out) const;
     };

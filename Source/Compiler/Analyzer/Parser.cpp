@@ -172,6 +172,37 @@ namespace Hack::Compiler::Analyzer
         advanceCursor();
     }
 
+    void Parser::constant(const int8_t symbolId)
+    {
+        Node* rule = _stack.top();
+        switch (symbolId)
+        {
+        case ConstantIdentifier:
+            identifier(rule, ConstantIdentifier, TOK_IDENTIFIER);
+            break;
+        case ConstantInteger:
+            identifier(rule, ConstantInteger, TOK_INTEGER);
+            break;
+        case ConstantString:
+            identifier(rule, ConstantString, TOK_STRING);
+            break;
+        case ConstantTrue:
+            identifier(rule, ConstantTrue, TOK_CONST_TRUE);
+            break;
+        case ConstantFalse:
+            identifier(rule, ConstantFalse, TOK_CONST_FALSE);
+            break;
+        case ConstantNull:
+            identifier(rule, ConstantNull, TOK_CONST_NULL);
+            break;
+        case ConstantThis:
+            identifier(rule, ConstantThis, TOK_CONST_THIS);
+            break;
+        default:
+            parseError("unknown constant");
+        }
+    }
+
     void Parser::symbol(Node*        rule,
                         const int8_t symbolId,
                         const int    token,
@@ -185,7 +216,7 @@ namespace Hack::Compiler::Analyzer
         advanceCursor();
     }
 
-    void Parser::symbol(int8_t symbolId)
+    void Parser::symbol(const int8_t symbolId)
     {
         Node* rule = _stack.top();
 
@@ -266,7 +297,7 @@ namespace Hack::Compiler::Analyzer
         advanceCursor();
     }
 
-    void Parser::keyword(int8_t symbolId)
+    void Parser::keyword(const int8_t symbolId)
     {
         Node* rule = _stack.top();
         switch (symbolId)
@@ -333,7 +364,7 @@ namespace Hack::Compiler::Analyzer
 
         keyword(KeywordClass);
 
-        identifier(rule, ConstantIdentifier, TOK_IDENTIFIER);
+        constant(ConstantIdentifier);
 
         symbol(SymbolOpenBrace);
 
@@ -370,9 +401,9 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::identifierListRule()
     {
-        Node* rule = createRule(RuleIdentifierList);
+        createRule(RuleIdentifierList);
 
-        identifier(rule, ConstantIdentifier, TOK_IDENTIFIER);
+        constant(ConstantIdentifier);
 
         int8_t t0 = getToken(0).getType();
         if (t0 == TOK_COMMA)
@@ -380,7 +411,9 @@ namespace Hack::Compiler::Analyzer
             do
             {
                 advanceCursor();
-                identifier(rule, ConstantIdentifier, TOK_IDENTIFIER);
+
+                constant(ConstantIdentifier);
+
                 t0 = getToken(0).getType();
 
                 checkEof();
@@ -390,45 +423,42 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::fieldSpecificationRule()
     {
-        Node* rule = createRule(RuleFieldSpecification);
+        createRule(RuleFieldSpecification);
 
-        const int8_t t0 = getToken(0).getType();
-        if (t0 == TOK_KW_FIELD)
-            rule->addChild(KeywordField);
-        else if (t0 == TOK_KW_STATIC)
-            rule->addChild(KeywordStatic);
-        else
-            parseError("Undefined field specifier");
-
-        advanceCursor();
+        switch (getToken(0).getType())
+        {
+        case TOK_KW_FIELD:
+            keyword(KeywordField);
+            break;
+        case TOK_KW_STATIC:
+            keyword(KeywordStatic);
+            break;
+        default:
+            parseError("undefined field specifier");
+        }
     }
 
     void Parser::dataTypeRule()
     {
-        Node* rule = createRule(RuleDataType);
+        createRule(RuleDataType);
 
-        String val;
-
-        const int8_t t0 = getToken(0).getType();
-        switch (t0)
+        switch (getToken(0).getType())
         {
         case TOK_KW_INT:
-            rule->addChild(KeywordInt);
+            keyword(KeywordInt);
             break;
         case TOK_KW_CHAR:
-            rule->addChild(KeywordChar);
+            keyword(KeywordChar);
             break;
         case TOK_KW_BOOL:
-            rule->addChild(KeywordBool);
+            keyword(KeywordBool);
             break;
         case TOK_IDENTIFIER:
-            _scanner->getString(val, getToken(0).getIndex());
-            rule->addChild(ConstantIdentifier, val);
+            constant(ConstantIdentifier);
             break;
         default:
             parseError("Undefined data type");
         }
-        advanceCursor();
     }
 
     void Parser::fieldRule()
@@ -457,7 +487,7 @@ namespace Hack::Compiler::Analyzer
         methodReturnTypeRule();
         reduceRule(rule);
 
-        identifier(rule, ConstantIdentifier, TOK_IDENTIFIER);
+        constant(ConstantIdentifier);
 
         symbol(SymbolLeftParenthesis);
 
@@ -472,38 +502,32 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::methodSpecificationRule()
     {
-        Node* rule = createRule(RuleMethodSpecification);
+        createRule(RuleMethodSpecification);
 
-        const int8_t t0 = getToken(0).getType();
-        switch (t0)
+        switch (getToken(0).getType())
         {
         case TOK_KW_CTOR:
-            rule->addChild(KeywordConstructor);
+            keyword(KeywordConstructor);
             break;
         case TOK_KW_FUNCTION:
-            rule->addChild(KeywordFunction);
+            keyword(KeywordFunction);
             break;
         case TOK_KW_METHOD:
-            rule->addChild(KeywordMethod);
+            keyword(KeywordMethod);
             break;
         default:
             parseError(
                 "Expected a method to be declared as a "
                 "constructor, function or method");
         }
-        advanceCursor();
     }
 
     void Parser::methodReturnTypeRule()
     {
         Node* rule = createRule(RuleMethodReturnType);
 
-        const int8_t t0 = getToken(0).getType();
-        if (t0 == TOK_KW_VOID)
-        {
-            rule->addChild(KeywordVoid);
-            advanceCursor();
-        }
+        if (getToken(0).getType() == TOK_KW_VOID)
+            keyword(KeywordVoid);
         else
         {
             dataTypeRule();
@@ -572,9 +596,7 @@ namespace Hack::Compiler::Analyzer
 
         // flow pivots on the let, if, else, while, do and return keywords.
 
-        const int8_t t0 = getToken(0).getType();
-
-        switch (t0)
+        switch (getToken(0).getType())
         {
         case TOK_KW_LET:
             letStatementRule();
@@ -612,7 +634,6 @@ namespace Hack::Compiler::Analyzer
         Node* rule = createRule(RuleLetStatement);
 
         keyword(KeywordLet);
-
         identifier(rule, ConstantIdentifier, TOK_IDENTIFIER);
 
         const int8_t t0 = getToken(0).getType();
@@ -655,7 +676,6 @@ namespace Hack::Compiler::Analyzer
         reduceRule(rule);
 
         symbol(SymbolRightParenthesis);
-
         symbol(SymbolOpenBrace);
 
         statementListRule();
@@ -683,14 +703,12 @@ namespace Hack::Compiler::Analyzer
         Node* rule = createRule(RuleWhileStatement);
 
         keyword(KeywordWhile);
-
         symbol(SymbolLeftParenthesis);
 
         expressionRule();
         reduceRule(rule);
 
         symbol(SymbolRightParenthesis);
-
         symbol(SymbolOpenBrace);
 
         statementListRule();
@@ -801,8 +819,6 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::termRule()
     {
-        // <Term> ::= <SimpleTerm> | <ComplexTerm>
-
         Node* rule = createRule(RuleTerm);
 
         const int8_t t0 = getToken(0).getType();
@@ -824,34 +840,34 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::simpleTermRule()
     {
-        Node* rule = createRule(RuleSimpleTerm);
+        createRule(RuleSimpleTerm);
 
-        const int8_t t0 = getToken(0).getType();
-        switch (t0)
+        switch (getToken(0).getType())
         {
         case TOK_IDENTIFIER:
-            identifier(rule, ConstantIdentifier, TOK_IDENTIFIER);
+
+            constant(ConstantIdentifier);
             break;
         case TOK_INTEGER:
-            identifier(rule, ConstantInteger, TOK_INTEGER);
+            constant(ConstantInteger);
             break;
         case TOK_CONST_TRUE:
-            identifier(rule, ConstantTrue, TOK_CONST_TRUE);
+            constant(ConstantTrue);
             break;
         case TOK_CONST_FALSE:
-            identifier(rule, ConstantFalse, TOK_CONST_FALSE);
+            constant(ConstantFalse);
             break;
         case TOK_CONST_NULL:
-            identifier(rule, ConstantNull, TOK_CONST_NULL);
+            constant(ConstantNull);
             break;
         case TOK_CONST_THIS:
-            identifier(rule, ConstantThis, TOK_CONST_THIS);
+            constant(ConstantThis);
             break;
         case TOK_STRING:
-            identifier(rule, ConstantString, TOK_STRING);
+            constant(ConstantString);
             break;
         default:
-            parseError("unknown constant '", (int)t0, '\'');
+            parseError("unknown constant '", (int)getToken(0).getType(), '\'');
         }
     }
 
@@ -874,8 +890,7 @@ namespace Hack::Compiler::Analyzer
         }
         else if (t0 == TOK_IDENTIFIER && t1 == TOK_L_BRACKET)
         {
-            // | Identifier '[' <Expression> ']'
-            identifier(rule, ConstantIdentifier, t0);
+            constant(ConstantIdentifier);
 
             symbol(SymbolLeftBracket);
 
@@ -895,7 +910,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::operatorRule()
     {
-        Node* rule = createRule(RuleOperator);
+        createRule(RuleOperator);
 
         const int8_t t0 = getToken(0).getType();
         switch (t0)
@@ -934,7 +949,7 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::unaryOperatorRule()
     {
-        Node* rule = createRule(RuleUnaryOperator);
+        createRule(RuleUnaryOperator);
 
         const int8_t t0 = getToken(0).getType();
 
@@ -1051,7 +1066,7 @@ namespace Hack::Compiler::Analyzer
         dataTypeRule();
         reduceRule(rule);
 
-        identifier(rule, ConstantIdentifier, TOK_IDENTIFIER);
+        constant(ConstantIdentifier);
     }
 
     void Parser::parseImpl(IStream& is)
@@ -1078,12 +1093,12 @@ namespace Hack::Compiler::Analyzer
         }
     }
 
-    void Parser::writeImpl(OStream& os)
+    void Parser::writeImpl(OStream& os, int format)
     {
         if (!_tree)
             parseError("invalid parse tree");
 
-        _tree->write(os);
+        _tree->write(os, format);
     }
 
 }  // namespace Hack::Compiler::Analyzer

@@ -95,18 +95,18 @@ namespace Hack
         parseImpl(is);
     }
 
-    void ParserBase::write(const String& file)
+    void ParserBase::write(const String& file, const int format)
     {
         std::ofstream os(file);
         if (!os.is_open())
             throw Exception("Failed to open the input file '", file, "'");
 
-        writeImpl(os);
+        writeImpl(os, format);
     }
 
-    void ParserBase::write(OStream& os)
+    void ParserBase::write(OStream& os, const int format)
     {
-        writeImpl(os);
+        writeImpl(os, format);
     }
 
 }  // namespace Hack

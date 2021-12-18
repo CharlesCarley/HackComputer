@@ -38,7 +38,7 @@ namespace Hack::VirtualMachine
     private:
         void parseImpl(IStream& is) override;
 
-        void writeImpl(OStream& os) override;
+        void writeImpl(OStream& os, int format = 0) override;
 
         void expression();
 
