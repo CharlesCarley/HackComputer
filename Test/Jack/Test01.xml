@@ -19,6 +19,20 @@
        </IdentifierList>
        <Symbol>;</Symbol>
      </Field>
+     <Field>
+       <FieldSpecification>
+         <Keyword>static</Keyword>
+       </FieldSpecification>
+       <DataType>
+         <Keyword>char</Keyword>
+       </DataType>
+       <IdentifierList>
+         <Identifier>x</Identifier>
+         <Identifier>y</Identifier>
+         <Identifier>c</Identifier>
+       </IdentifierList>
+       <Symbol>;</Symbol>
+     </Field>
      <Method>
        <MethodSpecification>
          <Keyword>method</Keyword>
@@ -34,24 +48,45 @@
        <MethodBody>
          <Symbol>{</Symbol>
          <Body>
+           <Variable>
+             <Keyword>var</Keyword>
+             <DataType>
+               <Keyword>char</Keyword>
+             </DataType>
+             <IdentifierList>
+               <Identifier>a</Identifier>
+               <Identifier>b</Identifier>
+               <Identifier>c</Identifier>
+             </IdentifierList>
+             <Symbol>;</Symbol>
+           </Variable>
+           <Statement>
+             <LetStatement>
+               <Keyword>let</Keyword>
+               <Identifier>a</Identifier>
+               <Symbol>=</Symbol>
+               <Expression>
+                 <Term>
+                   <SimpleTerm>
+                     <Identifier>1</Identifier>
+                   </SimpleTerm>
+                 </Term>
+                 <Operator>
+                   <Symbol>/</Symbol>
+                 </Operator>
+                 <Term>
+                   <SimpleTerm>
+                     <Identifier>5</Identifier>
+                   </SimpleTerm>
+                 </Term>
+               </Expression>
+               <Symbol>;</Symbol>
+             </LetStatement>
+           </Statement>
          </Body>
          <Symbol>}</Symbol>
        </MethodBody>
      </Method>
-     <Field>
-       <FieldSpecification>
-         <Keyword>static</Keyword>
-       </FieldSpecification>
-       <DataType>
-         <Keyword>char</Keyword>
-       </DataType>
-       <IdentifierList>
-         <Identifier>x</Identifier>
-         <Identifier>y</Identifier>
-         <Identifier>c</Identifier>
-       </IdentifierList>
-       <Symbol>;</Symbol>
-     </Field>
    </ClassDescription>
    <Symbol>}</Symbol>
  </Class>
