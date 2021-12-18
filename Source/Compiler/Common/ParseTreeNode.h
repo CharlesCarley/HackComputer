@@ -49,6 +49,7 @@ namespace Hack::Compiler
         RuleReturnStatement,
         RuleStatementList,
         RuleExpression,
+        RuleSingleExpression,
         RuleTerm,
         RuleSimpleTerm,
         RuleComplexTerm,
@@ -99,6 +100,7 @@ namespace Hack::Compiler
         SymbolGreater,
         SymbolLess,
         SymbolNot,
+        SymbolPeriod,
         SymbolEnd,
 
         Constant,

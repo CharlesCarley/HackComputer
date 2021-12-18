@@ -49,7 +49,15 @@ namespace Hack::Compiler::Analyzer
 
         static bool isOperator(int8_t id);
 
-        static bool testComplexTerm(int8_t t0, int8_t t1, int8_t t2, int8_t t3);
+        static bool isTerm(int8_t t0);
+
+        static bool isExpressionExit(int8_t t0);
+
+        static bool isCallTerm(int8_t t0, int8_t t1, int8_t t2, int8_t t3);
+
+        static bool isComplexTerm(int8_t t0, int8_t t1, int8_t t2, int8_t t3);
+
+        void        checkEof();
 
         void classRule();
 
@@ -61,7 +69,12 @@ namespace Hack::Compiler::Analyzer
 
         void symbol(ParseTreeNode* rule, int8_t symbolId, int token, char ch);
 
+        void symbol(int8_t symbolId);
+
         void keyword(ParseTreeNode* rule, int8_t symbolId, int token, const char* kw);
+
+        void keyword(int8_t symbolId);
+
 
         void identifierListRule();
 
@@ -100,6 +113,8 @@ namespace Hack::Compiler::Analyzer
         void statementListRule();
 
         void expressionRule();
+
+        void singleExpressionRule();
 
         void termRule();
 

@@ -1,16 +1,32 @@
 class A {
-    field int p, d, q;
-    static char x, y, c;
+    field int x,y,z;
 
+    constructor void A()
+    {
+        let x = 0;
+    }
+
+    function int IncA(int a)
+    {
+        return x + a;
+    }
 
     method void SomeMethod()
     {
-        var char a,b,c;
+        var int a;
+        let a = 0;
+        while (a < 25)
+        {
+            let a = IncA(5);
+            if (a = 25) {
+                do Output.Write("Done");
+            }
+            else {
+                do Output.Write("Not Done");
+            }
+        }
 
-        let a = 1/5;
-
-
-
+        return a/5;
     }
 }
 

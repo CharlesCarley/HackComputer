@@ -216,6 +216,9 @@ namespace Hack::Compiler
         case RuleExpression:
             dest = "Expression";
             break;
+        case RuleSingleExpression:
+            dest = "SingleExpression";
+            break;
         case RuleTerm:
             dest = "Term";
             break;
@@ -294,7 +297,6 @@ namespace Hack::Compiler
         case KeywordReturn:
             dest = "return";
             break;
-
         case SymbolOpenBrace :
             dest = "{";
             break;
@@ -342,6 +344,9 @@ namespace Hack::Compiler
             break;
         case SymbolNot:
             dest = "!";
+            break;
+        case SymbolPeriod:
+            dest = ".";
             break;
         case SymbolLeftBracket:
             dest = "[";

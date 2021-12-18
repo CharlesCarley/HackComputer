@@ -58,6 +58,8 @@ namespace Hack::Compiler::Analyzer
 
             _stack.pop();
         }
+        else
+            parseError("no rule was reduced");
     }
 
     ParseTreeNode* Parser::createRule(const int8_t& name)
@@ -67,7 +69,7 @@ namespace Hack::Compiler::Analyzer
         return rule;
     }
 
-    bool Parser::isOperator(int8_t id)
+    bool Parser::isOperator(const int8_t id)
     {
         switch (id)
         {
@@ -86,12 +88,39 @@ namespace Hack::Compiler::Analyzer
         }
     }
 
-    bool Parser::testComplexTerm(int8_t t0, int8_t t1, int8_t t2, int8_t t3)
+    bool Parser::isTerm(const int8_t t0)
     {
-        if (t0 == TOK_L_PAR)
+        switch (t0)
+        {
+        case TOK_IDENTIFIER:
+        case TOK_INTEGER:
+        case TOK_STRING:
+        case TOK_CONST_FALSE:
+        case TOK_CONST_TRUE:
+        case TOK_CONST_NULL:
+        case TOK_CONST_THIS:
             return true;
-        if (t0 == TOK_IDENTIFIER && t1 == TOK_L_BRACKET)
+        default:
+            return false;
+        }
+    }
+
+    bool Parser::isExpressionExit(const int8_t t0)
+    {
+        switch (t0)
+        {
+        case TOK_R_BRACKET:
+        case TOK_SEMICOLON:
+        case TOK_R_PAR:
+        case TOK_COMMA:
             return true;
+        default:
+            return false;
+        }
+    }
+
+    bool Parser::isCallTerm(const int8_t t0, const int8_t t1, const int8_t t2, const int8_t t3)
+    {
         if (t0 == TOK_IDENTIFIER && t1 == TOK_L_PAR)
             return true;
         if (t0 == TOK_IDENTIFIER && t1 == TOK_PERIOD && t2 == TOK_IDENTIFIER && t3 == TOK_L_PAR)
@@ -99,52 +128,20 @@ namespace Hack::Compiler::Analyzer
         return false;
     }
 
-    void Parser::classRule()
+    bool Parser::isComplexTerm(const int8_t t0, const int8_t t1, const int8_t t2, const int8_t t3)
     {
-        // <Class> ::= Class Identifier '{' <ClassDescription> '}'
-        ParseTreeNode* rule = createRule(RuleClass);
+        if (t0 == TOK_L_PAR)
+            return true;
+        if (t0 == TOK_IDENTIFIER && t1 == TOK_L_BRACKET)
+            return true;
 
-        keyword(rule, KeywordClass, TOK_KW_CLASS, "class");
-
-        identifier(rule, ConstantIdentifier, TOK_IDENTIFIER);
-
-        symbol(rule, SymbolOpenBrace, TOK_L_BRACE, '{');
-
-        classDescriptionRule();
-        reduceRule(rule);
-
-        symbol(rule, SymbolCloseBrace, TOK_R_BRACE, '}');
-
-        this->_tree->getRoot()->addChild(rule);
+        return isCallTerm(t0, t1, t2, t3);
     }
 
-    void Parser::classDescriptionRule()
+    void Parser::checkEof()
     {
-        // <ClassDescription> ::= <ClassDescription> <Field> ';'
-        //                      | <ClassDescription><Method>
-        //                      | !--empty--
-
-        ParseTreeNode* rule = createRule(RuleClassDescription);
-
-        int8_t t0 = getToken(0).getType();
-
-        while (t0 != TOK_R_BRACE && t0 != TOK_EOF)
-        {
-            const int32_t curOp = _cursor;
-
-            // flow pivots around the static and field keywords
-
-            if (t0 == TOK_KW_STATIC || t0 == TOK_KW_FIELD)
-                fieldRule();
-            else
-                methodRule();
-
-            reduceRule(rule);
-            t0 = getToken(0).getType();
-
-            if (curOp == _cursor)
-                parseError("no rule was reduced");
-        }
+        if (getToken(0).getType() == TOK_EOF)
+            parseError("end of file reached while reducing rules");
     }
 
     void Parser::identifier(ParseTreeNode* rule)
@@ -158,71 +155,241 @@ namespace Hack::Compiler::Analyzer
         rule->addChild(ConstantIdentifier, _scanner->getString(id));
     }
 
-    void Parser::identifier(ParseTreeNode* rule, int8_t symbolId, int token)
+    void Parser::identifier(ParseTreeNode* rule,
+                            const int8_t   symbolId,
+                            const int      token)
     {
         const int8_t t0 = getToken(0).getType();
         if (t0 != token)
-            parseError("expected an constant value");
-
+        {
+            parseError(
+                "expected an constant integer, string, "
+                "boolean, pointer or identifier");
+        }
         const size_t id = getToken(0).getIndex();
 
         rule->addChild(symbolId, _scanner->getString(id));
         advanceCursor();
     }
 
-    void Parser::symbol(ParseTreeNode* rule, int8_t symbolId, const int token, char ch)
+    void Parser::symbol(ParseTreeNode* rule,
+                        const int8_t   symbolId,
+                        const int      token,
+                        char           ch)
     {
         const int8_t t0 = getToken(0).getType();
         if (t0 != token)
-            parseError("expected the symbol, '", ch, "'");
+            parseError("expected symbol: '", ch, '\'');
 
         rule->addChild(symbolId);
         advanceCursor();
     }
 
-    void Parser::keyword(ParseTreeNode* rule, int8_t symbolId, int token, const char* kw)
+    void Parser::symbol(int8_t symbolId)
+    {
+        ParseTreeNode* rule = _stack.top();
+
+        switch (symbolId)
+        {
+        case SymbolOpenBrace:
+            symbol(rule, symbolId, TOK_L_BRACE, '{');
+            break;
+        case SymbolCloseBrace:
+            symbol(rule, symbolId, TOK_R_BRACE, '}');
+            break;
+        case SymbolSemiColon:
+            symbol(rule, symbolId, TOK_SEMICOLON, ';');
+            break;
+        case SymbolLeftParenthesis:
+            symbol(rule, symbolId, TOK_L_PAR, '(');
+            break;
+        case SymbolRightParenthesis:
+            symbol(rule, symbolId, TOK_R_PAR, ')');
+            break;
+        case SymbolLeftBracket:
+            symbol(rule, symbolId, TOK_L_BRACKET, '[');
+            break;
+        case SymbolRightBracket:
+            symbol(rule, symbolId, TOK_R_BRACKET, ']');
+            break;
+        case SymbolComma:
+            symbol(rule, symbolId, TOK_COMMA, ',');
+            break;
+        case SymbolEquals:
+            symbol(rule, symbolId, TOK_EQ, '=');
+            break;
+        case SymbolPlus:
+            symbol(rule, symbolId, TOK_OP_PLUS, '+');
+            break;
+        case SymbolMinus:
+            symbol(rule, symbolId, TOK_OP_MINUS, '-');
+            break;
+        case SymbolMultiply:
+            symbol(rule, symbolId, TOK_OP_MULTIPLY, '*');
+            break;
+        case SymbolDivide:
+            symbol(rule, symbolId, TOK_OP_DIVIDE, '/');
+            break;
+        case SymbolAnd:
+            symbol(rule, symbolId, TOK_OP_AND, '&');
+            break;
+        case SymbolOr:
+            symbol(rule, symbolId, TOK_OP_OR, '|');
+            break;
+        case SymbolGreater:
+            symbol(rule, symbolId, TOK_GT, '>');
+            break;
+        case SymbolLess:
+            symbol(rule, symbolId, TOK_LT, '<');
+            break;
+        case SymbolNot:
+            symbol(rule, symbolId, TOK_OP_NOT, '~');
+            break;
+        case SymbolPeriod:
+            symbol(rule, symbolId, TOK_PERIOD, '.');
+            break;
+        default:
+            parseError("unknown symbol");
+        }
+    }
+
+    void Parser::keyword(ParseTreeNode* rule,
+                         const int8_t   symbolId,
+                         const int      token,
+                         const char*    kw)
     {
         const int8_t t0 = getToken(0).getType();
         if (t0 != token)
-            parseError("expected the '", kw, "' keyword");
+            parseError("expected keyword: '", kw, '\'');
 
         rule->addChild(symbolId);
         advanceCursor();
+    }
+
+    void Parser::keyword(int8_t symbolId)
+    {
+        ParseTreeNode* rule = _stack.top();
+        switch (symbolId)
+        {
+        case KeywordClass:
+            keyword(rule, symbolId, TOK_KW_CLASS, "class");
+            break;
+        case KeywordConstructor:
+            keyword(rule, symbolId, TOK_KW_CTOR, "constructor");
+            break;
+        case KeywordFunction:
+            keyword(rule, symbolId, TOK_KW_FUNCTION, "function");
+            break;
+        case KeywordMethod:
+            keyword(rule, symbolId, TOK_KW_METHOD, "method");
+            break;
+        case KeywordField:
+            keyword(rule, symbolId, TOK_KW_FIELD, "field");
+            break;
+        case KeywordStatic:
+            keyword(rule, symbolId, TOK_KW_STATIC, "static");
+            break;
+        case KeywordInt:
+            keyword(rule, symbolId, TOK_KW_INT, "int");
+            break;
+        case KeywordChar:
+            keyword(rule, symbolId, TOK_KW_CHAR, "char");
+            break;
+        case KeywordBool:
+            keyword(rule, symbolId, TOK_KW_BOOL, "boolean");
+            break;
+        case KeywordVoid:
+            keyword(rule, symbolId, TOK_KW_VOID, "void");
+            break;
+        case KeywordVar:
+            keyword(rule, symbolId, TOK_KW_VAR, "var");
+            break;
+        case KeywordLet:
+            keyword(rule, symbolId, TOK_KW_LET, "let");
+            break;
+        case KeywordIf:
+            keyword(rule, symbolId, TOK_KW_IF, "if");
+            break;
+        case KeywordElse:
+            keyword(rule, symbolId, TOK_KW_ELSE, "else");
+            break;
+        case KeywordDo:
+            keyword(rule, symbolId, TOK_KW_DO, "do");
+            break;
+        case KeywordWhile:
+            keyword(rule, symbolId, TOK_KW_WHILE, "while");
+            break;
+        case KeywordReturn:
+            keyword(rule, symbolId, TOK_KW_RETURN, "return");
+            break;
+        default:
+            parseError("unknown keyword");
+        }
+    }
+
+    void Parser::classRule()
+    {
+        ParseTreeNode* rule = createRule(RuleClass);
+
+        keyword(KeywordClass);
+
+        identifier(rule, ConstantIdentifier, TOK_IDENTIFIER);
+
+        symbol(SymbolOpenBrace);
+
+        classDescriptionRule();
+        reduceRule(rule);
+
+        symbol(SymbolCloseBrace);
+
+        _tree->getRoot()->addChild(rule);
+    }
+
+    void Parser::classDescriptionRule()
+    {
+        ParseTreeNode* rule = createRule(RuleClassDescription);
+
+        int8_t t0 = getToken(0).getType();
+
+        do
+        {
+            // flow pivots around the static and field keywords
+
+            if (t0 == TOK_KW_STATIC || t0 == TOK_KW_FIELD)
+                fieldRule();
+            else
+                methodRule();
+
+            reduceRule(rule);
+            t0 = getToken(0).getType();
+
+            checkEof();
+
+        } while (t0 != TOK_R_BRACE);
     }
 
     void Parser::identifierListRule()
     {
         ParseTreeNode* rule = createRule(RuleIdentifierList);
 
-        identifier(rule);
+        identifier(rule, ConstantIdentifier, TOK_IDENTIFIER);
 
-        int8_t t1 = getToken(1).getType();
-
-        if (t1 == TOK_COMMA)
+        int8_t t0 = getToken(0).getType();
+        if (t0 == TOK_COMMA)
         {
-            advanceCursor(2);
-
-            while (t1 == TOK_COMMA)
+            do
             {
+                advanceCursor();
                 identifier(rule, ConstantIdentifier, TOK_IDENTIFIER);
+                t0 = getToken(0).getType();
 
-                t1 = getToken(0).getType();
-                if (t1 == TOK_EOF)
-                    parseError("expected a comma");
-                if (t1 == TOK_COMMA)
-                    advanceCursor();
-                else
-                    break;
-            }
+                checkEof();
+            } while (t0 == TOK_COMMA);
         }
-        else
-            advanceCursor();
     }
 
     void Parser::fieldSpecificationRule()
     {
-        // <FieldSpecification> ::= Static | Field
-
         ParseTreeNode* rule = createRule(RuleFieldSpecification);
 
         const int8_t t0 = getToken(0).getType();
@@ -268,8 +435,6 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::fieldRule()
     {
-        // <Field> ::= <FieldSpecification> <DataType> <IdentifierList>
-
         ParseTreeNode* rule = createRule(RuleField);
 
         fieldSpecificationRule();
@@ -281,13 +446,11 @@ namespace Hack::Compiler::Analyzer
         identifierListRule();
         reduceRule(rule);
 
-        symbol(rule, SymbolSemiColon, TOK_SEMICOLON, ';');
+        symbol(SymbolSemiColon);
     }
 
     void Parser::methodRule()
     {
-        // <Method> ::= <MethodSpecification> <MethodReturnType>
-        //              Identifier '(' <ParameterList> ')' <MethodBody>
         ParseTreeNode* rule = createRule(RuleMethod);
 
         methodSpecificationRule();
@@ -297,12 +460,13 @@ namespace Hack::Compiler::Analyzer
         reduceRule(rule);
 
         identifier(rule, ConstantIdentifier, TOK_IDENTIFIER);
-        symbol(rule, SymbolLeftParenthesis, TOK_L_PAR, '(');
+
+        symbol(SymbolLeftParenthesis);
 
         parameterListRule();
         reduceRule(rule);
 
-        symbol(rule, SymbolRightParenthesis, TOK_R_PAR, ')');
+        symbol(SymbolRightParenthesis);
 
         methodBodyRule();
         reduceRule(rule);
@@ -310,7 +474,6 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::methodSpecificationRule()
     {
-        // <MethodSpecification> ::= Constructor | Function | Method
         ParseTreeNode* rule = createRule(RuleMethodSpecification);
 
         const int8_t t0 = getToken(0).getType();
@@ -335,8 +498,6 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::methodReturnTypeRule()
     {
-        // <MethodReturnType> ::= Void | <DataType>
-
         ParseTreeNode* rule = createRule(RuleMethodReturnType);
 
         const int8_t t0 = getToken(0).getType();
@@ -354,31 +515,25 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::methodBodyRule()
     {
-        // <MethodBody> ::= '{' <Body> '}'
-
         ParseTreeNode* rule = createRule(RuleMethodBody);
 
-        symbol(rule, SymbolOpenBrace, TOK_L_BRACE, '{');
+        symbol(SymbolOpenBrace);
 
         bodyRule();
         reduceRule(rule);
 
-        symbol(rule, SymbolCloseBrace, TOK_R_BRACE, '}');
+        symbol(SymbolCloseBrace);
     }
 
     void Parser::bodyRule()
     {
-        // <Body> ::= <Body> <Variable>
-        //          | <Body> <Statement>
-        //          | !--empty--
         ParseTreeNode* rule = createRule(RuleBody);
 
         int8_t t0 = getToken(0).getType();
-        while (t0 != TOK_EOF && t0 != TOK_R_BRACE)
+        do
         {
-            const int32_t curOp = _cursor;
-
             // flow pivots around the var keyword
+
             if (t0 == TOK_KW_VAR)
             {
                 variableRule();
@@ -389,20 +544,20 @@ namespace Hack::Compiler::Analyzer
                 statementRule();
                 reduceRule(rule);
             }
+
+            checkEof();
+
             // test for the exit condition
             t0 = getToken(0).getType();
 
-            if (curOp == _cursor)
-                parseError("no rule was reduced");
-        }
+        } while (t0 != TOK_R_BRACE);
     }
 
     void Parser::variableRule()
     {
-        // <Variable> ::= Var <DataType> <IdentifierList> ';'
-
         ParseTreeNode* rule = createRule(RuleVariable);
-        keyword(rule, KeywordVar, TOK_KW_VAR, "var");
+
+        keyword(KeywordVar);
 
         dataTypeRule();
         reduceRule(rule);
@@ -410,22 +565,17 @@ namespace Hack::Compiler::Analyzer
         identifierListRule();
         reduceRule(rule);
 
-        symbol(rule, SymbolSemiColon, TOK_SEMICOLON, ';');
+        symbol(SymbolSemiColon);
     }
 
     void Parser::statementRule()
     {
-        // <Statement> ::= <LetStatement>
-        //               | <IfStatement>
-        //               | <WhileStatement>
-        //               | <DoStatement>
-        //               | <ReturnStatement>
-
         ParseTreeNode* rule = createRule(RuleStatement);
 
         // flow pivots on the let, if, else, while, do and return keywords.
 
-        int8_t t0 = getToken(0).getType();
+        const int8_t t0 = getToken(0).getType();
+
         switch (t0)
         {
         case TOK_KW_LET:
@@ -453,17 +603,17 @@ namespace Hack::Compiler::Analyzer
             reduceRule(rule);
             break;
         default:
-            parseError("unknown keyword rule, '", t0, '\'');
+            parseError(
+                "expected a statement token of "
+                "let, if, else, do, while or return");
         }
     }
 
     void Parser::letStatementRule()
     {
-        // <LetStatement> ::= Let Identifier '=' <Expression> ';'
-        //                  | Let Identifier '[' < Expression > ']' '=' < Expression > ';'
         ParseTreeNode* rule = createRule(RuleLetStatement);
 
-        keyword(rule, KeywordLet, TOK_KW_LET, "let");
+        keyword(KeywordLet);
 
         identifier(rule, ConstantIdentifier, TOK_IDENTIFIER);
 
@@ -471,72 +621,162 @@ namespace Hack::Compiler::Analyzer
 
         if (t0 == TOK_EQ)
         {
-            symbol(rule, SymbolEquals, TOK_EQ, '=');
+            symbol(SymbolEquals);
 
             expressionRule();
             reduceRule(rule);
 
-            symbol(rule, SymbolSemiColon, TOK_SEMICOLON, ';');
+            symbol(SymbolSemiColon);
         }
         else if (t0 == TOK_L_BRACKET)
         {
-            symbol(rule, SymbolLeftBracket, TOK_L_BRACKET, '[');
+            symbol(SymbolLeftBracket);
 
             expressionRule();
             reduceRule(rule);
 
-            symbol(rule, SymbolLeftBracket, TOK_R_BRACKET, ']');
-
-            symbol(rule, SymbolEquals, TOK_EQ, '=');
+            symbol(SymbolRightBracket);
+            symbol(SymbolEquals);
 
             expressionRule();
             reduceRule(rule);
 
-            symbol(rule, SymbolSemiColon, TOK_SEMICOLON, ';');
+            symbol(SymbolSemiColon);
         }
     }
 
     void Parser::ifStatementRule()
     {
         ParseTreeNode* rule = createRule(RuleIfStatement);
+
+        keyword(KeywordIf);
+
+        symbol(SymbolLeftParenthesis);
+
+        expressionRule();
+        reduceRule(rule);
+
+        symbol(SymbolRightParenthesis);
+
+        symbol(SymbolOpenBrace);
+
+        statementListRule();
+        reduceRule(rule);
+
+        symbol(SymbolCloseBrace);
     }
 
     void Parser::elseStatementRule()
     {
         ParseTreeNode* rule = createRule(RuleElseStatement);
+
+        keyword(KeywordElse);
+
+        symbol(SymbolOpenBrace);
+
+        statementListRule();
+        reduceRule(rule);
+
+        symbol(SymbolCloseBrace);
     }
 
     void Parser::whileStatementRule()
     {
         ParseTreeNode* rule = createRule(RuleWhileStatement);
+
+        keyword(KeywordWhile);
+
+        symbol(SymbolLeftParenthesis);
+
+        expressionRule();
+        reduceRule(rule);
+
+        symbol(SymbolRightParenthesis);
+
+        symbol(SymbolOpenBrace);
+
+        statementListRule();
+        reduceRule(rule);
+
+        symbol(SymbolCloseBrace);
     }
 
     void Parser::doStatementRule()
     {
         ParseTreeNode* rule = createRule(RuleDoStatement);
+
+        keyword(KeywordDo);
+
+        callMethodRule();
+        reduceRule(rule);
+
+        symbol(SymbolSemiColon);
     }
 
     void Parser::returnStatementRule()
     {
+        //  Return ';' | Return <Expression> ';'
+
         ParseTreeNode* rule = createRule(RuleReturnStatement);
+
+        keyword(KeywordReturn);
+
+        const int8_t t0 = getToken(0).getType();
+        if (t0 != TOK_SEMICOLON)
+        {
+            expressionRule();
+            reduceRule(rule);
+        }
+
+        symbol(SymbolSemiColon);
     }
 
     void Parser::statementListRule()
     {
         ParseTreeNode* rule = createRule(RuleStatementList);
+
+        int8_t t0 = getToken(0).getType();
+
+        if (t0 != TOK_R_BRACE)
+        {
+            do
+            {
+                statementRule();
+                reduceRule(rule);
+
+                checkEof();
+
+                t0 = getToken(0).getType();
+
+            } while (t0 != TOK_R_BRACE);
+        }
     }
 
     void Parser::expressionRule()
     {
-        // <Expression> ::= <Term>
-        //                | <Term> <Operator> <Term>
-        //                | <UnaryOperator> <Term>
-
         ParseTreeNode* rule = createRule(RuleExpression);
 
-        const int8_t t0 = getToken(0).getType();
+        int8_t t0;
+        do
+        {
+            singleExpressionRule();
+            reduceRule(rule);
 
-        if (t0 == TOK_OP_NOT || t0 == TOK_OP_MINUS)
+            checkEof();
+
+            t0 = getToken(0).getType();
+
+        } while (!isExpressionExit(t0));
+    }
+
+    void Parser::singleExpressionRule()
+    {
+        ParseTreeNode* rule = createRule(RuleSingleExpression);
+
+        const int8_t t0 = getToken(0).getType();
+        const int8_t t1 = getToken(1).getType();
+
+        if (t0 == TOK_OP_NOT || t0 == TOK_OP_MINUS && isTerm(t1))
         {
             unaryOperatorRule();
             reduceRule(rule);
@@ -544,21 +784,23 @@ namespace Hack::Compiler::Analyzer
             termRule();
             reduceRule(rule);
         }
-        else if (isOperator(getToken(1).getType()))
+        else if (isOperator(getToken(0).getType()) && isTerm(t1))
         {
-            termRule();
-            reduceRule(rule);
-
             operatorRule();
             reduceRule(rule);
 
             termRule();
             reduceRule(rule);
         }
-        else
+        else if (isTerm(t0))
         {
             termRule();
             reduceRule(rule);
+        }
+        else if (t0 != TOK_R_BRACKET && t0 != TOK_SEMICOLON)
+        {
+            // if it's not an exit from this rule, then it's an error.
+            parseError("expected unary term, operator term or a term");
         }
     }
 
@@ -573,7 +815,7 @@ namespace Hack::Compiler::Analyzer
         const int8_t t2 = getToken(2).getType();
         const int8_t t3 = getToken(3).getType();
 
-        if (testComplexTerm(t0, t1, t2, t3))
+        if (isComplexTerm(t0, t1, t2, t3))
         {
             complexTermRule();
             reduceRule(rule);
@@ -587,8 +829,6 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::simpleTermRule()
     {
-        // <SimpleTerm>:: = Integer | String | True | False | Null | This | Identifier
-
         ParseTreeNode* rule = createRule(RuleSimpleTerm);
 
         const int8_t t0 = getToken(0).getType();
@@ -623,6 +863,39 @@ namespace Hack::Compiler::Analyzer
     void Parser::complexTermRule()
     {
         ParseTreeNode* rule = createRule(RuleComplexTerm);
+        const int8_t   t0   = getToken(0).getType();
+        const int8_t   t1   = getToken(1).getType();
+        const int8_t   t2   = getToken(2).getType();
+        const int8_t   t3   = getToken(3).getType();
+
+        if (t0 == TOK_L_PAR)
+        {
+            symbol(SymbolLeftParenthesis);
+
+            expressionRule();
+            reduceRule(rule);
+
+            symbol(SymbolRightParenthesis);
+        }
+        else if (t0 == TOK_IDENTIFIER && t1 == TOK_L_BRACKET)
+        {
+            // | Identifier '[' <Expression> ']'
+            identifier(rule, ConstantIdentifier, t0);
+
+            symbol(SymbolLeftBracket);
+
+            expressionRule();
+            reduceRule(rule);
+
+            symbol(SymbolRightBracket);
+        }
+        else if (isCallTerm(t0, t1, t2, t3))
+        {
+            callMethodRule();
+            reduceRule(rule);
+        }
+        else
+            parseError("unknown complex term");
     }
 
     void Parser::operatorRule()
@@ -633,31 +906,31 @@ namespace Hack::Compiler::Analyzer
         switch (t0)
         {
         case TOK_OP_PLUS:
-            symbol(rule, SymbolPlus, TOK_OP_PLUS, '+');
+            symbol(SymbolPlus);
             break;
         case TOK_OP_MINUS:
-            symbol(rule, SymbolMinus, TOK_OP_MINUS, '-');
+            symbol(SymbolMinus);
             break;
         case TOK_OP_MULTIPLY:
-            symbol(rule, SymbolMultiply, TOK_OP_MULTIPLY, '*');
+            symbol(SymbolMultiply);
             break;
         case TOK_OP_DIVIDE:
-            symbol(rule, SymbolDivide, TOK_OP_DIVIDE, '/');
+            symbol(SymbolDivide);
             break;
         case TOK_OP_AND:
-            symbol(rule, SymbolAnd, TOK_OP_AND, '&');
+            symbol(SymbolAnd);
             break;
         case TOK_OP_OR:
-            symbol(rule, SymbolOr, TOK_OP_OR, '|');
+            symbol(SymbolOr);
             break;
         case TOK_GT:
-            symbol(rule, SymbolGreater, TOK_GT, '>');
+            symbol(SymbolGreater);
             break;
         case TOK_LT:
-            symbol(rule, SymbolLess, TOK_LT, '<');
+            symbol(SymbolLess);
             break;
         case TOK_EQ:
-            symbol(rule, SymbolEquals, TOK_EQ, '=');
+            symbol(SymbolEquals);
             break;
         default:
             parseError("unknown symbol '", (int)t0, '\'');
@@ -671,9 +944,9 @@ namespace Hack::Compiler::Analyzer
         const int8_t t0 = getToken(0).getType();
 
         if (t0 == TOK_OP_MINUS)
-            symbol(rule, SymbolMinus, TOK_OP_MINUS, '-');
+            symbol(SymbolMinus);
         else if (t0 == TOK_OP_NOT)
-            symbol(rule, SymbolNot, TOK_OP_NOT, '!');
+            symbol(SymbolNot);
         else
             parseError("expected a '-', '~', or '!' character");
     }
@@ -681,19 +954,72 @@ namespace Hack::Compiler::Analyzer
     void Parser::expressionListRule()
     {
         ParseTreeNode* rule = createRule(RuleExpressionList);
+
+        int8_t t0 = getToken(0).getType();
+
+        if (t0 != TOK_R_PAR)  // empty case
+        {
+            do
+            {
+                expressionRule();
+                reduceRule(rule);
+
+                checkEof();
+
+                t0 = getToken(0).getType();
+                if (t0 == TOK_COMMA)
+                {
+                    advanceCursor();
+                    t0 = getToken(0).getType();
+                }
+            } while (t0 != TOK_R_PAR);
+        }
     }
 
     void Parser::callMethodRule()
     {
         ParseTreeNode* rule = createRule(RuleCallMethod);
+
+        const int8_t t0 = getToken(0).getType();
+        const int8_t t1 = getToken(1).getType();
+        const int8_t t2 = getToken(2).getType();
+        const int8_t t3 = getToken(3).getType();
+
+        if (t0 == TOK_IDENTIFIER && t1 == TOK_L_PAR)
+        {
+            identifier(rule, ConstantIdentifier, t0);
+
+            symbol(SymbolLeftParenthesis);
+
+            expressionListRule();
+            reduceRule(rule);
+
+            symbol(SymbolRightParenthesis);
+        }
+        else if (t0 == TOK_IDENTIFIER &&
+                 t1 == TOK_PERIOD &&
+                 t2 == TOK_IDENTIFIER &&
+                 t3 == TOK_L_PAR)
+        {
+            identifier(rule, ConstantIdentifier, t0);
+
+            symbol(SymbolPeriod);
+
+            identifier(rule, ConstantIdentifier, t2);
+
+            symbol(SymbolLeftParenthesis);
+
+            expressionListRule();
+            reduceRule(rule);
+
+            symbol(SymbolRightParenthesis);
+        }
+        else
+            parseError("unknown call rule");
     }
 
     void Parser::parameterListRule()
     {
-        // <ParameterList> ::= <ParameterList> ',' <Parameter>
-        //                   | <Parameter>
-        //                   | !--empty--
-
         ParseTreeNode* rule = createRule(RuleParameterList);
         int8_t         t0   = getToken(0).getType();
         if (t0 != TOK_R_PAR)
