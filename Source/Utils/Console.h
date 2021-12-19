@@ -49,30 +49,40 @@ namespace Hack
     {
     public:
         static void read();
+
         static void read(int8_t& v);
+
         static void read(uint8_t& v);
 
         static void read(int16_t& v);
+
         static void read(uint16_t& v);
 
         static void read(int32_t& v);
+
         static void read(uint32_t& v);
 
         static void read(int64_t& v);
+
         static void read(uint64_t& v);
+
         static void read(String& v);
+
         static void readLine(String& v);
 
         static void setForeground(ConsoleColor col);
+
         static void setBackground(ConsoleColor col);
+
         static void resetColor();
 
         static void write(const String& str);
+
         static void writeLine(const String& str);
+
         static void writeLine(const int64_t& i);
+
         static void writeError(const String& str);
-
-
 
         template <typename... Args>
         static void writeLine(const String& str, Args&&... args)
@@ -82,9 +92,18 @@ namespace Hack
             ((oss << std::forward<Args>(args)), ...);
             writeLine(oss.str());
         }
-        
+
+        template <typename... Args>
+        static void write(const String& str, Args&&... args)
+        {
+            OutputStringStream oss;
+            oss << str;
+            ((oss << std::forward<Args>(args)), ...);
+            write(oss.str());
+        }
 
         static void writeLine(const OutputStringStream& str);
+
         static void writeError(const OutputStringStream& str);
     };
 

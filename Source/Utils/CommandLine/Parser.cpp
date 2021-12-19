@@ -30,7 +30,8 @@ namespace Hack::CommandLine
 {
     using namespace std;
 
-    Parser::Parser() : _maxLongSwitch(4), _required(0), _used(0)
+    Parser::Parser() :
+        _maxLongSwitch(4), _required(0), _used(0)
     {
     }
 
@@ -205,21 +206,21 @@ namespace Hack::CommandLine
             Console::writeLine(curInp);
     }
 
-    String Parser::getBaseProgram() const
+    String Parser::programName() const
     {
         String returnValue = _programName.substr(
             getBaseName(_programName.c_str()), _programName.size());
         return returnValue;
     }
 
-    String Parser::getProgramDirectory() const
+    String Parser::programDirectory() const
     {
         String returnValue =
             _programName.substr(0, getBaseName(_programName.c_str()));
         return returnValue;
     }
 
-    String Parser::getCurrentWorkingDirectory()
+    String Parser::currentDirectory()
     {
         return std::filesystem::current_path().string();
     }
@@ -231,17 +232,17 @@ namespace Hack::CommandLine
         return false;
     }
 
-    ParseOption* Parser::getOption(const uint32_t& enumId)
+    ParseOption* Parser::option(const uint32_t& enumId)
     {
         if (enumId < _options.size())
             return _options[enumId];
         return nullptr;
     }
 
-    int32_t Parser::getValueInt(const uint32_t& enumId,
-                                size_t          idx,
-                                int32_t         defaultValue,
-                                int32_t         base) const
+    int32_t Parser::int32(const uint32_t& enumId,
+                          size_t          idx,
+                          int32_t         defaultValue,
+                          int32_t         base) const
     {
         if (enumId < _options.size())
         {
@@ -251,10 +252,10 @@ namespace Hack::CommandLine
         return defaultValue;
     }
 
-    int64_t Parser::getValueInt64(const uint32_t& enumId,
-                                  size_t          idx,
-                                  int64_t         defaultValue,
-                                  int32_t         base) const
+    int64_t Parser::int64(const uint32_t& enumId,
+                          size_t          idx,
+                          int64_t         defaultValue,
+                          int32_t         base) const
     {
         if (enumId < _options.size())
         {
@@ -264,9 +265,9 @@ namespace Hack::CommandLine
         return defaultValue;
     }
 
-    const String& Parser::getValueString(const uint32_t& enumId,
-                                         size_t          idx,
-                                         const String&   defaultValue) const
+    const String& Parser::string(const uint32_t& enumId,
+                                 size_t          idx,
+                                 const String&   defaultValue) const
     {
         if (enumId < _options.size())
         {
@@ -288,7 +289,8 @@ namespace Hack::CommandLine
         const int          w = max(_maxLongSwitch + 2, 4);
         OutputStringStream stream;
 
-        stream << "Usage: " << getBaseProgram() << " <options> <arg[0] .. arg[n]>" << endl << endl;
+        stream << "Usage: " << programName() << " <options> <arg[0] .. arg[n]>" << endl
+               << endl;
         stream << pad(4) << "-h, --help" << pad(w - 4)
                << "Display this help message" << endl;
 
@@ -327,7 +329,8 @@ namespace Hack::CommandLine
                     stream << str;
                     if (i + 1 < arr.size())
                     {
-                        stream << endl << pad(w + 10);
+                        stream << endl
+                               << pad(w + 10);
                     }
                 }
             }

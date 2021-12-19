@@ -24,12 +24,14 @@ set(Target_HDR
    Tree.h
    Node.h
    XmlWriter.h
+   DotWriter.h
 )
 
 set(Target_SRC 
    Tree.cpp
    Node.cpp
    XmlWriter.cpp
+   DotWriter.cpp
 )
 
 include_directories(${Hack_SOURCE_DIR}/Source)

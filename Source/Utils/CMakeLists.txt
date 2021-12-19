@@ -84,6 +84,7 @@ set(Utils_HDR
     Common.h
     Console.h
     IndexCache.h
+    FileSystem.h
     String.h
     Exceptions/Exception.h
     Exceptions/IndexException.h
@@ -94,6 +95,7 @@ set(Utils_SRC
     Char.cpp
     Console.cpp
     String.cpp
+    FileSystem.cpp
 )
 
 source_group("Header" FILES ${Utils_HDR})

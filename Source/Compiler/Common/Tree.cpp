@@ -24,6 +24,7 @@
 #include <iostream>
 #include "Compiler/Common/Node.h"
 #include "Compiler/Common/XmlWriter.h"
+#include "Compiler/Common/DotWriter.h"
 
 namespace Hack::Compiler
 {
@@ -51,6 +52,8 @@ namespace Hack::Compiler
         }
         else
         {
+            const DotWriter writer(_root);
+            writer.write(out);
         }
     }
 

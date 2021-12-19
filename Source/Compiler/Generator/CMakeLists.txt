@@ -17,7 +17,7 @@
 #    misrepresented as being the original software.
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
-set(TargetName CodeGenerator)
+set(TargetName  CodeGenerator)
 set(TargetGroup Compiler)
 
 if (BuildType STREQUAL "CPP")

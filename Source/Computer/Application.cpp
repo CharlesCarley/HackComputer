@@ -104,7 +104,7 @@ namespace Hack::Computer
         if (cmd.parse(argc, argv, Switches, OP_MAX) < 0)
             return false;
 
-        const StringArray& al = cmd.getArgList();
+        const StringArray& al = cmd.arguments();
         if (al.empty())
         {
             String usage;

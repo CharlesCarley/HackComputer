@@ -83,8 +83,8 @@ namespace Hack::CommandLine
         /// <param name="argc">The argument count on program start.</param>
         /// <param name="argv">The argument vector on program start.</param>
         /// <returns>Returns -1 on any error otherwise it returns 0</returns>
-        int parse(int           argc,
-                  char**        argv);
+        int parse(int    argc,
+                  char** argv);
 
         /// <summary>
         /// Logs the command line verbatim
@@ -94,7 +94,7 @@ namespace Hack::CommandLine
         /// <summary>
         /// Returns the list of arguments that were not handled with switches.
         /// </summary>
-        StringArray& getArgList()
+        StringArray& arguments()
         {
             return _argumentList;
         }
@@ -102,7 +102,7 @@ namespace Hack::CommandLine
         /// <summary>
         /// Returns the path of the program that was supplied to main via argv[0]
         /// </summary>
-        const String& getFullProgramPath() const
+        const String& programPath() const
         {
             return _programName;
         }
@@ -110,19 +110,19 @@ namespace Hack::CommandLine
         /// <summary>
         /// Returns only the file name portion of the program that was supplied to main via argv[0]
         /// </summary>
-        String getBaseProgram() const;
+        String programName() const;
 
         /// <summary>
         /// Extracts the directory from the supplied path to main.
         /// </summary>
         /// <returns>The directory name of the program from argv[0]</returns>
-        String getProgramDirectory() const;
+        String programDirectory() const;
 
         /// <summary>
         /// Returns the current working directory for this process.
         /// </summary>
         /// <returns>The current working directory.</returns>
-        static String getCurrentWorkingDirectory();
+        static String currentDirectory();
 
         /// <param name="enumId">The switch id</param>
         /// <returns>true if it is supplied on the command line false otherwise</returns>
@@ -130,24 +130,24 @@ namespace Hack::CommandLine
 
         /// <param name="enumId">The switch id</param>
         /// <returns> the option at the enumId or null if the id is out of bounds</returns>
-        ParseOption* getOption(const uint32_t& enumId);
+        ParseOption* option(const uint32_t& enumId);
 
-        int32_t getValueInt(const uint32_t& enumId,
-                            size_t          idx,
-                            int32_t         defaultValue = -1,
-                            int32_t         base         = 10) const;
+        int32_t int32(const uint32_t& enumId,
+                      size_t          idx          = 0,
+                      int32_t         defaultValue = -1,
+                      int32_t         base         = 10) const;
 
-        int64_t getValueInt64(const uint32_t& enumId,
-                              size_t          idx,
-                              int64_t         defaultValue = -1,
-                              int32_t         base         = 10) const;
+        int64_t int64(const uint32_t& enumId,
+                      size_t          idx          = 0,
+                      int64_t         defaultValue = -1,
+                      int32_t         base         = 10) const;
 
-        const String& getValueString(const uint32_t& enumId,
-                                     size_t          idx,
-                                     const String&   defaultValue = "") const;
+        const String& string(const uint32_t& enumId,
+                             size_t          idx          = 0,
+                             const String&   defaultValue = "") const;
 
         void usage() const;
 
-        void usage(String &dest) const;
+        void usage(String& dest) const;
     };
-}  // namespace Utils::CommandLine
+}  // namespace Hack::CommandLine

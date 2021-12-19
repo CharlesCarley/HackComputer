@@ -60,9 +60,9 @@ public:
         if (p.parse(argc, argv, Switches, OP_MAX) < 0)
             return false;
 
-        _output = p.getValueString(OP_OUTPUT, 0);
+        _output = p.string(OP_OUTPUT, 0);
 
-        StringArray& args = p.getArgList();
+        StringArray& args = p.arguments();
         if (args.empty())
         {
             String usage;
