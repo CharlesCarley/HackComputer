@@ -135,7 +135,7 @@ GTEST_TEST(Analyzer, TokenTest)
         scn.scan(tok);
         EXPECT_EQ(exp, tok.getType());
 
-        if (exp >= 1 && exp <= 3)
+        if (exp >= 'A' && exp <= 'C')
         {
             EXPECT_EQ(offsIndex, tok.getIndex());
 

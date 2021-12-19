@@ -23,15 +23,15 @@ set(TargetName     Unit)
 set(TestTargetName ${TargetName}Test)
 
 set_group(TestTarget_Data
-    Inline:*.inl
-    Assembler/ASM:Assembler/*.asm
-    Assembler/Cmp:Assembler/*.cmp
-    ROM/ASM:Rom/*.asm
-    VM/Cmp:VM/*.cmp
-    VM/ASM:VM/*.asm
-    VM/VM:VM/*.vm
-    Jack/Cmp:Jack/*.xml
-    Jack/Jack:Jack/*.jack
+    TestFiles/Inline:*.inl
+    TestFiles/Assembler/ASM:Assembler/*.asm
+    TestFiles/Assembler/Cmp:Assembler/*.cmp
+    TestFiles/ROM/ASM:Rom/*.asm
+    TestFiles/VM/Cmp:VM/*.cmp
+    TestFiles/VM/ASM:VM/*.asm
+    TestFiles/VM/VM:TVM/*.vm
+    TestFiles/Jack/Cmp:Jack/*.xml
+    TestFiles/Jack/Jack:Jack/*.jack
 )
 
 set(TestTarget_SOURCE
