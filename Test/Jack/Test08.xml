@@ -289,6 +289,34 @@
                <Symbol> ; </Symbol>
              </LetStatement>
            </Statement>
+           <Statement>
+             <LetStatement>
+               <Keyword> let </Keyword>
+               <Identifier> v0 </Identifier>
+               <Symbol> [ </Symbol>
+               <Expression>
+                 <SingleExpression>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> 2 </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
+               </Expression>
+               <Symbol> ] </Symbol>
+               <Symbol> = </Symbol>
+               <Expression>
+                 <SingleExpression>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> 1 </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
+               </Expression>
+               <Symbol> ; </Symbol>
+             </LetStatement>
+           </Statement>
          </Body>
          <Symbol> } </Symbol>
        </MethodBody>

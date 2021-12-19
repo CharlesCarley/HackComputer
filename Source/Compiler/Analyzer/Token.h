@@ -29,10 +29,9 @@ namespace Hack::Compiler::Analyzer
         TOK_ERROR = -2,
         TOK_EOF,
         TOK_NULL,
-        TOK_INTEGER,
+        TOK_INTEGER = 'A',
         TOK_IDENTIFIER,
         TOK_STRING,
-
         TOK_KW_CLASS,
         TOK_KW_CTOR,
         TOK_KW_FUNCTION,
@@ -55,29 +54,27 @@ namespace Hack::Compiler::Analyzer
         TOK_CONST_NULL,
         TOK_CONST_THIS,
 
-        TOK_OP_PLUS,
-        TOK_OP_MINUS,
-        TOK_OP_MULTIPLY,
-        TOK_OP_DIVIDE,
-        TOK_OP_AND,
-        TOK_OP_OR,
-        TOK_OP_NOT,
-        TOK_L_BRACKET,
-        TOK_R_BRACKET,
-
-        TOK_L_BRACE,
-        TOK_R_BRACE,
-        TOK_L_PAR,
-        TOK_R_PAR,
-
-        TOK_PERIOD,
-        TOK_GT,
-        TOK_LT,
-        TOK_EQ,
-        TOK_COMMA,
-        TOK_SEMICOLON,
+        TOK_OP_PLUS     = '+',
+        TOK_OP_MINUS    = '-',
+        TOK_OP_MULTIPLY = '*',
+        TOK_OP_DIVIDE   = '/',
+        TOK_OP_AND      = '&',
+        TOK_OP_OR       = '|',
+        TOK_OP_NOT      = '!',
+        TOK_L_BRACKET   = '[',
+        TOK_R_BRACKET   = ']',
+        TOK_L_BRACE     = '{',
+        TOK_R_BRACE     = '}',
+        TOK_L_PAR       = '(',
+        TOK_R_PAR       = ')',
+        TOK_PERIOD      = '.',
+        TOK_GT          = '>',
+        TOK_LT          = '<',
+        TOK_EQ          = '=',
+        TOK_COMMA       = ',',
+        TOK_SEMICOLON   = ';',
     };
 
     using Token = TokenBase;
 
-}  // namespace Hack::VirtualMachine
+}  // namespace Hack::Compiler::Analyzer

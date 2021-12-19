@@ -60,7 +60,6 @@ namespace Hack::Compiler
         static void typeString(String& dest, Node* node);
 
     public:
-
         explicit XmlWriterImpl(Node* root, OStream* stream) :
             _root(root),
             _stream(stream),

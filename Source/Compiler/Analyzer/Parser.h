@@ -69,6 +69,8 @@ namespace Hack::Compiler::Analyzer
 
         void constant(int8_t symbolId);
 
+        void object(int8_t symbolId);
+
         void symbol(Node* rule, int8_t symbolId, int token, char ch);
 
         void symbol(int8_t symbolId);

@@ -122,9 +122,9 @@ namespace Hack::Compiler::Analyzer
 
     bool Parser::isCallTerm(const int8_t t0, const int8_t t1, const int8_t t2, const int8_t t3)
     {
-        if (t0 == TOK_IDENTIFIER && t1 == TOK_L_PAR)
+        if ((t0 == TOK_IDENTIFIER || t0 == TOK_CONST_THIS) && t1 == TOK_L_PAR)
             return true;
-        if (t0 == TOK_IDENTIFIER && t1 == TOK_PERIOD && t2 == TOK_IDENTIFIER && t3 == TOK_L_PAR)
+        if ((t0 == TOK_IDENTIFIER || t0 == TOK_CONST_THIS) && t1 == TOK_PERIOD && t2 == TOK_IDENTIFIER && t3 == TOK_L_PAR)
             return true;
         return false;
     }
@@ -220,6 +220,23 @@ namespace Hack::Compiler::Analyzer
             parseError("unknown constant");
         }
     }
+
+    void Parser::object(int8_t symbolId)
+    {
+        Node* rule = _stack.top();
+        switch (symbolId)
+        {
+        case TOK_IDENTIFIER:
+            identifier(rule, ConstantIdentifier, TOK_IDENTIFIER);
+            break;
+        case TOK_CONST_THIS:
+            identifier(rule, ConstantThis, TOK_CONST_THIS);
+            break;
+        default:
+            parseError("unknown constant");
+        }
+    }
+
 
     void Parser::symbol(Node*        rule,
                         const int8_t symbolId,
@@ -1022,7 +1039,7 @@ namespace Hack::Compiler::Analyzer
 
         if (t0 == TOK_IDENTIFIER && t1 == TOK_L_PAR)
         {
-            identifier(rule, ConstantIdentifier, t0);
+            constant(ConstantIdentifier);
 
             symbol(SymbolLeftParenthesis);
 
@@ -1031,12 +1048,12 @@ namespace Hack::Compiler::Analyzer
 
             symbol(SymbolRightParenthesis);
         }
-        else if (t0 == TOK_IDENTIFIER &&
+        else if (t0 == TOK_IDENTIFIER || t0 == TOK_CONST_THIS &&
                  t1 == TOK_PERIOD &&
                  t2 == TOK_IDENTIFIER &&
                  t3 == TOK_L_PAR)
         {
-            constant(ConstantIdentifier);
+            object(t0);
 
             symbol(SymbolPeriod);
 
