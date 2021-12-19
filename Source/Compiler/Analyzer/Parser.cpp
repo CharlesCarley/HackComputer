@@ -105,7 +105,7 @@ namespace Hack::Compiler::Analyzer
         }
     }
 
-    bool Parser::isExpressionExit(const int8_t t0)
+    bool Parser::isExpressionExitTerm(const int8_t t0)
     {
         switch (t0)
         {
@@ -380,22 +380,24 @@ namespace Hack::Compiler::Analyzer
         Node* rule = createRule(RuleClassDescription);
 
         int8_t t0 = getToken(0).getType();
-
-        do
+        if (t0 != TOK_R_BRACE)  // empty
         {
-            // flow pivots around the static and field keywords
+            do
+            {
+                // flow pivots around the static and field keywords
 
-            if (t0 == TOK_KW_STATIC || t0 == TOK_KW_FIELD)
-                fieldRule();
-            else
-                methodRule();
+                if (t0 == TOK_KW_STATIC || t0 == TOK_KW_FIELD)
+                    fieldRule();
+                else
+                    methodRule();
 
-            reduceRule(rule);
-            t0 = getToken(0).getType();
+                reduceRule(rule);
+                t0 = getToken(0).getType();
 
-            checkEof();
+                checkEof();
 
-        } while (t0 != TOK_R_BRACE);
+            } while (t0 != TOK_R_BRACE);
+        }
     }
 
     void Parser::identifierListRule()
@@ -768,7 +770,6 @@ namespace Hack::Compiler::Analyzer
     {
         Node* rule = createRule(RuleExpression);
 
-        int8_t t0;
         do
         {
             singleExpressionRule();
@@ -776,9 +777,7 @@ namespace Hack::Compiler::Analyzer
 
             checkEof();
 
-            t0 = getToken(0).getType();
-
-        } while (!isExpressionExit(t0));
+        } while (!isExpressionExitTerm(getToken(0).getType()));
     }
 
     void Parser::singleExpressionRule()

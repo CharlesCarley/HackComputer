@@ -22,8 +22,7 @@
 #include <fstream>
 #include "Compiler/Analyzer/Parser.h"
 #include "Compiler/Analyzer/Scanner.h"
-#include "Compiler/Common/Tree.h"
-#include "Compiler/Common/Node.h"
+#include "FileCmp.h"
 #include "TestDirectory.h"
 #include "gtest/gtest.h"
 
@@ -31,6 +30,24 @@ using namespace Hack;
 using namespace Compiler::Analyzer;
 
 constexpr size_t NullIdx = (size_t)-1;
+
+GTEST_TEST(Analyzer, GrammarClass)
+{
+    String testFiles[] = {
+        "Test02",
+    };
+
+    Parser psr;
+
+    for (String& f : testFiles)
+    {
+        psr.parse(GetTestFilePath("Jack/" + f + ".jack"));
+        psr.write(GetOutFilePath("" + f));
+
+        CompareFiles(GetTestFilePath("Jack/" + f + ".xml"),
+                     GetOutFilePath("" + f));
+    }
+}
 
 GTEST_TEST(Analyzer, TokenTest)
 {
@@ -124,7 +141,6 @@ GTEST_TEST(Analyzer, TokenTest)
             EXPECT_EQ(NullIdx, tok.getIndex());
     }
 }
-
 
 GTEST_TEST(Analyzer, ParserTest)
 {

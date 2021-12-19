@@ -20,29 +20,7 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
+#include "Utils/String.h"
 
-namespace Hack::Compiler::Analyzer
-{
-    enum RamAddresses
-    {
-        Stack     = 256,
-        Local     = Stack,
-        Arguments = Stack,
-        This      = Stack,
-        That      = Stack,
-    };
 
-    enum RamIndices
-    {
-        STP = 0,
-        LCL,
-        ARG,
-        THS,
-        THT,
-        TMP, // 8 entries
-        SW0 = 13,
-        SW1,
-        SW2
-    };
-
-}  // namespace Hack::VirtualMachine
+extern void CompareFiles(const Hack::String& a, const Hack::String& b);

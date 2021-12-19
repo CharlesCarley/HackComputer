@@ -35,6 +35,8 @@ set_group(TestTarget_Data
 )
 
 set(TestTarget_SOURCE
+    FileCmp.h
+    FileCmp.cpp
     Test1.cpp
     Test2.cpp
     Test3.cpp

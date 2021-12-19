@@ -1,10 +1,15 @@
 # Hack Computer
 
 This repository is my implementation of the Hack computer in C++ from the [Nand2Tetris course](https://www.coursera.org/learn/build-a-computer).
+It is a bit over the top and does not strictly adhere to the course. I chose to opt out of the certificate of completion instead I chose to support the authors by buying the e-book. 
+I also wanted something self-contained at the end, hence being over the top.
 
+ 
 ## Project Structure
 
-This project is split into multiple namespace projects under the primary Hack namespace.
+The following outline details the overall structure. 
+
+It is split into multiple namespace projects under the primary Hack namespace.
 
 - [Hack Computer](#hack-computer)
   - [Project Structure](#project-structure)

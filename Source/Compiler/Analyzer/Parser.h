@@ -51,7 +51,7 @@ namespace Hack::Compiler::Analyzer
 
         static bool isTerm(int8_t t0);
 
-        static bool isExpressionExit(int8_t t0);
+        static bool isExpressionExitTerm(int8_t t0);
 
         static bool isCallTerm(int8_t t0, int8_t t1, int8_t t2, int8_t t3);
 
@@ -76,7 +76,6 @@ namespace Hack::Compiler::Analyzer
         void keyword(Node* rule, int8_t symbolId, int token, const char* kw);
 
         void keyword(int8_t symbolId);
-
 
         void identifierListRule();
 
@@ -140,6 +139,14 @@ namespace Hack::Compiler::Analyzer
         Parser();
 
         ~Parser() override;
+
+        Tree* getTree() const;
     };
+
+    inline Tree* Parser::getTree() const
+    {
+        return _tree;
+    }
+
 
 }  // namespace Hack::Compiler::Analyzer

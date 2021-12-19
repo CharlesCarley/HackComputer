@@ -20,6 +20,8 @@
 -------------------------------------------------------------------------------
 */
 #include <fstream>
+
+#include "FileCmp.h"
 #include "Assembler/Parser.h"
 #include "Chips/Computer.h"
 #include "TestDirectory.h"
@@ -29,22 +31,6 @@
 #include "gtest/gtest.h"
 
 using namespace Hack;
-
-void VmCompareSrc(const String& f0, const String& f1)
-{
-    std::ifstream if0(f0);
-    std::ifstream if1(f1);
-
-    String a, b;
-    while (if1 >> b)
-    {
-        if0 >> a;
-        EXPECT_EQ(a, b);
-
-        a.clear();
-        b.clear();
-    }
-}
 
 void VirtualMachineTestStack(Chips::Computer& comp, const String& baseName)
 {
@@ -57,7 +43,7 @@ void VirtualMachineTestStack(Chips::Computer& comp, const String& baseName)
     psr.parse(fNameSrc);
     psr.write(fNameOut);
 
-    VmCompareSrc(fNameCmp, fNameOut);
+    CompareFiles(fNameCmp, fNameOut);
 
     Assembler::Parser loader;
     loader.parse(fNameOut);

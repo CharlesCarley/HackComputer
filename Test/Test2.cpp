@@ -20,6 +20,8 @@
 -------------------------------------------------------------------------------
 */
 #include <fstream>
+
+#include "FileCmp.h"
 #include "Assembler/Parser.h"
 #include "Assembler/Scanner.h"
 #include "TestDirectory.h"
@@ -95,30 +97,13 @@ GTEST_TEST(Assembler, Scanner2)
     }
 }
 
-void Assembler_CompareSrc(const Hack::String& f0, const Hack::String& f1)
-{
-    std::ifstream if0(f0);
-    std::ifstream if1(f1);
-
-    Hack::String a, b;
-
-    while (if1 >> b)
-    {
-        if0 >> a;
-        EXPECT_EQ(a, b);
-
-        a.clear();
-        b.clear();
-    }
-}
-
 GTEST_TEST(Assembler, Parser1)
 {
     Parser psr;
     psr.parse(GetTestFilePath("Assembler/Parser1.asm"));
     psr.write(GetOutFilePath("Parser1.out"));
 
-    Assembler_CompareSrc(GetTestFilePath("Assembler/Parser1.cmp"),
+    CompareFiles(GetTestFilePath("Assembler/Parser1.cmp"),
                          GetOutFilePath("Parser1.out"));
 }
 
@@ -128,7 +113,7 @@ GTEST_TEST(Assembler, Parser2)
     psr.parse(GetTestFilePath("Assembler/Parser2.asm"));
     psr.write(GetOutFilePath("Parser2.out"));
 
-    Assembler_CompareSrc(GetTestFilePath("Assembler/Parser2.cmp"),
+    CompareFiles(GetTestFilePath("Assembler/Parser2.cmp"),
                          GetOutFilePath("Parser2.out"));
 }
 
@@ -153,7 +138,7 @@ GTEST_TEST(Assembler, Add)
     psr.parse(GetTestFilePath("Assembler/Add.asm"));
     psr.write(GetOutFilePath("Add.out"));
 
-    Assembler_CompareSrc(GetTestFilePath("Assembler/Add.cmp"),
+    CompareFiles(GetTestFilePath("Assembler/Add.cmp"),
                          GetOutFilePath("Add.out"));
 }
 
@@ -164,6 +149,6 @@ GTEST_TEST(Assembler, Parser3)
     psr.parse(GetTestFilePath("Assembler/Parser3.asm"));
     psr.write(GetOutFilePath("Parser3.out"));
 
-    Assembler_CompareSrc(GetTestFilePath("Assembler/Parser3.cmp"),
+    CompareFiles(GetTestFilePath("Assembler/Parser3.cmp"),
                          GetOutFilePath("Parser3.out"));
 }
