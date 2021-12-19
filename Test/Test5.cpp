@@ -50,9 +50,9 @@ GTEST_TEST(Analyzer, GrammarClass)
     {
         Parser psr;
         psr.parse(GetTestFilePath("Jack/" + f + ".jack"));
-        psr.write(GetTestFilePath("Jack/" + f + ".xml"));
-        //psr.write(GetOutFilePath("" + f));
-        // CompareFiles(GetTestFilePath("Jack/" + f + ".xml"), GetOutFilePath("" + f));
+        // psr.write(GetTestFilePath("Jack/" + f + ".xml"));
+        psr.write(GetOutFilePath("" + f));
+        CompareFiles(GetTestFilePath("Jack/" + f + ".xml"), GetOutFilePath("" + f));
     }
 }
 
