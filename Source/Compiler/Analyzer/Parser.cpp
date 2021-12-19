@@ -46,7 +46,7 @@ namespace Hack::Compiler::Analyzer
     void Parser::reduceRule(Node* node)
     {
         if (_stack.empty())
-            parseError("No rules on the stack");
+            parseError("no rules on the stack");
 
         if (_stack.top() != node)
         {
@@ -54,7 +54,7 @@ namespace Hack::Compiler::Analyzer
             if (resolved->isRule())
                 node->addChild(resolved);
             else
-                parseError("Expected a reduced rule");
+                parseError("expected a rule to reduce");
 
             _stack.pop();
         }
@@ -134,7 +134,6 @@ namespace Hack::Compiler::Analyzer
             return true;
         if (t0 == TOK_IDENTIFIER && t1 == TOK_L_BRACKET)
             return true;
-
         return isCallTerm(t0, t1, t2, t3);
     }
 
@@ -842,10 +841,11 @@ namespace Hack::Compiler::Analyzer
     {
         createRule(RuleSimpleTerm);
 
-        switch (getToken(0).getType())
+        const int8_t t0 = getToken(0).getType();
+
+        switch (t0)
         {
         case TOK_IDENTIFIER:
-
             constant(ConstantIdentifier);
             break;
         case TOK_INTEGER:
@@ -867,17 +867,18 @@ namespace Hack::Compiler::Analyzer
             constant(ConstantString);
             break;
         default:
-            parseError("unknown constant '", (int)getToken(0).getType(), '\'');
+            parseError("unknown constant '", (int)t0, '\'');
         }
     }
 
     void Parser::complexTermRule()
     {
-        Node*        rule = createRule(RuleComplexTerm);
-        const int8_t t0   = getToken(0).getType();
-        const int8_t t1   = getToken(1).getType();
-        const int8_t t2   = getToken(2).getType();
-        const int8_t t3   = getToken(3).getType();
+        Node* rule = createRule(RuleComplexTerm);
+
+        const int8_t t0 = getToken(0).getType();
+        const int8_t t1 = getToken(1).getType();
+        const int8_t t2 = getToken(2).getType();
+        const int8_t t3 = getToken(3).getType();
 
         if (t0 == TOK_L_PAR)
         {
@@ -913,6 +914,7 @@ namespace Hack::Compiler::Analyzer
         createRule(RuleOperator);
 
         const int8_t t0 = getToken(0).getType();
+
         switch (t0)
         {
         case TOK_OP_PLUS:
@@ -1011,11 +1013,11 @@ namespace Hack::Compiler::Analyzer
                  t2 == TOK_IDENTIFIER &&
                  t3 == TOK_L_PAR)
         {
-            identifier(rule, ConstantIdentifier, t0);
+            constant(ConstantIdentifier);
 
             symbol(SymbolPeriod);
 
-            identifier(rule, ConstantIdentifier, t2);
+            constant(ConstantIdentifier);
 
             symbol(SymbolLeftParenthesis);
 
@@ -1030,32 +1032,23 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::parameterListRule()
     {
-        Node*  rule = createRule(RuleParameterList);
-        int8_t t0   = getToken(0).getType();
-        if (t0 != TOK_R_PAR)
+        Node* rule = createRule(RuleParameterList);
+
+        int8_t t0 = getToken(0).getType();
+        if (t0 != TOK_R_PAR)  // empty case
         {
-            parameterRule();
-            reduceRule(rule);
-
-            t0 = getToken(0).getType();
-            if (t0 == TOK_COMMA)
+            do
             {
-                advanceCursor();
+                parameterRule();
+                reduceRule(rule);
 
-                while (t0 == TOK_COMMA)
-                {
-                    parameterRule();
-                    reduceRule(rule);
+                t0 = getToken(0).getType();
+                if (t0 == TOK_COMMA)
+                    advanceCursor();
 
-                    t0 = getToken(0).getType();
-                    if (t0 == TOK_EOF)
-                        parseError("expected a comma");
-                    if (t0 == TOK_COMMA)
-                        advanceCursor();
-                    else
-                        break;
-                }
-            }
+                checkEof();
+
+            } while (t0 != TOK_R_PAR);
         }
     }
 

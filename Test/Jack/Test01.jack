@@ -1,31 +1,30 @@
 class A {
     field int x,y,z;
 
-    constructor void A()
-    {
-        let x = 0;
+    constructor void A() {
+        let x = 3;
+        
+        do Output.Write(1+1, 2+2, 3+3, 4+5);
     }
 
-    function int IncA(int a)
-    {
+    function int IncA(int a) {
         return x + a;
     }
 
-    method void SomeMethod()
-    {
+    method void SomeMethod() {
         var int a;
+
         let a = 0;
-        while (a < 25)
-        {
+        while (a < 25) {
             let a = IncA(5);
-            if (a = 25) {
+            if (~(a > 25)&3) {
                 do Output.Write("Done");
             }
             else {
                 do Output.Write("Not Done");
             }
+            let a = a + 1;
         }
-
         return a/5;
     }
 }
