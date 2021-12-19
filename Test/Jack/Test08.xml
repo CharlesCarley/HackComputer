@@ -302,6 +302,16 @@
                      </SimpleTerm>
                    </Term>
                  </SingleExpression>
+                 <SingleExpression>
+                   <Operator>
+                     <Symbol> + </Symbol>
+                   </Operator>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> 10000 </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
                </Expression>
                <Symbol> ] </Symbol>
                <Symbol> = </Symbol>
@@ -316,6 +326,130 @@
                </Expression>
                <Symbol> ; </Symbol>
              </LetStatement>
+           </Statement>
+           <Statement>
+             <DoStatement>
+               <Keyword> do </Keyword>
+               <CallMethod>
+                 <Identifier> a </Identifier>
+                 <Symbol> ( </Symbol>
+                 <ExpressionList>
+                   <Expression>
+                     <SingleExpression>
+                       <Term>
+                         <ComplexTerm>
+                           <Identifier> v0 </Identifier>
+                           <Symbol> [ </Symbol>
+                           <Expression>
+                             <SingleExpression>
+                               <Term>
+                                 <SimpleTerm>
+                                   <Identifier> 100 </Identifier>
+                                 </SimpleTerm>
+                               </Term>
+                             </SingleExpression>
+                             <SingleExpression>
+                               <Operator>
+                                 <Symbol> + </Symbol>
+                               </Operator>
+                               <Term>
+                                 <ComplexTerm>
+                                   <Symbol> ( </Symbol>
+                                   <Expression>
+                                     <SingleExpression>
+                                       <Term>
+                                         <SimpleTerm>
+                                           <Identifier> 7 </Identifier>
+                                         </SimpleTerm>
+                                       </Term>
+                                     </SingleExpression>
+                                     <SingleExpression>
+                                       <UnaryOperator>
+                                         <Symbol> - </Symbol>
+                                       </UnaryOperator>
+                                       <Term>
+                                         <ComplexTerm>
+                                           <Symbol> ( </Symbol>
+                                           <Expression>
+                                             <SingleExpression>
+                                               <UnaryOperator>
+                                                 <Symbol> - </Symbol>
+                                               </UnaryOperator>
+                                               <Term>
+                                                 <SimpleTerm>
+                                                   <Identifier> 3 </Identifier>
+                                                 </SimpleTerm>
+                                               </Term>
+                                             </SingleExpression>
+                                           </Expression>
+                                           <Symbol> ) </Symbol>
+                                         </ComplexTerm>
+                                       </Term>
+                                     </SingleExpression>
+                                   </Expression>
+                                   <Symbol> ) </Symbol>
+                                 </ComplexTerm>
+                               </Term>
+                             </SingleExpression>
+                             <SingleExpression>
+                               <Operator>
+                                 <Symbol> / </Symbol>
+                               </Operator>
+                               <Term>
+                                 <SimpleTerm>
+                                   <Identifier> 3 </Identifier>
+                                 </SimpleTerm>
+                               </Term>
+                             </SingleExpression>
+                           </Expression>
+                           <Symbol> ] </Symbol>
+                         </ComplexTerm>
+                       </Term>
+                     </SingleExpression>
+                   </Expression>
+                   <Expression>
+                     <SingleExpression>
+                       <Term>
+                         <SimpleTerm>
+                           <Identifier> 9 </Identifier>
+                         </SimpleTerm>
+                       </Term>
+                     </SingleExpression>
+                   </Expression>
+                   <Expression>
+                     <SingleExpression>
+                       <Term>
+                         <SimpleTerm>
+                           <Identifier> 10 </Identifier>
+                         </SimpleTerm>
+                       </Term>
+                     </SingleExpression>
+                     <SingleExpression>
+                       <Operator>
+                         <Symbol> + </Symbol>
+                       </Operator>
+                       <Term>
+                         <SimpleTerm>
+                           <Identifier> 2 </Identifier>
+                         </SimpleTerm>
+                       </Term>
+                     </SingleExpression>
+                     <SingleExpression>
+                       <Operator>
+                         <Symbol> & </Symbol>
+                       </Operator>
+                       <Term>
+                         <SimpleTerm>
+                           <Identifier> 7 </Identifier>
+                         </SimpleTerm>
+                       </Term>
+                     </SingleExpression>
+                   </Expression>
+                 </ExpressionList>
+                 <Symbol> ) </Symbol>
+               </CallMethod>
+               <Symbol> ; </Symbol>
+             </DoStatement>
            </Statement>
          </Body>
          <Symbol> } </Symbol>
