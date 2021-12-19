@@ -71,6 +71,14 @@ namespace Hack
             throw Exception("Index out of bounds");
         }
 
+        bool hasIndex(const size_t& index) const
+        {
+            if (index < _list.size())
+                return true;
+            return false;
+        }
+
+
         bool exists(const T& value) const
         {
             const typename Table::const_iterator it = _elements.find(value);

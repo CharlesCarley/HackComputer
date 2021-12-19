@@ -1,0 +1,92 @@
+/*
+
+<MethodBody> ::= '{' <Body> '}'
+
+<ParameterList> ::= <ParameterList> ',' <Parameter>
+                  | <Parameter>
+                  |  ! -- empty --
+
+<Parameter> ::= <DataType> Identifier
+
+<Body> ::= <Body> <Variable>
+         | <Body> <Statement>
+         |  ! -- empty --
+
+<Variable> ::= Var <DataType> <IdentifierList> ';'
+
+<StatementList> ::= <StatementList> <Statement>
+                 | <Statement>
+                 |  ! -- empty -- Watch it <Body> needs  Statement not StatementList
+
+<Statement> ::= <LetStatement>
+              | <IfStatement>
+              | <WhileStatement>
+              | <DoStatement>
+              | <ReturnStatement>
+
+<LetStatement> ::= Let Identifier '=' <Expression> ';'
+                 | Let Identifier '[' <Expression> ']' '=' <Expression> ';'
+
+<IfStatement> ::= If '(' <Expression> ')' '{' <StatementList> '}'
+                | Else '{' <StatementList> '}'
+
+<WhileStatement> ::= While '(' <Expression> ')' '{' <StatementList> '}'
+
+
+<DoStatement> ::= Do <CallMethod> ';'
+
+<ReturnStatement> ::= Return ';'
+                    | Return <Expression> ';'
+
+<CallMethod> ::= Identifier '(' <ExpressionList> ')' 
+               | Identifier '.' Identifier '(' <ExpressionList> ')' 
+
+<ExpressionList> ::= <ExpressionList> ',' <Expression>
+                   | <Expression>
+                   |  ! -- empty --
+
+<Expression> ::= <Expression> <SingleExpression>
+               | <SingleExpression> 
+
+<SingleExpression> ::= <Term>
+                   | <Operator> <Term> 
+                   | <UnaryOperator> <Term> 
+                   | Identifier '[' <Expression> ']'
+                   | <CallMethod>
+                   | '(' <Expression> ')'
+
+<Term>::= Integer
+        | String
+        | True
+        | False
+        | Null
+        | This
+        | Identifier
+
+<Operator> ::= '+'
+             | '-'
+             | '*'
+             | '/'
+             | '&'
+             | '|'
+             | '<'
+             | '>'
+             | '='
+
+<UnaryOperator> ::= '~' | '!'
+
+*/
+
+class MethodBody {
+
+    method boolean Body() {
+        var int v0;
+
+        let v0 = 0;
+        let v0 = "Hello World";
+        let v0 = null;
+        let v0 = true;
+        let v0 = false;
+        let v0 = this;
+    }
+}

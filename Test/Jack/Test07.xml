@@ -1,0 +1,144 @@
+<?xml version='1.0'?>
+<ClassList>
+ <Class>
+   <Keyword> class </Keyword>
+   <Identifier> MethodBody </Identifier>
+   <Symbol> { </Symbol>
+   <ClassDescription>
+     <Method>
+       <MethodSpecification>
+         <Keyword> method </Keyword>
+       </MethodSpecification>
+       <MethodReturnType>
+         <DataType>
+           <Identifier> boolean </Identifier>
+         </DataType>
+       </MethodReturnType>
+       <Identifier> Body </Identifier>
+       <Symbol> ( </Symbol>
+       <ParameterList>
+       </ParameterList>
+       <Symbol> ) </Symbol>
+       <MethodBody>
+         <Symbol> { </Symbol>
+         <Body>
+           <Variable>
+             <Keyword> var </Keyword>
+             <DataType>
+               <Keyword> int </Keyword>
+             </DataType>
+             <IdentifierList>
+               <Identifier> v0 </Identifier>
+             </IdentifierList>
+             <Symbol> ; </Symbol>
+           </Variable>
+           <Statement>
+             <LetStatement>
+               <Keyword> let </Keyword>
+               <Identifier> v0 </Identifier>
+               <Symbol> = </Symbol>
+               <Expression>
+                 <SingleExpression>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> 0 </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
+               </Expression>
+               <Symbol> ; </Symbol>
+             </LetStatement>
+           </Statement>
+           <Statement>
+             <LetStatement>
+               <Keyword> let </Keyword>
+               <Identifier> v0 </Identifier>
+               <Symbol> = </Symbol>
+               <Expression>
+                 <SingleExpression>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> Hello World </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
+               </Expression>
+               <Symbol> ; </Symbol>
+             </LetStatement>
+           </Statement>
+           <Statement>
+             <LetStatement>
+               <Keyword> let </Keyword>
+               <Identifier> v0 </Identifier>
+               <Symbol> = </Symbol>
+               <Expression>
+                 <SingleExpression>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> null </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
+               </Expression>
+               <Symbol> ; </Symbol>
+             </LetStatement>
+           </Statement>
+           <Statement>
+             <LetStatement>
+               <Keyword> let </Keyword>
+               <Identifier> v0 </Identifier>
+               <Symbol> = </Symbol>
+               <Expression>
+                 <SingleExpression>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> true </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
+               </Expression>
+               <Symbol> ; </Symbol>
+             </LetStatement>
+           </Statement>
+           <Statement>
+             <LetStatement>
+               <Keyword> let </Keyword>
+               <Identifier> v0 </Identifier>
+               <Symbol> = </Symbol>
+               <Expression>
+                 <SingleExpression>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> false </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
+               </Expression>
+               <Symbol> ; </Symbol>
+             </LetStatement>
+           </Statement>
+           <Statement>
+             <LetStatement>
+               <Keyword> let </Keyword>
+               <Identifier> v0 </Identifier>
+               <Symbol> = </Symbol>
+               <Expression>
+                 <SingleExpression>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> this </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
+               </Expression>
+               <Symbol> ; </Symbol>
+             </LetStatement>
+           </Statement>
+         </Body>
+         <Symbol> } </Symbol>
+       </MethodBody>
+     </Method>
+   </ClassDescription>
+   <Symbol> } </Symbol>
+ </Class>
+</ClassList>

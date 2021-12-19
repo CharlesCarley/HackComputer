@@ -66,6 +66,8 @@ namespace Hack
         void getString(String& dest, const size_t& i) const;
 
         size_t getLine() const;
+
+        bool hasString(size_t id) const;
     };
 
     inline size_t ScannerBase::getLine() const
@@ -73,8 +75,7 @@ namespace Hack
         return _line;
     }
 
-
-    // clang-format off
+// clang-format off
     #define LowerCaseAz                                                   \
     'a' : case 'b' : case 'c' : case 'd' : case 'e' : case 'f' : case 'g' \
         : case 'h' : case 'i' : case 'j' : case 'k' : case 'l' : case 'm' \

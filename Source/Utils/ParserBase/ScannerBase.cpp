@@ -48,6 +48,12 @@ namespace Hack
         _stringTable.get(dest, i);
     }
 
+    bool ScannerBase::hasString(const size_t id) const
+    {
+        return _stringTable.hasIndex(id);
+    }
+
+
     [[noreturn]] void ScannerBase::syntaxErrorThrow(const String& message) const
     {
         throw ParseError(0, _file, _line, message);

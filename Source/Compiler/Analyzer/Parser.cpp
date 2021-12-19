@@ -99,6 +99,7 @@ namespace Hack::Compiler::Analyzer
         case TOK_CONST_TRUE:
         case TOK_CONST_NULL:
         case TOK_CONST_THIS:
+        case TOK_L_PAR:
             return true;
         default:
             return false;
@@ -165,9 +166,27 @@ namespace Hack::Compiler::Analyzer
                 "expected an constant integer, string, "
                 "boolean, pointer or identifier");
         }
-        const size_t id = getToken(0).getIndex();
 
-        rule->addChild(symbolId, _scanner->getString(id));
+        switch (token)
+        {
+        case TOK_CONST_FALSE:
+        case TOK_CONST_TRUE:
+        case TOK_CONST_NULL:
+        case TOK_CONST_THIS:
+            rule->addChild(symbolId);
+            break;
+        default:
+        {
+            const size_t id = getToken(0).getIndex();
+
+            if (_scanner->hasString(id))
+                rule->addChild(symbolId, _scanner->getString(id));
+            else
+                parseError("no data is associated with the supplied token");
+        }
+        break;
+        }
+
         advanceCursor();
     }
 
@@ -542,8 +561,12 @@ namespace Hack::Compiler::Analyzer
 
         symbol(SymbolOpenBrace);
 
-        bodyRule();
-        reduceRule(rule);
+        const int8_t t0 = getToken(0).getType();
+        if (t0 != TOK_R_BRACE)  // handle empty
+        {
+            bodyRule();
+            reduceRule(rule);
+        }
 
         symbol(SymbolCloseBrace);
     }
@@ -635,7 +658,8 @@ namespace Hack::Compiler::Analyzer
         Node* rule = createRule(RuleLetStatement);
 
         keyword(KeywordLet);
-        identifier(rule, ConstantIdentifier, TOK_IDENTIFIER);
+
+        constant(ConstantIdentifier);
 
         const int8_t t0 = getToken(0).getType();
 
@@ -808,7 +832,7 @@ namespace Hack::Compiler::Analyzer
             termRule();
             reduceRule(rule);
         }
-        else if (t0 != TOK_R_BRACKET && t0 != TOK_SEMICOLON)
+        else if (t0 != TOK_R_BRACKET && t0 != TOK_SEMICOLON && t0 != TOK_R_PAR)
         {
             // if it's not an exit from this rule, then it's an error.
             parseError("expected unary term, operator term or a term");

@@ -49,11 +49,12 @@ namespace Hack::Compiler::Analyzer
         {
             ch = _stream->get();
             if (ch == '*' && _stream->peek() == '/')
+            {
+                _stream->get();
                 break;
-
+            }
             if (ch == '\r' || ch == '\n')
             {
-                ch = _stream->get();
                 if (ch == '\r' && _stream->peek() == '\n')
                     ch = _stream->get();
                 ++_line;

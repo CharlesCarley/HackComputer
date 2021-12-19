@@ -1,0 +1,32 @@
+/*
+<ClassDescription> ::= <ClassDescription> <Field> ';'
+                     | <ClassDescription> <Method>
+                     |  ! -- empty --
+
+<Field> ::= <FieldSpecification> <DataType> <IdentifierList>
+
+<FieldSpecification> ::= Static | Field
+
+<DataType> ::= Int | Char | Boolean | Identifier
+
+
+<IdentifierList> ::= <IdentifierList> ',' Identifier
+                     | Identifier
+
+*/
+
+class FieldTest
+{
+    field int       ft0;
+    field char      ft1;
+    field boolean   ft2;
+    field FieldTest ft3;
+    field int       ft4, ft5, ft6, ft7, ft8;
+
+    static int       ft0;
+    static char      ft1;
+    static boolean   ft2;
+    static FieldTest ft3;
+    static int       ft4, ft5, ft6, ft7, ft8;
+}
+

@@ -1,0 +1,29 @@
+/*
+
+<Method> ::= <MethodSpecification> <MethodReturnType>  Identifier '(' <ParameterList> ')' <MethodBody>
+
+<MethodSpecification> ::= Constructor | Function | Method
+<MethodReturnType> ::= Void | <DataType>
+
+<ParameterList> ::= <ParameterList> ',' <Parameter>
+                  | <Parameter>
+                  |  ! -- empty --
+
+<Parameter> ::= <DataType> Identifier
+*/
+
+class MethodTest
+{
+    constructor void New(){}
+    constructor void New(int x){}
+    constructor void New(int x, int y, int z){}
+
+    function void New(){}
+    function void New(int x){}
+    function void New(int x, int y, int z){}
+
+    method void New(){}
+    method void New(int x){}
+    method void New(int x, int y, int z){}
+}
+
