@@ -1,13 +1,11 @@
 # Hack Computer
 
 This repository is my implementation of the Hack computer in C++ from the [Nand2Tetris course](https://www.coursera.org/learn/build-a-computer).
-It is a bit over the top and does not strictly adhere to the course. I chose to opt out of the certificate of completion instead I chose to support the authors by buying the e-book. 
-I also wanted something self-contained at the end, hence being over the top.
+It is a bit over the top and does not strictly adhere to the course. I chose to opt out of the certificate of completion instead chose to support the authors by buying the e-book. I wanted something self-contained at the end. In order to do that, the supplied tools in the course material had to be written from scratch (to some extent; hence being over the top).
 
- 
 ## Project Structure
 
-The following outline details the overall structure. 
+The following outline details the overall structure.
 
 It is split into multiple namespace projects under the primary Hack namespace.
 
@@ -33,6 +31,7 @@ It is split into multiple namespace projects under the primary Hack namespace.
   - [Building](#building)
     - [Defines](#defines)
   - [Testing](#testing)
+  - [Extra Tools](#extra-tools)
 
 ### Utils
 
@@ -92,8 +91,6 @@ Extra options not in the main specification.
 - __halt__ `halt`
   - Will emit code that enters into an infinite loop
 
-
-
 #### Vm2Asm
 
 Is a program that takes a '.vm' file as input and emits assembly code.
@@ -122,8 +119,7 @@ See the [Jack.grm](Source/Compiler/Analyzer/Jack.grm) for the implemented gramma
 Extra options not in the main specification per personal preference.
 
 - __NOT__ `!`
-  - The not unary operator is implemented as '~' and '!', both have the same meaning. 
-
+  - The not unary operator is implemented as '~' and '!', both have the same meaning.
 
 #### Jack2XML
 
@@ -180,3 +176,15 @@ Optional CMake definitions used in this project.
 The testing directory is setup to work with [googletest](https://github.com/google/googletest).
 
 It also contains the initial setup for testing the standalone module using GitHub actions.
+
+## Extra Tools
+
+The syntax analyzer has the extra option to output the parse tree in `.dot` format. The dot program is part of the graphviz tool-set.
+
+- https://graphviz.org/
+
+The grammar files are for the most part, reference files only. They do not use any of code generation features of the Gold Parsing Engine, but they were initially written and tested with the Gold tool-set.
+
+Correct me if I'm wrong but I believe it's a dead project, which is a shame because it's an awesome tool-set to quickly throw together and test grammars.
+
+- http://www.goldparser.org/
