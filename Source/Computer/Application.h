@@ -22,10 +22,31 @@
 #pragma once
 #include "Utils/String.h"
 
-namespace Hack::Chips
+namespace Hack
 {
-    class Computer;
-}
+    namespace Compiler
+    {
+        namespace CodeGenerator
+        {
+            class Generator;
+        }
+    }  // namespace Compiler
+
+    namespace Assembler
+    {
+        class Parser;
+    }
+
+    namespace VirtualMachine
+    {
+        class Parser;
+    }
+
+    namespace Chips
+    {
+        class Computer;
+    }
+}  // namespace Hack
 
 namespace Hack::Computer
 {
@@ -44,6 +65,12 @@ namespace Hack::Computer
         void load() const;
 
         static void trace(Chips::Computer* computer);
+
+        void assemble(Assembler::Parser& assembler) const;
+
+        void generate(VirtualMachine::Parser& emitter) const;
+
+        void compile(Compiler::CodeGenerator::Generator& compiler) const;
 
     public:
         Application();

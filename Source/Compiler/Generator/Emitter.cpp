@@ -59,6 +59,8 @@ namespace Hack::Compiler::CodeGenerator
         w.write("set 1 512");
         w.write("set 2 768");
         w.write("set 4 1024");
+        w.write("call Main.main 0");
+        w.write("reset");
     }
 
     void Emitter::writeStatic(const Symbol& sym)

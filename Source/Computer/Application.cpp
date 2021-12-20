@@ -23,11 +23,13 @@
 #include <filesystem>
 #include "Assembler/Parser.h"
 #include "Chips/Computer.h"
+#include "Compiler/Generator/Generator.h"
 #include "Computer/CommandRuntime.h"
 #include "Computer/DebugRuntime.h"
-#include "VirtualMachine/Parser.h"
 #include "Utils/CommandLine/Parser.h"
 #include "Utils/Exceptions/Exception.h"
+#include "Utils/FileSystem.h"
+#include "VirtualMachine/Parser.h"
 
 #ifdef USE_SDL
 #include "Computer/Runtime.h"
@@ -36,6 +38,8 @@
 namespace Hack::Computer
 {
     using Instructions = Assembler::Parser::Instructions;
+    using Cmd          = CommandLine::Parser;
+    using CmdSwitch    = CommandLine::Switch;
 
     enum Options
     {
@@ -46,7 +50,7 @@ namespace Hack::Computer
         OP_MAX,
     };
 
-    constexpr CommandLine::Switch Switches[OP_MAX] = {
+    constexpr CmdSwitch Switches[OP_MAX] = {
         {
             OP_CMD,
             'c',
@@ -95,41 +99,71 @@ namespace Hack::Computer
 
         delete _runtime;
         _runtime = nullptr;
-
     }
 
     bool Application::parse(const int argc, char** argv)
     {
-        CommandLine::Parser cmd;
-        if (cmd.parse(argc, argv, Switches, OP_MAX) < 0)
+        Cmd parser;
+        if (parser.parse(argc, argv, Switches, OP_MAX) < 0)
             return false;
 
-        const StringArray& al = cmd.arguments();
-        if (al.empty())
+        const StringArray& arguments = parser.arguments();
+        if (arguments.empty())
         {
             String usage;
-            cmd.usage(usage);
+            parser.usage(usage);
             throw Exception(usage, "Missing input file");
         }
 
-        _input = al[0];
+        _input = arguments[0];
 
 #ifdef USE_SDL
-        if (cmd.isPresent(OP_DEBUG))
+        if (parser.isPresent(OP_DEBUG))
             _runtime = new DebugRuntime();
-        else if (cmd.isPresent(OP_CMD))
+        else if (parser.isPresent(OP_CMD))
             _runtime = new CommandRuntime();
         else
             _runtime = new Runtime();
 #else
-        if (cmd.isPresent(OP_DEBUG))
+        if (parser.isPresent(OP_DEBUG))
             _runtime = new DebugRuntime();
         else
             _runtime = new CommandRuntime();
 #endif
 
-        _trace = cmd.isPresent(OP_TRACE_MEM);
+        _trace = parser.isPresent(OP_TRACE_MEM);
         return true;
+    }
+
+    void Application::assemble(Assembler::Parser& assembler) const
+    {
+        const Instructions& instructions = assembler.getInstructions();
+
+        if (instructions.empty())
+            throw MessageException("no instructions found");
+
+        _computer->load(instructions.data(), instructions.size());
+    }
+
+    void Application::generate(VirtualMachine::Parser& emitter) const
+    {
+        StringStream input;
+        emitter.write(input);
+
+        Assembler::Parser assembler;
+        assembler.parse(input);
+        assemble(assembler);
+    }
+
+    void Application::compile(Compiler::CodeGenerator::Generator& compiler) const
+    {
+        StringStream input;
+        compiler.write(input);
+
+        VirtualMachine::Parser emitter;
+        emitter.parse(input);
+
+        generate(emitter);
     }
 
     void Application::load() const
@@ -137,33 +171,30 @@ namespace Hack::Computer
         // parser throws an exception but, it is not being
         // caught here, so that if there is an error it will
         // be caught in the main catch statement and reported.
-        std::filesystem::path path = _input;
+        const Path path = FileSystem::absolute(_input);
 
-        String ext = path.extension().string();
+        const String extension = path.extension().string();
 
-        if (ext == ".vm")
+        if (extension == ".jack")
         {
-            VirtualMachine::Parser vmp;
-            vmp.parse(_input);
+            Compiler::CodeGenerator::Generator input;
+            input.parse(path.string());
 
-            StringStream ss;
-            vmp.write(ss);
+            compile(input);
+        }
+        else if (extension == ".vm")
+        {
+            VirtualMachine::Parser input;
+            input.parse(_input);
 
-            Assembler::Parser psr;
-            psr.parse(ss);
-
-            const Instructions& instructions = psr.getInstructions();
-
-            _computer->load(instructions.data(), instructions.size());
+            generate(input);
         }
         else
         {
-            Assembler::Parser psr;
-            psr.parse(_input);
+            Assembler::Parser input;
+            input.parse(_input);
 
-            const Instructions& instructions = psr.getInstructions();
-
-            _computer->load(instructions.data(), instructions.size());
+            assemble(input);
         }
     }
 
@@ -189,7 +220,6 @@ namespace Hack::Computer
                     oss << std::setw(10) << v;
                     oss << '|';
                     oss << std::endl;
-                    
                 }
             }
         }

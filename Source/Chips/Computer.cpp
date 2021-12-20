@@ -52,6 +52,12 @@ namespace Hack::Chips
         update(false);
     }
 
+    bool Computer::canRead() const
+    {
+        return _cpuState.pc < _rom->size();
+    }
+
+
     void Computer::update(const bool saveState)
     {
         const bool cycle = Timer::tick();

@@ -19,6 +19,7 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
+#include <iostream>
 #include "Compiler/Generator/Generator.h"
 #include "Utils/CommandLine/Parser.h"
 #include "Utils/Console.h"
@@ -69,29 +70,28 @@ namespace Hack::Programs
 
             _output = parser.string(OP_OUTPUT);
 
-            StringArray& args = parser.arguments();
-            if (args.empty())
+            const StringArray& arguments = parser.arguments();
+
+            if (arguments.empty())
             {
                 String usage;
                 parser.usage(usage);
-
                 throw InputException(usage, "Missing file input");
             }
 
-            _input = filesystem::absolute(args[0]);
+            _input = filesystem::absolute(arguments[0]);
             return true;
         }
 
         int go() const
         {
-            Compiler::CodeGenerator::Generator gen;
-            gen.parse(_input.string());
+            const Compiler::CodeGenerator::Generator generator;
+            generator.parse(_input.string());
 
             if (!_output.empty())
-            {
-                gen.write(_output);
-                
-            }
+                generator.write(_output);
+            else
+                generator.write(std::cout);
 
             return 0;
         }

@@ -34,7 +34,13 @@ namespace Hack
         for (const Directory& element : dirIt)
         {
             if (element.is_regular_file() && element.path().extension() == ext)
-                dest.push_back(absolute(element.path()));
+                dest.push_back(std::filesystem::absolute(element.path()));
         }
     }
+
+    Path FileSystem::absolute(const String& input)
+    {
+        return std::filesystem::absolute(input);
+    }
+
 }  // namespace Hack

@@ -87,6 +87,8 @@ namespace Hack::Compiler::CodeGenerator
 
     void Generator::buildMethods(const Node& classDescription) const
     {
+        const String& className = classDescription.parent().child(1).value();
+
         Node::NodeArray methods;
         classDescription.filter(methods, RuleMethod);
 
@@ -100,7 +102,7 @@ namespace Hack::Compiler::CodeGenerator
             const Node& parameterList = method.rule(4);
             const Node& body          = method.rule(6).rule(1);
 
-            _emitter->writeFunction(methodName.value(), (uint16_t)parameterList.size());
+            _emitter->writeMethod(className, methodName.value(), (uint16_t)parameterList.size());
 
             buildLocals(body);
             buildStatements(body);

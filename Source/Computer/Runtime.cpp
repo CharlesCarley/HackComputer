@@ -116,6 +116,9 @@ namespace Hack::Computer
                     break;
                 }
             }
+
+            if (!computer->canRead())
+                _quit = true;
         }
 
         void flushMemory(Chips::Computer* computer) const
@@ -171,7 +174,8 @@ namespace Hack::Computer
         }
     };
 
-    Runtime::Runtime() : _private(new RuntimePrivate())
+    Runtime::Runtime() :
+        _private(new RuntimePrivate())
     {
     }
 
@@ -204,6 +208,7 @@ namespace Hack::Computer
     {
         for (int i = 0; i < 0x2000; ++i)
             computer->update(false);
+        computer->update(true);
     }
 
 }  // namespace Hack::Computer

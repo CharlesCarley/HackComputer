@@ -67,6 +67,9 @@ namespace Hack::Chips
         Rom32* getRom() const;
 
         const CpuState& getState() const;
+
+        bool canRead() const;
+
     };
 
     inline Memory* Computer::getRam() const

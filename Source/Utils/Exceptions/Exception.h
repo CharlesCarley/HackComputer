@@ -68,12 +68,14 @@ namespace Hack
     #define NotFound()                  Exception(FLS, "not found")
     #define InvalidPointer()            Exception(FLS, "invalid pointer")
     #define InputException(msg, ...)    Exception(FLS, msg, __VA_ARGS__)
+    #define MessageException(msg)       Exception(FLS, msg)
 #else
     #define NotImplemented()            Exception("not implemented")
     #define IndexOutOfBounds()          Exception("array index out of bounds")
     #define NotFound()                  Exception("not found")
     #define InvalidPointer()            Exception("invalid pointer")
     #define InputException(msg, ...)    Exception(msg, __VA_ARGS__)
+    #define MessageException(msg)       Exception(msg)
 #endif
     // clang-format on
 }  // namespace Hack

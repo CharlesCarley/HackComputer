@@ -60,6 +60,9 @@ add_executable(${TargetName}
 )
 
 target_link_libraries(${TargetName} 
+    CodeGenerator
+    SyntaxAnalyzer
+    CompileUtils
     Utils 
     Chips 
     Assembler
