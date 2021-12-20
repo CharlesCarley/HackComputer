@@ -37,7 +37,7 @@ namespace Hack::Compiler::CodeGenerator
         size_t  _argument;
         size_t  _pointer;
         size_t  _static;
-        size_t  _filed;
+        size_t  _field;
 
     public:
         SymbolTable();

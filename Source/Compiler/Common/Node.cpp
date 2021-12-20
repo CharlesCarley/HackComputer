@@ -69,7 +69,6 @@ namespace Hack::Compiler
         throw IndexOutOfBounds();
     }
 
-
     void Node::filter(NodeArray& dest, const int8_t symbolId) const
     {
         for (Node* node : _children)
@@ -77,9 +76,7 @@ namespace Hack::Compiler
             if (node->_type == symbolId)
                 dest.push_back(node);
         }
-
     }
-
 
     const Node& Node::rule(const size_t idx, const int8_t symbolId) const
     {
@@ -100,10 +97,9 @@ namespace Hack::Compiler
         if (nd.isTypeOf(symbolId))
             return nd;
 
-
         throw NotFound();
     }
-    
+
     const Node& Node::symbol(const size_t idx, const int8_t symbolId) const
     {
         return check(idx, symbolId, symbolId == Symbol && isSymbol());
@@ -140,6 +136,28 @@ namespace Hack::Compiler
     void Node::insert(int8_t type)
     {
         insert(new Node(type));
+    }
+
+    bool Node::isOperator() const
+    {
+        switch (_type)
+        {
+        case RuleOperator:
+        case RuleUnaryOperator:
+        case SymbolAnd:
+        case SymbolOr:
+        case SymbolPlus:
+        case SymbolMinus:
+        case SymbolMultiply:
+        case SymbolDivide:
+        case SymbolNot:
+        case SymbolEquals:
+        case SymbolGreater:
+        case SymbolLess:
+            return true;
+        default:
+            return false;
+        }
     }
 
 }  // namespace Hack::Compiler

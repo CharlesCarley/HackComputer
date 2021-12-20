@@ -66,12 +66,13 @@ namespace Hack::Compiler::CodeGenerator
         }
     }
 
-    void Generator::buildLocals(const Node& bodyNode) const
+    void Generator::buildLocals(const Node& bodyNode, const Node& parameters) const
     {
         _locals->clear();
-
         Node::NodeArray variables;
+
         bodyNode.filter(variables, RuleVariable);
+
         for (const Node* var : variables)
         {
             const Node& variable = *var;
@@ -82,6 +83,15 @@ namespace Hack::Compiler::CodeGenerator
 
             for (Node* id : identifierList)
                 _locals->insert(id->value(), type, Local);
+        }
+
+        for (const Node* par : parameters)
+        {
+            const Node& parameter = *par;
+
+            const int8_t type = parameter.rule(0, RuleDataType).type();
+
+            _locals->insert(parameters.child(1).value(), type, Argument);
         }
     }
 
@@ -104,8 +114,88 @@ namespace Hack::Compiler::CodeGenerator
 
             _emitter->writeMethod(className, methodName.value(), (uint16_t)parameterList.size());
 
-            buildLocals(body);
+            buildLocals(body, parameterList);
             buildStatements(body);
+        }
+    }
+
+    void Generator::buildConstant(const Node& simpleTerm) const
+    {
+        if (simpleTerm.isTypeOf(ConstantInteger))
+            _emitter->pushConstant(simpleTerm.value());
+    }
+
+    void Generator::buildOperation(const Node& op) const
+    {
+        switch (op.type())
+        {
+        case SymbolPlus:
+            _emitter->add();
+            break;
+        case SymbolMinus:
+            _emitter->sub();
+            break;
+        }
+    }
+
+    void Generator::buildTerm(const Node& term) const
+    {
+        if (term.size() > 0)
+        {
+            if (term.child(0).isTypeOf(RuleSimpleTerm))
+            {
+                const Node& simpleTerm = term.child(0);
+
+                if (simpleTerm.child(0).isConstant())
+                    buildConstant(simpleTerm.child(0));
+            }
+
+            else if (term.size() >= 2)
+            {
+                if (term.child(0).isTypeOf(RuleOperator))
+                {
+                    const Node& op = term.child(1);
+
+                    if (term.child(1).isTypeOf(RuleSimpleTerm))
+                    {
+                        const Node& simpleTerm = term.child(0);
+
+                        if (simpleTerm.child(0).isConstant())
+                            buildConstant(simpleTerm.child(0));
+                    }
+                    buildOperation(op);
+                }
+            }
+        }
+    }
+
+    void Generator::buildSingleExpression(const Node& singleExpression) const
+    {
+        if (singleExpression.size() > 0)
+        {
+            if (singleExpression.size() == 1)
+            {
+                if (singleExpression.child(0).isTypeOf(RuleTerm))
+                    buildTerm(singleExpression.child(0));
+            }
+            else if (singleExpression.size() == 2)
+            {
+                if (singleExpression.child(1).isTypeOf(RuleTerm))
+                    buildTerm(singleExpression.child(1));
+
+                if (singleExpression.child(0).isOperator())
+                    buildOperation(singleExpression.child(0).child(0));
+            }
+        }
+    }
+
+    void Generator::buildExpression(const Node& expression) const
+    {
+        for (const Node* exp : expression.children())
+        {
+            const Node& singleExpression = (*exp);
+
+            buildSingleExpression(singleExpression);
         }
     }
 
@@ -117,9 +207,8 @@ namespace Hack::Compiler::CodeGenerator
         {
             const Symbol& sym = _locals->get(id);
 
-            const String& value = statement.child(3).child(0).child(0).child(0).constant(0).value();
-
-            _emitter->pushConstant(value);
+            const Node& expression = statement.child(3);
+            buildExpression(expression);
             _emitter->popLocal(sym.entry());
         }
     }

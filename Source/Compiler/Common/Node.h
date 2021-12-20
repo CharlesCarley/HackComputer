@@ -162,6 +162,8 @@ namespace Hack::Compiler
 
         bool isConstant() const;
 
+        bool isOperator() const;
+
         bool isSymbol() const;
 
         void value(const String& data);
@@ -216,6 +218,8 @@ namespace Hack::Compiler
     {
         return _type > Constant && _type < ConstantEnd;
     }
+
+
 
     inline bool Node::isSymbol() const
     {

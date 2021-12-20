@@ -123,6 +123,18 @@ Extra options not in the main specification per personal preference.
 
 #### Jack2XML
 
+```txt
+Usage: jack2xml <options> <arg[0] .. arg[n]>
+
+    -h, --help       Display this help message
+    -f, --format     Specify an output file format
+                      - xml, format as XML (default)
+                      - dot, format as DOT
+    -d, --directory  Converts all .jack files in the current directory to .xml
+    -o, --output     Specify an output file
+                       - the directory option takes precedence
+```
+
 #### CompileUtils
 
 Utilities that tie together the syntax analyzer and the code generator

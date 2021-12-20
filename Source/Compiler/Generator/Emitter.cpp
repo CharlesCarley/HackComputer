@@ -116,4 +116,16 @@ namespace Hack::Compiler::CodeGenerator
         w.write("return");
     }
 
+    void Emitter::add()
+    {
+        const CodeStream w(&_stream);
+        w.write("add");
+    }
+
+    void Emitter::sub()
+    {
+        const CodeStream w(&_stream);
+        w.write("sub");
+    }
+
 }  // namespace Hack::Compiler::CodeGenerator

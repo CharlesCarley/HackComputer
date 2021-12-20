@@ -32,7 +32,7 @@ namespace Hack::Compiler::CodeGenerator
     {
     private:
         OutputStringStream _stream;
-        
+
     public:
         Emitter();
 
@@ -54,9 +54,12 @@ namespace Hack::Compiler::CodeGenerator
 
         void popLocal(const size_t& idx);
 
-        void  pushLocal(const size_t& idx);
+        void pushLocal(const size_t& idx);
 
         void writeReturn();
+
+        void add();
+        void sub();
     };
 
     inline OutputStringStream& Emitter::stream()

@@ -48,7 +48,17 @@ namespace Hack::Compiler::CodeGenerator
 
         void buildMethods(const Node& classDescription) const;
 
-        void buildLocals(const Node& bodyNode) const;
+        void buildLocals(const Node& bodyNode, const Node& parameters) const;
+
+        void buildConstant(const Node&  term) const;
+
+        void buildOperation(const Node& op) const;
+
+        void buildTerm(const Node& singleExpression) const;
+
+        void buildSingleExpression(const Node& expression) const;
+
+        void buildExpression(const Node& expression) const;
 
         void buildLetStatement(const Node& statement) const;
 
@@ -56,8 +66,7 @@ namespace Hack::Compiler::CodeGenerator
 
         void buildStatements(const Node& method) const;
 
-
-        void parseImpl(const Node *root) const;
+        void parseImpl(const Node* root) const;
 
     public:
         Generator();

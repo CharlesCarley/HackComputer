@@ -21,6 +21,8 @@
 */
 #include "Computer/Application.h"
 #include <filesystem>
+#include <iostream>
+
 #include "Assembler/Parser.h"
 #include "Chips/Computer.h"
 #include "Compiler/Generator/Generator.h"
@@ -159,10 +161,13 @@ namespace Hack::Computer
     {
         StringStream input;
         compiler.write(input);
+        compiler.write(std::cout);
 
         VirtualMachine::Parser emitter;
         emitter.parse(input);
 
+
+        emitter.write(std::cout);
         generate(emitter);
     }
 

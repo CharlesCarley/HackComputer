@@ -28,13 +28,13 @@ namespace Hack::Compiler::CodeGenerator
         _argument(0),
         _pointer(0),
         _static(0),
-        _filed(0)
+        _field(0)
     {
     }
 
     SymbolTable::~SymbolTable() = default;
 
-    void SymbolTable::insert(const String& name, int8_t type, int8_t kind)
+    void SymbolTable::insert(const String& name, const int8_t type, const int8_t kind)
     {
         if (!_symbols.contains(name))
         {
@@ -53,7 +53,7 @@ namespace Hack::Compiler::CodeGenerator
                 _symbols.insert(name, {name, type, kind, _static++});
                 break;
             case Field:
-                _symbols.insert(name, {name, type, kind, _filed++});
+                _symbols.insert(name, {name, type, kind, _field++});
                 break;
             default:
                 throw InputException("unknown symbol kind", (int)kind);
