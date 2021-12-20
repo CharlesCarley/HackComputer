@@ -183,6 +183,8 @@ The syntax analyzer has the extra option to output the parse tree in `.dot` form
 
 - https://graphviz.org/
 
+![Dia02](Test/Jack/Test10.svg)
+
 The grammar files are for the most part, reference files only. They do not use any of code generation features of the Gold Parsing Engine, but they were initially written and tested with the Gold tool-set.
 
 Correct me if I'm wrong but I believe it's a dead project, which is a shame because it's an awesome tool-set to quickly throw together and test grammars.
