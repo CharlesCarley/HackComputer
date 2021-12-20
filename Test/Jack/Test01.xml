@@ -1,3 +1,474 @@
 <?xml version='1.0'?>
 <ClassList>
+ <Class>
+   <Keyword> class </Keyword>
+   <Identifier> A </Identifier>
+   <Symbol> { </Symbol>
+   <ClassDescription>
+     <Field>
+       <FieldSpecification>
+         <Keyword> field </Keyword>
+       </FieldSpecification>
+       <DataType>
+         <Keyword> int </Keyword>
+       </DataType>
+       <IdentifierList>
+         <Identifier> x </Identifier>
+         <Identifier> y </Identifier>
+         <Identifier> z </Identifier>
+       </IdentifierList>
+       <Symbol> ; </Symbol>
+     </Field>
+     <Method>
+       <MethodSpecification>
+         <Keyword> constructor </Keyword>
+       </MethodSpecification>
+       <MethodReturnType>
+         <Keyword> void </Keyword>
+       </MethodReturnType>
+       <Identifier> A </Identifier>
+       <Symbol> ( </Symbol>
+       <ParameterList>
+       </ParameterList>
+       <Symbol> ) </Symbol>
+       <MethodBody>
+         <Symbol> { </Symbol>
+         <Body>
+           <Statement>
+             <LetStatement>
+               <Keyword> let </Keyword>
+               <Identifier> x </Identifier>
+               <Symbol> = </Symbol>
+               <Expression>
+                 <SingleExpression>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> 3 </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
+               </Expression>
+               <Symbol> ; </Symbol>
+             </LetStatement>
+           </Statement>
+           <Statement>
+             <DoStatement>
+               <Keyword> do </Keyword>
+               <CallMethod>
+                 <Identifier> Output </Identifier>
+                 <Symbol> . </Symbol>
+                 <Identifier> Write </Identifier>
+                 <Symbol> ( </Symbol>
+                 <ExpressionList>
+                   <Expression>
+                     <SingleExpression>
+                       <Term>
+                         <SimpleTerm>
+                           <Identifier> 1 </Identifier>
+                         </SimpleTerm>
+                       </Term>
+                     </SingleExpression>
+                     <SingleExpression>
+                       <Operator>
+                         <Symbol> + </Symbol>
+                       </Operator>
+                       <Term>
+                         <SimpleTerm>
+                           <Identifier> 1 </Identifier>
+                         </SimpleTerm>
+                       </Term>
+                     </SingleExpression>
+                   </Expression>
+                   <Expression>
+                     <SingleExpression>
+                       <Term>
+                         <SimpleTerm>
+                           <Identifier> 2 </Identifier>
+                         </SimpleTerm>
+                       </Term>
+                     </SingleExpression>
+                     <SingleExpression>
+                       <Operator>
+                         <Symbol> + </Symbol>
+                       </Operator>
+                       <Term>
+                         <SimpleTerm>
+                           <Identifier> 2 </Identifier>
+                         </SimpleTerm>
+                       </Term>
+                     </SingleExpression>
+                   </Expression>
+                   <Expression>
+                     <SingleExpression>
+                       <Term>
+                         <SimpleTerm>
+                           <Identifier> 3 </Identifier>
+                         </SimpleTerm>
+                       </Term>
+                     </SingleExpression>
+                     <SingleExpression>
+                       <Operator>
+                         <Symbol> + </Symbol>
+                       </Operator>
+                       <Term>
+                         <SimpleTerm>
+                           <Identifier> 3 </Identifier>
+                         </SimpleTerm>
+                       </Term>
+                     </SingleExpression>
+                   </Expression>
+                   <Expression>
+                     <SingleExpression>
+                       <Term>
+                         <SimpleTerm>
+                           <Identifier> 4 </Identifier>
+                         </SimpleTerm>
+                       </Term>
+                     </SingleExpression>
+                     <SingleExpression>
+                       <Operator>
+                         <Symbol> + </Symbol>
+                       </Operator>
+                       <Term>
+                         <SimpleTerm>
+                           <Identifier> 5 </Identifier>
+                         </SimpleTerm>
+                       </Term>
+                     </SingleExpression>
+                   </Expression>
+                 </ExpressionList>
+                 <Symbol> ) </Symbol>
+               </CallMethod>
+               <Symbol> ; </Symbol>
+             </DoStatement>
+           </Statement>
+         </Body>
+         <Symbol> } </Symbol>
+       </MethodBody>
+     </Method>
+     <Method>
+       <MethodSpecification>
+         <Keyword> function </Keyword>
+       </MethodSpecification>
+       <MethodReturnType>
+         <DataType>
+           <Keyword> int </Keyword>
+         </DataType>
+       </MethodReturnType>
+       <Identifier> IncA </Identifier>
+       <Symbol> ( </Symbol>
+       <ParameterList>
+         <Parameter>
+           <DataType>
+             <Keyword> int </Keyword>
+           </DataType>
+           <Identifier> a </Identifier>
+         </Parameter>
+       </ParameterList>
+       <Symbol> ) </Symbol>
+       <MethodBody>
+         <Symbol> { </Symbol>
+         <Body>
+           <Statement>
+             <ReturnStatement>
+               <Keyword> return </Keyword>
+               <Expression>
+                 <SingleExpression>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> x </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
+                 <SingleExpression>
+                   <Operator>
+                     <Symbol> + </Symbol>
+                   </Operator>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> a </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
+               </Expression>
+               <Symbol> ; </Symbol>
+             </ReturnStatement>
+           </Statement>
+         </Body>
+         <Symbol> } </Symbol>
+       </MethodBody>
+     </Method>
+     <Method>
+       <MethodSpecification>
+         <Keyword> method </Keyword>
+       </MethodSpecification>
+       <MethodReturnType>
+         <Keyword> void </Keyword>
+       </MethodReturnType>
+       <Identifier> SomeMethod </Identifier>
+       <Symbol> ( </Symbol>
+       <ParameterList>
+       </ParameterList>
+       <Symbol> ) </Symbol>
+       <MethodBody>
+         <Symbol> { </Symbol>
+         <Body>
+           <Variable>
+             <Keyword> var </Keyword>
+             <DataType>
+               <Keyword> int </Keyword>
+             </DataType>
+             <IdentifierList>
+               <Identifier> a </Identifier>
+             </IdentifierList>
+             <Symbol> ; </Symbol>
+           </Variable>
+           <Statement>
+             <LetStatement>
+               <Keyword> let </Keyword>
+               <Identifier> a </Identifier>
+               <Symbol> = </Symbol>
+               <Expression>
+                 <SingleExpression>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> 0 </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
+               </Expression>
+               <Symbol> ; </Symbol>
+             </LetStatement>
+           </Statement>
+           <Statement>
+             <WhileStatement>
+               <Keyword> while </Keyword>
+               <Symbol> ( </Symbol>
+               <Expression>
+                 <SingleExpression>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> a </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
+                 <SingleExpression>
+                   <Operator>
+                     <Symbol> < </Symbol>
+                   </Operator>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> 25 </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
+               </Expression>
+               <Symbol> ) </Symbol>
+               <Symbol> { </Symbol>
+               <StatementList>
+                 <Statement>
+                   <LetStatement>
+                     <Keyword> let </Keyword>
+                     <Identifier> a </Identifier>
+                     <Symbol> = </Symbol>
+                     <Expression>
+                       <SingleExpression>
+                         <Term>
+                           <ComplexTerm>
+                             <CallMethod>
+                               <Identifier> IncA </Identifier>
+                               <Symbol> ( </Symbol>
+                               <ExpressionList>
+                                 <Expression>
+                                   <SingleExpression>
+                                     <Term>
+                                       <SimpleTerm>
+                                         <Identifier> 5 </Identifier>
+                                       </SimpleTerm>
+                                     </Term>
+                                   </SingleExpression>
+                                 </Expression>
+                               </ExpressionList>
+                               <Symbol> ) </Symbol>
+                             </CallMethod>
+                           </ComplexTerm>
+                         </Term>
+                       </SingleExpression>
+                     </Expression>
+                     <Symbol> ; </Symbol>
+                   </LetStatement>
+                 </Statement>
+                 <Statement>
+                   <IfStatement>
+                     <Keyword> if </Keyword>
+                     <Symbol> ( </Symbol>
+                     <Expression>
+                       <SingleExpression>
+                         <UnaryOperator>
+                           <Symbol> ! </Symbol>
+                         </UnaryOperator>
+                         <Term>
+                           <ComplexTerm>
+                             <Symbol> ( </Symbol>
+                             <Expression>
+                               <SingleExpression>
+                                 <Term>
+                                   <SimpleTerm>
+                                     <Identifier> a </Identifier>
+                                   </SimpleTerm>
+                                 </Term>
+                               </SingleExpression>
+                               <SingleExpression>
+                                 <Operator>
+                                   <Symbol> > </Symbol>
+                                 </Operator>
+                                 <Term>
+                                   <SimpleTerm>
+                                     <Identifier> 25 </Identifier>
+                                   </SimpleTerm>
+                                 </Term>
+                               </SingleExpression>
+                             </Expression>
+                             <Symbol> ) </Symbol>
+                           </ComplexTerm>
+                         </Term>
+                       </SingleExpression>
+                       <SingleExpression>
+                         <Operator>
+                           <Symbol> & </Symbol>
+                         </Operator>
+                         <Term>
+                           <SimpleTerm>
+                             <Identifier> 3 </Identifier>
+                           </SimpleTerm>
+                         </Term>
+                       </SingleExpression>
+                     </Expression>
+                     <Symbol> ) </Symbol>
+                     <Symbol> { </Symbol>
+                     <StatementList>
+                       <Statement>
+                         <DoStatement>
+                           <Keyword> do </Keyword>
+                           <CallMethod>
+                             <Identifier> Output </Identifier>
+                             <Symbol> . </Symbol>
+                             <Identifier> Write </Identifier>
+                             <Symbol> ( </Symbol>
+                             <ExpressionList>
+                               <Expression>
+                                 <SingleExpression>
+                                   <Term>
+                                     <SimpleTerm>
+                                       <Identifier> Done </Identifier>
+                                     </SimpleTerm>
+                                   </Term>
+                                 </SingleExpression>
+                               </Expression>
+                             </ExpressionList>
+                             <Symbol> ) </Symbol>
+                           </CallMethod>
+                           <Symbol> ; </Symbol>
+                         </DoStatement>
+                       </Statement>
+                     </StatementList>
+                     <Symbol> } </Symbol>
+                   </IfStatement>
+                 </Statement>
+                 <Statement>
+                   <ElseStatement>
+                     <Keyword> else </Keyword>
+                     <Symbol> { </Symbol>
+                     <StatementList>
+                       <Statement>
+                         <DoStatement>
+                           <Keyword> do </Keyword>
+                           <CallMethod>
+                             <Identifier> Output </Identifier>
+                             <Symbol> . </Symbol>
+                             <Identifier> Write </Identifier>
+                             <Symbol> ( </Symbol>
+                             <ExpressionList>
+                               <Expression>
+                                 <SingleExpression>
+                                   <Term>
+                                     <SimpleTerm>
+                                       <Identifier> Not Done </Identifier>
+                                     </SimpleTerm>
+                                   </Term>
+                                 </SingleExpression>
+                               </Expression>
+                             </ExpressionList>
+                             <Symbol> ) </Symbol>
+                           </CallMethod>
+                           <Symbol> ; </Symbol>
+                         </DoStatement>
+                       </Statement>
+                     </StatementList>
+                     <Symbol> } </Symbol>
+                   </ElseStatement>
+                 </Statement>
+                 <Statement>
+                   <LetStatement>
+                     <Keyword> let </Keyword>
+                     <Identifier> a </Identifier>
+                     <Symbol> = </Symbol>
+                     <Expression>
+                       <SingleExpression>
+                         <Term>
+                           <SimpleTerm>
+                             <Identifier> a </Identifier>
+                           </SimpleTerm>
+                         </Term>
+                       </SingleExpression>
+                       <SingleExpression>
+                         <Operator>
+                           <Symbol> + </Symbol>
+                         </Operator>
+                         <Term>
+                           <SimpleTerm>
+                             <Identifier> 1 </Identifier>
+                           </SimpleTerm>
+                         </Term>
+                       </SingleExpression>
+                     </Expression>
+                     <Symbol> ; </Symbol>
+                   </LetStatement>
+                 </Statement>
+               </StatementList>
+               <Symbol> } </Symbol>
+             </WhileStatement>
+           </Statement>
+           <Statement>
+             <ReturnStatement>
+               <Keyword> return </Keyword>
+               <Expression>
+                 <SingleExpression>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> a </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
+                 <SingleExpression>
+                   <Operator>
+                     <Symbol> / </Symbol>
+                   </Operator>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> 5 </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
+               </Expression>
+               <Symbol> ; </Symbol>
+             </ReturnStatement>
+           </Statement>
+         </Body>
+         <Symbol> } </Symbol>
+       </MethodBody>
+     </Method>
+   </ClassDescription>
+   <Symbol> } </Symbol>
+ </Class>
 </ClassList>

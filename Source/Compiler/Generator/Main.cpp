@@ -19,86 +19,91 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
+#include "Compiler/Generator/Generator.h"
 #include "Utils/CommandLine/Parser.h"
 #include "Utils/Console.h"
 #include "Utils/Exceptions/Exception.h"
-#include "Compiler/Generator/Generator.h"
 #include "Utils/FileSystem.h"
 
 using namespace std;
-using namespace Hack;
 
-enum Options
+namespace Hack::Programs
 {
-    OP_OUTPUT,
-    OP_MAX,
-};
-
-constexpr CommandLine::Switch Switches[OP_MAX] = {
+    enum Options
     {
         OP_OUTPUT,
-        'o',
-        "output",
-        "Specify an output file",
-        true,
-        1,
-    },
-};
+        OP_MAX,
+    };
 
-class Application
-{
-private:
-    Path _input;
-    string _output;
+    using CmdLine   = CommandLine::Parser;
+    using CmdSwitch = CommandLine::Switch;
 
-public:
-    Application() :
-        _input("")
-    {
-        
-    }
-
-    bool parse(const int argc, char** argv)
-    {
-        CommandLine::Parser p;
-        if (p.parse(argc, argv, Switches, OP_MAX) < 0)
-            return false;
-
-        _output = p.string(OP_OUTPUT);
-
-        StringArray& args = p.arguments();
-        if (args.empty())
+    constexpr CmdSwitch Switches[OP_MAX] = {
         {
-            String usage;
-            p.usage(usage);
-            throw Exception(usage, "Missing input file");
+            OP_OUTPUT,
+            'o',
+            "output",
+            "Specify an output file",
+            true,
+            1,
+        },
+    };
+
+    class VmGeneratorApplication
+    {
+    private:
+        Path   _input;
+        string _output;
+
+    public:
+        VmGeneratorApplication() :
+            _input("")
+        {
         }
 
-        _input = filesystem::absolute(args[0]);
-        return true;
-    }
+        bool parse(const int argc, char** argv)
+        {
+            CmdLine parser;
+            if (parser.parse(argc, argv, Switches, OP_MAX) < 0)
+                return false;
 
-    int go() const
-    {
+            _output = parser.string(OP_OUTPUT);
 
-        Compiler::CodeGenerator::Generator gen;
-        gen.parseFile(_input.string());
+            StringArray& args = parser.arguments();
+            if (args.empty())
+            {
+                String usage;
+                parser.usage(usage);
 
-        return 0;
-    }
-};
+                throw InputException(usage, "Missing file input");
+            }
 
-int main(int argc, char** argv)
+            _input = filesystem::absolute(args[0]);
+            return true;
+        }
+
+        int go() const
+        {
+            Compiler::CodeGenerator::Generator gen;
+
+            gen.parseFile(_input.string());
+            return 0;
+        }
+    };
+
+}  // namespace Hack::Programs
+
+int main(const int argc, char** argv)
 {
     try
     {
-        Application app;
+        Hack::Programs::VmGeneratorApplication app;
         if (app.parse(argc, argv))
             return app.go();
     }
     catch (std::exception& ex)
     {
-        Console::writeError(ex.what());
+        Hack::Console::writeError(ex.what());
     }
     return 1;
 }

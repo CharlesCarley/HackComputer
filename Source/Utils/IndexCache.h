@@ -62,7 +62,7 @@ namespace Hack
             if (index < _list.size())
                 dest = _list.at(index);
             else
-                IndexOutOfBounds();
+                throw IndexOutOfBounds();
         }
 
         const T& at(const size_t& index) const
@@ -70,7 +70,7 @@ namespace Hack
             if (index < _list.size())
                 return _list.at(index);
 
-            IndexOutOfBounds();
+            throw IndexOutOfBounds();
         }
 
         bool contains(const size_t& index) const
@@ -90,7 +90,7 @@ namespace Hack
             if (it != _elements.end())
                 return it->second;
 
-            NotFound();
+            throw NotFound();
         }
 
         size_t size() const
@@ -178,14 +178,14 @@ namespace Hack
             if (index < _list.size())
                 dest = _list.at(index);
             else
-                IndexOutOfBounds();
+                throw IndexOutOfBounds();
         }
 
         const Value& at(const size_t& index) const
         {
             if (index < _list.size())
                 return _list.at(index);
-            IndexOutOfBounds();
+            throw IndexOutOfBounds();
         }
 
         bool contains(const size_t& index) const

@@ -20,15 +20,20 @@
 -------------------------------------------------------------------------------
 */
 #include "Compiler/Generator/Generator.h"
+#include <fstream>
 #include "Compiler/Analyzer/Parser.h"
 #include "Compiler/Common/Node.h"
+#include "Compiler/Generator/Emitter.h"
 #include "Compiler/Generator/SymbolTable.h"
+#include "Utils/Console.h"
+#include "Utils/FileSystem.h"
 
 namespace Hack::Compiler::CodeGenerator
 {
     Generator::Generator() :
         _globals(new SymbolTable()),
-        _locals(new SymbolTable())
+        _locals(new SymbolTable()),
+        _emitter(new Emitter())
     {
     }
 
@@ -36,30 +41,163 @@ namespace Hack::Compiler::CodeGenerator
     {
         delete _globals;
         delete _locals;
+        delete _emitter;
     }
 
-    void Generator::genClass(Node* node)
+    void Generator::buildGlobals(const Node& classDescription) const
+    {
+        Node::NodeArray field;
+        classDescription.filter(field, RuleField);
+        for (const Node* child : field)
+        {
+            const Node& ch = *child;
+
+            const Node& identifierList = ch.rule(2, RuleIdentifierList);
+
+            const int8_t fieldType = ch.rule(0).child(0).type();
+            const int8_t dataType  = ch.rule(1).rule(0).type();
+
+            for (Node* id : identifierList.children())
+            {
+                const int8_t kind = fieldType == KeywordStatic ? Static : Field;
+
+                _globals->insert(id->value(), dataType, kind);
+            }
+        }
+    }
+
+    void Generator::buildLocals(const Node& bodyNode) const
+    {
+        _locals->clear();
+
+        Node::NodeArray variables;
+        bodyNode.filter(variables, RuleVariable);
+        for (const Node* var : variables)
+        {
+            const Node& variable = *var;
+
+            const int8_t type = variable.rule(1, RuleDataType).type();
+
+            const Node& identifierList = variable.rule(2, RuleIdentifierList);
+
+            for (Node* id : identifierList)
+                _locals->insert(id->value(), type, Local);
+        }
+    }
+
+    void Generator::buildMethods(const Node& classDescription) const
+    {
+        Node::NodeArray methods;
+        classDescription.filter(methods, RuleMethod);
+
+        for (const Node* child : methods)
+        {
+
+            const Node& method = *child;
+
+            const Node& methodSpec    = method.rule(0).child(0);
+            const Node& returnType    = method.rule(1).child(0);
+            const Node& methodName    = method.rule(2);
+            const Node& parameterList = method.rule(4);
+            const Node& body          = method.rule(6).rule(1);
+
+            _emitter->writeFunction(methodName.value(), (uint16_t)parameterList.size());
+
+            buildLocals(body);
+            buildStatements(body);
+        }
+    }
+
+    void Generator::buildLetStatement(const Node& statement) const
+    {
+        const String &id = statement.child(1).value();
+
+        if (_locals->contains(id))
+        {
+            const Symbol &sym = _locals->get(id);
+
+            const String& value = statement.child(3).child(0).child(0).child(0).constant(0).value();
+
+            _emitter->pushConstant(value);
+            _emitter->popLocal(sym.entry());
+        }
+
+
+    }
+
+    void Generator::buildReturnStatement(const Node& statement) const
+    {
+        const String& id= statement.child(1).child(0).child(0).child(0).constant(0).value();
+
+        if (_locals->contains(id))
+        {
+            const Symbol& sym = _locals->get(id);
+
+
+            _emitter->pushLocal(sym.entry());
+            _emitter->writeReturn();
+        }
+    }
+
+    void Generator::buildStatements(const Node& body) const
+    {
+        Node::NodeArray statements;
+        body.filter(statements, RuleStatement);
+        for (const Node* child : statements)
+        {
+            const Node& statement = *child;
+
+
+            const Node &stmt = statement.rule(0);
+
+            switch (stmt.type())
+            {
+            case RuleLetStatement:
+                buildLetStatement(stmt);
+                break;
+            case RuleReturnStatement:
+                buildReturnStatement(stmt);
+                break;
+            default:
+                break;
+            }
+        }
+    }
+
+    void Generator::genClass(Node* node) const
     {
         _globals->clear();
         _locals->clear();
+
+        const Node& clsDesc = node->rule(3, RuleClassDescription);
+        buildGlobals(clsDesc);
+
+        buildMethods(clsDesc);
     }
 
-    void Generator::parseFile(const String& file)
+    void Generator::parseFile(const String& file) const
     {
         Analyzer::Parser psr;
         psr.parse(file);
 
+        _emitter->initialize();
+
         Node* root = psr.getTree().getRoot();
 
-        const Node::Children& children = root->getChildren();
-
-        for (Node* firstChild : children)
+        for (Node* firstChild : root->children())
         {
-            if (firstChild->getType() == RuleClass)
-            {
+            if (firstChild->isTypeOf(RuleClass))
                 genClass(firstChild);
-            }
         }
+
+        Path path = file;
+        path      = path.stem().string() + ".vm";
+        path      = absolute(path);
+
+        std::ofstream fs(path.string());
+
+        String str = _emitter->stream().str();
+        fs.write(str.c_str(), str.size());
     }
 
 }  // namespace Hack::Compiler::CodeGenerator

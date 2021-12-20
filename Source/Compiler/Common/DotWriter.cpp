@@ -109,7 +109,7 @@ namespace Hack::Compiler
         {
             writeNodeCluster(node);
 
-            const Node::Children& ch = node->getChildren();
+            const Node::Children& ch = node->children();
 
             for (Node* nd : ch)
             {
@@ -130,7 +130,7 @@ namespace Hack::Compiler
         void write()
         {
             writeHeader();
-            const Node::Children& ch = _root->getChildren();
+            const Node::Children& ch = _root->children();
 
             for (Node* nd : ch)
             {
@@ -158,7 +158,7 @@ namespace Hack::Compiler
 
     void DotWriterImpl::typeString(String& dest, Node* node)
     {
-        switch (node->getType())
+        switch (node->type())
         {
         default:
         case RuleEnd:
@@ -387,7 +387,7 @@ namespace Hack::Compiler
         case ConstantString:
         case ConstantInteger:
         case ConstantIdentifier:
-            dest = node->getData();
+            dest = node->value();
             break;
         }
     }

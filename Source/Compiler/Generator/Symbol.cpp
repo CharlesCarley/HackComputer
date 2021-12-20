@@ -19,48 +19,23 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#pragma once
-#include "Compiler/Common/Tree.h"
-
-namespace Hack
-{
-    namespace VirtualMachine
-    {
-        class Emitter;
-    }
-}  // namespace Hack
+#include "Compiler/Generator/Symbol.h"
 
 namespace Hack::Compiler::CodeGenerator
 {
-    class SymbolTable;
-    class Emitter;
-
-    class Generator
+    Symbol::Symbol() :
+        _type(-1),
+        _kind(-1),
+        _entry(-1)
     {
-    private:
-        SymbolTable* _globals;
-        SymbolTable* _locals;
-        Emitter*     _emitter;
+    }
 
-        void genClass(Node* node) const;
-
-        void buildGlobals(const Node& classDescription) const;
-
-        void buildMethods(const Node& classDescription) const;
-
-        void buildLocals(const Node& bodyNode) const;
-
-        void buildLetStatement(const Node& statement) const;
-
-        void buildReturnStatement(const Node& statement) const;
-
-        void buildStatements(const Node& method) const;
-
-    public:
-        Generator();
-        ~Generator();
-
-        void parseFile(const String& file) const;
-    };
+    Symbol::Symbol(String name, const int8_t type, const int8_t kind, const size_t entry) :
+        _name(std::move(name)),
+        _type(type),
+        _kind(kind),
+        _entry(entry)
+    {
+    }
 
 }  // namespace Hack::Compiler::CodeGenerator

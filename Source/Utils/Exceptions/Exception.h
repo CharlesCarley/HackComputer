@@ -33,7 +33,8 @@ namespace Hack
         String _string;
 
     public:
-        explicit Exception(const char* what) : std::exception(), _string(what)
+        explicit Exception(const char* what) :
+            std::exception(), _string(what)
         {
         }
 
@@ -57,21 +58,22 @@ namespace Hack
             return _string.c_str();
         }
     };
+    
 
-
-    [[noreturn]] inline void GeneralException(const char* msg, const char* file, long long line, const char* function)
-    {
-        throw Exception(msg, ' ', file, '(', line, ')',' ', function);
-    }
-
-
-#define NotImplemented() \
-    GeneralException("not implemented", __FILE__, __LINE__, __FUNCTION__)
-#define IndexOutOfBounds() \
-    GeneralException("array index out of bounds", __FILE__, __LINE__, __FUNCTION__)
-#define NotFound() \
-    GeneralException("not found", __FILE__, __LINE__, __FUNCTION__)
-#define InvalidPointer() \
-    GeneralException("invalid pointer", __FILE__, __LINE__, __FUNCTION__)
-
+// clang-format off
+#ifdef _DEBUG
+    #define FLS __FILE__ "(", __LINE__, "):\n\t" __FUNCTION__ "\n\n"
+    #define NotImplemented()            Exception(FLS, "not implemented")
+    #define IndexOutOfBounds()          Exception(FLS, "array index out of bounds")
+    #define NotFound()                  Exception(FLS, "not found")
+    #define InvalidPointer()            Exception(FLS, "invalid pointer")
+    #define InputException(msg, ...)    Exception(FLS, msg, __VA_ARGS__)
+#else
+    #define NotImplemented()            Exception("not implemented")
+    #define IndexOutOfBounds()          Exception("array index out of bounds")
+    #define NotFound()                  Exception("not found")
+    #define InvalidPointer()            Exception("invalid pointer")
+    #define InputException(msg, ...)    Exception(msg, __VA_ARGS__)
+#endif
+    // clang-format on
 }  // namespace Hack

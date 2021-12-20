@@ -2,9 +2,80 @@
 <ClassList>
  <Class>
    <Keyword> class </Keyword>
-   <Identifier> Test02 </Identifier>
+   <Identifier> Program </Identifier>
    <Symbol> { </Symbol>
    <ClassDescription>
+     <Method>
+       <MethodSpecification>
+         <Keyword> function </Keyword>
+       </MethodSpecification>
+       <MethodReturnType>
+         <Keyword> void </Keyword>
+       </MethodReturnType>
+       <Identifier> Main </Identifier>
+       <Symbol> ( </Symbol>
+       <ParameterList>
+       </ParameterList>
+       <Symbol> ) </Symbol>
+       <MethodBody>
+         <Symbol> { </Symbol>
+         <Body>
+           <Variable>
+             <Keyword> var </Keyword>
+             <DataType>
+               <Keyword> int </Keyword>
+             </DataType>
+             <IdentifierList>
+               <Identifier> x </Identifier>
+             </IdentifierList>
+             <Symbol> ; </Symbol>
+           </Variable>
+           <Statement>
+             <LetStatement>
+               <Keyword> let </Keyword>
+               <Identifier> x </Identifier>
+               <Symbol> = </Symbol>
+               <Expression>
+                 <SingleExpression>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> 2 </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
+                 <SingleExpression>
+                   <Operator>
+                     <Symbol> + </Symbol>
+                   </Operator>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> 2 </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
+               </Expression>
+               <Symbol> ; </Symbol>
+             </LetStatement>
+           </Statement>
+           <Statement>
+             <ReturnStatement>
+               <Keyword> return </Keyword>
+               <Expression>
+                 <SingleExpression>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> x </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
+               </Expression>
+               <Symbol> ; </Symbol>
+             </ReturnStatement>
+           </Statement>
+         </Body>
+         <Symbol> } </Symbol>
+       </MethodBody>
+     </Method>
    </ClassDescription>
    <Symbol> } </Symbol>
  </Class>

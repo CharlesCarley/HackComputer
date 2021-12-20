@@ -51,31 +51,95 @@ namespace Hack::Compiler
         _children.clear();
     }
 
-    Node* Node::getChild(const size_t idx) const
+    const Node& Node::check(size_t idx, int8_t symbolId, bool didCheck) const
     {
-        if (idx < _children.size())
-            return _children.at(idx);
+        if (_children.contains(idx))
+        {
+            Node* node = _children.at(idx);
 
-        IndexOutOfBounds();
+            // general
+            if (didCheck)
+                return *node;
+
+            // specific
+            if (node->isTypeOf(symbolId))
+                return *node;
+        }
+
+        throw IndexOutOfBounds();
+    }
+
+
+    void Node::filter(NodeArray& dest, const int8_t symbolId) const
+    {
+        for (Node* node : _children)
+        {
+            if (node->_type == symbolId)
+                dest.push_back(node);
+        }
 
     }
 
-    void Node::addChild(Node* node)
+
+    const Node& Node::rule(const size_t idx, const int8_t symbolId) const
+    {
+        return check(idx, symbolId, symbolId == Rule && isRule());
+    }
+
+    const Node& Node::keyword(const size_t idx, const int8_t symbolId) const
+    {
+        return check(idx, symbolId, symbolId == Keyword && isKeyword());
+    }
+
+    const Node& Node::constant(const size_t idx, const int8_t symbolId) const
+    {
+        const Node& nd = child(idx);
+        if (symbolId == Constant && nd.isConstant())
+            return nd;
+
+        if (nd.isTypeOf(symbolId))
+            return nd;
+
+
+        throw NotFound();
+    }
+    
+    const Node& Node::symbol(const size_t idx, const int8_t symbolId) const
+    {
+        return check(idx, symbolId, symbolId == Symbol && isSymbol());
+    }
+
+    const Node& Node::child(const size_t idx) const
+    {
+        if (idx < _children.size())
+        {
+            Node* node = _children.at(idx);
+
+            if (!node)
+                throw InvalidPointer();
+            return *node;
+        }
+
+        throw IndexOutOfBounds();
+    }
+
+    void Node::insert(Node* node)
     {
         if (!node)
-            InvalidPointer();
+            throw InvalidPointer();
+
         _children.insert(node);
         node->_parent = this;
     }
 
-    void Node::addChild(const int8_t type, const String& data)
+    void Node::insert(const int8_t type, const String& data)
     {
-        addChild(new Node(type, data));
+        insert(new Node(type, data));
     }
 
-    void Node::addChild(int8_t type)
+    void Node::insert(int8_t type)
     {
-        addChild(new Node(type));
+        insert(new Node(type));
     }
 
 }  // namespace Hack::Compiler

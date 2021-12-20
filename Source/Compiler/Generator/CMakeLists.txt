@@ -23,14 +23,18 @@ set(TargetGroup Compiler)
 set(Target_HDR
     Expression.h
     Generator.h
+    Emitter.h
     Scope.h
+    Symbol.h
     SymbolTable.h
 )
 
 set(Target_SRC 
     Expression.cpp
+    Emitter.cpp
     Generator.cpp
     Scope.cpp
+    Symbol.cpp
     SymbolTable.cpp
 )
 
@@ -48,7 +52,7 @@ endif()
 
 if (BuildType STREQUAL "CPP")
 
-    set(TargetName ParseTreeCompiler)
+    set(TargetName VmCompiler)
     unset(Target_HDR)
     unset(Target_SRC)
     set(Target_SRC Main.cpp)

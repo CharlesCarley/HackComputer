@@ -20,42 +20,16 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#include "Compiler/Common/Tree.h"
 #include "Utils/IndexCache.h"
+#include "Compiler/Generator/Symbol.h"
 
 namespace Hack::Compiler::CodeGenerator
 {
-    enum SymbolKind
-    {
-        Local,
-        Argument,
-        Pointer,
-        Static,
-        Field,
-    };
-
-    class Symbol
-    {
-    private:
-        String _name;
-        int8_t _type;
-        int8_t _kind;
-        size_t _entry;
-
-    public:
-        Symbol(String name, int8_t type, int8_t kind, size_t entry);
-        Symbol(const Symbol& oth) = default;
-
-        const String& name() const;
-        const int8_t& type() const;
-        const int8_t& kind() const;
-        const size_t& entry() const;
-    };
-
     class SymbolTable
     {
     public:
-        typedef KeyIndexCache<String, Symbol> Symbols;
+        typedef KeyIndexCache<String, Symbol>  Symbols;
+        typedef Symbols::Array::const_iterator Iterator;
 
     private:
         Symbols _symbols;
@@ -64,7 +38,6 @@ namespace Hack::Compiler::CodeGenerator
         size_t  _pointer;
         size_t  _static;
         size_t  _filed;
-
 
     public:
         SymbolTable();
@@ -79,26 +52,17 @@ namespace Hack::Compiler::CodeGenerator
         const Symbol& get(const size_t& idx) const;
 
         void clear();
+
+        Iterator begin() const
+        {
+            return _symbols.begin();
+        }
+
+        Iterator end() const
+        {
+            return _symbols.end();
+        }
     };
-
-    inline const String& Symbol::name() const
-    {
-        return _name;
-    }
-
-    inline const int8_t& Symbol::type() const
-    {
-        return _type;
-    }
-
-    inline const int8_t& Symbol::kind() const
-    {
-        return _kind;
-    }
-
-    inline const size_t& Symbol::entry() const
-    {
-        return _entry;
-    }
+    
 
 }  // namespace Hack::Compiler::CodeGenerator

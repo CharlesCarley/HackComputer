@@ -20,8 +20,8 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
+#include <functional>
 #include <vector>
-
 #include "Utils/IndexCache.h"
 #include "Utils/String.h"
 
@@ -119,13 +119,17 @@ namespace Hack::Compiler
     class Node
     {
     public:
-        typedef IndexCache<Node*> Children;
+        typedef IndexCache<Node*>               Children;
+        typedef Children::Array                 NodeArray;
+        typedef Children::Array::const_iterator Iterator;
 
     private:
         Node*    _parent;
         Children _children;
         int8_t   _type;
         String   _data;
+
+        const Node& check(size_t idx, int8_t symbolId, bool didCheck) const;
 
     public:
         Node();
@@ -136,9 +140,21 @@ namespace Hack::Compiler
 
         ~Node();
 
-        void setType(int8_t type);
+        void type(int8_t type);
 
-        int8_t getType() const;
+        int8_t type() const;
+
+        bool isTypeOf(int symbolId) const;
+
+        void filter(NodeArray& dest, int8_t symbolId) const;
+
+        const Node& rule(size_t idx, int8_t symbolId = Rule) const;
+
+        const Node& keyword(size_t idx, int8_t symbolId = Keyword) const;
+
+        const Node& symbol(size_t idx, int8_t symbolId = Symbol) const;
+
+        const Node& constant(size_t idx, int8_t symbolId = Constant) const;
 
         bool isRule() const;
 
@@ -148,33 +164,42 @@ namespace Hack::Compiler
 
         bool isSymbol() const;
 
-        void setData(const String& data);
+        void value(const String& data);
 
-        const String& getData() const;
+        const String& value() const;
 
-        size_t getChildCount() const;
+        size_t size() const;
 
-        const Children& getChildren() const;
+        const Children& children() const;
 
-        Node* getParent() const;
+        const Node& parent() const;
 
-        Node* getChild(size_t idx) const;
+        const Node& child(size_t idx) const;
 
-        void addChild(Node* node);
+        void insert(Node* node);
 
-        void addChild(int8_t type, const String& data);
+        void insert(int8_t type, const String& data);
 
-        void addChild(int8_t type);
+        void insert(int8_t type);
+
+        Iterator begin() const;
+
+        Iterator end() const;
     };
 
-    inline void Node::setType(const int8_t type)
+    inline void Node::type(const int8_t type)
     {
         _type = type;
     }
 
-    inline int8_t Node::getType() const
+    inline int8_t Node::type() const
     {
         return _type;
+    }
+
+    inline bool Node::isTypeOf(const int symbolId) const
+    {
+        return _type == symbolId;
     }
 
     inline bool Node::isRule() const
@@ -197,29 +222,41 @@ namespace Hack::Compiler
         return _type > Symbol && _type < SymbolEnd;
     }
 
-    inline void Node::setData(const String& data)
+    inline void Node::value(const String& data)
     {
         _data = data;
     }
 
-    inline const String& Node::getData() const
+    inline const String& Node::value() const
     {
         return _data;
     }
 
-    inline size_t Node::getChildCount() const
+    inline size_t Node::size() const
     {
         return _children.size();
     }
 
-    inline const Node::Children& Node::getChildren() const
+    inline const Node::Children& Node::children() const
     {
         return _children;
     }
 
-    inline Node* Node::getParent() const
+    inline const Node& Node::parent() const
     {
-        return _parent;
+        if (!_parent)
+            throw InvalidPointer();
+        return *_parent;
+    }
+
+    inline Node::Iterator Node::begin() const
+    {
+        return _children.begin();
+    }
+
+    inline Node::Iterator Node::end() const
+    {
+        return _children.end();
     }
 
 }  // namespace Hack::Compiler

@@ -52,7 +52,7 @@ namespace Hack::Compiler::Analyzer
         {
             Node* resolved = _stack.top();
             if (resolved->isRule())
-                node->addChild(resolved);
+                node->insert(resolved);
             else
                 parseError("expected a rule to reduce");
 
@@ -152,7 +152,7 @@ namespace Hack::Compiler::Analyzer
 
         const size_t id = getToken(0).getIndex();
 
-        rule->addChild(ConstantIdentifier, _scanner->getString(id));
+        rule->insert(ConstantIdentifier, _scanner->getString(id));
     }
 
     void Parser::identifier(Node*        rule,
@@ -173,14 +173,14 @@ namespace Hack::Compiler::Analyzer
         case TOK_CONST_TRUE:
         case TOK_CONST_NULL:
         case TOK_CONST_THIS:
-            rule->addChild(symbolId);
+            rule->insert(symbolId);
             break;
         default:
         {
             const size_t id = getToken(0).getIndex();
 
             if (_scanner->hasString(id))
-                rule->addChild(symbolId, _scanner->getString(id));
+                rule->insert(symbolId, _scanner->getString(id));
             else
                 parseError("no data is associated with the supplied token");
         }
@@ -247,7 +247,7 @@ namespace Hack::Compiler::Analyzer
         if (t0 != token)
             parseError("expected symbol: '", ch, '\'');
 
-        rule->addChild(symbolId);
+        rule->insert(symbolId);
         advanceCursor();
     }
 
@@ -328,7 +328,7 @@ namespace Hack::Compiler::Analyzer
         if (t0 != token)
             parseError("expected keyword: '", kw, '\'');
 
-        rule->addChild(symbolId);
+        rule->insert(symbolId);
         advanceCursor();
     }
 
@@ -408,7 +408,7 @@ namespace Hack::Compiler::Analyzer
 
         symbol(SymbolCloseBrace);
 
-        _tree->getRoot()->addChild(rule);
+        _tree->getRoot()->insert(rule);
     }
 
     void Parser::classDescriptionRule()

@@ -20,47 +20,46 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#include "Compiler/Common/Tree.h"
 
-namespace Hack
-{
-    namespace VirtualMachine
-    {
-        class Emitter;
-    }
-}  // namespace Hack
+#include "Compiler/Generator/Symbol.h"
+#include "Utils/String.h"
 
 namespace Hack::Compiler::CodeGenerator
 {
-    class SymbolTable;
-    class Emitter;
+    class CodeStream;
 
-    class Generator
+    class Emitter
     {
     private:
-        SymbolTable* _globals;
-        SymbolTable* _locals;
-        Emitter*     _emitter;
-
-        void genClass(Node* node) const;
-
-        void buildGlobals(const Node& classDescription) const;
-
-        void buildMethods(const Node& classDescription) const;
-
-        void buildLocals(const Node& bodyNode) const;
-
-        void buildLetStatement(const Node& statement) const;
-
-        void buildReturnStatement(const Node& statement) const;
-
-        void buildStatements(const Node& method) const;
+        OutputStringStream _stream;
+        int                _cmp;
 
     public:
-        Generator();
-        ~Generator();
+        Emitter();
 
-        void parseFile(const String& file) const;
+        void clear();
+
+        OutputStringStream& stream();
+
+        void initialize();
+
+        void writeStatic(const Symbol& sym);
+
+        void writeField(const Symbol& sym);
+
+        void writeFunction(const String& name, uint16_t numParams);
+
+        void pushConstant(const String& value);
+
+        void popLocal(const size_t idx);
+
+        void  pushLocal(const size_t idx);
+
+        void writeReturn();
     };
 
+    inline OutputStringStream& Emitter::stream()
+    {
+        return _stream;
+    }
 }  // namespace Hack::Compiler::CodeGenerator

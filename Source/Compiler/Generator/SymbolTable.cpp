@@ -23,14 +23,6 @@
 
 namespace Hack::Compiler::CodeGenerator
 {
-    Symbol::Symbol(String name, const int8_t type, const int8_t kind, const size_t entry) :
-        _name(std::move(name)),
-        _type(type),
-        _kind(kind),
-        _entry(entry)
-    {
-    }
-
     SymbolTable::SymbolTable() :
         _local(0),
         _argument(0),
@@ -64,7 +56,7 @@ namespace Hack::Compiler::CodeGenerator
                 _symbols.insert(name, {name, type, kind, _filed++});
                 break;
             default:
-                throw Exception("unknown kind");
+                throw InputException("unknown symbol kind", (int)kind);
             }
         }
     }
@@ -80,14 +72,15 @@ namespace Hack::Compiler::CodeGenerator
         if (idx != (size_t)-1)
             return _symbols.at(idx);
 
-        throw Exception("symbol ", name, " was not found");
+        throw NotFound();
     }
 
     const Symbol& SymbolTable::get(const size_t& idx) const
     {
         if (_symbols.contains(idx))
             return _symbols.at(idx);
-        throw Exception("symbol index ", idx, " is out of bounds");
+
+        throw IndexOutOfBounds();
     }
 
     void SymbolTable::clear()
