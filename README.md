@@ -110,7 +110,9 @@ This project is a collection of tools that implements the recommended compiler s
 
 #### SyntaxAnalyzer
 
-The syntax analyzer takes an input `.jack` file and builds the parse tree which can be either, saved to `.xml` or used directly to emit `.vm` code.
+
+
+The [syntax analyzer](Source/Compiler/SyntaxAnalyzer) takes an input `.jack` file and builds the parse tree which can be either, saved to `.xml` or used directly to emit `.vm` code.
 
 ##### Jack Grammar
 
@@ -124,7 +126,7 @@ Extra options not in the main specification per personal preference.
 #### Jack2XML
 
 ```txt
-Usage: jack2xml <options> <arg[0] .. arg[n]>
+Usage: Jack2xml <options> <arg[0] .. arg[n]>
 
     -h, --help       Display this help message
     -f, --format     Specify an output file format
@@ -137,7 +139,7 @@ Usage: jack2xml <options> <arg[0] .. arg[n]>
 
 #### CompileUtils
 
-Utilities that tie together the syntax analyzer and the code generator
+Utilities that tie together the syntax analyzer and the code generator 
 
 #### CodeGenerator
 
@@ -191,14 +193,19 @@ It also contains the initial setup for testing the standalone module using GitHu
 
 ## Extra Tools
 
+
+### Parse Tree Visual
+ 
 The syntax analyzer has the extra option to output the parse tree in `.dot` format. The dot program is part of the graphviz tool-set.
 
 - https://graphviz.org/
 
 ![Dia02](Test/Jack/Test10.svg)
 
-The grammar files are for the most part, reference files only. They do not use any of code generation features of the Gold Parsing Engine, but they were initially written and tested with the Gold tool-set.
+### GRM files
 
-Correct me if I'm wrong but I believe it's a dead project, which is a shame because it's an awesome tool-set to quickly throw together and test grammars.
+The grammar files are for the most part reference only. They do not use any of the code generation features of the Gold Parsing Engine, but they were initially written and tested with the tool-set.
+
+I believe it is a dead project, which is a shame because it is an awesome tool-set to `quickly` throw together and test grammars.
 
 - http://www.goldparser.org/
