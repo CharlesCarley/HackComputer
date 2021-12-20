@@ -19,45 +19,47 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#include "Utils/ParserBase/ScannerBase.h"
-#include "Utils/ParserBase/ParseError.h"
+#include "Compiler/Generator/Generator.h"
+#include "Compiler/Analyzer/Parser.h"
+#include "Compiler/Common/Node.h"
+#include "Compiler/Generator/SymbolTable.h"
 
-namespace Hack
+namespace Hack::Compiler::CodeGenerator
 {
-
-    ScannerBase::ScannerBase() :
-        _stream(nullptr),
-        _line(0)
+    Generator::Generator() :
+        _globals(new SymbolTable()),
+        _locals(new SymbolTable())
     {
     }
 
-    void ScannerBase::attach(IStream* stream, const String& file)
+    Generator::~Generator()
     {
-        _stream = stream;
-        _file   = file;
-        _line   = 1;
+        delete _globals;
+        delete _locals;
     }
 
-    const String& ScannerBase::getString(const size_t& i) const
+    void Generator::genClass(Node* node)
     {
-        return _stringTable.at(i);
+        _globals->clear();
+        _locals->clear();
     }
 
-    void ScannerBase::getString(String& dest, const size_t& i) const
+    void Generator::parseFile(const String& file)
     {
-        _stringTable.at(dest, i);
+        Analyzer::Parser psr;
+        psr.parse(file);
+
+        Node* root = psr.getTree().getRoot();
+
+        const Node::Children& children = root->getChildren();
+
+        for (Node* firstChild : children)
+        {
+            if (firstChild->getType() == RuleClass)
+            {
+                genClass(firstChild);
+            }
+        }
     }
 
-    bool ScannerBase::hasString(const size_t id) const
-    {
-        return _stringTable.contains(id);
-    }
-
-
-    [[noreturn]] void ScannerBase::syntaxErrorThrow(const String& message) const
-    {
-        throw ParseError(0, _file, _line, message);
-
-    }
-
-}  // namespace Hack
+}  // namespace Hack::Compiler::CodeGenerator

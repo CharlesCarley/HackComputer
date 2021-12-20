@@ -21,6 +21,8 @@
 */
 #pragma once
 #include <vector>
+
+#include "Utils/IndexCache.h"
 #include "Utils/String.h"
 
 namespace Hack::Compiler
@@ -117,7 +119,7 @@ namespace Hack::Compiler
     class Node
     {
     public:
-        typedef std::vector<Node*> Children;
+        typedef IndexCache<Node*> Children;
 
     private:
         Node*    _parent;
@@ -152,11 +154,11 @@ namespace Hack::Compiler
 
         size_t getChildCount() const;
 
-        const Children& getChildren();
+        const Children& getChildren() const;
 
         Node* getParent() const;
 
-        Node* getChild(size_t idx);
+        Node* getChild(size_t idx) const;
 
         void addChild(Node* node);
 
@@ -210,7 +212,7 @@ namespace Hack::Compiler
         return _children.size();
     }
 
-    inline const Node::Children& Node::getChildren()
+    inline const Node::Children& Node::getChildren() const
     {
         return _children;
     }

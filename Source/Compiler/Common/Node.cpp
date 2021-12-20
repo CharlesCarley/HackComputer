@@ -19,9 +19,8 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#include <utility>
-
 #include "Compiler/Common/Node.h"
+#include <utility>
 #include "Utils/Exceptions/Exception.h"
 
 namespace Hack::Compiler
@@ -52,20 +51,20 @@ namespace Hack::Compiler
         _children.clear();
     }
 
-    Node* Node::getChild(const size_t idx)
+    Node* Node::getChild(const size_t idx) const
     {
         if (idx < _children.size())
             return _children.at(idx);
 
-        throw Exception("Index out of bounds");
+        IndexOutOfBounds();
+
     }
 
     void Node::addChild(Node* node)
     {
         if (!node)
-            throw Exception("Invalid argument");
-
-        _children.push_back(node);
+            InvalidPointer();
+        _children.insert(node);
         node->_parent = this;
     }
 
@@ -78,6 +77,5 @@ namespace Hack::Compiler
     {
         addChild(new Node(type));
     }
-
 
 }  // namespace Hack::Compiler

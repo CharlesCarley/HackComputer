@@ -38,7 +38,8 @@ namespace Hack
         Array _list;
 
     public:
-        size_t save(const T& value)
+
+        size_t insert(const T& value)
         {
             size_t idx;
 
@@ -56,30 +57,28 @@ namespace Hack
             return idx;
         }
 
-        void get(T& dest, const size_t& index) const
+        void at(T& dest, const size_t& index) const
         {
             if (index < _list.size())
                 dest = _list.at(index);
             else
-                throw Exception("Index out of bounds");
+                IndexOutOfBounds();
         }
 
-        const T& get(const size_t& index) const
+        const T& at(const size_t& index) const
         {
             if (index < _list.size())
                 return _list.at(index);
-            throw Exception("Index out of bounds");
+
+            IndexOutOfBounds();
         }
 
-        bool hasIndex(const size_t& index) const
+        bool contains(const size_t& index) const
         {
-            if (index < _list.size())
-                return true;
-            return false;
+            return index < _list.size();
         }
 
-
-        bool exists(const T& value) const
+        bool contains(const T& value) const
         {
             const typename Table::const_iterator it = _elements.find(value);
             return it != _elements.end();
@@ -91,12 +90,29 @@ namespace Hack
             if (it != _elements.end())
                 return it->second;
 
-            throw Exception("Missing cache string");
+            NotFound();
         }
 
-        size_t size()
+        size_t size() const
         {
             return _list.size();
+        }
+
+        void clear()
+        {
+            _list.clear();
+            _elements.clear();
+        }
+
+
+        typename Array::const_iterator begin() const
+        {
+            return _list.begin();
+        }
+
+        typename Array::const_iterator end() const
+        {
+            return _list.end();
         }
     };
 
@@ -122,6 +138,96 @@ namespace Hack
         {
             const typename Table::iterator it = _elements.find(value);
             return it != _elements.end();
+        }
+    };
+
+    template <typename Key, typename Value>
+    class KeyIndexCache
+    {
+    public:
+        typedef std::unordered_map<Key, size_t> Table;
+        typedef std::vector<Value>              Array;
+
+    private:
+        Table _elements;
+        Array _list;
+
+    public:
+
+
+        size_t insert(const Key& key, const Value& value)
+        {
+            size_t idx;
+
+            const typename Table::iterator it = _elements.find(key);
+
+            if (it == _elements.end())
+            {
+                idx = _elements.size();
+                _list.push_back(value);
+                _elements.insert(std::make_pair(key, idx));
+            }
+            else
+                idx = it->second;
+
+            return idx;
+        }
+
+        void at(Value& dest, const size_t& index) const
+        {
+            if (index < _list.size())
+                dest = _list.at(index);
+            else
+                IndexOutOfBounds();
+        }
+
+        const Value& at(const size_t& index) const
+        {
+            if (index < _list.size())
+                return _list.at(index);
+            IndexOutOfBounds();
+        }
+
+        bool contains(const size_t& index) const
+        {
+            if (index < _list.size())
+                return true;
+            return false;
+        }
+
+        bool contains(const Key& value) const
+        {
+            const typename Table::const_iterator it = _elements.find(value);
+            return it != _elements.end();
+        }
+
+        size_t find(const Key& value) const
+        {
+            typename Table::const_iterator it = _elements.find(value);
+            if (it != _elements.end())
+                return it->second;
+            return (size_t)-1;
+        }
+
+        size_t size()
+        {
+            return _list.size();
+        }
+
+        void clear()
+        {
+            _list.clear();
+            _elements.clear();
+        }
+
+        typename Array::const_iterator begin() const
+        {
+            return _list.begin();
+        }
+
+        typename Array::const_iterator end() const
+        {
+            return _list.end();
         }
     };
 

@@ -20,8 +20,35 @@
 set(TargetName  CodeGenerator)
 set(TargetGroup Compiler)
 
+set(Target_HDR
+    Expression.h
+    Generator.h
+    Scope.h
+    SymbolTable.h
+)
+
+set(Target_SRC 
+    Expression.cpp
+    Generator.cpp
+    Scope.cpp
+    SymbolTable.cpp
+)
+
+include_directories(${Hack_SOURCE_DIR}/Source)
+add_library(${TargetName} 
+    ${Target_SRC} 
+    ${Target_HDR}
+)
+
+
+if (TargetFolders)
+    set_target_properties(${TargetName} PROPERTIES FOLDER "${TargetGroup}")
+endif()
+
+
 if (BuildType STREQUAL "CPP")
 
+    set(TargetName ParseTreeCompiler)
     unset(Target_HDR)
     unset(Target_SRC)
     set(Target_SRC Main.cpp)
@@ -30,7 +57,11 @@ if (BuildType STREQUAL "CPP")
 
     add_executable(${TargetName}  ${Target_SRC})
 
-    target_link_libraries(${TargetName} Utils)
+    target_link_libraries(${TargetName} 
+        Utils 
+        SyntaxAnalyzer 
+        CompileUtils 
+        CodeGenerator)
 
     copy_target(${TargetName} ${Hack_BINARY_DIR}/build_files) 
 

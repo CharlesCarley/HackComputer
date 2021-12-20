@@ -37,7 +37,7 @@ namespace Hack
 
         size_t saveString(const String& str)
         {
-            return _stringTable.save(str);
+            return _stringTable.insert(str);
         }
 
         template <typename... Args>

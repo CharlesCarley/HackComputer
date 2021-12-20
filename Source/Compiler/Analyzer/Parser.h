@@ -22,6 +22,7 @@
 #pragma once
 #include <stack>
 #include "Compiler/Common/Tree.h"
+#include "Utils/Exceptions/Exception.h"
 #include "Utils/ParserBase/ParserBase.h"
 #include "Utils/String.h"
 
@@ -142,13 +143,14 @@ namespace Hack::Compiler::Analyzer
 
         ~Parser() override;
 
-        Tree* getTree() const;
+        const Tree& getTree() const;
     };
 
-    inline Tree* Parser::getTree() const
+    inline const Tree& Parser::getTree() const
     {
-        return _tree;
+        if (!_tree)
+            throw Exception("null tree");
+        return *_tree;
     }
-
 
 }  // namespace Hack::Compiler::Analyzer

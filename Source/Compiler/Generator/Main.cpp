@@ -22,6 +22,8 @@
 #include "Utils/CommandLine/Parser.h"
 #include "Utils/Console.h"
 #include "Utils/Exceptions/Exception.h"
+#include "Compiler/Generator/Generator.h"
+#include "Utils/FileSystem.h"
 
 using namespace std;
 using namespace Hack;
@@ -37,8 +39,7 @@ constexpr CommandLine::Switch Switches[OP_MAX] = {
         OP_OUTPUT,
         'o',
         "output",
-        "Specify an output file\n"
-        " -- If one is not supplied the program's output will be sent to stdout",
+        "Specify an output file",
         true,
         1,
     },
@@ -47,11 +48,15 @@ constexpr CommandLine::Switch Switches[OP_MAX] = {
 class Application
 {
 private:
-    string _input;
+    Path _input;
     string _output;
 
 public:
-    Application() = default;
+    Application() :
+        _input("")
+    {
+        
+    }
 
     bool parse(const int argc, char** argv)
     {
@@ -59,7 +64,7 @@ public:
         if (p.parse(argc, argv, Switches, OP_MAX) < 0)
             return false;
 
-        _output = p.string(OP_OUTPUT, 0);
+        _output = p.string(OP_OUTPUT);
 
         StringArray& args = p.arguments();
         if (args.empty())
@@ -69,12 +74,16 @@ public:
             throw Exception(usage, "Missing input file");
         }
 
-        _input = args[0];
+        _input = filesystem::absolute(args[0]);
         return true;
     }
 
     int go() const
     {
+
+        Compiler::CodeGenerator::Generator gen;
+        gen.parseFile(_input.string());
+
         return 0;
     }
 };

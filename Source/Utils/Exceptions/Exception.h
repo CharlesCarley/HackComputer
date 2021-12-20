@@ -58,4 +58,20 @@ namespace Hack
         }
     };
 
+
+    [[noreturn]] inline void GeneralException(const char* msg, const char* file, long long line, const char* function)
+    {
+        throw Exception(msg, ' ', file, '(', line, ')',' ', function);
+    }
+
+
+#define NotImplemented() \
+    GeneralException("not implemented", __FILE__, __LINE__, __FUNCTION__)
+#define IndexOutOfBounds() \
+    GeneralException("array index out of bounds", __FILE__, __LINE__, __FUNCTION__)
+#define NotFound() \
+    GeneralException("not found", __FILE__, __LINE__, __FUNCTION__)
+#define InvalidPointer() \
+    GeneralException("invalid pointer", __FILE__, __LINE__, __FUNCTION__)
+
 }  // namespace Hack

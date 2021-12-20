@@ -19,45 +19,26 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#include "Utils/ParserBase/ScannerBase.h"
-#include "Utils/ParserBase/ParseError.h"
+#pragma once
+#include "Compiler/Common/Tree.h"
 
-namespace Hack
+namespace Hack::Compiler::CodeGenerator
 {
+    class SymbolTable;
 
-    ScannerBase::ScannerBase() :
-        _stream(nullptr),
-        _line(0)
+    class Generator
     {
-    }
+    private:
+        SymbolTable* _globals;
+        SymbolTable* _locals;
 
-    void ScannerBase::attach(IStream* stream, const String& file)
-    {
-        _stream = stream;
-        _file   = file;
-        _line   = 1;
-    }
+        void genClass(Node* node);
 
-    const String& ScannerBase::getString(const size_t& i) const
-    {
-        return _stringTable.at(i);
-    }
+    public:
+        Generator();
+        ~Generator();
 
-    void ScannerBase::getString(String& dest, const size_t& i) const
-    {
-        _stringTable.at(dest, i);
-    }
+        void parseFile(const String& file);
+    };
 
-    bool ScannerBase::hasString(const size_t id) const
-    {
-        return _stringTable.contains(id);
-    }
-
-
-    [[noreturn]] void ScannerBase::syntaxErrorThrow(const String& message) const
-    {
-        throw ParseError(0, _file, _line, message);
-
-    }
-
-}  // namespace Hack
+}  // namespace Hack::Compiler::CodeGenerator
