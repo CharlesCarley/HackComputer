@@ -45,10 +45,7 @@ namespace Hack::Compiler::CodeGenerator
         }
     };
 
-    Emitter::Emitter() :
-        _cmp(0)
-    {
-    }
+    Emitter::Emitter() = default;
 
     void Emitter::clear()
     {
@@ -85,31 +82,36 @@ namespace Hack::Compiler::CodeGenerator
         w.write("function ", name, " ", numParams);
     }
 
-    void Emitter::pushConstant(const String& cs)
+    void Emitter::writeMethod(const String& className,
+                              const String& methodName,
+                              uint16_t      numParams)
     {
         const CodeStream w(&_stream);
-        w.write("push constant ", Char::toInt16(cs));
+        w.write("function ", className, '.', methodName, ' ', numParams);
     }
 
-    void Emitter::popLocal(const size_t idx)
+    void Emitter::pushConstant(const String& value)
+    {
+        const CodeStream w(&_stream);
+        w.write("push constant ", Char::toInt16(value));
+    }
+
+    void Emitter::popLocal(const size_t& idx)
     {
         const CodeStream w(&_stream);
         w.write("pop local ", idx);
     }
 
-
-    void Emitter::pushLocal(const size_t idx)
+    void Emitter::pushLocal(const size_t& idx)
     {
         const CodeStream w(&_stream);
         w.write("push local ", idx);
     }
-
 
     void Emitter::writeReturn()
     {
         const CodeStream w(&_stream);
         w.write("return");
     }
-
 
 }  // namespace Hack::Compiler::CodeGenerator

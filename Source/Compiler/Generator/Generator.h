@@ -42,7 +42,7 @@ namespace Hack::Compiler::CodeGenerator
         SymbolTable* _locals;
         Emitter*     _emitter;
 
-        void genClass(Node* node) const;
+        void buildClass(Node* node) const;
 
         void buildGlobals(const Node& classDescription) const;
 
@@ -56,11 +56,20 @@ namespace Hack::Compiler::CodeGenerator
 
         void buildStatements(const Node& method) const;
 
+
+        void parseImpl(const Node *root) const;
+
     public:
         Generator();
         ~Generator();
 
-        void parseFile(const String& file) const;
+        void parse(const String& file) const;
+
+        void parse(IStream& stream) const;
+
+        void write(const String& file) const;
+
+        void write(OStream& stream) const;
     };
 
 }  // namespace Hack::Compiler::CodeGenerator

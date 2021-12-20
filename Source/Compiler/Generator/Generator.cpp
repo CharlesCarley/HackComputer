@@ -92,7 +92,6 @@ namespace Hack::Compiler::CodeGenerator
 
         for (const Node* child : methods)
         {
-
             const Node& method = *child;
 
             const Node& methodSpec    = method.rule(0).child(0);
@@ -110,29 +109,26 @@ namespace Hack::Compiler::CodeGenerator
 
     void Generator::buildLetStatement(const Node& statement) const
     {
-        const String &id = statement.child(1).value();
+        const String& id = statement.child(1).value();
 
         if (_locals->contains(id))
         {
-            const Symbol &sym = _locals->get(id);
+            const Symbol& sym = _locals->get(id);
 
             const String& value = statement.child(3).child(0).child(0).child(0).constant(0).value();
 
             _emitter->pushConstant(value);
             _emitter->popLocal(sym.entry());
         }
-
-
     }
 
     void Generator::buildReturnStatement(const Node& statement) const
     {
-        const String& id= statement.child(1).child(0).child(0).child(0).constant(0).value();
+        const String& id = statement.child(1).child(0).child(0).child(0).constant(0).value();
 
         if (_locals->contains(id))
         {
             const Symbol& sym = _locals->get(id);
-
 
             _emitter->pushLocal(sym.entry());
             _emitter->writeReturn();
@@ -147,8 +143,7 @@ namespace Hack::Compiler::CodeGenerator
         {
             const Node& statement = *child;
 
-
-            const Node &stmt = statement.rule(0);
+            const Node& stmt = statement.rule(0);
 
             switch (stmt.type())
             {
@@ -164,40 +159,61 @@ namespace Hack::Compiler::CodeGenerator
         }
     }
 
-    void Generator::genClass(Node* node) const
+    void Generator::buildClass(Node* node) const
     {
-        _globals->clear();
-        _locals->clear();
-
         const Node& clsDesc = node->rule(3, RuleClassDescription);
+
         buildGlobals(clsDesc);
 
         buildMethods(clsDesc);
     }
 
-    void Generator::parseFile(const String& file) const
+    void Generator::parseImpl(const Node* root) const
     {
-        Analyzer::Parser psr;
-        psr.parse(file);
-
         _emitter->initialize();
-
-        Node* root = psr.getTree().getRoot();
 
         for (Node* firstChild : root->children())
         {
             if (firstChild->isTypeOf(RuleClass))
-                genClass(firstChild);
-        }
+            {
+                _globals->clear();
+                _locals->clear();
 
+                buildClass(firstChild);
+            }
+        }
+    }
+
+    void Generator::parse(const String& file) const
+    {
+        Analyzer::Parser parser;
+        parser.parse(file);
+        parseImpl(parser.getTree().getRoot());
+    }
+
+    void Generator::parse(IStream& stream) const
+    {
+        Analyzer::Parser parser;
+        parser.parse(stream);
+        parseImpl(parser.getTree().getRoot());
+    }
+
+    void Generator::write(const String& file) const
+    {
         Path path = file;
-        path      = path.stem().string() + ".vm";
         path      = absolute(path);
 
-        std::ofstream fs(path.string());
+        std::ofstream stream(path);
+        if (!stream.is_open())
+            throw InputException("failed to open the output file ", path.string());
 
-        String str = _emitter->stream().str();
-        fs.write(str.c_str(), str.size());
+        write(stream);
+    }
+
+    void Generator::write(OStream& stream) const
+    {
+        const String buffer = _emitter->stream().str();
+        stream.write(buffer.c_str(), buffer.size());
     }
 
 }  // namespace Hack::Compiler::CodeGenerator

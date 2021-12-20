@@ -85,8 +85,14 @@ namespace Hack::Programs
         int go() const
         {
             Compiler::CodeGenerator::Generator gen;
+            gen.parse(_input.string());
 
-            gen.parseFile(_input.string());
+            if (!_output.empty())
+            {
+                gen.write(_output);
+                
+            }
+
             return 0;
         }
     };

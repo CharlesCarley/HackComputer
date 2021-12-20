@@ -32,8 +32,7 @@ namespace Hack::Compiler::CodeGenerator
     {
     private:
         OutputStringStream _stream;
-        int                _cmp;
-
+        
     public:
         Emitter();
 
@@ -49,11 +48,13 @@ namespace Hack::Compiler::CodeGenerator
 
         void writeFunction(const String& name, uint16_t numParams);
 
+        void writeMethod(const String& className, const String& methodName, uint16_t numParams);
+
         void pushConstant(const String& value);
 
-        void popLocal(const size_t idx);
+        void popLocal(const size_t& idx);
 
-        void  pushLocal(const size_t idx);
+        void  pushLocal(const size_t& idx);
 
         void writeReturn();
     };
