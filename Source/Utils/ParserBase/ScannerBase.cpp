@@ -20,11 +20,11 @@
 -------------------------------------------------------------------------------
 */
 #include "Utils/ParserBase/ScannerBase.h"
+#include "Utils/Char.h"
 #include "Utils/ParserBase/ParseError.h"
 
 namespace Hack
 {
-
     ScannerBase::ScannerBase() :
         _stream(nullptr),
         _line(0)
@@ -48,16 +48,65 @@ namespace Hack
         _stringTable.at(dest, i);
     }
 
+    int ScannerBase::getInt(const size_t& i) const
+    {
+        return _intTable.at(i);
+    }
+
     bool ScannerBase::hasString(const size_t id) const
     {
         return _stringTable.contains(id);
     }
 
-
     [[noreturn]] void ScannerBase::syntaxErrorThrow(const String& message) const
     {
         throw ParseError(0, _file, _line, message);
+    }
 
+    void ScannerBase::scanLineComment()
+    {
+        int ch = _stream->peek();
+        while (ch != '\r' && ch != '\n')
+        {
+            ch = _stream->get();
+            if (ch == '\r' && _stream->peek() == '\n')
+                ch = _stream->get();
+        }
+        ++_line;
+    }
+
+    void ScannerBase::scanMultiLineComment()
+    {
+        int ch = _stream->peek();
+        // save doc string?
+        // /** | /*!
+        while (ch > 0)
+        {
+            ch = _stream->get();
+            if (ch == '*' && _stream->peek() == '/')
+            {
+                _stream->get();
+                break;
+            }
+            if (ch == '\r' || ch == '\n')
+            {
+                if (ch == '\r' && _stream->peek() == '\n')
+                    ch = _stream->get();
+                ++_line;
+            }
+        }
+    }
+
+    void ScannerBase::scanWhiteSpace() const
+    {
+        int ch = 0;
+        while (ch != -1)
+        {
+            if (isWhiteSpace(_stream->peek()))
+                ch = _stream->get();
+            else
+                break;
+        }
     }
 
 }  // namespace Hack

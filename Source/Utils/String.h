@@ -40,4 +40,29 @@ namespace Hack
     public:
         static void split(StringArray& dest, const String& str, char sep);
     };
-}  // namespace Utils
+
+    template <typename... Args>
+    void StreamMerge(OutputStringStream& dest, Args&&... args)
+    {
+        OutputStringStream oss;
+        ((oss << std::forward<Args>(args)), ...);
+        dest << oss.str() << std::endl;
+    }
+
+    template <typename... Args>
+    void StringCombine(String& dest, Args&&... args)
+    {
+        OutputStringStream oss;
+        ((oss << std::forward<Args>(args)), ...);
+        dest = oss.str();
+    }
+
+    template <typename... Args>
+    String StringCombine(Args&&... args)
+    {
+        OutputStringStream oss;
+        ((oss << std::forward<Args>(args)), ...);
+        return oss.str();
+    }
+
+}  // namespace Hack

@@ -1,23 +1,21 @@
-set 0 317
-set 1 317
-set 2 310
-set 3 3000
-set 4 4000
-set 310 1234
-set 311 217  // fake return address
-set 312 1000
-set 313 305
-set 314 300
-set 315 3010
-set 316 4010
+set 0 102
+set 1 200
+set 2 300
+set 3 0
+set 4 0
 
-function sf 2
+set 200 4
+set 201 2
+set 300 6
+set 301 1
+
+function ABC 0
 	push local 0
 	push local 1
 	add
-	not
 	push argument 0
 	add
 	push argument 1
 	sub
-	return
+	reset
+	

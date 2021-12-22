@@ -21,13 +21,8 @@
 */
 #include "VirtualMachine/Emitter.h"
 #include <iomanip>
-#include "VirtualMachine/Constants.h"
 #include "Utils/Char.h"
-
-#define LFT(x) std::left, std::setw(x)
-#define RGT(x) std::right, std::setw(x), ' '
-#define P LFT(20)
-#define R RGT(21)
+#include "VirtualMachine/Constants.h"
 
 namespace Hack::VirtualMachine
 {
@@ -50,20 +45,303 @@ namespace Hack::VirtualMachine
             *_s << oss.str() << std::endl;
         }
 
-        void incrementStack() const
+        void atAddressOf(const String& value) const
         {
-            // clang-format off
-            write('@', P, STP, "M=M+1");
-            write(R,           "A=M-1");
-            // clang-format on
+            write('@', value);
         }
 
-        void decrementStack() const
+        void atAddressOf(const int& index) const
         {
-            // clang-format off
-            write('@', P, STP, "M=M-1");
-            write(R,           "A=M");
-            // clang-format on
+            write('@', index);
+        }
+
+        void popStackFrame(const int& frame, const int& x0, const int& idx) const
+        {
+            atAddressOf(frame);
+            copyMIntoD();
+            subXFromD(idx);
+            dereferenceD();
+            moveMIntoD();
+            moveDIntoX(x0);
+        }
+
+        void label(const String& str) const
+        {
+            write('(', str, ')');
+        }
+
+        void jumpToAddressIn(const int& addr) const
+        {
+            atAddressOf(addr);
+            moveMIntoA();
+        }
+
+        void jumpToRomAddress(const String& addr) const
+        {
+            atAddressOf(addr);
+            write("D=A;JMP");
+        }
+
+        void jumpToRomAddress(const int& addr) const
+        {
+            atAddressOf(addr);
+            write("D=A;JMP");
+        }
+
+        void clearSwap() const
+        {
+            atAddressOf(SW0);
+            setM(false);
+            atAddressOf(SW1);
+            setM(false);
+            atAddressOf(SW2);
+            setM(false);
+        }
+
+        void increment() const
+        {
+            atAddressOf(STP);
+            write("M=M+1");
+        }
+
+        void decrementA() const
+        {
+            write("A=A-1");
+        }
+
+        void decrement() const
+        {
+            atAddressOf(STP);
+            write("M=M-1");
+            atAddressOf(STP);
+            write("A=M M=0");
+        }
+
+        void incrementAndJump() const
+        {
+            atAddressOf(STP);
+            write("M=M+1 A=M-1");
+        }
+
+        void dereferenceOffset(int x0, int offs) const
+        {
+            //  A= RAM[x0] + offs
+            atAddressOf(offs);
+            write("D=A");
+            atAddressOf(x0);
+            write("A=D+M");
+        }
+
+        void offsetTo(const int x0, const int offs) const
+        {
+            atAddressOf(offs);
+            write("D=A");
+            atAddressOf(x0);
+            write("AD=D+A");
+        }
+
+        void moveMIntoD() const
+        {
+            write("D=M");
+            write("M=0");  // DEBUG
+        }
+
+        void copyMIntoD() const
+        {
+            write("D=M");
+        }
+
+        void moveDIntoX(const int x0) const
+        {
+            atAddressOf(x0);
+            write("M=D");
+        }
+
+        void moveDIntoX(const String& x0) const
+        {
+            atAddressOf(x0);
+            moveDIntoM();
+        }
+
+        void moveDIntoM() const
+        {
+            write("M=D");
+        }
+
+        void moveAIntoD() const
+        {
+            write("D=A");
+        }
+
+        void move(const int x0, const int v) const
+        {
+            atAddressOf(v);
+            moveAIntoD();
+            atAddressOf(x0);
+            moveDIntoM();
+        }
+
+        void moveMIntoA() const
+        {
+            write("A=M");
+        }
+
+        void moveDIntoA() const
+        {
+            write("A=D");
+        }
+
+        void addDmIntoM() const
+        {
+            write("M=D+M");
+        }
+
+        void subMdIntoM() const
+        {
+            write("M=M-D");
+        }
+
+        void subDmIntoD() const
+        {
+            write("D=M-D");
+        }
+
+        void andDmIntoM() const
+        {
+            write("M=D&M");
+        }
+
+        void orDmIntoM() const
+        {
+            write("M=D|M");
+        }
+
+        void notMIntoM() const
+        {
+            write("M=!M");
+        }
+
+        void negMIntoM() const
+        {
+            write("M=-M");
+        }
+        void subMdIntoD() const
+        {
+            write("D=M-D");
+        }
+
+        void addXToD(const int& x0) const
+        {
+            atAddressOf(x0);
+            write("D=D+A");
+        }
+
+        void subXFromD(const int& x0) const
+        {
+            atAddressOf(x0);
+            write("D=D-A");
+        }
+
+        void push(const int v) const
+        {
+            atAddressOf(v);
+            moveAIntoD();
+            increment();
+            write("A=M-1 M=D");
+        }
+
+        void pushD() const
+        {
+            increment();
+            write("A=M-1 M=D");
+        }
+
+        void setM(const bool val) const
+        {
+            if (val)
+                write("M=-1");
+            else
+                write("M=0");
+        }
+
+        void setD(const bool val) const
+        {
+            if (val)
+                write("D=-1");
+            else
+                write("D=0");
+        }
+
+        void jumpStackTop() const
+        {
+            atAddressOf(STP);
+            write("A=M-1");
+        }
+
+        void jumpIfGreater(const String& label) const
+        {
+            write('@', label);
+            write("D;JGT");
+        }
+
+        void jumpTo(const String& label) const
+        {
+            write('@', label);
+            write("0;JMP");
+        }
+
+        void jumpIfLess(const String& label) const
+        {
+            write('@', label);
+            write("D;JLT");
+        }
+
+        void jumpIfEquals(const String& label) const
+        {
+            write('@', label);
+            write("D;JEQ");
+        }
+
+        void jumpIfNotEquals(const String& label) const
+        {
+            write('@', label);
+            write("D;JNE");
+        }
+
+        void copyMIntoDAt(const int& x0) const
+        {
+            atAddressOf(x0);
+            copyMIntoD();
+        }
+
+        void dereferenceD() const
+        {
+            write("A=D");
+        }
+
+        void dereferenceM() const
+        {
+            write("A=M");
+        }
+
+        void jumpToD() const
+        {
+            write("A=D;JMP");
+        }
+
+        void popSegment(const int& seg0, const int& idx) const
+        {
+            dereferenceOffset(seg0, idx);
+            moveAIntoD();
+            moveDIntoX(SW0);
+            jumpStackTop();
+            moveMIntoD();
+            jumpToAddressIn(SW0);
+            moveDIntoM();
+            decrement();
+
+            atAddressOf(SW0);
+            setM(false);
         }
     };
 
@@ -90,495 +368,421 @@ namespace Hack::VirtualMachine
     void Emitter::setRam(const int index, const int value)
     {
         const CodeStream w(&_stream);
-        w.write('@', P, value, "D=A");
-        w.write('@', P, index, "M=D");
+        w.move(index, value);
     }
 
     void Emitter::initialize()
     {
-        const CodeStream w(&_stream);
-        w.write('@', P, 256, "D=A");
-        w.write('@', P, STP, "M=D");
-        w.write('@', P, LCL, "M=D");
-        w.write('@', P, ARG, "M=D");
-        w.write('@', P, THS, "M=D");
-        w.write('@', P, THT, "M=D");
     }
 
     void Emitter::popStackInto(const CodeStream& w,
-                               const String&     idx,
+                               const int&        idx,
                                const int32_t&    dest,
                                const int32_t&    swap)
     {
-        // assumes the correct destination index is in RAM[dest]
-
-        // clang-format off
-        w.write('@', P, idx,   "D=A");
-        w.write('@', P, dest,  "D=D+M");
-        w.write('@', P, swap,  "M=D");  
-        w.decrementStack();
-        w.write(R,             "D=M");
-        w.write('@', P, swap,  "A=M");
-        w.write(R,             "M=D");
-        // clang-format on
+        w.jumpStackTop();
+        w.moveMIntoD();
+        w.moveDIntoX(swap);
+        w.dereferenceOffset(dest, idx);
+        w.moveMIntoD();
+        w.jumpToAddressIn(swap);
+        w.moveDIntoM();
+        w.decrement();
+        w.clearSwap();
     }
 
-    void Emitter::pushIntoStack(const CodeStream& w,
-                                const String&     idx,
-                                const int32_t&    dest)
-    {
-        // clang-format off
-        w.write('@', P, idx,   "D=A");
-        w.write("@", P, dest,  "A=D+M");
-        w.write(R,             "D=M");
-        w.incrementStack();
-        w.write(R,             "M=D");
-        // clang-format on
-    }
-
-    void Emitter::pushConstant(const String& idx)
+    void Emitter::pushConstant(const int& idx)
     {
         const CodeStream w(&_stream);
-
-        // clang-format off
-        w.write("@", P, idx, "D=A");
-        w.incrementStack();
-        w.write(R,           "M=D");
-        // clang-format on
+        w.push(idx);
     }
 
-    void Emitter::pushLocal(const String& idx)
+    void Emitter::pushLocal(const int& idx)
     {
         const CodeStream w(&_stream);
-        pushIntoStack(w, idx, LCL);
+        w.dereferenceOffset(LCL, idx);
+        w.copyMIntoD();
+        w.pushD();
     }
 
-    void Emitter::pushArgument(const String& idx)
+    void Emitter::pushThis(const int& idx)
     {
         const CodeStream w(&_stream);
-        pushIntoStack(w, idx, ARG);
+        w.dereferenceOffset(THS, idx);
+        w.copyMIntoD();
+        w.pushD();
     }
 
-    void Emitter::pushThis(const String& idx)
+    void Emitter::pushThat(const int& idx)
     {
         const CodeStream w(&_stream);
-        pushIntoStack(w, idx, THS);
+        w.dereferenceOffset(THT, idx);
+        w.copyMIntoD();
+        w.pushD();
     }
 
-    void Emitter::pushThat(const String& idx)
+    void Emitter::pushTemp(const int& idx)
     {
         const CodeStream w(&_stream);
-        pushIntoStack(w, idx, THT);
+        w.offsetTo(TMP, idx);
+        w.moveMIntoD();  // Note: move not copy
+        w.pushD();
     }
 
-    void Emitter::pushTemp(const String& idx)
+    void Emitter::pushArgument(const int& idx)
     {
         const CodeStream w(&_stream);
-
-        // clang-format off
-        w.write('@', P, idx,   "D=A");
-        w.write("@", P, TMP,   "A=D+A");
-        w.write(R,             "D=M");
-        w.incrementStack();
-        w.write(R,             "M=D");
-        // clang-format on
+        w.dereferenceOffset(ARG, idx);
+        w.copyMIntoD();
+        w.pushD();
     }
 
-    void Emitter::pushPointer(const String& idx)
+    void Emitter::pushPointer(const int& idx)
     {
         const CodeStream w(&_stream);
-
-        // clang-format off
-        w.write('@', P, idx,   "D=A");
-        w.write("@", P, THS,   "A=D+A");
-        w.write(R,             "D=M");
-        w.incrementStack();
-        w.write(R,             "M=D");
-        // clang-format on
+        w.offsetTo(THS, idx);
+        w.copyMIntoD();
+        w.pushD();
     }
 
-    void Emitter::pushStatic(const String& context, const String& idx)
+    void Emitter::pushStatic(const String& context, const int& idx)
     {
-        const String loc = context + "." + idx;
-
+        const String     loc = StringCombine(context, '.', idx);
         const CodeStream w(&_stream);
 
-        // clang-format off
-        w.write('@', P, loc);
-        w.write(R,             "D=M");
-        w.incrementStack();
-        w.write(R,             "M=D");
-        // clang-format on
+        w.atAddressOf(loc);
+        w.copyMIntoD();
+        w.incrementAndJump();
+        w.moveDIntoM();
     }
 
-    void Emitter::popLocal(const String& idx)
+    void Emitter::popLocal(const int& idx)
     {
         const CodeStream w(&_stream);
-        popStackInto(w, idx, LCL, SW2);
+        w.popSegment(LCL, idx);
     }
 
-    void Emitter::popArgument(const String& idx)
+    void Emitter::popArgument(const int& idx)
     {
         const CodeStream w(&_stream);
-        popStackInto(w, idx, ARG, SW2);
+        w.popSegment(ARG, idx);
     }
 
-    void Emitter::popStatic(const String& context, const String& idx)
+    void Emitter::popStatic(const String& context, const int& idx)
     {
-        String loc = context + "." + idx;
+        const String staticLabel = StringCombine(context, '.', idx);
 
         const CodeStream w(&_stream);
 
-        // clang-format off
-        w.write('@', P, loc);
-        w.write(R,             "D=A");
-        w.write('@', P, SW0,   "M=D");
-        w.decrementStack();
-        w.write(R,             "D=M");
-        w.write('@', P, SW0,   "A=M");
-        w.write(R,             "M=D");
-        // clang-format on
+        w.jumpStackTop();
+        w.moveMIntoD();
+        w.moveDIntoX(staticLabel);
+        w.decrement();
     }
 
-    void Emitter::popThis(const String& idx)
+    void Emitter::popThis(const int& idx)
     {
         const CodeStream w(&_stream);
-        popStackInto(w, idx, THS, SW2);
+        w.popSegment(THS, idx);
     }
 
-    void Emitter::popThat(const String& idx)
+    void Emitter::popThat(const int& idx)
     {
         const CodeStream w(&_stream);
-        popStackInto(w, idx, THT, SW2);
+        w.popSegment(THT, idx);
     }
 
-    void Emitter::popTemp(const String& idx)
+    void Emitter::popTemp(const int& idx)
     {
-        const CodeStream w(&_stream);
+        if (idx > 7)
+        {
+            throw InputException("pop temp index (", idx,
+                                 ") out of bounds. "
+                                 "expected [0-7]");
+        }
 
-        // clang-format off
-        w.write('@', P, idx,   "D=A");
-        w.write('@', P, TMP,   "D=D+A");
-        w.write('@', P, SW2,   "M=D");
-        w.decrementStack();
-        w.write(R,             "D=M");
-        w.write('@', P, SW2,   "A=M");
-        w.write(R,             "M=D");
-        // clang-format on
+        const CodeStream w(&_stream);
+        w.offsetTo(TMP, idx);
+        w.moveDIntoX(SW0);
+        w.jumpStackTop();
+        w.moveMIntoD();
+        w.jumpToAddressIn(SW0);
+        w.moveDIntoM();
+        w.decrement();
+        w.clearSwap();
     }
 
-    void Emitter::popPointer(const String& idx)
+    void Emitter::popPointer(const int& idx)
     {
         const CodeStream w(&_stream);
-
-        // clang-format off
-        w.write('@', P, idx,   "D=A");
-        w.write('@', P, THS,   "D=D+A");
-        w.write('@', P, SW2,   "M=D");
-        w.decrementStack();
-        w.write(R,             "D=M");
-        w.write('@', P, SW2,   "A=M");
-        w.write(R,             "M=D");
-        // clang-format on
+        w.offsetTo(THS, idx);
+        w.moveDIntoX(SW0);
+        w.jumpStackTop();
+        w.moveMIntoD();
+        w.jumpToAddressIn(SW0);
+        w.moveDIntoM();
+        w.decrement();
+        w.clearSwap();
     }
 
     void Emitter::writeOr()
     {
         const CodeStream w(&_stream);
-
-        // clang-format off
-        w.decrementStack();
-        w.write(R,            "D=M");
-        w.write(R,            "A=A-1");
-        w.write(R,            "M=D|M");
-        // clang-format on
+        w.jumpStackTop();
+        w.moveMIntoD();
+        w.decrementA();
+        w.orDmIntoM();
+        w.decrement();
     }
 
     void Emitter::writeAnd()
     {
         const CodeStream w(&_stream);
-
-        // clang-format off
-        w.decrementStack();
-        w.write(R,            "D=M");
-        w.write(R,            "A=A-1");
-        w.write(R,            "M=D&M");
-        // clang-format on
+        w.jumpStackTop();
+        w.moveMIntoD();
+        w.decrementA();
+        w.andDmIntoM();
+        w.decrement();
     }
 
     void Emitter::writeSub()
     {
         const CodeStream w(&_stream);
-
-        // clang-format off
-        w.decrementStack();
-        w.write(R,            "D=M");
-        w.write(R,            "A=A-1");
-        w.write(R,            "M=M-D");
-        // clang-format on
+        w.jumpStackTop();
+        w.moveMIntoD();
+        w.decrementA();
+        w.subMdIntoM();
+        w.decrement();
     }
 
     void Emitter::writeAdd()
     {
         const CodeStream w(&_stream);
-
-        // clang-format off
-        w.decrementStack();
-        w.write(R,            "D=M");
-        w.write(R,            "A=A-1");
-        w.write(R,            "M=D+M");
-        // clang-format on
+        w.jumpStackTop();
+        w.moveMIntoD();
+        w.decrementA();
+        w.addDmIntoM();
+        w.decrement();
     }
 
     void Emitter::writeNot()
     {
         const CodeStream w(&_stream);
-
-        // clang-format off
-        w.write('@', P, STP,  "A=M-1");
-        w.write(R,            "M=!M");
-        // clang-format on
+        w.jumpStackTop();
+        w.notMIntoM();
     }
 
     void Emitter::writeNeg()
     {
         const CodeStream w(&_stream);
-        // clang-format off
-        w.write('@', P, STP,  "A=M-1");
-        w.write(R,            "M=-M");
-        // clang-format on
+        w.jumpStackTop();
+        w.negMIntoM();
     }
 
     void Emitter::writeEq()
     {
-        String t, d;
-        getJumpLabels(t, d);
+        String ifTrue, whenDone;
+        getJumpLabels(ifTrue, whenDone);
+
         const CodeStream w(&_stream);
 
-        // clang-format off
-        w.decrementStack();
-        w.write(R,           "D=M");
-        w.write(R,           "A=A-1");
-        w.write(R,           "D=M-D");
-        w.write('@', P, t,   "D;JEQ");
-        w.write(R,           "D=0");
-        w.write('@', P, d,   "0;JMP");
-        w.write('(', t, ')');
-        w.write(R,           "D=-1");
-        w.write('(', d, ')');
-        w.write('@', P, STP,  "A=M-1");
-        w.write(R,            "M=D");
-        // clang-format on
+        w.jumpStackTop();
+        w.copyMIntoD();
+        w.decrementA();
+        w.subMdIntoD();
+        w.jumpIfEquals(ifTrue);
+        w.setD(false);
+        w.jumpTo(whenDone);
+        w.label(ifTrue);
+        w.setD(true);
+        w.label(whenDone);
+        w.incrementAndJump();
+        w.moveDIntoM();
     }
 
     void Emitter::writeLt()
     {
-        String t, d;
-        getJumpLabels(t, d);
-        const CodeStream w(&_stream);
+        String ifTrue, whenDone;
+        getJumpLabels(ifTrue, whenDone);
 
-        // clang-format off
-        w.decrementStack();
-        w.write(R,            "D=M");
-        w.write(R,            "A=A-1");
-        w.write(R,            "D=M-D");
-        w.write('@', P, t,    "D;JLT");
-        w.write(R,            "D=0");
-        w.write('@', P, d,    "0;JMP");
-        w.write('(', t, ')');
-        w.write(R,            "D=-1");
-        w.write('(', d, ')');
-        w.write('@', P, STP,  "A=M-1");
-        w.write(R,            "M=D");
-        // clang-format on
+        const CodeStream w(&_stream);
+        w.jumpStackTop();
+        w.copyMIntoD();
+        w.decrementA();
+        w.subMdIntoD();
+        w.jumpIfLess(ifTrue);
+        w.setD(false);
+        w.jumpTo(whenDone);
+        w.label(ifTrue);
+        w.setD(true);
+        w.label(whenDone);
+        w.incrementAndJump();
+        w.moveDIntoM();
     }
 
     void Emitter::writeGt()
     {
-        String t, d;
-        getJumpLabels(t, d);
+        String ifTrue, whenDone;
+        getJumpLabels(ifTrue, whenDone);
 
         const CodeStream w(&_stream);
-
-        // clang-format off
-        w.decrementStack();
-        w.write(R,             "D=M");
-        w.write(R,             "A=A-1");
-        w.write(R,             "D=M-D");
-        w.write('@', P, t,     "D;JGT");
-        w.write(R,             "D=0");
-        w.write('@', P, d,     "0;JMP");
-        w.write('(', t, ')');
-        w.write(R,             "D=-1");
-        w.write('(', d, ')');
-        w.write('@', P, STP,   "A=M-1");
-        w.write(R,             "M=D");
-        // clang-format on
+        w.jumpStackTop();
+        w.copyMIntoD();
+        w.decrementA();
+        w.subMdIntoD();
+        w.jumpIfGreater(ifTrue);
+        w.setD(false);
+        w.jumpTo(whenDone);
+        w.label(ifTrue);
+        w.setD(true);
+        w.label(whenDone);
+        w.incrementAndJump();
+        w.moveDIntoM();
     }
 
     void Emitter::writeReset()
     {
         const CodeStream w(&_stream);
-        w.write('@', P, 32765, "D=A;JMP");
+        w.jumpToRomAddress(32766);
     }
 
     void Emitter::writeHalt()
     {
-        const String halt = "L.halt" + Char::toHexString((uint16_t)++_cmp);
-
+        const String     halt = StringCombine("L.halt.", (size_t)this);
         const CodeStream w(&_stream);
-        w.write('(', halt, ')');
-        w.write('@', P, halt, "D=A;JMP");
+        w.label(halt);
+        w.jumpToRomAddress(halt);
     }
 
     void Emitter::writGoto(const String& value)
     {
         const CodeStream w(&_stream);
-        w.write('@', P, value);
-        w.write(R, "D=A");
-        w.write(R, "0;JMP");
+        w.jumpToRomAddress(value);
     }
 
     void Emitter::writIfGoto(const String& value)
     {
         const CodeStream w(&_stream);
-        w.decrementStack();
-        w.write(R, "D=M");
-        w.write('@', P, value);
-        w.write(R, "D;JNE");
+        w.jumpStackTop();
+        w.moveMIntoD();
+        w.decrement();
+        w.decrement();
+        w.jumpIfNotEquals(value);
     }
 
     void Emitter::writeLabel(const String& value)
     {
         const CodeStream w(&_stream);
-        w.write('(', value, ')');
+        w.label(value);
     }
 
-    void Emitter::writeFunction(const String& name, const String& args)
+    void Emitter::writeFunction(const String& name, const int& args)
     {
         const CodeStream w(&_stream);
 
         _functions.push(name);
 
-        const uint16_t n = Char::toUint16(args);
+        const uint16_t n = (uint16_t)(args);
+        w.label(name);
 
-        // clang-format off
-        w.write('(', name, ')');
-        for (uint16_t i=0; i<n; ++i)
+        for (uint16_t i = 0; i < n; ++i)
         {
-            w.write('@', P, i,    "D=A");
-            w.write('@', P, LCL,  "A=D+M");
-            w.write(R,            "M=0");
+            w.dereferenceOffset(LCL, i);
+            w.setM(false);
         }
-        // clang-format on
     }
 
-    void Emitter::writeCall(const String& name, const String& args)
+    void Emitter::writeCall(const String& name, const int& args)
     {
         const CodeStream w(&_stream);
 
-        const String retAddr = "LR." + name + Char::toHexString((uint16_t)++_cmp);
+        const String retAddr = StringCombine("R.", name, '.', _cmp++, (size_t)this);
 
-        // Push the return address.
-        w.write('@', P, retAddr);
-        w.write(R,            "D=A");
-        w.incrementStack();
-        w.write(R,            "M=D");
+        w.atAddressOf(STP);
+        w.copyMIntoD();
+        w.pushD();  // save the stack
 
-        // Push the local segment address.
-        w.write('@', P, LCL,  "D=M");
-        w.incrementStack();
-        w.write(R,            "M=D");
+        // Push the segment addresses.
 
-        // Push the argument segment address.
-        w.write('@', P, ARG,  "D=M");
-        w.incrementStack();
-        w.write(R,            "M=D");
+        w.atAddressOf(retAddr);
+        w.moveAIntoD();
+        w.pushD();
 
-        // Push the this segment address
-        w.write('@', P, THS,  "D=M");
-        w.incrementStack();
-        w.write(R,            "M=D");
+        w.atAddressOf(LCL);
+        w.copyMIntoD();
+        w.pushD();
 
-        // Push the that segment address.
-        w.write('@', P, THT,  "D=M");
-        w.incrementStack();
-        w.write(R,            "M=D");
+        w.atAddressOf(ARG);
+        w.copyMIntoD();
+        w.pushD();
 
-        // update the new Arg
-        w.write('@', P, args, "D=A");
-        w.write('@', P, 5,    "D=A-D");
-        w.write('@', P, STP,  "D=M-D");
-        w.write('@', P, ARG,  "M=D");
+        w.atAddressOf(THS);
+        w.copyMIntoD();
+        w.pushD();
+
+        w.atAddressOf(THT);
+        w.copyMIntoD();
+        w.pushD();
+
+        // update the new ARG
+        w.atAddressOf(args);
+        w.moveAIntoD();
+        w.addXToD(5);
+        w.atAddressOf(STP);
+        w.subDmIntoD();
+        w.atAddressOf(ARG);
+        w.moveDIntoM();
 
         // Move the current stack address into the LCL address.
-        w.write('@', P, STP,  "D=M");
-        w.write('@', P, LCL,  "M=D");
-        w.write('@', P, name);
-        w.write(R,            "D=A");
-        w.write(R,            "D;JMP");
+        w.atAddressOf(STP);
+        w.copyMIntoD();
+        w.atAddressOf(LCL);
+        w.moveDIntoM();
+        w.jumpTo(name);
 
         // Write the return position.
-        w.write('(', retAddr, ')');
-
-        // clang-format on
+        w.label(retAddr);
     }
 
     void Emitter::writeReturn()
     {
         const CodeStream w(&_stream);
 
-        // clang-format off
-        
-        w.write('@', P, LCL, "D=M"); // Local
-        w.write('@', P, SW0, "M=D"); // FRAME = Local store in Swap 0
+        w.copyMIntoDAt(LCL);
+        w.moveDIntoX(SW0);  // Save the Frame
 
-        w.write('@', P, 5,   "D=D-A"); // Frame - 5
-        w.write('@', P, SW2, "M=D");   // Is the Return addr
-        w.write('@', P, SW1, "M=D");   // de-reference the  
-        w.write(R,           "A=D");  // vaLue at frame -5 
-        w.write(R,           "D=M");   //
+        // extract the return code
+        w.jumpStackTop();
+        w.moveMIntoD();
+        w.moveDIntoX(SW1);
 
-        w.write('@', P, SW1, "M=D");   // RET = *(frame-5)
-        w.write('@', P, STP, "A=M-1");
-        w.write(R,           "A=M");
-        w.write(R,           "D=A");   // *ARG = return value
-        w.write('@', P, SW2, "D=M");   // RET addr
-        w.write('@', P, STP, "M=D+1"); // SP = ARG + 1 
+        w.popStackFrame(SW0, THT, 1);
+        w.popStackFrame(SW0, THS, 2);
+        w.popStackFrame(SW0, ARG, 3);
+        w.popStackFrame(SW0, LCL, 4);
 
-        w.write('@', P, SW0, "D=M");   // FRAME
-        w.write('@', P, 1,   "D=D-A"); // FRAME-1
-        w.write(R,           "A=D");   // de-reference 
-        w.write(R,           "D=M");   //
-        w.write('@', P, THT, "M=D");   // THAT
+        // return address
+        w.atAddressOf(SW0);
+        w.copyMIntoD();
+        w.subXFromD(5);
+        w.dereferenceD();
+        w.moveMIntoD();  // move the return address
+        w.moveDIntoX(SW2);
 
-        w.write('@', P, SW0, "D=M");   // FRAME
-        w.write('@', P, 2,   "D=D-A"); // FRAME-2
-        w.write(R,           "A=D");   // de-reference 
-        w.write(R,           "D=M");   //
-        w.write('@', P, THS, "M=D");   // THIS
+        w.atAddressOf(SW0);
+        w.moveMIntoD();  // Final move
+        w.subXFromD(6);
+        w.dereferenceD();
+        w.moveMIntoD();
+        w.moveDIntoX(STP);
 
-        w.write('@', P, SW0, "D=M");   // FRAME
-        w.write('@', P, 3,   "D=D-A"); // FRAME-3
-        w.write(R,           "A=D");   // de-reference 
-        w.write(R,           "D=M");   //
-        w.write('@', P, ARG, "M=D");   // ARG
+        w.atAddressOf(SW1);
+        w.moveMIntoD();
+        w.pushD();
 
-        w.write('@', P, SW0, "D=M");   // FRAME
-        w.write('@', P, 4,   "D=D-A"); // FRAME-4
-        w.write(R,           "A=D");   // de-reference 
-        w.write(R,           "D=M");   //
-        w.write('@', P, LCL, "M=D");   // LCL
-        
-        w.write('@', P, SW0, "D=M"); // Clear the Frame
-        w.write(R,           "A=D"); // RET
-        w.write(R,           "D=M"); // Pick up the value at the top of the frame
-
-        w.write('@', P, SW2, "A=M");
-        w.write(R,           "M=D"); // Function return, place it in RAM[Swap 2]
-        w.write('@', P, SW1, "D=M"); // Pick up the return address
-        w.write(R,           "A=D"); // set up the jump to the return address
-        w.write(R,           "0;JMP");
+        w.atAddressOf(SW2);
+        w.moveMIntoD();
+        w.jumpToD();
 
         // clang-format on
     }

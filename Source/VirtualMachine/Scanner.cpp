@@ -27,67 +27,45 @@ namespace Hack::VirtualMachine
 {
     Scanner::Scanner() = default;
 
-    void Scanner::scanLineComment()
-    {
-        int ch = _stream->peek();
-        while (ch != '\r' && ch != '\n')
-        {
-            ch = _stream->get();
-            if (ch == '\r' && _stream->peek() == '\n')
-                ch = _stream->get();
-        }
-        ++_line;
-    }
-
-    void Scanner::scanWhiteSpace() const
-    {
-        int ch = 0;
-        while (ch != -1)
-        {
-            if (isWhiteSpace(_stream->peek()))
-                ch = _stream->get();
-            else
-                break;
-        }
-    }
-
     struct KeywordTable
     {
         const char* str;
         int8_t      tok;
     };
 
+    // clang-format off
     constexpr KeywordTable Reserved[] = {
-        {"argument", TOK_ARGUMENT},
-        {"constant", TOK_CONSTANT},
-        {"function", TOK_FUNCTION},
-        {"pointer", TOK_POINTER},
-        {"if-goto", TOK_IF_GOTO},
-        {"return", TOK_RETURN},
-        {"local", TOK_LOCAL},
-        {"label", TOK_LABEL},
-        {"static", TOK_STATIC},
-        {"call", TOK_CALL},
-        {"goto", TOK_GOTO},
-        {"this", TOK_THIS},
-        {"that", TOK_THAT},
-        {"temp", TOK_TEMP},
-        {"push", TOK_PUSH},
-        {"pop", TOK_POP},
-        {"add", TOK_ADD},
-        {"sub", TOK_SUB},
-        {"not", TOK_NOT},
-        {"neg", TOK_NEG},
-        {"and", TOK_AND},
-        {"or", TOK_OR},
-        {"eq", TOK_EQ},
-        {"gt", TOK_GT},
-        {"lt", TOK_LT},
-
-        {"set", TOK_SET},
-        {"reset", TOK_RESET},
-        {"halt", TOK_HALT},
+        {"argument",    TOK_ARGUMENT},
+        {"constant",    TOK_CONSTANT},
+        {"function",    TOK_FUNCTION},
+        {"pointer",     TOK_POINTER},
+        {"if-goto",     TOK_IF_GOTO},
+        {"return",      TOK_RETURN},
+        {"local",       TOK_LOCAL},
+        {"label",       TOK_LABEL},
+        {"static",      TOK_STATIC},
+        {"call",        TOK_CALL},
+        {"goto",        TOK_GOTO},
+        {"this",        TOK_THIS},
+        {"that",        TOK_THAT},
+        {"temp",        TOK_TEMP},
+        {"push",        TOK_PUSH},
+        {"pop",         TOK_POP},
+        {"add",         TOK_ADD},
+        {"sub",         TOK_SUB},
+        {"not",         TOK_NOT},
+        {"neg",         TOK_NEG},
+        {"and",         TOK_AND},
+        {"or",          TOK_OR},
+        {"eq",          TOK_EQ},
+        {"gt",          TOK_GT},
+        {"lt",          TOK_LT},
+        {"set",         TOK_SET},
+        {"reset",       TOK_RESET},
+        {"halt",        TOK_HALT},
     };
+    // clang-format on
+
 
     inline bool isValidCharacter(const int ch)
     {
@@ -122,7 +100,7 @@ namespace Hack::VirtualMachine
             // and use it as either a label or a static variable.
 
             tok.setType(TOK_IDENTIFIER);
-            tok.setIndex(saveString(cmp));
+            tok.setIndex(save(cmp));
         }
     }
 
@@ -139,7 +117,7 @@ namespace Hack::VirtualMachine
         }
 
         tok.setType(TOK_INTEGER);
-        tok.setIndex(saveString(v));
+        tok.setIndex(save(Char::toInt32(v)));
     }
 
     void Scanner::scan(Token& tok)
@@ -160,6 +138,8 @@ namespace Hack::VirtualMachine
             case '/':
                 if (_stream->peek() == '/')
                     scanLineComment();
+                if (_stream->peek() == '*')
+                    scanMultiLineComment();
                 break;
             case '-':
             case Digits09:

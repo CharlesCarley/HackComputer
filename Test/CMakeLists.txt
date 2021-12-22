@@ -29,7 +29,7 @@ set_group(TestTarget_Data
     TestFiles/ROM/ASM:Rom/*.asm
     TestFiles/VM/Cmp:VM/*.cmp
     TestFiles/VM/ASM:VM/*.asm
-    TestFiles/VM/VM:TVM/*.vm
+    TestFiles/VM/VM:VM/*.vm
     TestFiles/Jack/Cmp:Jack/*.xml
     TestFiles/Jack/Jack:Jack/*.jack
 )

@@ -225,4 +225,12 @@ namespace Hack
         writeError(str.str());
     }
 
-}  // namespace Utils
+    void Console::debugBreak()
+    {
+#if defined(_WIN32) && defined(_DEBUG)
+        if (IsDebuggerPresent())
+            DebugBreak();
+#endif
+    }
+
+}  // namespace Hack

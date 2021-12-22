@@ -1,4 +1,12 @@
+set 0 100
+set 1 200
+set 2 300
+set 3 400
+set 4 500
+
+
 push constant 41 
 push constant 31
 and
-pop local 0
+pop  local 0
+push local 0

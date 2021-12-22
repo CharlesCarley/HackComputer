@@ -89,7 +89,10 @@ namespace Hack::Compiler::CodeGenerator
                               uint16_t      numParams)
     {
         const CodeStream w(&_stream);
-        w.write("function ", className, '.', methodName, ' ', numParams);
+        w.write("push this 0");
+        w.write("pop argument 0");
+        w.write("push argument 0");
+        w.write("function ", className, '.', methodName, ' ', numParams + 1);
     }
 
     void Emitter::pushConstant(const String& value)
@@ -109,6 +112,25 @@ namespace Hack::Compiler::CodeGenerator
         const CodeStream w(&_stream);
         w.write("push local ", idx);
     }
+
+    void Emitter::pushArgument(const size_t& idx)
+    {
+        const CodeStream w(&_stream);
+        w.write("push argument ", idx);
+    }
+
+    void Emitter::pushStatic(const size_t& idx)
+    {
+        const CodeStream w(&_stream);
+        w.write("push argument ", idx);
+    }
+
+    void Emitter::pushThis(const size_t& idx)
+    {
+        const CodeStream w(&_stream);
+        w.write("push this ", idx);
+    }
+
 
     void Emitter::writeReturn()
     {

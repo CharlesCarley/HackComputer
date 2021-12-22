@@ -75,7 +75,7 @@ namespace Hack::Assembler
     {
         // Save 0 - 15 as a string.
         for (int i = 0; i < 16; ++i)
-            saveString(Char::toString(i));
+            save(Char::toString(i));
 
         // determine the first static register.
         _fsr = _stringTable.size();
@@ -83,35 +83,11 @@ namespace Hack::Assembler
         // pre save all the reserved names
         for (const ReservedWordTable& res : ReservedAddresses)
         {
-            saveString(res.val);
+            save(res.val);
 
             // if it's not already saved, save it as well.
             if (res.address > 16)
-                saveString(Char::toString(res.address));
-        }
-    }
-
-    void Scanner::scanLineComment()
-    {
-        int ch = _stream->peek();
-        while (ch != '\r' && ch != '\n')
-        {
-            ch = _stream->get();
-            if (ch == '\r' && _stream->peek() == '\n')
-                ch = _stream->get();
-        }
-        ++_line;
-    }
-
-    void Scanner::scanWhiteSpace() const
-    {
-        int ch = 0;
-        while (ch != -1)
-        {
-            if (isWhiteSpace(_stream->peek()))
-                ch = _stream->get();
-            else
-                break;
+                save(Char::toString(res.address));
         }
     }
 
@@ -141,7 +117,7 @@ namespace Hack::Assembler
         }
 
         tok.setType(TOK_INTEGER);
-        tok.setIndex(saveString(v));
+        tok.setIndex(save(v));
 
         if (ch > -1)
             _stream->putback((char)ch);
@@ -177,7 +153,7 @@ namespace Hack::Assembler
         if (iv < 16)
         {
             tok.setType(TOK_INTEGER);
-            tok.setIndex(saveString(str));
+            tok.setIndex(save(str));
             return true;
         }
         return false;
@@ -302,7 +278,8 @@ namespace Hack::Assembler
 
         // any other string should be saved and looked back up
         tok.setType(TOK_LABEL);
-        tok.setIndex(saveString(buf));
+
+        tok.setIndex(save(buf));
     }
 
     void Scanner::scan(Token& tok)

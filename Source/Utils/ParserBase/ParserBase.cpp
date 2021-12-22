@@ -90,7 +90,8 @@ namespace Hack
     void ParserBase::parse(IStream& is)
     {
         // save some relatively unique name for the file
-        _file = "ms" + Char::toString((size_t)this);
+        _file     = "MemoryStream." + Char::toHexString((size_t)this);
+        _filePath = _file;
 
         parseImpl(is);
     }

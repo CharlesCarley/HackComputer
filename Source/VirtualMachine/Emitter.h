@@ -39,14 +39,10 @@ namespace Hack::VirtualMachine
         StringStack        _functions;
 
         static void popStackInto(const CodeStream& w,
-                                 const String&     idx,
+                                 const int&        idx,
                                  const int32_t&    dest,
                                  const int32_t&    swap);
-
-        static void pushIntoStack(const CodeStream& w,
-                                  const String&     idx,
-                                  const int32_t&    dest);
-
+        
         void getJumpLabels(String& valTrue, String& valDone);
 
     public:
@@ -63,35 +59,35 @@ namespace Hack::VirtualMachine
 
         void setRam(int index, int value);
 
-        void pushConstant(const String& idx);
+        void pushConstant(const int& idx);
 
-        void pushLocal(const String& idx);
+        void pushLocal(const int& idx);
 
-        void pushArgument(const String& idx);
+        void pushArgument(const int& idx);
 
-        void pushThis(const String& idx);
+        void pushThis(const int& idx);
 
-        void pushThat(const String& idx);
+        void pushThat(const int& idx);
 
-        void pushStatic(const String& context, const String& idx);
+        void pushStatic(const String& context, const int& idx);
 
-        void pushTemp(const String& idx);
+        void pushTemp(const int& idx);
 
-        void pushPointer(const String& idx);
+        void pushPointer(const int& idx);
 
-        void popLocal(const String& idx);
+        void popLocal(const int& idx);
 
-        void popThis(const String& idx);
+        void popThis(const int& idx);
 
-        void popThat(const String& idx);
+        void popThat(const int& idx);
 
-        void popTemp(const String& idx);
+        void popTemp(const int& idx);
 
-        void popPointer(const String& idx);
+        void popPointer(const int& idx);
 
-        void popArgument(const String& idx);
+        void popArgument(const int& idx);
 
-        void popStatic(const String& context, const String& idx);
+        void popStatic(const String& context, const int& idx);
 
         void writeOr();
 
@@ -121,9 +117,9 @@ namespace Hack::VirtualMachine
 
         void writeLabel(const String& value);
 
-        void writeFunction(const String& name, const String& args);
+        void writeFunction(const String& name, const int& args);
 
-        void writeCall(const String& name, const String& args);
+        void writeCall(const String& name, const int& args);
 
         void writeReturn();
     };

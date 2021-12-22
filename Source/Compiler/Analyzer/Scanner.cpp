@@ -28,52 +28,6 @@ namespace Hack::Compiler::Analyzer
 {
     Scanner::Scanner() = default;
 
-    void Scanner::scanLineComment()
-    {
-        int ch = _stream->peek();
-        while (ch != '\r' && ch != '\n')
-        {
-            ch = _stream->get();
-            if (ch == '\r' && _stream->peek() == '\n')
-                ch = _stream->get();
-        }
-        ++_line;
-    }
-
-    void Scanner::scanMultiLineComment()
-    {
-        int ch = _stream->peek();
-        // save doc string?
-        // /** | /*!
-        while (ch > 0)
-        {
-            ch = _stream->get();
-            if (ch == '*' && _stream->peek() == '/')
-            {
-                _stream->get();
-                break;
-            }
-            if (ch == '\r' || ch == '\n')
-            {
-                if (ch == '\r' && _stream->peek() == '\n')
-                    ch = _stream->get();
-                ++_line;
-            }
-        }
-    }
-
-    void Scanner::scanWhiteSpace() const
-    {
-        int ch = 0;
-        while (ch != -1)
-        {
-            if (isWhiteSpace(_stream->peek()))
-                ch = _stream->get();
-            else
-                break;
-        }
-    }
-
     struct KeywordTable
     {
         const char* str;
@@ -140,7 +94,7 @@ namespace Hack::Compiler::Analyzer
             // and use it as either a label or a static variable.
 
             tok.setType(TOK_IDENTIFIER);
-            tok.setIndex(saveString(cmp));
+            tok.setIndex(save(cmp));
         }
     }
 
@@ -159,7 +113,7 @@ namespace Hack::Compiler::Analyzer
         _stream->putback((char)ch);
 
         tok.setType(TOK_INTEGER);
-        tok.setIndex(saveString(v));
+        tok.setIndex(save(v));
     }
 
     void Scanner::scanString(Token& tok)
@@ -215,7 +169,7 @@ namespace Hack::Compiler::Analyzer
         }
 
         tok.setType(TOK_STRING);
-        tok.setIndex(saveString(v));
+        tok.setIndex(save(v));
     }
 
     void Scanner::scan(Token& tok)

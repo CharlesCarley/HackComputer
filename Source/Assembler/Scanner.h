@@ -32,10 +32,6 @@ namespace Hack::Assembler
 
         void initializeTables();
 
-        void scanLineComment();
-
-        void scanWhiteSpace() const;
-
         void scanDecimal(Token& tok);
 
         void scanSymbol(Token& tok);

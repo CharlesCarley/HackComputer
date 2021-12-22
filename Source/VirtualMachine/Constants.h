@@ -23,15 +23,6 @@
 
 namespace Hack::VirtualMachine
 {
-    enum RamAddresses
-    {
-        Stack     = 256,
-        Local     = Stack,
-        Arguments = Stack,
-        This      = Stack,
-        That      = Stack,
-    };
-
     enum RamIndices
     {
         STP = 0,

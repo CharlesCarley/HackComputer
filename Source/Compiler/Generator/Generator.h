@@ -50,11 +50,13 @@ namespace Hack::Compiler::CodeGenerator
 
         void buildLocals(const Node& bodyNode, const Node& parameters) const;
 
-        void buildConstant(const Node&  term) const;
+        void pushIdentifier(const Node& simpleTerm) const;
+
+        void buildConstant(const Node& simpleTerm) const;
 
         void buildOperation(const Node& op) const;
 
-        void buildTerm(const Node& singleExpression) const;
+        void buildTerm(const Node& term) const;
 
         void buildSingleExpression(const Node& expression) const;
 

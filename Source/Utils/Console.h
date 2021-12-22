@@ -105,6 +105,8 @@ namespace Hack
         static void writeLine(const OutputStringStream& str);
 
         static void writeError(const OutputStringStream& str);
+
+        static void debugBreak();
     };
 
 }  // namespace Hack

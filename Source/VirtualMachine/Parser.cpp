@@ -21,10 +21,9 @@
 */
 #include "VirtualMachine/Parser.h"
 #include <fstream>
-#include "Utils/Exceptions/Exception.h"
+#include "Utils/Char.h"
 #include "VirtualMachine/Scanner.h"
 #include "VirtualMachine/Token.h"
-#include "Utils/Char.h"
 
 namespace Hack::VirtualMachine
 {
@@ -56,28 +55,28 @@ namespace Hack::VirtualMachine
         switch (t0)
         {
         case TOK_LOCAL:
-            _emitter.pushLocal(_scanner->getString(idx));
+            _emitter.pushLocal(_scanner->getInt(idx));
             break;
         case TOK_ARGUMENT:
-            _emitter.pushArgument(_scanner->getString(idx));
+            _emitter.pushArgument(_scanner->getInt(idx));
             break;
         case TOK_THIS:
-            _emitter.pushThis(_scanner->getString(idx));
+            _emitter.pushThis(_scanner->getInt(idx));
             break;
         case TOK_THAT:
-            _emitter.pushThat(_scanner->getString(idx));
+            _emitter.pushThat(_scanner->getInt(idx));
             break;
         case TOK_STATIC:
-            _emitter.pushStatic(_file, _scanner->getString(idx));
+            _emitter.pushStatic(_file, _scanner->getInt(idx));
             break;
         case TOK_TEMP:
-            _emitter.pushTemp(_scanner->getString(idx));
+            _emitter.pushTemp(_scanner->getInt(idx));
             break;
         case TOK_POINTER:
-            _emitter.pushPointer(_scanner->getString(idx));
+            _emitter.pushPointer(_scanner->getInt(idx));
             break;
         case TOK_CONSTANT:
-            _emitter.pushConstant(_scanner->getString(idx));
+            _emitter.pushConstant(_scanner->getInt(idx));
             break;
         default:
             parseError(
@@ -104,25 +103,25 @@ namespace Hack::VirtualMachine
         switch (t0)
         {
         case TOK_LOCAL:
-            _emitter.popLocal(_scanner->getString(idx));
+            _emitter.popLocal(_scanner->getInt(idx));
             break;
         case TOK_ARGUMENT:
-            _emitter.popArgument(_scanner->getString(idx));
+            _emitter.popArgument(_scanner->getInt(idx));
             break;
         case TOK_THIS:
-            _emitter.popThis(_scanner->getString(idx));
+            _emitter.popThis(_scanner->getInt(idx));
             break;
         case TOK_THAT:
-            _emitter.popThat(_scanner->getString(idx));
+            _emitter.popThat(_scanner->getInt(idx));
             break;
         case TOK_TEMP:
-            _emitter.popTemp(_scanner->getString(idx));
+            _emitter.popTemp(_scanner->getInt(idx));
             break;
         case TOK_STATIC:
-            _emitter.popStatic(_file, _scanner->getString(idx));
+            _emitter.popStatic(_file, _scanner->getInt(idx));
             break;
         case TOK_POINTER:
-            _emitter.popPointer(_scanner->getString(idx));
+            _emitter.popPointer(_scanner->getInt(idx));
             break;
         case TOK_CONSTANT:
         default:
@@ -180,7 +179,6 @@ namespace Hack::VirtualMachine
 
     void Parser::functionExpression()
     {
-        
         const int8_t t1 = getToken(1).getType();
         if (t1 != TOK_IDENTIFIER)
         {
@@ -202,10 +200,7 @@ namespace Hack::VirtualMachine
         if (name.empty())
             parseError("An empty label was found");
 
-        String args;
-        _scanner->getString(args, getToken(2).getIndex());
-        if (args.empty())
-            parseError("An empty integer was found");
+        const int args = _scanner->getInt(getToken(2).getIndex());
 
         _emitter.writeFunction(name, args);
     }
@@ -233,13 +228,10 @@ namespace Hack::VirtualMachine
         if (name.empty())
             parseError("An empty label was found");
 
-        String args;
-        _scanner->getString(args, getToken(2).getIndex());
-        if (args.empty())
-            parseError("An empty integer was found");
+        
+        const int args = _scanner->getInt(getToken(2).getIndex());
 
         _emitter.writeCall(name, args);
-        
     }
 
     void Parser::setExpression()
@@ -260,18 +252,11 @@ namespace Hack::VirtualMachine
                 "follow the set expression");
         }
 
-        String idx;
-        _scanner->getString(idx, getToken(1).getIndex());
-        if (idx.empty())
-            parseError("An empty integer was found");
+        const int idx = _scanner->getInt(getToken(1).getIndex());
 
-        String val;
-        _scanner->getString(val, getToken(2).getIndex());
-        if (val.empty())
-            parseError("An empty integer was found");
+        const int val = _scanner->getInt(getToken(2).getIndex());
 
-        _emitter.setRam(Char::toInt32(idx), Char::toInt32(val));
-           
+        _emitter.setRam(idx, val);
     }
 
     void Parser::expression()

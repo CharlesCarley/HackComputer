@@ -20,10 +20,9 @@
 -------------------------------------------------------------------------------
 */
 #include <fstream>
-
-#include "FileCmp.h"
 #include "Assembler/Parser.h"
 #include "Chips/Computer.h"
+#include "FileCmp.h"
 #include "TestDirectory.h"
 #include "VirtualMachine/Constants.h"
 #include "VirtualMachine/Parser.h"
@@ -32,7 +31,7 @@
 
 using namespace Hack;
 
-void VirtualMachineTestStack(Chips::Computer& comp, const String& baseName)
+void VirtualMachineTestStack(Chips::Computer& comp, const String& baseName, bool compare = false)
 {
     const String fNameSrc = GetTestFilePath("VM/" + baseName + ".vm");
     const String fNameCmp = GetTestFilePath("VM/" + baseName + ".asm");
@@ -43,7 +42,8 @@ void VirtualMachineTestStack(Chips::Computer& comp, const String& baseName)
     psr.parse(fNameSrc);
     psr.write(fNameOut);
 
-    CompareFiles(fNameCmp, fNameOut);
+    if (compare)
+        CompareFiles(fNameCmp, fNameOut);
 
     Assembler::Parser loader;
     loader.parse(fNameOut);
@@ -54,7 +54,7 @@ void VirtualMachineTestStack(Chips::Computer& comp, const String& baseName)
 
     comp.reset();
 
-    int tot = (int)inst.size();
+    const int tot = (int)inst.size();
 
     Chips::CpuState st = Chips::Computer::NullState;
     while (st.pc < tot)
@@ -75,16 +75,7 @@ GTEST_TEST(VirtualMachine, AddStackLocal)
     Chips::Memory* mem = comp.getRam();
 
     // assert the ram
-    uint16_t code = mem->get(VirtualMachine::STP);
-    EXPECT_EQ(code, VirtualMachine::Stack);
-
-    code = mem->get(code);
-    EXPECT_EQ(code, 4);  // srcA should be overridden
-
-    // assert the pop destination
-    code = mem->get(VirtualMachine::LCL);
-    EXPECT_EQ(code, VirtualMachine::Local);
-
+    uint16_t code = mem->get(VirtualMachine::LCL);
     code = mem->get(code);
     EXPECT_EQ(code, 4);
 }
@@ -97,16 +88,7 @@ GTEST_TEST(VirtualMachine, SubStackLocal)
     Chips::Memory* mem = comp.getRam();
 
     // assert the ram
-    uint16_t code = mem->get(VirtualMachine::STP);
-    EXPECT_EQ(code, VirtualMachine::Stack);
-
-    code = mem->get(code);
-    EXPECT_EQ(code, (uint16_t)-2);  // srcA should be overridden
-
-    // assert the pop destination
-    code = mem->get(VirtualMachine::LCL);
-    EXPECT_EQ(code, VirtualMachine::Local);
-
+    uint16_t code = mem->get(VirtualMachine::LCL);
     code = mem->get(code);
     EXPECT_EQ(code, (uint16_t)-2);
 }
@@ -119,16 +101,7 @@ GTEST_TEST(VirtualMachine, OrStackLocal)
     Chips::Memory* mem = comp.getRam();
 
     // assert the ram
-    uint16_t code = mem->get(VirtualMachine::STP);
-    EXPECT_EQ(code, VirtualMachine::Stack);
-
-    code = mem->get(code);
-    EXPECT_EQ(code, 63);  // srcA should be overridden
-
-    // assert the pop destination
-    code = mem->get(VirtualMachine::LCL);
-    EXPECT_EQ(code, VirtualMachine::Local);
-
+    uint16_t code = mem->get(VirtualMachine::LCL);
     code = mem->get(code);
     EXPECT_EQ(code, 63);
 }
@@ -141,16 +114,7 @@ GTEST_TEST(VirtualMachine, AndStackLocal)
     Chips::Memory* mem = comp.getRam();
 
     // assert the ram
-    uint16_t code = mem->get(VirtualMachine::STP);
-    EXPECT_EQ(code, VirtualMachine::Stack);
-
-    code = mem->get(code);
-    EXPECT_EQ(code, 9);  // srcA should be overridden
-
-    // assert the pop destination
-    code = mem->get(VirtualMachine::LCL);
-    EXPECT_EQ(code, VirtualMachine::Local);
-
+    uint16_t code = mem->get(VirtualMachine::LCL);
     code = mem->get(code);
     EXPECT_EQ(code, 9);
 }
@@ -163,17 +127,10 @@ GTEST_TEST(VirtualMachine, AddStackArg)
     Chips::Memory* mem = comp.getRam();
 
     // assert the ram
-    uint16_t code = mem->get(VirtualMachine::STP);
-    EXPECT_EQ(code, VirtualMachine::Stack);
+    const uint16_t code = mem->get(VirtualMachine::ARG);
 
-    code = mem->get(code);
-    EXPECT_EQ(code, 4);  // srcA should be overridden
-
-    code = mem->get(VirtualMachine::ARG);
-    EXPECT_EQ(code, VirtualMachine::Arguments);
-
-    code = mem->get(code);
-    EXPECT_EQ(code, 4);
+    const uint16_t val = mem->get(code);
+    EXPECT_EQ(val, 4);
 }
 
 GTEST_TEST(VirtualMachine, SubStackArg)
@@ -184,15 +141,7 @@ GTEST_TEST(VirtualMachine, SubStackArg)
     Chips::Memory* mem = comp.getRam();
 
     // assert the ram
-    uint16_t code = mem->get(VirtualMachine::STP);
-    EXPECT_EQ(code, VirtualMachine::Stack);
-
-    code = mem->get(code);
-    EXPECT_EQ(code, (uint16_t)-2);  // srcA should be overridden
-
-    code = mem->get(VirtualMachine::ARG);
-    EXPECT_EQ(code, VirtualMachine::Arguments);
-
+    uint16_t code = mem->get(VirtualMachine::ARG);
     code = mem->get(code);
     EXPECT_EQ(code, (uint16_t)-2);
 }
@@ -205,16 +154,9 @@ GTEST_TEST(VirtualMachine, OrStackArg)
     Chips::Memory* mem = comp.getRam();
 
     // assert the ram
-    uint16_t code = mem->get(VirtualMachine::STP);
-    EXPECT_EQ(code, VirtualMachine::Stack);
-
-    code = mem->get(code);
-    EXPECT_EQ(code, 63);  // srcA should be overridden
+    uint16_t code = mem->get(VirtualMachine::ARG);
 
     // assert the pop destination
-    code = mem->get(VirtualMachine::ARG);
-    EXPECT_EQ(code, VirtualMachine::Arguments);
-
     code = mem->get(code);
     EXPECT_EQ(code, 63);
 }
@@ -227,16 +169,7 @@ GTEST_TEST(VirtualMachine, AndStackArg)
     Chips::Memory* mem = comp.getRam();
 
     // assert the ram
-    uint16_t code = mem->get(VirtualMachine::STP);
-    EXPECT_EQ(code, VirtualMachine::Stack);
-
-    code = mem->get(code);
-    EXPECT_EQ(code, 9);  // srcA should be overridden
-
-    // assert the pop destination
-    code = mem->get(VirtualMachine::ARG);
-    EXPECT_EQ(code, VirtualMachine::Arguments);
-
+    uint16_t code = mem->get(VirtualMachine::ARG);
     code = mem->get(code);
     EXPECT_EQ(code, 9);
 }
@@ -249,22 +182,37 @@ GTEST_TEST(VirtualMachine, BasicTest)
 
     Chips::Memory* mem = comp.getRam();
 
-    uint16_t code = mem->get(256);
-    EXPECT_EQ(code, 472);
-    code = mem->get(300);
+    const uint16_t stp = mem->get(VirtualMachine::STP);
+    const uint16_t lcl = mem->get(VirtualMachine::LCL);
+    const uint16_t arg = mem->get(VirtualMachine::ARG);
+    const uint16_t ths = mem->get(VirtualMachine::THS);
+    const uint16_t tht = mem->get(VirtualMachine::THT);
+    const uint16_t tmp = VirtualMachine::TMP;
+
+    uint16_t code = mem->get(lcl);
     EXPECT_EQ(code, 10);
-    code = mem->get(401);
+    code = mem->get(lcl + 1);
+    EXPECT_EQ(code, 472);
+
+    code = mem->get(arg + 1);
     EXPECT_EQ(code, 21);
-    code = mem->get(402);
+
+    code = mem->get(arg + 2);
     EXPECT_EQ(code, 22);
-    code = mem->get(3006);
+
+    code = mem->get(ths + 6);
     EXPECT_EQ(code, 36);
-    code = mem->get(3012);
+
+
+    code = mem->get(tht + 2);
     EXPECT_EQ(code, 42);
-    code = mem->get(3015);
+    code = mem->get(tht + 5);
     EXPECT_EQ(code, 45);
-    code = mem->get(11);
-    EXPECT_EQ(code, 510);
+
+    code = mem->get(tmp + 6);
+    EXPECT_EQ(code, 0);
+    code = mem->get(stp);
+    EXPECT_EQ(code, 0);
 }
 
 GTEST_TEST(VirtualMachine, StaticTest)
@@ -274,8 +222,15 @@ GTEST_TEST(VirtualMachine, StaticTest)
 
     Chips::Memory* mem = comp.getRam();
 
-    const uint16_t code = mem->get(256);
+    uint16_t code = mem->get(VirtualMachine::STP);
+    code = mem->get(code-1);
     EXPECT_EQ(code, 1110);
+    code = mem->get(VirtualMachine::SW2 + 1);
+    EXPECT_EQ(code, 888);
+    code = mem->get(VirtualMachine::SW2 + 2);
+    EXPECT_EQ(code, 333);
+    code = mem->get(VirtualMachine::SW2 + 3);
+    EXPECT_EQ(code, 111);
 }
 
 GTEST_TEST(VirtualMachine, TempOffsetTest)
@@ -285,11 +240,9 @@ GTEST_TEST(VirtualMachine, TempOffsetTest)
 
     Chips::Memory* mem = comp.getRam();
 
-    uint16_t code = mem->get(256);
+    uint16_t code = mem->get(5);
     EXPECT_EQ(code, 555);
 
-    code = mem->get(5);
-    EXPECT_EQ(code, 555);
     code = mem->get(6);
     EXPECT_EQ(code, 555);
     code = mem->get(7);
@@ -304,12 +257,6 @@ GTEST_TEST(VirtualMachine, TempOffsetTest)
     EXPECT_EQ(code, 555);
     code = mem->get(12);
     EXPECT_EQ(code, 555);
-    code = mem->get(13);
-    EXPECT_EQ(code, 0);
-    code = mem->get(14);
-    EXPECT_EQ(code, 0);
-    code = mem->get(15);
-    EXPECT_EQ(code, 12);
 }
 
 GTEST_TEST(VirtualMachine, PointerTest)
@@ -340,15 +287,17 @@ GTEST_TEST(VirtualMachine, JumpTestLTEQ)
     Chips::Computer comp;
     VirtualMachineTestStack(comp, "Test13");
 
-    Chips::Memory* mem  = comp.getRam();
-    uint16_t       code = mem->get(VirtualMachine::Local + 3);
-    EXPECT_EQ(code, (uint16_t)-1);
+    Chips::Memory* mem = comp.getRam();
 
-    code = mem->get(VirtualMachine::Local + 4);
+    const uint16_t lcl = mem->get(VirtualMachine::LCL);
+
+    uint16_t code = mem->get(lcl + 3);
     EXPECT_EQ(code, (uint16_t)-1);
-    code = mem->get(VirtualMachine::Local + 5);
+    code = mem->get(lcl + 4);
     EXPECT_EQ(code, (uint16_t)-1);
-    code = mem->get(VirtualMachine::Local + 6);
+    code = mem->get(lcl + 5);
+    EXPECT_EQ(code, (uint16_t)-1);
+    code = mem->get(lcl + 6);
     EXPECT_EQ(code, (uint16_t)-1);
 }
 
@@ -359,8 +308,8 @@ GTEST_TEST(VirtualMachine, JumpTestGT)
 
     Chips::Memory* mem = comp.getRam();
 
-    const uint16_t code = mem->get(VirtualMachine::Local);
-    EXPECT_EQ(code, 987);
+    const uint16_t code = mem->get(VirtualMachine::LCL);
+    EXPECT_EQ(mem->get(code), 987);
 }
 
 GTEST_TEST(VirtualMachine, JumpTest)
@@ -370,7 +319,8 @@ GTEST_TEST(VirtualMachine, JumpTest)
 
     Chips::Memory* mem = comp.getRam();
 
-    const uint16_t code = mem->get(VirtualMachine::Local);
+    uint16_t code = mem->get(VirtualMachine::LCL);
+    code = mem->get(code);
     EXPECT_EQ(code, 25);
 }
 
@@ -408,27 +358,34 @@ GTEST_TEST(VirtualMachine, FibonacciSeries)
     EXPECT_EQ(val, 5);
 }
 
-
 GTEST_TEST(VirtualMachine, SimpleFunction)
 {
     Chips::Computer comp;
     VirtualMachineTestStack(comp, "Test18");
 
     Chips::Memory* mem = comp.getRam();
-//    | RAM[0] | RAM[1] | RAM[2] | RAM[3] | RAM[4] |RAM[310]|
-//|    313 |    305 |    300 |   3010 |   4010 |   1016 |
     uint16_t val = mem->get(0);
-    EXPECT_EQ(val, 313);
+    EXPECT_EQ(val, 103);
     val = mem->get(1);
-    EXPECT_EQ(val, 305);
+    EXPECT_EQ(val, 200);
     val = mem->get(2);
     EXPECT_EQ(val, 300);
-    val = mem->get(3);
-    EXPECT_EQ(val, 3010);
-    val = mem->get(4);
-    EXPECT_EQ(val, 4010);
-    val = mem->get(310);
-    EXPECT_EQ(val, 1234);
-    val = mem->get(312);
-    EXPECT_EQ(val, 1016);
+    val = mem->get(102);
+    EXPECT_EQ(val, 11);
+    val = mem->get(200);
+    EXPECT_EQ(val, 4);
+    val = mem->get(201);
+    EXPECT_EQ(val, 2);
+    val = mem->get(300);
+    EXPECT_EQ(val, 6);
+    val = mem->get(301);
+    EXPECT_EQ(val, 1);
+}
+
+GTEST_TEST(VirtualMachine, Function)
+{
+    Chips::Computer comp;
+    VirtualMachineTestStack(comp, "Test20", false);
+
+    Chips::Memory* mem = comp.getRam();
 }

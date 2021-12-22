@@ -112,7 +112,7 @@ This project is a collection of tools that implements the recommended compiler s
 
 
 
-The [syntax analyzer](Source/Compiler/SyntaxAnalyzer) takes an input `.jack` file and builds the parse tree which can be either, saved to `.xml` or used directly to emit `.vm` code.
+The [syntax analyzer](Source/Compiler/Analyzer) takes an input `.jack` file and builds the parse tree which can be either, saved to `.xml` or used directly to emit `.vm` code.
 
 ##### Jack Grammar
 

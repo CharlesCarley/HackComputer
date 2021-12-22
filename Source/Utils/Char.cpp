@@ -285,20 +285,6 @@ namespace Hack
         dest = stream.str();
     }
 
-    void Char::toString(String& dest, const uint32_t v)
-    {
-        std::stringstream stream;
-        stream << v;
-        dest = stream.str();
-    }
-
-    void Char::toString(String& dest, const uint64_t v)
-    {
-        std::stringstream stream;
-        stream << v;
-        dest = stream.str();
-    }
-
     void Char::toHexString(String& dest, const uint16_t v)
     {
         std::stringstream stream;
@@ -312,6 +298,35 @@ namespace Hack
         dest = bs.to_string();
     }
 
+    void Char::toString(String& dest, const uint32_t v)
+    {
+        std::stringstream stream;
+        stream << v;
+        dest = stream.str();
+    }
+
+    void Char::toHexString(String& dest, const uint32_t v)
+    {
+        std::stringstream stream;
+        stream << std::hex << v;
+        dest = stream.str();
+    }
+
+    void Char::toString(String& dest, const uint64_t v)
+    {
+        std::stringstream stream;
+        stream << v;
+        dest = stream.str();
+    }
+
+    void Char::toHexString(String& dest, const uint64_t v)
+    {
+        std::stringstream stream;
+        stream << std::hex << v;
+        dest = stream.str();
+    }
+
+    
     String Char::toString(const float v)
     {
         String copyOnReturn;
@@ -382,10 +397,24 @@ namespace Hack
         return copyOnReturn;
     }
 
+    String Char::toHexString(const uint32_t v)
+    {
+        String copyOnReturn;
+        toHexString(copyOnReturn, v);
+        return copyOnReturn;
+    }
+
     String Char::toString(const uint64_t v)
     {
         String copyOnReturn;
         toString(copyOnReturn, v);
+        return copyOnReturn;
+    }
+
+    String Char::toHexString(const uint64_t v)
+    {
+        String copyOnReturn;
+        toHexString(copyOnReturn, v);
         return copyOnReturn;
     }
 

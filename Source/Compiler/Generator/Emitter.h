@@ -55,6 +55,10 @@ namespace Hack::Compiler::CodeGenerator
         void popLocal(const size_t& idx);
 
         void pushLocal(const size_t& idx);
+        void pushArgument(const size_t& idx);
+        void pushStatic(const size_t& idx);
+        void pushThis(const size_t& idx);
+
 
         void writeReturn();
 

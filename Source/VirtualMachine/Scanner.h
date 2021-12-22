@@ -28,16 +28,11 @@ namespace Hack::VirtualMachine
     class Scanner final : public ScannerBase
     {
     private:
-        void scanLineComment();
-
-        void scanWhiteSpace() const;
-
         void scanSymbol(Token& tok);
 
         void scanDigit(Token& tok);
 
     public:
-
         Scanner();
 
         void scan(Token& tok) override;

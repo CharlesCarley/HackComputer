@@ -66,11 +66,12 @@ namespace Hack::Compiler::CodeGenerator
         }
     }
 
-    void Generator::buildLocals(const Node& bodyNode, const Node& parameters) const
+    void Generator::buildLocals(const Node& bodyNode,
+                                const Node& parameters) const
     {
         _locals->clear();
-        Node::NodeArray variables;
 
+        Node::NodeArray variables;
         bodyNode.filter(variables, RuleVariable);
 
         for (const Node* var : variables)
@@ -112,17 +113,65 @@ namespace Hack::Compiler::CodeGenerator
             const Node& parameterList = method.rule(4);
             const Node& body          = method.rule(6).rule(1);
 
-            _emitter->writeMethod(className, methodName.value(), (uint16_t)parameterList.size());
+            if (methodSpec.isTypeOf(KeywordFunction))
+                _emitter->writeFunction(methodName.value(), (uint16_t)parameterList.size());
+            else
+                _emitter->writeMethod(className, methodName.value(), (uint16_t)parameterList.size());
 
             buildLocals(body, parameterList);
             buildStatements(body);
         }
     }
 
+    void Generator::pushIdentifier(const Node& simpleTerm) const
+    {
+        const String& value = simpleTerm.value();
+        if (_locals->contains(value))
+        {
+            const Symbol& sym = _locals->get(value);
+
+            if (sym.kind() == Argument)
+                _emitter->pushArgument(sym.entry());
+            else if (sym.kind() == Local)
+                _emitter->pushLocal(sym.entry());
+            else if (sym.kind() == Static)
+                _emitter->pushStatic(sym.entry());
+        }
+        else if (_globals->contains(value))
+        {
+            const Symbol& sym = _globals->get(value);
+            if (sym.kind() == Field)
+                _emitter->pushThis(sym.entry() + 1);
+            else if (sym.kind() == Static)
+                _emitter->pushStatic(sym.entry());
+        }
+        else
+            throw InputException(value, " is undefined in this context");
+    }
+
     void Generator::buildConstant(const Node& simpleTerm) const
     {
-        if (simpleTerm.isTypeOf(ConstantInteger))
+        switch (simpleTerm.type())
+        {
+        case ConstantInteger:
             _emitter->pushConstant(simpleTerm.value());
+            break;
+        case ConstantThis:
+            _emitter->pushArgument(0);
+            break;
+        case ConstantNull:
+        case ConstantFalse:
+            _emitter->pushConstant("0");
+            break;
+        case ConstantTrue:
+            _emitter->pushConstant("65536");
+            break;
+        case ConstantIdentifier:
+            pushIdentifier(simpleTerm);
+            break;
+        default:
+            throw InputException("unhandled constant ", (int)simpleTerm.type());
+        }
     }
 
     void Generator::buildOperation(const Node& op) const
@@ -140,51 +189,49 @@ namespace Hack::Compiler::CodeGenerator
 
     void Generator::buildTerm(const Node& term) const
     {
-        if (term.size() > 0)
+        const size_t numTerms = term.size();
+
+        if (numTerms)
         {
-            if (term.child(0).isTypeOf(RuleSimpleTerm))
-            {
-                const Node& simpleTerm = term.child(0);
+            const Node& term0 = term.child(0);
 
-                if (simpleTerm.child(0).isConstant())
-                    buildConstant(simpleTerm.child(0));
-            }
-
-            else if (term.size() >= 2)
+            if (term0.isTypeOf(RuleSimpleTerm))
             {
-                if (term.child(0).isTypeOf(RuleOperator))
+                if (term0.size() > 0)
                 {
-                    const Node& op = term.child(1);
-
-                    if (term.child(1).isTypeOf(RuleSimpleTerm))
-                    {
-                        const Node& simpleTerm = term.child(0);
-
-                        if (simpleTerm.child(0).isConstant())
-                            buildConstant(simpleTerm.child(0));
-                    }
-                    buildOperation(op);
+                    const Node& simpleTerm = term0.child(0);
+                    if (simpleTerm.isConstant())
+                        buildConstant(simpleTerm);
+                    else
+                        throw MessageException("expected simple term to reduce to a constant");
                 }
+                else
+                    throw MessageException("expected simple term to reduce to a constant");
             }
         }
     }
 
     void Generator::buildSingleExpression(const Node& singleExpression) const
     {
-        if (singleExpression.size() > 0)
+        const size_t numTerms = singleExpression.size();
+        if (numTerms > 0)
         {
-            if (singleExpression.size() == 1)
+            const Node& term0 = singleExpression.child(0);
+
+            if (numTerms == 1)
             {
-                if (singleExpression.child(0).isTypeOf(RuleTerm))
-                    buildTerm(singleExpression.child(0));
+                if (term0.isTypeOf(RuleTerm))
+                    buildTerm(term0);
             }
             else if (singleExpression.size() == 2)
             {
-                if (singleExpression.child(1).isTypeOf(RuleTerm))
-                    buildTerm(singleExpression.child(1));
+                const Node& term1 = singleExpression.child(1);
 
-                if (singleExpression.child(0).isOperator())
-                    buildOperation(singleExpression.child(0).child(0));
+                if (term1.isTypeOf(RuleTerm))
+                    buildTerm(term1);
+
+                if (term0.isOperator())
+                    buildOperation(term0.child(0));
             }
         }
     }
@@ -193,7 +240,7 @@ namespace Hack::Compiler::CodeGenerator
     {
         for (const Node* exp : expression.children())
         {
-            const Node& singleExpression = (*exp);
+            const Node& singleExpression = *exp;
 
             buildSingleExpression(singleExpression);
         }
@@ -208,6 +255,7 @@ namespace Hack::Compiler::CodeGenerator
             const Symbol& sym = _locals->get(id);
 
             const Node& expression = statement.child(3);
+
             buildExpression(expression);
             _emitter->popLocal(sym.entry());
         }

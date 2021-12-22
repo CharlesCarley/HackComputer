@@ -20,9 +20,11 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
+
 #include <exception>
 #include <stdexcept>
 #include <utility>
+#include "Utils/Console.h"
 #include "Utils/String.h"
 
 namespace Hack
@@ -36,11 +38,13 @@ namespace Hack
         explicit Exception(const char* what) :
             std::exception(), _string(what)
         {
+            Console::debugBreak();
         }
 
         explicit Exception(String what) :
             std::exception(), _string(std::move(what))
         {
+            Console::debugBreak();
         }
 
         template <typename... Args>
@@ -51,6 +55,8 @@ namespace Hack
             oss << what;
             ((oss << std::forward<Args>(args)), ...);
             _string = oss.str();
+
+            Console::debugBreak();
         }
 
         const char* what() const noexcept override
@@ -58,7 +64,6 @@ namespace Hack
             return _string.c_str();
         }
     };
-    
 
 // clang-format off
 #ifdef _DEBUG
@@ -69,6 +74,7 @@ namespace Hack
     #define InvalidPointer()            Exception(FLS, "invalid pointer")
     #define InputException(msg, ...)    Exception(FLS, msg, __VA_ARGS__)
     #define MessageException(msg)       Exception(FLS, msg)
+    #define NullOrEmptyString()         Exception(FLS, "the supplied string is empty")
 #else
     #define NotImplemented()            Exception("not implemented")
     #define IndexOutOfBounds()          Exception("array index out of bounds")
@@ -76,6 +82,7 @@ namespace Hack
     #define InvalidPointer()            Exception("invalid pointer")
     #define InputException(msg, ...)    Exception(msg, __VA_ARGS__)
     #define MessageException(msg)       Exception(msg)
+    #define NullOrEmptyString()         Exception("the supplied string is empty")
 #endif
     // clang-format on
 }  // namespace Hack

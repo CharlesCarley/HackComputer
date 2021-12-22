@@ -1,21 +1,44 @@
+set 0 30
+set 1 40
+set 2 0
+set 3 0
+set 4 0
+
+
 push constant 1
 push constant 2
 lt
+pop temp 1
+pop temp 0
+pop temp 0
+push temp 1
 pop local 3
 
 
 push constant 2
 push constant 1
 gt
+pop temp 1
+pop temp 0
+pop temp 0
+push temp 1
 pop local 4
+
 
 push constant 3
 push constant 3
 eq
+pop temp 1
+pop temp 0
+pop temp 0
+push temp 1
 pop local 5
-
 
 push constant 1
 push constant 3
 eq not
+pop temp 1
+pop temp 0
+pop temp 0
+push temp 1
 pop local 6

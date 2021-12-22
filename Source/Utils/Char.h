@@ -114,7 +114,11 @@ namespace Hack
 
         static void toString(String& dest, uint32_t v);
 
+        static void toHexString(String& dest, uint32_t v);
+
         static void toString(String& dest, uint64_t v);
+
+        static void toHexString(String& dest, uint64_t v);
 
         static String toString(float v);
 
@@ -136,7 +140,11 @@ namespace Hack
 
         static String toString(uint32_t v);
 
+        static String toHexString(uint32_t v);
+
         static String toString(uint64_t v);
+
+        static String toHexString(uint64_t v);
     };
 
     inline bool isNewLine(const int ch)

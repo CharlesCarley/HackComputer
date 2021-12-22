@@ -26,18 +26,25 @@
 namespace Hack
 {
     using StringTable = IndexCache<String>;
+    using IntTable    = IndexCache<int>;
 
     class ScannerBase
     {
     protected:
         IStream*    _stream;
         StringTable _stringTable;
+        IntTable    _intTable;
         String      _file;
         size_t      _line;
 
-        size_t saveString(const String& str)
+        size_t save(const String& str)
         {
             return _stringTable.insert(str);
+        }
+
+        size_t save(const int& val)
+        {
+            return _intTable.insert(val);
         }
 
         template <typename... Args>
@@ -48,6 +55,12 @@ namespace Hack
             ((oss << std::forward<Args>(args)), ...);
             syntaxErrorThrow(oss.str());
         }
+
+        void scanWhiteSpace() const;
+
+        void scanLineComment();
+
+        void scanMultiLineComment();
 
     private:
         [[noreturn]] void syntaxErrorThrow(const String& message) const;
@@ -64,6 +77,8 @@ namespace Hack
         const String& getString(const size_t& i) const;
 
         void getString(String& dest, const size_t& i) const;
+
+        int getInt(const size_t& i) const;
 
         size_t getLine() const;
 

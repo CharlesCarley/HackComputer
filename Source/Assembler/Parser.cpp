@@ -424,6 +424,10 @@ namespace Hack::Assembler
         String label;
         _scanner->getString(label, t1.getIndex());
 
+        if (label.empty())
+            throw NullOrEmptyString();
+
+
         const Labels::iterator it = _labels.find(label);
 
         if (it == _labels.end())
@@ -433,13 +437,14 @@ namespace Hack::Assembler
     void Parser::expression()
     {
         const int8_t t0 = getToken(0).getType();
-        const int8_t t2 = getToken(2).getType();
-
+        
         if (t0 == TOK_AT)
             expressionA();
         else if (t0 == TOK_L_PAREN)
         {
-            if (t2 != TOK_R_PAREN)
+            const int8_t t1 = getToken(1).getType();
+            const int8_t t2 = getToken(2).getType();
+            if (t1 != TOK_LABEL || t2 != TOK_R_PAREN)
                 parseError("Expected a label declaration ([a-zA-Z0-9])");
 
             label();

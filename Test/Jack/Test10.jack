@@ -2,10 +2,10 @@
 
 class Main {
 
-	function void main()
-	{
-		var int x;
-		let x = 5-1+5+5;
+	method void main() {
+		var int x, y;
+		let y = 7;
+		let x = y + 5 + y;
 		return x;
 	}
 }

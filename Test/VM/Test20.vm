@@ -1,0 +1,18 @@
+set 0 20 // STP
+set 1 30 // LCL
+set 2 40 // ARG
+set 3 50 // THS
+set 4 60 // THT
+
+push constant 2
+pop argument  0
+push constant 2
+pop argument  1
+call main 2
+pop local 0            //0
+reset
+
+
+function main 2
+	push constant 123
+	return
