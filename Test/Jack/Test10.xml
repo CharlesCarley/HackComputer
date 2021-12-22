@@ -7,7 +7,7 @@
    <ClassDescription>
      <Method>
        <MethodSpecification>
-         <Keyword> function </Keyword>
+         <Keyword> method </Keyword>
        </MethodSpecification>
        <MethodReturnType>
          <Keyword> void </Keyword>
@@ -27,9 +27,27 @@
              </DataType>
              <IdentifierList>
                <Identifier> x </Identifier>
+               <Identifier> y </Identifier>
              </IdentifierList>
              <Symbol> ; </Symbol>
            </Variable>
+           <Statement>
+             <LetStatement>
+               <Keyword> let </Keyword>
+               <Identifier> y </Identifier>
+               <Symbol> = </Symbol>
+               <Expression>
+                 <SingleExpression>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> 7 </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
+               </Expression>
+               <Symbol> ; </Symbol>
+             </LetStatement>
+           </Statement>
            <Statement>
              <LetStatement>
                <Keyword> let </Keyword>
@@ -39,17 +57,7 @@
                  <SingleExpression>
                    <Term>
                      <SimpleTerm>
-                       <Identifier> 5 </Identifier>
-                     </SimpleTerm>
-                   </Term>
-                 </SingleExpression>
-                 <SingleExpression>
-                   <UnaryOperator>
-                     <Symbol> - </Symbol>
-                   </UnaryOperator>
-                   <Term>
-                     <SimpleTerm>
-                       <Identifier> 1 </Identifier>
+                       <Identifier> y </Identifier>
                      </SimpleTerm>
                    </Term>
                  </SingleExpression>
@@ -69,7 +77,7 @@
                    </Operator>
                    <Term>
                      <SimpleTerm>
-                       <Identifier> 5 </Identifier>
+                       <Identifier> y </Identifier>
                      </SimpleTerm>
                    </Term>
                  </SingleExpression>
