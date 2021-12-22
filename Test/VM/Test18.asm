@@ -1,119 +1,101 @@
-@256                 D=A
-@0                   M=D
-@1                   M=D
-@2                   M=D
-@3                   M=D
-@4                   M=D
-@317                 D=A
-@0                   M=D
-@317                 D=A
-@1                   M=D
-@310                 D=A
-@2                   M=D
-@3000                D=A
-@3                   M=D
-@4000                D=A
-@4                   M=D
-@1234                D=A
-@310                 M=D
-@217                 D=A
-@311                 M=D
-@1000                D=A
-@312                 M=D
-@305                 D=A
-@313                 M=D
-@300                 D=A
-@314                 M=D
-@3010                D=A
-@315                 M=D
-@4010                D=A
-@316                 M=D
-(sf)
-@0                   D=A
-@1                   A=D+M
-                     M=0
-@1                   D=A
-@1                   A=D+M
-                     M=0
-@0                   D=A
-@1                   A=D+M
-                     D=M
-@0                   M=M+1
-                     A=M-1
-                     M=D
-@1                   D=A
-@1                   A=D+M
-                     D=M
-@0                   M=M+1
-                     A=M-1
-                     M=D
-@0                   M=M-1
-                     A=M
-                     D=M
-                     A=A-1
-                     M=D+M
-@0                   A=M-1
-                     M=!M
-@0                   D=A
-@2                   A=D+M
-                     D=M
-@0                   M=M+1
-                     A=M-1
-                     M=D
-@0                   M=M-1
-                     A=M
-                     D=M
-                     A=A-1
-                     M=D+M
-@1                   D=A
-@2                   A=D+M
-                     D=M
-@0                   M=M+1
-                     A=M-1
-                     M=D
-@0                   M=M-1
-                     A=M
-                     D=M
-                     A=A-1
-                     M=M-D
-@1                   D=M
-@13                  M=D
-@5                   D=D-A
-@15                  M=D
-@14                  M=D
-                     A=D
-                     D=M
-@14                  M=D
-@0                   A=M-1
-                     A=M
-                     D=A
-@15                  D=M
-@0                   M=D+1
-@13                  D=M
-@1                   D=D-A
-                     A=D
-                     D=M
-@4                   M=D
-@13                  D=M
-@2                   D=D-A
-                     A=D
-                     D=M
-@3                   M=D
-@13                  D=M
-@3                   D=D-A
-                     A=D
-                     D=M
-@2                   M=D
-@13                  D=M
-@4                   D=D-A
-                     A=D
-                     D=M
-@1                   M=D
-@13                  D=M
-                     A=D
-                     D=M
-@15                  A=M
-                     M=D
-@14                  D=M
-                     A=D
-                     0;JMP
+@102
+D=A
+@0
+M=D
+@200
+D=A
+@1
+M=D
+@300
+D=A
+@2
+M=D
+@0
+D=A
+@3
+M=D
+@0
+D=A
+@4
+M=D
+@4
+D=A
+@200
+M=D
+@2
+D=A
+@201
+M=D
+@6
+D=A
+@300
+M=D
+@1
+D=A
+@301
+M=D
+(ABC)
+@0
+D=A
+@1
+A=D+M
+D=M
+@0
+M=M+1
+A=M-1 M=D
+@1
+D=A
+@1
+A=D+M
+D=M
+@0
+M=M+1
+A=M-1 M=D
+@0
+A=M-1
+D=M
+M=0
+A=A-1
+M=D+M
+@0
+M=M-1
+@0
+A=M M=0
+@0
+D=A
+@2
+A=D+M
+D=M
+@0
+M=M+1
+A=M-1 M=D
+@0
+A=M-1
+D=M
+M=0
+A=A-1
+M=D+M
+@0
+M=M-1
+@0
+A=M M=0
+@1
+D=A
+@2
+A=D+M
+D=M
+@0
+M=M+1
+A=M-1 M=D
+@0
+A=M-1
+D=M
+M=0
+A=A-1
+M=M-D
+@0
+M=M-1
+@0
+A=M M=0
+@32766
+D=A;JMP

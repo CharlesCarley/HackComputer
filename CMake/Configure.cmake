@@ -32,6 +32,7 @@ option(Hack_AUTO_RUN_TEST        "Automatically run the test program." OFF)
 option(Hack_CHECK_INT_BOUNDS     "Throw an exception on overflow ." ON)
 option(Hack_IMPLEMENT_BLACK_BOX  "If this is true all chips will be implemented with logic gates." OFF)
 option(Hack_PRINT_CHIP_STATE     "Enables the print method defined in the Chip class" OFF)
+option(Hack_VM_ZERO_RAM          "Emits extra instructions to remove RAM values that are no longer in use" ON)
 option(Hack_USE_SDL              "Enables or disables SDL" OFF)
 
 set(Hack_INSTALL_PATH         
@@ -61,6 +62,10 @@ else ()
 	set(USE_SDL FALSE)
 endif()
 
+
+if (Hack_VM_ZERO_RAM)
+    add_definitions(-DZERO_M)
+endif()
 
 if (USING_EMSCRIPTEN)
 	add_definitions(-DUSING_EMSCRIPTEN)

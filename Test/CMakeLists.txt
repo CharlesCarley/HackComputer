@@ -74,11 +74,6 @@ target_link_libraries(${TestTargetName}
     CompileUtils
  )
 
-#if (TargetFolders)
-#    set_target_properties(${TestTargetName} PROPERTIES FOLDER "${TargetGroup}")
-#endif()
-
-
 if (Hack_AUTO_RUN_TEST)
 
    add_custom_command(TARGET 
@@ -93,4 +88,5 @@ if (Hack_AUTO_RUN_TEST)
         VS_DEBUGGER_WORKING_DIRECTORY  
         ${CMAKE_CURRENT_SOURCE_DIR}
     )
+
 endif()

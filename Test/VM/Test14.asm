@@ -1,54 +1,177 @@
-@256                 D=A
-@0                   M=D
-@1                   M=D
-@2                   M=D
-@3                   M=D
-@4                   M=D
-@7                   D=A
-@0                   M=M+1
-                     A=M-1
-                     M=D
+@50
+D=A
+@0
+M=D
+@60
+D=A
+@1
+M=D
+@0
+D=A
+@2
+M=D
+@0
+D=A
+@3
+M=D
+@0
+D=A
+@4
+M=D
+@7
+D=A
+@0
+M=M+1
+A=M-1 M=D
+@0
+D=A
+@1
+A=D+M
+D=A
+@13
+M=D
+@0
+A=M-1
+D=M
+M=0
+@13
+A=M
+M=D
+@0
+M=M-1
+@0
+A=M M=0
+@13
+M=0
+@0
+D=A
+@1
+A=D+M
+D=M
+@0
+M=M+1
+A=M-1 M=D
 (top1)
-@1                   D=A
-@0                   M=M+1
-                     A=M-1
-                     M=D
-@0                   M=M-1
-                     A=M
-                     D=M
-                     A=A-1
-                     M=M-D
-@0                   D=A
-@0                   M=M+1
-                     A=M-1
-                     M=D
-@0                   M=M-1
-                     A=M
-                     D=M
-                     A=A-1
-                     D=M-D
-@L541                D;JGT
-                     D=0
-@L441                0;JMP
+@1
+D=A
+@0
+M=M+1
+A=M-1 M=D
+@0
+A=M-1
+D=M
+M=0
+A=A-1
+M=M-D
+@0
+M=M-1
+@0
+A=M M=0
+@0
+D=A
+@1
+A=D+M
+D=A
+@13
+M=D
+@0
+A=M-1
+D=M
+M=0
+@13
+A=M
+M=D
+@0
+M=M-1
+@0
+A=M M=0
+@13
+M=0
+@0
+D=A
+@1
+A=D+M
+D=M
+@0
+M=M+1
+A=M-1 M=D
+@1
+D=A
+@0
+M=M+1
+A=M-1 M=D
+@0
+A=M-1
+D=M
+A=A-1
+D=M-D
+@L541
+D;JGT
+D=0
+@L441
+0;JMP
 (L541)
-                     D=-1
+D=-1
 (L441)
-@0                   A=M-1
-                     M=D
-@0                   M=M-1
-                     A=M
-                     D=M
-@top1                
-                     D;JNE
-@987                 D=A
-@0                   M=M+1
-                     A=M-1
-                     M=D
-@0                   D=A
-@1                   D=D+M
-@15                  M=D
-@0                   M=M-1
-                     A=M
-                     D=M
-@15                  A=M
-                     M=D
+@0
+M=M+1 A=M-1
+M=D
+@0
+A=M-1
+D=M
+M=0
+@0
+M=M-1
+@0
+A=M M=0
+@0
+M=M-1
+@0
+A=M M=0
+@top1
+D;JNE
+@0
+D=A
+@1
+A=D+M
+D=A
+@13
+M=D
+@0
+A=M-1
+D=M
+M=0
+@13
+A=M
+M=D
+@0
+M=M-1
+@0
+A=M M=0
+@13
+M=0
+@987
+D=A
+@0
+M=M+1
+A=M-1 M=D
+@0
+D=A
+@1
+A=D+M
+D=A
+@13
+M=D
+@0
+A=M-1
+D=M
+M=0
+@13
+A=M
+M=D
+@0
+M=M-1
+@0
+A=M M=0
+@13
+M=0

@@ -87,6 +87,7 @@ namespace Hack::VirtualMachine
             atAddressOf(addr);
             write("D=A;JMP");
         }
+#ifdef ZERO_M
 
         void clearSwap() const
         {
@@ -97,6 +98,7 @@ namespace Hack::VirtualMachine
             atAddressOf(SW2);
             setM(false);
         }
+#endif
 
         void increment() const
         {
@@ -113,8 +115,11 @@ namespace Hack::VirtualMachine
         {
             atAddressOf(STP);
             write("M=M-1");
+#ifdef ZERO_M
             atAddressOf(STP);
-            write("A=M M=0");
+            write("A=M");
+            write("M=0");
+#endif
         }
 
         void incrementAndJump() const
@@ -143,7 +148,9 @@ namespace Hack::VirtualMachine
         void moveMIntoD() const
         {
             write("D=M");
+#ifdef ZERO_M
             write("M=0");  // DEBUG
+#endif
         }
 
         void copyMIntoD() const
@@ -314,6 +321,12 @@ namespace Hack::VirtualMachine
             copyMIntoD();
         }
 
+        void moveMIntoDAt(const int& x0) const
+        {
+            atAddressOf(x0);
+            moveMIntoD();
+        }
+
         void dereferenceD() const
         {
             write("A=D");
@@ -388,7 +401,9 @@ namespace Hack::VirtualMachine
         w.jumpToAddressIn(swap);
         w.moveDIntoM();
         w.decrement();
+#ifdef ZERO_M
         w.clearSwap();
+#endif
     }
 
     void Emitter::pushConstant(const int& idx)
@@ -509,7 +524,9 @@ namespace Hack::VirtualMachine
         w.jumpToAddressIn(SW0);
         w.moveDIntoM();
         w.decrement();
+#ifdef ZERO_M
         w.clearSwap();
+#endif
     }
 
     void Emitter::popPointer(const int& idx)
@@ -522,7 +539,9 @@ namespace Hack::VirtualMachine
         w.jumpToAddressIn(SW0);
         w.moveDIntoM();
         w.decrement();
+#ifdef ZERO_M
         w.clearSwap();
+#endif
     }
 
     void Emitter::writeOr()
@@ -682,7 +701,7 @@ namespace Hack::VirtualMachine
 
         _functions.push(name);
 
-        const uint16_t n = (uint16_t)(args);
+        const uint16_t n = (uint16_t)args;
         w.label(name);
 
         for (uint16_t i = 0; i < n; ++i)
@@ -762,15 +781,13 @@ namespace Hack::VirtualMachine
         w.popStackFrame(SW0, LCL, 4);
 
         // return address
-        w.atAddressOf(SW0);
-        w.copyMIntoD();
+        w.copyMIntoDAt(SW0);
         w.subXFromD(5);
         w.dereferenceD();
         w.moveMIntoD();  // move the return address
         w.moveDIntoX(SW2);
 
-        w.atAddressOf(SW0);
-        w.moveMIntoD();  // Final move
+        w.moveMIntoDAt(SW0);  // Final move
         w.subXFromD(6);
         w.dereferenceD();
         w.moveMIntoD();
@@ -783,8 +800,6 @@ namespace Hack::VirtualMachine
         w.atAddressOf(SW2);
         w.moveMIntoD();
         w.jumpToD();
-
-        // clang-format on
     }
 
 }  // namespace Hack::VirtualMachine

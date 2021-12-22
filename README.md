@@ -32,6 +32,8 @@ It is split into multiple namespace projects under the primary Hack namespace.
     - [Defines](#defines)
   - [Testing](#testing)
   - [Extra Tools](#extra-tools)
+    - [Parse Tree Visual](#parse-tree-visual)
+    - [GRM files](#grm-files)
 
 ### Utils
 
@@ -176,14 +178,15 @@ It uses CMake to generate its make files.
 
 Optional CMake definitions used in this project.
 
-| Option                   | Description                                                               | Default |
-|:-------------------------|:--------------------------------------------------------------------------|:-------:|
-| Hack_BUILD_TEST          | Build the unit test program.                                              |   OFF   |
-| Hack_AUTO_RUN_TEST       | Automatically run the test program.                                       |   OFF   |
-| Hack_CHECK_INT_BOUNDS    | Throw an overflow exception when testing individual bits.                 |   ON    |
-| Hack_IMPLEMENT_BLACK_BOX | If this is true most chips will be implemented with logic gates (Slower). |   OFF   |
-| Hack_PRINT_CHIP_STATE    | Enables the print method defined in the Chip base class.                  |   OFF   |
-| Hack_USE_SDL             | Enables or disables SDL                                                   |   OFF   |
+| Option                   | Description                                                                                                 | Default |
+|:-------------------------|:------------------------------------------------------------------------------------------------------------|:-------:|
+| Hack_BUILD_TEST          | Build the unit test program.                                                                                |   OFF   |
+| Hack_AUTO_RUN_TEST       | Automatically run the test program.                                                                         |   OFF   |
+| Hack_CHECK_INT_BOUNDS    | Throw an overflow exception when testing individual bits.                                                   |   ON    |
+| Hack_IMPLEMENT_BLACK_BOX | If this is true most chips will be implemented with logic gates (Slower).                                   |   OFF   |
+| Hack_PRINT_CHIP_STATE    | Enables the print method defined in the Chip base class.                                                    |   OFF   |
+| Hack_VM_ZERO_RAM         | Emits extra instructions to remove RAM values that are no longer in use. Useful with the Computer option -t |   ON    |
+| Hack_USE_SDL             | Enables or disables SDL                                                                                     |   OFF   |
 
 ## Testing
 
@@ -192,7 +195,6 @@ The testing directory is setup to work with [googletest](https://github.com/goog
 It also contains the initial setup for testing the standalone module using GitHub actions.
 
 ## Extra Tools
-
 
 ### Parse Tree Visual
  
