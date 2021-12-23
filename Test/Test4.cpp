@@ -365,22 +365,16 @@ GTEST_TEST(VirtualMachine, SimpleFunction)
     VirtualMachineTestStack(comp, "Test18");
 
     Chips::Memory* mem = comp.getRam();
-    uint16_t       val = mem->get(0);
-    EXPECT_EQ(val, 103);
-    val = mem->get(1);
-    EXPECT_EQ(val, 200);
-    val = mem->get(2);
-    EXPECT_EQ(val, 300);
-    val = mem->get(102);
-    EXPECT_EQ(val, 11);
-    val = mem->get(200);
-    EXPECT_EQ(val, 4);
-    val = mem->get(201);
-    EXPECT_EQ(val, 2);
-    val = mem->get(300);
-    EXPECT_EQ(val, 6);
-    val = mem->get(301);
-    EXPECT_EQ(val, 1);
+
+    uint16_t code = mem->get(VirtualMachine::STP);
+    EXPECT_EQ(code, 65);
+    code = mem->get(VirtualMachine::LCL);
+    EXPECT_EQ(code, 32);
+    code = mem->get(VirtualMachine::ARG);
+    EXPECT_EQ(code, 16);
+    code = mem->get(VirtualMachine::STP);
+    code = mem->get(code - 1);
+    EXPECT_EQ(code, 28);
 }
 
 GTEST_TEST(VirtualMachine, Function)

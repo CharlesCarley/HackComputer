@@ -1,17 +1,21 @@
-set 0 50
-set 1 48
-set 2 46
+set 0 64
+set 1 32
+set 2 16
 
 push constant 10
+pop argument 0
 push constant 2
+pop argument 1
+
+push argument 0
+push argument 1
 call ABC 2
 reset
 
 function ABC 2
-	push local 0
-	push local 1
+	push argument 0
+  	push argument 0
 	add
-	pop argument 0
 	push argument 0
 	add
 	push argument 1

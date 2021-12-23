@@ -55,10 +55,16 @@ namespace Hack::VirtualMachine
             write('@', index);
         }
 
+        void atDeReferencedAddressOf(const int& index) const
+        {
+            write('@', index);
+            write("A=M");
+        }
+
+        
         void popStackFrame(const int& frame, const int& x0, const int& idx) const
         {
-            atAddressOf(frame);
-            copyMIntoD();
+            copyMIntoDAt(frame);
             subXFromD(idx);
             dereferenceD();
             moveMIntoD();
@@ -356,6 +362,7 @@ namespace Hack::VirtualMachine
             atAddressOf(SW0);
             setM(false);
         }
+
     };
 
     Emitter::Emitter() :
@@ -381,7 +388,7 @@ namespace Hack::VirtualMachine
     void Emitter::setRam(const int index, const int value)
     {
         const CodeStream w(&_stream);
-        w.move(index, value);
+        w.move(index, (uint16_t)value);
     }
 
     void Emitter::initialize()
@@ -716,31 +723,23 @@ namespace Hack::VirtualMachine
         const CodeStream w(&_stream);
 
         const String retAddr = StringCombine("R.", name, '.', _cmp++, (size_t)this);
-
-        w.atAddressOf(STP);
-        w.copyMIntoD();
-        w.pushD();  // save the stack  
-
+        
         // Push the segment addresses.
 
         w.atAddressOf(retAddr);
         w.moveAIntoD();
         w.pushD();
 
-        w.atAddressOf(LCL);
-        w.copyMIntoD();
+        w.copyMIntoDAt(LCL);
         w.pushD();
 
-        w.atAddressOf(ARG);
-        w.copyMIntoD();
+        w.copyMIntoDAt(ARG);
         w.pushD();
 
-        w.atAddressOf(THS);
-        w.copyMIntoD();
+        w.copyMIntoDAt(THS);
         w.pushD();
 
-        w.atAddressOf(THT);
-        w.copyMIntoD();
+        w.copyMIntoDAt(THT);
         w.pushD();
 
         // update the new ARG
@@ -754,9 +753,10 @@ namespace Hack::VirtualMachine
 
         // Move the current stack address into the LCL address.
         w.copyMIntoDAt(STP);
-        w.subXFromD(args);
         w.atAddressOf(LCL);
         w.moveDIntoM();
+
+
         w.jumpTo(name);
 
         // Write the return position.
@@ -774,31 +774,34 @@ namespace Hack::VirtualMachine
         w.jumpStackTop();
         w.moveMIntoD();
         w.moveDIntoX(SW1);
+        w.decrement();
+
+
+        w.copyMIntoDAt(ARG);
+        w.addXToD(1);
+        w.atAddressOf(STP);
+        w.moveDIntoM();
 
         w.popStackFrame(SW0, THT, 1);
         w.popStackFrame(SW0, THS, 2);
         w.popStackFrame(SW0, ARG, 3);
         w.popStackFrame(SW0, LCL, 4);
+        
 
         // return address
-        w.copyMIntoDAt(SW0);
+        w.moveMIntoDAt(SW0);
         w.subXFromD(5);
         w.dereferenceD();
         w.moveMIntoD();  // move the return address
         w.moveDIntoX(SW2);
 
-        w.moveMIntoDAt(SW0);  // Final move
-        w.subXFromD(6);
-        w.dereferenceD();
-        w.moveMIntoD();
-        w.moveDIntoX(STP);
+        w.moveMIntoDAt(SW1);
+        w.atDeReferencedAddressOf(STP);
+        w.setM(false);
+        w.decrementA();
+        w.moveDIntoM();
 
-        w.atAddressOf(SW1);
-        w.moveMIntoD();
-        w.pushD();
-
-        w.atAddressOf(SW2);
-        w.moveMIntoD();
+        w.moveMIntoDAt(SW2);
         w.jumpToD();
     }
 

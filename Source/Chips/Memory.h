@@ -23,10 +23,10 @@
 #include "Chips/Chip.h"
 #include "Chips/Ram16k.h"
 #include "Chips/Screen.h"
+#include "VirtualMachine/Constants.h"
 
 namespace Hack::Chips
 {
-
     class Memory final : public Chip<uint8_t, 8>
     {
     public:

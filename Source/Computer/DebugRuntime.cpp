@@ -37,6 +37,7 @@ namespace Hack::Computer
         Highlight,
         WireTitle,
         Action,
+        Action2,
         Wire,
         Title,
         WireShadow,
@@ -95,9 +96,10 @@ namespace Hack::Computer
 
             _ctx = new Context();
             _ctx->createColor(Color(0x62627c));  // Grey
-            _ctx->createColor(Color(0x9F9FAF));  // Highlight
+            _ctx->createColor(Color(0x9f9faf));  // Highlight
             _ctx->createColor(Color(0x5a5a7f));  // WireTitle
             _ctx->createColor(Color(0xe94545));  // Action
+            _ctx->createColor(Color(0x72728c));  // Action2
             _ctx->createColor(Color(0x3f3f59));  // Wire
             _ctx->createColor(Color(0x8787bf));  // Title
             _ctx->createColor(Color(0x30303f));  // WireShadow
@@ -171,7 +173,10 @@ namespace Hack::Computer
                 else
                 {
                     ctx.background(0);
-                    ctx.foreground(Grey);
+                    if (value.at(0) == '@')
+                        ctx.foreground(Action2);
+                    else
+                        ctx.foreground(Grey);
                 }
 
                 ctx.string(value,
