@@ -20,8 +20,8 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#include "Utils/IndexCache.h"
 #include "Compiler/Generator/Symbol.h"
+#include "Utils/IndexCache.h"
 
 namespace Hack::Compiler::CodeGenerator
 {
@@ -33,11 +33,10 @@ namespace Hack::Compiler::CodeGenerator
 
     private:
         Symbols _symbols;
+        size_t  _field;
+        size_t  _static;
         size_t  _local;
         size_t  _argument;
-        size_t  _pointer;
-        size_t  _static;
-        size_t  _field;
 
     public:
         SymbolTable();
@@ -51,18 +50,52 @@ namespace Hack::Compiler::CodeGenerator
 
         const Symbol& get(const size_t& idx) const;
 
+        size_t fieldCount() const;
+
+        size_t staticCount() const;
+
+        size_t localCount() const;
+
+        size_t argumentCount() const;
+
+
         void clear();
 
-        Iterator begin() const
-        {
-            return _symbols.begin();
-        }
+        Iterator begin() const;
 
-        Iterator end() const
-        {
-            return _symbols.end();
-        }
+        Iterator end() const;
     };
-    
+
+
+    inline size_t SymbolTable::fieldCount() const
+    {
+        return _field;
+    }
+
+    inline size_t SymbolTable::staticCount() const
+    {
+        return _static;
+    }
+
+    inline size_t SymbolTable::localCount() const
+    {
+        return _local;
+    }
+
+    inline size_t SymbolTable::argumentCount() const
+    {
+        return _argument;
+    }
+
+
+    inline SymbolTable::Iterator SymbolTable::begin() const
+    {
+        return _symbols.begin();
+    }
+
+    inline SymbolTable::Iterator SymbolTable::end() const
+    {
+        return _symbols.end();
+    }
 
 }  // namespace Hack::Compiler::CodeGenerator

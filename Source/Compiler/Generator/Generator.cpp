@@ -23,8 +23,8 @@
 #include <fstream>
 #include "Compiler/Analyzer/Parser.h"
 #include "Compiler/Common/Node.h"
-#include "Compiler/Generator/Emitter.h"
 #include "Compiler/Generator/SymbolTable.h"
+#include "Compiler/Generator/VmEmitter.h"
 #include "Utils/Console.h"
 #include "Utils/FileSystem.h"
 
@@ -33,7 +33,7 @@ namespace Hack::Compiler::CodeGenerator
     Generator::Generator() :
         _globals(new SymbolTable()),
         _locals(new SymbolTable()),
-        _emitter(new Emitter())
+        _emitter(new VmEmitter())
     {
     }
 
@@ -83,7 +83,12 @@ namespace Hack::Compiler::CodeGenerator
             const Node& identifierList = variable.rule(2, RuleIdentifierList);
 
             for (Node* id : identifierList)
+            {
                 _locals->insert(id->value(), type, Local);
+                _emitter->pushConstant(-1);
+                _emitter->popLocal(_locals->localCount()-1);
+                _emitter->pushLocal(_locals->localCount() - 1);
+            }
         }
 
         for (const Node* par : parameters)
@@ -113,12 +118,13 @@ namespace Hack::Compiler::CodeGenerator
             const Node& parameterList = method.rule(4);
             const Node& body          = method.rule(6).rule(1);
 
+            buildLocals(body, parameterList);
+
             if (methodSpec.isTypeOf(KeywordFunction))
                 _emitter->writeFunction(methodName.value(), (uint16_t)parameterList.size());
             else
                 _emitter->writeMethod(className, methodName.value(), (uint16_t)parameterList.size());
 
-            buildLocals(body, parameterList);
             buildStatements(body);
         }
     }

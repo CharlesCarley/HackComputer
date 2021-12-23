@@ -19,7 +19,7 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#include "Compiler/Generator/Emitter.h"
+#include "Compiler/Generator/VmEmitter.h"
 #include <iomanip>
 #include "Utils/Char.h"
 
@@ -45,46 +45,47 @@ namespace Hack::Compiler::CodeGenerator
         }
     };
 
-    Emitter::Emitter() = default;
+    VmEmitter::VmEmitter() = default;
 
-    void Emitter::clear()
+    void VmEmitter::clear()
     {
         _stream.str("");
     }
 
-    void Emitter::initialize()
+    void VmEmitter::initialize()
     {
         const CodeStream w(&_stream);
         w.write("set 0 256");
-        w.write("set 1 512");
-        w.write("set 2 768");
-        w.write("set 4 1024");
+        w.write("set 1 128");
+        w.write("set 2 64");
+        w.write("set 3 1024");
+        w.write("set 4 2048");
         w.write("call Main.main 0");
         w.write("reset");
     }
 
-    void Emitter::writeStatic(const Symbol& sym)
+    void VmEmitter::writeStatic(const Symbol& sym)
     {
         const CodeStream w(&_stream);
         w.write("push constant 32767");
         w.write("pop static ", sym.entry());
     }
 
-    void Emitter::writeField(const Symbol& sym)
+    void VmEmitter::writeField(const Symbol& sym)
     {
         const CodeStream w(&_stream);
         w.write("push constant 32767");
         w.write("pop this ", sym.entry());
     }
 
-    void Emitter::writeFunction(const String& name, uint16_t numParams)
+    void VmEmitter::writeFunction(const String& name, uint16_t numParams)
     {
         const CodeStream w(&_stream);
 
         w.write("function ", name, " ", numParams);
     }
 
-    void Emitter::writeMethod(const String& className,
+    void VmEmitter::writeMethod(const String& className,
                               const String& methodName,
                               uint16_t      numParams)
     {
@@ -95,56 +96,62 @@ namespace Hack::Compiler::CodeGenerator
         w.write("function ", className, '.', methodName, ' ', numParams + 1);
     }
 
-    void Emitter::pushConstant(const String& value)
+    void VmEmitter::pushConstant(const String& value)
     {
         const CodeStream w(&_stream);
-        w.write("push constant ", Char::toInt16(value));
+        w.write("push constant ", (uint16_t)Char::toInt16(value));
     }
 
-    void Emitter::popLocal(const size_t& idx)
+    void VmEmitter::pushConstant(const size_t& value)
+    {
+        const CodeStream w(&_stream);
+        w.write("push constant ", (uint16_t)(int16_t)value);
+    }
+
+    void VmEmitter::popLocal(const size_t& idx)
     {
         const CodeStream w(&_stream);
         w.write("pop local ", idx);
     }
 
-    void Emitter::pushLocal(const size_t& idx)
+    void VmEmitter::pushLocal(const size_t& idx)
     {
         const CodeStream w(&_stream);
         w.write("push local ", idx);
     }
 
-    void Emitter::pushArgument(const size_t& idx)
+    void VmEmitter::pushArgument(const size_t& idx)
     {
         const CodeStream w(&_stream);
         w.write("push argument ", idx);
     }
 
-    void Emitter::pushStatic(const size_t& idx)
+    void VmEmitter::pushStatic(const size_t& idx)
     {
         const CodeStream w(&_stream);
         w.write("push argument ", idx);
     }
 
-    void Emitter::pushThis(const size_t& idx)
+    void VmEmitter::pushThis(const size_t& idx)
     {
         const CodeStream w(&_stream);
         w.write("push this ", idx);
     }
 
 
-    void Emitter::writeReturn()
+    void VmEmitter::writeReturn()
     {
         const CodeStream w(&_stream);
         w.write("return");
     }
 
-    void Emitter::add()
+    void VmEmitter::add()
     {
         const CodeStream w(&_stream);
         w.write("add");
     }
 
-    void Emitter::sub()
+    void VmEmitter::sub()
     {
         const CodeStream w(&_stream);
         w.write("sub");

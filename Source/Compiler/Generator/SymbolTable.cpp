@@ -24,11 +24,10 @@
 namespace Hack::Compiler::CodeGenerator
 {
     SymbolTable::SymbolTable() :
-        _local(0),
-        _argument(0),
-        _pointer(0),
+        _field(0),
         _static(0),
-        _field(0)
+        _local(0),
+        _argument(0)
     {
     }
 
@@ -45,9 +44,6 @@ namespace Hack::Compiler::CodeGenerator
                 break;
             case Argument:
                 _symbols.insert(name, {name, type, kind, _argument++});
-                break;
-            case Pointer:
-                _symbols.insert(name, {name, type, kind, _pointer++});
                 break;
             case Static:
                 _symbols.insert(name, {name, type, kind, _static++});
@@ -72,7 +68,7 @@ namespace Hack::Compiler::CodeGenerator
         if (idx != (size_t)-1)
             return _symbols.at(idx);
 
-        throw NotFound();
+        throw InputException("symbol ", name, " not found");
     }
 
     const Symbol& SymbolTable::get(const size_t& idx) const
@@ -80,7 +76,7 @@ namespace Hack::Compiler::CodeGenerator
         if (_symbols.contains(idx))
             return _symbols.at(idx);
 
-        throw IndexOutOfBounds();
+        throw InputException("symbol ", idx, " is out of bounds");
     }
 
     void SymbolTable::clear()

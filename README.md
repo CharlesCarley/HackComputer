@@ -190,7 +190,7 @@ Optional CMake definitions used in this project.
 
 ## Testing
 
-The testing directory is setup to work with [googletest](https://github.com/google/googletest).
+The [testing directory](Test/) is setup to work with [googletest](https://github.com/google/googletest).
 
 It also contains the initial setup for testing the standalone module using GitHub actions.
 

@@ -1,21 +1,20 @@
-set 0 102
-set 1 200
-set 2 300
-set 3 0
-set 4 0
+set 0 50
+set 1 48
+set 2 46
 
-set 200 4
-set 201 2
-set 300 6
-set 301 1
+push constant 10
+push constant 2
+call ABC 2
+reset
 
-function ABC 0
+function ABC 2
 	push local 0
 	push local 1
 	add
+	pop argument 0
 	push argument 0
 	add
 	push argument 1
 	sub
-	reset
+	return
 	

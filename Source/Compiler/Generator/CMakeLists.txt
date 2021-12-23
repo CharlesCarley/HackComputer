@@ -23,7 +23,7 @@ set(TargetGroup Compiler)
 set(Target_HDR
     Expression.h
     Generator.h
-    Emitter.h
+    VmEmitter.h
     Scope.h
     Symbol.h
     SymbolTable.h
@@ -31,7 +31,7 @@ set(Target_HDR
 
 set(Target_SRC 
     Expression.cpp
-    Emitter.cpp
+    VmEmitter.cpp
     Generator.cpp
     Scope.cpp
     Symbol.cpp

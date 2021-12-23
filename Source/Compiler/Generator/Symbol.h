@@ -26,11 +26,10 @@ namespace Hack::Compiler::CodeGenerator
 {
     enum SymbolKind
     {
+        Field,
+        Static,
         Local,
         Argument,
-        Pointer,
-        Static,
-        Field,
     };
 
     class Symbol

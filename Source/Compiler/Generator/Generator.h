@@ -33,14 +33,14 @@ namespace Hack
 namespace Hack::Compiler::CodeGenerator
 {
     class SymbolTable;
-    class Emitter;
+    class VmEmitter;
 
     class Generator
     {
     private:
         SymbolTable* _globals;
         SymbolTable* _locals;
-        Emitter*     _emitter;
+        VmEmitter*     _emitter;
 
         void buildClass(Node* node) const;
 

@@ -28,13 +28,13 @@ namespace Hack::Compiler::CodeGenerator
 {
     class CodeStream;
 
-    class Emitter
+    class VmEmitter
     {
     private:
         OutputStringStream _stream;
 
     public:
-        Emitter();
+        VmEmitter();
 
         void clear();
 
@@ -52,21 +52,26 @@ namespace Hack::Compiler::CodeGenerator
 
         void pushConstant(const String& value);
 
+        void pushConstant(const size_t& value);
+
         void popLocal(const size_t& idx);
 
         void pushLocal(const size_t& idx);
-        void pushArgument(const size_t& idx);
-        void pushStatic(const size_t& idx);
-        void pushThis(const size_t& idx);
 
+        void pushArgument(const size_t& idx);
+
+        void pushStatic(const size_t& idx);
+
+        void pushThis(const size_t& idx);
 
         void writeReturn();
 
         void add();
+
         void sub();
     };
 
-    inline OutputStringStream& Emitter::stream()
+    inline OutputStringStream& VmEmitter::stream()
     {
         return _stream;
     }

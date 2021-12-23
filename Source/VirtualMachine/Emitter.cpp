@@ -719,7 +719,7 @@ namespace Hack::VirtualMachine
 
         w.atAddressOf(STP);
         w.copyMIntoD();
-        w.pushD();  // save the stack
+        w.pushD();  // save the stack  
 
         // Push the segment addresses.
 
@@ -753,8 +753,8 @@ namespace Hack::VirtualMachine
         w.moveDIntoM();
 
         // Move the current stack address into the LCL address.
-        w.atAddressOf(STP);
-        w.copyMIntoD();
+        w.copyMIntoDAt(STP);
+        w.subXFromD(args);
         w.atAddressOf(LCL);
         w.moveDIntoM();
         w.jumpTo(name);
