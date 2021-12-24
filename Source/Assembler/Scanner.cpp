@@ -335,6 +335,7 @@ namespace Hack::Assembler
                 _stream->putback((char)ch);
                 scanDecimal(tok);
                 return;
+            case '_':
             case LowerCaseAz:
             case UpperCaseAz:
                 _stream->putback((char)ch);

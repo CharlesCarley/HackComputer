@@ -55,14 +55,16 @@ namespace Hack::Compiler::CodeGenerator
     void VmEmitter::initialize()
     {
         const CodeStream w(&_stream);
-        w.write("set 0 256");
-        w.write("set 1 128");
-        w.write("set 2 64");
-        w.write("set 3 1024");
-        w.write("set 4 2048");
         w.write("call Main.main 0");
-        w.write("reset");
+        w.write("goto __sys__exit");
     }
+
+    void VmEmitter::finalize()
+    {
+        const CodeStream w(&_stream);
+        w.write("label __sys__exit");
+    }
+
 
     void VmEmitter::writeStatic(const Symbol& sym)
     {
@@ -90,10 +92,7 @@ namespace Hack::Compiler::CodeGenerator
                               uint16_t      numParams)
     {
         const CodeStream w(&_stream);
-        w.write("push this 0");
-        w.write("pop argument 0");
-        w.write("push argument 0");
-        w.write("function ", className, '.', methodName, ' ', numParams + 1);
+        w.write("function ", className, '.', methodName, ' ', numParams);
     }
 
     void VmEmitter::pushConstant(const String& value)

@@ -3,7 +3,7 @@ push constant 2
 call ABC 2
 goto end_program
 
-function ABC 2
+function ABC 0
 	push argument 0
   	push argument 0
 	add              // 20

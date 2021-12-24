@@ -76,7 +76,7 @@ namespace Hack::VirtualMachine
     {
         int ch = _stream->get();
 
-        if (isLetter(ch))
+        if (isLetter(ch) || ch == '_')
         {
             String cmp;
             while (isValidCharacter(ch))
@@ -148,6 +148,7 @@ namespace Hack::VirtualMachine
                 _stream->putback((char)ch);
                 scanDigit(tok);
                 return;
+            case '_':
             case UpperCaseAz:
             case LowerCaseAz:
                 _stream->putback((char)ch);

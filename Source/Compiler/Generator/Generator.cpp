@@ -83,12 +83,7 @@ namespace Hack::Compiler::CodeGenerator
             const Node& identifierList = variable.rule(2, RuleIdentifierList);
 
             for (Node* id : identifierList)
-            {
                 _locals->insert(id->value(), type, Local);
-                _emitter->pushConstant(-1);
-                _emitter->popLocal(_locals->localCount()-1);
-                _emitter->pushLocal(_locals->localCount() - 1);
-            }
         }
 
         for (const Node* par : parameters)
@@ -120,10 +115,12 @@ namespace Hack::Compiler::CodeGenerator
 
             buildLocals(body, parameterList);
 
+            const uint16_t tot = (uint16_t)_locals->localCount();
+
             if (methodSpec.isTypeOf(KeywordFunction))
-                _emitter->writeFunction(methodName.value(), (uint16_t)parameterList.size());
+                _emitter->writeFunction(methodName.value(), tot);
             else
-                _emitter->writeMethod(className, methodName.value(), (uint16_t)parameterList.size());
+                _emitter->writeMethod(className, methodName.value(), tot);
 
             buildStatements(body);
         }
@@ -327,6 +324,9 @@ namespace Hack::Compiler::CodeGenerator
                 buildClass(firstChild);
             }
         }
+
+        _emitter->finalize();
+
     }
 
     void Generator::parse(const String& file) const

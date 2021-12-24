@@ -760,6 +760,7 @@ namespace Hack::VirtualMachine
         {
             w.dereferenceOffset(LCL, i);
             w.setM(false);
+            w.increment();
         }
     }
 
@@ -768,6 +769,11 @@ namespace Hack::VirtualMachine
         const CodeStream w(&_stream);
 
         const String retAddr = StringCombine("R.", name, '.', _cmp++, (size_t)this);
+        if (args == 0)  // allocate the return
+        {
+            w.setD(false);
+            w.pushD();
+        }
 
         // Push the segment addresses.
 
@@ -793,6 +799,10 @@ namespace Hack::VirtualMachine
         w.addXToD(5);
         w.atAddressOf(STP);
         w.subDmIntoD();
+
+        if (args == 0)  // allocate the return
+            w.subXFromD(1);
+
         w.atAddressOf(ARG);
         w.moveDIntoM();
 

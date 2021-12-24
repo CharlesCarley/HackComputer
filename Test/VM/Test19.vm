@@ -9,7 +9,7 @@ call Recursive 1
 goto end_program
 
 
-function Recursive 1
+function Recursive 0
 	push argument 0
 	push constant 2
 	lt

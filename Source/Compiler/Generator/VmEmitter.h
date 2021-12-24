@@ -42,6 +42,8 @@ namespace Hack::Compiler::CodeGenerator
 
         void initialize();
 
+        void finalize();
+
         void writeStatic(const Symbol& sym);
 
         void writeField(const Symbol& sym);

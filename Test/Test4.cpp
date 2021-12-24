@@ -385,11 +385,28 @@ GTEST_TEST(VirtualMachine, RecursiveFunction)
     EXPECT_EQ(code, 1);
 }
 
-
-GTEST_TEST(VirtualMachine, Function)
+GTEST_TEST(VirtualMachine, FunctionLocals)
 {
+    // this pushes 4 and 6, adds them, then moves them into  3 locals
+    // and returns the third local
+
     Chips::Computer comp;
     VirtualMachineTestStack(comp, "Test20", false);
 
     Chips::Memory* mem = comp.getRam();
+
+    const int locals = 256 + 2 + 5;
+
+    uint16_t code = mem->get(VirtualMachine::STP);
+    EXPECT_EQ(code, 257);         // should be one element on the stack (257-256)
+    code = mem->get(256);         // 
+    EXPECT_EQ(code, 10);          // should be 4+6
+    code = mem->get(257);         //
+    EXPECT_EQ(code, 6);          // should be lingering garbage  of 6
+    code = mem->get(locals);      // The local base address 0
+    EXPECT_EQ(code, 10);          // (garbage) but still present
+    code = mem->get(locals + 1);  // 
+    EXPECT_EQ(code, 10);          //
+    code = mem->get(locals + 2);  //
+    EXPECT_EQ(code, 10);          //
 }
