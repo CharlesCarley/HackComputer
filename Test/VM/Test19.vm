@@ -1,13 +1,37 @@
-set 0 32
-set 1 64
-set 2 128
-set 3 0
-set 4 0
+set 0 256// for clarity only 
+push constant 100
+// Recursively calls Test 100 times. 
+// Each call subtracts 1 from the argument then uses that as 
+// the argument to the next recursive call.
+// When the argument is less than one, it swaps the return value (1)
+// up the call tree. The final return code is (1) with a stack size of (1) (257)
+call Recursive 1
+goto end_program
 
-call main 0
-reset
 
-function main 0
-	push constant 123
-	pop local 0
-	return
+function Recursive 1
+	push argument 0
+	push constant 2
+	lt
+
+	if-goto lt_eq_1
+	goto gt_1
+
+
+	label lt_eq_1
+		push argument 0
+		return
+
+	label gt_1         
+		push argument 0
+		push constant 1
+		sub
+
+		// push up into the stack
+		pop  argument 0
+		push argument 0
+
+		call Recursive 1
+		return 
+
+label end_program

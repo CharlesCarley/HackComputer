@@ -61,7 +61,6 @@ namespace Hack::VirtualMachine
             write("A=M");
         }
 
-        
         void popStackFrame(const int& frame, const int& x0, const int& idx) const
         {
             copyMIntoDAt(frame);
@@ -93,8 +92,8 @@ namespace Hack::VirtualMachine
             atAddressOf(addr);
             write("D=A;JMP");
         }
-#ifdef ZERO_M
 
+#ifdef ZERO_M
         void clearSwap() const
         {
             atAddressOf(SW0);
@@ -120,11 +119,10 @@ namespace Hack::VirtualMachine
         void decrement() const
         {
             atAddressOf(STP);
-            write("M=M-1");
 #ifdef ZERO_M
-            atAddressOf(STP);
-            write("A=M");
-            write("M=0");
+            write("M=M-1 A=M+1 M=0");
+#else
+            write("M=M-1");
 #endif
         }
 
@@ -219,6 +217,15 @@ namespace Hack::VirtualMachine
             write("D=M-D");
         }
 
+        void subMoveDmIntoD() const
+        {
+#ifdef ZERO_M
+            write("D=M-D M=0");
+#else
+            write("D=M-D");
+#endif
+        }
+
         void andDmIntoM() const
         {
             write("M=D&M");
@@ -238,6 +245,7 @@ namespace Hack::VirtualMachine
         {
             write("M=-M");
         }
+
         void subMdIntoD() const
         {
             write("D=M-D");
@@ -363,6 +371,16 @@ namespace Hack::VirtualMachine
             setM(false);
         }
 
+        void compareDIntoX(const int& x0, const int& m0, const int& value) const
+        {
+            copyMIntoDAt(m0);
+            atAddressOf(x0);
+            moveDIntoM();
+            atAddressOf(value);
+            moveAIntoD();
+            atAddressOf(x0);
+            subMoveDmIntoD();
+        }
     };
 
     Emitter::Emitter() :
@@ -385,32 +403,18 @@ namespace Hack::VirtualMachine
         valDone = "L44" + v;
     }
 
+    void Emitter::genLabel(String& val)
+    {
+        ++_cmp;
+        String v;
+        Char::toHexString(v, (uint16_t)_cmp);
+        val = "L48" + v;
+    }
+
     void Emitter::setRam(const int index, const int value)
     {
         const CodeStream w(&_stream);
         w.move(index, (uint16_t)value);
-    }
-
-    void Emitter::initialize()
-    {
-    }
-
-    void Emitter::popStackInto(const CodeStream& w,
-                               const int&        idx,
-                               const int32_t&    dest,
-                               const int32_t&    swap)
-    {
-        w.jumpStackTop();
-        w.moveMIntoD();
-        w.moveDIntoX(swap);
-        w.dereferenceOffset(dest, idx);
-        w.moveMIntoD();
-        w.jumpToAddressIn(swap);
-        w.moveDIntoM();
-        w.decrement();
-#ifdef ZERO_M
-        w.clearSwap();
-#endif
     }
 
     void Emitter::pushConstant(const int& idx)
@@ -421,26 +425,52 @@ namespace Hack::VirtualMachine
 
     void Emitter::pushLocal(const int& idx)
     {
+        String whenDone;
+        genLabel(whenDone);
+
         const CodeStream w(&_stream);
+        w.compareDIntoX(SW2, LCL, 0);
+        w.jumpIfEquals(whenDone);
+
         w.dereferenceOffset(LCL, idx);
         w.copyMIntoD();
         w.pushD();
+
+        w.label(whenDone);
     }
 
     void Emitter::pushThis(const int& idx)
     {
+        String whenDone;
+        genLabel(whenDone);
+
         const CodeStream w(&_stream);
+
+        w.compareDIntoX(SW2, THS, 0);
+        w.jumpIfEquals(whenDone);
+
         w.dereferenceOffset(THS, idx);
         w.copyMIntoD();
         w.pushD();
+
+        w.label(whenDone);
     }
 
     void Emitter::pushThat(const int& idx)
     {
+        String whenDone;
+        genLabel(whenDone);
+
         const CodeStream w(&_stream);
+
+        w.compareDIntoX(SW2, THT, 0);
+        w.jumpIfEquals(whenDone);
+
         w.dereferenceOffset(THT, idx);
         w.copyMIntoD();
         w.pushD();
+
+        w.label(whenDone);
     }
 
     void Emitter::pushTemp(const int& idx)
@@ -453,10 +483,19 @@ namespace Hack::VirtualMachine
 
     void Emitter::pushArgument(const int& idx)
     {
+        String whenDone;
+        genLabel(whenDone);
+
         const CodeStream w(&_stream);
+
+        w.compareDIntoX(SW2, ARG, 0);
+        w.jumpIfEquals(whenDone);
+
         w.dereferenceOffset(ARG, idx);
         w.copyMIntoD();
         w.pushD();
+
+        w.label(whenDone);
     }
 
     void Emitter::pushPointer(const int& idx)
@@ -622,8 +661,10 @@ namespace Hack::VirtualMachine
         w.label(ifTrue);
         w.setD(true);
         w.label(whenDone);
-        w.incrementAndJump();
+        w.jumpStackTop();
+        w.decrementA();
         w.moveDIntoM();
+        w.decrement();
     }
 
     void Emitter::writeLt()
@@ -642,8 +683,10 @@ namespace Hack::VirtualMachine
         w.label(ifTrue);
         w.setD(true);
         w.label(whenDone);
-        w.incrementAndJump();
+        w.jumpStackTop();
+        w.decrementA();
         w.moveDIntoM();
+        w.decrement();
     }
 
     void Emitter::writeGt()
@@ -662,8 +705,10 @@ namespace Hack::VirtualMachine
         w.label(ifTrue);
         w.setD(true);
         w.label(whenDone);
-        w.incrementAndJump();
+        w.jumpStackTop();
+        w.decrementA();
         w.moveDIntoM();
+        w.decrement();
     }
 
     void Emitter::writeReset()
@@ -723,7 +768,7 @@ namespace Hack::VirtualMachine
         const CodeStream w(&_stream);
 
         const String retAddr = StringCombine("R.", name, '.', _cmp++, (size_t)this);
-        
+
         // Push the segment addresses.
 
         w.atAddressOf(retAddr);
@@ -756,7 +801,6 @@ namespace Hack::VirtualMachine
         w.atAddressOf(LCL);
         w.moveDIntoM();
 
-
         w.jumpTo(name);
 
         // Write the return position.
@@ -773,9 +817,9 @@ namespace Hack::VirtualMachine
         // extract the return code
         w.jumpStackTop();
         w.moveMIntoD();
-        w.moveDIntoX(SW1);
         w.decrement();
-
+        w.atDeReferencedAddressOf(ARG);
+        w.moveDIntoM();  // place the return
 
         w.copyMIntoDAt(ARG);
         w.addXToD(1);
@@ -786,20 +830,13 @@ namespace Hack::VirtualMachine
         w.popStackFrame(SW0, THS, 2);
         w.popStackFrame(SW0, ARG, 3);
         w.popStackFrame(SW0, LCL, 4);
-        
 
         // return address
-        w.moveMIntoDAt(SW0);
+        w.moveMIntoDAt(SW0);  // clobber the frame
         w.subXFromD(5);
         w.dereferenceD();
-        w.moveMIntoD();  // move the return address
-        w.moveDIntoX(SW2);
-
-        w.moveMIntoDAt(SW1);
-        w.atDeReferencedAddressOf(STP);
-        w.setM(false);
-        w.decrementA();
-        w.moveDIntoM();
+        w.moveMIntoD();     // move the return address to SW2
+        w.moveDIntoX(SW2);  // return address in
 
         w.moveMIntoDAt(SW2);
         w.jumpToD();

@@ -356,7 +356,6 @@ namespace Hack::VirtualMachine
 
         // clear the stream
         _emitter.clear();
-        _emitter.initialize();
 
         while (_cursor <= (int32_t)_tokens.size())
         {

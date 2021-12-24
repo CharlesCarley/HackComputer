@@ -367,15 +367,24 @@ GTEST_TEST(VirtualMachine, SimpleFunction)
     Chips::Memory* mem = comp.getRam();
 
     uint16_t code = mem->get(VirtualMachine::STP);
-    EXPECT_EQ(code, 65);
-    code = mem->get(VirtualMachine::LCL);
-    EXPECT_EQ(code, 32);
-    code = mem->get(VirtualMachine::ARG);
-    EXPECT_EQ(code, 16);
-    code = mem->get(VirtualMachine::STP);
-    code = mem->get(code - 1);
+    EXPECT_EQ(code, 257);
+    code = mem->get(256);
     EXPECT_EQ(code, 28);
 }
+
+GTEST_TEST(VirtualMachine, RecursiveFunction)
+{
+    Chips::Computer comp;
+    VirtualMachineTestStack(comp, "Test19");
+
+    Chips::Memory* mem = comp.getRam();
+
+    uint16_t code = mem->get(VirtualMachine::STP);
+    EXPECT_EQ(code, 257);
+    code = mem->get(256);
+    EXPECT_EQ(code, 1);
+}
+
 
 GTEST_TEST(VirtualMachine, Function)
 {

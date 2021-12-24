@@ -38,12 +38,11 @@ namespace Hack::VirtualMachine
         int                _cmp;
         StringStack        _functions;
 
-        static void popStackInto(const CodeStream& w,
-                                 const int&        idx,
-                                 const int32_t&    dest,
-                                 const int32_t&    swap);
+    
         
         void getJumpLabels(String& valTrue, String& valDone);
+
+        void genLabel(String& val);
 
     public:
         Emitter();
@@ -54,8 +53,6 @@ namespace Hack::VirtualMachine
         {
             return _stream;
         }
-
-        void initialize();
 
         void setRam(int index, int value);
 

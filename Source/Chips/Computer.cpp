@@ -65,6 +65,7 @@ namespace Hack::Chips
         {
             _cpu->clear();
             _ram->zero();
+            _ram->setValue(0, 256);
             _cpuState = NullState;
             Timer::reset();
         }

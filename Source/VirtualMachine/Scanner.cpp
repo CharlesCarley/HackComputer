@@ -114,6 +114,8 @@ namespace Hack::VirtualMachine
             ch = _stream->get();
             if (isDecimal(ch) || ch == '-')
                 v.push_back((char)ch);
+            else
+                _stream->putback((char)ch);
         }
 
         tok.setType(TOK_INTEGER);

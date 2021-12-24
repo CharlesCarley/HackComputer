@@ -1,24 +1,16 @@
-set 0 64
-set 1 32
-set 2 16
-
 push constant 10
-pop argument 0
 push constant 2
-pop argument 1
-
-push argument 0
-push argument 1
 call ABC 2
-reset
+goto end_program
 
 function ABC 2
 	push argument 0
   	push argument 0
-	add
-	push argument 0
-	add
-	push argument 1
-	sub
-	return
-	
+	add              // 20
+	push argument 0  
+	add              // 30
+	push argument 1 
+	sub              // 28
+ 	return
+
+label end_program
