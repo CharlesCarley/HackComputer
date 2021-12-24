@@ -114,7 +114,7 @@ namespace Hack::VirtualMachine
 
         void writeLabel(const String& value);
 
-        void writeFunction(const String& name, const int& args);
+        void writeFunction(const String& name, const int& locals);
 
         void writeCall(const String& name, const int& args);
 

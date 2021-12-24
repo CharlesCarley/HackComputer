@@ -747,13 +747,13 @@ namespace Hack::VirtualMachine
         w.label(value);
     }
 
-    void Emitter::writeFunction(const String& name, const int& args)
+    void Emitter::writeFunction(const String& name, const int& locals)
     {
         const CodeStream w(&_stream);
 
         _functions.push(name);
 
-        const uint16_t n = (uint16_t)args;
+        const uint16_t n = (uint16_t)locals;
         w.label(name);
 
         for (uint16_t i = 0; i < n; ++i)

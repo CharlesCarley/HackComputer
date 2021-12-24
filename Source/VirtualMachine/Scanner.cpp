@@ -66,7 +66,6 @@ namespace Hack::VirtualMachine
     };
     // clang-format on
 
-
     inline bool isValidCharacter(const int ch)
     {
         return isLetter(ch) || isDecimal(ch) || ch == '-' || ch == '_' || ch == '.';
@@ -165,7 +164,7 @@ namespace Hack::VirtualMachine
                 scanWhiteSpace();
                 break;
             default:
-                syntaxError("Unknown character parsed '", (char)ch, "'");
+                syntaxError("unknown character parsed '", ch, "'");
             }
         }
 

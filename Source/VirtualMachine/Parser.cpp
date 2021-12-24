@@ -47,7 +47,8 @@ namespace Hack::VirtualMachine
         {
             parseError(
                 "Expected an integer to be the third argument to the push "
-                "expression");
+                "expression\n"
+                "push <segment:keyword> <index:int>");
         }
 
         const size_t idx = getToken(2).getIndex();
@@ -80,9 +81,10 @@ namespace Hack::VirtualMachine
             break;
         default:
             parseError(
-                "Unknown token parsed, expected "
+                "Unknown keyword parsed.\nExpected "
                 "argument, local, static, constant, "
-                "this, that, pointer or temp");
+                "this, that, pointer or temp.\n"
+                "push <segment:keyword> <index:int>");
         }
     }
 
@@ -95,7 +97,8 @@ namespace Hack::VirtualMachine
         {
             parseError(
                 "Expected an integer to be the third argument to the pop "
-                "expression");
+                "expression\n"
+                "pop <segment:keyword> <index:int>");
         }
 
         const size_t idx = getToken(2).getIndex();
@@ -126,9 +129,10 @@ namespace Hack::VirtualMachine
         case TOK_CONSTANT:
         default:
             parseError(
-                "Unknown token parsed, expected "
-                "argument, local, static, "
-                "this, that, pointer or temp");
+                "Unknown keyword parsed.\nExpected "
+                "argument, local, static, constant, "
+                "this, that, pointer or temp.\n"
+                "pop <segment:keyword> <index:int>");
         }
     }
 
@@ -139,7 +143,8 @@ namespace Hack::VirtualMachine
         {
             parseError(
                 "Expected an identifier to "
-                "follow the label expression");
+                "follow the label expression\n"
+                "label <name:identifier>");
         }
 
         const size_t idx = getToken(1).getIndex();
@@ -161,13 +166,15 @@ namespace Hack::VirtualMachine
         {
             parseError(
                 "Expected an identifier to "
-                "follow the goto expression");
+                "follow the goto expression\n"
+                "goto <name:identifier>");
         }
 
         const size_t idx = getToken(1).getIndex();
 
         String value;
         _scanner->getString(value, idx);
+
         if (value.empty())
             parseError("An empty label was found");
 
@@ -184,7 +191,8 @@ namespace Hack::VirtualMachine
         {
             parseError(
                 "Expected an identifier to "
-                "follow the function expression");
+                "follow the function expression\n"
+                "function <name:identifier> <num-locals:int>");
         }
 
         const int8_t t2 = getToken(2).getType();
@@ -192,7 +200,8 @@ namespace Hack::VirtualMachine
         {
             parseError(
                 "Expected an integer to "
-                "follow the after the function label");
+                "follow the after the function label\n"
+                "function <name:identifier> <num-locals:int>");
         }
 
         String name;
@@ -200,9 +209,9 @@ namespace Hack::VirtualMachine
         if (name.empty())
             parseError("An empty label was found");
 
-        const int args = _scanner->getInt(getToken(2).getIndex());
+        const int locals = _scanner->getInt(getToken(2).getIndex());
 
-        _emitter.writeFunction(name, args);
+        _emitter.writeFunction(name, locals);
     }
 
     void Parser::callExpression()
@@ -212,7 +221,8 @@ namespace Hack::VirtualMachine
         {
             parseError(
                 "Expected an identifier to "
-                "follow the call expression");
+                "follow the call expression\n"
+                "call <name:identifier> <num-args:int>");
         }
 
         const int8_t t2 = getToken(2).getType();
@@ -220,7 +230,8 @@ namespace Hack::VirtualMachine
         {
             parseError(
                 "Expected an integer to "
-                "follow the after the call label");
+                "follow the after the call label\n"
+                "call <name:identifier> <num-args:int>");
         }
 
         String name;
@@ -241,15 +252,17 @@ namespace Hack::VirtualMachine
         {
             parseError(
                 "Expected an integer to "
-                "follow the set expression");
+                "follow the set expression\n"
+                "set <ram-index:int> <ram-value:int>");
         }
 
         const int8_t t2 = getToken(2).getType();
         if (t2 != TOK_INTEGER)
         {
             parseError(
-                "Expected two integers to "
-                "follow the set expression");
+                "Expected an integer to "
+                "follow the set expression\n"
+                "set <ram-index:int> <ram-value:int>");
         }
 
         const int idx = _scanner->getInt(getToken(1).getIndex());
