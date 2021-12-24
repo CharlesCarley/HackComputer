@@ -19,6 +19,7 @@
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
 include (GroupSet)
+
 set(TargetName     Unit)
 set(TestTargetName ${TargetName}Test)
 
@@ -33,6 +34,26 @@ set_group(TestTarget_Data
     TestFiles/Jack/Cmp:Jack/*.xml
     TestFiles/Jack/Jack:Jack/*.jack
 )
+include(Jack2Svg)
+
+if (Jack2Svg_ENABLED)
+    set(Jack_FILES 
+        Jack/Test01.jack
+        Jack/Test02.jack
+        Jack/Test03.jack
+        Jack/Test04.jack
+        Jack/Test05.jack
+        Jack/Test06.jack
+        Jack/Test07.jack
+        Jack/Test08.jack
+        Jack/Test09.jack
+        Jack/Test10.jack
+    )
+    jack_to_svg(Parse_Trees ${Jack_FILES})
+    source_group("Reference" FILES  ${Parse_Trees})
+endif()
+
+
 
 set(TestTarget_SOURCE
     FileCmp.h
@@ -42,6 +63,7 @@ set(TestTarget_SOURCE
     Test3.cpp
     Test4.cpp
     Test5.cpp
+    ${Parse_Trees}
     ${TestTarget_Data}
 )
 
