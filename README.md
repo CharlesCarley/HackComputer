@@ -1,6 +1,6 @@
 # Hack Computer
 
-This repository is my implementation of the Hack computer in C++ from the [Nand2Tetris course](https://www.coursera.org/learn/build-a-computer).
+This repository is my implementation of the Hack computer in C++ from the [NAnd2Tetris course](https://www.coursera.org/learn/build-a-computer).
 It is a bit over the top and does not strictly adhere to the course. I chose to opt out of the certificate of completion instead chose to support the authors by buying the e-book. I wanted something self-contained at the end. In order to do that, the supplied tools in the course material had to be written from scratch (to some extent; hence being over the top).
 
 ## Project Structure
@@ -139,14 +139,13 @@ Usage: Jack2xml <options> <arg[0] .. arg[n]>
 
 #### CompileUtils
 
-Utilities that tie together the syntax analyzer and the code generator 
+Houses the parse tree and other utilities that tie together the syntax analyzer and the code generator.
 
 #### CodeGenerator
 
 #### Compiler
 
-Is the compiler that ties together the whole system into a single executable file that can be executed with the computer 
-executable.
+Is the compiler that ties together the whole system into a single executable file that can be executed with the computer executable.
 
 ### Bindings
 
@@ -187,23 +186,23 @@ Optional CMake definitions used in this project.
 | Hack_CHECK_INT_BOUNDS    | Throw an overflow exception when testing individual bits.                                                                |   ON    |
 | Hack_IMPLEMENT_BLACK_BOX | If this is true most chips will be implemented with logic gates (Slower).                                                |   OFF   |
 | Hack_PRINT_CHIP_STATE    | Enables the print method defined in the Chip base class.                                                                 |   OFF   |
-| Hack_VM_ZERO_RAM         | Emits extra instructions to zero RAM values that are no longer in use. Useful when debugging with the Computer option -t |   ON    |
-| Hack_BLOCK_PUSH          | Emits conditional instructions to prevent pushing to segments when its out of context.                                   |   ON    |
+| Hack_VM_ZERO_RAM         | Emits extra instructions to zero RAM values that are no longer in use. Useful when debugging with the Computer option -t |   OFF   |
+| Hack_BLOCK_PUSH          | Emits conditional instructions to prevent pushing to segments when its out of context.                                   |   OFF   |
 | Hack_USE_SDL             | Enables or disables SDL                                                                                                  |   OFF   |
 
 ## Testing
 
-The [testing directory](Test/) is setup to work with [googletest](https://github.com/google/googletest).
+The [testing directory](Test/) is setup to work with [google test](https://github.com/google/googletest).
 
 It also contains the initial setup for testing the standalone module using GitHub actions.
 
 ## Extra Tools
 
 ### Parse Tree Visual
- 
+
 The syntax analyzer has the extra option to output the parse tree in `.dot` format. The dot program is part of the graphviz tool-set.
 
-- https://graphviz.org/
+- [GraphViz](https://graphviz.org/)
 
 ![Dia02](Test/Jack/Test10.svg)
 
@@ -213,4 +212,4 @@ The grammar files are for the most part reference only. They do not use any of t
 
 I believe it is a dead project, which is a shame because it is an awesome tool-set to `quickly` throw together and test grammars.
 
-- http://www.goldparser.org/
+- [GoldParser](http://www.goldparser.org/)
