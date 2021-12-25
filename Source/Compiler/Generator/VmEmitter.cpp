@@ -31,8 +31,7 @@ namespace Hack::Compiler::CodeGenerator
         OStream* _s;
 
     public:
-        explicit CodeStream(OStream* os) :
-            _s(os)
+        explicit CodeStream(OStream* os) : _s(os)
         {
         }
 
@@ -65,7 +64,6 @@ namespace Hack::Compiler::CodeGenerator
         w.write("label __sys__exit");
     }
 
-
     void VmEmitter::writeStatic(const Symbol& sym)
     {
         const CodeStream w(&_stream);
@@ -88,8 +86,8 @@ namespace Hack::Compiler::CodeGenerator
     }
 
     void VmEmitter::writeMethod(const String& className,
-                              const String& methodName,
-                              uint16_t      numParams)
+                                const String& methodName,
+                                uint16_t      numParams)
     {
         const CodeStream w(&_stream);
         w.write("function ", className, '.', methodName, ' ', numParams);
@@ -137,23 +135,70 @@ namespace Hack::Compiler::CodeGenerator
         w.write("push this ", idx);
     }
 
-
     void VmEmitter::writeReturn()
     {
         const CodeStream w(&_stream);
         w.write("return");
     }
 
-    void VmEmitter::add()
+    void VmEmitter::symbolAdd()
     {
         const CodeStream w(&_stream);
         w.write("add");
     }
 
-    void VmEmitter::sub()
+    void VmEmitter::symbolSub()
     {
         const CodeStream w(&_stream);
         w.write("sub");
+    }
+
+    void VmEmitter::symbolNeg()
+    {
+        const CodeStream w(&_stream);
+        w.write("neg");
+    }
+
+    void VmEmitter::symbolAnd()
+    {
+        const CodeStream w(&_stream);
+        w.write("and");
+    }
+
+    void VmEmitter::symbolOr()
+    {
+        const CodeStream w(&_stream);
+        w.write("or");
+    }
+
+    void VmEmitter::symbolNot()
+    {
+        const CodeStream w(&_stream);
+        w.write("not");
+    }
+
+    void VmEmitter::symbolGreater()
+    {
+        const CodeStream w(&_stream);
+        w.write("gt");
+    }
+
+    void VmEmitter::symbolLess()
+    {
+        const CodeStream w(&_stream);
+        w.write("lt");
+    }
+
+    void VmEmitter::symbolEquals()
+    {
+        const CodeStream w(&_stream);
+        w.write("eq");
+    }
+
+    void VmEmitter::writeCall(const String& id, const size_t size)
+    {
+        const CodeStream w(&_stream);
+        w.write("call ", id, ' ', std::min<size_t>(size, 20));
     }
 
 }  // namespace Hack::Compiler::CodeGenerator

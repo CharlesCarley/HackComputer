@@ -36,22 +36,26 @@ set_group(TestTarget_Data
 )
 include(Jack2Svg)
 
+set(Jack_FILES 
+    Jack/Test01.jack
+    Jack/Test02.jack
+    Jack/Test03.jack
+    Jack/Test04.jack
+    Jack/Test05.jack
+    Jack/Test06.jack
+    Jack/Test07.jack
+    Jack/Test08.jack
+    Jack/Test09.jack
+    Jack/Test10.jack
+)
+
 if (Jack2Svg_ENABLED)
-    set(Jack_FILES 
-        Jack/Test01.jack
-        Jack/Test02.jack
-        Jack/Test03.jack
-        Jack/Test04.jack
-        Jack/Test05.jack
-        Jack/Test06.jack
-        Jack/Test07.jack
-        Jack/Test08.jack
-        Jack/Test09.jack
-        Jack/Test10.jack
-    )
     jack_to_svg(Parse_Trees ${Jack_FILES})
-    source_group("Reference" FILES  ${Parse_Trees})
+    source_group("Reference\\SVG" FILES  ${Parse_Trees})
 endif()
+
+jack_to_xml(XML_Trees ${Jack_FILES})
+source_group("Reference\\XML" FILES  ${XML_Trees})
 
 
 
@@ -63,6 +67,7 @@ set(TestTarget_SOURCE
     Test3.cpp
     Test4.cpp
     Test5.cpp
+    ${XML_Trees}
     ${Parse_Trees}
     ${TestTarget_Data}
 )

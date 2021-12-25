@@ -21,6 +21,7 @@
 */
 #pragma once
 
+#include "Compiler/Common/Node.h"
 #include "Compiler/Generator/Symbol.h"
 #include "Utils/String.h"
 
@@ -50,7 +51,9 @@ namespace Hack::Compiler::CodeGenerator
 
         void writeFunction(const String& name, uint16_t numParams);
 
-        void writeMethod(const String& className, const String& methodName, uint16_t numParams);
+        void writeMethod(const String& className,
+                         const String& methodName,
+                         uint16_t      numParams);
 
         void pushConstant(const String& value);
 
@@ -68,9 +71,25 @@ namespace Hack::Compiler::CodeGenerator
 
         void writeReturn();
 
-        void add();
+        void symbolAdd();
 
-        void sub();
+        void symbolSub();
+
+        void symbolAnd();
+
+        void symbolOr();
+
+        void symbolNot();
+
+        void symbolGreater();
+
+        void symbolLess();
+
+        void symbolEquals();
+
+        void symbolNeg();
+
+        void writeCall(const String& id, size_t size);
     };
 
     inline OutputStringStream& VmEmitter::stream()

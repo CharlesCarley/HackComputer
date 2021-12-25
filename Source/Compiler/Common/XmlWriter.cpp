@@ -61,9 +61,7 @@ namespace Hack::Compiler
 
     public:
         explicit XmlWriterImpl(Node* root, OStream* stream) :
-            _root(root),
-            _stream(stream),
-            _indent(0)
+            _root(root), _stream(stream), _indent(0)
         {
         }
 
@@ -124,8 +122,7 @@ namespace Hack::Compiler
         }
     };
 
-    XmlWriter::XmlWriter(Node* root) :
-        _root(root)
+    XmlWriter::XmlWriter(Node* root) : _root(root)
     {
     }
 
@@ -328,16 +325,16 @@ namespace Hack::Compiler
             dest = "/";
             break;
         case SymbolAnd:
-            dest = "&";
+            dest = "&amp;";
             break;
         case SymbolOr:
             dest = "|";
             break;
         case SymbolGreater:
-            dest = ">";
+            dest = "&gt;";
             break;
         case SymbolLess:
-            dest = "<";
+            dest = "&lt;";
             break;
         case SymbolNot:
             dest = "!";

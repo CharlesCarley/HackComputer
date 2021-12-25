@@ -21,7 +21,6 @@
 */
 #include "Compiler/Common/Tree.h"
 #include <fstream>
-#include <iostream>
 #include "Compiler/Common/Node.h"
 #include "Compiler/Common/XmlWriter.h"
 #include "Compiler/Common/DotWriter.h"

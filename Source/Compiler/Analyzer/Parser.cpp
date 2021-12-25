@@ -237,7 +237,6 @@ namespace Hack::Compiler::Analyzer
         }
     }
 
-
     void Parser::symbol(Node*        rule,
                         const int8_t symbolId,
                         const int    token,
@@ -922,6 +921,8 @@ namespace Hack::Compiler::Analyzer
 
         if (t0 == TOK_L_PAR)
         {
+            rule->subtype(SubtypeExpressionGroup);
+
             symbol(SymbolLeftParenthesis);
 
             expressionRule();
@@ -931,6 +932,8 @@ namespace Hack::Compiler::Analyzer
         }
         else if (t0 == TOK_IDENTIFIER && t1 == TOK_L_BRACKET)
         {
+            rule->subtype(SubtypeArrayIndex);
+
             constant(ConstantIdentifier);
 
             symbol(SymbolLeftBracket);
@@ -942,6 +945,8 @@ namespace Hack::Compiler::Analyzer
         }
         else if (isCallTerm(t0, t1, t2, t3))
         {
+            rule->subtype(SubtypeCall);
+
             callMethodRule();
             reduceRule(rule);
         }
@@ -1039,6 +1044,9 @@ namespace Hack::Compiler::Analyzer
 
         if (t0 == TOK_IDENTIFIER && t1 == TOK_L_PAR)
         {
+            rule->subtype(SubtypeCallFunction);
+
+
             constant(ConstantIdentifier);
 
             symbol(SymbolLeftParenthesis);
@@ -1049,10 +1057,12 @@ namespace Hack::Compiler::Analyzer
             symbol(SymbolRightParenthesis);
         }
         else if (t0 == TOK_IDENTIFIER || t0 == TOK_CONST_THIS &&
-                 t1 == TOK_PERIOD &&
-                 t2 == TOK_IDENTIFIER &&
-                 t3 == TOK_L_PAR)
+                                             t1 == TOK_PERIOD &&
+                                             t2 == TOK_IDENTIFIER &&
+                                             t3 == TOK_L_PAR)
         {
+            rule->subtype(SubtypeCallMethod);
+
             object(t0);
 
             symbol(SymbolPeriod);

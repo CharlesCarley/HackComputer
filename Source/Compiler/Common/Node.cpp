@@ -51,14 +51,14 @@ namespace Hack::Compiler
         _children.clear();
     }
 
-    const Node& Node::check(size_t idx, int8_t symbolId, bool didCheck) const
+    const Node& Node::check(const size_t idx, const int8_t symbolId, const bool generalCase) const
     {
         if (_children.contains(idx))
         {
             Node* node = _children.at(idx);
 
             // general
-            if (didCheck)
+            if (generalCase)
                 return *node;
 
             // specific
@@ -66,7 +66,7 @@ namespace Hack::Compiler
                 return *node;
         }
 
-        throw IndexOutOfBounds();
+        throw InputException("The filter check on the node ", this->_type, " failed");
     }
 
     void Node::filter(NodeArray& dest, const int8_t symbolId) const
@@ -116,7 +116,7 @@ namespace Hack::Compiler
             return *node;
         }
 
-        throw IndexOutOfBounds();
+        throw InputException("The child index(", idx, ") is out of bounds");
     }
 
     void Node::insert(Node* node)

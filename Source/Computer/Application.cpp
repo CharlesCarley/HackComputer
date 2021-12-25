@@ -162,9 +162,9 @@ namespace Hack::Computer
             _runtime = new CommandRuntime();
 #endif
 
-        _trace = parser.isPresent(OP_TRACE_MEM);
+        _trace   = parser.isPresent(OP_TRACE_MEM);
         _showAsm = parser.isPresent(OP_SHOW_ASM);
-        _showVm = parser.isPresent(OP_SHOW_VM);
+        _showVm  = parser.isPresent(OP_SHOW_VM);
         _showMc  = parser.isPresent(OP_SHOW_MC);
         return true;
     }
@@ -193,7 +193,8 @@ namespace Hack::Computer
         assemble(assembler);
     }
 
-    void Application::compile(Compiler::CodeGenerator::Generator& compiler) const
+    void Application::compile(
+        Compiler::CodeGenerator::Generator& compiler) const
     {
         StringStream input;
         compiler.write(input);
@@ -251,15 +252,17 @@ namespace Hack::Computer
         oss << "| Index |  Value   |" << std::endl;
         oss << "|------:|---------:|" << std::endl;
 
+        const int& stp = (int)mem->get(0);
+
         for (int i = 0; i < Chips::Memory::MaxAddress; ++i)
         {
             const uint16_t v = mem->get(i);
-            if (v != 0)
+            if (v != 0 || (i >= 256 && i <= stp))
             {
                 oss << '|';
                 oss << std::right << std::setw(7) << i;
                 oss << '|';
-                oss << std::setw(10) << v;
+                oss << std::setw(10) << (int16_t)v;
                 oss << '|';
                 oss << std::endl;
             }

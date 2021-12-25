@@ -40,13 +40,14 @@ namespace Hack::Compiler::CodeGenerator
     private:
         SymbolTable* _globals;
         SymbolTable* _locals;
-        VmEmitter*     _emitter;
+        VmEmitter*   _emitter;
+        mutable bool _minusIsUnary;
 
         void buildClass(Node* node) const;
 
         void buildGlobals(const Node& classDescription) const;
 
-        void buildMethods(const Node& classDescription) const;
+        void buildClassDescription(const Node& classDescription) const;
 
         void buildLocals(const Node& bodyNode, const Node& parameters) const;
 
@@ -55,6 +56,10 @@ namespace Hack::Compiler::CodeGenerator
         void buildConstant(const Node& simpleTerm) const;
 
         void buildOperation(const Node& op) const;
+
+        void buildSimpleTerm(const Node& simpleTerm) const;
+
+        void buildComplexTerm(const Node& complexTerm) const;
 
         void buildTerm(const Node& term) const;
 
@@ -65,6 +70,12 @@ namespace Hack::Compiler::CodeGenerator
         void buildLetStatement(const Node& statement) const;
 
         void buildReturnStatement(const Node& statement) const;
+
+        void buildExpressionList(const Node& expressionList) const;
+
+        void buildCallMethod(const Node& callMethod) const;
+
+        void buildDoStatement(const Node& statement) const;
 
         void buildStatements(const Node& method) const;
 

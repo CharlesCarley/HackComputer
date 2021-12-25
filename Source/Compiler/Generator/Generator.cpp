@@ -25,7 +25,6 @@
 #include "Compiler/Common/Node.h"
 #include "Compiler/Generator/SymbolTable.h"
 #include "Compiler/Generator/VmEmitter.h"
-#include "Utils/Console.h"
 #include "Utils/FileSystem.h"
 
 namespace Hack::Compiler::CodeGenerator
@@ -33,7 +32,8 @@ namespace Hack::Compiler::CodeGenerator
     Generator::Generator() :
         _globals(new SymbolTable()),
         _locals(new SymbolTable()),
-        _emitter(new VmEmitter())
+        _emitter(new VmEmitter()),
+        _minusIsUnary(false)
     {
     }
 
@@ -44,95 +44,13 @@ namespace Hack::Compiler::CodeGenerator
         delete _emitter;
     }
 
-    void Generator::buildGlobals(const Node& classDescription) const
-    {
-        Node::NodeArray field;
-        classDescription.filter(field, RuleField);
-        for (const Node* child : field)
-        {
-            const Node& ch = *child;
-
-            const Node& identifierList = ch.rule(2, RuleIdentifierList);
-
-            const int8_t fieldType = ch.rule(0).child(0).type();
-            const int8_t dataType  = ch.rule(1).rule(0).type();
-
-            for (Node* id : identifierList.children())
-            {
-                const int8_t kind = fieldType == KeywordStatic ? Static : Field;
-
-                _globals->insert(id->value(), dataType, kind);
-            }
-        }
-    }
-
-    void Generator::buildLocals(const Node& bodyNode,
-                                const Node& parameters) const
-    {
-        _locals->clear();
-
-        Node::NodeArray variables;
-        bodyNode.filter(variables, RuleVariable);
-
-        for (const Node* var : variables)
-        {
-            const Node& variable = *var;
-
-            const int8_t type = variable.rule(1, RuleDataType).type();
-
-            const Node& identifierList = variable.rule(2, RuleIdentifierList);
-
-            for (Node* id : identifierList)
-                _locals->insert(id->value(), type, Local);
-        }
-
-        for (const Node* par : parameters)
-        {
-            const Node& parameter = *par;
-
-            const int8_t type = parameter.rule(0, RuleDataType).type();
-
-            _locals->insert(parameters.child(1).value(), type, Argument);
-        }
-    }
-
-    void Generator::buildMethods(const Node& classDescription) const
-    {
-        const String& className = classDescription.parent().child(1).value();
-
-        Node::NodeArray methods;
-        classDescription.filter(methods, RuleMethod);
-
-        for (const Node* child : methods)
-        {
-            const Node& method = *child;
-
-            const Node& methodSpec    = method.rule(0).child(0);
-            const Node& returnType    = method.rule(1).child(0);
-            const Node& methodName    = method.rule(2);
-            const Node& parameterList = method.rule(4);
-            const Node& body          = method.rule(6).rule(1);
-
-            buildLocals(body, parameterList);
-
-            const uint16_t tot = (uint16_t)_locals->localCount();
-
-            if (methodSpec.isTypeOf(KeywordFunction))
-                _emitter->writeFunction(methodName.value(), tot);
-            else
-                _emitter->writeMethod(className, methodName.value(), tot);
-
-            buildStatements(body);
-        }
-    }
-
     void Generator::pushIdentifier(const Node& simpleTerm) const
     {
         const String& value = simpleTerm.value();
+
         if (_locals->contains(value))
         {
             const Symbol& sym = _locals->get(value);
-
             if (sym.kind() == Argument)
                 _emitter->pushArgument(sym.entry());
             else if (sym.kind() == Local)
@@ -149,7 +67,9 @@ namespace Hack::Compiler::CodeGenerator
                 _emitter->pushStatic(sym.entry());
         }
         else
-            throw InputException(value, " is undefined in this context");
+        {
+            throw InputException("The value ", value, " was not found.");
+        }
     }
 
     void Generator::buildConstant(const Node& simpleTerm) const
@@ -182,14 +102,72 @@ namespace Hack::Compiler::CodeGenerator
         switch (op.type())
         {
         case SymbolPlus:
-            _emitter->add();
+            _emitter->symbolAdd();
             break;
         case SymbolMinus:
-            _emitter->sub();
+            if (_minusIsUnary)
+                _emitter->symbolNeg();
+            else
+                _emitter->symbolSub();
             break;
+        case SymbolAnd:
+            _emitter->symbolAnd();
+            break;
+        case SymbolOr:
+            _emitter->symbolOr();
+            break;
+        case SymbolNot:
+            _emitter->symbolNot();
+            break;
+        case SymbolGreater:
+            _emitter->symbolGreater();
+            break;
+        case SymbolLess:
+            _emitter->symbolLess();
+            break;
+        case SymbolEquals:
+            _emitter->symbolEquals();
+            break;
+        default:
+            throw InputException("unknown symbol type ", op.type());
         }
     }
 
+    void Generator::buildSimpleTerm(const Node& simpleTerm) const
+    {
+        if (simpleTerm.size() > 0)
+        {
+            const Node& term0 = simpleTerm.child(0);
+            if (term0.isConstant())
+                buildConstant(term0);
+            else
+                throw MessageException(
+                    "expected simple term to reduce to a constant");
+        }
+        else
+            throw MessageException(
+                "expected simple term to reduce to a constant");
+    }
+
+    void Generator::buildComplexTerm(const Node& complexTerm) const
+    {
+        if (complexTerm.isSubtypeOf(SubtypeExpressionGroup))
+            buildExpression(complexTerm.child(1));
+        else if (complexTerm.isSubtypeOf(SubtypeCall))
+            buildCallMethod(complexTerm.child(0));
+        else if (complexTerm.isSubtypeOf(SubtypeArrayIndex))
+        {
+            //
+        }
+    }
+
+    /// <summary>
+    /// <code>
+    /// <Term> ::= <SimpleTerm>
+    ///          | <ComplexTerm>
+    /// </code>
+    /// </summary>
+    /// <param name="term"></param>
     void Generator::buildTerm(const Node& term) const
     {
         const size_t numTerms = term.size();
@@ -199,53 +177,15 @@ namespace Hack::Compiler::CodeGenerator
             const Node& term0 = term.child(0);
 
             if (term0.isTypeOf(RuleSimpleTerm))
+                buildSimpleTerm(term0);
+            else if (term0.isTypeOf(RuleComplexTerm))
+                buildComplexTerm(term0);
+            else
             {
-                if (term0.size() > 0)
-                {
-                    const Node& simpleTerm = term0.child(0);
-                    if (simpleTerm.isConstant())
-                        buildConstant(simpleTerm);
-                    else
-                        throw MessageException("expected simple term to reduce to a constant");
-                }
-                else
-                    throw MessageException("expected simple term to reduce to a constant");
+                throw MessageException(
+                    "unknown term rule. "
+                    "The rule should be either a simple or complex type");
             }
-        }
-    }
-
-    void Generator::buildSingleExpression(const Node& singleExpression) const
-    {
-        const size_t numTerms = singleExpression.size();
-        if (numTerms > 0)
-        {
-            const Node& term0 = singleExpression.child(0);
-
-            if (numTerms == 1)
-            {
-                if (term0.isTypeOf(RuleTerm))
-                    buildTerm(term0);
-            }
-            else if (singleExpression.size() == 2)
-            {
-                const Node& term1 = singleExpression.child(1);
-
-                if (term1.isTypeOf(RuleTerm))
-                    buildTerm(term1);
-
-                if (term0.isOperator())
-                    buildOperation(term0.child(0));
-            }
-        }
-    }
-
-    void Generator::buildExpression(const Node& expression) const
-    {
-        for (const Node* exp : expression.children())
-        {
-            const Node& singleExpression = *exp;
-
-            buildSingleExpression(singleExpression);
         }
     }
 
@@ -266,15 +206,141 @@ namespace Hack::Compiler::CodeGenerator
 
     void Generator::buildReturnStatement(const Node& statement) const
     {
-        const String& id = statement.child(1).child(0).child(0).child(0).constant(0).value();
+        // <ReturnStatement> ::= Return ';' | Return <Expression> ';'
 
-        if (_locals->contains(id))
+        const Node& term1 = statement.child(1);
+
+        if (term1.isTypeOf(SymbolSemiColon))
+            _emitter->pushConstant(0);
+        else if (term1.isTypeOf(RuleExpression))
+            buildExpression(term1);
+        _emitter->writeReturn();
+    }
+
+    /// <summary>
+    /// <code>
+    ///  <SingleExpression> ::= <Term>
+    ///                        | <Operator> <Term>
+    ///                        | <UnaryOperator> <Term>
+    /// </code>
+    /// </summary>
+    /// <param name="singleExpression"></param>
+    void Generator::buildSingleExpression(const Node& singleExpression) const
+    {
+        const size_t numTerms = singleExpression.size();
+        if (numTerms > 0)
         {
-            const Symbol& sym = _locals->get(id);
+            const Node& term0 = singleExpression.child(0);
 
-            _emitter->pushLocal(sym.entry());
-            _emitter->writeReturn();
+            if (numTerms == 1)
+            {
+                if (term0.isTypeOf(RuleTerm))
+                    buildTerm(term0);
+
+                if (_minusIsUnary)
+                    _minusIsUnary = false;
+            }
+            else if (singleExpression.size() == 2)
+            {
+                const Node& term1 = singleExpression.child(1);
+
+                if (term1.isTypeOf(RuleTerm))
+                    buildTerm(term1);
+
+                if (term0.isOperator())
+                    buildOperation(term0.child(0));
+            }
         }
+    }
+
+    /// <summary>
+    /// <code>
+    /// <Expression> ::= <Expression><SingleExpression>
+    ///                | <SingleExpression>
+    /// </code>
+    /// </summary>
+    /// <param name="expression"></param>
+    void Generator::buildExpression(const Node& expression) const
+    {
+        for (const Node* exp : expression.children())
+        {
+            const Node& singleExpression = *exp;
+
+            _minusIsUnary = true;
+
+            buildSingleExpression(singleExpression);
+        }
+    }
+
+    /// <summary>
+    /// <code>
+    /// <ExpressionList> ::= <ExpressionList> ',' < Expression >
+    ///                    | <Expression>
+    ///                    | !--empty--
+    /// </code>
+    /// </summary>
+    /// <param name="expressionList"></param>
+    void Generator::buildExpressionList(const Node& expressionList) const
+    {
+        const Node::Children& expressions = expressionList.children();
+        for (const Node* child : expressions)
+        {
+            const Node& expression = *child;
+
+            buildExpression(expression);
+        }
+    }
+
+    /// <summary>
+    /// <code>
+    /// <CallMethod> ::= Identifier '(' <ExpressionList> ')'
+    ///                | Identifier '.' Identifier '(' <ExpressionList> ')'
+    /// </code>
+    /// </summary>
+    /// <param name="callMethod"></param>
+    void Generator::buildCallMethod(const Node& callMethod) const
+    {
+        if (callMethod.isSubtypeOf(SubtypeCallFunction))
+        {
+            const Node& id = callMethod.constant(0, ConstantIdentifier);
+            const Node& expressionList = callMethod.rule(2, RuleExpressionList);
+
+            buildExpressionList(expressionList);
+
+            _emitter->writeCall(id.value(), expressionList.size());
+        }
+        else if (callMethod.isSubtypeOf(SubtypeCallMethod))
+        {
+            const Node& classId  = callMethod.constant(0, ConstantIdentifier);
+            const Node& methodId = callMethod.constant(2, ConstantIdentifier);
+
+            const Node& expressionList = callMethod.rule(4, RuleExpressionList);
+
+            // will need to be looked back up
+            // when compiling to a binary
+            const String id =
+                StringCombine(classId.value(), '.', methodId.value());
+
+            buildExpressionList(expressionList);
+
+            _emitter->writeCall(id, expressionList.children().size());
+        }
+        else
+        {
+            // error
+        }
+    }
+
+    /// <summary>
+    /// <code>
+    /// <DoStatement> ::= Do <CallMethod> ';'
+    /// </code>
+    /// </summary>
+    /// <param name="statement"></param>
+    void Generator::buildDoStatement(const Node& statement) const
+    {
+        const Node& callMethod = statement.rule(1, RuleCallMethod);
+        buildCallMethod(callMethod);
     }
 
     void Generator::buildStatements(const Node& body) const
@@ -295,19 +361,122 @@ namespace Hack::Compiler::CodeGenerator
             case RuleReturnStatement:
                 buildReturnStatement(stmt);
                 break;
+            case RuleDoStatement:
+                buildDoStatement(stmt);
+                break;
             default:
                 break;
             }
         }
     }
 
+    void Generator::buildLocals(const Node& bodyNode,
+                                const Node& parameters) const
+    {
+        _locals->clear();
+
+        Node::NodeArray variables;
+        bodyNode.filter(variables, RuleVariable);
+
+        for (const Node* var : variables)
+        {
+            const Node& variable = *var;
+
+            const int8_t type           = variable.rule(1, RuleDataType).type();
+            const Node&  identifierList = variable.rule(2, RuleIdentifierList);
+
+            for (Node* id : identifierList)
+                _locals->insert(id->value(), type, Local);
+        }
+
+        for (const Node* par : parameters.children())
+        {
+            const Node& parameter = *par;
+
+            const int8_t type = parameter.rule(0, RuleDataType).type();
+
+            _locals->insert(parameter.constant(1, ConstantIdentifier).value(),
+                            type,
+                            Argument);
+        }
+    }
+
+    /// <summary>
+    /// <code>
+    /// <ClassDescription>  ::= <ClassDescription><Field> ';'
+    ///                       | <ClassDescription><Method>
+    ///                       | !--empty--
+    /// </code>
+    /// </summary>
+    /// <param name="classDescription"></param>
+    void Generator::buildClassDescription(const Node& classDescription) const
+    {
+        buildGlobals(classDescription);
+
+
+        const String& className = classDescription.parent().child(1).value();
+
+        Node::NodeArray methods;
+        classDescription.filter(methods, RuleMethod);
+
+        for (const Node* child : methods)
+        {
+            const Node& method = *child;
+
+            const Node& methodSpec    = method.rule(0).child(0);
+            const Node& returnType    = method.rule(1).child(0);
+            const Node& methodName    = method.rule(2);
+            const Node& parameterList = method.rule(4);
+            const Node& body          = method.rule(6).rule(1);
+
+            buildLocals(body, parameterList);
+
+            const uint16_t tot = (uint16_t)_locals->localCount();
+
+            if (methodSpec.isTypeOf(KeywordFunction))
+                _emitter->writeFunction(methodName.value(), tot);
+            else
+                _emitter->writeMethod(className, methodName.value(), tot);
+
+            buildStatements(body);
+        }
+    }
+
+    void Generator::buildGlobals(const Node& classDescription) const
+    {
+        _globals->clear();
+
+        Node::NodeArray field;
+        classDescription.filter(field, RuleField);
+
+        for (const Node* child : field)
+        {
+            const Node& ch             = *child;
+            const Node& identifierList = ch.rule(2, RuleIdentifierList);
+
+            const int8_t fieldType = ch.rule(0).child(0).type();
+            const int8_t dataType  = ch.rule(1).rule(0).type();
+
+            for (Node* id : identifierList.children())
+            {
+                const int8_t kind = fieldType == KeywordStatic ? Static : Field;
+
+                _globals->insert(id->value(), dataType, kind);
+            }
+        }
+    }
+
+    /// <summary>
+    /// <code>
+    /// <Class> ::= Class Identifier '{' <ClassDescription> '}'
+    /// </code>
+    /// </summary>
+    /// <param name="node"></param>
     void Generator::buildClass(Node* node) const
     {
-        const Node& clsDesc = node->rule(3, RuleClassDescription);
+        const Node& description = node->rule(3, RuleClassDescription);
 
-        buildGlobals(clsDesc);
-
-        buildMethods(clsDesc);
+        buildClassDescription(description);
     }
 
     void Generator::parseImpl(const Node* root) const
@@ -318,15 +487,11 @@ namespace Hack::Compiler::CodeGenerator
         {
             if (firstChild->isTypeOf(RuleClass))
             {
-                _globals->clear();
-                _locals->clear();
-
                 buildClass(firstChild);
             }
         }
 
         _emitter->finalize();
-
     }
 
     void Generator::parse(const String& file) const
@@ -350,7 +515,8 @@ namespace Hack::Compiler::CodeGenerator
 
         std::ofstream stream(path);
         if (!stream.is_open())
-            throw InputException("failed to open the output file ", path.string());
+            throw InputException("failed to open the output file ",
+                                 path.string());
 
         write(stream);
     }

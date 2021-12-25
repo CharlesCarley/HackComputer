@@ -3,9 +3,11 @@
 class Main {
 
 	method void main() {
-		var int x, y;
-		let y = 7;
-		let x = y + y + y + y + y + y + y;
-		return x;
+		var int x,y;
+
+		let x = 2;
+		let y = 6;
+
+		return x+y;
 	}
 }

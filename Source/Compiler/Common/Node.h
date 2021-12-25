@@ -114,6 +114,14 @@ namespace Hack::Compiler
         ConstantNull,
         ConstantThis,
         ConstantEnd,
+
+        SubtypeNone,
+        SubtypeExpressionGroup,
+        SubtypeCall,
+        SubtypeCallFunction,
+        SubtypeCallMethod,
+        SubtypeArrayIndex,
+
     };
 
     class Node
@@ -127,9 +135,10 @@ namespace Hack::Compiler
         Node*    _parent;
         Children _children;
         int8_t   _type;
+        int8_t   _subtype;
         String   _data;
 
-        const Node& check(size_t idx, int8_t symbolId, bool didCheck) const;
+        const Node& check(size_t idx, int8_t symbolId, bool generalCase) const;
 
     public:
         Node();
@@ -144,7 +153,13 @@ namespace Hack::Compiler
 
         int8_t type() const;
 
+        void subtype(int8_t type);
+
+        int8_t subtype() const;
+
         bool isTypeOf(int symbolId) const;
+
+        bool isSubtypeOf(int symbolId) const;
 
         void filter(NodeArray& dest, int8_t symbolId) const;
 
@@ -199,9 +214,24 @@ namespace Hack::Compiler
         return _type;
     }
 
+    inline void Node::subtype(int8_t type)
+    {
+        _subtype = type;
+    }
+
+    inline int8_t Node::subtype() const
+    {
+        return _subtype;
+    }
+
     inline bool Node::isTypeOf(const int symbolId) const
     {
         return _type == symbolId;
+    }
+
+    inline bool Node::isSubtypeOf(const int symbolId) const
+    {
+        return _subtype == symbolId;
     }
 
     inline bool Node::isRule() const
@@ -218,8 +248,6 @@ namespace Hack::Compiler
     {
         return _type > Constant && _type < ConstantEnd;
     }
-
-
 
     inline bool Node::isSymbol() const
     {

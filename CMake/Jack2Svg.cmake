@@ -35,27 +35,49 @@ if (Jack2Svg_ENABLED)
             get_filename_component(fileDir ${inFile} DIRECTORY)
             get_filename_component(fileBase ${inFile} NAME_WLE)
 
-            set(outFileDot "${CMAKE_CURRENT_SOURCE_DIR}/${fileBase}.dot")
+            set(outFileDot "${CMAKE_CURRENT_BINARY_DIR}/${fileBase}.dot")
             set(outFileSVG "${fileDir}/${fileBase}.svg")
-
+            
             add_custom_command(
                 OUTPUT  ${outFileDot}
                 COMMAND Jack2XML -f dot -o ${outFileDot} ${inFile}
                 DEPENDS Jack2XML ${inFile}
-                COMMENT "Converting ${outFileDot}"
+                COMMENT ""
             )
 
             add_custom_command(
                 OUTPUT  ${outFileSVG}
                 COMMAND ${Dot_EXE} -T svg -o ${outFileSVG} ${outFileDot}
                 DEPENDS ${inFile} ${outFileDot}
-                COMMENT "Converting ${outFileSVG}"
+                COMMENT ""
             )
             list(APPEND ${Output} ${outFileSVG})
-        
+
         endforeach()
     
     endmacro()
-    
 
 endif()
+
+macro(jack_to_xml Output)
+
+    set(Output)
+    foreach (FILE ${ARGN})
+        get_filename_component(inFile ${FILE} ABSOLUTE)
+        get_filename_component(fileDir ${inFile} DIRECTORY)
+        get_filename_component(fileBase ${inFile} NAME_WLE)
+
+        set(outFileXML "${fileDir}/${fileBase}.xml")
+
+        add_custom_command(
+            OUTPUT  ${outFileXML}
+            COMMAND Jack2XML -f xml -o ${outFileXML} ${inFile}
+            DEPENDS Jack2XML ${inFile}
+            COMMENT ""
+        )
+
+        list(APPEND ${Output} ${outFileXML})
+        
+    endforeach()
+    
+endmacro()
