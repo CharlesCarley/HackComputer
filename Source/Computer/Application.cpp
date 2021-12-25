@@ -22,7 +22,6 @@
 #include "Computer/Application.h"
 #include <filesystem>
 #include <iostream>
-
 #include "Assembler/Parser.h"
 #include "Chips/Computer.h"
 #include "Compiler/Generator/Generator.h"
@@ -49,6 +48,9 @@ namespace Hack::Computer
         OP_DEBUG,
         OP_RUN_END,
         OP_TRACE_MEM,
+        OP_SHOW_VM,
+        OP_SHOW_ASM,
+        OP_SHOW_MC,
         OP_MAX,
     };
 
@@ -85,12 +87,39 @@ namespace Hack::Computer
             true,
             0,
         },
+        {
+            OP_SHOW_VM,
+            0,
+            "show-vm",
+            "Output the emitted VM code from the supplied file",
+            true,
+            0,
+        },
+        {
+            OP_SHOW_ASM,
+            0,
+            "show-asm",
+            "Output the emitted assembly code from the supplied file",
+            true,
+            0,
+        },
+        {
+            OP_SHOW_MC,
+            0,
+            "show-mc",
+            "Output the emitted machine code from the supplied file",
+            true,
+            0,
+        },
     };
 
     Application::Application() :
         _computer(new Chips::Computer()),
         _runtime(nullptr),
-        _trace(false)
+        _trace(false),
+        _showVm(false),
+        _showAsm(false),
+        _showMc(false)
     {
     }
 
@@ -134,6 +163,9 @@ namespace Hack::Computer
 #endif
 
         _trace = parser.isPresent(OP_TRACE_MEM);
+        _showAsm = parser.isPresent(OP_SHOW_ASM);
+        _showVm = parser.isPresent(OP_SHOW_VM);
+        _showMc  = parser.isPresent(OP_SHOW_MC);
         return true;
     }
 
@@ -154,6 +186,10 @@ namespace Hack::Computer
 
         Assembler::Parser assembler;
         assembler.parse(input);
+
+        if (_showMc)
+            assembler.write(std::cout);
+
         assemble(assembler);
     }
 
@@ -161,13 +197,16 @@ namespace Hack::Computer
     {
         StringStream input;
         compiler.write(input);
-        compiler.write(std::cout);
+
+        if (_showVm)
+            compiler.write(std::cout);
 
         VirtualMachine::Parser emitter;
         emitter.parse(input);
 
+        if (_showAsm)
+            emitter.write(std::cout);
 
-        emitter.write(std::cout);
         generate(emitter);
     }
 
@@ -217,15 +256,12 @@ namespace Hack::Computer
             const uint16_t v = mem->get(i);
             if (v != 0)
             {
-                //if (i != 13 && i != 14 && i != 15)
-                {
-                    oss << '|';
-                    oss << std::right << std::setw(7) << i;
-                    oss << '|';
-                    oss << std::setw(10) << v;
-                    oss << '|';
-                    oss << std::endl;
-                }
+                oss << '|';
+                oss << std::right << std::setw(7) << i;
+                oss << '|';
+                oss << std::setw(10) << v;
+                oss << '|';
+                oss << std::endl;
             }
         }
         Console::write(oss.str());

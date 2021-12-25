@@ -33,7 +33,10 @@ option(Hack_CHECK_INT_BOUNDS     "Throw an exception on overflow ." ON)
 option(Hack_IMPLEMENT_BLACK_BOX  "If this is true all chips will be implemented with logic gates." OFF)
 option(Hack_PRINT_CHIP_STATE     "Enables the print method defined in the Chip class" OFF)
 option(Hack_VM_ZERO_RAM          "Emits extra instructions to remove RAM values that are no longer in use" ON)
+option(Hack_VM_GUARD_PUSH        "Emits conditional instructions to prevent pushing to segments when its out of context." OFF)
 option(Hack_USE_SDL              "Enables or disables SDL" OFF)
+
+
 
 set(Hack_INSTALL_PATH         
 	"" 
@@ -65,6 +68,10 @@ endif()
 
 if (Hack_VM_ZERO_RAM)
     add_definitions(-DZERO_M)
+endif()
+
+if (Hack_VM_GUARD_PUSH)
+    add_definitions(-DGUARD_PUSH)
 endif()
 
 if (USING_EMSCRIPTEN)

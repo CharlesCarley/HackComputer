@@ -112,8 +112,6 @@ This project is a collection of tools that implements the recommended compiler s
 
 #### SyntaxAnalyzer
 
-
-
 The [syntax analyzer](Source/Compiler/Analyzer) takes an input `.jack` file and builds the parse tree which can be either, saved to `.xml` or used directly to emit `.vm` code.
 
 ##### Jack Grammar
@@ -163,11 +161,15 @@ If SDL is enabled, the default runtime will open a window and map the screen reg
 ```txt
 Usage: computer <options> <arg[0] .. arg[n]>
 
-    -h, --help     Display this help message
-    -c             Use the command line runtime
-    -d             Debug the supplied file
-    -r, --run-end  Run the supplied file until it exits
-    -t, --trace    Output a dump of the non-zero portions of ram
+    -h, --help      Display this help message
+    -c              Use the command line runtime
+    -d              Debug the supplied file
+    -r, --run-end   Run the supplied file until it exits
+    -t, --trace     Output a dump of the non-zero portions of ram
+        --show-vm   Output the emitted VM code from the supplied file
+        --show-asm  Output the emitted assembly code from the supplied file
+        --show-mc   Output the emitted machine code from the supplied file
+
 ```
 
 ## Building
@@ -178,15 +180,16 @@ It uses CMake to generate its make files.
 
 Optional CMake definitions used in this project.
 
-| Option                   | Description                                                                                                 | Default |
-|:-------------------------|:------------------------------------------------------------------------------------------------------------|:-------:|
-| Hack_BUILD_TEST          | Build the unit test program.                                                                                |   OFF   |
-| Hack_AUTO_RUN_TEST       | Automatically run the test program.                                                                         |   OFF   |
-| Hack_CHECK_INT_BOUNDS    | Throw an overflow exception when testing individual bits.                                                   |   ON    |
-| Hack_IMPLEMENT_BLACK_BOX | If this is true most chips will be implemented with logic gates (Slower).                                   |   OFF   |
-| Hack_PRINT_CHIP_STATE    | Enables the print method defined in the Chip base class.                                                    |   OFF   |
-| Hack_VM_ZERO_RAM         | Emits extra instructions to remove RAM values that are no longer in use. Useful with the Computer option -t |   ON    |
-| Hack_USE_SDL             | Enables or disables SDL                                                                                     |   OFF   |
+| Option                   | Description                                                                                                              | Default |
+|:-------------------------|:-------------------------------------------------------------------------------------------------------------------------|:-------:|
+| Hack_BUILD_TEST          | Build the unit test program.                                                                                             |   OFF   |
+| Hack_AUTO_RUN_TEST       | Automatically run the test program.                                                                                      |   OFF   |
+| Hack_CHECK_INT_BOUNDS    | Throw an overflow exception when testing individual bits.                                                                |   ON    |
+| Hack_IMPLEMENT_BLACK_BOX | If this is true most chips will be implemented with logic gates (Slower).                                                |   OFF   |
+| Hack_PRINT_CHIP_STATE    | Enables the print method defined in the Chip base class.                                                                 |   OFF   |
+| Hack_VM_ZERO_RAM         | Emits extra instructions to zero RAM values that are no longer in use. Useful when debugging with the Computer option -t |   ON    |
+| Hack_BLOCK_PUSH          | Emits conditional instructions to prevent pushing to segments when its out of context.                                   |   ON    |
+| Hack_USE_SDL             | Enables or disables SDL                                                                                                  |   OFF   |
 
 ## Testing
 

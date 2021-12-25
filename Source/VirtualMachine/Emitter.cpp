@@ -24,6 +24,7 @@
 #include "Utils/Char.h"
 #include "VirtualMachine/Constants.h"
 
+
 namespace Hack::VirtualMachine
 {
     class CodeStream
@@ -366,7 +367,6 @@ namespace Hack::VirtualMachine
             jumpToAddressIn(SW0);
             moveDIntoM();
             decrement();
-
             atAddressOf(SW0);
             setM(false);
         }
@@ -425,52 +425,63 @@ namespace Hack::VirtualMachine
 
     void Emitter::pushLocal(const int& idx)
     {
+        const CodeStream w(&_stream);
+
+#ifdef GUARD_PUSH
         String whenDone;
         genLabel(whenDone);
 
-        const CodeStream w(&_stream);
         w.compareDIntoX(SW2, LCL, 0);
         w.jumpIfEquals(whenDone);
+#endif
 
         w.dereferenceOffset(LCL, idx);
         w.copyMIntoD();
         w.pushD();
 
+#ifdef GUARD_PUSH
         w.label(whenDone);
+#endif
     }
 
     void Emitter::pushThis(const int& idx)
     {
+
+        const CodeStream w(&_stream);
+#ifdef GUARD_PUSH
         String whenDone;
         genLabel(whenDone);
 
-        const CodeStream w(&_stream);
-
         w.compareDIntoX(SW2, THS, 0);
         w.jumpIfEquals(whenDone);
-
+#endif
         w.dereferenceOffset(THS, idx);
         w.copyMIntoD();
         w.pushD();
 
+#ifdef GUARD_PUSH
         w.label(whenDone);
+#endif
     }
 
     void Emitter::pushThat(const int& idx)
     {
+
+        const CodeStream w(&_stream);
+#ifdef GUARD_PUSH
         String whenDone;
         genLabel(whenDone);
 
-        const CodeStream w(&_stream);
-
         w.compareDIntoX(SW2, THT, 0);
         w.jumpIfEquals(whenDone);
-
+#endif
         w.dereferenceOffset(THT, idx);
         w.copyMIntoD();
         w.pushD();
 
+#ifdef GUARD_PUSH
         w.label(whenDone);
+#endif
     }
 
     void Emitter::pushTemp(const int& idx)
@@ -483,27 +494,42 @@ namespace Hack::VirtualMachine
 
     void Emitter::pushArgument(const int& idx)
     {
+
+        const CodeStream w(&_stream);
+#ifdef GUARD_PUSH
         String whenDone;
         genLabel(whenDone);
 
-        const CodeStream w(&_stream);
-
         w.compareDIntoX(SW2, ARG, 0);
         w.jumpIfEquals(whenDone);
-
+#endif
         w.dereferenceOffset(ARG, idx);
         w.copyMIntoD();
         w.pushD();
 
+#ifdef GUARD_PUSH
         w.label(whenDone);
+#endif
     }
 
     void Emitter::pushPointer(const int& idx)
     {
         const CodeStream w(&_stream);
+#ifdef GUARD_PUSH
+        String whenDone;
+        genLabel(whenDone);
+
+        w.compareDIntoX(SW2, ARG, 0);
+        w.jumpIfEquals(whenDone);
+#endif
+
         w.offsetTo(THS, idx);
         w.copyMIntoD();
         w.pushD();
+
+#ifdef GUARD_PUSH
+        w.label(whenDone);
+#endif
     }
 
     void Emitter::pushStatic(const String& context, const int& idx)

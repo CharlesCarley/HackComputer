@@ -61,6 +61,9 @@ namespace Hack::Computer
         IRuntime*        _runtime;
         String           _input;
         bool             _trace;
+        bool             _showVm;
+        bool             _showAsm;
+        bool             _showMc;
 
         void load() const;
 
