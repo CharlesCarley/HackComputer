@@ -34,30 +34,57 @@ set_group(TestTarget_Data
     TestFiles/Jack/Cmp:Jack/*.xml
     TestFiles/Jack/Jack:Jack/*.jack
 )
-include(Jack2Svg)
 
-set(Jack_FILES 
-    Jack/Test01.jack
-    Jack/Test02.jack
-    Jack/Test03.jack
-    Jack/Test04.jack
-    Jack/Test05.jack
-    Jack/Test06.jack
-    Jack/Test07.jack
-    Jack/Test08.jack
-    Jack/Test09.jack
-    Jack/Test10.jack
-)
+if (Hack_TEST_REGEN_CMP)
+    include(Jack2Svg)
+    set(Jack_FILES 
+        Jack/Test01.jack
+        Jack/Test02.jack
+        Jack/Test03.jack
+        Jack/Test04.jack
+        Jack/Test05.jack
+        Jack/Test06.jack
+        Jack/Test07.jack
+        Jack/Test08.jack
+        Jack/Test09.jack
+        Jack/Test10.jack
+    )
 
-if (Jack2Svg_ENABLED)
-    jack_to_svg(Parse_Trees ${Jack_FILES})
-    source_group("Reference\\SVG" FILES  ${Parse_Trees})
+    if (Jack2Svg_ENABLED)
+        jack_to_svg(Parse_Trees ${Jack_FILES})
+    endif()
+
+    jack_to_xml(XML_Trees ${Jack_FILES})
+else()
+    set(XML_Trees 
+        Jack/Test01.xml
+        Jack/Test02.xml
+        Jack/Test03.xml
+        Jack/Test04.xml
+        Jack/Test05.xml
+        Jack/Test06.xml
+        Jack/Test07.xml
+        Jack/Test08.xml
+        Jack/Test09.xml
+        Jack/Test10.xml
+    )
+
+    set(Parse_Trees 
+        Jack/Test01.svg
+        Jack/Test02.svg
+        Jack/Test03.svg
+        Jack/Test04.svg
+        Jack/Test05.svg
+        Jack/Test06.svg
+        Jack/Test07.svg
+        Jack/Test08.svg
+        Jack/Test09.svg
+        Jack/Test10.svg
+    )
 endif()
 
-jack_to_xml(XML_Trees ${Jack_FILES})
+source_group("Reference\\SVG" FILES  ${Parse_Trees})
 source_group("Reference\\XML" FILES  ${XML_Trees})
-
-
 
 set(TestTarget_SOURCE
     FileCmp.h

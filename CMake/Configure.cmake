@@ -35,6 +35,7 @@ option(Hack_PRINT_CHIP_STATE     "Enables the print method defined in the Chip c
 option(Hack_VM_ZERO_RAM          "Emits extra instructions to remove RAM values that are no longer in use" ON)
 option(Hack_VM_GUARD_PUSH        "Emits conditional instructions to prevent pushing to segments when its out of context." OFF)
 option(Hack_USE_SDL              "Enables or disables SDL" OFF)
+option(Hack_TEST_REGEN_CMP       "Regenerate the compare files" OFF)
 
 
 
