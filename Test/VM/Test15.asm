@@ -38,9 +38,7 @@ M=0
 A=A-1
 M=D+M
 @0
-M=M-1
-@0
-A=M M=0
+M=M-1 A=M+1 M=0
 @L3
 D=A;JMP
 (L4)
@@ -56,9 +54,7 @@ M=0
 A=A-1
 M=M-D
 @0
-M=M-1
-@0
-A=M M=0
+M=M-1 A=M+1 M=0
 @L5
 D=A;JMP
 (L1)
@@ -74,9 +70,7 @@ M=0
 A=A-1
 M=D+M
 @0
-M=M-1
-@0
-A=M M=0
+M=M-1 A=M+1 M=0
 @L2
 D=A;JMP
 (L3)
@@ -92,9 +86,7 @@ M=0
 A=A-1
 M=D+M
 @0
-M=M-1
-@0
-A=M M=0
+M=M-1 A=M+1 M=0
 @L4
 D=A;JMP
 (L5)
@@ -113,8 +105,6 @@ M=0
 A=M
 M=D
 @0
-M=M-1
-@0
-A=M M=0
+M=M-1 A=M+1 M=0
 @13
 M=0
