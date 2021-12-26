@@ -1,144 +1,144 @@
 <?xml version='1.0'?>
 <ClassList Filename="Test07.jack">
  <RuleClass Line="80">
-   <KeywordLine="80"> class </Keyword>
-   <IdentifierLine="80"> MethodBody </Identifier>
-   <SymbolLine="80"> { </Symbol>
+   <KeywordLine="80">class</Keyword>
+   <IdentifierLine="80">MethodBody</Identifier>
+   <SymbolLine="80">{</Symbol>
    <RuleClassDescription Line="80">
      <RuleMethod Line="82">
        <RuleMethodSpecification Line="82">
-         <KeywordLine="82"> method </Keyword>
+         <KeywordLine="82">method</Keyword>
        </RuleMethodSpecification>
        <RuleMethodReturnType Line="82">
          <RuleDataType Line="82">
-           <IdentifierLine="82"> boolean </Identifier>
+           <IdentifierLine="82">boolean</Identifier>
          </RuleDataType>
        </RuleMethodReturnType>
-       <IdentifierLine="82"> Body </Identifier>
-       <SymbolLine="82"> ( </Symbol>
+       <IdentifierLine="82">Body</Identifier>
+       <SymbolLine="82">(</Symbol>
        <RuleParameterList Line="82">
        </RuleParameterList>
-       <SymbolLine="82"> ) </Symbol>
+       <SymbolLine="82">)</Symbol>
        <RuleMethodBody Line="82">
-         <SymbolLine="82"> { </Symbol>
+         <SymbolLine="82">{</Symbol>
          <RuleBody Line="83">
            <RuleVariable Line="83">
-             <KeywordLine="83"> var </Keyword>
+             <KeywordLine="83">var</Keyword>
              <RuleDataType Line="83">
-               <KeywordLine="83"> int </Keyword>
+               <KeywordLine="83">int</Keyword>
              </RuleDataType>
              <RuleIdentifierList Line="83">
-               <IdentifierLine="83"> v0 </Identifier>
+               <IdentifierLine="83">v0</Identifier>
              </RuleIdentifierList>
-             <SymbolLine="83"> ; </Symbol>
+             <SymbolLine="83">;</Symbol>
            </RuleVariable>
            <RuleStatement Line="85">
              <RuleLetStatement Line="85" Subtype="SubtypeLetEqual">
-               <KeywordLine="85"> let </Keyword>
-               <IdentifierLine="85"> v0 </Identifier>
-               <SymbolLine="85"> = </Symbol>
+               <KeywordLine="85">let</Keyword>
+               <IdentifierLine="85">v0</Identifier>
+               <SymbolLine="85">=</Symbol>
                <RuleExpression Line="85">
                  <RuleSingleExpression Line="85" Subtype="SubtypeTerm">
                    <RuleTerm Line="85">
                      <RuleSimpleTerm Line="86">
-                       <IdentifierLine="86"> 0 </Identifier>
+                       <IdentifierLine="86">0</Identifier>
                      </RuleSimpleTerm>
                    </RuleTerm>
                  </RuleSingleExpression>
                </RuleExpression>
-               <SymbolLine="86"> ; </Symbol>
+               <SymbolLine="86">;</Symbol>
              </RuleLetStatement>
            </RuleStatement>
            <RuleStatement Line="86">
              <RuleLetStatement Line="86" Subtype="SubtypeLetEqual">
-               <KeywordLine="86"> let </Keyword>
-               <IdentifierLine="86"> v0 </Identifier>
-               <SymbolLine="86"> = </Symbol>
+               <KeywordLine="86">let</Keyword>
+               <IdentifierLine="86">v0</Identifier>
+               <SymbolLine="86">=</Symbol>
                <RuleExpression Line="86">
                  <RuleSingleExpression Line="86" Subtype="SubtypeTerm">
                    <RuleTerm Line="86">
                      <RuleSimpleTerm Line="87">
-                       <IdentifierLine="87"> Hello World </Identifier>
+                       <IdentifierLine="87">Hello World</Identifier>
                      </RuleSimpleTerm>
                    </RuleTerm>
                  </RuleSingleExpression>
                </RuleExpression>
-               <SymbolLine="87"> ; </Symbol>
+               <SymbolLine="87">;</Symbol>
              </RuleLetStatement>
            </RuleStatement>
            <RuleStatement Line="87">
              <RuleLetStatement Line="87" Subtype="SubtypeLetEqual">
-               <KeywordLine="87"> let </Keyword>
-               <IdentifierLine="87"> v0 </Identifier>
-               <SymbolLine="87"> = </Symbol>
+               <KeywordLine="87">let</Keyword>
+               <IdentifierLine="87">v0</Identifier>
+               <SymbolLine="87">=</Symbol>
                <RuleExpression Line="87">
                  <RuleSingleExpression Line="87" Subtype="SubtypeTerm">
                    <RuleTerm Line="87">
                      <RuleSimpleTerm Line="88">
-                       <IdentifierLine="88"> null </Identifier>
+                       <IdentifierLine="88">null</Identifier>
                      </RuleSimpleTerm>
                    </RuleTerm>
                  </RuleSingleExpression>
                </RuleExpression>
-               <SymbolLine="88"> ; </Symbol>
+               <SymbolLine="88">;</Symbol>
              </RuleLetStatement>
            </RuleStatement>
            <RuleStatement Line="88">
              <RuleLetStatement Line="88" Subtype="SubtypeLetEqual">
-               <KeywordLine="88"> let </Keyword>
-               <IdentifierLine="88"> v0 </Identifier>
-               <SymbolLine="88"> = </Symbol>
+               <KeywordLine="88">let</Keyword>
+               <IdentifierLine="88">v0</Identifier>
+               <SymbolLine="88">=</Symbol>
                <RuleExpression Line="88">
                  <RuleSingleExpression Line="88" Subtype="SubtypeTerm">
                    <RuleTerm Line="88">
                      <RuleSimpleTerm Line="89">
-                       <IdentifierLine="89"> true </Identifier>
+                       <IdentifierLine="89">true</Identifier>
                      </RuleSimpleTerm>
                    </RuleTerm>
                  </RuleSingleExpression>
                </RuleExpression>
-               <SymbolLine="89"> ; </Symbol>
+               <SymbolLine="89">;</Symbol>
              </RuleLetStatement>
            </RuleStatement>
            <RuleStatement Line="89">
              <RuleLetStatement Line="89" Subtype="SubtypeLetEqual">
-               <KeywordLine="89"> let </Keyword>
-               <IdentifierLine="89"> v0 </Identifier>
-               <SymbolLine="89"> = </Symbol>
+               <KeywordLine="89">let</Keyword>
+               <IdentifierLine="89">v0</Identifier>
+               <SymbolLine="89">=</Symbol>
                <RuleExpression Line="89">
                  <RuleSingleExpression Line="89" Subtype="SubtypeTerm">
                    <RuleTerm Line="89">
                      <RuleSimpleTerm Line="90">
-                       <IdentifierLine="90"> false </Identifier>
+                       <IdentifierLine="90">false</Identifier>
                      </RuleSimpleTerm>
                    </RuleTerm>
                  </RuleSingleExpression>
                </RuleExpression>
-               <SymbolLine="90"> ; </Symbol>
+               <SymbolLine="90">;</Symbol>
              </RuleLetStatement>
            </RuleStatement>
            <RuleStatement Line="90">
              <RuleLetStatement Line="90" Subtype="SubtypeLetEqual">
-               <KeywordLine="90"> let </Keyword>
-               <IdentifierLine="90"> v0 </Identifier>
-               <SymbolLine="90"> = </Symbol>
+               <KeywordLine="90">let</Keyword>
+               <IdentifierLine="90">v0</Identifier>
+               <SymbolLine="90">=</Symbol>
                <RuleExpression Line="90">
                  <RuleSingleExpression Line="90" Subtype="SubtypeTerm">
                    <RuleTerm Line="90">
                      <RuleSimpleTerm Line="92">
-                       <IdentifierLine="92"> this </Identifier>
+                       <IdentifierLine="92">this</Identifier>
                      </RuleSimpleTerm>
                    </RuleTerm>
                  </RuleSingleExpression>
                </RuleExpression>
-               <SymbolLine="92"> ; </Symbol>
+               <SymbolLine="92">;</Symbol>
              </RuleLetStatement>
            </RuleStatement>
          </RuleBody>
-         <SymbolLine="92"> } </Symbol>
+         <SymbolLine="92">}</Symbol>
        </RuleMethodBody>
      </RuleMethod>
    </RuleClassDescription>
-   <SymbolLine="92"> } </Symbol>
+   <SymbolLine="92">}</Symbol>
  </RuleClass>
 </ClassList>

@@ -65,7 +65,12 @@ namespace Hack::Compiler
         void inlineTag(const String& name, Node* node, const String& value)
         {
             _out << std::setw((size_t)(_indent - 1)) << ' ';
-            _out << '<' << name << "Line=\"" << node->line() << "\">" << ' ' << value << ' ';
+            _out << '<'
+                 << name
+                 << "Line=\""
+                 << node->line()
+                 << "\">"
+                 << value;
             _out << '<' << '/' << name << '>' << std::endl;
         }
 
@@ -78,7 +83,10 @@ namespace Hack::Compiler
         void writeHeader()
         {
             _out << "<?xml version='1.0'?>" << std::endl;
-            _out << "<ClassList Filename=\"" << Path(_root->filename()).filename().string() << "\">" << std::endl;
+            _out << "<ClassList Filename=\""
+                 << Path(_root->filename()).filename().string()
+                 << "\">"
+                 << std::endl;
             _indent += Indent;
         }
 
@@ -88,28 +96,27 @@ namespace Hack::Compiler
             _out << "</ClassList>" << std::endl;
         }
 
-        void writeRule(Node* node)
+        void writeRule(Node* rule)
         {
             String name, typeValue;
-            NodeUtils::nodeTypeXmlString(name, node);
-            openTag(name, node);
+            NodeUtils::nodeTypeXmlString(name, rule);
+            openTag(name, rule);
 
-            const Node::Children& ch = node->children();
-
-            for (Node* nd : ch)
+            const Node::Children& ch = rule->children();
+            for (Node* node : ch)
             {
-                NodeUtils::nodeTypeXmlString(typeValue, nd);
+                NodeUtils::nodeTypeXmlString(typeValue, node);
 
-                if (nd->isKeyword())
-                    inlineTag("Keyword", nd, typeValue);
-                else if (nd->isConstant())
-                    inlineTag("Identifier", nd, typeValue);
-                else if (nd->isSymbol())
-                    inlineTag("Symbol", nd, typeValue);
-                else if (nd->isRule())
-                    writeRule(nd);
+                if (node->isKeyword())
+                    inlineTag("Keyword", node, typeValue);
+                else if (node->isConstant())
+                    inlineTag("Identifier", node, typeValue);
+                else if (node->isSymbol())
+                    inlineTag("Symbol", node, typeValue);
+                else if (node->isRule())
+                    writeRule(node);
                 else
-                    inlineTag("Undefined", nd, nd->value());
+                    inlineTag("Undefined", node, node->value());
             }
             closeTag(name);
         }
