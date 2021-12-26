@@ -25,6 +25,7 @@
 #include "Compiler/Common/Node.h"
 #include "Compiler/Generator/SymbolTable.h"
 #include "Compiler/Generator/VmEmitter.h"
+#include "Utils/Exceptions/Exception.h"
 #include "Utils/FileSystem.h"
 
 namespace Hack::Compiler::CodeGenerator
@@ -158,6 +159,7 @@ namespace Hack::Compiler::CodeGenerator
             throw MessageException(
                 "expected simple term to reduce to a constant");
     }
+
 
     /// <summary>
     /// <code>
@@ -432,7 +434,7 @@ namespace Hack::Compiler::CodeGenerator
 
         const String l1 = _emitter->generateLabel();
         const String l0 = _emitter->generateLabel();
-        
+
         _emitter->writeIfEnd(l1);
         buildExpression(term2);
         _emitter->writeIfStart(l0);
