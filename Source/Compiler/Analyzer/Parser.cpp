@@ -21,6 +21,7 @@
 */
 #include "Compiler/Analyzer/Parser.h"
 #include <fstream>
+#include "Compiler/Analyzer/ParseUtils.h"
 #include "Compiler/Analyzer/Scanner.h"
 #include "Compiler/Analyzer/Token.h"
 #include "Compiler/Common/Node.h"
@@ -28,6 +29,8 @@
 
 namespace Hack::Compiler::Analyzer
 {
+    using Pu = ParseUtils;
+
     Parser::Parser()
     {
         _tree    = new Tree();
@@ -73,77 +76,6 @@ namespace Hack::Compiler::Analyzer
         Node* rule = new Node(name);
         _stack.push(rule);
         return rule;
-    }
-
-    bool Parser::isOperator(const int8_t id)
-    {
-        switch (id)
-        {
-        case TokOpMinus:
-        case TokOpPlus:
-        case TokOpMultiply:
-        case TokOpDivide:
-        case TokOpAnd:
-        case TokOpOr:
-        case TokOpGt:
-        case TokOpLt:
-        case TokOpEq:
-            return true;
-        default:
-            return false;
-        }
-    }
-
-    bool Parser::isTerm(const int8_t t0)
-    {
-        switch (t0)
-        {
-        case TokId:
-        case TokInt:
-        case TokString:
-        case TokKwFalse:
-        case TokKwTrue:
-        case TokKwNull:
-        case TokKwThis:
-        case TokSymLPar:
-            return true;
-        default:
-            return false;
-        }
-    }
-
-    bool Parser::isExpressionExitTerm(const int8_t t0)
-    {
-        switch (t0)
-        {
-        case TokSymRBracket:
-        case TokSymSemicolon:
-        case TokSymRPar:
-        case TokSymComma:
-            return true;
-        default:
-            return false;
-        }
-    }
-
-    bool Parser::isCallTerm(const int8_t t0, const int8_t t1, const int8_t t2, const int8_t t3)
-    {
-        const bool idOrThis = t0 == TokId || t0 == TokKwThis;
-
-        if (idOrThis && t1 == TokSymLPar)
-            return true;
-        if (idOrThis && t1 == TokSymPeriod && t2 == TokId && t3 == TokSymLPar)
-            return true;
-        return false;
-    }
-
-    bool Parser::isComplexTerm(const int8_t t0, const int8_t t1, const int8_t t2, const int8_t t3)
-    {
-        if (t0 == TokSymLPar)
-            return true;
-        if (t0 == TokId && t1 == TokSymLBracket)
-            return true;
-        return isCallTerm(t0, t1, t2, t3);
     }
 
     void Parser::checkEof()
@@ -252,7 +184,12 @@ namespace Hack::Compiler::Analyzer
     {
         const int8_t t0 = getToken(0).getType();
         if (t0 != token)
-            parseError("expected symbol: '", ch, '\'');
+        {
+            parseError("expected the symbol '",
+                       ch,
+                       "' but found the token ",
+                       ParseUtils::string(t0));
+        }
 
         rule->insert(symbolId);
         advanceCursor();
@@ -333,7 +270,12 @@ namespace Hack::Compiler::Analyzer
     {
         const int8_t t0 = getToken(0).getType();
         if (t0 != token)
-            parseError("expected keyword: '", kw, '\'');
+        {
+            parseError("expected the keyword '",
+                       kw,
+                       "' but found the token ",
+                       Pu::string(t0));
+        }
 
         rule->insert(symbolId);
         advanceCursor();
@@ -485,7 +427,9 @@ namespace Hack::Compiler::Analyzer
             keyword(KeywordStatic);
             break;
         default:
-            parseError("undefined field specifier");
+            parseError("unknown field specifier '",
+                       Pu::string(getToken(0).getType()),
+                       "'. expected either field or static.");
         }
     }
 
@@ -508,7 +452,9 @@ namespace Hack::Compiler::Analyzer
             constant(ConstantIdentifier);
             break;
         default:
-            parseError("Undefined data type");
+            parseError("unknown data type '",
+                       Pu::string(getToken(0).getType()),
+                       "'. expected int, char, bool or a class id");
         }
     }
 
@@ -582,8 +528,10 @@ namespace Hack::Compiler::Analyzer
             break;
         default:
             parseError(
-                "Expected a method to be declared as a "
-                "constructor, function or method");
+                "expected a method to be declared as a "
+                "constructor, function or method. Found the token '",
+                Pu::string(getToken(0).getType()),
+                "' instead.");
         }
     }
 
@@ -693,8 +641,11 @@ namespace Hack::Compiler::Analyzer
             break;
         default:
             parseError(
-                "expected a statement token of "
-                "let, if, else, do, while or return");
+                "expected a statement of the token "
+                "let, if, else, do, while or return."
+                " Found the token ",
+                Pu::string(getToken(0).getType()),
+                " instead.");
         }
     }
 
@@ -854,32 +805,28 @@ namespace Hack::Compiler::Analyzer
 
             checkEof();
 
-        } while (!isExpressionExitTerm(getToken(0).getType()));
+        } while (!Pu::isExpressionExitTerm(getToken(0).getType()));
     }
 
     void Parser::singleExpressionRule()
     {
         Node* rule = createRule(RuleSingleExpression);
 
+        const int8_t tp = getToken(-1).getType();
         const int8_t t0 = getToken(0).getType();
         const int8_t t1 = getToken(1).getType();
 
-        if (t0 == TokOpNot || t0 == TokOpMinus && isTerm(t1))
+        if (Pu::isUnary(t0, t1, tp))
         {
-            const int8_t tp = getToken(-1).getType();
-
             rule->subtype(SubtypeOpTerm);
 
-            if (isTerm(tp) && tp != TokSymLPar)
-                operatorRule();
-            else
-                unaryOperatorRule();
+            unaryOperatorRule();
             reduceRule(rule);
 
             termRule();
             reduceRule(rule);
         }
-        else if (isOperator(getToken(0).getType()) && isTerm(t1))
+        else if (Pu::isOperator(getToken(0).getType()) && Pu::isTerm(t1))
         {
             rule->subtype(SubtypeOpTerm);
 
@@ -889,7 +836,7 @@ namespace Hack::Compiler::Analyzer
             termRule();
             reduceRule(rule);
         }
-        else if (isTerm(t0))
+        else if (Pu::isTerm(t0))
         {
             rule->subtype(SubtypeTerm);
 
@@ -912,7 +859,7 @@ namespace Hack::Compiler::Analyzer
         const int8_t t2 = getToken(2).getType();
         const int8_t t3 = getToken(3).getType();
 
-        if (isComplexTerm(t0, t1, t2, t3))
+        if (Pu::isComplexTerm(t0, t1, t2, t3))
         {
             complexTermRule();
             reduceRule(rule);
@@ -954,7 +901,7 @@ namespace Hack::Compiler::Analyzer
             constant(ConstantString);
             break;
         default:
-            parseError("unknown constant '", (int)t0, '\'');
+            parseError("unknown token ", Pu::string(t0));
         }
     }
 
@@ -991,7 +938,7 @@ namespace Hack::Compiler::Analyzer
 
             symbol(SymbolRightBracket);
         }
-        else if (isCallTerm(t0, t1, t2, t3))
+        else if (Pu::isCallTerm(t0, t1, t2, t3))
         {
             rule->subtype(SubtypeCall);
 
@@ -999,7 +946,17 @@ namespace Hack::Compiler::Analyzer
             reduceRule(rule);
         }
         else
-            parseError("unknown complex term");
+        {
+            parseError("Unknown complex term.",
+                       "found tokens: ",
+                       Pu::string(t0),
+                       ' ',
+                       Pu::string(t1),
+                       ' ',
+                       Pu::string(t2),
+                       ' ',
+                       Pu::string(t3));
+        }
     }
 
     void Parser::operatorRule()
@@ -1038,7 +995,7 @@ namespace Hack::Compiler::Analyzer
             symbol(SymbolEquals);
             break;
         default:
-            parseError("unknown symbol '", (int)t0, '\'');
+            parseError("unknown symbol ", Pu::string(t0));
         }
     }
 
@@ -1053,7 +1010,13 @@ namespace Hack::Compiler::Analyzer
         else if (t0 == TokOpNot)
             symbol(SymbolNot);
         else
-            parseError("expected a '-', '~', or '!' character");
+        {
+            parseError(
+                "expected a '-', '~', or '!' "
+                "character, but found the token ",
+                Pu::string(t0),
+                " instead.");
+        }
     }
 
     void Parser::expressionListRule()
@@ -1090,7 +1053,7 @@ namespace Hack::Compiler::Analyzer
         const int8_t t2 = getToken(2).getType();
         const int8_t t3 = getToken(3).getType();
 
-        if (t0 == TokId && t1 == TokSymLPar)
+        if (Pu::isFunctionCall(t0, t1))
         {
             try
             {
@@ -1110,10 +1073,7 @@ namespace Hack::Compiler::Analyzer
                 throw InputException(ex.what(), "\n", "failed to parse method declaration");
             }
         }
-        else if (t0 == TokId || t0 == TokKwThis &&
-                                             t1 == TokSymPeriod &&
-                                             t2 == TokId &&
-                                             t3 == TokSymLPar)
+        else if (Pu::isMethodCall(t0, t1, t2, t3))
         {
             try
             {

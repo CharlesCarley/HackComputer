@@ -24,12 +24,14 @@ set(Target_HDR
    Token.h
    Scanner.h
    Parser.h
+   ParseUtils.h
    Jack.grm
 )
 
 set(Target_SRC 
    Scanner.cpp
    Parser.cpp
+   ParseUtils.cpp
 )
 
 include_directories(${Hack_SOURCE_DIR}/Source)

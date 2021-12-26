@@ -48,16 +48,6 @@ namespace Hack::Compiler::Analyzer
 
         Node* createRule(const int8_t& name);
 
-        static bool isOperator(int8_t id);
-
-        static bool isTerm(int8_t t0);
-
-        static bool isExpressionExitTerm(int8_t t0);
-
-        static bool isCallTerm(int8_t t0, int8_t t1, int8_t t2, int8_t t3);
-
-        static bool isComplexTerm(int8_t t0, int8_t t1, int8_t t2, int8_t t3);
-
         void checkEof();
 
         void classRule();
