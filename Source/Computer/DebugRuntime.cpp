@@ -91,8 +91,8 @@ namespace Hack::Computer
 
         void initialize(Chips::Computer* computer)
         {
-            _rom = computer->getRom();
-            _ram = computer->getRam();
+            _rom = computer->rom();
+            _ram = computer->memory();
 
             _ctx = new Context();
             _ctx->createColor(Color(0x62627c));  // Grey
@@ -143,7 +143,7 @@ namespace Hack::Computer
         {
             _ctx->clear();
 
-            _cpuState = computer->getState();
+            _cpuState = computer->state();
 
             render(*_ctx);
 

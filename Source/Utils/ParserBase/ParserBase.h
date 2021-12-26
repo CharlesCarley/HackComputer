@@ -21,6 +21,8 @@
 */
 #pragma once
 #include <vector>
+
+#include "ScannerBase.h"
 #include "Utils/ParserBase/TokenBase.h"
 
 namespace Hack
@@ -72,6 +74,23 @@ namespace Hack
         void write(const String& file, int format = 0);
 
         void write(OStream& os, int format =0);
+
+        const String& filename() const;
+
+        size_t line() const;
+
     };
+
+    inline const String& ParserBase::filename() const
+    {
+        return _filePath;
+    }
+
+    inline size_t ParserBase::line() const
+    {
+        if (_scanner)
+            return _scanner->line();
+        return 0;
+    }
 
 }  // namespace Hack

@@ -20,6 +20,7 @@
 -------------------------------------------------------------------------------
 */
 #include <iostream>
+#include "Compiler/Analyzer/Parser.h"
 #include "Compiler/Generator/Generator.h"
 #include "Utils/CommandLine/Parser.h"
 #include "Utils/Console.h"
@@ -85,8 +86,11 @@ namespace Hack::Programs
 
         int go() const
         {
-            const Compiler::CodeGenerator::Generator generator;
-            generator.parse(_input.string());
+            Compiler::Analyzer::Parser parser;
+            parser.parse(_input.string());
+
+            Compiler::CodeGenerator::Generator generator;
+            generator.compile(parser.getTree().getRoot());
 
             if (!_output.empty())
                 generator.write(_output);

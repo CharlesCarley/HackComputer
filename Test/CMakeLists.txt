@@ -127,6 +127,7 @@ target_link_libraries(${TestTargetName}
     Utils
     SyntaxAnalyzer
     CompileUtils
+    CodeGenerator
  )
 
 if (Hack_AUTO_RUN_TEST)

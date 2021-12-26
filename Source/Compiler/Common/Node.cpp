@@ -28,23 +28,28 @@ namespace Hack::Compiler
     Node::Node() :
         _parent(nullptr),
         _type(-1),
-        _subtype(SubtypeNone)
-    {
-    }
-
-    Node::Node(const int8_t type) :
-        _parent(nullptr),
-        _type(type),
-        _subtype(SubtypeNone)
+        _subtype(SubtypeNone),
+        _line(0)
 
     {
     }
 
-    Node::Node(const int8_t type, String data) :
+    Node::Node(const int8_t type, String fileName, size_t line) :
         _parent(nullptr),
         _type(type),
         _subtype(SubtypeNone),
-        _data(std::move(data))
+        _fileName(std::move(fileName)),
+        _line(line)
+    {
+    }
+
+    Node::Node(int8_t type, String data, String fileName, size_t line) :
+        _parent(nullptr),
+        _type(type),
+        _subtype(SubtypeNone),
+        _data(std::move(data)),
+        _fileName(std::move(fileName)),
+        _line(line)
     {
     }
 
@@ -132,14 +137,14 @@ namespace Hack::Compiler
         node->_parent = this;
     }
 
-    void Node::insert(const int8_t type, const String& data)
+    void Node::insert(const int8_t type, const String& data, const String& fileName, size_t line)
     {
-        insert(new Node(type, data));
+        insert(new Node(type, data, fileName, line));
     }
 
-    void Node::insert(int8_t type)
+    void Node::insert(int8_t type, const String& fileName, size_t line)
     {
-        insert(new Node(type));
+        insert(new Node(type, fileName, line));
     }
 
     bool Node::isOperator() const

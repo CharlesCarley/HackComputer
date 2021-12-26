@@ -56,28 +56,28 @@ namespace Hack::VirtualMachine
         switch (t0)
         {
         case TOK_LOCAL:
-            _emitter.pushLocal(_scanner->getInt(idx));
+            _emitter.pushLocal(_scanner->integer(idx));
             break;
         case TOK_ARGUMENT:
-            _emitter.pushArgument(_scanner->getInt(idx));
+            _emitter.pushArgument(_scanner->integer(idx));
             break;
         case TOK_THIS:
-            _emitter.pushThis(_scanner->getInt(idx));
+            _emitter.pushThis(_scanner->integer(idx));
             break;
         case TOK_THAT:
-            _emitter.pushThat(_scanner->getInt(idx));
+            _emitter.pushThat(_scanner->integer(idx));
             break;
         case TOK_STATIC:
-            _emitter.pushStatic(_file, _scanner->getInt(idx));
+            _emitter.pushStatic(_file, _scanner->integer(idx));
             break;
         case TOK_TEMP:
-            _emitter.pushTemp(_scanner->getInt(idx));
+            _emitter.pushTemp(_scanner->integer(idx));
             break;
         case TOK_POINTER:
-            _emitter.pushPointer(_scanner->getInt(idx));
+            _emitter.pushPointer(_scanner->integer(idx));
             break;
         case TOK_CONSTANT:
-            _emitter.pushConstant(_scanner->getInt(idx));
+            _emitter.pushConstant(_scanner->integer(idx));
             break;
         default:
             parseError(
@@ -106,25 +106,25 @@ namespace Hack::VirtualMachine
         switch (t0)
         {
         case TOK_LOCAL:
-            _emitter.popLocal(_scanner->getInt(idx));
+            _emitter.popLocal(_scanner->integer(idx));
             break;
         case TOK_ARGUMENT:
-            _emitter.popArgument(_scanner->getInt(idx));
+            _emitter.popArgument(_scanner->integer(idx));
             break;
         case TOK_THIS:
-            _emitter.popThis(_scanner->getInt(idx));
+            _emitter.popThis(_scanner->integer(idx));
             break;
         case TOK_THAT:
-            _emitter.popThat(_scanner->getInt(idx));
+            _emitter.popThat(_scanner->integer(idx));
             break;
         case TOK_TEMP:
-            _emitter.popTemp(_scanner->getInt(idx));
+            _emitter.popTemp(_scanner->integer(idx));
             break;
         case TOK_STATIC:
-            _emitter.popStatic(_file, _scanner->getInt(idx));
+            _emitter.popStatic(_file, _scanner->integer(idx));
             break;
         case TOK_POINTER:
-            _emitter.popPointer(_scanner->getInt(idx));
+            _emitter.popPointer(_scanner->integer(idx));
             break;
         case TOK_CONSTANT:
         default:
@@ -150,7 +150,7 @@ namespace Hack::VirtualMachine
         const size_t idx = getToken(1).getIndex();
 
         String value;
-        _scanner->getString(value, idx);
+        _scanner->string(value, idx);
         if (value.empty())
             parseError("An empty label was found");
 
@@ -173,7 +173,7 @@ namespace Hack::VirtualMachine
         const size_t idx = getToken(1).getIndex();
 
         String value;
-        _scanner->getString(value, idx);
+        _scanner->string(value, idx);
 
         if (value.empty())
             parseError("An empty label was found");
@@ -205,11 +205,11 @@ namespace Hack::VirtualMachine
         }
 
         String name;
-        _scanner->getString(name, getToken(1).getIndex());
+        _scanner->string(name, getToken(1).getIndex());
         if (name.empty())
             parseError("An empty label was found");
 
-        const int locals = _scanner->getInt(getToken(2).getIndex());
+        const int locals = _scanner->integer(getToken(2).getIndex());
 
         _emitter.writeFunction(name, locals);
     }
@@ -235,12 +235,12 @@ namespace Hack::VirtualMachine
         }
 
         String name;
-        _scanner->getString(name, getToken(1).getIndex());
+        _scanner->string(name, getToken(1).getIndex());
         if (name.empty())
             parseError("An empty label was found");
 
         
-        const int args = _scanner->getInt(getToken(2).getIndex());
+        const int args = _scanner->integer(getToken(2).getIndex());
 
         _emitter.writeCall(name, args);
     }
@@ -265,9 +265,9 @@ namespace Hack::VirtualMachine
                 "set <ram-index:int> <ram-value:int>");
         }
 
-        const int idx = _scanner->getInt(getToken(1).getIndex());
+        const int idx = _scanner->integer(getToken(1).getIndex());
 
-        const int val = _scanner->getInt(getToken(2).getIndex());
+        const int val = _scanner->integer(getToken(2).getIndex());
 
         _emitter.setRam(idx, val);
     }

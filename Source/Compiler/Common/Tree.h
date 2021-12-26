@@ -36,10 +36,10 @@ namespace Hack::Compiler
         ~Tree();
 
         Node* getRoot() const;
-
-        void read(IStream& in);
-
+        
         void write(OStream& out, int format) const;
+
+        void  filename(const String& fileName) const;
     };
 
     inline Node* Tree::getRoot() const

@@ -69,7 +69,7 @@ namespace Hack
 
     [[noreturn]] void ParserBase::parseErrorThrow(const String& message) const
     {
-        throw ParseError(1, _filePath, _scanner->getLine(), message);
+        throw ParseError(1, _filePath, _scanner->line(), message);
     }
 
     void ParserBase::parse(const String& file)

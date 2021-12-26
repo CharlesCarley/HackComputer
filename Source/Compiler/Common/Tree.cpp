@@ -38,8 +38,10 @@ namespace Hack::Compiler
         _root = nullptr;
     }
 
-    void Tree::read(IStream& in)
+
+    void Tree::filename(const String& fileName) const
     {
+        _root->filename(fileName);
     }
 
     void Tree::write(OStream& out, int format) const

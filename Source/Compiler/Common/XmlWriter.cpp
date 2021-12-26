@@ -40,6 +40,7 @@ namespace Hack::Compiler
         {
             _out << std::setw((size_t)(_indent - 1)) << ' ';
             _out << '<' << name;
+            _out << " Line=\"" << node->line() << "\"";
             if (node->subtype() != SubtypeNone)
             {
                 String subTypeName;
@@ -60,13 +61,13 @@ namespace Hack::Compiler
             _out << '<' << '/' << name << '>' << std::endl;
         }
 
-        void inlineTag(const String& name, const String& value)
+        void inlineTag(const String& name, Node* node, const String& value)
         {
             _out << std::setw((size_t)(_indent - 1)) << ' ';
-            _out << '<' << name << '>' << ' ' << value << ' ';
+            _out << '<' << name << "Line=\"" << node->line() << "\">" << ' ' << value << ' ';
             _out << '<' << '/' << name << '>' << std::endl;
         }
-        
+
     public:
         explicit XmlWriterImpl(Node* root, OStream* stream) :
             _root(root), _stream(stream), _indent(0)
@@ -76,7 +77,7 @@ namespace Hack::Compiler
         void writeHeader()
         {
             _out << "<?xml version='1.0'?>" << std::endl;
-            _out << "<ClassList>" << std::endl;
+            _out << "<ClassList Filename=\"" << _root->filename() << "\">" << std::endl;
             _indent += Indent;
         }
 
@@ -99,15 +100,15 @@ namespace Hack::Compiler
                 NodeUtils::nodeTypeXmlString(typeValue, nd);
 
                 if (nd->isKeyword())
-                    inlineTag("Keyword", typeValue);
+                    inlineTag("Keyword", nd, typeValue);
                 else if (nd->isConstant())
-                    inlineTag("Identifier", typeValue);
+                    inlineTag("Identifier", nd, typeValue);
                 else if (nd->isSymbol())
-                    inlineTag("Symbol", typeValue);
+                    inlineTag("Symbol", nd, typeValue);
                 else if (nd->isRule())
                     writeRule(nd);
                 else
-                    inlineTag("Undefined", nd->value());
+                    inlineTag("Undefined", nd, nd->value());
             }
             closeTag(name);
         }

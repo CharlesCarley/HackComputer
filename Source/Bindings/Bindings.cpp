@@ -146,8 +146,8 @@ namespace Hack::Binding
     public:
         ComputerWrapper() : _computer(new Computer()), _bytes(nullptr)
         {
-            _rom   = new RomWrapper(_computer->getRom());
-            _ram   = new RamWrapper(_computer->getRam());
+            _rom   = new RomWrapper(_computer->rom());
+            _ram   = new RamWrapper(_computer->memory());
             _bytes = new uint8_t[0x80001];
         }
 
@@ -185,7 +185,7 @@ namespace Hack::Binding
                 _computer->update(false);
 
             const uint16_t* pointer =
-                _computer->getRam()->pointer(Memory::ScreenAddress);
+                _computer->memory()->pointer(Memory::ScreenAddress);
 
             uint8_t* bytes = (uint8_t*)_bytes;
             for (int i = 0; i < 0x2000; ++i)
@@ -228,7 +228,7 @@ namespace Hack::Binding
         const CpuState& getState() const
         {
             if (_computer && type == ComputerType)
-                return _computer->getState();
+                return _computer->state();
             return Computer::NullState;
         }
 

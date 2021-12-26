@@ -73,7 +73,8 @@ namespace Hack::Compiler::Analyzer
 
     Node* Parser::createRule(const int8_t& name)
     {
-        Node* rule = new Node(name);
+        Node* rule = new Node(name, _filePath, _scanner->line());
+
         _stack.push(rule);
         return rule;
     }
@@ -92,7 +93,10 @@ namespace Hack::Compiler::Analyzer
 
         const size_t id = getToken(0).getIndex();
 
-        rule->insert(ConstantIdentifier, _scanner->getString(id));
+        rule->insert(ConstantIdentifier,
+                     _scanner->string(id),
+                     _filePath,
+                     _scanner->line());
     }
 
     void Parser::identifier(Node*        rule,
@@ -113,14 +117,14 @@ namespace Hack::Compiler::Analyzer
         case TokKwTrue:
         case TokKwNull:
         case TokKwThis:
-            rule->insert(symbolId);
+            rule->insert(symbolId, _filePath, _scanner->line());
             break;
         default:
         {
             const size_t id = getToken(0).getIndex();
 
-            if (_scanner->hasString(id))
-                rule->insert(symbolId, _scanner->getString(id));
+            if (_scanner->containsString(id))
+                rule->insert(symbolId, _scanner->string(id), _filePath, _scanner->line());
             else
                 parseError("no data is associated with the supplied token");
         }
@@ -191,7 +195,7 @@ namespace Hack::Compiler::Analyzer
                        ParseUtils::string(t0));
         }
 
-        rule->insert(symbolId);
+        rule->insert(symbolId, _filePath, _scanner->line());
         advanceCursor();
     }
 
@@ -277,7 +281,7 @@ namespace Hack::Compiler::Analyzer
                        Pu::string(t0));
         }
 
-        rule->insert(symbolId);
+        rule->insert(symbolId, _filePath, _scanner->line());
         advanceCursor();
     }
 
@@ -1140,6 +1144,8 @@ namespace Hack::Compiler::Analyzer
         // to the scanner
         _cursor = 0;
         _scanner->attach(&is, _filePath);
+
+        _tree->filename(_filePath);
 
         while (_cursor <= (int32_t)_tokens.size())
         {

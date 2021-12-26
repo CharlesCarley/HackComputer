@@ -125,13 +125,13 @@ namespace Hack::Assembler
         if (tok.getType() == TOK_INTEGER)
         {
             String tmp;
-            _scanner->getString(tmp, tok.getIndex());
+            _scanner->string(tmp, tok.getIndex());
             dest = Char::toUint16(tmp);
         }
         if (tok.getType() == TOK_LABEL)
         {
             String label;
-            _scanner->getString(label, tok.getIndex());
+            _scanner->string(label, tok.getIndex());
 
             if (label.empty())
             {
@@ -422,7 +422,7 @@ namespace Hack::Assembler
         advanceCursor(3);
 
         String label;
-        _scanner->getString(label, t1.getIndex());
+        _scanner->string(label, t1.getIndex());
 
         if (label.empty())
             throw NullOrEmptyString();

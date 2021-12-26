@@ -143,4 +143,5 @@ namespace Hack::Compiler::Analyzer
         return *_tree;
     }
 
+
 }  // namespace Hack::Compiler::Analyzer

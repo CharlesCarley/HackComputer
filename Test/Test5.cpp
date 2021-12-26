@@ -20,10 +20,14 @@
 -------------------------------------------------------------------------------
 */
 #include <fstream>
+#include "Assembler/Parser.h"
+#include "Chips/Computer.h"
 #include "Compiler/Analyzer/Parser.h"
 #include "Compiler/Analyzer/Scanner.h"
+#include "Compiler/Generator/Generator.h"
 #include "FileCmp.h"
 #include "TestDirectory.h"
+#include "VirtualMachine/Parser.h"
 #include "gtest/gtest.h"
 
 using namespace Hack;
@@ -45,15 +49,77 @@ GTEST_TEST(Analyzer, GrammarClass)
         "Test10",
     };
 
-
     for (String& f : testFiles)
     {
         Parser psr;
         psr.parse(GetTestFilePath("Jack/" + f + ".jack"));
-        // psr.write(GetTestFilePath("Jack/" + f + ".xml"));
         psr.write(GetOutFilePath("" + f));
         CompareFiles(GetTestFilePath("Jack/" + f + ".xml"), GetOutFilePath("" + f));
     }
+}
+
+void GeneratorTestFile(Chips::Computer& comp, const String& baseName)
+{
+    const String fNameSrc = GetTestFilePath("Jack/" + baseName + ".jack");
+
+    Parser ana;
+    ana.parse(fNameSrc);
+
+    Compiler::CodeGenerator::Generator cmp;
+    cmp.compile(ana.getTree().getRoot());
+
+    StringStream vmCode, asmCode;
+    cmp.write(vmCode);
+
+    VirtualMachine::Parser vm;
+
+    vm.parse(vmCode);
+    vm.write(asmCode);
+
+    Assembler::Parser asmPsr;
+    asmPsr.parse(asmCode);
+    const Assembler::Parser::Instructions& inst = asmPsr.getInstructions();
+
+    comp.load(inst.data(), inst.size());
+
+    comp.reset();
+
+    const int       tot = (int)inst.size();
+    Chips::CpuState st  = Chips::Computer::NullState;
+    while (st.pc < tot)
+    {
+        // ticks 0, 1
+        comp.update(false);
+        comp.update(true);
+
+        st = comp.state();
+    }
+}
+
+GTEST_TEST(Generator, TestAdd)
+{
+    Chips::Computer computer;
+    GeneratorTestFile(computer, "Test10");
+
+    Chips::Memory* memory = computer.memory();
+    uint16_t       code   = memory->get(VirtualMachine::STP);
+    EXPECT_EQ(code, 257);
+
+    code = memory->get(256);
+    EXPECT_EQ(code, 8);
+}
+
+GTEST_TEST(Generator, While)
+{
+    Chips::Computer computer;
+    GeneratorTestFile(computer, "Test11");
+
+    Chips::Memory* memory = computer.memory();
+    uint16_t       code   = memory->get(VirtualMachine::STP);
+    EXPECT_EQ(code, 257);
+
+    code = memory->get(256);
+    EXPECT_EQ(code, 20);
 }
 
 GTEST_TEST(Analyzer, TokenTest)
@@ -140,7 +206,7 @@ GTEST_TEST(Analyzer, TokenTest)
             EXPECT_EQ(offsIndex, tok.getIndex());
 
             String cmp;
-            scn.getString(cmp, offsIndex);
+            scn.string(cmp, offsIndex);
             EXPECT_EQ(expString[offsIndex], cmp);
             ++offsIndex;
         }

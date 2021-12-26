@@ -62,27 +62,27 @@ namespace Hack::Chips
 
         void reset();
 
-        Memory* getRam() const;
+        Memory* memory() const;
 
-        Rom32* getRom() const;
+        Rom32* rom() const;
 
-        const CpuState& getState() const;
+        const CpuState& state() const;
 
         bool canRead() const;
 
     };
 
-    inline Memory* Computer::getRam() const
+    inline Memory* Computer::memory() const
     {
         return _ram;
     }
 
-    inline Rom32* Computer::getRom() const
+    inline Rom32* Computer::rom() const
     {
         return _rom;
     }
 
-    inline const CpuState& Computer::getState() const
+    inline const CpuState& Computer::state() const
     {
         return _cpuState;
     }

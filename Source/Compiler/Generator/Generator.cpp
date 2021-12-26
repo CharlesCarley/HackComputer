@@ -211,7 +211,7 @@ namespace Hack::Compiler::CodeGenerator
                 buildComplexTerm(term0);
             else
             {
-                compileError(
+                compileError(term0,
                     "unknown terminal type, it should "
                     "be either a simple or complex type");
             }
@@ -242,7 +242,7 @@ namespace Hack::Compiler::CodeGenerator
                 _emitter->popLocal(sym.entry());
             }
             else
-                compileError("variable '", id, "' not found");
+                compileError(statement, "variable '", id, "' not found");
         }
         else if (statement.isSubtypeOf(SubtypeLetArrayEqual))
         {
@@ -270,7 +270,7 @@ namespace Hack::Compiler::CodeGenerator
         else if (term1.isTypeOf(RuleExpression))
             buildExpression(term1);
         else
-            compileError("invalid terminal type");
+            compileError(statement, "invalid terminal type");
 
         _emitter->writeReturn();
     }
@@ -301,20 +301,20 @@ namespace Hack::Compiler::CodeGenerator
                 if (term1.isTypeOf(RuleTerm))
                     buildTerm(term1);
                 else
-                    compileError("invalid terminal type");
+                    compileError(term1, "invalid terminal type");
 
                 if (term0.isTypeOf(RuleOperator))
                     buildOperation(term0.child(0));
                 else if (term0.isTypeOf(RuleUnaryOperator))
                     buildUnaryOperation(term0.child(0));
                 else
-                    compileError("invalid operator type");
+                    compileError(term1, "invalid operator type");
             }
             else
-                compileError("invalid terminal expression type");
+                compileError(singleExpression, "invalid terminal expression type");
         }
         else
-            compileError("empty expression");
+            compileError(singleExpression, "empty expression");
     }
 
     /// <summary>
@@ -514,7 +514,7 @@ namespace Hack::Compiler::CodeGenerator
                 buildWhileStatement(stmt);
                 break;
             default:
-                compileError("unknown statement type ", stmt.type());
+                compileError(stmt, "unknown statement type ", stmt.type());
             }
         }
     }
@@ -649,18 +649,10 @@ namespace Hack::Compiler::CodeGenerator
         _emitter->finalize();
     }
 
-    void Generator::parse(const String& file) const
+    void Generator::compile(const Node *node)
     {
-        Analyzer::Parser parser;
-        parser.parse(file);
-        parseImpl(parser.getTree().getRoot());
-    }
-
-    void Generator::parse(IStream& stream) const
-    {
-        Analyzer::Parser parser;
-        parser.parse(stream);
-        parseImpl(parser.getTree().getRoot());
+        _fileName = node->filename();
+        parseImpl(node);
     }
 
     void Generator::write(const String& file) const

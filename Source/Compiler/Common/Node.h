@@ -22,13 +22,12 @@
 #pragma once
 #include <functional>
 #include <vector>
+#include "Compiler/Common/NodeUtils.h"
 #include "Utils/IndexCache.h"
 #include "Utils/String.h"
-#include "Compiler/Common/NodeUtils.h"
 
 namespace Hack::Compiler
 {
-
     class Node
     {
     public:
@@ -42,15 +41,17 @@ namespace Hack::Compiler
         int8_t   _type;
         int8_t   _subtype;
         String   _data;
+        String   _fileName;
+        size_t   _line;
 
         const Node& check(size_t idx, int8_t symbolId, bool generalCase) const;
 
     public:
         Node();
 
-        explicit Node(int8_t type);
+        Node(int8_t type, String fileName, size_t line);
 
-        Node(int8_t type, String data);
+        Node(int8_t type, String data, String fileName, size_t line);
 
         ~Node();
 
@@ -100,13 +101,19 @@ namespace Hack::Compiler
 
         void insert(Node* node);
 
-        void insert(int8_t type, const String& data);
+        void insert(int8_t type, const String& data, const String& fileName, size_t line);
 
-        void insert(int8_t type);
+        void insert(int8_t type, const String& fileName, size_t line);
 
         Iterator begin() const;
 
         Iterator end() const;
+
+        const String& filename() const;
+
+        void filename(const String& fileName);
+
+        const size_t& line() const;
     };
 
     inline void Node::type(const int8_t type)
@@ -194,6 +201,21 @@ namespace Hack::Compiler
     inline Node::Iterator Node::end() const
     {
         return _children.end();
+    }
+
+    inline const String& Node::filename() const
+    {
+        return _fileName;
+    }
+
+    inline void Node::filename(const String& fileName)
+    {
+        _fileName = fileName;
+    }
+
+    inline const size_t& Node::line() const
+    {
+        return _line;
     }
 
 }  // namespace Hack::Compiler

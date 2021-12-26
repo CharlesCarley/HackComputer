@@ -24,6 +24,7 @@
 #include <iostream>
 #include "Assembler/Parser.h"
 #include "Chips/Computer.h"
+#include "Compiler/Analyzer/Parser.h"
 #include "Compiler/Generator/Generator.h"
 #include "Computer/CommandRuntime.h"
 #include "Computer/DebugRuntime.h"
@@ -48,6 +49,7 @@ namespace Hack::Computer
         OP_DEBUG,
         OP_RUN_END,
         OP_TRACE_MEM,
+        OP_SHOW_PT,
         OP_SHOW_VM,
         OP_SHOW_ASM,
         OP_SHOW_MC,
@@ -88,6 +90,14 @@ namespace Hack::Computer
             0,
         },
         {
+            OP_SHOW_PT,
+            0,
+            "show-pt",
+            "Output the parse tree from the supplied file",
+            true,
+            0,
+        },
+        {
             OP_SHOW_VM,
             0,
             "show-vm",
@@ -119,7 +129,8 @@ namespace Hack::Computer
         _trace(false),
         _showVm(false),
         _showAsm(false),
-        _showMc(false)
+        _showMc(false),
+        _showPt(false)
     {
     }
 
@@ -166,6 +177,8 @@ namespace Hack::Computer
         _showAsm = parser.isPresent(OP_SHOW_ASM);
         _showVm  = parser.isPresent(OP_SHOW_VM);
         _showMc  = parser.isPresent(OP_SHOW_MC);
+        _showPt  = parser.isPresent(OP_SHOW_PT);
+
         return true;
     }
 
@@ -222,8 +235,14 @@ namespace Hack::Computer
 
         if (extension == ".jack")
         {
+            Compiler::Analyzer::Parser parser;
+            parser.parse(path.string());
+
+            if (_showPt)
+                parser.getTree().write(std::cout, 0);
+
             Compiler::CodeGenerator::Generator input;
-            input.parse(path.string());
+            input.compile(parser.getTree().getRoot());
 
             compile(input);
         }
@@ -248,7 +267,7 @@ namespace Hack::Computer
 
     void Application::trace(Chips::Computer* computer)
     {
-        Chips::Memory* mem = computer->getRam();
+        Chips::Memory* mem = computer->memory();
 
         OutputStringStream oss;
 

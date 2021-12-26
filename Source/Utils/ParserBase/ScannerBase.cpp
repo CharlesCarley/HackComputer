@@ -38,22 +38,22 @@ namespace Hack
         _line   = 1;
     }
 
-    const String& ScannerBase::getString(const size_t& i) const
+    const String& ScannerBase::string(const size_t& i) const
     {
         return _stringTable.at(i);
     }
 
-    void ScannerBase::getString(String& dest, const size_t& i) const
+    void ScannerBase::string(String& dest, const size_t& i) const
     {
         _stringTable.at(dest, i);
     }
 
-    int ScannerBase::getInt(const size_t& i) const
+    int ScannerBase::integer(const size_t& i) const
     {
         return _intTable.at(i);
     }
 
-    bool ScannerBase::hasString(const size_t id) const
+    bool ScannerBase::containsString(const size_t id) const
     {
         return _stringTable.contains(id);
     }

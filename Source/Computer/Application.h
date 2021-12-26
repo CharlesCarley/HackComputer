@@ -64,6 +64,7 @@ namespace Hack::Computer
         bool             _showVm;
         bool             _showAsm;
         bool             _showMc;
+        bool             _showPt;
 
         void load() const;
 

@@ -63,7 +63,7 @@ void VirtualMachineTestStack(Chips::Computer& comp, const String& baseName, bool
         comp.update(false);
         comp.update(true);
 
-        st = comp.getState();
+        st = comp.state();
     }
 }
 
@@ -72,7 +72,7 @@ GTEST_TEST(VirtualMachine, AddStackLocal)
     Chips::Computer comp;
     VirtualMachineTestStack(comp, "Test01");
 
-    Chips::Memory* mem = comp.getRam();
+    Chips::Memory* mem = comp.memory();
 
     // assert the ram
     uint16_t code = mem->get(VirtualMachine::LCL);
@@ -85,7 +85,7 @@ GTEST_TEST(VirtualMachine, SubStackLocal)
     Chips::Computer comp;
     VirtualMachineTestStack(comp, "Test02");
 
-    Chips::Memory* mem = comp.getRam();
+    Chips::Memory* mem = comp.memory();
 
     // assert the ram
     uint16_t code = mem->get(VirtualMachine::LCL);
@@ -98,7 +98,7 @@ GTEST_TEST(VirtualMachine, OrStackLocal)
     Chips::Computer comp;
     VirtualMachineTestStack(comp, "Test03");
 
-    Chips::Memory* mem = comp.getRam();
+    Chips::Memory* mem = comp.memory();
 
     // assert the ram
     uint16_t code = mem->get(VirtualMachine::LCL);
@@ -111,7 +111,7 @@ GTEST_TEST(VirtualMachine, AndStackLocal)
     Chips::Computer comp;
     VirtualMachineTestStack(comp, "Test04");
 
-    Chips::Memory* mem = comp.getRam();
+    Chips::Memory* mem = comp.memory();
 
     // assert the ram
     uint16_t code = mem->get(VirtualMachine::LCL);
@@ -124,7 +124,7 @@ GTEST_TEST(VirtualMachine, AddStackArg)
     Chips::Computer comp;
     VirtualMachineTestStack(comp, "Test05");
 
-    Chips::Memory* mem = comp.getRam();
+    Chips::Memory* mem = comp.memory();
 
     // assert the ram
     const uint16_t code = mem->get(VirtualMachine::ARG);
@@ -138,7 +138,7 @@ GTEST_TEST(VirtualMachine, SubStackArg)
     Chips::Computer comp;
     VirtualMachineTestStack(comp, "Test06");
 
-    Chips::Memory* mem = comp.getRam();
+    Chips::Memory* mem = comp.memory();
 
     // assert the ram
     uint16_t code = mem->get(VirtualMachine::ARG);
@@ -151,7 +151,7 @@ GTEST_TEST(VirtualMachine, OrStackArg)
     Chips::Computer comp;
     VirtualMachineTestStack(comp, "Test07");
 
-    Chips::Memory* mem = comp.getRam();
+    Chips::Memory* mem = comp.memory();
 
     // assert the ram
     uint16_t code = mem->get(VirtualMachine::ARG);
@@ -166,7 +166,7 @@ GTEST_TEST(VirtualMachine, AndStackArg)
     Chips::Computer comp;
     VirtualMachineTestStack(comp, "Test08");
 
-    Chips::Memory* mem = comp.getRam();
+    Chips::Memory* mem = comp.memory();
 
     // assert the ram
     uint16_t code = mem->get(VirtualMachine::ARG);
@@ -180,7 +180,7 @@ GTEST_TEST(VirtualMachine, BasicTest)
 
     VirtualMachineTestStack(comp, "Test09");
 
-    Chips::Memory* mem = comp.getRam();
+    Chips::Memory* mem = comp.memory();
 
     const uint16_t stp = mem->get(VirtualMachine::STP);
     const uint16_t lcl = mem->get(VirtualMachine::LCL);
@@ -221,7 +221,7 @@ GTEST_TEST(VirtualMachine, StaticTest)
     Chips::Computer comp;
     VirtualMachineTestStack(comp, "Test10");
 
-    Chips::Memory* mem = comp.getRam();
+    Chips::Memory* mem = comp.memory();
 
     uint16_t code = mem->get(VirtualMachine::STP);
     code          = mem->get(code - 1);
@@ -239,7 +239,7 @@ GTEST_TEST(VirtualMachine, TempOffsetTest)
     Chips::Computer comp;
     VirtualMachineTestStack(comp, "Test11");
 
-    Chips::Memory* mem = comp.getRam();
+    Chips::Memory* mem = comp.memory();
 
     uint16_t code = mem->get(5);
     EXPECT_EQ(code, 555);
@@ -265,7 +265,7 @@ GTEST_TEST(VirtualMachine, PointerTest)
     Chips::Computer comp;
     VirtualMachineTestStack(comp, "Test12");
 
-    Chips::Memory* mem = comp.getRam();
+    Chips::Memory* mem = comp.memory();
 
     //|RAM[256]| RAM[3] | RAM[4] |RAM[3032|RAM[3046|
     //|   6084 |   3030 |   3040 |     32 |     46 |
@@ -288,7 +288,7 @@ GTEST_TEST(VirtualMachine, JumpTestLTEQ)
     Chips::Computer comp;
     VirtualMachineTestStack(comp, "Test13");
 
-    Chips::Memory* mem = comp.getRam();
+    Chips::Memory* mem = comp.memory();
 
     const uint16_t lcl = mem->get(VirtualMachine::LCL);
 
@@ -307,7 +307,7 @@ GTEST_TEST(VirtualMachine, JumpTestGT)
     Chips::Computer comp;
     VirtualMachineTestStack(comp, "Test14");
 
-    Chips::Memory* mem = comp.getRam();
+    Chips::Memory* mem = comp.memory();
 
     const uint16_t code = mem->get(VirtualMachine::LCL);
     EXPECT_EQ(mem->get(code), 987);
@@ -318,7 +318,7 @@ GTEST_TEST(VirtualMachine, JumpTest)
     Chips::Computer comp;
     VirtualMachineTestStack(comp, "Test15");
 
-    Chips::Memory* mem = comp.getRam();
+    Chips::Memory* mem = comp.memory();
 
     uint16_t code = mem->get(VirtualMachine::LCL);
     code          = mem->get(code);
@@ -330,7 +330,7 @@ GTEST_TEST(VirtualMachine, LoopTest)
     Chips::Computer comp;
     VirtualMachineTestStack(comp, "Test16");
 
-    Chips::Memory* mem = comp.getRam();
+    Chips::Memory* mem = comp.memory();
 
     const uint16_t code = mem->get(VirtualMachine::LCL);
     EXPECT_EQ(code, 300);
@@ -343,7 +343,7 @@ GTEST_TEST(VirtualMachine, FibonacciSeries)
     Chips::Computer comp;
     VirtualMachineTestStack(comp, "Test17");
 
-    Chips::Memory* mem = comp.getRam();
+    Chips::Memory* mem = comp.memory();
 
     uint16_t val = mem->get(3000);
     EXPECT_EQ(val, 0);
@@ -364,7 +364,7 @@ GTEST_TEST(VirtualMachine, SimpleFunction)
     Chips::Computer comp;
     VirtualMachineTestStack(comp, "Test18");
 
-    Chips::Memory* mem = comp.getRam();
+    Chips::Memory* mem = comp.memory();
 
     uint16_t code = mem->get(VirtualMachine::STP);
     EXPECT_EQ(code, 257);
@@ -377,7 +377,7 @@ GTEST_TEST(VirtualMachine, RecursiveFunction)
     Chips::Computer comp;
     VirtualMachineTestStack(comp, "Test19");
 
-    Chips::Memory* mem = comp.getRam();
+    Chips::Memory* mem = comp.memory();
 
     uint16_t code = mem->get(VirtualMachine::STP);
     EXPECT_EQ(code, 257);
@@ -393,7 +393,7 @@ GTEST_TEST(VirtualMachine, FunctionLocals)
     Chips::Computer comp;
     VirtualMachineTestStack(comp, "Test20", false);
 
-    Chips::Memory* mem = comp.getRam();
+    Chips::Memory* mem = comp.memory();
 
     const int locals = 256 + 2 + 5;
 

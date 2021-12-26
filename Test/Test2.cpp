@@ -87,7 +87,7 @@ GTEST_TEST(Assembler, Scanner2)
 
         EXPECT_EQ(TOK_INTEGER, token.getType());
 
-        EXPECT_EQ(str, scanner.getString(token.getIndex()));
+        EXPECT_EQ(str, scanner.string(token.getIndex()));
     }
 
     for (int tok : Scan2Tokens)

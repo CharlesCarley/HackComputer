@@ -3,16 +3,18 @@ class Main
 {
 	method void main()
 	{
-		var int i, sum;
-
-		let sum = 0;
+		var int x, y, s, i;
+		let x = 2;
+		let y = 10;
+		let s = 0;
 		let i = 0;
-		while (i < 200)
+
+		while (i < y)
 		{
-			 let sum = sum + 2;
-			 let i = i+1;
+			 let s = s + x;
+			 let i = i + 1;
 		}
-		return sum;
+		return s;
 	}
 }
 

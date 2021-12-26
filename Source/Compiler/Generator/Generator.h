@@ -20,8 +20,10 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
+#include "Compiler/Common/Node.h"
 #include "Compiler/Common/Tree.h"
 #include "Utils/Exceptions/Exception.h"
+#include "Utils/ParserBase/ParseError.h"
 
 namespace Hack
 {
@@ -29,6 +31,14 @@ namespace Hack
     {
         class Emitter;
     }
+    namespace Compiler
+    {
+        namespace Analyzer
+        {
+            class Parser;
+        }
+    }  // namespace Compiler
+
 }  // namespace Hack
 
 namespace Hack::Compiler::CodeGenerator
@@ -42,6 +52,7 @@ namespace Hack::Compiler::CodeGenerator
         SymbolTable*   _globals;
         SymbolTable*   _locals;
         VmEmitter*     _emitter;
+        String         _fileName;
         mutable bool   _hasReturn;
         mutable String _elseEnd;
 
@@ -92,25 +103,23 @@ namespace Hack::Compiler::CodeGenerator
         void parseImpl(const Node* root) const;
 
         template <typename... Args>
-        [[noreturn]] void compileError(const String& what, Args&&... args) const
+        [[noreturn]] void compileError(const Node& node, const String& what, Args&&... args) const
         {
             OutputStringStream oss;
             oss << what;
             ((oss << std::forward<Args>(args)), ...);
-            throw Exception(oss.str());
+            throw ParseError(2, node.filename(), node.line(), oss.str());
         }
 
     public:
         Generator();
         ~Generator();
 
-        void parse(const String& file) const;
-
-        void parse(IStream& stream) const;
-
         void write(const String& file) const;
 
         void write(OStream& stream) const;
+
+        void compile(const Node* tree);
     };
 
 }  // namespace Hack::Compiler::CodeGenerator

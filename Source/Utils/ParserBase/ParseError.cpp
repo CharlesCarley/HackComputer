@@ -35,6 +35,8 @@ namespace Hack
             oss << " syntax error: ";
         else if (stage == 1)
             oss << " parse error: ";
+        else if (stage == 2)
+            oss << " compile error: ";
 
         oss << message << std::endl;
         return oss.str();

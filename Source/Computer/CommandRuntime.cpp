@@ -51,8 +51,8 @@ namespace Hack::Computer
 
         void initialize(Chips::Computer* computer)
         {
-            _rom = computer->getRom();
-            _ram = computer->getRam();
+            _rom = computer->rom();
+            _ram = computer->memory();
         }
 
         int input() const
@@ -70,7 +70,7 @@ namespace Hack::Computer
         {
             computer->update(false);
             computer->update(true);
-            _cpuState = computer->getState();
+            _cpuState = computer->state();
         }
     };
 

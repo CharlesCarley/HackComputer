@@ -74,23 +74,23 @@ namespace Hack
 
         void attach(IStream* stream, const String& file);
 
-        const String& getString(const size_t& i) const;
+        const String& string(const size_t& i) const;
 
-        void getString(String& dest, const size_t& i) const;
+        void string(String& dest, const size_t& i) const;
 
-        int getInt(const size_t& i) const;
+        int integer(const size_t& i) const;
 
-        size_t getLine() const;
+        size_t line() const;
 
-        bool hasString(size_t id) const;
+        bool containsString(size_t id) const;
     };
 
-    inline size_t ScannerBase::getLine() const
+    inline size_t ScannerBase::line() const
     {
         return _line;
     }
 
-// clang-format off
+    // clang-format off
     #define LowerCaseAz                                                   \
     'a' : case 'b' : case 'c' : case 'd' : case 'e' : case 'f' : case 'g' \
         : case 'h' : case 'i' : case 'j' : case 'k' : case 'l' : case 'm' \
