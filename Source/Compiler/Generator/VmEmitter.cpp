@@ -20,6 +20,7 @@
 -------------------------------------------------------------------------------
 */
 #include "Compiler/Generator/VmEmitter.h"
+#include <chrono>
 #include <iomanip>
 #include "Utils/Char.h"
 
@@ -31,7 +32,8 @@ namespace Hack::Compiler::CodeGenerator
         OStream* _s;
 
     public:
-        explicit CodeStream(OStream* os) : _s(os)
+        explicit CodeStream(OStream* os) :
+            _s(os)
         {
         }
 
@@ -44,7 +46,10 @@ namespace Hack::Compiler::CodeGenerator
         }
     };
 
-    VmEmitter::VmEmitter() = default;
+    VmEmitter::VmEmitter() :
+        _uid(0)
+    {
+    }
 
     void VmEmitter::clear()
     {
@@ -199,6 +204,35 @@ namespace Hack::Compiler::CodeGenerator
     {
         const CodeStream w(&_stream);
         w.write("call ", id, ' ', std::min<size_t>(size, 20));
+    }
+
+
+    String VmEmitter::generateLabel()
+    {
+        return StringCombine("L.", 
+            (size_t)this, 
+            std::chrono::high_resolution_clock::now().time_since_epoch().count(), 
+            ++_uid);
+    }
+
+    void VmEmitter::writeIfStart(const String& label)
+    {
+        const CodeStream w(&_stream);
+        w.write("not");
+        w.write("if-goto ", label);
+    }
+
+    void VmEmitter::writeGoto(const String& label)
+    {
+        const CodeStream w(&_stream);
+        w.write("goto ", label);
+    }
+
+    void VmEmitter::writeIfEnd(const String& label)
+    {
+        const CodeStream w(&_stream);
+        w.write("label ", label);
+
     }
 
 }  // namespace Hack::Compiler::CodeGenerator

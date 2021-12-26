@@ -33,7 +33,8 @@ namespace Hack::Compiler::CodeGenerator
         _globals(new SymbolTable()),
         _locals(new SymbolTable()),
         _emitter(new VmEmitter()),
-        _minusIsUnary(false)
+        _minusIsUnary(false),
+        _hasReturn(false)
     {
     }
 
@@ -62,7 +63,7 @@ namespace Hack::Compiler::CodeGenerator
         {
             const Symbol& sym = _globals->get(value);
             if (sym.kind() == Field)
-                _emitter->pushThis(sym.entry() + 1);
+                _emitter->pushThis(sym.entry());
             else if (sym.kind() == Static)
                 _emitter->pushStatic(sym.entry());
         }
@@ -97,6 +98,21 @@ namespace Hack::Compiler::CodeGenerator
         }
     }
 
+    void Generator::buildUnaryOperation(const Node& unary) const
+    {
+        switch (unary.type())
+        {
+        case SymbolMinus:
+            _emitter->symbolNeg();
+            break;
+        case SymbolNot:
+            _emitter->symbolNot();
+            break;
+        default:
+            throw InputException("unknown unary operation type ", unary.type());
+        }
+    }
+
     void Generator::buildOperation(const Node& op) const
     {
         switch (op.type())
@@ -105,19 +121,13 @@ namespace Hack::Compiler::CodeGenerator
             _emitter->symbolAdd();
             break;
         case SymbolMinus:
-            if (_minusIsUnary)
-                _emitter->symbolNeg();
-            else
-                _emitter->symbolSub();
+            _emitter->symbolSub();
             break;
         case SymbolAnd:
             _emitter->symbolAnd();
             break;
         case SymbolOr:
             _emitter->symbolOr();
-            break;
-        case SymbolNot:
-            _emitter->symbolNot();
             break;
         case SymbolGreater:
             _emitter->symbolGreater();
@@ -129,7 +139,7 @@ namespace Hack::Compiler::CodeGenerator
             _emitter->symbolEquals();
             break;
         default:
-            throw InputException("unknown symbol type ", op.type());
+            throw InputException("unknown operation type ", op.type());
         }
     }
 
@@ -149,6 +159,14 @@ namespace Hack::Compiler::CodeGenerator
                 "expected simple term to reduce to a constant");
     }
 
+    /// <summary>
+    /// <code>
+    /// <ComplexTerm> ::= Identifier '[' < Expression > ']'
+    ///                  | <CallMethod>
+    ///                  | '(' < Expression > ')'
+    /// </code>
+    /// </summary>
+    /// <param name="complexTerm"></param>
     void Generator::buildComplexTerm(const Node& complexTerm) const
     {
         if (complexTerm.isSubtypeOf(SubtypeExpressionGroup))
@@ -189,6 +207,13 @@ namespace Hack::Compiler::CodeGenerator
         }
     }
 
+    /// <summary>
+    /// <code>
+    /// <LetStatement> ::= Let Identifier '=' <Expression> ';'
+    ///                  | Let Identifier '[' < Expression > ']' '=' < Expression > ';'
+    /// </code>
+    /// </summary>
+    /// <param name="statement"></param>
     void Generator::buildLetStatement(const Node& statement) const
     {
         const String& id = statement.child(1).value();
@@ -204,9 +229,14 @@ namespace Hack::Compiler::CodeGenerator
         }
     }
 
+    /// <summary>
+    /// <ReturnStatement> ::= Return ';' | Return <Expression> ';'
+    /// <code></code>
+    /// </summary>
+    /// <param name="statement"></param>
     void Generator::buildReturnStatement(const Node& statement) const
     {
-        // <ReturnStatement> ::= Return ';' | Return <Expression> ';'
+        _hasReturn = true;
 
         const Node& term1 = statement.child(1);
 
@@ -231,7 +261,6 @@ namespace Hack::Compiler::CodeGenerator
         if (numTerms > 0)
         {
             const Node& term0 = singleExpression.child(0);
-
             if (numTerms == 1)
             {
                 if (term0.isTypeOf(RuleTerm))
@@ -247,8 +276,10 @@ namespace Hack::Compiler::CodeGenerator
                 if (term1.isTypeOf(RuleTerm))
                     buildTerm(term1);
 
-                if (term0.isOperator())
+                if (term0.isTypeOf(RuleOperator))
                     buildOperation(term0.child(0));
+                else if (term0.isTypeOf(RuleUnaryOperator))
+                    buildUnaryOperation(term0.child(0));
             }
         }
     }
@@ -302,7 +333,7 @@ namespace Hack::Compiler::CodeGenerator
     {
         if (callMethod.isSubtypeOf(SubtypeCallFunction))
         {
-            const Node& id = callMethod.constant(0, ConstantIdentifier);
+            const Node& id             = callMethod.constant(0, ConstantIdentifier);
             const Node& expressionList = callMethod.rule(2, RuleExpressionList);
 
             buildExpressionList(expressionList);
@@ -343,10 +374,89 @@ namespace Hack::Compiler::CodeGenerator
         buildCallMethod(callMethod);
     }
 
-    void Generator::buildStatements(const Node& body) const
+    /// <summary>
+    /// <code>
+    /// <IfStatement> ::= If '(' <Expression> ')' '{' <StatementList> '}'
+    ///                 | Else '{' < StatementList > '}'
+    /// </code>
+    /// </summary>
+    /// <param name="statement"></param>
+    void Generator::buildElseStatement(const Node& statement) const
     {
+        if (_elseEnd.empty())
+            throw InputException("else statement without matching if statement");
+
+        const Node& term2 = statement.rule(2, RuleStatementList);
+        buildStatements(term2);
+        _emitter->writeIfEnd(_elseEnd);
+    }
+
+    /// <summary>
+    /// <code>
+    /// <IfStatement> ::= If '(' <Expression> ')' '{' <StatementList> '}'
+    ///                 | Else '{' < StatementList > '}'
+    /// </code>
+    /// </summary>
+    /// <param name="statement"></param>
+    void Generator::buildIfStatement(const Node& statement) const
+    {
+        const Node& term2 = statement.rule(2, RuleExpression);
+        const Node& term5 = statement.rule(5, RuleStatementList);
+
+        const String l0 = _emitter->generateLabel();
+        buildExpression(term2);
+
+        _emitter->writeIfStart(l0);
+
+        buildStatements(term5);
+
+        if (term5.isSubtypeOf(SubtypeIfElseCombo))
+        {
+            _elseEnd = _emitter->generateLabel();
+            _emitter->writeGoto(_elseEnd);
+        }
+
+        _emitter->writeIfEnd(l0);
+    }
+
+    /// <summary>
+    /// <code>
+    /// <WhileStatement> ::= While '(' <Expression> ')' '{' <StatementList> '}'
+    /// </code>
+    /// </summary>
+    /// <param name="statement"></param>
+    void Generator::buildWhileStatement(const Node& statement) const
+    {
+        const Node& term2 = statement.rule(2, RuleExpression);
+        const Node& term5 = statement.rule(5, RuleStatementList);
+
+        const String l1 = _emitter->generateLabel();
+        const String l0 = _emitter->generateLabel();
+        
+        _emitter->writeIfEnd(l1);
+        buildExpression(term2);
+        _emitter->writeIfStart(l0);
+
+        buildStatements(term5);
+
+        _emitter->writeGoto(l1);
+        _emitter->writeIfEnd(l0);
+    }
+
+    /// <summary>
+    /// <code>
+    /// <StatementList> ::= <StatementList> <Statement>
+    ///                   | <Statement>
+    ///                   |
+    /// </code>
+    /// </summary>
+    /// <param name="methodBody"></param>
+    void Generator::buildStatements(const Node& methodBody) const
+    {
+        // extract only the statements from the method body
         Node::NodeArray statements;
-        body.filter(statements, RuleStatement);
+        methodBody.filter(statements, RuleStatement);
+
         for (const Node* child : statements)
         {
             const Node& statement = *child;
@@ -363,6 +473,16 @@ namespace Hack::Compiler::CodeGenerator
                 break;
             case RuleDoStatement:
                 buildDoStatement(stmt);
+                break;
+            case RuleIfStatement:
+                _elseEnd.clear();
+                buildIfStatement(stmt);
+                break;
+            case RuleElseStatement:
+                buildElseStatement(stmt);
+                break;
+            case RuleWhileStatement:
+                buildWhileStatement(stmt);
                 break;
             default:
                 break;
@@ -403,16 +523,15 @@ namespace Hack::Compiler::CodeGenerator
 
     /// <summary>
     /// <code>
-    /// <ClassDescription>  ::= <ClassDescription><Field> ';'
-    ///                       | <ClassDescription><Method>
-    ///                       | !--empty--
+    /// <ClassDescription>  ::= <ClassDescription> <Field> ';'
+    ///                       | <ClassDescription> <Method>
+    ///                       |
     /// </code>
     /// </summary>
     /// <param name="classDescription"></param>
     void Generator::buildClassDescription(const Node& classDescription) const
     {
         buildGlobals(classDescription);
-
 
         const String& className = classDescription.parent().child(1).value();
 
@@ -438,7 +557,14 @@ namespace Hack::Compiler::CodeGenerator
             else
                 _emitter->writeMethod(className, methodName.value(), tot);
 
+            _hasReturn = false;
             buildStatements(body);
+
+            if (!_hasReturn)
+            {
+                _emitter->pushConstant(0);
+                _emitter->writeReturn();
+            }
         }
     }
 

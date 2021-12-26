@@ -48,6 +48,7 @@ if (Hack_TEST_REGEN_CMP)
         Jack/Test08.jack
         Jack/Test09.jack
         Jack/Test10.jack
+        Jack/Test11.jack
     )
 
     if (Jack2Svg_ENABLED)

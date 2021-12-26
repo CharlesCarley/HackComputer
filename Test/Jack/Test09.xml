@@ -121,29 +121,19 @@
                                        <Symbol> / </Symbol>
                                      </Operator>
                                      <Term>
-                                       <ComplexTerm>
-                                         <Symbol> ( </Symbol>
-                                         <Expression>
-                                           <SingleExpression>
-                                             <Term>
-                                               <SimpleTerm>
-                                                 <Identifier> 9 </Identifier>
-                                               </SimpleTerm>
-                                             </Term>
-                                           </SingleExpression>
-                                           <SingleExpression>
-                                             <Operator>
-                                               <Symbol> * </Symbol>
-                                             </Operator>
-                                             <Term>
-                                               <SimpleTerm>
-                                                 <Identifier> 7 </Identifier>
-                                               </SimpleTerm>
-                                             </Term>
-                                           </SingleExpression>
-                                         </Expression>
-                                         <Symbol> ) </Symbol>
-                                       </ComplexTerm>
+                                       <SimpleTerm>
+                                         <Identifier> 9 </Identifier>
+                                       </SimpleTerm>
+                                     </Term>
+                                   </SingleExpression>
+                                   <SingleExpression>
+                                     <Operator>
+                                       <Symbol> * </Symbol>
+                                     </Operator>
+                                     <Term>
+                                       <SimpleTerm>
+                                         <Identifier> 7 </Identifier>
+                                       </SimpleTerm>
                                      </Term>
                                    </SingleExpression>
                                  </Expression>
@@ -187,20 +177,9 @@
                      <Symbol> / </Symbol>
                    </Operator>
                    <Term>
-                     <ComplexTerm>
+                     <SimpleTerm>
                        <Identifier> c </Identifier>
-                       <Symbol> [ </Symbol>
-                       <Expression>
-                         <SingleExpression>
-                           <Term>
-                             <SimpleTerm>
-                               <Identifier> 0 </Identifier>
-                             </SimpleTerm>
-                           </Term>
-                         </SingleExpression>
-                       </Expression>
-                       <Symbol> ] </Symbol>
-                     </ComplexTerm>
+                     </SimpleTerm>
                    </Term>
                  </SingleExpression>
                  <SingleExpression>

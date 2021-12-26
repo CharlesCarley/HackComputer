@@ -38,10 +38,12 @@ namespace Hack::Compiler::CodeGenerator
     class Generator
     {
     private:
-        SymbolTable* _globals;
-        SymbolTable* _locals;
-        VmEmitter*   _emitter;
-        mutable bool _minusIsUnary;
+        SymbolTable*   _globals;
+        SymbolTable*   _locals;
+        VmEmitter*     _emitter;
+        mutable bool   _minusIsUnary;
+        mutable bool   _hasReturn;
+        mutable String _elseEnd;
 
         void buildClass(Node* node) const;
 
@@ -54,6 +56,8 @@ namespace Hack::Compiler::CodeGenerator
         void pushIdentifier(const Node& simpleTerm) const;
 
         void buildConstant(const Node& simpleTerm) const;
+
+        void buildUnaryOperation(const Node& unary) const;
 
         void buildOperation(const Node& op) const;
 
@@ -77,7 +81,13 @@ namespace Hack::Compiler::CodeGenerator
 
         void buildDoStatement(const Node& statement) const;
 
-        void buildStatements(const Node& method) const;
+        void buildIfStatement(const Node& statement) const;
+
+        void buildElseStatement(const Node& statement) const;
+
+        void buildWhileStatement(const Node& statement) const;
+
+        void buildStatements(const Node& methodBody) const;
 
         void parseImpl(const Node* root) const;
 

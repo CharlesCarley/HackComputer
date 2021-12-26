@@ -394,20 +394,27 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::classRule()
     {
-        Node* rule = createRule(RuleClass);
+        try
+        {
+            Node* rule = createRule(RuleClass);
 
-        keyword(KeywordClass);
+            keyword(KeywordClass);
 
-        constant(ConstantIdentifier);
+            constant(ConstantIdentifier);
 
-        symbol(SymbolOpenBrace);
+            symbol(SymbolOpenBrace);
 
-        classDescriptionRule();
-        reduceRule(rule);
+            classDescriptionRule();
+            reduceRule(rule);
 
-        symbol(SymbolCloseBrace);
+            symbol(SymbolCloseBrace);
 
-        _tree->getRoot()->insert(rule);
+            _tree->getRoot()->insert(rule);
+        }
+        catch (Exception& ex)
+        {
+            parseError("failed to parse the class\n", ex.what());
+        }
     }
 
     void Parser::classDescriptionRule()
@@ -499,41 +506,55 @@ namespace Hack::Compiler::Analyzer
 
     void Parser::fieldRule()
     {
-        Node* rule = createRule(RuleField);
+        try
+        {
+            Node* rule = createRule(RuleField);
 
-        fieldSpecificationRule();
-        reduceRule(rule);
+            fieldSpecificationRule();
+            reduceRule(rule);
 
-        dataTypeRule();
-        reduceRule(rule);
+            dataTypeRule();
+            reduceRule(rule);
 
-        identifierListRule();
-        reduceRule(rule);
+            identifierListRule();
+            reduceRule(rule);
 
-        symbol(SymbolSemiColon);
+            symbol(SymbolSemiColon);
+        }
+        catch (Exception& ex)
+        {
+            parseError("failed to construct class field\n", ex.what());
+        }
     }
 
     void Parser::methodRule()
     {
         Node* rule = createRule(RuleMethod);
 
-        methodSpecificationRule();
-        reduceRule(rule);
+        try
+        {
+            methodSpecificationRule();
+            reduceRule(rule);
 
-        methodReturnTypeRule();
-        reduceRule(rule);
+            methodReturnTypeRule();
+            reduceRule(rule);
 
-        constant(ConstantIdentifier);
+            constant(ConstantIdentifier);
 
-        symbol(SymbolLeftParenthesis);
+            symbol(SymbolLeftParenthesis);
 
-        parameterListRule();
-        reduceRule(rule);
+            parameterListRule();
+            reduceRule(rule);
 
-        symbol(SymbolRightParenthesis);
+            symbol(SymbolRightParenthesis);
 
-        methodBodyRule();
-        reduceRule(rule);
+            methodBodyRule();
+            reduceRule(rule);
+        }
+        catch (Exception& ex)
+        {
+            parseError("failed to build method\n", ex.what());
+        }
     }
 
     void Parser::methodSpecificationRule()
@@ -723,6 +744,12 @@ namespace Hack::Compiler::Analyzer
         reduceRule(rule);
 
         symbol(SymbolCloseBrace);
+
+        const int8_t t0 = getToken(0).getType();
+        if (t0 == TOK_KW_ELSE)
+            rule->subtype(SubtypeIfElseCombo);
+
+
     }
 
     void Parser::elseStatementRule()
@@ -829,7 +856,13 @@ namespace Hack::Compiler::Analyzer
 
         if (t0 == TOK_OP_NOT || t0 == TOK_OP_MINUS && isTerm(t1))
         {
-            unaryOperatorRule();
+            const int8_t tp = getToken(-1).getType();
+
+            if (isTerm(tp) && tp != TOK_L_PAR)
+                operatorRule();
+            else
+                unaryOperatorRule();
+
             reduceRule(rule);
 
             termRule();
@@ -837,8 +870,15 @@ namespace Hack::Compiler::Analyzer
         }
         else if (isOperator(getToken(0).getType()) && isTerm(t1))
         {
-            operatorRule();
+            const int8_t tp = getToken(-1).getType();
+
+            if (isTerm(tp))
+                operatorRule();
+            else
+                unaryOperatorRule();
+
             reduceRule(rule);
+
 
             termRule();
             reduceRule(rule);
@@ -1044,37 +1084,50 @@ namespace Hack::Compiler::Analyzer
 
         if (t0 == TOK_IDENTIFIER && t1 == TOK_L_PAR)
         {
-            rule->subtype(SubtypeCallFunction);
+            try
+            {
+                rule->subtype(SubtypeCallFunction);
 
+                constant(ConstantIdentifier);
 
-            constant(ConstantIdentifier);
+                symbol(SymbolLeftParenthesis);
 
-            symbol(SymbolLeftParenthesis);
+                expressionListRule();
+                reduceRule(rule);
 
-            expressionListRule();
-            reduceRule(rule);
-
-            symbol(SymbolRightParenthesis);
+                symbol(SymbolRightParenthesis);
+            }
+            catch (Exception& ex)
+            {
+                throw InputException(ex.what(), "\n", "failed to parse method declaration");
+            }
         }
         else if (t0 == TOK_IDENTIFIER || t0 == TOK_CONST_THIS &&
                                              t1 == TOK_PERIOD &&
                                              t2 == TOK_IDENTIFIER &&
                                              t3 == TOK_L_PAR)
         {
-            rule->subtype(SubtypeCallMethod);
+            try
+            {
+                rule->subtype(SubtypeCallMethod);
 
-            object(t0);
+                object(t0);
 
-            symbol(SymbolPeriod);
+                symbol(SymbolPeriod);
 
-            constant(ConstantIdentifier);
+                constant(ConstantIdentifier);
 
-            symbol(SymbolLeftParenthesis);
+                symbol(SymbolLeftParenthesis);
 
-            expressionListRule();
-            reduceRule(rule);
+                expressionListRule();
+                reduceRule(rule);
 
-            symbol(SymbolRightParenthesis);
+                symbol(SymbolRightParenthesis);
+            }
+            catch (Exception& ex)
+            {
+                throw InputException(ex.what(), "\n", "failed to parse method declaration");
+            }
         }
         else
             parseError("unknown call rule");

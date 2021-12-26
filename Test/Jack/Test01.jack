@@ -16,8 +16,8 @@ class A {
 
         let a = 0;
         while (a < 25) {
-            let a = IncA(5);
-            if (~(a > 25)&3) {
+            let a = 5;
+            if (a > 25&3) {
                 do Output.Write("Done");
             }
             else {

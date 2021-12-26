@@ -274,24 +274,9 @@
                      <Expression>
                        <SingleExpression>
                          <Term>
-                           <ComplexTerm>
-                             <CallMethod>
-                               <Identifier> IncA </Identifier>
-                               <Symbol> ( </Symbol>
-                               <ExpressionList>
-                                 <Expression>
-                                   <SingleExpression>
-                                     <Term>
-                                       <SimpleTerm>
-                                         <Identifier> 5 </Identifier>
-                                       </SimpleTerm>
-                                     </Term>
-                                   </SingleExpression>
-                                 </Expression>
-                               </ExpressionList>
-                               <Symbol> ) </Symbol>
-                             </CallMethod>
-                           </ComplexTerm>
+                           <SimpleTerm>
+                             <Identifier> 5 </Identifier>
+                           </SimpleTerm>
                          </Term>
                        </SingleExpression>
                      </Expression>
@@ -304,33 +289,20 @@
                      <Symbol> ( </Symbol>
                      <Expression>
                        <SingleExpression>
-                         <UnaryOperator>
-                           <Symbol> ! </Symbol>
-                         </UnaryOperator>
                          <Term>
-                           <ComplexTerm>
-                             <Symbol> ( </Symbol>
-                             <Expression>
-                               <SingleExpression>
-                                 <Term>
-                                   <SimpleTerm>
-                                     <Identifier> a </Identifier>
-                                   </SimpleTerm>
-                                 </Term>
-                               </SingleExpression>
-                               <SingleExpression>
-                                 <Operator>
-                                   <Symbol> &gt; </Symbol>
-                                 </Operator>
-                                 <Term>
-                                   <SimpleTerm>
-                                     <Identifier> 25 </Identifier>
-                                   </SimpleTerm>
-                                 </Term>
-                               </SingleExpression>
-                             </Expression>
-                             <Symbol> ) </Symbol>
-                           </ComplexTerm>
+                           <SimpleTerm>
+                             <Identifier> a </Identifier>
+                           </SimpleTerm>
+                         </Term>
+                       </SingleExpression>
+                       <SingleExpression>
+                         <Operator>
+                           <Symbol> &gt; </Symbol>
+                         </Operator>
+                         <Term>
+                           <SimpleTerm>
+                             <Identifier> 25 </Identifier>
+                           </SimpleTerm>
                          </Term>
                        </SingleExpression>
                        <SingleExpression>

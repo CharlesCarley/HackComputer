@@ -24,7 +24,6 @@
 #include "Utils/Char.h"
 #include "VirtualMachine/Constants.h"
 
-
 namespace Hack::VirtualMachine
 {
     class CodeStream
@@ -446,7 +445,6 @@ namespace Hack::VirtualMachine
 
     void Emitter::pushThis(const int& idx)
     {
-
         const CodeStream w(&_stream);
 #ifdef GUARD_PUSH
         String whenDone;
@@ -466,7 +464,6 @@ namespace Hack::VirtualMachine
 
     void Emitter::pushThat(const int& idx)
     {
-
         const CodeStream w(&_stream);
 #ifdef GUARD_PUSH
         String whenDone;
@@ -494,7 +491,6 @@ namespace Hack::VirtualMachine
 
     void Emitter::pushArgument(const int& idx)
     {
-
         const CodeStream w(&_stream);
 #ifdef GUARD_PUSH
         String whenDone;
@@ -762,7 +758,6 @@ namespace Hack::VirtualMachine
         const CodeStream w(&_stream);
         w.jumpStackTop();
         w.moveMIntoD();
-        w.decrement();
         w.decrement();
         w.jumpIfNotEquals(value);
     }

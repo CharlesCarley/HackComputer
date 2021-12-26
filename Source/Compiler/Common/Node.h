@@ -121,6 +121,7 @@ namespace Hack::Compiler
         SubtypeCallFunction,
         SubtypeCallMethod,
         SubtypeArrayIndex,
+        SubtypeIfElseCombo,
 
     };
 

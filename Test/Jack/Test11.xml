@@ -1,0 +1,129 @@
+<?xml version='1.0'?>
+<ClassList>
+ <Class>
+   <Keyword> class </Keyword>
+   <Identifier> Main </Identifier>
+   <Symbol> { </Symbol>
+   <ClassDescription>
+     <Method>
+       <MethodSpecification>
+         <Keyword> method </Keyword>
+       </MethodSpecification>
+       <MethodReturnType>
+         <Keyword> void </Keyword>
+       </MethodReturnType>
+       <Identifier> main </Identifier>
+       <Symbol> ( </Symbol>
+       <ParameterList>
+       </ParameterList>
+       <Symbol> ) </Symbol>
+       <MethodBody>
+         <Symbol> { </Symbol>
+         <Body>
+           <Variable>
+             <Keyword> var </Keyword>
+             <DataType>
+               <Keyword> int </Keyword>
+             </DataType>
+             <IdentifierList>
+               <Identifier> i </Identifier>
+             </IdentifierList>
+             <Symbol> ; </Symbol>
+           </Variable>
+           <Statement>
+             <LetStatement>
+               <Keyword> let </Keyword>
+               <Identifier> i </Identifier>
+               <Symbol> = </Symbol>
+               <Expression>
+                 <SingleExpression>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> 0 </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
+               </Expression>
+               <Symbol> ; </Symbol>
+             </LetStatement>
+           </Statement>
+           <Statement>
+             <WhileStatement>
+               <Keyword> while </Keyword>
+               <Symbol> ( </Symbol>
+               <Expression>
+                 <SingleExpression>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> i </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
+                 <SingleExpression>
+                   <Operator>
+                     <Symbol> &lt; </Symbol>
+                   </Operator>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> 100 </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
+               </Expression>
+               <Symbol> ) </Symbol>
+               <Symbol> { </Symbol>
+               <StatementList>
+                 <Statement>
+                   <LetStatement>
+                     <Keyword> let </Keyword>
+                     <Identifier> i </Identifier>
+                     <Symbol> = </Symbol>
+                     <Expression>
+                       <SingleExpression>
+                         <Term>
+                           <SimpleTerm>
+                             <Identifier> i </Identifier>
+                           </SimpleTerm>
+                         </Term>
+                       </SingleExpression>
+                       <SingleExpression>
+                         <Operator>
+                           <Symbol> + </Symbol>
+                         </Operator>
+                         <Term>
+                           <SimpleTerm>
+                             <Identifier> 1 </Identifier>
+                           </SimpleTerm>
+                         </Term>
+                       </SingleExpression>
+                     </Expression>
+                     <Symbol> ; </Symbol>
+                   </LetStatement>
+                 </Statement>
+               </StatementList>
+               <Symbol> } </Symbol>
+             </WhileStatement>
+           </Statement>
+           <Statement>
+             <ReturnStatement>
+               <Keyword> return </Keyword>
+               <Expression>
+                 <SingleExpression>
+                   <Term>
+                     <SimpleTerm>
+                       <Identifier> i </Identifier>
+                     </SimpleTerm>
+                   </Term>
+                 </SingleExpression>
+               </Expression>
+               <Symbol> ; </Symbol>
+             </ReturnStatement>
+           </Statement>
+         </Body>
+         <Symbol> } </Symbol>
+       </MethodBody>
+     </Method>
+   </ClassDescription>
+   <Symbol> } </Symbol>
+ </Class>
+</ClassList>

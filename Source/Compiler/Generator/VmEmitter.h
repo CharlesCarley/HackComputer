@@ -33,6 +33,9 @@ namespace Hack::Compiler::CodeGenerator
     {
     private:
         OutputStringStream _stream;
+        int                _uid;
+
+
 
     public:
         VmEmitter();
@@ -44,6 +47,9 @@ namespace Hack::Compiler::CodeGenerator
         void initialize();
 
         void finalize();
+
+        String generateLabel();
+
 
         void writeStatic(const Symbol& sym);
 
@@ -90,6 +96,12 @@ namespace Hack::Compiler::CodeGenerator
         void symbolNeg();
 
         void writeCall(const String& id, size_t size);
+
+        void writeIfStart(const String& label);
+
+        void writeGoto(const String& label);
+
+        void writeIfEnd(const String& cs);
     };
 
     inline OutputStringStream& VmEmitter::stream()
