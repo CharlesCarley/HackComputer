@@ -22,6 +22,7 @@
 #include "Compiler/Common/XmlWriter.h"
 #include <iomanip>
 #include "Compiler/Common/Node.h"
+#include "Utils/FileSystem.h"
 
 namespace Hack::Compiler
 {
@@ -77,7 +78,7 @@ namespace Hack::Compiler
         void writeHeader()
         {
             _out << "<?xml version='1.0'?>" << std::endl;
-            _out << "<ClassList Filename=\"" << _root->filename() << "\">" << std::endl;
+            _out << "<ClassList Filename=\"" << Path(_root->filename()).filename().string() << "\">" << std::endl;
             _indent += Indent;
         }
 
