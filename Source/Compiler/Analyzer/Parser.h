@@ -22,7 +22,7 @@
 #pragma once
 #include <stack>
 #include "Compiler/Common/Tree.h"
-#include "Utils/Exceptions/Exception.h"
+#include "Utils/Exception.h"
 #include "Utils/ParserBase/ParserBase.h"
 #include "Utils/String.h"
 

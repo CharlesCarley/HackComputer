@@ -25,7 +25,7 @@
 #include "Compiler/Analyzer/Parser.h"
 #include "Utils/CommandLine/Parser.h"
 #include "Utils/Console.h"
-#include "Utils/Exceptions/Exception.h"
+#include "Utils/Exception.h"
 #include "Utils/FileSystem.h"
 
 using namespace std;
@@ -69,8 +69,6 @@ constexpr CommandLine::Switch Switches[OP_MAX] = {
     },
 };
 
-
-
 class Application
 {
 private:
@@ -108,7 +106,6 @@ public:
 
         if (cmd.isPresent(OP_FMT))
             _dot = cmd.string(OP_FMT) == "dot";
-
         return true;
     }
 
@@ -128,14 +125,12 @@ public:
                                          .substr(0, inFile.size() - 5)
                                          .append(".xml");
 
-                    
                     Compiler::Analyzer::Parser psr;
                     Console::write("parsing ", jackFile.filename().string());
                     psr.parse(inFile);
 
                     Console::writeLine(" -> ", Path(outFile).filename().string());
                     psr.write(outFile, _dot ? 1 : 0);
-
                 }
                 catch (Exception& ex)
                 {

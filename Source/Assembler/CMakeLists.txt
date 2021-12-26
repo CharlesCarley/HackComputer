@@ -29,7 +29,6 @@ set(Target_HDR
 )
 
 set(Target_SRC 
-    Main.cpp
     Parser.cpp
     Instruction.cpp
     Scanner.cpp
@@ -47,7 +46,6 @@ endif()
 if (BuildType STREQUAL "CPP")
 
     # The command line application
-
     set(TargetName Asm2Mc)
 
 

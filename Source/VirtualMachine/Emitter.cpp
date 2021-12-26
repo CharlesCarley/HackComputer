@@ -120,7 +120,7 @@ namespace Hack::VirtualMachine
         {
             atAddressOf(STP);
 #ifdef ZERO_M
-            write("M=M-1 A=M+1 M=0");
+            write("M=M-1\nA=M+1\nM=0");
 #else
             write("M=M-1");
 #endif
@@ -129,7 +129,7 @@ namespace Hack::VirtualMachine
         void incrementAndJump() const
         {
             atAddressOf(STP);
-            write("M=M+1 A=M-1");
+            write("M=M+1\nA=M-1");
         }
 
         void dereferenceOffset(int x0, int offs) const
@@ -220,7 +220,7 @@ namespace Hack::VirtualMachine
         void subMoveDmIntoD() const
         {
 #ifdef ZERO_M
-            write("D=M-D M=0");
+            write("D=M-D\nM=0");
 #else
             write("D=M-D");
 #endif
@@ -268,13 +268,13 @@ namespace Hack::VirtualMachine
             atAddressOf(v);
             moveAIntoD();
             increment();
-            write("A=M-1 M=D");
+            write("A=M-1\nM=D");
         }
 
         void pushD() const
         {
             increment();
-            write("A=M-1 M=D");
+            write("A=M-1\nM=D");
         }
 
         void setM(const bool val) const
@@ -737,7 +737,9 @@ namespace Hack::VirtualMachine
 
     void Emitter::writeHalt()
     {
-        const String     halt = StringCombine("L.halt.", (size_t)this);
+        String halt;
+        genLabel(halt);
+
         const CodeStream w(&_stream);
         w.label(halt);
         w.jumpToRomAddress(halt);
@@ -785,7 +787,9 @@ namespace Hack::VirtualMachine
     {
         const CodeStream w(&_stream);
 
-        const String retAddr = StringCombine("R.", name, '.', _cmp++, (size_t)this);
+        String retAddr;
+        genLabel(retAddr);
+
         if (args == 0)  // allocate the return
         {
             w.setD(false);

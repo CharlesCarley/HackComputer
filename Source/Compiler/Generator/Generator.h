@@ -22,7 +22,7 @@
 #pragma once
 #include "Compiler/Common/Node.h"
 #include "Compiler/Common/Tree.h"
-#include "Utils/Exceptions/Exception.h"
+#include "Utils/Exception.h"
 #include "Utils/ParserBase/ParseError.h"
 
 namespace Hack

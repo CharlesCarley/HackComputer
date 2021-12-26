@@ -21,7 +21,7 @@
 */
 #include "Compiler/Common/Node.h"
 #include <utility>
-#include "Utils/Exceptions/Exception.h"
+#include "Utils/Exception.h"
 
 namespace Hack::Compiler
 {

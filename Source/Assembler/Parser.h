@@ -22,14 +22,11 @@
 #pragma once
 #include <unordered_map>
 #include <vector>
-#include "Assembler/Scanner.h"
 #include "Utils/ParserBase/ParserBase.h"
 
 namespace Hack::Assembler
 {
-
     using StringIndex = std::pair<String, size_t>;
-
 
     class Parser final : public ParserBase
     {
@@ -77,10 +74,10 @@ namespace Hack::Assembler
         Parser();
         ~Parser() override;
 
-        const Instructions& getInstructions() const;
+        const Instructions& instructions() const;
     };
 
-    inline const Parser::Instructions& Parser::getInstructions() const
+    inline const Parser::Instructions& Parser::instructions() const
     {
         return _instructions;
     }

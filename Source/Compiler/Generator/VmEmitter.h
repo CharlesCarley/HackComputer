@@ -34,6 +34,7 @@ namespace Hack::Compiler::CodeGenerator
     private:
         OutputStringStream _stream;
         int                _uid;
+        String             _eof;
 
         template <typename... Args>
         void write(Args&&... args)

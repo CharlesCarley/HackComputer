@@ -30,6 +30,7 @@
 namespace Hack::Compiler::Analyzer
 {
     using Pu = ParseUtils;
+    using Nu = NodeUtils;
 
     Parser::Parser()
     {
@@ -89,7 +90,12 @@ namespace Hack::Compiler::Analyzer
     {
         const int8_t t0 = getToken(0).getType();
         if (t0 != TokId)
-            parseError("expected an identifier");
+        {
+            parseError(
+                "expected to find an identifier, but found ",
+                Pu::string(t0),
+                " instead.");
+        }
 
         const size_t id = getToken(0).getIndex();
 
@@ -108,7 +114,9 @@ namespace Hack::Compiler::Analyzer
         {
             parseError(
                 "expected an constant integer, string, "
-                "boolean, pointer or identifier");
+                "boolean, pointer or identifier, but found ",
+                Pu::string(t0),
+                " instead.");
         }
 
         switch (token)
@@ -122,11 +130,10 @@ namespace Hack::Compiler::Analyzer
         default:
         {
             const size_t id = getToken(0).getIndex();
-
             if (_scanner->containsString(id))
                 rule->insert(symbolId, _scanner->string(id), _filePath, _scanner->line());
             else
-                parseError("no data is associated with the supplied token");
+                parseError("no scan data is associated with the supplied token");
         }
         break;
         }
@@ -161,11 +168,13 @@ namespace Hack::Compiler::Analyzer
             identifier(rule, ConstantThis, TokKwThis);
             break;
         default:
-            parseError("unknown constant");
+            parseError("unknown constant '",
+                       Nu::string(symbolId),
+                       '\'');
         }
     }
 
-    void Parser::object(int8_t symbolId)
+    void Parser::object(const int8_t symbolId)
     {
         Node* rule = _stack.top();
         switch (symbolId)
@@ -177,7 +186,9 @@ namespace Hack::Compiler::Analyzer
             identifier(rule, ConstantThis, TokKwThis);
             break;
         default:
-            parseError("unknown constant");
+            parseError("unknown constant '",
+                       Pu::string(symbolId),
+                       '\'');
         }
     }
 
@@ -192,7 +203,7 @@ namespace Hack::Compiler::Analyzer
             parseError("expected the symbol '",
                        ch,
                        "' but found the token ",
-                       ParseUtils::string(t0));
+                       Pu::string(t0));
         }
 
         rule->insert(symbolId, _filePath, _scanner->line());
@@ -263,7 +274,7 @@ namespace Hack::Compiler::Analyzer
             symbol(rule, symbolId, TokSymPeriod, '.');
             break;
         default:
-            parseError("unknown symbol");
+            parseError("unknown symbol ", Nu::string(symbolId));
         }
     }
 
@@ -342,7 +353,7 @@ namespace Hack::Compiler::Analyzer
             keyword(rule, symbolId, TokKwReturn, "return");
             break;
         default:
-            parseError("unknown keyword");
+            parseError("unknown keyword ", Nu::string(symbolId));
         }
     }
 
@@ -645,9 +656,9 @@ namespace Hack::Compiler::Analyzer
             break;
         default:
             parseError(
-                "expected a statement of the token "
-                "let, if, else, do, while or return."
-                " Found the token ",
+                "expected a statement token "
+                "let, if, else, do, while or return, but"
+                " found the token ",
                 Pu::string(getToken(0).getType()),
                 " instead.");
         }

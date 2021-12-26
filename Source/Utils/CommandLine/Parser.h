@@ -23,6 +23,7 @@
 #include <unordered_map>
 #include "Utils/CommandLine/Option.h"
 #include "Utils/CommandLine/Scanner.h"
+#include "Utils/FileSystem.h"
 
 namespace Hack::CommandLine
 {
@@ -37,7 +38,7 @@ namespace Hack::CommandLine
         typedef std::vector<String>                      StringArray;
 
     private:
-        String      _programName;
+        Path        _programName;
         int         _maxLongSwitch;
         int         _required;
         int         _used;
@@ -45,8 +46,6 @@ namespace Hack::CommandLine
         Switches    _switches;
         StringArray _argumentList;
         Options     _options;
-
-        static int getBaseName(const char* input);
 
         bool hasSwitch(const String& sw) const;
 
@@ -63,7 +62,7 @@ namespace Hack::CommandLine
         /// <summary>
         /// Parses the command line. Any switches that are needed must be
         /// initialized via initializeSwitches. Arguments that have no switch
-        /// are placed into an array and accessed via getArgList
+        /// are placed into an array and accessed via arguments
         /// </summary>
         /// <param name="argc">The argument count on program start.</param>
         /// <param name="argv">The argument vector on program start.</param>
@@ -74,17 +73,6 @@ namespace Hack::CommandLine
                   char**        argv,
                   const Switch* switches,
                   uint32_t      count);
-
-        /// <summary>
-        /// Parses the command line.
-        /// This method assumes that there are no switches present, it will
-        /// only take the program into account; IE argv[0].
-        /// </summary>
-        /// <param name="argc">The argument count on program start.</param>
-        /// <param name="argv">The argument vector on program start.</param>
-        /// <returns>Returns -1 on any error otherwise it returns 0</returns>
-        int parse(int    argc,
-                  char** argv);
 
         /// <summary>
         /// Logs the command line verbatim
@@ -102,9 +90,9 @@ namespace Hack::CommandLine
         /// <summary>
         /// Returns the path of the program that was supplied to main via argv[0]
         /// </summary>
-        const String& programPath() const
+        String programPath() const
         {
-            return _programName;
+            return _programName.string();
         }
 
         /// <summary>

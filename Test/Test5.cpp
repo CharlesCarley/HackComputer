@@ -78,7 +78,7 @@ void GeneratorTestFile(Chips::Computer& comp, const String& baseName)
 
     Assembler::Parser asmPsr;
     asmPsr.parse(asmCode);
-    const Assembler::Parser::Instructions& inst = asmPsr.getInstructions();
+    const Assembler::Parser::Instructions& inst = asmPsr.instructions();
 
     comp.load(inst.data(), inst.size());
 

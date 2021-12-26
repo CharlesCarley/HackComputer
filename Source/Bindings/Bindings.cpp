@@ -28,7 +28,7 @@
 #include "Assembler/Instruction.h"
 #include "Assembler/Parser.h"
 #include "Chips/Computer.h"
-#include "Utils/Exceptions/Exception.h"
+#include "Utils/Exception.h"
 
 typedef struct HandleType
 {
@@ -75,7 +75,7 @@ namespace Hack::Binding
             if (val >= 0)
             {
                 const Instruction instruction((uint16_t)val);
-                _cache = instruction.asString();
+                _cache = instruction.string();
             }
             return _cache.c_str();
         }
@@ -242,7 +242,7 @@ namespace Hack::Binding
                 ss << src;
                 psr.parse(ss);
 
-                Parser::Instructions inst = psr.getInstructions();
+                Parser::Instructions inst = psr.instructions();
 
                 _computer->load(inst.data(), inst.size());
                 return true;
@@ -260,7 +260,7 @@ namespace Hack::Binding
             if (val >= 0)
             {
                 const Instruction instruction((uint16_t)val);
-                _cache = instruction.asString();
+                _cache = instruction.string();
             }
             return _cache.c_str();
         }

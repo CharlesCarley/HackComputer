@@ -20,7 +20,7 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#include "Utils/Exceptions/Exception.h"
+#include "Utils/Exception.h"
 #include "Utils/String.h"
 
 namespace Hack::Compiler::Analyzer

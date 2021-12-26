@@ -48,7 +48,7 @@ void VirtualMachineTestStack(Chips::Computer& comp, const String& baseName, bool
     Assembler::Parser loader;
     loader.parse(fNameOut);
 
-    const Assembler::Parser::Instructions& inst = loader.getInstructions();
+    const Assembler::Parser::Instructions& inst = loader.instructions();
 
     comp.load(inst.data(), inst.size());
 

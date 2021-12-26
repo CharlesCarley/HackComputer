@@ -24,6 +24,7 @@
 #include <iostream>
 #include <sstream>
 #include "Utils/Console.h"
+
 #define pad(w) setw((w)) << ' '
 
 namespace Hack::CommandLine
@@ -40,21 +41,7 @@ namespace Hack::CommandLine
         for (ParseOption* op : _options)
             delete op;
     }
-
-    int Parser::getBaseName(const char* input)
-    {
-        int offs = 0;
-        if (input)
-        {
-            const int len = (int)Char::length(input);
-
-            for (int i = len - 1; i >= 0 && offs == 0; --i)
-                if (input[i] == '/' || input[i] == '\\')
-                    offs = i + 1;
-        }
-        return offs;
-    }
-
+    
     bool Parser::hasSwitch(const String& sw) const
     {
         return _switches.find(sw) != _switches.end();
@@ -71,7 +58,7 @@ namespace Hack::CommandLine
         if (!initializeSwitches(switches, count))
             return -1;
 
-        _programName.append(argv[0]);
+        _programName = argv[0];
         _used = 0;
         _scanner.clear();
 
@@ -186,19 +173,6 @@ namespace Hack::CommandLine
         return 0;
     }
 
-    int Parser::parse(int argc, char** argv)
-    {
-        if (!_programName.empty())  // using as a check for multiple calls
-            return 0;
-
-        if (argc >= 1)
-        {
-            _programName.append(argv[0]);
-            return 0;
-        }
-        return -1;
-    }
-
     void Parser::logInput() const
     {
         const String& curInp = _scanner.getValue();
@@ -208,16 +182,12 @@ namespace Hack::CommandLine
 
     String Parser::programName() const
     {
-        String returnValue = _programName.substr(
-            getBaseName(_programName.c_str()), _programName.size());
-        return returnValue;
+        return _programName.stem().string();
     }
 
     String Parser::programDirectory() const
     {
-        String returnValue =
-            _programName.substr(0, getBaseName(_programName.c_str()));
-        return returnValue;
+        return _programName.root_directory().string();
     }
 
     String Parser::currentDirectory()
@@ -240,9 +210,9 @@ namespace Hack::CommandLine
     }
 
     int32_t Parser::int32(const uint32_t& enumId,
-                          size_t          idx,
-                          int32_t         defaultValue,
-                          int32_t         base) const
+                          const size_t    idx,
+                          const int32_t   defaultValue,
+                          const int32_t   base) const
     {
         if (enumId < _options.size())
         {
@@ -253,8 +223,8 @@ namespace Hack::CommandLine
     }
 
     int64_t Parser::int64(const uint32_t& enumId,
-                          size_t          idx,
-                          int64_t         defaultValue,
+                          const size_t    idx,
+                          const int64_t   defaultValue,
                           int32_t         base) const
     {
         if (enumId < _options.size())

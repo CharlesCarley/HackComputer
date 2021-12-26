@@ -34,7 +34,7 @@ GTEST_TEST(LoadRom, Test1)
     Parser psr;
     psr.parse(GetTestFilePath("Rom/Add.asm"));
 
-    const Parser::Instructions &inst= psr.getInstructions();
+    const Parser::Instructions &inst= psr.instructions();
 
     Hack::Chips::Rom32 rom;
     rom.load(inst.data(), inst.size());

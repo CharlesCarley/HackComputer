@@ -285,7 +285,7 @@ namespace Hack::Assembler
     void Scanner::scan(Token& tok)
     {
         if (_stream == nullptr)
-            throw Exception("No supplied stream");
+            throw Exception("no stream was supplied to the scanner");
 
         tok.clear();
 

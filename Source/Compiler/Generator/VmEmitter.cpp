@@ -21,7 +21,6 @@
 */
 #include "Compiler/Generator/VmEmitter.h"
 #include <chrono>
-#include <iomanip>
 #include "Utils/Char.h"
 
 #define NOW std::chrono::high_resolution_clock::now().time_since_epoch().count()
@@ -35,13 +34,14 @@ namespace Hack::Compiler::CodeGenerator
 
     void VmEmitter::initialize()
     {
+        _eof = generateLabel();
         write("call Main.main 0");
-        write("goto __sys__exit");
+        write("goto ", _eof);
     }
 
     void VmEmitter::finalize()
     {
-        write("label __sys__exit");
+        write("label ", _eof);
     }
 
     void VmEmitter::clear()

@@ -22,7 +22,7 @@
 #include "Compiler/Analyzer/Scanner.h"
 #include "Compiler/Analyzer/Token.h"
 #include "Utils/Char.h"
-#include "Utils/Exceptions/Exception.h"
+#include "Utils/Exception.h"
 
 namespace Hack::Compiler::Analyzer
 {

@@ -25,7 +25,7 @@
 #include "Compiler/Common/Node.h"
 #include "Compiler/Generator/SymbolTable.h"
 #include "Compiler/Generator/VmEmitter.h"
-#include "Utils/Exceptions/Exception.h"
+#include "Utils/Exception.h"
 #include "Utils/FileSystem.h"
 
 namespace Hack::Compiler::CodeGenerator

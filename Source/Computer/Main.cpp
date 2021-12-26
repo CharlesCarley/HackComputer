@@ -21,7 +21,7 @@
 */
 #include "Application.h"
 #include "Utils/Console.h"
-#include "Utils/Exceptions/Exception.h"
+#include "Utils/Exception.h"
 
 using namespace std;
 using namespace Hack;

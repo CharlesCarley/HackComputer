@@ -29,14 +29,14 @@ namespace Hack::Assembler
     {
     }
 
-    String Instruction::asString() const
+    String Instruction::string() const
     {
         String cpy;
-        asString(cpy);
+        string(cpy);
         return cpy;
     }
 
-    void Instruction::asString(String& dest) const
+    void Instruction::string(String& dest) const
     {
         using B = Chips::B16;
         OutputStringStream oss;

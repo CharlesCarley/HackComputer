@@ -66,4 +66,5 @@ namespace Hack::Assembler
     };
 
     using Token = TokenBase;
+
 }  // namespace Hack::Assembler

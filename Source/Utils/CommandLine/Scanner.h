@@ -19,11 +19,8 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#ifndef _UtilsCommandLineScanner_h_
-#define _UtilsCommandLineScanner_h_
-
+#pragma once
 #include "Utils/CommandLine/Token.h"
-#include "Utils/Common.h"
 
 namespace Hack::CommandLine
 {
@@ -49,6 +46,4 @@ namespace Hack::CommandLine
     {
         return _buffer;
     }
-}  // namespace Utils::CommandLine
-
-#endif  // !_UtilsCommandLineScanner_h_
+}  // namespace Hack::CommandLine

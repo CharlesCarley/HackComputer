@@ -23,7 +23,7 @@
 #include "Assembler/Instruction.h"
 #include "Chips/Computer.h"
 #include "Utils/Char.h"
-#include "Utils/Exceptions/Exception.h"
+#include "Utils/Exception.h"
 #include "Utils/UserInterface/Context.h"
 
 using namespace Hack::Chips;
@@ -220,7 +220,7 @@ namespace Hack::Computer
 
                 String                 v;
                 Assembler::Instruction is(value);
-                is.asString(v);
+                is.string(v);
 
                 displayMemoryContents(
                     ctx, bounds, v, i, _cpuState.pc, iVal == _cpuState.pc);
@@ -441,7 +441,7 @@ namespace Hack::Computer
             ctx.foreground(Action);
 
             const Assembler::Instruction is(_cpuState.inst);
-            is.asString(v);
+            is.string(v);
             ctx.string(v, cpuRect.left() - (int)v.size() + 1, bounds.midY());
 
             // A Register.

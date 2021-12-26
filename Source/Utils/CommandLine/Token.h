@@ -19,8 +19,7 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#ifndef _UtilsCommandLineToken_h_
-#define _UtilsCommandLineToken_h_
+#pragma once
 
 #include "Utils/String.h"
 
@@ -87,5 +86,3 @@ namespace Hack::CommandLine
     };
 
 }  // namespace Utils::CommandLine
-
-#endif  // !_UtilsCommandLineToken_h_

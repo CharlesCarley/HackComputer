@@ -22,7 +22,7 @@
 #pragma once
 #include <unordered_map>
 #include <unordered_set>
-#include "Exceptions/Exception.h"
+#include "Utils/Exception.h"
 
 namespace Hack
 {
@@ -38,7 +38,6 @@ namespace Hack
         Array _list;
 
     public:
-
         size_t insert(const T& value)
         {
             size_t idx;
@@ -104,7 +103,6 @@ namespace Hack
             _elements.clear();
         }
 
-
         typename Array::const_iterator begin() const
         {
             return _list.begin();
@@ -153,8 +151,6 @@ namespace Hack
         Array _list;
 
     public:
-
-
         size_t insert(const Key& key, const Value& value)
         {
             size_t idx;

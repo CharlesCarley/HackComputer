@@ -22,7 +22,7 @@
 #pragma once
 #include <bitset>
 #ifdef CHECK_INT_BOUNDS
-#include "Utils/Exceptions/IndexException.h"
+#include "Utils/Exception.h"
 #endif
 #include "Utils/Console.h"
 
@@ -118,7 +118,7 @@ namespace Hack::Chips
         {
 #ifdef CHECK_INT_BOUNDS
             if (N >= sizeof(T) * 8)
-                throw IndexException();
+                throw IndexOutOfBounds();
 #endif
             T ret = 0;
             for (size_t i = 0; i < N; ++i)
@@ -133,7 +133,7 @@ namespace Hack::Chips
         {
 #ifdef CHECK_INT_BOUNDS
             if (lo >= Count || hi >= Count)
-                throw IndexException();
+                throw IndexOutOfBounds();
 #endif
             T ret = 0;
             for (T i = lo; i <= hi; ++i)
@@ -149,7 +149,7 @@ namespace Hack::Chips
         {
 #ifdef CHECK_INT_BOUNDS
             if (index >= Count)
-                throw IndexException();
+                throw IndexOutOfBounds();
 #endif
             return (bits & 1 << index) != 0;
         }
@@ -158,7 +158,7 @@ namespace Hack::Chips
         {
 #ifdef CHECK_INT_BOUNDS
             if (index >= Count)
-                throw IndexException();
+                throw IndexOutOfBounds();
 #endif
             bits |= 1 << index;
         }
@@ -167,7 +167,7 @@ namespace Hack::Chips
         {
 #ifdef CHECK_INT_BOUNDS
             if (index >= Count)
-                throw IndexException();
+                throw IndexOutOfBounds();
 #endif
             bits = (T)(1 << index);
         }
@@ -176,7 +176,7 @@ namespace Hack::Chips
         {
 #ifdef CHECK_INT_BOUNDS
             if (index >= Count)
-                throw IndexException();
+                throw IndexOutOfBounds();
 #endif
             bits &= ~(1 << index);
         }

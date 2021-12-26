@@ -40,7 +40,8 @@ namespace Hack::Chips
         uint16_t* _ram;
 
     public:
-        RamSegment() : _in(0), _inP(0), _address(0), _ram(nullptr)
+        RamSegment() :
+            _in(0), _inP(0), _address(0), _ram(nullptr)
         {
             _ram = new uint16_t[Max + 1];
             memset(_ram, 0, sizeof(uint16_t) * Max);
@@ -62,7 +63,7 @@ namespace Hack::Chips
         {
 #ifdef CHECK_INT_BOUNDS
             if (v >= High)
-                throw IndexException();
+                throw IndexOutOfBounds();
 #endif
             if (v < High)
                 _address = v;
@@ -98,7 +99,7 @@ namespace Hack::Chips
                 return _ram[i];
 
 #ifdef CHECK_INT_BOUNDS
-            throw IndexException();
+            throw IndexOutOfBounds();
 #else
             return 0;
 #endif

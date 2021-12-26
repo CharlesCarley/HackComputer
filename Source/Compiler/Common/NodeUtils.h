@@ -133,6 +133,11 @@ namespace Hack::Compiler
         /// <summary>
         /// Returns a exact string representation of the enum name
         /// </summary>
+        static String string(int8_t type);
+
+        /// <summary>
+        /// Returns a exact string representation of the enum name
+        /// </summary>
         /// <param name="dest"></param>
         /// <param name="node"></param>
         static void nodeTypeString(String& dest, Node* node);

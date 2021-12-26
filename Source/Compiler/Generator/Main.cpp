@@ -24,7 +24,7 @@
 #include "Compiler/Generator/Generator.h"
 #include "Utils/CommandLine/Parser.h"
 #include "Utils/Console.h"
-#include "Utils/Exceptions/Exception.h"
+#include "Utils/Exception.h"
 #include "Utils/FileSystem.h"
 
 using namespace std;

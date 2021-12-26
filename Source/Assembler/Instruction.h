@@ -32,9 +32,9 @@ namespace Hack::Assembler
     public:
         explicit Instruction(uint16_t inst);
 
-        String asString() const;
+        String string() const;
 
-        void asString(String& dest) const;
+        void string(String& dest) const;
     };
 
 }  // namespace Hack::Assembler

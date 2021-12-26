@@ -24,7 +24,6 @@
 #include <fstream>
 #include "Assembler/Scanner.h"
 #include "Utils/Char.h"
-#include "Utils/Console.h"
 
 using namespace Hack;
 
@@ -427,7 +426,6 @@ namespace Hack::Assembler
         if (label.empty())
             throw NullOrEmptyString();
 
-
         const Labels::iterator it = _labels.find(label);
 
         if (it == _labels.end())
@@ -437,7 +435,7 @@ namespace Hack::Assembler
     void Parser::expression()
     {
         const int8_t t0 = getToken(0).getType();
-        
+
         if (t0 == TOK_AT)
             expressionA();
         else if (t0 == TOK_L_PAREN)

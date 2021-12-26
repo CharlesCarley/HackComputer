@@ -81,14 +81,11 @@ source_group("ParserBase\\Source" FILES ${Utils_PB_SRC})
 
 set(Utils_HDR
     Char.h
-    Common.h
     Console.h
     IndexCache.h
     FileSystem.h
     String.h
-    Exceptions/Exception.h
-    Exceptions/IndexException.h
-    Exceptions/NotImplementedException.h
+    Exception.h
 )
 
 set(Utils_SRC

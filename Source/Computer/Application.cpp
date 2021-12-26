@@ -29,7 +29,7 @@
 #include "Computer/CommandRuntime.h"
 #include "Computer/DebugRuntime.h"
 #include "Utils/CommandLine/Parser.h"
-#include "Utils/Exceptions/Exception.h"
+#include "Utils/Exception.h"
 #include "Utils/FileSystem.h"
 #include "VirtualMachine/Parser.h"
 
@@ -184,7 +184,7 @@ namespace Hack::Computer
 
     void Application::assemble(Assembler::Parser& assembler) const
     {
-        const Instructions& instructions = assembler.getInstructions();
+        const Instructions& instructions = assembler.instructions();
 
         if (instructions.empty())
             throw MessageException("no instructions found");

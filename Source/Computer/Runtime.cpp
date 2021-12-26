@@ -23,7 +23,7 @@
 #include "Computer/Runtime.h"
 #include "Chips/Computer.h"
 #include "SDL.h"
-#include "Utils/Exceptions/Exception.h"
+#include "Utils/Exception.h"
 
 namespace Hack::Computer
 {

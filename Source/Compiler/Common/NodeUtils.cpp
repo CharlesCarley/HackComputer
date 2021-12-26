@@ -45,9 +45,17 @@
 
 namespace Hack::Compiler
 {
+
+
     void NodeUtils::nodeTypeString(String& dest, Node* node)
     {
-        BEGIN_ENUM_TO_STR(node->type(), "Unknown");
+        dest = string(node->type());
+    }
+
+    String NodeUtils::string(int8_t type)
+    {
+        String dest;
+        BEGIN_ENUM_TO_STR(type, "Unknown");
         CASE_TO_STR_A(Rule);
         CASE_TO_STR_A(RuleClass);
         CASE_TO_STR_A(RuleClassDescription);
@@ -142,6 +150,7 @@ namespace Hack::Compiler
         CASE_TO_STR_A(SubtypeLetEqual);
         CASE_TO_STR_A(SubtypeLetArrayEqual);
         END_ENUM_TO_STR()
+        return dest;
     }
 
     void NodeUtils::nodeTypeXmlString(String& dest, Node* node)
