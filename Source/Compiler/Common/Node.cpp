@@ -27,19 +27,23 @@ namespace Hack::Compiler
 {
     Node::Node() :
         _parent(nullptr),
-        _type(-1)
+        _type(-1),
+        _subtype(SubtypeNone)
     {
     }
 
     Node::Node(const int8_t type) :
         _parent(nullptr),
-        _type(type)
+        _type(type),
+        _subtype(SubtypeNone)
+
     {
     }
 
     Node::Node(const int8_t type, String data) :
         _parent(nullptr),
         _type(type),
+        _subtype(SubtypeNone),
         _data(std::move(data))
     {
     }

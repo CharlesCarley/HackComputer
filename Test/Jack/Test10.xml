@@ -1,100 +1,100 @@
 <?xml version='1.0'?>
 <ClassList>
- <Class>
+ <RuleClass>
    <Keyword> class </Keyword>
    <Identifier> Main </Identifier>
    <Symbol> { </Symbol>
-   <ClassDescription>
-     <Method>
-       <MethodSpecification>
+   <RuleClassDescription>
+     <RuleMethod>
+       <RuleMethodSpecification>
          <Keyword> method </Keyword>
-       </MethodSpecification>
-       <MethodReturnType>
+       </RuleMethodSpecification>
+       <RuleMethodReturnType>
          <Keyword> void </Keyword>
-       </MethodReturnType>
+       </RuleMethodReturnType>
        <Identifier> main </Identifier>
        <Symbol> ( </Symbol>
-       <ParameterList>
-       </ParameterList>
+       <RuleParameterList>
+       </RuleParameterList>
        <Symbol> ) </Symbol>
-       <MethodBody>
+       <RuleMethodBody>
          <Symbol> { </Symbol>
-         <Body>
-           <Variable>
+         <RuleBody>
+           <RuleVariable>
              <Keyword> var </Keyword>
-             <DataType>
+             <RuleDataType>
                <Keyword> int </Keyword>
-             </DataType>
-             <IdentifierList>
+             </RuleDataType>
+             <RuleIdentifierList>
                <Identifier> x </Identifier>
                <Identifier> y </Identifier>
-             </IdentifierList>
+             </RuleIdentifierList>
              <Symbol> ; </Symbol>
-           </Variable>
-           <Statement>
-             <LetStatement>
+           </RuleVariable>
+           <RuleStatement>
+             <RuleLetStatement Subtype="SubtypeLetEqual">
                <Keyword> let </Keyword>
                <Identifier> x </Identifier>
                <Symbol> = </Symbol>
-               <Expression>
-                 <SingleExpression>
-                   <Term>
-                     <SimpleTerm>
+               <RuleExpression>
+                 <RuleSingleExpression Subtype="SubtypeTerm">
+                   <RuleTerm>
+                     <RuleSimpleTerm>
                        <Identifier> 2 </Identifier>
-                     </SimpleTerm>
-                   </Term>
-                 </SingleExpression>
-               </Expression>
+                     </RuleSimpleTerm>
+                   </RuleTerm>
+                 </RuleSingleExpression>
+               </RuleExpression>
                <Symbol> ; </Symbol>
-             </LetStatement>
-           </Statement>
-           <Statement>
-             <LetStatement>
+             </RuleLetStatement>
+           </RuleStatement>
+           <RuleStatement>
+             <RuleLetStatement Subtype="SubtypeLetEqual">
                <Keyword> let </Keyword>
                <Identifier> y </Identifier>
                <Symbol> = </Symbol>
-               <Expression>
-                 <SingleExpression>
-                   <Term>
-                     <SimpleTerm>
+               <RuleExpression>
+                 <RuleSingleExpression Subtype="SubtypeTerm">
+                   <RuleTerm>
+                     <RuleSimpleTerm>
                        <Identifier> 6 </Identifier>
-                     </SimpleTerm>
-                   </Term>
-                 </SingleExpression>
-               </Expression>
+                     </RuleSimpleTerm>
+                   </RuleTerm>
+                 </RuleSingleExpression>
+               </RuleExpression>
                <Symbol> ; </Symbol>
-             </LetStatement>
-           </Statement>
-           <Statement>
-             <ReturnStatement>
+             </RuleLetStatement>
+           </RuleStatement>
+           <RuleStatement>
+             <RuleReturnStatement>
                <Keyword> return </Keyword>
-               <Expression>
-                 <SingleExpression>
-                   <Term>
-                     <SimpleTerm>
+               <RuleExpression>
+                 <RuleSingleExpression Subtype="SubtypeTerm">
+                   <RuleTerm>
+                     <RuleSimpleTerm>
                        <Identifier> x </Identifier>
-                     </SimpleTerm>
-                   </Term>
-                 </SingleExpression>
-                 <SingleExpression>
-                   <Operator>
+                     </RuleSimpleTerm>
+                   </RuleTerm>
+                 </RuleSingleExpression>
+                 <RuleSingleExpression Subtype="SubtypeOpTerm">
+                   <RuleOperator>
                      <Symbol> + </Symbol>
-                   </Operator>
-                   <Term>
-                     <SimpleTerm>
+                   </RuleOperator>
+                   <RuleTerm>
+                     <RuleSimpleTerm>
                        <Identifier> y </Identifier>
-                     </SimpleTerm>
-                   </Term>
-                 </SingleExpression>
-               </Expression>
+                     </RuleSimpleTerm>
+                   </RuleTerm>
+                 </RuleSingleExpression>
+               </RuleExpression>
                <Symbol> ; </Symbol>
-             </ReturnStatement>
-           </Statement>
-         </Body>
+             </RuleReturnStatement>
+           </RuleStatement>
+         </RuleBody>
          <Symbol> } </Symbol>
-       </MethodBody>
-     </Method>
-   </ClassDescription>
+       </RuleMethodBody>
+     </RuleMethod>
+   </RuleClassDescription>
    <Symbol> } </Symbol>
- </Class>
+ </RuleClass>
 </ClassList>

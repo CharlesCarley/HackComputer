@@ -29,9 +29,11 @@ namespace Hack
     private:
         size_t _index;
         int8_t _type;
+        size_t _line;
 
     public:
-        TokenBase() : _index(), _type()
+        TokenBase() :
+            _index(), _type(), _line(0)
         {
             clear();
         }
@@ -48,15 +50,20 @@ namespace Hack
             // negative values are errors, positive values are
             // possible tokens, and 0 indicates null
             _type = 0;
+            _line = 0;
         }
 
         size_t getIndex() const;
 
         int8_t getType() const;
 
+        size_t getLine() const;
+
         void setType(int8_t type);
 
         void setIndex(size_t i);
+
+        void setLine(size_t line);
     };
 
     inline size_t TokenBase::getIndex() const
@@ -69,6 +76,11 @@ namespace Hack
         return _type;
     }
 
+    inline size_t TokenBase::getLine() const
+    {
+        return _line;
+    }
+
     inline void TokenBase::setType(const int8_t type)
     {
         _type = type;
@@ -79,4 +91,9 @@ namespace Hack
         _index = i;
     }
 
-}  // namespace Hack::ParseInterface
+    inline void TokenBase::setLine(const size_t line)
+    {
+        _line = line;
+    }
+
+}  // namespace Hack

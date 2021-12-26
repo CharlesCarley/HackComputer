@@ -23,6 +23,7 @@ set(TargetGroup Compiler)
 set(Target_HDR
    Tree.h
    Node.h
+   NodeUtils.h
    XmlWriter.h
    DotWriter.h
 )
@@ -30,6 +31,7 @@ set(Target_HDR
 set(Target_SRC 
    Tree.cpp
    Node.cpp
+   NodeUtils.cpp
    XmlWriter.cpp
    DotWriter.cpp
 )

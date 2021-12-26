@@ -292,6 +292,8 @@ namespace Hack::Assembler
         int ch;
         while ((ch = _stream->get()) > 0)
         {
+            tok.setLine(_line);
+
             switch (ch)
             {
             case '#':

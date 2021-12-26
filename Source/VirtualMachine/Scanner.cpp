@@ -131,6 +131,8 @@ namespace Hack::VirtualMachine
         int ch;
         while ((ch = _stream->get()) > 0)
         {
+            tok.setLine(_line);
+
             switch (ch)
             {
             case '#':

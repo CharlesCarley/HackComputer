@@ -35,12 +35,16 @@ namespace Hack::Compiler::CodeGenerator
         OutputStringStream _stream;
         int                _uid;
 
-
+        template <typename... Args>
+        void write(Args&&... args)
+        {
+            OutputStringStream oss;
+            ((oss << std::forward<Args>(args)), ...);
+            _stream << oss.str() << std::endl;
+        }
 
     public:
         VmEmitter();
-
-        void clear();
 
         OutputStringStream& stream();
 
@@ -48,8 +52,9 @@ namespace Hack::Compiler::CodeGenerator
 
         void finalize();
 
-        String generateLabel();
+        void clear();
 
+        String generateLabel();
 
         void writeStatic(const Symbol& sym);
 
@@ -74,6 +79,10 @@ namespace Hack::Compiler::CodeGenerator
         void pushStatic(const size_t& idx);
 
         void pushThis(const size_t& idx);
+
+        void pushThat(const size_t& idx);
+
+        void pushPointer();
 
         void writeReturn();
 
@@ -101,7 +110,7 @@ namespace Hack::Compiler::CodeGenerator
 
         void writeGoto(const String& label);
 
-        void writeIfEnd(const String& cs);
+        void writeLabel(const String& label);
     };
 
     inline OutputStringStream& VmEmitter::stream()

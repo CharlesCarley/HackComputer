@@ -39,6 +39,9 @@ namespace Hack
     {
     public:
         static void split(StringArray& dest, const String& str, char sep);
+        static void scramble(String& dest, size_t value);
+
+        static void generate(String& dest, int& counter, void *seed);
     };
 
     template <typename... Args>

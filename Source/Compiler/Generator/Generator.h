@@ -21,6 +21,7 @@
 */
 #pragma once
 #include "Compiler/Common/Tree.h"
+#include "Utils/Exceptions/Exception.h"
 
 namespace Hack
 {
@@ -41,7 +42,6 @@ namespace Hack::Compiler::CodeGenerator
         SymbolTable*   _globals;
         SymbolTable*   _locals;
         VmEmitter*     _emitter;
-        mutable bool   _minusIsUnary;
         mutable bool   _hasReturn;
         mutable String _elseEnd;
 
@@ -90,6 +90,15 @@ namespace Hack::Compiler::CodeGenerator
         void buildStatements(const Node& methodBody) const;
 
         void parseImpl(const Node* root) const;
+
+        template <typename... Args>
+        [[noreturn]] void compileError(const String& what, Args&&... args) const
+        {
+            OutputStringStream oss;
+            oss << what;
+            ((oss << std::forward<Args>(args)), ...);
+            throw Exception(oss.str());
+        }
 
     public:
         Generator();

@@ -36,10 +36,20 @@ namespace Hack::Compiler
 
         int _indent;
 
-        void openTag(const String& name)
+        void openTag(const String& name, Node* node)
         {
             _out << std::setw((size_t)(_indent - 1)) << ' ';
-            _out << '<' << name << '>' << std::endl;
+            _out << '<' << name;
+            if (node->subtype() != SubtypeNone)
+            {
+                String subTypeName;
+                NodeUtils::nodeSubtypeString(subTypeName, node);
+                _out << " Subtype=\"" << subTypeName << "\">" << std::endl;
+            }
+            else
+            {
+                _out << '>' << std::endl;
+            }
             _indent += Indent;
         }
 
@@ -56,9 +66,7 @@ namespace Hack::Compiler
             _out << '<' << name << '>' << ' ' << value << ' ';
             _out << '<' << '/' << name << '>' << std::endl;
         }
-
-        static void typeString(String& dest, Node* node);
-
+        
     public:
         explicit XmlWriterImpl(Node* root, OStream* stream) :
             _root(root), _stream(stream), _indent(0)
@@ -81,14 +89,14 @@ namespace Hack::Compiler
         void writeRule(Node* node)
         {
             String name, typeValue;
-            typeString(name, node);
-            openTag(name);
+            NodeUtils::nodeTypeXmlString(name, node);
+            openTag(name, node);
 
             const Node::Children& ch = node->children();
 
             for (Node* nd : ch)
             {
-                typeString(typeValue, nd);
+                NodeUtils::nodeTypeXmlString(typeValue, nd);
 
                 if (nd->isKeyword())
                     inlineTag("Keyword", typeValue);
@@ -122,7 +130,8 @@ namespace Hack::Compiler
         }
     };
 
-    XmlWriter::XmlWriter(Node* root) : _root(root)
+    XmlWriter::XmlWriter(Node* root) :
+        _root(root)
     {
     }
 
@@ -130,242 +139,6 @@ namespace Hack::Compiler
     {
         XmlWriterImpl impl(_root, &out);
         impl.write();
-    }
-
-    void XmlWriterImpl::typeString(String& dest, Node* node)
-    {
-        switch (node->type())
-        {
-        default:
-        case RuleEnd:
-        case Keyword:
-        case KeywordEnd:
-        case Rule:
-        case Symbol:
-        case SymbolEnd:
-        case Constant:
-        case ConstantEnd:
-            dest = "Unknown";
-            break;
-        case RuleClass:
-            dest = "Class";
-            break;
-        case RuleClassDescription:
-            dest = "ClassDescription";
-            break;
-        case RuleField:
-            dest = "Field";
-            break;
-        case RuleDataType:
-            dest = "DataType";
-            break;
-        case RuleFieldSpecification:
-            dest = "FieldSpecification";
-            break;
-        case RuleIdentifierList:
-            dest = "IdentifierList";
-            break;
-        case RuleMethod:
-            dest = "Method";
-            break;
-        case RuleMethodSpecification:
-            dest = "MethodSpecification";
-            break;
-        case RuleMethodReturnType:
-            dest = "MethodReturnType";
-            break;
-        case RuleMethodBody:
-            dest = "MethodBody";
-            break;
-        case RuleBody:
-            dest = "Body";
-            break;
-        case RuleVariable:
-            dest = "Variable";
-            break;
-        case RuleStatement:
-            dest = "Statement";
-            break;
-        case RuleLetStatement:
-            dest = "LetStatement";
-            break;
-        case RuleIfStatement:
-            dest = "IfStatement";
-            break;
-        case RuleElseStatement:
-            dest = "ElseStatement";
-            break;
-        case RuleWhileStatement:
-            dest = "WhileStatement";
-            break;
-        case RuleDoStatement:
-            dest = "DoStatement";
-            break;
-        case RuleReturnStatement:
-            dest = "ReturnStatement";
-            break;
-        case RuleStatementList:
-            dest = "StatementList";
-            break;
-        case RuleExpression:
-            dest = "Expression";
-            break;
-        case RuleSingleExpression:
-            dest = "SingleExpression";
-            break;
-        case RuleTerm:
-            dest = "Term";
-            break;
-        case RuleSimpleTerm:
-            dest = "SimpleTerm";
-            break;
-        case RuleComplexTerm:
-            dest = "ComplexTerm";
-            break;
-        case RuleOperator:
-            dest = "Operator";
-            break;
-        case RuleUnaryOperator:
-            dest = "UnaryOperator";
-            break;
-        case RuleExpressionList:
-            dest = "ExpressionList";
-            break;
-        case RuleCallMethod:
-            dest = "CallMethod";
-            break;
-        case RuleParameterList:
-            dest = "ParameterList";
-            break;
-        case RuleParameter:
-            dest = "Parameter";
-            break;
-        case KeywordClass:
-            dest = "class";
-            break;
-        case KeywordConstructor:
-            dest = "constructor";
-            break;
-        case KeywordFunction:
-            dest = "function";
-            break;
-        case KeywordMethod:
-            dest = "method";
-            break;
-        case KeywordField:
-            dest = "field";
-            break;
-        case KeywordStatic:
-            dest = "static";
-            break;
-        case KeywordInt:
-            dest = "int";
-            break;
-        case KeywordChar:
-            dest = "char";
-            break;
-        case KeywordBool:
-            dest = "boolean";
-            break;
-        case KeywordVoid:
-            dest = "void";
-            break;
-        case KeywordVar:
-            dest = "var";
-            break;
-        case KeywordLet:
-            dest = "let";
-            break;
-        case KeywordIf:
-            dest = "if";
-            break;
-        case KeywordElse:
-            dest = "else";
-            break;
-        case KeywordDo:
-            dest = "do";
-            break;
-        case KeywordWhile:
-            dest = "while";
-            break;
-        case KeywordReturn:
-            dest = "return";
-            break;
-        case SymbolOpenBrace:
-            dest = "{";
-            break;
-        case SymbolCloseBrace:
-            dest = "}";
-            break;
-        case SymbolLeftParenthesis:
-            dest = "(";
-            break;
-        case SymbolRightParenthesis:
-            dest = ")";
-            break;
-        case SymbolSemiColon:
-            dest = ";";
-            break;
-        case SymbolComma:
-            dest = ",";
-            break;
-        case SymbolEquals:
-            dest = "=";
-            break;
-        case SymbolPlus:
-            dest = "+";
-            break;
-        case SymbolMinus:
-            dest = "-";
-            break;
-        case SymbolMultiply:
-            dest = "*";
-            break;
-        case SymbolDivide:
-            dest = "/";
-            break;
-        case SymbolAnd:
-            dest = "&amp;";
-            break;
-        case SymbolOr:
-            dest = "|";
-            break;
-        case SymbolGreater:
-            dest = "&gt;";
-            break;
-        case SymbolLess:
-            dest = "&lt;";
-            break;
-        case SymbolNot:
-            dest = "!";
-            break;
-        case SymbolPeriod:
-            dest = ".";
-            break;
-        case SymbolLeftBracket:
-            dest = "[";
-            break;
-        case SymbolRightBracket:
-            dest = "]";
-            break;
-        case ConstantTrue:
-            dest = "true";
-            break;
-        case ConstantFalse:
-            dest = "false";
-            break;
-        case ConstantNull:
-            dest = "null";
-            break;
-        case ConstantThis:
-            dest = "this";
-            break;
-        case ConstantString:
-        case ConstantInteger:
-        case ConstantIdentifier:
-            dest = node->value();
-            break;
-        }
     }
 
 }  // namespace Hack::Compiler

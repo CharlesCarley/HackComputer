@@ -24,31 +24,24 @@
 #include <iomanip>
 #include "Utils/Char.h"
 
+#define NOW std::chrono::high_resolution_clock::now().time_since_epoch().count()
+
 namespace Hack::Compiler::CodeGenerator
 {
-    class CodeStream
-    {
-    private:
-        OStream* _s;
-
-    public:
-        explicit CodeStream(OStream* os) :
-            _s(os)
-        {
-        }
-
-        template <typename... Args>
-        void write(Args&&... args) const
-        {
-            OutputStringStream oss;
-            ((oss << std::forward<Args>(args)), ...);
-            *_s << oss.str() << std::endl;
-        }
-    };
-
     VmEmitter::VmEmitter() :
         _uid(0)
     {
+    }
+
+    void VmEmitter::initialize()
+    {
+        write("call Main.main 0");
+        write("goto __sys__exit");
+    }
+
+    void VmEmitter::finalize()
+    {
+        write("label __sys__exit");
     }
 
     void VmEmitter::clear()
@@ -56,183 +49,151 @@ namespace Hack::Compiler::CodeGenerator
         _stream.str("");
     }
 
-    void VmEmitter::initialize()
+    String VmEmitter::generateLabel()
     {
-        const CodeStream w(&_stream);
-        w.write("call Main.main 0");
-        w.write("goto __sys__exit");
-    }
-
-    void VmEmitter::finalize()
-    {
-        const CodeStream w(&_stream);
-        w.write("label __sys__exit");
+        String label;
+        StringUtils::generate(label, _uid, this);
+        return label;
     }
 
     void VmEmitter::writeStatic(const Symbol& sym)
     {
-        const CodeStream w(&_stream);
-        w.write("push constant 32767");
-        w.write("pop static ", sym.entry());
+        write("push constant 32767");
+        write("pop static ", sym.entry());
     }
 
     void VmEmitter::writeField(const Symbol& sym)
     {
-        const CodeStream w(&_stream);
-        w.write("push constant 32767");
-        w.write("pop this ", sym.entry());
+        write("push constant 32767");
+        write("pop this ", sym.entry());
     }
 
     void VmEmitter::writeFunction(const String& name, uint16_t numParams)
     {
-        const CodeStream w(&_stream);
-
-        w.write("function ", name, " ", numParams);
+        write("function ", name, ' ', numParams);
     }
 
     void VmEmitter::writeMethod(const String& className,
                                 const String& methodName,
                                 uint16_t      numParams)
     {
-        const CodeStream w(&_stream);
-        w.write("function ", className, '.', methodName, ' ', numParams);
+        write("function ", className, '.', methodName, ' ', numParams);
     }
 
     void VmEmitter::pushConstant(const String& value)
     {
-        const CodeStream w(&_stream);
-        w.write("push constant ", (uint16_t)Char::toInt16(value));
+        write("push constant ", (uint16_t)Char::toInt16(value));
     }
 
     void VmEmitter::pushConstant(const size_t& value)
     {
-        const CodeStream w(&_stream);
-        w.write("push constant ", (uint16_t)(int16_t)value);
+        write("push constant ", (uint16_t)(int16_t)value);
     }
 
     void VmEmitter::popLocal(const size_t& idx)
     {
-        const CodeStream w(&_stream);
-        w.write("pop local ", idx);
+        write("pop local ", idx);
     }
 
     void VmEmitter::pushLocal(const size_t& idx)
     {
-        const CodeStream w(&_stream);
-        w.write("push local ", idx);
+        write("push local ", idx);
     }
 
     void VmEmitter::pushArgument(const size_t& idx)
     {
-        const CodeStream w(&_stream);
-        w.write("push argument ", idx);
+        write("push argument ", idx);
     }
 
     void VmEmitter::pushStatic(const size_t& idx)
     {
-        const CodeStream w(&_stream);
-        w.write("push argument ", idx);
+        write("push argument ", idx);
     }
 
     void VmEmitter::pushThis(const size_t& idx)
     {
-        const CodeStream w(&_stream);
-        w.write("push this ", idx);
+        write("push this ", idx);
+    }
+
+    void VmEmitter::pushThat(const size_t& idx)
+    {
+        write("push that ", idx);
+    }
+
+    void VmEmitter::pushPointer()
+    {
+        write("push pointer 0");
     }
 
     void VmEmitter::writeReturn()
     {
-        const CodeStream w(&_stream);
-        w.write("return");
+        write("return");
     }
 
     void VmEmitter::symbolAdd()
     {
-        const CodeStream w(&_stream);
-        w.write("add");
+        write("add");
     }
 
     void VmEmitter::symbolSub()
     {
-        const CodeStream w(&_stream);
-        w.write("sub");
+        write("sub");
     }
 
     void VmEmitter::symbolNeg()
     {
-        const CodeStream w(&_stream);
-        w.write("neg");
+        write("neg");
     }
 
     void VmEmitter::symbolAnd()
     {
-        const CodeStream w(&_stream);
-        w.write("and");
+        write("and");
     }
 
     void VmEmitter::symbolOr()
     {
-        const CodeStream w(&_stream);
-        w.write("or");
+        write("or");
     }
 
     void VmEmitter::symbolNot()
     {
-        const CodeStream w(&_stream);
-        w.write("not");
+        write("not");
     }
 
     void VmEmitter::symbolGreater()
     {
-        const CodeStream w(&_stream);
-        w.write("gt");
+        write("gt");
     }
 
     void VmEmitter::symbolLess()
     {
-        const CodeStream w(&_stream);
-        w.write("lt");
+        write("lt");
     }
 
     void VmEmitter::symbolEquals()
     {
-        const CodeStream w(&_stream);
-        w.write("eq");
+        write("eq");
     }
 
     void VmEmitter::writeCall(const String& id, const size_t size)
     {
-        const CodeStream w(&_stream);
-        w.write("call ", id, ' ', std::min<size_t>(size, 20));
-    }
-
-
-    String VmEmitter::generateLabel()
-    {
-        return StringCombine("L.", 
-            (size_t)this, 
-            std::chrono::high_resolution_clock::now().time_since_epoch().count(), 
-            ++_uid);
+        write("call ", id, ' ', std::min<size_t>(size, 20));
     }
 
     void VmEmitter::writeIfStart(const String& label)
     {
-        const CodeStream w(&_stream);
-        w.write("not");
-        w.write("if-goto ", label);
+        write("not");
+        write("if-goto ", label);
     }
 
     void VmEmitter::writeGoto(const String& label)
     {
-        const CodeStream w(&_stream);
-        w.write("goto ", label);
+        write("goto ", label);
     }
 
-    void VmEmitter::writeIfEnd(const String& label)
+    void VmEmitter::writeLabel(const String& label)
     {
-        const CodeStream w(&_stream);
-        w.write("label ", label);
-
+        write("label ", label);
     }
 
 }  // namespace Hack::Compiler::CodeGenerator

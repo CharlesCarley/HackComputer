@@ -34,7 +34,6 @@ namespace Hack::Compiler::CodeGenerator
         _globals(new SymbolTable()),
         _locals(new SymbolTable()),
         _emitter(new VmEmitter()),
-        _minusIsUnary(false),
         _hasReturn(false)
     {
     }
@@ -64,7 +63,10 @@ namespace Hack::Compiler::CodeGenerator
         {
             const Symbol& sym = _globals->get(value);
             if (sym.kind() == Field)
+            {
+                _emitter->pushPointer();
                 _emitter->pushThis(sym.entry());
+            }
             else if (sym.kind() == Static)
                 _emitter->pushStatic(sym.entry());
         }
@@ -144,28 +146,36 @@ namespace Hack::Compiler::CodeGenerator
         }
     }
 
+    /// <summary>
+    /// <code>
+    /// <SimpleTerm> ::= Integer
+    ///                | String
+    ///                | True
+    ///                | False
+    ///                | Null
+    ///                | This
+    ///                | Identifier
+    /// </code>
+    /// </summary>
+    /// <param name="simpleTerm"></param>
     void Generator::buildSimpleTerm(const Node& simpleTerm) const
     {
-        if (simpleTerm.size() > 0)
-        {
-            const Node& term0 = simpleTerm.child(0);
-            if (term0.isConstant())
-                buildConstant(term0);
-            else
-                throw MessageException(
-                    "expected simple term to reduce to a constant");
-        }
+        const Node& term0 = simpleTerm.child(0);
+        if (term0.isConstant())
+            buildConstant(term0);
         else
+        {
             throw MessageException(
-                "expected simple term to reduce to a constant");
+                "expected simple term to "
+                "reduce to a constant");
+        }
     }
-
 
     /// <summary>
     /// <code>
-    /// <ComplexTerm> ::= Identifier '[' < Expression > ']'
-    ///                  | <CallMethod>
-    ///                  | '(' < Expression > ')'
+    /// ComplexTerm ::= Identifier '[' Expression ']'
+    ///               | CallMethod
+    ///               | '(' Expression  ')'
     /// </code>
     /// </summary>
     /// <param name="complexTerm"></param>
@@ -183,8 +193,7 @@ namespace Hack::Compiler::CodeGenerator
 
     /// <summary>
     /// <code>
-    /// <Term> ::= <SimpleTerm>
-    ///          | <ComplexTerm>
+    /// Term ::= SimpleTerm | ComplexTerm
     /// </code>
     /// </summary>
     /// <param name="term"></param>
@@ -202,37 +211,51 @@ namespace Hack::Compiler::CodeGenerator
                 buildComplexTerm(term0);
             else
             {
-                throw MessageException(
-                    "unknown term rule. "
-                    "The rule should be either a simple or complex type");
+                compileError(
+                    "unknown terminal type, it should "
+                    "be either a simple or complex type");
             }
         }
     }
 
     /// <summary>
     /// <code>
-    /// <LetStatement> ::= Let Identifier '=' <Expression> ';'
-    ///                  | Let Identifier '[' < Expression > ']' '=' < Expression > ';'
+    /// LetStatement ::= Let Identifier '=' Expression ';'
+    ///                | Let Identifier '['  Expression  ']' '='  Expression  ';'
     /// </code>
     /// </summary>
     /// <param name="statement"></param>
     void Generator::buildLetStatement(const Node& statement) const
     {
-        const String& id = statement.child(1).value();
-
-        if (_locals->contains(id))
+        if (statement.isSubtypeOf(SubtypeLetEqual))
         {
-            const Symbol& sym = _locals->get(id);
+            // expects rule 0
+            const String& id = statement.constant(1, ConstantIdentifier).value();
 
-            const Node& expression = statement.child(3);
+            const Node& expression = statement.rule(3, RuleExpression);
 
-            buildExpression(expression);
-            _emitter->popLocal(sym.entry());
+            if (_locals->contains(id))
+            {
+                const Symbol& sym = _locals->get(id);
+
+                buildExpression(expression);
+                _emitter->popLocal(sym.entry());
+            }
+            else
+                compileError("variable '", id, "' not found");
+        }
+        else if (statement.isSubtypeOf(SubtypeLetArrayEqual))
+        {
+            // TODO
+        }
+        else
+        {
+            // compile error
         }
     }
 
     /// <summary>
-    /// <ReturnStatement> ::= Return ';' | Return <Expression> ';'
+    /// ReturnStatement ::= Return ';' | Return Expression ';'
     /// <code></code>
     /// </summary>
     /// <param name="statement"></param>
@@ -246,14 +269,17 @@ namespace Hack::Compiler::CodeGenerator
             _emitter->pushConstant(0);
         else if (term1.isTypeOf(RuleExpression))
             buildExpression(term1);
+        else
+            compileError("invalid terminal type");
+
         _emitter->writeReturn();
     }
 
     /// <summary>
     /// <code>
-    ///  <SingleExpression> ::= <Term>
-    ///                        | <Operator> <Term>
-    ///                        | <UnaryOperator> <Term>
+    ///  SingleExpression ::= Term
+    ///                        | Operator Term
+    ///                        | UnaryOperator Term
     /// </code>
     /// </summary>
     /// <param name="singleExpression"></param>
@@ -263,33 +289,38 @@ namespace Hack::Compiler::CodeGenerator
         if (numTerms > 0)
         {
             const Node& term0 = singleExpression.child(0);
-            if (numTerms == 1)
+            if (singleExpression.isSubtypeOf(SubtypeTerm))
             {
                 if (term0.isTypeOf(RuleTerm))
                     buildTerm(term0);
-
-                if (_minusIsUnary)
-                    _minusIsUnary = false;
             }
-            else if (singleExpression.size() == 2)
+            else if (singleExpression.isSubtypeOf(SubtypeOpTerm))
             {
                 const Node& term1 = singleExpression.child(1);
 
                 if (term1.isTypeOf(RuleTerm))
                     buildTerm(term1);
+                else
+                    compileError("invalid terminal type");
 
                 if (term0.isTypeOf(RuleOperator))
                     buildOperation(term0.child(0));
                 else if (term0.isTypeOf(RuleUnaryOperator))
                     buildUnaryOperation(term0.child(0));
+                else
+                    compileError("invalid operator type");
             }
+            else
+                compileError("invalid terminal expression type");
         }
+        else
+            compileError("empty expression");
     }
 
     /// <summary>
     /// <code>
-    /// <Expression> ::= <Expression><SingleExpression>
-    ///                | <SingleExpression>
+    /// Expression ::= ExpressionSingleExpression
+    ///                | SingleExpression
     /// </code>
     /// </summary>
     /// <param name="expression"></param>
@@ -298,17 +329,14 @@ namespace Hack::Compiler::CodeGenerator
         for (const Node* exp : expression.children())
         {
             const Node& singleExpression = *exp;
-
-            _minusIsUnary = true;
-
             buildSingleExpression(singleExpression);
         }
     }
 
     /// <summary>
     /// <code>
-    /// <ExpressionList> ::= <ExpressionList> ',' < Expression >
-    ///                    | <Expression>
+    /// ExpressionList ::= ExpressionList ','  Expression
+    ///                    | Expression
     ///                    | !--empty--
     /// </code>
     /// </summary>
@@ -326,8 +354,8 @@ namespace Hack::Compiler::CodeGenerator
 
     /// <summary>
     /// <code>
-    /// <CallMethod> ::= Identifier '(' <ExpressionList> ')'
-    ///                | Identifier '.' Identifier '(' <ExpressionList> ')'
+    /// CallMethod ::= Identifier '(' ExpressionList ')'
+    ///                | Identifier '.' Identifier '(' ExpressionList ')'
     /// </code>
     /// </summary>
     /// <param name="callMethod"></param>
@@ -351,8 +379,7 @@ namespace Hack::Compiler::CodeGenerator
 
             // will need to be looked back up
             // when compiling to a binary
-            const String id =
-                StringCombine(classId.value(), '.', methodId.value());
+            const String id = StringCombine(classId.value(), '.', methodId.value());
 
             buildExpressionList(expressionList);
 
@@ -366,7 +393,7 @@ namespace Hack::Compiler::CodeGenerator
 
     /// <summary>
     /// <code>
-    /// <DoStatement> ::= Do <CallMethod> ';'
+    /// DoStatement ::= Do CallMethod ';'
     /// </code>
     /// </summary>
     /// <param name="statement"></param>
@@ -378,25 +405,25 @@ namespace Hack::Compiler::CodeGenerator
 
     /// <summary>
     /// <code>
-    /// <IfStatement> ::= If '(' <Expression> ')' '{' <StatementList> '}'
-    ///                 | Else '{' < StatementList > '}'
+    /// IfStatement ::= If '(' Expression ')' '{' StatementList '}'
+    ///                 | Else '{'  StatementList  '}'
     /// </code>
     /// </summary>
     /// <param name="statement"></param>
     void Generator::buildElseStatement(const Node& statement) const
     {
         if (_elseEnd.empty())
-            throw InputException("else statement without matching if statement");
+            throw MessageException("else statement without matching if statement");
 
         const Node& term2 = statement.rule(2, RuleStatementList);
         buildStatements(term2);
-        _emitter->writeIfEnd(_elseEnd);
+        _emitter->writeLabel(_elseEnd);
     }
 
     /// <summary>
     /// <code>
-    /// <IfStatement> ::= If '(' <Expression> ')' '{' <StatementList> '}'
-    ///                 | Else '{' < StatementList > '}'
+    /// IfStatement ::= If '(' Expression ')' '{' StatementList '}'
+    ///                 | Else '{'  StatementList  '}'
     /// </code>
     /// </summary>
     /// <param name="statement"></param>
@@ -418,12 +445,12 @@ namespace Hack::Compiler::CodeGenerator
             _emitter->writeGoto(_elseEnd);
         }
 
-        _emitter->writeIfEnd(l0);
+        _emitter->writeLabel(l0);
     }
 
     /// <summary>
     /// <code>
-    /// <WhileStatement> ::= While '(' <Expression> ')' '{' <StatementList> '}'
+    /// WhileStatement ::= While '(' Expression ')' '{' StatementList '}'
     /// </code>
     /// </summary>
     /// <param name="statement"></param>
@@ -435,20 +462,20 @@ namespace Hack::Compiler::CodeGenerator
         const String l1 = _emitter->generateLabel();
         const String l0 = _emitter->generateLabel();
 
-        _emitter->writeIfEnd(l1);
+        _emitter->writeLabel(l1);
         buildExpression(term2);
         _emitter->writeIfStart(l0);
 
         buildStatements(term5);
 
         _emitter->writeGoto(l1);
-        _emitter->writeIfEnd(l0);
+        _emitter->writeLabel(l0);
     }
 
     /// <summary>
     /// <code>
-    /// <StatementList> ::= <StatementList> <Statement>
-    ///                   | <Statement>
+    /// StatementList ::= StatementList Statement
+    ///                   | Statement
     ///                   |
     /// </code>
     /// </summary>
@@ -487,7 +514,7 @@ namespace Hack::Compiler::CodeGenerator
                 buildWhileStatement(stmt);
                 break;
             default:
-                break;
+                compileError("unknown statement type ", stmt.type());
             }
         }
     }
@@ -525,8 +552,8 @@ namespace Hack::Compiler::CodeGenerator
 
     /// <summary>
     /// <code>
-    /// <ClassDescription>  ::= <ClassDescription> <Field> ';'
-    ///                       | <ClassDescription> <Method>
+    /// ClassDescription  ::= ClassDescription Field ';'
+    ///                       | ClassDescription Method
     ///                       |
     /// </code>
     /// </summary>
@@ -596,7 +623,7 @@ namespace Hack::Compiler::CodeGenerator
 
     /// <summary>
     /// <code>
-    /// <Class> ::= Class Identifier '{' <ClassDescription> '}'
+    /// Class ::= Class Identifier '{' ClassDescription '}'
     /// </code>
     /// </summary>
     /// <param name="node"></param>

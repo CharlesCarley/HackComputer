@@ -232,6 +232,9 @@ namespace Hack::Computer
             VirtualMachine::Parser input;
             input.parse(_input);
 
+            if (_showAsm)
+                input.write(std::cout);
+
             generate(input);
         }
         else

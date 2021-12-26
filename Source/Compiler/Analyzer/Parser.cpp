@@ -54,12 +54,18 @@ namespace Hack::Compiler::Analyzer
             if (resolved->isRule())
                 node->insert(resolved);
             else
-                parseError("expected a rule to reduce");
-
+            {
+                parseError(
+                    "expected the node on the top "
+                    "of the stack to be a rule");
+            }
             _stack.pop();
         }
         else
-            parseError("no rule was reduced");
+            parseError(
+                "the node on the top of the stack "
+                "is the current node being reduced "
+                "therefore, it can not be reduced.");
     }
 
     Node* Parser::createRule(const int8_t& name)
@@ -73,15 +79,15 @@ namespace Hack::Compiler::Analyzer
     {
         switch (id)
         {
-        case TOK_OP_MINUS:
-        case TOK_OP_PLUS:
-        case TOK_OP_MULTIPLY:
-        case TOK_OP_DIVIDE:
-        case TOK_OP_AND:
-        case TOK_OP_OR:
-        case TOK_GT:
-        case TOK_LT:
-        case TOK_EQ:
+        case TokOpMinus:
+        case TokOpPlus:
+        case TokOpMultiply:
+        case TokOpDivide:
+        case TokOpAnd:
+        case TokOpOr:
+        case TokOpGt:
+        case TokOpLt:
+        case TokOpEq:
             return true;
         default:
             return false;
@@ -92,14 +98,14 @@ namespace Hack::Compiler::Analyzer
     {
         switch (t0)
         {
-        case TOK_IDENTIFIER:
-        case TOK_INTEGER:
-        case TOK_STRING:
-        case TOK_CONST_FALSE:
-        case TOK_CONST_TRUE:
-        case TOK_CONST_NULL:
-        case TOK_CONST_THIS:
-        case TOK_L_PAR:
+        case TokId:
+        case TokInt:
+        case TokString:
+        case TokKwFalse:
+        case TokKwTrue:
+        case TokKwNull:
+        case TokKwThis:
+        case TokSymLPar:
             return true;
         default:
             return false;
@@ -110,10 +116,10 @@ namespace Hack::Compiler::Analyzer
     {
         switch (t0)
         {
-        case TOK_R_BRACKET:
-        case TOK_SEMICOLON:
-        case TOK_R_PAR:
-        case TOK_COMMA:
+        case TokSymRBracket:
+        case TokSymSemicolon:
+        case TokSymRPar:
+        case TokSymComma:
             return true;
         default:
             return false;
@@ -122,32 +128,34 @@ namespace Hack::Compiler::Analyzer
 
     bool Parser::isCallTerm(const int8_t t0, const int8_t t1, const int8_t t2, const int8_t t3)
     {
-        if ((t0 == TOK_IDENTIFIER || t0 == TOK_CONST_THIS) && t1 == TOK_L_PAR)
+        const bool idOrThis = t0 == TokId || t0 == TokKwThis;
+
+        if (idOrThis && t1 == TokSymLPar)
             return true;
-        if ((t0 == TOK_IDENTIFIER || t0 == TOK_CONST_THIS) && t1 == TOK_PERIOD && t2 == TOK_IDENTIFIER && t3 == TOK_L_PAR)
+        if (idOrThis && t1 == TokSymPeriod && t2 == TokId && t3 == TokSymLPar)
             return true;
         return false;
     }
 
     bool Parser::isComplexTerm(const int8_t t0, const int8_t t1, const int8_t t2, const int8_t t3)
     {
-        if (t0 == TOK_L_PAR)
+        if (t0 == TokSymLPar)
             return true;
-        if (t0 == TOK_IDENTIFIER && t1 == TOK_L_BRACKET)
+        if (t0 == TokId && t1 == TokSymLBracket)
             return true;
         return isCallTerm(t0, t1, t2, t3);
     }
 
     void Parser::checkEof()
     {
-        if (getToken(0).getType() == TOK_EOF)
+        if (getToken(0).getType() == TokEof)
             parseError("end of file reached while reducing rules");
     }
 
     void Parser::identifier(Node* rule)
     {
         const int8_t t0 = getToken(0).getType();
-        if (t0 != TOK_IDENTIFIER)
+        if (t0 != TokId)
             parseError("expected an identifier");
 
         const size_t id = getToken(0).getIndex();
@@ -169,10 +177,10 @@ namespace Hack::Compiler::Analyzer
 
         switch (token)
         {
-        case TOK_CONST_FALSE:
-        case TOK_CONST_TRUE:
-        case TOK_CONST_NULL:
-        case TOK_CONST_THIS:
+        case TokKwFalse:
+        case TokKwTrue:
+        case TokKwNull:
+        case TokKwThis:
             rule->insert(symbolId);
             break;
         default:
@@ -196,25 +204,25 @@ namespace Hack::Compiler::Analyzer
         switch (symbolId)
         {
         case ConstantIdentifier:
-            identifier(rule, ConstantIdentifier, TOK_IDENTIFIER);
+            identifier(rule, ConstantIdentifier, TokId);
             break;
         case ConstantInteger:
-            identifier(rule, ConstantInteger, TOK_INTEGER);
+            identifier(rule, ConstantInteger, TokInt);
             break;
         case ConstantString:
-            identifier(rule, ConstantString, TOK_STRING);
+            identifier(rule, ConstantString, TokString);
             break;
         case ConstantTrue:
-            identifier(rule, ConstantTrue, TOK_CONST_TRUE);
+            identifier(rule, ConstantTrue, TokKwTrue);
             break;
         case ConstantFalse:
-            identifier(rule, ConstantFalse, TOK_CONST_FALSE);
+            identifier(rule, ConstantFalse, TokKwFalse);
             break;
         case ConstantNull:
-            identifier(rule, ConstantNull, TOK_CONST_NULL);
+            identifier(rule, ConstantNull, TokKwNull);
             break;
         case ConstantThis:
-            identifier(rule, ConstantThis, TOK_CONST_THIS);
+            identifier(rule, ConstantThis, TokKwThis);
             break;
         default:
             parseError("unknown constant");
@@ -226,11 +234,11 @@ namespace Hack::Compiler::Analyzer
         Node* rule = _stack.top();
         switch (symbolId)
         {
-        case TOK_IDENTIFIER:
-            identifier(rule, ConstantIdentifier, TOK_IDENTIFIER);
+        case TokId:
+            identifier(rule, ConstantIdentifier, TokId);
             break;
-        case TOK_CONST_THIS:
-            identifier(rule, ConstantThis, TOK_CONST_THIS);
+        case TokKwThis:
+            identifier(rule, ConstantThis, TokKwThis);
             break;
         default:
             parseError("unknown constant");
@@ -257,61 +265,61 @@ namespace Hack::Compiler::Analyzer
         switch (symbolId)
         {
         case SymbolOpenBrace:
-            symbol(rule, symbolId, TOK_L_BRACE, '{');
+            symbol(rule, symbolId, TokSymLBrace, '{');
             break;
         case SymbolCloseBrace:
-            symbol(rule, symbolId, TOK_R_BRACE, '}');
+            symbol(rule, symbolId, TokSymRBrace, '}');
             break;
         case SymbolSemiColon:
-            symbol(rule, symbolId, TOK_SEMICOLON, ';');
+            symbol(rule, symbolId, TokSymSemicolon, ';');
             break;
         case SymbolLeftParenthesis:
-            symbol(rule, symbolId, TOK_L_PAR, '(');
+            symbol(rule, symbolId, TokSymLPar, '(');
             break;
         case SymbolRightParenthesis:
-            symbol(rule, symbolId, TOK_R_PAR, ')');
+            symbol(rule, symbolId, TokSymRPar, ')');
             break;
         case SymbolLeftBracket:
-            symbol(rule, symbolId, TOK_L_BRACKET, '[');
+            symbol(rule, symbolId, TokSymLBracket, '[');
             break;
         case SymbolRightBracket:
-            symbol(rule, symbolId, TOK_R_BRACKET, ']');
+            symbol(rule, symbolId, TokSymRBracket, ']');
             break;
         case SymbolComma:
-            symbol(rule, symbolId, TOK_COMMA, ',');
+            symbol(rule, symbolId, TokSymComma, ',');
             break;
         case SymbolEquals:
-            symbol(rule, symbolId, TOK_EQ, '=');
+            symbol(rule, symbolId, TokOpEq, '=');
             break;
         case SymbolPlus:
-            symbol(rule, symbolId, TOK_OP_PLUS, '+');
+            symbol(rule, symbolId, TokOpPlus, '+');
             break;
         case SymbolMinus:
-            symbol(rule, symbolId, TOK_OP_MINUS, '-');
+            symbol(rule, symbolId, TokOpMinus, '-');
             break;
         case SymbolMultiply:
-            symbol(rule, symbolId, TOK_OP_MULTIPLY, '*');
+            symbol(rule, symbolId, TokOpMultiply, '*');
             break;
         case SymbolDivide:
-            symbol(rule, symbolId, TOK_OP_DIVIDE, '/');
+            symbol(rule, symbolId, TokOpDivide, '/');
             break;
         case SymbolAnd:
-            symbol(rule, symbolId, TOK_OP_AND, '&');
+            symbol(rule, symbolId, TokOpAnd, '&');
             break;
         case SymbolOr:
-            symbol(rule, symbolId, TOK_OP_OR, '|');
+            symbol(rule, symbolId, TokOpOr, '|');
             break;
         case SymbolGreater:
-            symbol(rule, symbolId, TOK_GT, '>');
+            symbol(rule, symbolId, TokOpGt, '>');
             break;
         case SymbolLess:
-            symbol(rule, symbolId, TOK_LT, '<');
+            symbol(rule, symbolId, TokOpLt, '<');
             break;
         case SymbolNot:
-            symbol(rule, symbolId, TOK_OP_NOT, '~');
+            symbol(rule, symbolId, TokOpNot, '~');
             break;
         case SymbolPeriod:
-            symbol(rule, symbolId, TOK_PERIOD, '.');
+            symbol(rule, symbolId, TokSymPeriod, '.');
             break;
         default:
             parseError("unknown symbol");
@@ -337,55 +345,55 @@ namespace Hack::Compiler::Analyzer
         switch (symbolId)
         {
         case KeywordClass:
-            keyword(rule, symbolId, TOK_KW_CLASS, "class");
+            keyword(rule, symbolId, TokKwClass, "class");
             break;
         case KeywordConstructor:
-            keyword(rule, symbolId, TOK_KW_CTOR, "constructor");
+            keyword(rule, symbolId, TokKwConstructor, "constructor");
             break;
         case KeywordFunction:
-            keyword(rule, symbolId, TOK_KW_FUNCTION, "function");
+            keyword(rule, symbolId, TokKwFunction, "function");
             break;
         case KeywordMethod:
-            keyword(rule, symbolId, TOK_KW_METHOD, "method");
+            keyword(rule, symbolId, TokKwMethod, "method");
             break;
         case KeywordField:
-            keyword(rule, symbolId, TOK_KW_FIELD, "field");
+            keyword(rule, symbolId, TokKwField, "field");
             break;
         case KeywordStatic:
-            keyword(rule, symbolId, TOK_KW_STATIC, "static");
+            keyword(rule, symbolId, TokKwStatic, "static");
             break;
         case KeywordInt:
-            keyword(rule, symbolId, TOK_KW_INT, "int");
+            keyword(rule, symbolId, TokKwInt, "int");
             break;
         case KeywordChar:
-            keyword(rule, symbolId, TOK_KW_CHAR, "char");
+            keyword(rule, symbolId, TokKwChar, "char");
             break;
         case KeywordBool:
-            keyword(rule, symbolId, TOK_KW_BOOL, "boolean");
+            keyword(rule, symbolId, TokKwBool, "boolean");
             break;
         case KeywordVoid:
-            keyword(rule, symbolId, TOK_KW_VOID, "void");
+            keyword(rule, symbolId, TokKwVoid, "void");
             break;
         case KeywordVar:
-            keyword(rule, symbolId, TOK_KW_VAR, "var");
+            keyword(rule, symbolId, TokKwVar, "var");
             break;
         case KeywordLet:
-            keyword(rule, symbolId, TOK_KW_LET, "let");
+            keyword(rule, symbolId, TokKwLet, "let");
             break;
         case KeywordIf:
-            keyword(rule, symbolId, TOK_KW_IF, "if");
+            keyword(rule, symbolId, TokKwIf, "if");
             break;
         case KeywordElse:
-            keyword(rule, symbolId, TOK_KW_ELSE, "else");
+            keyword(rule, symbolId, TokKwElse, "else");
             break;
         case KeywordDo:
-            keyword(rule, symbolId, TOK_KW_DO, "do");
+            keyword(rule, symbolId, TokKwDo, "do");
             break;
         case KeywordWhile:
-            keyword(rule, symbolId, TOK_KW_WHILE, "while");
+            keyword(rule, symbolId, TokKwWhile, "while");
             break;
         case KeywordReturn:
-            keyword(rule, symbolId, TOK_KW_RETURN, "return");
+            keyword(rule, symbolId, TokKwReturn, "return");
             break;
         default:
             parseError("unknown keyword");
@@ -422,13 +430,13 @@ namespace Hack::Compiler::Analyzer
         Node* rule = createRule(RuleClassDescription);
 
         int8_t t0 = getToken(0).getType();
-        if (t0 != TOK_R_BRACE)  // empty
+        if (t0 != TokSymRBrace)  // empty
         {
             do
             {
                 // flow pivots around the static and field keywords
 
-                if (t0 == TOK_KW_STATIC || t0 == TOK_KW_FIELD)
+                if (t0 == TokKwStatic || t0 == TokKwField)
                     fieldRule();
                 else
                     methodRule();
@@ -438,7 +446,7 @@ namespace Hack::Compiler::Analyzer
 
                 checkEof();
 
-            } while (t0 != TOK_R_BRACE);
+            } while (t0 != TokSymRBrace);
         }
     }
 
@@ -449,7 +457,7 @@ namespace Hack::Compiler::Analyzer
         constant(ConstantIdentifier);
 
         int8_t t0 = getToken(0).getType();
-        if (t0 == TOK_COMMA)
+        if (t0 == TokSymComma)
         {
             do
             {
@@ -460,7 +468,7 @@ namespace Hack::Compiler::Analyzer
                 t0 = getToken(0).getType();
 
                 checkEof();
-            } while (t0 == TOK_COMMA);
+            } while (t0 == TokSymComma);
         }
     }
 
@@ -470,10 +478,10 @@ namespace Hack::Compiler::Analyzer
 
         switch (getToken(0).getType())
         {
-        case TOK_KW_FIELD:
+        case TokKwField:
             keyword(KeywordField);
             break;
-        case TOK_KW_STATIC:
+        case TokKwStatic:
             keyword(KeywordStatic);
             break;
         default:
@@ -487,16 +495,16 @@ namespace Hack::Compiler::Analyzer
 
         switch (getToken(0).getType())
         {
-        case TOK_KW_INT:
+        case TokKwInt:
             keyword(KeywordInt);
             break;
-        case TOK_KW_CHAR:
+        case TokKwChar:
             keyword(KeywordChar);
             break;
-        case TOK_KW_BOOL:
+        case TokKwBool:
             keyword(KeywordBool);
             break;
-        case TOK_IDENTIFIER:
+        case TokId:
             constant(ConstantIdentifier);
             break;
         default:
@@ -563,13 +571,13 @@ namespace Hack::Compiler::Analyzer
 
         switch (getToken(0).getType())
         {
-        case TOK_KW_CTOR:
+        case TokKwConstructor:
             keyword(KeywordConstructor);
             break;
-        case TOK_KW_FUNCTION:
+        case TokKwFunction:
             keyword(KeywordFunction);
             break;
-        case TOK_KW_METHOD:
+        case TokKwMethod:
             keyword(KeywordMethod);
             break;
         default:
@@ -583,7 +591,7 @@ namespace Hack::Compiler::Analyzer
     {
         Node* rule = createRule(RuleMethodReturnType);
 
-        if (getToken(0).getType() == TOK_KW_VOID)
+        if (getToken(0).getType() == TokKwVoid)
             keyword(KeywordVoid);
         else
         {
@@ -599,7 +607,7 @@ namespace Hack::Compiler::Analyzer
         symbol(SymbolOpenBrace);
 
         const int8_t t0 = getToken(0).getType();
-        if (t0 != TOK_R_BRACE)  // handle empty
+        if (t0 != TokSymRBrace)  // handle empty
         {
             bodyRule();
             reduceRule(rule);
@@ -617,7 +625,7 @@ namespace Hack::Compiler::Analyzer
         {
             // flow pivots around the var keyword
 
-            if (t0 == TOK_KW_VAR)
+            if (t0 == TokKwVar)
             {
                 variableRule();
                 reduceRule(rule);
@@ -633,7 +641,7 @@ namespace Hack::Compiler::Analyzer
             // test for the exit condition
             t0 = getToken(0).getType();
 
-        } while (t0 != TOK_R_BRACE);
+        } while (t0 != TokSymRBrace);
     }
 
     void Parser::variableRule()
@@ -659,27 +667,27 @@ namespace Hack::Compiler::Analyzer
 
         switch (getToken(0).getType())
         {
-        case TOK_KW_LET:
+        case TokKwLet:
             letStatementRule();
             reduceRule(rule);
             break;
-        case TOK_KW_IF:
+        case TokKwIf:
             ifStatementRule();
             reduceRule(rule);
             break;
-        case TOK_KW_ELSE:
+        case TokKwElse:
             elseStatementRule();
             reduceRule(rule);
             break;
-        case TOK_KW_DO:
+        case TokKwDo:
             doStatementRule();
             reduceRule(rule);
             break;
-        case TOK_KW_WHILE:
+        case TokKwWhile:
             whileStatementRule();
             reduceRule(rule);
             break;
-        case TOK_KW_RETURN:
+        case TokKwReturn:
             returnStatementRule();
             reduceRule(rule);
             break;
@@ -700,8 +708,10 @@ namespace Hack::Compiler::Analyzer
 
         const int8_t t0 = getToken(0).getType();
 
-        if (t0 == TOK_EQ)
+        if (t0 == TokOpEq)
         {
+            rule->subtype(SubtypeLetEqual);
+
             symbol(SymbolEquals);
 
             expressionRule();
@@ -709,8 +719,10 @@ namespace Hack::Compiler::Analyzer
 
             symbol(SymbolSemiColon);
         }
-        else if (t0 == TOK_L_BRACKET)
+        else if (t0 == TokSymLBracket)
         {
+            rule->subtype(SubtypeLetArrayEqual);
+
             symbol(SymbolLeftBracket);
 
             expressionRule();
@@ -746,10 +758,8 @@ namespace Hack::Compiler::Analyzer
         symbol(SymbolCloseBrace);
 
         const int8_t t0 = getToken(0).getType();
-        if (t0 == TOK_KW_ELSE)
+        if (t0 == TokKwElse)
             rule->subtype(SubtypeIfElseCombo);
-
-
     }
 
     void Parser::elseStatementRule()
@@ -804,7 +814,7 @@ namespace Hack::Compiler::Analyzer
         keyword(KeywordReturn);
 
         const int8_t t0 = getToken(0).getType();
-        if (t0 != TOK_SEMICOLON)
+        if (t0 != TokSymSemicolon)
         {
             expressionRule();
             reduceRule(rule);
@@ -818,7 +828,7 @@ namespace Hack::Compiler::Analyzer
 
         int8_t t0 = getToken(0).getType();
 
-        if (t0 != TOK_R_BRACE)
+        if (t0 != TokSymRBrace)
         {
             do
             {
@@ -829,7 +839,7 @@ namespace Hack::Compiler::Analyzer
 
                 t0 = getToken(0).getType();
 
-            } while (t0 != TOK_R_BRACE);
+            } while (t0 != TokSymRBrace);
         }
     }
 
@@ -854,15 +864,16 @@ namespace Hack::Compiler::Analyzer
         const int8_t t0 = getToken(0).getType();
         const int8_t t1 = getToken(1).getType();
 
-        if (t0 == TOK_OP_NOT || t0 == TOK_OP_MINUS && isTerm(t1))
+        if (t0 == TokOpNot || t0 == TokOpMinus && isTerm(t1))
         {
             const int8_t tp = getToken(-1).getType();
 
-            if (isTerm(tp) && tp != TOK_L_PAR)
+            rule->subtype(SubtypeOpTerm);
+
+            if (isTerm(tp) && tp != TokSymLPar)
                 operatorRule();
             else
                 unaryOperatorRule();
-
             reduceRule(rule);
 
             termRule();
@@ -870,25 +881,22 @@ namespace Hack::Compiler::Analyzer
         }
         else if (isOperator(getToken(0).getType()) && isTerm(t1))
         {
-            const int8_t tp = getToken(-1).getType();
+            rule->subtype(SubtypeOpTerm);
 
-            if (isTerm(tp))
-                operatorRule();
-            else
-                unaryOperatorRule();
-
+            operatorRule();
             reduceRule(rule);
-
 
             termRule();
             reduceRule(rule);
         }
         else if (isTerm(t0))
         {
+            rule->subtype(SubtypeTerm);
+
             termRule();
             reduceRule(rule);
         }
-        else if (t0 != TOK_R_BRACKET && t0 != TOK_SEMICOLON && t0 != TOK_R_PAR)
+        else if (t0 != TokSymRBracket && t0 != TokSymSemicolon && t0 != TokSymRPar)
         {
             // if it's not an exit from this rule, then it's an error.
             parseError("expected unary term, operator term or a term");
@@ -924,25 +932,25 @@ namespace Hack::Compiler::Analyzer
 
         switch (t0)
         {
-        case TOK_IDENTIFIER:
+        case TokId:
             constant(ConstantIdentifier);
             break;
-        case TOK_INTEGER:
+        case TokInt:
             constant(ConstantInteger);
             break;
-        case TOK_CONST_TRUE:
+        case TokKwTrue:
             constant(ConstantTrue);
             break;
-        case TOK_CONST_FALSE:
+        case TokKwFalse:
             constant(ConstantFalse);
             break;
-        case TOK_CONST_NULL:
+        case TokKwNull:
             constant(ConstantNull);
             break;
-        case TOK_CONST_THIS:
+        case TokKwThis:
             constant(ConstantThis);
             break;
-        case TOK_STRING:
+        case TokString:
             constant(ConstantString);
             break;
         default:
@@ -959,7 +967,7 @@ namespace Hack::Compiler::Analyzer
         const int8_t t2 = getToken(2).getType();
         const int8_t t3 = getToken(3).getType();
 
-        if (t0 == TOK_L_PAR)
+        if (t0 == TokSymLPar)
         {
             rule->subtype(SubtypeExpressionGroup);
 
@@ -970,7 +978,7 @@ namespace Hack::Compiler::Analyzer
 
             symbol(SymbolRightParenthesis);
         }
-        else if (t0 == TOK_IDENTIFIER && t1 == TOK_L_BRACKET)
+        else if (t0 == TokId && t1 == TokSymLBracket)
         {
             rule->subtype(SubtypeArrayIndex);
 
@@ -1002,31 +1010,31 @@ namespace Hack::Compiler::Analyzer
 
         switch (t0)
         {
-        case TOK_OP_PLUS:
+        case TokOpPlus:
             symbol(SymbolPlus);
             break;
-        case TOK_OP_MINUS:
+        case TokOpMinus:
             symbol(SymbolMinus);
             break;
-        case TOK_OP_MULTIPLY:
+        case TokOpMultiply:
             symbol(SymbolMultiply);
             break;
-        case TOK_OP_DIVIDE:
+        case TokOpDivide:
             symbol(SymbolDivide);
             break;
-        case TOK_OP_AND:
+        case TokOpAnd:
             symbol(SymbolAnd);
             break;
-        case TOK_OP_OR:
+        case TokOpOr:
             symbol(SymbolOr);
             break;
-        case TOK_GT:
+        case TokOpGt:
             symbol(SymbolGreater);
             break;
-        case TOK_LT:
+        case TokOpLt:
             symbol(SymbolLess);
             break;
-        case TOK_EQ:
+        case TokOpEq:
             symbol(SymbolEquals);
             break;
         default:
@@ -1040,9 +1048,9 @@ namespace Hack::Compiler::Analyzer
 
         const int8_t t0 = getToken(0).getType();
 
-        if (t0 == TOK_OP_MINUS)
+        if (t0 == TokOpMinus)
             symbol(SymbolMinus);
-        else if (t0 == TOK_OP_NOT)
+        else if (t0 == TokOpNot)
             symbol(SymbolNot);
         else
             parseError("expected a '-', '~', or '!' character");
@@ -1054,7 +1062,7 @@ namespace Hack::Compiler::Analyzer
 
         int8_t t0 = getToken(0).getType();
 
-        if (t0 != TOK_R_PAR)  // empty case
+        if (t0 != TokSymRPar)  // empty case
         {
             do
             {
@@ -1064,12 +1072,12 @@ namespace Hack::Compiler::Analyzer
                 checkEof();
 
                 t0 = getToken(0).getType();
-                if (t0 == TOK_COMMA)
+                if (t0 == TokSymComma)
                 {
                     advanceCursor();
                     t0 = getToken(0).getType();
                 }
-            } while (t0 != TOK_R_PAR);
+            } while (t0 != TokSymRPar);
         }
     }
 
@@ -1082,7 +1090,7 @@ namespace Hack::Compiler::Analyzer
         const int8_t t2 = getToken(2).getType();
         const int8_t t3 = getToken(3).getType();
 
-        if (t0 == TOK_IDENTIFIER && t1 == TOK_L_PAR)
+        if (t0 == TokId && t1 == TokSymLPar)
         {
             try
             {
@@ -1102,10 +1110,10 @@ namespace Hack::Compiler::Analyzer
                 throw InputException(ex.what(), "\n", "failed to parse method declaration");
             }
         }
-        else if (t0 == TOK_IDENTIFIER || t0 == TOK_CONST_THIS &&
-                                             t1 == TOK_PERIOD &&
-                                             t2 == TOK_IDENTIFIER &&
-                                             t3 == TOK_L_PAR)
+        else if (t0 == TokId || t0 == TokKwThis &&
+                                             t1 == TokSymPeriod &&
+                                             t2 == TokId &&
+                                             t3 == TokSymLPar)
         {
             try
             {
@@ -1138,7 +1146,7 @@ namespace Hack::Compiler::Analyzer
         Node* rule = createRule(RuleParameterList);
 
         int8_t t0 = getToken(0).getType();
-        if (t0 != TOK_R_PAR)  // empty case
+        if (t0 != TokSymRPar)  // empty case
         {
             do
             {
@@ -1146,12 +1154,12 @@ namespace Hack::Compiler::Analyzer
                 reduceRule(rule);
 
                 t0 = getToken(0).getType();
-                if (t0 == TOK_COMMA)
+                if (t0 == TokSymComma)
                     advanceCursor();
 
                 checkEof();
 
-            } while (t0 != TOK_R_PAR);
+            } while (t0 != TokSymRPar);
         }
     }
 
@@ -1176,7 +1184,7 @@ namespace Hack::Compiler::Analyzer
         while (_cursor <= (int32_t)_tokens.size())
         {
             const int8_t tok = getToken(0).getType();
-            if (tok == TOK_EOF)
+            if (tok == TokEof)
                 break;
 
             const int32_t op = _cursor;

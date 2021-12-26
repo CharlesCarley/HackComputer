@@ -20,6 +20,8 @@
 -------------------------------------------------------------------------------
 */
 #include "String.h"
+#include <chrono>
+#define NOW std::chrono::high_resolution_clock::now().time_since_epoch().count()
 
 namespace Hack
 {
@@ -39,6 +41,48 @@ namespace Hack
 
         if (!tmp.empty())
             dest.push_back(tmp);
+    }
+
+    // clang-format off
+    constexpr char BaseChars[] = {
+        'D', 'c', 'U', 'y', '3', 'b', 'C', 'g',
+        'p', 'J', '9', 'L', 'p', 'J', '0', 'A',
+        'W', 'o', 'x', 'O', 'a', 'N', 'u', '8',
+        'n', 'x', '7', 's', 'E', 'z', 'h', 'E',
+        'q', 'Z', 'L', '4', 'F', '2', 'Q', 'i',
+        'S', 'K', 'w', 'G', 'r', 'f', '1', 'Z',
+        'd', 't', 'Y', '5', 'I', '3', 'K', 't',
+        'B', '6', 'a', 'R', 'l', 'H', 'm', 'M',
+    };
+    // clang-format on
+
+    constexpr size_t BaseCharsSize = sizeof BaseChars;
+
+    void StringUtils::scramble(String& dest, size_t value)
+    {
+        dest.clear();
+        srand(NOW % 65536);
+
+        while (value > 0)
+        {
+            const size_t q  = value >> 6;
+            const size_t ra = (size_t)rand();
+            const size_t r  = (value + ra) % BaseCharsSize;
+
+            dest.push_back(BaseChars[r]);
+            value = q;
+        }
+    }
+
+    void StringUtils::generate(String& dest, int& counter, void* seed)
+    {
+        // this 'should' be a GUID
+        String sa, sb, sc, sd;
+        scramble(sa, size_t(17) * ++counter);
+        scramble(sb, NOW);
+        scramble(sc, (size_t)seed);
+        scramble(sd, size_t(41) * ++counter);
+        StringCombine(dest, "L", sa, sb, sc, sd);
     }
 
 }  // namespace Hack

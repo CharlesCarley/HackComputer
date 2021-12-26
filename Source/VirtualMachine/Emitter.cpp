@@ -396,18 +396,14 @@ namespace Hack::VirtualMachine
                                 String& valDone)
     {
         ++_cmp;
-        String v;
-        Char::toHexString(v, (uint16_t)_cmp);
-        valTrue = "L54" + v;
-        valDone = "L44" + v;
+        StringUtils::generate(valTrue, _cmp, this);
+        StringUtils::generate(valDone, _cmp, this);
     }
 
     void Emitter::genLabel(String& val)
     {
         ++_cmp;
-        String v;
-        Char::toHexString(v, (uint16_t)_cmp);
-        val = "L48" + v;
+        StringUtils::generate(val, _cmp, this);
     }
 
     void Emitter::setRam(const int index, const int value)

@@ -25,8 +25,6 @@
 
 namespace Hack::Compiler
 {
-    constexpr size_t Indent = 2;
-
     class DotWriterImpl
     {
     private:
@@ -34,16 +32,13 @@ namespace Hack::Compiler
         OStream*           _stream;
         OutputStringStream _out;
 
-        int _indent;
-
         void writeNodeCluster(Node* nd)
         {
             String str;
             typeString(str, nd);
 
-            _indent += Indent;
-            indent();
-            _out << "node" << (size_t)nd << " [shape=none, label =\"" << str << "\"]";
+            _out << std::setw(3) << ' ';
+            _out << "node_" << std::hex << (size_t)nd << " [shape=none, label =\"" << str << "\"]";
             _out << std::endl;
         }
 
@@ -52,56 +47,43 @@ namespace Hack::Compiler
             String str;
             typeString(str, nd);
 
-            indent();
-            _out << "node" << (size_t)nd << "[shape=none, label =\"" << str << "\"]";
-            _out << std::endl;
-        }
-
-        void closeNode()
-        {
-            _indent -= Indent;
+            _out << std::setw(3) << ' ';
+            _out << "node_" << std::hex << (size_t)nd << "[shape=none, label =\"" << str << "\"]";
             _out << std::endl;
         }
 
         void lineTo(Node* a, const Node* b)
         {
-            indent();
-            _out << "node" << (size_t)a;
+            _out << std::setw(3) << ' ';
+            _out << "node_" << std::hex << (size_t)a; 
             _out << "->";
-            _out << "node" << (size_t)b;
+            _out << "node_" << std::hex << (size_t)b ;
             _out << "[";
             _out << "arrowhead=none";
             _out << "]";
             _out << std::endl;
         }
-        void indent()
-        {
-            _out << std::setw((size_t)(_indent - 1)) << ' ';
-        }
 
         static void typeString(String& dest, Node* node);
 
     public:
-        explicit DotWriterImpl(Node* root, OStream* stream) :
+        DotWriterImpl(Node* root, OStream* stream) :
             _root(root),
-            _stream(stream),
-            _indent(0)
+            _stream(stream)
         {
         }
 
         void writeHeader()
         {
-            _indent += Indent;
             _out << "digraph ClassList {" << std::endl;
-            indent();
+            _out << std::setw(3) << ' ';
             _out << "rankdir = LR;" << std::endl;
-            indent();
+            _out << std::setw(3) << ' ';
             _out << "layout  = dot;" << std::endl;
         }
 
         void writeFooter()
         {
-            _indent -= Indent;
             _out << "}" << std::endl;
         }
 
@@ -123,15 +105,13 @@ namespace Hack::Compiler
                     lineTo(node, nd);
                 }
             }
-
-            closeNode();
         }
 
         void write()
         {
             writeHeader();
-            const Node::Children& ch = _root->children();
 
+            const Node::Children& ch = _root->children();
             for (Node* nd : ch)
             {
                 if (nd->isRule())

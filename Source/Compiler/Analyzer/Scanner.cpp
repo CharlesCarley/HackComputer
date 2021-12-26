@@ -37,27 +37,27 @@ namespace Hack::Compiler::Analyzer
     // clang-format off
 
     constexpr KeywordTable Reserved[] = {
-        {"class",       TOK_KW_CLASS},
-        {"constructor", TOK_KW_CTOR},
-        {"function",    TOK_KW_FUNCTION},
-        {"method",      TOK_KW_METHOD},
-        {"field",       TOK_KW_FIELD},
-        {"static",      TOK_KW_STATIC},
-        {"var",         TOK_KW_VAR},
-        {"int",         TOK_KW_INT},
-        {"char",        TOK_KW_CHAR},
-        {"bool",        TOK_KW_BOOL},
-        {"void",        TOK_KW_VOID},
-        {"let",         TOK_KW_LET},
-        {"do",          TOK_KW_DO},
-        {"if",          TOK_KW_IF},
-        {"else",        TOK_KW_ELSE},
-        {"while",       TOK_KW_WHILE},
-        {"return",      TOK_KW_RETURN},
-        {"true",        TOK_CONST_TRUE},
-        {"false",       TOK_CONST_FALSE},
-        {"null",        TOK_CONST_NULL},
-        {"this",        TOK_CONST_THIS},
+        {"class",       TokKwClass},
+        {"constructor", TokKwConstructor},
+        {"function",    TokKwFunction},
+        {"method",      TokKwMethod},
+        {"field",       TokKwField},
+        {"static",      TokKwStatic},
+        {"var",         TokKwVar},
+        {"int",         TokKwInt},
+        {"char",        TokKwChar},
+        {"bool",        TokKwBool},
+        {"void",        TokKwVoid},
+        {"let",         TokKwLet},
+        {"do",          TokKwDo},
+        {"if",          TokKwIf},
+        {"else",        TokKwElse},
+        {"while",       TokKwWhile},
+        {"return",      TokKwReturn},
+        {"true",        TokKwTrue},
+        {"false",       TokKwFalse},
+        {"null",        TokKwNull},
+        {"this",        TokKwThis},
     };
     // clang-format on
 
@@ -93,7 +93,7 @@ namespace Hack::Compiler::Analyzer
             // If it's not a reserved word save it as an identifier,
             // and use it as either a label or a static variable.
 
-            tok.setType(TOK_IDENTIFIER);
+            tok.setType(TokId);
             tok.setIndex(save(cmp));
         }
     }
@@ -112,7 +112,7 @@ namespace Hack::Compiler::Analyzer
 
         _stream->putback((char)ch);
 
-        tok.setType(TOK_INTEGER);
+        tok.setType(TokInt);
         tok.setIndex(save(v));
     }
 
@@ -168,7 +168,7 @@ namespace Hack::Compiler::Analyzer
             }
         }
 
-        tok.setType(TOK_STRING);
+        tok.setType(TokString);
         tok.setIndex(save(v));
     }
 
@@ -182,6 +182,8 @@ namespace Hack::Compiler::Analyzer
         int ch;
         while ((ch = _stream->get()) > 0)
         {
+            tok.setLine(_line);
+
             switch (ch)
             {
             case '/':
@@ -191,7 +193,7 @@ namespace Hack::Compiler::Analyzer
                     scanMultiLineComment();
                 else
                 {
-                    tok.setType(TOK_OP_DIVIDE);
+                    tok.setType(TokOpDivide);
                     return;
                 }
                 break;
@@ -219,66 +221,66 @@ namespace Hack::Compiler::Analyzer
                 scanString(tok);
                 return;
             case '+':
-                tok.setType(TOK_OP_PLUS);
+                tok.setType(TokOpPlus);
                 return;
             case '-':
-                tok.setType(TOK_OP_MINUS);
+                tok.setType(TokOpMinus);
                 return;
             case '*':
-                tok.setType(TOK_OP_MULTIPLY);
+                tok.setType(TokOpMultiply);
                 return;
             case '&':
-                tok.setType(TOK_OP_AND);
+                tok.setType(TokOpAnd);
                 return;
             case '|':
-                tok.setType(TOK_OP_OR);
+                tok.setType(TokOpOr);
                 return;
             case '!':
             case '~':
-                tok.setType(TOK_OP_NOT);
+                tok.setType(TokOpNot);
                 return;
             case '=':
-                tok.setType(TOK_EQ);
+                tok.setType(TokOpEq);
                 return;
             case '<':
-                tok.setType(TOK_LT);
+                tok.setType(TokOpLt);
                 return;
             case '>':
-                tok.setType(TOK_GT);
+                tok.setType(TokOpGt);
                 return;
             case '.':
-                tok.setType(TOK_PERIOD);
+                tok.setType(TokSymPeriod);
                 return;
             case '{':
-                tok.setType(TOK_L_BRACE);
+                tok.setType(TokSymLBrace);
                 return;
             case '}':
-                tok.setType(TOK_R_BRACE);
+                tok.setType(TokSymRBrace);
                 return;
             case '[':
-                tok.setType(TOK_L_BRACKET);
+                tok.setType(TokSymLBracket);
                 return;
             case ']':
-                tok.setType(TOK_R_BRACKET);
+                tok.setType(TokSymRBracket);
                 return;
             case '(':
-                tok.setType(TOK_L_PAR);
+                tok.setType(TokSymLPar);
                 return;
             case ')':
-                tok.setType(TOK_R_PAR);
+                tok.setType(TokSymRPar);
                 return;
             case ',':
-                tok.setType(TOK_COMMA);
+                tok.setType(TokSymComma);
                 return;
             case ';':
-                tok.setType(TOK_SEMICOLON);
+                tok.setType(TokSymSemicolon);
                 return;
             default:
                 syntaxError("Unknown character parsed '", (char)ch, "'");
             }
         }
 
-        tok.setType(TOK_EOF);
+        tok.setType(TokEof);
     }
 
 }  // namespace Hack::Compiler::Analyzer

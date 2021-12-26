@@ -1,211 +1,211 @@
 <?xml version='1.0'?>
 <ClassList>
- <Class>
+ <RuleClass>
    <Keyword> class </Keyword>
    <Identifier> MethodBody </Identifier>
    <Symbol> { </Symbol>
-   <ClassDescription>
-     <Method>
-       <MethodSpecification>
+   <RuleClassDescription>
+     <RuleMethod>
+       <RuleMethodSpecification>
          <Keyword> method </Keyword>
-       </MethodSpecification>
-       <MethodReturnType>
-         <DataType>
+       </RuleMethodSpecification>
+       <RuleMethodReturnType>
+         <RuleDataType>
            <Identifier> boolean </Identifier>
-         </DataType>
-       </MethodReturnType>
+         </RuleDataType>
+       </RuleMethodReturnType>
        <Identifier> Body </Identifier>
        <Symbol> ( </Symbol>
-       <ParameterList>
-       </ParameterList>
+       <RuleParameterList>
+       </RuleParameterList>
        <Symbol> ) </Symbol>
-       <MethodBody>
+       <RuleMethodBody>
          <Symbol> { </Symbol>
-         <Body>
-           <Statement>
-             <LetStatement>
+         <RuleBody>
+           <RuleStatement>
+             <RuleLetStatement Subtype="SubtypeLetEqual">
                <Keyword> let </Keyword>
                <Identifier> v0 </Identifier>
                <Symbol> = </Symbol>
-               <Expression>
-                 <SingleExpression>
-                   <Term>
-                     <SimpleTerm>
+               <RuleExpression>
+                 <RuleSingleExpression Subtype="SubtypeTerm">
+                   <RuleTerm>
+                     <RuleSimpleTerm>
                        <Identifier> 1 </Identifier>
-                     </SimpleTerm>
-                   </Term>
-                 </SingleExpression>
-               </Expression>
+                     </RuleSimpleTerm>
+                   </RuleTerm>
+                 </RuleSingleExpression>
+               </RuleExpression>
                <Symbol> ; </Symbol>
-             </LetStatement>
-           </Statement>
-           <Statement>
-             <LetStatement>
+             </RuleLetStatement>
+           </RuleStatement>
+           <RuleStatement>
+             <RuleLetStatement Subtype="SubtypeLetEqual">
                <Keyword> let </Keyword>
                <Identifier> v0 </Identifier>
                <Symbol> = </Symbol>
-               <Expression>
-                 <SingleExpression>
-                   <Term>
-                     <SimpleTerm>
+               <RuleExpression>
+                 <RuleSingleExpression Subtype="SubtypeTerm">
+                   <RuleTerm>
+                     <RuleSimpleTerm>
                        <Identifier> v0 </Identifier>
-                     </SimpleTerm>
-                   </Term>
-                 </SingleExpression>
-                 <SingleExpression>
-                   <Operator>
+                     </RuleSimpleTerm>
+                   </RuleTerm>
+                 </RuleSingleExpression>
+                 <RuleSingleExpression Subtype="SubtypeOpTerm">
+                   <RuleOperator>
                      <Symbol> &gt; </Symbol>
-                   </Operator>
-                   <Term>
-                     <SimpleTerm>
+                   </RuleOperator>
+                   <RuleTerm>
+                     <RuleSimpleTerm>
                        <Identifier> 2 </Identifier>
-                     </SimpleTerm>
-                   </Term>
-                 </SingleExpression>
-               </Expression>
+                     </RuleSimpleTerm>
+                   </RuleTerm>
+                 </RuleSingleExpression>
+               </RuleExpression>
                <Symbol> ; </Symbol>
-             </LetStatement>
-           </Statement>
-           <Statement>
-             <LetStatement>
+             </RuleLetStatement>
+           </RuleStatement>
+           <RuleStatement>
+             <RuleLetStatement Subtype="SubtypeLetEqual">
                <Keyword> let </Keyword>
                <Identifier> v0 </Identifier>
                <Symbol> = </Symbol>
-               <Expression>
-                 <SingleExpression>
-                   <Term>
-                     <SimpleTerm>
+               <RuleExpression>
+                 <RuleSingleExpression Subtype="SubtypeTerm">
+                   <RuleTerm>
+                     <RuleSimpleTerm>
                        <Identifier> v0 </Identifier>
-                     </SimpleTerm>
-                   </Term>
-                 </SingleExpression>
-                 <SingleExpression>
-                   <Operator>
+                     </RuleSimpleTerm>
+                   </RuleTerm>
+                 </RuleSingleExpression>
+                 <RuleSingleExpression Subtype="SubtypeOpTerm">
+                   <RuleOperator>
                      <Symbol> &lt; </Symbol>
-                   </Operator>
-                   <Term>
-                     <SimpleTerm>
+                   </RuleOperator>
+                   <RuleTerm>
+                     <RuleSimpleTerm>
                        <Identifier> 2 </Identifier>
-                     </SimpleTerm>
-                   </Term>
-                 </SingleExpression>
-               </Expression>
+                     </RuleSimpleTerm>
+                   </RuleTerm>
+                 </RuleSingleExpression>
+               </RuleExpression>
                <Symbol> ; </Symbol>
-             </LetStatement>
-           </Statement>
-           <Statement>
-             <LetStatement>
+             </RuleLetStatement>
+           </RuleStatement>
+           <RuleStatement>
+             <RuleLetStatement Subtype="SubtypeLetEqual">
                <Keyword> let </Keyword>
                <Identifier> v0 </Identifier>
                <Symbol> = </Symbol>
-               <Expression>
-                 <SingleExpression>
-                   <Term>
-                     <SimpleTerm>
+               <RuleExpression>
+                 <RuleSingleExpression Subtype="SubtypeTerm">
+                   <RuleTerm>
+                     <RuleSimpleTerm>
                        <Identifier> v0 </Identifier>
-                     </SimpleTerm>
-                   </Term>
-                 </SingleExpression>
-                 <SingleExpression>
-                   <Operator>
+                     </RuleSimpleTerm>
+                   </RuleTerm>
+                 </RuleSingleExpression>
+                 <RuleSingleExpression Subtype="SubtypeOpTerm">
+                   <RuleOperator>
                      <Symbol> = </Symbol>
-                   </Operator>
-                   <Term>
-                     <SimpleTerm>
+                   </RuleOperator>
+                   <RuleTerm>
+                     <RuleSimpleTerm>
                        <Identifier> 2 </Identifier>
-                     </SimpleTerm>
-                   </Term>
-                 </SingleExpression>
-               </Expression>
+                     </RuleSimpleTerm>
+                   </RuleTerm>
+                 </RuleSingleExpression>
+               </RuleExpression>
                <Symbol> ; </Symbol>
-             </LetStatement>
-           </Statement>
-           <Statement>
-             <LetStatement>
+             </RuleLetStatement>
+           </RuleStatement>
+           <RuleStatement>
+             <RuleLetStatement Subtype="SubtypeLetArrayEqual">
                <Keyword> let </Keyword>
                <Identifier> v0 </Identifier>
                <Symbol> [ </Symbol>
-               <Expression>
-                 <SingleExpression>
-                   <Term>
-                     <SimpleTerm>
+               <RuleExpression>
+                 <RuleSingleExpression Subtype="SubtypeTerm">
+                   <RuleTerm>
+                     <RuleSimpleTerm>
                        <Identifier> 2 </Identifier>
-                     </SimpleTerm>
-                   </Term>
-                 </SingleExpression>
-                 <SingleExpression>
-                   <Operator>
+                     </RuleSimpleTerm>
+                   </RuleTerm>
+                 </RuleSingleExpression>
+                 <RuleSingleExpression Subtype="SubtypeOpTerm">
+                   <RuleOperator>
                      <Symbol> + </Symbol>
-                   </Operator>
-                   <Term>
-                     <SimpleTerm>
+                   </RuleOperator>
+                   <RuleTerm>
+                     <RuleSimpleTerm>
                        <Identifier> 10000 </Identifier>
-                     </SimpleTerm>
-                   </Term>
-                 </SingleExpression>
-               </Expression>
+                     </RuleSimpleTerm>
+                   </RuleTerm>
+                 </RuleSingleExpression>
+               </RuleExpression>
                <Symbol> ] </Symbol>
                <Symbol> = </Symbol>
-               <Expression>
-                 <SingleExpression>
-                   <Term>
-                     <SimpleTerm>
+               <RuleExpression>
+                 <RuleSingleExpression Subtype="SubtypeTerm">
+                   <RuleTerm>
+                     <RuleSimpleTerm>
                        <Identifier> 1 </Identifier>
-                     </SimpleTerm>
-                   </Term>
-                 </SingleExpression>
-               </Expression>
+                     </RuleSimpleTerm>
+                   </RuleTerm>
+                 </RuleSingleExpression>
+               </RuleExpression>
                <Symbol> ; </Symbol>
-             </LetStatement>
-           </Statement>
-           <Statement>
-             <DoStatement>
+             </RuleLetStatement>
+           </RuleStatement>
+           <RuleStatement>
+             <RuleDoStatement>
                <Keyword> do </Keyword>
-               <CallMethod>
+               <RuleCallMethod Subtype="SubtypeCallFunction">
                  <Identifier> a </Identifier>
                  <Symbol> ( </Symbol>
-                 <ExpressionList>
-                   <Expression>
-                     <SingleExpression>
-                       <Term>
-                         <ComplexTerm>
+                 <RuleExpressionList>
+                   <RuleExpression>
+                     <RuleSingleExpression Subtype="SubtypeTerm">
+                       <RuleTerm>
+                         <RuleComplexTerm Subtype="SubtypeArrayIndex">
                            <Identifier> v0 </Identifier>
                            <Symbol> [ </Symbol>
-                           <Expression>
-                             <SingleExpression>
-                               <Term>
-                                 <SimpleTerm>
+                           <RuleExpression>
+                             <RuleSingleExpression Subtype="SubtypeTerm">
+                               <RuleTerm>
+                                 <RuleSimpleTerm>
                                    <Identifier> 2 </Identifier>
-                                 </SimpleTerm>
-                               </Term>
-                             </SingleExpression>
-                             <SingleExpression>
-                               <Operator>
+                                 </RuleSimpleTerm>
+                               </RuleTerm>
+                             </RuleSingleExpression>
+                             <RuleSingleExpression Subtype="SubtypeOpTerm">
+                               <RuleOperator>
                                  <Symbol> + </Symbol>
-                               </Operator>
-                               <Term>
-                                 <SimpleTerm>
+                               </RuleOperator>
+                               <RuleTerm>
+                                 <RuleSimpleTerm>
                                    <Identifier> 10000 </Identifier>
-                                 </SimpleTerm>
-                               </Term>
-                             </SingleExpression>
-                           </Expression>
+                                 </RuleSimpleTerm>
+                               </RuleTerm>
+                             </RuleSingleExpression>
+                           </RuleExpression>
                            <Symbol> ] </Symbol>
-                         </ComplexTerm>
-                       </Term>
-                     </SingleExpression>
-                   </Expression>
-                 </ExpressionList>
+                         </RuleComplexTerm>
+                       </RuleTerm>
+                     </RuleSingleExpression>
+                   </RuleExpression>
+                 </RuleExpressionList>
                  <Symbol> ) </Symbol>
-               </CallMethod>
+               </RuleCallMethod>
                <Symbol> ; </Symbol>
-             </DoStatement>
-           </Statement>
-         </Body>
+             </RuleDoStatement>
+           </RuleStatement>
+         </RuleBody>
          <Symbol> } </Symbol>
-       </MethodBody>
-     </Method>
-   </ClassDescription>
+       </RuleMethodBody>
+     </RuleMethod>
+   </RuleClassDescription>
    <Symbol> } </Symbol>
- </Class>
+ </RuleClass>
 </ClassList>

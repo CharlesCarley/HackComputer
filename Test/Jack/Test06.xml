@@ -1,86 +1,86 @@
 <?xml version='1.0'?>
 <ClassList>
- <Class>
+ <RuleClass>
    <Keyword> class </Keyword>
    <Identifier> MethodBody </Identifier>
    <Symbol> { </Symbol>
-   <ClassDescription>
-     <Method>
-       <MethodSpecification>
+   <RuleClassDescription>
+     <RuleMethod>
+       <RuleMethodSpecification>
          <Keyword> method </Keyword>
-       </MethodSpecification>
-       <MethodReturnType>
-         <DataType>
+       </RuleMethodSpecification>
+       <RuleMethodReturnType>
+         <RuleDataType>
            <Identifier> boolean </Identifier>
-         </DataType>
-       </MethodReturnType>
+         </RuleDataType>
+       </RuleMethodReturnType>
        <Identifier> Body </Identifier>
        <Symbol> ( </Symbol>
-       <ParameterList>
-       </ParameterList>
+       <RuleParameterList>
+       </RuleParameterList>
        <Symbol> ) </Symbol>
-       <MethodBody>
+       <RuleMethodBody>
          <Symbol> { </Symbol>
-         <Body>
-           <Variable>
+         <RuleBody>
+           <RuleVariable>
              <Keyword> var </Keyword>
-             <DataType>
+             <RuleDataType>
                <Keyword> int </Keyword>
-             </DataType>
-             <IdentifierList>
+             </RuleDataType>
+             <RuleIdentifierList>
                <Identifier> v0 </Identifier>
-             </IdentifierList>
+             </RuleIdentifierList>
              <Symbol> ; </Symbol>
-           </Variable>
-           <Variable>
+           </RuleVariable>
+           <RuleVariable>
              <Keyword> var </Keyword>
-             <DataType>
+             <RuleDataType>
                <Keyword> char </Keyword>
-             </DataType>
-             <IdentifierList>
+             </RuleDataType>
+             <RuleIdentifierList>
                <Identifier> v1 </Identifier>
-             </IdentifierList>
+             </RuleIdentifierList>
              <Symbol> ; </Symbol>
-           </Variable>
-           <Variable>
+           </RuleVariable>
+           <RuleVariable>
              <Keyword> var </Keyword>
-             <DataType>
+             <RuleDataType>
                <Identifier> boolean </Identifier>
-             </DataType>
-             <IdentifierList>
+             </RuleDataType>
+             <RuleIdentifierList>
                <Identifier> v2 </Identifier>
-             </IdentifierList>
+             </RuleIdentifierList>
              <Symbol> ; </Symbol>
-           </Variable>
-           <Variable>
+           </RuleVariable>
+           <RuleVariable>
              <Keyword> var </Keyword>
-             <DataType>
+             <RuleDataType>
                <Identifier> MethodBody </Identifier>
-             </DataType>
-             <IdentifierList>
+             </RuleDataType>
+             <RuleIdentifierList>
                <Identifier> v3 </Identifier>
-             </IdentifierList>
+             </RuleIdentifierList>
              <Symbol> ; </Symbol>
-           </Variable>
-           <Variable>
+           </RuleVariable>
+           <RuleVariable>
              <Keyword> var </Keyword>
-             <DataType>
+             <RuleDataType>
                <Identifier> MethodBody </Identifier>
-             </DataType>
-             <IdentifierList>
+             </RuleDataType>
+             <RuleIdentifierList>
                <Identifier> v4 </Identifier>
                <Identifier> v5 </Identifier>
                <Identifier> v6 </Identifier>
                <Identifier> v7 </Identifier>
                <Identifier> v8 </Identifier>
-             </IdentifierList>
+             </RuleIdentifierList>
              <Symbol> ; </Symbol>
-           </Variable>
-         </Body>
+           </RuleVariable>
+         </RuleBody>
          <Symbol> } </Symbol>
-       </MethodBody>
-     </Method>
-   </ClassDescription>
+       </RuleMethodBody>
+     </RuleMethod>
+   </RuleClassDescription>
    <Symbol> } </Symbol>
- </Class>
+ </RuleClass>
 </ClassList>
