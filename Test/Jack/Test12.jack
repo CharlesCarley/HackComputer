@@ -1,0 +1,18 @@
+
+class Main {
+	static int a, b, c;
+
+	method int Access() {
+		return a + b;
+	}
+
+	method void main() {
+		let a = 0;
+		let b = 10;
+		let a = Main.Access();
+		let a = Main.Access();
+		let a = Main.Access();
+		let a = Main.Access();
+		return a;
+	}
+}

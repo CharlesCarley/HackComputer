@@ -25,7 +25,7 @@ namespace Hack::Compiler::CodeGenerator
 {
     Symbol::Symbol() :
         _type(-1),
-        _kind(-1),
+        _kind(None),
         _entry(-1)
     {
     }

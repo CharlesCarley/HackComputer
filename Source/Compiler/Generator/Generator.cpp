@@ -45,9 +45,9 @@ namespace Hack::Compiler::CodeGenerator
         delete _emitter;
     }
 
-    void Generator::pushIdentifier(const Node& simpleTerm) const
+    void Generator::pushIdentifier(const Node& constantIdentifier) const
     {
-        const String& value = simpleTerm.value();
+        const String& value = constantIdentifier.value();
 
         if (_locals->contains(value))
         {
@@ -56,17 +56,12 @@ namespace Hack::Compiler::CodeGenerator
                 _emitter->pushArgument(sym.entry());
             else if (sym.kind() == Local)
                 _emitter->pushLocal(sym.entry());
-            else if (sym.kind() == Static)
-                _emitter->pushStatic(sym.entry());
         }
         else if (_globals->contains(value))
         {
             const Symbol& sym = _globals->get(value);
             if (sym.kind() == Field)
-            {
-                _emitter->pushPointer();
                 _emitter->pushThis(sym.entry());
-            }
             else if (sym.kind() == Static)
                 _emitter->pushStatic(sym.entry());
         }
@@ -84,7 +79,7 @@ namespace Hack::Compiler::CodeGenerator
             _emitter->pushConstant(simpleTerm.value());
             break;
         case ConstantThis:
-            _emitter->pushArgument(0);
+            _emitter->pushThis(0);
             break;
         case ConstantNull:
         case ConstantFalse:
@@ -97,7 +92,7 @@ namespace Hack::Compiler::CodeGenerator
             pushIdentifier(simpleTerm);
             break;
         default:
-            throw InputException("unhandled constant ", (int)simpleTerm.type());
+            compileError(simpleTerm, "unhandled constant ", (int)simpleTerm.type());
         }
     }
 
@@ -112,7 +107,7 @@ namespace Hack::Compiler::CodeGenerator
             _emitter->symbolNot();
             break;
         default:
-            throw InputException("unknown unary operation type ", unary.type());
+            compileError(unary, "unknown unary operation type ", unary.type());
         }
     }
 
@@ -142,7 +137,7 @@ namespace Hack::Compiler::CodeGenerator
             _emitter->symbolEquals();
             break;
         default:
-            throw InputException("unknown operation type ", op.type());
+            compileError(op, "unknown operation type ", op.type());
         }
     }
 
@@ -165,9 +160,9 @@ namespace Hack::Compiler::CodeGenerator
             buildConstant(term0);
         else
         {
-            throw MessageException(
-                "expected simple term to "
-                "reduce to a constant");
+            compileError(term0,
+                         "expected simple term to "
+                         "reduce to a constant");
         }
     }
 
@@ -187,7 +182,11 @@ namespace Hack::Compiler::CodeGenerator
             buildCallMethod(complexTerm.child(0));
         else if (complexTerm.isSubtypeOf(SubtypeArrayIndex))
         {
-            //
+            buildConstant(complexTerm.child(0));
+            buildExpression(complexTerm.child(2));
+            _emitter->symbolAdd();
+            _emitter->popPointer(1);
+            _emitter->pushThat(0);
         }
     }
 
@@ -212,8 +211,8 @@ namespace Hack::Compiler::CodeGenerator
             else
             {
                 compileError(term0,
-                    "unknown terminal type, it should "
-                    "be either a simple or complex type");
+                             "unknown terminal type, it should "
+                             "be either a simple or complex type");
             }
         }
     }
@@ -234,19 +233,29 @@ namespace Hack::Compiler::CodeGenerator
 
             const Node& expression = statement.rule(3, RuleExpression);
 
-            if (_locals->contains(id))
+            const Symbol sym = lookup(id);
+            if (sym.isValid())
             {
-                const Symbol& sym = _locals->get(id);
-
                 buildExpression(expression);
-                _emitter->popLocal(sym.entry());
+                popSymbol(sym);
             }
             else
                 compileError(statement, "variable '", id, "' not found");
         }
         else if (statement.isSubtypeOf(SubtypeLetArrayEqual))
         {
-            // TODO
+            const Node& id = statement.rule(1, ConstantIdentifier);
+            pushIdentifier(id);
+
+            const Node& arrayExpr = statement.rule(3, RuleExpression);
+            buildExpression(arrayExpr);
+            _emitter->symbolAdd();  // base address offset
+            _emitter->popPointer(1);  // move the base address into the current pointer
+            
+            const Node& assign = statement.rule(6, RuleExpression);
+            buildExpression(assign);
+
+            _emitter->popThat(0);
         }
         else
         {
@@ -413,7 +422,7 @@ namespace Hack::Compiler::CodeGenerator
     void Generator::buildElseStatement(const Node& statement) const
     {
         if (_elseEnd.empty())
-            throw MessageException("else statement without matching if statement");
+            compileError(statement, "else statement without matching if statement");
 
         const Node& term2 = statement.rule(2, RuleStatementList);
         buildStatements(term2);
@@ -519,6 +528,36 @@ namespace Hack::Compiler::CodeGenerator
         }
     }
 
+    Symbol Generator::lookup(const String& name) const
+    {
+        if (_locals->contains(name))
+            return _locals->get(name);
+        if (_globals->contains(name))
+            return _globals->get(name);
+        return Symbol();
+    }
+
+    void Generator::popSymbol(const Symbol& symbol) const
+    {
+        switch (symbol.kind())
+        {
+        case Local:
+            _emitter->popLocal(symbol.entry());
+            break;
+        case Argument:
+            _emitter->popArgument(symbol.entry());
+            break;
+        case Field:
+            _emitter->popThis(symbol.entry());
+            break;
+        case Static:
+            _emitter->popStatic(symbol.entry());
+            break;
+        default:
+            break;
+        }
+    }
+
     void Generator::buildLocals(const Node& bodyNode,
                                 const Node& parameters) const
     {
@@ -581,10 +620,7 @@ namespace Hack::Compiler::CodeGenerator
 
             const uint16_t tot = (uint16_t)_locals->localCount();
 
-            if (methodSpec.isTypeOf(KeywordFunction))
-                _emitter->writeFunction(methodName.value(), tot);
-            else
-                _emitter->writeMethod(className, methodName.value(), tot);
+            _emitter->writeMethod(className, methodName.value(), tot);
 
             _hasReturn = false;
             buildStatements(body);
@@ -638,21 +674,29 @@ namespace Hack::Compiler::CodeGenerator
     {
         _emitter->initialize();
 
-        for (Node* firstChild : root->children())
+        try
         {
-            if (firstChild->isTypeOf(RuleClass))
+            for (Node* firstChild : root->children())
             {
-                buildClass(firstChild);
+                if (firstChild->isTypeOf(RuleClass))
+                    buildClass(firstChild);
             }
+        }
+        catch (Exception& ex)
+        {
+            compileError(*root, "compilation failed\n", ex.what());
         }
 
         _emitter->finalize();
     }
 
-    void Generator::compile(const Node *node)
+    void Generator::compile(const Node* tree)
     {
-        _fileName = node->filename();
-        parseImpl(node);
+        if (!tree)
+            throw InvalidPointer();
+
+        _fileName = tree->filename();
+        parseImpl(tree);
     }
 
     void Generator::write(const String& file) const
@@ -661,9 +705,12 @@ namespace Hack::Compiler::CodeGenerator
         path      = absolute(path);
 
         std::ofstream stream(path);
+
         if (!stream.is_open())
+        {
             throw InputException("failed to open the output file ",
                                  path.string());
+        }
 
         write(stream);
     }

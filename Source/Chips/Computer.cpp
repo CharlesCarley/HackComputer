@@ -65,7 +65,7 @@ namespace Hack::Chips
         {
             _cpu->clear();
             _ram->zero();
-            _ram->setValue(0, 256);
+            _ram->setValue(0, (uint16_t)Memory::StackAddress);
             _cpuState = NullState;
             Timer::reset();
         }
@@ -78,7 +78,6 @@ namespace Hack::Chips
             _rom->lock(true);
 
             // Save the current CPU state
-
             _cpuState.pc     = _cpu->getNext();
             _cpuState.addrM  = _cpu->getAddress();
             _cpuState.outM   = _cpu->getOut();

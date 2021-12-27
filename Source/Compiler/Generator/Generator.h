@@ -20,6 +20,7 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
+#include "Symbol.h"
 #include "Compiler/Common/Node.h"
 #include "Compiler/Common/Tree.h"
 #include "Utils/Exception.h"
@@ -56,6 +57,10 @@ namespace Hack::Compiler::CodeGenerator
         mutable bool   _hasReturn;
         mutable String _elseEnd;
 
+        Symbol lookup(const String& name) const;
+
+        void   popSymbol(const Symbol& symbol) const;
+
         void buildClass(Node* node) const;
 
         void buildGlobals(const Node& classDescription) const;
@@ -64,7 +69,7 @@ namespace Hack::Compiler::CodeGenerator
 
         void buildLocals(const Node& bodyNode, const Node& parameters) const;
 
-        void pushIdentifier(const Node& simpleTerm) const;
+        void pushIdentifier(const Node& constantIdentifier) const;
 
         void buildConstant(const Node& simpleTerm) const;
 

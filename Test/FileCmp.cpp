@@ -28,13 +28,11 @@ void CompareFiles(const Hack::String& a, const Hack::String& b)
     std::ifstream if0(a);
     std::ifstream if1(b);
 
-    Hack::String r0, r1;
+    char r0, r1;
     while (if1 >> r1)
     {
         if0 >> r0;
-        EXPECT_EQ(r0, r1);
-
-        r0.clear();
-        r1.clear();
+        EXPECT_EQ((int)r0, (int)r1);
+        EXPECT_EQ(if0.tellg(), if1.tellg());
     }
 }

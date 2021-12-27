@@ -26,6 +26,7 @@ namespace Hack::Compiler::CodeGenerator
 {
     enum SymbolKind
     {
+        None=-1,
         Field,
         Static,
         Local,
@@ -62,6 +63,8 @@ namespace Hack::Compiler::CodeGenerator
         void kind(const int8_t&);
 
         void entry(const size_t&);
+
+        bool isValid() const;
     };
 
     inline const String& Symbol::name() const
@@ -102,6 +105,11 @@ namespace Hack::Compiler::CodeGenerator
     inline void Symbol::entry(const size_t& value)
     {
         _entry = value;
+    }
+
+    inline bool Symbol::isValid() const
+    {
+        return _type >= 0 && _kind != None;
     }
 
 }  // namespace Hack::Compiler::CodeGenerator

@@ -95,6 +95,38 @@ namespace Hack::Compiler::CodeGenerator
         write("pop local ", idx);
     }
 
+    void VmEmitter::popArgument(const size_t& idx)
+    {
+        write("pop argument ", idx);
+    }
+
+    void VmEmitter::popTemp(const size_t& idx)
+    {
+        write("pop temp ", idx);
+    }
+
+    void VmEmitter::popThis(const size_t& idx)
+    {
+        write("pop this ", idx);
+    }
+
+    void VmEmitter::popThat(const size_t& idx)
+    {
+        write("pop that ", idx);
+    }
+
+    void VmEmitter::popPointer(const size_t& idx)
+    {
+        if (idx > 2)
+            throw Exception("pop pointer can be 0 or 1");
+        write("pop pointer ", idx);
+    }
+
+    void VmEmitter::popStatic(const size_t& idx)
+    {
+        write("pop static ", idx);
+    }
+
     void VmEmitter::pushLocal(const size_t& idx)
     {
         write("push local ", idx);
@@ -104,12 +136,6 @@ namespace Hack::Compiler::CodeGenerator
     {
         write("push argument ", idx);
     }
-
-    void VmEmitter::pushStatic(const size_t& idx)
-    {
-        write("push argument ", idx);
-    }
-
     void VmEmitter::pushThis(const size_t& idx)
     {
         write("push this ", idx);
@@ -120,11 +146,24 @@ namespace Hack::Compiler::CodeGenerator
         write("push that ", idx);
     }
 
-    void VmEmitter::pushPointer()
+    void VmEmitter::pushPointer(const size_t& idx)
     {
-        write("push pointer 0");
+        if (idx > 2)
+            throw Exception("push pointer can be 0 or 1");
+
+        write("push pointer ", idx);
     }
 
+    void VmEmitter::pushStatic(const size_t& idx)
+    {
+        write("push static ", idx);
+    }
+
+    void VmEmitter::pushTemp(const size_t& idx)
+    {
+        write("push temp ", idx);
+    }
+    
     void VmEmitter::writeReturn()
     {
         write("return");

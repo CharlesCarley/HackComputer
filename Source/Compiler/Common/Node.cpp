@@ -75,7 +75,9 @@ namespace Hack::Compiler
                 return *node;
         }
 
-        throw InputException("The filter check on the node ", this->_type, " failed");
+        throw InputException("the filter check on the node ",
+                             NodeUtils::string(_type),
+                             " failed");
     }
 
     void Node::filter(NodeArray& dest, const int8_t symbolId) const
@@ -125,7 +127,7 @@ namespace Hack::Compiler
             return *node;
         }
 
-        throw InputException("The child index(", idx, ") is out of bounds");
+        throw InputException("the child index(", idx, ") is out of bounds");
     }
 
     void Node::insert(Node* node)
@@ -137,12 +139,17 @@ namespace Hack::Compiler
         node->_parent = this;
     }
 
-    void Node::insert(const int8_t type, const String& data, const String& fileName, size_t line)
+    void Node::insert(const int8_t  type,
+                      const String& data,
+                      const String& fileName,
+                      const size_t  line)
     {
         insert(new Node(type, data, fileName, line));
     }
 
-    void Node::insert(int8_t type, const String& fileName, size_t line)
+    void Node::insert(const int8_t  type,
+                      const String& fileName,
+                      const size_t  line)
     {
         insert(new Node(type, fileName, line));
     }

@@ -58,33 +58,33 @@ namespace Hack::VirtualMachine
 
         void pushConstant(const int& idx);
 
-        void pushLocal(const int& idx);
+        void pushLocal(const size_t& idx);
 
-        void pushArgument(const int& idx);
+        void pushArgument(const size_t& idx);
 
-        void pushThis(const int& idx);
+        void pushThis(const size_t& idx);
 
-        void pushThat(const int& idx);
+        void pushThat(const size_t& idx);
 
-        void pushStatic(const String& context, const int& idx);
+        void pushStatic(const String& context, const size_t& idx);
 
-        void pushTemp(const int& idx);
+        void pushTemp(const size_t& idx);
 
-        void pushPointer(const int& idx);
+        void pushPointer(const size_t& idx);
 
-        void popLocal(const int& idx);
+        void popLocal(const size_t& idx);
 
-        void popThis(const int& idx);
+        void popThis(const size_t& idx);
 
-        void popThat(const int& idx);
+        void popThat(const size_t& idx);
 
-        void popTemp(const int& idx);
+        void popTemp(const size_t& idx);
 
-        void popPointer(const int& idx);
+        void popPointer(const size_t& idx);
 
-        void popArgument(const int& idx);
+        void popArgument(const size_t& idx);
 
-        void popStatic(const String& context, const int& idx);
+        void popStatic(const String& context, const size_t& idx);
 
         void writeOr();
 

@@ -1,0 +1,41 @@
+
+class Main {
+	static int ram;
+	static int exit;
+
+	function void init() {
+		let ram = 16383;
+		let exit = 1;
+		return;
+	}
+
+	function int get(int address) {
+
+		return ram[address];
+	}
+
+	function void set(int address, int value) {
+		let ram = 16383;
+		let ram[address] = value;
+		return;
+	}
+
+	function void main() {
+		var int j, b;
+
+		do Main.init();
+
+		let j = 256;
+		let b = 0;
+		while ( exit = 1 ) {
+			while (j < 4096)
+			{
+				do Main.set(j, b);
+				let j = j + 1;
+			}
+			let b = !b;
+			let j = 0;
+		}
+		return Main.get(0);
+	}
+}

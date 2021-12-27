@@ -67,7 +67,7 @@ namespace Hack::Compiler
             _out << std::setw((size_t)(_indent - 1)) << ' ';
             _out << '<'
                  << name
-                 << "Line=\""
+                 << " Line=\""
                  << node->line()
                  << "\">"
                  << value;

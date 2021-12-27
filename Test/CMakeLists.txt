@@ -27,11 +27,7 @@ set_group(TestTarget_Data
     TestFiles/Inline:*.inl
     TestFiles/Assembler/ASM:Assembler/*.asm
     TestFiles/Assembler/Cmp:Assembler/*.cmp
-    TestFiles/ROM/ASM:Rom/*.asm
-    TestFiles/VM/Cmp:VM/*.cmp
-    TestFiles/VM/ASM:VM/*.asm
-    TestFiles/VM/VM:VM/*.vm
-    TestFiles/Jack/Cmp:Jack/*.xml
+    TestFiles/VM/:VM/*.vm
     TestFiles/Jack/Jack:Jack/*.jack
 )
 
@@ -49,27 +45,15 @@ if (Hack_TEST_REGEN_CMP)
         Jack/Test09.jack
         Jack/Test10.jack
         Jack/Test11.jack
+        Jack/Test12.jack
+        Jack/Test13.jack
     )
 
     if (Jack2Svg_ENABLED)
         jack_to_svg(Parse_Trees ${Jack_FILES})
     endif()
 
-    jack_to_xml(XML_Trees ${Jack_FILES})
 else()
-    set(XML_Trees 
-        Jack/Test01.xml
-        Jack/Test02.xml
-        Jack/Test03.xml
-        Jack/Test04.xml
-        Jack/Test05.xml
-        Jack/Test06.xml
-        Jack/Test07.xml
-        Jack/Test08.xml
-        Jack/Test09.xml
-        Jack/Test10.xml
-    )
-
     set(Parse_Trees 
         Jack/Test01.svg
         Jack/Test02.svg
@@ -81,21 +65,21 @@ else()
         Jack/Test08.svg
         Jack/Test09.svg
         Jack/Test10.svg
+        Jack/Test11.svg
+        Jack/Test12.svg
+        Jack/Test13.svg
     )
 endif()
 
 source_group("Reference\\SVG" FILES  ${Parse_Trees})
-source_group("Reference\\XML" FILES  ${XML_Trees})
 
 set(TestTarget_SOURCE
     FileCmp.h
     FileCmp.cpp
     Test1.cpp
     Test2.cpp
-    Test3.cpp
     Test4.cpp
     Test5.cpp
-    ${XML_Trees}
     ${Parse_Trees}
     ${TestTarget_Data}
 )

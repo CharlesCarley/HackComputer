@@ -1,0 +1,18 @@
+call Main.main 0
+goto LZNp47LqY6EGKfwbpWJU
+function Main.init 0
+push constant 2048
+pop static 0
+push this 0
+return
+function Main.peek 0
+push static 0
+push argument 0
+add
+return
+function Main.main 0
+call Main.init 0
+push constant 52
+call Main.peek 1
+return
+label LZNp47LqY6EGKfwbpWJU

@@ -105,14 +105,14 @@ namespace Hack::Chips
 #endif
         }
 
-        uint16_t* pointer(const int& address) const
+        uint16_t* pointer(const size_t& address) const
         {
             if (address < Max)
                 return &_ram[address];
             return nullptr;
         }
 
-        void setValue(const int& address, uint16_t v) const
+        void setValue(const size_t& address, const uint16_t v) const
         {
             if (address < Max)
                 _ram[address] = _ram[address + High] = v;

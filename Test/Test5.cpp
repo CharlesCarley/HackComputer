@@ -25,8 +25,8 @@
 #include "Compiler/Analyzer/Parser.h"
 #include "Compiler/Analyzer/Scanner.h"
 #include "Compiler/Generator/Generator.h"
-#include "FileCmp.h"
 #include "TestDirectory.h"
+#include "FileCmp.h"
 #include "VirtualMachine/Parser.h"
 #include "gtest/gtest.h"
 
@@ -34,29 +34,6 @@ using namespace Hack;
 using namespace Compiler::Analyzer;
 
 constexpr size_t NullIdx = (size_t)-1;
-
-GTEST_TEST(Analyzer, GrammarClass)
-{
-    String testFiles[] = {
-        "Test02",
-        "Test03",
-        "Test04",
-        "Test05",
-        "Test06",
-        "Test07",
-        "Test08",
-        "Test09",
-        "Test10",
-    };
-
-    for (String& f : testFiles)
-    {
-        Parser psr;
-        psr.parse(GetTestFilePath("Jack/" + f + ".jack"));
-        psr.write(GetOutFilePath("" + f));
-        CompareFiles(GetTestFilePath("Jack/" + f + ".xml"), GetOutFilePath("" + f));
-    }
-}
 
 void GeneratorTestFile(Chips::Computer& comp, const String& baseName)
 {
@@ -122,6 +99,25 @@ GTEST_TEST(Generator, While)
     EXPECT_EQ(code, 20);
 }
 
+GTEST_TEST(Generator, StaticFields)
+{
+    Chips::Computer computer;
+    GeneratorTestFile(computer, "Test12");
+
+    Chips::Memory* memory = computer.memory();
+    uint16_t       code   = memory->get(VirtualMachine::STP);
+    EXPECT_EQ(code, 257);
+
+    code = memory->get(256);
+    EXPECT_EQ(code, 40);
+    code = memory->get(16);
+    EXPECT_EQ(code, 40);
+    code = memory->get(17);
+    EXPECT_EQ(code, 10);
+}
+
+
+
 GTEST_TEST(Analyzer, TokenTest)
 {
     Scanner scn;
@@ -180,8 +176,8 @@ GTEST_TEST(Analyzer, TokenTest)
         TokEof,
     };
 
-    std::ifstream fs(GetTestFilePath("Jack/Scan.jack"));
-    scn.attach(&fs, GetTestFilePath("Jack/Scan.jack"));
+    std::ifstream fs(GetTestFilePath("Jack/Scan.in"));
+    scn.attach(&fs, GetTestFilePath("Jack/Scan.in"));
 
     String expString[] = {
         "0",
@@ -219,5 +215,9 @@ GTEST_TEST(Analyzer, ParserTest)
 {
     Parser psr;
     psr.parse(GetTestFilePath("Jack/Test01.jack"));
-    psr.write(GetTestFilePath("Jack/Test01.xml"));
+    psr.write(GetOutFilePath("Test01.xml"));
+
+
+    CompareFiles(GetOutFilePath("Test01.xml"),
+                 GetTestFilePath("Jack/Test01.cmp"));
 }

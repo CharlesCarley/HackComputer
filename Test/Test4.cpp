@@ -34,16 +34,12 @@ using namespace Hack;
 void VirtualMachineTestStack(Chips::Computer& comp, const String& baseName, bool compare = false)
 {
     const String fNameSrc = GetTestFilePath("VM/" + baseName + ".vm");
-    const String fNameCmp = GetTestFilePath("VM/" + baseName + ".asm");
-    const String fNameOut = GetOutFilePath("" + baseName + ".ans");
+    const String fNameOut = GetOutFilePath("" + baseName + ".asm");
 
     VirtualMachine::Parser psr;
 
     psr.parse(fNameSrc);
     psr.write(fNameOut);
-
-    if (compare)
-        CompareFiles(fNameCmp, fNameOut);
 
     Assembler::Parser loader;
     loader.parse(fNameOut);
@@ -62,7 +58,6 @@ void VirtualMachineTestStack(Chips::Computer& comp, const String& baseName, bool
         // ticks 0, 1
         comp.update(false);
         comp.update(true);
-
         st = comp.state();
     }
 }

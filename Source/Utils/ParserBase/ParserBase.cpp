@@ -87,10 +87,17 @@ namespace Hack
         parseImpl(is);
     }
 
-    void ParserBase::parse(IStream& is)
+    void ParserBase::parse(IStream& is, const String& file)
     {
         // save some relatively unique name for the file
-        _file     = "MemoryStream." + Char::toHexString((size_t)this);
+        if (file.empty())
+        {
+            String ex;
+            StringUtils::scramble(ex, (size_t)this);
+            _file = StringCombine("MemoryStream", '.', ex);
+        }
+        else
+            _file = file;
         _filePath = _file;
 
         parseImpl(is);

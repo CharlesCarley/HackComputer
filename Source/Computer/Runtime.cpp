@@ -126,7 +126,7 @@ namespace Hack::Computer
             if (!computer)
                 throw Exception("computer is null");
 
-            Memory* mem = computer->getRam();
+            Memory* mem = computer->memory();
             if (!mem)
                 throw Exception("computer memory is null");
 

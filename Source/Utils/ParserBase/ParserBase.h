@@ -69,7 +69,7 @@ namespace Hack
 
         void parse(const String& file);
 
-        void parse(IStream& is);
+        void parse(IStream& is, const String& file = "");
 
         void write(const String& file, int format = 0);
 

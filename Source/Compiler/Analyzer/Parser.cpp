@@ -861,7 +861,7 @@ namespace Hack::Compiler::Analyzer
         else if (t0 != TokSymRBracket && t0 != TokSymSemicolon && t0 != TokSymRPar)
         {
             // if it's not an exit from this rule, then it's an error.
-            parseError("expected unary term, operator term or a term");
+            parseError("expected unary term, operator term, a term or a semicolon");
         }
     }
 

@@ -25,6 +25,8 @@ namespace Hack::Chips
 {
     const int Memory::MaxAddress    = Ram16K::HighAddress + Screen::HighAddress;
     const int Memory::ScreenAddress = Ram16K::HighAddress;
+    const int Memory::StackAddress  = 256;
+    const int Memory::HeapAddress   = 2048;
 
     Memory::Memory() :
         _in(0),
@@ -53,9 +55,9 @@ namespace Hack::Chips
             _address = v;
     }
 
-    void Memory::setValue(const int& index, const uint16_t& v) const
+    void Memory::setValue(const size_t& index, const uint16_t& v) const
     {
-        if (index < MaxAddress && index >= 0)
+        if (index < MaxAddress)
         {
             if (index < ScreenAddress)
                 _ram16->setValue(index, v);

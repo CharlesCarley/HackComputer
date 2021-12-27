@@ -81,6 +81,10 @@ namespace Hack::Compiler::CodeGenerator
 
     void SymbolTable::clear()
     {
+        _argument = 0;
+        _field    = 0;
+        _local    = 0;
+        _static   = 0;
         _symbols.clear();
     }
 

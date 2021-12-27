@@ -50,7 +50,7 @@ namespace Hack::VirtualMachine
             write('@', value);
         }
 
-        void atAddressOf(const int& index) const
+        void atAddressOf(const size_t& index) const
         {
             write('@', index);
         }
@@ -94,6 +94,8 @@ namespace Hack::VirtualMachine
         }
 
 #ifdef ZERO_M
+
+
         void clearSwap() const
         {
             atAddressOf(SW0);
@@ -132,7 +134,7 @@ namespace Hack::VirtualMachine
             write("M=M+1\nA=M-1");
         }
 
-        void dereferenceOffset(int x0, int offs) const
+        void dereferenceOffset(int x0, size_t offs) const
         {
             //  A= RAM[x0] + offs
             atAddressOf(offs);
@@ -141,7 +143,7 @@ namespace Hack::VirtualMachine
             write("A=D+M");
         }
 
-        void offsetTo(const int x0, const int offs) const
+        void offsetTo(const int x0, const size_t offs) const
         {
             atAddressOf(offs);
             write("D=A");
@@ -356,7 +358,7 @@ namespace Hack::VirtualMachine
             write("A=D;JMP");
         }
 
-        void popSegment(const int& seg0, const int& idx) const
+        void popSegment(const int& seg0, const size_t& idx) const
         {
             dereferenceOffset(seg0, idx);
             moveAIntoD();
@@ -366,8 +368,9 @@ namespace Hack::VirtualMachine
             jumpToAddressIn(SW0);
             moveDIntoM();
             decrement();
-            atAddressOf(SW0);
-            setM(false);
+#ifdef ZERO_M
+            move(SW0, 0);
+#endif
         }
 
         void compareDIntoX(const int& x0, const int& m0, const int& value) const
@@ -418,7 +421,7 @@ namespace Hack::VirtualMachine
         w.push(idx);
     }
 
-    void Emitter::pushLocal(const int& idx)
+    void Emitter::pushLocal(const size_t& idx)
     {
         const CodeStream w(&_stream);
 
@@ -439,7 +442,7 @@ namespace Hack::VirtualMachine
 #endif
     }
 
-    void Emitter::pushThis(const int& idx)
+    void Emitter::pushThis(const size_t& idx)
     {
         const CodeStream w(&_stream);
 #ifdef GUARD_PUSH
@@ -458,7 +461,7 @@ namespace Hack::VirtualMachine
 #endif
     }
 
-    void Emitter::pushThat(const int& idx)
+    void Emitter::pushThat(const size_t& idx)
     {
         const CodeStream w(&_stream);
 #ifdef GUARD_PUSH
@@ -477,7 +480,7 @@ namespace Hack::VirtualMachine
 #endif
     }
 
-    void Emitter::pushTemp(const int& idx)
+    void Emitter::pushTemp(const size_t& idx)
     {
         const CodeStream w(&_stream);
         w.offsetTo(TMP, idx);
@@ -485,7 +488,7 @@ namespace Hack::VirtualMachine
         w.pushD();
     }
 
-    void Emitter::pushArgument(const int& idx)
+    void Emitter::pushArgument(const size_t& idx)
     {
         const CodeStream w(&_stream);
 #ifdef GUARD_PUSH
@@ -504,8 +507,15 @@ namespace Hack::VirtualMachine
 #endif
     }
 
-    void Emitter::pushPointer(const int& idx)
+    void Emitter::pushPointer(const size_t& idx)
     {
+        if (idx > 2)
+        {
+            throw InputException("pop pointer index (", idx,
+                                 ") out of bounds. "
+                                 "expected [0-1]");
+        }
+
         const CodeStream w(&_stream);
 #ifdef GUARD_PUSH
         String whenDone;
@@ -524,7 +534,7 @@ namespace Hack::VirtualMachine
 #endif
     }
 
-    void Emitter::pushStatic(const String& context, const int& idx)
+    void Emitter::pushStatic(const String& context, const size_t& idx)
     {
         const String     loc = StringCombine(context, '.', idx);
         const CodeStream w(&_stream);
@@ -535,19 +545,19 @@ namespace Hack::VirtualMachine
         w.moveDIntoM();
     }
 
-    void Emitter::popLocal(const int& idx)
+    void Emitter::popLocal(const size_t& idx)
     {
         const CodeStream w(&_stream);
         w.popSegment(LCL, idx);
     }
 
-    void Emitter::popArgument(const int& idx)
+    void Emitter::popArgument(const size_t& idx)
     {
         const CodeStream w(&_stream);
         w.popSegment(ARG, idx);
     }
 
-    void Emitter::popStatic(const String& context, const int& idx)
+    void Emitter::popStatic(const String& context, const size_t& idx)
     {
         const String staticLabel = StringCombine(context, '.', idx);
 
@@ -559,19 +569,19 @@ namespace Hack::VirtualMachine
         w.decrement();
     }
 
-    void Emitter::popThis(const int& idx)
+    void Emitter::popThis(const size_t& idx)
     {
         const CodeStream w(&_stream);
         w.popSegment(THS, idx);
     }
 
-    void Emitter::popThat(const int& idx)
+    void Emitter::popThat(const size_t& idx)
     {
         const CodeStream w(&_stream);
         w.popSegment(THT, idx);
     }
 
-    void Emitter::popTemp(const int& idx)
+    void Emitter::popTemp(const size_t& idx)
     {
         if (idx > 7)
         {
@@ -589,23 +599,24 @@ namespace Hack::VirtualMachine
         w.moveDIntoM();
         w.decrement();
 #ifdef ZERO_M
-        w.clearSwap();
+        w.move(SW0, 0);
 #endif
     }
 
-    void Emitter::popPointer(const int& idx)
+    void Emitter::popPointer(const size_t& idx)
     {
+        if (idx > 2)
+        {
+            throw InputException("pop pointer index (", idx,
+                                 ") out of bounds. "
+                                 "expected [0-1]");
+        }
+
         const CodeStream w(&_stream);
-        w.offsetTo(THS, idx);
-        w.moveDIntoX(SW0);
         w.jumpStackTop();
         w.moveMIntoD();
-        w.jumpToAddressIn(SW0);
-        w.moveDIntoM();
+        w.moveDIntoX(idx == 0 ? THS : THT);
         w.decrement();
-#ifdef ZERO_M
-        w.clearSwap();
-#endif
     }
 
     void Emitter::writeOr()

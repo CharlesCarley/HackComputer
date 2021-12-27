@@ -32,6 +32,9 @@ namespace Hack::Chips
     public:
         static const int MaxAddress;
         static const int ScreenAddress;
+        static const int StackAddress;
+        static const int HeapAddress;
+        static const int ExtensionAddress;
 
     private:
         void evaluate() override;
@@ -53,7 +56,7 @@ namespace Hack::Chips
 
         void setAddress(const uint16_t& v);
 
-        void setValue(const int& index, const uint16_t& v) const;
+        void setValue(const size_t& index, const uint16_t& v) const;
 
         void setLoad(bool v);
 

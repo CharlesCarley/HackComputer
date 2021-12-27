@@ -279,7 +279,7 @@ namespace Hack::Computer
         for (int i = 0; i < Chips::Memory::MaxAddress; ++i)
         {
             const uint16_t v = mem->get(i);
-            if (v != 0 || (i >= 256 && i <= stp))
+            if (v != 0 || (i >= 256 && i < stp) || i< 16)
             {
                 oss << '|';
                 oss << std::right << std::setw(7) << i;
