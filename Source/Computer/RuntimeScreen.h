@@ -19,36 +19,45 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
+#ifdef USE_SDL
 #pragma once
 #include "Chips/Screen.h"
-#include "Computer/RuntimeInterface.h"
+#include "SDL.h"
 
-namespace Hack::Computer
+namespace Hack::Chips
 {
-    class DebugRuntimePrivate;
-
-    class DebugRuntime final : public RuntimeInterface
+    class RuntimeScreen final : public Screen
     {
     private:
-        DebugRuntimePrivate* _private;
+        uint16_t*    _ram;
+        SDL_Texture* _texture;
+        uint8_t*     _pixels;
+        size_t       _pitch;
 
     public:
-        DebugRuntime();
+        RuntimeScreen();
 
-        ~DebugRuntime() override;
+        ~RuntimeScreen() override;
 
-        bool shouldUpdate() override;
+        uint16_t get(const size_t& i) const override;
 
-        void initialize(Chips::Computer* computer, Chips::Screen*) const override;
+        uint16_t* pointer(const size_t& address) const override;
 
-        bool exitRequest() const override;
+        void setValue(const size_t& address, const uint16_t& v) const override;
 
-        void processEvents(Chips::Computer* computer) const override;
+        void zero() const override;
 
-        void flushMemory(Chips::Computer* computer) const override;
+        SDL_Texture* createBuffer(SDL_Renderer* renderer);
 
-        void update(Chips::Computer* computer) const override;
+        void lockScreen() override;
+        void flush() const;
+        void unlockScreen() override;
 
+    protected:
+
+
+        void evaluate() override;
     };
 
-}  // namespace Hack::Computer
+}  // namespace Hack::Chips
+#endif

@@ -32,6 +32,7 @@ set(Target_HDR
     Clock.h
     Computer.h
     CPU.h
+    DefaultMemorySegment.h
     DFlipFlop.h
     DMux.h
     DMux4Way.h
@@ -39,6 +40,7 @@ set(Target_HDR
     FullAdder.h
     HalfAdder.h
     Inc16.h
+    IMemorySegment.h
     Memory.h
     Mux.h
     Mux16.h
@@ -106,6 +108,7 @@ set(Target_SRC
     Ram8.cpp
     Register.cpp
     Rom32.cpp
+    Screen.cpp
     SRLatch.cpp
     Timer.cpp
     XOr.cpp

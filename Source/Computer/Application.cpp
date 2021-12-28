@@ -28,6 +28,7 @@
 #include "Compiler/Generator/Generator.h"
 #include "Computer/CommandRuntime.h"
 #include "Computer/DebugRuntime.h"
+#include "Computer/RuntimeScreen.h"
 #include "Utils/CommandLine/Parser.h"
 #include "Utils/Exception.h"
 #include "Utils/FileSystem.h"
@@ -39,9 +40,15 @@
 
 namespace Hack::Computer
 {
+    using Clock = std::chrono::high_resolution_clock;
+    using Time  = std::chrono::time_point<Clock, Clock::duration>;
+
     using Instructions = Assembler::Parser::Instructions;
     using Cmd          = CommandLine::Parser;
     using CmdSwitch    = CommandLine::Switch;
+    using AsmParser    = Assembler::Parser;
+    using VmParser     = VirtualMachine::Parser;
+    using CodeGen      = Compiler::CodeGenerator::Generator;
 
     enum Options
     {
@@ -123,8 +130,43 @@ namespace Hack::Computer
         },
     };
 
+    class Application
+    {
+    private:
+        Chips::Computer*  _computer;
+        Chips::Screen*    _screen;
+        RuntimeInterface* _runtime;
+        String            _input;
+        bool              _trace;
+        bool              _showVm;
+        bool              _showAsm;
+        bool              _showMc;
+        bool              _showPt;
+
+        void load() const;
+
+        static void trace(Chips::Computer* computer);
+
+        void assemble(AsmParser& assembler) const;
+
+        void generate(VmParser& emitter) const;
+
+        void compile(CodeGen& compiler) const;
+
+        void setupScreen();
+
+    public:
+        Application();
+        ~Application();
+
+        bool parse(int argc, char** argv);
+
+        int go();
+    };
+
     Application::Application() :
         _computer(new Chips::Computer()),
+        _screen(nullptr),
         _runtime(nullptr),
         _trace(false),
         _showVm(false),
@@ -182,7 +224,39 @@ namespace Hack::Computer
         return true;
     }
 
-    void Application::assemble(Assembler::Parser& assembler) const
+    void Application::trace(Chips::Computer* computer)
+    {
+        Chips::Memory*     mem = computer->memory();
+        OutputStringStream oss;
+
+        oss << "| Index |  Value   |" << std::endl;
+        oss << "|------:|---------:|" << std::endl;
+
+        const int& stp = (int)mem->get(0);
+
+        for (uint16_t i = 0; i < Chips::Memory::MaxAddress; ++i)
+        {
+            const uint16_t v = mem->get(i);
+
+            bool dumpIt = v != 0 || i >= 256 && i < stp || i < 16;
+
+            if (dumpIt && v >= 0x4000 && v <= 0x6000)
+                dumpIt = false;
+
+            if (dumpIt)
+            {
+                oss << '|';
+                oss << std::right << std::setw(7) << i;
+                oss << '|';
+                oss << std::setw(10) << (int16_t)v;
+                oss << '|';
+                oss << std::endl;
+            }
+        }
+        Console::write(oss.str());
+    }
+
+    void Application::assemble(AsmParser& assembler) const
     {
         const Instructions& instructions = assembler.instructions();
 
@@ -192,12 +266,12 @@ namespace Hack::Computer
         _computer->load(instructions.data(), instructions.size());
     }
 
-    void Application::generate(VirtualMachine::Parser& emitter) const
+    void Application::generate(VmParser& emitter) const
     {
         StringStream input;
         emitter.write(input);
 
-        Assembler::Parser assembler;
+        AsmParser assembler;
         assembler.parse(input);
 
         if (_showMc)
@@ -206,8 +280,7 @@ namespace Hack::Computer
         assemble(assembler);
     }
 
-    void Application::compile(
-        Compiler::CodeGenerator::Generator& compiler) const
+    void Application::compile(CodeGen& compiler) const
     {
         StringStream input;
         compiler.write(input);
@@ -265,45 +338,29 @@ namespace Hack::Computer
         }
     }
 
-    void Application::trace(Chips::Computer* computer)
+    void Application::setupScreen()
     {
-        Chips::Memory* mem = computer->memory();
-        OutputStringStream oss;
+        Chips::Memory* mem = _computer->memory();
 
-        oss << "| Index |  Value   |" << std::endl;
-        oss << "|------:|---------:|" << std::endl;
+#ifdef USE_SDL
+        _screen = new Chips::RuntimeScreen();
+#else
+        _screen = new Chips::ScreenSegment();
+#endif
 
-        const int& stp = (int)mem->get(0);
-
-        for (uint16_t i = 0; i < Chips::Memory::MaxAddress; ++i)
-        {
-            const uint16_t v = mem->get(i);
-            bool dumpIt = v != 0 || (i >= 256 && i < stp) || i < 16;
-
-            if (dumpIt && v >= 0x4000 && v <= 0x6000)
-                dumpIt = false;
-
-            if (dumpIt)
-            {
-                oss << '|';
-                oss << std::right << std::setw(7) << i;
-                oss << '|';
-                oss << std::setw(10) << (int16_t)v;
-                oss << '|';
-                oss << std::endl;
-            }
-        }
-        Console::write(oss.str());
+        mem->initializeScreen(_screen);
     }
 
-    int Application::go() const
+    int Application::go()
     {
         if (_runtime)
         {
+            setupScreen();
+
             // load the supplied command line file
             load();
 
-            _runtime->initialize(_computer);
+            _runtime->initialize(_computer, _screen);
 
             while (!_runtime->exitRequest())
             {
@@ -314,7 +371,6 @@ namespace Hack::Computer
                 if (_runtime->shouldUpdate())
                     _runtime->update(_computer);
 
-                // synchronize screen memory
                 _runtime->flushMemory(_computer);
             }
 
@@ -328,3 +384,18 @@ namespace Hack::Computer
     }
 
 }  // namespace Hack::Computer
+
+int main(int argc, char** argv)
+{
+    try
+    {
+        Hack::Computer::Application app;
+        if (app.parse(argc, argv))
+            return app.go();
+    }
+    catch (Hack::Exception& ex)
+    {
+        Hack::Console::writeError(ex.what());
+    }
+    return 1;
+}

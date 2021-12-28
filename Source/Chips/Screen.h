@@ -20,10 +20,12 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#include "Chips/RamSegment.h"
+#include "Chips/DefaultMemorySegment.h"
 
 namespace Hack::Chips
 {
-    typedef RamSegment<0x6000, 0x4000> Screen;
+    typedef IMemorySegment<0x6000, 0x4000> Screen;
+    using ScreenSegment = DefaultMemorySegment<0x6000, 0x4000>;
+
 
 }  // namespace Hack::Chips

@@ -20,13 +20,14 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#include "Computer/IRuntime.h"
+#include "Chips/Screen.h"
+#include "Computer/RuntimeInterface.h"
 
 namespace Hack::Computer
 {
     class CommandRuntimePrivate;
 
-    class CommandRuntime final : public IRuntime
+    class CommandRuntime final : public RuntimeInterface
     {
     private:
         CommandRuntimePrivate* _private;
@@ -38,7 +39,7 @@ namespace Hack::Computer
 
         bool shouldUpdate() override;
 
-        void initialize(Chips::Computer* computer) const override;
+        void initialize(Chips::Computer* computer, Chips::Screen*) const override;
 
         bool exitRequest() const override;
 

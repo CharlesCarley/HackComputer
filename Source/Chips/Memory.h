@@ -23,7 +23,6 @@
 #include "Chips/Chip.h"
 #include "Chips/Ram16k.h"
 #include "Chips/Screen.h"
-#include "VirtualMachine/Constants.h"
 
 namespace Hack::Chips
 {
@@ -42,7 +41,7 @@ namespace Hack::Chips
         void markDirty();
 
         uint16_t _in;
-        uint16_t _inP;
+        uint16_t _out;
         uint16_t _address;
 
         Ram16K* _ram16;
@@ -51,6 +50,10 @@ namespace Hack::Chips
     public:
         Memory();
         ~Memory() override;
+
+        Screen* getScreen() const;
+
+        void initializeScreen(Screen* screen = nullptr);
 
         void setIn(const uint16_t& v);
 

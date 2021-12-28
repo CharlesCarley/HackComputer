@@ -527,7 +527,7 @@ namespace Hack::Computer
                !_private->block();
     }
 
-    void DebugRuntime::initialize(Chips::Computer* computer) const
+    void DebugRuntime::initialize(Chips::Computer* computer, Chips::Screen*) const
     {
         _private->initialize(computer);
         _private->flushMemory(computer);
@@ -551,7 +551,12 @@ namespace Hack::Computer
     void DebugRuntime::update(Chips::Computer* computer) const
     {
         if (computer)
+        {
+            const int16_t rate = getRate() - 1;
+            for (int16_t i = 0; i < rate; ++i)
+                computer->update(false);
             computer->update(true);
+        }
     }
 
 }  // namespace Hack::Computer

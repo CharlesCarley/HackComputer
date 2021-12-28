@@ -20,7 +20,6 @@
 -------------------------------------------------------------------------------
 */
 #include "Computer/CommandRuntime.h"
-#include "Assembler/Instruction.h"
 #include "Chips/Computer.h"
 #include "Utils/Char.h"
 #include "Utils/UserInterface/Context.h"
@@ -68,8 +67,6 @@ namespace Hack::Computer
 
         void update(Chips::Computer* computer)
         {
-            computer->update(false);
-            computer->update(true);
             _cpuState = computer->state();
         }
     };
@@ -90,7 +87,8 @@ namespace Hack::Computer
         return true;
     }
 
-    void CommandRuntime::initialize(Chips::Computer* computer) const
+    void CommandRuntime::initialize(Chips::Computer* computer,
+                                    Chips::Screen*) const
     {
         _private->initialize(computer);
     }
@@ -111,6 +109,9 @@ namespace Hack::Computer
 
     void CommandRuntime::update(Chips::Computer* computer) const
     {
+        for (int16_t i = 0; i < getRate(); ++i)
+            computer->update(false);
+        computer->update(true);
         _private->update(computer);
     }
 

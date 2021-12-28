@@ -22,6 +22,7 @@
 #ifdef USE_SDL
 #include "Computer/Runtime.h"
 #include "Chips/Computer.h"
+#include "RuntimeScreen.h"
 #include "SDL.h"
 #include "Utils/Exception.h"
 
@@ -29,10 +30,11 @@ namespace Hack::Computer
 {
     using namespace Chips;
 
-    constexpr uint32_t RenderFlags =
-        SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC;
+    constexpr uint32_t RenderFlags = SDL_RENDERER_ACCELERATED |
+                                     SDL_RENDERER_PRESENTVSYNC;
 
-    constexpr uint32_t WindowFlags = SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE;
+    constexpr uint32_t WindowFlags = SDL_WINDOW_SHOWN |
+                                     SDL_WINDOW_RESIZABLE;
 
     class RuntimePrivate
     {
@@ -65,7 +67,7 @@ namespace Hack::Computer
             SDL_Quit();
         }
 
-        void initialize()
+        void initialize(RuntimeScreen* screen)
         {
             if (SDL_Init(SDL_INIT_VIDEO) < 0)
             {
@@ -89,11 +91,7 @@ namespace Hack::Computer
 
             _renderer = SDL_CreateRenderer(_window, -1, RenderFlags);
 
-            _screenBuffer = SDL_CreateTexture(_renderer,
-                                              SDL_PIXELFORMAT_ABGR32,
-                                              SDL_TEXTUREACCESS_STREAMING,
-                                              512,
-                                              256);
+            _screenBuffer = screen->createBuffer(_renderer);
         }
 
         bool exitRequest() const
@@ -123,46 +121,11 @@ namespace Hack::Computer
 
         void flushMemory(Chips::Computer* computer) const
         {
-            if (!computer)
-                throw Exception("computer is null");
+            RuntimeScreen* scr = (RuntimeScreen*)computer->memory()->getScreen();
 
-            Memory* mem = computer->memory();
-            if (!mem)
-                throw Exception("computer memory is null");
-
-            void* texturePixels;
-            int   imagePitch;
-
-            SDL_LockTexture(
-                _screenBuffer, nullptr, &texturePixels, &imagePitch);
-
-            uint16_t* screenPixels = mem->pointer(Memory::ScreenAddress);
-            uint8_t*  imagePixels  = (uint8_t*)texturePixels;
-
-            // Copy 0x2000 shorts -> 2*0x2000 bytes
-            for (int i = 0; i < 0x2000; ++i)
-            {
-                const uint16_t pc = screenPixels[i];
-                for (int j = 0; j < 16; ++j)
-                {
-                    // 4:1 ARGB -> BW per bit
-                    if (pc & 1 << j)
-                    {
-                        *imagePixels++ = 0xFF;
-                        *imagePixels++ = 0xFF;
-                        *imagePixels++ = 0xFF;
-                        *imagePixels++ = 0xFF;
-                    }
-                    else
-                    {
-                        *imagePixels++ = 0xFF;
-                        *imagePixels++ = 0x00;
-                        *imagePixels++ = 0x00;
-                        *imagePixels++ = 0x00;
-                    }
-                }
-            }
-            SDL_UnlockTexture(_screenBuffer);
+            scr->lockScreen();
+            scr->flush();
+            scr->unlockScreen();
 
             // grab the final size
             SDL_Rect dest = {0, 0, 0, 0};
@@ -199,17 +162,20 @@ namespace Hack::Computer
         _private->flushMemory(computer);
     }
 
-    void Runtime::initialize(Chips::Computer*) const
+    void Runtime::initialize(Chips::Computer*, Screen* screen) const
     {
-        _private->initialize();
+        _private->initialize((RuntimeScreen*)screen);
     }
 
     void Runtime::update(Chips::Computer* computer) const
     {
-        for (int i = 0; i < 0x2000; ++i)
+        const int16_t rate = 0x2000 * getRate();
+        for (size_t i = 0; i < rate; ++i)
             computer->update(false);
-        computer->update(true);
+
+        computer->update(false);
     }
 
 }  // namespace Hack::Computer
+
 #endif

@@ -51,22 +51,14 @@ namespace Hack::Chips
         /// This method should be used to update the state
         /// of the _bits member variable.
         /// </summary>
-        virtual void evaluate()
-        {
-        }
+        virtual void evaluate();
 
-        virtual bool isDirty()
-        {
-            return true;
-        }
+        virtual bool isDirty();
 
         T _bits;
 
     public:
-        Chip() :
-            _bits()
-        {
-        }
+        Chip();
 
         virtual ~Chip() = default;
 
@@ -74,56 +66,91 @@ namespace Hack::Chips
         /// Prints the binary and decimal representation
         /// of the current state of the _bits member.
         /// </summary>
-        void print()
-        {
-#ifdef PRINT_CHIP_STATE
-            if (isDirty())
-                evaluate();
-            BitUtils<T, Count>::printBit(_bits);
-#endif
-        }
+        void print();
 
         /// <summary>
         /// Returns the state of the bit at the supplied index.
         /// </summary>
-        bool getBit(const uint8_t& index)
-        {
-            return BitUtils<T, Count>::getBit(_bits, index);
-        }
+        bool getBit(const uint8_t& index);
 
         /// <summary>
         /// Sets the bit at the supplied index.
         /// </summary>
-        void setBit(const uint8_t& index)
-        {
-            BitUtils<T, Count>::setBit(_bits, index);
-        }
+        void setBit(const uint8_t& index);
 
         /// <summary>
         /// Zeros all bits except for the bit at the supplied index.
         /// </summary>
-        void assignBit(const uint8_t& index)
-        {
-            BitUtils<T, Count>::assignBit(_bits, index);
-        }
+        void assignBit(const uint8_t& index);
 
         /// <summary>
         /// Clears the bit at the supplied index.
         /// </summary>
-        void clearBit(const uint8_t& index)
-        {
-            BitUtils<T, Count>::clearBit(_bits, index);
-        }
+        void clearBit(const uint8_t& index);
 
         /// <summary>
         /// Clears or sets the bit at the supplied index.
         /// </summary>
         /// <param name="index"></param>
         /// <param name="value">A value of true will set the bit.</param>
-        void applyBit(const uint8_t& index, const bool value)
-        {
-            BitUtils<T, Count>::applyBit(_bits, index, value);
-        }
+        void applyBit(const uint8_t& index, const bool value);
     };
+
+    template <typename T, uint8_t Count>
+    Chip<T, Count>::Chip() :
+        _bits()
+    {
+    }
+
+    template <typename T, uint8_t Count>
+    void Chip<T, Count>::evaluate()
+    {
+    }
+
+    template <typename T, uint8_t Count>
+    bool Chip<T, Count>::isDirty()
+    {
+        return true;
+    }
+
+    template <typename T, uint8_t Count>
+    void Chip<T, Count>::print()
+    {
+#ifdef PRINT_CHIP_STATE
+        if (isDirty())
+            evaluate();
+        BitUtils<T, Count>::printBit(_bits);
+#endif
+    }
+
+    template <typename T, uint8_t Count>
+    bool Chip<T, Count>::getBit(const uint8_t& index)
+    {
+        return BitUtils<T, Count>::getBit(_bits, index);
+    }
+
+    template <typename T, uint8_t Count>
+    void Chip<T, Count>::setBit(const uint8_t& index)
+    {
+        BitUtils<T, Count>::setBit(_bits, index);
+    }
+
+    template <typename T, uint8_t Count>
+    void Chip<T, Count>::assignBit(const uint8_t& index)
+    {
+        BitUtils<T, Count>::assignBit(_bits, index);
+    }
+
+    template <typename T, uint8_t Count>
+    void Chip<T, Count>::clearBit(const uint8_t& index)
+    {
+        BitUtils<T, Count>::clearBit(_bits, index);
+    }
+
+    template <typename T, uint8_t Count>
+    void Chip<T, Count>::applyBit(const uint8_t& index, const bool value)
+    {
+        BitUtils<T, Count>::applyBit(_bits, index, value);
+    }
 
 }  // namespace Hack::Chips

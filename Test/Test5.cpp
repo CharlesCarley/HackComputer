@@ -28,6 +28,7 @@
 #include "TestDirectory.h"
 #include "FileCmp.h"
 #include "VirtualMachine/Parser.h"
+#include "VirtualMachine/Constants.h"
 #include "gtest/gtest.h"
 
 using namespace Hack;

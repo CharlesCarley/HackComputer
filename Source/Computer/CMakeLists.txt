@@ -27,11 +27,11 @@ source_group("Content" FILES ${TargetName_DAT})
 
 
 set(TargetName_HDR 
-    Application.h
     CommandRuntime.h
     DebugRuntime.h
-    IRuntime.h
     Runtime.h
+    RuntimeInterface.h
+    RuntimeScreen.h
 )
 
     
@@ -39,8 +39,8 @@ set(TargetName_SRC
     Application.cpp
     CommandRuntime.cpp
     DebugRuntime.cpp
-    Main.cpp
     Runtime.cpp
+    RuntimeScreen.cpp
 )
 
 include_directories(    

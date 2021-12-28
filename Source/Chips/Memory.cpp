@@ -30,10 +30,10 @@ namespace Hack::Chips
 
     Memory::Memory() :
         _in(0),
-        _inP(0),
+        _out(0),
         _address(0),
         _ram16(new Ram16K()),
-        _screen(new Screen())
+        _screen(new ScreenSegment())
     {
     }
 
@@ -41,6 +41,23 @@ namespace Hack::Chips
     {
         delete _ram16;
         delete _screen;
+    }
+
+    Screen* Memory::getScreen() const
+    {
+        return _screen;
+    }
+
+    void Memory::initializeScreen(Screen* screen)
+    {
+        if (screen)
+        {
+            if (_screen)
+                delete _screen;
+            _screen = screen;
+        }
+        else
+            throw InvalidPointer();
     }
 
     void Memory::setIn(const uint16_t& v)
@@ -85,9 +102,9 @@ namespace Hack::Chips
 
     uint16_t Memory::getOut()
     {
-        if (isDirty())
+        if ((_bits & 128) != 0 && (_bits & 64) == 0)
             evaluate();
-        return _inP;
+        return _out;
     }
 
     uint16_t Memory::get(const size_t& i) const
@@ -96,7 +113,6 @@ namespace Hack::Chips
         {
             if (i < ScreenAddress)
                 return _ram16->get(i);
-
             return _screen->get(i - ScreenAddress);
         }
         return 0;
@@ -132,21 +148,21 @@ namespace Hack::Chips
             if (_address < ScreenAddress)
             {
                 _ram16->setAddress(_address);
-                _ram16->setLoad(getBit(0));
-                _ram16->setClock(getBit(1));
+                _ram16->setLoad((_bits & 1) != 0);
+                _ram16->setClock((_bits & 2) != 0);
                 _ram16->setIn(_in);
-                _inP = _ram16->getOut();
+                _out = _ram16->getOut();
             }
             else
             {
                 _screen->setAddress(_address - ScreenAddress);
-                _screen->setLoad(getBit(0));
-                _screen->setClock(getBit(1));
+                _screen->setLoad((_bits & 1) != 0);
+                _screen->setClock((_bits & 2) != 0);
                 _screen->setIn(_in);
-                _inP = _screen->getOut();
+                _out = _screen->getOut();
             }
 
-            clearBit(7);
+            _bits &= ~(1 << 7);
         }
     }
 }  // namespace Hack::Chips

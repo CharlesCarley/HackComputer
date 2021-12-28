@@ -48,12 +48,20 @@ namespace Hack::Chips
     {
         const bool reset = getBit(6);
         _bits &= ClockMask;
-
+#ifdef IMPLEMENT_BLACK_BOX
         if (reset)
             applyBit(0, getBit(1));
         else
             applyBit(0, Gates::Not(getBit(0)));
         return getBit(0);
+#else
+        if (reset)
+            applyBit(0, getBit(1));
+        else
+            applyBit(0, !getBit(0));
+
+        return getBit(0);
+#endif
     }
 
 }  // namespace Hack::Chips

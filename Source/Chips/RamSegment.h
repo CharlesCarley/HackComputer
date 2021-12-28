@@ -26,7 +26,7 @@
 namespace Hack::Chips
 {
     template <uint16_t High, uint16_t MaxElements>
-    class RamSegment final : public Chip<uint8_t, 8>
+    class RamSegment : public Chip<uint8_t, 8>
     {
     public:
         static const uint16_t Max         = (High << 1)+1;
@@ -126,6 +126,7 @@ namespace Hack::Chips
         }
 
     protected:
+
         bool isDirty() override
         {
             return getBit(7) && !getBit(6);

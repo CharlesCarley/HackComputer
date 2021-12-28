@@ -20,33 +20,45 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-
-namespace Hack::Chips
-{
-    class Computer;
-}
+#include "Chips/Screen.h"
+#include "Chips/Computer.h"
 
 namespace Hack::Computer
 {
-    class IRuntime
+    class RuntimeInterface
     {
     public:
-        virtual ~IRuntime() = default;
+        virtual ~RuntimeInterface() = default;
 
-        virtual bool shouldUpdate()
-        {
-            return true;
-        }
+        virtual bool shouldUpdate();
 
-        virtual void initialize(Chips::Computer* computer) const = 0;
+        virtual int16_t getRate() const;
+
+        virtual void setRate(int16_t v);
+
+        virtual void initialize(Chips::Computer* computer, Chips::Screen* screen) const = 0;
 
         virtual bool exitRequest() const = 0;
 
         virtual void processEvents(Chips::Computer* computer) const = 0;
 
-        virtual void update(Chips::Computer* computer) const = 0;
-
         virtual void flushMemory(Chips::Computer* computer) const = 0;
+
+        virtual void update(Chips::Computer* computer) const = 0;
     };
+
+    inline bool RuntimeInterface::shouldUpdate()
+    {
+        return true;
+    }
+
+    inline int16_t RuntimeInterface::getRate() const
+    {
+        return 1;
+    }
+
+    inline void RuntimeInterface::setRate(int16_t v)
+    {
+    }
 
 }  // namespace Hack::Computer

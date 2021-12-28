@@ -20,23 +20,25 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#include "Computer/IRuntime.h"
+#include "Chips/Screen.h"
+#include "Computer/RuntimeInterface.h"
 #ifdef USE_SDL
 
 namespace Hack::Computer
 {
     class RuntimePrivate;
 
-    class Runtime final : public IRuntime
+    class Runtime final : public RuntimeInterface
     {
     private:
-        RuntimePrivate*   _private;
-        
+        RuntimePrivate* _private;
+
     public:
         Runtime();
         ~Runtime() override;
 
-        void initialize(Chips::Computer* computer) const override;
+        void initialize(Chips::Computer*        computer,
+                        Chips::Screen* screen) const override;
 
         bool exitRequest() const override;
 
@@ -45,6 +47,7 @@ namespace Hack::Computer
         void flushMemory(Chips::Computer* computer) const override;
 
         void update(Chips::Computer* computer) const override;
+
     };
 
 }  // namespace Hack::Computer
