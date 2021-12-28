@@ -630,6 +630,8 @@ namespace Hack::Compiler::CodeGenerator
                 _emitter->pushConstant(0);
                 _emitter->writeReturn();
             }
+
+
         }
     }
 

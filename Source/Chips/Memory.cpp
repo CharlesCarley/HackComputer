@@ -23,10 +23,10 @@
 
 namespace Hack::Chips
 {
-    const int Memory::MaxAddress    = Ram16K::HighAddress + Screen::HighAddress;
-    const int Memory::ScreenAddress = Ram16K::HighAddress;
-    const int Memory::StackAddress  = 256;
-    const int Memory::HeapAddress   = 2048;
+    const uint16_t Memory::MaxAddress    = 0x6000;
+    const uint16_t Memory::ScreenAddress = 0x4000;
+    const uint16_t Memory::StackAddress  = 256;
+    const uint16_t Memory::HeapAddress   = 2048;
 
     Memory::Memory() :
         _in(0),
@@ -90,9 +90,9 @@ namespace Hack::Chips
         return _inP;
     }
 
-    uint16_t Memory::get(const int& i) const
+    uint16_t Memory::get(const size_t& i) const
     {
-        if (i < MaxAddress && i >= 0)
+        if (i < MaxAddress)
         {
             if (i < ScreenAddress)
                 return _ram16->get(i);
@@ -102,11 +102,10 @@ namespace Hack::Chips
         return 0;
     }
 
-    uint16_t* Memory::pointer(const int& address) const
+    uint16_t* Memory::pointer(const size_t& address) const
     {
         if (address < ScreenAddress)
             return _ram16->pointer(address);
-
         return _screen->pointer(address - ScreenAddress);
     }
 
@@ -130,7 +129,7 @@ namespace Hack::Chips
     {
         if (_address < MaxAddress)
         {
-            if (_address < Ram16K::HighAddress)
+            if (_address < ScreenAddress)
             {
                 _ram16->setAddress(_address);
                 _ram16->setLoad(getBit(0));
@@ -140,7 +139,7 @@ namespace Hack::Chips
             }
             else
             {
-                _screen->setAddress(_address - Ram16K::HighAddress);
+                _screen->setAddress(_address - ScreenAddress);
                 _screen->setLoad(getBit(0));
                 _screen->setClock(getBit(1));
                 _screen->setIn(_in);

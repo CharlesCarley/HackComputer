@@ -30,11 +30,11 @@ namespace Hack::Chips
     class Memory final : public Chip<uint8_t, 8>
     {
     public:
-        static const int MaxAddress;
-        static const int ScreenAddress;
-        static const int StackAddress;
-        static const int HeapAddress;
-        static const int ExtensionAddress;
+        static const uint16_t MaxAddress;
+        static const uint16_t ScreenAddress;
+        static const uint16_t StackAddress;
+        static const uint16_t HeapAddress;
+        static const uint16_t ExtensionAddress;
 
     private:
         void evaluate() override;
@@ -66,9 +66,9 @@ namespace Hack::Chips
 
         uint16_t getOut();
 
-        uint16_t get(const int& i) const;
+        uint16_t get(const size_t& i) const;
 
-        uint16_t* pointer(const int& address) const;
+        uint16_t* pointer(const size_t& address) const;
 
         void zero() const;
     };

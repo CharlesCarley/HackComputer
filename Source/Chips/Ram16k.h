@@ -24,5 +24,5 @@
 
 namespace Hack::Chips
 {
-    typedef RamSegment<0x4000> Ram16K;
+    typedef RamSegment<0x4000, 0x8000> Ram16K;
 }  // namespace Hack::Chips

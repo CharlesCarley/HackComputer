@@ -25,26 +25,28 @@
 
 namespace Hack::Chips
 {
-    template <int High>
+    template <uint16_t High, uint16_t MaxElements>
     class RamSegment final : public Chip<uint8_t, 8>
     {
     public:
-        static const int Max         = High << 1;
-        static const int HighAddress = High;
-        static const int LowAddress  = 0;
+        static const uint16_t Max         = (High << 1)+1;
+        static const uint16_t HighAddress = High;
 
     private:
         uint16_t  _in;
-        uint16_t  _inP;
+        uint16_t  _outP;
         uint16_t  _address;
         uint16_t* _ram;
 
     public:
         RamSegment() :
-            _in(0), _inP(0), _address(0), _ram(nullptr)
+            _in(0),
+            _outP(0),
+            _address(0),
+            _ram(nullptr)
         {
             _ram = new uint16_t[Max + 1];
-            memset(_ram, 0, sizeof(uint16_t) * Max);
+            memset(_ram, 0, sizeof(uint16_t) * (Max + 1));
             markDirty();
         }
 
@@ -90,12 +92,12 @@ namespace Hack::Chips
         {
             if (isDirty())
                 evaluate();
-            return _inP;
+            return _outP;
         }
 
-        uint16_t get(const int& i) const
+        uint16_t get(const size_t& i) const
         {
-            if (i >= 0 && i < High)
+            if (i < High)
                 return _ram[i];
 
 #ifdef CHECK_INT_BOUNDS
@@ -107,20 +109,20 @@ namespace Hack::Chips
 
         uint16_t* pointer(const size_t& address) const
         {
-            if (address < Max)
+            if (address < High)
                 return &_ram[address];
             return nullptr;
         }
 
         void setValue(const size_t& address, const uint16_t v) const
         {
-            if (address < Max)
+            if (address < High)
                 _ram[address] = _ram[address + High] = v;
         }
 
         void zero() const
         {
-            memset(_ram, 0, sizeof(uint16_t) * Max);
+            memset(_ram, 0, sizeof(uint16_t) * (MaxElements + 1));
         }
 
     protected:
@@ -140,18 +142,21 @@ namespace Hack::Chips
             {
                 if (getBit(0))
                 {
-                    if (getBit(1))
-                        _ram[_address] = _ram[_address + High] = _in;
-                    else
+                    const uint16_t hiBit = _address + High;
+                    if (hiBit < Max)
                     {
-                        _ram[_address] = _ram[_address + High];
-
-                        _ram[_address + High] = _in;
+                        if (getBit(1))
+                            _ram[_address] = _ram[hiBit] = _in;
+                        else
+                        {
+                            _ram[_address] = _ram[hiBit];
+                            _ram[hiBit]    = _in;
+                        }
                     }
+                    else
+                        throw InputException("Array index (", hiBit, ") out of bounds ", '[', _address, ',', hiBit,']');
                 }
-
-                _inP = _ram[_address];
-
+                _outP = _ram[_address];
                 clearBit(7);
             }
         }

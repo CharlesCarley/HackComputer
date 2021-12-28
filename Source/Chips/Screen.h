@@ -24,6 +24,6 @@
 
 namespace Hack::Chips
 {
-    typedef RamSegment<0x2000> Screen;
+    typedef RamSegment<0x6000, 0x4000> Screen;
 
 }  // namespace Hack::Chips

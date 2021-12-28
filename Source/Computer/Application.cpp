@@ -268,7 +268,6 @@ namespace Hack::Computer
     void Application::trace(Chips::Computer* computer)
     {
         Chips::Memory* mem = computer->memory();
-
         OutputStringStream oss;
 
         oss << "| Index |  Value   |" << std::endl;
@@ -276,10 +275,15 @@ namespace Hack::Computer
 
         const int& stp = (int)mem->get(0);
 
-        for (int i = 0; i < Chips::Memory::MaxAddress; ++i)
+        for (uint16_t i = 0; i < Chips::Memory::MaxAddress; ++i)
         {
             const uint16_t v = mem->get(i);
-            if (v != 0 || (i >= 256 && i < stp) || i< 16)
+            bool dumpIt = v != 0 || (i >= 256 && i < stp) || i < 16;
+
+            if (dumpIt && v >= 0x4000 && v <= 0x6000)
+                dumpIt = false;
+
+            if (dumpIt)
             {
                 oss << '|';
                 oss << std::right << std::setw(7) << i;
