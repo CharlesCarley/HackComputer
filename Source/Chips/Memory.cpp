@@ -62,7 +62,7 @@ namespace Hack::Chips
     void Memory::setIn(const uint16_t& v)
     {
         _in = v;
-        markDirty();
+        _bits |= Bit7;
     }
 
     void Memory::setAddress(const uint16_t& v)
@@ -75,7 +75,6 @@ namespace Hack::Chips
     {
         if (index <MaxAddress)
         {
-            
             if (index < ScreenAddress)
                 _ram16->setValue(index, v);
             else
@@ -85,19 +84,28 @@ namespace Hack::Chips
 
     void Memory::setLoad(const bool v)
     {
-        applyBit(0, v);
-        markDirty();
+        if (v)
+            _bits |= Bit0;
+        else
+            _bits &= ~Bit0;
+        _bits |= Bit7;
     }
 
     void Memory::setClock(const bool v)
     {
-        applyBit(1, v);
-        markDirty();
+        if (v)
+            _bits |= Bit1;
+        else
+            _bits &= ~Bit1;
+        _bits |= Bit7;
     }
 
     void Memory::lock(const bool v)
     {
-        applyBit(6, v);
+        if (v)
+            _bits |= Bit6;
+        else
+            _bits &= ~Bit6;
     }
 
     uint16_t Memory::getOut()
@@ -166,6 +174,5 @@ namespace Hack::Chips
         }
         else
             throw IndexOutOfBounds();
-
     }
 }  // namespace Hack::Chips

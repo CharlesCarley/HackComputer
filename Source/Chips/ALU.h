@@ -65,7 +65,6 @@ namespace Hack::Chips
         void evaluate() override;
 
         bit64_t _io;
-        bool    _dirty;
 
     public:
         Alu();

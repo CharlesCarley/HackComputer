@@ -912,14 +912,13 @@ GTEST_TEST(Hack, ALU)
         const uint16_t out = n.getOut();
         EXPECT_EQ((uint16_t)al[8], out);
 
-        flags  = n.getFlags();
         int tz = 0;
-        if (flags & Zr)
+        if (n.getZr())
             tz = 1;
         EXPECT_EQ(al[9], tz);
 
         tz = 0;
-        if (flags & Ne)
+        if (n.getNe())
             tz = 1;
         EXPECT_EQ(al[10], tz);
     }

@@ -57,33 +57,45 @@ namespace Hack::Chips
 
     void Cpu::setInMemory(const uint16_t& v)
     {
-        _in = v;
-        _bits |= Bit7;
+        if (_in != v)
+        {
+            _in = v;
+            _bits |= Bit7;
+        }
     }
 
     void Cpu::setClock(bool v)
     {
-        if (v)
-            _bits |= Bit1;
-        else
-            _bits &= ~Bit1;
+        if ((_bits & Bit1) !=0 != v)
+        {
+            if (v)
+                _bits |= Bit1;
+            else
+                _bits &= ~Bit1;
 
-        _bits |= Bit7;
+            _bits |= Bit7;
+        }
     }
 
     void Cpu::setReset(bool v)
     {
-        if (v)
-            _bits |= Bit0;
-        else
-            _bits &= ~Bit0;
-        _bits |= Bit7;
+        if ((_bits & Bit0) != 0 != v)
+        {
+            if (v)
+                _bits |= Bit0;
+            else
+                _bits &= ~Bit0;
+            _bits |= Bit7;
+        }
     }
 
     void Cpu::setInstruction(const uint16_t& v)
     {
-        _ins = v;
-        _bits |= Bit7;
+        if (_ins != v)
+        {
+            _ins = v;
+            _bits |= Bit7;
+        }
     }
 
     bool Cpu::getWrite()
@@ -216,8 +228,8 @@ namespace Hack::Chips
         // The flags are the ALU ctrl-bits, so mask them off
         // and shift them down so that they align in the lower
         // six bits of an unsigned char.
-        _alu.setFlags((_ins & CBits) >> 6);
-
+        if (typeC)
+            _alu.setFlags((_ins & CBits) >> 6);
         _alu.setX(_d.getOut());
 
         // A/M the a-bit (12) controls the M type commands

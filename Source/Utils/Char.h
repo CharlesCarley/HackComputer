@@ -100,6 +100,8 @@ namespace Hack
 
         static void toString(String& dest, bool v);
 
+        static void toBinaryString(String& dest, uint8_t v);
+
         static void toString(String& dest, int16_t v);
 
         static void toString(String& dest, int32_t v);
@@ -125,6 +127,8 @@ namespace Hack
         static String toString(double v);
 
         static String toString(bool v);
+
+        static String toBinaryString(uint8_t v);
 
         static String toString(int16_t v);
 

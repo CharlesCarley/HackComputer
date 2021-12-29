@@ -28,14 +28,14 @@
 #include "Compiler/Generator/Generator.h"
 #include "Computer/CommandRuntime.h"
 #include "Computer/DebugRuntime.h"
-#include "Computer/RuntimeScreen.h"
+#include "Computer/ScreenSDL.h"
 #include "Utils/CommandLine/Parser.h"
 #include "Utils/Exception.h"
 #include "Utils/FileSystem.h"
 #include "VirtualMachine/Parser.h"
 
 #ifdef USE_SDL
-#include "Computer/Runtime.h"
+#include "Computer/RuntimeSDL.h"
 #endif
 
 namespace Hack::Computer
@@ -207,7 +207,7 @@ namespace Hack::Computer
         else if (parser.isPresent(OP_CMD))
             _runtime = new CommandRuntime();
         else
-            _runtime = new Runtime();
+            _runtime = new RuntimeSDL();
 #else
         if (parser.isPresent(OP_DEBUG))
             _runtime = new DebugRuntime();
@@ -343,7 +343,7 @@ namespace Hack::Computer
         Chips::Memory* mem = _computer->memory();
 
 #ifdef USE_SDL
-        _screen = new Chips::RuntimeScreen();
+        _screen = new Chips::ScreenSDL();
 #else
         _screen = new Chips::ScreenSegment();
 #endif

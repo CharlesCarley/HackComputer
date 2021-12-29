@@ -19,47 +19,38 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#ifdef USE_SDL
 #pragma once
 #include "Chips/Screen.h"
-#include "SDL.h"
+#include "Computer/RuntimeInterface.h"
+#ifdef USE_SDL
 
-namespace Hack::Chips
+namespace Hack::Computer
 {
-    class RuntimeScreen final : public Screen
+    class RuntimePrivate;
+
+    class RuntimeSDL final : public RuntimeInterface
     {
     private:
-        uint16_t*    _ram;
-        SDL_Texture* _texture;
-        SDL_Renderer* _renderer;
-        uint8_t*     _pixels;
-        size_t       _pitch;
+        RuntimePrivate* _private;
+
+        int16_t getRate() const override;
 
     public:
-        RuntimeScreen();
+        RuntimeSDL();
+        ~RuntimeSDL() override;
 
-        ~RuntimeScreen() override;
+        void initialize(Chips::Computer* computer,
+                        Chips::Screen*   screen) const override;
 
-        uint16_t get(const size_t& i) const override;
+        bool exitRequest() const override;
 
-        uint16_t* pointer(const size_t& address) const override;
+        void processEvents(Chips::Computer* computer) const override;
 
-        void setValue(const size_t& address, const uint16_t& v) const override;
+        void flushMemory(Chips::Computer* computer) const override;
 
-        void zero() const override;
-
-        SDL_Texture* createBuffer(SDL_Renderer* renderer);
-
-        void lockScreen() override;
-
-        void unlockScreen() override;
-
-    protected:
-        void flush() const;
-        
-
-        void evaluate() override;
+        void update(Chips::Computer* computer) const override;
     };
 
-}  // namespace Hack::Chips
+}  // namespace Hack::Computer
+
 #endif

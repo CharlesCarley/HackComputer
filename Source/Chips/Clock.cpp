@@ -46,7 +46,6 @@ namespace Hack::Chips
 
     bool Clock::getOut()
     {
-        _bits &= ClockMask;
 #ifdef IMPLEMENT_BLACK_BOX
         if (getBit(6))
             applyBit(0, getBit(1));
@@ -68,6 +67,7 @@ namespace Hack::Chips
             else
                 _bits &= ~Bit0;
         }
+        _bits &= ClockMask;
         return (_bits & Bit0) != 0;
 #endif
     }

@@ -78,14 +78,14 @@ namespace Hack::Chips
     IMemorySegment<High, ElementCount>::IMemorySegment() :
         _in(0), _out(0), _address(0)
     {
-        markDirty();
+        _bits = Bit7;
     }
 
     template <uint16_t High, uint16_t ElementCount>
     void IMemorySegment<High, ElementCount>::setIn(const uint16_t& value)
     {
         _in = value;
-        markDirty();
+        _bits |= Bit7;
     }
 
     template <uint16_t High, uint16_t ElementCount>
@@ -102,21 +102,30 @@ namespace Hack::Chips
     template <uint16_t High, uint16_t ElementCount>
     void IMemorySegment<High, ElementCount>::setLoad(const bool load)
     {
-        applyBit(0, load);
-        markDirty();
+        if (load)
+            _bits |= Bit0;
+        else
+            _bits &= ~Bit0;
+        _bits |= Bit7;
     }
 
     template <uint16_t High, uint16_t ElementCount>
     void IMemorySegment<High, ElementCount>::setClock(const bool clock)
     {
-        applyBit(1, clock);
-        markDirty();
+        if (clock)
+            _bits |= Bit1;
+        else
+            _bits &= ~Bit1;
+        _bits |= Bit7;
     }
 
     template <uint16_t High, uint16_t ElementCount>
     void IMemorySegment<High, ElementCount>::lock(const bool lockIt)
     {
-        applyBit(6, lockIt);
+        if (lockIt)
+            _bits |= Bit6;
+        else
+            _bits &= ~Bit6;
     }
 
     template <uint16_t High, uint16_t ElementCount>
@@ -140,12 +149,12 @@ namespace Hack::Chips
     template <uint16_t High, uint16_t ElementCount>
     bool IMemorySegment<High, ElementCount>::isDirty()
     {
-        return getBit(7) && !getBit(6);
+        return (_bits & Bit7) != 0 && (_bits & Bit6) == 0;
     }
 
     template <uint16_t High, uint16_t ElementCount>
     void IMemorySegment<High, ElementCount>::markDirty()
     {
-        setBit(7);
+        _bits |= Bit7;
     }
 }  // namespace Hack::Chips

@@ -22,6 +22,7 @@
 #include "Chips/ALU.h"
 #include "Chips/BitUtils.h"
 #include "Chips/Chip.h"
+#include "Utils/Char.h"
 
 #ifdef IMPLEMENT_BLACK_BOX
 #include "Chips/Add16.h"
@@ -38,52 +39,60 @@ namespace Hack::Chips
     Alu::Alu() :
         _io{}
     {
-        _dirty = true;
+        _bits = Bit7;
     }
 
     void Alu::setFlags(const uint8_t& flags)
     {
-        _bits  = flags;
-        _dirty = true;
+        if (_io.b[7] != flags)
+        {
+            _io.b[7] = flags;
+            _bits |= Bit7;
+        }
     }
 
     uint8_t Alu::getFlags()
     {
-        if (_dirty)
+        if ((_bits & Bit7) != 0)
             evaluate();
-
-        return _bits;
+        return _io.b[7];
     }
 
     void Alu::setX(const uint16_t& v)
     {
-        _io.s[0] = v;
-        _dirty   = true;
+        if (_io.s[0] != v)
+        {
+            _io.s[0] = v;
+            _bits |= Bit7;
+        }
     }
 
     void Alu::setY(const uint16_t& v)
     {
-        _io.s[1] = v;
-        _dirty   = true;
+        if (_io.s[1] != v)
+        {
+            _io.s[1] = v;
+            _bits |= Bit7;
+        }
     }
 
     bool Alu::getZr()
     {
-        if (_dirty)
+        if ((_bits & Bit7) !=0)
             evaluate();
-        return (_bits & Zr) != 0;
+        return (_io.b[6] & Zr) != 0;
     }
 
     bool Alu::getNe()
     {
-        if (_dirty)
+        if ((_bits & Bit7) != 0)
             evaluate();
-        return (_bits & Ne) != 0;
+        return (_io.b[6] & Ne) != 0;
     }
 
     uint16_t Alu::getOut()
     {
-        if (_dirty)
+        if ((_bits & Bit7) != 0)
             evaluate();
         return _io.s[2];
     }
@@ -138,7 +147,7 @@ namespace Hack::Chips
         out.setB(axyN.getOut());
         out.setSel(_bits & No);
 
-        _dirty   = false;
+        _io.b[6] = 0;
         _io.s[2] = out.getOut();
 
         bit16_t b16{};
@@ -164,78 +173,132 @@ namespace Hack::Chips
         else
             _bits &= ~Ne;
 #else
-        _bits &= 0b00111111;
+        _bits &= ~Bit7;
 
-        switch (_bits)
+        switch (_io.b[7])
         {
         case Zero:
             _io.s[2] = 0;
+            _io.b[6] = Zr;
             break;
         case One:
             _io.s[2] = 1;
             break;
         case XAndY:
             _io.s[2] = _io.s[0] & _io.s[1];
+            if (_io.s[2] & Bit15)
+                _io.b[6] = Ne;
+            else if (_io.s[2] == 0)
+                _io.b[6] = Zr;
             break;
         case NegativeOne:
             _io.s[2] = 0xFFFF;
+            _io.b[6] = Ne;
             break;
         case OutX:
             _io.s[2] = _io.s[0];
+            if (_io.s[2] & Bit15)
+                _io.b[6] = Ne;
+            else if (_io.s[2] == 0)
+                _io.b[6] = Zr;
             break;
         case OutY:
             _io.s[2] = _io.s[1];
+            if (_io.s[2] & Bit15)
+                _io.b[6] = Ne;
+            else if (_io.s[2] == 0)
+                _io.b[6] = Zr;
             break;
         case NotX:
             _io.s[2] = ~_io.s[0];
+            if (_io.s[2] & Bit15)
+                _io.b[6] = Ne;
+            else if (_io.s[2] == 0)
+                _io.b[6] = Zr;
             break;
         case NotY:
             _io.s[2] = ~_io.s[1];
+            if (_io.s[2] & Bit15)
+                _io.b[6] = Ne;
+            else if (_io.s[2] == 0)
+                _io.b[6] = Zr;
             break;
         case NegativeX:
             _io.s[2] = -_io.s[0];
+            if (_io.s[2] & Bit15)
+                _io.b[6] = Ne;
+            else if (_io.s[2] == 0)
+                _io.b[6] = Zr;
             break;
         case NegativeY:
             _io.s[2] = -_io.s[1];
+            if (_io.s[2] & Bit15)
+                _io.b[6] = Ne;
+            else if (_io.s[2] == 0)
+                _io.b[6] = Zr;
             break;
         case XPlusOne:
             _io.s[2] = _io.s[0] + 1;
+            if (_io.s[2] & Bit15)
+                _io.b[6] = Ne;
+            else if (_io.s[2] == 0)
+                _io.b[6] = Zr;
             break;
         case YPlusOne:
             _io.s[2] = _io.s[1] + 1;
+            if (_io.s[2] & Bit15)
+                _io.b[6] = Ne;
+            else if (_io.s[2] == 0)
+                _io.b[6] = Zr;
             break;
         case XMinusOne:
             _io.s[2] = _io.s[0] - 1;
+            if (_io.s[2] & Bit15)
+                _io.b[6] = Ne;
+            else if (_io.s[2] == 0)
+                _io.b[6] = Zr;
             break;
         case YMinusOne:
             _io.s[2] = _io.s[1] - 1;
+            if (_io.s[2] & Bit15)
+                _io.b[6] = Ne;
+            else if (_io.s[2] == 0)
+                _io.b[6] = Zr;
             break;
         case XPlusY:
             _io.s[2] = _io.s[0] + _io.s[1];
+            if (_io.s[2] & Bit15)
+                _io.b[6] = Ne;
+            else if (_io.s[2] == 0)
+                _io.b[6] = Zr;
             break;
         case XMinusY:
             _io.s[2] = _io.s[0] - _io.s[1];
+            if (_io.s[2] & Bit15)
+                _io.b[6] = Ne;
+            else if (_io.s[2] == 0)
+                _io.b[6] = Zr;
             break;
         case YMinusX:
             _io.s[2] = _io.s[1] - _io.s[0];
+            if (_io.s[2] & Bit15)
+                _io.b[6] = Ne;
+            else if (_io.s[2] == 0)
+                _io.b[6] = Zr;
             break;
         case XOrY:
             _io.s[2] = _io.s[0] | _io.s[1];
+            if (_io.s[2] & Bit15)
+                _io.b[6] = Ne;
+            else if (_io.s[2] == 0)
+                _io.b[6] = Zr;
             break;
-        case Undefined:
-            [[fallthrough]];
         default:
-            // OutputStringStream oss;
-            // oss << "ALU function " << (int)_bits << " not found";
-            // Console::writeLine(oss);
+            Console::writeLine("ALU function ",
+                                 Char::toBinaryString(_bits),
+                                 " not found");
             break;
         }
-
-        if (_io.s[2] == 0)
-            _bits |= Zr;
-
-        if (_io.s[2] & Bit15)
-            _bits |= Ne;
 #endif
     }
 

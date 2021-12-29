@@ -20,9 +20,9 @@
 -------------------------------------------------------------------------------
 */
 #ifdef USE_SDL
-#include "Computer/Runtime.h"
+#include "Computer/RuntimeSDL.h"
 #include "Chips/Computer.h"
-#include "RuntimeScreen.h"
+#include "ScreenSDL.h"
 #include "SDL.h"
 #include "Utils/Exception.h"
 
@@ -67,7 +67,7 @@ namespace Hack::Computer
             SDL_Quit();
         }
 
-        void initialize(RuntimeScreen* screen)
+        void initialize(ScreenSDL* screen)
         {
             if (SDL_Init(SDL_INIT_VIDEO) < 0)
             {
@@ -136,41 +136,46 @@ namespace Hack::Computer
         }
     };
 
-    Runtime::Runtime() :
+    inline int16_t RuntimeSDL::getRate() const
+    {
+        return 0x6000 - 1;
+    }
+
+    RuntimeSDL::RuntimeSDL() :
         _private(new RuntimePrivate())
     {
     }
 
-    Runtime::~Runtime()
+    RuntimeSDL::~RuntimeSDL()
     {
         delete _private;
     }
 
-    bool Runtime::exitRequest() const
+    bool RuntimeSDL::exitRequest() const
     {
         return _private->exitRequest();
     }
 
-    void Runtime::processEvents(Chips::Computer* computer) const
+    void RuntimeSDL::processEvents(Chips::Computer* computer) const
     {
         _private->processEvents(computer);
     }
 
-    void Runtime::flushMemory(Chips::Computer* computer) const
+    void RuntimeSDL::flushMemory(Chips::Computer* computer) const
     {
         _private->flushMemory(computer);
     }
 
-    void Runtime::initialize(Chips::Computer*, Screen* screen) const
+    void RuntimeSDL::initialize(Chips::Computer*, Screen* screen) const
     {
-        _private->initialize((RuntimeScreen*)screen);
+        _private->initialize((ScreenSDL*)screen);
     }
 
-    void Runtime::update(Chips::Computer* computer) const
+    void RuntimeSDL::update(Chips::Computer* computer) const
     {
         const int32_t rate = getRate();
 
-        RuntimeScreen* rc = (RuntimeScreen*)computer->memory()->getScreen();
+        ScreenSDL* rc = (ScreenSDL*)computer->memory()->getScreen();
         rc->lockScreen();
         computer->update(true);
 

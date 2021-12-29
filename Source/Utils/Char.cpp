@@ -257,6 +257,12 @@ namespace Hack
             dest.push_back('0');
     }
 
+    void Char::toBinaryString(String& dest, uint8_t v)
+    {
+        const std::bitset<8> bs(v);
+        dest = bs.to_string();
+    }
+
     void Char::toString(String& dest, const int16_t v)
     {
         std::stringstream stream;
@@ -345,6 +351,13 @@ namespace Hack
     {
         String copyOnReturn;
         toString(copyOnReturn, v);
+        return copyOnReturn;
+    }
+
+    String Char::toBinaryString(uint8_t v)
+    {
+        String copyOnReturn;
+        toBinaryString(copyOnReturn, v);
         return copyOnReturn;
     }
 

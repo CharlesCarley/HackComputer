@@ -21,11 +21,11 @@
 */
 #ifdef USE_SDL
 
-#include "Computer/RuntimeScreen.h"
+#include "Computer/ScreenSDL.h"
 
 namespace Hack::Chips
 {
-    RuntimeScreen::RuntimeScreen() :
+    ScreenSDL::ScreenSDL() :
         _ram(new uint16_t[Max + 1]),
         _texture(nullptr),
         _renderer(nullptr),
@@ -35,12 +35,12 @@ namespace Hack::Chips
         zero();
     }
 
-    RuntimeScreen::~RuntimeScreen()
+    ScreenSDL::~ScreenSDL()
     {
         delete[] _ram;
     }
 
-    uint16_t RuntimeScreen::get(const size_t& i) const
+    uint16_t ScreenSDL::get(const size_t& i) const
     {
         if (i < HighAddress)
             return _ram[i];
@@ -52,28 +52,27 @@ namespace Hack::Chips
 #endif
     }
 
-    uint16_t* RuntimeScreen::pointer(const size_t& address) const
+    uint16_t* ScreenSDL::pointer(const size_t& address) const
     {
         if (address < HighAddress)
             return &_ram[address];
         return nullptr;
     }
 
-    void RuntimeScreen::setValue(const size_t& address, const uint16_t& v) const
+    void ScreenSDL::setValue(const size_t& address, const uint16_t& v) const
     {
-
         if (address < HighAddress)
             _ram[address] = _ram[address + HighAddress] = v;
         else
             throw IndexOutOfBounds();
     }
 
-    void RuntimeScreen::zero() const
+    void ScreenSDL::zero() const
     {
         memset(_ram, 0, sizeof(uint16_t) * Max);
     }
 
-    SDL_Texture* RuntimeScreen::createBuffer(SDL_Renderer* renderer)
+    SDL_Texture* ScreenSDL::createBuffer(SDL_Renderer* renderer)
     {
         _renderer = renderer;
         _texture  = SDL_CreateTexture(renderer,
@@ -84,7 +83,7 @@ namespace Hack::Chips
         return _texture;
     }
 
-    void RuntimeScreen::lockScreen()
+    void ScreenSDL::lockScreen()
     {
         if (_texture)
         {
@@ -97,12 +96,11 @@ namespace Hack::Chips
 
                 _pixels = (uint8_t*)pixels;
                 _pitch  = (size_t)pitch;
-                
             }
         }
     }
 
-    void RuntimeScreen::unlockScreen()
+    void ScreenSDL::unlockScreen()
     {
         if (_texture)
         {
@@ -119,8 +117,7 @@ namespace Hack::Chips
         }
     }
 
-
-    void RuntimeScreen::evaluate()
+    void ScreenSDL::evaluate()
     {
         const uint16_t loAddr = _address;
         if (loAddr >= HighAddress)
@@ -152,35 +149,33 @@ namespace Hack::Chips
 
         _out = _ram[loAddr];
         flush();
-
         _bits &= 0b01111100;
     }
 
-    void RuntimeScreen::flush() const
+    void ScreenSDL::flush() const
     {
         if (_pixels)
         {
-            uint8_t* base = &_pixels[_address * 64];
+            const size_t baseAddr = (size_t)&_pixels[_address << 6];
 
-            const uint16_t v = _ram[_address];
+            uint32_t* base = (uint32_t*)baseAddr;
 
-            for (int j = 0; j < 16; ++j)
-            {
-                if (v & 1 << j)
-                {
-                    *base++ = 0xFF;
-                    *base++ = 0xFF;
-                    *base++ = 0xFF;
-                    *base++ = 0xFF;
-                }
-                else
-                {
-                    *base++ = 0xFF;
-                    *base++ = 0x00;
-                    *base++ = 0x00;
-                    *base++ = 0x00;
-                }
-            }
+            *base++ = _out & Bit0 ? 0xFFFFFFFF : 0xFF;
+            *base++ = _out & Bit1 ? 0xFFFFFFFF : 0xFF;
+            *base++ = _out & Bit2 ? 0xFFFFFFFF : 0xFF;
+            *base++ = _out & Bit3 ? 0xFFFFFFFF : 0xFF;
+            *base++ = _out & Bit4 ? 0xFFFFFFFF : 0xFF;
+            *base++ = _out & Bit5 ? 0xFFFFFFFF : 0xFF;
+            *base++ = _out & Bit6 ? 0xFFFFFFFF : 0xFF;
+            *base++ = _out & Bit7 ? 0xFFFFFFFF : 0xFF;
+            *base++ = _out & Bit8 ? 0xFFFFFFFF : 0xFF;
+            *base++ = _out & Bit9 ? 0xFFFFFFFF : 0xFF;
+            *base++ = _out & Bit10 ? 0xFFFFFFFF : 0xFF;
+            *base++ = _out & Bit11 ? 0xFFFFFFFF : 0xFF;
+            *base++ = _out & Bit12 ? 0xFFFFFFFF : 0xFF;
+            *base++ = _out & Bit13 ? 0xFFFFFFFF : 0xFF;
+            *base++ = _out & Bit14 ? 0xFFFFFFFF : 0xFF;
+            *base   = _out & Bit15 ? 0xFFFFFFFF : 0xFF;
         }
     }
 
