@@ -18,7 +18,7 @@
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
 set(TargetName Compiler)
-set(TargetGroup Compiler)
+set(TargetGroup P7.Compiler)
 
 if (BuildType STREQUAL "CPP")
 

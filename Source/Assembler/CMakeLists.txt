@@ -18,7 +18,7 @@
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
 set(TargetName Assembler)
-set(TargetGroup Assembler)
+set(TargetGroup P2.Assembler)
 
 set(Target_HDR 
     Parser.h
@@ -47,6 +47,7 @@ if (BuildType STREQUAL "CPP")
 
     # The command line application
     set(TargetName Asm2Mc)
+    set(TargetGroup Executables)
 
 
     include_directories(${Hack_SOURCE_DIR}/Source)

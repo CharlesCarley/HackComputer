@@ -18,7 +18,7 @@
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
 set(TargetName Chips)
-set(TargetGroup Hardware)
+set(TargetGroup P1.Hardware)
 
 
 set(Target_HDR

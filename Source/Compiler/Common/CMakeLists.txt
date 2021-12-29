@@ -18,7 +18,7 @@
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
 set(TargetName CompileUtils)
-set(TargetGroup Compiler)
+set(TargetGroup P4.Compiler.Common)
 
 set(Target_HDR
    Tree.h

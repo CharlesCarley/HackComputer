@@ -20,10 +20,12 @@
 # ------------------------------------------------------------------------------
 include (GroupSet)
 
-set(TargetName     Unit)
-set(TestTargetName ${TargetName}Test)
+set(TargetName      Unit)
+set(TestTargetName  ${TargetName}Test)
+
 
 set_group(TestTarget_Data
+
     TestFiles/Inline:*.inl
     TestFiles/Assembler/ASM:Assembler/*.asm
     TestFiles/Assembler/Cmp:Assembler/*.cmp
@@ -32,7 +34,9 @@ set_group(TestTarget_Data
 )
 
 if (Hack_TEST_REGEN_CMP)
+
     include(Jack2Svg)
+
     set(Jack_FILES 
         Jack/Test01.jack
         Jack/Test02.jack
@@ -54,6 +58,7 @@ if (Hack_TEST_REGEN_CMP)
     endif()
 
 else()
+
     set(Parse_Trees 
         Jack/Test01.svg
         Jack/Test02.svg
@@ -128,5 +133,4 @@ if (Hack_AUTO_RUN_TEST)
         VS_DEBUGGER_WORKING_DIRECTORY  
         ${CMAKE_CURRENT_SOURCE_DIR}
     )
-
 endif()

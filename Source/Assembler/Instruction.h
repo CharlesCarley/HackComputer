@@ -24,6 +24,11 @@
 
 namespace Hack::Assembler
 {
+
+    /// <summary>
+    /// Utility class that converts a binary instruction
+    /// to its symbolic string representation.
+    /// </summary>
     class Instruction
     {
     private:

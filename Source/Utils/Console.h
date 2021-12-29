@@ -45,25 +45,64 @@ namespace Hack
         CS_WHITE,
     };
 
+    /// <summary>
+    /// Utility console class.
+    /// Makes use of std::cout, std::cin and std::cerr
+    /// </summary>
     class Console
     {
     public:
+        /// <summary>
+        /// Blocks until a character is pressed.
+        /// </summary>
         static void read();
 
+        /// <summary>
+        /// Reads a single character from stdin.
+        /// </summary>
+        /// <param name="v">Destination character.</param>
         static void read(int8_t& v);
 
+        /// <summary>
+        /// Reads a single character from stdin.
+        /// </summary>
+        /// <param name="v">Destination character.</param>
         static void read(uint8_t& v);
 
+        /// <summary>
+        /// Reads a single short from stdin.
+        /// </summary>
+        /// <param name="v">Destination memory.</param>
         static void read(int16_t& v);
 
+        /// <summary>
+        /// Reads a single unsigned short from stdin.
+        /// </summary>
+        /// <param name="v">Destination memory.</param>
         static void read(uint16_t& v);
 
+        /// <summary>
+        /// Reads a single int from stdin.
+        /// </summary>
+        /// <param name="v">Destination memory.</param>
         static void read(int32_t& v);
 
+        /// <summary>
+        /// Reads a single unsigned int from stdin.
+        /// </summary>
+        /// <param name="v">Destination memory.</param>
         static void read(uint32_t& v);
 
+        /// <summary>
+        /// Reads a single 64bit integer from stdin.
+        /// </summary>
+        /// <param name="v">Destination memory.</param>
         static void read(int64_t& v);
 
+        /// <summary>
+        /// Reads a single unsigned 64bit integer from stdin.
+        /// </summary>
+        /// <param name="v">Destination memory.</param>
         static void read(uint64_t& v);
 
         static void read(String& v);

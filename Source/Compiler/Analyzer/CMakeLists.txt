@@ -18,7 +18,7 @@
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
 set(TargetName SyntaxAnalyzer)
-set(TargetGroup Compiler)
+set(TargetGroup P4.Compiler)
 
 set(Target_HDR
    Token.h
@@ -53,7 +53,9 @@ if (BuildType STREQUAL "CPP")
 
     # The command line application
     set(TargetName Jack2XML)
-    
+    set(TargetGroup Executables)
+
+
     unset(Target_HDR)
     unset(Target_SRC)
     set(Target_SRC Main.cpp)

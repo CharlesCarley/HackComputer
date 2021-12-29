@@ -18,7 +18,7 @@
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
 set(TargetName  CodeGenerator)
-set(TargetGroup Compiler)
+set(TargetGroup P6.Compiler)
 
 set(Target_HDR
     Expression.h
@@ -53,6 +53,8 @@ endif()
 if (BuildType STREQUAL "CPP")
 
     set(TargetName VmCompiler)
+    set(TargetGroup Executables)
+
     unset(Target_HDR)
     unset(Target_SRC)
     set(Target_SRC Main.cpp)

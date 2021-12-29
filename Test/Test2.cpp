@@ -126,7 +126,7 @@ GTEST_TEST(Assembler, Error)
 
         EXPECT_FALSE(true);
     }
-    catch(Hack::Exception &ex)
+    catch(std::exception &ex)
     {
         Hack::Console::write(ex.what());
     }

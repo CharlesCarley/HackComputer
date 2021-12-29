@@ -18,7 +18,7 @@
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
 set(TargetName VirtualMachine)
-set(TargetGroup VirtualMachine)
+set(TargetGroup P3.VirtualMachine)
 
 
 set(Target_HDR
@@ -55,7 +55,9 @@ if (BuildType STREQUAL "CPP")
 
     # The command line application
     set(TargetName Vm2Asm)
-    
+    set(TargetGroup Executables)
+
+
     unset(Target_HDR)
     unset(Target_SRC)
     set(Target_SRC Main.cpp)
