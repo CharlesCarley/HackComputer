@@ -158,7 +158,7 @@ namespace Hack::Chips
         out.setB(axyN.getOut());
         out.setSel(_io.b[6] & No);
 
-        _dirty   = false;
+        _io.b[7] &= ~Bit0;
         _io.s[2] = out.getOut();
 
         bit16_t b16{};
