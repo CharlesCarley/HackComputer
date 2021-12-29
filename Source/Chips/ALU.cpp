@@ -69,14 +69,14 @@ namespace Hack::Chips
 
     bool Alu::getZr()
     {
-        if (isDirty())
+        if (_dirty)
             evaluate();
         return (_bits & Zr) != 0;
     }
 
     bool Alu::getNe()
     {
-        if (isDirty())
+        if (_dirty)
             evaluate();
         return (_bits & Ne) != 0;
     }
@@ -234,7 +234,7 @@ namespace Hack::Chips
         if (_io.s[2] == 0)
             _bits |= Zr;
 
-        if (_io.s[2] & 1 << 15)
+        if (_io.s[2] & Bit15)
             _bits |= Ne;
 #endif
     }

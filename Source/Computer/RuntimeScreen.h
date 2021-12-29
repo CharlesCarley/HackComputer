@@ -31,6 +31,7 @@ namespace Hack::Chips
     private:
         uint16_t*    _ram;
         SDL_Texture* _texture;
+        SDL_Renderer* _renderer;
         uint8_t*     _pixels;
         size_t       _pitch;
 
@@ -50,11 +51,12 @@ namespace Hack::Chips
         SDL_Texture* createBuffer(SDL_Renderer* renderer);
 
         void lockScreen() override;
-        void flush() const;
+
         void unlockScreen() override;
 
     protected:
-
+        void flush() const;
+        
 
         void evaluate() override;
     };

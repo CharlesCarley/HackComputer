@@ -29,13 +29,13 @@ namespace Hack::Chips
     {
     public:
         static const uint16_t HighAddress = High;
+        static const uint16_t WriteAddress= High+1;
         static const uint16_t Max         = (High << 1) + 1;
 
     protected:
         uint16_t _in;
         uint16_t _out;
         uint16_t _address;
-
 
     public:
         IMemorySegment();
@@ -61,6 +61,8 @@ namespace Hack::Chips
         virtual void zero() const = 0;
 
         virtual void lockScreen();
+
+        virtual void sync(){}
 
         virtual void unlockScreen();
 
@@ -118,7 +120,7 @@ namespace Hack::Chips
     template <uint16_t High, uint16_t ElementCount>
     uint16_t IMemorySegment<High, ElementCount>::getOut()
     {
-        if (isDirty())
+        if ((_bits & Bit7) != 0 && (_bits & Bit6) == 0)
             evaluate();
         return _out;
     }

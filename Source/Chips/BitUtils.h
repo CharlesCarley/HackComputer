@@ -28,6 +28,26 @@
 
 namespace Hack::Chips
 {
+    enum BitIndex
+    {
+        Bit0  = 0x0001,
+        Bit1  = 0x0002,
+        Bit2  = 0x0004,
+        Bit3  = 0x0008,
+        Bit4  = 0x0010,
+        Bit5  = 0x0020,
+        Bit6  = 0x0040,
+        Bit7  = 0x0080,
+        Bit8  = 0x0100,
+        Bit9  = 0x0200,
+        Bit10 = 0x0400,
+        Bit11 = 0x0800,
+        Bit12 = 0x1000,
+        Bit13 = 0x2000,
+        Bit14 = 0x4000,
+        Bit15 = 0x8000,
+    };
+
     union bit16_t
     {
         uint16_t s;
@@ -68,135 +88,175 @@ namespace Hack::Chips
     class BitUtils
     {
     public:
-        static void unpack(const T& value, bool* array)
-        {
-            for (uint8_t i = 0; i < Count; ++i)
-                array[i] = (value & 1 << i) != 0;
-        }
+        static void unpack(const T& value, bool* array);
 
-        static void unpack(const T& value, uint8_t* array)
-        {
-            for (uint8_t i = 0; i < Count; ++i)
-                array[i] = (value & 1 << i) != 0;
-        }
+        static void unpack(const T& value, uint8_t* array);
 
-        static T pack(const uint8_t* array)
-        {
-            T ret = 0;
-            for (uint8_t i = 0; i < Count; ++i)
-            {
-                if (array[i])
-                    ret |= 1 << i;
-            }
-            return ret;
-        }
+        static T pack(const uint8_t* array);
 
-        static T pack(const char* array)
-        {
-            T ret = 0;
-            for (uint8_t i = 0; i < Count; ++i)
-            {
-                if (array[i])
-                    ret |= 1 << (Count - 1 - i);
-            }
-            return ret;
-        }
+        static T pack(const char* array);
 
-        static T pack(const bool* array)
-        {
-            T ret = 0;
-            for (uint8_t i = 0; i < Count; ++i)
-            {
-                if (array[i])
-                    ret |= 1 << i;
-            }
-            return ret;
-        }
+        static T pack(const bool* array);
 
         template <uint8_t N>
-        static T pack(const bool array[N])
-        {
-#ifdef CHECK_INT_BOUNDS
-            if (N >= sizeof(T) * 8)
-                throw IndexOutOfBounds();
-#endif
-            T ret = 0;
-            for (size_t i = 0; i < N; ++i)
-            {
-                if (array[i])
-                    ret |= 1 << i;
-            }
-            return ret;
-        }
+        static T pack(const bool array[N]);
 
-        static T extract(const T& in, const T& lo, const T& hi)
-        {
-#ifdef CHECK_INT_BOUNDS
-            if (lo >= Count || hi >= Count)
-                throw IndexOutOfBounds();
-#endif
-            T ret = 0;
-            for (T i = lo; i <= hi; ++i)
-            {
-                const T p = 1 << i;
-                if (in & p)
-                    ret |= 1 << (i - lo);
-            }
-            return ret;
-        }
+        static T extract(const T& in, const T& lo, const T& hi);
 
-        static bool getBit(const T& bits, const T& index)
-        {
-#ifdef CHECK_INT_BOUNDS
-            if (index >= Count)
-                throw IndexOutOfBounds();
-#endif
-            return (bits & 1 << index) != 0;
-        }
+        static bool getBit(const T& bits, const T& index);
 
-        static void setBit(T& bits, const T& index)
-        {
-#ifdef CHECK_INT_BOUNDS
-            if (index >= Count)
-                throw IndexOutOfBounds();
-#endif
-            bits |= 1 << index;
-        }
+        static void setBit(T& bits, const T& index);
 
-        static void assignBit(T& bits, const T& index)
-        {
-#ifdef CHECK_INT_BOUNDS
-            if (index >= Count)
-                throw IndexOutOfBounds();
-#endif
-            bits = (T)(1 << index);
-        }
+        static void assignBit(T& bits, const T& index);
 
-        static void clearBit(T& bits, const T& index)
-        {
-#ifdef CHECK_INT_BOUNDS
-            if (index >= Count)
-                throw IndexOutOfBounds();
-#endif
-            bits &= ~(1 << index);
-        }
+        static void clearBit(T& bits, const T& index);
 
-        static void applyBit(T& bits, const T& index, const bool value)
-        {
-            value ? setBit(bits, index) : clearBit(bits, index);
-        }
+        static void applyBit(T& bits, const T& index, bool value);
 
-        static void printBit(const T& bits)
-        {
-            OutputStringStream os;
-
-            const size_t v = (size_t)bits;
-
-            std::bitset<Count> b(v);
-            os << b << ' ' << '|' << ' ' << v;
-            Console::writeLine(os);
-        }
+        static void printBit(const T& bits);
     };
+
+    template <typename T, uint8_t Count>
+    void BitUtils<T, Count>::unpack(const T& value, bool* array)
+    {
+        for (uint8_t i = 0; i < Count; ++i)
+            array[i] = (value & 1 << i) != 0;
+    }
+
+    template <typename T, uint8_t Count>
+    void BitUtils<T, Count>::unpack(const T& value, uint8_t* array)
+    {
+        for (uint8_t i = 0; i < Count; ++i)
+            array[i] = (value & 1 << i) != 0;
+    }
+
+    template <typename T, uint8_t Count>
+    T BitUtils<T, Count>::pack(const uint8_t* array)
+    {
+        T ret = 0;
+        for (uint8_t i = 0; i < Count; ++i)
+        {
+            if (array[i])
+                ret |= 1 << i;
+        }
+        return ret;
+    }
+
+    template <typename T, uint8_t Count>
+    T BitUtils<T, Count>::pack(const char* array)
+    {
+        T ret = 0;
+        for (uint8_t i = 0; i < Count; ++i)
+        {
+            if (array[i])
+                ret |= 1 << (Count - 1 - i);
+        }
+        return ret;
+    }
+
+    template <typename T, uint8_t Count>
+    T BitUtils<T, Count>::pack(const bool* array)
+    {
+        T ret = 0;
+        for (uint8_t i = 0; i < Count; ++i)
+        {
+            if (array[i])
+                ret |= 1 << i;
+        }
+        return ret;
+    }
+
+    template <typename T, uint8_t Count>
+    template <uint8_t N>
+    T BitUtils<T, Count>::pack(const bool array[N])
+    {
+#ifdef CHECK_INT_BOUNDS
+        if (N >= sizeof(T) * 8)
+            throw IndexOutOfBounds();
+#endif
+        T ret = 0;
+        for (size_t i = 0; i < N; ++i)
+        {
+            if (array[i])
+                ret |= 1 << i;
+        }
+        return ret;
+    }
+
+    template <typename T, uint8_t Count>
+    T BitUtils<T, Count>::extract(const T& in, const T& lo, const T& hi)
+    {
+#ifdef CHECK_INT_BOUNDS
+        if (lo >= Count || hi >= Count)
+            throw IndexOutOfBounds();
+#endif
+        T ret = 0;
+        for (T i = lo; i <= hi; ++i)
+        {
+            const T p = 1 << i;
+            if (in & p)
+                ret |= 1 << (i - lo);
+        }
+        return ret;
+    }
+
+    template <typename T, uint8_t Count>
+    bool BitUtils<T, Count>::getBit(const T& bits, const T& index)
+    {
+#ifdef CHECK_INT_BOUNDS
+        if (index >= Count)
+            throw IndexOutOfBounds();
+#endif
+        return (bits & 1 << index) != 0;
+    }
+
+    template <typename T, uint8_t Count>
+    void BitUtils<T, Count>::setBit(T& bits, const T& index)
+    {
+#ifdef CHECK_INT_BOUNDS
+        if (index >= Count)
+            throw IndexOutOfBounds();
+#endif
+        bits |= 1 << index;
+    }
+
+    template <typename T, uint8_t Count>
+    void BitUtils<T, Count>::assignBit(T& bits, const T& index)
+    {
+#ifdef CHECK_INT_BOUNDS
+        if (index >= Count)
+            throw IndexOutOfBounds();
+#endif
+        bits = (T)(1 << index);
+    }
+
+    template <typename T, uint8_t Count>
+    void BitUtils<T, Count>::clearBit(T& bits, const T& index)
+    {
+#ifdef CHECK_INT_BOUNDS
+        if (index >= Count)
+            throw IndexOutOfBounds();
+#endif
+        bits &= ~(1 << index);
+    }
+
+    template <typename T, uint8_t Count>
+    void BitUtils<T, Count>::applyBit(T& bits, const T& index, const bool value)
+    {
+        value ? setBit(bits, index) : clearBit(bits, index);
+    }
+
+    template <typename T, uint8_t Count>
+    void BitUtils<T, Count>::printBit(const T& bits)
+    {
+        OutputStringStream os;
+
+        const size_t v = (size_t)bits;
+
+        std::bitset<Count> b(v);
+        os << b << ' ' << '|' << ' ' << v;
+        Console::writeLine(os);
+    }
 
     using B8  = BitUtils<uint8_t, 8>;
     using B16 = BitUtils<uint16_t, 16>;

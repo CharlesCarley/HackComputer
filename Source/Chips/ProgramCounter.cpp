@@ -31,49 +31,61 @@ namespace Hack::Chips
 {
     ProgramCounter::ProgramCounter()
     {
-        _bits.ll = 0;
-        B8::setBit(_bits.b[6], 7);
+        _bits.ll   = 0;
+        _bits.b[6] = Bit7;
     }
 
     void ProgramCounter::setIn(const uint16_t& v)
     {
         _bits.s[0] = v;
-        B8::setBit(_bits.b[6], 7);
+        _bits.b[6] |= Bit7;
     }
 
     void ProgramCounter::setFlags(const uint8_t& v)
     {
         _bits.b[6] = v & 0b00000111;
-        B8::setBit(_bits.b[6], 7);
+        _bits.b[6] |= Bit7;
     }
 
     void ProgramCounter::setInc(bool v)
     {
-        B8::applyBit(_bits.b[6], 0, v);
-        B8::setBit(_bits.b[6], 7);
+        if (v)
+            _bits.b[6] |= Bit0;
+        else
+            _bits.b[6] &= ~Bit0;
+
+        _bits.b[6] |= Bit7;
     }
 
     void ProgramCounter::setReset(bool v)
     {
-        B8::applyBit(_bits.b[6], 1, v);
-        B8::setBit(_bits.b[6], 7);
+        if (v)
+            _bits.b[6] |= Bit1;
+        else
+            _bits.b[6] &= ~Bit1;
+
+        _bits.b[6] |= Bit7;
     }
 
     void ProgramCounter::setLoad(bool v)
     {
-        B8::applyBit(_bits.b[6], 2, v);
-        B8::setBit(_bits.b[6], 7);
+        if (v)
+            _bits.b[6] |= Bit2;
+        else
+            _bits.b[6] &= ~Bit2;
+
+        _bits.b[6] |= Bit7;
     }
 
     void ProgramCounter::setClock(bool v)
     {
         _bits.b[7] = v;
-        B8::setBit(_bits.b[6], 7);
+        _bits.b[6] |= Bit7;
     }
 
     uint16_t ProgramCounter::getOut()
     {
-        if (B8::getBit(_bits.b[6], 7))
+        if (_bits.b[6] & Bit7)
             evaluate();
         return _bits.s[1];
     }
@@ -124,8 +136,7 @@ namespace Hack::Chips
             _bits.s[2] = value;
         }
 #endif
-
-        B8::clearBit(_bits.b[6], 7);
+        _bits.b[6] &= ~Bit7;
     }
 
 }  // namespace Hack::Chips

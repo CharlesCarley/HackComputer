@@ -28,6 +28,7 @@ namespace Hack::Chips
     RuntimeScreen::RuntimeScreen() :
         _ram(new uint16_t[Max + 1]),
         _texture(nullptr),
+        _renderer(nullptr),
         _pixels(nullptr),
         _pitch(0)
     {
@@ -60,8 +61,11 @@ namespace Hack::Chips
 
     void RuntimeScreen::setValue(const size_t& address, const uint16_t& v) const
     {
+
         if (address < HighAddress)
             _ram[address] = _ram[address + HighAddress] = v;
+        else
+            throw IndexOutOfBounds();
     }
 
     void RuntimeScreen::zero() const
@@ -71,7 +75,8 @@ namespace Hack::Chips
 
     SDL_Texture* RuntimeScreen::createBuffer(SDL_Renderer* renderer)
     {
-        _texture = SDL_CreateTexture(renderer,
+        _renderer = renderer;
+        _texture  = SDL_CreateTexture(renderer,
                                      SDL_PIXELFORMAT_ABGR32,
                                      SDL_TEXTUREACCESS_STREAMING,
                                      512,
@@ -86,10 +91,14 @@ namespace Hack::Chips
             void* pixels;
             int   pitch;
 
-            SDL_LockTexture(_texture, nullptr, &pixels, &pitch);
+            if (_pixels == nullptr)
+            {
+                SDL_LockTexture(_texture, nullptr, &pixels, &pitch);
 
-            _pixels = (uint8_t*)pixels;
-            _pitch  = (size_t)pitch;
+                _pixels = (uint8_t*)pixels;
+                _pitch  = (size_t)pitch;
+                
+            }
         }
     }
 
@@ -101,8 +110,15 @@ namespace Hack::Chips
             _pitch  = 0;
 
             SDL_UnlockTexture(_texture);
+            // grab the final size
+            SDL_Rect dest = {0, 0, 0, 0};
+            SDL_GetRendererOutputSize(_renderer, &dest.w, &dest.h);
+
+            SDL_Rect src = {0, 0, 512, 256};
+            SDL_RenderCopy(_renderer, _texture, &src, &dest);
         }
     }
+
 
     void RuntimeScreen::evaluate()
     {
@@ -135,6 +151,8 @@ namespace Hack::Chips
         }
 
         _out = _ram[loAddr];
+        flush();
+
         _bits &= 0b01111100;
     }
 
@@ -142,32 +160,30 @@ namespace Hack::Chips
     {
         if (_pixels)
         {
-            uint8_t* base = _pixels;
+            uint8_t* base = &_pixels[_address * 64];
 
-            for (int i = 0; i < 0x2000; ++i)
+            const uint16_t v = _ram[_address];
+
+            for (int j = 0; j < 16; ++j)
             {
-                const uint16_t v = _ram[i];
-
-                for (int j = 0; j < 16; ++j)
+                if (v & 1 << j)
                 {
-                    if (v & 1 << j)
-                    {
-                        *base++ = 0xFF;
-                        *base++ = 0xFF;
-                        *base++ = 0xFF;
-                        *base++ = 0xFF;
-                    }
-                    else
-                    {
-                        *base++ = 0xFF;
-                        *base++ = 0x00;
-                        *base++ = 0x00;
-                        *base++ = 0x00;
-                    }
+                    *base++ = 0xFF;
+                    *base++ = 0xFF;
+                    *base++ = 0xFF;
+                    *base++ = 0xFF;
+                }
+                else
+                {
+                    *base++ = 0xFF;
+                    *base++ = 0x00;
+                    *base++ = 0x00;
+                    *base++ = 0x00;
                 }
             }
         }
     }
 
 }  // namespace Hack::Chips
+
 #endif

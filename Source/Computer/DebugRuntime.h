@@ -32,6 +32,11 @@ namespace Hack::Computer
     private:
         DebugRuntimePrivate* _private;
 
+        int16_t getRate() const override
+        {
+            return 2;
+        }
+
     public:
         DebugRuntime();
 
@@ -48,7 +53,6 @@ namespace Hack::Computer
         void flushMemory(Chips::Computer* computer) const override;
 
         void update(Chips::Computer* computer) const override;
-
     };
 
 }  // namespace Hack::Computer

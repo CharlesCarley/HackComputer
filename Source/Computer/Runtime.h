@@ -33,12 +33,17 @@ namespace Hack::Computer
     private:
         RuntimePrivate* _private;
 
+        int16_t getRate() const override
+        {
+            return 0x8000-1;
+        }
+
     public:
         Runtime();
         ~Runtime() override;
 
-        void initialize(Chips::Computer*        computer,
-                        Chips::Screen* screen) const override;
+        void initialize(Chips::Computer* computer,
+                        Chips::Screen*   screen) const override;
 
         bool exitRequest() const override;
 
@@ -47,7 +52,6 @@ namespace Hack::Computer
         void flushMemory(Chips::Computer* computer) const override;
 
         void update(Chips::Computer* computer) const override;
-
     };
 
 }  // namespace Hack::Computer

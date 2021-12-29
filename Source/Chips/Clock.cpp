@@ -46,21 +46,29 @@ namespace Hack::Chips
 
     bool Clock::getOut()
     {
-        const bool reset = getBit(6);
         _bits &= ClockMask;
 #ifdef IMPLEMENT_BLACK_BOX
-        if (reset)
+        if (getBit(6))
             applyBit(0, getBit(1));
         else
             applyBit(0, Gates::Not(getBit(0)));
         return getBit(0);
 #else
-        if (reset)
-            applyBit(0, getBit(1));
+        if (_bits & Bit6)
+        {
+            if ((_bits & Bit1) != 0)
+                _bits |= Bit0;
+            else
+                _bits &= ~Bit0;
+        }
         else
-            applyBit(0, !getBit(0));
-
-        return getBit(0);
+        {
+            if ((_bits & Bit0) == 0)
+                _bits |= Bit0;
+            else
+                _bits &= ~Bit0;
+        }
+        return (_bits & Bit0) != 0;
 #endif
     }
 

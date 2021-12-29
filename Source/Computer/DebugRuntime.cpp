@@ -259,7 +259,7 @@ namespace Hack::Computer
 
             for (int i = -hh + 1; i < hh - 1; ++i)
             {
-                int iVal = _cpuState.addrM + i;
+                const int iVal = _cpuState.addrM + i;
 
                 const uint16_t vi = _ram->get(iVal);
                 String         v;

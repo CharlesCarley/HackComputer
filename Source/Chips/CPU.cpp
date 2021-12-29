@@ -29,6 +29,8 @@
 #include "Chips/Mux16.h"
 #endif
 
+#define DirtyBits 
+
 namespace Hack::Chips
 {
 #ifndef IMPLEMENT_BLACK_BOX
@@ -47,71 +49,81 @@ namespace Hack::Chips
 
     void Cpu::lock(const bool v)
     {
-        applyBit(2, v);
+        if (v)
+            _bits |= Bit2;
+        else
+            _bits &= ~Bit2;
     }
 
     void Cpu::setInMemory(const uint16_t& v)
     {
         _in = v;
-        markDirty();
+        _bits |= Bit7;
     }
 
     void Cpu::setClock(bool v)
     {
-        applyBit(1, v);
-        markDirty();
+        if (v)
+            _bits |= Bit1;
+        else
+            _bits &= ~Bit1;
+
+        _bits |= Bit7;
     }
 
     void Cpu::setReset(bool v)
     {
-        applyBit(0, v);
-        markDirty();
+        if (v)
+            _bits |= Bit0;
+        else
+            _bits &= ~Bit0;
+        _bits |= Bit7;
     }
 
     void Cpu::setInstruction(const uint16_t& v)
     {
         _ins = v;
-        markDirty();
+        _bits |= Bit7;
     }
 
     bool Cpu::getWrite()
     {
-        if (isDirty())
+        if (_bits & Bit7  && !(_bits & Bit2))
             evaluate();
-        return getBit(6);
+        return (_bits & Bit6) != 0;
     }
 
     uint16_t Cpu::getOut()
     {
-        if (isDirty())
+        if (_bits & Bit7 && !(_bits & Bit2))
             evaluate();
         return _alu.getOut();
     }
 
     uint16_t Cpu::getAddress()
     {
-        if (isDirty())
+        if (_bits & Bit7 && !(_bits & Bit2))
             evaluate();
         return _a.getOut();
     }
 
     uint16_t Cpu::getDRegister()
     {
-        if (isDirty())
+        if (_bits & Bit7 && !(_bits & Bit2))
             evaluate();
         return _d.getOut();
     }
 
     uint16_t Cpu::getAMRegister()
     {
-        if (isDirty())
+        if (_bits & Bit7 && !(_bits & Bit2))
             evaluate();
         return _a.getOut();
     }
 
     uint16_t Cpu::getNext()
     {
-        if (isDirty())
+        if (_bits & Bit7 && !(_bits & Bit2))
             evaluate();
         return _pc.getOut();
     }
@@ -123,7 +135,7 @@ namespace Hack::Chips
 
     void Cpu::markDirty()
     {
-        setBit(7);
+        _bits |= Bit7;
     }
 
     void Cpu::evaluate()
@@ -185,10 +197,10 @@ namespace Hack::Chips
 #else
 
         // clock is in bit 1
-        const bool tick = getBit(1);
+        const bool tick = (_bits & Bit1)!=0;
 
         // if the highest bit is set, it is a c-type instruction
-        const bool typeC = (_ins & 1 << 15) != 0;
+        const bool typeC = (_ins & Bit15) != 0;
 
         // otherwise it's an a-type instruction
         const bool typeA = !typeC;
@@ -237,7 +249,7 @@ namespace Hack::Chips
 
         _pc.setIn(_a.getOut());
         _pc.setInc(true);
-        _pc.setReset(getBit(0));
+        _pc.setReset((_bits & Bit0)!=0);
         _pc.setClock(tick);
 
         // bit 6 controls the write memory flag
@@ -249,7 +261,7 @@ namespace Hack::Chips
         (void)_pc.getOut();
 
         // clear the dirty flag
-        clearBit(7);
+        _bits &= ~Bit7;
 #endif
     }
 

@@ -35,6 +35,7 @@ option(Hack_VM_ZERO_RAM          "Emits extra instructions to remove RAM values 
 option(Hack_VM_GUARD_PUSH        "Emits conditional instructions to prevent pushing to segments when its out of context." OFF)
 option(Hack_USE_SDL              "Enables or disables SDL" OFF)
 option(Hack_TEST_REGEN_CMP       "Regenerate the compare files" OFF)
+option(Hack_JUST_MY_CODE         "Enable the /JMC flag" ON)
 
 set(Hack_INSTALL_PATH "" 
 	CACHE PATH
@@ -77,8 +78,10 @@ if (MSVC)
 	# globally disable scoped enum warnings
 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /wd26812")
 
-	# Enable just my code...
-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /JMC")
+	if (Hack_JUST_MY_CODE)
+		# Enable just my code...
+		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /JMC")
+	endif()
 
 	set(WebRunner_DIR ${Hack_SOURCE_DIR}/Web/build/windows/runner)
 	set(Test_DIR      ${Hack_SOURCE_DIR}/Web/test)

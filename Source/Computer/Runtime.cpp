@@ -107,6 +107,17 @@ namespace Hack::Computer
             {
                 switch (evt.type)
                 {
+                case SDL_KEYDOWN:
+                    if (evt.key.keysym.sym == SDLK_r)
+                    {
+                        computer->reset();
+                    }
+                    if (evt.key.keysym.sym == SDLK_ESCAPE)
+                    {
+                        _quit = true;
+                    }
+                    break;
+
                 case SDL_QUIT:
                     _quit = true;
                     break;
@@ -121,18 +132,6 @@ namespace Hack::Computer
 
         void flushMemory(Chips::Computer* computer) const
         {
-            RuntimeScreen* scr = (RuntimeScreen*)computer->memory()->getScreen();
-
-            scr->lockScreen();
-            scr->flush();
-            scr->unlockScreen();
-
-            // grab the final size
-            SDL_Rect dest = {0, 0, 0, 0};
-            SDL_GetRendererOutputSize(_renderer, &dest.w, &dest.h);
-
-            SDL_Rect src = {0, 0, 512, 256};
-            SDL_RenderCopy(_renderer, _screenBuffer, &src, &dest);
             SDL_RenderPresent(_renderer);
         }
     };
@@ -169,11 +168,18 @@ namespace Hack::Computer
 
     void Runtime::update(Chips::Computer* computer) const
     {
-        const int16_t rate = 0x2000 * getRate();
-        for (size_t i = 0; i < rate; ++i)
-            computer->update(false);
+        const int32_t rate = getRate();
 
-        computer->update(false);
+        RuntimeScreen* rc = (RuntimeScreen*)computer->memory()->getScreen();
+        rc->lockScreen();
+        computer->update(true);
+
+        for (int32_t i = 0; i < rate && computer->canRead(); ++i)
+        {
+            computer->update(false);
+            computer->update(true);
+        }
+        rc->unlockScreen();
     }
 
 }  // namespace Hack::Computer

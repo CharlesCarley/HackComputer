@@ -60,7 +60,6 @@ set(Target_HDR
     Ram512.h
     Ram64.h
     Ram8.h
-    RamSegment.h
     Rom32.h
     Register.h
     Screen.h
@@ -68,9 +67,6 @@ set(Target_HDR
     Timer.h
     XOr.h
 )
-
-
-
 
 set(Target_SRC 
     Add16.cpp

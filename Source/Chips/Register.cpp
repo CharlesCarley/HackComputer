@@ -28,30 +28,38 @@ namespace Hack::Chips
     Register::Register()
     {
         _bits.ll = 0;
-        B8::assignBit(_bits.b[6], 7);
+        _bits.b[6] = Bit7;
     }
 
     void Register::setIn(const uint16_t& v)
     {
         _bits.s[0] = v;
-        B8::setBit(_bits.b[6], 7);
+        _bits.b[6] |= Bit7;
     }
 
     void Register::setLoad(bool write)
     {
-        B8::applyBit(_bits.b[6], 0, write);
-        B8::setBit(_bits.b[6], 7);
+        if (write)
+            _bits.b[6] |= Bit0;
+        else
+            _bits.b[6] &= ~Bit0;
+
+        _bits.b[6] |= Bit7;
     }
 
     void Register::setClock(bool tick)
     {
-        B8::applyBit(_bits.b[6], 1, tick);
-        B8::setBit(_bits.b[6], 7);
+        if (tick)
+            _bits.b[6] |= Bit1;
+        else
+            _bits.b[6] &= ~Bit1;
+
+        _bits.b[6] |= Bit7;
     }
 
     uint16_t Register::getOut()
     {
-        if (B8::getBit(_bits.b[6], 7))
+        if (_bits.b[6] & Bit7)
             evaluate();
         return _bits.s[1];
     }
@@ -84,10 +92,14 @@ namespace Hack::Chips
             if (_r[i].getOut())
                 _bits.s[1] |= p;
         }
+        B8::clearBit(_bits.b[6], 7);
+
 #else
-        if (B8::getBit(_bits.b[6], 0))
+        _bits.b[6] &= ~Bit7;
+
+        if (_bits.b[6] & Bit0)
         {
-            if (B8::getBit(_bits.b[6], 1))
+            if (_bits.b[6] & Bit1)
                 _bits.s[1] = _bits.s[2] = _bits.s[0];
             else
             {
@@ -97,7 +109,6 @@ namespace Hack::Chips
         }
 #endif
 
-        B8::clearBit(_bits.b[6], 7);
     }
 
 }  // namespace Hack::Chips

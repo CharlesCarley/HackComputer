@@ -31,10 +31,9 @@ namespace Hack::Chips
         _size(0),
         _r(nullptr)
     {
-        setBit(7);
-        _r = new uint16_t[0x7FFF+1];
-
-        memset(_r, 0, sizeof(uint16_t) * 0x7FFF+1);
+        _bits |= Bit7;
+        _r = new uint16_t[0x7FFF + 1];
+        memset(_r, 0, sizeof(uint16_t) * 0x7FFF + 1);
     }
 
     Rom32::~Rom32()
@@ -47,7 +46,8 @@ namespace Hack::Chips
     {
         if (_in != v)
         {
-            setBit(7);
+            _bits |= Bit7;
+
             _in = v;
             if (_in >= 0x7FFF)
                 _in = 0;
@@ -56,12 +56,15 @@ namespace Hack::Chips
 
     void Rom32::lock(const bool v)
     {
-        applyBit(6, v);
+        if (v)
+            _bits |= Bit6;
+        else
+            _bits &= ~Bit6;
     }
 
     uint16_t Rom32::getOut()
     {
-        if (isDirty())
+        if ((_bits & Bit7) != 0 && (_bits & Bit6) == 0)
             evaluate();
         return _out;
     }
@@ -89,7 +92,6 @@ namespace Hack::Chips
         std::ifstream fp(file);
         String        s;
 
-        
         for (_size = 0; _size < 0x7FFF + 1; ++_size)
         {
             if (fp >> s)
@@ -101,7 +103,7 @@ namespace Hack::Chips
 
     void Rom32::load(const uint16_t* data, size_t size)
     {
-        if (data!= nullptr)
+        if (data != nullptr)
         {
             // zero any memory that is present
             memset(_r, 0, sizeof(uint16_t) * 0x7FFF);

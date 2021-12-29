@@ -104,13 +104,13 @@ namespace Hack::Chips
         if (loBit >= High)
             return;
 
-        if (this->_bits & 1)
+        if (this->_bits & Bit0)
         {
             const uint16_t hiBit = loBit + High;
 
             if (hiBit < BaseType::Max)
             {
-                if (this->_bits & 2)
+                if (this->_bits & Bit1)
                     _ram[loBit] = _ram[hiBit] = this->_in;
                 else
                 {

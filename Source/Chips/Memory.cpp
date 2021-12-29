@@ -25,8 +25,8 @@ namespace Hack::Chips
 {
     const uint16_t Memory::MaxAddress    = 0x6000;
     const uint16_t Memory::ScreenAddress = 0x4000;
-    const uint16_t Memory::StackAddress  = 256;
-    const uint16_t Memory::HeapAddress   = 2048;
+    const uint16_t Memory::StackAddress  = 0x0100;
+    const uint16_t Memory::HeapAddress   = 0x0800;
 
     Memory::Memory() :
         _in(0),
@@ -52,8 +52,7 @@ namespace Hack::Chips
     {
         if (screen)
         {
-            if (_screen)
-                delete _screen;
+            delete _screen;
             _screen = screen;
         }
         else
@@ -68,14 +67,15 @@ namespace Hack::Chips
 
     void Memory::setAddress(const uint16_t& v)
     {
-        if (v <= MaxAddress)
+        if (v < MaxAddress)
             _address = v;
     }
 
     void Memory::setValue(const size_t& index, const uint16_t& v) const
     {
-        if (index < MaxAddress)
+        if (index <MaxAddress)
         {
+            
             if (index < ScreenAddress)
                 _ram16->setValue(index, v);
             else
@@ -102,7 +102,7 @@ namespace Hack::Chips
 
     uint16_t Memory::getOut()
     {
-        if ((_bits & 128) != 0 && (_bits & 64) == 0)
+        if ((_bits & Bit7) != 0 && (_bits & Bit6) == 0)
             evaluate();
         return _out;
     }
@@ -148,21 +148,24 @@ namespace Hack::Chips
             if (_address < ScreenAddress)
             {
                 _ram16->setAddress(_address);
-                _ram16->setLoad((_bits & 1) != 0);
-                _ram16->setClock((_bits & 2) != 0);
+                _ram16->setLoad((_bits & Bit0) != 0);
+                _ram16->setClock((_bits & Bit1) != 0);
                 _ram16->setIn(_in);
                 _out = _ram16->getOut();
             }
             else
             {
                 _screen->setAddress(_address - ScreenAddress);
-                _screen->setLoad((_bits & 1) != 0);
-                _screen->setClock((_bits & 2) != 0);
+                _screen->setLoad((_bits & Bit0) != 0);
+                _screen->setClock((_bits & Bit1) != 0);
                 _screen->setIn(_in);
                 _out = _screen->getOut();
             }
 
-            _bits &= ~(1 << 7);
+            _bits &= 0b01111100;
         }
+        else
+            throw IndexOutOfBounds();
+
     }
 }  // namespace Hack::Chips
