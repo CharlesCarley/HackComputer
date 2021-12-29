@@ -21,6 +21,8 @@
 */
 #pragma once
 #include "Chips/Chip.h"
+#include <cstring>
+
 
 namespace Hack::Chips
 {
