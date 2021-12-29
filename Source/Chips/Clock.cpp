@@ -51,6 +51,8 @@ namespace Hack::Chips
             applyBit(0, getBit(1));
         else
             applyBit(0, Gates::Not(getBit(0)));
+
+        _bits &= ClockMask;
         return getBit(0);
 #else
         if (_bits & Bit6)

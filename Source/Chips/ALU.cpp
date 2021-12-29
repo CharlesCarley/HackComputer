@@ -161,28 +161,26 @@ namespace Hack::Chips
         _io.b[7] &= ~Bit0;
         _io.s[2] = out.getOut();
 
-        bit16_t b16{};
+        bit16_t b16;
         b16.s = _io.s[2];
 
-        Or8Way ORH, ORL;
-        ORH.setIn(b16.b[1]);
-        ORL.setIn(b16.b[0]);
+        Or8Way orh, orl;
+        orh.setIn(b16.b[1]);
+        orl.setIn(b16.b[0]);
+
         Or isZero;
-        isZero.setA(ORH.getOut());
-        isZero.setB(ORL.getOut());
+        isZero.setA(orh.getOut());
+        isZero.setB(orl.getOut());
 
         Not zr;
         zr.setIn(isZero.getOut());
 
         if (zr.getOut())
-            _io.b[6] |= Zr;
+            _io.b[7] = Zr;
+        else if (_io.s[2] & 1 << 15)
+            _io.b[7] = Ne;
         else
-            _io.b[6] &= ~Zr;
-
-        if (_io.s[2] & 1 << 15)
-            _io.b[6] |= Ne;
-        else
-            _io.b[6] &= ~Ne;
+            _io.b[7] = 0;
 #else
         switch (_io.b[6])
         {
