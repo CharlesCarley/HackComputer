@@ -57,68 +57,75 @@ namespace Hack::Chips
         return _cpuState.pc < _rom->size();
     }
 
+    void Computer::clear()
+    {
+        _cpu->clear();
+        _ram->zero();
+        _ram->setValue(0, (uint16_t)Memory::StackAddress);
+
+        _cpuState = NullState;
+
+        Timer::reset();
+    }
+
+    void Computer::captureState()
+    {
+        // Lock to prevent evaluation when querying the state
+        _cpu->lock(true);
+        _ram->lock(true);
+        _rom->lock(true);
+
+        // Save the current CPU state
+        _cpuState.regD   = _cpu->getDRegister();
+        _cpuState.regA   = _cpu->getAMRegister();
+        _cpuState.pc     = _cpu->getNext();
+        _cpuState.inst   = _rom->getOut();
+        _cpuState.ram    = _ram->getOut();
+        _cpuState.writeM = _cpu->getWrite();
+        _cpuState.addrM  = _cpu->getAddress();
+        _cpuState.outM   = _cpu->getOut();
+        _cpuState.reset  = _reset ? 1 : 0;
+
+        _cpu->lock(false);
+        _ram->lock(false);
+        _rom->lock(false);
+    }
+
+
     void Computer::update(const bool saveState)
     {
-        const bool cycle = Timer::tick();
+        _cpuState.clock = Timer::tick() ? 1 : 0;
         if (_reset)
-        {
-            _cpu->clear();
-            _ram->zero();
-            _ram->setValue(0, (uint16_t)Memory::StackAddress);
-            _cpuState = NullState;
-            Timer::reset();
-        }
+            clear();
 
-        // force a reset...
-        // @32766
-        // 0;JMP
+        _cpuState.pc = _cpu->getNext();
         if (_cpuState.pc >= 0x7FFF)
+        {
+            // force a reset...
+            // @32766
+            // 0;JMP
             _reset = true;
-
-        // Set the next instruction
-        // from the previous evaluation,
-        // or zero if this is the first.
-        _rom->setIn(_cpu->getNext());
+            _cpuState.reset = 1;
+        }
+        _rom->setIn(_cpuState.pc);
 
         // Link I/O to the CPU
-
         _cpu->setInstruction(_rom->getOut());
-        _cpu->setClock(cycle);
+        _cpu->setClock(_cpuState.clock);
         _cpu->setReset(_reset);
         _cpu->setInMemory(_ram->getOut());
 
         // Tie the CPU outputs to the ram
-
-        _ram->setClock(cycle);
+        _ram->setClock(_cpuState.clock != 0);
         _ram->setLoad(_cpu->getWrite());
         _ram->setAddress(_cpu->getAddress());
         _ram->setIn(_cpu->getOut());
 
         if (saveState)
-        {
-            // Lock to prevent evaluation when querying the state
-            _cpu->lock(true);
-            _ram->lock(true);
-            _rom->lock(true);
-
-            // Save the current CPU state
-            _cpuState.pc     = _cpu->getNext();
-            _cpuState.addrM  = _cpu->getAddress();
-            _cpuState.outM   = _cpu->getOut();
-            _cpuState.regD   = _cpu->getDRegister();
-            _cpuState.regA   = _cpu->getAMRegister();
-            _cpuState.clock  = cycle;
-            _cpuState.inst   = _rom->getOut();
-            _cpuState.writeM = _cpu->getWrite();
-            _cpuState.ram    = _ram->getOut();
-            _cpuState.reset  = _reset ? 1 : 0;
-
-            _cpu->lock(false);
-            _ram->lock(false);
-            _rom->lock(false);
-        }
+            captureState();
 
         _reset = false;
+
     }
 
     void Computer::reset()

@@ -19,11 +19,12 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
+#include <future>
 #ifdef USE_SDL
-#include "Computer/RuntimeSDL.h"
 #include "Chips/Computer.h"
-#include "ScreenSDL.h"
+#include "Computer/RuntimeSDL.h"
 #include "SDL.h"
+#include "ScreenSDL.h"
 #include "Utils/Exception.h"
 
 namespace Hack::Computer
@@ -51,6 +52,9 @@ namespace Hack::Computer
             _screenBuffer(nullptr),
             _quit(false)
         {
+            _refreshAcc = 0;
+            _cpuAcc     = 0;
+
         }
 
         ~RuntimePrivate()
@@ -117,6 +121,11 @@ namespace Hack::Computer
                         _quit = true;
                     }
                     break;
+                case SDL_WINDOWEVENT_RESIZED:
+                    _cpuAcc     = 0;
+                    _refreshAcc = 0;
+                    flushMemory(computer);
+                    break;
 
                 case SDL_QUIT:
                     _quit = true;
@@ -132,8 +141,15 @@ namespace Hack::Computer
 
         void flushMemory(Chips::Computer* computer) const
         {
-            SDL_RenderPresent(_renderer);
+            ScreenSDL* scr = (ScreenSDL*)computer->memory()->getScreen();
+
+            scr->lockScreen();
+            scr->writeToBuffer();
+            scr->unlockScreen();
         }
+        mutable uint64_t _refreshAcc;
+        mutable uint64_t _cpuAcc;
+
     };
 
     inline int16_t RuntimeSDL::getRate() const
@@ -163,7 +179,7 @@ namespace Hack::Computer
 
     void RuntimeSDL::flushMemory(Chips::Computer* computer) const
     {
-        _private->flushMemory(computer);
+        // _private->flushMemory(computer);
     }
 
     void RuntimeSDL::initialize(Chips::Computer*, Screen* screen) const
@@ -171,20 +187,52 @@ namespace Hack::Computer
         _private->initialize((ScreenSDL*)screen);
     }
 
-    void RuntimeSDL::update(Chips::Computer* computer) const
+    constexpr uint64_t ScreenRefresh = 0x10000;
+    constexpr uint64_t CpuRefresh    = ScreenRefresh / 8;
+
+    static bool Flush(Chips::Computer* computer)
     {
-        const int32_t rate = getRate();
+        ScreenSDL* scr = (ScreenSDL*)computer->memory()->getScreen();
 
-        ScreenSDL* rc = (ScreenSDL*)computer->memory()->getScreen();
-        rc->lockScreen();
-        computer->update(true);
+        scr->lockScreen();
+        scr->writeToBuffer();
+        scr->unlockScreen();
+        return true;
+    }
 
-        for (int32_t i = 0; i < rate && computer->canRead(); ++i)
+    static bool Update(Chips::Computer* computer, uint64_t& acc)
+    {
+        uint64_t i = 0;
+        while (i < CpuRefresh)
         {
             computer->update(false);
-            computer->update(true);
+            computer->update(false);
+            ++acc;
+            ++i;
         }
-        rc->unlockScreen();
+        return true;
+    }
+
+    void RuntimeSDL::update(Chips::Computer* computer) const
+    {
+        std::future<bool> up;
+
+        if (_private->_cpuAcc == 0)
+        {
+            _private->_cpuAcc = 1;
+            up      = std::async(std::launch::async, [computer, this]()
+                            { return Update(computer, _private->_refreshAcc); });
+        }
+
+        if (_private->_refreshAcc > ScreenRefresh)
+        {
+            auto result = std::async(std::launch::async, [computer]()
+                                           { return Flush(computer); });
+            if (result.get())
+                _private->_refreshAcc = 0;
+        }
+        if (up.get())
+            _private->_cpuAcc = 0;
     }
 
 }  // namespace Hack::Computer

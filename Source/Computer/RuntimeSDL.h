@@ -35,6 +35,7 @@ namespace Hack::Computer
 
         int16_t getRate() const override;
 
+        
     public:
         RuntimeSDL();
         ~RuntimeSDL() override;

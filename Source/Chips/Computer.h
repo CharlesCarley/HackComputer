@@ -20,6 +20,7 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
+
 #include "Chips/CPU.h"
 #include "Chips/Memory.h"
 #include "Chips/Rom32.h"
@@ -51,6 +52,10 @@ namespace Hack::Chips
         Memory*  _ram;
         bool     _reset;
         CpuState _cpuState;
+
+        void clear();
+
+        void captureState();
 
     public:
         Computer();

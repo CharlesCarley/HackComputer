@@ -82,6 +82,11 @@ if (MSVC)
 		# Enable just my code...
 		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /JMC")
 	endif()
+	find_package (OpenMP)
+
+	if (OpenMP_FOUND)	
+		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
+	endif()
 
 	set(WebRunner_DIR ${Hack_SOURCE_DIR}/Web/build/windows/runner)
 	set(Test_DIR      ${Hack_SOURCE_DIR}/Web/test)

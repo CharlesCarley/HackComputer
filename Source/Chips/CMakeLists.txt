@@ -104,7 +104,6 @@ set(Target_SRC
     Ram8.cpp
     Register.cpp
     Rom32.cpp
-    Screen.cpp
     SRLatch.cpp
     Timer.cpp
     XOr.cpp

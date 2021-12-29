@@ -270,7 +270,7 @@ namespace Hack::Chips
         applyBit(6, typeC && (_ins & MLoad) != 0);
 
         // evaluate the program counter
-        (void)_pc.getOut();
+        _pc.getOut();
 
         // clear the dirty flag
         _bits &= ~Bit7;

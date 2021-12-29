@@ -54,6 +54,8 @@ namespace Hack::Chips
 
         void unlockScreen() override;
 
+        void  writeToBuffer() const;
+
     protected:
         void flush() const;
         

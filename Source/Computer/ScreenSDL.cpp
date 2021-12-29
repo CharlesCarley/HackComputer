@@ -114,6 +114,8 @@ namespace Hack::Chips
 
             SDL_Rect src = {0, 0, 512, 256};
             SDL_RenderCopy(_renderer, _texture, &src, &dest);
+
+            SDL_RenderPresent(_renderer);
         }
     }
 
@@ -176,6 +178,37 @@ namespace Hack::Chips
             *base++ = _out & Bit13 ? 0xFFFFFFFF : 0xFF;
             *base++ = _out & Bit14 ? 0xFFFFFFFF : 0xFF;
             *base   = _out & Bit15 ? 0xFFFFFFFF : 0xFF;
+        }
+    }
+
+    void ScreenSDL::writeToBuffer() const
+    {
+        if (_pixels)
+        {
+            for (int i = 0; i < 0x2000; ++i)
+            {
+                const size_t baseAddr = (size_t)&_pixels[i*64];
+
+                uint32_t*      base = (uint32_t*)baseAddr;
+                const uint16_t out  = _ram[i];
+
+                *base++ = out & Bit0 ? 0xFFFFFFFF : 0xFF;
+                *base++ = out & Bit1 ? 0xFFFFFFFF : 0xFF;
+                *base++ = out & Bit2 ? 0xFFFFFFFF : 0xFF;
+                *base++ = out & Bit3 ? 0xFFFFFFFF : 0xFF;
+                *base++ = out & Bit4 ? 0xFFFFFFFF : 0xFF;
+                *base++ = out & Bit5 ? 0xFFFFFFFF : 0xFF;
+                *base++ = out & Bit6 ? 0xFFFFFFFF : 0xFF;
+                *base++ = out & Bit7 ? 0xFFFFFFFF : 0xFF;
+                *base++ = out & Bit8 ? 0xFFFFFFFF : 0xFF;
+                *base++ = out & Bit9 ? 0xFFFFFFFF : 0xFF;
+                *base++ = out & Bit10 ? 0xFFFFFFFF : 0xFF;
+                *base++ = out & Bit11 ? 0xFFFFFFFF : 0xFF;
+                *base++ = out & Bit12 ? 0xFFFFFFFF : 0xFF;
+                *base++ = out & Bit13 ? 0xFFFFFFFF : 0xFF;
+                *base++ = out & Bit14 ? 0xFFFFFFFF : 0xFF;
+                *base   = out & Bit15 ? 0xFFFFFFFF : 0xFF;
+            }
         }
     }
 

@@ -57,7 +57,7 @@ void VirtualMachineTestStack(Chips::Computer& comp, const String& baseName, bool
     {
         // ticks 0, 1
         comp.update(false);
-        comp.update(true);
+        comp.update(false);
         st = comp.state();
     }
 }

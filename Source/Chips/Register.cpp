@@ -23,38 +23,46 @@
 
 namespace Hack::Chips
 {
-    constexpr uint64_t RegisterMask = 0xFFFFFFFFFFFFFF;
-
     Register::Register()
     {
-        _bits.ll = 0;
+        _bits.ll   = 0;
         _bits.b[6] = Bit7;
     }
 
     void Register::setIn(const uint16_t& v)
     {
-        _bits.s[0] = v;
-        _bits.b[6] |= Bit7;
+        if (_bits.s[0] != v)
+        {
+            _bits.s[0] = v;
+            _bits.b[6] |= Bit7;
+        }
     }
 
-    void Register::setLoad(bool write)
+    void Register::setLoad(const bool write)
     {
-        if (write)
-            _bits.b[6] |= Bit0;
-        else
-            _bits.b[6] &= ~Bit0;
-
-        _bits.b[6] |= Bit7;
+        const bool test = (_bits.b[6] & Bit0) != 0;
+        if (test != write)
+        {
+            if (write)
+                _bits.b[6] |= Bit0;
+            else
+                _bits.b[6] &= ~Bit0;
+            _bits.b[6] |= Bit7;
+        }
     }
 
-    void Register::setClock(bool tick)
+    void Register::setClock(const bool tick)
     {
-        if (tick)
-            _bits.b[6] |= Bit1;
-        else
-            _bits.b[6] &= ~Bit1;
+        const bool test = (_bits.b[6] & Bit1) != 0;
+        if (test != tick)
+        {
+            if (tick)
+                _bits.b[6] |= Bit1;
+            else
+                _bits.b[6] &= ~Bit1;
 
-        _bits.b[6] |= Bit7;
+            _bits.b[6] |= Bit7;
+        }
     }
 
     uint16_t Register::getOut()
@@ -71,10 +79,7 @@ namespace Hack::Chips
 
     void Register::evaluate()
     {
-        _bits.ll &= RegisterMask;
-
 #ifdef IMPLEMENT_BLACK_BOX
-
         const bool load  = B8::getBit(_bits.b[6], 0);
         const bool clock = B8::getBit(_bits.b[6], 1);
 
@@ -95,8 +100,6 @@ namespace Hack::Chips
         B8::clearBit(_bits.b[6], 7);
 
 #else
-        _bits.b[6] &= ~Bit7;
-
         if (_bits.b[6] & Bit0)
         {
             if (_bits.b[6] & Bit1)
@@ -107,8 +110,9 @@ namespace Hack::Chips
                 _bits.s[2] = _bits.s[0];
             }
         }
-#endif
 
+        _bits.b[6] &= ~Bit7;
+#endif
     }
 
 }  // namespace Hack::Chips

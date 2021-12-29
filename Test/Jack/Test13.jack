@@ -2,10 +2,11 @@
 class Main {
 	static int ram;
 	function void main() {
-		var int j, t;
-		
+		var int j, t, i;
+
+		let i  = 0;		
 		let j = 0;
-		while ( 1 = 1 )
+		while ( i < 15 )
 		{
 			let ram = 16384;
 			let j = 0;
@@ -16,6 +17,7 @@ class Main {
 				let ram[j] = !t;
 				let j = j + 1;
 			}
+			let i = i + 1;
 		}
 		return;
 	}

@@ -213,10 +213,6 @@ namespace Hack::Chips
     template <typename T, uint8_t Count>
     void BitUtils<T, Count>::setBit(T& bits, const T& index)
     {
-#ifdef CHECK_INT_BOUNDS
-        if (index >= Count)
-            throw IndexOutOfBounds();
-#endif
         bits |= 1 << index;
     }
 
