@@ -24,6 +24,7 @@
 #include "Chips/ProgramCounter.h"
 #include "Chips/Register.h"
 #include "Chips/Timer.h"
+#include "Utils/Exception.h"
 #ifdef IMPLEMENT_BLACK_BOX
 #include "Chips/And16.h"
 #include "Chips/Mux16.h"
