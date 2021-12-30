@@ -221,7 +221,7 @@ namespace Hack::Chips
         clearBit(7);
 #else
         if (CpuIsLocked(_bits))
-            throw InputException("evaluation on a locked CPU");
+            throw MessageException("evaluation on a locked CPU");
 
         // clock is in bit 1
         const bool tick = (_bits & Bit1) != 0;
