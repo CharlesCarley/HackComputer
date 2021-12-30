@@ -61,17 +61,7 @@ void GeneratorTestFile(Chips::Computer& comp, const String& baseName)
     comp.load(inst.data(), inst.size());
 
     comp.reset();
-
-    const int       tot = (int)inst.size();
-    Chips::CpuState st  = Chips::Computer::NullState;
-    while (st.pc < tot)
-    {
-        // ticks 0, 1
-        comp.update(false);
-        comp.update(true);
-
-        st = comp.state();
-    }
+    comp.runToEnd();
 }
 
 GTEST_TEST(Generator, TestAdd)

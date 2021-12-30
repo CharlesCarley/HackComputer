@@ -49,17 +49,7 @@ void VirtualMachineTestStack(Chips::Computer& comp, const String& baseName, bool
     comp.load(inst.data(), inst.size());
 
     comp.reset();
-
-    const int tot = (int)inst.size();
-
-    Chips::CpuState st = Chips::Computer::NullState;
-    while (st.pc < tot)
-    {
-        // ticks 0, 1
-        comp.update(false);
-        comp.update(false);
-        st = comp.state();
-    }
+    comp.runToEnd();
 }
 
 GTEST_TEST(VirtualMachine, AddStackLocal)
