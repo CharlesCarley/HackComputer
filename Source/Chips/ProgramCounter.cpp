@@ -47,6 +47,14 @@ namespace Hack::Chips
         _bits.b[6] |= Bit7;
     }
 
+    void ProgramCounter::lock(bool v)
+    {
+        if (v)
+            _bits.b[6] |= Bit6;
+        else
+            _bits.b[6] &= ~Bit6;
+    }
+
     void ProgramCounter::setInc(bool v)
     {
         if (v)
@@ -85,7 +93,7 @@ namespace Hack::Chips
 
     uint16_t ProgramCounter::getOut()
     {
-        if (_bits.b[6] & Bit7)
+        if (_bits.b[6] & Bit7 && !(_bits.b[6] & Bit6))
             evaluate();
         return _bits.s[1];
     }

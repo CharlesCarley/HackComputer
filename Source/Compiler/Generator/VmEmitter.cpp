@@ -235,4 +235,13 @@ namespace Hack::Compiler::CodeGenerator
         write("label ", label);
     }
 
+
+    void VmEmitter::writeCode(int type, const String& code)
+    {
+        if (type == RuleInlineVm)
+            write(code);
+        else if (type == RuleInlineAsm)
+            write("asm [\n", code, "\n]");
+    }
+
 }  // namespace Hack::Compiler::CodeGenerator

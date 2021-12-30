@@ -54,6 +54,8 @@ namespace Hack::Compiler::Analyzer
         TokKwFalse,
         TokKwNull,
         TokKwThis,
+        TokKwInlineVm,
+        TokKwInlineAsm,
 
         TokOpPlus       = '+',
         TokOpMinus      = '-',

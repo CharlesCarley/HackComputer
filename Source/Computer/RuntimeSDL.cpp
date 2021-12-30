@@ -139,7 +139,7 @@ namespace Hack::Computer
                 _quit = true;
         }
 
-        void flushMemory(Chips::Computer* computer) const
+        static void flushMemory(Chips::Computer* computer)
         {
             ScreenSDL* scr = (ScreenSDL*)computer->memory()->getScreen();
 
@@ -147,6 +147,7 @@ namespace Hack::Computer
             scr->writeToBuffer();
             scr->unlockScreen();
         }
+
         mutable uint64_t _refreshAcc;
         mutable uint64_t _cpuAcc;
 
@@ -187,7 +188,7 @@ namespace Hack::Computer
         _private->initialize((ScreenSDL*)screen);
     }
 
-    constexpr uint64_t ScreenRefresh = 0x10000;
+    constexpr uint64_t ScreenRefresh = 0x1800;
     constexpr uint64_t CpuRefresh    = ScreenRefresh / 8;
 
     static bool Flush(Chips::Computer* computer)
@@ -233,6 +234,7 @@ namespace Hack::Computer
         }
         if (up.get())
             _private->_cpuAcc = 0;
+
     }
 
 }  // namespace Hack::Computer

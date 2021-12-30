@@ -29,10 +29,18 @@
 #include "Chips/Mux16.h"
 #endif
 
-#define DirtyBits 
-
 namespace Hack::Chips
 {
+    inline bool CpuIsLocked(const uint8_t& bits)
+    {
+        return (bits & Bit2) != 0;
+    }
+
+    inline bool CpuDirty(const uint8_t& bits)
+    {
+        return (bits & Bit7) != 0 && !CpuIsLocked(bits);
+    }
+
 #ifndef IMPLEMENT_BLACK_BOX
     constexpr uint16_t RMask = 0b0111'1111'1111'1111;
     constexpr uint16_t MLoad = 0b0'00'0'000000'001'000;
@@ -41,7 +49,8 @@ namespace Hack::Chips
     constexpr uint16_t ABits = 0b0'00'1'000000'000'000;
     constexpr uint16_t CBits = 0b0'00'0'111111'000'000;
 #endif
-    Cpu::Cpu() : _ins(0), _in(0)
+    Cpu::Cpu() :
+        _ins(0), _in(0)
     {
         // This should not be marked as dirty
         // initially
@@ -53,6 +62,10 @@ namespace Hack::Chips
             _bits |= Bit2;
         else
             _bits &= ~Bit2;
+
+        _a.lock(v);
+        _d.lock(v);
+        _pc.lock(v);
     }
 
     void Cpu::setInMemory(const uint16_t& v)
@@ -66,7 +79,9 @@ namespace Hack::Chips
 
     void Cpu::setClock(bool v)
     {
-        if ((_bits & Bit1) !=0 != v)
+        const bool cc = (_bits & Bit1) != 0;
+
+        if (cc != v)
         {
             if (v)
                 _bits |= Bit1;
@@ -79,7 +94,8 @@ namespace Hack::Chips
 
     void Cpu::setReset(bool v)
     {
-        if ((_bits & Bit0) != 0 != v)
+        const bool cc = (_bits & Bit0) != 0;
+        if (cc != v)
         {
             if (v)
                 _bits |= Bit0;
@@ -91,58 +107,55 @@ namespace Hack::Chips
 
     void Cpu::setInstruction(const uint16_t& v)
     {
-        if (_ins != v)
-        {
-            _ins = v;
-            _bits |= Bit7;
-        }
+        _ins = v;
+        _bits |= Bit7;
     }
 
     bool Cpu::getWrite()
     {
-        if (_bits & Bit7  && !(_bits & Bit2))
+        if (CpuDirty(_bits))
             evaluate();
         return (_bits & Bit6) != 0;
     }
 
     uint16_t Cpu::getOut()
     {
-        if (_bits & Bit7 && !(_bits & Bit2))
+        if (CpuDirty(_bits))
             evaluate();
         return _alu.getOut();
     }
 
     uint16_t Cpu::getAddress()
     {
-        if (_bits & Bit7 && !(_bits & Bit2))
+        if (CpuDirty(_bits))
             evaluate();
         return _a.getOut();
     }
 
     uint16_t Cpu::getDRegister()
     {
-        if (_bits & Bit7 && !(_bits & Bit2))
+        if (CpuDirty(_bits))
             evaluate();
         return _d.getOut();
     }
 
-    uint16_t Cpu::getAMRegister()
+    uint16_t Cpu::getAmRegister()
     {
-        if (_bits & Bit7 && !(_bits & Bit2))
+        if (CpuDirty(_bits))
             evaluate();
         return _a.getOut();
     }
 
     uint16_t Cpu::getNext()
     {
-        if (_bits & Bit7 && !(_bits & Bit2))
+        if (CpuDirty(_bits))
             evaluate();
         return _pc.getOut();
     }
 
     bool Cpu::isDirty()
     {
-        return getBit(7) && !getBit(2);
+        return CpuDirty(_bits);
     }
 
     void Cpu::markDirty()
@@ -195,8 +208,7 @@ namespace Hack::Chips
                                   Gates::And(Gates::Not(_alu.getZr()),
                                              Gates::Not(_alu.getNe()))),
                        Gates::And(Gates::And(typeC, codes[1]), _alu.getZr()),
-                       Gates::And(Gates::And(typeC, codes[2]), _alu.getNe())
-                           )));
+                       Gates::And(Gates::And(typeC, codes[2]), _alu.getNe()))));
         _pc.setIn(_a.getOut());
         _pc.setInc(true);
         _pc.setReset(getBit(0));
@@ -207,9 +219,11 @@ namespace Hack::Chips
         _pc.getOut();
         clearBit(7);
 #else
+        if (CpuIsLocked(_bits))
+            throw InputException("evaluation on a locked CPU");
 
         // clock is in bit 1
-        const bool tick = (_bits & Bit1)!=0;
+        const bool tick = (_bits & Bit1) != 0;
 
         // if the highest bit is set, it is a c-type instruction
         const bool typeC = (_ins & Bit15) != 0;
@@ -261,13 +275,21 @@ namespace Hack::Chips
 
         _pc.setIn(_a.getOut());
         _pc.setInc(true);
-        _pc.setReset((_bits & Bit0)!=0);
+        _pc.setReset((_bits & Bit0) != 0);
         _pc.setClock(tick);
 
         // bit 6 controls the write memory flag
         // which should be linked to the load bit on the
         // RAM.
-        applyBit(6, typeC && (_ins & MLoad) != 0);
+        if (typeC)
+        {
+            if ((_ins & MLoad) != 0)
+                _bits |= Bit6;
+            else
+                _bits &= ~Bit6;
+        }
+        else
+            _bits &= ~Bit6;
 
         // evaluate the program counter
         _pc.getOut();

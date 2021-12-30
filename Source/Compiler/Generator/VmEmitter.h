@@ -130,6 +130,8 @@ namespace Hack::Compiler::CodeGenerator
         void writeGoto(const String& label);
 
         void writeLabel(const String& label);
+
+        void  writeCode(int type, const String& code);
     };
 
     inline OutputStringStream& VmEmitter::stream()

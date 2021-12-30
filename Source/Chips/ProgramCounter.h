@@ -49,15 +49,23 @@ namespace Hack::Chips
     public:
         ProgramCounter();
 
+        void lock(bool v);
+
         void setIn(const uint16_t& v);
+
         void setFlags(const uint8_t& v);
+
         void setLoad(bool v);
+
         void setReset(bool v);
+
         void setInc(bool v);
 
         void setClock(bool v);
 
         uint16_t getOut();
+
+        
     };
 
 }  // namespace Hack::Chips

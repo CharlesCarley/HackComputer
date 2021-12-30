@@ -552,10 +552,8 @@ namespace Hack::Computer
     {
         if (computer)
         {
-            const int16_t rate = getRate() - 1;
-            for (int16_t i = 0; i < rate; ++i)
-                computer->update(false);
-            computer->update(true);
+            computer->update();
+            computer->captureState();
         }
     }
 

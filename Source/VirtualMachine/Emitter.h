@@ -119,6 +119,8 @@ namespace Hack::VirtualMachine
         void writeCall(const String& name, const int& args);
 
         void writeReturn();
+
+        void  writeCode(const String& cs);
     };
 
 }  // namespace Hack::VirtualMachine

@@ -188,6 +188,10 @@ namespace Hack::Compiler::Analyzer
             return "null";
         case TokKwThis:
             return "this";
+        case TokKwInlineVm:
+            return "_vm";
+        case TokKwInlineAsm:
+            return "_asm";
         case TokOpPlus:
             return "'+'";
         case TokOpMinus:

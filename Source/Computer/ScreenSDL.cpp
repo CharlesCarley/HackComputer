@@ -125,18 +125,18 @@ namespace Hack::Chips
         if (loAddr >= HighAddress)
             return;
 
-        if (_bits & 1)
+        if (_bits & Bit0)
         {
             const uint16_t hiAddr = loAddr + HighAddress;
 
             if (hiAddr < Max)
             {
-                if (_bits & 2)
+                if (_bits & Bit1)
                     _ram[loAddr] = _ram[hiAddr] = _in;
                 else
                 {
                     _ram[loAddr] = _ram[hiAddr];
-                    _ram[loAddr] = _in;
+                    _ram[hiAddr] = _in;
                 }
             }
             else
@@ -148,9 +148,7 @@ namespace Hack::Chips
                                      ']');
             }
         }
-
         _out = _ram[loAddr];
-        flush();
         _bits &= 0b01111100;
     }
 
@@ -187,7 +185,7 @@ namespace Hack::Chips
         {
             for (int i = 0; i < 0x2000; ++i)
             {
-                const size_t baseAddr = (size_t)&_pixels[i*64];
+                const size_t baseAddr = (size_t)&_pixels[i * 64];
 
                 uint32_t*      base = (uint32_t*)baseAddr;
                 const uint16_t out  = _ram[i];

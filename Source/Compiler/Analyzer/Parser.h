@@ -128,6 +128,10 @@ namespace Hack::Compiler::Analyzer
 
         void parameterRule();
 
+        void inlineVmRule();
+
+        void inlineAsmRule();
+
     public:
         Parser();
 

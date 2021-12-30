@@ -884,4 +884,12 @@ namespace Hack::VirtualMachine
         w.jumpToD();
     }
 
+
+    void Emitter::writeCode(const String& cs)
+    {
+        const CodeStream w(&_stream);
+        w.write(cs);
+    }
+
+
 }  // namespace Hack::VirtualMachine

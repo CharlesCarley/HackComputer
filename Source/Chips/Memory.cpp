@@ -61,8 +61,11 @@ namespace Hack::Chips
 
     void Memory::setIn(const uint16_t& v)
     {
-        _in = v;
-        _bits |= Bit7;
+        if (_in != v)
+        {
+            _in = v;
+            _bits |= Bit7;
+        }
     }
 
     void Memory::setAddress(const uint16_t& v)

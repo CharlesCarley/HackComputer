@@ -57,6 +57,15 @@ namespace Hack::Chips
         return _cpuState.pc < _rom->size();
     }
 
+
+    void Computer::runToEnd()
+    {
+        const uint16_t max = _rom->size();
+        while (_cpuState.pc < max)
+            update();
+        captureState();
+    }
+
     void Computer::clear()
     {
         _cpu->clear();
@@ -77,7 +86,7 @@ namespace Hack::Chips
 
         // Save the current CPU state
         _cpuState.regD   = _cpu->getDRegister();
-        _cpuState.regA   = _cpu->getAMRegister();
+        _cpuState.regA   = _cpu->getAmRegister();
         _cpuState.pc     = _cpu->getNext();
         _cpuState.inst   = _rom->getOut();
         _cpuState.ram    = _ram->getOut();
@@ -97,6 +106,9 @@ namespace Hack::Chips
         _cpuState.clock = Timer::tick() ? 1 : 0;
         if (_reset)
             clear();
+
+        if (saveState)
+            captureState();
 
         _cpuState.pc = _cpu->getNext();
         if (_cpuState.pc >= 0x7FFF)
@@ -120,9 +132,6 @@ namespace Hack::Chips
         _ram->setLoad(_cpu->getWrite());
         _ram->setAddress(_cpu->getAddress());
         _ram->setIn(_cpu->getOut());
-
-        if (saveState)
-            captureState();
 
         _reset = false;
 

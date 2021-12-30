@@ -18,7 +18,7 @@
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
 set(TargetName  CodeGenerator)
-set(TargetGroup P6.Compiler)
+set(TargetGroup P5.Compiler)
 
 set(Target_HDR
     Expression.h
@@ -52,7 +52,7 @@ endif()
 
 if (BuildType STREQUAL "CPP")
 
-    set(TargetName VmCompiler)
+    set(TargetName Jack2VM)
     set(TargetGroup Executables)
 
     unset(Target_HDR)

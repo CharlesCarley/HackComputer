@@ -31,7 +31,6 @@ namespace Hack::Chips
     {
     public:
         static const uint16_t HighAddress = High;
-        static const uint16_t WriteAddress= High+1;
         static const uint16_t Max         = (High << 1) + 1;
 
     protected:
@@ -131,7 +130,7 @@ namespace Hack::Chips
     template <uint16_t High, uint16_t ElementCount>
     uint16_t IMemorySegment<High, ElementCount>::getOut()
     {
-        if ((_bits & Bit7) != 0 && (_bits & Bit6) == 0)
+        if ((_bits & Bit7) != 0 && !(_bits & Bit6))
             evaluate();
         return _out;
     }

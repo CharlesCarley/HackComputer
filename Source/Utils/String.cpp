@@ -85,4 +85,30 @@ namespace Hack
         StringCombine(dest, "L", sa, sb, sc, sd);
     }
 
+
+    void StringUtils::trim(String& dest, const String& in, char ch)
+    {
+        size_t st = 0;
+        size_t en = in.size();
+
+        for (st=0; st<in.size(); ++st)
+        {
+            if (in[st] != ch)
+                break;
+        }
+
+        for (en = in.size()-1; en != 0; --en)
+        {
+            if (in[en] != ch)
+                break;
+        }
+
+        if (st > en)
+            return;
+
+
+        dest = in.substr(st, en+1);
+
+    }
+
 }  // namespace Hack

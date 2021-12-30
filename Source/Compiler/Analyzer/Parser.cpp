@@ -579,6 +579,40 @@ namespace Hack::Compiler::Analyzer
         symbol(SymbolCloseBrace);
     }
 
+    void Parser::inlineVmRule()
+    {
+        Node* rule = createRule(RuleInlineVm);
+
+        const int8_t t0   = getToken(0).getType();
+        if (t0 != TokKwInlineVm)
+            parseError("Expected the keyword _vm");
+
+        Scanner* scn = ((Scanner*)_scanner);
+
+        String value;
+        scn->getCode(value, getToken(0).getIndex());
+
+        rule->insert(ConstantInlineVm, value, _filePath, _scanner->line());
+        advanceCursor();
+    }
+
+    void Parser::inlineAsmRule()
+    {
+        Node* rule = createRule(RuleInlineAsm);
+
+        const int8_t t0 = getToken(0).getType();
+        if (t0 != TokKwInlineAsm)
+            parseError("Expected the keyword _asm");
+
+        Scanner* scn = ((Scanner*)_scanner);
+
+        String value;
+        scn->getCode(value, getToken(0).getIndex());
+
+        rule->insert(ConstantInlineAsm, value, _filePath, _scanner->line());
+        advanceCursor();
+    }
+
     void Parser::bodyRule()
     {
         Node* rule = createRule(RuleBody);
@@ -591,6 +625,16 @@ namespace Hack::Compiler::Analyzer
             if (t0 == TokKwVar)
             {
                 variableRule();
+                reduceRule(rule);
+            }
+            else if (t0 == TokKwInlineVm)
+            {
+                inlineVmRule();
+                reduceRule(rule);
+            }
+            else if (t0 == TokKwInlineAsm)
+            {
+                inlineAsmRule();
                 reduceRule(rule);
             }
             else

@@ -55,7 +55,6 @@ namespace Hack::Chips
 
         void clear();
 
-        void captureState();
 
     public:
         Computer();
@@ -63,7 +62,7 @@ namespace Hack::Chips
 
         void load(const uint16_t* data, size_t size);
 
-        void update(bool saveState);
+        void update(bool saveState = false);
 
         void reset();
 
@@ -75,6 +74,9 @@ namespace Hack::Chips
 
         bool canRead() const;
 
+        void runToEnd();
+
+        void captureState();
     };
 
     inline Memory* Computer::memory() const

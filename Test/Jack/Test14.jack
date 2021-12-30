@@ -1,0 +1,21 @@
+class Main
+{
+	function int main()
+	{
+		_asm {
+			(start)
+			@15    M=0
+			@8192  D=A
+			@14    M=D
+			(top)
+			// first test bounds
+			@15     D=M
+			@14     D=M-D
+			@start  D;JEQ
+			@15     M=M+1 D=M
+			@16383  A=D+A M=!M
+			@top   0;JMP
+		}
+	}
+}
+

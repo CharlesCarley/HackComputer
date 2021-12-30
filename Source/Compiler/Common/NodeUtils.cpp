@@ -88,6 +88,8 @@ namespace Hack::Compiler
         CASE_TO_STR_A(RuleCallMethod);
         CASE_TO_STR_A(RuleParameterList);
         CASE_TO_STR_A(RuleParameter);
+        CASE_TO_STR_A(RuleInlineVm);
+        CASE_TO_STR_A(RuleInlineAsm);
         CASE_TO_STR_A(RuleEnd);
         CASE_TO_STR_A(Keyword);
         CASE_TO_STR_A(KeywordClass);
@@ -133,6 +135,8 @@ namespace Hack::Compiler
         CASE_TO_STR_A(ConstantIdentifier);
         CASE_TO_STR_A(ConstantInteger);
         CASE_TO_STR_A(ConstantString);
+        CASE_TO_STR_A(ConstantInlineVm);
+        CASE_TO_STR_A(ConstantInlineAsm);
         CASE_TO_STR_A(ConstantTrue);
         CASE_TO_STR_A(ConstantFalse);
         CASE_TO_STR_A(ConstantNull);
@@ -188,6 +192,8 @@ namespace Hack::Compiler
         CASE_TO_STR_A(RuleCallMethod);
         CASE_TO_STR_A(RuleParameterList);
         CASE_TO_STR_A(RuleParameter);
+        CASE_TO_STR_A(RuleInlineVm);
+        CASE_TO_STR_A(RuleInlineAsm);
         CASE_TO_STR_A(RuleEnd);
         CASE_TO_STR_A(Keyword);
         CASE_TO_STR_V(KeywordClass, "class");
@@ -232,6 +238,8 @@ namespace Hack::Compiler
         CASE_TO_STR_A(Constant);
         CASE_TO_STR_F(ConstantIdentifier);
         CASE_TO_STR_F(ConstantInteger);
+        CASE_TO_STR_F(ConstantInlineVm);
+        CASE_TO_STR_F(ConstantInlineAsm);
         CASE_TO_STR_V(ConstantString, node->value());
         CASE_TO_STR_V(ConstantTrue, "true");
         CASE_TO_STR_V(ConstantFalse, "false");

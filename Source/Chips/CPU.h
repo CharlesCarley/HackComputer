@@ -62,7 +62,7 @@ namespace Hack::Chips
 
         uint16_t getDRegister();
 
-        uint16_t getAMRegister();
+        uint16_t getAmRegister();
 
         void lock(bool v);
 

@@ -42,6 +42,8 @@ namespace Hack::Compiler
         RuleBody,
         RuleVariable,
         RuleStatement,
+        RuleInlineVm,
+        RuleInlineAsm,
         RuleLetStatement,
         RuleIfStatement,
         RuleElseStatement,
@@ -112,6 +114,8 @@ namespace Hack::Compiler
         ConstantFalse,
         ConstantNull,
         ConstantThis,
+        ConstantInlineVm,
+        ConstantInlineAsm,
         ConstantEnd,
 
         SubtypeNone,

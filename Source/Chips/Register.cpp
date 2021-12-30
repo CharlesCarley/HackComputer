@@ -67,9 +67,17 @@ namespace Hack::Chips
 
     uint16_t Register::getOut()
     {
-        if (_bits.b[6] & Bit7)
+        if (_bits.b[6] & Bit7 && !(_bits.b[6] & Bit6))
             evaluate();
         return _bits.s[1];
+    }
+
+    void Register::lock(bool v)
+    {
+        if (v)
+            _bits.b[6] |= Bit6;
+        else
+            _bits.b[6] &= ~Bit6;
     }
 
     bool Register::isDirty()

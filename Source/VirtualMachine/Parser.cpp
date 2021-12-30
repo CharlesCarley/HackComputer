@@ -239,7 +239,6 @@ namespace Hack::VirtualMachine
         if (name.empty())
             parseError("An empty label was found");
 
-        
         const int args = _scanner->integer(getToken(2).getIndex());
 
         _emitter.writeCall(name, args);
@@ -277,6 +276,17 @@ namespace Hack::VirtualMachine
         const int8_t t0 = getToken(0).getType();
         switch (t0)
         {
+        case TOK_ASM:
+        {
+            String code;
+            Scanner* scn = (Scanner*)_scanner;
+            scn->getCode(code, getToken(0).getIndex());
+
+            _emitter.writeCode(code);
+            advanceCursor();
+        }
+        break;
+
         case TOK_PUSH:
             pushExpression();
             advanceCursor(3);

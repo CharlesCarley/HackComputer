@@ -492,39 +492,49 @@ namespace Hack::Compiler::CodeGenerator
     void Generator::buildStatements(const Node& methodBody) const
     {
         // extract only the statements from the method body
-        Node::NodeArray statements;
-        methodBody.filter(statements, RuleStatement);
-
+        const Node::Children &statements = methodBody.children();
+        
         for (const Node* child : statements)
         {
             const Node& statement = *child;
-
-            const Node& stmt = statement.rule(0);
-
-            switch (stmt.type())
+            if (statement.isTypeOf(RuleStatement))
             {
-            case RuleLetStatement:
-                buildLetStatement(stmt);
-                break;
-            case RuleReturnStatement:
-                buildReturnStatement(stmt);
-                break;
-            case RuleDoStatement:
-                buildDoStatement(stmt);
-                break;
-            case RuleIfStatement:
-                _elseEnd.clear();
-                buildIfStatement(stmt);
-                break;
-            case RuleElseStatement:
-                buildElseStatement(stmt);
-                break;
-            case RuleWhileStatement:
-                buildWhileStatement(stmt);
-                break;
-            default:
-                compileError(stmt, "unknown statement type ", stmt.type());
+                const Node& stmt = statement.rule(0);
+
+                switch (stmt.type())
+                {
+                case RuleLetStatement:
+                    buildLetStatement(stmt);
+                    break;
+                case RuleReturnStatement:
+                    buildReturnStatement(stmt);
+                    break;
+                case RuleDoStatement:
+                    buildDoStatement(stmt);
+                    break;
+                case RuleIfStatement:
+                    _elseEnd.clear();
+                    buildIfStatement(stmt);
+                    break;
+                case RuleElseStatement:
+                    buildElseStatement(stmt);
+                    break;
+                case RuleWhileStatement:
+                    buildWhileStatement(stmt);
+                    break;
+                default:
+                    compileError(stmt, "unknown statement type ", stmt.type());
+                }                
             }
+            else if (statement.isTypeOf(RuleInlineVm))
+            {
+                _emitter->writeCode(RuleInlineVm, statement.child(0).value());
+            }
+            else if (statement.isTypeOf(RuleInlineAsm))
+            {
+                _emitter->writeCode(RuleInlineAsm, statement.child(0).value());
+            }
+
         }
     }
 

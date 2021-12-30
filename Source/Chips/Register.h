@@ -44,6 +44,8 @@ namespace Hack::Chips
         void setClock(bool tick);
 
         uint16_t getOut();
+
+        void lock(bool v);
     };
 
 }  // namespace Hack::Chips

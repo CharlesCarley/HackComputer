@@ -20,21 +20,22 @@
 -------------------------------------------------------------------------------
 */
 #include <fstream>
-
-#include "FileCmp.h"
 #include "Assembler/Parser.h"
 #include "Assembler/Scanner.h"
+#include "Chips/Computer.h"
+#include "FileCmp.h"
 #include "TestDirectory.h"
-#include "gtest/gtest.h"
 #include "Utils/Console.h"
+#include "gtest/gtest.h"
 
-using namespace Hack::Assembler;
+using namespace Hack;
+using namespace Assembler;
 
 #include "Test2Data.inl"
 
 GTEST_TEST(Assembler, Scanner1)
 {
-    const Hack::String file = GetTestFilePath("Assembler/Scanner1.asm");
+    const String file = GetTestFilePath("Assembler/Scanner1.asm");
 
     std::ifstream fs(file);
 
@@ -49,12 +50,12 @@ GTEST_TEST(Assembler, Scanner1)
 
 GTEST_TEST(Assembler, Scanner2)
 {
-    const Hack::String file = GetTestFilePath("Assembler/Scanner2.asm");
+    const String file = GetTestFilePath("Assembler/Scanner2.asm");
 
     std::ifstream fs(file);
     EXPECT_TRUE(fs.is_open());
 
-    const Hack::String expected[]{
+    const String expected[]{
         "12",
         "123",
         "1234",
@@ -78,7 +79,7 @@ GTEST_TEST(Assembler, Scanner2)
     scanner.scan(token);
     EXPECT_EQ(TOK_ONE, token.getType());
 
-    for (const Hack::String& str : expected)
+    for (const String& str : expected)
     {
         scanner.scan(token);
         EXPECT_EQ(TOK_AT, token.getType());
@@ -104,7 +105,7 @@ GTEST_TEST(Assembler, Parser1)
     psr.write(GetOutFilePath("Parser1.out"));
 
     CompareFiles(GetTestFilePath("Assembler/Parser1.cmp"),
-                         GetOutFilePath("Parser1.out"));
+                 GetOutFilePath("Parser1.out"));
 }
 
 GTEST_TEST(Assembler, Parser2)
@@ -114,7 +115,7 @@ GTEST_TEST(Assembler, Parser2)
     psr.write(GetOutFilePath("Parser2.out"));
 
     CompareFiles(GetTestFilePath("Assembler/Parser2.cmp"),
-                         GetOutFilePath("Parser2.out"));
+                 GetOutFilePath("Parser2.out"));
 }
 
 GTEST_TEST(Assembler, Error)
@@ -126,9 +127,9 @@ GTEST_TEST(Assembler, Error)
 
         EXPECT_FALSE(true);
     }
-    catch(std::exception &ex)
+    catch (std::exception& ex)
     {
-        Hack::Console::write(ex.what());
+        Console::write(ex.what());
     }
 }
 
@@ -139,7 +140,7 @@ GTEST_TEST(Assembler, Add)
     psr.write(GetOutFilePath("Add.out"));
 
     CompareFiles(GetTestFilePath("Assembler/Add.cmp"),
-                         GetOutFilePath("Add.out"));
+                 GetOutFilePath("Add.out"));
 }
 
 GTEST_TEST(Assembler, Parser3)
@@ -150,5 +151,37 @@ GTEST_TEST(Assembler, Parser3)
     psr.write(GetOutFilePath("Parser3.out"));
 
     CompareFiles(GetTestFilePath("Assembler/Parser3.cmp"),
-                         GetOutFilePath("Parser3.out"));
+                 GetOutFilePath("Parser3.out"));
+}
+
+void AsmTestExec(Chips::Computer& comp, const String& baseName)
+{
+    const String fNameSrc = GetTestFilePath("Assembler/" + baseName + ".asm");
+
+    Parser psr;
+    psr.parse(fNameSrc);
+
+    const Parser::Instructions& inst = psr.instructions();
+    comp.load(inst.data(), inst.size());
+    comp.reset();
+    comp.runToEnd();
+}
+
+
+
+GTEST_TEST(Assembler, Exec01)
+{
+    Chips::Computer c;
+    AsmTestExec(c, "Test01");
+
+    Chips::Memory *mem = c.memory();
+    EXPECT_EQ(mem->get(0), (uint16_t)-1);
+    EXPECT_EQ(mem->get(1), 256);
+    EXPECT_EQ(mem->get(2), 123);
+    EXPECT_EQ(mem->get(3), 123);
+    EXPECT_EQ(mem->get(4), (uint16_t)-1);
+    EXPECT_EQ(mem->get(5), (uint16_t)-1);
+    EXPECT_EQ(mem->get(6), (uint16_t)-1);
+    EXPECT_EQ(mem->get(7), (uint16_t)-1);
+    EXPECT_EQ(mem->get(8), 0);
 }

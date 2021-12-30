@@ -63,12 +63,82 @@ namespace Hack::VirtualMachine
         {"set",         TOK_SET},
         {"reset",       TOK_RESET},
         {"halt",        TOK_HALT},
+        {"asm",         TOK_ASM},
     };
     // clang-format on
 
     inline bool isValidCharacter(const int ch)
     {
         return isLetter(ch) || isDecimal(ch) || ch == '-' || ch == '_' || ch == '.';
+    }
+
+    void Scanner::scanCode(Token& tok)
+    {
+        int ch = _stream->get();
+        while (ch != '[')
+        {
+            ch = _stream->get();
+            if (ch <= 0)
+                syntaxError("end of file scan");
+        }
+        ch = _stream->get();
+
+        OutputStringStream oss;
+        while (ch != ']')
+        {
+            if (ch != ']')
+            {
+                if (ch != '\r' && ch != '\n')
+                {
+                    if (ch == '\t')
+                        ch = ' ';
+                    oss << (char)ch;
+                }
+            }
+
+            ch = _stream->get();
+            if (ch <= 0)
+                syntaxError("end of file scan");
+
+            if (ch == '\r' || ch == '\n')
+            {
+                if (ch == '\r' && _stream->peek() == '\n')
+                    _stream->get();
+
+                ch = _stream->get();
+                oss << '\n';
+                ++_line;
+            }
+        }
+
+        StringArray lines;
+        StringUtils::split(lines, oss.str(), '\n');
+        oss.str("");
+
+        for (size_t i = 0; i < lines.size(); ++i)
+        {
+            const String& line = lines[i];
+            if (!line.empty())
+            {
+                String t;
+                StringUtils::trim(t, line, ' ');
+                if (!t.empty())
+                    oss << t << '\n';
+            }
+        }
+
+        String str = oss.str();
+
+        tok.setIndex(_code.size());
+        _code.push_back(str.substr(0, str.size()-1));
+    }
+
+    void Scanner::getCode(String& dest, const size_t& idx)
+    {
+        if (idx < _code.size())
+            dest = _code.at(idx);
+        else
+            syntaxError("code index out of bounds");
     }
 
     void Scanner::scanSymbol(Token& tok)
@@ -91,6 +161,9 @@ namespace Hack::VirtualMachine
                 if (cmp == res.str)
                 {
                     tok.setType(res.tok);
+
+                    if (res.tok == TOK_ASM)
+                        scanCode(tok);
                     return;
                 }
             }

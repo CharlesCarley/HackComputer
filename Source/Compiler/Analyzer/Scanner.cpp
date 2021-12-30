@@ -58,6 +58,8 @@ namespace Hack::Compiler::Analyzer
         {"false",       TokKwFalse},
         {"null",        TokKwNull},
         {"this",        TokKwThis},
+        {"_vm",         TokKwInlineVm},
+        {"_asm",        TokKwInlineAsm},
     };
     // clang-format on
 
@@ -66,11 +68,49 @@ namespace Hack::Compiler::Analyzer
         return isLetter(ch) || isDecimal(ch) || ch == '_';
     }
 
+    void Scanner::scanCode(Token& tok)
+    {
+        int ch = _stream->get();
+        while (ch != '{')
+        {
+            ch = _stream->get();
+            if (ch <= 0)
+                syntaxError("end of file scan");
+        }
+        ch = _stream->get();
+
+
+        OutputStringStream oss;
+        while (ch != '}')
+        {
+            if (ch != '}')
+                oss << (char)ch;
+            ch = _stream->get();
+            if (ch <= 0)
+                syntaxError("end of file scan");
+
+            if (ch == '\r' || ch == '\n')
+            {
+                if (ch == '\r' && _stream->peek() == '\n')
+                {
+                    ch = _stream->get();
+                    oss << (char)ch;
+                }
+                ++_line;
+            }
+        }
+
+
+        tok.setIndex(_code.size());
+        _code.push_back(oss.str());
+    }
+
+
     void Scanner::scanSymbol(Token& tok)
     {
         int ch = _stream->get();
 
-        if (isLetter(ch))
+        if (isLetter(ch) || ch == '_')
         {
             String cmp;
             while (isValidCharacter(ch))
@@ -86,6 +126,8 @@ namespace Hack::Compiler::Analyzer
                 if (cmp == res.str)
                 {
                     tok.setType(res.tok);
+                    if (res.tok == TokKwInlineVm || res.tok == TokKwInlineAsm)
+                        scanCode(tok);
                     return;
                 }
             }
@@ -172,6 +214,14 @@ namespace Hack::Compiler::Analyzer
         tok.setIndex(save(v));
     }
 
+    void Scanner::getCode(String& dest, const size_t& idx)
+    {
+        if (idx < _code.size())
+            dest = _code.at(idx);
+        else
+            syntaxError("code index out of bounds");
+    }
+
     void Scanner::scan(Token& tok)
     {
         if (_stream == nullptr)
@@ -201,6 +251,7 @@ namespace Hack::Compiler::Analyzer
                 _stream->putback((char)ch);
                 scanDigit(tok);
                 return;
+            case '_':
             case UpperCaseAz:
             case LowerCaseAz:
                 _stream->putback((char)ch);
