@@ -885,7 +885,7 @@ namespace Hack::Compiler::Analyzer
             termRule();
             reduceRule(rule);
         }
-        else if (Pu::isOperator(getToken(0).getType()) && Pu::isTerm(t1))
+        else if (Pu::isOperator(t0) && Pu::isTerm(t1))
         {
             rule->subtype(SubtypeOpTerm);
 

@@ -57,8 +57,6 @@ namespace Hack::Chips
         void  writeToBuffer() const;
 
     protected:
-        void flush() const;
-        
 
         void evaluate() override;
     };

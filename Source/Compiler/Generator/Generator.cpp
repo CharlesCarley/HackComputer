@@ -67,7 +67,7 @@ namespace Hack::Compiler::CodeGenerator
         }
         else
         {
-            throw InputException("The value ", value, " was not found.");
+            throw InputException("The value '", value, "' was not found.");
         }
     }
 

@@ -152,33 +152,6 @@ namespace Hack::Chips
         _bits &= 0b01111100;
     }
 
-    void ScreenSDL::flush() const
-    {
-        if (_pixels)
-        {
-            const size_t baseAddr = (size_t)&_pixels[_address << 6];
-
-            uint32_t* base = (uint32_t*)baseAddr;
-
-            *base++ = _out & Bit0 ? 0xFFFFFFFF : 0xFF;
-            *base++ = _out & Bit1 ? 0xFFFFFFFF : 0xFF;
-            *base++ = _out & Bit2 ? 0xFFFFFFFF : 0xFF;
-            *base++ = _out & Bit3 ? 0xFFFFFFFF : 0xFF;
-            *base++ = _out & Bit4 ? 0xFFFFFFFF : 0xFF;
-            *base++ = _out & Bit5 ? 0xFFFFFFFF : 0xFF;
-            *base++ = _out & Bit6 ? 0xFFFFFFFF : 0xFF;
-            *base++ = _out & Bit7 ? 0xFFFFFFFF : 0xFF;
-            *base++ = _out & Bit8 ? 0xFFFFFFFF : 0xFF;
-            *base++ = _out & Bit9 ? 0xFFFFFFFF : 0xFF;
-            *base++ = _out & Bit10 ? 0xFFFFFFFF : 0xFF;
-            *base++ = _out & Bit11 ? 0xFFFFFFFF : 0xFF;
-            *base++ = _out & Bit12 ? 0xFFFFFFFF : 0xFF;
-            *base++ = _out & Bit13 ? 0xFFFFFFFF : 0xFF;
-            *base++ = _out & Bit14 ? 0xFFFFFFFF : 0xFF;
-            *base   = _out & Bit15 ? 0xFFFFFFFF : 0xFF;
-        }
-    }
-
     void ScreenSDL::writeToBuffer() const
     {
         if (_pixels)

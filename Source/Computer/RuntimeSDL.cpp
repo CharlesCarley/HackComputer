@@ -188,7 +188,7 @@ namespace Hack::Computer
         _private->initialize((ScreenSDL*)screen);
     }
 
-    constexpr uint64_t ScreenRefresh = 0x1800;
+    constexpr uint64_t ScreenRefresh = 0x8000;
     constexpr uint64_t CpuRefresh    = ScreenRefresh / 8;
 
     static bool Flush(Chips::Computer* computer)
@@ -227,7 +227,7 @@ namespace Hack::Computer
 
         if (_private->_refreshAcc > ScreenRefresh)
         {
-            auto result = std::async(std::launch::async, [computer]()
+            auto result = std::async(std::launch::deferred, [computer]()
                                            { return Flush(computer); });
             if (result.get())
                 _private->_refreshAcc = 0;

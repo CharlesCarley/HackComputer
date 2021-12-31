@@ -23,6 +23,7 @@ add_subdirectory(Assembler)
 add_subdirectory(Bindings)
 add_subdirectory(VirtualMachine)
 add_subdirectory(Compiler)
+add_subdirectory(OperatingSystem)
 
 if (BuildType STREQUAL "CPP")
 	add_subdirectory(Computer)

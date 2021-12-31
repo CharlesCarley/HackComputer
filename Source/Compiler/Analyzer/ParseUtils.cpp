@@ -84,7 +84,9 @@ namespace Hack::Compiler::Analyzer
         const bool notOrMinus = t0 == TokOpNot || t0 == TokOpMinus;
         if (notOrMinus && isTerm(t1))
         {
-            if (t2 != TokSymLPar || !isTerm(t2))
+            if (t2 == TokSymLPar)
+                return true;
+            if (!isTerm(t2))
                 return true;
         }
         return false;
