@@ -31,7 +31,7 @@
 
 using namespace Hack;
 
-void VirtualMachineTestStack(Chips::Computer& comp, const String& baseName, bool compare = false)
+void VirtualMachineTestStack(Chips::Computer& comp, const String& baseName)
 {
     const String fNameSrc = GetTestFilePath("VM/" + baseName + ".vm");
     const String fNameOut = GetOutFilePath("" + baseName + ".asm");
@@ -376,7 +376,7 @@ GTEST_TEST(VirtualMachine, FunctionLocals)
     // and returns the third local
 
     Chips::Computer comp;
-    VirtualMachineTestStack(comp, "Test20", false);
+    VirtualMachineTestStack(comp, "Test20");
 
     Chips::Memory* mem = comp.memory();
 
