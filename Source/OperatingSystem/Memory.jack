@@ -1,0 +1,50 @@
+class Memory {
+    static internal ram;
+
+    function void init() {
+        let ram = 0;
+        return;
+    }
+
+    function int peek(int address) {
+        return ram[address];
+    }
+
+    function void poke(int address, int value) {
+        let ram[address] = value;
+        return;
+    }
+
+
+    function void allocate(int size) {
+        return;
+    }
+
+    function void free(int address) {
+        return;
+    }
+}
+
+
+class Main
+{
+    function int main()
+    {
+        _asm {
+        // var int x; 
+        }
+        var int x; 
+        _asm {
+        // do Memory.init();
+        }
+        do Memory.init();
+        _asm {
+        // let x = Memory.peek(15);
+        }
+        let x = Memory.peek(15);
+        _asm {
+        // return x;
+        }
+        return x;
+    }
+}
