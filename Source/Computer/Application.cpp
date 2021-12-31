@@ -56,7 +56,8 @@ namespace Hack::Computer
         OP_DEBUG,
         OP_RUN_END,
         OP_TRACE_MEM,
-        OP_SHOW_PT,
+        OP_SHOW_XML,
+        OP_SHOW_DOT,
         OP_SHOW_VM,
         OP_SHOW_ASM,
         OP_SHOW_MC,
@@ -97,10 +98,18 @@ namespace Hack::Computer
             0,
         },
         {
-            OP_SHOW_PT,
+            OP_SHOW_XML,
             0,
-            "show-pt",
-            "Output the parse tree from the supplied file",
+            "show-xml",
+            "Output the parse tree in XML from the supplied file",
+            true,
+            0,
+        },
+        {
+            OP_SHOW_DOT,
+            0,
+            "show-dot",
+            "Output the parse tree in dot from the supplied file",
             true,
             0,
         },
@@ -141,7 +150,8 @@ namespace Hack::Computer
         bool              _showVm;
         bool              _showAsm;
         bool              _showMc;
-        bool              _showPt;
+        bool              _showXml;
+        bool              _showDot;
 
         void load() const;
 
@@ -172,7 +182,8 @@ namespace Hack::Computer
         _showVm(false),
         _showAsm(false),
         _showMc(false),
-        _showPt(false)
+        _showXml(false),
+        _showDot(false)
     {
     }
 
@@ -219,7 +230,8 @@ namespace Hack::Computer
         _showAsm = parser.isPresent(OP_SHOW_ASM);
         _showVm  = parser.isPresent(OP_SHOW_VM);
         _showMc  = parser.isPresent(OP_SHOW_MC);
-        _showPt  = parser.isPresent(OP_SHOW_PT);
+        _showXml = parser.isPresent(OP_SHOW_XML);
+        _showDot = parser.isPresent(OP_SHOW_DOT);
 
         return true;
     }
@@ -311,8 +323,10 @@ namespace Hack::Computer
             Compiler::Analyzer::Parser parser;
             parser.parse(path.string());
 
-            if (_showPt)
+            if (_showXml)
                 parser.getTree().write(std::cout, 0);
+            if (_showDot)
+                parser.getTree().write(std::cout, 1);
 
             Compiler::CodeGenerator::Generator input;
             input.compile(parser.getTree().getRoot());

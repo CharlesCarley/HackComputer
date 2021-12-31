@@ -62,6 +62,12 @@ namespace Hack
 
         void scanMultiLineComment();
 
+
+        void scanAny(String &dest, char seqStart, char seqEnd);
+
+        
+        void extractCode(String& dest, char seqStart, char seqEnd);
+
     private:
         [[noreturn]] void syntaxErrorThrow(const String& message) const;
 

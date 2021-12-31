@@ -70,39 +70,11 @@ namespace Hack::Compiler::Analyzer
 
     void Scanner::scanCode(Token& tok)
     {
-        int ch = _stream->get();
-        while (ch != '{')
-        {
-            ch = _stream->get();
-            if (ch <= 0)
-                syntaxError("end of file scan");
-        }
-        ch = _stream->get();
-
-
-        OutputStringStream oss;
-        while (ch != '}')
-        {
-            if (ch != '}')
-                oss << (char)ch;
-            ch = _stream->get();
-            if (ch <= 0)
-                syntaxError("end of file scan");
-
-            if (ch == '\r' || ch == '\n')
-            {
-                if (ch == '\r' && _stream->peek() == '\n')
-                {
-                    ch = _stream->get();
-                    oss << (char)ch;
-                }
-                ++_line;
-            }
-        }
-
+        String block;
+        extractCode(block, '{', '}');
 
         tok.setIndex(_code.size());
-        _code.push_back(oss.str());
+        _code.push_back(block);
     }
 
 

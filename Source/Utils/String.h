@@ -40,11 +40,23 @@ namespace Hack
     public:
         static void split(StringArray& dest, const String& str, char sep);
 
+        static void split(StringArray& dest, const String& str, const String& sep);
+
         static void scramble(String& dest, size_t value);
 
-        static void generate(String& dest, int& counter, void *seed);
+        static void generate(String& dest, int& counter, void* seed);
 
-        static void trim(String& dest, const String &in, char ch);
+        static void trimWhiteSpace(String& dest, const String& in);
+
+        static void trim(String& dest, const String& in, char ch);
+
+        static void trimL(String& dest, const String& in, char ch);
+
+        static void trimR(String& dest, const String& in, char ch);
+
+        static void splitLine(StringArray& dest, const String& input, char swap ='$');
+
+        static void replaceAll(String& dest, const String& input, const String& a, const String& b);
     };
 
     template <typename... Args>

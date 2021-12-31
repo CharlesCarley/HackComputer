@@ -97,6 +97,73 @@ namespace Hack
         }
     }
 
+    void ScannerBase::scanAny(String& dest, char seqStart, char seqEnd)
+    {
+        int ch = _stream->get();
+        while (ch != seqStart)
+        {
+            ch = _stream->get();
+            if (ch <= 0)
+                syntaxError("end of file scan while searching for ", seqStart);
+        }
+        ch = _stream->get();
+
+        OutputStringStream oss;
+        while (ch != seqEnd)
+        {
+            if (ch != seqEnd)
+            {
+                if (ch != '\r' && ch != '\n')
+                {
+                    if (ch == '\t')
+                        ch = ' ';
+                    oss << (char)ch;
+                }
+            }
+
+            ch = _stream->get();
+            if (ch <= 0)
+                syntaxError("end of file scan while searching for ", seqEnd);
+
+            if (ch == '\r' || ch == '\n')
+            {
+                if (ch == '\r' && _stream->peek() == '\n')
+                    _stream->get();
+
+                ch = _stream->get();
+                oss << '\n';
+                ++_line;
+            }
+        }
+
+        dest = oss.str();
+    }
+
+    void ScannerBase::extractCode(String& dest, char seqStart, char seqEnd)
+    {
+        String block;
+        scanAny(block, seqStart, seqEnd);
+
+        OutputStringStream oss;
+
+        StringArray lines;
+        StringUtils::splitLine(lines, block);
+        for (const String& line : lines)
+        {
+            if (!line.empty())
+            {
+                String temp;
+                StringUtils::trimWhiteSpace(temp, line);
+                if (!temp.empty())
+                    oss << temp << '\n';
+            }
+        }
+
+        const String code = oss.str();
+
+        dest = code.substr(0, code.size() - 1);
+    }
+
     void ScannerBase::scanWhiteSpace() const
     {
         int ch = 0;

@@ -81,6 +81,7 @@ source_group("Reference\\SVG" FILES  ${Parse_Trees})
 set(TestTarget_SOURCE
     FileCmp.h
     FileCmp.cpp
+    General.cpp
     Test1.cpp
     Test2.cpp
     Test4.cpp
