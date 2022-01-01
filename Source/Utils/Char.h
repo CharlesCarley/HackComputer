@@ -21,16 +21,30 @@
 */
 #pragma once
 #include <cstdint>
-#include "String.h"
+#include "Utils/String.h"
 
 namespace Hack
 {
+    /// <summary>
+    /// Provides conversion utilities between char pointers and strings. 
+    /// </summary>
     class Char
     {
     public:
-        static size_t length(const char* in);
+        /// <summary>
+        /// Counts the number of characters up to the first occurrence
+        /// of a null character '\0'
+        /// </summary>
+        /// <param name="input">The char pointer to use to compute the length. </param>
+        /// <returns>The total number of characters.</returns>
+        static size_t length(const char* input);
 
-        static void copy(char* dest, const char* src);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="destination"></param>
+        /// <param name="source"></param>
+        static void copy(char* destination, const char* source);
 
         static void copy(char* dest, const char* src, size_t max);
 
@@ -151,21 +165,44 @@ namespace Hack
         static String toHexString(uint64_t v);
     };
 
-    inline bool isNewLine(const int ch)
+
+    /// <summary>
+    /// Tests the supplied constant for the '\\r' and '\\n'
+    /// ASCII codes.
+    /// </summary>
+    /// <param name="constant">The constant to test.</param>
+    /// <returns>Returns true if the supplied constant is a new-line code.</returns>
+    inline bool isNewLine(const int constant)
     {
-        return ch == '\r' || ch == '\n';
+        return constant == '\r' || constant == '\n';
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="ch"></param>
+    /// <returns></returns>
     inline bool isWhiteSpace(const int ch)
     {
         return ch == ' ' || ch == '\t' || isNewLine(ch);
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="ch"></param>
+    /// <returns></returns>
     inline bool isDecimal(const int ch)
     {
         return ch >= '0' && ch <= '9';
     }
 
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="ch"></param>
+    /// <returns></returns>
     inline bool isLetter(const int ch)
     {
         return ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z';

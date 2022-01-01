@@ -32,9 +32,9 @@
 
 namespace Hack
 {
-    size_t Char::length(const char* in)
+    size_t Char::length(const char* input)
     {
-        return in && *in ? (size_t)strlen(in) : 0;
+        return input && *input ? (size_t)strlen(input) : 0;
     }
 
     void Char::copy(char* dest, const char* src)
