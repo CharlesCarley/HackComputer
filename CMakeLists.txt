@@ -60,7 +60,6 @@ if (BuildType STREQUAL "CPP")
 endif()
 
 add_subdirectory(Source)
-add_subdirectory(Tools)
 
 if (Hack_BUILD_TEST)
     if (BuildType STREQUAL "CPP")

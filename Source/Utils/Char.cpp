@@ -37,10 +37,10 @@ namespace Hack
         return input && *input ? (size_t)strlen(input) : 0;
     }
 
-    void Char::copy(char* dest, const char* src)
+    void Char::copy(char* destination, const char* source)
     {
-        if (dest && src && *src)
-            strcpy(dest, src);
+        if (destination && source && *source)
+            strcpy(destination, source);
     }
 
     void Char::copy(char* dest, const char* src, const size_t max)
