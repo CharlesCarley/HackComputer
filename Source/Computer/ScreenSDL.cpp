@@ -119,6 +119,13 @@ namespace Hack::Chips
         }
     }
 
+    uint16_t ScreenSDL::getOut()
+    {
+        if ((_bits & Bit7) != 0 && !(_bits & Bit6))
+            evaluate();
+        return _out;
+    }
+
     void ScreenSDL::evaluate()
     {
         const uint16_t loAddr = _address;

@@ -19,50 +19,50 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#pragma once
-#ifdef USE_SDL
-#include "Chips/Screen.h"
-#include "SDL.h"
+#include "Document.h"
+#include <fstream>
 
-namespace Hack::Chips
+#include "XmlDocument.h"
+
+namespace Hack::DocConverter
 {
-    class ScreenSDL final : public Screen
+    Document::Document()
     {
-    private:
-        uint16_t*    _ram;
-        SDL_Texture* _texture;
-        SDL_Renderer* _renderer;
-        uint8_t*     _pixels;
-        size_t       _pitch;
+    }
 
-    public:
-        ScreenSDL();
+    Document::~Document()
+    {
+    }
 
-        ~ScreenSDL() override;
+    void Document::handleDoxygenNode(Node* doxy)
+    {
+        for (Node* node : doxy->children())
+        {
+            _out << "# " << node->attribute("title", "undefined") << std::endl;
+        }
 
-        uint16_t get(const size_t& i) const override;
+    }
 
-        uint16_t* pointer(const size_t& address) const override;
+    void Document::merge(const Path& path, const Path& out)
+    {
+        XmlDocument xml;
+        xml.parse(path);
 
-        void setValue(const size_t& address, const uint16_t& v) const override;
+        XmlDocument::NodeArray& nodes = xml.nodes();
+        for (Node* node : nodes)
+        {
+            if (node->type() == NT_DOXYGEN)
+            {
+                handleDoxygenNode(node);
+            }
+        }
 
-        void zero() const override;
+        std::ofstream of(out.string());
+        if (of.is_open())
+        {
+            const String str = _out.str();
+            of.write(str.c_str(), str.size());
+        }
+    }
 
-        SDL_Texture* createBuffer(SDL_Renderer* renderer);
-
-        void lockScreen() override;
-
-        void unlockScreen() override;
-
-        void  writeToBuffer() const;
-
-        uint16_t getOut() override;
-
-    protected:
-
-        void evaluate();
-
-    };
-
-}  // namespace Hack::Chips
-#endif
+}  // namespace Hack::DocConverter

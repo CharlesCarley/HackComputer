@@ -20,49 +20,41 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#ifdef USE_SDL
-#include "Chips/Screen.h"
-#include "SDL.h"
+#include <utility>
+#include "Utils/String.h"
 
-namespace Hack::Chips
+namespace Hack::DocConverter
 {
-    class ScreenSDL final : public Screen
+    class Attribute
     {
     private:
-        uint16_t*    _ram;
-        SDL_Texture* _texture;
-        SDL_Renderer* _renderer;
-        uint8_t*     _pixels;
-        size_t       _pitch;
+        String _key;
+        String _value;
 
     public:
-        ScreenSDL();
+        Attribute(String key, String value);
 
-        ~ScreenSDL() override;
+        ~Attribute() = default;
 
-        uint16_t get(const size_t& i) const override;
+        const String& key() const;
 
-        uint16_t* pointer(const size_t& address) const override;
-
-        void setValue(const size_t& address, const uint16_t& v) const override;
-
-        void zero() const override;
-
-        SDL_Texture* createBuffer(SDL_Renderer* renderer);
-
-        void lockScreen() override;
-
-        void unlockScreen() override;
-
-        void  writeToBuffer() const;
-
-        uint16_t getOut() override;
-
-    protected:
-
-        void evaluate();
-
+        const String& value() const;
     };
 
-}  // namespace Hack::Chips
-#endif
+    inline Attribute::Attribute(String key, String value) :
+        _key(std::move(key)),
+        _value(std::move(value))
+    {
+    }
+
+    inline const String& Attribute::key() const
+    {
+        return _key;
+    }
+
+    inline const String& Attribute::value() const
+    {
+        return _value;
+    }
+
+}  // namespace Hack::DocConverter

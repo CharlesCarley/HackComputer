@@ -19,50 +19,51 @@
   3. This notice may not be removed or altered from any source distribution.
 -------------------------------------------------------------------------------
 */
-#pragma once
-#ifdef USE_SDL
-#include "Chips/Screen.h"
-#include "SDL.h"
+#ifndef _XMLDocument_h_
+#define _XMLDocument_h_
 
-namespace Hack::Chips
+#include <stack>
+#include <vector>
+#include "Utils/FileSystem.h"
+#include "XmlNode.h"
+#include "expat.h"
+
+namespace Hack::DocConverter
 {
-    class ScreenSDL final : public Screen
+    class XmlDocument
     {
+    public:
+        typedef std::vector<Node*> NodeArray;
+        typedef std::stack<Node*>  NodeStack;
+
+        static const int BlockLen = 2048;
+
     private:
-        uint16_t*    _ram;
-        SDL_Texture* _texture;
-        SDL_Renderer* _renderer;
-        uint8_t*     _pixels;
-        size_t       _pitch;
+        NodeArray _nodes;
+        NodeStack _stack;
+        NodeArray _rootNodes;
+        int       _offset;
+
+        static NodeType getNodeType(const XML_Char* name);
+
+        void startTag(const XML_Char* name, const XML_Char** attributes);
+
+        void data(const XML_Char* string, int len);
+
+        void endTag();
 
     public:
-        ScreenSDL();
+        XmlDocument();
 
-        ~ScreenSDL() override;
+        ~XmlDocument();
 
-        uint16_t get(const size_t& i) const override;
+        void parse(const Path& path);
 
-        uint16_t* pointer(const size_t& address) const override;
+        void parse(IStream& stream);
 
-        void setValue(const size_t& address, const uint16_t& v) const override;
-
-        void zero() const override;
-
-        SDL_Texture* createBuffer(SDL_Renderer* renderer);
-
-        void lockScreen() override;
-
-        void unlockScreen() override;
-
-        void  writeToBuffer() const;
-
-        uint16_t getOut() override;
-
-    protected:
-
-        void evaluate();
-
+        NodeArray& nodes();
     };
 
-}  // namespace Hack::Chips
-#endif
+}  // namespace Hack::DocConverter
+
+#endif  //_XMLDocument_h_

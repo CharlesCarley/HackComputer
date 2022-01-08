@@ -20,49 +20,17 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#ifdef USE_SDL
-#include "Chips/Screen.h"
-#include "SDL.h"
 
-namespace Hack::Chips
+namespace Hack::DocConverter
 {
-    class ScreenSDL final : public Screen
+    /// <summary>
+    ///
+    /// </summary>
+    enum NodeType
     {
-    private:
-        uint16_t*    _ram;
-        SDL_Texture* _texture;
-        SDL_Renderer* _renderer;
-        uint8_t*     _pixels;
-        size_t       _pitch;
-
-    public:
-        ScreenSDL();
-
-        ~ScreenSDL() override;
-
-        uint16_t get(const size_t& i) const override;
-
-        uint16_t* pointer(const size_t& address) const override;
-
-        void setValue(const size_t& address, const uint16_t& v) const override;
-
-        void zero() const override;
-
-        SDL_Texture* createBuffer(SDL_Renderer* renderer);
-
-        void lockScreen() override;
-
-        void unlockScreen() override;
-
-        void  writeToBuffer() const;
-
-        uint16_t getOut() override;
-
-    protected:
-
-        void evaluate();
-
+        NT_UNKNOWN,
+        NT_DOXYGEN,
+        NT_COMPOUND_DEF,
     };
 
-}  // namespace Hack::Chips
-#endif
+}  // namespace Hack::DocConverter
