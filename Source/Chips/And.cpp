@@ -28,15 +28,15 @@ namespace Hack::Chips
         assignBit(7);
     }
 
-    void And::setA(bool v)
+    void And::setA(bool a)
     {
-        applyBit(0, v);
+        applyBit(0, a);
         setBit(7);
     }
 
-    void And::setB(bool v)
+    void And::setB(bool b)
     {
-        applyBit(1, v);
+        applyBit(1, b);
         setBit(7);
     }
 
@@ -56,5 +56,4 @@ namespace Hack::Chips
             evaluate();
         return getBit(6);
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

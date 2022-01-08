@@ -34,19 +34,19 @@ namespace Hack::Chips
         _bits = 0;
     }
 
-    void Bit::setIn(bool v)
+    void Bit::setIn(bool input)
     {
-        applyBit(0, v);
+        applyBit(0, input);
     }
 
-    void Bit::setLoad(bool v)
+    void Bit::setLoad(bool load)
     {
-        applyBit(6, v);
+        applyBit(6, load);
     }
 
-    void Bit::setClock(bool v)
+    void Bit::setClock(bool clock)
     {
-        applyBit(4, v);
+        applyBit(4, clock);
     }
 
     bool Bit::getOut()
@@ -77,5 +77,4 @@ namespace Hack::Chips
             }
         }
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

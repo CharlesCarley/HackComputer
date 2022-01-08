@@ -87,5 +87,4 @@ namespace Hack::Compiler::CodeGenerator
         _static   = 0;
         _symbols.clear();
     }
-
-}  // namespace Hack::Compiler::CodeGenerator
+} // namespace Hack::Compiler::CodeGenerator

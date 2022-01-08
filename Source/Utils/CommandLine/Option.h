@@ -170,4 +170,4 @@ namespace Hack::CommandLine
         if (index < _values.size())
             _values[index] = str;
     }
-}  // namespace Hack::CommandLine
+} // namespace Hack::CommandLine

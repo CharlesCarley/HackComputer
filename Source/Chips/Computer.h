@@ -29,16 +29,16 @@ namespace Hack::Chips
 {
     struct CpuState
     {
-        uint16_t pc;      // The current program counter
-        uint16_t outM;    // The CPU's output to RAM
-        uint16_t addrM;   // The current index in to RAM
-        uint16_t regD;    // Current contents of the D register
-        uint16_t regA;    // Contents of the A register
-        uint16_t clock;   // The current clock cycle
-        uint16_t inst;    // The instruction in ROM at the pc index
-        uint16_t writeM;  // The load bit for the CPU.
-        uint16_t ram;     // The last output from RAM
-        uint16_t reset;   // Reset indicator
+        uint16_t pc;     // The current program counter
+        uint16_t outM;   // The CPU's output to RAM
+        uint16_t addrM;  // The current index in to RAM
+        uint16_t regD;   // Current contents of the D register
+        uint16_t regA;   // Contents of the A register
+        uint16_t clock;  // The current clock cycle
+        uint16_t inst;   // The instruction in ROM at the pc index
+        uint16_t writeM; // The load bit for the CPU.
+        uint16_t ram;    // The last output from RAM
+        uint16_t reset;  // Reset indicator
     };
 
     class Computer
@@ -93,5 +93,4 @@ namespace Hack::Chips
     {
         return _cpuState;
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

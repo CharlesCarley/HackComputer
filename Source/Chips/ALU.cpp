@@ -34,7 +34,6 @@
 #include "Chips/Or8Way.h"
 #endif
 
-
 #define InsertCheckFlags       \
     if (_io.s[2] == 0)         \
         _io.b[7] = Zr;         \
@@ -69,20 +68,20 @@ namespace Hack::Chips
         return _io.b[7];
     }
 
-    void Alu::setX(const uint16_t& v)
+    void Alu::setX(const uint16_t& x)
     {
-        if (_io.s[0] != v)
+        if (_io.s[0] != x)
         {
-            _io.s[0] = v;
+            _io.s[0] = x;
             _io.b[7] |= Bit0;
         }
     }
 
-    void Alu::setY(const uint16_t& v)
+    void Alu::setY(const uint16_t& y)
     {
-        if (_io.s[1] != v)
+        if (_io.s[1] != y)
         {
-            _io.s[1] = v;
+            _io.s[1] = y;
             _io.b[7] |= Bit0;
         }
     }
@@ -257,12 +256,10 @@ namespace Hack::Chips
             InsertCheckFlags;
             break;
         default:
-            throw InputException("AluFunction ",
+            throw InputException("ALU function ",
                                  Char::toBinaryString(_io.b[6]),
                                  " not found");
         }
-
 #endif
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

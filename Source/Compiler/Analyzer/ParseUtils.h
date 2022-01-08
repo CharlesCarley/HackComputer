@@ -46,5 +46,4 @@ namespace Hack::Compiler::Analyzer
 
         static bool isComplexTerm(int8_t t0, int8_t t1, int8_t t2, int8_t t3);
     };
-
-}  // namespace Hack::Compiler::Analyzer
+} // namespace Hack::Compiler::Analyzer

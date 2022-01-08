@@ -55,15 +55,15 @@ namespace Hack::Compiler
         void lineTo(Node* a, const Node* b)
         {
             _out << std::setw(3) << ' ';
-            _out << "node_" << std::hex << (size_t)a; 
+            _out << "node_" << std::hex << (size_t)a;
             _out << "->";
-            _out << "node_" << std::hex << (size_t)b ;
+            _out << "node_" << std::hex << (size_t)b;
             _out << "[";
             _out << "arrowhead=none";
             _out << "]";
             _out << std::endl;
         }
-        
+
     public:
         DotWriterImpl(Node* root, OStream* stream) :
             _root(root),
@@ -133,5 +133,4 @@ namespace Hack::Compiler
         DotWriterImpl impl(_root, &out);
         impl.write();
     }
-    
-}  // namespace Hack::Compiler
+} // namespace Hack::Compiler

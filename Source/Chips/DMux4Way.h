@@ -27,21 +27,25 @@ namespace Hack::Chips
     class DMux4Way final : public Chip<uint8_t, 8>
     {
     private:
-        void evaluate() override;
+        void evaluate();
 
     public:
         DMux4Way();
 
-        void setIn(bool v);
-        void setSel(const uint8_t& v);
+        void setIn(bool input);
+
+        void setSel(const uint8_t& selection);
 
         bool getA();
+
         bool getB();
+
         bool getC();
+
         bool getD();
 
         uint8_t getOut();
+
         uint8_t getIndex();
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

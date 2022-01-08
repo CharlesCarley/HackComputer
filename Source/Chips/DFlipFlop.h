@@ -27,18 +27,19 @@ namespace Hack::Chips
     class DFlipFlop final : public Chip<uint8_t, 8>
     {
     private:
-        void evaluate() override;
+        void evaluate();
 
     public:
         DFlipFlop();
 
-        void setD(bool v);
-        void setG(bool v);
+        void setD(bool d);
 
-        void setQn(bool v);
+        void setG(bool g);
+
+        void setQn(bool qn);
 
         bool getQ();
+
         bool getQPlus();
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

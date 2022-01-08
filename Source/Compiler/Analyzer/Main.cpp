@@ -122,8 +122,8 @@ public:
                 {
                     String inFile  = jackFile.string();
                     String outFile = inFile
-                                         .substr(0, inFile.size() - 5)
-                                         .append(".xml");
+                                     .substr(0, inFile.size() - 5)
+                                     .append(".xml");
 
                     Compiler::Analyzer::Parser psr;
                     Console::write("parsing ", jackFile.filename().string());

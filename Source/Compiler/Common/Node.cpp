@@ -175,5 +175,4 @@ namespace Hack::Compiler
             return false;
         }
     }
-
-}  // namespace Hack::Compiler
+} // namespace Hack::Compiler

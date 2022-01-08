@@ -57,5 +57,4 @@ namespace Hack::Compiler
             writer.write(out);
         }
     }
-
-}  // namespace Hack::Compiler
+} // namespace Hack::Compiler

@@ -151,5 +151,4 @@ namespace Hack::Chips
 #endif
         clearBit(7);
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

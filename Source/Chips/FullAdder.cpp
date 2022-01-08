@@ -31,21 +31,21 @@ namespace Hack::Chips
         assignBit(7);
     }
 
-    void FullAdder::setA(bool v)
+    void FullAdder::setA(bool a)
     {
-        applyBit(0, v);
+        applyBit(0, a);
         setBit(7);
     }
 
-    void FullAdder::setB(bool v)
+    void FullAdder::setB(bool b)
     {
-        applyBit(1, v);
+        applyBit(1, b);
         setBit(7);
     }
 
-    void FullAdder::setCaryIn(bool v)
+    void FullAdder::setCary(bool cary)
     {
-        applyBit(2, v);
+        applyBit(2, cary);
         setBit(7);
     }
 
@@ -86,5 +86,4 @@ namespace Hack::Chips
         applyBit(5, o1.getOut());
         clearBit(7);
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

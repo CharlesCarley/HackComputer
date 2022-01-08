@@ -66,17 +66,19 @@ namespace Hack::Compiler
         {
             _out << std::setw((size_t)(_indent - 1)) << ' ';
             _out << '<'
-                 << name
-                 << " Line=\""
-                 << node->line()
-                 << "\">"
-                 << value;
+                << name
+                << " Line=\""
+                << node->line()
+                << "\">"
+                << value;
             _out << '<' << '/' << name << '>' << std::endl;
         }
 
     public:
         explicit XmlWriterImpl(Node* root, OStream* stream) :
-            _root(root), _stream(stream), _indent(0)
+            _root(root),
+            _stream(stream),
+            _indent(0)
         {
         }
 
@@ -84,9 +86,9 @@ namespace Hack::Compiler
         {
             _out << "<?xml version='1.0'?>" << std::endl;
             _out << "<ClassList Filename=\""
-                 << Path(_root->filename()).filename().string()
-                 << "\">"
-                 << std::endl;
+                << Path(_root->filename()).filename().string()
+                << "\">"
+                << std::endl;
             _indent += Indent;
         }
 
@@ -149,5 +151,4 @@ namespace Hack::Compiler
         XmlWriterImpl impl(_root, &out);
         impl.write();
     }
-
-}  // namespace Hack::Compiler
+} // namespace Hack::Compiler

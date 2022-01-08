@@ -28,15 +28,15 @@ namespace Hack::Chips
         assignBit(7);
     }
 
-    void DMux::setIn(bool v)
+    void DMux::setIn(bool input)
     {
-        applyBit(0, v);
+        applyBit(0, input);
         setBit(7);
     }
 
-    void DMux::setSel(bool v)
+    void DMux::setSel(bool selection)
     {
-        applyBit(1, v);
+        applyBit(1, selection);
         setBit(7);
     }
 
@@ -60,5 +60,4 @@ namespace Hack::Chips
             evaluate();
         return getBit(5);
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

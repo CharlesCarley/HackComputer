@@ -88,7 +88,7 @@ namespace Hack::Computer
     }
 
     void CommandRuntime::initialize(Chips::Computer* computer,
-                                    Chips::Screen*) const
+                                    Chips::Screen*   ) const
     {
         _private->initialize(computer);
     }
@@ -114,5 +114,4 @@ namespace Hack::Computer
         computer->update(true);
         _private->update(computer);
     }
-
-}  // namespace Hack::Computer
+} // namespace Hack::Computer

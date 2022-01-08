@@ -27,13 +27,13 @@
 
 namespace Hack
 {
-    using String             = std::string;
-    using StringArray        = std::vector<std::string>;
-    using StringStream       = std::stringstream;
-    using InputStringStream  = std::istringstream;
+    using String = std::string;
+    using StringArray = std::vector<std::string>;
+    using StringStream = std::stringstream;
+    using InputStringStream = std::istringstream;
     using OutputStringStream = std::ostringstream;
-    using IStream            = std::istream;
-    using OStream            = std::ostream;
+    using IStream = std::istream;
+    using OStream = std::ostream;
 
     class StringUtils
     {
@@ -54,13 +54,13 @@ namespace Hack
 
         static void trimR(String& dest, const String& in, char ch);
 
-        static void splitLine(StringArray& dest, const String& input, char swap ='$');
+        static void splitLine(StringArray& dest, const String& input, char swap = '$');
 
         static void replaceAll(String& dest, const String& input, const String& a, const String& b);
     };
 
     template <typename... Args>
-    void StreamMerge(OutputStringStream& dest, Args&&... args)
+    void StreamMerge(OutputStringStream& dest, Args&&...args)
     {
         OutputStringStream oss;
         ((oss << std::forward<Args>(args)), ...);
@@ -68,7 +68,7 @@ namespace Hack
     }
 
     template <typename... Args>
-    void StringCombine(String& dest, Args&&... args)
+    void StringCombine(String& dest, Args&&...args)
     {
         OutputStringStream oss;
         ((oss << std::forward<Args>(args)), ...);
@@ -76,11 +76,10 @@ namespace Hack
     }
 
     template <typename... Args>
-    String StringCombine(Args&&... args)
+    String StringCombine(Args&&...args)
     {
         OutputStringStream oss;
         ((oss << std::forward<Args>(args)), ...);
         return oss.str();
     }
-
-}  // namespace Hack
+} // namespace Hack

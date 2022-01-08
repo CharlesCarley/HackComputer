@@ -34,7 +34,7 @@ typedef struct HandleType
 {
     uint64_t  type;
     uintptr_t ptr;
-} const* Handle;
+} const*      Handle;
 
 namespace Hack::Binding
 {
@@ -55,7 +55,8 @@ namespace Hack::Binding
         mutable String _cache;
 
     public:
-        explicit RomWrapper(Rom32* rom32) : _rom(rom32)
+        explicit RomWrapper(Rom32* rom32) :
+            _rom(rom32)
         {
         }
 
@@ -100,7 +101,8 @@ namespace Hack::Binding
         Memory* _memory;
 
     public:
-        explicit RamWrapper(Memory* mem) : _memory(mem)
+        explicit RamWrapper(Memory* mem) :
+            _memory(mem)
         {
         }
 
@@ -144,7 +146,9 @@ namespace Hack::Binding
         mutable uint8_t* _bytes;
 
     public:
-        ComputerWrapper() : _computer(new Computer()), _bytes(nullptr)
+        ComputerWrapper() :
+            _computer(new Computer()),
+            _bytes(nullptr)
         {
             _rom   = new RomWrapper(_computer->rom());
             _ram   = new RamWrapper(_computer->memory());
@@ -281,8 +285,7 @@ namespace Hack::Binding
             return nullptr;
         }
     };
-
-}  // namespace Hack::Binding
+} // namespace Hack::Binding
 
 using namespace Hack::Binding;
 
@@ -298,7 +301,7 @@ EXPORT_API void ComputerFree(void* handle)
 
 EXPORT_API Handle CreateComputer()
 {
-    return (Handle) new ComputerWrapper();
+    return (Handle)new ComputerWrapper();
 }
 
 EXPORT_API void DestroyComputer(const Handle handle)

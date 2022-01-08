@@ -27,17 +27,18 @@ namespace Hack::Chips
     class FullAdder final : public Chip<uint8_t, 8>
     {
     private:
-        void evaluate() override;
+        void evaluate();
 
     public:
         FullAdder();
 
-        void setA(bool v);
-        void setB(bool v);
-        void setCaryIn(bool v);
+        void setA(bool a);
+        void setB(bool b);
+
+        void setCary(bool cary);
 
         bool getSum();
+
         bool getCary();
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

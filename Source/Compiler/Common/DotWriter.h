@@ -38,5 +38,4 @@ namespace Hack::Compiler
 
         void write(OStream& out) const;
     };
-
-}  // namespace Hack::Compiler
+} // namespace Hack::Compiler

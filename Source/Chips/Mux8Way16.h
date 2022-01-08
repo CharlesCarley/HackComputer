@@ -27,24 +27,32 @@ namespace Hack::Chips
     class Mux8Way16 final : public Chip<uint8_t, 8>
     {
     private:
-        void     evaluate() override;
+        void evaluate();
+
         bit64_t  _in[2];
         uint16_t _out;
 
     public:
         Mux8Way16();
 
-        void setA(const uint16_t& v);
-        void setB(const uint16_t& v);
-        void setC(const uint16_t& v);
-        void setD(const uint16_t& v);
-        void setE(const uint16_t& v);
-        void setF(const uint16_t& v);
-        void setG(const uint16_t& v);
-        void setH(const uint16_t& v);
-        void setSel(uint8_t v);
+        void setA(const uint16_t& a);
+
+        void setB(const uint16_t& b);
+
+        void setC(const uint16_t& c);
+
+        void setD(const uint16_t& d);
+
+        void setE(const uint16_t& e);
+
+        void setF(const uint16_t& f);
+
+        void setG(const uint16_t& g);
+
+        void setH(const uint16_t& h);
+
+        void setSel(const uint8_t& selection);
 
         uint16_t getOut();
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

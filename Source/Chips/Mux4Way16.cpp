@@ -102,5 +102,4 @@ namespace Hack::Chips
         _flags &= ~128;
 #endif
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

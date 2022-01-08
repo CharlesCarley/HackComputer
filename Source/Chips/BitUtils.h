@@ -30,16 +30,16 @@ namespace Hack::Chips
 {
     enum BitIndex
     {
-        Bit0  = 0x0001,
-        Bit1  = 0x0002,
-        Bit2  = 0x0004,
-        Bit3  = 0x0008,
-        Bit4  = 0x0010,
-        Bit5  = 0x0020,
-        Bit6  = 0x0040,
-        Bit7  = 0x0080,
-        Bit8  = 0x0100,
-        Bit9  = 0x0200,
+        Bit0 = 0x0001,
+        Bit1 = 0x0002,
+        Bit2 = 0x0004,
+        Bit3 = 0x0008,
+        Bit4 = 0x0010,
+        Bit5 = 0x0020,
+        Bit6 = 0x0040,
+        Bit7 = 0x0080,
+        Bit8 = 0x0100,
+        Bit9 = 0x0200,
         Bit10 = 0x0400,
         Bit11 = 0x0800,
         Bit12 = 0x1000,
@@ -120,14 +120,14 @@ namespace Hack::Chips
     void BitUtils<T, Count>::unpack(const T& value, bool* array)
     {
         for (uint8_t i = 0; i < Count; ++i)
-            array[i] = (value & 1 << i) != 0;
+            array[i]   = (value & 1 << i) != 0;
     }
 
     template <typename T, uint8_t Count>
     void BitUtils<T, Count>::unpack(const T& value, uint8_t* array)
     {
         for (uint8_t i = 0; i < Count; ++i)
-            array[i] = (value & 1 << i) != 0;
+            array[i]   = (value & 1 << i) != 0;
     }
 
     template <typename T, uint8_t Count>
@@ -254,7 +254,7 @@ namespace Hack::Chips
         Console::writeLine(os);
     }
 
-    using B8  = BitUtils<uint8_t, 8>;
+    using B8 = BitUtils<uint8_t, 8>;
     using B16 = BitUtils<uint16_t, 16>;
 
     namespace Gates
@@ -305,8 +305,7 @@ namespace Hack::Chips
         {
             return Or(And(a, Not(s)), And(b, s));
         }
-
-    }  // namespace Gates
+    } // namespace Gates
 
     namespace BitwiseGates
     {
@@ -352,7 +351,5 @@ namespace Hack::Chips
         {
             return Or<T>(And<T>(a, Not<T>(s)), And<T>(b, s));
         }
-
-    }  // namespace BitwiseGates
-
-}  // namespace Hack::Chips
+    } // namespace BitwiseGates
+}     // namespace Hack::Chips

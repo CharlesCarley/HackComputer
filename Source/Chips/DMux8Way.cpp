@@ -34,17 +34,17 @@ namespace Hack::Chips
         assignBit(15);
     }
 
-    void DMux8Way::setIn(bool v)
+    void DMux8Way::setIn(bool input)
     {
-        applyBit(0, v);
+        applyBit(0, input);
         setBit(15);
     }
 
-    void DMux8Way::setSel(const uint8_t& v)
+    void DMux8Way::setSel(const uint8_t& selection)
     {
-        applyBit(1, v & 1);
-        applyBit(2, v & 2);
-        applyBit(3, v & 4);
+        applyBit(1, selection & 1);
+        applyBit(2, selection & 2);
+        applyBit(3, selection & 4);
         setBit(15);
     }
 
@@ -165,5 +165,4 @@ namespace Hack::Chips
         setBit(4 + B8::pack<3>(ar));
 #endif
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

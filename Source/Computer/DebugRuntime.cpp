@@ -55,8 +55,7 @@ namespace Hack::Computer
         constexpr int SideBarWidth  = 20;
         constexpr int SideBarWidthD = SideBarWidth << 1;
         const Point   RegSize       = Point(12, 3);
-
-    }  // namespace Detail
+    } // namespace Detail
 
     class DebugRuntimePrivate
     {
@@ -95,15 +94,15 @@ namespace Hack::Computer
             _ram = computer->memory();
 
             _ctx = new Context();
-            _ctx->createColor(Color(0x62627c));  // Grey
-            _ctx->createColor(Color(0x9f9faf));  // Highlight
-            _ctx->createColor(Color(0x5a5a7f));  // WireTitle
-            _ctx->createColor(Color(0xe94545));  // Action
-            _ctx->createColor(Color(0x72728c));  // Action2
-            _ctx->createColor(Color(0x3f3f59));  // Wire
-            _ctx->createColor(Color(0x8787bf));  // Title
-            _ctx->createColor(Color(0x30303f));  // WireShadow
-            _ctx->createColor(Color(0x5a5a7f));  // WireShadow
+            _ctx->createColor(Color(0x62627c)); // Grey
+            _ctx->createColor(Color(0x9f9faf)); // Highlight
+            _ctx->createColor(Color(0x5a5a7f)); // WireTitle
+            _ctx->createColor(Color(0xe94545)); // Action
+            _ctx->createColor(Color(0x72728c)); // Action2
+            _ctx->createColor(Color(0x3f3f59)); // Wire
+            _ctx->createColor(Color(0x8787bf)); // Title
+            _ctx->createColor(Color(0x30303f)); // WireShadow
+            _ctx->createColor(Color(0x5a5a7f)); // WireShadow
         }
 
         int input() const
@@ -191,7 +190,9 @@ namespace Hack::Computer
                 String s;
                 Char::toString(s, index + offset);
                 ctx.string(
-                    s, (bounds.x + 6) - (int)s.size(), (bounds.midY()) + index);
+                    s,
+                    (bounds.x + 6) - (int)s.size(),
+                    (bounds.midY()) + index);
             }
         }
 
@@ -223,7 +224,12 @@ namespace Hack::Computer
                 is.string(v);
 
                 displayMemoryContents(
-                    ctx, bounds, v, i, _cpuState.pc, iVal == _cpuState.pc);
+                    ctx,
+                    bounds,
+                    v,
+                    i,
+                    _cpuState.pc,
+                    iVal == _cpuState.pc);
             }
         }
 
@@ -316,8 +322,9 @@ namespace Hack::Computer
             //  Write
             int offs = 4;
 
-            ctx.foreground(_prevCpuState.writeM != _cpuState.writeM ? WireLight
-                                                                    : Wire);
+            ctx.foreground(_prevCpuState.writeM != _cpuState.writeM
+                               ? WireLight
+                               : Wire);
             ctx.line(cpuRect.right(),
                      bounds.midY() + offs,
                      halfOfHalfToEdge,
@@ -326,8 +333,9 @@ namespace Hack::Computer
             ctx.string("Write", cpuRect.right() - 1, bounds.midY() + offs);
 
             //  Address
-            ctx.foreground(_prevCpuState.addrM != _cpuState.addrM ? WireLight
-                                                                  : Wire);
+            ctx.foreground(_prevCpuState.addrM != _cpuState.addrM
+                               ? WireLight
+                               : Wire);
             ctx.line(cpuRect.right(),
                      bounds.midY(),
                      halfToEdge + SideBarWidth,
@@ -337,8 +345,9 @@ namespace Hack::Computer
 
             //  Output
             offs = 2;
-            ctx.foreground(_prevCpuState.outM != _cpuState.outM ? WireLight
-                                                                : Wire);
+            ctx.foreground(_prevCpuState.outM != _cpuState.outM
+                               ? WireLight
+                               : Wire);
             ctx.line(cpuRect.right(),
                      bounds.midY() + offs,
                      halfToEdge >> 1,
@@ -348,7 +357,7 @@ namespace Hack::Computer
 
             // Wiring Out -> Ram
             ctx.foreground(_prevCpuState.writeM != _cpuState.writeM &&
-                                   _cpuState.writeM
+                           _cpuState.writeM
                                ? WireLight
                                : Wire);
 
@@ -382,8 +391,9 @@ namespace Hack::Computer
 
             // Rom -> CPU
 
-            ctx.foreground(_prevCpuState.inst != _cpuState.inst ? WireLight
-                                                                : Wire);
+            ctx.foreground(_prevCpuState.inst != _cpuState.inst
+                               ? WireLight
+                               : Wire);
             ctx.moveTo(4, bounds.midY());
             ctx.lineTo(cpuRect.left(), bounds.midY(), OR_HORIZONTAL);
 
@@ -412,8 +422,9 @@ namespace Hack::Computer
             if (_mode == 3)
                 boundsOffset -= 5;
 
-            ctx.foreground(_prevCpuState.ram != _cpuState.ram ? WireLight
-                                                              : Wire);
+            ctx.foreground(_prevCpuState.ram != _cpuState.ram
+                               ? WireLight
+                               : Wire);
             ctx.moveTo(cpuRect.left() - halfOfHalfToEdge, bounds.top() + 1);
             ctx.lineTo(boundsOffset, bounds.top() + 1, OR_HORIZONTAL);
             ctx.moveTo(cpuRect.left() - halfOfHalfToEdge, cpuRect.top() + 3);
@@ -431,12 +442,16 @@ namespace Hack::Computer
 
             ctx.foreground(WireTitle);
             ctx.string(
-                "In", cpuRect.left() - halfOfHalfToEdge + 1, cpuRect.top() + 3);
+                "In",
+                cpuRect.left() - halfOfHalfToEdge + 1,
+                cpuRect.top() + 3);
 
             ctx.foreground(Action);
             Char::toString(v, _cpuState.ram);
             ctx.string(
-                v, cpuRect.left() - (int)v.size() + 1, cpuRect.top() + 3);
+                v,
+                cpuRect.left() - (int)v.size() + 1,
+                cpuRect.top() + 3);
 
             ctx.foreground(Action);
 
@@ -455,9 +470,12 @@ namespace Hack::Computer
             ctx.character('^', aRect.midX(), aRect.bottom() - 1);
             ctx.foreground(_cpuState.clock ? WireLight : WireTitle);
             ctx.character(
-                _cpuState.clock ? '1' : '0', aRect.midX(), aRect.bottom());
-            ctx.foreground(_prevCpuState.regA != _cpuState.regA ? Action
-                                                                : WireTitle);
+                _cpuState.clock ? '1' : '0',
+                aRect.midX(),
+                aRect.bottom());
+            ctx.foreground(_prevCpuState.regA != _cpuState.regA
+                               ? Action
+                               : WireTitle);
             Char::toString(v, _cpuState.regA);
             ctx.string(v, aRect.midX() - ((int)v.size() >> 1), aRect.midY());
 
@@ -472,15 +490,19 @@ namespace Hack::Computer
             ctx.character('^', dRect.midX(), dRect.bottom() - 1);
             ctx.foreground(_cpuState.clock ? WireLight : WireTitle);
             ctx.character(
-                _cpuState.clock ? '1' : '0', dRect.midX(), dRect.bottom());
-            ctx.foreground(_prevCpuState.regD != _cpuState.regD ? Action
-                                                                : WireTitle);
+                _cpuState.clock ? '1' : '0',
+                dRect.midX(),
+                dRect.bottom());
+            ctx.foreground(_prevCpuState.regD != _cpuState.regD
+                               ? Action
+                               : WireTitle);
             Char::toString(v, _cpuState.regD);
             ctx.string(v, dRect.midX() - ((int)v.size() >> 1), dRect.midY());
 
             // Reset
-            ctx.foreground(_cpuState.reset != _prevCpuState.reset ? WireLight
-                                                                  : Wire);
+            ctx.foreground(_cpuState.reset != _prevCpuState.reset
+                               ? WireLight
+                               : Wire);
             ctx.line(cpuRect.left() - 11, bounds.midY() + 3, 11, OR_HORIZONTAL);
             ctx.foreground(_cpuState.reset ? Action : WireTitle);
             ctx.string("Reset", cpuRect.left() - 11, bounds.midY() + 3);
@@ -556,5 +578,4 @@ namespace Hack::Computer
             computer->captureState();
         }
     }
-
-}  // namespace Hack::Computer
+} // namespace Hack::Computer

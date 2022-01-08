@@ -30,10 +30,10 @@ namespace Hack::VirtualMachine
         ARG,
         THS,
         THT,
-        TMP, // 8 entries
+        TMP,
+        // 8 entries
         SW0 = 13,
         SW1,
         SW2
     };
-
-}  // namespace Hack::VirtualMachine
+} // namespace Hack::VirtualMachine

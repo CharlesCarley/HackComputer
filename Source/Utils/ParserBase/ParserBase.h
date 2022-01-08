@@ -52,7 +52,7 @@ namespace Hack
         void readToken(int32_t n = 1);
 
         template <typename... Args>
-        [[noreturn]] void parseError(const String& what, Args&&... args)
+        [[noreturn]] void parseError(const String& what, Args&&...args)
         {
             OutputStringStream oss;
             oss << what;
@@ -73,12 +73,11 @@ namespace Hack
 
         void write(const String& file, int format = 0);
 
-        void write(OStream& os, int format =0);
+        void write(OStream& os, int format = 0);
 
         const String& filename() const;
 
         size_t line() const;
-
     };
 
     inline const String& ParserBase::filename() const
@@ -92,5 +91,4 @@ namespace Hack
             return _scanner->line();
         return 0;
     }
-
-}  // namespace Hack
+} // namespace Hack

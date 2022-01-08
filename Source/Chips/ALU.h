@@ -38,31 +38,30 @@ namespace Hack::Chips
 
     enum Control
     {
-        XAndY       = 0,
-        Zero        = Zx | Zy | Fn,
-        One         = Zx | Nx | Zy | Ny | Fn | No,
+        XAndY = 0,
+        Zero = Zx | Zy | Fn,
+        One = Zx | Nx | Zy | Ny | Fn | No,
         NegativeOne = Zx | Nx | Zy | Fn,
-        OutX        = Zy | Ny,
-        OutY        = Zx | Nx,
-        NotX        = Zy | Ny | No,
-        NotY        = Zx | Nx | No,
-        NegativeX   = Zy | Ny | No | Fn,
-        NegativeY   = Zx | Nx | No | Fn,
-        XPlusOne    = Nx | Zy | Ny | Fn | No,
-        YPlusOne    = Zx | Nx | Ny | Fn | No,
-        XMinusOne   = Zy | Ny | Fn,
-        YMinusOne   = Zx | Nx | Fn,
-        XPlusY      = Fn,
-        XMinusY     = Nx | Fn | No,
-        YMinusX     = Ny | Fn | No,
-        XOrY        = Nx | Ny | No,
-        Undefined   = Zx | Zy | Ny | Fn
+        OutX = Zy | Ny,
+        OutY = Zx | Nx,
+        NotX = Zy | Ny | No,
+        NotY = Zx | Nx | No,
+        NegativeX = Zy | Ny | No | Fn,
+        NegativeY = Zx | Nx | No | Fn,
+        XPlusOne = Nx | Zy | Ny | Fn | No,
+        YPlusOne = Zx | Nx | Ny | Fn | No,
+        XMinusOne = Zy | Ny | Fn,
+        YMinusOne = Zx | Nx | Fn,
+        XPlusY = Fn,
+        XMinusY = Nx | Fn | No,
+        YMinusX = Ny | Fn | No,
+        XOrY = Nx | Ny | No,
     };
 
     class Alu final : public Chip<uint8_t, 8>
     {
     private:
-        void evaluate() override;
+        void evaluate();
 
         bit64_t _io;
 
@@ -73,13 +72,14 @@ namespace Hack::Chips
 
         uint8_t getFlags();
 
-        void setX(const uint16_t& v);
-        void setY(const uint16_t& v);
+        void setX(const uint16_t& x);
+
+        void setY(const uint16_t& y);
 
         uint16_t getOut();
 
         bool getZr();
+
         bool getNe();
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

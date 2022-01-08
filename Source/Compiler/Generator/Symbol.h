@@ -111,5 +111,4 @@ namespace Hack::Compiler::CodeGenerator
     {
         return _type >= 0 && _kind != None;
     }
-
-}  // namespace Hack::Compiler::CodeGenerator
+} // namespace Hack::Compiler::CodeGenerator

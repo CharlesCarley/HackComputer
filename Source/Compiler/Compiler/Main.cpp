@@ -33,14 +33,14 @@ enum Options
 };
 
 constexpr CommandLine::Switch Switches[OP_MAX] = {{
-    OP_OUTPUT,
-    'o',
-    "output",
-    "Specify an output file\n"
-    " -- If one is not supplied the program's output will be sent to stdout",
-    true,
-    1,
-}
+        OP_OUTPUT,
+        'o',
+        "output",
+        "Specify an output file\n"
+        " -- If one is not supplied the program's output will be sent to stdout",
+        true,
+        1,
+    }
 
 };
 

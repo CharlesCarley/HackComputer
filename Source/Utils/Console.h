@@ -124,7 +124,7 @@ namespace Hack
         static void writeError(const String& str);
 
         template <typename... Args>
-        static void writeLine(const String& str, Args&&... args)
+        static void writeLine(const String& str, Args&&...args)
         {
             OutputStringStream oss;
             oss << str;
@@ -133,7 +133,7 @@ namespace Hack
         }
 
         template <typename... Args>
-        static void write(const String& str, Args&&... args)
+        static void write(const String& str, Args&&...args)
         {
             OutputStringStream oss;
             oss << str;
@@ -147,5 +147,4 @@ namespace Hack
 
         static void debugBreak();
     };
-
-}  // namespace Hack
+} // namespace Hack

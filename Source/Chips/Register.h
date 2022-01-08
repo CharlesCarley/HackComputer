@@ -30,7 +30,7 @@ namespace Hack::Chips
     class Register final : public Chip<bit64_t, 64>
     {
     private:
-        void evaluate() override;
+        void evaluate();
         bool isDirty() override;
 
 #ifdef IMPLEMENT_BLACK_BOX
@@ -47,5 +47,4 @@ namespace Hack::Chips
 
         void lock(bool v);
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

@@ -168,13 +168,12 @@ void AsmTestExec(Chips::Computer& comp, const String& baseName)
 }
 
 
-
 GTEST_TEST(Assembler, Exec01)
 {
     Chips::Computer c;
     AsmTestExec(c, "Test01");
 
-    Chips::Memory *mem = c.memory();
+    Chips::Memory* mem = c.memory();
     EXPECT_EQ(mem->get(0), (uint16_t)-1);
     EXPECT_EQ(mem->get(1), 256);
     EXPECT_EQ(mem->get(2), 123);

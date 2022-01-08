@@ -146,6 +146,4 @@ namespace Hack::Compiler::Analyzer
             throw Exception("null tree");
         return *_tree;
     }
-
-
-}  // namespace Hack::Compiler::Analyzer
+} // namespace Hack::Compiler::Analyzer

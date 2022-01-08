@@ -51,5 +51,4 @@ namespace Hack
                                const size_t& line,
                                const String& message = "");
     };
-
-}  // namespace Hack
+} // namespace Hack

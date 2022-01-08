@@ -219,5 +219,4 @@ namespace Hack::Assembler
         }
         dest = oss.str();
     }
-
-}  // namespace Hack::Assembler
+} // namespace Hack::Assembler

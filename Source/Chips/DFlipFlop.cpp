@@ -29,23 +29,23 @@ namespace Hack::Chips
         setBit(4);
     }
 
-    void DFlipFlop::setD(bool v)
+    void DFlipFlop::setD(bool d)
     {
-        applyBit(0, v);
+        applyBit(0, d);
         setBit(7);
     }
 
-    void DFlipFlop::setG(bool v)
+    void DFlipFlop::setG(bool g)
     {
-        applyBit(1, v);
+        applyBit(1, g);
         setBit(7);
     }
 
-    void DFlipFlop::setQn(bool v)
+    void DFlipFlop::setQn(bool qn)
     {
         // explicitly set the previous value
         // for testing purposes...
-        applyBit(6, v);
+        applyBit(6, qn);
         clearBit(4);
         setBit(7);
     }
@@ -95,5 +95,4 @@ namespace Hack::Chips
 
         clearBit(7);
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

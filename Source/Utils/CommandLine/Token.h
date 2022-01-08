@@ -31,10 +31,14 @@ namespace Hack::CommandLine
         TOK_SWITCH_SHORT,
         TOK_SWITCH_LONG,
         TOK_NEXT,
-        TOK_OPTION,      // delete
-        TOK_INTEGER,     // delete
-        TOK_REAL,        // delete
-        TOK_IDENTIFIER,  // rename to value
+        TOK_OPTION,
+        // delete
+        TOK_INTEGER,
+        // delete
+        TOK_REAL,
+        // delete
+        TOK_IDENTIFIER,
+        // rename to value
         TOK_FILEPATH,
         TOK_EOS,
         TOK_ERROR
@@ -84,5 +88,4 @@ namespace Hack::CommandLine
             _value.resize(0);
         }
     };
-
-}  // namespace Utils::CommandLine
+} // namespace Utils::CommandLine

@@ -24,7 +24,7 @@
 namespace Hack
 {
     using Directory = std::filesystem::directory_entry;
-    
+
     void FileSystem::glob(PathArray& dest, const String& dir, const String& ext)
     {
         const Path pth = dir;
@@ -40,7 +40,13 @@ namespace Hack
 
     Path FileSystem::absolute(const String& input)
     {
-        return std::filesystem::absolute(input);
+        Path rPath(input);
+        if (!rPath.has_root_directory())
+        {
+            Path cwd = std::filesystem::current_path();
+            cwd += rPath;
+            rPath = std::filesystem::absolute(cwd);
+        }
+        return rPath;
     }
-
-}  // namespace Hack
+} // namespace Hack

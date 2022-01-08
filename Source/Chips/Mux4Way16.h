@@ -27,7 +27,7 @@ namespace Hack::Chips
     class Mux4Way16 final : public Chip<bit64_t, 64>
     {
     private:
-        void evaluate() override;
+        void evaluate();
 
         uint8_t  _flags;
         uint16_t _out;
@@ -44,5 +44,4 @@ namespace Hack::Chips
 
         uint16_t getOut();
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

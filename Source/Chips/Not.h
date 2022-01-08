@@ -27,7 +27,7 @@ namespace Hack::Chips
     class Not final : public Chip<uint8_t, 8>
     {
     private:
-        void evaluate() override;
+        void evaluate();
 
     public:
         Not();
@@ -35,5 +35,4 @@ namespace Hack::Chips
         void setIn(bool v);
         bool getOut();
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

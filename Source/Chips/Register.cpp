@@ -122,5 +122,4 @@ namespace Hack::Chips
         _bits.b[6] &= ~Bit7;
 #endif
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

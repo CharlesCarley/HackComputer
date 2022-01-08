@@ -51,40 +51,41 @@ namespace Hack::Chips
     constexpr uint16_t CBits = 0b0'00'0'111111'000'000;
 #endif
     Cpu::Cpu() :
-        _ins(0), _in(0)
+        _ins(0),
+        _in(0)
     {
         // This should not be marked as dirty
         // initially
     }
 
-    void Cpu::lock(const bool v)
+    void Cpu::lock(const bool state)
     {
-        if (v)
+        if (state)
             _bits |= Bit2;
         else
             _bits &= ~Bit2;
 
-        _a.lock(v);
-        _d.lock(v);
-        _pc.lock(v);
+        _a.lock(state);
+        _d.lock(state);
+        _pc.lock(state);
     }
 
-    void Cpu::setInMemory(const uint16_t& v)
+    void Cpu::setInMemory(const uint16_t& input)
     {
-        if (_in != v)
+        if (_in != input)
         {
-            _in = v;
+            _in = input;
             _bits |= Bit7;
         }
     }
 
-    void Cpu::setClock(bool v)
+    void Cpu::setClock(bool clock)
     {
         const bool cc = (_bits & Bit1) != 0;
 
-        if (cc != v)
+        if (cc != clock)
         {
-            if (v)
+            if (clock)
                 _bits |= Bit1;
             else
                 _bits &= ~Bit1;
@@ -93,12 +94,12 @@ namespace Hack::Chips
         }
     }
 
-    void Cpu::setReset(bool v)
+    void Cpu::setReset(bool reset)
     {
         const bool cc = (_bits & Bit0) != 0;
-        if (cc != v)
+        if (cc != reset)
         {
-            if (v)
+            if (reset)
                 _bits |= Bit0;
             else
                 _bits &= ~Bit0;
@@ -106,9 +107,9 @@ namespace Hack::Chips
         }
     }
 
-    void Cpu::setInstruction(const uint16_t& v)
+    void Cpu::setInstruction(const uint16_t& instruction)
     {
-        _ins = v;
+        _ins = instruction;
         _bits |= Bit7;
     }
 
@@ -255,7 +256,7 @@ namespace Hack::Chips
 
         _d.setLoad(typeC && (_ins & DLoad) != 0);
         _d.setIn(_alu.getOut());
-        _d.setClock(!tick);  // t-1
+        _d.setClock(!tick); // t-1
 
         if (typeC)
         {
@@ -324,5 +325,4 @@ namespace Hack::Chips
         _bits = 0;
         Timer::reset();
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

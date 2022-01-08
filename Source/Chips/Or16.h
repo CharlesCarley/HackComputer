@@ -27,14 +27,13 @@ namespace Hack::Chips
     class Or16 final : public Chip<bit64_t, 64>
     {
     private:
-        void evaluate() override;
+        void evaluate();
     public:
         Or16();
 
-        void setA(const uint16_t & v);
+        void setA(const uint16_t& v);
         void setB(const uint16_t& v);
 
         uint16_t getOut();
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

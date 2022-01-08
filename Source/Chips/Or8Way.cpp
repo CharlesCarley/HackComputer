@@ -62,5 +62,4 @@ namespace Hack::Chips
         clearBit(15);
 #endif
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

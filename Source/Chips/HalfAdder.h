@@ -27,14 +27,17 @@ namespace Hack::Chips
     class HalfAdder final : public Chip<uint8_t, 8>
     {
     private:
-        void    evaluate() override;
+        void evaluate();
+
     public:
         HalfAdder();
 
-        void setA(bool v);
-        void setB(bool v);
+        void setA(bool a);
+
+        void setB(bool b);
+
         bool getSum();
+
         bool getCary();
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

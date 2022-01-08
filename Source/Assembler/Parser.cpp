@@ -99,7 +99,7 @@ namespace Hack::Assembler
 
         // clear the working set.
         _cBits = 0;
-        _aBit = _dBits = _jBits = 0;
+        _aBit  = _dBits = _jBits = 0;
     }
 
     void Parser::expressionA()
@@ -111,8 +111,7 @@ namespace Hack::Assembler
         switch (tok.getType())
         {
         case TOK_ONE:
-            dest = 1;
-            [[fallthrough]];
+            dest = 1;[[fallthrough]];
         case TOK_ZERO:
         case TOK_INTEGER:
         case TOK_LABEL:
@@ -172,9 +171,7 @@ namespace Hack::Assembler
                 _cBits = 58;
                 advanceCursor();
                 break;
-            }
-
-            [[fallthrough]];
+            }[[fallthrough]];
         default:
             parseError("Expected a constant 1, -1, or 0");
         }
@@ -213,21 +210,46 @@ namespace Hack::Assembler
             if (testCompoundExpression(t0, t1, t2, TOK_D, TOK_PLUS, TOK_ONE))
                 _cBits = 31;
             else if (testCompoundExpression(
-                         t0, t1, t2, TOK_D, TOK_MINUS, TOK_ONE))
+                t0,
+                t1,
+                t2,
+                TOK_D,
+                TOK_MINUS,
+                TOK_ONE))
                 _cBits = 14;
             else if (testCompoundExpression(
-                         t0, t1, t2, TOK_A, TOK_PLUS, TOK_ONE))
+                t0,
+                t1,
+                t2,
+                TOK_A,
+                TOK_PLUS,
+                TOK_ONE))
                 _cBits = 55;
             else if (testCompoundExpression(
-                         t0, t1, t2, TOK_A, TOK_MINUS, TOK_ONE))
+                t0,
+                t1,
+                t2,
+                TOK_A,
+                TOK_MINUS,
+                TOK_ONE))
                 _cBits = 50;
             else if (testCompoundExpression(t0, t1, t2, TOK_D, TOK_PLUS, TOK_A))
                 _cBits = 2;
             else if (testCompoundExpression(
-                         t0, t1, t2, TOK_D, TOK_MINUS, TOK_A))
+                t0,
+                t1,
+                t2,
+                TOK_D,
+                TOK_MINUS,
+                TOK_A))
                 _cBits = 19;
             else if (testCompoundExpression(
-                         t0, t1, t2, TOK_A, TOK_MINUS, TOK_D))
+                t0,
+                t1,
+                t2,
+                TOK_A,
+                TOK_MINUS,
+                TOK_D))
                 _cBits = 7;
             else if (testCompoundExpression(t0, t1, t2, TOK_D, TOK_AND, TOK_A))
                 _cBits = 0;
@@ -277,15 +299,30 @@ namespace Hack::Assembler
             if (testCompoundExpression(t0, t1, t2, TOK_M, TOK_PLUS, TOK_ONE))
                 _cBits = 55;
             else if (testCompoundExpression(
-                         t0, t1, t2, TOK_M, TOK_MINUS, TOK_ONE))
+                t0,
+                t1,
+                t2,
+                TOK_M,
+                TOK_MINUS,
+                TOK_ONE))
                 _cBits = 50;
             else if (testCompoundExpression(t0, t1, t2, TOK_D, TOK_PLUS, TOK_M))
                 _cBits = 2;
             else if (testCompoundExpression(
-                         t0, t1, t2, TOK_D, TOK_MINUS, TOK_M))
+                t0,
+                t1,
+                t2,
+                TOK_D,
+                TOK_MINUS,
+                TOK_M))
                 _cBits = 19;
             else if (testCompoundExpression(
-                         t0, t1, t2, TOK_M, TOK_MINUS, TOK_D))
+                t0,
+                t1,
+                t2,
+                TOK_M,
+                TOK_MINUS,
+                TOK_D))
                 _cBits = 7;
             else if (testCompoundExpression(t0, t1, t2, TOK_D, TOK_AND, TOK_M))
                 _cBits = 0;
@@ -485,5 +522,4 @@ namespace Hack::Assembler
             os << v << std::endl;
         }
     }
-
-}  // namespace Hack::Assembler
+} // namespace Hack::Assembler

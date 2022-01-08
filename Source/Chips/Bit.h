@@ -29,18 +29,19 @@ namespace Hack::Chips
     class Bit final : public Chip<uint8_t, 8>
     {
     private:
-        void evaluate() override;
+        void evaluate();
 
         DFlipFlop _ff;
 
     public:
         Bit();
 
-        void setIn(bool v);
-        void setLoad(bool v);
-        void setClock(bool v);
+        void setIn(bool input);
+
+        void setLoad(bool load);
+
+        void setClock(bool clock);
 
         bool getOut();
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

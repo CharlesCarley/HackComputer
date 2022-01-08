@@ -28,14 +28,13 @@ namespace Hack::Compiler::Analyzer
     using CodeCache = std::vector<String>;
 
 
-
     class Scanner final : public ScannerBase
     {
     private:
 
         CodeCache _code;
 
-        void  scanCode(Token& tok);
+        void scanCode(Token& tok);
 
         void scanSymbol(Token& tok);
 
@@ -49,7 +48,6 @@ namespace Hack::Compiler::Analyzer
 
         void scan(Token& tok) override;
 
-        void  getCode(String& dest, const size_t& idx);
+        void getCode(String& dest, const size_t& idx);
     };
-
-}  // namespace Hack::VirtualMachine
+} // namespace Hack::VirtualMachine

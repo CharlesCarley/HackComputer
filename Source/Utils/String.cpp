@@ -226,5 +226,4 @@ namespace Hack
         else
             dest.clear();
     }
-
-}  // namespace Hack
+} // namespace Hack

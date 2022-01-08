@@ -136,6 +136,7 @@ namespace Hack::Compiler::CodeGenerator
     {
         write("push argument ", idx);
     }
+
     void VmEmitter::pushThis(const size_t& idx)
     {
         write("push this ", idx);
@@ -163,7 +164,7 @@ namespace Hack::Compiler::CodeGenerator
     {
         write("push temp ", idx);
     }
-    
+
     void VmEmitter::writeReturn()
     {
         write("return");
@@ -243,5 +244,4 @@ namespace Hack::Compiler::CodeGenerator
         else if (type == RuleInlineAsm)
             write("asm [\n", code, "\n]");
     }
-
-}  // namespace Hack::Compiler::CodeGenerator
+} // namespace Hack::Compiler::CodeGenerator

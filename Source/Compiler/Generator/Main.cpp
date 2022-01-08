@@ -37,7 +37,7 @@ namespace Hack::Programs
         OP_MAX,
     };
 
-    using CmdLine   = CommandLine::Parser;
+    using CmdLine = CommandLine::Parser;
     using CmdSwitch = CommandLine::Switch;
 
     constexpr CmdSwitch Switches[OP_MAX] = {
@@ -100,8 +100,7 @@ namespace Hack::Programs
             return 0;
         }
     };
-
-}  // namespace Hack::Programs
+} // namespace Hack::Programs
 
 int main(const int argc, char** argv)
 {

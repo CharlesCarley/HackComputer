@@ -27,7 +27,7 @@ namespace Hack::Chips
     class NOr final : public Chip<uint8_t, 8>
     {
     private:
-        void evaluate() override;
+        void evaluate();
 
     public:
         NOr();
@@ -36,5 +36,4 @@ namespace Hack::Chips
         void setB(bool v);
         bool getOut();
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

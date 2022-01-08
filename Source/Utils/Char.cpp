@@ -37,45 +37,14 @@ namespace Hack
         return input && *input ? (size_t)strlen(input) : 0;
     }
 
-    void Char::copy(char* destination, const char* source)
-    {
-        if (destination && source && *source)
-            strcpy(destination, source);
-    }
-
-    void Char::copy(char* dest, const char* src, const size_t max)
-    {
-        if (dest && src && *src)
-        {
-            size_t len = length(src);
-
-            // restrict it to max
-            if (len > max)
-                len = max;
-
-            strncpy(dest, src, (size_t)len);
-
-            if (len <= max)
-                dest[len] = 0;
-        }
-    }
-
-    size_t Char::equals(const char* a, const char* b)
+    bool Char::equals(const char* a, const char* b, const size_t max)
     {
         if (!a || !b)
-            return 1;
+            return false;
         if (*a != *b)
-            return 1;
-        return (size_t)strcmp(a, b);
-    }
+            return false;
 
-    size_t Char::equals(const char* a, const char* b, const size_t max)
-    {
-        if (!a || !b)
-            return 1;
-        if (*a != *b)
-            return 1;
-        return (size_t)(size_t)strncmp(a, b, (size_t)max);
+        return strncmp(a, b, std::min(max, length(b))) == 0;
     }
 
     int16_t Char::toInt16(const char* in, const int16_t def, const int base)
@@ -332,7 +301,6 @@ namespace Hack
         dest = stream.str();
     }
 
-    
     String Char::toString(const float v)
     {
         String copyOnReturn;
@@ -430,5 +398,4 @@ namespace Hack
         toHexString(copyOnReturn, v);
         return copyOnReturn;
     }
-
-}  // namespace Hack
+} // namespace Hack

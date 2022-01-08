@@ -33,7 +33,9 @@ namespace Hack
 
     public:
         TokenBase() :
-            _index(), _type(), _line(0)
+            _index(),
+            _type(),
+            _line(0)
         {
             clear();
         }
@@ -95,5 +97,4 @@ namespace Hack
     {
         _line = line;
     }
-
-}  // namespace Hack
+} // namespace Hack

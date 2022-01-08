@@ -45,8 +45,6 @@
 
 namespace Hack::Compiler
 {
-
-
     void NodeUtils::nodeTypeString(String& dest, Node* node)
     {
         dest = string(node->type());
@@ -281,5 +279,4 @@ namespace Hack::Compiler
         CASE_TO_STR_A(SubtypeLetArrayEqual);
         END_ENUM_TO_STR()
     }
-
-}  // namespace Hack::Compiler
+} // namespace Hack::Compiler

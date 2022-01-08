@@ -97,5 +97,4 @@ namespace Hack::Compiler::CodeGenerator
     {
         return _symbols.end();
     }
-
-}  // namespace Hack::Compiler::CodeGenerator
+} // namespace Hack::Compiler::CodeGenerator

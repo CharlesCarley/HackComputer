@@ -278,7 +278,7 @@ namespace Hack::VirtualMachine
         {
         case TOK_ASM:
         {
-            String code;
+            String   code;
             Scanner* scn = (Scanner*)_scanner;
             scn->getCode(code, getToken(0).getIndex());
 
@@ -401,5 +401,4 @@ namespace Hack::VirtualMachine
         const String str = _emitter.stream().str();
         os.write(str.c_str(), str.size());
     }
-
-}  // namespace Hack::VirtualMachine
+} // namespace Hack::VirtualMachine

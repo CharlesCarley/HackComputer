@@ -32,15 +32,15 @@ namespace Hack::Chips
         _bits.s[3] = 1;
     }
 
-    void Add16::setA(const uint16_t& v)
+    void Add16::setA(const uint16_t& a)
     {
-        _bits.s[0] = v;
+        _bits.s[0] = a;
         _bits.s[3] = 1;
     }
 
-    void Add16::setB(const uint16_t& v)
+    void Add16::setB(const uint16_t& b)
     {
-        _bits.s[1] = v;
+        _bits.s[1] = b;
         _bits.s[3] = 1;
     }
 
@@ -73,7 +73,7 @@ namespace Hack::Chips
 
             n.setA(a1);
             n.setB(b1);
-            n.setCaryIn(c1);
+            n.setCary(c1);
             if (n.getSum())
                 _bits.s[2] |= p;
             c1 = n.getCary();
@@ -90,5 +90,4 @@ namespace Hack::Chips
         _bits.s[3] = 0;
 #endif
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

@@ -30,7 +30,7 @@ namespace Hack::Chips
     class Ram512 final : public Chip<uint8_t, 8>
     {
     private:
-        void evaluate() override;
+        void evaluate();
         bool isDirty() override;
         void markDirty();
 
@@ -62,5 +62,4 @@ namespace Hack::Chips
 
         uint16_t getOut();
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

@@ -41,14 +41,14 @@
 namespace Hack::Computer
 {
     using Clock = std::chrono::high_resolution_clock;
-    using Time  = std::chrono::time_point<Clock, Clock::duration>;
+    using Time = std::chrono::time_point<Clock, Clock::duration>;
 
     using Instructions = Assembler::Parser::Instructions;
-    using Cmd          = CommandLine::Parser;
-    using CmdSwitch    = CommandLine::Switch;
-    using AsmParser    = Assembler::Parser;
-    using VmParser     = VirtualMachine::Parser;
-    using CodeGen      = Compiler::CodeGenerator::Generator;
+    using Cmd = CommandLine::Parser;
+    using CmdSwitch = CommandLine::Switch;
+    using AsmParser = Assembler::Parser;
+    using VmParser = VirtualMachine::Parser;
+    using CodeGen = Compiler::CodeGenerator::Generator;
 
     enum Options
     {
@@ -396,8 +396,7 @@ namespace Hack::Computer
 
         throw Exception("No application runtime was found");
     }
-
-}  // namespace Hack::Computer
+} // namespace Hack::Computer
 
 int main(int argc, char** argv)
 {

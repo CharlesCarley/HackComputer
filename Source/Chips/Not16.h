@@ -27,7 +27,7 @@ namespace Hack::Chips
     class Not16 final : public Chip<uint16_t, 16>
     {
     private:
-        void evaluate() override;
+        void evaluate();
 
     public:
         Not16();
@@ -36,5 +36,4 @@ namespace Hack::Chips
 
         uint16_t getOut();
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

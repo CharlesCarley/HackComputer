@@ -175,5 +175,4 @@ namespace Hack
                 break;
         }
     }
-
-}  // namespace Hack
+} // namespace Hack

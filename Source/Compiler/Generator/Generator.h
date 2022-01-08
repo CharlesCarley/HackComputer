@@ -32,15 +32,15 @@ namespace Hack
     {
         class Emitter;
     }
+
     namespace Compiler
     {
         namespace Analyzer
         {
             class Parser;
         }
-    }  // namespace Compiler
-
-}  // namespace Hack
+    } // namespace Compiler
+}     // namespace Hack
 
 namespace Hack::Compiler::CodeGenerator
 {
@@ -59,7 +59,7 @@ namespace Hack::Compiler::CodeGenerator
 
         Symbol lookup(const String& name) const;
 
-        void   popSymbol(const Symbol& symbol) const;
+        void popSymbol(const Symbol& symbol) const;
 
         void buildClass(Node* node) const;
 
@@ -108,7 +108,7 @@ namespace Hack::Compiler::CodeGenerator
         void parseImpl(const Node* root) const;
 
         template <typename... Args>
-        [[noreturn]] void compileError(const Node& node, const String& what, Args&&... args) const
+        [[noreturn]] void compileError(const Node& node, const String& what, Args&&...args) const
         {
             OutputStringStream oss;
             oss << what;
@@ -126,5 +126,4 @@ namespace Hack::Compiler::CodeGenerator
 
         void compile(const Node* tree);
     };
-
-}  // namespace Hack::Compiler::CodeGenerator
+} // namespace Hack::Compiler::CodeGenerator

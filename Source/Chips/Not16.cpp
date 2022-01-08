@@ -55,5 +55,4 @@ namespace Hack::Chips
         _bits = ~_bits;
 #endif
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

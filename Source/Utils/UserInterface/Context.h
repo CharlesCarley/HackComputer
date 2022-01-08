@@ -134,5 +134,4 @@ namespace Hack::Ui
     {
         _color.y = idx;
     }
-
-}  // namespace Hack::Ui
+} // namespace Hack::Ui

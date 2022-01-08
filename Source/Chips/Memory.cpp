@@ -76,7 +76,7 @@ namespace Hack::Chips
 
     void Memory::setValue(const size_t& index, const uint16_t& v) const
     {
-        if (index <MaxAddress)
+        if (index < MaxAddress)
         {
             if (index < ScreenAddress)
                 _ram16->setValue(index, v);
@@ -178,4 +178,4 @@ namespace Hack::Chips
         else
             throw IndexOutOfBounds();
     }
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

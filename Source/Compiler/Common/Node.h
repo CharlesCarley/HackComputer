@@ -217,5 +217,4 @@ namespace Hack::Compiler
     {
         return _line;
     }
-
-}  // namespace Hack::Compiler
+} // namespace Hack::Compiler

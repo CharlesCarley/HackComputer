@@ -36,14 +36,14 @@ enum Options
 };
 
 constexpr CommandLine::Switch Switches[OP_MAX] = {{
-    OP_OUTPUT,
-    'o',
-    "output",
-    "Specify an output file\n"
-    " -- If one is not supplied the program's output will be sent to stdout",
-    true,
-    1,
-}
+        OP_OUTPUT,
+        'o',
+        "output",
+        "Specify an output file\n"
+        " -- If one is not supplied the program's output will be sent to stdout",
+        true,
+        1,
+    }
 
 };
 
@@ -89,7 +89,9 @@ public:
                 vmp.write(out);
             else
                 throw Exception(
-                    "Failed to open the supplied output file '", _output, "'");
+                    "Failed to open the supplied output file '",
+                    _output,
+                    "'");
         }
         return 0;
     }

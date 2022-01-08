@@ -60,5 +60,4 @@ namespace Hack::Computer
     inline void RuntimeInterface::setRate(int16_t v)
     {
     }
-
-}  // namespace Hack::Computer
+} // namespace Hack::Computer

@@ -47,7 +47,7 @@ namespace Hack::Ui
         constexpr const char* LineLb    = "\x1b(0m";
         constexpr const char* LineVertR = "\x1b(0t";
         constexpr const char* LineVertL = "\x1b(0w";
-    }  // namespace Detail
+    } // namespace Detail
 
     class Platform
     {
@@ -87,5 +87,4 @@ namespace Hack::Ui
 
         static void sleep(const uint32_t& ms);
     };
-
-}  // namespace Hack::Ui
+} // namespace Hack::Ui

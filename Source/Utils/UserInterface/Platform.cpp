@@ -33,7 +33,7 @@ namespace Hack::Ui
 
     Platform::~Platform()
     {
-        for (auto & [idx, item] : _cache)
+        for (auto& [idx, item] : _cache)
             delete item;
 
         std::setvbuf(stdout, nullptr, _IOLBF, 0x400);
@@ -164,5 +164,4 @@ namespace Hack::Ui
         usleep(ms * 1000);
 #endif
     }
-
-}  // namespace Hack::Ui
+} // namespace Hack::Ui

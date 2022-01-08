@@ -37,29 +37,29 @@ namespace Hack::Compiler::Analyzer
     // clang-format off
 
     constexpr KeywordTable Reserved[] = {
-        {"class",       TokKwClass},
+        {"class", TokKwClass},
         {"constructor", TokKwConstructor},
-        {"function",    TokKwFunction},
-        {"method",      TokKwMethod},
-        {"field",       TokKwField},
-        {"static",      TokKwStatic},
-        {"var",         TokKwVar},
-        {"int",         TokKwInt},
-        {"char",        TokKwChar},
-        {"bool",        TokKwBool},
-        {"void",        TokKwVoid},
-        {"let",         TokKwLet},
-        {"do",          TokKwDo},
-        {"if",          TokKwIf},
-        {"else",        TokKwElse},
-        {"while",       TokKwWhile},
-        {"return",      TokKwReturn},
-        {"true",        TokKwTrue},
-        {"false",       TokKwFalse},
-        {"null",        TokKwNull},
-        {"this",        TokKwThis},
-        {"_vm",         TokKwInlineVm},
-        {"_asm",        TokKwInlineAsm},
+        {"function", TokKwFunction},
+        {"method", TokKwMethod},
+        {"field", TokKwField},
+        {"static", TokKwStatic},
+        {"var", TokKwVar},
+        {"int", TokKwInt},
+        {"char", TokKwChar},
+        {"bool", TokKwBool},
+        {"void", TokKwVoid},
+        {"let", TokKwLet},
+        {"do", TokKwDo},
+        {"if", TokKwIf},
+        {"else", TokKwElse},
+        {"while", TokKwWhile},
+        {"return", TokKwReturn},
+        {"true", TokKwTrue},
+        {"false", TokKwFalse},
+        {"null", TokKwNull},
+        {"this", TokKwThis},
+        {"_vm", TokKwInlineVm},
+        {"_asm", TokKwInlineAsm},
     };
     // clang-format on
 
@@ -305,5 +305,4 @@ namespace Hack::Compiler::Analyzer
 
         tok.setType(TokEof);
     }
-
-}  // namespace Hack::Compiler::Analyzer
+} // namespace Hack::Compiler::Analyzer

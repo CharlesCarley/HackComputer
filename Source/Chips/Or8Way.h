@@ -27,7 +27,7 @@ namespace Hack::Chips
     class Or8Way final : public Chip<uint16_t, 16>
     {
     private:
-        void evaluate() override;
+        void evaluate();
 
     public:
         Or8Way();
@@ -36,5 +36,4 @@ namespace Hack::Chips
 
         bool getOut();
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

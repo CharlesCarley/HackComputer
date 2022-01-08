@@ -35,6 +35,4 @@ namespace Hack::Chips
     {
         _clock.setReset(true);
     }
-
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

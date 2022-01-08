@@ -36,7 +36,8 @@ namespace Hack::Ui
         Point(const Point& oth) = default;
 
         Point(const int& nx, const int& ny) :
-            x(nx), y(ny)
+            x(nx),
+            y(ny)
         {
         }
 
@@ -72,7 +73,10 @@ namespace Hack::Ui
                   const int& ny,
                   const int& nw,
                   const int& nh) :
-            x(nx), y(ny), w(nw), h(nh)
+            x(nx),
+            y(ny),
+            w(nw),
+            h(nh)
         {
         }
 
@@ -187,8 +191,10 @@ namespace Hack::Ui
                      const int& start,
                      const int& end)
     {
-        return in < start ? start : in > end ? end
-                                             : in;
+        return in < start
+                   ? start
+                   : in > end
+                   ? end
+                   : in;
     }
-
-}  // namespace Hack::Ui
+} // namespace Hack::Ui

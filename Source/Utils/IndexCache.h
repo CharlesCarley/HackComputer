@@ -226,5 +226,4 @@ namespace Hack
             return _list.end();
         }
     };
-
-}  // namespace Hack
+} // namespace Hack

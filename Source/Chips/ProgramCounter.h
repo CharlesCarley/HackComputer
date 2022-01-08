@@ -30,15 +30,15 @@ namespace Hack::Chips
 {
     enum ProgramCounterFlags
     {
-        PCF_INC   = 1,
+        PCF_INC = 1,
         PCF_RESET = 2,
-        PCF_LOAD  = 4,
+        PCF_LOAD = 4,
     };
 
     class ProgramCounter final : public Chip<bit64_t, 64>
     {
     private:
-        void evaluate() override;
+        void evaluate();
 
         bool isDirty() override;
 
@@ -64,8 +64,5 @@ namespace Hack::Chips
         void setClock(bool v);
 
         uint16_t getOut();
-
-        
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

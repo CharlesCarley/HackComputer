@@ -30,9 +30,10 @@ namespace Hack::Chips
     class Cpu final : public Chip<uint8_t, 8>
     {
     private:
-        void evaluate() override;
+        void evaluate();
 
         bool isDirty() override;
+
         void markDirty();
 
         Register       _a, _d;
@@ -44,13 +45,13 @@ namespace Hack::Chips
     public:
         Cpu();
 
-        void setInMemory(const uint16_t& v);
+        void setInMemory(const uint16_t& input);
 
-        void setClock(bool v);
+        void setClock(bool clock);
 
-        void setReset(bool v);
+        void setReset(bool reset);
 
-        void setInstruction(const uint16_t& v);
+        void setInstruction(const uint16_t& instruction);
 
         bool getWrite();
 
@@ -64,9 +65,8 @@ namespace Hack::Chips
 
         uint16_t getAmRegister();
 
-        void lock(bool v);
+        void lock(bool state);
 
         void clear();
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

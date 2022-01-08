@@ -81,5 +81,4 @@ namespace Hack::Assembler
     {
         return _instructions;
     }
-
-}  // namespace Hack::Assembler
+} // namespace Hack::Assembler

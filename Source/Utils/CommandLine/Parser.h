@@ -138,4 +138,4 @@ namespace Hack::CommandLine
 
         void usage(String& dest) const;
     };
-}  // namespace Hack::CommandLine
+} // namespace Hack::CommandLine

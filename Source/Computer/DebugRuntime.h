@@ -54,5 +54,4 @@ namespace Hack::Computer
 
         void update(Chips::Computer* computer) const override;
     };
-
-}  // namespace Hack::Computer
+} // namespace Hack::Computer

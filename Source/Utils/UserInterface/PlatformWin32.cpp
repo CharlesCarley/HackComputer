@@ -62,19 +62,20 @@ namespace Hack::Ui
         SetConsoleMode(_stdin, current);
 
         // clang-format off
-        SetConsoleCtrlHandler([](const DWORD evt) {
-            switch (evt)
-            {
-            case CTRL_C_EVENT:
-            case CTRL_BREAK_EVENT:
-            case CTRL_CLOSE_EVENT:
-                Hook = true;
-                [[fallthrough]];
-            default: 
-                break;
-            }
-            return Hook? TRUE : FALSE;
-        }, TRUE);
+        SetConsoleCtrlHandler([](const DWORD evt)
+                              {
+                                  switch (evt)
+                                  {
+                                  case CTRL_C_EVENT:
+                                  case CTRL_BREAK_EVENT:
+                                  case CTRL_CLOSE_EVENT:
+                                      Hook = true;[[fallthrough]];
+                                  default:
+                                      break;
+                                  }
+                                  return Hook ? TRUE : FALSE;
+                              },
+                              TRUE);
         // clang-format on
         clear();
         useBackBuffer(true);
@@ -168,6 +169,5 @@ namespace Hack::Ui
 
         return PR_NO_INPUT;
     }
-
-}  // namespace Hack::Ui
+} // namespace Hack::Ui
 #endif

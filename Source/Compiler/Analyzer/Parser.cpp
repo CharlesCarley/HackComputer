@@ -387,7 +387,7 @@ namespace Hack::Compiler::Analyzer
         Node* rule = createRule(RuleClassDescription);
 
         int8_t t0 = getToken(0).getType();
-        if (t0 != TokSymRBrace)  // empty
+        if (t0 != TokSymRBrace) // empty
         {
             do
             {
@@ -402,8 +402,8 @@ namespace Hack::Compiler::Analyzer
                 t0 = getToken(0).getType();
 
                 checkEof();
-
-            } while (t0 != TokSymRBrace);
+            }
+            while (t0 != TokSymRBrace);
         }
     }
 
@@ -425,7 +425,8 @@ namespace Hack::Compiler::Analyzer
                 t0 = getToken(0).getType();
 
                 checkEof();
-            } while (t0 == TokSymComma);
+            }
+            while (t0 == TokSymComma);
         }
     }
 
@@ -570,7 +571,7 @@ namespace Hack::Compiler::Analyzer
         symbol(SymbolOpenBrace);
 
         const int8_t t0 = getToken(0).getType();
-        if (t0 != TokSymRBrace)  // handle empty
+        if (t0 != TokSymRBrace) // handle empty
         {
             bodyRule();
             reduceRule(rule);
@@ -583,7 +584,7 @@ namespace Hack::Compiler::Analyzer
     {
         Node* rule = createRule(RuleInlineVm);
 
-        const int8_t t0   = getToken(0).getType();
+        const int8_t t0 = getToken(0).getType();
         if (t0 != TokKwInlineVm)
             parseError("Expected the keyword _vm");
 
@@ -647,8 +648,8 @@ namespace Hack::Compiler::Analyzer
 
             // test for the exit condition
             t0 = getToken(0).getType();
-
-        } while (t0 != TokSymRBrace);
+        }
+        while (t0 != TokSymRBrace);
     }
 
     void Parser::variableRule()
@@ -848,8 +849,8 @@ namespace Hack::Compiler::Analyzer
                 checkEof();
 
                 t0 = getToken(0).getType();
-
-            } while (t0 != TokSymRBrace);
+            }
+            while (t0 != TokSymRBrace);
         }
     }
 
@@ -863,8 +864,8 @@ namespace Hack::Compiler::Analyzer
             reduceRule(rule);
 
             checkEof();
-
-        } while (!Pu::isExpressionExitTerm(getToken(0).getType()));
+        }
+        while (!Pu::isExpressionExitTerm(getToken(0).getType()));
     }
 
     void Parser::singleExpressionRule()
@@ -1084,7 +1085,7 @@ namespace Hack::Compiler::Analyzer
 
         int8_t t0 = getToken(0).getType();
 
-        if (t0 != TokSymRPar)  // empty case
+        if (t0 != TokSymRPar) // empty case
         {
             do
             {
@@ -1099,7 +1100,8 @@ namespace Hack::Compiler::Analyzer
                     advanceCursor();
                     t0 = getToken(0).getType();
                 }
-            } while (t0 != TokSymRPar);
+            }
+            while (t0 != TokSymRPar);
         }
     }
 
@@ -1165,7 +1167,7 @@ namespace Hack::Compiler::Analyzer
         Node* rule = createRule(RuleParameterList);
 
         int8_t t0 = getToken(0).getType();
-        if (t0 != TokSymRPar)  // empty case
+        if (t0 != TokSymRPar) // empty case
         {
             do
             {
@@ -1177,8 +1179,8 @@ namespace Hack::Compiler::Analyzer
                     advanceCursor();
 
                 checkEof();
-
-            } while (t0 != TokSymRPar);
+            }
+            while (t0 != TokSymRPar);
         }
     }
 
@@ -1225,5 +1227,4 @@ namespace Hack::Compiler::Analyzer
 
         _tree->write(os, format);
     }
-
-}  // namespace Hack::Compiler::Analyzer
+} // namespace Hack::Compiler::Analyzer

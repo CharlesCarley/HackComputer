@@ -41,5 +41,4 @@ namespace Hack
         oss << message << std::endl;
         return oss.str();
     }
-
-}  // namespace Hack
+} // namespace Hack

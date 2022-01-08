@@ -46,7 +46,8 @@ namespace Hack
             _scanner->scan(tok);
 
             _tokens.push_back(tok);
-        } while (--n > 0);
+        }
+        while (--n > 0);
     }
 
     TokenBase ParserBase::getToken(const int32_t offs)
@@ -116,5 +117,4 @@ namespace Hack
     {
         writeImpl(os, format);
     }
-
-}  // namespace Hack
+} // namespace Hack

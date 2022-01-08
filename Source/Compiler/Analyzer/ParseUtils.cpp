@@ -234,4 +234,4 @@ namespace Hack::Compiler::Analyzer
             return "';'";
         }
     }
-}  // namespace Hack::Compiler::Analyzer
+} // namespace Hack::Compiler::Analyzer

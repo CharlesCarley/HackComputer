@@ -4,7 +4,8 @@ class Memory {
 
     function void init()
     { 
-        let _ram = 0; 
+        let _ram = 0;
+        let _free = 2048;
         return; 
     }
     
@@ -20,7 +21,23 @@ class Memory {
     }
 
     function void allocate(int size) {
-        return;
+        var int next, len;
+
+        let next = _free[0];
+        let len  = _free[1];
+
+        if (len = 0)
+        {
+            let next = _free;
+            let len = size;
+            let _free[0] = next;
+            let _free[1] = len;
+        }
+        else
+        {
+        }
+
+        return next;
     }
 
     function void free(int address) {
@@ -28,3 +45,13 @@ class Memory {
     }
 }
 
+class Main
+{
+    function void main()
+    {
+        var int base;
+        do Memory.init();
+        let base = Memory.allocate(512);
+        return base;
+    }
+}

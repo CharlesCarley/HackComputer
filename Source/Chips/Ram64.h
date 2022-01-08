@@ -30,7 +30,7 @@ namespace Hack::Chips
     class Ram64 final : public Chip<bit64_t, 64>
     {
     private:
-        void evaluate() override;
+        void evaluate();
         bool isDirty() override;
         void markDirty();
 
@@ -52,5 +52,4 @@ namespace Hack::Chips
         uint16_t getOut();
         uint16_t getOut(bool v);
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

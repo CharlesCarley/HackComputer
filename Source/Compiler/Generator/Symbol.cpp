@@ -37,5 +37,4 @@ namespace Hack::Compiler::CodeGenerator
         _entry(entry)
     {
     }
-
-}  // namespace Hack::Compiler::CodeGenerator
+} // namespace Hack::Compiler::CodeGenerator

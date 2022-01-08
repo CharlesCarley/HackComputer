@@ -39,5 +39,4 @@ namespace Hack::Ui
         const char* foreground();
         const char* background();
     };
-
-}  // namespace Hack::Ui
+} // namespace Hack::Ui

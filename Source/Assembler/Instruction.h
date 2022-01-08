@@ -24,7 +24,6 @@
 
 namespace Hack::Assembler
 {
-
     /// <summary>
     /// Utility class that converts a binary instruction
     /// to its symbolic string representation.
@@ -41,5 +40,4 @@ namespace Hack::Assembler
 
         void string(String& dest) const;
     };
-
-}  // namespace Hack::Assembler
+} // namespace Hack::Assembler

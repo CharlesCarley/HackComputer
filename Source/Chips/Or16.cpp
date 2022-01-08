@@ -69,5 +69,4 @@ namespace Hack::Chips
         _bits.s[3] = 0;
 #endif
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

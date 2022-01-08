@@ -35,13 +35,13 @@ enum Options
 };
 
 constexpr CommandLine::Switch Switches[OP_MAX] = {{
-    OP_OUTPUT,
-    'o',
-    "output",
-    "Specify an output file",
-    true,
-    1,
-}
+        OP_OUTPUT,
+        'o',
+        "output",
+        "Specify an output file",
+        true,
+        1,
+    }
 
 };
 

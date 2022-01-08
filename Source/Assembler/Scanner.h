@@ -55,5 +55,4 @@ namespace Hack::Assembler
 
         size_t nextStaticRegister();
     };
-
-}  // namespace Hack::Assembler
+} // namespace Hack::Assembler

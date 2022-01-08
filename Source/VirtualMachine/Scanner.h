@@ -44,7 +44,5 @@ namespace Hack::VirtualMachine
         void scan(Token& tok) override;
 
         void getCode(String& dest, const size_t& idx);
-
     };
-
-}  // namespace Hack::VirtualMachine
+} // namespace Hack::VirtualMachine

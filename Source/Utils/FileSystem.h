@@ -26,7 +26,7 @@
 
 namespace Hack
 {
-    using Path      = std::filesystem::path;
+    using Path = std::filesystem::path;
     using PathArray = std::vector<Path>;
 
     class FileSystem
@@ -35,4 +35,4 @@ namespace Hack
         static void glob(PathArray& dest, const String& dir, const String& ext);
         static Path absolute(const String& input);
     };
-}  // namespace Hack
+} // namespace Hack

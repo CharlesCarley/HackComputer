@@ -27,7 +27,7 @@ namespace Hack::Chips
     class Mux final : public Chip<uint8_t, 8>
     {
     private:
-        void evaluate() override;
+        void evaluate();
 
     public:
         Mux();
@@ -37,5 +37,4 @@ namespace Hack::Chips
         void setSel(bool v);
         bool getOut();
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

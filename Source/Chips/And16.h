@@ -27,15 +27,15 @@ namespace Hack::Chips
     class And16 final : public Chip<bit64_t, 64>
     {
     private:
-        void evaluate() override;
+        void evaluate();
 
     public:
         And16();
 
-        void setA(const uint16_t& v);
-        void setB(const uint16_t& v);
+        void setA(const uint16_t& a);
+
+        void setB(const uint16_t& b);
 
         uint16_t getOut();
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

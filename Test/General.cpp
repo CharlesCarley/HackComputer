@@ -47,7 +47,6 @@ GTEST_TEST(General, StringSplitCR)
     EXPECT_EQ("B", a1[1]);
     EXPECT_EQ("C", a1[2]);
 
-
     inp = "A\rB\nC\r";
 
     StringArray a2;
@@ -70,7 +69,6 @@ GTEST_TEST(General, StringSplitCR)
 }
 
 
-
 GTEST_TEST(General, Trim)
 {
     String inp = "     A B C       ";
@@ -78,10 +76,9 @@ GTEST_TEST(General, Trim)
 
     EXPECT_EQ("A B C", inp);
 
-    inp = "\t\t\t\A\tB\tC\t\t\t\t\t";
+    inp = "\t\t\t\tA\tB\tC\t\t\t\t\t";
     StringUtils::trimWhiteSpace(inp, inp);
     EXPECT_EQ("A\tB\tC", inp);
-
 
     inp = " \t \t \tA\tB C \t \t  \t";
     StringUtils::trimWhiteSpace(inp, inp);

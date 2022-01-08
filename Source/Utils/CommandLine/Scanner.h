@@ -46,4 +46,4 @@ namespace Hack::CommandLine
     {
         return _buffer;
     }
-}  // namespace Hack::CommandLine
+} // namespace Hack::CommandLine

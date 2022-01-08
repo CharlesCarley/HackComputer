@@ -27,7 +27,7 @@ namespace Hack::Chips
     class SRLatch final : public Chip<uint8_t, 8>
     {
     private:
-        void evaluate() override;
+        void evaluate();
 
         bool isDirty() override
         {
@@ -44,5 +44,4 @@ namespace Hack::Chips
         bool getQ();
         bool getQPlus();
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

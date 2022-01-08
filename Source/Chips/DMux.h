@@ -27,16 +27,17 @@ namespace Hack::Chips
     class DMux final : public Chip<uint8_t, 8>
     {
     private:
-        void evaluate() override;
+        void evaluate();
 
     public:
         DMux();
 
-        void setIn(bool v);
-        void setSel(bool v);
+        void setIn(bool input);
+
+        void setSel(bool selection);
 
         bool getA();
+
         bool getB();
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

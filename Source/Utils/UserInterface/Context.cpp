@@ -413,5 +413,4 @@ namespace Hack::Ui
 
         _platform->flush();
     }
-
-}  // namespace Hack::Ui
+} // namespace Hack::Ui

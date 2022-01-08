@@ -155,5 +155,4 @@ namespace Hack::Chips
 #endif
         B8::clearBit(_bits.b[6], 7);
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

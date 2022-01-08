@@ -117,5 +117,4 @@ namespace Hack::Chips
             memcpy(_r, data, _size * sizeof(uint16_t));
         }
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

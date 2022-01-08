@@ -30,7 +30,7 @@ namespace Hack::Chips
     class Ram8 final : public Chip<bit64_t, 64>
     {
     private:
-        void evaluate() override;
+        void evaluate();
         bool isDirty() override;
 
 #ifdef IMPLEMENT_BLACK_BOX
@@ -49,5 +49,4 @@ namespace Hack::Chips
 
         uint16_t getOut();
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

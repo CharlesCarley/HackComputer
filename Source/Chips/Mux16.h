@@ -27,7 +27,7 @@ namespace Hack::Chips
     class Mux16 final : public Chip<bit64_t, 64>
     {
     private:
-        void evaluate() override;
+        void evaluate();
 
     public:
         Mux16();
@@ -38,5 +38,4 @@ namespace Hack::Chips
 
         uint16_t getOut();
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

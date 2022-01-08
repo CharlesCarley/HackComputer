@@ -35,35 +35,35 @@ namespace Hack::VirtualMachine
 
     // clang-format off
     constexpr KeywordTable Reserved[] = {
-        {"argument",    TOK_ARGUMENT},
-        {"constant",    TOK_CONSTANT},
-        {"function",    TOK_FUNCTION},
-        {"pointer",     TOK_POINTER},
-        {"if-goto",     TOK_IF_GOTO},
-        {"return",      TOK_RETURN},
-        {"local",       TOK_LOCAL},
-        {"label",       TOK_LABEL},
-        {"static",      TOK_STATIC},
-        {"call",        TOK_CALL},
-        {"goto",        TOK_GOTO},
-        {"this",        TOK_THIS},
-        {"that",        TOK_THAT},
-        {"temp",        TOK_TEMP},
-        {"push",        TOK_PUSH},
-        {"pop",         TOK_POP},
-        {"add",         TOK_ADD},
-        {"sub",         TOK_SUB},
-        {"not",         TOK_NOT},
-        {"neg",         TOK_NEG},
-        {"and",         TOK_AND},
-        {"or",          TOK_OR},
-        {"eq",          TOK_EQ},
-        {"gt",          TOK_GT},
-        {"lt",          TOK_LT},
-        {"set",         TOK_SET},
-        {"reset",       TOK_RESET},
-        {"halt",        TOK_HALT},
-        {"asm",         TOK_ASM},
+        {"argument", TOK_ARGUMENT},
+        {"constant", TOK_CONSTANT},
+        {"function", TOK_FUNCTION},
+        {"pointer", TOK_POINTER},
+        {"if-goto", TOK_IF_GOTO},
+        {"return", TOK_RETURN},
+        {"local", TOK_LOCAL},
+        {"label", TOK_LABEL},
+        {"static", TOK_STATIC},
+        {"call", TOK_CALL},
+        {"goto", TOK_GOTO},
+        {"this", TOK_THIS},
+        {"that", TOK_THAT},
+        {"temp", TOK_TEMP},
+        {"push", TOK_PUSH},
+        {"pop", TOK_POP},
+        {"add", TOK_ADD},
+        {"sub", TOK_SUB},
+        {"not", TOK_NOT},
+        {"neg", TOK_NEG},
+        {"and", TOK_AND},
+        {"or", TOK_OR},
+        {"eq", TOK_EQ},
+        {"gt", TOK_GT},
+        {"lt", TOK_LT},
+        {"set", TOK_SET},
+        {"reset", TOK_RESET},
+        {"halt", TOK_HALT},
+        {"asm", TOK_ASM},
     };
     // clang-format on
 
@@ -193,5 +193,4 @@ namespace Hack::VirtualMachine
 
         tok.setType(TOK_EOF);
     }
-
-}  // namespace Hack::VirtualMachine
+} // namespace Hack::VirtualMachine

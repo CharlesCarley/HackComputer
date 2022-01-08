@@ -32,15 +32,15 @@ namespace Hack::Chips
         _bits.s[3] = 1;
     }
 
-    void And16::setA(const uint16_t& v)
+    void And16::setA(const uint16_t& a)
     {
-        _bits.s[0] = v;
+        _bits.s[0] = a;
         _bits.s[3] = 1;
     }
 
-    void And16::setB(const uint16_t& v)
+    void And16::setB(const uint16_t& b)
     {
-        _bits.s[1] = v;
+        _bits.s[1] = b;
         _bits.s[3] = 1;
     }
 
@@ -76,4 +76,4 @@ namespace Hack::Chips
         _bits.s[2] = _bits.s[0] & _bits.s[1];
 #endif
     }
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

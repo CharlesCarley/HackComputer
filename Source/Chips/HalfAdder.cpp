@@ -28,15 +28,15 @@ namespace Hack::Chips
         assignBit(7);
     }
 
-    void HalfAdder::setA(bool v)
+    void HalfAdder::setA(bool a)
     {
-        applyBit(0, v);
+        applyBit(0, a);
         setBit(7);
     }
 
-    void HalfAdder::setB(bool v)
+    void HalfAdder::setB(bool b)
     {
-        applyBit(1, v);
+        applyBit(1, b);
         setBit(7);
     }
 
@@ -63,5 +63,4 @@ namespace Hack::Chips
         applyBit(5, Gates::And(a, b));
         clearBit(7);
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

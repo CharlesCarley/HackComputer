@@ -159,5 +159,4 @@ namespace Hack::Compiler
         /// <param name="node"></param>
         static void nodeSubtypeString(String& dest, Node* node);
     };
-
-}  // namespace Hack::Compiler
+} // namespace Hack::Compiler

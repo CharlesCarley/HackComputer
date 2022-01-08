@@ -32,7 +32,9 @@ namespace Hack::CommandLine
     using namespace std;
 
     Parser::Parser() :
-        _maxLongSwitch(4), _required(0), _used(0)
+        _maxLongSwitch(4),
+        _required(0),
+        _used(0)
     {
     }
 
@@ -41,7 +43,7 @@ namespace Hack::CommandLine
         for (ParseOption* op : _options)
             delete op;
     }
-    
+
     bool Parser::hasSwitch(const String& sw) const
     {
         return _switches.find(sw) != _switches.end();
@@ -52,14 +54,14 @@ namespace Hack::CommandLine
                       const Switch* switches,
                       uint32_t      count)
     {
-        if (!_programName.empty())  // using as a check for multiple calls
+        if (!_programName.empty()) // using as a check for multiple calls
             return 0;
 
         if (!initializeSwitches(switches, count))
             return -1;
 
         _programName = argv[0];
-        _used = 0;
+        _used        = 0;
         _scanner.clear();
 
         for (int i = 1; i < argc; ++i)
@@ -127,7 +129,7 @@ namespace Hack::CommandLine
                         {
                             OutputStringStream os;
                             os << "invalid argument for option " << curSwitch
-                               << endl;
+                                << endl;
                             return writeError(os);
                         }
 
@@ -135,7 +137,7 @@ namespace Hack::CommandLine
                         {
                             OutputStringStream os;
                             os << "missing argument for option " << curSwitch
-                               << endl;
+                                << endl;
                             return writeError(os);
                         }
 
@@ -146,7 +148,7 @@ namespace Hack::CommandLine
                     {
                         OutputStringStream os;
                         os << "not all arguments converted when parsing switch "
-                           << curSwitch << endl;
+                            << curSwitch << endl;
                         return writeError(os);
                     }
                 }
@@ -260,9 +262,9 @@ namespace Hack::CommandLine
         OutputStringStream stream;
 
         stream << "Usage: " << programName() << " <options> <arg[0] .. arg[n]>" << endl
-               << endl;
+            << endl;
         stream << pad(4) << "-h, --help" << pad(w - 4)
-               << "Display this help message" << endl;
+            << "Display this help message" << endl;
 
         for (ParseOption* opt : _options)
         {
@@ -300,7 +302,7 @@ namespace Hack::CommandLine
                     if (i + 1 < arr.size())
                     {
                         stream << endl
-                               << pad(w + 10);
+                            << pad(w + 10);
                     }
                 }
             }
@@ -389,5 +391,4 @@ namespace Hack::CommandLine
         usage();
         return -1;
     }
-
-}  // namespace Hack::CommandLine
+} // namespace Hack::CommandLine

@@ -38,16 +38,18 @@ namespace Hack::Chips
 
         ~DefaultMemorySegment() override;
 
-        uint16_t get(const size_t& i) const override;
+        uint16_t get(const size_t& index) const override;
 
         uint16_t* pointer(const size_t& address) const override;
 
-        void setValue(const size_t& address, const uint16_t& v) const override;
+        void setValue(const size_t& address, const uint16_t& value) const override;
 
         void zero() const override;
 
+        uint16_t getOut() override;
+
     protected:
-        void evaluate() override;
+        void evaluate();
     };
 
     template <uint16_t High, uint16_t ElementCount>
@@ -64,10 +66,10 @@ namespace Hack::Chips
     }
 
     template <uint16_t High, uint16_t ElementCount>
-    uint16_t DefaultMemorySegment<High, ElementCount>::get(const size_t& i) const
+    uint16_t DefaultMemorySegment<High, ElementCount>::get(const size_t& index) const
     {
-        if (i < High)
-            return _ram[i];
+        if (index < High)
+            return _ram[index];
 #ifdef CHECK_INT_BOUNDS
         throw IndexOutOfBounds();
 #else
@@ -85,10 +87,10 @@ namespace Hack::Chips
 
     template <uint16_t High, uint16_t ElementCount>
     void DefaultMemorySegment<High, ElementCount>::setValue(const size_t&   address,
-                                                            const uint16_t& v) const
+                                                            const uint16_t& value) const
     {
         if (address < High)
-            _ram[address] = _ram[address + High] = v;
+            _ram[address] = _ram[address + High] = value;
     }
 
     template <uint16_t High, uint16_t ElementCount>
@@ -132,4 +134,11 @@ namespace Hack::Chips
         this->_bits &= 0b01111100;
     }
 
-}  // namespace Hack::Chips
+    template <uint16_t High, uint16_t ElementCount>
+    uint16_t DefaultMemorySegment<High, ElementCount>::getOut()
+    {
+        if ((this->_bits & Bit7) != 0 && !(this->_bits & Bit6))
+            evaluate();
+        return this->_out;
+    }
+} // namespace Hack::Chips

@@ -29,10 +29,10 @@ namespace Hack::Chips
     public:
         Clock();
 
-        void setIn(bool v);
-        void setReset(bool v);
+        void setIn(bool input);
+
+        void setReset(bool reset);
 
         bool getOut();
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

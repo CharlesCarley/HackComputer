@@ -29,6 +29,4 @@ namespace Hack::OperatingSystem
         Memory();
         ~Memory();
     };
-
-
-}  // namespace Hack::OperatingSystem
+} // namespace Hack::OperatingSystem

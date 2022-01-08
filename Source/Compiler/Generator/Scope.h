@@ -24,4 +24,4 @@
 
 namespace Hack::Compiler::CodeGenerator
 {
-}  // namespace Hack::Compiler::CodeGenerator
+} // namespace Hack::Compiler::CodeGenerator

@@ -47,6 +47,5 @@ namespace Hack::Ui
 
         int poll(bool block) override;
     };
-
-}  // namespace Hack::Ui
+} // namespace Hack::Ui
 #endif

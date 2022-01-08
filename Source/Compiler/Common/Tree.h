@@ -36,15 +36,14 @@ namespace Hack::Compiler
         ~Tree();
 
         Node* getRoot() const;
-        
+
         void write(OStream& out, int format) const;
 
-        void  filename(const String& fileName) const;
+        void filename(const String& fileName) const;
     };
 
     inline Node* Tree::getRoot() const
     {
         return _root;
     }
-
-}  // namespace Hack::Compiler
+} // namespace Hack::Compiler

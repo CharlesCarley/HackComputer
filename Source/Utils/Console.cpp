@@ -232,5 +232,4 @@ namespace Hack
             DebugBreak();
 #endif
     }
-
-}  // namespace Hack
+} // namespace Hack

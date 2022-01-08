@@ -47,12 +47,6 @@ namespace Hack::Chips
     class Chip
     {
     protected:
-        /// <summary>
-        /// This method should be used to update the state
-        /// of the _bits member variable.
-        /// </summary>
-        virtual void evaluate();
-
         virtual bool isDirty();
 
         T _bits;
@@ -103,11 +97,6 @@ namespace Hack::Chips
     }
 
     template <typename T, uint8_t Count>
-    void Chip<T, Count>::evaluate()
-    {
-    }
-
-    template <typename T, uint8_t Count>
     bool Chip<T, Count>::isDirty()
     {
         return true;
@@ -152,5 +141,4 @@ namespace Hack::Chips
     {
         BitUtils<T, Count>::applyBit(_bits, index, value);
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

@@ -55,18 +55,19 @@ namespace Hack::Assembler
 
     // clang-format off
     constexpr ReservedWordTable ReservedAddresses[] = {
-        {"SP",     2, 0x0000},
-        {"LCL",    3, 0x0001},
-        {"ARG",    3, 0x0002},
-        {"THIS",   4, 0x0003},
-        {"THAT",   4, 0x0004},
+        {"SP", 2, 0x0000},
+        {"LCL", 3, 0x0001},
+        {"ARG", 3, 0x0002},
+        {"THIS", 4, 0x0003},
+        {"THAT", 4, 0x0004},
         {"SCREEN", 5, 0x4000},
-        {"KBD",    3, 0x6000},
+        {"KBD", 3, 0x6000},
     };
     // clang-format on
 
     Scanner::Scanner() :
-        _fsr(0), _offs(0)
+        _fsr(0),
+        _offs(0)
     {
         initializeTables();
     }
@@ -201,8 +202,7 @@ namespace Hack::Assembler
                 return true;
             case 'R':
                 if (isDecimal(nx) && extractRSymbol(tok))
-                    return true;
-                [[fallthrough]];
+                    return true;[[fallthrough]];
             default:
                 // just keep going
                 break;
@@ -268,7 +268,7 @@ namespace Hack::Assembler
         {
             if (Char::equals(buf.c_str(),
                              ele.val,
-                             std::min(buf.size(), ele.len)) == 0)
+                             std::min(buf.size(), ele.len)))
             {
                 tok.setType(TOK_INTEGER);
                 tok.setIndex(_stringTable.get(Char::toString(ele.address)));
@@ -359,5 +359,4 @@ namespace Hack::Assembler
         }
         tok.setType(TOK_EOF);
     }
-
-}  // namespace Hack::Assembler
+} // namespace Hack::Assembler

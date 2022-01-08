@@ -36,19 +36,21 @@ namespace Hack
 
     public:
         explicit Exception(const char* what) :
-            std::exception(), _string(what)
+            std::exception(),
+            _string(what)
         {
             Console::debugBreak();
         }
 
         explicit Exception(String what) :
-            std::exception(), _string(std::move(what))
+            std::exception(),
+            _string(std::move(what))
         {
             Console::debugBreak();
         }
 
         template <typename... Args>
-        explicit Exception(const String& what, Args&&... args) :
+        explicit Exception(const String& what, Args&&...args) :
             std::exception()
         {
             OutputStringStream oss;
@@ -65,16 +67,16 @@ namespace Hack
         }
     };
 
-// clang-format off
+    // clang-format off
 #ifdef _DEBUG
-    #define FLS __FILE__ "(", __LINE__, "):\n\t" __FUNCTION__ "\n\n"
-    #define NotImplemented()            Exception(FLS, "not implemented")
-    #define IndexOutOfBounds()          Exception(FLS, "array index out of bounds")
-    #define NotFound()                  Exception(FLS, "not found")
-    #define InvalidPointer()            Exception(FLS, "invalid pointer")
-    #define InputException(msg, ...)    Exception(FLS, msg, __VA_ARGS__)
-    #define MessageException(msg)       Exception(FLS, msg)
-    #define NullOrEmptyString()         Exception(FLS, "the supplied string is empty")
+#define FLS __FILE__ "(", __LINE__, "):\n\t" __FUNCTION__ "\n\n"
+#define NotImplemented()            Exception(FLS, "not implemented")
+#define IndexOutOfBounds()          Exception(FLS, "array index out of bounds")
+#define NotFound()                  Exception(FLS, "not found")
+#define InvalidPointer()            Exception(FLS, "invalid pointer")
+#define InputException(msg, ...)    Exception(FLS, msg, __VA_ARGS__)
+#define MessageException(msg)       Exception(FLS, msg)
+#define NullOrEmptyString()         Exception(FLS, "the supplied string is empty")
 #else
     #define NotImplemented()            Exception("not implemented")
     #define IndexOutOfBounds()          Exception("array index out of bounds")
@@ -85,4 +87,4 @@ namespace Hack
     #define NullOrEmptyString()         Exception("the supplied string is empty")
 #endif
     // clang-format on
-}  // namespace Hack
+} // namespace Hack

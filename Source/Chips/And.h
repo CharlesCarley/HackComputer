@@ -27,14 +27,15 @@ namespace Hack::Chips
     class And final : public Chip<uint8_t, 8>
     {
     private:
-        void evaluate() override;
+        void evaluate();
 
     public:
         And();
 
-        void setA(bool v);
-        void setB(bool v);
+        void setA(bool a);
+
+        void setB(bool b);
+
         bool getOut();
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

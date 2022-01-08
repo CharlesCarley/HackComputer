@@ -36,59 +36,59 @@ namespace Hack::Chips
         assignBit(7);
     }
 
-    void Mux8Way16::setA(const uint16_t& v)
+    void Mux8Way16::setA(const uint16_t& a)
     {
-        _in[0].s[0] = v;
+        _in[0].s[0] = a;
         setBit(7);
     }
 
-    void Mux8Way16::setB(const uint16_t& v)
+    void Mux8Way16::setB(const uint16_t& b)
     {
-        _in[0].s[1] = v;
+        _in[0].s[1] = b;
         setBit(7);
     }
 
-    void Mux8Way16::setC(const uint16_t& v)
+    void Mux8Way16::setC(const uint16_t& c)
     {
-        _in[0].s[2] = v;
+        _in[0].s[2] = c;
         setBit(7);
     }
 
-    void Mux8Way16::setD(const uint16_t& v)
+    void Mux8Way16::setD(const uint16_t& d)
     {
-        _in[0].s[3] = v;
+        _in[0].s[3] = d;
         setBit(7);
     }
 
-    void Mux8Way16::setE(const uint16_t& v)
+    void Mux8Way16::setE(const uint16_t& e)
     {
-        _in[1].s[0] = v;
+        _in[1].s[0] = e;
         setBit(7);
     }
 
-    void Mux8Way16::setF(const uint16_t& v)
+    void Mux8Way16::setF(const uint16_t& f)
     {
-        _in[1].s[1] = v;
+        _in[1].s[1] = f;
         setBit(7);
     }
 
-    void Mux8Way16::setG(const uint16_t& v)
+    void Mux8Way16::setG(const uint16_t& g)
     {
-        _in[1].s[2] = v;
+        _in[1].s[2] = g;
         setBit(7);
     }
 
-    void Mux8Way16::setH(const uint16_t& v)
+    void Mux8Way16::setH(const uint16_t& h)
     {
-        _in[1].s[3] = v;
+        _in[1].s[3] = h;
         setBit(7);
     }
 
-    void Mux8Way16::setSel(uint8_t v)
+    void Mux8Way16::setSel(const uint8_t& selection)
     {
-        applyBit(0, v & 1);
-        applyBit(1, v & 2);
-        applyBit(2, v & 4);
+        applyBit(0, selection & 1);
+        applyBit(1, selection & 2);
+        applyBit(2, selection & 4);
         setBit(7);
     }
 
@@ -139,5 +139,4 @@ namespace Hack::Chips
         _out = _in[bb].s[ba];
 #endif
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

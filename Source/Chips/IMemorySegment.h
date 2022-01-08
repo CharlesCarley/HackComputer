@@ -20,9 +20,8 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#include "Chips/Chip.h"
 #include <cstring>
-
+#include "Chips/Chip.h"
 
 namespace Hack::Chips
 {
@@ -41,29 +40,31 @@ namespace Hack::Chips
     public:
         IMemorySegment();
 
-        void setIn(const uint16_t& value);
+        void setIn(const uint16_t& input);
 
-        void setAddress(const uint16_t& value);
+        void setAddress(const uint16_t& address);
 
         void setLoad(bool load);
 
         void setClock(bool clock);
 
-        void lock(bool lockIt);
+        void lock(bool state);
 
-        uint16_t getOut();
+        virtual uint16_t getOut() = 0;
 
-        virtual uint16_t get(const size_t& i) const = 0;
+        virtual uint16_t get(const size_t& index) const = 0;
 
         virtual uint16_t* pointer(const size_t& address) const = 0;
 
-        virtual void setValue(const size_t& address, const uint16_t& v) const = 0;
+        virtual void setValue(const size_t& address, const uint16_t& value) const = 0;
 
         virtual void zero() const = 0;
 
         virtual void lockScreen();
 
-        virtual void sync(){}
+        virtual void sync()
+        {
+        }
 
         virtual void unlockScreen();
 
@@ -75,27 +76,29 @@ namespace Hack::Chips
 
     template <uint16_t High, uint16_t ElementCount>
     IMemorySegment<High, ElementCount>::IMemorySegment() :
-        _in(0), _out(0), _address(0)
+        _in(0),
+        _out(0),
+        _address(0)
     {
         _bits = Bit7;
     }
 
     template <uint16_t High, uint16_t ElementCount>
-    void IMemorySegment<High, ElementCount>::setIn(const uint16_t& value)
+    void IMemorySegment<High, ElementCount>::setIn(const uint16_t& input)
     {
-        _in = value;
+        _in = input;
         _bits |= Bit7;
     }
 
     template <uint16_t High, uint16_t ElementCount>
-    void IMemorySegment<High, ElementCount>::setAddress(const uint16_t& value)
+    void IMemorySegment<High, ElementCount>::setAddress(const uint16_t& address)
     {
 #ifdef CHECK_INT_BOUNDS
-        if (value >= High)
+        if (address >= High)
             throw IndexOutOfBounds();
 #endif
-        if (value < High)
-            _address = value;
+        if (address < High)
+            _address = address;
     }
 
     template <uint16_t High, uint16_t ElementCount>
@@ -119,20 +122,12 @@ namespace Hack::Chips
     }
 
     template <uint16_t High, uint16_t ElementCount>
-    void IMemorySegment<High, ElementCount>::lock(const bool lockIt)
+    void IMemorySegment<High, ElementCount>::lock(const bool state)
     {
-        if (lockIt)
+        if (state)
             _bits |= Bit6;
         else
             _bits &= ~Bit6;
-    }
-
-    template <uint16_t High, uint16_t ElementCount>
-    uint16_t IMemorySegment<High, ElementCount>::getOut()
-    {
-        if ((_bits & Bit7) != 0 && !(_bits & Bit6))
-            evaluate();
-        return _out;
     }
 
     template <uint16_t High, uint16_t ElementCount>
@@ -156,4 +151,4 @@ namespace Hack::Chips
     {
         _bits |= Bit7;
     }
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

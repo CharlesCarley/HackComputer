@@ -108,7 +108,6 @@ GTEST_TEST(Generator, StaticFields)
 }
 
 
-
 GTEST_TEST(Analyzer, TokenTest)
 {
     Scanner scn;
@@ -207,7 +206,6 @@ GTEST_TEST(Analyzer, ParserTest)
     Parser psr;
     psr.parse(GetTestFilePath("Jack/Test01.jack"));
     psr.write(GetOutFilePath("Test01.xml"));
-
 
     CompareFiles(GetOutFilePath("Test01.xml"),
                  GetTestFilePath("Jack/Test01.cmp"));

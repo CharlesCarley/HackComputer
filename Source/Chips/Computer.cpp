@@ -116,7 +116,7 @@ namespace Hack::Chips
             // force a reset...
             // @32766
             // 0;JMP
-            _reset = true;
+            _reset          = true;
             _cpuState.reset = 1;
         }
         _rom->setIn(_cpuState.pc);
@@ -134,12 +134,10 @@ namespace Hack::Chips
         _ram->setIn(_cpu->getOut());
 
         _reset = false;
-
     }
 
     void Computer::reset()
     {
         _reset = true;
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

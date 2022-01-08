@@ -383,15 +383,15 @@ GTEST_TEST(VirtualMachine, FunctionLocals)
     const int locals = 256 + 2 + 5;
 
     uint16_t code = mem->get(VirtualMachine::STP);
-    EXPECT_EQ(code, 257);         // should be one element on the stack (257-256)
-    code = mem->get(256);         // 
-    EXPECT_EQ(code, 10);          // should be 4+6
-    code = mem->get(257);         //
+    EXPECT_EQ(code, 257);        // should be one element on the stack (257-256)
+    code = mem->get(256);        // 
+    EXPECT_EQ(code, 10);         // should be 4+6
+    code = mem->get(257);        //
     EXPECT_EQ(code, 6);          // should be lingering garbage  of 6
-    code = mem->get(locals);      // The local base address 0
-    EXPECT_EQ(code, 10);          // (garbage) but still present
-    code = mem->get(locals + 1);  // 
-    EXPECT_EQ(code, 10);          //
-    code = mem->get(locals + 2);  //
-    EXPECT_EQ(code, 10);          //
+    code = mem->get(locals);     // The local base address 0
+    EXPECT_EQ(code, 10);         // (garbage) but still present
+    code = mem->get(locals + 1); // 
+    EXPECT_EQ(code, 10);         //
+    code = mem->get(locals + 2); //
+    EXPECT_EQ(code, 10);         //
 }

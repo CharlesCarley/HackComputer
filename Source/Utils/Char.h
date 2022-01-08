@@ -26,7 +26,7 @@
 namespace Hack
 {
     /// <summary>
-    /// Provides conversion utilities between char pointers and strings. 
+    /// Provides conversion utilities between char pointers and strings.
     /// </summary>
     class Char
     {
@@ -40,17 +40,17 @@ namespace Hack
         static size_t length(const char* input);
 
         /// <summary>
-        /// 
+        /// Tests the strings for equality
         /// </summary>
-        /// <param name="destination"></param>
-        /// <param name="source"></param>
-        static void copy(char* destination, const char* source);
-
-        static void copy(char* dest, const char* src, size_t max);
-
-        static size_t equals(const char* a, const char* b);
-
-        static size_t equals(const char* a, const char* b, size_t max);
+        /// <param name="a">The first string.</param>
+        /// <param name="b">The second string.</param>
+        /// <param name="max">The maximum number of bytes to test.</param>
+        /// <returns>
+        /// False if a or b is null,
+        /// false if the first character in a does not equal the first character in b,
+        /// otherwise returns the result of strncmp.
+        /// </returns>
+        static bool equals(const char* a, const char* b, size_t max);
 
         static int16_t toInt16(const char* in, int16_t def = -1, int base = 10);
 
@@ -165,47 +165,33 @@ namespace Hack
         static String toHexString(uint64_t v);
     };
 
-
-    /// <summary>
-    /// Tests the supplied constant for the '\\r' and '\\n'
-    /// ASCII codes.
-    /// </summary>
-    /// <param name="constant">The constant to test.</param>
-    /// <returns>Returns true if the supplied constant is a new-line code.</returns>
+    /// <returns>
+    /// True if the supplied constant is a line feed character or
+    /// a carriage return character.
+    /// </returns>
     inline bool isNewLine(const int constant)
     {
         return constant == '\r' || constant == '\n';
     }
 
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="ch"></param>
-    /// <returns></returns>
+    /// <returns>
+    /// True if the character is a white space character,
+    /// tab character or a newline character.
+    /// </returns>
     inline bool isWhiteSpace(const int ch)
     {
         return ch == ' ' || ch == '\t' || isNewLine(ch);
     }
 
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="ch"></param>
-    /// <returns></returns>
+    /// <returns>True if the character is in the range of [0-9]</returns>
     inline bool isDecimal(const int ch)
     {
         return ch >= '0' && ch <= '9';
     }
 
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="ch"></param>
-    /// <returns></returns>
+    /// <returns>True if the character is in the range of [a-zA-Z]</returns>
     inline bool isLetter(const int ch)
     {
         return ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z';
     }
-
-}  // namespace Hack
+} // namespace Hack

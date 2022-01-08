@@ -52,5 +52,4 @@ namespace Hack::Chips
             evaluate();
         return getBit(6);
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

@@ -33,5 +33,4 @@ namespace Hack::Chips
         static bool tick();
         static void reset();
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

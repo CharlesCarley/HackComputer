@@ -140,4 +140,4 @@ namespace Hack::CommandLine
             }
         }
     }
-}  // namespace Utils::CommandLine
+} // namespace Utils::CommandLine

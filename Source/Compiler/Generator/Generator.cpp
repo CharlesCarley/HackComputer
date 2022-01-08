@@ -249,9 +249,9 @@ namespace Hack::Compiler::CodeGenerator
 
             const Node& arrayExpr = statement.rule(3, RuleExpression);
             buildExpression(arrayExpr);
-            _emitter->symbolAdd();  // base address offset
-            _emitter->popPointer(1);  // move the base address into the current pointer
-            
+            _emitter->symbolAdd();   // base address offset
+            _emitter->popPointer(1); // move the base address into the current pointer
+
             const Node& assign = statement.rule(6, RuleExpression);
             buildExpression(assign);
 
@@ -492,8 +492,8 @@ namespace Hack::Compiler::CodeGenerator
     void Generator::buildStatements(const Node& methodBody) const
     {
         // extract only the statements from the method body
-        const Node::Children &statements = methodBody.children();
-        
+        const Node::Children& statements = methodBody.children();
+
         for (const Node* child : statements)
         {
             const Node& statement = *child;
@@ -524,7 +524,7 @@ namespace Hack::Compiler::CodeGenerator
                     break;
                 default:
                     compileError(stmt, "unknown statement type ", stmt.type());
-                }                
+                }
             }
             else if (statement.isTypeOf(RuleInlineVm))
             {
@@ -534,7 +534,6 @@ namespace Hack::Compiler::CodeGenerator
             {
                 _emitter->writeCode(RuleInlineAsm, statement.child(0).value());
             }
-
         }
     }
 
@@ -640,8 +639,6 @@ namespace Hack::Compiler::CodeGenerator
                 _emitter->pushConstant(0);
                 _emitter->writeReturn();
             }
-
-
         }
     }
 
@@ -732,5 +729,4 @@ namespace Hack::Compiler::CodeGenerator
         const String buffer = _emitter->stream().str();
         stream.write(buffer.c_str(), buffer.size());
     }
-
-}  // namespace Hack::Compiler::CodeGenerator
+} // namespace Hack::Compiler::CodeGenerator

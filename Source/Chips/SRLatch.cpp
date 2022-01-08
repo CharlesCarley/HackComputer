@@ -70,8 +70,8 @@ namespace Hack::Chips
         const bool s = getBit(0);
         const bool r = getBit(1);
 
-        const bool na  = Gates::NOr(s, getBit(3));
-        const bool nb  = Gates::NOr(getBit(2), r);
+        const bool na = Gates::NOr(s, getBit(3));
+        const bool nb = Gates::NOr(getBit(2), r);
 
         const bool sr  = Gates::And(s, r);
         const bool nsr = Gates::Not(sr);
@@ -79,5 +79,4 @@ namespace Hack::Chips
         applyBit(2, Gates::Mux(Gates::Mux(na, Gates::Not(s), sr), na, nsr));
         applyBit(3, Gates::Mux(Gates::Mux(nb, s, sr), nb, nsr));
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

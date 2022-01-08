@@ -61,5 +61,4 @@ namespace Hack::VirtualMachine
 
         ~Parser() override;
     };
-
-}  // namespace Hack::VirtualMachine
+} // namespace Hack::VirtualMachine

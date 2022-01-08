@@ -438,56 +438,56 @@ GTEST_TEST(Hack, FullAdder)
     FullAdder n;
     n.setA(false);
     n.setB(false);
-    n.setCaryIn(false);
+    n.setCary(false);
     n.print();
     EXPECT_FALSE(n.getSum());
     EXPECT_FALSE(n.getCary());
 
     n.setA(false);
     n.setB(false);
-    n.setCaryIn(true);
+    n.setCary(true);
     n.print();
     EXPECT_TRUE(n.getSum());
     EXPECT_FALSE(n.getCary());
 
     n.setA(false);
     n.setB(true);
-    n.setCaryIn(false);
+    n.setCary(false);
     n.print();
     EXPECT_TRUE(n.getSum());
     EXPECT_FALSE(n.getCary());
 
     n.setA(false);
     n.setB(true);
-    n.setCaryIn(true);
+    n.setCary(true);
     n.print();
     EXPECT_FALSE(n.getSum());
     EXPECT_TRUE(n.getCary());
 
     n.setA(true);
     n.setB(false);
-    n.setCaryIn(false);
+    n.setCary(false);
     n.print();
     EXPECT_TRUE(n.getSum());
     EXPECT_FALSE(n.getCary());
 
     n.setA(true);
     n.setB(false);
-    n.setCaryIn(true);
+    n.setCary(true);
     n.print();
     EXPECT_FALSE(n.getSum());
     EXPECT_TRUE(n.getCary());
 
     n.setA(true);
     n.setB(true);
-    n.setCaryIn(false);
+    n.setCary(false);
     n.print();
     EXPECT_FALSE(n.getSum());
     EXPECT_TRUE(n.getCary());
 
     n.setA(true);
     n.setB(true);
-    n.setCaryIn(true);
+    n.setCary(true);
     n.print();
     EXPECT_TRUE(n.getSum());
     EXPECT_TRUE(n.getCary());
@@ -510,7 +510,7 @@ GTEST_TEST(Hack, FullAdderAdd)
     // ----------------------------
     for (int i = 0; i < 7; ++i)
     {
-        n.setCaryIn(n.getCary());
+        n.setCary(n.getCary());
         n.setA(A[i] != 0);
         n.setB(B[i] != 0);
         n.print();
@@ -928,7 +928,7 @@ GTEST_TEST(Hack, ALU)
 GTEST_TEST(Hack, SRLatch)
 {
     char table[][4] = {
-        {0, 0, 1, 1},  // latched
+        {0, 0, 1, 1}, // latched
         {0, 1, 1, 0},
         {1, 0, 0, 1},
         {1, 1, 0, 1},
@@ -1064,7 +1064,7 @@ GTEST_TEST(Hack, Ram8)
         const bool    time = reg[0] != 0;
         const int16_t in   = (int16_t)reg[1];
         const bool    load = reg[2] != 0;
-        const uint8_t addr = reg[3];
+        const uint8_t addr = (uint8_t)reg[3];
         const int16_t exp  = (int16_t)reg[4];
 
         n.setClock(time);

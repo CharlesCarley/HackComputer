@@ -52,7 +52,7 @@ namespace Hack::Ui
 
         // printable
         CS_START = ' ',
-        CS_END   = '~' + 1,
+        CS_END = '~' + 1,
     };
 
     enum ColorPalette
@@ -138,5 +138,4 @@ namespace Hack::Ui
         PR_ALT,
         PR_ESC,
     };
-
-}  // namespace Hack::Ui
+} // namespace Hack::Ui

@@ -44,5 +44,4 @@ namespace Hack::Ui
             _bg = Color(_color).background();
         return _bg.c_str();
     }
-
-}  // namespace Hack::Ui
+} // namespace Hack::Ui

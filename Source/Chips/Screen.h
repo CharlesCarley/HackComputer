@@ -26,6 +26,4 @@ namespace Hack::Chips
 {
     typedef IMemorySegment<0x6000, 0x4000> Screen;
     using ScreenSegment = DefaultMemorySegment<0x6000, 0x4000>;
-
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

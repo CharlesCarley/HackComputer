@@ -29,9 +29,14 @@ namespace Hack::Ui
         const ColorU u(Rgb);
         _scratch[Clamp(
             (int)snprintf(
-                _scratch, 31, buf, (int)u.b[RByte], (int)u.b[GByte], (int)u.b[BByte]),
+                _scratch,
+                31,
+                buf,
+                (int)u.b[RByte],
+                (int)u.b[GByte],
+                (int)u.b[BByte]),
             0,
             31)] = 0;
         return _scratch;
     }
-}  // namespace Hack::Ui
+} // namespace Hack::Ui

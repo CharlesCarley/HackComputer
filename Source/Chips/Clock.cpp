@@ -34,14 +34,14 @@ namespace Hack::Chips
         _bits = 0b01000000;
     }
 
-    void Clock::setIn(bool v)
+    void Clock::setIn(bool input)
     {
-        applyBit(1, v);
+        applyBit(1, input);
     }
 
-    void Clock::setReset(bool v)
+    void Clock::setReset(bool reset)
     {
-        applyBit(6, v);
+        applyBit(6, reset);
     }
 
     bool Clock::getOut()
@@ -73,5 +73,4 @@ namespace Hack::Chips
         return (_bits & Bit0) != 0;
 #endif
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

@@ -38,8 +38,7 @@ namespace Hack::VirtualMachine
         int                _cmp;
         StringStack        _functions;
 
-    
-        
+
         void getJumpLabels(String& valTrue, String& valDone);
 
         void genLabel(String& val);
@@ -120,7 +119,6 @@ namespace Hack::VirtualMachine
 
         void writeReturn();
 
-        void  writeCode(const String& cs);
+        void writeCode(const String& cs);
     };
-
-}  // namespace Hack::VirtualMachine
+} // namespace Hack::VirtualMachine

@@ -36,7 +36,7 @@ namespace Hack::Chips
         static const uint16_t ExtensionAddress;
 
     private:
-        void evaluate() override;
+        void evaluate();
         bool isDirty() override;
         void markDirty();
 
@@ -75,5 +75,4 @@ namespace Hack::Chips
 
         void zero() const;
     };
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips

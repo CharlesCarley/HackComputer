@@ -64,5 +64,4 @@ namespace Hack::VirtualMachine
     };
 
     using Token = TokenBase;
-
-}  // namespace Hack::VirtualMachine
+} // namespace Hack::VirtualMachine

@@ -27,7 +27,7 @@ namespace Hack::Chips
     class Rom32 final : public Chip<uint8_t, 8>
     {
     private:
-        void evaluate() override;
+        void evaluate();
         bool isDirty() override;
 
         uint16_t  _in, _out, _size;
@@ -56,5 +56,4 @@ namespace Hack::Chips
     {
         return _size;
     }
-
-}  // namespace Hack::Chips
+} // namespace Hack::Chips
