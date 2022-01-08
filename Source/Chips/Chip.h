@@ -57,12 +57,6 @@ namespace Hack::Chips
         virtual ~Chip() = default;
 
         /// <summary>
-        /// Prints the binary and decimal representation
-        /// of the current state of the _bits member.
-        /// </summary>
-        void print();
-
-        /// <summary>
         /// Returns the state of the bit at the supplied index.
         /// </summary>
         bool getBit(const uint8_t& index);
@@ -103,16 +97,6 @@ namespace Hack::Chips
     }
 
     template <typename T, uint8_t Count>
-    void Chip<T, Count>::print()
-    {
-#ifdef PRINT_CHIP_STATE
-        if (isDirty())
-            evaluate();
-        BitUtils<T, Count>::printBit(_bits);
-#endif
-    }
-
-    template <typename T, uint8_t Count>
     bool Chip<T, Count>::getBit(const uint8_t& index)
     {
         return BitUtils<T, Count>::getBit(_bits, index);
@@ -141,4 +125,4 @@ namespace Hack::Chips
     {
         BitUtils<T, Count>::applyBit(_bits, index, value);
     }
-} // namespace Hack::Chips
+}  // namespace Hack::Chips

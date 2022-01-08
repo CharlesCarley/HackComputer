@@ -47,9 +47,6 @@ if (Hack_CHECK_INT_BOUNDS)
     add_definitions(-DCHECK_INT_BOUNDS)
 endif()
 
-if (Hack_PRINT_CHIP_STATE)
-    add_definitions(-DPRINT_CHIP_STATE)
-endif()
 
 if (Hack_IMPLEMENT_BLACK_BOX)
     add_definitions(-DIMPLEMENT_BLACK_BOX)

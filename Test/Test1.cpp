@@ -66,22 +66,22 @@ GTEST_TEST(Hack, Nand)
     NAnd n;
     n.setA(false);
     n.setB(false);
-    n.print();
+
     EXPECT_TRUE(n.getOut());
 
     n.setA(false);
     n.setB(true);
-    n.print();
+
     EXPECT_TRUE(n.getOut());
 
     n.setA(true);
     n.setB(false);
-    n.print();
+
     EXPECT_TRUE(n.getOut());
 
     n.setA(true);
     n.setB(true);
-    n.print();
+
     EXPECT_FALSE(n.getOut());
 }
 
@@ -89,11 +89,11 @@ GTEST_TEST(Hack, Not)
 {
     Not n;
     n.setIn(false);
-    n.print();
+
     EXPECT_TRUE(n.getOut());
 
     n.setIn(true);
-    n.print();
+
     EXPECT_FALSE(n.getOut());
 }
 
@@ -112,22 +112,22 @@ GTEST_TEST(Hack, Or)
     Or n;
     n.setA(false);
     n.setB(false);
-    n.print();
+
     EXPECT_FALSE(n.getOut());
 
     n.setA(false);
     n.setB(true);
-    n.print();
+
     EXPECT_TRUE(n.getOut());
 
     n.setA(true);
     n.setB(false);
-    n.print();
+
     EXPECT_TRUE(n.getOut());
 
     n.setA(true);
     n.setB(true);
-    n.print();
+
     EXPECT_TRUE(n.getOut());
 }
 
@@ -136,22 +136,22 @@ GTEST_TEST(Hack, NOr)
     NOr n;
     n.setA(false);
     n.setB(false);
-    n.print();
+
     EXPECT_TRUE(n.getOut());
 
     n.setA(false);
     n.setB(true);
-    n.print();
+
     EXPECT_FALSE(n.getOut());
 
     n.setA(true);
     n.setB(false);
-    n.print();
+
     EXPECT_FALSE(n.getOut());
 
     n.setA(true);
     n.setB(true);
-    n.print();
+
     EXPECT_FALSE(n.getOut());
 }
 
@@ -160,22 +160,22 @@ GTEST_TEST(Hack, XOr)
     XOr n;
     n.setA(false);
     n.setB(false);
-    n.print();
+
     EXPECT_FALSE(n.getOut());
 
     n.setA(false);
     n.setB(true);
-    n.print();
+
     EXPECT_TRUE(n.getOut());
 
     n.setA(true);
     n.setB(false);
-    n.print();
+
     EXPECT_TRUE(n.getOut());
 
     n.setA(true);
     n.setB(true);
-    n.print();
+
     EXPECT_FALSE(n.getOut());
 }
 
@@ -184,22 +184,22 @@ GTEST_TEST(Hack, And)
     And n;
     n.setA(false);
     n.setB(false);
-    n.print();
+
     EXPECT_FALSE(n.getOut());
 
     n.setA(false);
     n.setB(true);
-    n.print();
+
     EXPECT_FALSE(n.getOut());
 
     n.setA(true);
     n.setB(false);
-    n.print();
+
     EXPECT_FALSE(n.getOut());
 
     n.setA(true);
     n.setB(true);
-    n.print();
+
     EXPECT_TRUE(n.getOut());
 }
 
@@ -293,49 +293,49 @@ GTEST_TEST(Hack, Mux)
     n.setA(false);
     n.setB(false);
     n.setSel(false);
-    n.print();
+
     EXPECT_FALSE(n.getOut());
 
     n.setA(false);
     n.setB(false);
     n.setSel(true);
-    n.print();
+
     EXPECT_FALSE(n.getOut());
 
     n.setA(false);
     n.setB(true);
     n.setSel(false);
-    n.print();
+
     EXPECT_FALSE(n.getOut());
 
     n.setA(false);
     n.setB(true);
     n.setSel(true);
-    n.print();
+
     EXPECT_TRUE(n.getOut());
 
     n.setA(true);
     n.setB(false);
     n.setSel(false);
-    n.print();
+
     EXPECT_TRUE(n.getOut());
 
     n.setA(true);
     n.setB(false);
     n.setSel(true);
-    n.print();
+
     EXPECT_FALSE(n.getOut());
 
     n.setA(true);
     n.setB(true);
     n.setSel(false);
-    n.print();
+
     EXPECT_TRUE(n.getOut());
 
     n.setA(true);
     n.setB(true);
     n.setSel(true);
-    n.print();
+
     EXPECT_TRUE(n.getOut());
 }
 
@@ -344,25 +344,25 @@ GTEST_TEST(Hack, DMux)
     DMux n;
     n.setIn(false);
     n.setSel(false);
-    n.print();
+
     EXPECT_FALSE(n.getA());
     EXPECT_FALSE(n.getB());
 
     n.setIn(false);
     n.setSel(true);
-    n.print();
+
     EXPECT_FALSE(n.getA());
     EXPECT_FALSE(n.getB());
 
     n.setIn(true);
     n.setSel(false);
-    n.print();
+
     EXPECT_TRUE(n.getA());
     EXPECT_FALSE(n.getB());
 
     n.setIn(true);
     n.setSel(true);
-    n.print();
+
     EXPECT_FALSE(n.getA());
     EXPECT_TRUE(n.getB());
 }
@@ -410,25 +410,25 @@ GTEST_TEST(Hack, HalfAdder)
     HalfAdder n;
     n.setA(false);
     n.setB(false);
-    n.print();
+
     EXPECT_FALSE(n.getSum());
     EXPECT_FALSE(n.getCary());
 
     n.setA(false);
     n.setB(true);
-    n.print();
+
     EXPECT_TRUE(n.getSum());
     EXPECT_FALSE(n.getCary());
 
     n.setA(true);
     n.setB(false);
-    n.print();
+
     EXPECT_TRUE(n.getSum());
     EXPECT_FALSE(n.getCary());
 
     n.setA(true);
     n.setB(true);
-    n.print();
+
     EXPECT_FALSE(n.getSum());
     EXPECT_TRUE(n.getCary());
 }
@@ -439,56 +439,56 @@ GTEST_TEST(Hack, FullAdder)
     n.setA(false);
     n.setB(false);
     n.setCary(false);
-    n.print();
+
     EXPECT_FALSE(n.getSum());
     EXPECT_FALSE(n.getCary());
 
     n.setA(false);
     n.setB(false);
     n.setCary(true);
-    n.print();
+
     EXPECT_TRUE(n.getSum());
     EXPECT_FALSE(n.getCary());
 
     n.setA(false);
     n.setB(true);
     n.setCary(false);
-    n.print();
+
     EXPECT_TRUE(n.getSum());
     EXPECT_FALSE(n.getCary());
 
     n.setA(false);
     n.setB(true);
     n.setCary(true);
-    n.print();
+
     EXPECT_FALSE(n.getSum());
     EXPECT_TRUE(n.getCary());
 
     n.setA(true);
     n.setB(false);
     n.setCary(false);
-    n.print();
+
     EXPECT_TRUE(n.getSum());
     EXPECT_FALSE(n.getCary());
 
     n.setA(true);
     n.setB(false);
     n.setCary(true);
-    n.print();
+
     EXPECT_FALSE(n.getSum());
     EXPECT_TRUE(n.getCary());
 
     n.setA(true);
     n.setB(true);
     n.setCary(false);
-    n.print();
+
     EXPECT_FALSE(n.getSum());
     EXPECT_TRUE(n.getCary());
 
     n.setA(true);
     n.setB(true);
     n.setCary(true);
-    n.print();
+
     EXPECT_TRUE(n.getSum());
     EXPECT_TRUE(n.getCary());
 }
@@ -513,7 +513,7 @@ GTEST_TEST(Hack, FullAdderAdd)
         n.setCary(n.getCary());
         n.setA(A[i] != 0);
         n.setB(B[i] != 0);
-        n.print();
+
         r += (1 << i) * (n.getSum() ? 1 : 0);
     }
     if (n.getCary())
@@ -530,7 +530,7 @@ GTEST_TEST(Hack, Or8Way)
     for (int i = 0; i < 8; ++i)
     {
         n.setIn(v);
-        n.print();
+
         EXPECT_TRUE(n.getOut());
         v &= ~(1 << i);
     }
@@ -928,7 +928,7 @@ GTEST_TEST(Hack, ALU)
 GTEST_TEST(Hack, SRLatch)
 {
     char table[][4] = {
-        {0, 0, 1, 1}, // latched
+        {0, 0, 1, 1},  // latched
         {0, 1, 1, 0},
         {1, 0, 0, 1},
         {1, 1, 0, 1},
@@ -939,7 +939,6 @@ GTEST_TEST(Hack, SRLatch)
 
         n.setS(tab[0] != 0);
         n.setR(tab[1] != 0);
-        n.print();
 
         EXPECT_EQ(tab[2] != 0, n.getQ());
         EXPECT_EQ(tab[3] != 0, n.getQPlus());
@@ -953,20 +952,18 @@ GTEST_TEST(Hack, Clock)
     n.setIn(true);
     n.setReset(true);
 
-    n.print();
     EXPECT_TRUE(n.getOut());
 
     bool test = true;
     for (int i = 0; i < 17; ++i)
     {
-        n.print();
         EXPECT_EQ(!test, n.getOut());
         test = !test;
     }
 
     n.setIn(test);
     n.setReset(true);
-    n.print();
+
     EXPECT_EQ(test, n.getOut());
 }
 
@@ -975,28 +972,28 @@ GTEST_TEST(Hack, DFlipFlop)
     DFlipFlop n;
     n.setD(false);
     n.setG(true);
-    n.print();
+
     EXPECT_EQ(false, n.getQ());
     EXPECT_EQ(true, n.getQPlus());
 
     for (int i = 0; i < 100; ++i)
     {
         n.setG(false);
-        n.print();
+
         EXPECT_EQ(false, n.getQ());
         EXPECT_EQ(true, n.getQPlus());
     }
 
     n.setD(true);
     n.setG(true);
-    n.print();
+
     EXPECT_EQ(true, n.getQ());
     EXPECT_EQ(false, n.getQPlus());
 
     for (int i = 0; i < 100; ++i)
     {
         n.setG(false);
-        n.print();
+
         EXPECT_EQ(true, n.getQ());
         EXPECT_EQ(false, n.getQPlus());
     }
@@ -1018,7 +1015,7 @@ GTEST_TEST(Hack, Bit)
         n.setLoad(load);
 
         int16_t out = (int16_t)n.getOut();
-        n.print();
+
         EXPECT_EQ(exp, out);
     }
 }
@@ -1037,8 +1034,6 @@ GTEST_TEST(Hack, Register)
         n.setClock(time);
         n.setIn(in);
         n.setLoad(load);
-
-        n.print();
 
         int16_t out = (int16_t)n.getOut();
         EXPECT_EQ(exp, out);
@@ -1072,8 +1067,6 @@ GTEST_TEST(Hack, Ram8)
         n.setLoad(load != 0);
         n.setAddress(addr);
 
-        n.print();
-
         int16_t out = (int16_t)n.getOut();
         EXPECT_EQ(exp, out);
     }
@@ -1095,8 +1088,6 @@ GTEST_TEST(Hack, Ram64)
         n.setLoad(load);
         n.setAddress(addr);
         n.setClock(clock);
-
-        n.print();
 
         int16_t out = (int16_t)n.getOut();
         EXPECT_EQ(exp, out);
@@ -1120,7 +1111,7 @@ GTEST_TEST(Hack, Ram512)
         n.setAddress(addr);
         n.setClock(clock);
 
-        ///n.print();
+        ///
 
         int16_t out = (int16_t)n.getOut();
         EXPECT_EQ(exp, out);
@@ -1146,7 +1137,7 @@ GTEST_TEST(Hack, Ram4k)
         n.setAddress(addr);
         n.setClock(clock);
 
-        n.print();
+        
 
         int16_t out = (int16_t)n.getOut();
         EXPECT_EQ(exp, out);
@@ -1170,7 +1161,7 @@ GTEST_TEST(Hack, Ram16k)
         n.setAddress(addr);
         n.setClock(clock);
 
-        n.print();
+        
 
         int16_t out = (int16_t)n.getOut();
         EXPECT_EQ(exp, out);
@@ -1205,7 +1196,6 @@ GTEST_TEST(Hack, ProgramCounter)
         n.setFlags(flags);
         n.setClock(clock);
 
-        n.print();
         int16_t out = (int16_t)n.getOut();
         EXPECT_EQ(exp, out);
     }

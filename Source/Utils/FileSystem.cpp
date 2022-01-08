@@ -40,13 +40,16 @@ namespace Hack
 
     Path FileSystem::absolute(const String& input)
     {
-        Path rPath(input);
-        if (!rPath.has_root_directory())
+        Path value(input);
+        if (!value.has_root_directory())
         {
-            Path cwd = std::filesystem::current_path();
-            cwd += rPath;
-            rPath = std::filesystem::absolute(cwd);
+            const String combined = StringCombine(
+                std::filesystem::current_path().string(),
+                '/',
+                input);
+
+            value = std::filesystem::absolute(combined);
         }
-        return rPath;
+        return value;
     }
-} // namespace Hack
+}  // namespace Hack

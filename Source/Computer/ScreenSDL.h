@@ -58,7 +58,7 @@ namespace Hack::Chips
 
     protected:
 
-        void evaluate() override;
+        void evaluate();
     };
 
 }  // namespace Hack::Chips

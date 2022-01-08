@@ -10,11 +10,11 @@ jobs:
      - uses: actions/checkout@v2
 
      - name: ConfigureChips
-       run: cmake . -DHack_BUILD_TEST=ON -DHack_AUTO_RUN_TEST=ON -DHack_USE_SDL=OFF  -DHack_IMPLEMENT_BLACK_BOX=ON  -DHack_CHECK_INT_BOUNDS=ON  -DHack_PRINT_CHIP_STATE=ON
+       run: cmake . -DHack_BUILD_TEST=ON -DHack_AUTO_RUN_TEST=ON -DHack_USE_SDL=OFF  -DHack_IMPLEMENT_BLACK_BOX=ON  -DHack_CHECK_INT_BOUNDS=ON
      - name: Build
        run: make
        
      - name: ConfigureCPU
-       run: cmake . -DHack_BUILD_TEST=ON -DHack_AUTO_RUN_TEST=ON -DHack_USE_SDL=OFF  -DHack_IMPLEMENT_BLACK_BOX=OFF  -DHack_CHECK_INT_BOUNDS=ON  -DHack_PRINT_CHIP_STATE=ON
+       run: cmake . -DHack_BUILD_TEST=ON -DHack_AUTO_RUN_TEST=ON -DHack_USE_SDL=OFF  -DHack_IMPLEMENT_BLACK_BOX=OFF  -DHack_CHECK_INT_BOUNDS=ON
      - name: Build
        run: make
