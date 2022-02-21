@@ -116,11 +116,7 @@ INPUT                  = "${MdDoxBuilder_OutputDir}/pages" \
 INPUT_ENCODING         = UTF-8
 FILE_PATTERNS          = *.cpp \
                          *.h \
-                         *.inl \
-                         *.dot \
-                         *.md \
-                         *.py \
-                         .cmake
+                         *.inl
 RECURSIVE              = YES
 EXCLUDE                = ${SourceExclude}
 EXCLUDE_SYMLINKS       = NO
@@ -128,11 +124,7 @@ EXCLUDE_PATTERNS       = ${SymbolExclude}
 EXCLUDE_SYMBOLS        = ${SymbolExclude}
 EXAMPLE_PATH           = "${ExamplePaths}"
 EXAMPLE_PATTERNS       = *.cpp \
-                         *.h \
-                         *.md \
-                         *.inl \
-                         *.grm \ 
-                         *.svg
+                         *.h
 EXAMPLE_RECURSIVE      = YES
 IMAGE_PATH             = "${ImagePaths}"
 INPUT_FILTER           = 

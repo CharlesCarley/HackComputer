@@ -1,0 +1,937 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classHack_1_1Compiler_1_1Analyzer_1_1Parser" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>Hack::Compiler::Analyzer::Parser</compoundname>
+    <basecompoundref refid="classHack_1_1ParserBase" prot="public" virt="non-virtual">Hack::ParserBase</basecompoundref>
+    <includes local="no">Source/Compiler/Analyzer/Parser.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a5ade64fc71a3b925e25fdc02ec268457" prot="public" static="no">
+        <type>std::stack&lt; <ref refid="classHack_1_1Compiler_1_1Node" kindref="compound">Node</ref> * &gt;</type>
+        <definition>typedef std::stack&lt;Node*&gt; Hack::Compiler::Analyzer::Parser::NodeStack</definition>
+        <argsstring></argsstring>
+        <name>NodeStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="36" column="1" bodyfile="Source/Compiler/Analyzer/Parser.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1aa3bb9b180f08d574a4e159648eaa1c77" prot="private" static="no" mutable="no">
+        <type><ref refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a5ade64fc71a3b925e25fdc02ec268457" kindref="member">NodeStack</ref></type>
+        <definition>NodeStack Hack::Compiler::Analyzer::Parser::_stack</definition>
+        <argsstring></argsstring>
+        <name>_stack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="40" column="1" bodyfile="Source/Compiler/Analyzer/Parser.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1ae6a26fa3b0c58e100a96206af11f8f86" prot="private" static="no" mutable="no">
+        <type><ref refid="classHack_1_1Compiler_1_1Tree" kindref="compound">Tree</ref> *</type>
+        <definition>Tree* Hack::Compiler::Analyzer::Parser::_tree</definition>
+        <argsstring></argsstring>
+        <name>_tree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="39" column="1" bodyfile="Source/Compiler/Analyzer/Parser.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a06ff5b2e15bc97bf370bec27398178fe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::bodyRule</definition>
+        <argsstring>()</argsstring>
+        <name>bodyRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="89" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="617" bodyend="653"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1abbca5621375e16d066b918301d1c9531" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::callMethodRule</definition>
+        <argsstring>()</argsstring>
+        <name>callMethodRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="125" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="1108" bodyend="1163"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a641b3501fea0f320a1d7174e9a85aae1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::checkEof</definition>
+        <argsstring>()</argsstring>
+        <name>checkEof</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="51" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="83" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a18a58db352b31fe410bfde76700873e7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::classDescriptionRule</definition>
+        <argsstring>()</argsstring>
+        <name>classDescriptionRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="55" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="385" bodyend="408"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a76201aa99c6773bfe63f6faa35c6fdb8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::classRule</definition>
+        <argsstring>()</argsstring>
+        <name>classRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="53" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="360" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a0fd3daac085a63d2ad61e2823e1c510f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::complexTermRule</definition>
+        <argsstring>()</argsstring>
+        <name>complexTermRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="117" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="968" bodyend="1020"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a930a0302875244ca0a8e0de7e0c07b40" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::constant</definition>
+        <argsstring>(int8_t symbolId)</argsstring>
+        <name>constant</name>
+        <param>
+          <type>int8_t</type>
+          <declname>symbolId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="61" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="144" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a3074adfaaf5e147bb1e0c7f23494b677" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classHack_1_1Compiler_1_1Node" kindref="compound">Node</ref> *</type>
+        <definition>Node * Hack::Compiler::Analyzer::Parser::createRule</definition>
+        <argsstring>(const int8_t &amp;name)</argsstring>
+        <name>createRule</name>
+        <param>
+          <type>const int8_t &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="49" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="75" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a391321d060e0bc0fc3b7b2b75c5e2ce4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::dataTypeRule</definition>
+        <argsstring>()</argsstring>
+        <name>dataTypeRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="79" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="452" bodyend="475"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1aabaf622c3c32458ed9216ebb541927f1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::doStatementRule</definition>
+        <argsstring>()</argsstring>
+        <name>doStatementRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="103" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="809" bodyend="819"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a7f065bedde7fc065dd83848a47528007" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::elseStatementRule</definition>
+        <argsstring>()</argsstring>
+        <name>elseStatementRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="99" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="776" bodyend="788"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1af68048a7a1b04eba64edfe0e0987121d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::expressionListRule</definition>
+        <argsstring>()</argsstring>
+        <name>expressionListRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="123" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="1082" bodyend="1106"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a60be7242259e211cf25a98daed30e3e4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::expressionRule</definition>
+        <argsstring>()</argsstring>
+        <name>expressionRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="109" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="857" bodyend="869"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a0df3093399f4e1a5f8554563f66351e9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::fieldRule</definition>
+        <argsstring>()</argsstring>
+        <name>fieldRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="75" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="477" bodyend="498"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a73934c21f82bdb704cd420c05c2b401c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::fieldSpecificationRule</definition>
+        <argsstring>()</argsstring>
+        <name>fieldSpecificationRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="77" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="433" bodyend="450"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1adca8d5963b14e6b2ade7f23524078025" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::identifier</definition>
+        <argsstring>(Node *rule)</argsstring>
+        <name>identifier</name>
+        <param>
+          <type><ref refid="classHack_1_1Compiler_1_1Node" kindref="compound">Node</ref> *</type>
+          <declname>rule</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="57" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="89" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a99517e5b2340a979e99bfe76b7d20ac6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::identifier</definition>
+        <argsstring>(Node *rule, int8_t symbolId, int token)</argsstring>
+        <name>identifier</name>
+        <param>
+          <type><ref refid="classHack_1_1Compiler_1_1Node" kindref="compound">Node</ref> *</type>
+          <declname>rule</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>symbolId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>token</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="59" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="108" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a71dd2813d457c0fb0a3a83316d2becab" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::identifierListRule</definition>
+        <argsstring>()</argsstring>
+        <name>identifierListRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="73" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="410" bodyend="431"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a428e901a4b3018ae5b1654eb8b89153c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::ifStatementRule</definition>
+        <argsstring>()</argsstring>
+        <name>ifStatementRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="97" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="752" bodyend="774"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1aa990603f9143b82223e53bf4fed520c7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::inlineAsmRule</definition>
+        <argsstring>()</argsstring>
+        <name>inlineAsmRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="133" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="600" bodyend="615"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1afb0595a23c35d053374741be56dc31a0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::inlineVmRule</definition>
+        <argsstring>()</argsstring>
+        <name>inlineVmRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="131" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="583" bodyend="598"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a60e5576f1c54c7c9b0b45eb60509242b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::keyword</definition>
+        <argsstring>(Node *rule, int8_t symbolId, int token, const char *kw)</argsstring>
+        <name>keyword</name>
+        <param>
+          <type><ref refid="classHack_1_1Compiler_1_1Node" kindref="compound">Node</ref> *</type>
+          <declname>rule</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>symbolId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>token</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>kw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="69" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="281" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1af6d7f2811ff34bc56acc84bd1eefa6a4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::keyword</definition>
+        <argsstring>(int8_t symbolId)</argsstring>
+        <name>keyword</name>
+        <param>
+          <type>int8_t</type>
+          <declname>symbolId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="71" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="299" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a0a0aa27ce03bed4ad5c0466ed3ccf91f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::letStatementRule</definition>
+        <argsstring>()</argsstring>
+        <name>letStatementRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="95" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="712" bodyend="750"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a3ebe311c43fcc9c091e192f3e1e8e579" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::methodBodyRule</definition>
+        <argsstring>()</argsstring>
+        <name>methodBodyRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="87" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="567" bodyend="581"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a1e389207736d4d70dac4c2bd161c4c1c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::methodReturnTypeRule</definition>
+        <argsstring>()</argsstring>
+        <name>methodReturnTypeRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="85" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="554" bodyend="565"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1aa2bc6678c140819b90e3877025cec4d0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::methodRule</definition>
+        <argsstring>()</argsstring>
+        <name>methodRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="81" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="500" bodyend="528"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1afc0c98a20019b90fae60b3bfbdfb5d62" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::methodSpecificationRule</definition>
+        <argsstring>()</argsstring>
+        <name>methodSpecificationRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="83" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="530" bodyend="552"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a5534984f8fb58d0f2a21218063f271e3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::object</definition>
+        <argsstring>(int8_t symbolId)</argsstring>
+        <name>object</name>
+        <param>
+          <type>int8_t</type>
+          <declname>symbolId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="63" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="177" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a6843760ff35a3ffd9d474f3dc129315a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::operatorRule</definition>
+        <argsstring>()</argsstring>
+        <name>operatorRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="119" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="1022" bodyend="1060"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1ab1a6adde6c646619180baf8af5ef4264" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::parameterListRule</definition>
+        <argsstring>()</argsstring>
+        <name>parameterListRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="127" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="1165" bodyend="1185"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a27fd3f6127752042c1655deeaaefd04c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::parameterRule</definition>
+        <argsstring>()</argsstring>
+        <name>parameterRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="129" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="1187" bodyend="1195"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a91a2299f319767a8f2aa9d5d72ccdccb" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::parseImpl</definition>
+        <argsstring>(IStream &amp;is) override</argsstring>
+        <name>parseImpl</name>
+        <reimplements refid="classHack_1_1ParserBase_1aca4fd325b8520d930ca612cf3337c625">parseImpl</reimplements>
+        <param>
+          <type><ref refid="namespaceHack_1a830c8eb3c005ef2fbc470e0b141b93c5" kindref="member">IStream</ref> &amp;</type>
+          <declname>is</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="43" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="1197" bodyend="1221"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1af1d00dc41a8b231b7e16aa73dff85e61" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::reduceRule</definition>
+        <argsstring>(Node *node)</argsstring>
+        <name>reduceRule</name>
+        <param>
+          <type><ref refid="classHack_1_1Compiler_1_1Node" kindref="compound">Node</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="47" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="50" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a9738a6a4d1e7076c6a3dacd3fd8eb7c8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::returnStatementRule</definition>
+        <argsstring>()</argsstring>
+        <name>returnStatementRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="105" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="821" bodyend="834"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1af6623adca3dff3a7ec5c908b5903a92f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::simpleTermRule</definition>
+        <argsstring>()</argsstring>
+        <name>simpleTermRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="115" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="934" bodyend="966"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a6c360e04bd3e71f6561cce8a86d0af24" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::singleExpressionRule</definition>
+        <argsstring>()</argsstring>
+        <name>singleExpressionRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="111" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="871" bodyend="911"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a2b659bf904ca763d3e3d77ca844e5e2b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::statementListRule</definition>
+        <argsstring>()</argsstring>
+        <name>statementListRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="107" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="836" bodyend="855"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a5b7fec76dd064b8ca51e38cfb2c70828" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::statementRule</definition>
+        <argsstring>()</argsstring>
+        <name>statementRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="93" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="670" bodyend="710"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a504f085bbdd924f479bc5465d3ad20ed" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::symbol</definition>
+        <argsstring>(Node *rule, int8_t symbolId, int token, char ch)</argsstring>
+        <name>symbol</name>
+        <param>
+          <type><ref refid="classHack_1_1Compiler_1_1Node" kindref="compound">Node</ref> *</type>
+          <declname>rule</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>symbolId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>token</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="65" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="195" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a787a6ff5c9dafa70e21f029628f3fdd7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::symbol</definition>
+        <argsstring>(int8_t symbolId)</argsstring>
+        <name>symbol</name>
+        <param>
+          <type>int8_t</type>
+          <declname>symbolId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="67" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="213" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1aaef3f38537f3ead9d29c9fff3d51406a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::termRule</definition>
+        <argsstring>()</argsstring>
+        <name>termRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="113" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="913" bodyend="932"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a3ed55fffb1db2ff948843c614f77f72d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::unaryOperatorRule</definition>
+        <argsstring>()</argsstring>
+        <name>unaryOperatorRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="121" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="1062" bodyend="1080"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a10f25311d7f1ff0169960bb56d9df58c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::variableRule</definition>
+        <argsstring>()</argsstring>
+        <name>variableRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="91" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="655" bodyend="668"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1ac56dced8a8756cb403bd50ccb1a41eef" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::whileStatementRule</definition>
+        <argsstring>()</argsstring>
+        <name>whileStatementRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="101" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="790" bodyend="807"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a2dd7713d5148b3a7b771478d92a4fa10" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::Analyzer::Parser::writeImpl</definition>
+        <argsstring>(OStream &amp;os, int format=0) override</argsstring>
+        <name>writeImpl</name>
+        <reimplements refid="classHack_1_1ParserBase_1a4e9dd3f0283226de48b148d66b416f0f">writeImpl</reimplements>
+        <param>
+          <type><ref refid="namespaceHack_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref> &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>format</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="45" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="1223" bodyend="1229"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a7254682ac0d96fcf4199af56f19b3688" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Compiler::Analyzer::Parser::Parser</definition>
+        <argsstring>()</argsstring>
+        <name>Parser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="136" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="35" bodyend="39"/>
+        <references refid="classHack_1_1ParserBase_1aec27fb418bd286a67e449bbf42ddb4e7" compoundref="ParserBase_8h" startline="40">Hack::ParserBase::_scanner</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a3776e5e7c4432429f36f08cd1666644e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Compiler::Analyzer::Parser::~Parser</definition>
+        <argsstring>() override</argsstring>
+        <name>~Parser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="138" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="41" bodyend="48"/>
+        <references refid="classHack_1_1ParserBase_1aec27fb418bd286a67e449bbf42ddb4e7" compoundref="ParserBase_8h" startline="40">Hack::ParserBase::_scanner</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a19917dd91094e5a227a90d6cfaadb150" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classHack_1_1Compiler_1_1Tree" kindref="compound">Tree</ref> &amp;</type>
+        <definition>const Tree &amp; Hack::Compiler::Analyzer::Parser::getTree</definition>
+        <argsstring>() const</argsstring>
+        <name>getTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.h" line="140" column="1" bodyfile="Source/Compiler/Analyzer/Parser.h" bodystart="143" bodyend="148"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="318">
+        <label>Hack::Compiler::Analyzer::Parser</label>
+        <link refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser"/>
+        <childnode refid="319" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="319">
+        <label>Hack::ParserBase</label>
+        <link refid="classHack_1_1ParserBase"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="326">
+        <label>size_t</label>
+      </node>
+      <node id="324">
+        <label>Hack::IndexCache&lt; String &gt;</label>
+        <link refid="classHack_1_1IndexCache"/>
+      </node>
+      <node id="328">
+        <label>IStream *</label>
+      </node>
+      <node id="320">
+        <label>Hack::Compiler::Analyzer::Parser</label>
+        <link refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser"/>
+        <childnode refid="321" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="329">
+        <label>int32_t</label>
+      </node>
+      <node id="327">
+        <label>string</label>
+      </node>
+      <node id="322">
+        <label>vector&lt; TokenBase &gt;</label>
+      </node>
+      <node id="321">
+        <label>Hack::ParserBase</label>
+        <link refid="classHack_1_1ParserBase"/>
+        <childnode refid="322" relation="usage">
+          <edgelabel>_tokens</edgelabel>
+        </childnode>
+        <childnode refid="323" relation="usage">
+          <edgelabel>_scanner</edgelabel>
+        </childnode>
+        <childnode refid="329" relation="usage">
+          <edgelabel>_cursor</edgelabel>
+        </childnode>
+        <childnode refid="327" relation="usage">
+          <edgelabel>_filePath</edgelabel>
+          <edgelabel>_file</edgelabel>
+        </childnode>
+      </node>
+      <node id="323">
+        <label>Hack::ScannerBase</label>
+        <link refid="classHack_1_1ScannerBase"/>
+        <childnode refid="324" relation="usage">
+          <edgelabel>_stringTable</edgelabel>
+        </childnode>
+        <childnode refid="325" relation="usage">
+          <edgelabel>_intTable</edgelabel>
+        </childnode>
+        <childnode refid="326" relation="usage">
+          <edgelabel>_line</edgelabel>
+        </childnode>
+        <childnode refid="327" relation="usage">
+          <edgelabel>_file</edgelabel>
+        </childnode>
+        <childnode refid="328" relation="usage">
+          <edgelabel>_stream</edgelabel>
+        </childnode>
+      </node>
+      <node id="325">
+        <label>Hack::IndexCache&lt; int &gt;</label>
+        <link refid="classHack_1_1IndexCache"/>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Compiler/Analyzer/Parser.h" line="34" column="1" bodyfile="Source/Compiler/Analyzer/Parser.h" bodystart="33" bodyend="141"/>
+    <listofallmembers>
+      <member refid="classHack_1_1ParserBase_1a050b6fa7aa7a8a0ad9e6dc769c5fe1ab" prot="protected" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>_cursor</name></member>
+      <member refid="classHack_1_1ParserBase_1a3845bf25a071be865d1abf5d86547d4e" prot="protected" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>_file</name></member>
+      <member refid="classHack_1_1ParserBase_1ab0e5c4de751cb9162c1068d08fe5108f" prot="protected" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>_filePath</name></member>
+      <member refid="classHack_1_1ParserBase_1aec27fb418bd286a67e449bbf42ddb4e7" prot="protected" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>_scanner</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1aa3bb9b180f08d574a4e159648eaa1c77" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>_stack</name></member>
+      <member refid="classHack_1_1ParserBase_1a848d7a2893106ea47afc8839aae2f4e4" prot="protected" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>_tokens</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1ae6a26fa3b0c58e100a96206af11f8f86" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>_tree</name></member>
+      <member refid="classHack_1_1ParserBase_1a857d4ca08875acc4a5ae351eab22ebee" prot="protected" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>advanceCursor</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a06ff5b2e15bc97bf370bec27398178fe" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>bodyRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1abbca5621375e16d066b918301d1c9531" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>callMethodRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a641b3501fea0f320a1d7174e9a85aae1" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>checkEof</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a18a58db352b31fe410bfde76700873e7" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>classDescriptionRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a76201aa99c6773bfe63f6faa35c6fdb8" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>classRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a0fd3daac085a63d2ad61e2823e1c510f" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>complexTermRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a930a0302875244ca0a8e0de7e0c07b40" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>constant</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a3074adfaaf5e147bb1e0c7f23494b677" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>createRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a391321d060e0bc0fc3b7b2b75c5e2ce4" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>dataTypeRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1aabaf622c3c32458ed9216ebb541927f1" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>doStatementRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a7f065bedde7fc065dd83848a47528007" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>elseStatementRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1af68048a7a1b04eba64edfe0e0987121d" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>expressionListRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a60be7242259e211cf25a98daed30e3e4" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>expressionRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a0df3093399f4e1a5f8554563f66351e9" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>fieldRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a73934c21f82bdb704cd420c05c2b401c" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>fieldSpecificationRule</name></member>
+      <member refid="classHack_1_1ParserBase_1ab701a1a26d52964d228d1c1472130483" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>filename</name></member>
+      <member refid="classHack_1_1ParserBase_1a6b9602e4c23316318668f57da6db421c" prot="protected" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>getToken</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a19917dd91094e5a227a90d6cfaadb150" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>getTree</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1adca8d5963b14e6b2ade7f23524078025" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>identifier</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a99517e5b2340a979e99bfe76b7d20ac6" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>identifier</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a71dd2813d457c0fb0a3a83316d2becab" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>identifierListRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a428e901a4b3018ae5b1654eb8b89153c" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>ifStatementRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1aa990603f9143b82223e53bf4fed520c7" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>inlineAsmRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1afb0595a23c35d053374741be56dc31a0" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>inlineVmRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a60e5576f1c54c7c9b0b45eb60509242b" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>keyword</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1af6d7f2811ff34bc56acc84bd1eefa6a4" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>keyword</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a0a0aa27ce03bed4ad5c0466ed3ccf91f" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>letStatementRule</name></member>
+      <member refid="classHack_1_1ParserBase_1a87c46515fd89517db2645943cb44493b" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>line</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a3ebe311c43fcc9c091e192f3e1e8e579" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>methodBodyRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a1e389207736d4d70dac4c2bd161c4c1c" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>methodReturnTypeRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1aa2bc6678c140819b90e3877025cec4d0" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>methodRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1afc0c98a20019b90fae60b3bfbdfb5d62" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>methodSpecificationRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a5ade64fc71a3b925e25fdc02ec268457" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>NodeStack</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a5534984f8fb58d0f2a21218063f271e3" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>object</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a6843760ff35a3ffd9d474f3dc129315a" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>operatorRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1ab1a6adde6c646619180baf8af5ef4264" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>parameterListRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a27fd3f6127752042c1655deeaaefd04c" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>parameterRule</name></member>
+      <member refid="classHack_1_1ParserBase_1a4668ec9b913931ce518de6d7f92fb4e0" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>parse</name></member>
+      <member refid="classHack_1_1ParserBase_1a526cddbd87b36f03b8e76db9b7d640b9" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>parse</name></member>
+      <member refid="classHack_1_1ParserBase_1aa78f3654190d9b4f2ea49f8bcfa97f2b" prot="protected" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>parseError</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a91a2299f319767a8f2aa9d5d72ccdccb" prot="private" virt="virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>parseImpl</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a7254682ac0d96fcf4199af56f19b3688" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>Parser</name></member>
+      <member refid="classHack_1_1ParserBase_1ad2acc126d182c46c5d7f2afbb2aaeb66" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>ParserBase</name></member>
+      <member refid="classHack_1_1ParserBase_1a8436c3d2c31c4a3e822c946c8a6b1a92" prot="protected" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>readToken</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1af1d00dc41a8b231b7e16aa73dff85e61" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>reduceRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a9738a6a4d1e7076c6a3dacd3fd8eb7c8" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>returnStatementRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1af6623adca3dff3a7ec5c908b5903a92f" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>simpleTermRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a6c360e04bd3e71f6561cce8a86d0af24" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>singleExpressionRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a2b659bf904ca763d3e3d77ca844e5e2b" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>statementListRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a5b7fec76dd064b8ca51e38cfb2c70828" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>statementRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a504f085bbdd924f479bc5465d3ad20ed" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>symbol</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a787a6ff5c9dafa70e21f029628f3fdd7" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>symbol</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1aaef3f38537f3ead9d29c9fff3d51406a" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>termRule</name></member>
+      <member refid="classHack_1_1ParserBase_1a7fbbfbffb70e56bfd7d117f8aabcd8f0" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>Tokens</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a3ed55fffb1db2ff948843c614f77f72d" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>unaryOperatorRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a10f25311d7f1ff0169960bb56d9df58c" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>variableRule</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1ac56dced8a8756cb403bd50ccb1a41eef" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>whileStatementRule</name></member>
+      <member refid="classHack_1_1ParserBase_1a4560ce70fee098d7508b053b409c1d19" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>write</name></member>
+      <member refid="classHack_1_1ParserBase_1a644c6667a785050f490a4ee24a98e2e7" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>write</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a2dd7713d5148b3a7b771478d92a4fa10" prot="private" virt="virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>writeImpl</name></member>
+      <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a3776e5e7c4432429f36f08cd1666644e" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>~Parser</name></member>
+      <member refid="classHack_1_1ParserBase_1a6e57377073e2e728304316b73986ded2" prot="public" virt="virtual"><scope>Hack::Compiler::Analyzer::Parser</scope><name>~ParserBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

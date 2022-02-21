@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="ALU_8h" kind="file" language="C++">
+    <compoundname>ALU.h</compoundname>
+    <includes refid="Chip_8h" local="yes">Chips/Chip.h</includes>
+    <includedby refid="ALU_8cpp" local="yes">Source/Chips/ALU.cpp</includedby>
+    <includedby refid="CPU_8cpp" local="yes">Source/Chips/CPU.cpp</includedby>
+    <includedby refid="CPU_8h" local="yes">Source/Chips/CPU.h</includedby>
+    <incdepgraph>
+      <node id="719">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="720" relation="include">
+        </childnode>
+      </node>
+      <node id="711">
+        <label>Chips/BitUtils.h</label>
+        <childnode refid="712" relation="include">
+        </childnode>
+        <childnode refid="713" relation="include">
+        </childnode>
+      </node>
+      <node id="720">
+        <label>cstdint</label>
+      </node>
+      <node id="716">
+        <label>string</label>
+      </node>
+      <node id="718">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="714" relation="include">
+        </childnode>
+        <childnode refid="719" relation="include">
+        </childnode>
+        <childnode refid="721" relation="include">
+        </childnode>
+      </node>
+      <node id="721">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="720" relation="include">
+        </childnode>
+        <childnode refid="717" relation="include">
+        </childnode>
+        <childnode refid="719" relation="include">
+        </childnode>
+      </node>
+      <node id="713">
+        <label>Utils/Console.h</label>
+        <childnode refid="714" relation="include">
+        </childnode>
+        <childnode refid="718" relation="include">
+        </childnode>
+      </node>
+      <node id="712">
+        <label>bitset</label>
+      </node>
+      <node id="717">
+        <label>vector</label>
+      </node>
+      <node id="715">
+        <label>sstream</label>
+      </node>
+      <node id="710">
+        <label>Chips/Chip.h</label>
+        <childnode refid="711" relation="include">
+        </childnode>
+        <childnode refid="713" relation="include">
+        </childnode>
+      </node>
+      <node id="709">
+        <label>Source/Chips/ALU.h</label>
+        <link refid="ALU_8h"/>
+        <childnode refid="710" relation="include">
+        </childnode>
+      </node>
+      <node id="714">
+        <label>String.h</label>
+        <childnode refid="715" relation="include">
+        </childnode>
+        <childnode refid="716" relation="include">
+        </childnode>
+        <childnode refid="717" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="735">
+        <label>Source/Computer/RuntimeSDL.h</label>
+      </node>
+      <node id="734">
+        <label>Source/Computer/DebugRuntime.h</label>
+        <childnode refid="729" relation="include">
+        </childnode>
+        <childnode refid="731" relation="include">
+        </childnode>
+      </node>
+      <node id="726">
+        <label>Source/Chips/Computer.h</label>
+        <childnode refid="727" relation="include">
+        </childnode>
+        <childnode refid="728" relation="include">
+        </childnode>
+        <childnode refid="729" relation="include">
+        </childnode>
+        <childnode refid="730" relation="include">
+        </childnode>
+        <childnode refid="731" relation="include">
+        </childnode>
+        <childnode refid="732" relation="include">
+        </childnode>
+      </node>
+      <node id="724">
+        <label>Source/Chips/CPU.cpp</label>
+      </node>
+      <node id="727">
+        <label>Source/Bindings/Bindings.cpp</label>
+      </node>
+      <node id="723">
+        <label>Source/Chips/ALU.cpp</label>
+      </node>
+      <node id="728">
+        <label>Source/Chips/Computer.cpp</label>
+      </node>
+      <node id="730">
+        <label>Source/Computer/CommandRuntime.cpp</label>
+      </node>
+      <node id="731">
+        <label>Source/Computer/DebugRuntime.cpp</label>
+      </node>
+      <node id="729">
+        <label>Source/Computer/Application.cpp</label>
+      </node>
+      <node id="732">
+        <label>Source/Computer/RuntimeInterface.h</label>
+        <childnode refid="733" relation="include">
+        </childnode>
+        <childnode refid="734" relation="include">
+        </childnode>
+        <childnode refid="735" relation="include">
+        </childnode>
+      </node>
+      <node id="722">
+        <label>Source/Chips/ALU.h</label>
+        <link refid="ALU_8h"/>
+        <childnode refid="723" relation="include">
+        </childnode>
+        <childnode refid="724" relation="include">
+        </childnode>
+        <childnode refid="725" relation="include">
+        </childnode>
+      </node>
+      <node id="733">
+        <label>Source/Computer/CommandRuntime.h</label>
+        <childnode refid="729" relation="include">
+        </childnode>
+        <childnode refid="730" relation="include">
+        </childnode>
+      </node>
+      <node id="725">
+        <label>Source/Chips/CPU.h</label>
+        <childnode refid="726" relation="include">
+        </childnode>
+        <childnode refid="724" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classHack_1_1Chips_1_1Alu" prot="public">Hack::Chips::Alu</innerclass>
+    <innernamespace refid="namespaceHack_1_1Chips">Hack::Chips</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>Charles<sp/>Carley.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>software<sp/>is<sp/>provided<sp/>&apos;as-is&apos;,<sp/>without<sp/>any<sp/>express<sp/>or<sp/>implied</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/>warranty.<sp/>In<sp/>no<sp/>event<sp/>will<sp/>the<sp/>authors<sp/>be<sp/>held<sp/>liable<sp/>for<sp/>any<sp/>damages</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>arising<sp/>from<sp/>the<sp/>use<sp/>of<sp/>this<sp/>software.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>Permission<sp/>is<sp/>granted<sp/>to<sp/>anyone<sp/>to<sp/>use<sp/>this<sp/>software<sp/>for<sp/>any<sp/>purpose,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>including<sp/>commercial<sp/>applications,<sp/>and<sp/>to<sp/>alter<sp/>it<sp/>and<sp/>redistribute<sp/>it</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/>freely,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>restrictions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>1.<sp/>The<sp/>origin<sp/>of<sp/>this<sp/>software<sp/>must<sp/>not<sp/>be<sp/>misrepresented;<sp/>you<sp/>must<sp/>not</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>claim<sp/>that<sp/>you<sp/>wrote<sp/>the<sp/>original<sp/>software.<sp/>If<sp/>you<sp/>use<sp/>this<sp/>software</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>in<sp/>a<sp/>product,<sp/>an<sp/>acknowledgment<sp/>in<sp/>the<sp/>product<sp/>documentation<sp/>would<sp/>be</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>appreciated<sp/>but<sp/>is<sp/>not<sp/>required.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>2.<sp/>Altered<sp/>source<sp/>versions<sp/>must<sp/>be<sp/>plainly<sp/>marked<sp/>as<sp/>such,<sp/>and<sp/>must<sp/>not<sp/>be</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>misrepresented<sp/>as<sp/>being<sp/>the<sp/>original<sp/>software.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Chip.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceHack_1_1Chips" kindref="compound">Hack::Chips</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27" refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144" kindref="member">AluFlags</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29" refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" kindref="member">No</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>0,</highlight></codeline>
+<codeline lineno="30" refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>1,</highlight></codeline>
+<codeline lineno="31" refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a4ceb8925d42a26780931ee5536ebbb88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a4ceb8925d42a26780931ee5536ebbb88" kindref="member">Ny</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>2,</highlight></codeline>
+<codeline lineno="32" refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a36b5e715b100c9067069fcf166591565" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a36b5e715b100c9067069fcf166591565" kindref="member">Zy</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>3,</highlight></codeline>
+<codeline lineno="33" refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" kindref="member">Nx</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>4,</highlight></codeline>
+<codeline lineno="34" refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a76fcc6dbc3a599d794f357556801298b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a76fcc6dbc3a599d794f357556801298b" kindref="member">Zx</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>5,</highlight></codeline>
+<codeline lineno="35" refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a1630ccda3ce240ba49b84d1111d0adb8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a1630ccda3ce240ba49b84d1111d0adb8" kindref="member">Ne</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>6,</highlight></codeline>
+<codeline lineno="36" refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a315f157d7e9917bcfe8a0dcfa133f6fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a315f157d7e9917bcfe8a0dcfa133f6fb" kindref="member">Zr</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>7,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834e" kindref="member">Control</ref></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41" refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ead8acdd64728db039cd19896192b6cb91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ead8acdd64728db039cd19896192b6cb91" kindref="member">XAndY</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="42" refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ead194429bd882d774218235b665c40691" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ead194429bd882d774218235b665c40691" kindref="member">Zero</ref><sp/>=<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a76fcc6dbc3a599d794f357556801298b" kindref="member">Zx</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a36b5e715b100c9067069fcf166591565" kindref="member">Zy</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref>,</highlight></codeline>
+<codeline lineno="43" refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ea5bf31a73c4015858640cbf4525a0f635" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ea5bf31a73c4015858640cbf4525a0f635" kindref="member">One</ref><sp/>=<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a76fcc6dbc3a599d794f357556801298b" kindref="member">Zx</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" kindref="member">Nx</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a36b5e715b100c9067069fcf166591565" kindref="member">Zy</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a4ceb8925d42a26780931ee5536ebbb88" kindref="member">Ny</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" kindref="member">No</ref>,</highlight></codeline>
+<codeline lineno="44" refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834eace1f386fd2bfb62375cd39260f9bfaab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834eace1f386fd2bfb62375cd39260f9bfaab" kindref="member">NegativeOne</ref><sp/>=<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a76fcc6dbc3a599d794f357556801298b" kindref="member">Zx</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" kindref="member">Nx</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a36b5e715b100c9067069fcf166591565" kindref="member">Zy</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref>,</highlight></codeline>
+<codeline lineno="45" refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834eae9d7dcbb6f68eda355091b64af6963ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834eae9d7dcbb6f68eda355091b64af6963ac" kindref="member">OutX</ref><sp/>=<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a36b5e715b100c9067069fcf166591565" kindref="member">Zy</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a4ceb8925d42a26780931ee5536ebbb88" kindref="member">Ny</ref>,</highlight></codeline>
+<codeline lineno="46" refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ea64ecded9e9d4bce576320438afbcc0b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ea64ecded9e9d4bce576320438afbcc0b5" kindref="member">OutY</ref><sp/>=<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a76fcc6dbc3a599d794f357556801298b" kindref="member">Zx</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" kindref="member">Nx</ref>,</highlight></codeline>
+<codeline lineno="47" refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834eae9410c9c533b94acf19cd933687903bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834eae9410c9c533b94acf19cd933687903bb" kindref="member">NotX</ref><sp/>=<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a36b5e715b100c9067069fcf166591565" kindref="member">Zy</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a4ceb8925d42a26780931ee5536ebbb88" kindref="member">Ny</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" kindref="member">No</ref>,</highlight></codeline>
+<codeline lineno="48" refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ea92d3c2bb6b5095ec608417078b9c7c65" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ea92d3c2bb6b5095ec608417078b9c7c65" kindref="member">NotY</ref><sp/>=<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a76fcc6dbc3a599d794f357556801298b" kindref="member">Zx</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" kindref="member">Nx</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" kindref="member">No</ref>,</highlight></codeline>
+<codeline lineno="49" refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ea135215f1f6dc8beda77599a341eb01e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ea135215f1f6dc8beda77599a341eb01e3" kindref="member">NegativeX</ref><sp/>=<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a36b5e715b100c9067069fcf166591565" kindref="member">Zy</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a4ceb8925d42a26780931ee5536ebbb88" kindref="member">Ny</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" kindref="member">No</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref>,</highlight></codeline>
+<codeline lineno="50" refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ea4cd630e751714e9213ba6b4d317dad3d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ea4cd630e751714e9213ba6b4d317dad3d" kindref="member">NegativeY</ref><sp/>=<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a76fcc6dbc3a599d794f357556801298b" kindref="member">Zx</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" kindref="member">Nx</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" kindref="member">No</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref>,</highlight></codeline>
+<codeline lineno="51" refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ea5bf9e8694f6b94e54a595c35d5301561" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ea5bf9e8694f6b94e54a595c35d5301561" kindref="member">XPlusOne</ref><sp/>=<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" kindref="member">Nx</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a36b5e715b100c9067069fcf166591565" kindref="member">Zy</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a4ceb8925d42a26780931ee5536ebbb88" kindref="member">Ny</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" kindref="member">No</ref>,</highlight></codeline>
+<codeline lineno="52" refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ea5799d387c4c6411ce163ace339f1134d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ea5799d387c4c6411ce163ace339f1134d" kindref="member">YPlusOne</ref><sp/>=<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a76fcc6dbc3a599d794f357556801298b" kindref="member">Zx</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" kindref="member">Nx</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a4ceb8925d42a26780931ee5536ebbb88" kindref="member">Ny</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" kindref="member">No</ref>,</highlight></codeline>
+<codeline lineno="53" refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834eadf026416b8f09401bdcec8d02ed4201e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834eadf026416b8f09401bdcec8d02ed4201e" kindref="member">XMinusOne</ref><sp/>=<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a36b5e715b100c9067069fcf166591565" kindref="member">Zy</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a4ceb8925d42a26780931ee5536ebbb88" kindref="member">Ny</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref>,</highlight></codeline>
+<codeline lineno="54" refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ea481daef132a274ac459f4776b68a4bf0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ea481daef132a274ac459f4776b68a4bf0" kindref="member">YMinusOne</ref><sp/>=<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a76fcc6dbc3a599d794f357556801298b" kindref="member">Zx</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" kindref="member">Nx</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref>,</highlight></codeline>
+<codeline lineno="55" refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ea1c96e420eda712bdb7d30149dca9b84a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ea1c96e420eda712bdb7d30149dca9b84a" kindref="member">XPlusY</ref><sp/>=<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref>,</highlight></codeline>
+<codeline lineno="56" refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ea98319c0cfadf4a237d16b99336ade784" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ea98319c0cfadf4a237d16b99336ade784" kindref="member">XMinusY</ref><sp/>=<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" kindref="member">Nx</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" kindref="member">No</ref>,</highlight></codeline>
+<codeline lineno="57" refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ea80e05ad94b2217d5b423e1a93d24bfdf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ea80e05ad94b2217d5b423e1a93d24bfdf" kindref="member">YMinusX</ref><sp/>=<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a4ceb8925d42a26780931ee5536ebbb88" kindref="member">Ny</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" kindref="member">No</ref>,</highlight></codeline>
+<codeline lineno="58" refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ea0908b6d56aaa80b7f079e5e115e89e41" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Chips_1a341881db4c30c6d32529deb197b5834ea0908b6d56aaa80b7f079e5e115e89e41" kindref="member">XOrY</ref><sp/>=<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" kindref="member">Nx</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a4ceb8925d42a26780931ee5536ebbb88" kindref="member">Ny</ref><sp/>|<sp/><ref refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" kindref="member">No</ref>,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="classHack_1_1Chips_1_1Alu" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classHack_1_1Chips_1_1Alu" kindref="compound">Alu</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Chips_1_1Chip" kindref="compound" tooltip="Chip is the base class for all chips defined in this system. It uses a template integer for the _bits...">Chip</ref>&lt;uint8_t,<sp/>8&gt;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>evaluate();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="unionHack_1_1Chips_1_1bit64__t" kindref="compound">bit64_t</ref><sp/>_io;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Chips_1_1Alu_1af17c289dd1252a047f2bf651707603d4" kindref="member">Alu</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Chips_1_1Alu_1ab78360af9a64fb57b2144516bf03de8a" kindref="member">setFlags</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuint8__t" kindref="compound">uint8_t</ref>&amp;<sp/>flags);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classuint8__t" kindref="compound">uint8_t</ref><sp/><ref refid="classHack_1_1Chips_1_1Alu_1aabd92bfe8970447e25ccd70f0a951530" kindref="member">getFlags</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Chips_1_1Alu_1af3082e0b359aebd367e56457b1d8ef52" kindref="member">setX</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuint16__t" kindref="compound">uint16_t</ref>&amp;<sp/>x);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Chips_1_1Alu_1aa777e90d3af236329d8c7f9340a21a78" kindref="member">setY</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuint16__t" kindref="compound">uint16_t</ref>&amp;<sp/>y);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classuint16__t" kindref="compound">uint16_t</ref><sp/><ref refid="classHack_1_1Chips_1_1Alu_1a0a6f75d46a2d234c77033a30fef51326" kindref="member">getOut</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Chips_1_1Alu_1a2f8ef9292d754e3b65079a0bae64076b" kindref="member">getZr</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Chips_1_1Alu_1a85ae2abb1cd2db9cbc00d2d7131dc819" kindref="member">getNe</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Source/Chips/ALU.h"/>
+  </compounddef>
+</doxygen>

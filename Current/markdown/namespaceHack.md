@@ -1,0 +1,710 @@
+<a id="hack"></a>
+<h1>Hack</h1>
+<a id="namespaceHack"></a>
+<a href="https://github.com/CharlesCarley/HackComputer.md">~</a>
+<a href="indexpage.md#hack">Hack</a>
+<span class="inline-text">/</span>
+<a href="index.md#index">Index</a>
+<span class="inline-text">/</span>
+<span class="bold-text"><b>Hack</b></span>
+<br/>
+<br/>
+<a id="namespaces"></a>
+<h2>Namespaces</h2>
+<span class="icon-list-item"><a href="namespaceHack_1_1Assembler.md#assembler" class="icon-list-item"><img src="../images/namespace.svg" class="icon-list-item"/><span class="icon-list-item">Assembler</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="namespaceHack_1_1Binding.md#binding" class="icon-list-item"><img src="../images/namespace.svg" class="icon-list-item"/><span class="icon-list-item">Binding</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="namespaceHack_1_1Chips.md#chips" class="icon-list-item"><img src="../images/namespace.svg" class="icon-list-item"/><span class="icon-list-item">Chips</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="namespaceHack_1_1CommandLine.md#commandline" class="icon-list-item"><img src="../images/namespace.svg" class="icon-list-item"/><span class="icon-list-item">CommandLine</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#compiler" class="icon-list-item"><img src="../images/namespace.svg" class="icon-list-item"/><span class="icon-list-item">Compiler</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="namespaceHack_1_1Computer.md#computer" class="icon-list-item"><img src="../images/namespace.svg" class="icon-list-item"/><span class="icon-list-item">Computer</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="namespaceHack_1_1OperatingSystem.md#operatingsystem" class="icon-list-item"><img src="../images/namespace.svg" class="icon-list-item"/><span class="icon-list-item">OperatingSystem</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="namespaceHack_1_1Programs.md#programs" class="icon-list-item"><img src="../images/namespace.svg" class="icon-list-item"/><span class="icon-list-item">Programs</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="namespaceHack_1_1Ui.md#ui" class="icon-list-item"><img src="../images/namespace.svg" class="icon-list-item"/><span class="icon-list-item">Ui</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#virtualmachine" class="icon-list-item"><img src="../images/namespace.svg" class="icon-list-item"/><span class="icon-list-item">VirtualMachine</span>
+</a>
+</span>
+<br/>
+<a id="classes"></a>
+<h2>Classes</h2>
+<span class="icon-list-item"><a href="classHack_1_1Cache.md#cache" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Cache</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="classHack_1_1Char.md#char" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Char</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="classHack_1_1Console.md#console" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Console</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="classHack_1_1Exception.md#exception" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Exception</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="classHack_1_1FileSystem.md#filesystem" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">FileSystem</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="classHack_1_1IndexCache.md#indexcache" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">IndexCache</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="classHack_1_1KeyIndexCache.md#keyindexcache" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeyIndexCache</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="classHack_1_1ParseError.md#parseerror" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ParseError</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="classHack_1_1ParserBase.md#parserbase" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ParserBase</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="classHack_1_1ScannerBase.md#scannerbase" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ScannerBase</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="classHack_1_1StringUtils.md#stringutils" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">StringUtils</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="classHack_1_1TokenBase.md#tokenbase" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokenBase</span>
+</a>
+</span>
+<br/>
+<a id="enums"></a>
+<h2>Enums</h2>
+<span class="icon-list-item"><a href="#consolecolor" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ConsoleColor</span>
+</a>
+</span>
+<br/>
+<a id="typedefs"></a>
+<h2>Typedefs</h2>
+<span class="icon-list-item"><a href="#directory" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Directory</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#inputstringstream" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">InputStringStream</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#inttable" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">IntTable</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#istream" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">IStream</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#ostream" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">OStream</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#outputstringstream" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">OutputStringStream</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#path" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Path</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#patharray" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">PathArray</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#string" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">String</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#stringarray" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">StringArray</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#stringstream" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">StringStream</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#stringtable" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">StringTable</span>
+</a>
+</span>
+<br/>
+<a id="variables"></a>
+<h2>Variables</h2>
+<span class="icon-list-item"><a href="#__gbackground" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">__gBackground</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#__gforeground" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">__gForeground</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#basechars" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">BaseChars</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#basecharssize" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">BaseCharsSize</span>
+</a>
+</span>
+<br/>
+<a id="functions"></a>
+<h2>Functions</h2>
+<span class="icon-list-item"><a href="#isdecimal" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">isDecimal</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#isletter" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">isLetter</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#isnewline" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">isNewLine</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#iswhitespace" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">isWhiteSpace</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#mapcolor" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">MapColor</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#setcolor" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SetColor</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#streammerge" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">StreamMerge</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#stringcombine" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">StringCombine</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#stringcombine" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">StringCombine</span>
+</a>
+</span>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//[generated]#L1" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">[generated]</span>
+</a>
+</span>
+<br/>
+<a id="consolecolor"></a>
+<h2>ConsoleColor</h2>
+<span class="bold-text"><b>ConsoleColor</b></span>
+<br/>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_BLACK</span>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_DARK_BLUE</span>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_DARK_GREEN</span>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_DARK_CYAN</span>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_DARK_RED</span>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_DARK_MAGENTA</span>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_DARK_YELLOW</span>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_LIGHT_GREY</span>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_GREY</span>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_BLUE</span>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_GREEN</span>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_CYAN</span>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_RED</span>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_MAGENTA</span>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_YELLOW</span>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_WHITE</span>
+</span>
+</div>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/Console.h#L29" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Console.h</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="directory"></a>
+<h2>Directory</h2>
+<span class="inline-text">std::filesystem::directory_entry</span>
+<span class="bold-text"><b>Directory</b></span>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/FileSystem.cpp#L26" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">FileSystem.cpp</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="inputstringstream"></a>
+<h2>InputStringStream</h2>
+<span class="inline-text">std::istringstream</span>
+<span class="bold-text"><b>InputStringStream</b></span>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/String.h#L33" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">String.h</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="inttable"></a>
+<h2>IntTable</h2>
+<a href="classHack_1_1IndexCache.md#indexcache">IndexCache</a>
+<span class="inline-text">&lt; int &gt;</span>
+<span class="bold-text"><b>IntTable</b></span>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/ParserBase/ScannerBase.h#L29" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ScannerBase.h</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="istream"></a>
+<h2>IStream</h2>
+<span class="inline-text">std::istream</span>
+<span class="bold-text"><b>IStream</b></span>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/String.h#L35" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">String.h</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="ostream"></a>
+<h2>OStream</h2>
+<span class="inline-text">std::ostream</span>
+<span class="bold-text"><b>OStream</b></span>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/String.h#L36" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">String.h</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="outputstringstream"></a>
+<h2>OutputStringStream</h2>
+<span class="inline-text">std::ostringstream</span>
+<span class="bold-text"><b>OutputStringStream</b></span>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/String.h#L34" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">String.h</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="path"></a>
+<h2>Path</h2>
+<span class="inline-text">std::filesystem::path</span>
+<span class="bold-text"><b>Path</b></span>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/FileSystem.h#L29" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">FileSystem.h</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="patharray"></a>
+<h2>PathArray</h2>
+<span class="inline-text">std::vector&lt; </span>
+<a href="namespaceHack.md#path">Path</a>
+<span class="inline-text"> &gt;</span>
+<span class="bold-text"><b>PathArray</b></span>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/FileSystem.h#L30" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">FileSystem.h</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="string"></a>
+<h2>String</h2>
+<span class="inline-text">std::string</span>
+<span class="bold-text"><b>String</b></span>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/String.h#L30" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">String.h</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="stringarray"></a>
+<h2>StringArray</h2>
+<span class="inline-text">std::vector&lt; std::string &gt;</span>
+<span class="bold-text"><b>StringArray</b></span>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/String.h#L31" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">String.h</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="stringstream"></a>
+<h2>StringStream</h2>
+<span class="inline-text">std::stringstream</span>
+<span class="bold-text"><b>StringStream</b></span>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/String.h#L32" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">String.h</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="stringtable"></a>
+<h2>StringTable</h2>
+<a href="classHack_1_1IndexCache.md#indexcache">IndexCache</a>
+<span class="inline-text">&lt; </span>
+<a href="namespaceHack.md#string">String</a>
+<span class="inline-text"> &gt;</span>
+<span class="bold-text"><b>StringTable</b></span>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/ParserBase/ScannerBase.h#L28" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ScannerBase.h</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="__gbackground"></a>
+<h2>__gBackground</h2>
+<a href="namespaceHack.md#consolecolor">ConsoleColor</a>
+<span class="bold-text"><b>__gBackground</b></span>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/Console.cpp#L33" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Console.cpp</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="__gforeground"></a>
+<h2>__gForeground</h2>
+<a href="namespaceHack.md#consolecolor">ConsoleColor</a>
+<span class="bold-text"><b>__gForeground</b></span>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/Console.cpp#L32" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Console.cpp</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="basechars"></a>
+<h2>BaseChars</h2>
+<span class="inline-text">constexpr char</span>
+<span class="bold-text"><b>BaseChars</b></span>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/String.cpp#L118" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">String.cpp</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="basecharssize"></a>
+<h2>BaseCharsSize</h2>
+<span class="inline-text">constexpr size_t</span>
+<span class="bold-text"><b>BaseCharsSize</b></span>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/String.cpp#L130" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">String.cpp</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="isdecimal"></a>
+<h2>isDecimal</h2>
+<span class="inline-text">bool</span>
+<span class="bold-text"><b>isDecimal</b></span>
+<span class="italic-text"><i>(</i></span>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><span class="inline-text">const int</span>
+<span class="inline-text">ch</span>
+</span>
+</div>
+<span class="italic-text"><i>)</i></span>
+<a id="details"></a>
+<h4>Details</h4>
+<a id="returns"></a>
+<h4>Returns</h4>
+<span class="inline-text">True if the character is in the range of [0-9]</span>
+<br/>
+<br/>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/Char.h#L187" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Char.h</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="isletter"></a>
+<h2>isLetter</h2>
+<span class="inline-text">bool</span>
+<span class="bold-text"><b>isLetter</b></span>
+<span class="italic-text"><i>(</i></span>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><span class="inline-text">const int</span>
+<span class="inline-text">ch</span>
+</span>
+</div>
+<span class="italic-text"><i>)</i></span>
+<a id="details"></a>
+<h4>Details</h4>
+<a id="returns"></a>
+<h4>Returns</h4>
+<span class="inline-text">True if the character is in the range of [a-zA-Z]</span>
+<br/>
+<br/>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/Char.h#L193" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Char.h</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="isnewline"></a>
+<h2>isNewLine</h2>
+<span class="inline-text">bool</span>
+<span class="bold-text"><b>isNewLine</b></span>
+<span class="italic-text"><i>(</i></span>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><span class="inline-text">const int</span>
+<span class="inline-text">constant</span>
+</span>
+</div>
+<span class="italic-text"><i>)</i></span>
+<a id="details"></a>
+<h4>Details</h4>
+<a id="returns"></a>
+<h4>Returns</h4>
+<span class="inline-text">True if the supplied constant is a line feed character or a carriage return character. </span>
+<br/>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/Char.h#L172" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Char.h</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="iswhitespace"></a>
+<h2>isWhiteSpace</h2>
+<span class="inline-text">bool</span>
+<span class="bold-text"><b>isWhiteSpace</b></span>
+<span class="italic-text"><i>(</i></span>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><span class="inline-text">const int</span>
+<span class="inline-text">ch</span>
+</span>
+</div>
+<span class="italic-text"><i>)</i></span>
+<a id="details"></a>
+<h4>Details</h4>
+<a id="returns"></a>
+<h4>Returns</h4>
+<span class="inline-text">True if the character is a white space character, tab character or a newline character. </span>
+<br/>
+<br/>
+<a id="references"></a>
+<h4>References</h4>
+<span class="icon-list-item"><a href="namespaceHack.md#isnewline" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">isNewLine</span>
+</a>
+</span>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/Char.h#L181" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Char.h</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="mapcolor"></a>
+<h2>MapColor</h2>
+<span class="bold-text"><b>uint8_t</b></span>
+<span class="bold-text"><b>MapColor</b></span>
+<span class="italic-text"><i>(</i></span>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><span class="inline-text">const </span>
+<a href="namespaceHack.md#consolecolor">ConsoleColor</a>
+<span class="inline-text"> &amp;</span>
+<span class="inline-text">col</span>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><span class="inline-text">bool</span>
+<span class="inline-text">bg</span>
+</span>
+</div>
+<span class="italic-text"><i>)</i></span>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/Console.cpp#L36" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Console.cpp</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="setcolor"></a>
+<h2>SetColor</h2>
+<span class="inline-text">void</span>
+<span class="bold-text"><b>SetColor</b></span>
+<span class="italic-text"><i>(</i></span>
+<span class="italic-text"><i>)</i></span>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/Console.cpp#L97" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Console.cpp</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="streammerge"></a>
+<h2>StreamMerge</h2>
+<span class="inline-text">void</span>
+<span class="bold-text"><b>StreamMerge</b></span>
+<span class="italic-text"><i>(</i></span>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="namespaceHack.md#outputstringstream">OutputStringStream</a>
+<span class="inline-text"> &amp;</span>
+<span class="inline-text">dest</span>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><span class="inline-text">Args &amp;&amp;...</span>
+<span class="inline-text">args</span>
+</span>
+</div>
+<span class="italic-text"><i>)</i></span>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/String.h#L63" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">String.h</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="stringcombine"></a>
+<h2>StringCombine</h2>
+<span class="inline-text">void</span>
+<span class="bold-text"><b>StringCombine</b></span>
+<span class="italic-text"><i>(</i></span>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="namespaceHack.md#string">String</a>
+<span class="inline-text"> &amp;</span>
+<span class="inline-text">dest</span>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><span class="inline-text">Args &amp;&amp;...</span>
+<span class="inline-text">args</span>
+</span>
+</div>
+<span class="italic-text"><i>)</i></span>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/String.h#L71" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">String.h</span>
+</a>
+</span>
+<br/>
+<br/>
+<a id="stringcombine"></a>
+<h2>StringCombine</h2>
+<a href="namespaceHack.md#string">String</a>
+<span class="bold-text"><b>StringCombine</b></span>
+<span class="italic-text"><i>(</i></span>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><span class="inline-text">Args &amp;&amp;...</span>
+<span class="inline-text">args</span>
+</span>
+</div>
+<span class="italic-text"><i>)</i></span>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/String.h#L79" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">String.h</span>
+</a>
+</span>
+<br/>
+<br/>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="FullAdder_8cpp" kind="file" language="C++">
+    <compoundname>FullAdder.cpp</compoundname>
+    <includes refid="FullAdder_8h" local="yes">Chips/FullAdder.h</includes>
+    <includes refid="And_8h" local="yes">Chips/And.h</includes>
+    <includes refid="Or_8h" local="yes">Chips/Or.h</includes>
+    <includes refid="XOr_8h" local="yes">Chips/XOr.h</includes>
+    <incdepgraph>
+      <node id="1343">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="1344" relation="include">
+        </childnode>
+      </node>
+      <node id="1335">
+        <label>Chips/BitUtils.h</label>
+        <childnode refid="1336" relation="include">
+        </childnode>
+        <childnode refid="1337" relation="include">
+        </childnode>
+      </node>
+      <node id="1346">
+        <label>Chips/And.h</label>
+        <childnode refid="1334" relation="include">
+        </childnode>
+      </node>
+      <node id="1344">
+        <label>cstdint</label>
+      </node>
+      <node id="1340">
+        <label>string</label>
+      </node>
+      <node id="1333">
+        <label>Chips/FullAdder.h</label>
+        <childnode refid="1334" relation="include">
+        </childnode>
+      </node>
+      <node id="1347">
+        <label>Chips/Or.h</label>
+        <childnode refid="1334" relation="include">
+        </childnode>
+      </node>
+      <node id="1342">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="1338" relation="include">
+        </childnode>
+        <childnode refid="1343" relation="include">
+        </childnode>
+        <childnode refid="1345" relation="include">
+        </childnode>
+      </node>
+      <node id="1345">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="1344" relation="include">
+        </childnode>
+        <childnode refid="1341" relation="include">
+        </childnode>
+        <childnode refid="1343" relation="include">
+        </childnode>
+      </node>
+      <node id="1337">
+        <label>Utils/Console.h</label>
+        <childnode refid="1338" relation="include">
+        </childnode>
+        <childnode refid="1342" relation="include">
+        </childnode>
+      </node>
+      <node id="1336">
+        <label>bitset</label>
+      </node>
+      <node id="1332">
+        <label>Source/Chips/FullAdder.cpp</label>
+        <link refid="FullAdder_8cpp"/>
+        <childnode refid="1333" relation="include">
+        </childnode>
+        <childnode refid="1346" relation="include">
+        </childnode>
+        <childnode refid="1347" relation="include">
+        </childnode>
+        <childnode refid="1348" relation="include">
+        </childnode>
+      </node>
+      <node id="1341">
+        <label>vector</label>
+      </node>
+      <node id="1339">
+        <label>sstream</label>
+      </node>
+      <node id="1334">
+        <label>Chips/Chip.h</label>
+        <childnode refid="1335" relation="include">
+        </childnode>
+        <childnode refid="1337" relation="include">
+        </childnode>
+      </node>
+      <node id="1348">
+        <label>Chips/XOr.h</label>
+        <childnode refid="1334" relation="include">
+        </childnode>
+      </node>
+      <node id="1338">
+        <label>String.h</label>
+        <childnode refid="1339" relation="include">
+        </childnode>
+        <childnode refid="1340" relation="include">
+        </childnode>
+        <childnode refid="1341" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceHack_1_1Chips">Hack::Chips</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>Charles<sp/>Carley.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>software<sp/>is<sp/>provided<sp/>&apos;as-is&apos;,<sp/>without<sp/>any<sp/>express<sp/>or<sp/>implied</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/>warranty.<sp/>In<sp/>no<sp/>event<sp/>will<sp/>the<sp/>authors<sp/>be<sp/>held<sp/>liable<sp/>for<sp/>any<sp/>damages</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>arising<sp/>from<sp/>the<sp/>use<sp/>of<sp/>this<sp/>software.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>Permission<sp/>is<sp/>granted<sp/>to<sp/>anyone<sp/>to<sp/>use<sp/>this<sp/>software<sp/>for<sp/>any<sp/>purpose,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>including<sp/>commercial<sp/>applications,<sp/>and<sp/>to<sp/>alter<sp/>it<sp/>and<sp/>redistribute<sp/>it</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/>freely,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>restrictions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>1.<sp/>The<sp/>origin<sp/>of<sp/>this<sp/>software<sp/>must<sp/>not<sp/>be<sp/>misrepresented;<sp/>you<sp/>must<sp/>not</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>claim<sp/>that<sp/>you<sp/>wrote<sp/>the<sp/>original<sp/>software.<sp/>If<sp/>you<sp/>use<sp/>this<sp/>software</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>in<sp/>a<sp/>product,<sp/>an<sp/>acknowledgment<sp/>in<sp/>the<sp/>product<sp/>documentation<sp/>would<sp/>be</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>appreciated<sp/>but<sp/>is<sp/>not<sp/>required.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>2.<sp/>Altered<sp/>source<sp/>versions<sp/>must<sp/>be<sp/>plainly<sp/>marked<sp/>as<sp/>such,<sp/>and<sp/>must<sp/>not<sp/>be</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>misrepresented<sp/>as<sp/>being<sp/>the<sp/>original<sp/>software.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/FullAdder.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/And.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Or.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/XOr.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceHack_1_1Chips" kindref="compound">Hack::Chips</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29" refid="classHack_1_1Chips_1_1FullAdder_1aacdc3b474e0d525611f29516618f5b28" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Chips_1_1FullAdder_1aacdc3b474e0d525611f29516618f5b28" kindref="member">FullAdder::FullAdder</ref>()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Chips_1_1Chip_1a5a604431fa35bc87e0d7f4328b4ad4a1" kindref="member" tooltip="Zeros all bits except for the bit at the supplied index. ">assignBit</ref>(7);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classHack_1_1Chips_1_1FullAdder_1a64891928d2e7b30966aba6eeff53d273" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Chips_1_1FullAdder_1a64891928d2e7b30966aba6eeff53d273" kindref="member">FullAdder::setA</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>a)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Chips_1_1Chip_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(0,<sp/>a);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Chips_1_1Chip_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="classHack_1_1Chips_1_1FullAdder_1a6afaf79fb36b108b83d7ae78f5557d07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Chips_1_1FullAdder_1a6afaf79fb36b108b83d7ae78f5557d07" kindref="member">FullAdder::setB</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>b)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Chips_1_1Chip_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(1,<sp/>b);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Chips_1_1Chip_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classHack_1_1Chips_1_1FullAdder_1a45aedf6321833672440a6c45e26c0718" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Chips_1_1FullAdder_1a45aedf6321833672440a6c45e26c0718" kindref="member">FullAdder::setCary</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>cary)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Chips_1_1Chip_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(2,<sp/>cary);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Chips_1_1Chip_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="classHack_1_1Chips_1_1FullAdder_1a1cbc633d0a2501de5094feeac597516c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Chips_1_1FullAdder_1a1cbc633d0a2501de5094feeac597516c" kindref="member">FullAdder::getSum</ref>()</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classHack_1_1Chips_1_1Chip_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(7))</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Chips_1_1Chip_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(6);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classHack_1_1Chips_1_1FullAdder_1a58e6c589ca23ca70f631b584fb98c31c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Chips_1_1FullAdder_1a58e6c589ca23ca70f631b584fb98c31c" kindref="member">FullAdder::getCary</ref>()</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classHack_1_1Chips_1_1Chip_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(7))</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Chips_1_1Chip_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(5);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>FullAdder::evaluate()</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Chips_1_1XOr" kindref="compound">XOr</ref><sp/>x1,<sp/>x2;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Chips_1_1And" kindref="compound">And</ref><sp/>a1,<sp/>a2;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Chips_1_1Or" kindref="compound">Or</ref><sp/><sp/>o1;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x1.<ref refid="classHack_1_1Chips_1_1XOr_1a8c95c1e512936632c88c673a4f6d0b31" kindref="member">setA</ref>(<ref refid="classHack_1_1Chips_1_1Chip_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(0));</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x1.<ref refid="classHack_1_1Chips_1_1XOr_1a5b5680c517fe3da9ea28552c22639fdf" kindref="member">setB</ref>(<ref refid="classHack_1_1Chips_1_1Chip_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(1));</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a1.<ref refid="classHack_1_1Chips_1_1And_1a90b4df330a1148a1ef278d0b205434c8" kindref="member">setA</ref>(<ref refid="classHack_1_1Chips_1_1Chip_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(0));</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a1.<ref refid="classHack_1_1Chips_1_1And_1a8bb4d4c09098144dd40f0d973958048c" kindref="member">setB</ref>(<ref refid="classHack_1_1Chips_1_1Chip_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(1));</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x2.<ref refid="classHack_1_1Chips_1_1XOr_1a8c95c1e512936632c88c673a4f6d0b31" kindref="member">setA</ref>(x1.<ref refid="classHack_1_1Chips_1_1XOr_1a63b186e9bcc271c6b5895f5ed4e8ac4b" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x2.<ref refid="classHack_1_1Chips_1_1XOr_1a5b5680c517fe3da9ea28552c22639fdf" kindref="member">setB</ref>(<ref refid="classHack_1_1Chips_1_1Chip_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(2));</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a2.<ref refid="classHack_1_1Chips_1_1And_1a90b4df330a1148a1ef278d0b205434c8" kindref="member">setA</ref>(x1.<ref refid="classHack_1_1Chips_1_1XOr_1a63b186e9bcc271c6b5895f5ed4e8ac4b" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a2.<ref refid="classHack_1_1Chips_1_1And_1a8bb4d4c09098144dd40f0d973958048c" kindref="member">setB</ref>(<ref refid="classHack_1_1Chips_1_1Chip_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(2));</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>o1.<ref refid="classHack_1_1Chips_1_1Or_1ad564d4175209d9e1acb2b3500f3d10b6" kindref="member">setA</ref>(a2.<ref refid="classHack_1_1Chips_1_1And_1af7f3b9917ef2925cce68417e117b4824" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>o1.<ref refid="classHack_1_1Chips_1_1Or_1a2757aa09d39124e39e48148d549fcfb7" kindref="member">setB</ref>(a1.<ref refid="classHack_1_1Chips_1_1And_1af7f3b9917ef2925cce68417e117b4824" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Chips_1_1Chip_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(6,<sp/>x2.<ref refid="classHack_1_1Chips_1_1XOr_1a63b186e9bcc271c6b5895f5ed4e8ac4b" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Chips_1_1Chip_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(5,<sp/>o1.<ref refid="classHack_1_1Chips_1_1Or_1a8623bc37bda7b709a5c750f67a9d28c8" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Chips_1_1Chip_1a21ec8cfbaba9e08deb3607c7eff9ad63" kindref="member" tooltip="Clears the bit at the supplied index. ">clearBit</ref>(7);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Source/Chips/FullAdder.cpp"/>
+  </compounddef>
+</doxygen>

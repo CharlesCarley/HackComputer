@@ -1,0 +1,18 @@
+<a id="hackcomputer"></a>
+<h1>HackComputer</h1>
+<a id="indexpage"></a>
+<a href="https://github.com/CharlesCarley/HackComputer.md">~</a>
+<a href="indexpage.md#hack">Hack</a>
+<span class="inline-text">/</span>
+<a href="index.md#index">Index</a>
+<span class="inline-text">/</span>
+<span class="bold-text"><b>index</b></span>
+<br/>
+<br/>
+<span class="inline-text">This repository is my implementation of the </span>
+<a href="namespaceHack.md#hack">Hack</a>
+<span class="inline-text"> computer in C++ from the NAnd2Tetris course. It is a bit over the top and does not strictly adhere to the course. I chose to opt out of the certificate of completion instead chose to support the authors by buying the e-book. I wanted something self-contained in the end. In order to do that, the supplied tools in the course material had to be written from scratch (to some extent). </span>
+</div>
+</div>
+</body>
+</html>

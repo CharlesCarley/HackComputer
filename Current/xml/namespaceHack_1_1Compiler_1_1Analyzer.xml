@@ -1,0 +1,500 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespaceHack_1_1Compiler_1_1Analyzer" kind="namespace" language="C++">
+    <compoundname>Hack::Compiler::Analyzer</compoundname>
+    <innerclass refid="structHack_1_1Compiler_1_1Analyzer_1_1KeywordTable" prot="public">Hack::Compiler::Analyzer::KeywordTable</innerclass>
+    <innerclass refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser" prot="public">Hack::Compiler::Analyzer::Parser</innerclass>
+    <innerclass refid="classHack_1_1Compiler_1_1Analyzer_1_1ParseUtils" prot="public">Hack::Compiler::Analyzer::ParseUtils</innerclass>
+    <innerclass refid="classHack_1_1Compiler_1_1Analyzer_1_1Scanner" prot="public">Hack::Compiler::Analyzer::Scanner</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213e" prot="public" static="no" strong="no">
+        <type></type>
+        <name>TokenType</name>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea6b35e077d6922de3009e3b220254c978" prot="public">
+          <name>TokError</name>
+          <initializer>= -2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea1ba4f9d692cc431d36fb140c844a9aaa" prot="public">
+          <name>TokEof</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea4fdcf1312581f32a2b868e5d8887b130" prot="public">
+          <name>TokNull</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213eaa145d7ff1b1544932f018e4c7416e3f0" prot="public">
+          <name>TokInt</name>
+          <initializer>= &apos;A&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea891b4734b63678b1e02b1b8b9f13f9b2" prot="public">
+          <name>TokId</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea5ed57746b9abdc5453a78be28262d994" prot="public">
+          <name>TokString</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea3683a4a8d9bdc7b0b2464d047b288dcf" prot="public">
+          <name>TokKwClass</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213eafb1fb17048d6b03064d3ff99ab8d541d" prot="public">
+          <name>TokKwConstructor</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea8378aa98bd996b1a1c8c8d7613d5d381" prot="public">
+          <name>TokKwFunction</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213eafdb4aa87958bd43b2b033989acf334ce" prot="public">
+          <name>TokKwMethod</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213eaac16f1f376e1c88c29e36c61541ed6ed" prot="public">
+          <name>TokKwField</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea41ff45e379695623a95dc6ae81ba184a" prot="public">
+          <name>TokKwStatic</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213eabee3fe36ff107d8c12098b56a6dfd3be" prot="public">
+          <name>TokKwVar</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea00c5a3bd7d23d99702b1e4a468d703eb" prot="public">
+          <name>TokKwInt</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea69ed9ded5c7bc79c1f9f605af67db523" prot="public">
+          <name>TokKwChar</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ead3accc88d83f2804a36fb69c3a69efc5" prot="public">
+          <name>TokKwBool</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213eaa943f9dd346815c158a3b016ce8b529d" prot="public">
+          <name>TokKwVoid</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213eaeeac2f18a174d237cf037b611f8fdfe5" prot="public">
+          <name>TokKwLet</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea0a7f0a131aeb14c0fa31a04334f8a346" prot="public">
+          <name>TokKwDo</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea7fe7d6fd910001a9f951e25c694ba7b4" prot="public">
+          <name>TokKwIf</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea46582649acdbceba292a221af2333715" prot="public">
+          <name>TokKwElse</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213eaa71bf47574690cb47f749bafef229864" prot="public">
+          <name>TokKwWhile</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213eacc7bf307a84d19b1d06537181b6e4318" prot="public">
+          <name>TokKwReturn</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea691d340728bd1c0633eb4956e30214bd" prot="public">
+          <name>TokKwTrue</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213eaea87287587de0856df0952777164bc59" prot="public">
+          <name>TokKwFalse</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea2fb9ed390da565ed30445e486683fd12" prot="public">
+          <name>TokKwNull</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213eabed8d290ba00a9c4a2f05ebed54483bd" prot="public">
+          <name>TokKwThis</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213eaaf652b4a06fb74f6dc211693e2e769a3" prot="public">
+          <name>TokKwInlineVm</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213eadcf7897b3f892f5487862015ab078438" prot="public">
+          <name>TokKwInlineAsm</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea7137a22e01a5be5107a978261d9e516c" prot="public">
+          <name>TokOpPlus</name>
+          <initializer>= &apos;+&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea43ad123222961ed0ba51292c5477456e" prot="public">
+          <name>TokOpMinus</name>
+          <initializer>= &apos;-&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea0b94377eace5b63712399ac9217a16f3" prot="public">
+          <name>TokOpMultiply</name>
+          <initializer>= &apos;*&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213eafb37aafcf316cd19f283b70185a6c7db" prot="public">
+          <name>TokOpDivide</name>
+          <initializer>= &apos;/&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213eae145e1948582f41d8142b03f672577e0" prot="public">
+          <name>TokOpAnd</name>
+          <initializer>= &apos;&amp;&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea9e7478436d156c0c3a1db85422186218" prot="public">
+          <name>TokOpOr</name>
+          <initializer>= &apos;|&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea6d8bef72aaef7e066efde4ac33be78b7" prot="public">
+          <name>TokOpNot</name>
+          <initializer>= &apos;!&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213eafb2ee9a2e649e7cca8fae5a74f4150ea" prot="public">
+          <name>TokOpGt</name>
+          <initializer>= &apos;&gt;&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea35aaca16e06f074aac288a35ea1fb334" prot="public">
+          <name>TokOpLt</name>
+          <initializer>= &apos;&lt;&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea59302097276b3efce9d00a1b56260b53" prot="public">
+          <name>TokOpEq</name>
+          <initializer>= &apos;=&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213eafb944d2a0e4ad0c586816d56c1029078" prot="public">
+          <name>TokSymLBracket</name>
+          <initializer>= &apos;[&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213eaaf7e383183280f916f91b4cc577b6666" prot="public">
+          <name>TokSymRBracket</name>
+          <initializer>= &apos;]&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea75b99e6336f6b1f0c48e8b0152258abe" prot="public">
+          <name>TokSymLBrace</name>
+          <initializer>= &apos;{&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea74d79d469720fac9d5dd69b4875a1b84" prot="public">
+          <name>TokSymRBrace</name>
+          <initializer>= &apos;}&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea3e31bd9b170ad514bb5a76e879112bf4" prot="public">
+          <name>TokSymLPar</name>
+          <initializer>= &apos;(&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea832c288ebb3bb5101fcf65fe48ef307d" prot="public">
+          <name>TokSymRPar</name>
+          <initializer>= &apos;)&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea3f40c46f83b01cd10c2f0e44f488b7a0" prot="public">
+          <name>TokSymPeriod</name>
+          <initializer>= &apos;.&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213ea17c04349dc66747e992f5f8fe52c61bb" prot="public">
+          <name>TokSymComma</name>
+          <initializer>= &apos;,&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Compiler_1_1Analyzer_1af2b20fa0841330bfd08bb1cbae04213eafbeba2a07000ac4e4118f1b8f2a9ea20" prot="public">
+          <name>TokSymSemicolon</name>
+          <initializer>= &apos;;&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Token.h" line="28" column="1" bodyfile="Source/Compiler/Analyzer/Token.h" bodystart="27" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceHack_1_1Compiler_1_1Analyzer_1a5d51cba76b1c9a4e05f7a36a0912c98e" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &gt;</type>
+        <definition>using Hack::Compiler::Analyzer::CodeCache = typedef std::vector&lt;String&gt;</definition>
+        <argsstring></argsstring>
+        <name>CodeCache</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Scanner.h" line="28" column="1" bodyfile="Source/Compiler/Analyzer/Scanner.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceHack_1_1Compiler_1_1Analyzer_1a7219e6aa13345f38c3d64d1242336703" prot="public" static="no">
+        <type><ref refid="classHack_1_1Compiler_1_1NodeUtils" kindref="compound">NodeUtils</ref></type>
+        <definition>using Hack::Compiler::Analyzer::Nu = typedef NodeUtils</definition>
+        <argsstring></argsstring>
+        <name>Nu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.cpp" line="33" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceHack_1_1Compiler_1_1Analyzer_1a6f8114e1c96a4db6a412869b5ff7c072" prot="public" static="no">
+        <type><ref refid="classHack_1_1Compiler_1_1Analyzer_1_1ParseUtils" kindref="compound">ParseUtils</ref></type>
+        <definition>using Hack::Compiler::Analyzer::Pu = typedef ParseUtils</definition>
+        <argsstring></argsstring>
+        <name>Pu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Parser.cpp" line="32" column="1" bodyfile="Source/Compiler/Analyzer/Parser.cpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceHack_1_1Compiler_1_1Analyzer_1a365a4ba8e3278740601f02b8d6c45910" prot="public" static="no">
+        <type><ref refid="classHack_1_1TokenBase" kindref="compound">TokenBase</ref></type>
+        <definition>using Hack::Compiler::Analyzer::Token = typedef TokenBase</definition>
+        <argsstring></argsstring>
+        <name>Token</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Token.h" line="81" column="1" bodyfile="Source/Compiler/Analyzer/Token.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceHack_1_1Compiler_1_1Analyzer_1aa918b67ea44f46e6cab35259d30faf91" prot="public" static="no" mutable="no">
+        <type>constexpr <ref refid="structHack_1_1Compiler_1_1Analyzer_1_1KeywordTable" kindref="compound">KeywordTable</ref></type>
+        <definition>constexpr KeywordTable Hack::Compiler::Analyzer::Reserved[]</definition>
+        <argsstring>[]</argsstring>
+        <name>Reserved</name>
+        <initializer>= {
+        {&quot;class&quot;, TokKwClass},
+        {&quot;constructor&quot;, TokKwConstructor},
+        {&quot;function&quot;, TokKwFunction},
+        {&quot;method&quot;, TokKwMethod},
+        {&quot;field&quot;, TokKwField},
+        {&quot;static&quot;, TokKwStatic},
+        {&quot;var&quot;, TokKwVar},
+        {&quot;int&quot;, TokKwInt},
+        {&quot;char&quot;, TokKwChar},
+        {&quot;bool&quot;, TokKwBool},
+        {&quot;void&quot;, TokKwVoid},
+        {&quot;let&quot;, TokKwLet},
+        {&quot;do&quot;, TokKwDo},
+        {&quot;if&quot;, TokKwIf},
+        {&quot;else&quot;, TokKwElse},
+        {&quot;while&quot;, TokKwWhile},
+        {&quot;return&quot;, TokKwReturn},
+        {&quot;true&quot;, TokKwTrue},
+        {&quot;false&quot;, TokKwFalse},
+        {&quot;null&quot;, TokKwNull},
+        {&quot;this&quot;, TokKwThis},
+        {&quot;_vm&quot;, TokKwInlineVm},
+        {&quot;_asm&quot;, TokKwInlineAsm},
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Scanner.cpp" line="39" column="1" bodyfile="Source/Compiler/Analyzer/Scanner.cpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceHack_1_1Compiler_1_1Analyzer_1ab6f3ea655150bf9a53bbfbd4e3f0cf95" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Compiler::Analyzer::isValidCharacter</definition>
+        <argsstring>(const int ch)</argsstring>
+        <name>isValidCharacter</name>
+        <param>
+          <type>const int</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Scanner.cpp" line="66" column="1" bodyfile="Source/Compiler/Analyzer/Scanner.cpp" bodystart="66" bodyend="69"/>
+        <references refid="namespaceHack_1a3b7e26319acf069b65ddb8e0f3f34812" compoundref="Char_8h" startline="193" endline="196">Hack::isLetter</references>
+        <references refid="namespaceHack_1a3072f15c6cc44192ad127f00ab7430cd" compoundref="Char_8h" startline="187" endline="190">Hack::isDecimal</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/Compiler/Analyzer/Parser.cpp" line="31" column="1"/>
+  </compounddef>
+</doxygen>

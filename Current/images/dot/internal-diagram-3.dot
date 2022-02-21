@@ -1,0 +1,27 @@
+digraph {
+ rankdir = "TB"
+ bgcolor = none;
+ node [
+   shape     = none
+   fontname  = "Segoe UI"
+   fontsize  = "11"
+   fontcolor = "#222222ff"
+   color     = "#cacde8ff"
+   fillcolor = "#e6e8faff"
+   margin    = "0.01"
+ ]
+ edge [
+   arrowsize = "0.25"
+   fontname  = "Segoe UI"
+   fontsize  = "11"
+   color     = "#606ee0ff"
+   fontcolor = "#222222ff"
+ ]
+ 0[
+   label = "Chip&lt; bit64_t, 64 &gt;"
+ ]
+ 1[
+   label = "Add16"
+ ]
+ 0->1
+}

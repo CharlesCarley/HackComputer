@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structHack_1_1Chips_1_1CpuState" kind="struct" language="C++" prot="public">
+    <compoundname>Hack::Chips::CpuState</compoundname>
+    <includes local="no">Source/Chips/Computer.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structHack_1_1Chips_1_1CpuState_1a7b6ea40228d9e23b00fd2ee43133a6f3" prot="public" static="no" mutable="no">
+        <type><ref refid="classuint16__t" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::CpuState::addrM</definition>
+        <argsstring></argsstring>
+        <name>addrM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Computer.h" line="34" column="1" bodyfile="Source/Chips/Computer.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structHack_1_1Chips_1_1CpuState_1a5606ebaf9ae4d826b421dce343c223f9" prot="public" static="no" mutable="no">
+        <type><ref refid="classuint16__t" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::CpuState::clock</definition>
+        <argsstring></argsstring>
+        <name>clock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Computer.h" line="37" column="1" bodyfile="Source/Chips/Computer.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structHack_1_1Chips_1_1CpuState_1a3bdae3da64a41fd9b98171cea0f1b1c1" prot="public" static="no" mutable="no">
+        <type><ref refid="classuint16__t" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::CpuState::inst</definition>
+        <argsstring></argsstring>
+        <name>inst</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Computer.h" line="38" column="1" bodyfile="Source/Chips/Computer.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structHack_1_1Chips_1_1CpuState_1a4898fb8aa66f45e0e07d4b754b8d93ba" prot="public" static="no" mutable="no">
+        <type><ref refid="classuint16__t" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::CpuState::outM</definition>
+        <argsstring></argsstring>
+        <name>outM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Computer.h" line="33" column="1" bodyfile="Source/Chips/Computer.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structHack_1_1Chips_1_1CpuState_1a8ff12fb359df46f8c2b7bb4536b03bd2" prot="public" static="no" mutable="no">
+        <type><ref refid="classuint16__t" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::CpuState::pc</definition>
+        <argsstring></argsstring>
+        <name>pc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Computer.h" line="32" column="1" bodyfile="Source/Chips/Computer.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structHack_1_1Chips_1_1CpuState_1ae932a7489f8bdecf33ffd43c9410130f" prot="public" static="no" mutable="no">
+        <type><ref refid="classuint16__t" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::CpuState::ram</definition>
+        <argsstring></argsstring>
+        <name>ram</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Computer.h" line="40" column="1" bodyfile="Source/Chips/Computer.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structHack_1_1Chips_1_1CpuState_1a764dbb644ba5bb323c97e09cb26ae122" prot="public" static="no" mutable="no">
+        <type><ref refid="classuint16__t" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::CpuState::regA</definition>
+        <argsstring></argsstring>
+        <name>regA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Computer.h" line="36" column="1" bodyfile="Source/Chips/Computer.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structHack_1_1Chips_1_1CpuState_1a918ad89614f75599104e9c1a8123c916" prot="public" static="no" mutable="no">
+        <type><ref refid="classuint16__t" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::CpuState::regD</definition>
+        <argsstring></argsstring>
+        <name>regD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Computer.h" line="35" column="1" bodyfile="Source/Chips/Computer.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structHack_1_1Chips_1_1CpuState_1af9c11b4b51b6cd89cdfdcccdf52341db" prot="public" static="no" mutable="no">
+        <type><ref refid="classuint16__t" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::CpuState::reset</definition>
+        <argsstring></argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Computer.h" line="41" column="1" bodyfile="Source/Chips/Computer.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structHack_1_1Chips_1_1CpuState_1af1398587a09d5722d1d794f87d427a35" prot="public" static="no" mutable="no">
+        <type><ref refid="classuint16__t" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::CpuState::writeM</definition>
+        <argsstring></argsstring>
+        <name>writeM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Computer.h" line="39" column="1" bodyfile="Source/Chips/Computer.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="113">
+        <label>uint16_t</label>
+        <link refid="classuint16__t"/>
+      </node>
+      <node id="112">
+        <label>Hack::Chips::CpuState</label>
+        <link refid="structHack_1_1Chips_1_1CpuState"/>
+        <childnode refid="113" relation="usage">
+          <edgelabel>regA</edgelabel>
+          <edgelabel>outM</edgelabel>
+          <edgelabel>regD</edgelabel>
+          <edgelabel>pc</edgelabel>
+          <edgelabel>inst</edgelabel>
+          <edgelabel>reset</edgelabel>
+          <edgelabel>ram</edgelabel>
+          <edgelabel>clock</edgelabel>
+          <edgelabel>addrM</edgelabel>
+          <edgelabel>writeM</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Chips/Computer.h" line="31" column="1" bodyfile="Source/Chips/Computer.h" bodystart="30" bodyend="42"/>
+    <listofallmembers>
+      <member refid="structHack_1_1Chips_1_1CpuState_1a7b6ea40228d9e23b00fd2ee43133a6f3" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>addrM</name></member>
+      <member refid="structHack_1_1Chips_1_1CpuState_1a5606ebaf9ae4d826b421dce343c223f9" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>clock</name></member>
+      <member refid="structHack_1_1Chips_1_1CpuState_1a3bdae3da64a41fd9b98171cea0f1b1c1" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>inst</name></member>
+      <member refid="structHack_1_1Chips_1_1CpuState_1a4898fb8aa66f45e0e07d4b754b8d93ba" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>outM</name></member>
+      <member refid="structHack_1_1Chips_1_1CpuState_1a8ff12fb359df46f8c2b7bb4536b03bd2" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>pc</name></member>
+      <member refid="structHack_1_1Chips_1_1CpuState_1ae932a7489f8bdecf33ffd43c9410130f" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>ram</name></member>
+      <member refid="structHack_1_1Chips_1_1CpuState_1a764dbb644ba5bb323c97e09cb26ae122" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>regA</name></member>
+      <member refid="structHack_1_1Chips_1_1CpuState_1a918ad89614f75599104e9c1a8123c916" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>regD</name></member>
+      <member refid="structHack_1_1Chips_1_1CpuState_1af9c11b4b51b6cd89cdfdcccdf52341db" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>reset</name></member>
+      <member refid="structHack_1_1Chips_1_1CpuState_1af1398587a09d5722d1d794f87d427a35" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>writeM</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

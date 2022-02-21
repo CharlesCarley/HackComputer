@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="md_Source_Chips_README" kind="page">
+    <compoundname>md_Source_Chips_README</compoundname>
+    <title>Chips</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><heading level="2">Memory Segments</heading>
+</para><para>This implementation assigns the following meanings to the virtual memory.</para><para><table rows="15" cols="4"><row>
+<entry thead="yes"><para>Index  </para></entry><entry thead="yes"><para>Meaning  </para></entry><entry thead="yes"><para>Value  </para></entry><entry thead="yes"><para>Notes   </para></entry></row>
+<row>
+<entry thead="no"><para>0  </para></entry><entry thead="no"><para>Stack pointer  </para></entry><entry thead="no"><para>256  </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>1  </para></entry><entry thead="no"><para>Local segment  </para></entry><entry thead="no"><para>0  </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>2  </para></entry><entry thead="no"><para>Argument segment  </para></entry><entry thead="no"><para>0  </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>3  </para></entry><entry thead="no"><para>This segment  </para></entry><entry thead="no"><para>2048  </para></entry><entry thead="no"><para>base address on the heap   </para></entry></row>
+<row>
+<entry thead="no"><para>4  </para></entry><entry thead="no"><para>That segment  </para></entry><entry thead="no"><para>2048  </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>5-12  </para></entry><entry thead="no"><para>Temp general registers  </para></entry><entry thead="no"><para>0  </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>13  </para></entry><entry thead="no"><para>Working swap 1  </para></entry><entry thead="no"><para>0  </para></entry><entry thead="no"><para>Used internally   </para></entry></row>
+<row>
+<entry thead="no"><para>14  </para></entry><entry thead="no"><para>Working swap 2  </para></entry><entry thead="no"><para>0  </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>15  </para></entry><entry thead="no"><para>Working swap 3  </para></entry><entry thead="no"><para>0  </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>16-255  </para></entry><entry thead="no"><para>Static address space  </para></entry><entry thead="no"><para>0  </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>256-2047  </para></entry><entry thead="no"><para>Working stack  </para></entry><entry thead="no"><para>0  </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>2048-16383  </para></entry><entry thead="no"><para>Working heap  </para></entry><entry thead="no"><para>0  </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>16384-24575  </para></entry><entry thead="no"><para>Screen memory  </para></entry><entry thead="no"><para>0  </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>24576-24577  </para></entry><entry thead="no"><para>Keyboard memory  </para></entry><entry thead="no"><para>0  </para></entry><entry thead="no"><para></para></entry></row>
+</table>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

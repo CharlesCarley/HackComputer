@@ -1,0 +1,346 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classHack_1_1Binding_1_1ComputerWrapper" kind="class" language="C++" prot="public">
+    <compoundname>Hack::Binding::ComputerWrapper</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classHack_1_1Binding_1_1ComputerWrapper_1a2be699b9e2f1f7c90e0b5a8121b68bd4" prot="private" static="no" mutable="yes">
+        <type><ref refid="classuint8__t" kindref="compound">uint8_t</ref> *</type>
+        <definition>uint8_t* Hack::Binding::ComputerWrapper::_bytes</definition>
+        <argsstring></argsstring>
+        <name>_bytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="146" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHack_1_1Binding_1_1ComputerWrapper_1a1cef4178a614dd5a3f1c03cd2d7f8694" prot="private" static="no" mutable="yes">
+        <type><ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
+        <definition>String Hack::Binding::ComputerWrapper::_cache</definition>
+        <argsstring></argsstring>
+        <name>_cache</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="143" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHack_1_1Binding_1_1ComputerWrapper_1a5d4ea7d96921b094bfd243488d7622c9" prot="private" static="no" mutable="no">
+        <type><ref refid="classHack_1_1Chips_1_1Computer" kindref="compound">Computer</ref> *</type>
+        <definition>Computer* Hack::Binding::ComputerWrapper::_computer</definition>
+        <argsstring></argsstring>
+        <name>_computer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="139" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHack_1_1Binding_1_1ComputerWrapper_1ae739b9cb17508590869db049aecf4854" prot="private" static="no" mutable="yes">
+        <type><ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
+        <definition>String Hack::Binding::ComputerWrapper::_error</definition>
+        <argsstring></argsstring>
+        <name>_error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="144" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHack_1_1Binding_1_1ComputerWrapper_1a07456b3c9a0db3d6c7fca6350addb607" prot="private" static="no" mutable="no">
+        <type><ref refid="classHack_1_1Binding_1_1RamWrapper" kindref="compound">RamWrapper</ref> *</type>
+        <definition>RamWrapper* Hack::Binding::ComputerWrapper::_ram</definition>
+        <argsstring></argsstring>
+        <name>_ram</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="141" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHack_1_1Binding_1_1ComputerWrapper_1aaa19f428c765693ffb65a0f2f8ac1090" prot="private" static="no" mutable="no">
+        <type><ref refid="classHack_1_1Binding_1_1RomWrapper" kindref="compound">RomWrapper</ref> *</type>
+        <definition>RomWrapper* Hack::Binding::ComputerWrapper::_rom</definition>
+        <argsstring></argsstring>
+        <name>_rom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="140" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHack_1_1Binding_1_1ComputerWrapper_1a3377e8d94f8b824a9e84ab484658a8ca" prot="private" static="no" mutable="no">
+        <type>const uint64_t</type>
+        <definition>const uint64_t Hack::Binding::ComputerWrapper::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <initializer>= <ref refid="namespaceHack_1_1Binding_1a0a115b3347cdfd195e6032ae7fca252d" kindref="member">ComputerType</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="137" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classHack_1_1Binding_1_1ComputerWrapper_1a05701422e12ee10d04b8bac96cda6c63" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Binding::ComputerWrapper::ComputerWrapper</definition>
+        <argsstring>()</argsstring>
+        <name>ComputerWrapper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="149" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="149" bodyend="156"/>
+        <references refid="classHack_1_1Chips_1_1Computer_1aa88d19943c50711fbe12d82e901fb21a" compoundref="Computer_8h" startline="87" endline="90">Hack::Chips::Computer::rom</references>
+        <references refid="classHack_1_1Chips_1_1Computer_1abf924e51c33908fd52168a0c29228d1c" compoundref="Computer_8h" startline="82" endline="85">Hack::Chips::Computer::memory</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Binding_1_1ComputerWrapper_1abab052c1b6bba357dd8c8c1dd33705ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Binding::ComputerWrapper::~ComputerWrapper</definition>
+        <argsstring>()</argsstring>
+        <name>~ComputerWrapper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="158" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="158" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Binding_1_1ComputerWrapper_1afec078bec7c111ec37d14d29ba8dc98a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* Hack::Binding::ComputerWrapper::decode</definition>
+        <argsstring>(const int val) const</argsstring>
+        <name>decode</name>
+        <param>
+          <type>const int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="261" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="261" bodyend="270"/>
+        <references refid="classHack_1_1Assembler_1_1Instruction_1ade81360d9e9ec9bdfedc8af1d0252a73" compoundref="Instruction_8cpp" startline="32" endline="37">Hack::Assembler::Instruction::string</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Binding_1_1ComputerWrapper_1a283fbcbbe1e31f1ec8404358041daa60" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* Hack::Binding::ComputerWrapper::getLastError</definition>
+        <argsstring>() const</argsstring>
+        <name>getLastError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="272" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="272" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Binding_1_1ComputerWrapper_1aef4a7e2f5cd7320f4109b3f17dccbac5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classHack_1_1Binding_1_1RamWrapper" kindref="compound">RamWrapper</ref> *</type>
+        <definition>RamWrapper* Hack::Binding::ComputerWrapper::getRam</definition>
+        <argsstring>() const</argsstring>
+        <name>getRam</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="222" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="222" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Binding_1_1ComputerWrapper_1a5f0fe4ea707ae43d018f171f854656d7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classHack_1_1Binding_1_1RomWrapper" kindref="compound">RomWrapper</ref> *</type>
+        <definition>RomWrapper* Hack::Binding::ComputerWrapper::getRom</definition>
+        <argsstring>() const</argsstring>
+        <name>getRom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="227" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="227" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Binding_1_1ComputerWrapper_1af50055b2d81ae08683235a66d7f8d9a4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classuint8__t" kindref="compound">uint8_t</ref> *</type>
+        <definition>uint8_t* Hack::Binding::ComputerWrapper::getScreenBuffer</definition>
+        <argsstring>() const</argsstring>
+        <name>getScreenBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="217" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="217" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Binding_1_1ComputerWrapper_1a8a7fc482100bb79d5d2827576d1a7497" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="structHack_1_1Chips_1_1CpuState" kindref="compound">CpuState</ref> &amp;</type>
+        <definition>const CpuState&amp; Hack::Binding::ComputerWrapper::getState</definition>
+        <argsstring>() const</argsstring>
+        <name>getState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="232" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="232" bodyend="237"/>
+        <references refid="namespaceHack_1_1Binding_1a0a115b3347cdfd195e6032ae7fca252d" compoundref="Bindings_8cpp" startline="44">Hack::Binding::ComputerType</references>
+        <references refid="classHack_1_1Chips_1_1Computer_1a90309c49a06a3585499693ca005aa643" compoundref="Computer_8h" startline="92" endline="95">Hack::Chips::Computer::state</references>
+        <references refid="classHack_1_1Chips_1_1Computer_1aa280cc035bb3869f0d63c55d5c608a7f" compoundref="Computer_8h" startline="47">Hack::Chips::Computer::NullState</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Binding_1_1ComputerWrapper_1a2a71a4d9889b5c19305d242c76e02966" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Binding::ComputerWrapper::load</definition>
+        <argsstring>(const String &amp;src) const</argsstring>
+        <name>load</name>
+        <param>
+          <type>const <ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="239" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="239" bodyend="259"/>
+        <references refid="classHack_1_1ParserBase_1a4668ec9b913931ce518de6d7f92fb4e0" compoundref="ParserBase_8cpp" startline="76" endline="89">Hack::ParserBase::parse</references>
+        <references refid="classHack_1_1Assembler_1_1Parser_1a5f8343d626d9e19a9d1cd7d64979ae24" compoundref="Assembler_2Parser_8h" startline="80" endline="83">Hack::Assembler::Parser::instructions</references>
+        <references refid="classHack_1_1Chips_1_1Computer_1ab215c3ad1dfa7242b4edaccb75869063" compoundref="Computer_8cpp" startline="48" endline="53">Hack::Chips::Computer::load</references>
+        <references refid="classHack_1_1Exception_1ad552d982f58950c324eaebd2dfbd1fe2" compoundref="Exception_8h" startline="64" endline="67">Hack::Exception::what</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Binding_1_1ComputerWrapper_1af671488ec3c545e916e8e9071bc08164" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Binding::ComputerWrapper::reset</definition>
+        <argsstring>() const</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="172" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="172" bodyend="176"/>
+        <references refid="namespaceHack_1_1Binding_1a0a115b3347cdfd195e6032ae7fca252d" compoundref="Bindings_8cpp" startline="44">Hack::Binding::ComputerType</references>
+        <references refid="classHack_1_1Chips_1_1Computer_1a5e2ff33095c4f19eecdfdbfdba101b52" compoundref="Computer_8cpp" startline="139" endline="142">Hack::Chips::Computer::reset</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Binding_1_1ComputerWrapper_1ac4124d74a3382a231681fce5fcffb89d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Binding::ComputerWrapper::update</definition>
+        <argsstring>() const</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="166" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="166" bodyend="170"/>
+        <references refid="namespaceHack_1_1Binding_1a0a115b3347cdfd195e6032ae7fca252d" compoundref="Bindings_8cpp" startline="44">Hack::Binding::ComputerType</references>
+        <references refid="classHack_1_1Chips_1_1Computer_1aa44e98396b5191c503bd5255fe0ffa1f" compoundref="Computer_8cpp" startline="104" endline="137">Hack::Chips::Computer::update</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Binding_1_1ComputerWrapper_1af85b61cef2548f621730bb77456b9037" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Binding::ComputerWrapper::updateScreen</definition>
+        <argsstring>() const</argsstring>
+        <name>updateScreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="183" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="183" bodyend="215"/>
+        <references refid="namespaceHack_1_1Binding_1a0a115b3347cdfd195e6032ae7fca252d" compoundref="Bindings_8cpp" startline="44">Hack::Binding::ComputerType</references>
+        <references refid="classHack_1_1Chips_1_1Computer_1aa44e98396b5191c503bd5255fe0ffa1f" compoundref="Computer_8cpp" startline="104" endline="137">Hack::Chips::Computer::update</references>
+        <references refid="classHack_1_1Chips_1_1Computer_1abf924e51c33908fd52168a0c29228d1c" compoundref="Computer_8h" startline="82" endline="85">Hack::Chips::Computer::memory</references>
+        <references refid="classHack_1_1Chips_1_1Memory_1a33e18b325ababb24a8f50de7dcf03fd0" compoundref="Chips_2Memory_8cpp" startline="132" endline="137">Hack::Chips::Memory::pointer</references>
+        <references refid="classHack_1_1Chips_1_1Memory_1a5e6ec45243f237084d377b6aefb6981b" compoundref="Chips_2Memory_8h" startline="33">Hack::Chips::Memory::ScreenAddress</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classHack_1_1Binding_1_1ComputerWrapper_1a41c100b390407b69d20f446a07509f60" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classHack_1_1Binding_1_1ComputerWrapper" kindref="compound">ComputerWrapper</ref> *</type>
+        <definition>static const ComputerWrapper* Hack::Binding::ComputerWrapper::cast</definition>
+        <argsstring>(Handle handle)</argsstring>
+        <name>cast</name>
+        <param>
+          <type><ref refid="structHandleType" kindref="compound">Handle</ref></type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="277" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="277" bodyend="286"/>
+        <references refid="namespaceHack_1_1Binding_1a0a115b3347cdfd195e6032ae7fca252d" compoundref="Bindings_8cpp" startline="44">Hack::Binding::ComputerType</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Binding_1_1ComputerWrapper_1a59a3eb0c4d63bf567902d41ae970dd78" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int Hack::Binding::ComputerWrapper::getScreenBufferSize</definition>
+        <argsstring>()</argsstring>
+        <name>getScreenBufferSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="178" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="178" bodyend="181"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/Bindings/Bindings.cpp" line="135" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="134" bodyend="287"/>
+    <listofallmembers>
+      <member refid="classHack_1_1Binding_1_1ComputerWrapper_1a2be699b9e2f1f7c90e0b5a8121b68bd4" prot="private" virt="non-virtual"><scope>Hack::Binding::ComputerWrapper</scope><name>_bytes</name></member>
+      <member refid="classHack_1_1Binding_1_1ComputerWrapper_1a1cef4178a614dd5a3f1c03cd2d7f8694" prot="private" virt="non-virtual"><scope>Hack::Binding::ComputerWrapper</scope><name>_cache</name></member>
+      <member refid="classHack_1_1Binding_1_1ComputerWrapper_1a5d4ea7d96921b094bfd243488d7622c9" prot="private" virt="non-virtual"><scope>Hack::Binding::ComputerWrapper</scope><name>_computer</name></member>
+      <member refid="classHack_1_1Binding_1_1ComputerWrapper_1ae739b9cb17508590869db049aecf4854" prot="private" virt="non-virtual"><scope>Hack::Binding::ComputerWrapper</scope><name>_error</name></member>
+      <member refid="classHack_1_1Binding_1_1ComputerWrapper_1a07456b3c9a0db3d6c7fca6350addb607" prot="private" virt="non-virtual"><scope>Hack::Binding::ComputerWrapper</scope><name>_ram</name></member>
+      <member refid="classHack_1_1Binding_1_1ComputerWrapper_1aaa19f428c765693ffb65a0f2f8ac1090" prot="private" virt="non-virtual"><scope>Hack::Binding::ComputerWrapper</scope><name>_rom</name></member>
+      <member refid="classHack_1_1Binding_1_1ComputerWrapper_1a41c100b390407b69d20f446a07509f60" prot="public" virt="non-virtual"><scope>Hack::Binding::ComputerWrapper</scope><name>cast</name></member>
+      <member refid="classHack_1_1Binding_1_1ComputerWrapper_1a05701422e12ee10d04b8bac96cda6c63" prot="public" virt="non-virtual"><scope>Hack::Binding::ComputerWrapper</scope><name>ComputerWrapper</name></member>
+      <member refid="classHack_1_1Binding_1_1ComputerWrapper_1afec078bec7c111ec37d14d29ba8dc98a" prot="public" virt="non-virtual"><scope>Hack::Binding::ComputerWrapper</scope><name>decode</name></member>
+      <member refid="classHack_1_1Binding_1_1ComputerWrapper_1a283fbcbbe1e31f1ec8404358041daa60" prot="public" virt="non-virtual"><scope>Hack::Binding::ComputerWrapper</scope><name>getLastError</name></member>
+      <member refid="classHack_1_1Binding_1_1ComputerWrapper_1aef4a7e2f5cd7320f4109b3f17dccbac5" prot="public" virt="non-virtual"><scope>Hack::Binding::ComputerWrapper</scope><name>getRam</name></member>
+      <member refid="classHack_1_1Binding_1_1ComputerWrapper_1a5f0fe4ea707ae43d018f171f854656d7" prot="public" virt="non-virtual"><scope>Hack::Binding::ComputerWrapper</scope><name>getRom</name></member>
+      <member refid="classHack_1_1Binding_1_1ComputerWrapper_1af50055b2d81ae08683235a66d7f8d9a4" prot="public" virt="non-virtual"><scope>Hack::Binding::ComputerWrapper</scope><name>getScreenBuffer</name></member>
+      <member refid="classHack_1_1Binding_1_1ComputerWrapper_1a59a3eb0c4d63bf567902d41ae970dd78" prot="public" virt="non-virtual"><scope>Hack::Binding::ComputerWrapper</scope><name>getScreenBufferSize</name></member>
+      <member refid="classHack_1_1Binding_1_1ComputerWrapper_1a8a7fc482100bb79d5d2827576d1a7497" prot="public" virt="non-virtual"><scope>Hack::Binding::ComputerWrapper</scope><name>getState</name></member>
+      <member refid="classHack_1_1Binding_1_1ComputerWrapper_1a2a71a4d9889b5c19305d242c76e02966" prot="public" virt="non-virtual"><scope>Hack::Binding::ComputerWrapper</scope><name>load</name></member>
+      <member refid="classHack_1_1Binding_1_1ComputerWrapper_1af671488ec3c545e916e8e9071bc08164" prot="public" virt="non-virtual"><scope>Hack::Binding::ComputerWrapper</scope><name>reset</name></member>
+      <member refid="classHack_1_1Binding_1_1ComputerWrapper_1a3377e8d94f8b824a9e84ab484658a8ca" prot="private" virt="non-virtual"><scope>Hack::Binding::ComputerWrapper</scope><name>type</name></member>
+      <member refid="classHack_1_1Binding_1_1ComputerWrapper_1ac4124d74a3382a231681fce5fcffb89d" prot="public" virt="non-virtual"><scope>Hack::Binding::ComputerWrapper</scope><name>update</name></member>
+      <member refid="classHack_1_1Binding_1_1ComputerWrapper_1af85b61cef2548f621730bb77456b9037" prot="public" virt="non-virtual"><scope>Hack::Binding::ComputerWrapper</scope><name>updateScreen</name></member>
+      <member refid="classHack_1_1Binding_1_1ComputerWrapper_1abab052c1b6bba357dd8c8c1dd33705ac" prot="public" virt="non-virtual"><scope>Hack::Binding::ComputerWrapper</scope><name>~ComputerWrapper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

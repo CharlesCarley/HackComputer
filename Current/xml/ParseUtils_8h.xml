@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="ParseUtils_8h" kind="file" language="C++">
+    <compoundname>ParseUtils.h</compoundname>
+    <includes refid="Exception_8h" local="yes">Utils/Exception.h</includes>
+    <includes refid="String_8h" local="yes">Utils/String.h</includes>
+    <includedby refid="Compiler_2Analyzer_2Parser_8cpp" local="yes">Source/Compiler/Analyzer/Parser.cpp</includedby>
+    <includedby refid="ParseUtils_8cpp" local="yes">Source/Compiler/Analyzer/ParseUtils.cpp</includedby>
+    <incdepgraph>
+      <node id="2286">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="2287" relation="include">
+        </childnode>
+      </node>
+      <node id="2287">
+        <label>cstdint</label>
+      </node>
+      <node id="2278">
+        <label>stdexcept</label>
+      </node>
+      <node id="2283">
+        <label>string</label>
+      </node>
+      <node id="2277">
+        <label>exception</label>
+      </node>
+      <node id="2285">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="2281" relation="include">
+        </childnode>
+        <childnode refid="2286" relation="include">
+        </childnode>
+        <childnode refid="2288" relation="include">
+        </childnode>
+      </node>
+      <node id="2288">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="2287" relation="include">
+        </childnode>
+        <childnode refid="2284" relation="include">
+        </childnode>
+        <childnode refid="2286" relation="include">
+        </childnode>
+      </node>
+      <node id="2280">
+        <label>Utils/Console.h</label>
+        <childnode refid="2281" relation="include">
+        </childnode>
+        <childnode refid="2285" relation="include">
+        </childnode>
+      </node>
+      <node id="2284">
+        <label>vector</label>
+      </node>
+      <node id="2279">
+        <label>utility</label>
+      </node>
+      <node id="2282">
+        <label>sstream</label>
+      </node>
+      <node id="2276">
+        <label>Utils/Exception.h</label>
+        <childnode refid="2277" relation="include">
+        </childnode>
+        <childnode refid="2278" relation="include">
+        </childnode>
+        <childnode refid="2279" relation="include">
+        </childnode>
+        <childnode refid="2280" relation="include">
+        </childnode>
+        <childnode refid="2281" relation="include">
+        </childnode>
+      </node>
+      <node id="2275">
+        <label>Source/Compiler/Analyzer/ParseUtils.h</label>
+        <link refid="ParseUtils_8h"/>
+        <childnode refid="2276" relation="include">
+        </childnode>
+        <childnode refid="2281" relation="include">
+        </childnode>
+      </node>
+      <node id="2281">
+        <label>String.h</label>
+        <childnode refid="2282" relation="include">
+        </childnode>
+        <childnode refid="2283" relation="include">
+        </childnode>
+        <childnode refid="2284" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2290">
+        <label>Source/Compiler/Analyzer/Parser.cpp</label>
+      </node>
+      <node id="2289">
+        <label>Source/Compiler/Analyzer/ParseUtils.h</label>
+        <link refid="ParseUtils_8h"/>
+        <childnode refid="2290" relation="include">
+        </childnode>
+        <childnode refid="2291" relation="include">
+        </childnode>
+      </node>
+      <node id="2291">
+        <label>Source/Compiler/Analyzer/ParseUtils.cpp</label>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classHack_1_1Compiler_1_1Analyzer_1_1ParseUtils" prot="public">Hack::Compiler::Analyzer::ParseUtils</innerclass>
+    <innernamespace refid="namespaceHack_1_1Compiler_1_1Analyzer">Hack::Compiler::Analyzer</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>Charles<sp/>Carley.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>software<sp/>is<sp/>provided<sp/>&apos;as-is&apos;,<sp/>without<sp/>any<sp/>express<sp/>or<sp/>implied</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/>warranty.<sp/>In<sp/>no<sp/>event<sp/>will<sp/>the<sp/>authors<sp/>be<sp/>held<sp/>liable<sp/>for<sp/>any<sp/>damages</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>arising<sp/>from<sp/>the<sp/>use<sp/>of<sp/>this<sp/>software.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>Permission<sp/>is<sp/>granted<sp/>to<sp/>anyone<sp/>to<sp/>use<sp/>this<sp/>software<sp/>for<sp/>any<sp/>purpose,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>including<sp/>commercial<sp/>applications,<sp/>and<sp/>to<sp/>alter<sp/>it<sp/>and<sp/>redistribute<sp/>it</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/>freely,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>restrictions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>1.<sp/>The<sp/>origin<sp/>of<sp/>this<sp/>software<sp/>must<sp/>not<sp/>be<sp/>misrepresented;<sp/>you<sp/>must<sp/>not</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>claim<sp/>that<sp/>you<sp/>wrote<sp/>the<sp/>original<sp/>software.<sp/>If<sp/>you<sp/>use<sp/>this<sp/>software</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>in<sp/>a<sp/>product,<sp/>an<sp/>acknowledgment<sp/>in<sp/>the<sp/>product<sp/>documentation<sp/>would<sp/>be</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>appreciated<sp/>but<sp/>is<sp/>not<sp/>required.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>2.<sp/>Altered<sp/>source<sp/>versions<sp/>must<sp/>be<sp/>plainly<sp/>marked<sp/>as<sp/>such,<sp/>and<sp/>must<sp/>not<sp/>be</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>misrepresented<sp/>as<sp/>being<sp/>the<sp/>original<sp/>software.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/Exception.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/String.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceHack_1_1Compiler_1_1Analyzer" kindref="compound">Hack::Compiler::Analyzer</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28" refid="classHack_1_1Compiler_1_1Analyzer_1_1ParseUtils" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classHack_1_1Compiler_1_1Analyzer_1_1ParseUtils" kindref="compound">ParseUtils</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><ref refid="classHack_1_1Compiler_1_1Analyzer_1_1ParseUtils_1af4e5bdaea1a70383c0c02d702f69f2a9" kindref="member">string</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1Analyzer_1_1ParseUtils_1a9f48226f7f08ae3ec5bfe575f7c59c3b" kindref="member">isOperator</ref>(int8_t<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1Analyzer_1_1ParseUtils_1a537cc831bb3f8c69f1744476fb1f7096" kindref="member">isTerm</ref>(int8_t<sp/>t0);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1Analyzer_1_1ParseUtils_1a80dc891183adf97bd0b2df0341b87b13" kindref="member">isUnary</ref>(int8_t<sp/>t0,<sp/>int8_t<sp/>t1,<sp/>int8_t<sp/>t2);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1Analyzer_1_1ParseUtils_1a59847659483be6c6323ae16c504ffb30" kindref="member">isExpressionExitTerm</ref>(int8_t<sp/>t0);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1Analyzer_1_1ParseUtils_1ae05c21942052125755e6fe007b4a8aef" kindref="member">isFunctionCall</ref>(int8_t<sp/>t0,<sp/>int8_t<sp/>t1);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1Analyzer_1_1ParseUtils_1adfa39dfbbc491f4bf89ea81e6b303bd6" kindref="member">isMethodCall</ref>(int8_t<sp/>t0,<sp/>int8_t<sp/>t1,<sp/>int8_t<sp/>t2,<sp/>int8_t<sp/>t3);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1Analyzer_1_1ParseUtils_1a35ccb54979ab85176eacd434d2b1f52a" kindref="member">isCallTerm</ref>(int8_t<sp/>t0,<sp/>int8_t<sp/>t1,<sp/>int8_t<sp/>t2,<sp/>int8_t<sp/>t3);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1Analyzer_1_1ParseUtils_1a159c1acb728301d959cf4559bdcea9f1" kindref="member">isComplexTerm</ref>(int8_t<sp/>t0,<sp/>int8_t<sp/>t1,<sp/>int8_t<sp/>t2,<sp/>int8_t<sp/>t3);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler::Analyzer</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Source/Compiler/Analyzer/ParseUtils.h"/>
+  </compounddef>
+</doxygen>
