@@ -1,7 +1,9 @@
 # Hack Computer
 
 This repository is my implementation of the Hack computer in C++ from the [NAnd2Tetris course](https://www.coursera.org/learn/build-a-computer).
-It is a bit over the top and does not strictly adhere to the course. I chose to opt out of the certificate of completion instead chose to support the authors by buying the e-book. I wanted something self-contained at the end. In order to do that, the supplied tools in the course material had to be written from scratch (to some extent; hence being over the top).
+It is a bit over the top and does not strictly adhere to the course. I chose to opt out of the certificate of completion instead chose to support the authors by buying the e-book. I wanted something self-contained at the end. In order to do that, the supplied tools in the course material had to be written from scratch (to some extent).
+
+
 
 ## Project Structure
 
@@ -34,6 +36,7 @@ It is split into multiple namespace projects under the primary Hack namespace.
   - [Extra Tools](#extra-tools)
     - [Parse Tree Visual](#parse-tree-visual)
     - [GRM files](#grm-files)
+  - [Current State](#current-state)
 
 ### Utils
 
@@ -213,3 +216,12 @@ The grammar files are for the most part reference only. They do not use any of t
 I believe it is a dead project, which is a shame because it is an awesome tool-set to `quickly` throw together and test grammars.
 
 - [GoldParser](http://www.goldparser.org/)
+
+## Current State
+
+This is still a work in progress. Its on hold for the time being until I have
+more time to devote to it. It doesn't really do much on the surface. The Jack
+language is still very basic, and cannot really do much of anything.
+
+This all just a hobby for me and the thought of actually finding job writing code seems 
+farther off now more than ever.
