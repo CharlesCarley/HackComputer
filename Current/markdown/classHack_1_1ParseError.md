@@ -1,7 +1,7 @@
 <a id="parseerror"></a>
 <h1>ParseError</h1>
-<a id="classHack_1_1ParseError"></a>
-<a href="https://github.com/CharlesCarley/HackComputer.md">~</a>
+<a id="classhack_1_1parseerror"></a>
+<a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
 <a href="indexpage.md#hack">Hack</a>
 <span class="inline-text">/</span>
 <a href="index.md#index">Index</a>
@@ -14,7 +14,7 @@
 <a id="derived-from"></a>
 <h4>Derived From</h4>
 <div class="icon-link">
-<img src="../images/class.svg"/><a href="classHack_1_1Exception.md#hackexception">Hack::Exception</a>
+<img src="../images/class.svg"/><a href="classHack_1_1Exception.md#exception">Hack::Exception</a>
 </div>
 <img src="../images/dot/internal-diagram-46.dot.svg"/><br/>
 <a id="public-methods"></a>
@@ -39,10 +39,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/ParserBase/ParseError.h#L28" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseError.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/ParserBase/ParseError.h#L28" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseError.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#parseerror" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <a id="parseerror"></a>
 <h2>ParseError</h2>
 <span class="bold-text"><b>ParseError</b></span>
@@ -50,10 +56,16 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/ParserBase/ParseError.h#L30" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseError.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/ParserBase/ParseError.h#L30" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseError.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#parseerror" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="parseerror"></a>
 <h2>ParseError</h2>
@@ -69,10 +81,16 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/ParserBase/ParseError.h#L35" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseError.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/ParserBase/ParseError.h#L35" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseError.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#parseerror" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="parseerror"></a>
 <h2>ParseError</h2>
@@ -105,10 +123,16 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/ParserBase/ParseError.h#L40" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseError.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/ParserBase/ParseError.h#L40" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseError.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#parseerror" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="geterror"></a>
 <h2>getError</h2>
@@ -144,14 +168,20 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/ParserBase/ParseError.h#L49" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseError.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/ParserBase/ParseError.h#L49" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseError.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Utils/ParserBase/ParseError.cpp#L26" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseError.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/ParserBase/ParseError.cpp#L26" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseError.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#parseerror" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 </div>
 </div>

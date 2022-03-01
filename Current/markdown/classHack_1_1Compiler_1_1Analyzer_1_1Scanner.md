@@ -1,7 +1,7 @@
 <a id="scanner"></a>
 <h1>Scanner</h1>
-<a id="classHack_1_1Compiler_1_1Analyzer_1_1Scanner"></a>
-<a href="https://github.com/CharlesCarley/HackComputer.md">~</a>
+<a id="classhack_1_1compiler_1_1analyzer_1_1scanner"></a>
+<a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
 <a href="indexpage.md#hack">Hack</a>
 <span class="inline-text">/</span>
 <a href="index.md#index">Index</a>
@@ -18,7 +18,7 @@
 <a id="derived-from"></a>
 <h4>Derived From</h4>
 <div class="icon-link">
-<img src="../images/class.svg"/><a href="classHack_1_1ScannerBase.md#hackscannerbase">Hack::ScannerBase</a>
+<img src="../images/class.svg"/><a href="classHack_1_1ScannerBase.md#scannerbase">Hack::ScannerBase</a>
 </div>
 <img src="../images/dot/internal-diagram-41.dot.svg"/><br/>
 <a id="private-members"></a>
@@ -61,10 +61,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/Scanner.h#L32" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/Scanner.h#L32" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#scanner" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <a id="_code"></a>
 <h2>_code</h2>
 <a href="namespaceHack_1_1Compiler_1_1Analyzer.md#codecache">CodeCache</a>
@@ -72,10 +78,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/Scanner.h#L35" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/Scanner.h#L35" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#scanner" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="scancode"></a>
 <h2>scanCode</h2>
@@ -91,14 +103,20 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/Scanner.h#L37" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/Scanner.h#L37" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/Scanner.cpp#L71" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/Scanner.cpp#L71" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#scanner" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="scandigit"></a>
 <h2>scanDigit</h2>
@@ -114,14 +132,20 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/Scanner.h#L41" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/Scanner.h#L41" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/Scanner.cpp#L115" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/Scanner.cpp#L115" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#scanner" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="scanstring"></a>
 <h2>scanString</h2>
@@ -137,14 +161,20 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/Scanner.h#L43" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/Scanner.h#L43" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/Scanner.cpp#L133" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/Scanner.cpp#L133" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#scanner" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="scansymbol"></a>
 <h2>scanSymbol</h2>
@@ -160,14 +190,20 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/Scanner.h#L39" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/Scanner.h#L39" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/Scanner.cpp#L81" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/Scanner.cpp#L81" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#scanner" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="scanner"></a>
 <h2>Scanner</h2>
@@ -176,10 +212,16 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/Scanner.h#L47" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/Scanner.h#L47" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#scanner" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="getcode"></a>
 <h2>getCode</h2>
@@ -200,20 +242,26 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1ScannerBase.md#syntaxerror" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">syntaxError</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1ScannerBase.md#syntaxerror">syntaxError</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/Scanner.h#L51" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/Scanner.h#L51" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/Scanner.cpp#L189" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/Scanner.cpp#L189" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#scanner" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="scan"></a>
 <h2>scan</h2>
@@ -229,132 +277,138 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1ScannerBase.md#_stream" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">_stream</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1ScannerBase.md#_stream">_stream</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1ScannerBase.md#syntaxerror" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">syntaxError</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1ScannerBase.md#syntaxerror">syntaxError</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1TokenBase.md#clear" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">clear</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1TokenBase.md#clear">clear</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1TokenBase.md#setline" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">setLine</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1TokenBase.md#setline">setLine</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1ScannerBase.md#_line" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">_line</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1ScannerBase.md#_line">_line</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1ScannerBase.md#scanlinecomment" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">scanLineComment</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1ScannerBase.md#scanlinecomment">scanLineComment</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1ScannerBase.md#scanmultilinecomment" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">scanMultiLineComment</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1ScannerBase.md#scanmultilinecomment">scanMultiLineComment</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1TokenBase.md#settype" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">setType</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1TokenBase.md#settype">setType</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopdivide" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpDivide</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopdivide">TokOpDivide</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1ScannerBase.md#scanwhitespace" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">scanWhiteSpace</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1ScannerBase.md#scanwhitespace">scanWhiteSpace</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopplus" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpPlus</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopplus">TokOpPlus</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopminus" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpMinus</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopminus">TokOpMinus</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopmultiply" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpMultiply</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopmultiply">TokOpMultiply</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopand" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpAnd</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopand">TokOpAnd</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopor" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpOr</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopor">TokOpOr</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopnot" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpNot</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopnot">TokOpNot</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopeq" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpEq</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopeq">TokOpEq</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokoplt" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpLt</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokoplt">TokOpLt</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopgt" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpGt</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopgt">TokOpGt</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymperiod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymPeriod</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymperiod">TokSymPeriod</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymlbrace" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymLBrace</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymlbrace">TokSymLBrace</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymrbrace" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymRBrace</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymrbrace">TokSymRBrace</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymlbracket" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymLBracket</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymlbracket">TokSymLBracket</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymrbracket" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymRBracket</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymrbracket">TokSymRBracket</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymlpar" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymLPar</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymlpar">TokSymLPar</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymrpar" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymRPar</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymrpar">TokSymRPar</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymcomma" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymComma</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymcomma">TokSymComma</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymsemicolon" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymSemicolon</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymsemicolon">TokSymSemicolon</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokeof" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokEof</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokeof">TokEof</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/Scanner.h#L49" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/Scanner.h#L49" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/Scanner.cpp#L197" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/Scanner.cpp#L197" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#scanner" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 </div>
 </div>

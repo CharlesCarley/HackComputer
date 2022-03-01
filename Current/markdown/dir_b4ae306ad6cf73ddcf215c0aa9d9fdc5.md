@@ -1,7 +1,7 @@
 <a id="assembler"></a>
 <h1>Assembler</h1>
 <a id="dir_b4ae306ad6cf73ddcf215c0aa9d9fdc5"></a>
-<a href="https://github.com/CharlesCarley/HackComputer.md">~</a>
+<a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
 <a href="indexpage.md#hack">Hack</a>
 <span class="inline-text">/</span>
 <a href="index.md#index">Index</a>

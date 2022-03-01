@@ -1,7 +1,7 @@
 <a id="hackcomputer"></a>
 <h1>HackComputer</h1>
 <a id="indexpage"></a>
-<a href="https://github.com/CharlesCarley/HackComputer.md">~</a>
+<a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
 <a href="indexpage.md#hack">Hack</a>
 <span class="inline-text">/</span>
 <a href="index.md#index">Index</a>

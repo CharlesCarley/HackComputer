@@ -1,7 +1,7 @@
 <a id="nodeutils"></a>
 <h1>NodeUtils</h1>
-<a id="classHack_1_1Compiler_1_1NodeUtils"></a>
-<a href="https://github.com/CharlesCarley/HackComputer.md">~</a>
+<a id="classhack_1_1compiler_1_1nodeutils"></a>
+<a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
 <a href="indexpage.md#hack">Hack</a>
 <span class="inline-text">/</span>
 <a href="index.md#index">Index</a>
@@ -33,10 +33,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Common/NodeUtils.h#L135" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">NodeUtils.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Common/NodeUtils.h#L135" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">NodeUtils.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#nodeutils" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <a id="nodesubtypestring"></a>
 <h2>nodeSubtypeString</h2>
 <span class="inline-text">void</span>
@@ -71,64 +77,70 @@
 <br/>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1Compiler_1_1Node.md#subtype" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">subtype</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Compiler_1_1Node.md#subtype">subtype</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypenone" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeNone</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypenone">SubtypeNone</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypeexpressiongroup" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeExpressionGroup</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypeexpressiongroup">SubtypeExpressionGroup</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypecall" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeCall</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypecall">SubtypeCall</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypecallfunction" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeCallFunction</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypecallfunction">SubtypeCallFunction</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypecallmethod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeCallMethod</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypecallmethod">SubtypeCallMethod</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypearrayindex" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeArrayIndex</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypearrayindex">SubtypeArrayIndex</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypeifelsecombo" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeIfElseCombo</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypeifelsecombo">SubtypeIfElseCombo</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypeterm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeTerm</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypeterm">SubtypeTerm</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypeopterm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeOpTerm</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypeopterm">SubtypeOpTerm</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypeletequal" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeLetEqual</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypeletequal">SubtypeLetEqual</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypeletarrayequal" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeLetArrayEqual</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypeletarrayequal">SubtypeLetArrayEqual</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Common/NodeUtils.h#L160" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">NodeUtils.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Common/NodeUtils.h#L160" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">NodeUtils.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Common/NodeUtils.cpp#L266" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">NodeUtils.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Common/NodeUtils.cpp#L266" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">NodeUtils.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#nodeutils" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="nodetypestring"></a>
 <h2>nodeTypeString</h2>
@@ -164,24 +176,30 @@
 <br/>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1Compiler_1_1NodeUtils.md#string" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">string</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Compiler_1_1NodeUtils.md#string">string</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Compiler_1_1Node.md#type" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">type</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Compiler_1_1Node.md#type">type</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Common/NodeUtils.h#L147" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">NodeUtils.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Common/NodeUtils.h#L147" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">NodeUtils.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Common/NodeUtils.cpp#L48" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">NodeUtils.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Common/NodeUtils.cpp#L48" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">NodeUtils.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#nodeutils" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="nodetypexmlstring"></a>
 <h2>nodeTypeXmlString</h2>
@@ -217,412 +235,418 @@
 <br/>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1Compiler_1_1Node.md#type" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">type</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rule" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Rule</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleclass" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleClass</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleclassdescription" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleClassDescription</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulefield" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleField</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruledatatype" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleDataType</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulefieldspecification" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleFieldSpecification</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleidentifierlist" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleIdentifierList</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulemethod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleMethod</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulemethodspecification" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleMethodSpecification</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulemethodreturntype" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleMethodReturnType</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulemethodbody" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleMethodBody</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulebody" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleBody</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulevariable" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleVariable</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulestatement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleStatement</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleletstatement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleLetStatement</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleifstatement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleIfStatement</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleelsestatement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleElseStatement</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulewhilestatement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleWhileStatement</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruledostatement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleDoStatement</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulereturnstatement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleReturnStatement</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulestatementlist" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleStatementList</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleexpression" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleExpression</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulesingleexpression" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleSingleExpression</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleterm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleTerm</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulesimpleterm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleSimpleTerm</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulecomplexterm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleComplexTerm</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleoperator" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleOperator</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleunaryoperator" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleUnaryOperator</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleexpressionlist" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleExpressionList</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulecallmethod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleCallMethod</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleparameterlist" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleParameterList</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleparameter" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleParameter</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleinlinevm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleInlineVm</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleinlineasm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleInlineAsm</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleend" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleEnd</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keyword" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Keyword</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordclass" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordClass</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordconstructor" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordConstructor</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordfunction" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordFunction</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordmethod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordMethod</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordfield" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordField</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordstatic" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordStatic</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordint" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordInt</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordchar" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordChar</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordbool" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordBool</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordvoid" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordVoid</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordvar" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordVar</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordlet" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordLet</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordif" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordIf</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordelse" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordElse</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keyworddo" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordDo</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordwhile" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordWhile</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordreturn" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordReturn</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordend" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordEnd</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbol" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Symbol</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolopenbrace" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolOpenBrace</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolclosebrace" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolCloseBrace</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolsemicolon" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolSemiColon</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolleftparenthesis" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolLeftParenthesis</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolrightparenthesis" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolRightParenthesis</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolleftbracket" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolLeftBracket</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolrightbracket" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolRightBracket</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolcomma" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolComma</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolequals" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolEquals</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolplus" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolPlus</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolminus" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolMinus</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolmultiply" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolMultiply</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symboldivide" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolDivide</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symboland" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolAnd</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolor" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolOr</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolgreater" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolGreater</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolless" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolLess</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolnot" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolNot</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolperiod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolPeriod</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Compiler_1_1Node.md#type">type</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rule">Rule</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleclass">RuleClass</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleclassdescription">RuleClassDescription</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulefield">RuleField</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruledatatype">RuleDataType</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulefieldspecification">RuleFieldSpecification</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleidentifierlist">RuleIdentifierList</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulemethod">RuleMethod</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulemethodspecification">RuleMethodSpecification</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulemethodreturntype">RuleMethodReturnType</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulemethodbody">RuleMethodBody</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulebody">RuleBody</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulevariable">RuleVariable</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulestatement">RuleStatement</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleletstatement">RuleLetStatement</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleifstatement">RuleIfStatement</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleelsestatement">RuleElseStatement</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulewhilestatement">RuleWhileStatement</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruledostatement">RuleDoStatement</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulereturnstatement">RuleReturnStatement</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulestatementlist">RuleStatementList</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleexpression">RuleExpression</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulesingleexpression">RuleSingleExpression</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleterm">RuleTerm</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulesimpleterm">RuleSimpleTerm</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulecomplexterm">RuleComplexTerm</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleoperator">RuleOperator</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleunaryoperator">RuleUnaryOperator</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleexpressionlist">RuleExpressionList</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulecallmethod">RuleCallMethod</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleparameterlist">RuleParameterList</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleparameter">RuleParameter</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleinlinevm">RuleInlineVm</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleinlineasm">RuleInlineAsm</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleend">RuleEnd</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keyword">Keyword</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordclass">KeywordClass</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordconstructor">KeywordConstructor</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordfunction">KeywordFunction</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordmethod">KeywordMethod</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordfield">KeywordField</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordstatic">KeywordStatic</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordint">KeywordInt</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordchar">KeywordChar</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordbool">KeywordBool</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordvoid">KeywordVoid</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordvar">KeywordVar</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordlet">KeywordLet</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordif">KeywordIf</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordelse">KeywordElse</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keyworddo">KeywordDo</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordwhile">KeywordWhile</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordreturn">KeywordReturn</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordend">KeywordEnd</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbol">Symbol</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolopenbrace">SymbolOpenBrace</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolclosebrace">SymbolCloseBrace</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolsemicolon">SymbolSemiColon</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolleftparenthesis">SymbolLeftParenthesis</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolrightparenthesis">SymbolRightParenthesis</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolleftbracket">SymbolLeftBracket</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolrightbracket">SymbolRightBracket</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolcomma">SymbolComma</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolequals">SymbolEquals</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolplus">SymbolPlus</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolminus">SymbolMinus</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolmultiply">SymbolMultiply</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symboldivide">SymbolDivide</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symboland">SymbolAnd</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolor">SymbolOr</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolgreater">SymbolGreater</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolless">SymbolLess</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolnot">SymbolNot</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolperiod">SymbolPeriod</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolend" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolEnd</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolend">SymbolEnd</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#constant" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Constant</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#constant">Constant</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#constantidentifier" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ConstantIdentifier</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#constantidentifier">ConstantIdentifier</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#constantinteger" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ConstantInteger</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#constantinteger">ConstantInteger</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#constantinlinevm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ConstantInlineVm</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#constantinlinevm">ConstantInlineVm</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#constantinlineasm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ConstantInlineAsm</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#constantinlineasm">ConstantInlineAsm</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#constantstring" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ConstantString</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#constantstring">ConstantString</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Compiler_1_1Node.md#value" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">value</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Compiler_1_1Node.md#value">value</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#constanttrue" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ConstantTrue</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#constanttrue">ConstantTrue</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#constantfalse" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ConstantFalse</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#constantfalse">ConstantFalse</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#constantnull" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ConstantNull</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#constantnull">ConstantNull</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#constantthis" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ConstantThis</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#constantthis">ConstantThis</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#constantend" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ConstantEnd</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#constantend">ConstantEnd</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypenone" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeNone</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypenone">SubtypeNone</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypeexpressiongroup" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeExpressionGroup</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypeexpressiongroup">SubtypeExpressionGroup</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypecall" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeCall</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypecall">SubtypeCall</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypecallfunction" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeCallFunction</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypecallfunction">SubtypeCallFunction</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypecallmethod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeCallMethod</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypecallmethod">SubtypeCallMethod</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypearrayindex" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeArrayIndex</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypearrayindex">SubtypeArrayIndex</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypeifelsecombo" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeIfElseCombo</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypeifelsecombo">SubtypeIfElseCombo</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypeterm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeTerm</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypeterm">SubtypeTerm</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypeopterm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeOpTerm</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypeopterm">SubtypeOpTerm</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypeletequal" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeLetEqual</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypeletequal">SubtypeLetEqual</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypeletarrayequal" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeLetArrayEqual</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypeletarrayequal">SubtypeLetArrayEqual</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Common/NodeUtils.h#L153" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">NodeUtils.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Common/NodeUtils.h#L153" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">NodeUtils.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Common/NodeUtils.cpp#L158" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">NodeUtils.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Common/NodeUtils.cpp#L158" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">NodeUtils.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#nodeutils" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="string"></a>
 <h2>string</h2>
@@ -642,404 +666,410 @@
 <br/>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rule" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Rule</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleclass" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleClass</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleclassdescription" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleClassDescription</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulefield" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleField</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruledatatype" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleDataType</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulefieldspecification" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleFieldSpecification</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleidentifierlist" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleIdentifierList</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulemethod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleMethod</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulemethodspecification" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleMethodSpecification</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulemethodreturntype" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleMethodReturnType</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulemethodbody" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleMethodBody</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulebody" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleBody</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulevariable" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleVariable</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulestatement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleStatement</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleletstatement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleLetStatement</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleifstatement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleIfStatement</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleelsestatement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleElseStatement</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulewhilestatement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleWhileStatement</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruledostatement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleDoStatement</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulereturnstatement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleReturnStatement</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulestatementlist" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleStatementList</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleexpression" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleExpression</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulesingleexpression" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleSingleExpression</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleterm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleTerm</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulesimpleterm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleSimpleTerm</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulecomplexterm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleComplexTerm</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleoperator" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleOperator</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleunaryoperator" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleUnaryOperator</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleexpressionlist" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleExpressionList</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#rulecallmethod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleCallMethod</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleparameterlist" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleParameterList</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleparameter" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleParameter</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleinlinevm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleInlineVm</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleinlineasm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleInlineAsm</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#ruleend" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">RuleEnd</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keyword" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Keyword</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordclass" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordClass</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordconstructor" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordConstructor</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordfunction" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordFunction</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordmethod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordMethod</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordfield" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordField</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordstatic" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordStatic</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordint" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordInt</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordchar" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordChar</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordbool" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordBool</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordvoid" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordVoid</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordvar" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordVar</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordlet" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordLet</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordif" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordIf</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordelse" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordElse</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keyworddo" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordDo</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordwhile" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordWhile</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordreturn" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordReturn</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#keywordend" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordEnd</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbol" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Symbol</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolopenbrace" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolOpenBrace</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolclosebrace" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolCloseBrace</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolsemicolon" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolSemiColon</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolleftparenthesis" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolLeftParenthesis</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolrightparenthesis" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolRightParenthesis</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolleftbracket" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolLeftBracket</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolrightbracket" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolRightBracket</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolcomma" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolComma</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolequals" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolEquals</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolplus" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolPlus</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolminus" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolMinus</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolmultiply" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolMultiply</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symboldivide" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolDivide</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symboland" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolAnd</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolor" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolOr</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolgreater" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolGreater</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolless" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolLess</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolnot" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolNot</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rule">Rule</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleclass">RuleClass</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleclassdescription">RuleClassDescription</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulefield">RuleField</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruledatatype">RuleDataType</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulefieldspecification">RuleFieldSpecification</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleidentifierlist">RuleIdentifierList</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulemethod">RuleMethod</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulemethodspecification">RuleMethodSpecification</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulemethodreturntype">RuleMethodReturnType</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulemethodbody">RuleMethodBody</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulebody">RuleBody</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulevariable">RuleVariable</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulestatement">RuleStatement</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleletstatement">RuleLetStatement</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleifstatement">RuleIfStatement</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleelsestatement">RuleElseStatement</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulewhilestatement">RuleWhileStatement</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruledostatement">RuleDoStatement</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulereturnstatement">RuleReturnStatement</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulestatementlist">RuleStatementList</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleexpression">RuleExpression</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulesingleexpression">RuleSingleExpression</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleterm">RuleTerm</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulesimpleterm">RuleSimpleTerm</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulecomplexterm">RuleComplexTerm</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleoperator">RuleOperator</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleunaryoperator">RuleUnaryOperator</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleexpressionlist">RuleExpressionList</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#rulecallmethod">RuleCallMethod</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleparameterlist">RuleParameterList</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleparameter">RuleParameter</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleinlinevm">RuleInlineVm</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleinlineasm">RuleInlineAsm</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#ruleend">RuleEnd</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keyword">Keyword</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordclass">KeywordClass</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordconstructor">KeywordConstructor</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordfunction">KeywordFunction</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordmethod">KeywordMethod</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordfield">KeywordField</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordstatic">KeywordStatic</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordint">KeywordInt</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordchar">KeywordChar</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordbool">KeywordBool</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordvoid">KeywordVoid</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordvar">KeywordVar</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordlet">KeywordLet</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordif">KeywordIf</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordelse">KeywordElse</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keyworddo">KeywordDo</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordwhile">KeywordWhile</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordreturn">KeywordReturn</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#keywordend">KeywordEnd</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbol">Symbol</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolopenbrace">SymbolOpenBrace</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolclosebrace">SymbolCloseBrace</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolsemicolon">SymbolSemiColon</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolleftparenthesis">SymbolLeftParenthesis</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolrightparenthesis">SymbolRightParenthesis</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolleftbracket">SymbolLeftBracket</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolrightbracket">SymbolRightBracket</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolcomma">SymbolComma</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolequals">SymbolEquals</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolplus">SymbolPlus</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolminus">SymbolMinus</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolmultiply">SymbolMultiply</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symboldivide">SymbolDivide</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symboland">SymbolAnd</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolor">SymbolOr</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolgreater">SymbolGreater</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolless">SymbolLess</a>
+</span>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolnot">SymbolNot</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolperiod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolPeriod</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolperiod">SymbolPeriod</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#symbolend" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SymbolEnd</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#symbolend">SymbolEnd</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#constant" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Constant</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#constant">Constant</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#constantidentifier" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ConstantIdentifier</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#constantidentifier">ConstantIdentifier</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#constantinteger" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ConstantInteger</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#constantinteger">ConstantInteger</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#constantstring" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ConstantString</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#constantstring">ConstantString</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#constantinlinevm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ConstantInlineVm</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#constantinlinevm">ConstantInlineVm</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#constantinlineasm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ConstantInlineAsm</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#constantinlineasm">ConstantInlineAsm</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#constanttrue" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ConstantTrue</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#constanttrue">ConstantTrue</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#constantfalse" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ConstantFalse</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#constantfalse">ConstantFalse</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#constantnull" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ConstantNull</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#constantnull">ConstantNull</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#constantthis" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ConstantThis</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#constantthis">ConstantThis</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#constantend" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ConstantEnd</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#constantend">ConstantEnd</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypenone" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeNone</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypenone">SubtypeNone</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypeexpressiongroup" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeExpressionGroup</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypeexpressiongroup">SubtypeExpressionGroup</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypecall" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeCall</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypecall">SubtypeCall</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypecallfunction" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeCallFunction</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypecallfunction">SubtypeCallFunction</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypecallmethod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeCallMethod</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypecallmethod">SubtypeCallMethod</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypearrayindex" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeArrayIndex</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypearrayindex">SubtypeArrayIndex</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypeifelsecombo" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeIfElseCombo</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypeifelsecombo">SubtypeIfElseCombo</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypeterm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeTerm</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypeterm">SubtypeTerm</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypeopterm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeOpTerm</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypeopterm">SubtypeOpTerm</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypeletequal" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeLetEqual</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypeletequal">SubtypeLetEqual</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler.md#subtypeletarrayequal" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SubtypeLetArrayEqual</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler.md#subtypeletarrayequal">SubtypeLetArrayEqual</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Common/NodeUtils.h#L140" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">NodeUtils.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Common/NodeUtils.h#L140" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">NodeUtils.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Common/NodeUtils.cpp#L53" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">NodeUtils.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Common/NodeUtils.cpp#L53" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">NodeUtils.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#nodeutils" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 </div>
 </div>

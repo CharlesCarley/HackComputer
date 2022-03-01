@@ -1,7 +1,7 @@
 <a id="programs"></a>
 <h1>Programs</h1>
-<a id="namespaceHack_1_1Programs"></a>
-<a href="https://github.com/CharlesCarley/HackComputer.md">~</a>
+<a id="namespacehack_1_1programs"></a>
+<a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
 <a href="indexpage.md#hack">Hack</a>
 <span class="inline-text">/</span>
 <a href="index.md#index">Index</a>
@@ -13,10 +13,9 @@
 <br/>
 <a id="classes"></a>
 <h2>Classes</h2>
-<span class="icon-list-item"><a href="classHack_1_1Programs_1_1VmGeneratorApplication.md#vmgeneratorapplication" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">VmGeneratorApplication</span>
-</a>
-</span>
-<br/>
+<div class="icon-link">
+<img src="../images/class.svg"/><a href="classHack_1_1Programs_1_1VmGeneratorApplication.md#vmgeneratorapplication">VmGeneratorApplication</a>
+</div>
 <a id="enums"></a>
 <h2>Enums</h2>
 <span class="icon-list-item"><a href="#options" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Options</span>
@@ -41,52 +40,80 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Generator/Main.cpp#L33" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Main.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Generator/Main.cpp#L33" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Main.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#programs" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <a id="options"></a>
 <h2>Options</h2>
 <span class="bold-text"><b>Options</b></span>
 <br/>
+<a id="op_output"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">OP_OUTPUT</span>
 </span>
 </div>
+<a id="op_max"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">OP_MAX</span>
 </span>
 </div>
+<a id="op_output"></a>
+<a id="op_max"></a>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Generator/Main.cpp#L35" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Main.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Generator/Main.cpp#L35" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Main.cpp</span>
 </a>
 </span>
 <br/>
 <br/>
+<blockquote>
+<span class="icon-list-item"><a href="#programs" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
+<br/>
 <a id="cmdline"></a>
 <h2>CmdLine</h2>
-<a href="classHack_1_1CommandLine_1_1Parser.md#commandlineparser">CommandLine::Parser</a>
+<a href="classHack_1_1CommandLine_1_1Parser.md#parser">CommandLine::Parser</a>
 <span class="bold-text"><b>CmdLine</b></span>
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Generator/Main.cpp#L40" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Main.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Generator/Main.cpp#L40" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Main.cpp</span>
 </a>
 </span>
 <br/>
 <br/>
+<blockquote>
+<span class="icon-list-item"><a href="#programs" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
+<br/>
 <a id="cmdswitch"></a>
 <h2>CmdSwitch</h2>
-<a href="structHack_1_1CommandLine_1_1Switch.md#commandlineswitch">CommandLine::Switch</a>
+<a href="structHack_1_1CommandLine_1_1Switch.md#switch">CommandLine::Switch</a>
 <span class="bold-text"><b>CmdSwitch</b></span>
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Generator/Main.cpp#L41" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Main.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Generator/Main.cpp#L41" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Main.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#programs" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="switches"></a>
 <h2>Switches</h2>
@@ -96,10 +123,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Generator/Main.cpp#L43" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Main.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Generator/Main.cpp#L43" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Main.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#programs" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 </div>
 </div>

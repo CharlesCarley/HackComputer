@@ -1,11 +1,13 @@
-<a id="hack"></a>
-<h1>Hack</h1>
-<a href="https://github.com/CharlesCarley/HackComputer.md">~</a>
+<a id="index"></a>
+<h1>Index</h1>
+<a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
 <a href="indexpage.md#hack">Hack</a>
 <span class="inline-text">/</span>
 <a href="index.md#index">Index</a>
 <span class="inline-text">/</span>
 <span class="bold-text"><b>Contents</b></span>
+<br/>
+<br/>
 <a id="contents"></a>
 <h2>Contents</h2>
 <ul>

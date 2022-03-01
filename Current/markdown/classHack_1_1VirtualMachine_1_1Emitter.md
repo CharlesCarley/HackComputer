@@ -1,7 +1,7 @@
 <a id="emitter"></a>
 <h1>Emitter</h1>
-<a id="classHack_1_1VirtualMachine_1_1Emitter"></a>
-<a href="https://github.com/CharlesCarley/HackComputer.md">~</a>
+<a id="classhack_1_1virtualmachine_1_1emitter"></a>
+<a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
 <a href="indexpage.md#hack">Hack</a>
 <span class="inline-text">/</span>
 <a href="index.md#index">Index</a>
@@ -195,10 +195,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L32" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L32" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <a id="stringstack"></a>
 <h2>StringStack</h2>
 <span class="inline-text">std::stack&lt; </span>
@@ -208,10 +214,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L34" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L34" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="_cmp"></a>
 <h2>_cmp</h2>
@@ -220,10 +232,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L38" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L38" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="_functions"></a>
 <h2>_functions</h2>
@@ -232,10 +250,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L39" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L39" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="_stream"></a>
 <h2>_stream</h2>
@@ -244,10 +268,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L37" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L37" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="genlabel"></a>
 <h2>genLabel</h2>
@@ -263,14 +293,20 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L44" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L44" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L406" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L406" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="getjumplabels"></a>
 <h2>getJumpLabels</h2>
@@ -292,14 +328,20 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L42" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L42" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L398" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L398" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="emitter"></a>
 <h2>Emitter</h2>
@@ -308,14 +350,20 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L47" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L47" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L388" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L388" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="clear"></a>
 <h2>clear</h2>
@@ -325,14 +373,20 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L49" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L49" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L393" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L393" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="popargument"></a>
 <h2>popArgument</h2>
@@ -347,24 +401,30 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#popsegment" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">popSegment</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#popsegment">popSegment</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#arg" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ARG</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#arg">ARG</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L84" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L84" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L555" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L555" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="poplocal"></a>
 <h2>popLocal</h2>
@@ -379,24 +439,30 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#popsegment" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">popSegment</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#popsegment">popSegment</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#lcl" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">LCL</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#lcl">LCL</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L74" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L74" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L549" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L549" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="poppointer"></a>
 <h2>popPointer</h2>
@@ -411,40 +477,46 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpStackTop</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop">jumpStackTop</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movemintod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">moveMIntoD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movemintod">moveMIntoD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movedintox" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">moveDIntoX</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movedintox">moveDIntoX</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#ths" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">THS</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#ths">THS</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#tht" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">THT</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#tht">THT</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">decrement</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrement">decrement</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L82" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L82" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L608" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L608" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="popstatic"></a>
 <h2>popStatic</h2>
@@ -466,36 +538,42 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="namespaceHack.md#stringcombine" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">StringCombine</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack.md#stringcombine">StringCombine</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpStackTop</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop">jumpStackTop</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movemintod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">moveMIntoD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movemintod">moveMIntoD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movedintox" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">moveDIntoX</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movedintox">moveDIntoX</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">decrement</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrement">decrement</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L86" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L86" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L561" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L561" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="poptemp"></a>
 <h2>popTemp</h2>
@@ -510,56 +588,62 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#offsetto" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">offsetTo</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#offsetto">offsetTo</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#tmp" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TMP</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#tmp">TMP</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movedintox" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">moveDIntoX</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movedintox">moveDIntoX</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#sw0" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SW0</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#sw0">SW0</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpStackTop</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop">jumpStackTop</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movemintod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">moveMIntoD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movemintod">moveMIntoD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumptoaddressin" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpToAddressIn</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumptoaddressin">jumpToAddressIn</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movedintom" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">moveDIntoM</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movedintom">moveDIntoM</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">decrement</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrement">decrement</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#move" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">move</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#move">move</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L80" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L80" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L585" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L585" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="popthat"></a>
 <h2>popThat</h2>
@@ -574,24 +658,30 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#popsegment" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">popSegment</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#popsegment">popSegment</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#tht" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">THT</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#tht">THT</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L78" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L78" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L579" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L579" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="popthis"></a>
 <h2>popThis</h2>
@@ -606,24 +696,30 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#popsegment" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">popSegment</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#popsegment">popSegment</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#ths" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">THS</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#ths">THS</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L76" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L76" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L573" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L573" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="pushargument"></a>
 <h2>pushArgument</h2>
@@ -638,48 +734,54 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#comparedintox" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">compareDIntoX</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#comparedintox">compareDIntoX</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#sw2" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SW2</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#sw2">SW2</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#arg" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ARG</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#arg">ARG</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpifequals" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpIfEquals</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpifequals">jumpIfEquals</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#dereferenceoffset" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">dereferenceOffset</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#dereferenceoffset">dereferenceOffset</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#copymintod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">copyMIntoD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#copymintod">copyMIntoD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#pushd" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">pushD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#pushd">pushD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#label" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">label</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#label">label</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L62" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L62" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L491" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L491" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="pushconstant"></a>
 <h2>pushConstant</h2>
@@ -694,20 +796,26 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#push" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">push</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#push">push</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L58" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L58" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L418" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L418" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="pushlocal"></a>
 <h2>pushLocal</h2>
@@ -722,48 +830,54 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#comparedintox" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">compareDIntoX</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#comparedintox">compareDIntoX</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#sw2" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SW2</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#sw2">SW2</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#lcl" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">LCL</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#lcl">LCL</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpifequals" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpIfEquals</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpifequals">jumpIfEquals</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#dereferenceoffset" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">dereferenceOffset</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#dereferenceoffset">dereferenceOffset</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#copymintod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">copyMIntoD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#copymintod">copyMIntoD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#pushd" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">pushD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#pushd">pushD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#label" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">label</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#label">label</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L60" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L60" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L424" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L424" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="pushpointer"></a>
 <h2>pushPointer</h2>
@@ -778,52 +892,58 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#comparedintox" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">compareDIntoX</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#comparedintox">compareDIntoX</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#sw2" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SW2</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#sw2">SW2</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#arg" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ARG</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#arg">ARG</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpifequals" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpIfEquals</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpifequals">jumpIfEquals</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#offsetto" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">offsetTo</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#offsetto">offsetTo</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#ths" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">THS</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#ths">THS</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#copymintod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">copyMIntoD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#copymintod">copyMIntoD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#pushd" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">pushD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#pushd">pushD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#label" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">label</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#label">label</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L72" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L72" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L510" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L510" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="pushstatic"></a>
 <h2>pushStatic</h2>
@@ -845,36 +965,42 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="namespaceHack.md#stringcombine" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">StringCombine</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack.md#stringcombine">StringCombine</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#ataddressof" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">atAddressOf</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#ataddressof">atAddressOf</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#copymintod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">copyMIntoD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#copymintod">copyMIntoD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#incrementandjump" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">incrementAndJump</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#incrementandjump">incrementAndJump</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movedintom" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">moveDIntoM</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movedintom">moveDIntoM</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L68" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L68" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L538" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L538" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="pushtemp"></a>
 <h2>pushTemp</h2>
@@ -889,32 +1015,38 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#offsetto" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">offsetTo</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#offsetto">offsetTo</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#tmp" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TMP</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#tmp">TMP</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movemintod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">moveMIntoD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movemintod">moveMIntoD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#pushd" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">pushD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#pushd">pushD</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L70" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L70" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L483" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L483" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="pushthat"></a>
 <h2>pushThat</h2>
@@ -929,48 +1061,54 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#comparedintox" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">compareDIntoX</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#comparedintox">compareDIntoX</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#sw2" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SW2</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#sw2">SW2</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#tht" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">THT</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#tht">THT</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpifequals" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpIfEquals</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpifequals">jumpIfEquals</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#dereferenceoffset" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">dereferenceOffset</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#dereferenceoffset">dereferenceOffset</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#copymintod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">copyMIntoD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#copymintod">copyMIntoD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#pushd" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">pushD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#pushd">pushD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#label" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">label</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#label">label</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L66" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L66" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L464" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L464" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="pushthis"></a>
 <h2>pushThis</h2>
@@ -985,48 +1123,54 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#comparedintox" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">compareDIntoX</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#comparedintox">compareDIntoX</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#sw2" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SW2</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#sw2">SW2</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#ths" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">THS</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#ths">THS</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpifequals" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpIfEquals</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpifequals">jumpIfEquals</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#dereferenceoffset" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">dereferenceOffset</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#dereferenceoffset">dereferenceOffset</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#copymintod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">copyMIntoD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#copymintod">copyMIntoD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#pushd" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">pushD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#pushd">pushD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#label" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">label</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#label">label</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L64" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L64" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L445" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L445" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="setram"></a>
 <h2>setRam</h2>
@@ -1046,20 +1190,26 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#move" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">move</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#move">move</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L56" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L56" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L412" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L412" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="stream"></a>
 <h2>stream</h2>
@@ -1070,10 +1220,16 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L51" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L51" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="writeadd"></a>
 <h2>writeAdd</h2>
@@ -1083,36 +1239,42 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpStackTop</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop">jumpStackTop</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movemintod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">moveMIntoD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movemintod">moveMIntoD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrementa" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">decrementA</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrementa">decrementA</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#adddmintom" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">addDmIntoM</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#adddmintom">addDmIntoM</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">decrement</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrement">decrement</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L94" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L94" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L655" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L655" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="writeand"></a>
 <h2>writeAnd</h2>
@@ -1122,36 +1284,42 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpStackTop</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop">jumpStackTop</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movemintod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">moveMIntoD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movemintod">moveMIntoD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrementa" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">decrementA</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrementa">decrementA</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#anddmintom" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">andDmIntoM</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#anddmintom">andDmIntoM</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">decrement</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrement">decrement</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L90" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L90" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L635" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L635" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="writecall"></a>
 <h2>writeCall</h2>
@@ -1173,80 +1341,86 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#setd" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">setD</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#setd">setD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#pushd" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">pushD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#pushd">pushD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#ataddressof" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">atAddressOf</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#ataddressof">atAddressOf</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#moveaintod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">moveAIntoD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#moveaintod">moveAIntoD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#copymintodat" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">copyMIntoDAt</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#copymintodat">copyMIntoDAt</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#lcl" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">LCL</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#lcl">LCL</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#arg" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ARG</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#arg">ARG</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#ths" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">THS</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#ths">THS</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#tht" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">THT</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#tht">THT</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#addxtod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">addXToD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#addxtod">addXToD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#stp" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">STP</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#stp">STP</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#subdmintod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">subDmIntoD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#subdmintod">subDmIntoD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#subxfromd" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">subXFromD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#subxfromd">subXFromD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movedintom" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">moveDIntoM</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movedintom">moveDIntoM</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpto" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpTo</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpto">jumpTo</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#label" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">label</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#label">label</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L118" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L118" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L800" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L800" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="writecode"></a>
 <h2>writeCode</h2>
@@ -1263,20 +1437,26 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#write" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">write</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#write">write</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L122" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L122" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L891" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L891" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="writeeq"></a>
 <h2>writeEq</h2>
@@ -1286,56 +1466,62 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpStackTop</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop">jumpStackTop</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#copymintod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">copyMIntoD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#copymintod">copyMIntoD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrementa" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">decrementA</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrementa">decrementA</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#submdintod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">subMdIntoD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#submdintod">subMdIntoD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpifequals" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpIfEquals</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpifequals">jumpIfEquals</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#setd" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">setD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#setd">setD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpto" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpTo</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpto">jumpTo</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#label" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">label</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#label">label</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movedintom" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">moveDIntoM</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movedintom">moveDIntoM</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">decrement</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrement">decrement</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L100" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L100" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L679" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L679" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="writefunction"></a>
 <h2>writeFunction</h2>
@@ -1357,36 +1543,42 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#label" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">label</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#label">label</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#dereferenceoffset" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">dereferenceOffset</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#dereferenceoffset">dereferenceOffset</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#lcl" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">LCL</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#lcl">LCL</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#setm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">setM</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#setm">setM</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#increment" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">increment</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#increment">increment</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L116" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L116" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L783" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L783" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="writegt"></a>
 <h2>writeGt</h2>
@@ -1396,56 +1588,62 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpStackTop</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop">jumpStackTop</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#copymintod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">copyMIntoD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#copymintod">copyMIntoD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrementa" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">decrementA</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrementa">decrementA</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#submdintod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">subMdIntoD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#submdintod">subMdIntoD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpifgreater" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpIfGreater</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpifgreater">jumpIfGreater</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#setd" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">setD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#setd">setD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpto" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpTo</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpto">jumpTo</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#label" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">label</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#label">label</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movedintom" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">moveDIntoM</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movedintom">moveDIntoM</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">decrement</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrement">decrement</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L104" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L104" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L724" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L724" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="writehalt"></a>
 <h2>writeHalt</h2>
@@ -1455,24 +1653,30 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#label" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">label</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#label">label</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumptoromaddress" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpToRomAddress</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumptoromaddress">jumpToRomAddress</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L108" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L108" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L752" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L752" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="writelabel"></a>
 <h2>writeLabel</h2>
@@ -1489,20 +1693,26 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#label" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">label</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#label">label</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L114" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L114" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L777" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L777" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="writelt"></a>
 <h2>writeLt</h2>
@@ -1512,56 +1722,62 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpStackTop</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop">jumpStackTop</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#copymintod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">copyMIntoD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#copymintod">copyMIntoD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrementa" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">decrementA</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrementa">decrementA</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#submdintod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">subMdIntoD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#submdintod">subMdIntoD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpifless" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpIfLess</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpifless">jumpIfLess</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#setd" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">setD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#setd">setD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpto" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpTo</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpto">jumpTo</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#label" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">label</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#label">label</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movedintom" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">moveDIntoM</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movedintom">moveDIntoM</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">decrement</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrement">decrement</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L102" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L102" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L702" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L702" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="writeneg"></a>
 <h2>writeNeg</h2>
@@ -1571,24 +1787,30 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpStackTop</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop">jumpStackTop</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#negmintom" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">negMIntoM</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#negmintom">negMIntoM</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L98" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L98" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L672" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L672" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="writenot"></a>
 <h2>writeNot</h2>
@@ -1598,24 +1820,30 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpStackTop</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop">jumpStackTop</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#notmintom" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">notMIntoM</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#notmintom">notMIntoM</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L96" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L96" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L665" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L665" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="writeor"></a>
 <h2>writeOr</h2>
@@ -1625,36 +1853,42 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpStackTop</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop">jumpStackTop</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movemintod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">moveMIntoD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movemintod">moveMIntoD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrementa" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">decrementA</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrementa">decrementA</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#ordmintom" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">orDmIntoM</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#ordmintom">orDmIntoM</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">decrement</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrement">decrement</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L88" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L88" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L625" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L625" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="writereset"></a>
 <h2>writeReset</h2>
@@ -1664,20 +1898,26 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumptoromaddress" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpToRomAddress</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumptoromaddress">jumpToRomAddress</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L106" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L106" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L746" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L746" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="writereturn"></a>
 <h2>writeReturn</h2>
@@ -1687,100 +1927,106 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#copymintodat" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">copyMIntoDAt</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#copymintodat">copyMIntoDAt</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#lcl" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">LCL</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#lcl">LCL</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movedintox" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">moveDIntoX</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movedintox">moveDIntoX</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#sw0" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SW0</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#sw0">SW0</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpStackTop</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop">jumpStackTop</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movemintod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">moveMIntoD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movemintod">moveMIntoD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">decrement</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrement">decrement</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#atdereferencedaddressof" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">atDeReferencedAddressOf</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#atdereferencedaddressof">atDeReferencedAddressOf</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#arg" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ARG</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#arg">ARG</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movedintom" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">moveDIntoM</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movedintom">moveDIntoM</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#addxtod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">addXToD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#addxtod">addXToD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#ataddressof" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">atAddressOf</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#ataddressof">atAddressOf</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#stp" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">STP</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#stp">STP</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#popstackframe" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">popStackFrame</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#popstackframe">popStackFrame</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#tht" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">THT</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#tht">THT</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#ths" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">THS</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#ths">THS</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movemintodat" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">moveMIntoDAt</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movemintodat">moveMIntoDAt</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#subxfromd" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">subXFromD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#subxfromd">subXFromD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#dereferenced" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">dereferenceD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#dereferenced">dereferenceD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1VirtualMachine.md#sw2" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">SW2</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1VirtualMachine.md#sw2">SW2</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumptod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpToD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumptod">jumpToD</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L120" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L120" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L855" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L855" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="writesub"></a>
 <h2>writeSub</h2>
@@ -1790,36 +2036,42 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpStackTop</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop">jumpStackTop</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movemintod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">moveMIntoD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movemintod">moveMIntoD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrementa" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">decrementA</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrementa">decrementA</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#submdintom" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">subMdIntoM</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#submdintom">subMdIntoM</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">decrement</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrement">decrement</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L92" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L92" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L645" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L645" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="writgoto"></a>
 <h2>writGoto</h2>
@@ -1836,20 +2088,26 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumptoromaddress" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpToRomAddress</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumptoromaddress">jumpToRomAddress</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L110" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L110" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L762" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L762" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="writifgoto"></a>
 <h2>writIfGoto</h2>
@@ -1866,32 +2124,38 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpStackTop</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpstacktop">jumpStackTop</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movemintod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">moveMIntoD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#movemintod">moveMIntoD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrement" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">decrement</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#decrement">decrement</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpifnotequals" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">jumpIfNotEquals</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#jumpifnotequals">jumpIfNotEquals</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.h#L112" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.h#L112" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/VirtualMachine/Emitter.cpp#L768" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/VirtualMachine/Emitter.cpp#L768" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Emitter.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#emitter" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 </div>
 </div>

@@ -1,7 +1,7 @@
 <a id="assembler"></a>
 <h1>Assembler</h1>
-<a id="namespaceHack_1_1Assembler"></a>
-<a href="https://github.com/CharlesCarley/HackComputer.md">~</a>
+<a id="namespacehack_1_1assembler"></a>
+<a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
 <a href="indexpage.md#hack">Hack</a>
 <span class="inline-text">/</span>
 <a href="index.md#index">Index</a>
@@ -13,26 +13,21 @@
 <br/>
 <a id="classes"></a>
 <h2>Classes</h2>
-<span class="icon-list-item"><a href="classHack_1_1Assembler_1_1Instruction.md#instruction" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Instruction</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="structHack_1_1Assembler_1_1KeywordTable.md#keywordtable" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">KeywordTable</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Assembler_1_1Parser.md#parser" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Parser</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="structHack_1_1Assembler_1_1ReservedWordTable.md#reservedwordtable" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ReservedWordTable</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Assembler_1_1Scanner.md#scanner" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Scanner</span>
-</a>
-</span>
-<br/>
+<div class="icon-link">
+<img src="../images/class.svg"/><a href="classHack_1_1Assembler_1_1Instruction.md#instruction">Instruction</a>
+</div>
+<div class="icon-link">
+<img src="../images/class.svg"/><a href="structHack_1_1Assembler_1_1KeywordTable.md#keywordtable">KeywordTable</a>
+</div>
+<div class="icon-link">
+<img src="../images/class.svg"/><a href="classHack_1_1Assembler_1_1Parser.md#parser">Parser</a>
+</div>
+<div class="icon-link">
+<img src="../images/class.svg"/><a href="structHack_1_1Assembler_1_1ReservedWordTable.md#reservedwordtable">ReservedWordTable</a>
+</div>
+<div class="icon-link">
+<img src="../images/class.svg"/><a href="classHack_1_1Assembler_1_1Scanner.md#scanner">Scanner</a>
+</div>
 <a id="enums"></a>
 <h2>Enums</h2>
 <span class="icon-list-item"><a href="#tokentype" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokenType</span>
@@ -83,156 +78,236 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Assembler/Instruction.cpp#L26" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Instruction.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Assembler/Instruction.cpp#L26" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Instruction.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#assembler" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <a id="tokentype"></a>
 <h2>TokenType</h2>
 <span class="bold-text"><b>TokenType</b></span>
 <br/>
+<a id="tok_error"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_ERROR</span>
 </span>
 </div>
+<a id="tok_eof"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_EOF</span>
 </span>
 </div>
+<a id="tok_null"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_NULL</span>
 </span>
 </div>
+<a id="tok_d_start"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_D_START</span>
 </span>
 </div>
+<a id="tok_m"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_M</span>
 </span>
 </div>
+<a id="tok_d"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_D</span>
 </span>
 </div>
+<a id="tok_md"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_MD</span>
 </span>
 </div>
+<a id="tok_a"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_A</span>
 </span>
 </div>
+<a id="tok_am"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_AM</span>
 </span>
 </div>
+<a id="tok_ad"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_AD</span>
 </span>
 </div>
+<a id="tok_amd"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_AMD</span>
 </span>
 </div>
+<a id="tok_j_start"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_J_START</span>
 </span>
 </div>
+<a id="tok_jgt"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_JGT</span>
 </span>
 </div>
+<a id="tok_jeq"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_JEQ</span>
 </span>
 </div>
+<a id="tok_jge"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_JGE</span>
 </span>
 </div>
+<a id="tok_jlt"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_JLT</span>
 </span>
 </div>
+<a id="tok_jne"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_JNE</span>
 </span>
 </div>
+<a id="tok_jle"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_JLE</span>
 </span>
 </div>
+<a id="tok_jmp"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_JMP</span>
 </span>
 </div>
+<a id="tok_zero"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_ZERO</span>
 </span>
 </div>
+<a id="tok_minus"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_MINUS</span>
 </span>
 </div>
+<a id="tok_not"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_NOT</span>
 </span>
 </div>
+<a id="tok_plus"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_PLUS</span>
 </span>
 </div>
+<a id="tok_and"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_AND</span>
 </span>
 </div>
+<a id="tok_or"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_OR</span>
 </span>
 </div>
+<a id="tok_at"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_AT</span>
 </span>
 </div>
+<a id="tok_semi_colon"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_SEMI_COLON</span>
 </span>
 </div>
+<a id="tok_equal"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_EQUAL</span>
 </span>
 </div>
+<a id="tok_l_paren"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_L_PAREN</span>
 </span>
 </div>
+<a id="tok_r_paren"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_R_PAREN</span>
 </span>
 </div>
+<a id="tok_comma"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_COMMA</span>
 </span>
 </div>
+<a id="tok_one"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_ONE</span>
 </span>
 </div>
+<a id="tok_integer"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_INTEGER</span>
 </span>
 </div>
+<a id="tok_label"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">TOK_LABEL</span>
 </span>
 </div>
+<a id="tok_error"></a>
+<a id="tok_eof"></a>
+<a id="tok_null"></a>
+<a id="tok_d_start"></a>
+<a id="tok_m"></a>
+<a id="tok_d"></a>
+<a id="tok_md"></a>
+<a id="tok_a"></a>
+<a id="tok_am"></a>
+<a id="tok_ad"></a>
+<a id="tok_amd"></a>
+<a id="tok_j_start"></a>
+<a id="tok_jgt"></a>
+<a id="tok_jeq"></a>
+<a id="tok_jge"></a>
+<a id="tok_jlt"></a>
+<a id="tok_jne"></a>
+<a id="tok_jle"></a>
+<a id="tok_jmp"></a>
+<a id="tok_zero"></a>
+<a id="tok_minus"></a>
+<a id="tok_not"></a>
+<a id="tok_plus"></a>
+<a id="tok_and"></a>
+<a id="tok_or"></a>
+<a id="tok_at"></a>
+<a id="tok_semi_colon"></a>
+<a id="tok_equal"></a>
+<a id="tok_l_paren"></a>
+<a id="tok_r_paren"></a>
+<a id="tok_comma"></a>
+<a id="tok_one"></a>
+<a id="tok_integer"></a>
+<a id="tok_label"></a>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Assembler/Token.h#L28" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Token.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Assembler/Token.h#L28" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Token.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#assembler" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="stringindex"></a>
 <h2>StringIndex</h2>
@@ -243,10 +318,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Assembler/Parser.h#L29" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Parser.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Assembler/Parser.h#L29" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Parser.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#assembler" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="token"></a>
 <h2>Token</h2>
@@ -255,10 +336,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Assembler/Token.h#L68" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Token.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Assembler/Token.h#L68" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Token.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#assembler" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="destandjumptable"></a>
 <h2>DestAndJumpTable</h2>
@@ -268,10 +355,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Assembler/Scanner.cpp#L42" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Assembler/Scanner.cpp#L42" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#assembler" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="reservedaddresses"></a>
 <h2>ReservedAddresses</h2>
@@ -281,10 +374,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Assembler/Scanner.cpp#L57" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Assembler/Scanner.cpp#L57" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Scanner.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#assembler" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="isconstanttoken"></a>
 <h2>isConstantToken</h2>
@@ -299,24 +398,30 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="namespaceHack_1_1Assembler.md#tok_zero" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TOK_ZERO</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Assembler.md#tok_zero">TOK_ZERO</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Assembler.md#tok_one" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TOK_ONE</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Assembler.md#tok_one">TOK_ONE</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Assembler.md#tok_integer" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TOK_INTEGER</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Assembler.md#tok_integer">TOK_INTEGER</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Assembler/Parser.cpp#L47" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Parser.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Assembler/Parser.cpp#L47" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Parser.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#assembler" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="isdesttoken"></a>
 <h2>isDestToken</h2>
@@ -331,20 +436,26 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="namespaceHack_1_1Assembler.md#tok_m" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TOK_M</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Assembler.md#tok_m">TOK_M</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Assembler.md#tok_amd" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TOK_AMD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Assembler.md#tok_amd">TOK_AMD</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Assembler/Parser.cpp#L42" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Parser.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Assembler/Parser.cpp#L42" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Parser.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#assembler" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="isjumptoken"></a>
 <h2>isJumpToken</h2>
@@ -359,20 +470,26 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="namespaceHack_1_1Assembler.md#tok_jgt" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TOK_JGT</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Assembler.md#tok_jgt">TOK_JGT</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Assembler.md#tok_jmp" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TOK_JMP</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Assembler.md#tok_jmp">TOK_JMP</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Assembler/Parser.cpp#L58" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Parser.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Assembler/Parser.cpp#L58" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Parser.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#assembler" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="isoperatortoken"></a>
 <h2>isOperatorToken</h2>
@@ -387,32 +504,38 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="namespaceHack_1_1Assembler.md#tok_plus" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TOK_PLUS</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Assembler.md#tok_plus">TOK_PLUS</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Assembler.md#tok_minus" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TOK_MINUS</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Assembler.md#tok_minus">TOK_MINUS</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Assembler.md#tok_and" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TOK_AND</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Assembler.md#tok_and">TOK_AND</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Assembler.md#tok_or" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TOK_OR</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Assembler.md#tok_or">TOK_OR</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Assembler.md#tok_not" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TOK_NOT</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Assembler.md#tok_not">TOK_NOT</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Assembler/Parser.cpp#L52" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Parser.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Assembler/Parser.cpp#L52" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Parser.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#assembler" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="testcompoundexpression"></a>
 <h2>testCompoundExpression</h2>
@@ -452,10 +575,16 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Assembler/Parser.cpp#L32" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Parser.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Assembler/Parser.cpp#L32" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Parser.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#assembler" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 </div>
 </div>

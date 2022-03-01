@@ -1,7 +1,7 @@
 <a id="parseutils"></a>
 <h1>ParseUtils</h1>
-<a id="classHack_1_1Compiler_1_1Analyzer_1_1ParseUtils"></a>
-<a href="https://github.com/CharlesCarley/HackComputer.md">~</a>
+<a id="classhack_1_1compiler_1_1analyzer_1_1parseutils"></a>
+<a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
 <a href="indexpage.md#hack">Hack</a>
 <span class="inline-text">/</span>
 <a href="index.md#index">Index</a>
@@ -55,10 +55,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/ParseUtils.h#L29" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/ParseUtils.h#L29" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#parseutils" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <a id="iscallterm"></a>
 <h2>isCallTerm</h2>
 <span class="inline-text">bool</span>
@@ -87,24 +93,30 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1Compiler_1_1Analyzer_1_1ParseUtils.md#isfunctioncall" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">isFunctionCall</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Compiler_1_1Analyzer_1_1ParseUtils.md#isfunctioncall">isFunctionCall</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Compiler_1_1Analyzer_1_1ParseUtils.md#ismethodcall" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">isMethodCall</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Compiler_1_1Analyzer_1_1ParseUtils.md#ismethodcall">isMethodCall</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/ParseUtils.h#L45" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/ParseUtils.h#L45" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/ParseUtils.cpp#L114" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/ParseUtils.cpp#L114" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#parseutils" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="iscomplexterm"></a>
 <h2>isComplexTerm</h2>
@@ -134,32 +146,38 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymlpar" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymLPar</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymlpar">TokSymLPar</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokid" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokId</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokid">TokId</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymlbracket" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymLBracket</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymlbracket">TokSymLBracket</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Compiler_1_1Analyzer_1_1ParseUtils.md#iscallterm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">isCallTerm</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Compiler_1_1Analyzer_1_1ParseUtils.md#iscallterm">isCallTerm</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/ParseUtils.h#L47" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/ParseUtils.h#L47" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/ParseUtils.cpp#L122" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/ParseUtils.cpp#L122" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#parseutils" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="isexpressionexitterm"></a>
 <h2>isExpressionExitTerm</h2>
@@ -174,32 +192,38 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymrbracket" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymRBracket</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymrbracket">TokSymRBracket</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymsemicolon" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymSemicolon</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymsemicolon">TokSymSemicolon</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymrpar" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymRPar</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymrpar">TokSymRPar</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymcomma" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymComma</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymcomma">TokSymComma</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/ParseUtils.h#L39" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/ParseUtils.h#L39" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/ParseUtils.cpp#L66" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/ParseUtils.cpp#L66" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#parseutils" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="isfunctioncall"></a>
 <h2>isFunctionCall</h2>
@@ -219,24 +243,30 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokid" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokId</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokid">TokId</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymlpar" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymLPar</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymlpar">TokSymLPar</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/ParseUtils.h#L41" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/ParseUtils.h#L41" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/ParseUtils.cpp#L95" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/ParseUtils.cpp#L95" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#parseutils" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="ismethodcall"></a>
 <h2>isMethodCall</h2>
@@ -266,32 +296,38 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokid" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokId</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokid">TokId</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwthis" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwThis</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwthis">TokKwThis</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymperiod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymPeriod</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymperiod">TokSymPeriod</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymlpar" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymLPar</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymlpar">TokSymLPar</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/ParseUtils.h#L43" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/ParseUtils.h#L43" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/ParseUtils.cpp#L103" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/ParseUtils.cpp#L103" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#parseutils" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="isoperator"></a>
 <h2>isOperator</h2>
@@ -306,52 +342,58 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopminus" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpMinus</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopminus">TokOpMinus</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopplus" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpPlus</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopplus">TokOpPlus</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopmultiply" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpMultiply</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopmultiply">TokOpMultiply</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopdivide" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpDivide</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopdivide">TokOpDivide</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopand" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpAnd</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopand">TokOpAnd</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopor" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpOr</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopor">TokOpOr</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopgt" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpGt</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopgt">TokOpGt</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokoplt" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpLt</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokoplt">TokOpLt</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopeq" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpEq</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopeq">TokOpEq</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/ParseUtils.h#L33" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/ParseUtils.h#L33" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/ParseUtils.cpp#L29" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/ParseUtils.cpp#L29" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#parseutils" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="isterm"></a>
 <h2>isTerm</h2>
@@ -366,48 +408,54 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokid" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokId</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokid">TokId</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokint" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokInt</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokint">TokInt</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokstring" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokString</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokstring">TokString</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwfalse" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwFalse</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwfalse">TokKwFalse</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwtrue" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwTrue</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwtrue">TokKwTrue</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwnull" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwNull</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwnull">TokKwNull</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwthis" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwThis</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwthis">TokKwThis</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymlpar" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymLPar</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymlpar">TokSymLPar</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/ParseUtils.h#L35" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/ParseUtils.h#L35" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/ParseUtils.cpp#L48" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/ParseUtils.cpp#L48" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#parseutils" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="isunary"></a>
 <h2>isUnary</h2>
@@ -432,32 +480,38 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopnot" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpNot</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopnot">TokOpNot</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopminus" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpMinus</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopminus">TokOpMinus</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Compiler_1_1Analyzer_1_1ParseUtils.md#isterm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">isTerm</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Compiler_1_1Analyzer_1_1ParseUtils.md#isterm">isTerm</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymlpar" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymLPar</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymlpar">TokSymLPar</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/ParseUtils.h#L37" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/ParseUtils.h#L37" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/ParseUtils.cpp#L80" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/ParseUtils.cpp#L80" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#parseutils" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="string"></a>
 <h2>string</h2>
@@ -472,208 +526,214 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toknull" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokNull</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toknull">TokNull</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokerror" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokError</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokerror">TokError</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokeof" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokEof</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokeof">TokEof</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokint" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokInt</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokint">TokInt</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokid" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokId</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokid">TokId</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokstring" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokString</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokstring">TokString</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwclass" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwClass</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwclass">TokKwClass</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwconstructor" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwConstructor</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwconstructor">TokKwConstructor</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwfunction" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwFunction</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwfunction">TokKwFunction</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwmethod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwMethod</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwmethod">TokKwMethod</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwfield" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwField</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwfield">TokKwField</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwstatic" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwStatic</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwstatic">TokKwStatic</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwvar" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwVar</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwvar">TokKwVar</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwint" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwInt</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwint">TokKwInt</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwchar" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwChar</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwchar">TokKwChar</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwbool" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwBool</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwbool">TokKwBool</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwvoid" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwVoid</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwvoid">TokKwVoid</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwlet" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwLet</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwlet">TokKwLet</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwdo" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwDo</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwdo">TokKwDo</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwif" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwIf</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwif">TokKwIf</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwelse" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwElse</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwelse">TokKwElse</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwwhile" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwWhile</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwwhile">TokKwWhile</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwreturn" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwReturn</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwreturn">TokKwReturn</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwtrue" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwTrue</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwtrue">TokKwTrue</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwfalse" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwFalse</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwfalse">TokKwFalse</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwnull" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwNull</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwnull">TokKwNull</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwthis" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwThis</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwthis">TokKwThis</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwinlinevm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwInlineVm</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwinlinevm">TokKwInlineVm</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwinlineasm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokKwInlineAsm</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokkwinlineasm">TokKwInlineAsm</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopplus" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpPlus</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopplus">TokOpPlus</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopminus" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpMinus</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopminus">TokOpMinus</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopmultiply" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpMultiply</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopmultiply">TokOpMultiply</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopdivide" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpDivide</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopdivide">TokOpDivide</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopand" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpAnd</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopand">TokOpAnd</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopor" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpOr</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopor">TokOpOr</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopnot" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpNot</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopnot">TokOpNot</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopgt" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpGt</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopgt">TokOpGt</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokoplt" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpLt</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokoplt">TokOpLt</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopeq" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokOpEq</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#tokopeq">TokOpEq</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymlbracket" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymLBracket</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymlbracket">TokSymLBracket</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymrbracket" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymRBracket</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymrbracket">TokSymRBracket</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymlbrace" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymLBrace</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymlbrace">TokSymLBrace</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymrbrace" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymRBrace</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymrbrace">TokSymRBrace</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymlpar" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymLPar</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymlpar">TokSymLPar</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymrpar" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymRPar</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymrpar">TokSymRPar</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymperiod" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymPeriod</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymperiod">TokSymPeriod</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymcomma" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymComma</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymcomma">TokSymComma</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymsemicolon" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">TokSymSemicolon</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Compiler_1_1Analyzer.md#toksymsemicolon">TokSymSemicolon</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/ParseUtils.h#L31" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/ParseUtils.h#L31" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Compiler/Analyzer/ParseUtils.cpp#L134" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Compiler/Analyzer/ParseUtils.cpp#L134" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">ParseUtils.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#parseutils" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 </div>
 </div>

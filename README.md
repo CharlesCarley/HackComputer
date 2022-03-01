@@ -111,8 +111,6 @@ Usage: vm2mc <options> <arg[0] .. arg[n]>
 
 This project is a collection of tools that implements the recommended compiler structure.
 
-![Dia01](Content/Dia01.svg)
-
 #### SyntaxAnalyzer
 
 The [syntax analyzer](Source/Compiler/Analyzer) takes an input `.jack` file and builds the parse tree which can be either, saved to `.xml` or used directly to emit `.vm` code.
@@ -158,7 +156,7 @@ Provides a binding interface to use in other languages.
 
 The [computer](Source/Computer/) ties together the ROM, RAM and CPU chips and implements multiple runtime targets.
 
-If SDL is enabled, the default runtime will open a window and map the screen region of memory to the SDL window. Otherwise if SDL is disabled, the default and only runtime is the [command line debugger](Content/Debugger.png).
+If SDL is enabled, the default runtime will open a window and map the screen region of memory to the SDL window. Otherwise if SDL is disabled, the default and only runtime is the ![command line debugger](Current/images/Debugger.png).
 
 ```txt
 Usage: computer <options> <arg[0] .. arg[n]>

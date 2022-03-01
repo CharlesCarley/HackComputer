@@ -1,14 +1,14 @@
 <a id="userinterface"></a>
 <h1>UserInterface</h1>
 <a id="dir_cf803d8ae7b53d8e9f214adfe58bf0b4"></a>
-<a href="https://github.com/CharlesCarley/HackComputer.md">~</a>
+<a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
 <a href="indexpage.md#hack">Hack</a>
 <span class="inline-text">/</span>
 <a href="index.md#index">Index</a>
 <span class="inline-text">/</span>
 <a href="dir_74389ed8173ad57b461b9d623a1f3867.md#source">Source</a>
 <span class="inline-text">/</span>
-<a href="dir_5c09e96eccedf512ae411d636afd2712.md#utils">Utils</a>
+<a href="dir_5c09e96eccedf512ae411d636afd2712.md#source-utils">Utils</a>
 <span class="inline-text">/</span>
 <span class="bold-text"><b>UserInterface</b></span>
 <br/>

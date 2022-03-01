@@ -1,7 +1,7 @@
 <a id="debugruntime"></a>
 <h1>DebugRuntime</h1>
-<a id="classHack_1_1Computer_1_1DebugRuntime"></a>
-<a href="https://github.com/CharlesCarley/HackComputer.md">~</a>
+<a id="classhack_1_1computer_1_1debugruntime"></a>
+<a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
 <a href="indexpage.md#hack">Hack</a>
 <span class="inline-text">/</span>
 <a href="index.md#index">Index</a>
@@ -16,7 +16,7 @@
 <a id="derived-from"></a>
 <h4>Derived From</h4>
 <div class="icon-link">
-<img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1RuntimeInterface.md#hackcomputerruntimeinterface">Hack::Computer::RuntimeInterface</a>
+<img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1RuntimeInterface.md#runtimeinterface">Hack::Computer::RuntimeInterface</a>
 </div>
 <img src="../images/dot/internal-diagram-43.dot.svg"/><br/>
 <a id="private-members"></a>
@@ -67,10 +67,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.h#L31" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.h#L31" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntime" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <a id="_private"></a>
 <h2>_private</h2>
 <a href="classHack_1_1Computer_1_1DebugRuntimePrivate.md#debugruntimeprivate">DebugRuntimePrivate</a>
@@ -79,10 +85,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.h#L33" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.h#L33" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntime" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="getrate"></a>
 <h2>getRate</h2>
@@ -92,10 +104,16 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.h#L35" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.h#L35" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntime" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="debugruntime"></a>
 <h2>DebugRuntime</h2>
@@ -104,14 +122,20 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.h#L41" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.h#L41" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L535" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L535" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntime" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="~debugruntime"></a>
 <h2>~DebugRuntime</h2>
@@ -120,14 +144,20 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.h#L43" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.h#L43" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L540" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L540" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntime" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="exitrequest"></a>
 <h2>exitRequest</h2>
@@ -137,24 +167,30 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1Computer_1_1DebugRuntimePrivate.md#input" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">input</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1DebugRuntimePrivate.md#input">input</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Ui.md#pr_exit" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">PR_EXIT</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Ui.md#pr_exit">PR_EXIT</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.h#L49" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.h#L49" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L558" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L558" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntime" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="flushmemory"></a>
 <h2>flushMemory</h2>
@@ -162,7 +198,7 @@
 <span class="bold-text"><b>flushMemory</b></span>
 <span class="italic-text"><i>(</i></span>
 <div class="paragraph">
-<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="classHack_1_1Chips_1_1Computer.md#chipscomputer">Chips::Computer</a>
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="classHack_1_1Chips_1_1Computer.md#computer">Chips::Computer</a>
 <span class="inline-text"> *</span>
 <span class="inline-text">computer</span>
 </span>
@@ -170,20 +206,26 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1Computer_1_1DebugRuntimePrivate.md#flushmemory" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">flushMemory</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1DebugRuntimePrivate.md#flushmemory">flushMemory</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.h#L53" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.h#L53" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L568" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L568" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntime" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="initialize"></a>
 <h2>initialize</h2>
@@ -191,37 +233,43 @@
 <span class="bold-text"><b>initialize</b></span>
 <span class="italic-text"><i>(</i></span>
 <div class="paragraph">
-<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="classHack_1_1Chips_1_1Computer.md#chipscomputer">Chips::Computer</a>
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="classHack_1_1Chips_1_1Computer.md#computer">Chips::Computer</a>
 <span class="inline-text"> *</span>
 <span class="inline-text">computer</span>
 </span>
 </div>
 <div class="paragraph">
-<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="namespaceHack_1_1Chips.md#chipsscreen">Chips::Screen</a>
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="namespaceHack_1_1Chips.md#screen">Chips::Screen</a>
 <span class="inline-text"> *</span>
 </span>
 </div>
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1Computer_1_1DebugRuntimePrivate.md#initialize" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">initialize</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1DebugRuntimePrivate.md#initialize">initialize</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Computer_1_1DebugRuntimePrivate.md#flushmemory" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">flushMemory</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1DebugRuntimePrivate.md#flushmemory">flushMemory</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.h#L47" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.h#L47" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L552" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L552" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntime" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="processevents"></a>
 <h2>processEvents</h2>
@@ -229,7 +277,7 @@
 <span class="bold-text"><b>processEvents</b></span>
 <span class="italic-text"><i>(</i></span>
 <div class="paragraph">
-<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="classHack_1_1Chips_1_1Computer.md#chipscomputer">Chips::Computer</a>
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="classHack_1_1Chips_1_1Computer.md#computer">Chips::Computer</a>
 <span class="inline-text"> *</span>
 <span class="inline-text">computer</span>
 </span>
@@ -237,20 +285,26 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1Computer_1_1DebugRuntimePrivate.md#processevents" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">processEvents</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1DebugRuntimePrivate.md#processevents">processEvents</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.h#L51" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.h#L51" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L563" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L563" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntime" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="shouldupdate"></a>
 <h2>shouldUpdate</h2>
@@ -260,32 +314,38 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1Computer_1_1DebugRuntimePrivate.md#input" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">input</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1DebugRuntimePrivate.md#input">input</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Ui.md#pr_up_arrow" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">PR_UP_ARROW</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Ui.md#pr_up_arrow">PR_UP_ARROW</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Ui.md#pr_r" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">PR_R</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Ui.md#pr_r">PR_R</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Computer_1_1DebugRuntimePrivate.md#block" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">block</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1DebugRuntimePrivate.md#block">block</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.h#L45" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.h#L45" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L546" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L546" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntime" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="update"></a>
 <h2>update</h2>
@@ -293,7 +353,7 @@
 <span class="bold-text"><b>update</b></span>
 <span class="italic-text"><i>(</i></span>
 <div class="paragraph">
-<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="classHack_1_1Chips_1_1Computer.md#chipscomputer">Chips::Computer</a>
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="classHack_1_1Chips_1_1Computer.md#computer">Chips::Computer</a>
 <span class="inline-text"> *</span>
 <span class="inline-text">computer</span>
 </span>
@@ -301,24 +361,30 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1Chips_1_1Computer.md#update" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">update</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Chips_1_1Computer.md#update">update</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Chips_1_1Computer.md#capturestate" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">captureState</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Chips_1_1Computer.md#capturestate">captureState</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.h#L55" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.h#L55" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L573" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L573" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntime" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 </div>
 </div>

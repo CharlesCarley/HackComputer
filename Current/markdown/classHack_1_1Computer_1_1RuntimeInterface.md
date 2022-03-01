@@ -1,7 +1,7 @@
 <a id="runtimeinterface"></a>
 <h1>RuntimeInterface</h1>
-<a id="classHack_1_1Computer_1_1RuntimeInterface"></a>
-<a href="https://github.com/CharlesCarley/HackComputer.md">~</a>
+<a id="classhack_1_1computer_1_1runtimeinterface"></a>
+<a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
 <a href="indexpage.md#hack">Hack</a>
 <span class="inline-text">/</span>
 <a href="index.md#index">Index</a>
@@ -16,10 +16,10 @@
 <a id="derived-by"></a>
 <h4>Derived By</h4>
 <div class="icon-link">
-<img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1CommandRuntime.md#hackcomputercommandruntime">Hack::Computer::CommandRuntime</a>
+<img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1CommandRuntime.md#commandruntime">Hack::Computer::CommandRuntime</a>
 </div>
 <div class="icon-link">
-<img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1DebugRuntime.md#hackcomputerdebugruntime">Hack::Computer::DebugRuntime</a>
+<img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1DebugRuntime.md#debugruntime">Hack::Computer::DebugRuntime</a>
 </div>
 <img src="../images/dot/internal-diagram-44.dot.svg"/><br/>
 <a id="public-methods"></a>
@@ -62,10 +62,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/RuntimeInterface.h#L29" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L29" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#runtimeinterface" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <a id="~runtimeinterface"></a>
 <h2>~RuntimeInterface</h2>
 <span class="bold-text"><b>~RuntimeInterface</b></span>
@@ -73,10 +79,16 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/RuntimeInterface.h#L31" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L31" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#runtimeinterface" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="exitrequest"></a>
 <h2>exitRequest</h2>
@@ -86,10 +98,16 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/RuntimeInterface.h#L41" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L41" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#runtimeinterface" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="flushmemory"></a>
 <h2>flushMemory</h2>
@@ -97,7 +115,7 @@
 <span class="bold-text"><b>flushMemory</b></span>
 <span class="italic-text"><i>(</i></span>
 <div class="paragraph">
-<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="classHack_1_1Chips_1_1Computer.md#chipscomputer">Chips::Computer</a>
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="classHack_1_1Chips_1_1Computer.md#computer">Chips::Computer</a>
 <span class="inline-text"> *</span>
 <span class="inline-text">computer</span>
 </span>
@@ -105,10 +123,16 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/RuntimeInterface.h#L45" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L45" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#runtimeinterface" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="getrate"></a>
 <h2>getRate</h2>
@@ -118,10 +142,16 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/RuntimeInterface.h#L35" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L35" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#runtimeinterface" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="initialize"></a>
 <h2>initialize</h2>
@@ -129,13 +159,13 @@
 <span class="bold-text"><b>initialize</b></span>
 <span class="italic-text"><i>(</i></span>
 <div class="paragraph">
-<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="classHack_1_1Chips_1_1Computer.md#chipscomputer">Chips::Computer</a>
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="classHack_1_1Chips_1_1Computer.md#computer">Chips::Computer</a>
 <span class="inline-text"> *</span>
 <span class="inline-text">computer</span>
 </span>
 </div>
 <div class="paragraph">
-<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="namespaceHack_1_1Chips.md#chipsscreen">Chips::Screen</a>
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="namespaceHack_1_1Chips.md#screen">Chips::Screen</a>
 <span class="inline-text"> *</span>
 <span class="inline-text">screen</span>
 </span>
@@ -143,10 +173,16 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/RuntimeInterface.h#L39" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L39" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#runtimeinterface" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="processevents"></a>
 <h2>processEvents</h2>
@@ -154,7 +190,7 @@
 <span class="bold-text"><b>processEvents</b></span>
 <span class="italic-text"><i>(</i></span>
 <div class="paragraph">
-<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="classHack_1_1Chips_1_1Computer.md#chipscomputer">Chips::Computer</a>
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="classHack_1_1Chips_1_1Computer.md#computer">Chips::Computer</a>
 <span class="inline-text"> *</span>
 <span class="inline-text">computer</span>
 </span>
@@ -162,10 +198,16 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/RuntimeInterface.h#L43" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L43" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#runtimeinterface" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="setrate"></a>
 <h2>setRate</h2>
@@ -180,10 +222,16 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/RuntimeInterface.h#L37" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L37" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#runtimeinterface" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="shouldupdate"></a>
 <h2>shouldUpdate</h2>
@@ -193,10 +241,16 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/RuntimeInterface.h#L33" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L33" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#runtimeinterface" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="update"></a>
 <h2>update</h2>
@@ -204,7 +258,7 @@
 <span class="bold-text"><b>update</b></span>
 <span class="italic-text"><i>(</i></span>
 <div class="paragraph">
-<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="classHack_1_1Chips_1_1Computer.md#chipscomputer">Chips::Computer</a>
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="classHack_1_1Chips_1_1Computer.md#computer">Chips::Computer</a>
 <span class="inline-text"> *</span>
 <span class="inline-text">computer</span>
 </span>
@@ -212,10 +266,16 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/RuntimeInterface.h#L47" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L47" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#runtimeinterface" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 </div>
 </div>

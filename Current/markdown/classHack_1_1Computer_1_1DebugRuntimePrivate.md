@@ -1,7 +1,7 @@
 <a id="debugruntimeprivate"></a>
 <h1>DebugRuntimePrivate</h1>
-<a id="classHack_1_1Computer_1_1DebugRuntimePrivate"></a>
-<a href="https://github.com/CharlesCarley/HackComputer.md">~</a>
+<a id="classhack_1_1computer_1_1debugruntimeprivate"></a>
+<a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
 <a href="indexpage.md#hack">Hack</a>
 <span class="inline-text">/</span>
 <a href="index.md#index">Index</a>
@@ -99,10 +99,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L61" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L61" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntimeprivate" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <a id="_block"></a>
 <h2>_block</h2>
 <span class="inline-text">bool</span>
@@ -110,10 +116,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L65" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L65" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntimeprivate" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="_cpustate"></a>
 <h2>_cpuState</h2>
@@ -122,10 +134,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L69" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L69" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntimeprivate" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="_ctx"></a>
 <h2>_ctx</h2>
@@ -135,10 +153,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L66" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L66" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntimeprivate" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="_input"></a>
 <h2>_input</h2>
@@ -147,10 +171,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L63" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L63" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntimeprivate" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="_mode"></a>
 <h2>_mode</h2>
@@ -159,10 +189,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L64" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L64" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntimeprivate" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="_prevcpustate"></a>
 <h2>_prevCpuState</h2>
@@ -171,10 +207,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L70" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L70" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntimeprivate" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="_ram"></a>
 <h2>_ram</h2>
@@ -184,10 +226,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L67" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L67" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntimeprivate" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="_rom"></a>
 <h2>_rom</h2>
@@ -197,10 +245,16 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L68" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L68" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntimeprivate" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="debugruntimeprivate"></a>
 <h2>DebugRuntimePrivate</h2>
@@ -209,16 +263,22 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="namespaceHack_1_1Ui.md#pr_no_input" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">PR_NO_INPUT</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Ui.md#pr_no_input">PR_NO_INPUT</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L73" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L73" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntimeprivate" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="~debugruntimeprivate"></a>
 <h2>~DebugRuntimePrivate</h2>
@@ -227,10 +287,16 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L85" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L85" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntimeprivate" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="block"></a>
 <h2>block</h2>
@@ -240,10 +306,16 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L113" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L113" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntimeprivate" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="displaycpu"></a>
 <h2>displayCpu</h2>
@@ -259,172 +331,178 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#height" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">height</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#height">height</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#width" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">width</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#width">width</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Rectangle.md#midx" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">midX</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Rectangle.md#midx">midX</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Rectangle.md#midy" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">midY</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Rectangle.md#midy">midY</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#reset" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">reset</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#reset">reset</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#foreground" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">foreground</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#foreground">foreground</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Computer.md#wire" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Wire</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Computer.md#wire">Wire</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#rectangle" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">rectangle</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#rectangle">rectangle</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Computer.md#title" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Title</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Computer.md#title">Title</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#string" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">string</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#string">string</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Rectangle.md#left" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">left</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Rectangle.md#left">left</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Rectangle.md#top" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Rectangle.md#top">top</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Rectangle.md#w" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">w</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Rectangle.md#w">w</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="structHack_1_1Chips_1_1CpuState.md#writem" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">writeM</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="structHack_1_1Chips_1_1CpuState.md#writem">writeM</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Computer.md#wirelight" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">WireLight</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Computer.md#wirelight">WireLight</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#line" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">line</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#line">line</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Rectangle.md#right" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">right</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Rectangle.md#right">right</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Ui.md#or_horizontal" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">OR_HORIZONTAL</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Ui.md#or_horizontal">OR_HORIZONTAL</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Computer.md#wiretitle" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">WireTitle</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Computer.md#wiretitle">WireTitle</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="structHack_1_1Chips_1_1CpuState.md#addrm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">addrM</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="structHack_1_1Chips_1_1CpuState.md#addrm">addrM</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="structHack_1_1Chips_1_1CpuState.md#outm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">outM</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="structHack_1_1Chips_1_1CpuState.md#outm">outM</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#moveto" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">moveTo</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#moveto">moveTo</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Rectangle.md#bottom" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">bottom</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Rectangle.md#bottom">bottom</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#lineto" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">lineTo</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#lineto">lineTo</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Ui.md#or_vertical" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">OR_VERTICAL</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Ui.md#or_vertical">OR_VERTICAL</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#character" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">character</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#character">character</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Ui.md#cs_rect_rt" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">CS_RECT_RT</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Ui.md#cs_rect_rt">CS_RECT_RT</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Ui.md#cs_rect_lb" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">CS_RECT_LB</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Ui.md#cs_rect_lb">CS_RECT_LB</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Ui.md#cs_rect_rb" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">CS_RECT_RB</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Ui.md#cs_rect_rb">CS_RECT_RB</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Computer.md#action" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Action</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Computer.md#action">Action</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Char.md#tostring" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">toString</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Char.md#tostring">toString</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="structHack_1_1Chips_1_1CpuState.md#inst" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">inst</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="structHack_1_1Chips_1_1CpuState.md#inst">inst</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="structHack_1_1Chips_1_1CpuState.md#pc" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">pc</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="structHack_1_1Chips_1_1CpuState.md#pc">pc</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Ui.md#cs_rect_lt" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">CS_RECT_LT</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Ui.md#cs_rect_lt">CS_RECT_LT</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="structHack_1_1Chips_1_1CpuState.md#ram" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">ram</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="structHack_1_1Chips_1_1CpuState.md#ram">ram</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Assembler_1_1Instruction.md#string" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">string</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Assembler_1_1Instruction.md#string">string</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="structHack_1_1Chips_1_1CpuState.md#clock" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">clock</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="structHack_1_1Chips_1_1CpuState.md#clock">clock</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="structHack_1_1Chips_1_1CpuState.md#rega" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">regA</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="structHack_1_1Chips_1_1CpuState.md#rega">regA</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="structHack_1_1Chips_1_1CpuState.md#regd" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">regD</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="structHack_1_1Chips_1_1CpuState.md#regd">regD</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="structHack_1_1Chips_1_1CpuState.md#reset" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">reset</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="structHack_1_1Chips_1_1CpuState.md#reset">reset</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L290" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L290" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntimeprivate" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="displaymemorycontents"></a>
 <h2>displayMemoryContents</h2>
@@ -469,72 +547,78 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#background" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">background</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#background">background</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Computer.md#wireshadow" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">WireShadow</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Computer.md#wireshadow">WireShadow</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#foreground" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">foreground</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#foreground">foreground</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#line" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">line</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#line">line</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Rectangle.md#x" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">x</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Rectangle.md#x">x</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Rectangle.md#midy" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">midY</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Rectangle.md#midy">midY</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Rectangle.md#w" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">w</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Rectangle.md#w">w</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Ui.md#or_horizontal" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">OR_HORIZONTAL</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Ui.md#or_horizontal">OR_HORIZONTAL</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Computer.md#highlight" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Highlight</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Computer.md#highlight">Highlight</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Computer.md#action2" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Action2</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Computer.md#action2">Action2</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Computer.md#grey" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Grey</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Computer.md#grey">Grey</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#string" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">string</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#string">string</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Rectangle.md#right" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">right</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Rectangle.md#right">right</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Computer.md#action" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Action</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Computer.md#action">Action</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Char.md#tostring" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">toString</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Char.md#tostring">toString</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L153" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L153" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntimeprivate" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="displayram"></a>
 <h2>displayRam</h2>
@@ -550,76 +634,82 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#height" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">height</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#height">height</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#width" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">width</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#width">width</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#reset" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">reset</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#reset">reset</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#foreground" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">foreground</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#foreground">foreground</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Computer.md#wire" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Wire</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Computer.md#wire">Wire</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#rectangle" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">rectangle</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#rectangle">rectangle</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Computer.md#title" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Title</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Computer.md#title">Title</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#string" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">string</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#string">string</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Rectangle.md#left" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">left</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Rectangle.md#left">left</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Rectangle.md#top" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Rectangle.md#top">top</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Rectangle.md#h" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">h</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Rectangle.md#h">h</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="structHack_1_1Chips_1_1CpuState.md#addrm" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">addrM</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="structHack_1_1Chips_1_1CpuState.md#addrm">addrM</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Chips_1_1Memory.md#get" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">get</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Chips_1_1Memory.md#get">get</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Char.md#tostring" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">toString</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Char.md#tostring">toString</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Char.md#tohexstring" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">toHexString</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Char.md#tohexstring">toHexString</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Char.md#tobinarystring" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">toBinaryString</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Char.md#tobinarystring">toBinaryString</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L236" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L236" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntimeprivate" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="displayrom"></a>
 <h2>displayRom</h2>
@@ -635,64 +725,70 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#height" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">height</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#height">height</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#reset" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">reset</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#reset">reset</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#foreground" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">foreground</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#foreground">foreground</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Computer.md#wire" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Wire</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Computer.md#wire">Wire</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#rectangle" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">rectangle</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#rectangle">rectangle</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Computer.md#title" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Title</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Computer.md#title">Title</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#string" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">string</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#string">string</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Rectangle.md#x" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">x</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Rectangle.md#x">x</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Rectangle.md#y" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">y</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Rectangle.md#y">y</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Rectangle.md#h" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">h</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Rectangle.md#h">h</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="structHack_1_1Chips_1_1CpuState.md#pc" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">pc</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="structHack_1_1Chips_1_1CpuState.md#pc">pc</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Chips_1_1Rom32.md#get" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">get</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Chips_1_1Rom32.md#get">get</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Assembler_1_1Instruction.md#string" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">string</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Assembler_1_1Instruction.md#string">string</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L199" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L199" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntimeprivate" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="flushmemory"></a>
 <h2>flushMemory</h2>
@@ -700,7 +796,7 @@
 <span class="bold-text"><b>flushMemory</b></span>
 <span class="italic-text"><i>(</i></span>
 <div class="paragraph">
-<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="classHack_1_1Chips_1_1Computer.md#chipscomputer">Chips::Computer</a>
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="classHack_1_1Chips_1_1Computer.md#computer">Chips::Computer</a>
 <span class="inline-text"> *</span>
 <span class="inline-text">computer</span>
 </span>
@@ -708,24 +804,30 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#clear" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">clear</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#clear">clear</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Chips_1_1Computer.md#state" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">state</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Chips_1_1Computer.md#state">state</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#flush" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">flush</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#flush">flush</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L141" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L141" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntimeprivate" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="initialize"></a>
 <h2>initialize</h2>
@@ -733,7 +835,7 @@
 <span class="bold-text"><b>initialize</b></span>
 <span class="italic-text"><i>(</i></span>
 <div class="paragraph">
-<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="classHack_1_1Chips_1_1Computer.md#chipscomputer">Chips::Computer</a>
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="classHack_1_1Chips_1_1Computer.md#computer">Chips::Computer</a>
 <span class="inline-text"> *</span>
 <span class="inline-text">computer</span>
 </span>
@@ -741,24 +843,30 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1Chips_1_1Computer.md#rom" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">rom</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Chips_1_1Computer.md#rom">rom</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Chips_1_1Computer.md#memory" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">memory</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Chips_1_1Computer.md#memory">memory</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#createcolor" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">createColor</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#createcolor">createColor</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L91" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L91" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntimeprivate" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="input"></a>
 <h2>input</h2>
@@ -768,10 +876,16 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L108" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L108" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntimeprivate" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="processevents"></a>
 <h2>processEvents</h2>
@@ -779,7 +893,7 @@
 <span class="bold-text"><b>processEvents</b></span>
 <span class="italic-text"><i>(</i></span>
 <div class="paragraph">
-<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="classHack_1_1Chips_1_1Computer.md#chipscomputer">Chips::Computer</a>
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><a href="classHack_1_1Chips_1_1Computer.md#computer">Chips::Computer</a>
 <span class="inline-text"> *</span>
 <span class="inline-text">computer</span>
 </span>
@@ -787,52 +901,58 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#poll" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">poll</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#poll">poll</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Ui.md#pr_c" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">PR_C</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Ui.md#pr_c">PR_C</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Ui.md#pr_r" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">PR_R</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Ui.md#pr_r">PR_R</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Chips_1_1Computer.md#reset" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">reset</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Chips_1_1Computer.md#reset">reset</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Ui.md#pr_1" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">PR_1</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Ui.md#pr_1">PR_1</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Ui.md#pr_2" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">PR_2</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Ui.md#pr_2">PR_2</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Ui.md#pr_3" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">PR_3</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Ui.md#pr_3">PR_3</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Ui.md#pr_4" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">PR_4</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Ui.md#pr_4">PR_4</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Ui.md#pr_esc" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">PR_ESC</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Ui.md#pr_esc">PR_ESC</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Ui.md#pr_exit" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">PR_EXIT</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Ui.md#pr_exit">PR_EXIT</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L118" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L118" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntimeprivate" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 <a id="render"></a>
 <h2>render</h2>
@@ -848,52 +968,58 @@
 <span class="italic-text"><i>)</i></span>
 <a id="references"></a>
 <h4>References</h4>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#reset" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">reset</span>
-</a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#reset">reset</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#width" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">width</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#width">width</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#background" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">background</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#background">background</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Computer.md#wireshadow" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">WireShadow</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Computer.md#wireshadow">WireShadow</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#foreground" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">foreground</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#foreground">foreground</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#line" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">line</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#line">line</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Ui.md#or_horizontal" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">OR_HORIZONTAL</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Ui.md#or_horizontal">OR_HORIZONTAL</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="namespaceHack_1_1Computer.md#highlight" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Highlight</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="namespaceHack_1_1Computer.md#highlight">Highlight</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#string" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">string</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#string">string</a>
 </span>
-<br/>
-<span class="icon-list-item"><a href="classHack_1_1Ui_1_1Context.md#useextended" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">useExtended</span>
-</a>
+</div>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/class.svg"/><a href="classHack_1_1Ui_1_1Context.md#useextended">useExtended</a>
 </span>
-<br/>
+</div>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master//Source/Computer/DebugRuntime.cpp#L511" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L511" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
 </a>
 </span>
 <br/>
+<br/>
+<blockquote>
+<span class="icon-list-item"><a href="#debugruntimeprivate" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+</blockquote>
 <br/>
 </div>
 </div>

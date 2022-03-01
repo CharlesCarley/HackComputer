@@ -1,7 +1,7 @@
 <a id="operatingsystem"></a>
 <h1>OperatingSystem</h1>
 <a id="dir_db6a65340a7df5fc473ffbff34a678f0"></a>
-<a href="https://github.com/CharlesCarley/HackComputer.md">~</a>
+<a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
 <a href="indexpage.md#hack">Hack</a>
 <span class="inline-text">/</span>
 <a href="index.md#index">Index</a>
