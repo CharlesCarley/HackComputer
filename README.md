@@ -36,6 +36,7 @@ It is split into multiple namespace projects under the primary Hack namespace.
   - [Extra Tools](#extra-tools)
     - [Parse Tree Visual](#parse-tree-visual)
     - [GRM files](#grm-files)
+  - [MdDox Index](#mddox-index)
   - [Current State](#current-state)
 
 ### Utils
@@ -172,6 +173,7 @@ Usage: computer <options> <arg[0] .. arg[n]>
 
 ```
 
+
 ## Building
 
 It uses CMake to generate its make files.
@@ -214,6 +216,10 @@ The grammar files are for the most part reference only. They do not use any of t
 I believe it is a dead project, which is a shame because it is an awesome tool-set to `quickly` throw together and test grammars.
 
 - [GoldParser](http://www.goldparser.org/)
+
+## MdDox Index
+
+The generated content for this repository can be found [here](Current/markdown/index.md)
 
 ## Current State
 
