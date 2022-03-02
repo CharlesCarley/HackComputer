@@ -12,5 +12,6 @@ in the end. In order to do that, the supplied tools in the course material had
 to be written from scratch (to some extent).
 
 
+- \ref index "Primary Index"
 
 */

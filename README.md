@@ -226,9 +226,3 @@ The generated content for this repository can be found [here](Current/markdown/i
 This is still a work in progress. Its on hold for the time being until I have
 more time to devote to it. It doesn't really do much on the surface. The Jack
 language is still very basic.
-
-This all just a hobby for me and the thought of actually finding job writing code seems 
-farther off now more than ever. More effort on my part needs to be given to a job search vs spending all my time writing 
-code for the sake of writing code.
-
-
