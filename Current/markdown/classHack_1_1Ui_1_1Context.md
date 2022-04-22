@@ -2,9 +2,7 @@
 <h1>Context</h1>
 <a id="classhack_1_1ui_1_1context"></a>
 <a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
-<a href="indexpage.md#hack">Hack</a>
-<span class="inline-text">/</span>
-<a href="index.md#index">Index</a>
+<a href="index.md#index">Hack</a>
 <span class="inline-text">/</span>
 <a href="namespaceHack.md#hack">Hack</a>
 <span class="inline-text">::</span>
@@ -200,11 +198,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <a id="_capacity"></a>
 <h2>_capacity</h2>
 <span class="inline-text">size_t</span>
@@ -217,11 +213,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="_cbcap"></a>
 <h2>_cbCap</h2>
@@ -235,11 +229,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="_cbsize"></a>
 <h2>_cbSize</h2>
@@ -253,11 +245,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="_color"></a>
 <h2>_color</h2>
@@ -271,11 +261,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="_colorbuffer"></a>
 <h2>_colorBuffer</h2>
@@ -290,11 +278,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="_colormap"></a>
 <h2>_colorMap</h2>
@@ -308,11 +294,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="_framebuffer"></a>
 <h2>_frameBuffer</h2>
@@ -326,11 +310,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="_pitch"></a>
 <h2>_pitch</h2>
@@ -344,11 +326,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="_platform"></a>
 <h2>_platform</h2>
@@ -363,11 +343,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="_size"></a>
 <h2>_size</h2>
@@ -381,11 +359,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="_useextended"></a>
 <h2>_useExtended</h2>
@@ -399,11 +375,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="_workingpath"></a>
 <h2>_workingPath</h2>
@@ -417,11 +391,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="initializepalette"></a>
 <h2>initializePalette</h2>
@@ -440,11 +412,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="insertcharacter"></a>
 <h2>insertCharacter</h2>
@@ -478,11 +448,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="putextended"></a>
 <h2>putExtended</h2>
@@ -506,11 +474,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="resizebuffers"></a>
 <h2>resizeBuffers</h2>
@@ -536,11 +502,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="context"></a>
 <h2>Context</h2>
@@ -558,11 +522,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="~context"></a>
 <h2>~Context</h2>
@@ -580,11 +542,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="addsegment"></a>
 <h2>addSegment</h2>
@@ -622,11 +582,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="background"></a>
 <h2>background</h2>
@@ -654,11 +612,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="character"></a>
 <h2>character</h2>
@@ -692,11 +648,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="character"></a>
 <h2>character</h2>
@@ -741,11 +695,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="clear"></a>
 <h2>clear</h2>
@@ -789,11 +741,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="clearpath"></a>
 <h2>clearPath</h2>
@@ -812,11 +762,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="createcolor"></a>
 <h2>createColor</h2>
@@ -848,11 +796,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="flush"></a>
 <h2>flush</h2>
@@ -929,11 +875,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="foreground"></a>
 <h2>foreground</h2>
@@ -961,11 +905,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="height"></a>
 <h2>height</h2>
@@ -986,11 +928,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="initialize"></a>
 <h2>initialize</h2>
@@ -1015,11 +955,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="line"></a>
 <h2>line</h2>
@@ -1088,11 +1026,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="line"></a>
 <h2>line</h2>
@@ -1142,11 +1078,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="lineto"></a>
 <h2>lineTo</h2>
@@ -1206,11 +1140,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="moveto"></a>
 <h2>moveTo</h2>
@@ -1245,11 +1177,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="poll"></a>
 <h2>poll</h2>
@@ -1287,11 +1217,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="rectangle"></a>
 <h2>rectangle</h2>
@@ -1364,11 +1292,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="rectangle"></a>
 <h2>rectangle</h2>
@@ -1416,11 +1342,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="reset"></a>
 <h2>reset</h2>
@@ -1445,11 +1369,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="size"></a>
 <h2>size</h2>
@@ -1466,11 +1388,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="string"></a>
 <h2>string</h2>
@@ -1506,11 +1426,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="string"></a>
 <h2>string</h2>
@@ -1557,11 +1475,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="useextended"></a>
 <h2>useExtended</h2>
@@ -1581,11 +1497,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="width"></a>
 <h2>width</h2>
@@ -1606,11 +1520,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="sleep"></a>
 <h2>sleep</h2>
@@ -1640,24 +1552,10 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#context" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
-<br/>
-<blockquote>
-<img src="../images/debug.svg"/><span class="inline-text">The following sources were used to generate this page.</span>
-<br/>
-<span class="icon-list-item"><a href="../xml/classHack_1_1Ui_1_1Context.xml#L1" class="icon-list-item"><img src="../images/lookInside.svg" class="icon-list-item"/><span class="icon-list-item">classHack_1_1Ui_1_1Context.xml</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="../xml/compound.xsd#L1" class="icon-list-item"><img src="../images/lookInside.svg" class="icon-list-item"/><span class="icon-list-item">compound.xsd</span>
-</a>
-</span>
-</blockquote>
 </div>
 </div>
 </body>

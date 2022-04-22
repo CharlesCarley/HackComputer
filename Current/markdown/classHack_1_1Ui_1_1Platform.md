@@ -2,9 +2,7 @@
 <h1>Platform</h1>
 <a id="classhack_1_1ui_1_1platform"></a>
 <a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
-<a href="indexpage.md#hack">Hack</a>
-<span class="inline-text">/</span>
-<a href="index.md#index">Index</a>
+<a href="index.md#index">Hack</a>
 <span class="inline-text">/</span>
 <a href="namespaceHack.md#hack">Hack</a>
 <span class="inline-text">::</span>
@@ -102,11 +100,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#platform" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <a id="colorcache"></a>
 <h2>ColorCache</h2>
 <span class="inline-text">std::unordered_map&lt; </span>
@@ -123,11 +119,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#platform" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="_cache"></a>
 <h2>_cache</h2>
@@ -141,11 +135,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#platform" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="platform"></a>
 <h2>Platform</h2>
@@ -159,11 +151,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#platform" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="~platform"></a>
 <h2>~Platform</h2>
@@ -181,11 +171,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#platform" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="clear"></a>
 <h2>clear</h2>
@@ -214,11 +202,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#platform" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="color"></a>
 <h2>color</h2>
@@ -266,11 +252,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#platform" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="flush"></a>
 <h2>flush</h2>
@@ -289,11 +273,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#platform" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="getscreensize"></a>
 <h2>getScreenSize</h2>
@@ -314,11 +296,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#platform" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="poll"></a>
 <h2>poll</h2>
@@ -338,11 +318,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#platform" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="put"></a>
 <h2>put</h2>
@@ -444,11 +422,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#platform" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="put"></a>
 <h2>put</h2>
@@ -472,11 +448,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#platform" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="resetcolor"></a>
 <h2>resetColor</h2>
@@ -505,11 +479,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#platform" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="resetcursor"></a>
 <h2>resetCursor</h2>
@@ -538,11 +510,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#platform" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="setcursor"></a>
 <h2>setCursor</h2>
@@ -577,11 +547,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#platform" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="showcursor"></a>
 <h2>showCursor</h2>
@@ -619,11 +587,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#platform" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="usebackbuffer"></a>
 <h2>useBackBuffer</h2>
@@ -681,11 +647,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#platform" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="sleep"></a>
 <h2>sleep</h2>
@@ -709,24 +673,10 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#platform" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
-<br/>
-<blockquote>
-<img src="../images/debug.svg"/><span class="inline-text">The following sources were used to generate this page.</span>
-<br/>
-<span class="icon-list-item"><a href="../xml/classHack_1_1Ui_1_1Platform.xml#L1" class="icon-list-item"><img src="../images/lookInside.svg" class="icon-list-item"/><span class="icon-list-item">classHack_1_1Ui_1_1Platform.xml</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="../xml/compound.xsd#L1" class="icon-list-item"><img src="../images/lookInside.svg" class="icon-list-item"/><span class="icon-list-item">compound.xsd</span>
-</a>
-</span>
-</blockquote>
 </div>
 </div>
 </body>

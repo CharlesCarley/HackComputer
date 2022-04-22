@@ -2,9 +2,7 @@
 <h1>Computer</h1>
 <a id="classhack_1_1chips_1_1computer"></a>
 <a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
-<a href="indexpage.md#hack">Hack</a>
-<span class="inline-text">/</span>
-<a href="index.md#index">Index</a>
+<a href="index.md#index">Hack</a>
 <span class="inline-text">/</span>
 <a href="namespaceHack.md#hack">Hack</a>
 <span class="inline-text">::</span>
@@ -100,11 +98,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#computer" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <a id="nullstate"></a>
 <h2>NullState</h2>
 <a href="structHack_1_1Chips_1_1CpuState.md#cpustate">CpuState</a>
@@ -117,11 +113,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#computer" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="_cpu"></a>
 <h2>_cpu</h2>
@@ -136,11 +130,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#computer" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="_cpustate"></a>
 <h2>_cpuState</h2>
@@ -154,11 +146,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#computer" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="_ram"></a>
 <h2>_ram</h2>
@@ -173,11 +163,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#computer" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="_reset"></a>
 <h2>_reset</h2>
@@ -191,11 +179,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#computer" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="_rom"></a>
 <h2>_rom</h2>
@@ -210,11 +196,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#computer" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="clear"></a>
 <h2>clear</h2>
@@ -233,11 +217,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#computer" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="computer"></a>
 <h2>Computer</h2>
@@ -255,11 +237,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#computer" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="~computer"></a>
 <h2>~Computer</h2>
@@ -277,11 +257,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#computer" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="canread"></a>
 <h2>canRead</h2>
@@ -310,11 +288,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#computer" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="capturestate"></a>
 <h2>captureState</h2>
@@ -415,11 +391,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#computer" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="load"></a>
 <h2>load</h2>
@@ -460,11 +434,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#computer" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="memory"></a>
 <h2>memory</h2>
@@ -480,11 +452,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#computer" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="reset"></a>
 <h2>reset</h2>
@@ -503,11 +473,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#computer" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="rom"></a>
 <h2>rom</h2>
@@ -523,11 +491,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#computer" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="runtoend"></a>
 <h2>runToEnd</h2>
@@ -564,11 +530,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#computer" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="state"></a>
 <h2>state</h2>
@@ -585,11 +549,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#computer" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="update"></a>
 <h2>update</h2>
@@ -697,24 +659,10 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#computer" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
-<br/>
-<blockquote>
-<img src="../images/debug.svg"/><span class="inline-text">The following sources were used to generate this page.</span>
-<br/>
-<span class="icon-list-item"><a href="../xml/classHack_1_1Chips_1_1Computer.xml#L1" class="icon-list-item"><img src="../images/lookInside.svg" class="icon-list-item"/><span class="icon-list-item">classHack_1_1Chips_1_1Computer.xml</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="../xml/compound.xsd#L1" class="icon-list-item"><img src="../images/lookInside.svg" class="icon-list-item"/><span class="icon-list-item">compound.xsd</span>
-</a>
-</span>
-</blockquote>
 </div>
 </div>
 </body>

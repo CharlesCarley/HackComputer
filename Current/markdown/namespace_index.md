@@ -1,15 +1,11 @@
 <a id="namespace-index"></a>
 <h1>Namespace Index</h1>
 <a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
-<a href="indexpage.md#hack">Hack</a>
-<span class="inline-text">/</span>
-<a href="index.md#index">Index</a>
+<a href="index.md#index">Hack</a>
 <span class="inline-text">/</span>
 <span class="bold-text"><b>Namespace Index</b></span>
 <br/>
 <br/>
-<a id="contents"></a>
-<h2>Contents</h2>
 <ul>
 <li><a href="namespaceHack.md#hack">Hack</a>
 </li>

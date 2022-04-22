@@ -2,9 +2,7 @@
 <h1>Gates</h1>
 <a id="namespacehack_1_1chips_1_1gates"></a>
 <a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
-<a href="indexpage.md#hack">Hack</a>
-<span class="inline-text">/</span>
-<a href="index.md#index">Index</a>
+<a href="index.md#index">Hack</a>
 <span class="inline-text">/</span>
 <a href="namespaceHack.md#hack">Hack</a>
 <span class="inline-text">::</span>
@@ -58,11 +56,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#gates" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <a id="and"></a>
 <h2>And</h2>
 <span class="inline-text">bool</span>
@@ -92,11 +88,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#gates" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="and3"></a>
 <h2>And3</h2>
@@ -132,11 +126,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#gates" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="mux"></a>
 <h2>Mux</h2>
@@ -180,11 +172,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#gates" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="nand"></a>
 <h2>NAnd</h2>
@@ -209,11 +199,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#gates" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="nor"></a>
 <h2>NOr</h2>
@@ -248,11 +236,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#gates" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="not"></a>
 <h2>Not</h2>
@@ -278,11 +264,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#gates" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="or"></a>
 <h2>Or</h2>
@@ -317,11 +301,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#gates" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="or3"></a>
 <h2>Or3</h2>
@@ -357,11 +339,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#gates" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="xor"></a>
 <h2>XOr</h2>
@@ -392,24 +372,10 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#gates" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
-<br/>
-<blockquote>
-<img src="../images/debug.svg"/><span class="inline-text">The following sources were used to generate this page.</span>
-<br/>
-<span class="icon-list-item"><a href="../xml/namespaceHack_1_1Chips_1_1Gates.xml#L1" class="icon-list-item"><img src="../images/lookInside.svg" class="icon-list-item"/><span class="icon-list-item">namespaceHack_1_1Chips_1_1Gates.xml</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="../xml/compound.xsd#L1" class="icon-list-item"><img src="../images/lookInside.svg" class="icon-list-item"/><span class="icon-list-item">compound.xsd</span>
-</a>
-</span>
-</blockquote>
 </div>
 </div>
 </body>

@@ -2,9 +2,7 @@
 <h1>SRLatch</h1>
 <a id="classhack_1_1chips_1_1srlatch"></a>
 <a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
-<a href="indexpage.md#hack">Hack</a>
-<span class="inline-text">/</span>
-<a href="index.md#index">Index</a>
+<a href="index.md#index">Hack</a>
 <span class="inline-text">/</span>
 <a href="namespaceHack.md#hack">Hack</a>
 <span class="inline-text">::</span>
@@ -62,11 +60,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#srlatch" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <a id="evaluate"></a>
 <h2>evaluate</h2>
 <span class="inline-text">void</span>
@@ -84,11 +80,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#srlatch" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="isdirty"></a>
 <h2>isDirty</h2>
@@ -103,11 +97,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#srlatch" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="srlatch"></a>
 <h2>SRLatch</h2>
@@ -135,11 +127,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#srlatch" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="getq"></a>
 <h2>getQ</h2>
@@ -164,11 +154,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#srlatch" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="getqplus"></a>
 <h2>getQPlus</h2>
@@ -193,11 +181,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#srlatch" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="setqn"></a>
 <h2>setQn</h2>
@@ -227,11 +213,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#srlatch" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="setr"></a>
 <h2>setR</h2>
@@ -265,11 +249,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#srlatch" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="sets"></a>
 <h2>setS</h2>
@@ -303,24 +285,10 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#srlatch" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
-<br/>
-<blockquote>
-<img src="../images/debug.svg"/><span class="inline-text">The following sources were used to generate this page.</span>
-<br/>
-<span class="icon-list-item"><a href="../xml/classHack_1_1Chips_1_1SRLatch.xml#L1" class="icon-list-item"><img src="../images/lookInside.svg" class="icon-list-item"/><span class="icon-list-item">classHack_1_1Chips_1_1SRLatch.xml</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="../xml/compound.xsd#L1" class="icon-list-item"><img src="../images/lookInside.svg" class="icon-list-item"/><span class="icon-list-item">compound.xsd</span>
-</a>
-</span>
-</blockquote>
 </div>
 </div>
 </body>

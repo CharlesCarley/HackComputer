@@ -2,17 +2,13 @@
 <h1>Assembler</h1>
 <a id="dir_b4ae306ad6cf73ddcf215c0aa9d9fdc5"></a>
 <a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
-<a href="indexpage.md#hack">Hack</a>
-<span class="inline-text">/</span>
-<a href="index.md#index">Index</a>
+<a href="index.md#index">Hack</a>
 <span class="inline-text">/</span>
 <a href="dir_74389ed8173ad57b461b9d623a1f3867.md#source">Source</a>
 <span class="inline-text">/</span>
 <span class="bold-text"><b>Assembler</b></span>
 <br/>
 <br/>
-<a id="contents"></a>
-<h2>Contents</h2>
 <span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Assembler/Instruction.cpp#L1" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Instruction.cpp</span>
 </a>
 </span>
@@ -49,18 +45,6 @@
 </a>
 </span>
 <br/>
-<br/>
-<blockquote>
-<img src="../images/debug.svg"/><span class="inline-text">The following sources were used to generate this page.</span>
-<br/>
-<span class="icon-list-item"><a href="../xml/dir_b4ae306ad6cf73ddcf215c0aa9d9fdc5.xml#L1" class="icon-list-item"><img src="../images/lookInside.svg" class="icon-list-item"/><span class="icon-list-item">dir_b4ae306ad6cf73ddcf215c0aa9d9fdc5.xml</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="../xml/compound.xsd#L1" class="icon-list-item"><img src="../images/lookInside.svg" class="icon-list-item"/><span class="icon-list-item">compound.xsd</span>
-</a>
-</span>
-</blockquote>
 </div>
 </div>
 </body>

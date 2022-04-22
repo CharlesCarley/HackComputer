@@ -2,9 +2,7 @@
 <h1>Generator</h1>
 <a id="classhack_1_1compiler_1_1codegenerator_1_1generator"></a>
 <a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
-<a href="indexpage.md#hack">Hack</a>
-<span class="inline-text">/</span>
-<a href="index.md#index">Index</a>
+<a href="index.md#index">Hack</a>
 <span class="inline-text">/</span>
 <a href="namespaceHack.md#hack">Hack</a>
 <span class="inline-text">::</span>
@@ -176,11 +174,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <a id="_elseend"></a>
 <h2>_elseEnd</h2>
 <a href="namespaceHack.md#string">String</a>
@@ -193,11 +189,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="_emitter"></a>
 <h2>_emitter</h2>
@@ -212,11 +206,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="_filename"></a>
 <h2>_fileName</h2>
@@ -230,11 +222,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="_globals"></a>
 <h2>_globals</h2>
@@ -249,11 +239,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="_hasreturn"></a>
 <h2>_hasReturn</h2>
@@ -267,11 +255,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="_locals"></a>
 <h2>_locals</h2>
@@ -286,11 +272,9 @@
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="buildcallmethod"></a>
 <h2>buildCallMethod</h2>
@@ -331,11 +315,9 @@ CallMethod ::= Identifier '(' ExpressionList ')'
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="buildclass"></a>
 <h2>buildClass</h2>
@@ -374,11 +356,9 @@ Class ::= Class Identifier '{' ClassDescription '}'
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="buildclassdescription"></a>
 <h2>buildClassDescription</h2>
@@ -420,11 +400,9 @@ ClassDescription  ::= ClassDescription Field ';'
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="buildcomplexterm"></a>
 <h2>buildComplexTerm</h2>
@@ -466,11 +444,9 @@ ComplexTerm ::= Identifier '[' Expression ']'
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="buildconstant"></a>
 <h2>buildConstant</h2>
@@ -496,11 +472,9 @@ ComplexTerm ::= Identifier '[' Expression ']'
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="builddostatement"></a>
 <h2>buildDoStatement</h2>
@@ -540,11 +514,9 @@ DoStatement ::= Do CallMethod ';'
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="buildelsestatement"></a>
 <h2>buildElseStatement</h2>
@@ -585,11 +557,9 @@ IfStatement ::= If '(' Expression ')' '{' StatementList '}'
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="buildexpression"></a>
 <h2>buildExpression</h2>
@@ -630,11 +600,9 @@ Expression ::= ExpressionSingleExpression
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="buildexpressionlist"></a>
 <h2>buildExpressionList</h2>
@@ -676,11 +644,9 @@ ExpressionList ::= ExpressionList ','  Expression
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="buildglobals"></a>
 <h2>buildGlobals</h2>
@@ -706,11 +672,9 @@ ExpressionList ::= ExpressionList ','  Expression
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="buildifstatement"></a>
 <h2>buildIfStatement</h2>
@@ -751,11 +715,9 @@ IfStatement ::= If '(' Expression ')' '{' StatementList '}'
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="buildletstatement"></a>
 <h2>buildLetStatement</h2>
@@ -796,11 +758,9 @@ LetStatement ::= Let Identifier '=' Expression ';'
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="buildlocals"></a>
 <h2>buildLocals</h2>
@@ -833,11 +793,9 @@ LetStatement ::= Let Identifier '=' Expression ';'
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="buildoperation"></a>
 <h2>buildOperation</h2>
@@ -863,11 +821,9 @@ LetStatement ::= Let Identifier '=' Expression ';'
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="buildreturnstatement"></a>
 <h2>buildReturnStatement</h2>
@@ -904,11 +860,9 @@ LetStatement ::= Let Identifier '=' Expression ';'
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="buildsimpleterm"></a>
 <h2>buildSimpleTerm</h2>
@@ -954,11 +908,9 @@ LetStatement ::= Let Identifier '=' Expression ';'
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="buildsingleexpression"></a>
 <h2>buildSingleExpression</h2>
@@ -1002,11 +954,9 @@ SingleExpression ::= Term
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="buildstatements"></a>
 <h2>buildStatements</h2>
@@ -1048,11 +998,9 @@ StatementList ::= StatementList Statement
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="buildterm"></a>
 <h2>buildTerm</h2>
@@ -1092,11 +1040,9 @@ Term ::= SimpleTerm | ComplexTerm
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="buildunaryoperation"></a>
 <h2>buildUnaryOperation</h2>
@@ -1122,11 +1068,9 @@ Term ::= SimpleTerm | ComplexTerm
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="buildwhilestatement"></a>
 <h2>buildWhileStatement</h2>
@@ -1166,11 +1110,9 @@ WhileStatement ::= While '(' Expression ')' '{' StatementList '}'
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="compileerror"></a>
 <h2>compileError</h2>
@@ -1204,11 +1146,9 @@ WhileStatement ::= While '(' Expression ')' '{' StatementList '}'
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="lookup"></a>
 <h2>lookup</h2>
@@ -1234,11 +1174,9 @@ WhileStatement ::= While '(' Expression ')' '{' StatementList '}'
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="parseimpl"></a>
 <h2>parseImpl</h2>
@@ -1264,11 +1202,9 @@ WhileStatement ::= While '(' Expression ')' '{' StatementList '}'
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="popsymbol"></a>
 <h2>popSymbol</h2>
@@ -1294,11 +1230,9 @@ WhileStatement ::= While '(' Expression ')' '{' StatementList '}'
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="pushidentifier"></a>
 <h2>pushIdentifier</h2>
@@ -1324,11 +1258,9 @@ WhileStatement ::= While '(' Expression ')' '{' StatementList '}'
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="generator"></a>
 <h2>Generator</h2>
@@ -1346,11 +1278,9 @@ WhileStatement ::= While '(' Expression ')' '{' StatementList '}'
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="~generator"></a>
 <h2>~Generator</h2>
@@ -1368,11 +1298,9 @@ WhileStatement ::= While '(' Expression ')' '{' StatementList '}'
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="compile"></a>
 <h2>compile</h2>
@@ -1404,11 +1332,9 @@ WhileStatement ::= While '(' Expression ')' '{' StatementList '}'
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="write"></a>
 <h2>write</h2>
@@ -1434,11 +1360,9 @@ WhileStatement ::= While '(' Expression ')' '{' StatementList '}'
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
 <a id="write"></a>
 <h2>write</h2>
@@ -1469,24 +1393,10 @@ WhileStatement ::= While '(' Expression ')' '{' StatementList '}'
 </span>
 <br/>
 <br/>
-<blockquote>
 <span class="icon-list-item"><a href="#generator" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
 </a>
 </span>
-</blockquote>
 <br/>
-<br/>
-<blockquote>
-<img src="../images/debug.svg"/><span class="inline-text">The following sources were used to generate this page.</span>
-<br/>
-<span class="icon-list-item"><a href="../xml/classHack_1_1Compiler_1_1CodeGenerator_1_1Generator.xml#L1" class="icon-list-item"><img src="../images/lookInside.svg" class="icon-list-item"/><span class="icon-list-item">classHack_1_1Compiler_1_1CodeGenerator_1_1Generator.xml</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="../xml/compound.xsd#L1" class="icon-list-item"><img src="../images/lookInside.svg" class="icon-list-item"/><span class="icon-list-item">compound.xsd</span>
-</a>
-</span>
-</blockquote>
 </div>
 </div>
 </body>

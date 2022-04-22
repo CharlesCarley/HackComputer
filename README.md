@@ -219,7 +219,7 @@ I believe it is a dead project, which is a shame because it is an awesome tool-s
 
 ## MdDox Index
 
-The generated content for this repository can be found [here](Current/markdown/index.md)
+The generated content for this repository can be found [here](Current/markdown/index.md#hack)
 
 ## Current State
 
