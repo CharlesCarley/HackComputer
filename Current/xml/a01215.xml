@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01215" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Hack::Computer::RuntimeInterface</compoundname>
+    <derivedcompoundref refid="a01203" prot="public" virt="non-virtual">Hack::Computer::CommandRuntime</derivedcompoundref>
+    <derivedcompoundref refid="a01211" prot="public" virt="non-virtual">Hack::Computer::DebugRuntime</derivedcompoundref>
+    <includes local="no">Source/Computer/RuntimeInterface.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a01215_1a3e09aeb7e6d6907b58f7a2a40636ac37" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual Hack::Computer::RuntimeInterface::~RuntimeInterface</definition>
+        <argsstring>()=default</argsstring>
+        <name>~RuntimeInterface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/RuntimeInterface.h" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a01215_1ae4fb11811510339381b65be887827dfc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool Hack::Computer::RuntimeInterface::exitRequest</definition>
+        <argsstring>() const =0</argsstring>
+        <name>exitRequest</name>
+        <reimplementedby refid="a01203_1acb3795487cd6907dfc21fd6afbe7826c">exitRequest</reimplementedby>
+        <reimplementedby refid="a01211_1acce22e29456976ba86f505c06b5fff81">exitRequest</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/RuntimeInterface.h" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a01215_1af845999e44531fc6282d028402131fa9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Hack::Computer::RuntimeInterface::flushMemory</definition>
+        <argsstring>(Chips::Computer *computer) const =0</argsstring>
+        <name>flushMemory</name>
+        <reimplementedby refid="a01203_1aad566a5bee2b92a128e0e30739748c1e">flushMemory</reimplementedby>
+        <reimplementedby refid="a01211_1aee00ac57512447b7655ed7cdc54b025d">flushMemory</reimplementedby>
+        <param>
+          <type><ref refid="a00999" kindref="compound">Chips::Computer</ref> *</type>
+          <declname>computer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/RuntimeInterface.h" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a01215_1a0f5eca7470888a3c5190dd9c1ddc3f67" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>int16_t</type>
+        <definition>int16_t Hack::Computer::RuntimeInterface::getRate</definition>
+        <argsstring>() const</argsstring>
+        <name>getRate</name>
+        <reimplementedby refid="a01211_1ace069a8cbf49c271f047e62868763c2e">getRate</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/RuntimeInterface.h" line="35" column="1" bodyfile="Source/Computer/RuntimeInterface.h" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="a01215_1acfdf1e97cbbcc9a9f13ad26e6062b8d0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Hack::Computer::RuntimeInterface::initialize</definition>
+        <argsstring>(Chips::Computer *computer, Chips::Screen *screen) const =0</argsstring>
+        <name>initialize</name>
+        <reimplementedby refid="a01203_1acccc797c5a77cf71015778c0a48a49c8">initialize</reimplementedby>
+        <reimplementedby refid="a01211_1a8514e728f96721d941711bf25d74517a">initialize</reimplementedby>
+        <param>
+          <type><ref refid="a00999" kindref="compound">Chips::Computer</ref> *</type>
+          <declname>computer</declname>
+        </param>
+        <param>
+          <type><ref refid="a00893_1a205aa97050ad01560145252139c81057" kindref="member">Chips::Screen</ref> *</type>
+          <declname>screen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/RuntimeInterface.h" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a01215_1a3cb1ab52903aaedabb0c9d49b013aab4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Hack::Computer::RuntimeInterface::processEvents</definition>
+        <argsstring>(Chips::Computer *computer) const =0</argsstring>
+        <name>processEvents</name>
+        <reimplementedby refid="a01203_1ab48b3746adc94551350da3c9f065577d">processEvents</reimplementedby>
+        <reimplementedby refid="a01211_1a4811a14fcdfa33479b429ecd07bbc9d1">processEvents</reimplementedby>
+        <param>
+          <type><ref refid="a00999" kindref="compound">Chips::Computer</ref> *</type>
+          <declname>computer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/RuntimeInterface.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a01215_1afac6241dfa4f6de4ca3353819786e5e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void Hack::Computer::RuntimeInterface::setRate</definition>
+        <argsstring>(int16_t v)</argsstring>
+        <name>setRate</name>
+        <param>
+          <type>int16_t</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/RuntimeInterface.h" line="37" column="1" bodyfile="Source/Computer/RuntimeInterface.h" bodystart="60" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="a01215_1a44e6d9da00af26f22941e1a0a540e797" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool Hack::Computer::RuntimeInterface::shouldUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>shouldUpdate</name>
+        <reimplementedby refid="a01203_1aa9aa0a0efed236c2371afb8f6b31e030">shouldUpdate</reimplementedby>
+        <reimplementedby refid="a01211_1ab171edd61256c2eac08cdc2528a551f2">shouldUpdate</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/RuntimeInterface.h" line="33" column="1" bodyfile="Source/Computer/RuntimeInterface.h" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="a01215_1a5fe5dfa099bbf6ded85b29028440466d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Hack::Computer::RuntimeInterface::update</definition>
+        <argsstring>(Chips::Computer *computer) const =0</argsstring>
+        <name>update</name>
+        <reimplementedby refid="a01203_1ab738d56db4537f88d9141c7ae64aee5b">update</reimplementedby>
+        <reimplementedby refid="a01211_1a3bd47a61275e31af0bf9056a6097712c">update</reimplementedby>
+        <param>
+          <type><ref refid="a00999" kindref="compound">Chips::Computer</ref> *</type>
+          <declname>computer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/RuntimeInterface.h" line="47" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="377">
+        <label>Hack::Computer::RuntimeInterface</label>
+        <link refid="a01215"/>
+      </node>
+      <node id="378">
+        <label>Hack::Computer::CommandRuntime</label>
+        <link refid="a01203"/>
+        <childnode refid="377" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="379">
+        <label>Hack::Computer::DebugRuntime</label>
+        <link refid="a01211"/>
+        <childnode refid="377" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="Source/Computer/RuntimeInterface.h" line="29" column="1" bodyfile="Source/Computer/RuntimeInterface.h" bodystart="28" bodyend="48"/>
+    <listofallmembers>
+      <member refid="a01215_1ae4fb11811510339381b65be887827dfc" prot="public" virt="pure-virtual"><scope>Hack::Computer::RuntimeInterface</scope><name>exitRequest</name></member>
+      <member refid="a01215_1af845999e44531fc6282d028402131fa9" prot="public" virt="pure-virtual"><scope>Hack::Computer::RuntimeInterface</scope><name>flushMemory</name></member>
+      <member refid="a01215_1a0f5eca7470888a3c5190dd9c1ddc3f67" prot="public" virt="virtual"><scope>Hack::Computer::RuntimeInterface</scope><name>getRate</name></member>
+      <member refid="a01215_1acfdf1e97cbbcc9a9f13ad26e6062b8d0" prot="public" virt="pure-virtual"><scope>Hack::Computer::RuntimeInterface</scope><name>initialize</name></member>
+      <member refid="a01215_1a3cb1ab52903aaedabb0c9d49b013aab4" prot="public" virt="pure-virtual"><scope>Hack::Computer::RuntimeInterface</scope><name>processEvents</name></member>
+      <member refid="a01215_1afac6241dfa4f6de4ca3353819786e5e3" prot="public" virt="virtual"><scope>Hack::Computer::RuntimeInterface</scope><name>setRate</name></member>
+      <member refid="a01215_1a44e6d9da00af26f22941e1a0a540e797" prot="public" virt="virtual"><scope>Hack::Computer::RuntimeInterface</scope><name>shouldUpdate</name></member>
+      <member refid="a01215_1a5fe5dfa099bbf6ded85b29028440466d" prot="public" virt="pure-virtual"><scope>Hack::Computer::RuntimeInterface</scope><name>update</name></member>
+      <member refid="a01215_1a3e09aeb7e6d6907b58f7a2a40636ac37" prot="public" virt="virtual"><scope>Hack::Computer::RuntimeInterface</scope><name>~RuntimeInterface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

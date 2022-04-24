@@ -1,223 +1,119 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00479" kind="file" language="C++">
-    <compoundname>Computer.h</compoundname>
-    <includes refid="a00485" local="yes">Chips/CPU.h</includes>
-    <includes refid="a01650" local="yes">Chips/Memory.h</includes>
-    <includes refid="a00656" local="yes">Chips/Rom32.h</includes>
-    <includedby refid="a00431" local="yes">Source/Bindings/Bindings.cpp</includedby>
-    <includedby refid="a00476" local="yes">Source/Chips/Computer.cpp</includedby>
-    <includedby refid="a00752" local="yes">Source/Computer/Application.cpp</includedby>
-    <includedby refid="a00758" local="yes">Source/Computer/CommandRuntime.cpp</includedby>
-    <includedby refid="a00764" local="yes">Source/Computer/DebugRuntime.cpp</includedby>
-    <includedby refid="a00770" local="yes">Source/Computer/RuntimeInterface.h</includedby>
+    <compoundname>Clock.h</compoundname>
+    <includes refid="a00473" local="yes">Chips/Chip.h</includes>
+    <includedby refid="a00476" local="yes">Source/Chips/Clock.cpp</includedby>
+    <includedby refid="a00677" local="yes">Source/Chips/Timer.h</includedby>
     <incdepgraph>
-      <node id="1123">
+      <node id="1073">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="1124" relation="include">
+        <childnode refid="1074" relation="include">
         </childnode>
       </node>
-      <node id="1115">
+      <node id="1065">
         <label>Chips/BitUtils.h</label>
-        <childnode refid="1116" relation="include">
+        <childnode refid="1066" relation="include">
         </childnode>
-        <childnode refid="1117" relation="include">
+        <childnode refid="1067" relation="include">
         </childnode>
       </node>
-      <node id="1124">
+      <node id="1074">
         <label>cstdint</label>
       </node>
-      <node id="1111">
-        <label>Source/Chips/Computer.h</label>
-        <link refid="a00479"/>
-        <childnode refid="1112" relation="include">
-        </childnode>
-        <childnode refid="1128" relation="include">
-        </childnode>
-        <childnode refid="1134" relation="include">
-        </childnode>
-      </node>
-      <node id="1128">
-        <label>Chips/Memory.h</label>
-        <childnode refid="1114" relation="include">
-        </childnode>
-        <childnode refid="1129" relation="include">
-        </childnode>
-        <childnode refid="1133" relation="include">
-        </childnode>
-      </node>
-      <node id="1120">
+      <node id="1070">
         <label>string</label>
       </node>
-      <node id="1122">
+      <node id="1072">
         <label>UserInterface/Context.h</label>
-        <childnode refid="1118" relation="include">
+        <childnode refid="1068" relation="include">
         </childnode>
-        <childnode refid="1123" relation="include">
+        <childnode refid="1073" relation="include">
         </childnode>
-        <childnode refid="1125" relation="include">
+        <childnode refid="1075" relation="include">
         </childnode>
       </node>
-      <node id="1125">
+      <node id="1075">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="1124" relation="include">
+        <childnode refid="1074" relation="include">
         </childnode>
-        <childnode refid="1121" relation="include">
+        <childnode refid="1071" relation="include">
         </childnode>
-        <childnode refid="1123" relation="include">
-        </childnode>
-      </node>
-      <node id="1126">
-        <label>Chips/ProgramCounter.h</label>
-        <childnode refid="1114" relation="include">
+        <childnode refid="1073" relation="include">
         </childnode>
       </node>
-      <node id="1117">
+      <node id="1067">
         <label>Utils/Console.h</label>
-        <childnode refid="1118" relation="include">
+        <childnode refid="1068" relation="include">
         </childnode>
-        <childnode refid="1122" relation="include">
+        <childnode refid="1072" relation="include">
         </childnode>
       </node>
-      <node id="1116">
+      <node id="1066">
         <label>bitset</label>
       </node>
-      <node id="1121">
+      <node id="1063">
+        <label>Source/Chips/Clock.h</label>
+        <link refid="a00479"/>
+        <childnode refid="1064" relation="include">
+        </childnode>
+      </node>
+      <node id="1071">
         <label>vector</label>
       </node>
-      <node id="1119">
+      <node id="1069">
         <label>sstream</label>
       </node>
-      <node id="1114">
+      <node id="1064">
         <label>Chips/Chip.h</label>
-        <childnode refid="1115" relation="include">
+        <childnode refid="1065" relation="include">
         </childnode>
-        <childnode refid="1117" relation="include">
-        </childnode>
-      </node>
-      <node id="1130">
-        <label>Chips/DefaultMemorySegment.h</label>
-        <childnode refid="1131" relation="include">
+        <childnode refid="1067" relation="include">
         </childnode>
       </node>
-      <node id="1134">
-        <label>Chips/Rom32.h</label>
-        <childnode refid="1114" relation="include">
-        </childnode>
-      </node>
-      <node id="1131">
-        <label>Chips/IMemorySegment.h</label>
-        <childnode refid="1132" relation="include">
-        </childnode>
-        <childnode refid="1114" relation="include">
-        </childnode>
-      </node>
-      <node id="1129">
-        <label>Chips/Ram16k.h</label>
-        <childnode refid="1130" relation="include">
-        </childnode>
-      </node>
-      <node id="1133">
-        <label>Chips/Screen.h</label>
-        <childnode refid="1130" relation="include">
-        </childnode>
-      </node>
-      <node id="1127">
-        <label>Chips/Register.h</label>
-        <childnode refid="1114" relation="include">
-        </childnode>
-      </node>
-      <node id="1113">
-        <label>ALU.h</label>
-        <childnode refid="1114" relation="include">
-        </childnode>
-      </node>
-      <node id="1132">
-        <label>cstring</label>
-      </node>
-      <node id="1112">
-        <label>Chips/CPU.h</label>
-        <childnode refid="1113" relation="include">
-        </childnode>
-        <childnode refid="1114" relation="include">
-        </childnode>
-        <childnode refid="1126" relation="include">
-        </childnode>
-        <childnode refid="1127" relation="include">
-        </childnode>
-      </node>
-      <node id="1118">
+      <node id="1068">
         <label>String.h</label>
-        <childnode refid="1119" relation="include">
+        <childnode refid="1069" relation="include">
         </childnode>
-        <childnode refid="1120" relation="include">
+        <childnode refid="1070" relation="include">
         </childnode>
-        <childnode refid="1121" relation="include">
+        <childnode refid="1071" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="1144">
-        <label>Source/Computer/RuntimeSDL.h</label>
+      <node id="1081">
+        <label>Source/Chips/Timer.cpp</label>
       </node>
-      <node id="1143">
-        <label>Source/Computer/DebugRuntime.h</label>
-        <childnode refid="1138" relation="include">
-        </childnode>
-        <childnode refid="1140" relation="include">
-        </childnode>
+      <node id="1080">
+        <label>Source/Chips/CPU.cpp</label>
       </node>
-      <node id="1135">
-        <label>Source/Chips/Computer.h</label>
+      <node id="1076">
+        <label>Source/Chips/Clock.h</label>
         <link refid="a00479"/>
-        <childnode refid="1136" relation="include">
+        <childnode refid="1077" relation="include">
         </childnode>
-        <childnode refid="1137" relation="include">
-        </childnode>
-        <childnode refid="1138" relation="include">
-        </childnode>
-        <childnode refid="1139" relation="include">
-        </childnode>
-        <childnode refid="1140" relation="include">
-        </childnode>
-        <childnode refid="1141" relation="include">
+        <childnode refid="1078" relation="include">
         </childnode>
       </node>
-      <node id="1136">
-        <label>Source/Bindings/Bindings.cpp</label>
-      </node>
-      <node id="1137">
+      <node id="1079">
         <label>Source/Chips/Computer.cpp</label>
       </node>
-      <node id="1139">
-        <label>Source/Computer/CommandRuntime.cpp</label>
-      </node>
-      <node id="1140">
-        <label>Source/Computer/DebugRuntime.cpp</label>
-      </node>
-      <node id="1138">
-        <label>Source/Computer/Application.cpp</label>
-      </node>
-      <node id="1141">
-        <label>Source/Computer/RuntimeInterface.h</label>
-        <childnode refid="1142" relation="include">
+      <node id="1078">
+        <label>Source/Chips/Timer.h</label>
+        <childnode refid="1079" relation="include">
         </childnode>
-        <childnode refid="1143" relation="include">
+        <childnode refid="1080" relation="include">
         </childnode>
-        <childnode refid="1144" relation="include">
+        <childnode refid="1081" relation="include">
         </childnode>
       </node>
-      <node id="1142">
-        <label>Source/Computer/CommandRuntime.h</label>
-        <childnode refid="1138" relation="include">
-        </childnode>
-        <childnode refid="1139" relation="include">
-        </childnode>
+      <node id="1077">
+        <label>Source/Chips/Clock.cpp</label>
       </node>
     </invincdepgraph>
-    <innerclass refid="a00996" prot="public">Hack::Chips::Computer</innerclass>
-    <innerclass refid="a00992" prot="public">Hack::Chips::CpuState</innerclass>
-    <innernamespace refid="a00890">Hack::Chips</innernamespace>
+    <innerclass refid="a00994" prot="public">Hack::Chips::Clock</innerclass>
+    <innernamespace refid="a00896">Hack::Chips</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -245,81 +141,23 @@
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/CPU.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Memory.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Rom32.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00890" kindref="compound">Hack::Chips</ref></highlight></codeline>
-<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="30" refid="a00992" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="a00992" kindref="compound">CpuState</ref></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="32" refid="a00992_1a8ff12fb359df46f8c2b7bb4536b03bd2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01352" kindref="compound">uint16_t</ref><sp/><ref refid="a00992_1a8ff12fb359df46f8c2b7bb4536b03bd2" kindref="member">pc</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>current<sp/>program<sp/>counter</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33" refid="a00992_1a4898fb8aa66f45e0e07d4b754b8d93ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01352" kindref="compound">uint16_t</ref><sp/><ref refid="a00992_1a4898fb8aa66f45e0e07d4b754b8d93ba" kindref="member">outM</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>CPU&apos;s<sp/>output<sp/>to<sp/>RAM</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="a00992_1a7b6ea40228d9e23b00fd2ee43133a6f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01352" kindref="compound">uint16_t</ref><sp/><ref refid="a00992_1a7b6ea40228d9e23b00fd2ee43133a6f3" kindref="member">addrM</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>current<sp/>index<sp/>in<sp/>to<sp/>RAM</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35" refid="a00992_1a918ad89614f75599104e9c1a8123c916" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01352" kindref="compound">uint16_t</ref><sp/><ref refid="a00992_1a918ad89614f75599104e9c1a8123c916" kindref="member">regD</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Current<sp/>contents<sp/>of<sp/>the<sp/>D<sp/>register</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36" refid="a00992_1a764dbb644ba5bb323c97e09cb26ae122" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01352" kindref="compound">uint16_t</ref><sp/><ref refid="a00992_1a764dbb644ba5bb323c97e09cb26ae122" kindref="member">regA</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Contents<sp/>of<sp/>the<sp/>A<sp/>register</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37" refid="a00992_1a5606ebaf9ae4d826b421dce343c223f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01352" kindref="compound">uint16_t</ref><sp/><ref refid="a00992_1a5606ebaf9ae4d826b421dce343c223f9" kindref="member">clock</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>current<sp/>clock<sp/>cycle</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38" refid="a00992_1a3bdae3da64a41fd9b98171cea0f1b1c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01352" kindref="compound">uint16_t</ref><sp/><ref refid="a00992_1a3bdae3da64a41fd9b98171cea0f1b1c1" kindref="member">inst</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>instruction<sp/>in<sp/>ROM<sp/>at<sp/>the<sp/>pc<sp/>index</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39" refid="a00992_1af1398587a09d5722d1d794f87d427a35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01352" kindref="compound">uint16_t</ref><sp/><ref refid="a00992_1af1398587a09d5722d1d794f87d427a35" kindref="member">writeM</ref>;<sp/></highlight><highlight class="comment">//<sp/>The<sp/>load<sp/>bit<sp/>for<sp/>the<sp/>CPU.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="40" refid="a00992_1ae932a7489f8bdecf33ffd43c9410130f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01352" kindref="compound">uint16_t</ref><sp/><ref refid="a00992_1ae932a7489f8bdecf33ffd43c9410130f" kindref="member">ram</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>last<sp/>output<sp/>from<sp/>RAM</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="41" refid="a00992_1af9c11b4b51b6cd89cdfdcccdf52341db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01352" kindref="compound">uint16_t</ref><sp/><ref refid="a00992_1af9c11b4b51b6cd89cdfdcccdf52341db" kindref="member">reset</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>Reset<sp/>indicator</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44" refid="a00996" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a00996" kindref="compound">Computer</ref></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="47" refid="a00996_1aa280cc035bb3869f0d63c55d5c608a7f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="a00992" kindref="compound">CpuState</ref><sp/><ref refid="a00996_1aa280cc035bb3869f0d63c55d5c608a7f" kindref="member">NullState</ref>;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01112" kindref="compound">Rom32</ref>*<sp/><sp/><sp/>_rom;</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01000" kindref="compound">Cpu</ref>*<sp/><sp/><sp/><sp/><sp/>_cpu;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01040" kindref="compound">Memory</ref>*<sp/><sp/>_ram;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>_reset;</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00992" kindref="compound">CpuState</ref><sp/>_cpuState;</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>clear();</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00996_1ad9e1addc596ec6f58fa56631086491e3" kindref="member">Computer</ref>();</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00996_1ae76586a1a8385c183863269158c19083" kindref="member">~Computer</ref>();</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00996_1ab215c3ad1dfa7242b4edaccb75869063" kindref="member">load</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01352" kindref="compound">uint16_t</ref>*<sp/>data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00996_1aa44e98396b5191c503bd5255fe0ffa1f" kindref="member">update</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>saveState<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00996_1a5e2ff33095c4f19eecdfdbfdba101b52" kindref="member">reset</ref>();</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01040" kindref="compound">Memory</ref>*<sp/><ref refid="a00996_1abf924e51c33908fd52168a0c29228d1c" kindref="member">memory</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01112" kindref="compound">Rom32</ref>*<sp/><ref refid="a00996_1aa88d19943c50711fbe12d82e901fb21a" kindref="member">rom</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00992" kindref="compound">CpuState</ref>&amp;<sp/><ref refid="a00996_1a90309c49a06a3585499693ca005aa643" kindref="member">state</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00996_1af05aa34a76553dbe510a97b0c7027399" kindref="member">canRead</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00996_1ad4e3bd9b1c6831220b8c9802cbf679bf" kindref="member">runToEnd</ref>();</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00996_1a2dbfa6b9bb02786f4e91770527d8624b" kindref="member">captureState</ref>();</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82" refid="a00996_1abf924e51c33908fd52168a0c29228d1c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="a01040" kindref="compound">Memory</ref>*<sp/><ref refid="a00996_1abf924e51c33908fd52168a0c29228d1c" kindref="member">Computer::memory</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="83"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_ram;</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87" refid="a00996_1aa88d19943c50711fbe12d82e901fb21a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="a01112" kindref="compound">Rom32</ref>*<sp/><ref refid="a00996_1aa88d19943c50711fbe12d82e901fb21a" kindref="member">Computer::rom</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="88"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_rom;</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92" refid="a00996_1a90309c49a06a3585499693ca005aa643" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00992" kindref="compound">CpuState</ref>&amp;<sp/><ref refid="a00996_1a90309c49a06a3585499693ca005aa643" kindref="member">Computer::state</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="93"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_cpuState;</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="96"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Chip.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00896" kindref="compound">Hack::Chips</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27" refid="a00994" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a00994" kindref="compound">Clock</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="a00990" kindref="compound" tooltip="Chip is the base class for all chips defined in this system. It uses a template integer for the _bits...">Chip</ref>&lt;uint8_t,<sp/>8&gt;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00994_1a9922cf26014046b0b96db3a2f0e6f721" kindref="member">Clock</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00994_1ace2784b83c45b2f8ff31cfed7aaa739c" kindref="member">setIn</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>input);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00994_1abb454609d9a6416ea16f15f9b7c78957" kindref="member">setReset</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>reset);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00994_1acb81d1eb95bf01d4fe203701562da7d0" kindref="member">getOut</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Chips/Computer.h"/>
+    <location file="Source/Chips/Clock.h"/>
   </compounddef>
 </doxygen>

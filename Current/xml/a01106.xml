@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01106" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>Hack::Chips::Ram64</compoundname>
+    <basecompoundref refid="a00990" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; bit64_t, 64 &gt;</basecompoundref>
+    <includes local="no">Source/Chips/Ram64.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="a01106_1a9051d33f57e9c7e422202df66f8554b4" prot="private" static="no" mutable="no">
+        <type><ref refid="a00978" kindref="compound">bit32_t</ref> *</type>
+        <definition>bit32_t* Hack::Chips::Ram64::_r</definition>
+        <argsstring></argsstring>
+        <name>_r</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Ram64.h" line="40" column="1" bodyfile="Source/Chips/Ram64.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="a01106_1a7992ef556ef7c4a6a1eed6569b909bfb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Ram64::evaluate</definition>
+        <argsstring>()</argsstring>
+        <name>evaluate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Ram64.h" line="33" column="1" bodyfile="Source/Chips/Ram64.cpp" bodystart="98" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="a01106_1aab09a5e80f3a09e435b5090f1858bc8c" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::Ram64::isDirty</definition>
+        <argsstring>() override</argsstring>
+        <name>isDirty</name>
+        <reimplements refid="a00990_1a63bb368bb0827830235759b33718d1b4">isDirty</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Ram64.h" line="34" column="1" bodyfile="Source/Chips/Ram64.cpp" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="a01106_1a4b6dfafafd5055d758e53957e0576a4b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Ram64::markDirty</definition>
+        <argsstring>()</argsstring>
+        <name>markDirty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Ram64.h" line="35" column="1" bodyfile="Source/Chips/Ram64.cpp" bodystart="93" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a01106_1adbef9a39578063d7d3bcbbcc146f09d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Chips::Ram64::Ram64</definition>
+        <argsstring>()</argsstring>
+        <name>Ram64</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Ram64.h" line="44" column="1" bodyfile="Source/Chips/Ram64.cpp" bodystart="32" bodyend="44"/>
+        <references refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00473" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00982_1a741dc95ddcf042b70e2747571d95cd82" compoundref="a00470" startline="76">Hack::Chips::bit64_t::ll</references>
+      </memberdef>
+      <memberdef kind="function" id="a01106_1a3df72dc2402ecb2d15215dd1a1eab5f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Chips::Ram64::~Ram64</definition>
+        <argsstring>() override</argsstring>
+        <name>~Ram64</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Ram64.h" line="45" column="1" bodyfile="Source/Chips/Ram64.cpp" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="a01106_1a8a5b968569e346116271bc58db35649c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a01358" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::Ram64::getOut</definition>
+        <argsstring>()</argsstring>
+        <name>getOut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Ram64.h" line="52" column="1" bodyfile="Source/Chips/Ram64.cpp" bodystart="75" bodyend="80"/>
+        <references refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00473" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00982_1af415893333942f41fb4c4ad619083a16" compoundref="a00470" startline="78">Hack::Chips::bit64_t::s</references>
+      </memberdef>
+      <memberdef kind="function" id="a01106_1adcce4ef1c9e050b3a70cfb177a0032ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a01358" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::Ram64::getOut</definition>
+        <argsstring>(bool v)</argsstring>
+        <name>getOut</name>
+        <param>
+          <type>bool</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Ram64.h" line="53" column="1" bodyfile="Source/Chips/Ram64.cpp" bodystart="82" bodyend="86"/>
+        <references refid="a01106_1a44f3fdbb67e1b130e8091ed4ffcf902f" compoundref="a00641" startline="69" endline="73">setClock</references>
+        <references refid="a01106_1a8a5b968569e346116271bc58db35649c" compoundref="a00641" startline="75" endline="80">getOut</references>
+      </memberdef>
+      <memberdef kind="function" id="a01106_1ad7d0c489c87e88d4be196c512c1f125a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Ram64::setAddress</definition>
+        <argsstring>(const uint8_t &amp;v)</argsstring>
+        <name>setAddress</name>
+        <param>
+          <type>const <ref refid="a01370" kindref="compound">uint8_t</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Ram64.h" line="48" column="1" bodyfile="Source/Chips/Ram64.cpp" bodystart="57" bodyend="61"/>
+        <references refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00473" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00982_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00470" startline="79">Hack::Chips::bit64_t::b</references>
+      </memberdef>
+      <memberdef kind="function" id="a01106_1a44f3fdbb67e1b130e8091ed4ffcf902f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Ram64::setClock</definition>
+        <argsstring>(bool v)</argsstring>
+        <name>setClock</name>
+        <param>
+          <type>bool</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Ram64.h" line="50" column="1" bodyfile="Source/Chips/Ram64.cpp" bodystart="69" bodyend="73"/>
+        <references refid="a00986_1a266db4b38d31abd421bdb6356b6d8f6a" compoundref="a00470" startline="240" endline="243">Hack::Chips::BitUtils&lt; T, Count &gt;::applyBit</references>
+        <references refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00473" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00982_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00470" startline="79">Hack::Chips::bit64_t::b</references>
+      </memberdef>
+      <memberdef kind="function" id="a01106_1a3fdfe10c249409c34d0b4cb818ae6cc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Ram64::setIn</definition>
+        <argsstring>(const uint16_t &amp;v)</argsstring>
+        <name>setIn</name>
+        <param>
+          <type>const <ref refid="a01358" kindref="compound">uint16_t</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Ram64.h" line="47" column="1" bodyfile="Source/Chips/Ram64.cpp" bodystart="51" bodyend="55"/>
+        <references refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00473" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00982_1af415893333942f41fb4c4ad619083a16" compoundref="a00470" startline="78">Hack::Chips::bit64_t::s</references>
+      </memberdef>
+      <memberdef kind="function" id="a01106_1a63479b6db0500d5b4438cbcd56e931d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Ram64::setLoad</definition>
+        <argsstring>(bool v)</argsstring>
+        <name>setLoad</name>
+        <param>
+          <type>bool</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Ram64.h" line="49" column="1" bodyfile="Source/Chips/Ram64.cpp" bodystart="63" bodyend="67"/>
+        <references refid="a00986_1a266db4b38d31abd421bdb6356b6d8f6a" compoundref="a00470" startline="240" endline="243">Hack::Chips::BitUtils&lt; T, Count &gt;::applyBit</references>
+        <references refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00473" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00982_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00470" startline="79">Hack::Chips::bit64_t::b</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="257">
+        <label>Hack::Chips::Chip&lt; bit64_t, 64 &gt;</label>
+        <link refid="a00990"/>
+      </node>
+      <node id="256">
+        <label>Hack::Chips::Ram64</label>
+        <link refid="a01106"/>
+        <childnode refid="257" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="261">
+        <label>uint64_t</label>
+      </node>
+      <node id="262">
+        <label>uint16_t</label>
+        <link refid="a01358"/>
+      </node>
+      <node id="263">
+        <label>uint32_t</label>
+      </node>
+      <node id="264">
+        <label>uint8_t</label>
+        <link refid="a01370"/>
+      </node>
+      <node id="260">
+        <label>Hack::Chips::bit64_t</label>
+        <link refid="a00982"/>
+        <childnode refid="261" relation="usage">
+          <edgelabel>ll</edgelabel>
+        </childnode>
+        <childnode refid="262" relation="usage">
+          <edgelabel>s</edgelabel>
+        </childnode>
+        <childnode refid="263" relation="usage">
+          <edgelabel>i</edgelabel>
+        </childnode>
+        <childnode refid="264" relation="usage">
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="259">
+        <label>Hack::Chips::Chip&lt; bit64_t, 64 &gt;</label>
+        <link refid="a00990"/>
+        <childnode refid="260" relation="usage">
+          <edgelabel>_bits</edgelabel>
+        </childnode>
+      </node>
+      <node id="258">
+        <label>Hack::Chips::Ram64</label>
+        <link refid="a01106"/>
+        <childnode refid="259" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Chips/Ram64.h" line="31" column="1" bodyfile="Source/Chips/Ram64.h" bodystart="30" bodyend="54"/>
+    <listofallmembers>
+      <member refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Ram64</scope><name>_bits</name></member>
+      <member refid="a01106_1a9051d33f57e9c7e422202df66f8554b4" prot="private" virt="non-virtual"><scope>Hack::Chips::Ram64</scope><name>_r</name></member>
+      <member refid="a00990_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram64</scope><name>applyBit</name></member>
+      <member refid="a00990_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram64</scope><name>assignBit</name></member>
+      <member refid="a00990_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram64</scope><name>Chip</name></member>
+      <member refid="a00990_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram64</scope><name>clearBit</name></member>
+      <member refid="a01106_1a7992ef556ef7c4a6a1eed6569b909bfb" prot="private" virt="non-virtual"><scope>Hack::Chips::Ram64</scope><name>evaluate</name></member>
+      <member refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram64</scope><name>getBit</name></member>
+      <member refid="a01106_1a8a5b968569e346116271bc58db35649c" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram64</scope><name>getOut</name></member>
+      <member refid="a01106_1adcce4ef1c9e050b3a70cfb177a0032ed" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram64</scope><name>getOut</name></member>
+      <member refid="a01106_1aab09a5e80f3a09e435b5090f1858bc8c" prot="private" virt="virtual"><scope>Hack::Chips::Ram64</scope><name>isDirty</name></member>
+      <member refid="a01106_1a4b6dfafafd5055d758e53957e0576a4b" prot="private" virt="non-virtual"><scope>Hack::Chips::Ram64</scope><name>markDirty</name></member>
+      <member refid="a01106_1adbef9a39578063d7d3bcbbcc146f09d4" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram64</scope><name>Ram64</name></member>
+      <member refid="a01106_1ad7d0c489c87e88d4be196c512c1f125a" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram64</scope><name>setAddress</name></member>
+      <member refid="a00990_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram64</scope><name>setBit</name></member>
+      <member refid="a01106_1a44f3fdbb67e1b130e8091ed4ffcf902f" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram64</scope><name>setClock</name></member>
+      <member refid="a01106_1a3fdfe10c249409c34d0b4cb818ae6cc9" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram64</scope><name>setIn</name></member>
+      <member refid="a01106_1a63479b6db0500d5b4438cbcd56e931d9" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram64</scope><name>setLoad</name></member>
+      <member refid="a00990_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::Ram64</scope><name>~Chip</name></member>
+      <member refid="a01106_1a3df72dc2402ecb2d15215dd1a1eab5f1" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram64</scope><name>~Ram64</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

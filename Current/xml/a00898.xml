@@ -1,297 +1,195 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00898" kind="namespace" language="C++">
-    <compoundname>Hack::Computer</compoundname>
-    <innerclass refid="a01192" prot="public">Hack::Computer::Application</innerclass>
-    <innerclass refid="a01200" prot="public">Hack::Computer::CommandRuntime</innerclass>
-    <innerclass refid="a01196" prot="public">Hack::Computer::CommandRuntimePrivate</innerclass>
-    <innerclass refid="a01208" prot="public">Hack::Computer::DebugRuntime</innerclass>
-    <innerclass refid="a01204" prot="public">Hack::Computer::DebugRuntimePrivate</innerclass>
-    <innerclass refid="a01212" prot="public">Hack::Computer::RuntimeInterface</innerclass>
-    <innernamespace refid="a00899">Hack::Computer::Detail</innernamespace>
-      <sectiondef kind="enum">
-      <memberdef kind="enum" id="a00898_1a6ee97e54ce2758fcfe70e172c882b9bb" prot="public" static="no" strong="no">
-        <type></type>
-        <name>Colors</name>
-        <enumvalue id="a00898_1a6ee97e54ce2758fcfe70e172c882b9bba7e22e0614cab05eee2406a31b577c1cb" prot="public">
-          <name>Grey</name>
-          <initializer>= CP_USER</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00898_1a6ee97e54ce2758fcfe70e172c882b9bba523f19de5aed5dbd2040373dba07824f" prot="public">
-          <name>Highlight</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00898_1a6ee97e54ce2758fcfe70e172c882b9bba1395267cd84975a8d8c1e054512ecd10" prot="public">
-          <name>WireTitle</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00898_1a6ee97e54ce2758fcfe70e172c882b9bbaf6a6ac45348d5f3cd60894f729d9b618" prot="public">
-          <name>Action</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00898_1a6ee97e54ce2758fcfe70e172c882b9bbad75fff1f9779ab03efb0978a8eb03ff9" prot="public">
-          <name>Action2</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00898_1a6ee97e54ce2758fcfe70e172c882b9bbaa486485fc55b5cc36bd0f71b07d3ccbe" prot="public">
-          <name>Wire</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00898_1a6ee97e54ce2758fcfe70e172c882b9bba18e2c54dbcfb73c3aa981698f4a62d4c" prot="public">
-          <name>Title</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00898_1a6ee97e54ce2758fcfe70e172c882b9bbab6c91e70d12f0fb5a6fd8a5bf49a8dd3" prot="public">
-          <name>WireShadow</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00898_1a6ee97e54ce2758fcfe70e172c882b9bbaa743894e7b4ca3f69492d489e09b6013" prot="public">
-          <name>WireLight</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
+    <compoundname>Hack::Chips::BitwiseGates</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="a00898_1a84362f3ebaddfd42c327c37f29d808d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Hack::Chips::BitwiseGates::And</definition>
+        <argsstring>(const T &amp;a, const T &amp;b)</argsstring>
+        <name>And</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>b</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.cpp" line="35" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="34" bodyend="45"/>
+        <location file="Source/Chips/BitUtils.h" line="325" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="325" bodyend="328"/>
       </memberdef>
-      <memberdef kind="enum" id="a00898_1a5ead6eecb040356778165b52450fac0f" prot="public" static="no" strong="no">
-        <type></type>
-        <name>Options</name>
-        <enumvalue id="a00898_1a5ead6eecb040356778165b52450fac0fa0e2329db25c9227ee69e8336b3f982a8" prot="public">
-          <name>OP_CMD</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00898_1a5ead6eecb040356778165b52450fac0fa5ccb26246212b9bdc557ac4aca6ef740" prot="public">
-          <name>OP_DEBUG</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00898_1a5ead6eecb040356778165b52450fac0fa5bb5b4a13f03bffb9c28b7f34c849f7e" prot="public">
-          <name>OP_RUN_END</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00898_1a5ead6eecb040356778165b52450fac0fa1fb6c22b6bdc59404f77be8cfd8ee59a" prot="public">
-          <name>OP_TRACE_MEM</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00898_1a5ead6eecb040356778165b52450fac0fa17d658589c9d9b505b731b3eddb352ce" prot="public">
-          <name>OP_SHOW_XML</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00898_1a5ead6eecb040356778165b52450fac0fa1aad4222a6e1d1bcb81d8f5c4c2db80d" prot="public">
-          <name>OP_SHOW_DOT</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00898_1a5ead6eecb040356778165b52450fac0fa5f7d0e79a3908016de1de9a918f77c70" prot="public">
-          <name>OP_SHOW_VM</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00898_1a5ead6eecb040356778165b52450fac0fa7017bdbf89e2e8e4ee8477f18f3a795d" prot="public">
-          <name>OP_SHOW_ASM</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00898_1a5ead6eecb040356778165b52450fac0fabf65c654b7921c6f8247d6de80763985" prot="public">
-          <name>OP_SHOW_MC</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00898_1a5ead6eecb040356778165b52450fac0fa395bf60d8da91644da7f1a7d65f9bc1b" prot="public">
-          <name>OP_MAX</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
+      <memberdef kind="function" id="a00898_1ad70c68df991a03702b6e44507ff2a0e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Hack::Chips::BitwiseGates::Mux</definition>
+        <argsstring>(const T &amp;a, const T &amp;b, const T &amp;s)</argsstring>
+        <name>Mux</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>s</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/Application.cpp" line="54" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="53" bodyend="65"/>
+        <location file="Source/Chips/BitUtils.h" line="350" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="350" bodyend="353"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="a00898_1aba32ded0cec6b006c47567a0e1882e10" prot="public" static="no">
-        <type><ref refid="a00916" kindref="compound">Assembler::Parser</ref></type>
-        <definition>using Hack::Computer::AsmParser = typedef Assembler::Parser</definition>
-        <argsstring></argsstring>
-        <name>AsmParser</name>
+      <memberdef kind="function" id="a00898_1ae6b0c9d01ef62c0bc80a18accd7d6ca9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Hack::Chips::BitwiseGates::NAnd</definition>
+        <argsstring>(const T &amp;a, const T &amp;b)</argsstring>
+        <name>NAnd</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>b</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/Application.cpp" line="49" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="49" bodyend="-1"/>
+        <location file="Source/Chips/BitUtils.h" line="313" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="313" bodyend="316"/>
       </memberdef>
-      <memberdef kind="typedef" id="a00898_1a9a8e3139231dc9b3e84768479987047a" prot="public" static="no">
-        <type>std::chrono::high_resolution_clock</type>
-        <definition>using Hack::Computer::Clock = typedef std::chrono::high_resolution_clock</definition>
-        <argsstring></argsstring>
-        <name>Clock</name>
+      <memberdef kind="function" id="a00898_1a3118052ddcc3b5956dccfa1c9cd50528" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Hack::Chips::BitwiseGates::NOr</definition>
+        <argsstring>(const T &amp;a, const T &amp;b)</argsstring>
+        <name>NOr</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>b</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/Application.cpp" line="43" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="43" bodyend="-1"/>
+        <location file="Source/Chips/BitUtils.h" line="337" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="337" bodyend="340"/>
       </memberdef>
-      <memberdef kind="typedef" id="a00898_1a7adfa2a3953171ba9904ffbd0c285bcc" prot="public" static="no">
-        <type><ref refid="a01232" kindref="compound">CommandLine::Parser</ref></type>
-        <definition>using Hack::Computer::Cmd = typedef CommandLine::Parser</definition>
-        <argsstring></argsstring>
-        <name>Cmd</name>
+      <memberdef kind="function" id="a00898_1a84d09455d2c5d520a37804d10bcedef4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Hack::Chips::BitwiseGates::Not</definition>
+        <argsstring>(const T &amp;a)</argsstring>
+        <name>Not</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>a</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/Application.cpp" line="47" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="47" bodyend="-1"/>
+        <location file="Source/Chips/BitUtils.h" line="319" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="319" bodyend="322"/>
       </memberdef>
-      <memberdef kind="typedef" id="a00898_1a4895802d0916e2b1cd7de7a2c2721789" prot="public" static="no">
-        <type><ref refid="a01224" kindref="compound">CommandLine::Switch</ref></type>
-        <definition>using Hack::Computer::CmdSwitch = typedef CommandLine::Switch</definition>
-        <argsstring></argsstring>
-        <name>CmdSwitch</name>
+      <memberdef kind="function" id="a00898_1aa46e2bc824542f8c88678197e54892b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Hack::Chips::BitwiseGates::Or</definition>
+        <argsstring>(const T &amp;a, const T &amp;b)</argsstring>
+        <name>Or</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>b</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/Application.cpp" line="48" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="48" bodyend="-1"/>
+        <location file="Source/Chips/BitUtils.h" line="331" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="331" bodyend="334"/>
       </memberdef>
-      <memberdef kind="typedef" id="a00898_1aac63dd835bedf1d4c3c8b26f777db86d" prot="public" static="no">
-        <type><ref refid="a01172" kindref="compound">Compiler::CodeGenerator::Generator</ref></type>
-        <definition>using Hack::Computer::CodeGen = typedef Compiler::CodeGenerator::Generator</definition>
-        <argsstring></argsstring>
-        <name>CodeGen</name>
+      <memberdef kind="function" id="a00898_1a87f9b215940bce4b2d6ae012557b3fdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Hack::Chips::BitwiseGates::XOr</definition>
+        <argsstring>(const T &amp;a, const T &amp;b)</argsstring>
+        <name>XOr</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>b</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/Application.cpp" line="51" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="51" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="a00898_1a44afbb15c2b5cb28f39f19bfcdde74de" prot="public" static="no">
-        <type><ref refid="a00916_1a9e0e8293fb5dfb34d2669b83ee4e7a61" kindref="member">Assembler::Parser::Instructions</ref></type>
-        <definition>using Hack::Computer::Instructions = typedef Assembler::Parser::Instructions</definition>
-        <argsstring></argsstring>
-        <name>Instructions</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Computer/Application.cpp" line="46" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="46" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="a00898_1a43395a16792cd3a3073302e6e3c90ff4" prot="public" static="no">
-        <type>std::chrono::time_point&lt; <ref refid="a00898_1a9a8e3139231dc9b3e84768479987047a" kindref="member">Clock</ref>, Clock::duration &gt;</type>
-        <definition>using Hack::Computer::Time = typedef std::chrono::time_point&lt;Clock, Clock::duration&gt;</definition>
-        <argsstring></argsstring>
-        <name>Time</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Computer/Application.cpp" line="44" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="44" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="a00898_1ae7e2f73e4f04af1c84f92348e8d432a1" prot="public" static="no">
-        <type><ref refid="a01336" kindref="compound">VirtualMachine::Parser</ref></type>
-        <definition>using Hack::Computer::VmParser = typedef VirtualMachine::Parser</definition>
-        <argsstring></argsstring>
-        <name>VmParser</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Computer/Application.cpp" line="50" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="50" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="var">
-      <memberdef kind="variable" id="a00898_1a1a5d69e12118b3a2c1fd1aec69e262fc" prot="public" static="no" mutable="no">
-        <type>constexpr <ref refid="a00898_1a4895802d0916e2b1cd7de7a2c2721789" kindref="member">CmdSwitch</ref></type>
-        <definition>constexpr CmdSwitch Hack::Computer::Switches[OP_MAX]</definition>
-        <argsstring>[OP_MAX]</argsstring>
-        <name>Switches</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Computer/Application.cpp" line="67" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="67" bodyend="-1"/>
+        <location file="Source/Chips/BitUtils.h" line="343" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="343" bodyend="347"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Computer/Application.cpp" line="42" column="1"/>
+    <location file="Source/Chips/BitUtils.h" line="311" column="1"/>
   </compounddef>
 </doxygen>

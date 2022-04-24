@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01074" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>Hack::Chips::Not</compoundname>
+    <basecompoundref refid="a00990" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; uint8_t, 8 &gt;</basecompoundref>
+    <includes local="no">Source/Chips/Not.h</includes>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="a01074_1a028dfa315879f520a695fd566c680aaa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Not::evaluate</definition>
+        <argsstring>()</argsstring>
+        <name>evaluate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Not.h" line="30" column="1" bodyfile="Source/Chips/Not.cpp" bodystart="37" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a01074_1a3dabb7dcbf3678cece55980d2658624b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Chips::Not::Not</definition>
+        <argsstring>()</argsstring>
+        <name>Not</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Not.h" line="33" column="1" bodyfile="Source/Chips/Not.cpp" bodystart="26" bodyend="29"/>
+        <references refid="a00990_1a5a604431fa35bc87e0d7f4328b4ad4a1" compoundref="a00473" startline="112" endline="115">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::assignBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01074_1ad0155e8af5013a4009a3a751d4908444" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::Not::getOut</definition>
+        <argsstring>()</argsstring>
+        <name>getOut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Not.h" line="36" column="1" bodyfile="Source/Chips/Not.cpp" bodystart="47" bodyend="52"/>
+        <references refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00473" startline="100" endline="103">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::getBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01074_1a839b2ed314d61cb06ef294d5b608e643" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Not::setIn</definition>
+        <argsstring>(bool v)</argsstring>
+        <name>setIn</name>
+        <param>
+          <type>bool</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Not.h" line="35" column="1" bodyfile="Source/Chips/Not.cpp" bodystart="31" bodyend="35"/>
+        <references refid="a00990_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00473" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
+        <references refid="a00990_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="a00473" startline="106" endline="109">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::setBit</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="209">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="a00990"/>
+      </node>
+      <node id="208">
+        <label>Hack::Chips::Not</label>
+        <link refid="a01074"/>
+        <childnode refid="209" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="212">
+        <label>uint8_t</label>
+        <link refid="a01370"/>
+      </node>
+      <node id="211">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="a00990"/>
+        <childnode refid="212" relation="usage">
+          <edgelabel>_bits</edgelabel>
+        </childnode>
+      </node>
+      <node id="210">
+        <label>Hack::Chips::Not</label>
+        <link refid="a01074"/>
+        <childnode refid="211" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Chips/Not.h" line="28" column="1" bodyfile="Source/Chips/Not.h" bodystart="27" bodyend="37"/>
+    <listofallmembers>
+      <member refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Not</scope><name>_bits</name></member>
+      <member refid="a00990_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::Not</scope><name>applyBit</name></member>
+      <member refid="a00990_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::Not</scope><name>assignBit</name></member>
+      <member refid="a00990_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::Not</scope><name>Chip</name></member>
+      <member refid="a00990_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::Not</scope><name>clearBit</name></member>
+      <member refid="a01074_1a028dfa315879f520a695fd566c680aaa" prot="private" virt="non-virtual"><scope>Hack::Chips::Not</scope><name>evaluate</name></member>
+      <member refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::Not</scope><name>getBit</name></member>
+      <member refid="a01074_1ad0155e8af5013a4009a3a751d4908444" prot="public" virt="non-virtual"><scope>Hack::Chips::Not</scope><name>getOut</name></member>
+      <member refid="a00990_1a63bb368bb0827830235759b33718d1b4" prot="protected" virt="virtual"><scope>Hack::Chips::Not</scope><name>isDirty</name></member>
+      <member refid="a01074_1a3dabb7dcbf3678cece55980d2658624b" prot="public" virt="non-virtual"><scope>Hack::Chips::Not</scope><name>Not</name></member>
+      <member refid="a00990_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::Not</scope><name>setBit</name></member>
+      <member refid="a01074_1a839b2ed314d61cb06ef294d5b608e643" prot="public" virt="non-virtual"><scope>Hack::Chips::Not</scope><name>setIn</name></member>
+      <member refid="a00990_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::Not</scope><name>~Chip</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

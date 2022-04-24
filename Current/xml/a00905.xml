@@ -1,421 +1,125 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00905" kind="namespace" language="C++">
-    <compoundname>Hack::VirtualMachine</compoundname>
-    <innerclass refid="a01337" prot="public">Hack::VirtualMachine::CodeStream</innerclass>
-    <innerclass refid="a01341" prot="public">Hack::VirtualMachine::Emitter</innerclass>
-    <innerclass refid="a01349" prot="public">Hack::VirtualMachine::KeywordTable</innerclass>
-    <innerclass refid="a01345" prot="public">Hack::VirtualMachine::Parser</innerclass>
-    <innerclass refid="a01353" prot="public">Hack::VirtualMachine::Scanner</innerclass>
-      <sectiondef kind="enum">
-      <memberdef kind="enum" id="a00905_1ab2a36ae607c4ab166da225c1f6f71827" prot="public" static="no" strong="no">
-        <type></type>
-        <name>RamIndices</name>
-        <enumvalue id="a00905_1ab2a36ae607c4ab166da225c1f6f71827a863abda83f7c8925cceaf04098e3cb34" prot="public">
-          <name>STP</name>
-          <initializer>= 0</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1ab2a36ae607c4ab166da225c1f6f71827acf4f05429d20255bf7128cebaf158e72" prot="public">
-          <name>LCL</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1ab2a36ae607c4ab166da225c1f6f71827a8ca2cf3937e5c6f1e63ee3b602fdf814" prot="public">
-          <name>ARG</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1ab2a36ae607c4ab166da225c1f6f71827a0edd4176219c47bc38b154d7319b2b0c" prot="public">
-          <name>THS</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1ab2a36ae607c4ab166da225c1f6f71827a892ac688cf8f49defc936c85521c630b" prot="public">
-          <name>THT</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1ab2a36ae607c4ab166da225c1f6f71827a7257ce4a14d1f26d6858febfad59e371" prot="public">
-          <name>TMP</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1ab2a36ae607c4ab166da225c1f6f71827ac877118ac6aa475e26bcdc4dd5952f52" prot="public">
-          <name>SW0</name>
-          <initializer>= 13</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1ab2a36ae607c4ab166da225c1f6f71827ac160ec799f9773ab331ad17427c85d75" prot="public">
-          <name>SW1</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1ab2a36ae607c4ab166da225c1f6f71827ae6201d4edf7d9066f2245e0d75ac1805" prot="public">
-          <name>SW2</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/VirtualMachine/Constants.h" line="27" column="1" bodyfile="Source/VirtualMachine/Constants.h" bodystart="26" bodyend="38"/>
-      </memberdef>
-      <memberdef kind="enum" id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8" prot="public" static="no" strong="no">
-        <type></type>
-        <name>TokenType</name>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a71e915ab635f656148cf8990f77e5171" prot="public">
-          <name>TOK_ERROR</name>
-          <initializer>= -2</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8aa3110406fa7d6ce5c6dba8fd3594d633" prot="public">
-          <name>TOK_EOF</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8abe92c0e4ce7a4c0b26df409cab3cd1a7" prot="public">
-          <name>TOK_NULL</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8af65d8765d7554151c22a5de2475e4a04" prot="public">
-          <name>TOK_INTEGER</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a79fe4d72ec11f5d2ba06c0f0818bc383" prot="public">
-          <name>TOK_IDENTIFIER</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a15637fa7561d27e7ec3767c1234f30c8" prot="public">
-          <name>TOK_PUSH</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8acc1f94b8928811b09124734ee1597a55" prot="public">
-          <name>TOK_POP</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8ac1c79b33295900ce5fb9b7388f9d3774" prot="public">
-          <name>TOK_ARGUMENT</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a884782019d67a9034800b2e52853285f" prot="public">
-          <name>TOK_LOCAL</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a34c8a308ae07cccf0911f5beedf966b1" prot="public">
-          <name>TOK_STATIC</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a1b5933cb66c94f5d52f4b26aa5d21687" prot="public">
-          <name>TOK_CONSTANT</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a336b66142cf793364a1852264a54363e" prot="public">
-          <name>TOK_THIS</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a4a6f04837563a657059418583b193f6d" prot="public">
-          <name>TOK_THAT</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a1ff62250b7cc15cf5232385336a43faa" prot="public">
-          <name>TOK_POINTER</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a9a81b7232eec35bfa052a1127102ef88" prot="public">
-          <name>TOK_TEMP</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a4e509ea02cf3295cfb974cbef858a2a0" prot="public">
-          <name>TOK_IF_GOTO</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8adefb15a333279ec39429629d72c7247b" prot="public">
-          <name>TOK_GOTO</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8adea00dd7260945f628607920c28f4f88" prot="public">
-          <name>TOK_LABEL</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a8fe88815a953aa99c8e5c8d5ee61977b" prot="public">
-          <name>TOK_FUNCTION</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8aba05bfde3b583f0f57670db082435502" prot="public">
-          <name>TOK_CALL</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8aab8d542c9b300e713566c31fd04978b2" prot="public">
-          <name>TOK_RETURN</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a93c0f222ca3e14bf194e2ada515f6231" prot="public">
-          <name>TOK_EQ</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8afa3234091b8747a25c81465bbc76356e" prot="public">
-          <name>TOK_GT</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a34d01c2b796f4fba92dbbdba6829b4de" prot="public">
-          <name>TOK_LT</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8ad252188e8cc229f0e37a62bc2a6effbb" prot="public">
-          <name>TOK_ADD</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a44c80f603918c4ec0059e90c6aec5da0" prot="public">
-          <name>TOK_SUB</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a090fd2880780efacb459ca5a0f9108b2" prot="public">
-          <name>TOK_AND</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8afc9b5bec56f03be602419b704b93791e" prot="public">
-          <name>TOK_OR</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8ab3a17c6fa237215d3cbd4ef2147917c5" prot="public">
-          <name>TOK_NOT</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a3528eed46cd82da594149f52de5580f0" prot="public">
-          <name>TOK_NEG</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a3fa291fa8690f5c7571b54b2fa681b08" prot="public">
-          <name>TOK_SET</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a066351ce777c87e213b2dc4daf40e599" prot="public">
-          <name>TOK_RESET</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a8ecc09af794ba08a877a741036883409" prot="public">
-          <name>TOK_HALT</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a4ab563e860977220dd359e7df2a3db53" prot="public">
-          <name>TOK_ASM</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/VirtualMachine/Token.h" line="28" column="1" bodyfile="Source/VirtualMachine/Token.h" bodystart="27" bodyend="64"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="a00905_1a08484157b85b2bda07ff1e0c32072f10" prot="public" static="no">
-        <type>std::vector&lt; <ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &gt;</type>
-        <definition>using Hack::VirtualMachine::CodeCache = typedef std::vector&lt;String&gt;</definition>
-        <argsstring></argsstring>
-        <name>CodeCache</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/VirtualMachine/Scanner.h" line="28" column="1" bodyfile="Source/VirtualMachine/Scanner.h" bodystart="28" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="a00905_1a02186d1a9c875e3583ff775f46ad7c0a" prot="public" static="no">
-        <type><ref refid="a01269" kindref="compound">Cache</ref>&lt; <ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &gt;</type>
-        <definition>using Hack::VirtualMachine::StringCache = typedef Cache&lt;String&gt;</definition>
-        <argsstring></argsstring>
-        <name>StringCache</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="30" column="1" bodyfile="Source/VirtualMachine/Parser.h" bodystart="30" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="a00905_1a1256a43300d83510604c7b9755796e01" prot="public" static="no">
-        <type><ref refid="a01289" kindref="compound">TokenBase</ref></type>
-        <definition>using Hack::VirtualMachine::Token = typedef TokenBase</definition>
-        <argsstring></argsstring>
-        <name>Token</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/VirtualMachine/Token.h" line="66" column="1" bodyfile="Source/VirtualMachine/Token.h" bodystart="66" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
+    <compoundname>Hack::Computer::Detail</compoundname>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="a00905_1a30e923dda3e21a2da18e80be744949c7" prot="public" static="no" mutable="no">
-        <type>constexpr <ref refid="a01349" kindref="compound">KeywordTable</ref></type>
-        <definition>constexpr KeywordTable Hack::VirtualMachine::Reserved[]</definition>
-        <argsstring>[]</argsstring>
-        <name>Reserved</name>
+      <memberdef kind="variable" id="a00905_1aa4afbbad44ea4825f010eb45cae1921a" prot="public" static="no" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Hack::Computer::Detail::CpuHeight</definition>
+        <argsstring></argsstring>
+        <name>CpuHeight</name>
+        <initializer>= 12</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Scanner.cpp" line="37" column="1" bodyfile="Source/VirtualMachine/Scanner.cpp" bodystart="37" bodyend="-1"/>
+        <location file="Source/Computer/DebugRuntime.cpp" line="51" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="51" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="a00905_1ad47a4e14037dad618c52c200c3c35fc0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Hack::VirtualMachine::isValidCharacter</definition>
-        <argsstring>(const int ch)</argsstring>
-        <name>isValidCharacter</name>
-        <param>
-          <type>const int</type>
-          <declname>ch</declname>
-        </param>
+      <memberdef kind="variable" id="a00905_1aea1e334a76f2d7d3f968fbc724deefb7" prot="public" static="no" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Hack::Computer::Detail::CpuHeightH</definition>
+        <argsstring></argsstring>
+        <name>CpuHeightH</name>
+        <initializer>= <ref refid="a00905_1aa4afbbad44ea4825f010eb45cae1921a" kindref="member">CpuHeight</ref> &gt;&gt; 1</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Scanner.cpp" line="70" column="1" bodyfile="Source/VirtualMachine/Scanner.cpp" bodystart="70" bodyend="73"/>
-        <references refid="a00897_1a3b7e26319acf069b65ddb8e0f3f34812" compoundref="a00797" startline="193" endline="196">Hack::isLetter</references>
-        <references refid="a00897_1a3072f15c6cc44192ad127f00ab7430cd" compoundref="a00797" startline="187" endline="190">Hack::isDecimal</references>
+        <location file="Source/Computer/DebugRuntime.cpp" line="52" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00905_1a4f8d7dbd69a5f2fab5d4d597c3c7410e" prot="public" static="no" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Hack::Computer::Detail::CpuWidth</definition>
+        <argsstring></argsstring>
+        <name>CpuWidth</name>
+        <initializer>= 24</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/DebugRuntime.cpp" line="49" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00905_1a8252ac17c512721f037bb810e2fdadd0" prot="public" static="no" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Hack::Computer::Detail::CpuWidthH</definition>
+        <argsstring></argsstring>
+        <name>CpuWidthH</name>
+        <initializer>= <ref refid="a00905_1a4f8d7dbd69a5f2fab5d4d597c3c7410e" kindref="member">CpuWidth</ref> &gt;&gt; 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/DebugRuntime.cpp" line="50" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00905_1a02b35b35dc0cf08e801b7319d7187619" prot="public" static="no" mutable="no">
+        <type>const <ref refid="a01302" kindref="compound">Point</ref></type>
+        <definition>const Point Hack::Computer::Detail::RegSize</definition>
+        <argsstring></argsstring>
+        <name>RegSize</name>
+        <initializer>= <ref refid="a01302" kindref="compound">Point</ref>(12, 3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/DebugRuntime.cpp" line="57" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00905_1aae482b259939907b0455e00ddb1d6d29" prot="public" static="no" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Hack::Computer::Detail::SideBarWidth</definition>
+        <argsstring></argsstring>
+        <name>SideBarWidth</name>
+        <initializer>= 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/DebugRuntime.cpp" line="55" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00905_1a634e7d1cba7c2e041e76cf938876972f" prot="public" static="no" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Hack::Computer::Detail::SideBarWidthD</definition>
+        <argsstring></argsstring>
+        <name>SideBarWidthD</name>
+        <initializer>= <ref refid="a00905_1aae482b259939907b0455e00ddb1d6d29" kindref="member">SideBarWidth</ref> &lt;&lt; 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/DebugRuntime.cpp" line="56" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00905_1a85f5e165277e3188b5d60842d095ed6a" prot="public" static="no" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Hack::Computer::Detail::TitleOffs</definition>
+        <argsstring></argsstring>
+        <name>TitleOffs</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/DebugRuntime.cpp" line="53" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="53" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Compiler/Generator/Generator.h" line="32" column="1"/>
+    <location file="Source/Computer/DebugRuntime.cpp" line="48" column="1"/>
   </compounddef>
 </doxygen>

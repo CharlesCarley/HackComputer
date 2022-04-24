@@ -49,6 +49,10 @@
 </a>
 </span>
 <br/>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Current/pages/Hc08.Extra.h#L1" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Hc08.Extra.h</span>
+</a>
+</span>
+<br/>
 </div>
 </div>
 </body>

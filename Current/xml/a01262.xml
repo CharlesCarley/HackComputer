@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01262" kind="class" language="C++" prot="public">
+    <compoundname>Hack::IndexCache</compoundname>
+    <includes local="no">Source/Utils/IndexCache.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="a01262_1a35bba19b55830e0f1e0abbf57e4857eb" prot="public" static="no">
+        <type>std::vector&lt; T &gt;</type>
+        <definition>typedef std::vector&lt;T&gt; Hack::IndexCache&lt; T &gt;::Array</definition>
+        <argsstring></argsstring>
+        <name>Array</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/IndexCache.h" line="34" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="a01262_1a58d643c7021a8e432c0cb50c34a701e0" prot="public" static="no">
+        <type>std::unordered_map&lt; T, size_t &gt;</type>
+        <definition>typedef std::unordered_map&lt;T, size_t&gt; Hack::IndexCache&lt; T &gt;::Table</definition>
+        <argsstring></argsstring>
+        <name>Table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/IndexCache.h" line="33" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="a01262_1a07eff8e764a122085d1eff7fc144136d" prot="private" static="no" mutable="no">
+        <type><ref refid="a01262_1a58d643c7021a8e432c0cb50c34a701e0" kindref="member">Table</ref></type>
+        <definition>Table Hack::IndexCache&lt; T &gt;::_elements</definition>
+        <argsstring></argsstring>
+        <name>_elements</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/IndexCache.h" line="37" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01262_1af96cab70bed98e3790541fd8a9298f1a" prot="private" static="no" mutable="no">
+        <type><ref refid="a01262_1a35bba19b55830e0f1e0abbf57e4857eb" kindref="member">Array</ref></type>
+        <definition>Array Hack::IndexCache&lt; T &gt;::_list</definition>
+        <argsstring></argsstring>
+        <name>_list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/IndexCache.h" line="38" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a01262_1ab01608c27db3ac4be90bf52ce1d4c0c3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::IndexCache&lt; T &gt;::at</definition>
+        <argsstring>(T &amp;dest, const size_t &amp;index) const</argsstring>
+        <name>at</name>
+        <param>
+          <type>T &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/IndexCache.h" line="59" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="59" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1a902ffa3068422edb3fee0b4cdaabff49" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const T &amp;</type>
+        <definition>const T&amp; Hack::IndexCache&lt; T &gt;::at</definition>
+        <argsstring>(const size_t &amp;index) const</argsstring>
+        <name>at</name>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/IndexCache.h" line="67" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="67" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1a937eb5cd44aa067611509f5559f09425" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Array::const_iterator</type>
+        <definition>Array::const_iterator Hack::IndexCache&lt; T &gt;::begin</definition>
+        <argsstring>() const</argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/IndexCache.h" line="106" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="106" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1af9003f1c606faeb1ed81da3e6724afdf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::IndexCache&lt; T &gt;::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/IndexCache.h" line="100" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="100" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1a677054e7114594776d14288e2a7fb6f4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::IndexCache&lt; T &gt;::contains</definition>
+        <argsstring>(const size_t &amp;index) const</argsstring>
+        <name>contains</name>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/IndexCache.h" line="75" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1a0f40060d06258d8985ed3511aa7a5728" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::IndexCache&lt; T &gt;::contains</definition>
+        <argsstring>(const T &amp;value) const</argsstring>
+        <name>contains</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/IndexCache.h" line="80" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="80" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1a061f94f9c3f4b68039a653a682424d4c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Array::const_iterator</type>
+        <definition>Array::const_iterator Hack::IndexCache&lt; T &gt;::end</definition>
+        <argsstring>() const</argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/IndexCache.h" line="111" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="111" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1a9ed2e1e8ac63d2383b14f2a1f9fd3247" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Hack::IndexCache&lt; T &gt;::get</definition>
+        <argsstring>(const T &amp;value) const</argsstring>
+        <name>get</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/IndexCache.h" line="86" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="86" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1a049a43563b3a4a2b23e47a4da2425c3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Hack::IndexCache&lt; T &gt;::insert</definition>
+        <argsstring>(const T &amp;value)</argsstring>
+        <name>insert</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/IndexCache.h" line="41" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="41" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1a1c40fbac04597a5f4255de48cc2830c9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Hack::IndexCache&lt; T &gt;::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/IndexCache.h" line="95" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="95" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/Utils/IndexCache.h" line="31" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="30" bodyend="115"/>
+    <listofallmembers>
+      <member refid="a01262_1a07eff8e764a122085d1eff7fc144136d" prot="private" virt="non-virtual"><scope>Hack::IndexCache</scope><name>_elements</name></member>
+      <member refid="a01262_1af96cab70bed98e3790541fd8a9298f1a" prot="private" virt="non-virtual"><scope>Hack::IndexCache</scope><name>_list</name></member>
+      <member refid="a01262_1a35bba19b55830e0f1e0abbf57e4857eb" prot="public" virt="non-virtual"><scope>Hack::IndexCache</scope><name>Array</name></member>
+      <member refid="a01262_1ab01608c27db3ac4be90bf52ce1d4c0c3" prot="public" virt="non-virtual"><scope>Hack::IndexCache</scope><name>at</name></member>
+      <member refid="a01262_1a902ffa3068422edb3fee0b4cdaabff49" prot="public" virt="non-virtual"><scope>Hack::IndexCache</scope><name>at</name></member>
+      <member refid="a01262_1a937eb5cd44aa067611509f5559f09425" prot="public" virt="non-virtual"><scope>Hack::IndexCache</scope><name>begin</name></member>
+      <member refid="a01262_1af9003f1c606faeb1ed81da3e6724afdf" prot="public" virt="non-virtual"><scope>Hack::IndexCache</scope><name>clear</name></member>
+      <member refid="a01262_1a677054e7114594776d14288e2a7fb6f4" prot="public" virt="non-virtual"><scope>Hack::IndexCache</scope><name>contains</name></member>
+      <member refid="a01262_1a0f40060d06258d8985ed3511aa7a5728" prot="public" virt="non-virtual"><scope>Hack::IndexCache</scope><name>contains</name></member>
+      <member refid="a01262_1a061f94f9c3f4b68039a653a682424d4c" prot="public" virt="non-virtual"><scope>Hack::IndexCache</scope><name>end</name></member>
+      <member refid="a01262_1a9ed2e1e8ac63d2383b14f2a1f9fd3247" prot="public" virt="non-virtual"><scope>Hack::IndexCache</scope><name>get</name></member>
+      <member refid="a01262_1a049a43563b3a4a2b23e47a4da2425c3f" prot="public" virt="non-virtual"><scope>Hack::IndexCache</scope><name>insert</name></member>
+      <member refid="a01262_1a1c40fbac04597a5f4255de48cc2830c9" prot="public" virt="non-virtual"><scope>Hack::IndexCache</scope><name>size</name></member>
+      <member refid="a01262_1a58d643c7021a8e432c0cb50c34a701e0" prot="public" virt="non-virtual"><scope>Hack::IndexCache</scope><name>Table</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

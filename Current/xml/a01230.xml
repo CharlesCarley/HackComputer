@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01230" kind="struct" language="C++" prot="public">
+    <compoundname>Hack::CommandLine::Switch</compoundname>
+    <includes local="no">Source/Utils/CommandLine/Option.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="a01230_1a002425f1bb1d230c56836920850857f4" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Hack::CommandLine::Switch::argCount</definition>
+        <argsstring></argsstring>
+        <name>argCount</name>
+        <briefdescription>
+<para>Defines the number of required arguments. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Option.h" line="54" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01230_1ab100a397f7937d57fd07818559cc4768" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* Hack::CommandLine::Switch::description</definition>
+        <argsstring></argsstring>
+        <name>description</name>
+        <briefdescription>
+<para>A brief description for the -h, <ndash/>help builtin option. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Option.h" line="48" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01230_1ab5eba3cf599eef4751ba4d5985e821ee" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Hack::CommandLine::Switch::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This needs to be it&apos;s index in the context of all defined switches </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Option.h" line="37" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01230_1a2fcdf7ee4ff6df3990cf86d1b5470a83" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* Hack::CommandLine::Switch::longSwitch</definition>
+        <argsstring></argsstring>
+        <name>longSwitch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Option.h" line="45" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01230_1a584e5301f7bab584467a66879cc18c21" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Hack::CommandLine::Switch::optional</definition>
+        <argsstring></argsstring>
+        <name>optional</name>
+        <briefdescription>
+<para>Means it&apos;s an optional switch. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Option.h" line="51" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01230_1ad725d98dbe8d12706bd7851f5d3d905c" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Hack::CommandLine::Switch::shortSwitch</definition>
+        <argsstring></argsstring>
+        <name>shortSwitch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Short switch (-[a-zA-Z]+) A value of 0 means unused </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Option.h" line="41" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a command line switch </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="309">
+        <label>size_t</label>
+      </node>
+      <node id="310">
+        <label>uint32_t</label>
+      </node>
+      <node id="311">
+        <label>bool</label>
+      </node>
+      <node id="308">
+        <label>char</label>
+      </node>
+      <node id="307">
+        <label>Hack::CommandLine::Switch</label>
+        <link refid="a01230"/>
+        <childnode refid="308" relation="usage">
+          <edgelabel>longSwitch</edgelabel>
+          <edgelabel>shortSwitch</edgelabel>
+          <edgelabel>description</edgelabel>
+        </childnode>
+        <childnode refid="309" relation="usage">
+          <edgelabel>argCount</edgelabel>
+        </childnode>
+        <childnode refid="310" relation="usage">
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="311" relation="usage">
+          <edgelabel>optional</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Utils/CommandLine/Option.h" line="34" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="33" bodyend="55"/>
+    <listofallmembers>
+      <member refid="a01230_1a002425f1bb1d230c56836920850857f4" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Switch</scope><name>argCount</name></member>
+      <member refid="a01230_1ab100a397f7937d57fd07818559cc4768" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Switch</scope><name>description</name></member>
+      <member refid="a01230_1ab5eba3cf599eef4751ba4d5985e821ee" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Switch</scope><name>id</name></member>
+      <member refid="a01230_1a2fcdf7ee4ff6df3990cf86d1b5470a83" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Switch</scope><name>longSwitch</name></member>
+      <member refid="a01230_1a584e5301f7bab584467a66879cc18c21" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Switch</scope><name>optional</name></member>
+      <member refid="a01230_1ad725d98dbe8d12706bd7851f5d3d905c" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Switch</scope><name>shortSwitch</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

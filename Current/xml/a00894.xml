@@ -1,694 +1,141 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00894" kind="namespace" language="C++">
-    <compoundname>Hack::Compiler</compoundname>
-    <innerclass refid="a01148" prot="public">Hack::Compiler::DotWriter</innerclass>
-    <innerclass refid="a01144" prot="public">Hack::Compiler::DotWriterImpl</innerclass>
-    <innerclass refid="a01152" prot="public">Hack::Compiler::Node</innerclass>
-    <innerclass refid="a01156" prot="public">Hack::Compiler::NodeUtils</innerclass>
-    <innerclass refid="a01160" prot="public">Hack::Compiler::Tree</innerclass>
-    <innerclass refid="a01168" prot="public">Hack::Compiler::XmlWriter</innerclass>
-    <innerclass refid="a01164" prot="public">Hack::Compiler::XmlWriterImpl</innerclass>
-    <innernamespace refid="a00893">Hack::Compiler::Analyzer</innernamespace>
-    <innernamespace refid="a00895">Hack::Compiler::CodeGenerator</innernamespace>
+    <compoundname>Hack</compoundname>
+    <innerclass refid="a01266" prot="public">Hack::Cache</innerclass>
+    <innerclass refid="a01226" prot="public">Hack::Char</innerclass>
+    <innerclass refid="a01250" prot="public">Hack::Console</innerclass>
+    <innerclass refid="a01254" prot="public">Hack::Exception</innerclass>
+    <innerclass refid="a01258" prot="public">Hack::FileSystem</innerclass>
+    <innerclass refid="a01262" prot="public">Hack::IndexCache</innerclass>
+    <innerclass refid="a01270" prot="public">Hack::KeyIndexCache</innerclass>
+    <innerclass refid="a01274" prot="public">Hack::ParseError</innerclass>
+    <innerclass refid="a01278" prot="public">Hack::ParserBase</innerclass>
+    <innerclass refid="a01282" prot="public">Hack::ScannerBase</innerclass>
+    <innerclass refid="a01290" prot="public">Hack::StringUtils</innerclass>
+    <innerclass refid="a01286" prot="public">Hack::TokenBase</innerclass>
+    <innernamespace refid="a00893">Hack::Assembler</innernamespace>
+    <innernamespace refid="a00895">Hack::Binding</innernamespace>
+    <innernamespace refid="a00896">Hack::Chips</innernamespace>
+    <innernamespace refid="a00907">Hack::CommandLine</innernamespace>
+    <innernamespace refid="a00900">Hack::Compiler</innernamespace>
+    <innernamespace refid="a00904">Hack::Computer</innernamespace>
+    <innernamespace refid="a00906">Hack::OperatingSystem</innernamespace>
+    <innernamespace refid="a00903">Hack::Programs</innernamespace>
+    <innernamespace refid="a00908">Hack::Ui</innernamespace>
+    <innernamespace refid="a00902">Hack::VirtualMachine</innernamespace>
       <sectiondef kind="enum">
-      <memberdef kind="enum" id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6" prot="public" static="no" strong="no">
+      <memberdef kind="enum" id="a00894_1a36cd9148d33ac143e1ab550c0cc95422" prot="public" static="no" strong="no">
         <type></type>
-        <name>NodeType</name>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a12d787097fb230c34304927acb58a558" prot="public">
-          <name>Rule</name>
+        <name>ConsoleColor</name>
+        <enumvalue id="a00894_1a36cd9148d33ac143e1ab550c0cc95422ac12944af8b48da06fea92305e07d5a86" prot="public">
+          <name>CS_BLACK</name>
+          <initializer>= 0</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6af5fb400704892777118abdccc81b9194" prot="public">
-          <name>RuleClass</name>
+        <enumvalue id="a00894_1a36cd9148d33ac143e1ab550c0cc95422a3e322f5c257e1d60511f9efb852499ff" prot="public">
+          <name>CS_DARK_BLUE</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6aa4a86eb5c36e73c82c0e65cb88c87860" prot="public">
-          <name>RuleClassDescription</name>
+        <enumvalue id="a00894_1a36cd9148d33ac143e1ab550c0cc95422a4a0ef12656585d3d7de9098f4a367ed8" prot="public">
+          <name>CS_DARK_GREEN</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6af895d92a3471ae1dd81db116cb5683e4" prot="public">
-          <name>RuleField</name>
+        <enumvalue id="a00894_1a36cd9148d33ac143e1ab550c0cc95422aabe6734a69d20b2eb87d53460411647f" prot="public">
+          <name>CS_DARK_CYAN</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a83868e546ba4cf0544f7b704c9ad32ff" prot="public">
-          <name>RuleDataType</name>
+        <enumvalue id="a00894_1a36cd9148d33ac143e1ab550c0cc95422a5087dcb93e87c9ccb9cebeb709dd670c" prot="public">
+          <name>CS_DARK_RED</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a74a4a6265f456fe0176393106c407b6e" prot="public">
-          <name>RuleFieldSpecification</name>
+        <enumvalue id="a00894_1a36cd9148d33ac143e1ab550c0cc95422aa6617dec2367bd28f31ca80b8f85be5c" prot="public">
+          <name>CS_DARK_MAGENTA</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a379776fb31e81b1baa8e37d597eb24a4" prot="public">
-          <name>RuleIdentifierList</name>
+        <enumvalue id="a00894_1a36cd9148d33ac143e1ab550c0cc95422acec9e9d56bbc26b7aa4e07ecae158fb3" prot="public">
+          <name>CS_DARK_YELLOW</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6ad395ed3a48e79f471aa48780ebdc3ff1" prot="public">
-          <name>RuleMethod</name>
+        <enumvalue id="a00894_1a36cd9148d33ac143e1ab550c0cc95422a33f74366ed335de9402ded1513faa1fd" prot="public">
+          <name>CS_LIGHT_GREY</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a8e21b2c6a1e2c1820fd46de24934b033" prot="public">
-          <name>RuleMethodSpecification</name>
+        <enumvalue id="a00894_1a36cd9148d33ac143e1ab550c0cc95422a7a3a406783331d9982717cda0c4b9d32" prot="public">
+          <name>CS_GREY</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a494bc4f5cb9c004cd62bfb5390eb7a33" prot="public">
-          <name>RuleMethodReturnType</name>
+        <enumvalue id="a00894_1a36cd9148d33ac143e1ab550c0cc95422a83887a2dd719baca7ae876a83a5dcdf0" prot="public">
+          <name>CS_BLUE</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6acd4325f3ac0a467e6fefcb9bc2a57861" prot="public">
-          <name>RuleMethodBody</name>
+        <enumvalue id="a00894_1a36cd9148d33ac143e1ab550c0cc95422ad8940f15cc539c584cab06a6254e3fcb" prot="public">
+          <name>CS_GREEN</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a3f94a6a03101d7a4403e12934a7dd99d" prot="public">
-          <name>RuleBody</name>
+        <enumvalue id="a00894_1a36cd9148d33ac143e1ab550c0cc95422acb0eff31aec39069dc2b5065415a3e4c" prot="public">
+          <name>CS_CYAN</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6ab2900197084b999d0d27771e8326970f" prot="public">
-          <name>RuleVariable</name>
+        <enumvalue id="a00894_1a36cd9148d33ac143e1ab550c0cc95422a85995eae0ed8467e1a9f39691004a08e" prot="public">
+          <name>CS_RED</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6ac1dea96e8aa8912884cd00534d5be418" prot="public">
-          <name>RuleStatement</name>
+        <enumvalue id="a00894_1a36cd9148d33ac143e1ab550c0cc95422a3be7623273d8f4f63c18cbd69a265f93" prot="public">
+          <name>CS_MAGENTA</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6afe32ecf4dda649e33924606d05e85ccd" prot="public">
-          <name>RuleInlineVm</name>
+        <enumvalue id="a00894_1a36cd9148d33ac143e1ab550c0cc95422a341ebe38c827def41083c99fcc558b49" prot="public">
+          <name>CS_YELLOW</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6acbaba7a7dcfa3aeec822934d931f42c1" prot="public">
-          <name>RuleInlineAsm</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6acfa63bed354357c7c65733160ef9f4fa" prot="public">
-          <name>RuleLetStatement</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6ad6c4df62cebed24c57fb5cf1cc636f8d" prot="public">
-          <name>RuleIfStatement</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a26dae7be723fdf8ba71202d29625f6f5" prot="public">
-          <name>RuleElseStatement</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a303329c590b8ca9e53bbac315017d365" prot="public">
-          <name>RuleWhileStatement</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6ac0729f0dd5d255b9aa667cd581da95f4" prot="public">
-          <name>RuleDoStatement</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a87934873c24cbdc44c8fa785781b29d7" prot="public">
-          <name>RuleReturnStatement</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6aeac707ada70e601bbfc8325327da5dcb" prot="public">
-          <name>RuleStatementList</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a46ca516f5cbcd46c3029be456b9f500d" prot="public">
-          <name>RuleExpression</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a25ea761d296db24a901341598d7d4852" prot="public">
-          <name>RuleSingleExpression</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a9d0ef264a545c5117c990415ff883634" prot="public">
-          <name>RuleTerm</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a031b1a025a73129dff8de9246e61e2f2" prot="public">
-          <name>RuleSimpleTerm</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a3bd0a9809c3b1c83912b72eceb6cf4f5" prot="public">
-          <name>RuleComplexTerm</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a4bd47378515d925ac6426c0c397e5a27" prot="public">
-          <name>RuleOperator</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6afe7e8673ff8860700e770e2afee945a2" prot="public">
-          <name>RuleUnaryOperator</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a8d902d19f27773b8272d3f48adf6f135" prot="public">
-          <name>RuleExpressionList</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a228d7822b0f80c89a86e450a24d68ce4" prot="public">
-          <name>RuleCallMethod</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a7796c9aacca84a379e90aa2b1438901e" prot="public">
-          <name>RuleParameterList</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a7988966264071c4fc121bed42d6ae205" prot="public">
-          <name>RuleParameter</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a65ff4e8ff9a2f029c5724550f90d8431" prot="public">
-          <name>RuleEnd</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6ae20eb424b83e17c701a57261e73b9052" prot="public">
-          <name>Keyword</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6ac31a70cbd9d9151351ffbe21b039ae4e" prot="public">
-          <name>KeywordClass</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6ae581171931b8bf6afb42ff9893d97ab0" prot="public">
-          <name>KeywordConstructor</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6ab26ac14d93f8a31f192b0e508f684a77" prot="public">
-          <name>KeywordFunction</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6aa0c2dc86da0f80dd9612abd2a3a77dd6" prot="public">
-          <name>KeywordMethod</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a8a27d8c907bccbea7451f6dd392bad75" prot="public">
-          <name>KeywordField</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a11680baf7488776f4bc0734b10035bc9" prot="public">
-          <name>KeywordStatic</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a2ba36ac2824b8af6298d1ba5bf5e4a06" prot="public">
-          <name>KeywordInt</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a97fc1d604682922b0b57eb05eaf7ed8a" prot="public">
-          <name>KeywordChar</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a4b6ed4a9c930866c2c694b2fc9d01fb9" prot="public">
-          <name>KeywordBool</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a5e0ca93da96ca2f39af10ed3f861e8c4" prot="public">
-          <name>KeywordVoid</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a4685a031adea4dbe1e7f657025fce740" prot="public">
-          <name>KeywordVar</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a7e5161b02ebb6784a0606285eb12dfd4" prot="public">
-          <name>KeywordLet</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a3a4ecc30d87ec79169e2bc7448a26b12" prot="public">
-          <name>KeywordIf</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a4c5a4ed9b73dd86745fcc5ce46e6edae" prot="public">
-          <name>KeywordElse</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a5229615543f1151e305ba04f60d8b9b8" prot="public">
-          <name>KeywordDo</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6aa4144c1216383931b91e4d06d8f2e5b9" prot="public">
-          <name>KeywordWhile</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a94e18e9f169344d2cc5308c7ae3cb4cc" prot="public">
-          <name>KeywordReturn</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a3efd6e34626ea06664a4e2bfbde6ac58" prot="public">
-          <name>KeywordEnd</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6aaf2cf666c2ba44b7ca371eb4b36991ce" prot="public">
-          <name>Symbol</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a2f8793e1c7bae9e986497c01c2be40f2" prot="public">
-          <name>SymbolOpenBrace</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a1b36db2997870e3f4750fe2bdacc1bf2" prot="public">
-          <name>SymbolCloseBrace</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6ad186637e1f78fd0001af6cf552da87f5" prot="public">
-          <name>SymbolSemiColon</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a7449b679a50e24f41705008788c90370" prot="public">
-          <name>SymbolLeftParenthesis</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6ab2c061b2efd2fbdd428ece15ed05ec27" prot="public">
-          <name>SymbolRightParenthesis</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a1c5da8e6a44118cb7af19c5966f611ab" prot="public">
-          <name>SymbolLeftBracket</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a8f7acc7cd1aa8763a3ec7c0723d3db3d" prot="public">
-          <name>SymbolRightBracket</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a69239f8c8f83820d5a13ad527a91316e" prot="public">
-          <name>SymbolComma</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6aa1c4e8b5a4bedf3e787d4c9b338b162a" prot="public">
-          <name>SymbolEquals</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6ab1b59e86da4b072c9c28809e36054032" prot="public">
-          <name>SymbolPlus</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6acf933364f0a3278d3c703cae0290e773" prot="public">
-          <name>SymbolMinus</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a2a3779e8d88ff5f074b61b0fe92b0b58" prot="public">
-          <name>SymbolMultiply</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a249f0459fb4c38dfa2690f09164c6488" prot="public">
-          <name>SymbolDivide</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6abb1b9f57f66f57725a1527e2f7acaedf" prot="public">
-          <name>SymbolAnd</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a7a5091b144812532ee7bf44dedd63781" prot="public">
-          <name>SymbolOr</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a07219731941d199649962cab568a10e9" prot="public">
-          <name>SymbolGreater</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6aaf53fad5156cbe194d6ed4f960e18ec8" prot="public">
-          <name>SymbolLess</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a32d4f45905602f6394b83e167fd7291e" prot="public">
-          <name>SymbolNot</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6af78cd3fd81595b5027563fc46de176bd" prot="public">
-          <name>SymbolPeriod</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6aac55360a9e63b95a0fe018110cee4891" prot="public">
-          <name>SymbolEnd</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6aa9315da8cb5f19dba0d77daddab7b0bd" prot="public">
-          <name>Constant</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a99979f3b0a7ec4669e64804412671e01" prot="public">
-          <name>ConstantIdentifier</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6afbd47c44db84d19153a2178f5852a6e0" prot="public">
-          <name>ConstantInteger</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a3bedb2300b4e67173eba51e3ab99c230" prot="public">
-          <name>ConstantString</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a28c9451c0059f6fa453a7204a9c043be" prot="public">
-          <name>ConstantTrue</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6ab42502c51c876d73e971e0b0db8a656e" prot="public">
-          <name>ConstantFalse</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6ac8ac251b2349e2ea86042e71aec4f317" prot="public">
-          <name>ConstantNull</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a2534a9437f7adc210d06c1b351ed4445" prot="public">
-          <name>ConstantThis</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6ad8221a84d21471ea7ad0dd3ecc349b12" prot="public">
-          <name>ConstantInlineVm</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a89061fb26c3f0c298b55ffca768debe8" prot="public">
-          <name>ConstantInlineAsm</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a3c41789e6326c83d485d3915fe44cb32" prot="public">
-          <name>ConstantEnd</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a6a900f6dff7c1a6f57cc24896d7b4f10" prot="public">
-          <name>SubtypeNone</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6aa0d8352ed2ca08217f9dc2b3ca635df4" prot="public">
-          <name>SubtypeExpressionGroup</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a22c529bdbb52ad409d9243fab183552b" prot="public">
-          <name>SubtypeCall</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a7ffb8ab9b38b4b338d446fc1ba39ad29" prot="public">
-          <name>SubtypeCallFunction</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a1cf72edfd7c12952849fd910e83f4052" prot="public">
-          <name>SubtypeCallMethod</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a41bd191826e40afa0260afee2fdaa6d6" prot="public">
-          <name>SubtypeArrayIndex</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a709cc210e1ab40744609244d1f7a3f8b" prot="public">
-          <name>SubtypeIfElseCombo</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a15bb148de2293807ec093fde1f2c22d5" prot="public">
-          <name>SubtypeTerm</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a19aa4a2351849e73de63c6464515bbcb" prot="public">
-          <name>SubtypeOpTerm</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a332598b2aac0805651f0039b3ff545fc" prot="public">
-          <name>SubtypeLetEqual</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00894_1a661f20cd8ee85e44fdd5e021df7c42b6a82b15984274411f0ed2e4fbc86f8c073" prot="public">
-          <name>SubtypeLetArrayEqual</name>
+        <enumvalue id="a00894_1a36cd9148d33ac143e1ab550c0cc95422aad0499502630b8e0c45c07d85d8dd477" prot="public">
+          <name>CS_WHITE</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -700,23 +147,421 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Common/NodeUtils.h" line="30" column="1" bodyfile="Source/Compiler/Common/NodeUtils.h" bodystart="29" bodyend="132"/>
+        <location file="Source/Utils/Console.h" line="29" column="1" bodyfile="Source/Utils/Console.h" bodystart="28" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="a00894_1a8babd9628a6940a2d49cd7fb5993819d" prot="public" static="no">
+        <type>std::filesystem::directory_entry</type>
+        <definition>using Hack::Directory = typedef std::filesystem::directory_entry</definition>
+        <argsstring></argsstring>
+        <name>Directory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/FileSystem.cpp" line="26" column="1" bodyfile="Source/Utils/FileSystem.cpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="a00894_1ab983b76961e0322ec2ffdfd7d0e17a6c" prot="public" static="no">
+        <type>std::istringstream</type>
+        <definition>using Hack::InputStringStream = typedef std::istringstream</definition>
+        <argsstring></argsstring>
+        <name>InputStringStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/String.h" line="33" column="1" bodyfile="Source/Utils/String.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="a00894_1a0fe26662b7931e1996129243b3461d14" prot="public" static="no">
+        <type><ref refid="a01262" kindref="compound">IndexCache</ref>&lt; int &gt;</type>
+        <definition>using Hack::IntTable = typedef IndexCache&lt;int&gt;</definition>
+        <argsstring></argsstring>
+        <name>IntTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="29" column="1" bodyfile="Source/Utils/ParserBase/ScannerBase.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="a00894_1a830c8eb3c005ef2fbc470e0b141b93c5" prot="public" static="no">
+        <type>std::istream</type>
+        <definition>using Hack::IStream = typedef std::istream</definition>
+        <argsstring></argsstring>
+        <name>IStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/String.h" line="35" column="1" bodyfile="Source/Utils/String.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="a00894_1a404ae4dff97be2fec362955db83690da" prot="public" static="no">
+        <type>std::ostream</type>
+        <definition>using Hack::OStream = typedef std::ostream</definition>
+        <argsstring></argsstring>
+        <name>OStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/String.h" line="36" column="1" bodyfile="Source/Utils/String.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="a00894_1ae3a6ca87ce783b824591a2858b2409a1" prot="public" static="no">
+        <type>std::ostringstream</type>
+        <definition>using Hack::OutputStringStream = typedef std::ostringstream</definition>
+        <argsstring></argsstring>
+        <name>OutputStringStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/String.h" line="34" column="1" bodyfile="Source/Utils/String.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="a00894_1a95e191d8af73e79ac197701ac6a6c9a6" prot="public" static="no">
+        <type>std::filesystem::path</type>
+        <definition>using Hack::Path = typedef std::filesystem::path</definition>
+        <argsstring></argsstring>
+        <name>Path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/FileSystem.h" line="29" column="1" bodyfile="Source/Utils/FileSystem.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="a00894_1a7c50e21fc90ae27988ef26dd0b40a118" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="a00894_1a95e191d8af73e79ac197701ac6a6c9a6" kindref="member">Path</ref> &gt;</type>
+        <definition>using Hack::PathArray = typedef std::vector&lt;Path&gt;</definition>
+        <argsstring></argsstring>
+        <name>PathArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/FileSystem.h" line="30" column="1" bodyfile="Source/Utils/FileSystem.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="a00894_1af578ea8fc214989b8ebeece788fa787d" prot="public" static="no">
+        <type>std::string</type>
+        <definition>using Hack::String = typedef std::string</definition>
+        <argsstring></argsstring>
+        <name>String</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/String.h" line="30" column="1" bodyfile="Source/Utils/String.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="a00894_1a02a62f0f81901a275e5e91f45798b2de" prot="public" static="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>using Hack::StringArray = typedef std::vector&lt;std::string&gt;</definition>
+        <argsstring></argsstring>
+        <name>StringArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/String.h" line="31" column="1" bodyfile="Source/Utils/String.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="a00894_1a3359517a07995b79651874c054caa348" prot="public" static="no">
+        <type>std::stringstream</type>
+        <definition>using Hack::StringStream = typedef std::stringstream</definition>
+        <argsstring></argsstring>
+        <name>StringStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/String.h" line="32" column="1" bodyfile="Source/Utils/String.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="a00894_1ae83ea09a8716690d1b9e9e8b462e5960" prot="public" static="no">
+        <type><ref refid="a01262" kindref="compound">IndexCache</ref>&lt; <ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &gt;</type>
+        <definition>using Hack::StringTable = typedef IndexCache&lt;String&gt;</definition>
+        <argsstring></argsstring>
+        <name>StringTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="28" column="1" bodyfile="Source/Utils/ParserBase/ScannerBase.h" bodystart="28" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="a00894_1aeb8813e0fbc7c80bff43c6fb8a33c058" prot="public" static="no" mutable="no">
-        <type>constexpr size_t</type>
-        <definition>constexpr size_t Hack::Compiler::Indent</definition>
+      <memberdef kind="variable" id="a00894_1a041cfca460e5405322e744c8081279a6" prot="public" static="yes" mutable="no">
+        <type><ref refid="a00894_1a36cd9148d33ac143e1ab550c0cc95422" kindref="member">ConsoleColor</ref></type>
+        <definition>ConsoleColor Hack::__gBackground</definition>
         <argsstring></argsstring>
-        <name>Indent</name>
-        <initializer>= 2</initializer>
+        <name>__gBackground</name>
+        <initializer>= <ref refid="a00894_1a36cd9148d33ac143e1ab550c0cc95422ac12944af8b48da06fea92305e07d5a86" kindref="member">CS_BLACK</ref></initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Common/XmlWriter.cpp" line="29" column="1" bodyfile="Source/Compiler/Common/XmlWriter.cpp" bodystart="29" bodyend="-1"/>
+        <location file="Source/Utils/Console.cpp" line="33" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00894_1a31eb56db00653252b73a1d6f1aef8fb1" prot="public" static="yes" mutable="no">
+        <type><ref refid="a00894_1a36cd9148d33ac143e1ab550c0cc95422" kindref="member">ConsoleColor</ref></type>
+        <definition>ConsoleColor Hack::__gForeground</definition>
+        <argsstring></argsstring>
+        <name>__gForeground</name>
+        <initializer>= <ref refid="a00894_1a36cd9148d33ac143e1ab550c0cc95422aad0499502630b8e0c45c07d85d8dd477" kindref="member">CS_WHITE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Console.cpp" line="32" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00894_1ae7e3e66ba861ebc2a81c74fab64eca4a" prot="public" static="no" mutable="no">
+        <type>constexpr char</type>
+        <definition>constexpr char Hack::BaseChars[]</definition>
+        <argsstring>[]</argsstring>
+        <name>BaseChars</name>
+        <initializer>= {
+        &apos;D&apos;, &apos;c&apos;, &apos;U&apos;, &apos;y&apos;, &apos;3&apos;, &apos;b&apos;, &apos;C&apos;, &apos;g&apos;,
+        &apos;p&apos;, &apos;J&apos;, &apos;9&apos;, &apos;L&apos;, &apos;p&apos;, &apos;J&apos;, &apos;0&apos;, &apos;A&apos;,
+        &apos;W&apos;, &apos;o&apos;, &apos;x&apos;, &apos;O&apos;, &apos;a&apos;, &apos;N&apos;, &apos;u&apos;, &apos;8&apos;,
+        &apos;n&apos;, &apos;x&apos;, &apos;7&apos;, &apos;s&apos;, &apos;E&apos;, &apos;z&apos;, &apos;h&apos;, &apos;E&apos;,
+        &apos;q&apos;, &apos;Z&apos;, &apos;L&apos;, &apos;4&apos;, &apos;F&apos;, &apos;2&apos;, &apos;Q&apos;, &apos;i&apos;,
+        &apos;S&apos;, &apos;K&apos;, &apos;w&apos;, &apos;G&apos;, &apos;r&apos;, &apos;f&apos;, &apos;1&apos;, &apos;Z&apos;,
+        &apos;d&apos;, &apos;t&apos;, &apos;Y&apos;, &apos;5&apos;, &apos;I&apos;, &apos;3&apos;, &apos;K&apos;, &apos;t&apos;,
+        &apos;B&apos;, &apos;6&apos;, &apos;a&apos;, &apos;R&apos;, &apos;l&apos;, &apos;H&apos;, &apos;m&apos;, &apos;M&apos;,
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/String.cpp" line="118" column="1" bodyfile="Source/Utils/String.cpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00894_1ab2f01cb6501d226bff7dec88849a0f23" prot="public" static="no" mutable="no">
+        <type>constexpr size_t</type>
+        <definition>constexpr size_t Hack::BaseCharsSize</definition>
+        <argsstring></argsstring>
+        <name>BaseCharsSize</name>
+        <initializer>= sizeof <ref refid="a00894_1ae7e3e66ba861ebc2a81c74fab64eca4a" kindref="member">BaseChars</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/String.cpp" line="130" column="1" bodyfile="Source/Utils/String.cpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="a00894_1a3072f15c6cc44192ad127f00ab7430cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::isDecimal</definition>
+        <argsstring>(const int ch)</argsstring>
+        <name>isDecimal</name>
+        <param>
+          <type>const int</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+<para><simplesect kind="return"><para>True if the character is in the range of [0-9]</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Char.h" line="187" column="1" bodyfile="Source/Utils/Char.h" bodystart="187" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="a00894_1a3b7e26319acf069b65ddb8e0f3f34812" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::isLetter</definition>
+        <argsstring>(const int ch)</argsstring>
+        <name>isLetter</name>
+        <param>
+          <type>const int</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+<para><simplesect kind="return"><para>True if the character is in the range of [a-zA-Z]</para></simplesect>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Char.h" line="193" column="1" bodyfile="Source/Utils/Char.h" bodystart="193" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="a00894_1a997ba9c78deb35bd113a03a3da54f8cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::isNewLine</definition>
+        <argsstring>(const int constant)</argsstring>
+        <name>isNewLine</name>
+        <param>
+          <type>const int</type>
+          <declname>constant</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if the supplied constant is a line feed character or a carriage return character. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Char.h" line="172" column="1" bodyfile="Source/Utils/Char.h" bodystart="172" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="a00894_1afe2cb1512758851b265f12637bd5ec7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::isWhiteSpace</definition>
+        <argsstring>(const int ch)</argsstring>
+        <name>isWhiteSpace</name>
+        <param>
+          <type>const int</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if the character is a white space character, tab character or a newline character. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Char.h" line="181" column="1" bodyfile="Source/Utils/Char.h" bodystart="181" bodyend="184"/>
+        <references refid="a00894_1a997ba9c78deb35bd113a03a3da54f8cd" compoundref="a00794" startline="172" endline="175">isNewLine</references>
+      </memberdef>
+      <memberdef kind="function" id="a00894_1aa7cb53a739bf7a43f184136d60bbd6d0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a01370" kindref="compound">uint8_t</ref></type>
+        <definition>static uint8_t Hack::MapColor</definition>
+        <argsstring>(const ConsoleColor &amp;col, bool bg)</argsstring>
+        <name>MapColor</name>
+        <param>
+          <type>const <ref refid="a00894_1a36cd9148d33ac143e1ab550c0cc95422" kindref="member">ConsoleColor</ref> &amp;</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Console.cpp" line="36" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="36" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="a00894_1a92c69899a09a2e10c63aa0ed739cdad3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Hack::SetColor</definition>
+        <argsstring>()</argsstring>
+        <name>SetColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Console.cpp" line="97" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="97" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="a00894_1a5364723a01adba9b9d85c38f1cb8e9df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void Hack::StreamMerge</definition>
+        <argsstring>(OutputStringStream &amp;dest, Args &amp;&amp;...args)</argsstring>
+        <name>StreamMerge</name>
+        <param>
+          <type><ref refid="a00894_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref> &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/String.h" line="63" column="1" bodyfile="Source/Utils/String.h" bodystart="63" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="a00894_1a0022073c844c619a094704ae6c9b14bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void Hack::StringCombine</definition>
+        <argsstring>(String &amp;dest, Args &amp;&amp;...args)</argsstring>
+        <name>StringCombine</name>
+        <param>
+          <type><ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/String.h" line="71" column="1" bodyfile="Source/Utils/String.h" bodystart="71" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="a00894_1ab53f5c42920e217a6da19d1e7b0bed33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
+        <definition>String Hack::StringCombine</definition>
+        <argsstring>(Args &amp;&amp;...args)</argsstring>
+        <name>StringCombine</name>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/String.h" line="79" column="1" bodyfile="Source/Utils/String.h" bodystart="79" bodyend="84"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

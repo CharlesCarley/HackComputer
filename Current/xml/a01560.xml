@@ -1,29 +1,67 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01560" kind="page">
-    <compoundname>Hc03</compoundname>
-    <title>Assembler</title>
+    <compoundname>Hc00</compoundname>
+    <title>CMake</title>
     <briefdescription>
-<para>Implements a machine code compiler. </para>    </briefdescription>
+<para>It uses <ulink url="https://cmake.org/">CMake</ulink> for its build system. </para>    </briefdescription>
     <detaileddescription>
-<para>Implements a machine code compiler.</para><para><linebreak/>
+<para>It uses <ulink url="https://cmake.org/">CMake</ulink> for its build system.</para><para><linebreak/>
 <linebreak/>
-It outputs binary instructions that are later used to control the CPU chip. The grammar for the assembly can be found <ulink url="../../Source/Assembler/ASM.grm">here</ulink>. <linebreak/>
+The build has been tested using <computeroutput>Unix Makefiles</computeroutput> as well as <computeroutput>Visual Studio 2019</computeroutput> generators.</para><para><linebreak/>
 <linebreak/>
- </para><sect1 id="a01560_1Hc03Asm2Mc">
-<title>Asm2Mc</title>
-<para>Is the executable that implements this. <linebreak/>
+It provides the following definitions.</para><para><linebreak/>
 <linebreak/>
- <programlisting filename=".txt"><codeline><highlight class="normal">Usage:<sp/>asm2mc<sp/>&lt;options&gt;<sp/>&lt;arg[0]<sp/>..<sp/>arg[n]&gt;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/>where<sp/>arg[0]<sp/>is<sp/>the<sp/>input<sp/>file</highlight></codeline>
-<codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-h,<sp/>--help<sp/><sp/><sp/><sp/>Display<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>help<sp/>message</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-o,<sp/>--output<sp/><sp/>Specify<sp/>an<sp/>output<sp/>file.</highlight></codeline>
-</programlisting></para></sect1>
-<sect1 id="a01560_1Hc03Defined">
-<title>Defined In</title>
-<para>The source is defined in <ulink url="../../Source/Assembler/">Source/Assembler</ulink> </para></sect1>
-    </detaileddescription>
+<itemizedlist>
+<listitem>
+<para>Hack_BUILD_TEST | OFF <itemizedlist>
+<listitem>
+<para>Build the unit test program. </para></listitem>
+</itemizedlist>
+</para><para></para></listitem>
+<listitem>
+<para>Hack_AUTO_RUN_TEST | OFF <itemizedlist>
+<listitem>
+<para>Automatically runs the test program after each build. </para></listitem>
+</itemizedlist>
+</para><para></para></listitem>
+<listitem>
+<para>Hack_CHECK_INT_BOUNDS | ON <itemizedlist>
+<listitem>
+<para>Throws an overflow exception when testing individual bits. </para></listitem>
+</itemizedlist>
+</para><para></para></listitem>
+<listitem>
+<para>Hack_IMPLEMENT_BLACK_BOX | ON <itemizedlist>
+<listitem>
+<para>If this is true most chips will be implemented with logic gates. </para></listitem>
+</itemizedlist>
+</para><para></para></listitem>
+<listitem>
+<para>Hack_PRINT_CHIP_STATE | OFF <itemizedlist>
+<listitem>
+<para>Enables the print method defined in the Chip base class. </para></listitem>
+</itemizedlist>
+</para><para></para></listitem>
+<listitem>
+<para>Hack_VM_ZERO_RAM | OFF <itemizedlist>
+<listitem>
+<para>Emits extra instructions to zero RAM values that are no longer in use. (Useful when debugging with the Computer option -t)  </para></listitem>
+</itemizedlist>
+</para><para></para></listitem>
+<listitem>
+<para>Hack_BLOCK_PUSH | OFF <itemizedlist>
+<listitem>
+<para>Emits conditional instructions to prevent pushing to segments when its out of context.  </para></listitem>
+</itemizedlist>
+</para><para></para></listitem>
+<listitem>
+<para>Hack_USE_SDL | OFF <itemizedlist>
+<listitem>
+<para>Enables or disables SDL. </para></listitem>
+</itemizedlist>
+</para></listitem>
+</itemizedlist>
+</para>    </detaileddescription>
   </compounddef>
 </doxygen>

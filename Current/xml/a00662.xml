@@ -1,90 +1,157 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00662" kind="file" language="C++">
-    <compoundname>SRLatch.cpp</compoundname>
-    <includes refid="a00665" local="yes">Chips/SRLatch.h</includes>
+    <compoundname>Rom32.h</compoundname>
+    <includes refid="a00473" local="yes">Chips/Chip.h</includes>
+    <includedby refid="a00485" local="yes">Source/Chips/Computer.h</includedby>
+    <includedby refid="a00659" local="yes">Source/Chips/Rom32.cpp</includedby>
     <incdepgraph>
-      <node id="2184">
+      <node id="2131">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="2185" relation="include">
+        <childnode refid="2132" relation="include">
         </childnode>
       </node>
-      <node id="2176">
+      <node id="2123">
         <label>Chips/BitUtils.h</label>
-        <childnode refid="2177" relation="include">
+        <childnode refid="2124" relation="include">
         </childnode>
-        <childnode refid="2178" relation="include">
+        <childnode refid="2125" relation="include">
         </childnode>
       </node>
-      <node id="2185">
+      <node id="2132">
         <label>cstdint</label>
       </node>
-      <node id="2173">
-        <label>Source/Chips/SRLatch.cpp</label>
-        <link refid="a00662"/>
-        <childnode refid="2174" relation="include">
-        </childnode>
-      </node>
-      <node id="2181">
+      <node id="2128">
         <label>string</label>
       </node>
-      <node id="2183">
+      <node id="2130">
         <label>UserInterface/Context.h</label>
-        <childnode refid="2179" relation="include">
+        <childnode refid="2126" relation="include">
         </childnode>
-        <childnode refid="2184" relation="include">
+        <childnode refid="2131" relation="include">
         </childnode>
-        <childnode refid="2186" relation="include">
+        <childnode refid="2133" relation="include">
         </childnode>
       </node>
-      <node id="2186">
+      <node id="2133">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="2185" relation="include">
+        <childnode refid="2132" relation="include">
         </childnode>
-        <childnode refid="2182" relation="include">
+        <childnode refid="2129" relation="include">
         </childnode>
-        <childnode refid="2184" relation="include">
+        <childnode refid="2131" relation="include">
         </childnode>
       </node>
-      <node id="2178">
+      <node id="2125">
         <label>Utils/Console.h</label>
-        <childnode refid="2179" relation="include">
+        <childnode refid="2126" relation="include">
         </childnode>
-        <childnode refid="2183" relation="include">
+        <childnode refid="2130" relation="include">
         </childnode>
       </node>
-      <node id="2177">
+      <node id="2124">
         <label>bitset</label>
       </node>
-      <node id="2174">
-        <label>Chips/SRLatch.h</label>
-        <childnode refid="2175" relation="include">
-        </childnode>
-      </node>
-      <node id="2182">
+      <node id="2129">
         <label>vector</label>
       </node>
-      <node id="2180">
+      <node id="2127">
         <label>sstream</label>
       </node>
-      <node id="2175">
+      <node id="2122">
         <label>Chips/Chip.h</label>
-        <childnode refid="2176" relation="include">
+        <childnode refid="2123" relation="include">
         </childnode>
-        <childnode refid="2178" relation="include">
+        <childnode refid="2125" relation="include">
         </childnode>
       </node>
-      <node id="2179">
+      <node id="2121">
+        <label>Source/Chips/Rom32.h</label>
+        <link refid="a00662"/>
+        <childnode refid="2122" relation="include">
+        </childnode>
+      </node>
+      <node id="2126">
         <label>String.h</label>
-        <childnode refid="2180" relation="include">
+        <childnode refid="2127" relation="include">
         </childnode>
-        <childnode refid="2181" relation="include">
+        <childnode refid="2128" relation="include">
         </childnode>
-        <childnode refid="2182" relation="include">
+        <childnode refid="2129" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <innernamespace refid="a00890">Hack::Chips</innernamespace>
+    <invincdepgraph>
+      <node id="2144">
+        <label>Source/Computer/RuntimeSDL.h</label>
+      </node>
+      <node id="2143">
+        <label>Source/Computer/DebugRuntime.h</label>
+        <childnode refid="2138" relation="include">
+        </childnode>
+        <childnode refid="2140" relation="include">
+        </childnode>
+      </node>
+      <node id="2135">
+        <label>Source/Chips/Computer.h</label>
+        <childnode refid="2136" relation="include">
+        </childnode>
+        <childnode refid="2137" relation="include">
+        </childnode>
+        <childnode refid="2138" relation="include">
+        </childnode>
+        <childnode refid="2139" relation="include">
+        </childnode>
+        <childnode refid="2140" relation="include">
+        </childnode>
+        <childnode refid="2141" relation="include">
+        </childnode>
+      </node>
+      <node id="2136">
+        <label>Source/Bindings/Bindings.cpp</label>
+      </node>
+      <node id="2137">
+        <label>Source/Chips/Computer.cpp</label>
+      </node>
+      <node id="2139">
+        <label>Source/Computer/CommandRuntime.cpp</label>
+      </node>
+      <node id="2140">
+        <label>Source/Computer/DebugRuntime.cpp</label>
+      </node>
+      <node id="2134">
+        <label>Source/Chips/Rom32.h</label>
+        <link refid="a00662"/>
+        <childnode refid="2135" relation="include">
+        </childnode>
+        <childnode refid="2145" relation="include">
+        </childnode>
+      </node>
+      <node id="2138">
+        <label>Source/Computer/Application.cpp</label>
+      </node>
+      <node id="2145">
+        <label>Source/Chips/Rom32.cpp</label>
+      </node>
+      <node id="2141">
+        <label>Source/Computer/RuntimeInterface.h</label>
+        <childnode refid="2142" relation="include">
+        </childnode>
+        <childnode refid="2143" relation="include">
+        </childnode>
+        <childnode refid="2144" relation="include">
+        </childnode>
+      </node>
+      <node id="2142">
+        <label>Source/Computer/CommandRuntime.h</label>
+        <childnode refid="2138" relation="include">
+        </childnode>
+        <childnode refid="2139" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="a01118" prot="public">Hack::Chips::Rom32</innerclass>
+    <innernamespace refid="a00896">Hack::Chips</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -111,68 +178,45 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/SRLatch.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00890" kindref="compound">Hack::Chips</ref></highlight></codeline>
-<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="26" refid="a00890_1aa30bb2bb6c1f3ec73c3b5046db26ada2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/><ref refid="a01364" kindref="compound">uint8_t</ref><sp/><ref refid="a00890_1aa30bb2bb6c1f3ec73c3b5046db26ada2" kindref="member">SrLatchMask</ref><sp/>=<sp/>0b01101111;</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28" refid="a01116_1ab4024d57ab5595233ac4c3dc6828336a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01116_1ab4024d57ab5595233ac4c3dc6828336a" kindref="member">SRLatch::SRLatch</ref>()</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a5a604431fa35bc87e0d7f4328b4ad4a1" kindref="member" tooltip="Zeros all bits except for the bit at the supplied index. ">assignBit</ref>(7);</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(4);</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="a01116_1a439b80b9ddb355d12431020e5aa85bd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01116_1a439b80b9ddb355d12431020e5aa85bd3" kindref="member">SRLatch::setS</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v)</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(0,<sp/>v);</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Chip.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00896" kindref="compound">Hack::Chips</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27" refid="a01118" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01118" kindref="compound">Rom32</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="a00990" kindref="compound" tooltip="Chip is the base class for all chips defined in this system. It uses a template integer for the _bits...">Chip</ref>&lt;uint8_t,<sp/>8&gt;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>evaluate();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isDirty()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/><sp/>_in,<sp/>_out,<sp/>_size;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01358" kindref="compound">uint16_t</ref>*<sp/>_r;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01118_1a94b3cb4d07d1645ed3e61566809a1fd3" kindref="member">Rom32</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01118_1ac41d7ab3330bcc9055ac8b47285ec47a" kindref="member">~Rom32</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40" refid="a01116_1a54e7a2f18ea3941477404a43b29938aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01116_1a54e7a2f18ea3941477404a43b29938aa" kindref="member">SRLatch::setR</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v)</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(1,<sp/>v);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01118_1ae7bd95475bee92dfd9c9992da8fba511" kindref="member">setIn</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01358" kindref="compound">uint16_t</ref>&amp;<sp/>v);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/><ref refid="a01118_1ac4786f98ecaa6c91a1cd31e438c29aab" kindref="member">getOut</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>i)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46" refid="a01116_1a1be3e2f9a12b13a1403615c3f31ce609" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01116_1a1be3e2f9a12b13a1403615c3f31ce609" kindref="member">SRLatch::setQn</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v)</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(4);</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/><ref refid="a01118_1aca05d80f8b7c52b5c17e0465fe2aeb7c" kindref="member">size</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01118_1a767e0cee036509120d2a6436b7be26f4" kindref="member">lock</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01118_1ac604efafb3c2bec9d439d7d33f551b2a" kindref="member">load</ref>(<ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>file);</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52" refid="a01116_1a50289416e241035b969e5ad069aed676" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01116_1a50289416e241035b969e5ad069aed676" kindref="member">SRLatch::getQ</ref>()</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00984_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(7))</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00984_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(2);</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59" refid="a01116_1ad1af33b9f4ff6c5e85ff709d81d830c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01116_1ad1af33b9f4ff6c5e85ff709d81d830c9" kindref="member">SRLatch::getQPlus</ref>()</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00984_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(7))</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00984_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(3);</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SRLatch::evaluate()</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;=<sp/><ref refid="a00890_1aa30bb2bb6c1f3ec73c3b5046db26ada2" kindref="member">SrLatchMask</ref>;</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>s<sp/>=<sp/><ref refid="a00984_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(0);</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>r<sp/>=<sp/><ref refid="a00984_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(1);</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>na<sp/>=<sp/><ref refid="a00891_1a0a9a77de5bb6d99ccb690718019659b6" kindref="member">Gates::NOr</ref>(s,<sp/><ref refid="a00984_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(3));</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>nb<sp/>=<sp/><ref refid="a00891_1a0a9a77de5bb6d99ccb690718019659b6" kindref="member">Gates::NOr</ref>(<ref refid="a00984_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(2),<sp/>r);</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>sr<sp/><sp/>=<sp/><ref refid="a00891_1ae497dca5e03287bf0b47755e4727966c" kindref="member">Gates::And</ref>(s,<sp/>r);</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>nsr<sp/>=<sp/><ref refid="a00891_1a47f1937b5e8e2f1f55c52ece2e236d9a" kindref="member">Gates::Not</ref>(sr);</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(2,<sp/><ref refid="a00891_1a6c50ba4cc3bfcf7d92a1628e357c19b1" kindref="member">Gates::Mux</ref>(<ref refid="a00891_1a6c50ba4cc3bfcf7d92a1628e357c19b1" kindref="member">Gates::Mux</ref>(na,<sp/><ref refid="a00891_1a47f1937b5e8e2f1f55c52ece2e236d9a" kindref="member">Gates::Not</ref>(s),<sp/>sr),<sp/>na,<sp/>nsr));</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(3,<sp/><ref refid="a00891_1a6c50ba4cc3bfcf7d92a1628e357c19b1" kindref="member">Gates::Mux</ref>(<ref refid="a00891_1a6c50ba4cc3bfcf7d92a1628e357c19b1" kindref="member">Gates::Mux</ref>(nb,<sp/>s,<sp/>sr),<sp/>nb,<sp/>nsr));</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="82"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01118_1ac604efafb3c2bec9d439d7d33f551b2a" kindref="member">load</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01358" kindref="compound">uint16_t</ref>*<sp/>data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="a01118_1aca05d80f8b7c52b5c17e0465fe2aeb7c" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="a01118_1aca05d80f8b7c52b5c17e0465fe2aeb7c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/><ref refid="a01118_1aca05d80f8b7c52b5c17e0465fe2aeb7c" kindref="member">Rom32::size</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="56"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_size;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Chips/SRLatch.cpp"/>
+    <location file="Source/Chips/Rom32.h"/>
   </compounddef>
 </doxygen>

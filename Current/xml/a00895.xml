@@ -1,64 +1,58 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00895" kind="namespace" language="C++">
-    <compoundname>Hack::Compiler::CodeGenerator</compoundname>
-    <innerclass refid="a01172" prot="public">Hack::Compiler::CodeGenerator::Generator</innerclass>
-    <innerclass refid="a01180" prot="public">Hack::Compiler::CodeGenerator::Symbol</innerclass>
-    <innerclass refid="a01184" prot="public">Hack::Compiler::CodeGenerator::SymbolTable</innerclass>
-    <innerclass refid="a01188" prot="public">Hack::Compiler::CodeGenerator::VmEmitter</innerclass>
-      <sectiondef kind="enum">
-      <memberdef kind="enum" id="a00895_1ac08293c0a6cadd380abba4ce7069b7bc" prot="public" static="no" strong="no">
-        <type></type>
-        <name>SymbolKind</name>
-        <enumvalue id="a00895_1ac08293c0a6cadd380abba4ce7069b7bca33eb8724d1cfb37808fb1dd2a3c24812" prot="public">
-          <name>None</name>
-          <initializer>=-1</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00895_1ac08293c0a6cadd380abba4ce7069b7bca758124b318712f1ca6e7abfcceb26517" prot="public">
-          <name>Field</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00895_1ac08293c0a6cadd380abba4ce7069b7bca4e24ef81cf7ed83a94dc616bb8b510a8" prot="public">
-          <name>Static</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00895_1ac08293c0a6cadd380abba4ce7069b7bcac16d59cf9aa39e37737b703b8d21a9ee" prot="public">
-          <name>Local</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00895_1ac08293c0a6cadd380abba4ce7069b7bcac846b86715799a34e6b35cfef36ea1bb" prot="public">
-          <name>Argument</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
+    <compoundname>Hack::Binding</compoundname>
+    <innerclass refid="a00950" prot="public">Hack::Binding::ComputerWrapper</innerclass>
+    <innerclass refid="a00946" prot="public">Hack::Binding::RamWrapper</innerclass>
+    <innerclass refid="a00942" prot="public">Hack::Binding::RomWrapper</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="a00895_1a0a115b3347cdfd195e6032ae7fca252d" prot="public" static="no" mutable="no">
+        <type>constexpr uint64_t</type>
+        <definition>constexpr uint64_t Hack::Binding::ComputerType</definition>
+        <argsstring></argsstring>
+        <name>ComputerType</name>
+        <initializer>= 0x6543F55D6F4A3D0F</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Generator/Symbol.h" line="28" column="1" bodyfile="Source/Compiler/Generator/Symbol.h" bodystart="27" bodyend="34"/>
+        <location file="Source/Bindings/Bindings.cpp" line="44" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00895_1afa6a47600d4368c4198b7292deb32747" prot="public" static="no" mutable="no">
+        <type>constexpr uint64_t</type>
+        <definition>constexpr uint64_t Hack::Binding::RamType</definition>
+        <argsstring></argsstring>
+        <name>RamType</name>
+        <initializer>= 0x3D654F7A36F4A3D0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="46" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00895_1ab9e96018072b404d8a46e2192f06b954" prot="public" static="no" mutable="no">
+        <type>constexpr uint64_t</type>
+        <definition>constexpr uint64_t Hack::Binding::RomType</definition>
+        <argsstring></argsstring>
+        <name>RomType</name>
+        <initializer>= 0x06D5DAF556F4ADB3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="45" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="45" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Compiler/Generator/Expression.cpp" line="25" column="1"/>
+    <location file="Source/Bindings/Bindings.cpp" line="40" column="1"/>
   </compounddef>
 </doxygen>

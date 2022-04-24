@@ -22,6 +22,7 @@ that, the supplied tools in the course materials were written from scratch, to s
 - \ref Hc05 \copybrief Hc05
 - \ref Hc06 \copybrief Hc06
 - \ref Hc07 \copybrief Hc07
+- \ref Hc08 \copybrief Hc08
 
 \section HC002 Index
 */

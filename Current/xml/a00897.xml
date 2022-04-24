@@ -1,92 +1,222 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00897" kind="namespace" language="C++">
-    <compoundname>Hack::Programs</compoundname>
-    <innerclass refid="a01176" prot="public">Hack::Programs::VmGeneratorApplication</innerclass>
-      <sectiondef kind="enum">
-      <memberdef kind="enum" id="a00897_1abf03186f32cf652a3130af11201ad075" prot="public" static="no" strong="no">
-        <type></type>
-        <name>Options</name>
-        <enumvalue id="a00897_1abf03186f32cf652a3130af11201ad075a885204b76dba92eaf23aca08ee5807b8" prot="public">
-          <name>OP_OUTPUT</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00897_1abf03186f32cf652a3130af11201ad075aaccd1ba868a2f5d31c1788dc25318016" prot="public">
-          <name>OP_MAX</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
+    <compoundname>Hack::Chips::Gates</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="a00897_1ae497dca5e03287bf0b47755e4727966c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::Gates::And</definition>
+        <argsstring>(const bool a, const bool b)</argsstring>
+        <name>And</name>
+        <param>
+          <type>const bool</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>b</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Generator/Main.cpp" line="35" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="34" bodyend="38"/>
+        <location file="Source/Chips/BitUtils.h" line="272" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="272" bodyend="276"/>
+        <references refid="a00897_1ada9a46218595da6aec64c80462c5c48f" compoundref="a00470" startline="262" endline="265">NAnd</references>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="a00897_1a13ebb77912ec0bfaffec05c6825a7f9b" prot="public" static="no">
-        <type><ref refid="a01232" kindref="compound">CommandLine::Parser</ref></type>
-        <definition>using Hack::Programs::CmdLine = typedef CommandLine::Parser</definition>
-        <argsstring></argsstring>
-        <name>CmdLine</name>
+      <memberdef kind="function" id="a00897_1a498cc0f1f89eba40c58e757c83ef9efc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::Gates::And3</definition>
+        <argsstring>(const bool a, const bool b, const bool c)</argsstring>
+        <name>And3</name>
+        <param>
+          <type>const bool</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>c</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Generator/Main.cpp" line="40" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="40" bodyend="-1"/>
+        <location file="Source/Chips/BitUtils.h" line="278" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="278" bodyend="281"/>
+        <references refid="a00897_1ae497dca5e03287bf0b47755e4727966c" compoundref="a00470" startline="272" endline="276">And</references>
       </memberdef>
-      <memberdef kind="typedef" id="a00897_1ae8e8d238d0cc49784639419312e6ac31" prot="public" static="no">
-        <type><ref refid="a01224" kindref="compound">CommandLine::Switch</ref></type>
-        <definition>using Hack::Programs::CmdSwitch = typedef CommandLine::Switch</definition>
-        <argsstring></argsstring>
-        <name>CmdSwitch</name>
+      <memberdef kind="function" id="a00897_1a6c50ba4cc3bfcf7d92a1628e357c19b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::Gates::Mux</definition>
+        <argsstring>(const bool a, const bool b, const bool s)</argsstring>
+        <name>Mux</name>
+        <param>
+          <type>const bool</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>s</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Generator/Main.cpp" line="41" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="41" bodyend="-1"/>
+        <location file="Source/Chips/BitUtils.h" line="304" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="304" bodyend="307"/>
+        <references refid="a00897_1a5251fc609c60aa33cc653dc5bbfa39d4" compoundref="a00470" startline="283" endline="286">Or</references>
+        <references refid="a00897_1ae497dca5e03287bf0b47755e4727966c" compoundref="a00470" startline="272" endline="276">And</references>
+        <references refid="a00897_1a47f1937b5e8e2f1f55c52ece2e236d9a" compoundref="a00470" startline="267" endline="270">Not</references>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="var">
-      <memberdef kind="variable" id="a00897_1abaf8ca10fec17b26f9d1fb59c924ef58" prot="public" static="no" mutable="no">
-        <type>constexpr <ref refid="a00897_1ae8e8d238d0cc49784639419312e6ac31" kindref="member">CmdSwitch</ref></type>
-        <definition>constexpr CmdSwitch Hack::Programs::Switches[OP_MAX]</definition>
-        <argsstring>[OP_MAX]</argsstring>
-        <name>Switches</name>
-        <initializer>= {
-        {
-            <ref refid="a00897_1abf03186f32cf652a3130af11201ad075a885204b76dba92eaf23aca08ee5807b8" kindref="member">OP_OUTPUT</ref>,
-            &apos;o&apos;,
-            &quot;output&quot;,
-            &quot;Specify an output file&quot;,
-            true,
-            1,
-        },
-    }</initializer>
+      <memberdef kind="function" id="a00897_1ada9a46218595da6aec64c80462c5c48f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::Gates::NAnd</definition>
+        <argsstring>(const bool a, const bool b)</argsstring>
+        <name>NAnd</name>
+        <param>
+          <type>const bool</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>b</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Generator/Main.cpp" line="43" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="43" bodyend="-1"/>
+        <location file="Source/Chips/BitUtils.h" line="262" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="262" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="a00897_1a0a9a77de5bb6d99ccb690718019659b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::Gates::NOr</definition>
+        <argsstring>(const bool a, const bool b)</argsstring>
+        <name>NOr</name>
+        <param>
+          <type>const bool</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/BitUtils.h" line="293" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="293" bodyend="296"/>
+        <references refid="a00897_1a47f1937b5e8e2f1f55c52ece2e236d9a" compoundref="a00470" startline="267" endline="270">Not</references>
+        <references refid="a00897_1ada9a46218595da6aec64c80462c5c48f" compoundref="a00470" startline="262" endline="265">NAnd</references>
+      </memberdef>
+      <memberdef kind="function" id="a00897_1a47f1937b5e8e2f1f55c52ece2e236d9a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::Gates::Not</definition>
+        <argsstring>(const bool a)</argsstring>
+        <name>Not</name>
+        <param>
+          <type>const bool</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/BitUtils.h" line="267" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="267" bodyend="270"/>
+        <references refid="a00897_1ada9a46218595da6aec64c80462c5c48f" compoundref="a00470" startline="262" endline="265">NAnd</references>
+      </memberdef>
+      <memberdef kind="function" id="a00897_1a5251fc609c60aa33cc653dc5bbfa39d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::Gates::Or</definition>
+        <argsstring>(const bool a, const bool b)</argsstring>
+        <name>Or</name>
+        <param>
+          <type>const bool</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/BitUtils.h" line="283" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="283" bodyend="286"/>
+        <references refid="a00897_1ada9a46218595da6aec64c80462c5c48f" compoundref="a00470" startline="262" endline="265">NAnd</references>
+        <references refid="a00897_1a47f1937b5e8e2f1f55c52ece2e236d9a" compoundref="a00470" startline="267" endline="270">Not</references>
+      </memberdef>
+      <memberdef kind="function" id="a00897_1a6acffbc2c6a453d2d4f856180395cf24" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::Gates::Or3</definition>
+        <argsstring>(const bool a, const bool b, const bool c)</argsstring>
+        <name>Or3</name>
+        <param>
+          <type>const bool</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/BitUtils.h" line="288" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="288" bodyend="291"/>
+        <references refid="a00897_1a5251fc609c60aa33cc653dc5bbfa39d4" compoundref="a00470" startline="283" endline="286">Or</references>
+      </memberdef>
+      <memberdef kind="function" id="a00897_1a002092c1145c7301b06c0a0cab9fc889" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::Gates::XOr</definition>
+        <argsstring>(const bool a, const bool b)</argsstring>
+        <name>XOr</name>
+        <param>
+          <type>const bool</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/BitUtils.h" line="298" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="298" bodyend="302"/>
+        <references refid="a00897_1ada9a46218595da6aec64c80462c5c48f" compoundref="a00470" startline="262" endline="265">NAnd</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Compiler/Generator/Main.cpp" line="33" column="1"/>
+    <location file="Source/Chips/BitUtils.h" line="261" column="1"/>
   </compounddef>
 </doxygen>

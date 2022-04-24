@@ -13,7 +13,8 @@ Otherwise if SDL is disabled, the default and only runtime is the command line d
 \n
 
 \section Hc07Debugger Debugger
-![command line debugger](Current/images/Debugger.png)
+
+\image html Debugger.png
 \n\n
 
 

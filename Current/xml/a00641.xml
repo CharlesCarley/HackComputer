@@ -1,90 +1,104 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00641" kind="file" language="C++">
-    <compoundname>Ram8.cpp</compoundname>
-    <includes refid="a00644" local="yes">Chips/Ram8.h</includes>
+    <compoundname>Ram64.cpp</compoundname>
+    <includes refid="a00644" local="yes">Chips/Ram64.h</includes>
+    <includes refid="a00650" local="yes">Ram8.h</includes>
+    <includes local="no">cstring</includes>
     <incdepgraph>
-      <node id="2040">
+      <node id="2010">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="2041" relation="include">
+        <childnode refid="2011" relation="include">
         </childnode>
       </node>
-      <node id="2032">
+      <node id="2002">
         <label>Chips/BitUtils.h</label>
-        <childnode refid="2033" relation="include">
+        <childnode refid="2003" relation="include">
         </childnode>
-        <childnode refid="2034" relation="include">
+        <childnode refid="2004" relation="include">
         </childnode>
       </node>
-      <node id="2041">
+      <node id="2011">
         <label>cstdint</label>
       </node>
-      <node id="2037">
+      <node id="2007">
         <label>string</label>
       </node>
-      <node id="2039">
+      <node id="2009">
         <label>UserInterface/Context.h</label>
-        <childnode refid="2035" relation="include">
+        <childnode refid="2005" relation="include">
         </childnode>
-        <childnode refid="2040" relation="include">
+        <childnode refid="2010" relation="include">
         </childnode>
-        <childnode refid="2042" relation="include">
+        <childnode refid="2012" relation="include">
         </childnode>
       </node>
-      <node id="2042">
+      <node id="2012">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="2041" relation="include">
+        <childnode refid="2011" relation="include">
         </childnode>
-        <childnode refid="2038" relation="include">
+        <childnode refid="2008" relation="include">
         </childnode>
-        <childnode refid="2040" relation="include">
+        <childnode refid="2010" relation="include">
         </childnode>
       </node>
-      <node id="2034">
+      <node id="2004">
         <label>Utils/Console.h</label>
-        <childnode refid="2035" relation="include">
+        <childnode refid="2005" relation="include">
         </childnode>
-        <childnode refid="2039" relation="include">
+        <childnode refid="2009" relation="include">
         </childnode>
       </node>
-      <node id="2029">
-        <label>Source/Chips/Ram8.cpp</label>
+      <node id="1999">
+        <label>Source/Chips/Ram64.cpp</label>
         <link refid="a00641"/>
-        <childnode refid="2030" relation="include">
+        <childnode refid="2000" relation="include">
+        </childnode>
+        <childnode refid="2013" relation="include">
+        </childnode>
+        <childnode refid="2014" relation="include">
         </childnode>
       </node>
-      <node id="2033">
+      <node id="2003">
         <label>bitset</label>
       </node>
-      <node id="2038">
+      <node id="2008">
         <label>vector</label>
       </node>
-      <node id="2036">
+      <node id="2006">
         <label>sstream</label>
       </node>
-      <node id="2031">
+      <node id="2001">
         <label>Chips/Chip.h</label>
-        <childnode refid="2032" relation="include">
+        <childnode refid="2002" relation="include">
         </childnode>
-        <childnode refid="2034" relation="include">
-        </childnode>
-      </node>
-      <node id="2030">
-        <label>Chips/Ram8.h</label>
-        <childnode refid="2031" relation="include">
+        <childnode refid="2004" relation="include">
         </childnode>
       </node>
-      <node id="2035">
+      <node id="2013">
+        <label>Ram8.h</label>
+        <childnode refid="2001" relation="include">
+        </childnode>
+      </node>
+      <node id="2000">
+        <label>Chips/Ram64.h</label>
+        <childnode refid="2001" relation="include">
+        </childnode>
+      </node>
+      <node id="2014">
+        <label>cstring</label>
+      </node>
+      <node id="2005">
         <label>String.h</label>
-        <childnode refid="2036" relation="include">
+        <childnode refid="2006" relation="include">
         </childnode>
-        <childnode refid="2037" relation="include">
+        <childnode refid="2007" relation="include">
         </childnode>
-        <childnode refid="2038" relation="include">
+        <childnode refid="2008" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <innernamespace refid="a00890">Hack::Chips</innernamespace>
+    <innernamespace refid="a00896">Hack::Chips</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -111,112 +125,144 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Ram8.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>IMPLEMENT_BLACK_BOX</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/DMux8Way.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Mux8Way16.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00890" kindref="compound">Hack::Chips</ref></highlight></codeline>
-<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="31" refid="a01104_1a1bdd2f188028038eeb2b218c852fb86b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01104_1a1bdd2f188028038eeb2b218c852fb86b" kindref="member">Ram8::Ram8</ref>()<sp/>:</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_r()</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1a741dc95ddcf042b70e2747571d95cd82" kindref="member">ll</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00980_1a8de689aae4b89fd7d06c770aed087e37" kindref="member">B8::assignBit</ref>(<ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6],<sp/>7);</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38" refid="a01104_1a274789bd03402b62376b6cd5f126b8b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01104_1a274789bd03402b62376b6cd5f126b8b5" kindref="member">Ram8::setIn</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01352" kindref="compound">uint16_t</ref>&amp;<sp/>v)</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0]<sp/>=<sp/>v;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00980_1ab1a8c5970c7a58f399c82c96c872a920" kindref="member">B8::setBit</ref>(<ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6],<sp/>7);</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44" refid="a01104_1a419712fb2a9e015e68fdd0d69459ba7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01104_1a419712fb2a9e015e68fdd0d69459ba7a" kindref="member">Ram8::setAddress</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01364" kindref="compound">uint8_t</ref>&amp;<sp/>v)</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6]<sp/>=<sp/>v<sp/>&amp;<sp/>0b10000111;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00980_1ab1a8c5970c7a58f399c82c96c872a920" kindref="member">B8::setBit</ref>(<ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6],<sp/>7);</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50" refid="a01104_1a6444ef52a1722c762eec05391bd7863c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01104_1a6444ef52a1722c762eec05391bd7863c" kindref="member">Ram8::setLoad</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>write)</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00980_1a266db4b38d31abd421bdb6356b6d8f6a" kindref="member">B8::applyBit</ref>(<ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7],<sp/>0,<sp/>write);</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00980_1ab1a8c5970c7a58f399c82c96c872a920" kindref="member">B8::setBit</ref>(<ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6],<sp/>7);</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56" refid="a01104_1af477e46639f4b51245bb12a69cced6a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01104_1af477e46639f4b51245bb12a69cced6a3" kindref="member">Ram8::setClock</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>tick)</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00980_1a266db4b38d31abd421bdb6356b6d8f6a" kindref="member">B8::applyBit</ref>(<ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7],<sp/>1,<sp/>tick);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00980_1ab1a8c5970c7a58f399c82c96c872a920" kindref="member">B8::setBit</ref>(<ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6],<sp/>7);</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62" refid="a01104_1a5e347a8538f541c1775389125298cc92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01352" kindref="compound">uint16_t</ref><sp/><ref refid="a01104_1a5e347a8538f541c1775389125298cc92" kindref="member">Ram8::getOut</ref>()</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00980_1a62cc15c18ccdd215a9ef08e8a8021564" kindref="member">B8::getBit</ref>(<ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6],<sp/>7))</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[1];</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Ram64.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Ram8.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>IMPLEMENT_BLACK_BOX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/DMux8Way.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Mux8Way16.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00896" kindref="compound">Hack::Chips</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32" refid="a01106_1adbef9a39578063d7d3bcbbcc146f09d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01106_1adbef9a39578063d7d3bcbbcc146f09d4" kindref="member">Ram64::Ram64</ref>()<sp/>:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_r(nullptr)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>IMPLEMENT_BLACK_BOX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_r<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="a01110" kindref="compound">Ram8</ref>[8];</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_r<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="a00978" kindref="compound">bit32_t</ref>[64];</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memset(_r,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="a00978" kindref="compound">bit32_t</ref>)<sp/>*<sp/>64);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1a741dc95ddcf042b70e2747571d95cd82" kindref="member">ll</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>markDirty();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="a01106_1a3df72dc2402ecb2d15215dd1a1eab5f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01106_1a3df72dc2402ecb2d15215dd1a1eab5f1" kindref="member">Ram64::~Ram64</ref>()</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[]<sp/>_r;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="a01106_1a3fdfe10c249409c34d0b4cb818ae6cc9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01106_1a3fdfe10c249409c34d0b4cb818ae6cc9" kindref="member">Ram64::setIn</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01358" kindref="compound">uint16_t</ref>&amp;<sp/>v)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0]<sp/>=<sp/>v;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>markDirty();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="a01106_1ad7d0c489c87e88d4be196c512c1f125a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01106_1ad7d0c489c87e88d4be196c512c1f125a" kindref="member">Ram64::setAddress</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01370" kindref="compound">uint8_t</ref>&amp;<sp/>v)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6]<sp/>=<sp/>v<sp/>&amp;<sp/>0b10111111;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>markDirty();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="a01106_1a63479b6db0500d5b4438cbcd56e931d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01106_1a63479b6db0500d5b4438cbcd56e931d9" kindref="member">Ram64::setLoad</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00986_1a266db4b38d31abd421bdb6356b6d8f6a" kindref="member">B8::applyBit</ref>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7],<sp/>0,<sp/>v);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>markDirty();</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Ram8::isDirty()</highlight></codeline>
+<codeline lineno="69" refid="a01106_1a44f3fdbb67e1b130e8091ed4ffcf902f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01106_1a44f3fdbb67e1b130e8091ed4ffcf902f" kindref="member">Ram64::setClock</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v)</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00980_1a62cc15c18ccdd215a9ef08e8a8021564" kindref="member">B8::getBit</ref>(<ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6],<sp/>7);</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Ram8::evaluate()</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>IMPLEMENT_BLACK_BOX</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mux8Way16<sp/>n;</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DMux8Way<sp/><sp/>d;</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>load<sp/><sp/>=<sp/><ref refid="a00980_1a62cc15c18ccdd215a9ef08e8a8021564" kindref="member">B8::getBit</ref>(<ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7],<sp/>0);</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>clock<sp/>=<sp/><ref refid="a00980_1a62cc15c18ccdd215a9ef08e8a8021564" kindref="member">B8::getBit</ref>(<ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7],<sp/>1);</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d.setIn(load);</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d.setSel(<ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6]);</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n.setSel(<ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6]);</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00986_1a266db4b38d31abd421bdb6356b6d8f6a" kindref="member">B8::applyBit</ref>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7],<sp/>1,<sp/>v);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>markDirty();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="a01106_1a8a5b968569e346116271bc58db35649c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/><ref refid="a01106_1a8a5b968569e346116271bc58db35649c" kindref="member">Ram64::getOut</ref>()</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isDirty())</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[1];</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="a01106_1adcce4ef1c9e050b3a70cfb177a0032ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/><ref refid="a01106_1a8a5b968569e346116271bc58db35649c" kindref="member">Ram64::getOut</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01106_1a44f3fdbb67e1b130e8091ed4ffcf902f" kindref="member">setClock</ref>(v);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a01106_1a8a5b968569e346116271bc58db35649c" kindref="member">getOut</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v[8]{d.getA(),<sp/>d.getB(),<sp/>d.getC(),<sp/>d.getD(),<sp/>d.getE(),<sp/>d.getF(),<sp/>d.getG(),<sp/>d.getH()};</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="a01364" kindref="compound">uint8_t</ref><sp/>i=0;<sp/>i&lt;8;<sp/>++i)</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_r[i].setLoad(v[i]);</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_r[i].setClock(clock);</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_r[i].setIn(<ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0]);</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Ram64::isDirty()</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00986_1a62cc15c18ccdd215a9ef08e8a8021564" kindref="member">B8::getBit</ref>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6],<sp/>7);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Ram64::markDirty()</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00986_1ab1a8c5970c7a58f399c82c96c872a920" kindref="member">B8::setBit</ref>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6],<sp/>7);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="97"><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n.setA(_r[0].<ref refid="a01104_1a5e347a8538f541c1775389125298cc92" kindref="member">getOut</ref>());</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n.setB(_r[1].<ref refid="a01104_1a5e347a8538f541c1775389125298cc92" kindref="member">getOut</ref>());</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n.setC(_r[2].<ref refid="a01104_1a5e347a8538f541c1775389125298cc92" kindref="member">getOut</ref>());</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n.setD(_r[3].<ref refid="a01104_1a5e347a8538f541c1775389125298cc92" kindref="member">getOut</ref>());</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n.setE(_r[4].<ref refid="a01104_1a5e347a8538f541c1775389125298cc92" kindref="member">getOut</ref>());</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n.setF(_r[5].<ref refid="a01104_1a5e347a8538f541c1775389125298cc92" kindref="member">getOut</ref>());</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n.setG(_r[6].<ref refid="a01104_1a5e347a8538f541c1775389125298cc92" kindref="member">getOut</ref>());</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n.setH(_r[7].<ref refid="a01104_1a5e347a8538f541c1775389125298cc92" kindref="member">getOut</ref>());</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[1]<sp/>=<sp/>n.getOut();</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01364" kindref="compound">uint8_t</ref><sp/>index<sp/>=<sp/><ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6]<sp/>&amp;<sp/>0b00000111;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Ram64::evaluate()</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>IMPLEMENT_BLACK_BOX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mux8Way16<sp/>n;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DMux8Way<sp/><sp/>d;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>load<sp/><sp/>=<sp/><ref refid="a00986_1a62cc15c18ccdd215a9ef08e8a8021564" kindref="member">B8::getBit</ref>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7],<sp/>0);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>clock<sp/>=<sp/><ref refid="a00986_1a62cc15c18ccdd215a9ef08e8a8021564" kindref="member">B8::getBit</ref>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7],<sp/>1);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01370" kindref="compound">uint8_t</ref>&amp;<sp/>lo<sp/>=<sp/><ref refid="a00986_1ae3a8aa786d194eb21dc8a71b3d8de9af" kindref="member">B8::extract</ref>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6]<sp/>&amp;<sp/>0b00111111,<sp/>0,<sp/>2);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01370" kindref="compound">uint8_t</ref>&amp;<sp/>hi<sp/>=<sp/><ref refid="a00986_1ae3a8aa786d194eb21dc8a71b3d8de9af" kindref="member">B8::extract</ref>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6]<sp/>&amp;<sp/>0b00111111,<sp/>3,<sp/>5);</highlight></codeline>
 <codeline lineno="110"><highlight class="normal"></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00980_1a62cc15c18ccdd215a9ef08e8a8021564" kindref="member">B8::getBit</ref>(<ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7],<sp/>0))</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00980_1a62cc15c18ccdd215a9ef08e8a8021564" kindref="member">B8::getBit</ref>(<ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7],<sp/>1))</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_r[index].<ref refid="a00972_1a028e84a90747978a00bff7cb482fce4c" kindref="member">s</ref>[0]<sp/>=<sp/>_r[index].<ref refid="a00972_1a028e84a90747978a00bff7cb482fce4c" kindref="member">s</ref>[1]<sp/>=<sp/><ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0];</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_r[index].<ref refid="a00972_1a028e84a90747978a00bff7cb482fce4c" kindref="member">s</ref>[0]<sp/>=<sp/>_r[index].<ref refid="a00972_1a028e84a90747978a00bff7cb482fce4c" kindref="member">s</ref>[1];</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_r[index].<ref refid="a00972_1a028e84a90747978a00bff7cb482fce4c" kindref="member">s</ref>[1]<sp/>=<sp/><ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0];</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"></highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[1]<sp/>=<sp/>_r[index].<ref refid="a00972_1a028e84a90747978a00bff7cb482fce4c" kindref="member">s</ref>[0];</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00980_1adc5cf65b1d1ca5d3562cb57711d78ce9" kindref="member">B8::clearBit</ref>(<ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6],<sp/>7);</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="126"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d.setIn(load);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d.setSel(lo);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n.setSel(lo);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>index[8]{d.getA(),<sp/>d.getB(),<sp/>d.getC(),<sp/>d.getD(),<sp/>d.getE(),<sp/>d.getF(),<sp/>d.getG(),<sp/>d.getH()};</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ram8*<sp/>ram8<sp/>=<sp/>&amp;_r[0];</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>element<sp/>:<sp/>index)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*ram8).setLoad(element);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*ram8).setIn(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0]);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*ram8).setAddress(hi);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*ram8).setClock(clock);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++ram8;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n.setA(_r[0].<ref refid="a01106_1a8a5b968569e346116271bc58db35649c" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n.setB(_r[1].<ref refid="a01106_1a8a5b968569e346116271bc58db35649c" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n.setC(_r[2].<ref refid="a01106_1a8a5b968569e346116271bc58db35649c" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n.setD(_r[3].<ref refid="a01106_1a8a5b968569e346116271bc58db35649c" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n.setE(_r[4].<ref refid="a01106_1a8a5b968569e346116271bc58db35649c" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n.setF(_r[5].<ref refid="a01106_1a8a5b968569e346116271bc58db35649c" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n.setG(_r[6].<ref refid="a01106_1a8a5b968569e346116271bc58db35649c" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n.setH(_r[7].<ref refid="a01106_1a8a5b968569e346116271bc58db35649c" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[1]<sp/>=<sp/>n.getOut();</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01370" kindref="compound">uint8_t</ref><sp/>index<sp/>=<sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[3]<sp/>&amp;<sp/>0b00111111;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00986_1a62cc15c18ccdd215a9ef08e8a8021564" kindref="member">B8::getBit</ref>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7],<sp/>0))</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00986_1a62cc15c18ccdd215a9ef08e8a8021564" kindref="member">B8::getBit</ref>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7],<sp/>1))</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_r[index].<ref refid="a00978_1a028e84a90747978a00bff7cb482fce4c" kindref="member">s</ref>[0]<sp/>=<sp/>_r[index].<ref refid="a00978_1a028e84a90747978a00bff7cb482fce4c" kindref="member">s</ref>[1]<sp/>=<sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0];</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_r[index].<ref refid="a00978_1a028e84a90747978a00bff7cb482fce4c" kindref="member">s</ref>[0]<sp/>=<sp/>_r[index].<ref refid="a00978_1a028e84a90747978a00bff7cb482fce4c" kindref="member">s</ref>[1];</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_r[index].<ref refid="a00978_1a028e84a90747978a00bff7cb482fce4c" kindref="member">s</ref>[1]<sp/>=<sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0];</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[1]<sp/>=<sp/>_r[index].<ref refid="a00978_1a028e84a90747978a00bff7cb482fce4c" kindref="member">s</ref>[0];</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00986_1adc5cf65b1d1ca5d3562cb57711d78ce9" kindref="member">B8::clearBit</ref>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6],<sp/>7);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Chips/Ram8.cpp"/>
+    <location file="Source/Chips/Ram64.cpp"/>
   </compounddef>
 </doxygen>

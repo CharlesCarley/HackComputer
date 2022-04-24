@@ -1,0 +1,298 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a00918" kind="class" language="C++" prot="public">
+    <compoundname>Application</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="a00918_1a43b8f4ff7f4d0c37c945d9e306273e2f" prot="private" static="no" mutable="no">
+        <type><ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
+        <definition>String Application::_dir</definition>
+        <argsstring></argsstring>
+        <name>_dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Main.cpp" line="78" column="1" bodyfile="Source/Compiler/Analyzer/Main.cpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00918_1a4405764edadbf4be30941e617b27ac99" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Application::_dot</definition>
+        <argsstring></argsstring>
+        <name>_dot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Main.cpp" line="77" column="1" bodyfile="Source/Compiler/Analyzer/Main.cpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00918_1a18205096aac7e07ab8d3aec6cca6771f" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Application::_input</definition>
+        <argsstring></argsstring>
+        <name>_input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Assembler/Main.cpp" line="51" column="1" bodyfile="Source/Assembler/Main.cpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00918_1a79c475e8c61d2510d421ab54ee780bf7" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Application::_output</definition>
+        <argsstring></argsstring>
+        <name>_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Assembler/Main.cpp" line="52" column="1" bodyfile="Source/Assembler/Main.cpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a00918_1a03eb21681fbd7473ff2eb2c6009afa8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Application::Application</definition>
+        <argsstring>()=default</argsstring>
+        <name>Application</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Compiler/Main.cpp" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00918_1a03eb21681fbd7473ff2eb2c6009afa8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Application::Application</definition>
+        <argsstring>()=default</argsstring>
+        <name>Application</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Assembler/Main.cpp" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00918_1a03eb21681fbd7473ff2eb2c6009afa8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Application::Application</definition>
+        <argsstring>()=default</argsstring>
+        <name>Application</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Main.cpp" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00918_1afa8cc05ce6b6092be5ecdfdae44e05f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Application::Application</definition>
+        <argsstring>()</argsstring>
+        <name>Application</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Main.cpp" line="81" column="1" bodyfile="Source/Compiler/Analyzer/Main.cpp" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="a00918_1a13a83479f691f96dc438a7dd72c98610" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Application::go</definition>
+        <argsstring>() const</argsstring>
+        <name>go</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Compiler/Main.cpp" line="76" column="1" bodyfile="Source/Compiler/Compiler/Main.cpp" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="a00918_1a13a83479f691f96dc438a7dd72c98610" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Application::go</definition>
+        <argsstring>() const</argsstring>
+        <name>go</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Main.cpp" line="79" column="1" bodyfile="Source/VirtualMachine/Main.cpp" bodystart="79" bodyend="97"/>
+        <references refid="a01278_1a4668ec9b913931ce518de6d7f92fb4e0" compoundref="a00824" startline="76" endline="89">Hack::ParserBase::parse</references>
+        <references refid="a01278_1a4560ce70fee098d7508b053b409c1d19" compoundref="a00824" startline="107" endline="114">Hack::ParserBase::write</references>
+      </memberdef>
+      <memberdef kind="function" id="a00918_1a13a83479f691f96dc438a7dd72c98610" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Application::go</definition>
+        <argsstring>() const</argsstring>
+        <name>go</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Assembler/Main.cpp" line="79" column="1" bodyfile="Source/Assembler/Main.cpp" bodystart="79" bodyend="88"/>
+        <references refid="a01278_1a4668ec9b913931ce518de6d7f92fb4e0" compoundref="a00824" startline="76" endline="89">Hack::ParserBase::parse</references>
+        <references refid="a01278_1a4560ce70fee098d7508b053b409c1d19" compoundref="a00824" startline="107" endline="114">Hack::ParserBase::write</references>
+      </memberdef>
+      <memberdef kind="function" id="a00918_1a13a83479f691f96dc438a7dd72c98610" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Application::go</definition>
+        <argsstring>() const</argsstring>
+        <name>go</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Main.cpp" line="112" column="1" bodyfile="Source/Compiler/Analyzer/Main.cpp" bodystart="112" bodyend="156"/>
+        <references refid="a01278_1a4668ec9b913931ce518de6d7f92fb4e0" compoundref="a00824" startline="76" endline="89">Hack::ParserBase::parse</references>
+        <references refid="a01278_1a4560ce70fee098d7508b053b409c1d19" compoundref="a00824" startline="107" endline="114">Hack::ParserBase::write</references>
+        <references refid="a01254_1ad552d982f58950c324eaebd2dfbd1fe2" compoundref="a00806" startline="64" endline="67">Hack::Exception::what</references>
+      </memberdef>
+      <memberdef kind="function" id="a00918_1a045c846c566d8cbe75a94d7b341a8fe7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Application::parse</definition>
+        <argsstring>(const int argc, char **argv)</argsstring>
+        <name>parse</name>
+        <param>
+          <type>const int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Compiler/Main.cpp" line="56" column="1" bodyfile="Source/Compiler/Compiler/Main.cpp" bodystart="56" bodyend="74"/>
+        <references refid="a01238_1a304e3e2f4af07df0fb6c9cde37040e27" compoundref="a01597" startline="52" endline="176">Hack::CommandLine::Parser::parse</references>
+        <references refid="a01238_1a9da3aa8c56bad342c3a7c30eb98d9c17" compoundref="a01597" startline="245" endline="255">Hack::CommandLine::Parser::string</references>
+        <references refid="a01238_1ac7bc3f3c9e8b89b4a39b8dd9a36b713f" compoundref="a01609" startline="88" endline="91">Hack::CommandLine::Parser::arguments</references>
+        <references refid="a01238_1afd63d6cb40243606fe5d6c944754eb5b" compoundref="a01597" startline="257" endline="262">Hack::CommandLine::Parser::usage</references>
+      </memberdef>
+      <memberdef kind="function" id="a00918_1a045c846c566d8cbe75a94d7b341a8fe7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Application::parse</definition>
+        <argsstring>(const int argc, char **argv)</argsstring>
+        <name>parse</name>
+        <param>
+          <type>const int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Assembler/Main.cpp" line="57" column="1" bodyfile="Source/Assembler/Main.cpp" bodystart="57" bodyend="77"/>
+        <references refid="a01238_1aaaa3cc28de66e1e9b2f64cd1e51f2fe1" compoundref="a01597" startline="178" endline="181">Hack::CommandLine::Parser::setHelpText</references>
+        <references refid="a01238_1a304e3e2f4af07df0fb6c9cde37040e27" compoundref="a01597" startline="52" endline="176">Hack::CommandLine::Parser::parse</references>
+        <references refid="a01238_1a9da3aa8c56bad342c3a7c30eb98d9c17" compoundref="a01597" startline="245" endline="255">Hack::CommandLine::Parser::string</references>
+        <references refid="a01238_1ac7bc3f3c9e8b89b4a39b8dd9a36b713f" compoundref="a01609" startline="88" endline="91">Hack::CommandLine::Parser::arguments</references>
+        <references refid="a01238_1afd63d6cb40243606fe5d6c944754eb5b" compoundref="a01597" startline="257" endline="262">Hack::CommandLine::Parser::usage</references>
+      </memberdef>
+      <memberdef kind="function" id="a00918_1a045c846c566d8cbe75a94d7b341a8fe7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Application::parse</definition>
+        <argsstring>(const int argc, char **argv)</argsstring>
+        <name>parse</name>
+        <param>
+          <type>const int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Main.cpp" line="59" column="1" bodyfile="Source/VirtualMachine/Main.cpp" bodystart="59" bodyend="77"/>
+        <references refid="a01238_1a304e3e2f4af07df0fb6c9cde37040e27" compoundref="a01597" startline="52" endline="176">Hack::CommandLine::Parser::parse</references>
+        <references refid="a01238_1a9da3aa8c56bad342c3a7c30eb98d9c17" compoundref="a01597" startline="245" endline="255">Hack::CommandLine::Parser::string</references>
+        <references refid="a01238_1ac7bc3f3c9e8b89b4a39b8dd9a36b713f" compoundref="a01609" startline="88" endline="91">Hack::CommandLine::Parser::arguments</references>
+        <references refid="a01238_1afd63d6cb40243606fe5d6c944754eb5b" compoundref="a01597" startline="257" endline="262">Hack::CommandLine::Parser::usage</references>
+      </memberdef>
+      <memberdef kind="function" id="a00918_1a045c846c566d8cbe75a94d7b341a8fe7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Application::parse</definition>
+        <argsstring>(const int argc, char **argv)</argsstring>
+        <name>parse</name>
+        <param>
+          <type>const int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Main.cpp" line="86" column="1" bodyfile="Source/Compiler/Analyzer/Main.cpp" bodystart="86" bodyend="110"/>
+        <references refid="a01238_1a304e3e2f4af07df0fb6c9cde37040e27" compoundref="a01597" startline="52" endline="176">Hack::CommandLine::Parser::parse</references>
+        <references refid="a01238_1a9da3aa8c56bad342c3a7c30eb98d9c17" compoundref="a01597" startline="245" endline="255">Hack::CommandLine::Parser::string</references>
+        <references refid="a01238_1adbd749e0938e2b359ee7f719864d1451" compoundref="a01597" startline="205" endline="210">Hack::CommandLine::Parser::isPresent</references>
+        <references refid="a01238_1ac7bc3f3c9e8b89b4a39b8dd9a36b713f" compoundref="a01609" startline="88" endline="91">Hack::CommandLine::Parser::arguments</references>
+        <references refid="a01238_1afd63d6cb40243606fe5d6c944754eb5b" compoundref="a01597" startline="257" endline="262">Hack::CommandLine::Parser::usage</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/Assembler/Main.cpp" line="49" column="1" bodyfile="Source/Assembler/Main.cpp" bodystart="48" bodyend="89"/>
+    <listofallmembers>
+      <member refid="a00918_1a43b8f4ff7f4d0c37c945d9e306273e2f" prot="private" virt="non-virtual"><scope>Application</scope><name>_dir</name></member>
+      <member refid="a00918_1a4405764edadbf4be30941e617b27ac99" prot="private" virt="non-virtual"><scope>Application</scope><name>_dot</name></member>
+      <member refid="a00918_1a18205096aac7e07ab8d3aec6cca6771f" prot="private" virt="non-virtual"><scope>Application</scope><name>_input</name></member>
+      <member refid="a00918_1a79c475e8c61d2510d421ab54ee780bf7" prot="private" virt="non-virtual"><scope>Application</scope><name>_output</name></member>
+      <member refid="a00918_1a03eb21681fbd7473ff2eb2c6009afa8e" prot="public" virt="non-virtual"><scope>Application</scope><name>Application</name></member>
+      <member refid="a00918_1afa8cc05ce6b6092be5ecdfdae44e05f8" prot="public" virt="non-virtual"><scope>Application</scope><name>Application</name></member>
+      <member refid="a00918_1a03eb21681fbd7473ff2eb2c6009afa8e" prot="public" virt="non-virtual"><scope>Application</scope><name>Application</name></member>
+      <member refid="a00918_1a03eb21681fbd7473ff2eb2c6009afa8e" prot="public" virt="non-virtual"><scope>Application</scope><name>Application</name></member>
+      <member refid="a00918_1a13a83479f691f96dc438a7dd72c98610" prot="public" virt="non-virtual"><scope>Application</scope><name>go</name></member>
+      <member refid="a00918_1a13a83479f691f96dc438a7dd72c98610" prot="public" virt="non-virtual"><scope>Application</scope><name>go</name></member>
+      <member refid="a00918_1a13a83479f691f96dc438a7dd72c98610" prot="public" virt="non-virtual"><scope>Application</scope><name>go</name></member>
+      <member refid="a00918_1a13a83479f691f96dc438a7dd72c98610" prot="public" virt="non-virtual"><scope>Application</scope><name>go</name></member>
+      <member refid="a00918_1a045c846c566d8cbe75a94d7b341a8fe7" prot="public" virt="non-virtual"><scope>Application</scope><name>parse</name></member>
+      <member refid="a00918_1a045c846c566d8cbe75a94d7b341a8fe7" prot="public" virt="non-virtual"><scope>Application</scope><name>parse</name></member>
+      <member refid="a00918_1a045c846c566d8cbe75a94d7b341a8fe7" prot="public" virt="non-virtual"><scope>Application</scope><name>parse</name></member>
+      <member refid="a00918_1a045c846c566d8cbe75a94d7b341a8fe7" prot="public" virt="non-virtual"><scope>Application</scope><name>parse</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

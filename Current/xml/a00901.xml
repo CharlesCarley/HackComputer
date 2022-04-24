@@ -1,88 +1,46 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00901" kind="namespace" language="C++">
-    <compoundname>Hack::CommandLine</compoundname>
-    <innerclass refid="a01228" prot="public">Hack::CommandLine::ParseOption</innerclass>
-    <innerclass refid="a01232" prot="public">Hack::CommandLine::Parser</innerclass>
-    <innerclass refid="a01236" prot="public">Hack::CommandLine::Scanner</innerclass>
-    <innerclass refid="a01224" prot="public">Hack::CommandLine::Switch</innerclass>
-    <innerclass refid="a01240" prot="public">Hack::CommandLine::Token</innerclass>
+    <compoundname>Hack::Compiler::CodeGenerator</compoundname>
+    <innerclass refid="a01178" prot="public">Hack::Compiler::CodeGenerator::Generator</innerclass>
+    <innerclass refid="a01186" prot="public">Hack::Compiler::CodeGenerator::Symbol</innerclass>
+    <innerclass refid="a01190" prot="public">Hack::Compiler::CodeGenerator::SymbolTable</innerclass>
+    <innerclass refid="a01194" prot="public">Hack::Compiler::CodeGenerator::VmEmitter</innerclass>
       <sectiondef kind="enum">
-      <memberdef kind="enum" id="a00901_1a7bf8cf020e39f88d39725c1ec763cd86" prot="public" static="no" strong="no">
+      <memberdef kind="enum" id="a00901_1ac08293c0a6cadd380abba4ce7069b7bc" prot="public" static="no" strong="no">
         <type></type>
-        <name>TokenType</name>
-        <enumvalue id="a00901_1a7bf8cf020e39f88d39725c1ec763cd86a18937fa12a9efdd1df2262f17578b735" prot="public">
-          <name>TOK_NONE</name>
+        <name>SymbolKind</name>
+        <enumvalue id="a00901_1ac08293c0a6cadd380abba4ce7069b7bca33eb8724d1cfb37808fb1dd2a3c24812" prot="public">
+          <name>None</name>
+          <initializer>=-1</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00901_1a7bf8cf020e39f88d39725c1ec763cd86a55849c5d51bca86446e7f7ac620d7d23" prot="public">
-          <name>TOK_SWITCH_SHORT</name>
+        <enumvalue id="a00901_1ac08293c0a6cadd380abba4ce7069b7bca758124b318712f1ca6e7abfcceb26517" prot="public">
+          <name>Field</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00901_1a7bf8cf020e39f88d39725c1ec763cd86adf0cf175e182315d7ed141f8f08120e5" prot="public">
-          <name>TOK_SWITCH_LONG</name>
+        <enumvalue id="a00901_1ac08293c0a6cadd380abba4ce7069b7bca4e24ef81cf7ed83a94dc616bb8b510a8" prot="public">
+          <name>Static</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00901_1a7bf8cf020e39f88d39725c1ec763cd86af245704ac1981ba509a2bf36c9f974de" prot="public">
-          <name>TOK_NEXT</name>
+        <enumvalue id="a00901_1ac08293c0a6cadd380abba4ce7069b7bcac16d59cf9aa39e37737b703b8d21a9ee" prot="public">
+          <name>Local</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00901_1a7bf8cf020e39f88d39725c1ec763cd86a1ec616246244f6453a7f66b5fb826ad3" prot="public">
-          <name>TOK_OPTION</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00901_1a7bf8cf020e39f88d39725c1ec763cd86a3098177307fabe9d80853b00deaff42d" prot="public">
-          <name>TOK_INTEGER</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00901_1a7bf8cf020e39f88d39725c1ec763cd86ac5583780f8eea34fe0ee815f66fc1439" prot="public">
-          <name>TOK_REAL</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00901_1a7bf8cf020e39f88d39725c1ec763cd86ad10952ab16deb1fdfc37ce82f5cb52e5" prot="public">
-          <name>TOK_IDENTIFIER</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00901_1a7bf8cf020e39f88d39725c1ec763cd86ac89e0f1937f562da1aa8f4ef6f0fae69" prot="public">
-          <name>TOK_FILEPATH</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00901_1a7bf8cf020e39f88d39725c1ec763cd86a728a7b175a948d4e4390726507f087b8" prot="public">
-          <name>TOK_EOS</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00901_1a7bf8cf020e39f88d39725c1ec763cd86af499719b721526aa16a9b57e252fde89" prot="public">
-          <name>TOK_ERROR</name>
+        <enumvalue id="a00901_1ac08293c0a6cadd380abba4ce7069b7bcac846b86715799a34e6b35cfef36ea1bb" prot="public">
+          <name>Argument</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -94,13 +52,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/CommandLine/Token.h" line="29" column="1" bodyfile="Source/Utils/CommandLine/Token.h" bodystart="28" bodyend="45"/>
+        <location file="Source/Compiler/Generator/Symbol.h" line="28" column="1" bodyfile="Source/Compiler/Generator/Symbol.h" bodystart="27" bodyend="34"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Utils/CommandLine/Option.h" line="29" column="1"/>
+    <location file="Source/Compiler/Generator/Expression.cpp" line="25" column="1"/>
   </compounddef>
 </doxygen>

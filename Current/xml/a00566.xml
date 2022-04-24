@@ -1,90 +1,98 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00566" kind="file" language="C++">
-    <compoundname>Mux8Way16.cpp</compoundname>
-    <includes refid="a00569" local="yes">Chips/Mux8Way16.h</includes>
+    <compoundname>Mux4Way16.cpp</compoundname>
+    <includes refid="a00569" local="yes">Chips/Mux4Way16.h</includes>
+    <includes refid="a00563" local="yes">Mux16.h</includes>
     <incdepgraph>
-      <node id="1634">
+      <node id="1605">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="1635" relation="include">
+        <childnode refid="1606" relation="include">
         </childnode>
       </node>
-      <node id="1626">
+      <node id="1595">
+        <label>Chips/Mux4Way16.h</label>
+        <childnode refid="1596" relation="include">
+        </childnode>
+      </node>
+      <node id="1597">
         <label>Chips/BitUtils.h</label>
-        <childnode refid="1627" relation="include">
+        <childnode refid="1598" relation="include">
         </childnode>
-        <childnode refid="1628" relation="include">
-        </childnode>
-      </node>
-      <node id="1624">
-        <label>Chips/Mux8Way16.h</label>
-        <childnode refid="1625" relation="include">
+        <childnode refid="1599" relation="include">
         </childnode>
       </node>
-      <node id="1635">
+      <node id="1606">
         <label>cstdint</label>
       </node>
-      <node id="1631">
+      <node id="1594">
+        <label>Source/Chips/Mux4Way16.cpp</label>
+        <link refid="a00566"/>
+        <childnode refid="1595" relation="include">
+        </childnode>
+        <childnode refid="1608" relation="include">
+        </childnode>
+      </node>
+      <node id="1602">
         <label>string</label>
       </node>
-      <node id="1633">
+      <node id="1604">
         <label>UserInterface/Context.h</label>
-        <childnode refid="1629" relation="include">
+        <childnode refid="1600" relation="include">
         </childnode>
-        <childnode refid="1634" relation="include">
+        <childnode refid="1605" relation="include">
         </childnode>
-        <childnode refid="1636" relation="include">
+        <childnode refid="1607" relation="include">
         </childnode>
       </node>
-      <node id="1636">
+      <node id="1607">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="1635" relation="include">
+        <childnode refid="1606" relation="include">
         </childnode>
-        <childnode refid="1632" relation="include">
+        <childnode refid="1603" relation="include">
         </childnode>
-        <childnode refid="1634" relation="include">
+        <childnode refid="1605" relation="include">
         </childnode>
       </node>
-      <node id="1628">
+      <node id="1599">
         <label>Utils/Console.h</label>
-        <childnode refid="1629" relation="include">
+        <childnode refid="1600" relation="include">
         </childnode>
-        <childnode refid="1633" relation="include">
-        </childnode>
-      </node>
-      <node id="1623">
-        <label>Source/Chips/Mux8Way16.cpp</label>
-        <link refid="a00566"/>
-        <childnode refid="1624" relation="include">
+        <childnode refid="1604" relation="include">
         </childnode>
       </node>
-      <node id="1627">
+      <node id="1608">
+        <label>Mux16.h</label>
+        <childnode refid="1596" relation="include">
+        </childnode>
+      </node>
+      <node id="1598">
         <label>bitset</label>
       </node>
-      <node id="1632">
+      <node id="1603">
         <label>vector</label>
       </node>
-      <node id="1630">
+      <node id="1601">
         <label>sstream</label>
       </node>
-      <node id="1625">
+      <node id="1596">
         <label>Chips/Chip.h</label>
-        <childnode refid="1626" relation="include">
+        <childnode refid="1597" relation="include">
         </childnode>
-        <childnode refid="1628" relation="include">
+        <childnode refid="1599" relation="include">
         </childnode>
       </node>
-      <node id="1629">
+      <node id="1600">
         <label>String.h</label>
-        <childnode refid="1630" relation="include">
+        <childnode refid="1601" relation="include">
         </childnode>
-        <childnode refid="1631" relation="include">
+        <childnode refid="1602" relation="include">
         </childnode>
-        <childnode refid="1632" relation="include">
+        <childnode refid="1603" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <innernamespace refid="a00890">Hack::Chips</innernamespace>
+    <innernamespace refid="a00896">Hack::Chips</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -111,128 +119,91 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Mux8Way16.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>IMPLEMENT_BLACK_BOX</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Mux16.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Mux4Way16.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00890" kindref="compound">Hack::Chips</ref></highlight></codeline>
-<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="30" refid="a00890_1ae1b67452b254db5b0d86e024b16194d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/><ref refid="a01364" kindref="compound">uint8_t</ref><sp/><ref refid="a00890_1ae1b67452b254db5b0d86e024b16194d7" kindref="member">Mux8Way16Mask</ref><sp/>=<sp/>0b00000111;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32" refid="a01056_1a0bcac2f2ab107aa55c815c9dde23120c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01056_1a0bcac2f2ab107aa55c815c9dde23120c" kindref="member">Mux8Way16::Mux8Way16</ref>()<sp/>:</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_in{{},<sp/>{}}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Mux4Way16.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Mux16.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00896" kindref="compound">Hack::Chips</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27" refid="a01058_1a89b2c7bd11b3a18a0e7b4cfbcb5255aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01058_1a89b2c7bd11b3a18a0e7b4cfbcb5255aa" kindref="member">Mux4Way16::Mux4Way16</ref>()</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_flags<sp/>=<sp/>1<sp/>&lt;&lt;<sp/>7;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="a01058_1a89dda32a00ef6c72e87edf0b7c7d1506" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01058_1a89dda32a00ef6c72e87edf0b7c7d1506" kindref="member">Mux4Way16::setA</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01358" kindref="compound">uint16_t</ref>&amp;<sp/>v)</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assignBit(7);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0]<sp/>=<sp/>v;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00986_1ab1a8c5970c7a58f399c82c96c872a920" kindref="member">B8::setBit</ref>(_flags,<sp/>7);</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39" refid="a01056_1afd147fb65b2e35dd42c6771ce68c1401" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01056_1afd147fb65b2e35dd42c6771ce68c1401" kindref="member">Mux8Way16::setA</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01352" kindref="compound">uint16_t</ref>&amp;<sp/>a)</highlight></codeline>
+<codeline lineno="39" refid="a01058_1a04e74e897da70acc2084aa9d4f22def4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01058_1a04e74e897da70acc2084aa9d4f22def4" kindref="member">Mux4Way16::setB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01358" kindref="compound">uint16_t</ref>&amp;<sp/>v)</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_in[0].<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0]<sp/>=<sp/>a;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[1]<sp/>=<sp/>v;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00986_1ab1a8c5970c7a58f399c82c96c872a920" kindref="member">B8::setBit</ref>(_flags,<sp/>7);</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45" refid="a01056_1abfa1cb2a27683ec7ebf9c54e008b9be9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01056_1abfa1cb2a27683ec7ebf9c54e008b9be9" kindref="member">Mux8Way16::setB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01352" kindref="compound">uint16_t</ref>&amp;<sp/>b)</highlight></codeline>
+<codeline lineno="45" refid="a01058_1a61a72328f8b0191142d1fe60a5d8ee53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01058_1a61a72328f8b0191142d1fe60a5d8ee53" kindref="member">Mux4Way16::setC</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01358" kindref="compound">uint16_t</ref>&amp;<sp/>v)</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_in[0].<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[1]<sp/>=<sp/>b;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2]<sp/>=<sp/>v;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00986_1ab1a8c5970c7a58f399c82c96c872a920" kindref="member">B8::setBit</ref>(_flags,<sp/>7);</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51" refid="a01056_1ad5fd4d4af52f09bb60508acc6218967d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01056_1ad5fd4d4af52f09bb60508acc6218967d" kindref="member">Mux8Way16::setC</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01352" kindref="compound">uint16_t</ref>&amp;<sp/>c)</highlight></codeline>
+<codeline lineno="51" refid="a01058_1a2f5cb78ec61da56b6b09cefa0aecb71f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01058_1a2f5cb78ec61da56b6b09cefa0aecb71f" kindref="member">Mux4Way16::setD</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01358" kindref="compound">uint16_t</ref>&amp;<sp/>v)</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_in[0].<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2]<sp/>=<sp/>c;</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[3]<sp/>=<sp/>v;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00986_1ab1a8c5970c7a58f399c82c96c872a920" kindref="member">B8::setBit</ref>(_flags,<sp/>7);</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57" refid="a01056_1a411d721a15eae9e177f2a29dca54767d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01056_1a411d721a15eae9e177f2a29dca54767d" kindref="member">Mux8Way16::setD</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01352" kindref="compound">uint16_t</ref>&amp;<sp/>d)</highlight></codeline>
+<codeline lineno="57" refid="a01058_1abaa152acf1be764df397d7fa3b20dd7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01058_1abaa152acf1be764df397d7fa3b20dd7a" kindref="member">Mux4Way16::setSel</ref>(<ref refid="a01370" kindref="compound">uint8_t</ref><sp/>v)</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_in[0].<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[3]<sp/>=<sp/>d;</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63" refid="a01056_1af114f99625188d3b470514a82b3621f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01056_1af114f99625188d3b470514a82b3621f9" kindref="member">Mux8Way16::setE</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01352" kindref="compound">uint16_t</ref>&amp;<sp/>e)</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_in[1].<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0]<sp/>=<sp/>e;</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69" refid="a01056_1a3d030fad68e8bf609d42f9a95d1738a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01056_1a3d030fad68e8bf609d42f9a95d1738a7" kindref="member">Mux8Way16::setF</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01352" kindref="compound">uint16_t</ref>&amp;<sp/>f)</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_in[1].<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[1]<sp/>=<sp/>f;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75" refid="a01056_1a31f066efab8465d895dc7a8aa30c7cb7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01056_1a31f066efab8465d895dc7a8aa30c7cb7" kindref="member">Mux8Way16::setG</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01352" kindref="compound">uint16_t</ref>&amp;<sp/>g)</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_in[1].<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2]<sp/>=<sp/>g;</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81" refid="a01056_1a4a514b4731d83b014dfc141e65e80cad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01056_1a4a514b4731d83b014dfc141e65e80cad" kindref="member">Mux8Way16::setH</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01352" kindref="compound">uint16_t</ref>&amp;<sp/>h)</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_in[1].<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[3]<sp/>=<sp/>h;</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00986_1a266db4b38d31abd421bdb6356b6d8f6a" kindref="member">B8::applyBit</ref>(_flags,<sp/>0,<sp/>v<sp/>&amp;<sp/>1);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00986_1a266db4b38d31abd421bdb6356b6d8f6a" kindref="member">B8::applyBit</ref>(_flags,<sp/>1,<sp/>v<sp/>&amp;<sp/>2);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00986_1ab1a8c5970c7a58f399c82c96c872a920" kindref="member">B8::setBit</ref>(_flags,<sp/>7);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="a01058_1a382fc2a7d2fff224a70e4420e4d74b2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/><ref refid="a01058_1a382fc2a7d2fff224a70e4420e4d74b2c" kindref="member">Mux4Way16::getOut</ref>()</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_flags<sp/>&amp;<sp/>128)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_out;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Mux4Way16::evaluate()</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>IMPLEMENT_BLACK_BOX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01054" kindref="compound">Mux16</ref><sp/>a,<sp/>b,<sp/>c;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ba<sp/>=<sp/><ref refid="a00986_1a62cc15c18ccdd215a9ef08e8a8021564" kindref="member">B8::getBit</ref>(_flags,<sp/>0);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bb<sp/>=<sp/><ref refid="a00986_1a62cc15c18ccdd215a9ef08e8a8021564" kindref="member">B8::getBit</ref>(_flags,<sp/>1);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a.<ref refid="a01054_1a1bbaad4f7cfb18c2366180c3fabd67da" kindref="member">setA</ref>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0]);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a.<ref refid="a01054_1a0b6138389a0cc6a4b99e1860c4c1d5ad" kindref="member">setB</ref>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[1]);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a.<ref refid="a01054_1af45f56aaffd81b2fe735526d8da060de" kindref="member">setSel</ref>(ba);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b.<ref refid="a01054_1a1bbaad4f7cfb18c2366180c3fabd67da" kindref="member">setA</ref>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2]);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b.<ref refid="a01054_1a0b6138389a0cc6a4b99e1860c4c1d5ad" kindref="member">setB</ref>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[3]);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b.<ref refid="a01054_1af45f56aaffd81b2fe735526d8da060de" kindref="member">setSel</ref>(ba);</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87" refid="a01056_1aaa864aefa095cba9eab2fc6ec1647445" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01056_1aaa864aefa095cba9eab2fc6ec1647445" kindref="member">Mux8Way16::setSel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01364" kindref="compound">uint8_t</ref>&amp;<sp/>selection)</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(0,<sp/>selection<sp/>&amp;<sp/>1);</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(1,<sp/>selection<sp/>&amp;<sp/>2);</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(2,<sp/>selection<sp/>&amp;<sp/>4);</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight></codeline>
-<codeline lineno="95" refid="a01056_1a39f7bb00e37cf570773677732e027caa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01352" kindref="compound">uint16_t</ref><sp/><ref refid="a01056_1a39f7bb00e37cf570773677732e027caa" kindref="member">Mux8Way16::getOut</ref>()</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00984_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(7))</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_out;</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Mux8Way16::evaluate()</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;=<sp/><ref refid="a00890_1ae1b67452b254db5b0d86e024b16194d7" kindref="member">Mux8Way16Mask</ref>;</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"></highlight></codeline>
-<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>IMPLEMENT_BLACK_BOX</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01048" kindref="compound">Mux16</ref><sp/><sp/><sp/><sp/><sp/>o;</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01052" kindref="compound">Mux4Way16</ref><sp/>a,<sp/>b;</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>v[]{<ref refid="a00984_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(0),<sp/><ref refid="a00984_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(1)};</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01364" kindref="compound">uint8_t</ref><sp/>ba<sp/>=<sp/>B8::pack&lt;2&gt;(v);</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a.<ref refid="a01052_1a89dda32a00ef6c72e87edf0b7c7d1506" kindref="member">setA</ref>(_in[0].s[0]);</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a.<ref refid="a01052_1a04e74e897da70acc2084aa9d4f22def4" kindref="member">setB</ref>(_in[0].s[1]);</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a.<ref refid="a01052_1a61a72328f8b0191142d1fe60a5d8ee53" kindref="member">setC</ref>(_in[0].s[2]);</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a.<ref refid="a01052_1a2f5cb78ec61da56b6b09cefa0aecb71f" kindref="member">setD</ref>(_in[0].s[3]);</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a.<ref refid="a01052_1abaa152acf1be764df397d7fa3b20dd7a" kindref="member">setSel</ref>(ba);</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b.<ref refid="a01052_1a89dda32a00ef6c72e87edf0b7c7d1506" kindref="member">setA</ref>(_in[1].s[0]);</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b.<ref refid="a01052_1a04e74e897da70acc2084aa9d4f22def4" kindref="member">setB</ref>(_in[1].s[1]);</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b.<ref refid="a01052_1a61a72328f8b0191142d1fe60a5d8ee53" kindref="member">setC</ref>(_in[1].s[2]);</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b.<ref refid="a01052_1a2f5cb78ec61da56b6b09cefa0aecb71f" kindref="member">setD</ref>(_in[1].s[3]);</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b.<ref refid="a01052_1abaa152acf1be764df397d7fa3b20dd7a" kindref="member">setSel</ref>(ba);</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"></highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>o.<ref refid="a01048_1a1bbaad4f7cfb18c2366180c3fabd67da" kindref="member">setA</ref>(a.<ref refid="a01052_1a382fc2a7d2fff224a70e4420e4d74b2c" kindref="member">getOut</ref>());</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>o.<ref refid="a01048_1a0b6138389a0cc6a4b99e1860c4c1d5ad" kindref="member">setB</ref>(b.<ref refid="a01052_1a382fc2a7d2fff224a70e4420e4d74b2c" kindref="member">getOut</ref>());</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>o.<ref refid="a01048_1af45f56aaffd81b2fe735526d8da060de" kindref="member">setSel</ref>(<ref refid="a00984_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(2));</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"></highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>=<sp/>o.<ref refid="a01048_1a422702d865f283f2f4a20acb2af25575" kindref="member">getOut</ref>();</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01364" kindref="compound">uint8_t</ref><sp/>ba<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"></highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01364" kindref="compound">uint8_t</ref><sp/>bb<sp/>=<sp/><ref refid="a00984_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(2)<sp/>?<sp/>1<sp/>:<sp/>0;</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00984_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(0))</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ba<sp/>|=<sp/>1;</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00984_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(1))</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ba<sp/>|=<sp/>2;</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"></highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>=<sp/>_in[bb].<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[ba];</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="142"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c.<ref refid="a01054_1a1bbaad4f7cfb18c2366180c3fabd67da" kindref="member">setA</ref>(a.<ref refid="a01054_1a422702d865f283f2f4a20acb2af25575" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c.<ref refid="a01054_1a0b6138389a0cc6a4b99e1860c4c1d5ad" kindref="member">setB</ref>(b.<ref refid="a01054_1a422702d865f283f2f4a20acb2af25575" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c.<ref refid="a01054_1af45f56aaffd81b2fe735526d8da060de" kindref="member">setSel</ref>(bb);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>=<sp/>c.<ref refid="a01054_1a422702d865f283f2f4a20acb2af25575" kindref="member">getOut</ref>();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_flags<sp/>&amp;=<sp/>~128;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01370" kindref="compound">uint8_t</ref><sp/>ba<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00986_1a62cc15c18ccdd215a9ef08e8a8021564" kindref="member">B8::getBit</ref>(_flags,<sp/>0))</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ba<sp/>|=<sp/>1;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00986_1a62cc15c18ccdd215a9ef08e8a8021564" kindref="member">B8::getBit</ref>(_flags,<sp/>1))</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ba<sp/>|=<sp/>2;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>=<sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>.<ref refid="a00982_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[ba];</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_flags<sp/>&amp;=<sp/>~128;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Chips/Mux8Way16.cpp"/>
+    <location file="Source/Chips/Mux4Way16.cpp"/>
   </compounddef>
 </doxygen>

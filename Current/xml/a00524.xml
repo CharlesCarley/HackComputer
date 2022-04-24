@@ -1,98 +1,98 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00524" kind="file" language="C++">
-    <compoundname>HalfAdder.h</compoundname>
-    <includes refid="a00467" local="yes">Chips/Chip.h</includes>
-    <includedby refid="a00521" local="yes">Source/Chips/HalfAdder.cpp</includedby>
+    <compoundname>FullAdder.h</compoundname>
+    <includes refid="a00473" local="yes">Chips/Chip.h</includes>
+    <includedby refid="a00521" local="yes">Source/Chips/FullAdder.cpp</includedby>
     <incdepgraph>
-      <node id="1408">
+      <node id="1380">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="1409" relation="include">
+        <childnode refid="1381" relation="include">
         </childnode>
       </node>
-      <node id="1400">
+      <node id="1372">
         <label>Chips/BitUtils.h</label>
-        <childnode refid="1401" relation="include">
+        <childnode refid="1373" relation="include">
         </childnode>
-        <childnode refid="1402" relation="include">
+        <childnode refid="1374" relation="include">
         </childnode>
       </node>
-      <node id="1409">
+      <node id="1381">
         <label>cstdint</label>
       </node>
-      <node id="1405">
+      <node id="1377">
         <label>string</label>
       </node>
-      <node id="1407">
+      <node id="1370">
+        <label>Source/Chips/FullAdder.h</label>
+        <link refid="a00524"/>
+        <childnode refid="1371" relation="include">
+        </childnode>
+      </node>
+      <node id="1379">
         <label>UserInterface/Context.h</label>
-        <childnode refid="1403" relation="include">
+        <childnode refid="1375" relation="include">
         </childnode>
-        <childnode refid="1408" relation="include">
+        <childnode refid="1380" relation="include">
         </childnode>
-        <childnode refid="1410" relation="include">
+        <childnode refid="1382" relation="include">
         </childnode>
       </node>
-      <node id="1410">
+      <node id="1382">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="1409" relation="include">
+        <childnode refid="1381" relation="include">
         </childnode>
-        <childnode refid="1406" relation="include">
+        <childnode refid="1378" relation="include">
         </childnode>
-        <childnode refid="1408" relation="include">
+        <childnode refid="1380" relation="include">
         </childnode>
       </node>
-      <node id="1402">
+      <node id="1374">
         <label>Utils/Console.h</label>
-        <childnode refid="1403" relation="include">
+        <childnode refid="1375" relation="include">
         </childnode>
-        <childnode refid="1407" relation="include">
+        <childnode refid="1379" relation="include">
         </childnode>
       </node>
-      <node id="1401">
+      <node id="1373">
         <label>bitset</label>
       </node>
-      <node id="1406">
+      <node id="1378">
         <label>vector</label>
       </node>
-      <node id="1404">
+      <node id="1376">
         <label>sstream</label>
       </node>
-      <node id="1399">
+      <node id="1371">
         <label>Chips/Chip.h</label>
-        <childnode refid="1400" relation="include">
+        <childnode refid="1372" relation="include">
         </childnode>
-        <childnode refid="1402" relation="include">
-        </childnode>
-      </node>
-      <node id="1398">
-        <label>Source/Chips/HalfAdder.h</label>
-        <link refid="a00524"/>
-        <childnode refid="1399" relation="include">
+        <childnode refid="1374" relation="include">
         </childnode>
       </node>
-      <node id="1403">
+      <node id="1375">
         <label>String.h</label>
-        <childnode refid="1404" relation="include">
+        <childnode refid="1376" relation="include">
         </childnode>
-        <childnode refid="1405" relation="include">
+        <childnode refid="1377" relation="include">
         </childnode>
-        <childnode refid="1406" relation="include">
+        <childnode refid="1378" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="1412">
-        <label>Source/Chips/HalfAdder.cpp</label>
-      </node>
-      <node id="1411">
-        <label>Source/Chips/HalfAdder.h</label>
+      <node id="1383">
+        <label>Source/Chips/FullAdder.h</label>
         <link refid="a00524"/>
-        <childnode refid="1412" relation="include">
+        <childnode refid="1384" relation="include">
         </childnode>
       </node>
+      <node id="1384">
+        <label>Source/Chips/FullAdder.cpp</label>
+      </node>
     </invincdepgraph>
-    <innerclass refid="a01028" prot="public">Hack::Chips::HalfAdder</innerclass>
-    <innernamespace refid="a00890">Hack::Chips</innernamespace>
+    <innerclass refid="a01030" prot="public">Hack::Chips::FullAdder</innerclass>
+    <innernamespace refid="a00896">Hack::Chips</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -122,26 +122,27 @@
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Chip.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00890" kindref="compound">Hack::Chips</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00896" kindref="compound">Hack::Chips</ref></highlight></codeline>
 <codeline lineno="26"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="27" refid="a01028" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01028" kindref="compound">HalfAdder</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="a00984" kindref="compound" tooltip="Chip is the base class for all chips defined in this system. It uses a template integer for the _bits...">Chip</ref>&lt;uint8_t,<sp/>8&gt;</highlight></codeline>
+<codeline lineno="27" refid="a01030" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01030" kindref="compound">FullAdder</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="a00990" kindref="compound" tooltip="Chip is the base class for all chips defined in this system. It uses a template integer for the _bits...">Chip</ref>&lt;uint8_t,<sp/>8&gt;</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>evaluate();</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01028_1a3a00e781b1fb11824207af965b3b7d99" kindref="member">HalfAdder</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01030_1aacdc3b474e0d525611f29516618f5b28" kindref="member">FullAdder</ref>();</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01028_1aead8b0057be11ba623493ead47b97ead" kindref="member">setA</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>a);</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01028_1ac52efb9fa9ceb6f4aa72b2576b4a83bc" kindref="member">setB</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>b);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01028_1aab199ce7952a279f66bfca5246a6df1c" kindref="member">getSum</ref>();</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01028_1a423a04b0658dd9e41398bc8bf36a1026" kindref="member">getCary</ref>();</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="43"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01030_1a64891928d2e7b30966aba6eeff53d273" kindref="member">setA</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>a);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01030_1a6afaf79fb36b108b83d7ae78f5557d07" kindref="member">setB</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>b);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01030_1a45aedf6321833672440a6c45e26c0718" kindref="member">setCary</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>cary);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01030_1a1cbc633d0a2501de5094feeac597516c" kindref="member">getSum</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01030_1a58e6c589ca23ca70f631b584fb98c31c" kindref="member">getCary</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Chips/HalfAdder.h"/>
+    <location file="Source/Chips/FullAdder.h"/>
   </compounddef>
 </doxygen>

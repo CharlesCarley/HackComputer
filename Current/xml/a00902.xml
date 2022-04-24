@@ -1,271 +1,76 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00902" kind="namespace" language="C++">
-    <compoundname>Hack::Ui</compoundname>
-    <innerclass refid="a01312" prot="public">Hack::Ui::Color</innerclass>
-    <innerclass refid="a01308" prot="public">Hack::Ui::ColorBuffer</innerclass>
-    <innerclass refid="a01288" prot="public">Hack::Ui::ColorCacheItem</innerclass>
-    <innerclass refid="a01304" prot="public">Hack::Ui::ColorU</innerclass>
-    <innerclass refid="a01292" prot="public">Hack::Ui::Context</innerclass>
-    <innerclass refid="a01316" prot="public">Hack::Ui::Platform</innerclass>
-    <innerclass refid="a01324" prot="public">Hack::Ui::PlatformUnix</innerclass>
-    <innerclass refid="a01296" prot="public">Hack::Ui::Point</innerclass>
-    <innerclass refid="a01300" prot="public">Hack::Ui::Rectangle</innerclass>
-    <innerclass refid="a01320" prot="public">Hack::Ui::Terminal</innerclass>
-    <innernamespace refid="a00903">Hack::Ui::Detail</innernamespace>
+    <compoundname>Hack::VirtualMachine</compoundname>
+    <innerclass refid="a01334" prot="public">Hack::VirtualMachine::CodeStream</innerclass>
+    <innerclass refid="a01338" prot="public">Hack::VirtualMachine::Emitter</innerclass>
+    <innerclass refid="a01346" prot="public">Hack::VirtualMachine::KeywordTable</innerclass>
+    <innerclass refid="a01342" prot="public">Hack::VirtualMachine::Parser</innerclass>
+    <innerclass refid="a01350" prot="public">Hack::VirtualMachine::Scanner</innerclass>
       <sectiondef kind="enum">
-      <memberdef kind="enum" id="a00902_1a1d16939595474e3adb96cc6d05ed7aa0" prot="public" static="no" strong="no">
+      <memberdef kind="enum" id="a00902_1ab2a36ae607c4ab166da225c1f6f71827" prot="public" static="no" strong="no">
         <type></type>
-        <name>CharacterSet</name>
-        <enumvalue id="a00902_1a1d16939595474e3adb96cc6d05ed7aa0ad03378ac2b6b4c1118d5cdda7e793da9" prot="public">
-          <name>CS_SEQ_START</name>
-          <initializer>= -1</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a1d16939595474e3adb96cc6d05ed7aa0ac9e5831d71a26cab7a3a4a8d374f8560" prot="public">
-          <name>CS_NONE</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a1d16939595474e3adb96cc6d05ed7aa0a998b2d1dfa04163699d0ada53e82f922" prot="public">
-          <name>CS_RECT_RB</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a1d16939595474e3adb96cc6d05ed7aa0a753412f679e04e3ba44c25dbb93d6131" prot="public">
-          <name>CS_RECT_RT</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a1d16939595474e3adb96cc6d05ed7aa0a5d03c84a5b72b5dbe74459bf33791a08" prot="public">
-          <name>CS_RECT_LT</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a1d16939595474e3adb96cc6d05ed7aa0a073a22d37e6a995b7c17ddfc65661e7d" prot="public">
-          <name>CS_RECT_LB</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a1d16939595474e3adb96cc6d05ed7aa0a8803333d960baf039bb860468988d16d" prot="public">
-          <name>CS_RECT_CS</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a1d16939595474e3adb96cc6d05ed7aa0a5cc1590a1227299f2d57e30c9c354748" prot="public">
-          <name>CS_RECT_HZ</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a1d16939595474e3adb96cc6d05ed7aa0a9b1d4bb7b028bce971009f4742e28e8b" prot="public">
-          <name>CS_RECT_LCS</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a1d16939595474e3adb96cc6d05ed7aa0a6f020960e91251129ffbaa5a9514eb9e" prot="public">
-          <name>CS_RECT_RCS</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a1d16939595474e3adb96cc6d05ed7aa0a5da6a4a3faaa0f29c7774f447c0fba74" prot="public">
-          <name>CS_RECT_BCS</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a1d16939595474e3adb96cc6d05ed7aa0aab50306728780dd9c7cc010ddf09556b" prot="public">
-          <name>CS_RECT_TCS</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a1d16939595474e3adb96cc6d05ed7aa0a4354d780f39ce363e5a3834343c3aa50" prot="public">
-          <name>CS_RECT_VT</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a1d16939595474e3adb96cc6d05ed7aa0ae51b178c3675d1c5b33fd92346227bc4" prot="public">
-          <name>CS_START</name>
-          <initializer>= &apos; &apos;</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a1d16939595474e3adb96cc6d05ed7aa0a41af7adc01eb6945b60a1bfd8fef6c41" prot="public">
-          <name>CS_END</name>
-          <initializer>= &apos;~&apos; + 1</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/UserInterface/Common.h" line="38" column="1" bodyfile="Source/Utils/UserInterface/Common.h" bodystart="37" bodyend="56"/>
-      </memberdef>
-      <memberdef kind="enum" id="a00902_1ae1fedfb1c7fe15d04561a77c09b20bc3" prot="public" static="no" strong="no">
-        <type></type>
-        <name>ColorPalette</name>
-        <enumvalue id="a00902_1ae1fedfb1c7fe15d04561a77c09b20bc3a414c02028042fe450a6e6e6a25dd2140" prot="public">
-          <name>CP_TRANSPARENT</name>
+        <name>RamIndices</name>
+        <enumvalue id="a00902_1ab2a36ae607c4ab166da225c1f6f71827a863abda83f7c8925cceaf04098e3cb34" prot="public">
+          <name>STP</name>
           <initializer>= 0</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00902_1ae1fedfb1c7fe15d04561a77c09b20bc3a7edf6936440ce71b8690beb0af6d9f5f" prot="public">
-          <name>CP_BLACK</name>
+        <enumvalue id="a00902_1ab2a36ae607c4ab166da225c1f6f71827acf4f05429d20255bf7128cebaf158e72" prot="public">
+          <name>LCL</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00902_1ae1fedfb1c7fe15d04561a77c09b20bc3ad45b227d2ca0298b705625e4db00d705" prot="public">
-          <name>CP_DARK_BLUE</name>
+        <enumvalue id="a00902_1ab2a36ae607c4ab166da225c1f6f71827a8ca2cf3937e5c6f1e63ee3b602fdf814" prot="public">
+          <name>ARG</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00902_1ae1fedfb1c7fe15d04561a77c09b20bc3aa63f39e1018b572b2c8427607a61378b" prot="public">
-          <name>CP_DARK_GREEN</name>
+        <enumvalue id="a00902_1ab2a36ae607c4ab166da225c1f6f71827a0edd4176219c47bc38b154d7319b2b0c" prot="public">
+          <name>THS</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00902_1ae1fedfb1c7fe15d04561a77c09b20bc3ad8af3766c39ba526c346d92946426320" prot="public">
-          <name>CP_DARK_CYAN</name>
+        <enumvalue id="a00902_1ab2a36ae607c4ab166da225c1f6f71827a892ac688cf8f49defc936c85521c630b" prot="public">
+          <name>THT</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00902_1ae1fedfb1c7fe15d04561a77c09b20bc3abefc1fbd3ccfa1da37ab41bbd92b1046" prot="public">
-          <name>CP_DARK_RED</name>
+        <enumvalue id="a00902_1ab2a36ae607c4ab166da225c1f6f71827a7257ce4a14d1f26d6858febfad59e371" prot="public">
+          <name>TMP</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00902_1ae1fedfb1c7fe15d04561a77c09b20bc3af1683a4d2ce91e3679fcc914ee8f9ff4" prot="public">
-          <name>CP_DARK_MAGENTA</name>
+        <enumvalue id="a00902_1ab2a36ae607c4ab166da225c1f6f71827ac877118ac6aa475e26bcdc4dd5952f52" prot="public">
+          <name>SW0</name>
+          <initializer>= 13</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00902_1ae1fedfb1c7fe15d04561a77c09b20bc3af06a23afaf2fde0bb7f31fdb1fe735e1" prot="public">
-          <name>CP_DARK_YELLOW</name>
+        <enumvalue id="a00902_1ab2a36ae607c4ab166da225c1f6f71827ac160ec799f9773ab331ad17427c85d75" prot="public">
+          <name>SW1</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00902_1ae1fedfb1c7fe15d04561a77c09b20bc3a6c8c1be9e493ae7545a7f36337ece440" prot="public">
-          <name>CP_GREY</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1ae1fedfb1c7fe15d04561a77c09b20bc3a3327799852a4d471716f61a7f333a11e" prot="public">
-          <name>CP_LIGHT_GREY</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1ae1fedfb1c7fe15d04561a77c09b20bc3a350e74faa3f4ff1cee29035e4b05b848" prot="public">
-          <name>CP_BLUE</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1ae1fedfb1c7fe15d04561a77c09b20bc3a8f2d06886cb3b1e469dc0eb3b9ae5c2c" prot="public">
-          <name>CP_GREEN</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1ae1fedfb1c7fe15d04561a77c09b20bc3aabf8678b03996715d5b75053d944374f" prot="public">
-          <name>CP_CYAN</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1ae1fedfb1c7fe15d04561a77c09b20bc3ab275556ce0259162bc23c9bb315ab603" prot="public">
-          <name>CP_RED</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1ae1fedfb1c7fe15d04561a77c09b20bc3a04e27d16749cab380a2074f251f638ff" prot="public">
-          <name>CP_MAGENTA</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1ae1fedfb1c7fe15d04561a77c09b20bc3ae1c3347c8ed074263a78b53f105a26c5" prot="public">
-          <name>CP_YELLOW</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1ae1fedfb1c7fe15d04561a77c09b20bc3a84e0441414a4ff41753e4c259f4b559c" prot="public">
-          <name>CP_WHITE</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1ae1fedfb1c7fe15d04561a77c09b20bc3a5bad76b91aaadc4b8e6d1084be6be564" prot="public">
-          <name>CP_USER</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1ae1fedfb1c7fe15d04561a77c09b20bc3a170742463623504b34e60c30094ef901" prot="public">
-          <name>CP_MAX</name>
-          <initializer>= 256</initializer>
+        <enumvalue id="a00902_1ab2a36ae607c4ab166da225c1f6f71827ae6201d4edf7d9066f2245e0d75ac1805" prot="public">
+          <name>SW2</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -277,20 +82,245 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/UserInterface/Common.h" line="59" column="1" bodyfile="Source/Utils/UserInterface/Common.h" bodystart="58" bodyend="80"/>
+        <location file="Source/VirtualMachine/Constants.h" line="27" column="1" bodyfile="Source/VirtualMachine/Constants.h" bodystart="26" bodyend="38"/>
       </memberdef>
-      <memberdef kind="enum" id="a00902_1a52a9537a5cb72fb438de8f7331ffd9a2" prot="public" static="no" strong="no">
+      <memberdef kind="enum" id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8" prot="public" static="no" strong="no">
         <type></type>
-        <name>Orientation</name>
-        <enumvalue id="a00902_1a52a9537a5cb72fb438de8f7331ffd9a2a271c30a3b0460f8419bd335556d6a496" prot="public">
-          <name>OR_HORIZONTAL</name>
+        <name>TokenType</name>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a71e915ab635f656148cf8990f77e5171" prot="public">
+          <name>TOK_ERROR</name>
+          <initializer>= -2</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00902_1a52a9537a5cb72fb438de8f7331ffd9a2a447f7e8d33ccc8b1edc5aa00e8f5202f" prot="public">
-          <name>OR_VERTICAL</name>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8aa3110406fa7d6ce5c6dba8fd3594d633" prot="public">
+          <name>TOK_EOF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8abe92c0e4ce7a4c0b26df409cab3cd1a7" prot="public">
+          <name>TOK_NULL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8af65d8765d7554151c22a5de2475e4a04" prot="public">
+          <name>TOK_INTEGER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a79fe4d72ec11f5d2ba06c0f0818bc383" prot="public">
+          <name>TOK_IDENTIFIER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a15637fa7561d27e7ec3767c1234f30c8" prot="public">
+          <name>TOK_PUSH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8acc1f94b8928811b09124734ee1597a55" prot="public">
+          <name>TOK_POP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8ac1c79b33295900ce5fb9b7388f9d3774" prot="public">
+          <name>TOK_ARGUMENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a884782019d67a9034800b2e52853285f" prot="public">
+          <name>TOK_LOCAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a34c8a308ae07cccf0911f5beedf966b1" prot="public">
+          <name>TOK_STATIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a1b5933cb66c94f5d52f4b26aa5d21687" prot="public">
+          <name>TOK_CONSTANT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a336b66142cf793364a1852264a54363e" prot="public">
+          <name>TOK_THIS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a4a6f04837563a657059418583b193f6d" prot="public">
+          <name>TOK_THAT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a1ff62250b7cc15cf5232385336a43faa" prot="public">
+          <name>TOK_POINTER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a9a81b7232eec35bfa052a1127102ef88" prot="public">
+          <name>TOK_TEMP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a4e509ea02cf3295cfb974cbef858a2a0" prot="public">
+          <name>TOK_IF_GOTO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8adefb15a333279ec39429629d72c7247b" prot="public">
+          <name>TOK_GOTO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8adea00dd7260945f628607920c28f4f88" prot="public">
+          <name>TOK_LABEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a8fe88815a953aa99c8e5c8d5ee61977b" prot="public">
+          <name>TOK_FUNCTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8aba05bfde3b583f0f57670db082435502" prot="public">
+          <name>TOK_CALL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8aab8d542c9b300e713566c31fd04978b2" prot="public">
+          <name>TOK_RETURN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a93c0f222ca3e14bf194e2ada515f6231" prot="public">
+          <name>TOK_EQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8afa3234091b8747a25c81465bbc76356e" prot="public">
+          <name>TOK_GT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a34d01c2b796f4fba92dbbdba6829b4de" prot="public">
+          <name>TOK_LT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8ad252188e8cc229f0e37a62bc2a6effbb" prot="public">
+          <name>TOK_ADD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a44c80f603918c4ec0059e90c6aec5da0" prot="public">
+          <name>TOK_SUB</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a090fd2880780efacb459ca5a0f9108b2" prot="public">
+          <name>TOK_AND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8afc9b5bec56f03be602419b704b93791e" prot="public">
+          <name>TOK_OR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8ab3a17c6fa237215d3cbd4ef2147917c5" prot="public">
+          <name>TOK_NOT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a3528eed46cd82da594149f52de5580f0" prot="public">
+          <name>TOK_NEG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a3fa291fa8690f5c7571b54b2fa681b08" prot="public">
+          <name>TOK_SET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a066351ce777c87e213b2dc4daf40e599" prot="public">
+          <name>TOK_RESET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a8ecc09af794ba08a877a741036883409" prot="public">
+          <name>TOK_HALT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a4ab563e860977220dd359e7df2a3db53" prot="public">
+          <name>TOK_ASM</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -302,498 +332,74 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/UserInterface/Common.h" line="83" column="1" bodyfile="Source/Utils/UserInterface/Common.h" bodystart="82" bodyend="86"/>
-      </memberdef>
-      <memberdef kind="enum" id="a00902_1a7553833a41980e8c2bae00177d41129e" prot="public" static="no" strong="no">
-        <type></type>
-        <name>PollResult</name>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ead7a3bc54fb41225d6588c6fb307f0bcf" prot="public">
-          <name>PR_EXIT</name>
-          <initializer>= 0</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea628e6c1cd2f76b3b8b8346aaa4dfecf1" prot="public">
-          <name>PR_NO_INPUT</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea3dde91a4939857995c340109342db15b" prot="public">
-          <name>PR_RESIZE</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea312b0a8f38ea0bb8efd0aab28979ede1" prot="public">
-          <name>PR_0</name>
-          <initializer>= &apos;0&apos;</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea9a8a91789ebb52f8166f7a8d2407057c" prot="public">
-          <name>PR_1</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea5d6a27ad614058c15c679f4a7fe99d48" prot="public">
-          <name>PR_2</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea33335fa899c442d134eb40ce5c993426" prot="public">
-          <name>PR_3</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea79877e014f1a2ad5cf2568728d4cb866" prot="public">
-          <name>PR_4</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129eaa24d438ee4351597701da9911ccdab36" prot="public">
-          <name>PR_5</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129eaaa9bd05ee2d18e6ca9cd753922bac771" prot="public">
-          <name>PR_6</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea9a43ed3a898c79796908fe26f7108957" prot="public">
-          <name>PR_7</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129eaa61eee33219bf701c43eef34a220b2f6" prot="public">
-          <name>PR_8</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129eac5278fe7cf3a9ab21e7762082b5b5ef6" prot="public">
-          <name>PR_9</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea2627c1de742b4d08526efd3e20d70eea" prot="public">
-          <name>PR_A</name>
-          <initializer>= &apos;a&apos;</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea56955bfa3e61dcda326bb5705d8b0b08" prot="public">
-          <name>PR_B</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129eac5bfa9b08ea8636eb07cf284d5307f20" prot="public">
-          <name>PR_C</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea9a2c70635383e3b23c167d887a867ec4" prot="public">
-          <name>PR_D</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129eaeca4d3710469b65a521f52f648f9d453" prot="public">
-          <name>PR_E</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea5a373100d7d678d8f1db646c3106d710" prot="public">
-          <name>PR_F</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129eafc725582557ab4116696b422ce70002c" prot="public">
-          <name>PR_G</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea228362349dccf8097cdc731e9933c97f" prot="public">
-          <name>PR_H</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea4c050883f463c7194fc23506e0bd3804" prot="public">
-          <name>PR_I</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea0a5764199b1b7d6a875bf14c05a92c3f" prot="public">
-          <name>PR_J</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ead97778b9a49df986057a346ab6c2faf6" prot="public">
-          <name>PR_K</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea71ba4e8ba6d2f0b6ff43241f39d84065" prot="public">
-          <name>PR_L</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129eab51a41d00259b4e1946618dfeabe70f9" prot="public">
-          <name>PR_M</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ead4c3ea861e60eb67e9891aaa4c3cff92" prot="public">
-          <name>PR_N</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129eabeb57b5bdcea1ff48b857b2016b27097" prot="public">
-          <name>PR_O</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea94e718444a7fa856ff1522b809bfdd66" prot="public">
-          <name>PR_P</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129eaac096e4ab5b9bda727f54b4e076086da" prot="public">
-          <name>PR_Q</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129eadce783d1df91b3fd26fd5817f0ff07c6" prot="public">
-          <name>PR_R</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129eac0f91de647a0b16eb41d0f7ca451b033" prot="public">
-          <name>PR_S</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129eaa696bdfb3daf4cdf617281b29943b107" prot="public">
-          <name>PR_T</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea9285423542bdaadf9eab8e14b50f3633" prot="public">
-          <name>PR_U</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea22f2d6a843672a83b82bd11fd7318fb5" prot="public">
-          <name>PR_V</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129eadbb94a03fa4dad97cdfa6559dd29639b" prot="public">
-          <name>PR_W</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129eae6c3839fc23b67d3fb0a67fe97030fb4" prot="public">
-          <name>PR_X</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea3bc32ea5a0e65d84b122bc87b9fd518b" prot="public">
-          <name>PR_Y</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea9eac26a84b6afb0fdedfce24daaa5791" prot="public">
-          <name>PR_Z</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea35bf1e881e438245e59ccdf1cd1d0774" prot="public">
-          <name>PR_UP_ARROW</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea3c5a3820b4f7ada22ec68576968bd89d" prot="public">
-          <name>PR_DOWN_ARROW</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea930343c4a28078ebe2a6b9cfeb4ba56e" prot="public">
-          <name>PR_RIGHT_ARROW</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ead791c01c4f98f1dccf5b6bd16ff003bf" prot="public">
-          <name>PR_LEFT_ARROW</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea89c5fae3ba9dbf20538adec915496de2" prot="public">
-          <name>PR_CTRL</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea6bda70105ae10d19db8b9170dddecf76" prot="public">
-          <name>PR_SHIFT</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea403265cd9f8c17461bb349be5dcc1d35" prot="public">
-          <name>PR_ALT</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00902_1a7553833a41980e8c2bae00177d41129ea7d0aa57d06151d917be3d0a2a61a475f" prot="public">
-          <name>PR_ESC</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/UserInterface/Common.h" line="89" column="1" bodyfile="Source/Utils/UserInterface/Common.h" bodystart="88" bodyend="140"/>
+        <location file="Source/VirtualMachine/Token.h" line="28" column="1" bodyfile="Source/VirtualMachine/Token.h" bodystart="27" bodyend="64"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="a00902_1a4f45196c0f3ee54c6c4dcff9b593a42b" prot="public" static="no">
-        <type>std::vector&lt; <ref refid="a01296" kindref="compound">Point</ref> &gt;</type>
-        <definition>using Hack::Ui::Path = typedef std::vector&lt;Point&gt;</definition>
+      <memberdef kind="typedef" id="a00902_1a08484157b85b2bda07ff1e0c32072f10" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &gt;</type>
+        <definition>using Hack::VirtualMachine::CodeCache = typedef std::vector&lt;String&gt;</definition>
         <argsstring></argsstring>
-        <name>Path</name>
+        <name>CodeCache</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/UserInterface/Math.h" line="61" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="61" bodyend="-1"/>
+        <location file="Source/VirtualMachine/Scanner.h" line="28" column="1" bodyfile="Source/VirtualMachine/Scanner.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="a00902_1a02186d1a9c875e3583ff775f46ad7c0a" prot="public" static="no">
+        <type><ref refid="a01266" kindref="compound">Cache</ref>&lt; <ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &gt;</type>
+        <definition>using Hack::VirtualMachine::StringCache = typedef Cache&lt;String&gt;</definition>
+        <argsstring></argsstring>
+        <name>StringCache</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Parser.h" line="30" column="1" bodyfile="Source/VirtualMachine/Parser.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="a00902_1a1256a43300d83510604c7b9755796e01" prot="public" static="no">
+        <type><ref refid="a01286" kindref="compound">TokenBase</ref></type>
+        <definition>using Hack::VirtualMachine::Token = typedef TokenBase</definition>
+        <argsstring></argsstring>
+        <name>Token</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Token.h" line="66" column="1" bodyfile="Source/VirtualMachine/Token.h" bodystart="66" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="a00902_1aec02730284fab877bca263a7af111eda" prot="public" static="no" mutable="no">
-        <type>constexpr <ref refid="a01364" kindref="compound">uint8_t</ref></type>
-        <definition>constexpr uint8_t Hack::Ui::AByte</definition>
-        <argsstring></argsstring>
-        <name>AByte</name>
-        <initializer>= 3</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/UserInterface/Common.h" line="29" column="1" bodyfile="Source/Utils/UserInterface/Common.h" bodystart="29" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00902_1a606e644506be4ad6f6cdbb42ce408826" prot="public" static="no" mutable="no">
-        <type>constexpr <ref refid="a01364" kindref="compound">uint8_t</ref></type>
-        <definition>constexpr uint8_t Hack::Ui::BByte</definition>
-        <argsstring></argsstring>
-        <name>BByte</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/UserInterface/Common.h" line="32" column="1" bodyfile="Source/Utils/UserInterface/Common.h" bodystart="32" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00902_1a0ea3206f4a2713ef362fdf3f98c85f69" prot="public" static="no" mutable="no">
-        <type>constexpr <ref refid="a01364" kindref="compound">uint8_t</ref></type>
-        <definition>constexpr uint8_t Hack::Ui::GByte</definition>
-        <argsstring></argsstring>
-        <name>GByte</name>
-        <initializer>= 1</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/UserInterface/Common.h" line="31" column="1" bodyfile="Source/Utils/UserInterface/Common.h" bodystart="31" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00902_1a32af7f12bf8096a6c71bd1e45ac6b9b1" prot="public" static="no" mutable="no">
-        <type>constexpr <ref refid="a01364" kindref="compound">uint8_t</ref></type>
-        <definition>constexpr uint8_t Hack::Ui::RByte</definition>
-        <argsstring></argsstring>
-        <name>RByte</name>
-        <initializer>= 2</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/UserInterface/Common.h" line="30" column="1" bodyfile="Source/Utils/UserInterface/Common.h" bodystart="30" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00902_1afa04eb3bbd4814431ab8fce1f562166f" prot="public" static="no" mutable="no">
-        <type>constexpr char</type>
-        <definition>constexpr char Hack::Ui::RgbFormatBg[]</definition>
+      <memberdef kind="variable" id="a00902_1a30e923dda3e21a2da18e80be744949c7" prot="public" static="no" mutable="no">
+        <type>constexpr <ref refid="a01346" kindref="compound">KeywordTable</ref></type>
+        <definition>constexpr KeywordTable Hack::VirtualMachine::Reserved[]</definition>
         <argsstring>[]</argsstring>
-        <name>RgbFormatBg</name>
-        <initializer>= &quot;\x1b[48;2;%d;%d;%dm&quot;</initializer>
+        <name>Reserved</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/UserInterface/Common.h" line="35" column="1" bodyfile="Source/Utils/UserInterface/Common.h" bodystart="35" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00902_1aefd7f2d50548723bc913d2c3289e31c1" prot="public" static="no" mutable="no">
-        <type>constexpr char</type>
-        <definition>constexpr char Hack::Ui::RgbFormatFg[]</definition>
-        <argsstring>[]</argsstring>
-        <name>RgbFormatFg</name>
-        <initializer>= &quot;\x1b[38;2;%d;%d;%dm&quot;</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/UserInterface/Common.h" line="34" column="1" bodyfile="Source/Utils/UserInterface/Common.h" bodystart="34" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00902_1a0d4a60535dddbf3b72b7d84ac8a25bc3" prot="public" static="no" mutable="no">
-        <type>constexpr int</type>
-        <definition>constexpr int Hack::Ui::StdInput</definition>
-        <argsstring></argsstring>
-        <name>StdInput</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/UserInterface/PlatformUnix.cpp" line="35" column="1" bodyfile="Source/Utils/UserInterface/PlatformUnix.cpp" bodystart="35" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00902_1abb4f00c31f8360c500f8ac00c478bd8b" prot="public" static="no" mutable="no">
-        <type>constexpr int</type>
-        <definition>constexpr int Hack::Ui::StdOutput</definition>
-        <argsstring></argsstring>
-        <name>StdOutput</name>
-        <initializer>= 1</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/UserInterface/PlatformUnix.cpp" line="36" column="1" bodyfile="Source/Utils/UserInterface/PlatformUnix.cpp" bodystart="36" bodyend="-1"/>
+        <location file="Source/VirtualMachine/Scanner.cpp" line="37" column="1" bodyfile="Source/VirtualMachine/Scanner.cpp" bodystart="37" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="a00902_1af8c1578b66f9a23dd22d006b8fcc42c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>int</type>
-        <definition>int Hack::Ui::Clamp</definition>
-        <argsstring>(const int &amp;in, const int &amp;start, const int &amp;end)</argsstring>
-        <name>Clamp</name>
+      <memberdef kind="function" id="a00902_1ad47a4e14037dad618c52c200c3c35fc0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::VirtualMachine::isValidCharacter</definition>
+        <argsstring>(const int ch)</argsstring>
+        <name>isValidCharacter</name>
         <param>
-          <type>const int &amp;</type>
-          <declname>in</declname>
-        </param>
-        <param>
-          <type>const int &amp;</type>
-          <declname>start</declname>
-        </param>
-        <param>
-          <type>const int &amp;</type>
-          <declname>end</declname>
+          <type>const int</type>
+          <declname>ch</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -801,13 +407,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/UserInterface/Math.h" line="190" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="190" bodyend="199"/>
+        <location file="Source/VirtualMachine/Scanner.cpp" line="70" column="1" bodyfile="Source/VirtualMachine/Scanner.cpp" bodystart="70" bodyend="73"/>
+        <references refid="a00894_1a3b7e26319acf069b65ddb8e0f3f34812" compoundref="a00794" startline="193" endline="196">Hack::isLetter</references>
+        <references refid="a00894_1a3072f15c6cc44192ad127f00ab7430cd" compoundref="a00794" startline="187" endline="190">Hack::isDecimal</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Utils/UserInterface/ColorCache.cpp" line="26" column="1"/>
+    <location file="Source/Compiler/Generator/Generator.h" line="32" column="1"/>
   </compounddef>
 </doxygen>

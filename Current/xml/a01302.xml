@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01302" kind="class" language="C++" prot="public">
+    <compoundname>Hack::Ui::Point</compoundname>
+    <includes local="no">Source/Utils/UserInterface/Math.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="a01302_1aa9335e7ea01d18489913ee919bcc22ea" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Hack::Ui::Point::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Math.h" line="32" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01302_1a7b3997703cfb10a093aacb82d4cc6ec7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Hack::Ui::Point::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Math.h" line="32" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a01302_1a6f5d53abb3a2a63ef97ca1a27d7739a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Ui::Point::Point</definition>
+        <argsstring>()=default</argsstring>
+        <name>Point</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Math.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a01302_1a7b78ac0b1c8b605b3e49d8c63e81d75b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Ui::Point::Point</definition>
+        <argsstring>(const Point &amp;oth)=default</argsstring>
+        <name>Point</name>
+        <param>
+          <type>const <ref refid="a01302" kindref="compound">Point</ref> &amp;</type>
+          <declname>oth</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Math.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a01302_1adbb8b7e5c9d603688f1d03abfc15ef01" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Ui::Point::Point</definition>
+        <argsstring>(const int &amp;nx, const int &amp;ny)</argsstring>
+        <name>Point</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>nx</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>ny</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Math.h" line="38" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="38" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="a01302_1a673a523fadc1c109881aa6140f6e1b2f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="a01302" kindref="compound">Point</ref></type>
+        <definition>Point Hack::Ui::Point::maxPoint</definition>
+        <argsstring>(const Point &amp;rhs) const</argsstring>
+        <name>maxPoint</name>
+        <param>
+          <type>const <ref refid="a01302" kindref="compound">Point</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Math.h" line="44" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="44" bodyend="50"/>
+        <references refid="a01302_1aa9335e7ea01d18489913ee919bcc22ea" compoundref="a00863" startline="32">x</references>
+        <references refid="a01302_1a7b3997703cfb10a093aacb82d4cc6ec7" compoundref="a00863" startline="32">y</references>
+      </memberdef>
+      <memberdef kind="function" id="a01302_1aec3e51560917b1a0f1ec978d3975ef46" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="a01302" kindref="compound">Point</ref></type>
+        <definition>Point Hack::Ui::Point::minPoint</definition>
+        <argsstring>(const Point &amp;rhs) const</argsstring>
+        <name>minPoint</name>
+        <param>
+          <type>const <ref refid="a01302" kindref="compound">Point</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Math.h" line="52" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="52" bodyend="58"/>
+        <references refid="a01302_1aa9335e7ea01d18489913ee919bcc22ea" compoundref="a00863" startline="32">x</references>
+        <references refid="a01302_1a7b3997703cfb10a093aacb82d4cc6ec7" compoundref="a00863" startline="32">y</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="455">
+        <label>int</label>
+      </node>
+      <node id="454">
+        <label>Hack::Ui::Point</label>
+        <link refid="a01302"/>
+        <childnode refid="455" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Utils/UserInterface/Math.h" line="30" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="29" bodyend="59"/>
+    <listofallmembers>
+      <member refid="a01302_1a673a523fadc1c109881aa6140f6e1b2f" prot="public" virt="non-virtual"><scope>Hack::Ui::Point</scope><name>maxPoint</name></member>
+      <member refid="a01302_1aec3e51560917b1a0f1ec978d3975ef46" prot="public" virt="non-virtual"><scope>Hack::Ui::Point</scope><name>minPoint</name></member>
+      <member refid="a01302_1a6f5d53abb3a2a63ef97ca1a27d7739a4" prot="public" virt="non-virtual"><scope>Hack::Ui::Point</scope><name>Point</name></member>
+      <member refid="a01302_1a7b78ac0b1c8b605b3e49d8c63e81d75b" prot="public" virt="non-virtual"><scope>Hack::Ui::Point</scope><name>Point</name></member>
+      <member refid="a01302_1adbb8b7e5c9d603688f1d03abfc15ef01" prot="public" virt="non-virtual"><scope>Hack::Ui::Point</scope><name>Point</name></member>
+      <member refid="a01302_1aa9335e7ea01d18489913ee919bcc22ea" prot="public" virt="non-virtual"><scope>Hack::Ui::Point</scope><name>x</name></member>
+      <member refid="a01302_1a7b3997703cfb10a093aacb82d4cc6ec7" prot="public" virt="non-virtual"><scope>Hack::Ui::Point</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

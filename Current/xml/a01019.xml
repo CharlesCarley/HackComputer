@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01019" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>Hack::Chips::DMux4Way</compoundname>
+    <basecompoundref refid="a00987" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; uint8_t, 8 &gt;</basecompoundref>
+    <includes local="no">Source/Chips/DMux4Way.h</includes>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="a01019_1a61ab0c8ced51e00de041a6fd5a8d62f1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::DMux4Way::evaluate</definition>
+        <argsstring>()</argsstring>
+        <name>evaluate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/DMux4Way.h" line="30" column="1" bodyfile="Source/Chips/DMux4Way.cpp" bodystart="98" bodyend="124"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a01019_1a476120f2183fe5ad6099849e2173fac8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Chips::DMux4Way::DMux4Way</definition>
+        <argsstring>()</argsstring>
+        <name>DMux4Way</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/DMux4Way.h" line="33" column="1" bodyfile="Source/Chips/DMux4Way.cpp" bodystart="30" bodyend="33"/>
+        <references refid="a00987_1a5a604431fa35bc87e0d7f4328b4ad4a1" compoundref="a00470" startline="112" endline="115">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::assignBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01019_1a92b4a86f01bee842053f14425411a1de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::DMux4Way::getA</definition>
+        <argsstring>()</argsstring>
+        <name>getA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/DMux4Way.h" line="39" column="1" bodyfile="Source/Chips/DMux4Way.cpp" bodystart="48" bodyend="53"/>
+        <references refid="a00987_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00470" startline="100" endline="103">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::getBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01019_1ad95915c78bc579864000fbb62a642c79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::DMux4Way::getB</definition>
+        <argsstring>()</argsstring>
+        <name>getB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/DMux4Way.h" line="41" column="1" bodyfile="Source/Chips/DMux4Way.cpp" bodystart="55" bodyend="60"/>
+        <references refid="a00987_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00470" startline="100" endline="103">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::getBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01019_1a744b9f15d3e376c8c7cfe3ef6e3126c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::DMux4Way::getC</definition>
+        <argsstring>()</argsstring>
+        <name>getC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/DMux4Way.h" line="43" column="1" bodyfile="Source/Chips/DMux4Way.cpp" bodystart="62" bodyend="67"/>
+        <references refid="a00987_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00470" startline="100" endline="103">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::getBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01019_1af60975a11e5180fdaca9b45d9add06d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::DMux4Way::getD</definition>
+        <argsstring>()</argsstring>
+        <name>getD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/DMux4Way.h" line="45" column="1" bodyfile="Source/Chips/DMux4Way.cpp" bodystart="69" bodyend="74"/>
+        <references refid="a00987_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00470" startline="100" endline="103">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::getBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01019_1aae07a8a1ed42f593bae3ac2d94de2136" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a01367" kindref="compound">uint8_t</ref></type>
+        <definition>uint8_t Hack::Chips::DMux4Way::getIndex</definition>
+        <argsstring>()</argsstring>
+        <name>getIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/DMux4Way.h" line="49" column="1" bodyfile="Source/Chips/DMux4Way.cpp" bodystart="93" bodyend="96"/>
+        <references refid="a01019_1a888f75b5b94958edd920debb58577c1f" compoundref="a00506" startline="76" endline="91">getOut</references>
+      </memberdef>
+      <memberdef kind="function" id="a01019_1a888f75b5b94958edd920debb58577c1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a01367" kindref="compound">uint8_t</ref></type>
+        <definition>uint8_t Hack::Chips::DMux4Way::getOut</definition>
+        <argsstring>()</argsstring>
+        <name>getOut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/DMux4Way.h" line="47" column="1" bodyfile="Source/Chips/DMux4Way.cpp" bodystart="76" bodyend="91"/>
+        <references refid="a00987_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00470" startline="100" endline="103">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::getBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01019_1a66abd6f9ce1ff208709ee37f08a8dd7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::DMux4Way::setIn</definition>
+        <argsstring>(bool input)</argsstring>
+        <name>setIn</name>
+        <param>
+          <type>bool</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/DMux4Way.h" line="35" column="1" bodyfile="Source/Chips/DMux4Way.cpp" bodystart="35" bodyend="39"/>
+        <references refid="a00987_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00470" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
+        <references refid="a00987_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="a00470" startline="106" endline="109">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::setBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01019_1abb2de056c675819e8657f06e9cd5dfc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::DMux4Way::setSel</definition>
+        <argsstring>(const uint8_t &amp;selection)</argsstring>
+        <name>setSel</name>
+        <param>
+          <type>const <ref refid="a01367" kindref="compound">uint8_t</ref> &amp;</type>
+          <declname>selection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/DMux4Way.h" line="37" column="1" bodyfile="Source/Chips/DMux4Way.cpp" bodystart="41" bodyend="46"/>
+        <references refid="a00987_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00470" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
+        <references refid="a00987_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="a00470" startline="106" endline="109">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::setBit</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="132">
+        <label>Hack::Chips::DMux4Way</label>
+        <link refid="a01019"/>
+        <childnode refid="133" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="133">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="a00987"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="134">
+        <label>Hack::Chips::DMux4Way</label>
+        <link refid="a01019"/>
+        <childnode refid="135" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="136">
+        <label>uint8_t</label>
+        <link refid="a01367"/>
+      </node>
+      <node id="135">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="a00987"/>
+        <childnode refid="136" relation="usage">
+          <edgelabel>_bits</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Chips/DMux4Way.h" line="28" column="1" bodyfile="Source/Chips/DMux4Way.h" bodystart="27" bodyend="50"/>
+    <listofallmembers>
+      <member refid="a00987_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::DMux4Way</scope><name>_bits</name></member>
+      <member refid="a00987_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux4Way</scope><name>applyBit</name></member>
+      <member refid="a00987_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux4Way</scope><name>assignBit</name></member>
+      <member refid="a00987_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux4Way</scope><name>Chip</name></member>
+      <member refid="a00987_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux4Way</scope><name>clearBit</name></member>
+      <member refid="a01019_1a476120f2183fe5ad6099849e2173fac8" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux4Way</scope><name>DMux4Way</name></member>
+      <member refid="a01019_1a61ab0c8ced51e00de041a6fd5a8d62f1" prot="private" virt="non-virtual"><scope>Hack::Chips::DMux4Way</scope><name>evaluate</name></member>
+      <member refid="a01019_1a92b4a86f01bee842053f14425411a1de" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux4Way</scope><name>getA</name></member>
+      <member refid="a01019_1ad95915c78bc579864000fbb62a642c79" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux4Way</scope><name>getB</name></member>
+      <member refid="a00987_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux4Way</scope><name>getBit</name></member>
+      <member refid="a01019_1a744b9f15d3e376c8c7cfe3ef6e3126c2" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux4Way</scope><name>getC</name></member>
+      <member refid="a01019_1af60975a11e5180fdaca9b45d9add06d4" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux4Way</scope><name>getD</name></member>
+      <member refid="a01019_1aae07a8a1ed42f593bae3ac2d94de2136" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux4Way</scope><name>getIndex</name></member>
+      <member refid="a01019_1a888f75b5b94958edd920debb58577c1f" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux4Way</scope><name>getOut</name></member>
+      <member refid="a00987_1a63bb368bb0827830235759b33718d1b4" prot="protected" virt="virtual"><scope>Hack::Chips::DMux4Way</scope><name>isDirty</name></member>
+      <member refid="a00987_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux4Way</scope><name>setBit</name></member>
+      <member refid="a01019_1a66abd6f9ce1ff208709ee37f08a8dd7b" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux4Way</scope><name>setIn</name></member>
+      <member refid="a01019_1abb2de056c675819e8657f06e9cd5dfc9" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux4Way</scope><name>setSel</name></member>
+      <member refid="a00987_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::DMux4Way</scope><name>~Chip</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

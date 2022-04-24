@@ -1,98 +1,187 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00665" kind="file" language="C++">
-    <compoundname>SRLatch.h</compoundname>
-    <includes refid="a00467" local="yes">Chips/Chip.h</includes>
-    <includedby refid="a00662" local="yes">Source/Chips/SRLatch.cpp</includedby>
+    <compoundname>Screen.h</compoundname>
+    <includes refid="a00494" local="yes">Chips/DefaultMemorySegment.h</includes>
+    <includedby refid="a01657" local="yes">Source/Chips/Memory.h</includedby>
+    <includedby refid="a00767" local="yes">Source/Computer/CommandRuntime.h</includedby>
+    <includedby refid="a00773" local="yes">Source/Computer/DebugRuntime.h</includedby>
+    <includedby refid="a00776" local="yes">Source/Computer/RuntimeInterface.h</includedby>
+    <includedby refid="a00782" local="yes">Source/Computer/RuntimeSDL.h</includedby>
     <incdepgraph>
-      <node id="2198">
+      <node id="2159">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="2199" relation="include">
+        <childnode refid="2160" relation="include">
         </childnode>
       </node>
-      <node id="2190">
+      <node id="2151">
         <label>Chips/BitUtils.h</label>
-        <childnode refid="2191" relation="include">
+        <childnode refid="2152" relation="include">
         </childnode>
-        <childnode refid="2192" relation="include">
+        <childnode refid="2153" relation="include">
         </childnode>
       </node>
-      <node id="2199">
+      <node id="2160">
         <label>cstdint</label>
       </node>
-      <node id="2195">
+      <node id="2156">
         <label>string</label>
       </node>
-      <node id="2197">
+      <node id="2158">
         <label>UserInterface/Context.h</label>
-        <childnode refid="2193" relation="include">
+        <childnode refid="2154" relation="include">
         </childnode>
-        <childnode refid="2198" relation="include">
+        <childnode refid="2159" relation="include">
         </childnode>
-        <childnode refid="2200" relation="include">
+        <childnode refid="2161" relation="include">
         </childnode>
       </node>
-      <node id="2200">
+      <node id="2161">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="2199" relation="include">
+        <childnode refid="2160" relation="include">
         </childnode>
-        <childnode refid="2196" relation="include">
+        <childnode refid="2157" relation="include">
         </childnode>
-        <childnode refid="2198" relation="include">
+        <childnode refid="2159" relation="include">
         </childnode>
       </node>
-      <node id="2192">
+      <node id="2153">
         <label>Utils/Console.h</label>
-        <childnode refid="2193" relation="include">
+        <childnode refid="2154" relation="include">
         </childnode>
-        <childnode refid="2197" relation="include">
+        <childnode refid="2158" relation="include">
         </childnode>
       </node>
-      <node id="2191">
+      <node id="2152">
         <label>bitset</label>
       </node>
-      <node id="2188">
-        <label>Source/Chips/SRLatch.h</label>
-        <link refid="a00665"/>
-        <childnode refid="2189" relation="include">
-        </childnode>
-      </node>
-      <node id="2196">
+      <node id="2157">
         <label>vector</label>
       </node>
-      <node id="2194">
+      <node id="2155">
         <label>sstream</label>
       </node>
-      <node id="2189">
+      <node id="2150">
         <label>Chips/Chip.h</label>
-        <childnode refid="2190" relation="include">
+        <childnode refid="2151" relation="include">
         </childnode>
-        <childnode refid="2192" relation="include">
+        <childnode refid="2153" relation="include">
         </childnode>
       </node>
-      <node id="2193">
+      <node id="2147">
+        <label>Chips/DefaultMemorySegment.h</label>
+        <childnode refid="2148" relation="include">
+        </childnode>
+      </node>
+      <node id="2148">
+        <label>Chips/IMemorySegment.h</label>
+        <childnode refid="2149" relation="include">
+        </childnode>
+        <childnode refid="2150" relation="include">
+        </childnode>
+      </node>
+      <node id="2146">
+        <label>Source/Chips/Screen.h</label>
+        <link refid="a00665"/>
+        <childnode refid="2147" relation="include">
+        </childnode>
+      </node>
+      <node id="2149">
+        <label>cstring</label>
+      </node>
+      <node id="2154">
         <label>String.h</label>
-        <childnode refid="2194" relation="include">
+        <childnode refid="2155" relation="include">
         </childnode>
-        <childnode refid="2195" relation="include">
+        <childnode refid="2156" relation="include">
         </childnode>
-        <childnode refid="2196" relation="include">
+        <childnode refid="2157" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2202">
-        <label>Source/Chips/SRLatch.cpp</label>
+      <node id="2173">
+        <label>Source/Computer/RuntimeSDL.h</label>
       </node>
-      <node id="2201">
-        <label>Source/Chips/SRLatch.h</label>
+      <node id="2172">
+        <label>Source/Computer/DebugRuntime.h</label>
+        <childnode refid="2167" relation="include">
+        </childnode>
+        <childnode refid="2169" relation="include">
+        </childnode>
+      </node>
+      <node id="2164">
+        <label>Source/Chips/Computer.h</label>
+        <childnode refid="2165" relation="include">
+        </childnode>
+        <childnode refid="2166" relation="include">
+        </childnode>
+        <childnode refid="2167" relation="include">
+        </childnode>
+        <childnode refid="2168" relation="include">
+        </childnode>
+        <childnode refid="2169" relation="include">
+        </childnode>
+        <childnode refid="2170" relation="include">
+        </childnode>
+      </node>
+      <node id="2163">
+        <label>Source/Chips/Memory.h</label>
+        <childnode refid="2164" relation="include">
+        </childnode>
+        <childnode refid="2174" relation="include">
+        </childnode>
+      </node>
+      <node id="2165">
+        <label>Source/Bindings/Bindings.cpp</label>
+      </node>
+      <node id="2166">
+        <label>Source/Chips/Computer.cpp</label>
+      </node>
+      <node id="2168">
+        <label>Source/Computer/CommandRuntime.cpp</label>
+      </node>
+      <node id="2174">
+        <label>Source/Chips/Memory.cpp</label>
+      </node>
+      <node id="2169">
+        <label>Source/Computer/DebugRuntime.cpp</label>
+      </node>
+      <node id="2162">
+        <label>Source/Chips/Screen.h</label>
         <link refid="a00665"/>
-        <childnode refid="2202" relation="include">
+        <childnode refid="2163" relation="include">
+        </childnode>
+        <childnode refid="2171" relation="include">
+        </childnode>
+        <childnode refid="2172" relation="include">
+        </childnode>
+        <childnode refid="2170" relation="include">
+        </childnode>
+        <childnode refid="2173" relation="include">
+        </childnode>
+      </node>
+      <node id="2167">
+        <label>Source/Computer/Application.cpp</label>
+      </node>
+      <node id="2170">
+        <label>Source/Computer/RuntimeInterface.h</label>
+        <childnode refid="2171" relation="include">
+        </childnode>
+        <childnode refid="2172" relation="include">
+        </childnode>
+        <childnode refid="2173" relation="include">
+        </childnode>
+      </node>
+      <node id="2171">
+        <label>Source/Computer/CommandRuntime.h</label>
+        <childnode refid="2167" relation="include">
+        </childnode>
+        <childnode refid="2168" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
-    <innerclass refid="a01116" prot="public">Hack::Chips::SRLatch</innerclass>
-    <innernamespace refid="a00890">Hack::Chips</innernamespace>
+    <innernamespace refid="a00896">Hack::Chips</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -120,32 +209,14 @@
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Chip.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/DefaultMemorySegment.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00890" kindref="compound">Hack::Chips</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00896" kindref="compound">Hack::Chips</ref></highlight></codeline>
 <codeline lineno="26"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="27" refid="a01116" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01116" kindref="compound">SRLatch</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="a00984" kindref="compound" tooltip="Chip is the base class for all chips defined in this system. It uses a template integer for the _bits...">Chip</ref>&lt;uint8_t,<sp/>8&gt;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>evaluate();</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isDirty()</highlight><highlight class="keyword"><sp/>override</highlight></codeline>
-<codeline lineno="33"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00984_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(7);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01116_1ab4024d57ab5595233ac4c3dc6828336a" kindref="member">SRLatch</ref>();</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01116_1a439b80b9ddb355d12431020e5aa85bd3" kindref="member">setS</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v);</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01116_1a54e7a2f18ea3941477404a43b29938aa" kindref="member">setR</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v);</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01116_1a1be3e2f9a12b13a1403615c3f31ce609" kindref="member">setQn</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01116_1a50289416e241035b969e5ad069aed676" kindref="member">getQ</ref>();</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01116_1ad1af33b9f4ff6c5e85ff709d81d830c9" kindref="member">getQPlus</ref>();</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="47"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="a00896_1a205aa97050ad01560145252139c81057" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="a01038" kindref="compound">IMemorySegment&lt;0x6000, 0x4000&gt;</ref><sp/><ref refid="a00896_1a205aa97050ad01560145252139c81057" kindref="member">Screen</ref>;</highlight></codeline>
+<codeline lineno="28" refid="a00896_1a40609e493601249c692ffb4b5d2d31a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="a01010" kindref="compound">ScreenSegment</ref><sp/>=<sp/><ref refid="a01010" kindref="compound">DefaultMemorySegment&lt;0x6000, 0x4000&gt;</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Chips/SRLatch.h"/>
+    <location file="Source/Chips/Screen.h"/>
   </compounddef>
 </doxygen>

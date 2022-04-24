@@ -1,48 +1,23 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01562" kind="page">
-    <compoundname>Hc05</compoundname>
-    <title>Compiler</title>
+    <compoundname>Hc02</compoundname>
+    <title>Chips</title>
     <briefdescription>
-<para>Provides tools to parse <computeroutput>.jack</computeroutput> files. </para>    </briefdescription>
+<para>Implements a circuit class library. </para>    </briefdescription>
     <detaileddescription>
-<para>Provides tools to parse <computeroutput>.jack</computeroutput> files.</para><para><linebreak/>
+<para>Implements a circuit class library.</para><para><linebreak/>
+It uses two separate implementations to compute the circuit logic.<linebreak/>
 <linebreak/>
-The definition of the grammar can be found in <ulink url="../../Source/Compiler/Analyzer/Jack.grm">Jack.grm</ulink>.</para><para><linebreak/>
+ The first implementation is written to compute the value of each circuit. I wanted to keep the chip functionality present rather than abstract it away. It links the circuits together in code and computes the value of each bit.<linebreak/>
 <linebreak/>
-Options not in the course specification.</para><para><itemizedlist>
-<listitem><para><bold>NOT</bold> <computeroutput>!</computeroutput><itemizedlist>
-<listitem><para>The not unary operator is implemented as &apos;~&apos; and &apos;!&apos;.</para></listitem></itemizedlist>
-</para></listitem></itemizedlist>
-</para><sect1 id="a01562_1Hc05Contents">
-<title>Contents</title>
-<para>The compiler consists of a set of tools to handle <computeroutput>.jack</computeroutput> files.</para><sect2 id="a01562_1Hc05SyntaxAnalyzer">
-<title>SyntaxAnalyzer</title>
-<para>Implements a static library to parse and compile the parse tree to a node tree.</para></sect2>
-<sect2 id="a01562_1Hc05CompileUtils">
-<title>CompileUtils</title>
-<para>Provides a bridge to store the node tree in intermediate form.</para></sect2>
-<sect2 id="a01562_1Hc05Jack2XML">
-<title>Jack2XML</title>
-<para>Transforms the node tree into an output xml or dot file.<linebreak/>
+ The second implementation is with the circuit behavior abstracted away. It replaces the circuit logic with a C++ implementation of for its operation.<linebreak/>
 <linebreak/>
- <programlisting filename=".txt"><codeline><highlight class="normal">Usage:<sp/>Jack2xml<sp/>&lt;options&gt;<sp/>&lt;arg[0]<sp/>..<sp/>arg[n]&gt;</highlight></codeline>
-<codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-h,<sp/>--help<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Display<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>help<sp/>message</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-f,<sp/>--format<sp/><sp/><sp/><sp/><sp/>Specify<sp/>an<sp/>output<sp/>file<sp/>format</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>xml,<sp/>format<sp/>as<sp/>XML<sp/>(</highlight><highlight class="keywordflow">default</highlight><highlight class="normal">)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>dot,<sp/>format<sp/>as<sp/>DOT</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-d,<sp/>--directory<sp/><sp/>Converts<sp/>all<sp/>.jack<sp/>files<sp/>in<sp/>the<sp/>current<sp/>directory<sp/>to<sp/>.xml</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-o,<sp/>--output<sp/><sp/><sp/><sp/><sp/>Specify<sp/>an<sp/>output<sp/>file</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>the<sp/>directory<sp/>option<sp/>takes<sp/>precedence</highlight></codeline>
-</programlisting></para></sect2>
-<sect2 id="a01562_1Hc05CodeGenerator">
-<title>CodeGenerator</title>
-<para>Implements a static library that converts the <computeroutput>.jack</computeroutput> parse tree into <computeroutput>.vm</computeroutput> form.</para></sect2>
-</sect1>
-<sect1 id="a01562_1Hc05Defined">
+ The build option that toggles this behavior is <computeroutput>Hack_IMPLEMENT_BLACK_BOX</computeroutput>.<linebreak/>
+<linebreak/>
+ </para><sect1 id="a01562_1Hc02Defined">
 <title>Defined In</title>
-<para>The source is defined in <ulink url="../../Source/Compiler/">Source/Compiler</ulink> </para></sect1>
+<para>The source is defined in <ulink url="../../Source/Chips/">Source/Chips</ulink> </para></sect1>
     </detaileddescription>
   </compounddef>
 </doxygen>

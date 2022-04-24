@@ -1,95 +1,90 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00668" kind="file" language="C++">
-    <compoundname>Timer.cpp</compoundname>
-    <includes refid="a00671" local="yes">Chips/Timer.h</includes>
+    <compoundname>SRLatch.cpp</compoundname>
+    <includes refid="a00671" local="yes">Chips/SRLatch.h</includes>
     <incdepgraph>
-      <node id="2215">
+      <node id="2186">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="2216" relation="include">
+        <childnode refid="2187" relation="include">
         </childnode>
       </node>
-      <node id="2207">
+      <node id="2178">
         <label>Chips/BitUtils.h</label>
-        <childnode refid="2208" relation="include">
+        <childnode refid="2179" relation="include">
         </childnode>
-        <childnode refid="2209" relation="include">
+        <childnode refid="2180" relation="include">
         </childnode>
       </node>
-      <node id="2216">
+      <node id="2187">
         <label>cstdint</label>
       </node>
-      <node id="2203">
-        <label>Source/Chips/Timer.cpp</label>
+      <node id="2175">
+        <label>Source/Chips/SRLatch.cpp</label>
         <link refid="a00668"/>
-        <childnode refid="2204" relation="include">
+        <childnode refid="2176" relation="include">
         </childnode>
       </node>
-      <node id="2212">
+      <node id="2183">
         <label>string</label>
       </node>
-      <node id="2214">
+      <node id="2185">
         <label>UserInterface/Context.h</label>
-        <childnode refid="2210" relation="include">
+        <childnode refid="2181" relation="include">
         </childnode>
-        <childnode refid="2215" relation="include">
+        <childnode refid="2186" relation="include">
         </childnode>
-        <childnode refid="2217" relation="include">
+        <childnode refid="2188" relation="include">
         </childnode>
       </node>
-      <node id="2217">
+      <node id="2188">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="2216" relation="include">
+        <childnode refid="2187" relation="include">
         </childnode>
-        <childnode refid="2213" relation="include">
+        <childnode refid="2184" relation="include">
         </childnode>
-        <childnode refid="2215" relation="include">
+        <childnode refid="2186" relation="include">
         </childnode>
       </node>
-      <node id="2209">
+      <node id="2180">
         <label>Utils/Console.h</label>
-        <childnode refid="2210" relation="include">
+        <childnode refid="2181" relation="include">
         </childnode>
-        <childnode refid="2214" relation="include">
+        <childnode refid="2185" relation="include">
         </childnode>
       </node>
-      <node id="2208">
+      <node id="2179">
         <label>bitset</label>
       </node>
-      <node id="2205">
-        <label>Chips/Clock.h</label>
-        <childnode refid="2206" relation="include">
+      <node id="2176">
+        <label>Chips/SRLatch.h</label>
+        <childnode refid="2177" relation="include">
         </childnode>
       </node>
-      <node id="2213">
+      <node id="2184">
         <label>vector</label>
       </node>
-      <node id="2211">
+      <node id="2182">
         <label>sstream</label>
       </node>
-      <node id="2206">
+      <node id="2177">
         <label>Chips/Chip.h</label>
-        <childnode refid="2207" relation="include">
+        <childnode refid="2178" relation="include">
         </childnode>
-        <childnode refid="2209" relation="include">
-        </childnode>
-      </node>
-      <node id="2204">
-        <label>Chips/Timer.h</label>
-        <childnode refid="2205" relation="include">
+        <childnode refid="2180" relation="include">
         </childnode>
       </node>
-      <node id="2210">
+      <node id="2181">
         <label>String.h</label>
-        <childnode refid="2211" relation="include">
+        <childnode refid="2182" relation="include">
         </childnode>
-        <childnode refid="2212" relation="include">
+        <childnode refid="2183" relation="include">
         </childnode>
-        <childnode refid="2213" relation="include">
+        <childnode refid="2184" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <innernamespace refid="a00890">Hack::Chips</innernamespace>
+    <innernamespace refid="a00896">Hack::Chips</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -116,24 +111,68 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Timer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/SRLatch.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00890" kindref="compound">Hack::Chips</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00896" kindref="compound">Hack::Chips</ref></highlight></codeline>
 <codeline lineno="25"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>should<sp/>be<sp/>a<sp/>pointer,<sp/>but<sp/>for<sp/>now:<sp/>have<sp/>a<sp/>at-exit<sp/>call</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00898_1a9a8e3139231dc9b3e84768479987047a" kindref="member">Clock</ref><sp/>Timer::_clock<sp/>=<sp/><ref refid="a00898_1a9a8e3139231dc9b3e84768479987047a" kindref="member">Clock</ref>();</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29" refid="a01120_1a06197be547ad70f903d23120252cf044" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01120_1a06197be547ad70f903d23120252cf044" kindref="member">Timer::tick</ref>()</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_clock.<ref refid="a00988_1acb81d1eb95bf01d4fe203701562da7d0" kindref="member">getOut</ref>();</highlight></codeline>
+<codeline lineno="26" refid="a00896_1aa30bb2bb6c1f3ec73c3b5046db26ada2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/><ref refid="a01370" kindref="compound">uint8_t</ref><sp/><ref refid="a00896_1aa30bb2bb6c1f3ec73c3b5046db26ada2" kindref="member">SrLatchMask</ref><sp/>=<sp/>0b01101111;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="a01122_1ab4024d57ab5595233ac4c3dc6828336a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01122_1ab4024d57ab5595233ac4c3dc6828336a" kindref="member">SRLatch::SRLatch</ref>()</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a5a604431fa35bc87e0d7f4328b4ad4a1" kindref="member" tooltip="Zeros all bits except for the bit at the supplied index. ">assignBit</ref>(7);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(4);</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="a01120_1a7570f5f591474c56e6f96ab6d3f77044" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01120_1a7570f5f591474c56e6f96ab6d3f77044" kindref="member">Timer::reset</ref>()</highlight></codeline>
+<codeline lineno="34" refid="a01122_1a439b80b9ddb355d12431020e5aa85bd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01122_1a439b80b9ddb355d12431020e5aa85bd3" kindref="member">SRLatch::setS</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v)</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_clock.<ref refid="a00988_1abb454609d9a6416ea16f15f9b7c78957" kindref="member">setReset</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="38"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(0,<sp/>v);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="a01122_1a54e7a2f18ea3941477404a43b29938aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01122_1a54e7a2f18ea3941477404a43b29938aa" kindref="member">SRLatch::setR</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(1,<sp/>v);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="a01122_1a1be3e2f9a12b13a1403615c3f31ce609" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01122_1a1be3e2f9a12b13a1403615c3f31ce609" kindref="member">SRLatch::setQn</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(4);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="a01122_1a50289416e241035b969e5ad069aed676" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01122_1a50289416e241035b969e5ad069aed676" kindref="member">SRLatch::getQ</ref>()</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(7))</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(2);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="a01122_1ad1af33b9f4ff6c5e85ff709d81d830c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01122_1ad1af33b9f4ff6c5e85ff709d81d830c9" kindref="member">SRLatch::getQPlus</ref>()</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(7))</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(3);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SRLatch::evaluate()</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;=<sp/><ref refid="a00896_1aa30bb2bb6c1f3ec73c3b5046db26ada2" kindref="member">SrLatchMask</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>s<sp/>=<sp/><ref refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(0);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>r<sp/>=<sp/><ref refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(1);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>na<sp/>=<sp/><ref refid="a00897_1a0a9a77de5bb6d99ccb690718019659b6" kindref="member">Gates::NOr</ref>(s,<sp/><ref refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(3));</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>nb<sp/>=<sp/><ref refid="a00897_1a0a9a77de5bb6d99ccb690718019659b6" kindref="member">Gates::NOr</ref>(<ref refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(2),<sp/>r);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>sr<sp/><sp/>=<sp/><ref refid="a00897_1ae497dca5e03287bf0b47755e4727966c" kindref="member">Gates::And</ref>(s,<sp/>r);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>nsr<sp/>=<sp/><ref refid="a00897_1a47f1937b5e8e2f1f55c52ece2e236d9a" kindref="member">Gates::Not</ref>(sr);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(2,<sp/><ref refid="a00897_1a6c50ba4cc3bfcf7d92a1628e357c19b1" kindref="member">Gates::Mux</ref>(<ref refid="a00897_1a6c50ba4cc3bfcf7d92a1628e357c19b1" kindref="member">Gates::Mux</ref>(na,<sp/><ref refid="a00897_1a47f1937b5e8e2f1f55c52ece2e236d9a" kindref="member">Gates::Not</ref>(s),<sp/>sr),<sp/>na,<sp/>nsr));</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(3,<sp/><ref refid="a00897_1a6c50ba4cc3bfcf7d92a1628e357c19b1" kindref="member">Gates::Mux</ref>(<ref refid="a00897_1a6c50ba4cc3bfcf7d92a1628e357c19b1" kindref="member">Gates::Mux</ref>(nb,<sp/>s,<sp/>sr),<sp/>nb,<sp/>nsr));</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Chips/Timer.cpp"/>
+    <location file="Source/Chips/SRLatch.cpp"/>
   </compounddef>
 </doxygen>

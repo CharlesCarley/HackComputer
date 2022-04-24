@@ -1,38 +1,18 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01564" kind="page">
-    <compoundname>Hc07</compoundname>
-    <title>Computer</title>
+    <compoundname>Hc01</compoundname>
+    <title>Utils</title>
     <briefdescription>
-<para>Implements a program to tie the system together. </para>    </briefdescription>
+<para>Implements general functionality classes that are used project wide. </para>    </briefdescription>
     <detaileddescription>
-<para>Implements a program to tie the system together.</para><para><linebreak/>
+<para>Implements general functionality classes that are used project wide.</para><para><linebreak/>
 <linebreak/>
-It ties together the ROM, RAM and CPU chips and implements multiple runtime targets.</para><para><linebreak/>
-<linebreak/>
-If SDL is enabled the default runtime will open a window and map the screen region of memory to a SDL window. Otherwise if SDL is disabled, the default and only runtime is the command line debugger. <linebreak/>
- </para><sect1 id="a01564_1Hc07Debugger">
-<title>Debugger</title>
-<para><image type="html" name="Debugger.png">command line debugger</image>
-<linebreak/>
-<linebreak/>
-</para></sect1>
-<sect1 id="a01564_1Hc07Usage">
-<title>Usage</title>
-<para><programlisting filename=".txt"><codeline><highlight class="normal">Usage:<sp/>computer<sp/>&lt;options&gt;<sp/>&lt;arg[0]<sp/>..<sp/>arg[n]&gt;</highlight></codeline>
-<codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-h,<sp/>--help<sp/><sp/><sp/><sp/><sp/><sp/>Display<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>help<sp/>message</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-c<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Use<sp/>the<sp/>command<sp/>line<sp/>runtime</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-d<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Debug<sp/>the<sp/>supplied<sp/>file</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-r,<sp/>--run-end<sp/><sp/><sp/>Run<sp/>the<sp/>supplied<sp/>file<sp/>until<sp/>it<sp/>exits</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-t,<sp/>--trace<sp/><sp/><sp/><sp/><sp/>Output<sp/>a<sp/>dump<sp/>of<sp/>the<sp/>non-zero<sp/>portions<sp/>of<sp/>ram</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--show-vm<sp/><sp/><sp/>Output<sp/>the<sp/>emitted<sp/>VM<sp/>code<sp/>from<sp/>the<sp/>supplied<sp/>file</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--show-</highlight><highlight class="keyword">asm</highlight><highlight class="normal"><sp/><sp/>Output<sp/>the<sp/>emitted<sp/>assembly<sp/>code<sp/>from<sp/>the<sp/>supplied<sp/>file</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--show-mc<sp/><sp/><sp/>Output<sp/>the<sp/>emitted<sp/>machine<sp/>code<sp/>from<sp/>the<sp/>supplied<sp/>file</highlight></codeline>
-</programlisting></para></sect1>
-<sect1 id="a01564_1Hc07Defines">
+<itemizedlist>
+<listitem><para><computeroutput>Source/Utils</computeroutput> provides string conversion and console output utilities.</para></listitem><listitem><para><computeroutput>Source/Utils/CommandLine</computeroutput> implements a command line argument parser.</para></listitem><listitem><para><computeroutput>Source/Utils/UserInterface</computeroutput> provides a terminal drawing context.</para></listitem></itemizedlist>
+</para><sect1 id="a01564_1Hc01Defined">
 <title>Defined In</title>
-<para>The source is defined in <ulink url="../../Source/Computer/">Source/Computer</ulink> </para></sect1>
+<para>The source is defined in <ulink url="../../Source/Utils/">Source/Utils</ulink> </para></sect1>
     </detaileddescription>
   </compounddef>
 </doxygen>

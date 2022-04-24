@@ -1,98 +1,104 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00563" kind="file" language="C++">
-    <compoundname>Mux4Way16.h</compoundname>
-    <includes refid="a00467" local="yes">Chips/Chip.h</includes>
-    <includedby refid="a00560" local="yes">Source/Chips/Mux4Way16.cpp</includedby>
+    <compoundname>Mux16.h</compoundname>
+    <includes refid="a00473" local="yes">Chips/Chip.h</includes>
+    <includedby refid="a00560" local="yes">Source/Chips/Mux16.cpp</includedby>
+    <includedby refid="a00566" local="yes">Source/Chips/Mux4Way16.cpp</includedby>
     <incdepgraph>
-      <node id="1618">
+      <node id="1588">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="1619" relation="include">
+        <childnode refid="1589" relation="include">
         </childnode>
       </node>
-      <node id="1608">
-        <label>Source/Chips/Mux4Way16.h</label>
-        <link refid="a00563"/>
-        <childnode refid="1609" relation="include">
-        </childnode>
-      </node>
-      <node id="1610">
+      <node id="1580">
         <label>Chips/BitUtils.h</label>
-        <childnode refid="1611" relation="include">
+        <childnode refid="1581" relation="include">
         </childnode>
-        <childnode refid="1612" relation="include">
+        <childnode refid="1582" relation="include">
         </childnode>
       </node>
-      <node id="1619">
+      <node id="1589">
         <label>cstdint</label>
       </node>
-      <node id="1615">
+      <node id="1585">
         <label>string</label>
       </node>
-      <node id="1617">
+      <node id="1587">
         <label>UserInterface/Context.h</label>
-        <childnode refid="1613" relation="include">
+        <childnode refid="1583" relation="include">
         </childnode>
-        <childnode refid="1618" relation="include">
+        <childnode refid="1588" relation="include">
         </childnode>
-        <childnode refid="1620" relation="include">
+        <childnode refid="1590" relation="include">
         </childnode>
       </node>
-      <node id="1620">
+      <node id="1590">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="1619" relation="include">
+        <childnode refid="1589" relation="include">
         </childnode>
-        <childnode refid="1616" relation="include">
+        <childnode refid="1586" relation="include">
         </childnode>
-        <childnode refid="1618" relation="include">
+        <childnode refid="1588" relation="include">
         </childnode>
       </node>
-      <node id="1612">
+      <node id="1582">
         <label>Utils/Console.h</label>
-        <childnode refid="1613" relation="include">
+        <childnode refid="1583" relation="include">
         </childnode>
-        <childnode refid="1617" relation="include">
+        <childnode refid="1587" relation="include">
         </childnode>
       </node>
-      <node id="1611">
+      <node id="1578">
+        <label>Source/Chips/Mux16.h</label>
+        <link refid="a00563"/>
+        <childnode refid="1579" relation="include">
+        </childnode>
+      </node>
+      <node id="1581">
         <label>bitset</label>
       </node>
-      <node id="1616">
+      <node id="1586">
         <label>vector</label>
       </node>
-      <node id="1614">
+      <node id="1584">
         <label>sstream</label>
       </node>
-      <node id="1609">
+      <node id="1579">
         <label>Chips/Chip.h</label>
-        <childnode refid="1610" relation="include">
+        <childnode refid="1580" relation="include">
         </childnode>
-        <childnode refid="1612" relation="include">
+        <childnode refid="1582" relation="include">
         </childnode>
       </node>
-      <node id="1613">
+      <node id="1583">
         <label>String.h</label>
-        <childnode refid="1614" relation="include">
+        <childnode refid="1584" relation="include">
         </childnode>
-        <childnode refid="1615" relation="include">
+        <childnode refid="1585" relation="include">
         </childnode>
-        <childnode refid="1616" relation="include">
+        <childnode refid="1586" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="1621">
-        <label>Source/Chips/Mux4Way16.h</label>
-        <link refid="a00563"/>
-        <childnode refid="1622" relation="include">
-        </childnode>
+      <node id="1592">
+        <label>Source/Chips/Mux16.cpp</label>
       </node>
-      <node id="1622">
+      <node id="1593">
         <label>Source/Chips/Mux4Way16.cpp</label>
       </node>
+      <node id="1591">
+        <label>Source/Chips/Mux16.h</label>
+        <link refid="a00563"/>
+        <childnode refid="1592" relation="include">
+        </childnode>
+        <childnode refid="1593" relation="include">
+        </childnode>
+      </node>
     </invincdepgraph>
-    <innerclass refid="a01052" prot="public">Hack::Chips::Mux4Way16</innerclass>
-    <innernamespace refid="a00890">Hack::Chips</innernamespace>
+    <innerclass refid="a01054" prot="public">Hack::Chips::Mux16</innerclass>
+    <innernamespace refid="a00896">Hack::Chips</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -122,30 +128,24 @@
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Chip.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00890" kindref="compound">Hack::Chips</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00896" kindref="compound">Hack::Chips</ref></highlight></codeline>
 <codeline lineno="26"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="27" refid="a01052" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01052" kindref="compound">Mux4Way16</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="a00984" kindref="compound" tooltip="Chip is the base class for all chips defined in this system. It uses a template integer for the _bits...">Chip</ref>&lt;bit64_t,<sp/>64&gt;</highlight></codeline>
+<codeline lineno="27" refid="a01054" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01054" kindref="compound">Mux16</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="a00990" kindref="compound" tooltip="Chip is the base class for all chips defined in this system. It uses a template integer for the _bits...">Chip</ref>&lt;bit64_t,<sp/>64&gt;</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>evaluate();</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01364" kindref="compound">uint8_t</ref><sp/><sp/>_flags;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01352" kindref="compound">uint16_t</ref><sp/>_out;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01054_1ad1c8cd040cf50a5ccaf2dcc021861a39" kindref="member">Mux16</ref>();</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01052_1a89b2c7bd11b3a18a0e7b4cfbcb5255aa" kindref="member">Mux4Way16</ref>();</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01052_1a89dda32a00ef6c72e87edf0b7c7d1506" kindref="member">setA</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01352" kindref="compound">uint16_t</ref>&amp;<sp/>v);</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01052_1a04e74e897da70acc2084aa9d4f22def4" kindref="member">setB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01352" kindref="compound">uint16_t</ref>&amp;<sp/>v);</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01052_1a61a72328f8b0191142d1fe60a5d8ee53" kindref="member">setC</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01352" kindref="compound">uint16_t</ref>&amp;<sp/>v);</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01052_1a2f5cb78ec61da56b6b09cefa0aecb71f" kindref="member">setD</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01352" kindref="compound">uint16_t</ref>&amp;<sp/>v);</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01052_1abaa152acf1be764df397d7fa3b20dd7a" kindref="member">setSel</ref>(<ref refid="a01364" kindref="compound">uint8_t</ref><sp/>v);</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01352" kindref="compound">uint16_t</ref><sp/><ref refid="a01052_1a382fc2a7d2fff224a70e4420e4d74b2c" kindref="member">getOut</ref>();</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="47"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01054_1a1bbaad4f7cfb18c2366180c3fabd67da" kindref="member">setA</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01358" kindref="compound">uint16_t</ref>&amp;<sp/>v);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01054_1a0b6138389a0cc6a4b99e1860c4c1d5ad" kindref="member">setB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01358" kindref="compound">uint16_t</ref>&amp;<sp/>v);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01054_1af45f56aaffd81b2fe735526d8da060de" kindref="member">setSel</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/><ref refid="a01054_1a422702d865f283f2f4a20acb2af25575" kindref="member">getOut</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Chips/Mux4Way16.h"/>
+    <location file="Source/Chips/Mux16.h"/>
   </compounddef>
 </doxygen>

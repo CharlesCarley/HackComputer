@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01047" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>Hack::Chips::Mux</compoundname>
+    <basecompoundref refid="a00987" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; uint8_t, 8 &gt;</basecompoundref>
+    <includes local="no">Source/Chips/Mux.h</includes>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="a01047_1acf77d245ed865a67b1bac3d4d4d34864" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Mux::evaluate</definition>
+        <argsstring>()</argsstring>
+        <name>evaluate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Mux.h" line="30" column="1" bodyfile="Source/Chips/Mux.cpp" bodystart="49" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a01047_1a524f6a996135fce748b1a5af7bb7c3bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Chips::Mux::Mux</definition>
+        <argsstring>()</argsstring>
+        <name>Mux</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Mux.h" line="33" column="1" bodyfile="Source/Chips/Mux.cpp" bodystart="26" bodyend="29"/>
+        <references refid="a00987_1a5a604431fa35bc87e0d7f4328b4ad4a1" compoundref="a00470" startline="112" endline="115">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::assignBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01047_1a4d4dfbb94fff0c6359ec21a53d0b39c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::Mux::getOut</definition>
+        <argsstring>()</argsstring>
+        <name>getOut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Mux.h" line="38" column="1" bodyfile="Source/Chips/Mux.cpp" bodystart="55" bodyend="60"/>
+        <references refid="a00987_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00470" startline="100" endline="103">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::getBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01047_1a8baa94aebeb4786b5b2225f0629a7112" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Mux::setA</definition>
+        <argsstring>(bool v)</argsstring>
+        <name>setA</name>
+        <param>
+          <type>bool</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Mux.h" line="35" column="1" bodyfile="Source/Chips/Mux.cpp" bodystart="31" bodyend="35"/>
+        <references refid="a00987_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00470" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
+        <references refid="a00987_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="a00470" startline="106" endline="109">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::setBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01047_1a851b9eaff40d2af002d1f9ca925f1ccf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Mux::setB</definition>
+        <argsstring>(bool v)</argsstring>
+        <name>setB</name>
+        <param>
+          <type>bool</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Mux.h" line="36" column="1" bodyfile="Source/Chips/Mux.cpp" bodystart="37" bodyend="41"/>
+        <references refid="a00987_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00470" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
+        <references refid="a00987_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="a00470" startline="106" endline="109">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::setBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01047_1a8243002190b7268bc57312b8d7c7f618" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Mux::setSel</definition>
+        <argsstring>(bool v)</argsstring>
+        <name>setSel</name>
+        <param>
+          <type>bool</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Mux.h" line="37" column="1" bodyfile="Source/Chips/Mux.cpp" bodystart="43" bodyend="47"/>
+        <references refid="a00987_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00470" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
+        <references refid="a00987_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="a00470" startline="106" endline="109">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::setBit</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="170">
+        <label>Hack::Chips::Mux</label>
+        <link refid="a01047"/>
+        <childnode refid="171" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="171">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="a00987"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="172">
+        <label>Hack::Chips::Mux</label>
+        <link refid="a01047"/>
+        <childnode refid="173" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="174">
+        <label>uint8_t</label>
+        <link refid="a01367"/>
+      </node>
+      <node id="173">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="a00987"/>
+        <childnode refid="174" relation="usage">
+          <edgelabel>_bits</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Chips/Mux.h" line="28" column="1" bodyfile="Source/Chips/Mux.h" bodystart="27" bodyend="39"/>
+    <listofallmembers>
+      <member refid="a00987_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Mux</scope><name>_bits</name></member>
+      <member refid="a00987_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::Mux</scope><name>applyBit</name></member>
+      <member refid="a00987_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::Mux</scope><name>assignBit</name></member>
+      <member refid="a00987_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::Mux</scope><name>Chip</name></member>
+      <member refid="a00987_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::Mux</scope><name>clearBit</name></member>
+      <member refid="a01047_1acf77d245ed865a67b1bac3d4d4d34864" prot="private" virt="non-virtual"><scope>Hack::Chips::Mux</scope><name>evaluate</name></member>
+      <member refid="a00987_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::Mux</scope><name>getBit</name></member>
+      <member refid="a01047_1a4d4dfbb94fff0c6359ec21a53d0b39c1" prot="public" virt="non-virtual"><scope>Hack::Chips::Mux</scope><name>getOut</name></member>
+      <member refid="a00987_1a63bb368bb0827830235759b33718d1b4" prot="protected" virt="virtual"><scope>Hack::Chips::Mux</scope><name>isDirty</name></member>
+      <member refid="a01047_1a524f6a996135fce748b1a5af7bb7c3bb" prot="public" virt="non-virtual"><scope>Hack::Chips::Mux</scope><name>Mux</name></member>
+      <member refid="a01047_1a8baa94aebeb4786b5b2225f0629a7112" prot="public" virt="non-virtual"><scope>Hack::Chips::Mux</scope><name>setA</name></member>
+      <member refid="a01047_1a851b9eaff40d2af002d1f9ca925f1ccf" prot="public" virt="non-virtual"><scope>Hack::Chips::Mux</scope><name>setB</name></member>
+      <member refid="a00987_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::Mux</scope><name>setBit</name></member>
+      <member refid="a01047_1a8243002190b7268bc57312b8d7c7f618" prot="public" virt="non-virtual"><scope>Hack::Chips::Mux</scope><name>setSel</name></member>
+      <member refid="a00987_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::Mux</scope><name>~Chip</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

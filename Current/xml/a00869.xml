@@ -1,98 +1,101 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00869" kind="file" language="C++">
-    <compoundname>PlatformUnix.h</compoundname>
-    <includes local="no">termios.h</includes>
-    <includes refid="a00863" local="yes">Utils/UserInterface/Platform.h</includes>
-    <includedby refid="a00848" local="yes">Source/Utils/UserInterface/Context.cpp</includedby>
-    <includedby refid="a00866" local="yes">Source/Utils/UserInterface/PlatformUnix.cpp</includedby>
+    <compoundname>Platform.h</compoundname>
+    <includes local="no">cstdint</includes>
+    <includes local="no">unordered_map</includes>
+    <includes refid="a00848" local="yes">Utils/UserInterface/ColorCache.h</includes>
+    <includes refid="a00863" local="yes">Utils/UserInterface/Math.h</includes>
+    <includedby refid="a00866" local="yes">Source/Utils/UserInterface/Platform.cpp</includedby>
+    <includedby refid="a00875" local="yes">Source/Utils/UserInterface/PlatformUnix.h</includedby>
     <incdepgraph>
-      <node id="4289">
+      <node id="4253">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="4281" relation="include">
+        <childnode refid="4245" relation="include">
         </childnode>
       </node>
-      <node id="4280">
-        <label>Utils/UserInterface/Platform.h</label>
-        <childnode refid="4281" relation="include">
+      <node id="4244">
+        <label>Source/Utils/UserInterface/Platform.h</label>
+        <link refid="a00869"/>
+        <childnode refid="4245" relation="include">
         </childnode>
-        <childnode refid="4282" relation="include">
+        <childnode refid="4246" relation="include">
         </childnode>
-        <childnode refid="4283" relation="include">
+        <childnode refid="4247" relation="include">
         </childnode>
-        <childnode refid="4288" relation="include">
+        <childnode refid="4252" relation="include">
         </childnode>
       </node>
-      <node id="4283">
+      <node id="4247">
         <label>Utils/UserInterface/ColorCache.h</label>
-        <childnode refid="4281" relation="include">
+        <childnode refid="4245" relation="include">
         </childnode>
-        <childnode refid="4284" relation="include">
+        <childnode refid="4248" relation="include">
         </childnode>
       </node>
-      <node id="4281">
+      <node id="4245">
         <label>cstdint</label>
       </node>
-      <node id="4279">
-        <label>termios.h</label>
-      </node>
-      <node id="4286">
+      <node id="4250">
         <label>string</label>
       </node>
-      <node id="4288">
+      <node id="4252">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="4281" relation="include">
+        <childnode refid="4245" relation="include">
         </childnode>
-        <childnode refid="4287" relation="include">
+        <childnode refid="4251" relation="include">
         </childnode>
-        <childnode refid="4289" relation="include">
+        <childnode refid="4253" relation="include">
         </childnode>
       </node>
-      <node id="4287">
+      <node id="4251">
         <label>vector</label>
       </node>
-      <node id="4285">
+      <node id="4249">
         <label>sstream</label>
       </node>
-      <node id="4278">
-        <label>Source/Utils/UserInterface/PlatformUnix.h</label>
-        <link refid="a00869"/>
-        <childnode refid="4279" relation="include">
-        </childnode>
-        <childnode refid="4280" relation="include">
-        </childnode>
-      </node>
-      <node id="4282">
+      <node id="4246">
         <label>unordered_map</label>
       </node>
-      <node id="4284">
+      <node id="4248">
         <label>Utils/String.h</label>
-        <childnode refid="4285" relation="include">
+        <childnode refid="4249" relation="include">
         </childnode>
-        <childnode refid="4286" relation="include">
+        <childnode refid="4250" relation="include">
         </childnode>
-        <childnode refid="4287" relation="include">
+        <childnode refid="4251" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="4291">
+      <node id="4254">
+        <label>Source/Utils/UserInterface/Platform.h</label>
+        <link refid="a00869"/>
+        <childnode refid="4255" relation="include">
+        </childnode>
+        <childnode refid="4256" relation="include">
+        </childnode>
+      </node>
+      <node id="4257">
         <label>Source/Utils/UserInterface/Context.cpp</label>
       </node>
-      <node id="4292">
+      <node id="4258">
         <label>Source/Utils/UserInterface/PlatformUnix.cpp</label>
       </node>
-      <node id="4290">
+      <node id="4256">
         <label>Source/Utils/UserInterface/PlatformUnix.h</label>
-        <link refid="a00869"/>
-        <childnode refid="4291" relation="include">
+        <childnode refid="4257" relation="include">
         </childnode>
-        <childnode refid="4292" relation="include">
+        <childnode refid="4258" relation="include">
         </childnode>
       </node>
+      <node id="4255">
+        <label>Source/Utils/UserInterface/Platform.cpp</label>
+      </node>
     </invincdepgraph>
-    <innerclass refid="a01324" prot="public">Hack::Ui::PlatformUnix</innerclass>
-    <innernamespace refid="a00902">Hack::Ui</innernamespace>
+    <innerclass refid="a01322" prot="public">Hack::Ui::Platform</innerclass>
+    <innernamespace refid="a00908">Hack::Ui</innernamespace>
+    <innernamespace refid="a00909">Hack::Ui::Detail</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -120,45 +123,75 @@
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>WIN32</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;termios.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/UserInterface/Platform.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">termios;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00902" kindref="compound">Hack::Ui</ref></highlight></codeline>
-<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="31" refid="a01324" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01324" kindref="compound">PlatformUnix</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="a01316" kindref="compound">Platform</ref></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01320" kindref="compound">Terminal</ref>*<sp/>_term;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01296" kindref="compound">Point</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_size;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_message;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>saveState();</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>restoreState();</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>checkSize();</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>readStdin();</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scan(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>cp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>checkSignals();</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01324_1adfcb6e6d0b18cebdbe6c96d2465fed82" kindref="member">PlatformUnix</ref>();</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01324_1a29eeecc62bd694cdd256f4fbf78dc425" kindref="member">~PlatformUnix</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01324_1a7ddb3f7fb3607a643acf4cf236d28f7b" kindref="member">getScreenSize</ref>(<ref refid="a01296" kindref="compound">Point</ref>&amp;<sp/>sz)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="a01324_1a061f1bbd721feb4a7b370a7f7f951bcd" kindref="member">poll</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>block)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Ui</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/UserInterface/ColorCache.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/UserInterface/Math.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00908" kindref="compound">Hack::Ui</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30" refid="a00909" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Detail</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32" refid="a00909_1a8bcc07654099d413e79fdbd087c37151" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="a00909_1a8bcc07654099d413e79fdbd087c37151" kindref="member">ShowCursor</ref><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\x1b[?25h&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33" refid="a00909_1afe86bd2942c9eef87a316c286d47f510" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="a00909_1afe86bd2942c9eef87a316c286d47f510" kindref="member">HideCursor</ref><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\x1b[?25l&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34" refid="a00909_1a86b05e3b4b571723251f84b66c5c7d9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="a00909_1a86b05e3b4b571723251f84b66c5c7d9c" kindref="member">UseBackBuffer</ref><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\x1b[?1049h&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35" refid="a00909_1afc2cfd341bffbc28a0829607f3bb4838" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="a00909_1afc2cfd341bffbc28a0829607f3bb4838" kindref="member">UseFrontBuffer</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\x1b[?1049l&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36" refid="a00909_1a33853f4a5a76638722e1febde2cee328" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="a00909_1a33853f4a5a76638722e1febde2cee328" kindref="member">Clear</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\x1b[2J&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37" refid="a00909_1a127458bf42d95ddbb1004704935d8bcc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="a00909_1a127458bf42d95ddbb1004704935d8bcc" kindref="member">ZeroCursor</ref><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\x1b[0;0H&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38" refid="a00909_1aad13e43e04b9b3f5dd1366514a7926ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="a00909_1aad13e43e04b9b3f5dd1366514a7926ce" kindref="member">ResetColor</ref><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\x1b[0m&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39" refid="a00909_1a3576cc7ce9181a354daff9ded81c1b45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="a00909_1a3576cc7ce9181a354daff9ded81c1b45" kindref="member">SetCursor</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\x1b[%d;%dH&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>line<sp/>drawing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="a00909_1ae4506309ad509d4d28ac113620edd6ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="a00909_1ae4506309ad509d4d28ac113620edd6ab" kindref="member">LineHz</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\x1b(0q&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43" refid="a00909_1a4ed8c1169133a213bf99ffad6fb30a86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="a00909_1a4ed8c1169133a213bf99ffad6fb30a86" kindref="member">LineVt</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\x1b(0x&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44" refid="a00909_1a7e344cdf5463e56c211659e2a21af4f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="a00909_1a7e344cdf5463e56c211659e2a21af4f8" kindref="member">LineLt</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\x1b(0l&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45" refid="a00909_1a1151cd1c5a9ec7be5f775dee0ea61465" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="a00909_1a1151cd1c5a9ec7be5f775dee0ea61465" kindref="member">LineRt</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\x1b(0k&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46" refid="a00909_1a13d36030f4ce00dbd082a7b63f0f7e93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="a00909_1a13d36030f4ce00dbd082a7b63f0f7e93" kindref="member">LineRb</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\x1b(0j&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47" refid="a00909_1a44554fef2e43a64304c62333d3f7415e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="a00909_1a44554fef2e43a64304c62333d3f7415e" kindref="member">LineLb</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\x1b(0m&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48" refid="a00909_1a2d75a0a649a37f46deb916f800a48e81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="a00909_1a2d75a0a649a37f46deb916f800a48e81" kindref="member">LineVertR</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\x1b(0t&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49" refid="a00909_1af5e7cd1af04685b1a1514b38541e8a81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="a00909_1af5e7cd1af04685b1a1514b38541e8a81" kindref="member">LineVertL</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\x1b(0w&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Detail</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="a01322" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01322" kindref="compound">Platform</ref></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="55" refid="a01322_1a4e3b5013683b0e76d9cf8a7fc393739b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::unordered_map&lt;uint8_t,<sp/>ColorCacheItem*&gt;<sp/><ref refid="a01322_1a4e3b5013683b0e76d9cf8a7fc393739b" kindref="member">ColorCache</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01322_1a4e3b5013683b0e76d9cf8a7fc393739b" kindref="member">ColorCache</ref><sp/>_cache;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01322_1a594724e6217b28fea8d8e02f9ec5c1cc" kindref="member">Platform</ref>();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="a01322_1a52466ae630306e7f4f87b6797bcd4539" kindref="member">~Platform</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01322_1a812312c281345be05294a3d99b909732" kindref="member">getScreenSize</ref>(<ref refid="a01302" kindref="compound">Point</ref>&amp;<sp/>sz)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="a01322_1a0b6f15d06279d86dc25a72cb4d49dbe9" kindref="member">poll</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>block)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01322_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>ch);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01322_1af8c071d83f5d72d196e43a167ad598eb" kindref="member">color</ref>(<ref refid="a01370" kindref="compound">uint8_t</ref><sp/>index,<sp/>uint32_t<sp/><ref refid="a01322_1af8c071d83f5d72d196e43a167ad598eb" kindref="member">color</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>background);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01322_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>ch);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01322_1a86fcdb4fbf68b809d3572c1867920679" kindref="member">setCursor</ref>(int16_t<sp/>x,<sp/>int16_t<sp/>y);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01322_1aa24be0702916597fc5143dca16e369a6" kindref="member">clear</ref>();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01322_1adde1b619c1d73187a0e1d3f9f0ca01e5" kindref="member">resetCursor</ref>();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01322_1a3c654cae3feb0c3134a4164e72666144" kindref="member">resetColor</ref>();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01322_1a8248f8b05e4e341bc274d8a87f198590" kindref="member">showCursor</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>show);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01322_1aecbdaddb564da342d970727a7475b360" kindref="member">useBackBuffer</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>use);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01322_1aa3054a397921f0b3b33f7b70d8fb45d8" kindref="member">flush</ref>();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01322_1ad3ce58985cbdf1e835fabf88e32a64c8" kindref="member">sleep</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t&amp;<sp/>ms);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Ui</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Utils/UserInterface/PlatformUnix.h"/>
+    <location file="Source/Utils/UserInterface/Platform.h"/>
   </compounddef>
 </doxygen>
