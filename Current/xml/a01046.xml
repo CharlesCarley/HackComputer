@@ -115,9 +115,9 @@
         </inbodydescription>
         <location file="Source/Chips/Memory.h" line="44" column="1" bodyfile="Source/Chips/Memory.h" bodystart="44" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a01046_1a4731ff8b8925d19e5bf7e4969c9a809f" prot="private" static="no" mutable="no">
-        <type><ref refid="a00896_1af444d69c9f8c7290fb072226e5b1d56d" kindref="member">Ram16K</ref> *</type>
-        <definition>Ram16K* Hack::Chips::Memory::_ram16</definition>
+      <memberdef kind="variable" id="a01046_1a8dcdf891c8b31f18dd38452431933b01" prot="private" static="no" mutable="no">
+        <type><ref refid="a00896_1a34177040653a4658b7c74d3846e164e1" kindref="member">Ram16k</ref> *</type>
+        <definition>Ram16k* Hack::Chips::Memory::_ram16</definition>
         <argsstring></argsstring>
         <name>_ram16</name>
         <briefdescription>
@@ -488,7 +488,7 @@
       <member refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Memory</scope><name>_bits</name></member>
       <member refid="a01046_1a945ff73b32a627124f4304adf6d32b63" prot="private" virt="non-virtual"><scope>Hack::Chips::Memory</scope><name>_in</name></member>
       <member refid="a01046_1a52c99b8e93fd12ef32912e5e2bbc1395" prot="private" virt="non-virtual"><scope>Hack::Chips::Memory</scope><name>_out</name></member>
-      <member refid="a01046_1a4731ff8b8925d19e5bf7e4969c9a809f" prot="private" virt="non-virtual"><scope>Hack::Chips::Memory</scope><name>_ram16</name></member>
+      <member refid="a01046_1a8dcdf891c8b31f18dd38452431933b01" prot="private" virt="non-virtual"><scope>Hack::Chips::Memory</scope><name>_ram16</name></member>
       <member refid="a01046_1ac2016f1aef2e2d41d1ca4a98f80def12" prot="private" virt="non-virtual"><scope>Hack::Chips::Memory</scope><name>_screen</name></member>
       <member refid="a00990_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::Memory</scope><name>applyBit</name></member>
       <member refid="a00990_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::Memory</scope><name>assignBit</name></member>

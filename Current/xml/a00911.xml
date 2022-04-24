@@ -1,290 +1,813 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
-  <compounddef id="a00911" kind="file" language="C++">
-    <compoundname>Emitter.h</compoundname>
-    <includes local="no">stack</includes>
-    <includes refid="a00854" local="yes">Utils/ParserBase/ScannerBase.h</includes>
-    <includes refid="a00863" local="yes">Utils/String.h</includes>
-    <includedby refid="a00908" local="yes">Emitter.cpp</includedby>
-    <includedby refid="a02007" local="yes">Parser.h</includedby>
-    <incdepgraph>
-      <node id="1516">
-        <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="1517" relation="include">
-        </childnode>
-      </node>
-      <node id="1517">
-        <label>cstdint</label>
-      </node>
-      <node id="1508">
-        <label>stdexcept</label>
-      </node>
-      <node id="1513">
-        <label>string</label>
-      </node>
-      <node id="1505">
-        <label>unordered_set</label>
-      </node>
-      <node id="1507">
-        <label>exception</label>
-      </node>
-      <node id="1502">
-        <label>Utils/ParserBase/ScannerBase.h</label>
-        <childnode refid="1503" relation="include">
-        </childnode>
-        <childnode refid="1519" relation="include">
-        </childnode>
-      </node>
-      <node id="1519">
-        <label>Utils/ParserBase/TokenBase.h</label>
-        <childnode refid="1511" relation="include">
-        </childnode>
-      </node>
-      <node id="1515">
-        <label>UserInterface/Context.h</label>
-        <childnode refid="1511" relation="include">
-        </childnode>
-        <childnode refid="1516" relation="include">
-        </childnode>
-        <childnode refid="1518" relation="include">
-        </childnode>
-      </node>
-      <node id="1518">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="1517" relation="include">
-        </childnode>
-        <childnode refid="1514" relation="include">
-        </childnode>
-        <childnode refid="1516" relation="include">
-        </childnode>
-      </node>
-      <node id="1503">
-        <label>Utils/IndexCache.h</label>
-        <childnode refid="1504" relation="include">
-        </childnode>
-        <childnode refid="1505" relation="include">
-        </childnode>
-        <childnode refid="1506" relation="include">
-        </childnode>
-      </node>
-      <node id="1510">
-        <label>Utils/Console.h</label>
-        <childnode refid="1511" relation="include">
-        </childnode>
-        <childnode refid="1515" relation="include">
-        </childnode>
-      </node>
-      <node id="1514">
-        <label>vector</label>
-      </node>
-      <node id="1501">
-        <label>stack</label>
-      </node>
-      <node id="1500">
-        <label>Emitter.h</label>
-        <link refid="a00911"/>
-        <childnode refid="1501" relation="include">
-        </childnode>
-        <childnode refid="1502" relation="include">
-        </childnode>
-        <childnode refid="1511" relation="include">
-        </childnode>
-      </node>
-      <node id="1509">
-        <label>utility</label>
-      </node>
-      <node id="1512">
-        <label>sstream</label>
-      </node>
-      <node id="1506">
-        <label>Utils/Exception.h</label>
-        <childnode refid="1507" relation="include">
-        </childnode>
-        <childnode refid="1508" relation="include">
-        </childnode>
-        <childnode refid="1509" relation="include">
-        </childnode>
-        <childnode refid="1510" relation="include">
-        </childnode>
-        <childnode refid="1511" relation="include">
-        </childnode>
-      </node>
-      <node id="1504">
-        <label>unordered_map</label>
-      </node>
-      <node id="1511">
-        <label>String.h</label>
-        <childnode refid="1512" relation="include">
-        </childnode>
-        <childnode refid="1513" relation="include">
-        </childnode>
-        <childnode refid="1514" relation="include">
-        </childnode>
-      </node>
-    </incdepgraph>
-    <invincdepgraph>
-      <node id="1522">
-        <label>Parser.h</label>
-        <childnode refid="1523" relation="include">
-        </childnode>
-        <childnode refid="1524" relation="include">
-        </childnode>
-        <childnode refid="1525" relation="include">
-        </childnode>
-      </node>
-      <node id="1524">
-        <label>Main.cpp</label>
-      </node>
-      <node id="1521">
-        <label>Emitter.cpp</label>
-      </node>
-      <node id="1520">
-        <label>Emitter.h</label>
-        <link refid="a00911"/>
-        <childnode refid="1521" relation="include">
-        </childnode>
-        <childnode refid="1522" relation="include">
-        </childnode>
-      </node>
-      <node id="1525">
-        <label>Parser.cpp</label>
-      </node>
-      <node id="1523">
-        <label>Application.cpp</label>
-      </node>
-    </invincdepgraph>
-    <innerclass refid="a01639" prot="public">Hack::VirtualMachine::Emitter</innerclass>
-    <innernamespace refid="a00923">Hack::VirtualMachine</innernamespace>
+  <compounddef id="a00911" kind="namespace" language="C++">
+    <compoundname>Hack::Ui</compoundname>
+    <innerclass refid="a01321" prot="public">Hack::Ui::Color</innerclass>
+    <innerclass refid="a01317" prot="public">Hack::Ui::ColorBuffer</innerclass>
+    <innerclass refid="a01297" prot="public">Hack::Ui::ColorCacheItem</innerclass>
+    <innerclass refid="a01313" prot="public">Hack::Ui::ColorU</innerclass>
+    <innerclass refid="a01301" prot="public">Hack::Ui::Context</innerclass>
+    <innerclass refid="a01325" prot="public">Hack::Ui::Platform</innerclass>
+    <innerclass refid="a01333" prot="public">Hack::Ui::PlatformUnix</innerclass>
+    <innerclass refid="a01305" prot="public">Hack::Ui::Point</innerclass>
+    <innerclass refid="a01309" prot="public">Hack::Ui::Rectangle</innerclass>
+    <innerclass refid="a01329" prot="public">Hack::Ui::Terminal</innerclass>
+    <innernamespace refid="a00912">Hack::Ui::Detail</innernamespace>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="a00911_1a1d16939595474e3adb96cc6d05ed7aa0" prot="public" static="no" strong="no">
+        <type></type>
+        <name>CharacterSet</name>
+        <enumvalue id="a00911_1a1d16939595474e3adb96cc6d05ed7aa0ad03378ac2b6b4c1118d5cdda7e793da9" prot="public">
+          <name>CS_SEQ_START</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a1d16939595474e3adb96cc6d05ed7aa0ac9e5831d71a26cab7a3a4a8d374f8560" prot="public">
+          <name>CS_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a1d16939595474e3adb96cc6d05ed7aa0a998b2d1dfa04163699d0ada53e82f922" prot="public">
+          <name>CS_RECT_RB</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a1d16939595474e3adb96cc6d05ed7aa0a753412f679e04e3ba44c25dbb93d6131" prot="public">
+          <name>CS_RECT_RT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a1d16939595474e3adb96cc6d05ed7aa0a5d03c84a5b72b5dbe74459bf33791a08" prot="public">
+          <name>CS_RECT_LT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a1d16939595474e3adb96cc6d05ed7aa0a073a22d37e6a995b7c17ddfc65661e7d" prot="public">
+          <name>CS_RECT_LB</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a1d16939595474e3adb96cc6d05ed7aa0a8803333d960baf039bb860468988d16d" prot="public">
+          <name>CS_RECT_CS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a1d16939595474e3adb96cc6d05ed7aa0a5cc1590a1227299f2d57e30c9c354748" prot="public">
+          <name>CS_RECT_HZ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a1d16939595474e3adb96cc6d05ed7aa0a9b1d4bb7b028bce971009f4742e28e8b" prot="public">
+          <name>CS_RECT_LCS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a1d16939595474e3adb96cc6d05ed7aa0a6f020960e91251129ffbaa5a9514eb9e" prot="public">
+          <name>CS_RECT_RCS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a1d16939595474e3adb96cc6d05ed7aa0a5da6a4a3faaa0f29c7774f447c0fba74" prot="public">
+          <name>CS_RECT_BCS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a1d16939595474e3adb96cc6d05ed7aa0aab50306728780dd9c7cc010ddf09556b" prot="public">
+          <name>CS_RECT_TCS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a1d16939595474e3adb96cc6d05ed7aa0a4354d780f39ce363e5a3834343c3aa50" prot="public">
+          <name>CS_RECT_VT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a1d16939595474e3adb96cc6d05ed7aa0ae51b178c3675d1c5b33fd92346227bc4" prot="public">
+          <name>CS_START</name>
+          <initializer>= &apos; &apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a1d16939595474e3adb96cc6d05ed7aa0a41af7adc01eb6945b60a1bfd8fef6c41" prot="public">
+          <name>CS_END</name>
+          <initializer>= &apos;~&apos; + 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Common.h" line="38" column="1" bodyfile="Source/Utils/UserInterface/Common.h" bodystart="37" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="enum" id="a00911_1ae1fedfb1c7fe15d04561a77c09b20bc3" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ColorPalette</name>
+        <enumvalue id="a00911_1ae1fedfb1c7fe15d04561a77c09b20bc3a414c02028042fe450a6e6e6a25dd2140" prot="public">
+          <name>CP_TRANSPARENT</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1ae1fedfb1c7fe15d04561a77c09b20bc3a7edf6936440ce71b8690beb0af6d9f5f" prot="public">
+          <name>CP_BLACK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1ae1fedfb1c7fe15d04561a77c09b20bc3ad45b227d2ca0298b705625e4db00d705" prot="public">
+          <name>CP_DARK_BLUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1ae1fedfb1c7fe15d04561a77c09b20bc3aa63f39e1018b572b2c8427607a61378b" prot="public">
+          <name>CP_DARK_GREEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1ae1fedfb1c7fe15d04561a77c09b20bc3ad8af3766c39ba526c346d92946426320" prot="public">
+          <name>CP_DARK_CYAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1ae1fedfb1c7fe15d04561a77c09b20bc3abefc1fbd3ccfa1da37ab41bbd92b1046" prot="public">
+          <name>CP_DARK_RED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1ae1fedfb1c7fe15d04561a77c09b20bc3af1683a4d2ce91e3679fcc914ee8f9ff4" prot="public">
+          <name>CP_DARK_MAGENTA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1ae1fedfb1c7fe15d04561a77c09b20bc3af06a23afaf2fde0bb7f31fdb1fe735e1" prot="public">
+          <name>CP_DARK_YELLOW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1ae1fedfb1c7fe15d04561a77c09b20bc3a6c8c1be9e493ae7545a7f36337ece440" prot="public">
+          <name>CP_GREY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1ae1fedfb1c7fe15d04561a77c09b20bc3a3327799852a4d471716f61a7f333a11e" prot="public">
+          <name>CP_LIGHT_GREY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1ae1fedfb1c7fe15d04561a77c09b20bc3a350e74faa3f4ff1cee29035e4b05b848" prot="public">
+          <name>CP_BLUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1ae1fedfb1c7fe15d04561a77c09b20bc3a8f2d06886cb3b1e469dc0eb3b9ae5c2c" prot="public">
+          <name>CP_GREEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1ae1fedfb1c7fe15d04561a77c09b20bc3aabf8678b03996715d5b75053d944374f" prot="public">
+          <name>CP_CYAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1ae1fedfb1c7fe15d04561a77c09b20bc3ab275556ce0259162bc23c9bb315ab603" prot="public">
+          <name>CP_RED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1ae1fedfb1c7fe15d04561a77c09b20bc3a04e27d16749cab380a2074f251f638ff" prot="public">
+          <name>CP_MAGENTA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1ae1fedfb1c7fe15d04561a77c09b20bc3ae1c3347c8ed074263a78b53f105a26c5" prot="public">
+          <name>CP_YELLOW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1ae1fedfb1c7fe15d04561a77c09b20bc3a84e0441414a4ff41753e4c259f4b559c" prot="public">
+          <name>CP_WHITE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1ae1fedfb1c7fe15d04561a77c09b20bc3a5bad76b91aaadc4b8e6d1084be6be564" prot="public">
+          <name>CP_USER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1ae1fedfb1c7fe15d04561a77c09b20bc3a170742463623504b34e60c30094ef901" prot="public">
+          <name>CP_MAX</name>
+          <initializer>= 256</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Common.h" line="59" column="1" bodyfile="Source/Utils/UserInterface/Common.h" bodystart="58" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="enum" id="a00911_1a52a9537a5cb72fb438de8f7331ffd9a2" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Orientation</name>
+        <enumvalue id="a00911_1a52a9537a5cb72fb438de8f7331ffd9a2a271c30a3b0460f8419bd335556d6a496" prot="public">
+          <name>OR_HORIZONTAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a52a9537a5cb72fb438de8f7331ffd9a2a447f7e8d33ccc8b1edc5aa00e8f5202f" prot="public">
+          <name>OR_VERTICAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Common.h" line="83" column="1" bodyfile="Source/Utils/UserInterface/Common.h" bodystart="82" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="enum" id="a00911_1a7553833a41980e8c2bae00177d41129e" prot="public" static="no" strong="no">
+        <type></type>
+        <name>PollResult</name>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ead7a3bc54fb41225d6588c6fb307f0bcf" prot="public">
+          <name>PR_EXIT</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea628e6c1cd2f76b3b8b8346aaa4dfecf1" prot="public">
+          <name>PR_NO_INPUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea3dde91a4939857995c340109342db15b" prot="public">
+          <name>PR_RESIZE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea312b0a8f38ea0bb8efd0aab28979ede1" prot="public">
+          <name>PR_0</name>
+          <initializer>= &apos;0&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea9a8a91789ebb52f8166f7a8d2407057c" prot="public">
+          <name>PR_1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea5d6a27ad614058c15c679f4a7fe99d48" prot="public">
+          <name>PR_2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea33335fa899c442d134eb40ce5c993426" prot="public">
+          <name>PR_3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea79877e014f1a2ad5cf2568728d4cb866" prot="public">
+          <name>PR_4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129eaa24d438ee4351597701da9911ccdab36" prot="public">
+          <name>PR_5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129eaaa9bd05ee2d18e6ca9cd753922bac771" prot="public">
+          <name>PR_6</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea9a43ed3a898c79796908fe26f7108957" prot="public">
+          <name>PR_7</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129eaa61eee33219bf701c43eef34a220b2f6" prot="public">
+          <name>PR_8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129eac5278fe7cf3a9ab21e7762082b5b5ef6" prot="public">
+          <name>PR_9</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea2627c1de742b4d08526efd3e20d70eea" prot="public">
+          <name>PR_A</name>
+          <initializer>= &apos;a&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea56955bfa3e61dcda326bb5705d8b0b08" prot="public">
+          <name>PR_B</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129eac5bfa9b08ea8636eb07cf284d5307f20" prot="public">
+          <name>PR_C</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea9a2c70635383e3b23c167d887a867ec4" prot="public">
+          <name>PR_D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129eaeca4d3710469b65a521f52f648f9d453" prot="public">
+          <name>PR_E</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea5a373100d7d678d8f1db646c3106d710" prot="public">
+          <name>PR_F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129eafc725582557ab4116696b422ce70002c" prot="public">
+          <name>PR_G</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea228362349dccf8097cdc731e9933c97f" prot="public">
+          <name>PR_H</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea4c050883f463c7194fc23506e0bd3804" prot="public">
+          <name>PR_I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea0a5764199b1b7d6a875bf14c05a92c3f" prot="public">
+          <name>PR_J</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ead97778b9a49df986057a346ab6c2faf6" prot="public">
+          <name>PR_K</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea71ba4e8ba6d2f0b6ff43241f39d84065" prot="public">
+          <name>PR_L</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129eab51a41d00259b4e1946618dfeabe70f9" prot="public">
+          <name>PR_M</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ead4c3ea861e60eb67e9891aaa4c3cff92" prot="public">
+          <name>PR_N</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129eabeb57b5bdcea1ff48b857b2016b27097" prot="public">
+          <name>PR_O</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea94e718444a7fa856ff1522b809bfdd66" prot="public">
+          <name>PR_P</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129eaac096e4ab5b9bda727f54b4e076086da" prot="public">
+          <name>PR_Q</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129eadce783d1df91b3fd26fd5817f0ff07c6" prot="public">
+          <name>PR_R</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129eac0f91de647a0b16eb41d0f7ca451b033" prot="public">
+          <name>PR_S</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129eaa696bdfb3daf4cdf617281b29943b107" prot="public">
+          <name>PR_T</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea9285423542bdaadf9eab8e14b50f3633" prot="public">
+          <name>PR_U</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea22f2d6a843672a83b82bd11fd7318fb5" prot="public">
+          <name>PR_V</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129eadbb94a03fa4dad97cdfa6559dd29639b" prot="public">
+          <name>PR_W</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129eae6c3839fc23b67d3fb0a67fe97030fb4" prot="public">
+          <name>PR_X</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea3bc32ea5a0e65d84b122bc87b9fd518b" prot="public">
+          <name>PR_Y</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea9eac26a84b6afb0fdedfce24daaa5791" prot="public">
+          <name>PR_Z</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea35bf1e881e438245e59ccdf1cd1d0774" prot="public">
+          <name>PR_UP_ARROW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea3c5a3820b4f7ada22ec68576968bd89d" prot="public">
+          <name>PR_DOWN_ARROW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea930343c4a28078ebe2a6b9cfeb4ba56e" prot="public">
+          <name>PR_RIGHT_ARROW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ead791c01c4f98f1dccf5b6bd16ff003bf" prot="public">
+          <name>PR_LEFT_ARROW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea89c5fae3ba9dbf20538adec915496de2" prot="public">
+          <name>PR_CTRL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea6bda70105ae10d19db8b9170dddecf76" prot="public">
+          <name>PR_SHIFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea403265cd9f8c17461bb349be5dcc1d35" prot="public">
+          <name>PR_ALT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00911_1a7553833a41980e8c2bae00177d41129ea7d0aa57d06151d917be3d0a2a61a475f" prot="public">
+          <name>PR_ESC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Common.h" line="89" column="1" bodyfile="Source/Utils/UserInterface/Common.h" bodystart="88" bodyend="140"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="a00911_1a4f45196c0f3ee54c6c4dcff9b593a42b" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="a01305" kindref="compound">Point</ref> &gt;</type>
+        <definition>using Hack::Ui::Path = typedef std::vector&lt;Point&gt;</definition>
+        <argsstring></argsstring>
+        <name>Path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Math.h" line="61" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="a00911_1aec02730284fab877bca263a7af111eda" prot="public" static="no" mutable="no">
+        <type>constexpr <ref refid="a01373" kindref="compound">uint8_t</ref></type>
+        <definition>constexpr uint8_t Hack::Ui::AByte</definition>
+        <argsstring></argsstring>
+        <name>AByte</name>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Common.h" line="29" column="1" bodyfile="Source/Utils/UserInterface/Common.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00911_1a606e644506be4ad6f6cdbb42ce408826" prot="public" static="no" mutable="no">
+        <type>constexpr <ref refid="a01373" kindref="compound">uint8_t</ref></type>
+        <definition>constexpr uint8_t Hack::Ui::BByte</definition>
+        <argsstring></argsstring>
+        <name>BByte</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Common.h" line="32" column="1" bodyfile="Source/Utils/UserInterface/Common.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00911_1a0ea3206f4a2713ef362fdf3f98c85f69" prot="public" static="no" mutable="no">
+        <type>constexpr <ref refid="a01373" kindref="compound">uint8_t</ref></type>
+        <definition>constexpr uint8_t Hack::Ui::GByte</definition>
+        <argsstring></argsstring>
+        <name>GByte</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Common.h" line="31" column="1" bodyfile="Source/Utils/UserInterface/Common.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00911_1a32af7f12bf8096a6c71bd1e45ac6b9b1" prot="public" static="no" mutable="no">
+        <type>constexpr <ref refid="a01373" kindref="compound">uint8_t</ref></type>
+        <definition>constexpr uint8_t Hack::Ui::RByte</definition>
+        <argsstring></argsstring>
+        <name>RByte</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Common.h" line="30" column="1" bodyfile="Source/Utils/UserInterface/Common.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00911_1afa04eb3bbd4814431ab8fce1f562166f" prot="public" static="no" mutable="no">
+        <type>constexpr char</type>
+        <definition>constexpr char Hack::Ui::RgbFormatBg[]</definition>
+        <argsstring>[]</argsstring>
+        <name>RgbFormatBg</name>
+        <initializer>= &quot;\x1b[48;2;%d;%d;%dm&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Common.h" line="35" column="1" bodyfile="Source/Utils/UserInterface/Common.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00911_1aefd7f2d50548723bc913d2c3289e31c1" prot="public" static="no" mutable="no">
+        <type>constexpr char</type>
+        <definition>constexpr char Hack::Ui::RgbFormatFg[]</definition>
+        <argsstring>[]</argsstring>
+        <name>RgbFormatFg</name>
+        <initializer>= &quot;\x1b[38;2;%d;%d;%dm&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Common.h" line="34" column="1" bodyfile="Source/Utils/UserInterface/Common.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00911_1a0d4a60535dddbf3b72b7d84ac8a25bc3" prot="public" static="no" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Hack::Ui::StdInput</definition>
+        <argsstring></argsstring>
+        <name>StdInput</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/PlatformUnix.cpp" line="35" column="1" bodyfile="Source/Utils/UserInterface/PlatformUnix.cpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00911_1abb4f00c31f8360c500f8ac00c478bd8b" prot="public" static="no" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Hack::Ui::StdOutput</definition>
+        <argsstring></argsstring>
+        <name>StdOutput</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/PlatformUnix.cpp" line="36" column="1" bodyfile="Source/Utils/UserInterface/PlatformUnix.cpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="a00911_1af8c1578b66f9a23dd22d006b8fcc42c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Hack::Ui::Clamp</definition>
+        <argsstring>(const int &amp;in, const int &amp;start, const int &amp;end)</argsstring>
+        <name>Clamp</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Math.h" line="190" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="190" bodyend="199"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <programlisting>
-<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="2"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
-<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>Charles<sp/>Carley.</highlight></codeline>
-<codeline lineno="4"><highlight class="comment"></highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>software<sp/>is<sp/>provided<sp/>&apos;as-is&apos;,<sp/>without<sp/>any<sp/>express<sp/>or<sp/>implied</highlight></codeline>
-<codeline lineno="6"><highlight class="comment"><sp/><sp/>warranty.<sp/>In<sp/>no<sp/>event<sp/>will<sp/>the<sp/>authors<sp/>be<sp/>held<sp/>liable<sp/>for<sp/>any<sp/>damages</highlight></codeline>
-<codeline lineno="7"><highlight class="comment"><sp/><sp/>arising<sp/>from<sp/>the<sp/>use<sp/>of<sp/>this<sp/>software.</highlight></codeline>
-<codeline lineno="8"><highlight class="comment"></highlight></codeline>
-<codeline lineno="9"><highlight class="comment"><sp/><sp/>Permission<sp/>is<sp/>granted<sp/>to<sp/>anyone<sp/>to<sp/>use<sp/>this<sp/>software<sp/>for<sp/>any<sp/>purpose,</highlight></codeline>
-<codeline lineno="10"><highlight class="comment"><sp/><sp/>including<sp/>commercial<sp/>applications,<sp/>and<sp/>to<sp/>alter<sp/>it<sp/>and<sp/>redistribute<sp/>it</highlight></codeline>
-<codeline lineno="11"><highlight class="comment"><sp/><sp/>freely,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>restrictions:</highlight></codeline>
-<codeline lineno="12"><highlight class="comment"></highlight></codeline>
-<codeline lineno="13"><highlight class="comment"><sp/><sp/>1.<sp/>The<sp/>origin<sp/>of<sp/>this<sp/>software<sp/>must<sp/>not<sp/>be<sp/>misrepresented;<sp/>you<sp/>must<sp/>not</highlight></codeline>
-<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>claim<sp/>that<sp/>you<sp/>wrote<sp/>the<sp/>original<sp/>software.<sp/>If<sp/>you<sp/>use<sp/>this<sp/>software</highlight></codeline>
-<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>in<sp/>a<sp/>product,<sp/>an<sp/>acknowledgment<sp/>in<sp/>the<sp/>product<sp/>documentation<sp/>would<sp/>be</highlight></codeline>
-<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>appreciated<sp/>but<sp/>is<sp/>not<sp/>required.</highlight></codeline>
-<codeline lineno="17"><highlight class="comment"><sp/><sp/>2.<sp/>Altered<sp/>source<sp/>versions<sp/>must<sp/>be<sp/>plainly<sp/>marked<sp/>as<sp/>such,<sp/>and<sp/>must<sp/>not<sp/>be</highlight></codeline>
-<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>misrepresented<sp/>as<sp/>being<sp/>the<sp/>original<sp/>software.</highlight></codeline>
-<codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
-<codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
-<codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stack&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/ParserBase/ScannerBase.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/String.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00923" kindref="compound">Hack::VirtualMachine</ref></highlight></codeline>
-<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">CodeStream;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31" refid="a01639" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01639" kindref="compound">Emitter</ref></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="34" refid="a01639_1aa8ce88c353ba6d22e7540662e1df2a8a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::stack&lt;String&gt;<sp/><ref refid="a01639_1aa8ce88c353ba6d22e7540662e1df2a8a" kindref="member">StringStack</ref>;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref><sp/>_stream;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_cmp;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01639_1aa8ce88c353ba6d22e7540662e1df2a8a" kindref="member">StringStack</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_functions;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getJumpLabels(<ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>valTrue,<sp/><ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>valDone);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>genLabel(<ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>val);</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01639_1aed412b794ba08f97702b7c9e1ddc936f" kindref="member">Emitter</ref>();</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1af262bc1ecd8d3450375f9f4e450a7c19" kindref="member">clear</ref>();</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51" refid="a01639_1a3944cc6bbc9993953d7b4543af940128" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref>&amp;<sp/><ref refid="a01639_1a3944cc6bbc9993953d7b4543af940128" kindref="member">stream</ref>()</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_stream;</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1aa6529297748da36b15e9ed7674ec60b2" kindref="member">setRam</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1aaa58d2ca0cd17e6d4a3b6dec96d53d76" kindref="member">pushConstant</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1a8f6a6b66be4690f4b9aeb6eddfff713f" kindref="member">pushLocal</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1a5cbf52561c2c0e632664e9da1ef93b8d" kindref="member">pushArgument</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1a0aa1816c96c0f6deb1971ef113a79af3" kindref="member">pushThis</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1af1a7a98b19545def95f6bc05e3e573d1" kindref="member">pushThat</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1a058483c1d4c8d8f37cb173df25aaf0cb" kindref="member">pushStatic</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>context,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1a7e845f9ab740405fc8cac69e48e3f35e" kindref="member">pushTemp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1ab918a95684ae69febf08ff7df0dc7977" kindref="member">pushPointer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1a1eb323d646263c89efbd6b4b609709f6" kindref="member">popLocal</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1a02258187ea3b8426a88a2a6d63dda0f4" kindref="member">popThis</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1a2de462d5d98a35b4366d15d2801d157d" kindref="member">popThat</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1a144f81f654a07f4f2b488b9424629bfd" kindref="member">popTemp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1a56edb8fc5daceb2c366c6a06709f5d51" kindref="member">popPointer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1abc0dabd1997693d70d9703aa4c861abd" kindref="member">popArgument</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1a2fa0b264ae63445fad0a8db36d20075a" kindref="member">popStatic</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>context,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1a5a9dd7c8028d6eb7a0f10f04d727ffb8" kindref="member">writeOr</ref>();</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1ae83c1294d792a8a07a2c2d1ae42b65ae" kindref="member">writeAnd</ref>();</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1ace6851f1122c7b49eaf7363d0fd00311" kindref="member">writeSub</ref>();</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1aaace24f338366621d97233f0a0505e38" kindref="member">writeAdd</ref>();</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1a79e7c8b178799150cf1bc9a0179bfcc2" kindref="member">writeNot</ref>();</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1a2f860b25cccd5835f087d13a33f6f4ff" kindref="member">writeNeg</ref>();</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1ab7130849685d66f3dbfdb66516a6666b" kindref="member">writeEq</ref>();</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1a1628ba2540e176473ece7714482fd895" kindref="member">writeLt</ref>();</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1a755e9953659ecf7df60423bd30dfe80c" kindref="member">writeGt</ref>();</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"></highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1a2fdb4876761af2db20b9511303b432bc" kindref="member">writeReset</ref>();</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"></highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1a0257d1433f36b284b726033a6f6760f2" kindref="member">writeHalt</ref>();</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1a732f25ca250ae685216a138788a8ab83" kindref="member">writGoto</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>value);</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1a838a57865474ad8fed8f0d872ade28e2" kindref="member">writIfGoto</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>value);</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1aaca9c3ae0e13532b9d44339d7ecbc06d" kindref="member">writeLabel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>value);</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"></highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1aab3f6bc5273771ec46046381c7253242" kindref="member">writeFunction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>locals);</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"></highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1ad150c2fea65ae75600e16c7af316999e" kindref="member">writeCall</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>args);</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"></highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1a02fbd64d23b39a2a5b4bc631d94aedae" kindref="member">writeReturn</ref>();</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"></highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01639_1aaf525ae23391a46b4ede8a6313f6a5d9" kindref="member">writeCode</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>cs);</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="124"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::VirtualMachine</highlight><highlight class="normal"></highlight></codeline>
-    </programlisting>
-    <location file="Source/VirtualMachine/Emitter.h"/>
+    <location file="Source/Utils/UserInterface/ColorCache.cpp" line="26" column="1"/>
   </compounddef>
 </doxygen>

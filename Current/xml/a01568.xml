@@ -1,45 +1,27 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01568" kind="page">
-    <compoundname>Hc05</compoundname>
-    <title>Compiler</title>
+    <compoundname>Hc02</compoundname>
+    <title>Chips</title>
     <briefdescription>
-<para>Implements the jack compiler. </para>    </briefdescription>
+<para>Implements the circuit class library. </para>    </briefdescription>
     <detaileddescription>
-<para>Implements the jack compiler.</para><para><linebreak/>
+<para>Implements the circuit class library.</para><sect1 id="a01568_1Hc02Impl">
+<title>Implementation</title>
+<para>It uses two separate implementations to compute the circuit logic.<linebreak/>
 <linebreak/>
-The primary job of the compiler is to take the high level jack language and translate it from, jack, vm, asm, then finally to mc.</para><para><linebreak/>
+ The first implementation is written to compute the value of each circuit. It links the circuits together in code and computes the value of each bit. <linebreak/>
 <linebreak/>
-</para><sect1 id="a01568_1Hc05SyntaxAnalyzer">
-<title>SyntaxAnalyzer</title>
-<para>Provides a static library that compiles the jack code into a parse tree. <linebreak/>
+ The second implementation is with the circuit behavior abstracted away. It replaces the circuit logic with a C++ implementation of its operation. <linebreak/>
 <linebreak/>
-The definition for the jack grammar can be found <ulink url="../../Source/Compiler/Analyzer/Jack.grm">here.</ulink><itemizedlist>
-<listitem><para>Note: the not operator <computeroutput>!</computeroutput> is implemented both as &apos;~&apos; and &apos;!&apos;.</para></listitem></itemizedlist>
+ The build option that toggles this behavior is <computeroutput>Hack_IMPLEMENT_BLACK_BOX</computeroutput>. <linebreak/>
+<linebreak/>
+</para><para>See <ref refid="a01569" kindref="compound">Implemented Chips</ref> for more information.</para><para><linebreak/>
+<linebreak/>
 </para></sect1>
-<sect1 id="a01568_1Hc05CompileUtils">
-<title>CompileUtils</title>
-<para>Provides the code that implements the parse tree, as well as extra classes that operate on the parse tree.</para></sect1>
-<sect1 id="a01568_1Hc05Jack2XML">
-<title>Jack2XML</title>
-<para>Is the program that uses the parse tree and outputs inspection files. <linebreak/>
-<linebreak/>
- <programlisting filename=".txt"><codeline><highlight class="normal">Usage:<sp/>Jack2xml<sp/>&lt;options&gt;<sp/>&lt;arg[0]<sp/>..<sp/>arg[n]&gt;</highlight></codeline>
-<codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-h,<sp/>--help<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Display<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>help<sp/>message</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-f,<sp/>--format<sp/><sp/><sp/><sp/><sp/>Specify<sp/>an<sp/>output<sp/>file<sp/>format</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>xml,<sp/>format<sp/>as<sp/>XML<sp/>(</highlight><highlight class="keywordflow">default</highlight><highlight class="normal">)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>dot,<sp/>format<sp/>as<sp/>DOT</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-d,<sp/>--directory<sp/><sp/>Converts<sp/>all<sp/>.jack<sp/>files<sp/>in<sp/>the<sp/>current<sp/>directory<sp/>to<sp/>.xml</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-o,<sp/>--output<sp/><sp/><sp/><sp/><sp/>Specify<sp/>an<sp/>output<sp/>file</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>the<sp/>directory<sp/>option<sp/>takes<sp/>precedence</highlight></codeline>
-</programlisting></para></sect1>
-<sect1 id="a01568_1Hc05CodeGenerator">
-<title>CodeGenerator</title>
-<para>Is the static library that implements the parse tree conversion from jack to vm.</para></sect1>
-<sect1 id="a01568_1Hc05Defined">
+<sect1 id="a01568_1Hc02Defined">
 <title>Defined In</title>
-<para>The source is defined in <ulink url="../../Source/Compiler/">Source/Compiler</ulink> </para></sect1>
+<para>The source is defined in <ulink url="../../Source/Chips/">Source/Chips</ulink> </para></sect1>
     </detaileddescription>
   </compounddef>
 </doxygen>

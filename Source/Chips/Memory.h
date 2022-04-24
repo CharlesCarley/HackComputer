@@ -44,7 +44,7 @@ namespace Hack::Chips
         uint16_t _out;
         uint16_t _address;
 
-        Ram16K* _ram16;
+        Ram16k* _ram16;
         Screen* _screen;
 
     public:

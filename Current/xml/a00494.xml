@@ -1,192 +1,181 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00494" kind="file" language="C++">
-    <compoundname>DefaultMemorySegment.h</compoundname>
-    <includes refid="a00533" local="yes">Chips/IMemorySegment.h</includes>
-    <includedby refid="a00626" local="yes">Source/Chips/Ram16k.h</includedby>
-    <includedby refid="a00665" local="yes">Source/Chips/Screen.h</includedby>
+    <compoundname>CPU.h</compoundname>
+    <includes refid="a00452" local="yes">ALU.h</includes>
+    <includes refid="a00476" local="yes">Chips/Chip.h</includes>
+    <includes refid="a00626" local="yes">Chips/ProgramCounter.h</includes>
+    <includes refid="a00659" local="yes">Chips/Register.h</includes>
+    <includedby refid="a00488" local="yes">Source/Chips/Computer.h</includedby>
+    <includedby refid="a00491" local="yes">Source/Chips/CPU.cpp</includedby>
     <incdepgraph>
-      <node id="1211">
+      <node id="1184">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="1212" relation="include">
+        <childnode refid="1185" relation="include">
         </childnode>
       </node>
-      <node id="1203">
+      <node id="1176">
         <label>Chips/BitUtils.h</label>
-        <childnode refid="1204" relation="include">
+        <childnode refid="1177" relation="include">
         </childnode>
-        <childnode refid="1205" relation="include">
+        <childnode refid="1178" relation="include">
         </childnode>
       </node>
-      <node id="1212">
+      <node id="1185">
         <label>cstdint</label>
       </node>
-      <node id="1208">
+      <node id="1181">
         <label>string</label>
       </node>
-      <node id="1210">
+      <node id="1183">
         <label>UserInterface/Context.h</label>
-        <childnode refid="1206" relation="include">
+        <childnode refid="1179" relation="include">
         </childnode>
-        <childnode refid="1211" relation="include">
+        <childnode refid="1184" relation="include">
         </childnode>
-        <childnode refid="1213" relation="include">
+        <childnode refid="1186" relation="include">
         </childnode>
       </node>
-      <node id="1213">
+      <node id="1186">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="1212" relation="include">
+        <childnode refid="1185" relation="include">
         </childnode>
-        <childnode refid="1209" relation="include">
+        <childnode refid="1182" relation="include">
         </childnode>
-        <childnode refid="1211" relation="include">
+        <childnode refid="1184" relation="include">
         </childnode>
       </node>
-      <node id="1205">
+      <node id="1187">
+        <label>Chips/ProgramCounter.h</label>
+        <childnode refid="1175" relation="include">
+        </childnode>
+      </node>
+      <node id="1178">
         <label>Utils/Console.h</label>
-        <childnode refid="1206" relation="include">
+        <childnode refid="1179" relation="include">
         </childnode>
-        <childnode refid="1210" relation="include">
+        <childnode refid="1183" relation="include">
         </childnode>
       </node>
-      <node id="1204">
+      <node id="1177">
         <label>bitset</label>
       </node>
-      <node id="1209">
+      <node id="1182">
         <label>vector</label>
       </node>
-      <node id="1207">
+      <node id="1180">
         <label>sstream</label>
       </node>
-      <node id="1202">
+      <node id="1175">
         <label>Chips/Chip.h</label>
-        <childnode refid="1203" relation="include">
+        <childnode refid="1176" relation="include">
         </childnode>
-        <childnode refid="1205" relation="include">
+        <childnode refid="1178" relation="include">
         </childnode>
       </node>
-      <node id="1199">
-        <label>Source/Chips/DefaultMemorySegment.h</label>
+      <node id="1188">
+        <label>Chips/Register.h</label>
+        <childnode refid="1175" relation="include">
+        </childnode>
+      </node>
+      <node id="1174">
+        <label>ALU.h</label>
+        <childnode refid="1175" relation="include">
+        </childnode>
+      </node>
+      <node id="1173">
+        <label>Source/Chips/CPU.h</label>
         <link refid="a00494"/>
-        <childnode refid="1200" relation="include">
+        <childnode refid="1174" relation="include">
+        </childnode>
+        <childnode refid="1175" relation="include">
+        </childnode>
+        <childnode refid="1187" relation="include">
+        </childnode>
+        <childnode refid="1188" relation="include">
         </childnode>
       </node>
-      <node id="1200">
-        <label>Chips/IMemorySegment.h</label>
-        <childnode refid="1201" relation="include">
-        </childnode>
-        <childnode refid="1202" relation="include">
-        </childnode>
-      </node>
-      <node id="1201">
-        <label>cstring</label>
-      </node>
-      <node id="1206">
+      <node id="1179">
         <label>String.h</label>
-        <childnode refid="1207" relation="include">
+        <childnode refid="1180" relation="include">
         </childnode>
-        <childnode refid="1208" relation="include">
+        <childnode refid="1181" relation="include">
         </childnode>
-        <childnode refid="1209" relation="include">
+        <childnode refid="1182" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="1226">
+      <node id="1199">
         <label>Source/Computer/RuntimeSDL.h</label>
       </node>
-      <node id="1225">
+      <node id="1198">
         <label>Source/Computer/DebugRuntime.h</label>
-        <childnode refid="1220" relation="include">
+        <childnode refid="1193" relation="include">
         </childnode>
-        <childnode refid="1222" relation="include">
+        <childnode refid="1195" relation="include">
         </childnode>
       </node>
-      <node id="1217">
+      <node id="1190">
         <label>Source/Chips/Computer.h</label>
-        <childnode refid="1218" relation="include">
+        <childnode refid="1191" relation="include">
         </childnode>
-        <childnode refid="1219" relation="include">
+        <childnode refid="1192" relation="include">
         </childnode>
-        <childnode refid="1220" relation="include">
+        <childnode refid="1193" relation="include">
         </childnode>
-        <childnode refid="1221" relation="include">
+        <childnode refid="1194" relation="include">
         </childnode>
-        <childnode refid="1222" relation="include">
+        <childnode refid="1195" relation="include">
         </childnode>
-        <childnode refid="1223" relation="include">
-        </childnode>
-      </node>
-      <node id="1216">
-        <label>Source/Chips/Memory.h</label>
-        <childnode refid="1217" relation="include">
-        </childnode>
-        <childnode refid="1227" relation="include">
+        <childnode refid="1196" relation="include">
         </childnode>
       </node>
-      <node id="1218">
+      <node id="1200">
+        <label>Source/Chips/CPU.cpp</label>
+      </node>
+      <node id="1191">
         <label>Source/Bindings/Bindings.cpp</label>
       </node>
-      <node id="1219">
+      <node id="1192">
         <label>Source/Chips/Computer.cpp</label>
       </node>
-      <node id="1221">
+      <node id="1194">
         <label>Source/Computer/CommandRuntime.cpp</label>
       </node>
-      <node id="1227">
-        <label>Source/Chips/Memory.cpp</label>
-      </node>
-      <node id="1214">
-        <label>Source/Chips/DefaultMemorySegment.h</label>
-        <link refid="a00494"/>
-        <childnode refid="1215" relation="include">
-        </childnode>
-        <childnode refid="1228" relation="include">
-        </childnode>
-      </node>
-      <node id="1222">
+      <node id="1195">
         <label>Source/Computer/DebugRuntime.cpp</label>
       </node>
-      <node id="1215">
-        <label>Source/Chips/Ram16k.h</label>
-        <childnode refid="1216" relation="include">
-        </childnode>
-      </node>
-      <node id="1228">
-        <label>Source/Chips/Screen.h</label>
-        <childnode refid="1216" relation="include">
-        </childnode>
-        <childnode refid="1224" relation="include">
-        </childnode>
-        <childnode refid="1225" relation="include">
-        </childnode>
-        <childnode refid="1223" relation="include">
-        </childnode>
-        <childnode refid="1226" relation="include">
-        </childnode>
-      </node>
-      <node id="1220">
+      <node id="1193">
         <label>Source/Computer/Application.cpp</label>
       </node>
-      <node id="1223">
+      <node id="1196">
         <label>Source/Computer/RuntimeInterface.h</label>
-        <childnode refid="1224" relation="include">
+        <childnode refid="1197" relation="include">
         </childnode>
-        <childnode refid="1225" relation="include">
+        <childnode refid="1198" relation="include">
         </childnode>
-        <childnode refid="1226" relation="include">
+        <childnode refid="1199" relation="include">
         </childnode>
       </node>
-      <node id="1224">
+      <node id="1197">
         <label>Source/Computer/CommandRuntime.h</label>
-        <childnode refid="1220" relation="include">
+        <childnode refid="1193" relation="include">
         </childnode>
-        <childnode refid="1221" relation="include">
+        <childnode refid="1194" relation="include">
+        </childnode>
+      </node>
+      <node id="1189">
+        <label>Source/Chips/CPU.h</label>
+        <link refid="a00494"/>
+        <childnode refid="1190" relation="include">
+        </childnode>
+        <childnode refid="1200" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
-    <innerclass refid="a01010" prot="public">Hack::Chips::DefaultMemorySegment</innerclass>
-    <innernamespace refid="a00896">Hack::Chips</innernamespace>
+    <innerclass refid="a01009" prot="public">Hack::Chips::Cpu</innerclass>
+    <innernamespace refid="a00899">Hack::Chips</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -214,129 +203,57 @@
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/IMemorySegment.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00896" kindref="compound">Hack::Chips</ref></highlight></codeline>
-<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">16_t<sp/>High,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">16_t<sp/>ElementCount&gt;</highlight></codeline>
-<codeline lineno="28" refid="a01010" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01010" kindref="compound">DefaultMemorySegment</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="a01038" kindref="compound">IMemorySegment</ref>&lt;High,<sp/>ElementCount&gt;</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="31" refid="a01010_1aa04cb9e6857a0b613e33e7f27f18efc8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="a01038" kindref="compound">IMemorySegment&lt;High, ElementCount&gt;</ref><sp/><ref refid="a01010_1aa04cb9e6857a0b613e33e7f27f18efc8" kindref="member">BaseType</ref>;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01358" kindref="compound">uint16_t</ref>*<sp/>_ram;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01010_1ac20cd1025034ccde9abbd06b8a30b9b1" kindref="member">DefaultMemorySegment</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ALU.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Chip.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/ProgramCounter.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Register.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00899" kindref="compound">Hack::Chips</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30" refid="a01009" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01009" kindref="compound">Cpu</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="a00993" kindref="compound" tooltip="Chip is the base class for all chips defined in this system. It uses a template integer for the _bits...">Chip</ref>&lt;uint8_t,<sp/>8&gt;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>evaluate();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isDirty()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>markDirty();</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01010_1ab86f5452f2831b2f439f0a3984d3effe" kindref="member">~DefaultMemorySegment</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>index)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01358" kindref="compound">uint16_t</ref>*<sp/><ref refid="a01010_1ad4b862a78421101fef5afc7ad76cd942" kindref="member">pointer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>address)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01117" kindref="compound">Register</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_a,<sp/>_d;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01097" kindref="compound">ProgramCounter</ref><sp/>_pc;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ins;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_in;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00961" kindref="compound">Alu</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_alu;</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01010_1ac10efeb1855e75c99717840b6bca98d7" kindref="member">setValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>address,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01358" kindref="compound">uint16_t</ref>&amp;<sp/>value)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01010_1af6db3804cc8555a3a302e9264885d5b4" kindref="member">zero</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/><ref refid="a01010_1a111146260aff6fd6a3c98ecbbfa14d26" kindref="member">getOut</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01010_1a8dda4aef718d10a18e206aa105b85e3c" kindref="member">evaluate</ref>();</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">16_t<sp/>High,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">16_t<sp/>ElementCount&gt;</highlight></codeline>
-<codeline lineno="56" refid="a01010_1ac20cd1025034ccde9abbd06b8a30b9b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01010_1ac20cd1025034ccde9abbd06b8a30b9b1" kindref="member">DefaultMemorySegment&lt;High, ElementCount&gt;::DefaultMemorySegment</ref>()<sp/>:</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ram(new<sp/><ref refid="a01358" kindref="compound">uint16_t</ref>[<ref refid="a01038" kindref="compound">BaseType</ref>::Max<sp/>+<sp/>1])</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01010_1af6db3804cc8555a3a302e9264885d5b4" kindref="member">zero</ref>();</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01009_1a5543e5ad5c5fcc2dcc166787b6bba8b4" kindref="member">Cpu</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01009_1a79cecbb18e73a58f32d84d8a4da53dc8" kindref="member">setInMemory</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01361" kindref="compound">uint16_t</ref>&amp;<sp/>input);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01009_1ad12d07395a9bb6a137027a086bad44d3" kindref="member">setClock</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>clock);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01009_1ac14c3298730fc31946de0c05ee2c7a2b" kindref="member">setReset</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>reset);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01009_1aed70d190ffe8390a4ad3f74ade6e60fe" kindref="member">setInstruction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01361" kindref="compound">uint16_t</ref>&amp;<sp/>instruction);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01009_1a09ccfdbe1ebceb25ef9964834cee904f" kindref="member">getWrite</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><ref refid="a01009_1a1f9a2cb8f03f3196c82d0fca242c6903" kindref="member">getOut</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><ref refid="a01009_1a5af96f7c73c15c4f0fff860481dc83bf" kindref="member">getAddress</ref>();</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">16_t<sp/>High,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">16_t<sp/>ElementCount&gt;</highlight></codeline>
-<codeline lineno="63" refid="a01010_1ab86f5452f2831b2f439f0a3984d3effe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01010_1ab86f5452f2831b2f439f0a3984d3effe" kindref="member">DefaultMemorySegment&lt;High, ElementCount&gt;::~DefaultMemorySegment</ref>()</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[]<sp/>_ram;</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><ref refid="a01009_1a9500b587542088fd9b9574d81508e6e2" kindref="member">getNext</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><ref refid="a01009_1a91db924b7a0e4fe6b99999402b00336b" kindref="member">getDRegister</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><ref refid="a01009_1a6ac458a81ab675897e277d07cb093193" kindref="member">getAmRegister</ref>();</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">16_t<sp/>High,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">16_t<sp/>ElementCount&gt;</highlight></codeline>
-<codeline lineno="69" refid="a01010_1a94ef78fc28470abbd4b024e2b6d44510" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/><ref refid="a01010_1a94ef78fc28470abbd4b024e2b6d44510" kindref="member">DefaultMemorySegment&lt;High, ElementCount&gt;::get</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>index)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="70"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>&lt;<sp/>High)</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_ram[index];</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CHECK_INT_BOUNDS</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>IndexOutOfBounds();</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">16_t<sp/>High,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">16_t<sp/>ElementCount&gt;</highlight></codeline>
-<codeline lineno="81" refid="a01010_1ad4b862a78421101fef5afc7ad76cd942" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01358" kindref="compound">uint16_t</ref>*<sp/><ref refid="a01010_1ad4b862a78421101fef5afc7ad76cd942" kindref="member">DefaultMemorySegment&lt;High, ElementCount&gt;::pointer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>address)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="82"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(address<sp/>&lt;<sp/>High)</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;_ram[address];</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">16_t<sp/>High,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">16_t<sp/>ElementCount&gt;</highlight></codeline>
-<codeline lineno="89" refid="a01010_1ac10efeb1855e75c99717840b6bca98d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01010_1ac10efeb1855e75c99717840b6bca98d7" kindref="member">DefaultMemorySegment&lt;High, ElementCount&gt;::setValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/><sp/><sp/>address,</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01358" kindref="compound">uint16_t</ref>&amp;<sp/>value)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="91"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(address<sp/>&lt;<sp/>High)</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ram[address]<sp/>=<sp/>_ram[address<sp/>+<sp/>High]<sp/>=<sp/>value;</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">16_t<sp/>High,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">16_t<sp/>ElementCount&gt;</highlight></codeline>
-<codeline lineno="97" refid="a01010_1af6db3804cc8555a3a302e9264885d5b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01010_1af6db3804cc8555a3a302e9264885d5b4" kindref="member">DefaultMemorySegment&lt;High, ElementCount&gt;::zero</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="98"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memset(_ram,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="a01358" kindref="compound">uint16_t</ref>)<sp/>*<sp/>BaseType::Max);</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">16_t<sp/>High,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">16_t<sp/>ElementCount&gt;</highlight></codeline>
-<codeline lineno="103" refid="a01010_1a8dda4aef718d10a18e206aa105b85e3c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01010_1a8dda4aef718d10a18e206aa105b85e3c" kindref="member">DefaultMemorySegment&lt;High, ElementCount&gt;::evaluate</ref>()</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/>loBit<sp/>=<sp/>this-&gt;_address;</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(loBit<sp/>&gt;=<sp/>High)</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this-&gt;_bits<sp/>&amp;<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" kindref="member">Bit0</ref>)</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/>hiBit<sp/>=<sp/>loBit<sp/>+<sp/>High;</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hiBit<sp/>&lt;<sp/>BaseType::Max)</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this-&gt;_bits<sp/>&amp;<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2a8487c63d5dca7d87b359feca1a2c2ac8" kindref="member">Bit1</ref>)</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ram[loBit]<sp/>=<sp/>_ram[hiBit]<sp/>=<sp/>this-&gt;_in;</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ram[loBit]<sp/>=<sp/>_ram[hiBit];</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ram[hiBit]<sp/>=<sp/>this-&gt;_in;</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>InputException(</highlight><highlight class="stringliteral">&quot;ram<sp/>index<sp/>(&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hiBit,</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;)<sp/>out<sp/>of<sp/>bounds<sp/>[0,<sp/>&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hiBit,</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;]&apos;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"></highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;_out<sp/>=<sp/>_ram[loBit];</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;_bits<sp/>&amp;=<sp/>0b01111100;</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"></highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">16_t<sp/>High,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">16_t<sp/>ElementCount&gt;</highlight></codeline>
-<codeline lineno="138" refid="a01010_1a111146260aff6fd6a3c98ecbbfa14d26" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/><ref refid="a01010_1a111146260aff6fd6a3c98ecbbfa14d26" kindref="member">DefaultMemorySegment&lt;High, ElementCount&gt;::getOut</ref>()</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((this-&gt;_bits<sp/>&amp;<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" kindref="member">Bit7</ref>)<sp/>!=<sp/>0<sp/>&amp;&amp;<sp/>!(this-&gt;_bits<sp/>&amp;<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" kindref="member">Bit6</ref>))</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;_out;</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="144"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01009_1ae5b1d8f46e76e589ca99c6dee2fd7390" kindref="member">lock</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01009_1a599e7ef3d1afa3a29c3f12f2e457f265" kindref="member">clear</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Chips/DefaultMemorySegment.h"/>
+    <location file="Source/Chips/CPU.h"/>
   </compounddef>
 </doxygen>

@@ -115,9 +115,9 @@
         </inbodydescription>
         <location file="Source/Chips/Memory.h" line="44" column="1" bodyfile="Source/Chips/Memory.h" bodystart="44" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a01049_1a4731ff8b8925d19e5bf7e4969c9a809f" prot="private" static="no" mutable="no">
-        <type><ref refid="a00899_1af444d69c9f8c7290fb072226e5b1d56d" kindref="member">Ram16K</ref> *</type>
-        <definition>Ram16K* Hack::Chips::Memory::_ram16</definition>
+      <memberdef kind="variable" id="a01049_1a8dcdf891c8b31f18dd38452431933b01" prot="private" static="no" mutable="no">
+        <type><ref refid="a00899_1a34177040653a4658b7c74d3846e164e1" kindref="member">Ram16k</ref> *</type>
+        <definition>Ram16k* Hack::Chips::Memory::_ram16</definition>
         <argsstring></argsstring>
         <name>_ram16</name>
         <briefdescription>
@@ -227,8 +227,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Source/Chips/Memory.h" line="72" column="1" bodyfile="Source/Chips/Memory.cpp" bodystart="121" bodyend="130"/>
-        <references refid="a01049_1aeacf9b833a7fde722f19829077675b60" compoundref="a01662" startline="32">MaxAddress</references>
-        <references refid="a01049_1a5e6ec45243f237084d377b6aefb6981b" compoundref="a01662" startline="33">ScreenAddress</references>
+        <references refid="a01049_1aeacf9b833a7fde722f19829077675b60" compoundref="a01661" startline="32">MaxAddress</references>
+        <references refid="a01049_1a5e6ec45243f237084d377b6aefb6981b" compoundref="a01661" startline="33">ScreenAddress</references>
         <references refid="a01013_1a94ef78fc28470abbd4b024e2b6d44510" compoundref="a00497" startline="69" endline="78">Hack::Chips::DefaultMemorySegment&lt; High, ElementCount &gt;::get</references>
         <references refid="a01041_1abd9da88a0da67c4ea4cebb492cef6b78">Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::get</references>
       </memberdef>
@@ -314,7 +314,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Source/Chips/Memory.h" line="74" column="1" bodyfile="Source/Chips/Memory.cpp" bodystart="132" bodyend="137"/>
-        <references refid="a01049_1a5e6ec45243f237084d377b6aefb6981b" compoundref="a01662" startline="33">ScreenAddress</references>
+        <references refid="a01049_1a5e6ec45243f237084d377b6aefb6981b" compoundref="a01661" startline="33">ScreenAddress</references>
         <references refid="a01013_1ad4b862a78421101fef5afc7ad76cd942" compoundref="a00497" startline="81" endline="86">Hack::Chips::DefaultMemorySegment&lt; High, ElementCount &gt;::pointer</references>
         <references refid="a01041_1a928606841d9d6b0130aa7dbdbe7d294e">Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::pointer</references>
       </memberdef>
@@ -334,7 +334,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Source/Chips/Memory.h" line="60" column="1" bodyfile="Source/Chips/Memory.cpp" bodystart="71" bodyend="75"/>
-        <references refid="a01049_1aeacf9b833a7fde722f19829077675b60" compoundref="a01662" startline="32">MaxAddress</references>
+        <references refid="a01049_1aeacf9b833a7fde722f19829077675b60" compoundref="a01661" startline="32">MaxAddress</references>
       </memberdef>
       <memberdef kind="function" id="a01049_1aff5964e2c12b9d9d2df86251852f7667" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -415,8 +415,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Source/Chips/Memory.h" line="62" column="1" bodyfile="Source/Chips/Memory.cpp" bodystart="77" bodyend="86"/>
-        <references refid="a01049_1aeacf9b833a7fde722f19829077675b60" compoundref="a01662" startline="32">MaxAddress</references>
-        <references refid="a01049_1a5e6ec45243f237084d377b6aefb6981b" compoundref="a01662" startline="33">ScreenAddress</references>
+        <references refid="a01049_1aeacf9b833a7fde722f19829077675b60" compoundref="a01661" startline="32">MaxAddress</references>
+        <references refid="a01049_1a5e6ec45243f237084d377b6aefb6981b" compoundref="a01661" startline="33">ScreenAddress</references>
         <references refid="a01013_1ac10efeb1855e75c99717840b6bca98d7" compoundref="a00497" startline="89" endline="94">Hack::Chips::DefaultMemorySegment&lt; High, ElementCount &gt;::setValue</references>
         <references refid="a01041_1a2fe4fb4ddf831109accb6c95f6dbf990">Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::setValue</references>
       </memberdef>
@@ -488,7 +488,7 @@
       <member refid="a00993_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Memory</scope><name>_bits</name></member>
       <member refid="a01049_1a945ff73b32a627124f4304adf6d32b63" prot="private" virt="non-virtual"><scope>Hack::Chips::Memory</scope><name>_in</name></member>
       <member refid="a01049_1a52c99b8e93fd12ef32912e5e2bbc1395" prot="private" virt="non-virtual"><scope>Hack::Chips::Memory</scope><name>_out</name></member>
-      <member refid="a01049_1a4731ff8b8925d19e5bf7e4969c9a809f" prot="private" virt="non-virtual"><scope>Hack::Chips::Memory</scope><name>_ram16</name></member>
+      <member refid="a01049_1a8dcdf891c8b31f18dd38452431933b01" prot="private" virt="non-virtual"><scope>Hack::Chips::Memory</scope><name>_ram16</name></member>
       <member refid="a01049_1ac2016f1aef2e2d41d1ca4a98f80def12" prot="private" virt="non-virtual"><scope>Hack::Chips::Memory</scope><name>_screen</name></member>
       <member refid="a00993_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::Memory</scope><name>applyBit</name></member>
       <member refid="a00993_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::Memory</scope><name>assignBit</name></member>

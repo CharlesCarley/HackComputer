@@ -1,16 +1,21 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01569" kind="page">
-    <compoundname>Hc06</compoundname>
-    <title>Bindings</title>
+    <compoundname>Hc0201</compoundname>
+    <title>Implemented Chips</title>
     <briefdescription>
-<para>Provides a script language binding interface. </para>    </briefdescription>
+    </briefdescription>
     <detaileddescription>
-<para>Provides a script language binding interface.</para><para><linebreak/>
-<linebreak/>
-This interface is currently on the back-burner, until primary functionality is complete.</para><para><linebreak/>
-<linebreak/>
-The proof of concept flutter application can be found in the flutter branch.</para><para><linebreak/>
-It uses this interface to communicate with dart. </para>    </detaileddescription>
+<sect1 id="a01569_1Hc0201Standalone">
+<title>Standalone Chips</title>
+<para><itemizedlist>
+<listitem><para><ref refid="a00965" kindref="compound">Hack::Chips::And</ref></para></listitem><listitem><para><ref refid="a00997" kindref="compound">Hack::Chips::Clock</ref></para></listitem><listitem><para><ref refid="a01021" kindref="compound">Hack::Chips::DMux</ref></para></listitem><listitem><para><ref refid="a01053" kindref="compound">Hack::Chips::Mux</ref></para></listitem><listitem><para><ref refid="a01133" kindref="compound">Hack::Chips::XOr</ref></para></listitem><listitem><para><ref refid="a01085" kindref="compound">Hack::Chips::Or</ref></para></listitem><listitem><para><ref refid="a01077" kindref="compound">Hack::Chips::Not</ref></para></listitem><listitem><para><ref refid="a01069" kindref="compound">Hack::Chips::NAnd</ref></para></listitem><listitem><para><ref refid="a01073" kindref="compound">Hack::Chips::NOr</ref></para></listitem></itemizedlist>
+</para></sect1>
+<sect1 id="a01569_1Hc0201Combination">
+<title>Combination Chips</title>
+<para><itemizedlist>
+<listitem><para><ref refid="a01005" kindref="compound">Hack::Chips::Computer</ref></para></listitem><listitem><para><ref refid="a00957" kindref="compound">Hack::Chips::Add16</ref></para></listitem><listitem><para><ref refid="a00961" kindref="compound">Hack::Chips::Alu</ref></para></listitem><listitem><para><ref refid="a00969" kindref="compound">Hack::Chips::And16</ref></para></listitem><listitem><para><ref refid="a00973" kindref="compound">Hack::Chips::Bit</ref></para></listitem><listitem><para><ref refid="a01009" kindref="compound">Hack::Chips::Cpu</ref></para></listitem><listitem><para><ref refid="a01017" kindref="compound">Hack::Chips::DFlipFlop</ref></para></listitem><listitem><para><ref refid="a01025" kindref="compound">Hack::Chips::DMux4Way</ref></para></listitem><listitem><para><ref refid="a01029" kindref="compound">Hack::Chips::DMux8Way</ref></para></listitem><listitem><para><ref refid="a01033" kindref="compound">Hack::Chips::FullAdder</ref></para></listitem><listitem><para><ref refid="a01037" kindref="compound">Hack::Chips::HalfAdder</ref></para></listitem><listitem><para><ref refid="a01045" kindref="compound">Hack::Chips::Inc16</ref></para></listitem><listitem><para><ref refid="a01049" kindref="compound">Hack::Chips::Memory</ref></para></listitem><listitem><para><ref refid="a01057" kindref="compound">Hack::Chips::Mux16</ref></para></listitem><listitem><para><ref refid="a01061" kindref="compound">Hack::Chips::Mux4Way16</ref></para></listitem><listitem><para><ref refid="a01065" kindref="compound">Hack::Chips::Mux8Way16</ref></para></listitem><listitem><para><ref refid="a01081" kindref="compound">Hack::Chips::Not16</ref></para></listitem><listitem><para><ref refid="a01089" kindref="compound">Hack::Chips::Or16</ref></para></listitem><listitem><para><ref refid="a01093" kindref="compound">Hack::Chips::Or8Way</ref></para></listitem><listitem><para><ref refid="a01097" kindref="compound">Hack::Chips::ProgramCounter</ref></para></listitem><listitem><para><ref refid="a00899_1a34177040653a4658b7c74d3846e164e1" kindref="member">Hack::Chips::Ram16k</ref></para></listitem><listitem><para><ref refid="a01101" kindref="compound">Hack::Chips::Ram4k</ref></para></listitem><listitem><para><ref refid="a01105" kindref="compound">Hack::Chips::Ram512</ref></para></listitem><listitem><para><ref refid="a01109" kindref="compound">Hack::Chips::Ram64</ref></para></listitem><listitem><para><ref refid="a01113" kindref="compound">Hack::Chips::Ram8</ref></para></listitem><listitem><para><ref refid="a01117" kindref="compound">Hack::Chips::Register</ref></para></listitem><listitem><para><ref refid="a01121" kindref="compound">Hack::Chips::Rom32</ref></para></listitem><listitem><para><ref refid="a00899_1a205aa97050ad01560145252139c81057" kindref="member">Hack::Chips::Screen</ref></para></listitem><listitem><para><ref refid="a01125" kindref="compound">Hack::Chips::SRLatch</ref></para></listitem><listitem><para><ref refid="a01129" kindref="compound">Hack::Chips::Timer</ref> </para></listitem></itemizedlist>
+</para></sect1>
+    </detaileddescription>
   </compounddef>
 </doxygen>

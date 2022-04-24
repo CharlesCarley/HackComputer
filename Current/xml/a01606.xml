@@ -2,182 +2,162 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01606" kind="file" language="C++">
     <compoundname>Parser.h</compoundname>
-    <includes local="no">stack</includes>
-    <includes refid="a00713" local="yes">Compiler/Common/Tree.h</includes>
-    <includes refid="a00806" local="yes">Utils/Exception.h</includes>
-    <includes refid="a00827" local="yes">Utils/ParserBase/ParserBase.h</includes>
-    <includes refid="a00842" local="yes">Utils/String.h</includes>
-    <includedby refid="a01576" local="yes">Source/Compiler/Analyzer/Main.cpp</includedby>
-    <includedby refid="a01594" local="yes">Source/Compiler/Analyzer/Parser.cpp</includedby>
-    <includedby refid="a00728" local="yes">Source/Compiler/Generator/Generator.cpp</includedby>
-    <includedby refid="a01582" local="yes">Source/Compiler/Generator/Main.cpp</includedby>
-    <includedby refid="a00758" local="yes">Source/Computer/Application.cpp</includedby>
+    <includes local="no">unordered_map</includes>
+    <includes local="no">vector</includes>
+    <includes refid="a00830" local="yes">Utils/ParserBase/ParserBase.h</includes>
+    <includedby refid="a01576" local="yes">Source/Assembler/Main.cpp</includedby>
+    <includedby refid="a01594" local="yes">Source/Assembler/Parser.cpp</includedby>
+    <includedby refid="a00440" local="yes">Source/Bindings/Bindings.cpp</includedby>
+    <includedby refid="a00761" local="yes">Source/Computer/Application.cpp</includedby>
     <incdepgraph>
-      <node id="359">
-        <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="360" relation="include">
+      <node id="323">
+        <label>Source/Assembler/Parser.h</label>
+        <link refid="a01606"/>
+        <childnode refid="324" relation="include">
+        </childnode>
+        <childnode refid="325" relation="include">
+        </childnode>
+        <childnode refid="326" relation="include">
         </childnode>
       </node>
-      <node id="360">
+      <node id="339">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="340" relation="include">
+        </childnode>
+      </node>
+      <node id="340">
         <label>cstdint</label>
       </node>
-      <node id="355">
+      <node id="332">
         <label>stdexcept</label>
       </node>
-      <node id="351">
+      <node id="337">
         <label>string</label>
       </node>
-      <node id="366">
+      <node id="329">
         <label>unordered_set</label>
       </node>
-      <node id="354">
+      <node id="331">
         <label>exception</label>
       </node>
-      <node id="363">
+      <node id="327">
         <label>ScannerBase.h</label>
-        <childnode refid="364" relation="include">
+        <childnode refid="328" relation="include">
         </childnode>
-        <childnode refid="367" relation="include">
+        <childnode refid="342" relation="include">
         </childnode>
       </node>
-      <node id="367">
+      <node id="342">
         <label>Utils/ParserBase/TokenBase.h</label>
-        <childnode refid="349" relation="include">
+        <childnode refid="335" relation="include">
         </childnode>
       </node>
-      <node id="358">
+      <node id="338">
         <label>UserInterface/Context.h</label>
-        <childnode refid="349" relation="include">
+        <childnode refid="335" relation="include">
         </childnode>
-        <childnode refid="359" relation="include">
+        <childnode refid="339" relation="include">
         </childnode>
-        <childnode refid="361" relation="include">
+        <childnode refid="341" relation="include">
         </childnode>
       </node>
-      <node id="361">
+      <node id="341">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="360" relation="include">
+        <childnode refid="340" relation="include">
         </childnode>
-        <childnode refid="352" relation="include">
+        <childnode refid="325" relation="include">
         </childnode>
-        <childnode refid="359" relation="include">
+        <childnode refid="339" relation="include">
         </childnode>
       </node>
-      <node id="364">
+      <node id="328">
         <label>Utils/IndexCache.h</label>
-        <childnode refid="365" relation="include">
+        <childnode refid="324" relation="include">
         </childnode>
-        <childnode refid="366" relation="include">
+        <childnode refid="329" relation="include">
         </childnode>
-        <childnode refid="353" relation="include">
+        <childnode refid="330" relation="include">
         </childnode>
       </node>
-      <node id="357">
+      <node id="334">
         <label>Utils/Console.h</label>
-        <childnode refid="349" relation="include">
+        <childnode refid="335" relation="include">
         </childnode>
-        <childnode refid="358" relation="include">
+        <childnode refid="338" relation="include">
         </childnode>
       </node>
-      <node id="352">
+      <node id="325">
         <label>vector</label>
       </node>
-      <node id="347">
-        <label>stack</label>
-      </node>
-      <node id="356">
+      <node id="333">
         <label>utility</label>
       </node>
-      <node id="350">
+      <node id="336">
         <label>sstream</label>
       </node>
-      <node id="346">
-        <label>Source/Compiler/Analyzer/Parser.h</label>
-        <link refid="a01606"/>
-        <childnode refid="347" relation="include">
-        </childnode>
-        <childnode refid="348" relation="include">
-        </childnode>
-        <childnode refid="353" relation="include">
-        </childnode>
-        <childnode refid="362" relation="include">
-        </childnode>
-        <childnode refid="349" relation="include">
-        </childnode>
-      </node>
-      <node id="353">
+      <node id="330">
         <label>Utils/Exception.h</label>
-        <childnode refid="354" relation="include">
+        <childnode refid="331" relation="include">
         </childnode>
-        <childnode refid="355" relation="include">
+        <childnode refid="332" relation="include">
         </childnode>
-        <childnode refid="356" relation="include">
+        <childnode refid="333" relation="include">
         </childnode>
-        <childnode refid="357" relation="include">
+        <childnode refid="334" relation="include">
         </childnode>
-        <childnode refid="349" relation="include">
+        <childnode refid="335" relation="include">
         </childnode>
       </node>
-      <node id="365">
+      <node id="324">
         <label>unordered_map</label>
       </node>
-      <node id="362">
+      <node id="326">
         <label>Utils/ParserBase/ParserBase.h</label>
-        <childnode refid="352" relation="include">
+        <childnode refid="325" relation="include">
         </childnode>
-        <childnode refid="363" relation="include">
+        <childnode refid="327" relation="include">
         </childnode>
-        <childnode refid="367" relation="include">
-        </childnode>
-      </node>
-      <node id="348">
-        <label>Compiler/Common/Tree.h</label>
-        <childnode refid="349" relation="include">
+        <childnode refid="342" relation="include">
         </childnode>
       </node>
-      <node id="349">
-        <label>Utils/String.h</label>
-        <childnode refid="350" relation="include">
+      <node id="335">
+        <label>String.h</label>
+        <childnode refid="336" relation="include">
         </childnode>
-        <childnode refid="351" relation="include">
+        <childnode refid="337" relation="include">
         </childnode>
-        <childnode refid="352" relation="include">
+        <childnode refid="325" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="371">
-        <label>Source/Compiler/Generator/Generator.cpp</label>
-      </node>
-      <node id="368">
-        <label>Source/Compiler/Analyzer/Parser.h</label>
+      <node id="343">
+        <label>Source/Assembler/Parser.h</label>
         <link refid="a01606"/>
-        <childnode refid="369" relation="include">
+        <childnode refid="344" relation="include">
         </childnode>
-        <childnode refid="370" relation="include">
+        <childnode refid="345" relation="include">
         </childnode>
-        <childnode refid="371" relation="include">
+        <childnode refid="346" relation="include">
         </childnode>
-        <childnode refid="372" relation="include">
-        </childnode>
-        <childnode refid="373" relation="include">
+        <childnode refid="347" relation="include">
         </childnode>
       </node>
-      <node id="370">
-        <label>Source/Compiler/Analyzer/Parser.cpp</label>
+      <node id="344">
+        <label>Source/Assembler/Main.cpp</label>
       </node>
-      <node id="369">
-        <label>Source/Compiler/Analyzer/Main.cpp</label>
+      <node id="346">
+        <label>Source/Bindings/Bindings.cpp</label>
       </node>
-      <node id="373">
+      <node id="345">
+        <label>Source/Assembler/Parser.cpp</label>
+      </node>
+      <node id="347">
         <label>Source/Computer/Application.cpp</label>
       </node>
-      <node id="372">
-        <label>Source/Compiler/Generator/Main.cpp</label>
-      </node>
     </invincdepgraph>
-    <innerclass refid="a01134" prot="public">Hack::Compiler::Analyzer::Parser</innerclass>
-    <innernamespace refid="a00899">Hack::Compiler::Analyzer</innernamespace>
+    <innerclass refid="a00925" prot="public">Hack::Assembler::Parser</innerclass>
+    <innernamespace refid="a00896">Hack::Assembler</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -205,134 +185,69 @@
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stack&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Compiler/Common/Tree.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/Exception.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/ParserBase/ParserBase.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/String.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00899" kindref="compound">Hack::Compiler::Analyzer</ref></highlight></codeline>
-<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Scanner;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33" refid="a01134" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01134" kindref="compound">Parser</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="a01278" kindref="compound">ParserBase</ref></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="36" refid="a01134_1a5ade64fc71a3b925e25fdc02ec268457" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::stack&lt;Node*&gt;<sp/><ref refid="a01134_1a5ade64fc71a3b925e25fdc02ec268457" kindref="member">NodeStack</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/ParserBase/ParserBase.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00896" kindref="compound">Hack::Assembler</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29" refid="a00896_1ad1af9d4a0a202058a0d533d12c60c3b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="a00896_1ad1af9d4a0a202058a0d533d12c60c3b6" kindref="member">StringIndex</ref><sp/>=<sp/>std::pair&lt;String,<sp/>size_t&gt;;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="a00925" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a00925" kindref="compound">Parser</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="a01281" kindref="compound">ParserBase</ref></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34" refid="a00925_1a9e0e8293fb5dfb34d2669b83ee4e7a61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;uint16_t&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00925_1a9e0e8293fb5dfb34d2669b83ee4e7a61" kindref="member">Instructions</ref>;</highlight></codeline>
+<codeline lineno="35" refid="a00925_1ac1448535aceaa8dcc7d35a3067790d62" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::unordered_map&lt;String,<sp/>size_t&gt;<sp/><ref refid="a00925_1ac1448535aceaa8dcc7d35a3067790d62" kindref="member">Labels</ref>;</highlight></codeline>
+<codeline lineno="36" refid="a00925_1ad1744b6d9135f851433d88b8e79d824a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;StringIndex&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00925_1ad1744b6d9135f851433d88b8e79d824a" kindref="member">LabelLookup</ref>;</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01166" kindref="compound">Tree</ref>*<sp/><sp/><sp/><sp/><sp/>_tree;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01134_1a5ade64fc71a3b925e25fdc02ec268457" kindref="member">NodeStack</ref><sp/>_stack;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>parseImpl(<ref refid="a00894_1a830c8eb3c005ef2fbc470e0b141b93c5" kindref="member">IStream</ref>&amp;<sp/>is)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>writeImpl(<ref refid="a00894_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref>&amp;<sp/>os,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>format<sp/>=<sp/>0)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00925_1a9e0e8293fb5dfb34d2669b83ee4e7a61" kindref="member">Instructions</ref><sp/>_instructions;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00925_1ac1448535aceaa8dcc7d35a3067790d62" kindref="member">Labels</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_labels;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><sp/><sp/><sp/><sp/>_cBits;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01373" kindref="compound">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><sp/>_dBits;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01373" kindref="compound">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><sp/>_aBit;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01373" kindref="compound">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><sp/>_jBits;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00925_1ad1744b6d9135f851433d88b8e79d824a" kindref="member">LabelLookup</ref><sp/><sp/>_resolution;</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>reduceRule(<ref refid="a01158" kindref="compound">Node</ref>*<sp/>node);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>pushCInstruction();</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01158" kindref="compound">Node</ref>*<sp/>createRule(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int8_t&amp;<sp/>name);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>compoundExpressionAZero();</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkEof();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>compoundExpressionAOne();</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>classRule();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>compoundExpression();</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>classDescriptionRule();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>assignmentExpression();</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>identifier(<ref refid="a01158" kindref="compound">Node</ref>*<sp/>rule);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>identityExpression();</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>identifier(<ref refid="a01158" kindref="compound">Node</ref>*<sp/>rule,<sp/>int8_t<sp/>symbolId,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>token);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>expressionC();</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>constant(int8_t<sp/>symbolId);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>expressionA();</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>object(int8_t<sp/>symbolId);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>label();</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>symbol(<ref refid="a01158" kindref="compound">Node</ref>*<sp/>rule,<sp/>int8_t<sp/>symbolId,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>token,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>ch);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>expression();</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>symbol(int8_t<sp/>symbolId);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>resolveLabels();</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>keyword(<ref refid="a01158" kindref="compound">Node</ref>*<sp/>rule,<sp/>int8_t<sp/>symbolId,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>token,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>kw);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>parseImpl(<ref refid="a00897_1a830c8eb3c005ef2fbc470e0b141b93c5" kindref="member">IStream</ref>&amp;<sp/>is)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>keyword(int8_t<sp/>symbolId);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>writeImpl(<ref refid="a00897_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref>&amp;<sp/>os,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>format<sp/>=<sp/>0)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>identifierListRule();</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>fieldRule();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00925_1ad076691ece43e0632cd613e597df061e" kindref="member">Parser</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00925_1a48c44a16d5bae99c1adb31f12e6aa4c7" kindref="member">~Parser</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>fieldSpecificationRule();</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dataTypeRule();</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>methodRule();</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>methodSpecificationRule();</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>methodReturnTypeRule();</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>methodBodyRule();</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>bodyRule();</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>variableRule();</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>statementRule();</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>letStatementRule();</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ifStatementRule();</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>elseStatementRule();</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>whileStatementRule();</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>doStatementRule();</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>returnStatementRule();</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>statementListRule();</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>expressionRule();</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>singleExpressionRule();</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>termRule();</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>simpleTermRule();</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>complexTermRule();</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>operatorRule();</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>unaryOperatorRule();</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"></highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>expressionListRule();</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"></highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>callMethodRule();</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"></highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>parameterListRule();</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"></highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>parameterRule();</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"></highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>inlineVmRule();</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"></highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>inlineAsmRule();</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"></highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01134_1a7254682ac0d96fcf4199af56f19b3688" kindref="member">Parser</ref>();</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"></highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01134_1a3776e5e7c4432429f36f08cd1666644e" kindref="member">~Parser</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"></highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01166" kindref="compound">Tree</ref>&amp;<sp/><ref refid="a01134_1a19917dd91094e5a227a90d6cfaadb150" kindref="member">getTree</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"></highlight></codeline>
-<codeline lineno="143" refid="a01134_1a19917dd91094e5a227a90d6cfaadb150" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01166" kindref="compound">Tree</ref>&amp;<sp/><ref refid="a01134_1a19917dd91094e5a227a90d6cfaadb150" kindref="member">Parser::getTree</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="144"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!_tree)</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="a01254" kindref="compound">Exception</ref>(</highlight><highlight class="stringliteral">&quot;null<sp/>tree&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*_tree;</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="149"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler::Analyzer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00925_1a9e0e8293fb5dfb34d2669b83ee4e7a61" kindref="member">Instructions</ref>&amp;<sp/><ref refid="a00925_1a5f8343d626d9e19a9d1cd7d64979ae24" kindref="member">instructions</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="a00925_1a5f8343d626d9e19a9d1cd7d64979ae24" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00925_1a9e0e8293fb5dfb34d2669b83ee4e7a61" kindref="member">Parser::Instructions</ref>&amp;<sp/><ref refid="a00925_1a5f8343d626d9e19a9d1cd7d64979ae24" kindref="member">Parser::instructions</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="81"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_instructions;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Assembler</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Compiler/Analyzer/Parser.h"/>
+    <location file="Source/Assembler/Parser.h"/>
   </compounddef>
 </doxygen>

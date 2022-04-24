@@ -1,90 +1,170 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00452" kind="file" language="C++">
-    <compoundname>And.cpp</compoundname>
-    <includes refid="a00455" local="yes">Chips/And.h</includes>
+    <compoundname>ALU.h</compoundname>
+    <includes refid="a00476" local="yes">Chips/Chip.h</includes>
+    <includedby refid="a00449" local="yes">Source/Chips/ALU.cpp</includedby>
+    <includedby refid="a00491" local="yes">Source/Chips/CPU.cpp</includedby>
+    <includedby refid="a00494" local="yes">Source/Chips/CPU.h</includedby>
     <incdepgraph>
-      <node id="767">
+      <node id="741">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="768" relation="include">
+        <childnode refid="742" relation="include">
         </childnode>
       </node>
-      <node id="759">
+      <node id="733">
         <label>Chips/BitUtils.h</label>
-        <childnode refid="760" relation="include">
+        <childnode refid="734" relation="include">
         </childnode>
-        <childnode refid="761" relation="include">
-        </childnode>
-      </node>
-      <node id="757">
-        <label>Chips/And.h</label>
-        <childnode refid="758" relation="include">
+        <childnode refid="735" relation="include">
         </childnode>
       </node>
-      <node id="768">
+      <node id="742">
         <label>cstdint</label>
       </node>
-      <node id="764">
+      <node id="738">
         <label>string</label>
       </node>
-      <node id="766">
+      <node id="740">
         <label>UserInterface/Context.h</label>
-        <childnode refid="762" relation="include">
+        <childnode refid="736" relation="include">
         </childnode>
-        <childnode refid="767" relation="include">
+        <childnode refid="741" relation="include">
         </childnode>
-        <childnode refid="769" relation="include">
+        <childnode refid="743" relation="include">
         </childnode>
       </node>
-      <node id="769">
+      <node id="743">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="768" relation="include">
+        <childnode refid="742" relation="include">
         </childnode>
-        <childnode refid="765" relation="include">
+        <childnode refid="739" relation="include">
         </childnode>
-        <childnode refid="767" relation="include">
+        <childnode refid="741" relation="include">
         </childnode>
       </node>
-      <node id="761">
+      <node id="735">
         <label>Utils/Console.h</label>
-        <childnode refid="762" relation="include">
+        <childnode refid="736" relation="include">
         </childnode>
-        <childnode refid="766" relation="include">
+        <childnode refid="740" relation="include">
         </childnode>
       </node>
-      <node id="760">
+      <node id="734">
         <label>bitset</label>
       </node>
-      <node id="765">
+      <node id="739">
         <label>vector</label>
       </node>
-      <node id="763">
+      <node id="737">
         <label>sstream</label>
       </node>
-      <node id="758">
+      <node id="732">
         <label>Chips/Chip.h</label>
-        <childnode refid="759" relation="include">
+        <childnode refid="733" relation="include">
         </childnode>
-        <childnode refid="761" relation="include">
+        <childnode refid="735" relation="include">
         </childnode>
       </node>
-      <node id="756">
-        <label>Source/Chips/And.cpp</label>
+      <node id="731">
+        <label>Source/Chips/ALU.h</label>
         <link refid="a00452"/>
-        <childnode refid="757" relation="include">
+        <childnode refid="732" relation="include">
         </childnode>
       </node>
-      <node id="762">
+      <node id="736">
         <label>String.h</label>
-        <childnode refid="763" relation="include">
+        <childnode refid="737" relation="include">
         </childnode>
-        <childnode refid="764" relation="include">
+        <childnode refid="738" relation="include">
         </childnode>
-        <childnode refid="765" relation="include">
+        <childnode refid="739" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <innernamespace refid="a00896">Hack::Chips</innernamespace>
+    <invincdepgraph>
+      <node id="757">
+        <label>Source/Computer/RuntimeSDL.h</label>
+      </node>
+      <node id="756">
+        <label>Source/Computer/DebugRuntime.h</label>
+        <childnode refid="751" relation="include">
+        </childnode>
+        <childnode refid="753" relation="include">
+        </childnode>
+      </node>
+      <node id="748">
+        <label>Source/Chips/Computer.h</label>
+        <childnode refid="749" relation="include">
+        </childnode>
+        <childnode refid="750" relation="include">
+        </childnode>
+        <childnode refid="751" relation="include">
+        </childnode>
+        <childnode refid="752" relation="include">
+        </childnode>
+        <childnode refid="753" relation="include">
+        </childnode>
+        <childnode refid="754" relation="include">
+        </childnode>
+      </node>
+      <node id="746">
+        <label>Source/Chips/CPU.cpp</label>
+      </node>
+      <node id="749">
+        <label>Source/Bindings/Bindings.cpp</label>
+      </node>
+      <node id="745">
+        <label>Source/Chips/ALU.cpp</label>
+      </node>
+      <node id="750">
+        <label>Source/Chips/Computer.cpp</label>
+      </node>
+      <node id="752">
+        <label>Source/Computer/CommandRuntime.cpp</label>
+      </node>
+      <node id="753">
+        <label>Source/Computer/DebugRuntime.cpp</label>
+      </node>
+      <node id="751">
+        <label>Source/Computer/Application.cpp</label>
+      </node>
+      <node id="754">
+        <label>Source/Computer/RuntimeInterface.h</label>
+        <childnode refid="755" relation="include">
+        </childnode>
+        <childnode refid="756" relation="include">
+        </childnode>
+        <childnode refid="757" relation="include">
+        </childnode>
+      </node>
+      <node id="744">
+        <label>Source/Chips/ALU.h</label>
+        <link refid="a00452"/>
+        <childnode refid="745" relation="include">
+        </childnode>
+        <childnode refid="746" relation="include">
+        </childnode>
+        <childnode refid="747" relation="include">
+        </childnode>
+      </node>
+      <node id="755">
+        <label>Source/Computer/CommandRuntime.h</label>
+        <childnode refid="751" relation="include">
+        </childnode>
+        <childnode refid="752" relation="include">
+        </childnode>
+      </node>
+      <node id="747">
+        <label>Source/Chips/CPU.h</label>
+        <childnode refid="748" relation="include">
+        </childnode>
+        <childnode refid="746" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="a00961" prot="public">Hack::Chips::Alu</innerclass>
+    <innernamespace refid="a00899">Hack::Chips</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -111,45 +191,71 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/And.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00896" kindref="compound">Hack::Chips</ref></highlight></codeline>
-<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="26" refid="a00962_1ab531dbe1ff79daf2f6fbd7a2782ab4f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00962_1ab531dbe1ff79daf2f6fbd7a2782ab4f5" kindref="member">And::And</ref>()</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a5a604431fa35bc87e0d7f4328b4ad4a1" kindref="member" tooltip="Zeros all bits except for the bit at the supplied index. ">assignBit</ref>(7);</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31" refid="a00962_1a90b4df330a1148a1ef278d0b205434c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00962_1a90b4df330a1148a1ef278d0b205434c8" kindref="member">And::setA</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>a)</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(0,<sp/>a);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37" refid="a00962_1a8bb4d4c09098144dd40f0d973958048c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00962_1a8bb4d4c09098144dd40f0d973958048c" kindref="member">And::setB</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>b)</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(1,<sp/>b);</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>And::evaluate()</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>IMPLEMENT_BLACK_BOX</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(6,<sp/><ref refid="a00897_1ae497dca5e03287bf0b47755e4727966c" kindref="member">Gates::And</ref>(<ref refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(0),<sp/><ref refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(1)));</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(6,<sp/><ref refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(0)<sp/>&amp;&amp;<sp/><ref refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(1));</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a21ec8cfbaba9e08deb3607c7eff9ad63" kindref="member" tooltip="Clears the bit at the supplied index. ">clearBit</ref>(7);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53" refid="a00962_1af7f3b9917ef2925cce68417e117b4824" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00962_1af7f3b9917ef2925cce68417e117b4824" kindref="member">And::getOut</ref>()</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(7))</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(6);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="59"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Chip.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00899" kindref="compound">Hack::Chips</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27" refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144" kindref="member">AluFlags</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29" refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" kindref="member">No</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>0,</highlight></codeline>
+<codeline lineno="30" refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>1,</highlight></codeline>
+<codeline lineno="31" refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a4ceb8925d42a26780931ee5536ebbb88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a4ceb8925d42a26780931ee5536ebbb88" kindref="member">Ny</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>2,</highlight></codeline>
+<codeline lineno="32" refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a36b5e715b100c9067069fcf166591565" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a36b5e715b100c9067069fcf166591565" kindref="member">Zy</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>3,</highlight></codeline>
+<codeline lineno="33" refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" kindref="member">Nx</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>4,</highlight></codeline>
+<codeline lineno="34" refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a76fcc6dbc3a599d794f357556801298b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a76fcc6dbc3a599d794f357556801298b" kindref="member">Zx</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>5,</highlight></codeline>
+<codeline lineno="35" refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a1630ccda3ce240ba49b84d1111d0adb8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a1630ccda3ce240ba49b84d1111d0adb8" kindref="member">Ne</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>6,</highlight></codeline>
+<codeline lineno="36" refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a315f157d7e9917bcfe8a0dcfa133f6fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a315f157d7e9917bcfe8a0dcfa133f6fb" kindref="member">Zr</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>7,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="a00899_1a341881db4c30c6d32529deb197b5834e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="a00899_1a341881db4c30c6d32529deb197b5834e" kindref="member">Control</ref></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41" refid="a00899_1a341881db4c30c6d32529deb197b5834ead8acdd64728db039cd19896192b6cb91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a341881db4c30c6d32529deb197b5834ead8acdd64728db039cd19896192b6cb91" kindref="member">XAndY</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="42" refid="a00899_1a341881db4c30c6d32529deb197b5834ead194429bd882d774218235b665c40691" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a341881db4c30c6d32529deb197b5834ead194429bd882d774218235b665c40691" kindref="member">Zero</ref><sp/>=<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a76fcc6dbc3a599d794f357556801298b" kindref="member">Zx</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a36b5e715b100c9067069fcf166591565" kindref="member">Zy</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref>,</highlight></codeline>
+<codeline lineno="43" refid="a00899_1a341881db4c30c6d32529deb197b5834ea5bf31a73c4015858640cbf4525a0f635" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a341881db4c30c6d32529deb197b5834ea5bf31a73c4015858640cbf4525a0f635" kindref="member">One</ref><sp/>=<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a76fcc6dbc3a599d794f357556801298b" kindref="member">Zx</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" kindref="member">Nx</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a36b5e715b100c9067069fcf166591565" kindref="member">Zy</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a4ceb8925d42a26780931ee5536ebbb88" kindref="member">Ny</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" kindref="member">No</ref>,</highlight></codeline>
+<codeline lineno="44" refid="a00899_1a341881db4c30c6d32529deb197b5834eace1f386fd2bfb62375cd39260f9bfaab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a341881db4c30c6d32529deb197b5834eace1f386fd2bfb62375cd39260f9bfaab" kindref="member">NegativeOne</ref><sp/>=<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a76fcc6dbc3a599d794f357556801298b" kindref="member">Zx</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" kindref="member">Nx</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a36b5e715b100c9067069fcf166591565" kindref="member">Zy</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref>,</highlight></codeline>
+<codeline lineno="45" refid="a00899_1a341881db4c30c6d32529deb197b5834eae9d7dcbb6f68eda355091b64af6963ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a341881db4c30c6d32529deb197b5834eae9d7dcbb6f68eda355091b64af6963ac" kindref="member">OutX</ref><sp/>=<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a36b5e715b100c9067069fcf166591565" kindref="member">Zy</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a4ceb8925d42a26780931ee5536ebbb88" kindref="member">Ny</ref>,</highlight></codeline>
+<codeline lineno="46" refid="a00899_1a341881db4c30c6d32529deb197b5834ea64ecded9e9d4bce576320438afbcc0b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a341881db4c30c6d32529deb197b5834ea64ecded9e9d4bce576320438afbcc0b5" kindref="member">OutY</ref><sp/>=<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a76fcc6dbc3a599d794f357556801298b" kindref="member">Zx</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" kindref="member">Nx</ref>,</highlight></codeline>
+<codeline lineno="47" refid="a00899_1a341881db4c30c6d32529deb197b5834eae9410c9c533b94acf19cd933687903bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a341881db4c30c6d32529deb197b5834eae9410c9c533b94acf19cd933687903bb" kindref="member">NotX</ref><sp/>=<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a36b5e715b100c9067069fcf166591565" kindref="member">Zy</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a4ceb8925d42a26780931ee5536ebbb88" kindref="member">Ny</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" kindref="member">No</ref>,</highlight></codeline>
+<codeline lineno="48" refid="a00899_1a341881db4c30c6d32529deb197b5834ea92d3c2bb6b5095ec608417078b9c7c65" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a341881db4c30c6d32529deb197b5834ea92d3c2bb6b5095ec608417078b9c7c65" kindref="member">NotY</ref><sp/>=<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a76fcc6dbc3a599d794f357556801298b" kindref="member">Zx</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" kindref="member">Nx</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" kindref="member">No</ref>,</highlight></codeline>
+<codeline lineno="49" refid="a00899_1a341881db4c30c6d32529deb197b5834ea135215f1f6dc8beda77599a341eb01e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a341881db4c30c6d32529deb197b5834ea135215f1f6dc8beda77599a341eb01e3" kindref="member">NegativeX</ref><sp/>=<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a36b5e715b100c9067069fcf166591565" kindref="member">Zy</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a4ceb8925d42a26780931ee5536ebbb88" kindref="member">Ny</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" kindref="member">No</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref>,</highlight></codeline>
+<codeline lineno="50" refid="a00899_1a341881db4c30c6d32529deb197b5834ea4cd630e751714e9213ba6b4d317dad3d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a341881db4c30c6d32529deb197b5834ea4cd630e751714e9213ba6b4d317dad3d" kindref="member">NegativeY</ref><sp/>=<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a76fcc6dbc3a599d794f357556801298b" kindref="member">Zx</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" kindref="member">Nx</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" kindref="member">No</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref>,</highlight></codeline>
+<codeline lineno="51" refid="a00899_1a341881db4c30c6d32529deb197b5834ea5bf9e8694f6b94e54a595c35d5301561" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a341881db4c30c6d32529deb197b5834ea5bf9e8694f6b94e54a595c35d5301561" kindref="member">XPlusOne</ref><sp/>=<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" kindref="member">Nx</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a36b5e715b100c9067069fcf166591565" kindref="member">Zy</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a4ceb8925d42a26780931ee5536ebbb88" kindref="member">Ny</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" kindref="member">No</ref>,</highlight></codeline>
+<codeline lineno="52" refid="a00899_1a341881db4c30c6d32529deb197b5834ea5799d387c4c6411ce163ace339f1134d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a341881db4c30c6d32529deb197b5834ea5799d387c4c6411ce163ace339f1134d" kindref="member">YPlusOne</ref><sp/>=<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a76fcc6dbc3a599d794f357556801298b" kindref="member">Zx</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" kindref="member">Nx</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a4ceb8925d42a26780931ee5536ebbb88" kindref="member">Ny</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" kindref="member">No</ref>,</highlight></codeline>
+<codeline lineno="53" refid="a00899_1a341881db4c30c6d32529deb197b5834eadf026416b8f09401bdcec8d02ed4201e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a341881db4c30c6d32529deb197b5834eadf026416b8f09401bdcec8d02ed4201e" kindref="member">XMinusOne</ref><sp/>=<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a36b5e715b100c9067069fcf166591565" kindref="member">Zy</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a4ceb8925d42a26780931ee5536ebbb88" kindref="member">Ny</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref>,</highlight></codeline>
+<codeline lineno="54" refid="a00899_1a341881db4c30c6d32529deb197b5834ea481daef132a274ac459f4776b68a4bf0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a341881db4c30c6d32529deb197b5834ea481daef132a274ac459f4776b68a4bf0" kindref="member">YMinusOne</ref><sp/>=<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a76fcc6dbc3a599d794f357556801298b" kindref="member">Zx</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" kindref="member">Nx</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref>,</highlight></codeline>
+<codeline lineno="55" refid="a00899_1a341881db4c30c6d32529deb197b5834ea1c96e420eda712bdb7d30149dca9b84a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a341881db4c30c6d32529deb197b5834ea1c96e420eda712bdb7d30149dca9b84a" kindref="member">XPlusY</ref><sp/>=<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref>,</highlight></codeline>
+<codeline lineno="56" refid="a00899_1a341881db4c30c6d32529deb197b5834ea98319c0cfadf4a237d16b99336ade784" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a341881db4c30c6d32529deb197b5834ea98319c0cfadf4a237d16b99336ade784" kindref="member">XMinusY</ref><sp/>=<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" kindref="member">Nx</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" kindref="member">No</ref>,</highlight></codeline>
+<codeline lineno="57" refid="a00899_1a341881db4c30c6d32529deb197b5834ea80e05ad94b2217d5b423e1a93d24bfdf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a341881db4c30c6d32529deb197b5834ea80e05ad94b2217d5b423e1a93d24bfdf" kindref="member">YMinusX</ref><sp/>=<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a4ceb8925d42a26780931ee5536ebbb88" kindref="member">Ny</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" kindref="member">No</ref>,</highlight></codeline>
+<codeline lineno="58" refid="a00899_1a341881db4c30c6d32529deb197b5834ea0908b6d56aaa80b7f079e5e115e89e41" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a341881db4c30c6d32529deb197b5834ea0908b6d56aaa80b7f079e5e115e89e41" kindref="member">XOrY</ref><sp/>=<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" kindref="member">Nx</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a4ceb8925d42a26780931ee5536ebbb88" kindref="member">Ny</ref><sp/>|<sp/><ref refid="a00899_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" kindref="member">No</ref>,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="a00961" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a00961" kindref="compound">Alu</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="a00993" kindref="compound" tooltip="Chip is the base class for all chips defined in this system. It uses a template integer for the _bits...">Chip</ref>&lt;uint8_t,<sp/>8&gt;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>evaluate();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00985" kindref="compound">bit64_t</ref><sp/>_io;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00961_1af17c289dd1252a047f2bf651707603d4" kindref="member">Alu</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00961_1ab78360af9a64fb57b2144516bf03de8a" kindref="member">setFlags</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01373" kindref="compound">uint8_t</ref>&amp;<sp/>flags);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01373" kindref="compound">uint8_t</ref><sp/><ref refid="a00961_1aabd92bfe8970447e25ccd70f0a951530" kindref="member">getFlags</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00961_1af3082e0b359aebd367e56457b1d8ef52" kindref="member">setX</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01361" kindref="compound">uint16_t</ref>&amp;<sp/>x);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00961_1aa777e90d3af236329d8c7f9340a21a78" kindref="member">setY</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01361" kindref="compound">uint16_t</ref>&amp;<sp/>y);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><ref refid="a00961_1a0a6f75d46a2d234c77033a30fef51326" kindref="member">getOut</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00961_1a2f8ef9292d754e3b65079a0bae64076b" kindref="member">getZr</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00961_1a85ae2abb1cd2db9cbc00d2d7131dc819" kindref="member">getNe</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Chips/And.cpp"/>
+    <location file="Source/Chips/ALU.h"/>
   </compounddef>
 </doxygen>

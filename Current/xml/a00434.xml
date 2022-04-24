@@ -1,70 +1,45 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00434" kind="file" language="C++">
-    <compoundname>Instruction.h</compoundname>
-    <includes refid="a02034" local="yes">Assembler/Token.h</includes>
-    <includedby refid="a00431" local="yes">Instruction.cpp</includedby>
-    <includedby refid="a00458" local="yes">Bindings.cpp</includedby>
-    <includedby refid="a00791" local="yes">DebugRuntime.cpp</includedby>
+    <compoundname>Token.cpp</compoundname>
+    <includes refid="a01643" local="yes">Assembler/Token.h</includes>
     <incdepgraph>
-      <node id="1910">
+      <node id="591">
         <label>string</label>
       </node>
-      <node id="1907">
+      <node id="588">
         <label>Utils/ParserBase/TokenBase.h</label>
-        <childnode refid="1908" relation="include">
+        <childnode refid="589" relation="include">
         </childnode>
       </node>
-      <node id="1905">
-        <label>Instruction.h</label>
+      <node id="586">
+        <label>Source/Assembler/Token.cpp</label>
         <link refid="a00434"/>
-        <childnode refid="1906" relation="include">
+        <childnode refid="587" relation="include">
         </childnode>
       </node>
-      <node id="1911">
+      <node id="592">
         <label>vector</label>
       </node>
-      <node id="1906">
+      <node id="587">
         <label>Assembler/Token.h</label>
-        <childnode refid="1907" relation="include">
+        <childnode refid="588" relation="include">
         </childnode>
       </node>
-      <node id="1909">
+      <node id="590">
         <label>sstream</label>
       </node>
-      <node id="1908">
+      <node id="589">
         <label>Utils/String.h</label>
-        <childnode refid="1909" relation="include">
+        <childnode refid="590" relation="include">
         </childnode>
-        <childnode refid="1910" relation="include">
+        <childnode refid="591" relation="include">
         </childnode>
-        <childnode refid="1911" relation="include">
+        <childnode refid="592" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <invincdepgraph>
-      <node id="1914">
-        <label>Bindings.cpp</label>
-      </node>
-      <node id="1912">
-        <label>Instruction.h</label>
-        <link refid="a00434"/>
-        <childnode refid="1913" relation="include">
-        </childnode>
-        <childnode refid="1914" relation="include">
-        </childnode>
-        <childnode refid="1915" relation="include">
-        </childnode>
-      </node>
-      <node id="1915">
-        <label>DebugRuntime.cpp</label>
-      </node>
-      <node id="1913">
-        <label>Instruction.cpp</label>
-      </node>
-    </invincdepgraph>
-    <innerclass refid="a01215" prot="public">Hack::Assembler::Instruction</innerclass>
-    <innernamespace refid="a00914">Hack::Assembler</innernamespace>
+    <innernamespace refid="a00896">Hack::Assembler</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -91,25 +66,29 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Assembler/Token.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00914" kindref="compound">Hack::Assembler</ref></highlight></codeline>
-<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="31" refid="a01215" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01215" kindref="compound" tooltip="Utility class that converts a binary instruction to its symbolic string representation. ">Instruction</ref></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>_inst;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="a01215_1a9ba532f3dfc27e6d9bdf312d10eb6df1" kindref="member">Instruction</ref>(uint16_t<sp/>inst);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><ref refid="a01215_1ade81360d9e9ec9bdfedc8af1d0252a73" kindref="member">string</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01215_1ade81360d9e9ec9bdfedc8af1d0252a73" kindref="member">string</ref>(<ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="43"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Assembler</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Assembler/Token.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00896" kindref="compound">Hack::Assembler</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>Token::Token()<sp/>:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_index(0),</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_type(<ref refid="a00896_1ab52345149881cbf184ed8dbc45774908a8d9967af0244b14438091db8babef208" kindref="member">TOK_NULL</ref>)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01289_1a30cd135b1d593a583b727309323138ad" kindref="member">Token::clear</ref>()</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_index<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_type<sp/>=<sp/><ref refid="a00896_1ab52345149881cbf184ed8dbc45774908a8d9967af0244b14438091db8babef208" kindref="member">TOK_NULL</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="a01289_1aa299ccac72d52b74f3ebc2ce2dcf96a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Token::setType(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int8_t<sp/>type)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_type<sp/>=<sp/>type;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Assembler</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Assembler/Instruction.h"/>
+    <location file="Source/Assembler/Token.cpp"/>
   </compounddef>
 </doxygen>

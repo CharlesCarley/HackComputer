@@ -1,165 +1,136 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00824" kind="file" language="C++">
-    <compoundname>ParserBase.cpp</compoundname>
-    <includes refid="a00827" local="yes">Utils/ParserBase/ParserBase.h</includes>
-    <includes local="no">filesystem</includes>
-    <includes local="no">fstream</includes>
-    <includes local="no">vector</includes>
-    <includes refid="a00794" local="yes">Utils/Char.h</includes>
-    <includes refid="a00821" local="yes">Utils/ParserBase/ParseError.h</includes>
-    <includes refid="a00833" local="yes">Utils/ParserBase/ScannerBase.h</includes>
-    <includes refid="a00836" local="yes">Utils/ParserBase/TokenBase.h</includes>
+    <compoundname>ParseError.h</compoundname>
+    <includes refid="a00809" local="yes">Utils/Exception.h</includes>
+    <includedby refid="a00734" local="yes">Source/Compiler/Generator/Generator.h</includedby>
+    <includedby refid="a00821" local="yes">Source/Utils/ParserBase/ParseError.cpp</includedby>
+    <includedby refid="a00827" local="yes">Source/Utils/ParserBase/ParserBase.cpp</includedby>
+    <includedby refid="a00833" local="yes">Source/Utils/ParserBase/ScannerBase.cpp</includedby>
     <incdepgraph>
-      <node id="3413">
+      <node id="3388">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="3414" relation="include">
+        <childnode refid="3389" relation="include">
         </childnode>
       </node>
-      <node id="3417">
-        <label>filesystem</label>
-      </node>
-      <node id="3414">
+      <node id="3389">
         <label>cstdint</label>
       </node>
-      <node id="3406">
+      <node id="3380">
         <label>stdexcept</label>
       </node>
-      <node id="3411">
+      <node id="3385">
         <label>string</label>
       </node>
-      <node id="3403">
-        <label>unordered_set</label>
-      </node>
-      <node id="3405">
+      <node id="3379">
         <label>exception</label>
       </node>
-      <node id="3418">
-        <label>fstream</label>
-      </node>
-      <node id="3400">
-        <label>ScannerBase.h</label>
-        <childnode refid="3401" relation="include">
-        </childnode>
-        <childnode refid="3416" relation="include">
+      <node id="3377">
+        <label>Source/Utils/ParserBase/ParseError.h</label>
+        <link refid="a00824"/>
+        <childnode refid="3378" relation="include">
         </childnode>
       </node>
-      <node id="3420">
-        <label>Utils/ParserBase/ParseError.h</label>
-        <childnode refid="3404" relation="include">
-        </childnode>
-      </node>
-      <node id="3416">
-        <label>Utils/ParserBase/TokenBase.h</label>
-        <childnode refid="3409" relation="include">
-        </childnode>
-      </node>
-      <node id="3412">
+      <node id="3387">
         <label>UserInterface/Context.h</label>
-        <childnode refid="3409" relation="include">
+        <childnode refid="3383" relation="include">
         </childnode>
-        <childnode refid="3413" relation="include">
+        <childnode refid="3388" relation="include">
         </childnode>
-        <childnode refid="3415" relation="include">
+        <childnode refid="3390" relation="include">
         </childnode>
       </node>
-      <node id="3415">
+      <node id="3390">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="3414" relation="include">
+        <childnode refid="3389" relation="include">
         </childnode>
-        <childnode refid="3399" relation="include">
+        <childnode refid="3386" relation="include">
         </childnode>
-        <childnode refid="3413" relation="include">
-        </childnode>
-      </node>
-      <node id="3401">
-        <label>Utils/IndexCache.h</label>
-        <childnode refid="3402" relation="include">
-        </childnode>
-        <childnode refid="3403" relation="include">
-        </childnode>
-        <childnode refid="3404" relation="include">
+        <childnode refid="3388" relation="include">
         </childnode>
       </node>
-      <node id="3408">
+      <node id="3382">
         <label>Utils/Console.h</label>
-        <childnode refid="3409" relation="include">
+        <childnode refid="3383" relation="include">
         </childnode>
-        <childnode refid="3412" relation="include">
+        <childnode refid="3387" relation="include">
         </childnode>
       </node>
-      <node id="3399">
+      <node id="3386">
         <label>vector</label>
       </node>
-      <node id="3407">
+      <node id="3381">
         <label>utility</label>
       </node>
-      <node id="3410">
+      <node id="3384">
         <label>sstream</label>
       </node>
-      <node id="3419">
-        <label>Utils/Char.h</label>
-        <childnode refid="3414" relation="include">
-        </childnode>
-        <childnode refid="3409" relation="include">
-        </childnode>
-      </node>
-      <node id="3404">
+      <node id="3378">
         <label>Utils/Exception.h</label>
-        <childnode refid="3405" relation="include">
+        <childnode refid="3379" relation="include">
         </childnode>
-        <childnode refid="3406" relation="include">
+        <childnode refid="3380" relation="include">
         </childnode>
-        <childnode refid="3407" relation="include">
+        <childnode refid="3381" relation="include">
         </childnode>
-        <childnode refid="3408" relation="include">
+        <childnode refid="3382" relation="include">
         </childnode>
-        <childnode refid="3409" relation="include">
-        </childnode>
-      </node>
-      <node id="3397">
-        <label>Source/Utils/ParserBase/ParserBase.cpp</label>
-        <link refid="a00824"/>
-        <childnode refid="3398" relation="include">
-        </childnode>
-        <childnode refid="3417" relation="include">
-        </childnode>
-        <childnode refid="3418" relation="include">
-        </childnode>
-        <childnode refid="3399" relation="include">
-        </childnode>
-        <childnode refid="3419" relation="include">
-        </childnode>
-        <childnode refid="3420" relation="include">
-        </childnode>
-        <childnode refid="3400" relation="include">
-        </childnode>
-        <childnode refid="3416" relation="include">
+        <childnode refid="3383" relation="include">
         </childnode>
       </node>
-      <node id="3402">
-        <label>unordered_map</label>
-      </node>
-      <node id="3398">
-        <label>Utils/ParserBase/ParserBase.h</label>
-        <childnode refid="3399" relation="include">
-        </childnode>
-        <childnode refid="3400" relation="include">
-        </childnode>
-        <childnode refid="3416" relation="include">
-        </childnode>
-      </node>
-      <node id="3409">
+      <node id="3383">
         <label>String.h</label>
-        <childnode refid="3410" relation="include">
+        <childnode refid="3384" relation="include">
         </childnode>
-        <childnode refid="3411" relation="include">
+        <childnode refid="3385" relation="include">
         </childnode>
-        <childnode refid="3399" relation="include">
+        <childnode refid="3386" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <innernamespace refid="a00894">Hack</innernamespace>
+    <invincdepgraph>
+      <node id="3391">
+        <label>Source/Utils/ParserBase/ParseError.h</label>
+        <link refid="a00824"/>
+        <childnode refid="3392" relation="include">
+        </childnode>
+        <childnode refid="3396" relation="include">
+        </childnode>
+        <childnode refid="3397" relation="include">
+        </childnode>
+        <childnode refid="3398" relation="include">
+        </childnode>
+      </node>
+      <node id="3393">
+        <label>Source/Compiler/Generator/Generator.cpp</label>
+      </node>
+      <node id="3396">
+        <label>Source/Utils/ParserBase/ParseError.cpp</label>
+      </node>
+      <node id="3398">
+        <label>Source/Utils/ParserBase/ScannerBase.cpp</label>
+      </node>
+      <node id="3397">
+        <label>Source/Utils/ParserBase/ParserBase.cpp</label>
+      </node>
+      <node id="3395">
+        <label>Source/Computer/Application.cpp</label>
+      </node>
+      <node id="3392">
+        <label>Source/Compiler/Generator/Generator.h</label>
+        <childnode refid="3393" relation="include">
+        </childnode>
+        <childnode refid="3394" relation="include">
+        </childnode>
+        <childnode refid="3395" relation="include">
+        </childnode>
+      </node>
+      <node id="3394">
+        <label>Source/Compiler/Generator/Main.cpp</label>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="a01277" prot="public">Hack::ParseError</innerclass>
+    <innernamespace refid="a00897">Hack</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -186,106 +157,40 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/ParserBase/ParserBase.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;filesystem&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/Char.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/ParserBase/ParseError.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/ParserBase/ScannerBase.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/ParserBase/TokenBase.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00894" kindref="compound">Hack</ref></highlight></codeline>
-<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="33" refid="a01278_1ad2acc126d182c46c5d7f2afbb2aaeb66" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01278_1ad2acc126d182c46c5d7f2afbb2aaeb66" kindref="member">ParserBase::ParserBase</ref>()<sp/>:</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_cursor(0),</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_scanner(nullptr)</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01278_1a6e57377073e2e728304316b73986ded2" kindref="member">ParserBase::~ParserBase</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41" refid="a01278_1a8436c3d2c31c4a3e822c946c8a6b1a92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01278_1a8436c3d2c31c4a3e822c946c8a6b1a92" kindref="member">ParserBase::readToken</ref>(int32_t<sp/>n)</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01286" kindref="compound">TokenBase</ref><sp/>tok;</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01278_1aec27fb418bd286a67e449bbf42ddb4e7" kindref="member">_scanner</ref>-&gt;<ref refid="a01282_1ac24b88935d8f5463217aacbfa9b87e9b" kindref="member">scan</ref>(tok);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/Exception.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00897" kindref="compound">Hack</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27" refid="a01277" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01277" kindref="compound">ParseError</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="a01257" kindref="compound">Exception</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30" refid="a01277_1ad5fbf42e19047225a7de16baa8cda76e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="a01277_1ad5fbf42e19047225a7de16baa8cda76e" kindref="member">ParseError</ref>()<sp/>:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01257" kindref="compound">Exception</ref>(getError(-1,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>0))</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="a01277_1a9a62c64f6fe1991bf379e478b6914c15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="a01277_1a9a62c64f6fe1991bf379e478b6914c15" kindref="member">ParseError</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>message)<sp/>:</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01257" kindref="compound">Exception</ref>(getError(-1,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>0,<sp/>message))</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="a01277_1a1b6d389020bc20c4f39bf6988ee782e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="a01277_1a1b6d389020bc20c4f39bf6988ee782e4" kindref="member">ParseError</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>stage,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>file,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/>line,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>message)<sp/>:</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01257" kindref="compound">Exception</ref>(getError(stage,<sp/>file,<sp/>line,<sp/>message))</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01278_1a848d7a2893106ea47afc8839aae2f4e4" kindref="member">_tokens</ref>.push_back(tok);</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(--n<sp/>&gt;<sp/>0);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53" refid="a01278_1a6b9602e4c23316318668f57da6db421c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01286" kindref="compound">TokenBase</ref><sp/><ref refid="a01278_1a6b9602e4c23316318668f57da6db421c" kindref="member">ParserBase::getToken</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32_t<sp/>offs)</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32_t<sp/>next<sp/>=<sp/>offs<sp/>+<sp/><ref refid="a01278_1a050b6fa7aa7a8a0ad9e6dc769c5fe1ab" kindref="member">_cursor</ref>;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(next<sp/>+<sp/>1<sp/>&gt;<sp/>(int32_t)<ref refid="a01278_1a848d7a2893106ea47afc8839aae2f4e4" kindref="member">_tokens</ref>.size())</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01278_1a8436c3d2c31c4a3e822c946c8a6b1a92" kindref="member">readToken</ref>();</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(next<sp/>&lt;<sp/>(int32_t)<ref refid="a01278_1a848d7a2893106ea47afc8839aae2f4e4" kindref="member">_tokens</ref>.size()<sp/>&amp;&amp;<sp/>next<sp/>&gt;=<sp/>0)</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a01278_1a848d7a2893106ea47afc8839aae2f4e4" kindref="member">_tokens</ref>.at(next);</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01278_1aa78f3654190d9b4f2ea49f8bcfa97f2b" kindref="member">parseError</ref>(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>read<sp/>token&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66" refid="a01278_1a857d4ca08875acc4a5ae351eab22ebee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01278_1a857d4ca08875acc4a5ae351eab22ebee" kindref="member">ParserBase::advanceCursor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32_t<sp/>n)</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01278_1a050b6fa7aa7a8a0ad9e6dc769c5fe1ab" kindref="member">_cursor</ref><sp/>+=<sp/>n;</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>[[noreturn]]<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ParserBase::parseErrorThrow(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>message)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="72"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="a01274" kindref="compound">ParseError</ref>(1,<sp/><ref refid="a01278_1ab0e5c4de751cb9162c1068d08fe5108f" kindref="member">_filePath</ref>,<sp/><ref refid="a01278_1aec27fb418bd286a67e449bbf42ddb4e7" kindref="member">_scanner</ref>-&gt;<ref refid="a01282_1a30f51f62024dec9e10aae0f40bfe04e6" kindref="member">line</ref>(),<sp/>message);</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76" refid="a01278_1a4668ec9b913931ce518de6d7f92fb4e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01278_1a4668ec9b913931ce518de6d7f92fb4e0" kindref="member">ParserBase::parse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>file)</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ifstream<sp/>is(file);</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!is.is_open())</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="a01254" kindref="compound">Exception</ref>(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>open<sp/>the<sp/>input<sp/>file<sp/>&apos;&quot;</highlight><highlight class="normal">,<sp/>file,<sp/></highlight><highlight class="stringliteral">&quot;&apos;&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>save<sp/>the<sp/>base<sp/>file<sp/>name</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::filesystem::path<sp/>pth<sp/>=<sp/>file;</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01278_1a3845bf25a071be865d1abf5d86547d4e" kindref="member">_file</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>pth.stem().string();</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01278_1ab0e5c4de751cb9162c1068d08fe5108f" kindref="member">_filePath</ref><sp/>=<sp/>absolute(pth).string();</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01278_1aca4fd325b8520d930ca612cf3337c625" kindref="member">parseImpl</ref>(is);</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="91" refid="a01278_1a526cddbd87b36f03b8e76db9b7d640b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01278_1a4668ec9b913931ce518de6d7f92fb4e0" kindref="member">ParserBase::parse</ref>(<ref refid="a00894_1a830c8eb3c005ef2fbc470e0b141b93c5" kindref="member">IStream</ref>&amp;<sp/>is,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>file)</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>save<sp/>some<sp/>relatively<sp/>unique<sp/>name<sp/>for<sp/>the<sp/>file</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(file.empty())</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>ex;</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01290_1a317411e0785122e1f415d6da27351ba6" kindref="member">StringUtils::scramble</ref>(ex,<sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01278_1a3845bf25a071be865d1abf5d86547d4e" kindref="member">_file</ref><sp/>=<sp/><ref refid="a00894_1a0022073c844c619a094704ae6c9b14bf" kindref="member">StringCombine</ref>(</highlight><highlight class="stringliteral">&quot;MemoryStream&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">,<sp/>ex);</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01278_1a3845bf25a071be865d1abf5d86547d4e" kindref="member">_file</ref><sp/>=<sp/>file;</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01278_1ab0e5c4de751cb9162c1068d08fe5108f" kindref="member">_filePath</ref><sp/>=<sp/><ref refid="a01278_1a3845bf25a071be865d1abf5d86547d4e" kindref="member">_file</ref>;</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01278_1aca4fd325b8520d930ca612cf3337c625" kindref="member">parseImpl</ref>(is);</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"></highlight></codeline>
-<codeline lineno="107" refid="a01278_1a4560ce70fee098d7508b053b409c1d19" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01278_1a4560ce70fee098d7508b053b409c1d19" kindref="member">ParserBase::write</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>file,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>format)</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ofstream<sp/>os(file);</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!os.is_open())</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="a01254" kindref="compound">Exception</ref>(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>open<sp/>the<sp/>input<sp/>file<sp/>&apos;&quot;</highlight><highlight class="normal">,<sp/>file,<sp/></highlight><highlight class="stringliteral">&quot;&apos;&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01278_1a4e9dd3f0283226de48b148d66b416f0f" kindref="member">writeImpl</ref>(os,<sp/>format);</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"></highlight></codeline>
-<codeline lineno="116" refid="a01278_1a644c6667a785050f490a4ee24a98e2e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01278_1a4560ce70fee098d7508b053b409c1d19" kindref="member">ParserBase::write</ref>(<ref refid="a00894_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref>&amp;<sp/>os,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>format)</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01278_1a4e9dd3f0283226de48b148d66b416f0f" kindref="member">writeImpl</ref>(os,<sp/>format);</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="120"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>getError(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stage,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>file,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>line,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>message<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Utils/ParserBase/ParserBase.cpp"/>
+    <location file="Source/Utils/ParserBase/ParseError.h"/>
   </compounddef>
 </doxygen>

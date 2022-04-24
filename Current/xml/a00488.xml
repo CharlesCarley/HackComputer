@@ -1,158 +1,223 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00488" kind="file" language="C++">
-    <compoundname>CPU.cpp</compoundname>
-    <includes refid="a00491" local="yes">Chips/CPU.h</includes>
-    <includes refid="a00449" local="yes">Chips/ALU.h</includes>
-    <includes refid="a00623" local="yes">Chips/ProgramCounter.h</includes>
-    <includes refid="a00656" local="yes">Chips/Register.h</includes>
-    <includes refid="a00677" local="yes">Chips/Timer.h</includes>
-    <includes refid="a00806" local="yes">Utils/Exception.h</includes>
+    <compoundname>Computer.h</compoundname>
+    <includes refid="a00494" local="yes">Chips/CPU.h</includes>
+    <includes refid="a01661" local="yes">Chips/Memory.h</includes>
+    <includes refid="a00665" local="yes">Chips/Rom32.h</includes>
+    <includedby refid="a00440" local="yes">Source/Bindings/Bindings.cpp</includedby>
+    <includedby refid="a00485" local="yes">Source/Chips/Computer.cpp</includedby>
+    <includedby refid="a00761" local="yes">Source/Computer/Application.cpp</includedby>
+    <includedby refid="a00767" local="yes">Source/Computer/CommandRuntime.cpp</includedby>
+    <includedby refid="a00773" local="yes">Source/Computer/DebugRuntime.cpp</includedby>
+    <includedby refid="a00779" local="yes">Source/Computer/RuntimeInterface.h</includedby>
     <incdepgraph>
-      <node id="1159">
+      <node id="1127">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="1160" relation="include">
+        <childnode refid="1128" relation="include">
         </childnode>
       </node>
-      <node id="1151">
+      <node id="1119">
         <label>Chips/BitUtils.h</label>
-        <childnode refid="1152" relation="include">
+        <childnode refid="1120" relation="include">
         </childnode>
-        <childnode refid="1153" relation="include">
+        <childnode refid="1121" relation="include">
         </childnode>
       </node>
-      <node id="1160">
+      <node id="1128">
         <label>cstdint</label>
       </node>
-      <node id="1147">
-        <label>Source/Chips/CPU.cpp</label>
+      <node id="1115">
+        <label>Source/Chips/Computer.h</label>
         <link refid="a00488"/>
-        <childnode refid="1148" relation="include">
+        <childnode refid="1116" relation="include">
         </childnode>
-        <childnode refid="1149" relation="include">
+        <childnode refid="1132" relation="include">
         </childnode>
-        <childnode refid="1162" relation="include">
-        </childnode>
-        <childnode refid="1163" relation="include">
-        </childnode>
-        <childnode refid="1164" relation="include">
-        </childnode>
-        <childnode refid="1166" relation="include">
+        <childnode refid="1138" relation="include">
         </childnode>
       </node>
-      <node id="1168">
-        <label>stdexcept</label>
+      <node id="1132">
+        <label>Chips/Memory.h</label>
+        <childnode refid="1118" relation="include">
+        </childnode>
+        <childnode refid="1133" relation="include">
+        </childnode>
+        <childnode refid="1137" relation="include">
+        </childnode>
       </node>
-      <node id="1156">
+      <node id="1124">
         <label>string</label>
       </node>
-      <node id="1167">
-        <label>exception</label>
-      </node>
-      <node id="1158">
+      <node id="1126">
         <label>UserInterface/Context.h</label>
-        <childnode refid="1154" relation="include">
+        <childnode refid="1122" relation="include">
         </childnode>
-        <childnode refid="1159" relation="include">
+        <childnode refid="1127" relation="include">
         </childnode>
-        <childnode refid="1161" relation="include">
+        <childnode refid="1129" relation="include">
         </childnode>
       </node>
-      <node id="1161">
+      <node id="1129">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="1160" relation="include">
+        <childnode refid="1128" relation="include">
         </childnode>
-        <childnode refid="1157" relation="include">
+        <childnode refid="1125" relation="include">
         </childnode>
-        <childnode refid="1159" relation="include">
+        <childnode refid="1127" relation="include">
         </childnode>
       </node>
-      <node id="1162">
+      <node id="1130">
         <label>Chips/ProgramCounter.h</label>
-        <childnode refid="1150" relation="include">
+        <childnode refid="1118" relation="include">
         </childnode>
       </node>
-      <node id="1153">
+      <node id="1121">
         <label>Utils/Console.h</label>
-        <childnode refid="1154" relation="include">
+        <childnode refid="1122" relation="include">
         </childnode>
-        <childnode refid="1158" relation="include">
+        <childnode refid="1126" relation="include">
         </childnode>
       </node>
-      <node id="1152">
+      <node id="1120">
         <label>bitset</label>
       </node>
-      <node id="1165">
-        <label>Chips/Clock.h</label>
-        <childnode refid="1150" relation="include">
-        </childnode>
-      </node>
-      <node id="1157">
+      <node id="1125">
         <label>vector</label>
       </node>
-      <node id="1169">
-        <label>utility</label>
-      </node>
-      <node id="1155">
+      <node id="1123">
         <label>sstream</label>
       </node>
-      <node id="1150">
+      <node id="1118">
         <label>Chips/Chip.h</label>
-        <childnode refid="1151" relation="include">
+        <childnode refid="1119" relation="include">
         </childnode>
-        <childnode refid="1153" relation="include">
-        </childnode>
-      </node>
-      <node id="1166">
-        <label>Utils/Exception.h</label>
-        <childnode refid="1167" relation="include">
-        </childnode>
-        <childnode refid="1168" relation="include">
-        </childnode>
-        <childnode refid="1169" relation="include">
-        </childnode>
-        <childnode refid="1153" relation="include">
-        </childnode>
-        <childnode refid="1154" relation="include">
+        <childnode refid="1121" relation="include">
         </childnode>
       </node>
-      <node id="1164">
-        <label>Chips/Timer.h</label>
-        <childnode refid="1165" relation="include">
+      <node id="1134">
+        <label>Chips/DefaultMemorySegment.h</label>
+        <childnode refid="1135" relation="include">
         </childnode>
       </node>
-      <node id="1163">
+      <node id="1138">
+        <label>Chips/Rom32.h</label>
+        <childnode refid="1118" relation="include">
+        </childnode>
+      </node>
+      <node id="1135">
+        <label>Chips/IMemorySegment.h</label>
+        <childnode refid="1136" relation="include">
+        </childnode>
+        <childnode refid="1118" relation="include">
+        </childnode>
+      </node>
+      <node id="1133">
+        <label>Chips/Ram16k.h</label>
+        <childnode refid="1134" relation="include">
+        </childnode>
+      </node>
+      <node id="1137">
+        <label>Chips/Screen.h</label>
+        <childnode refid="1134" relation="include">
+        </childnode>
+      </node>
+      <node id="1131">
         <label>Chips/Register.h</label>
-        <childnode refid="1150" relation="include">
+        <childnode refid="1118" relation="include">
         </childnode>
       </node>
-      <node id="1149">
+      <node id="1117">
         <label>ALU.h</label>
-        <childnode refid="1150" relation="include">
+        <childnode refid="1118" relation="include">
         </childnode>
       </node>
-      <node id="1148">
+      <node id="1136">
+        <label>cstring</label>
+      </node>
+      <node id="1116">
         <label>Chips/CPU.h</label>
-        <childnode refid="1149" relation="include">
+        <childnode refid="1117" relation="include">
         </childnode>
-        <childnode refid="1150" relation="include">
+        <childnode refid="1118" relation="include">
         </childnode>
-        <childnode refid="1162" relation="include">
+        <childnode refid="1130" relation="include">
         </childnode>
-        <childnode refid="1163" relation="include">
+        <childnode refid="1131" relation="include">
         </childnode>
       </node>
-      <node id="1154">
+      <node id="1122">
         <label>String.h</label>
-        <childnode refid="1155" relation="include">
+        <childnode refid="1123" relation="include">
         </childnode>
-        <childnode refid="1156" relation="include">
+        <childnode refid="1124" relation="include">
         </childnode>
-        <childnode refid="1157" relation="include">
+        <childnode refid="1125" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <innernamespace refid="a00896">Hack::Chips</innernamespace>
+    <invincdepgraph>
+      <node id="1148">
+        <label>Source/Computer/RuntimeSDL.h</label>
+      </node>
+      <node id="1147">
+        <label>Source/Computer/DebugRuntime.h</label>
+        <childnode refid="1142" relation="include">
+        </childnode>
+        <childnode refid="1144" relation="include">
+        </childnode>
+      </node>
+      <node id="1139">
+        <label>Source/Chips/Computer.h</label>
+        <link refid="a00488"/>
+        <childnode refid="1140" relation="include">
+        </childnode>
+        <childnode refid="1141" relation="include">
+        </childnode>
+        <childnode refid="1142" relation="include">
+        </childnode>
+        <childnode refid="1143" relation="include">
+        </childnode>
+        <childnode refid="1144" relation="include">
+        </childnode>
+        <childnode refid="1145" relation="include">
+        </childnode>
+      </node>
+      <node id="1140">
+        <label>Source/Bindings/Bindings.cpp</label>
+      </node>
+      <node id="1141">
+        <label>Source/Chips/Computer.cpp</label>
+      </node>
+      <node id="1143">
+        <label>Source/Computer/CommandRuntime.cpp</label>
+      </node>
+      <node id="1144">
+        <label>Source/Computer/DebugRuntime.cpp</label>
+      </node>
+      <node id="1142">
+        <label>Source/Computer/Application.cpp</label>
+      </node>
+      <node id="1145">
+        <label>Source/Computer/RuntimeInterface.h</label>
+        <childnode refid="1146" relation="include">
+        </childnode>
+        <childnode refid="1147" relation="include">
+        </childnode>
+        <childnode refid="1148" relation="include">
+        </childnode>
+      </node>
+      <node id="1146">
+        <label>Source/Computer/CommandRuntime.h</label>
+        <childnode refid="1142" relation="include">
+        </childnode>
+        <childnode refid="1143" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="a01005" prot="public">Hack::Chips::Computer</innerclass>
+    <innerclass refid="a01001" prot="public">Hack::Chips::CpuState</innerclass>
+    <innernamespace refid="a00899">Hack::Chips</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -179,314 +244,82 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/CPU.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/ALU.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/ProgramCounter.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Register.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Timer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/Exception.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>IMPLEMENT_BLACK_BOX</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/And16.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Mux16.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00896" kindref="compound">Hack::Chips</ref></highlight></codeline>
-<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="35" refid="a00896_1ad7b6ac75288861f60b160dcdc43aa189" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00896_1ad7b6ac75288861f60b160dcdc43aa189" kindref="member">CpuIsLocked</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01370" kindref="compound">uint8_t</ref>&amp;<sp/>bits)</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(bits<sp/>&amp;<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2a8a09deb894b81cd01eb5ea4d9f1f1cf5" kindref="member">Bit2</ref>)<sp/>!=<sp/>0;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40" refid="a00896_1a7a5791fb124e7aad6c36cca12afba484" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00896_1a7a5791fb124e7aad6c36cca12afba484" kindref="member">CpuDirty</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01370" kindref="compound">uint8_t</ref>&amp;<sp/>bits)</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(bits<sp/>&amp;<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" kindref="member">Bit7</ref>)<sp/>!=<sp/>0<sp/>&amp;&amp;<sp/>!<ref refid="a00896_1ad7b6ac75288861f60b160dcdc43aa189" kindref="member">CpuIsLocked</ref>(bits);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>IMPLEMENT_BLACK_BOX</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="46" refid="a00896_1a31b128b4961f42e0532f63a42c7e990c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/><ref refid="a00896_1a31b128b4961f42e0532f63a42c7e990c" kindref="member">RMask</ref><sp/>=<sp/>0b0111</highlight><highlight class="stringliteral">&apos;1111&apos;</highlight><highlight class="normal">1111</highlight><highlight class="stringliteral">&apos;1111;</highlight></codeline>
-<codeline lineno="47" refid="a00896_1abba66580760a71c292f9d27068d4b248" refkind="member"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>constexpr<sp/>uint16_t<sp/>MLoad<sp/>=<sp/>0b0&apos;</highlight><highlight class="normal">00</highlight><highlight class="charliteral">&apos;0&apos;</highlight><highlight class="normal">000000</highlight><highlight class="stringliteral">&apos;001&apos;</highlight><highlight class="normal">000;</highlight></codeline>
-<codeline lineno="48" refid="a00896_1aecca554241805bc1e9d1d50df379efaa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/><ref refid="a00896_1aecca554241805bc1e9d1d50df379efaa" kindref="member">DLoad</ref><sp/>=<sp/>0b0</highlight><highlight class="stringliteral">&apos;00&apos;</highlight><highlight class="normal">0</highlight><highlight class="stringliteral">&apos;000000&apos;</highlight><highlight class="normal">010</highlight><highlight class="stringliteral">&apos;000;</highlight></codeline>
-<codeline lineno="49" refid="a00896_1ac2e8bb0a903ada736323d9ae15fbd83f" refkind="member"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>constexpr<sp/>uint16_t<sp/>ALoad<sp/>=<sp/>0b0&apos;</highlight><highlight class="normal">00</highlight><highlight class="charliteral">&apos;0&apos;</highlight><highlight class="normal">000000</highlight><highlight class="stringliteral">&apos;100&apos;</highlight><highlight class="normal">000;</highlight></codeline>
-<codeline lineno="50" refid="a00896_1aaba0ba71f01d3869fbd9d00e9c7c8843" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/><ref refid="a00896_1aaba0ba71f01d3869fbd9d00e9c7c8843" kindref="member">ABits</ref><sp/>=<sp/>0b0</highlight><highlight class="stringliteral">&apos;00&apos;</highlight><highlight class="normal">1</highlight><highlight class="stringliteral">&apos;000000&apos;</highlight><highlight class="normal">000</highlight><highlight class="stringliteral">&apos;000;</highlight></codeline>
-<codeline lineno="51" refid="a00896_1aed76ec1c3c9eb7477302492f4a555347" refkind="member"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>constexpr<sp/>uint16_t<sp/>CBits<sp/>=<sp/>0b0&apos;</highlight><highlight class="normal">00</highlight><highlight class="charliteral">&apos;0&apos;</highlight><highlight class="normal">111111</highlight><highlight class="stringliteral">&apos;000&apos;</highlight><highlight class="normal">000;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="53" refid="a01006_1a5543e5ad5c5fcc2dcc166787b6bba8b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01006_1a5543e5ad5c5fcc2dcc166787b6bba8b4" kindref="member">Cpu::Cpu</ref>()<sp/>:</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ins(0),</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_in(0)</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>should<sp/>not<sp/>be<sp/>marked<sp/>as<sp/>dirty</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>initially</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61" refid="a01006_1ae5b1d8f46e76e589ca99c6dee2fd7390" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01006_1ae5b1d8f46e76e589ca99c6dee2fd7390" kindref="member">Cpu::lock</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state)</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state)</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>|=<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2a8a09deb894b81cd01eb5ea4d9f1f1cf5" kindref="member">Bit2</ref>;</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;=<sp/>~<ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2a8a09deb894b81cd01eb5ea4d9f1f1cf5" kindref="member">Bit2</ref>;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_a.<ref refid="a01114_1abf268bf9204e6b0661e639078499694e" kindref="member">lock</ref>(state);</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_d.<ref refid="a01114_1abf268bf9204e6b0661e639078499694e" kindref="member">lock</ref>(state);</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pc.<ref refid="a01094_1a29da0fadf3fa09aaf42825d04338ffc7" kindref="member">lock</ref>(state);</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/CPU.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Memory.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Rom32.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00899" kindref="compound">Hack::Chips</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30" refid="a01001" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="a01001" kindref="compound">CpuState</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32" refid="a01001_1a8ff12fb359df46f8c2b7bb4536b03bd2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><ref refid="a01001_1a8ff12fb359df46f8c2b7bb4536b03bd2" kindref="member">pc</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>current<sp/>program<sp/>counter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="a01001_1a4898fb8aa66f45e0e07d4b754b8d93ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><ref refid="a01001_1a4898fb8aa66f45e0e07d4b754b8d93ba" kindref="member">outM</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>CPU&apos;s<sp/>output<sp/>to<sp/>RAM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="a01001_1a7b6ea40228d9e23b00fd2ee43133a6f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><ref refid="a01001_1a7b6ea40228d9e23b00fd2ee43133a6f3" kindref="member">addrM</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>current<sp/>index<sp/>in<sp/>to<sp/>RAM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="a01001_1a918ad89614f75599104e9c1a8123c916" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><ref refid="a01001_1a918ad89614f75599104e9c1a8123c916" kindref="member">regD</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Current<sp/>contents<sp/>of<sp/>the<sp/>D<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="a01001_1a764dbb644ba5bb323c97e09cb26ae122" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><ref refid="a01001_1a764dbb644ba5bb323c97e09cb26ae122" kindref="member">regA</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Contents<sp/>of<sp/>the<sp/>A<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="a01001_1a5606ebaf9ae4d826b421dce343c223f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><ref refid="a01001_1a5606ebaf9ae4d826b421dce343c223f9" kindref="member">clock</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>current<sp/>clock<sp/>cycle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="a01001_1a3bdae3da64a41fd9b98171cea0f1b1c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><ref refid="a01001_1a3bdae3da64a41fd9b98171cea0f1b1c1" kindref="member">inst</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>instruction<sp/>in<sp/>ROM<sp/>at<sp/>the<sp/>pc<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="a01001_1af1398587a09d5722d1d794f87d427a35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><ref refid="a01001_1af1398587a09d5722d1d794f87d427a35" kindref="member">writeM</ref>;<sp/></highlight><highlight class="comment">//<sp/>The<sp/>load<sp/>bit<sp/>for<sp/>the<sp/>CPU.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="a01001_1ae932a7489f8bdecf33ffd43c9410130f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><ref refid="a01001_1ae932a7489f8bdecf33ffd43c9410130f" kindref="member">ram</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>last<sp/>output<sp/>from<sp/>RAM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="a01001_1af9c11b4b51b6cd89cdfdcccdf52341db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><ref refid="a01001_1af9c11b4b51b6cd89cdfdcccdf52341db" kindref="member">reset</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>Reset<sp/>indicator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="a01005" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01005" kindref="compound">Computer</ref></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="47" refid="a01005_1aa280cc035bb3869f0d63c55d5c608a7f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="a01001" kindref="compound">CpuState</ref><sp/><ref refid="a01005_1aa280cc035bb3869f0d63c55d5c608a7f" kindref="member">NullState</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01121" kindref="compound">Rom32</ref>*<sp/><sp/><sp/>_rom;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01009" kindref="compound">Cpu</ref>*<sp/><sp/><sp/><sp/><sp/>_cpu;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01049" kindref="compound">Memory</ref>*<sp/><sp/>_ram;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>_reset;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01001" kindref="compound">CpuState</ref><sp/>_cpuState;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>clear();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01005_1ad9e1addc596ec6f58fa56631086491e3" kindref="member">Computer</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01005_1ae76586a1a8385c183863269158c19083" kindref="member">~Computer</ref>();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01005_1ab215c3ad1dfa7242b4edaccb75869063" kindref="member">load</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01361" kindref="compound">uint16_t</ref>*<sp/>data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01005_1aa44e98396b5191c503bd5255fe0ffa1f" kindref="member">update</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>saveState<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01005_1a5e2ff33095c4f19eecdfdbfdba101b52" kindref="member">reset</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01049" kindref="compound">Memory</ref>*<sp/><ref refid="a01005_1abf924e51c33908fd52168a0c29228d1c" kindref="member">memory</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01121" kindref="compound">Rom32</ref>*<sp/><ref refid="a01005_1aa88d19943c50711fbe12d82e901fb21a" kindref="member">rom</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73" refid="a01006_1a79cecbb18e73a58f32d84d8a4da53dc8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01006_1a79cecbb18e73a58f32d84d8a4da53dc8" kindref="member">Cpu::setInMemory</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01358" kindref="compound">uint16_t</ref>&amp;<sp/>input)</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_in<sp/>!=<sp/>input)</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_in<sp/>=<sp/>input;</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>|=<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" kindref="member">Bit7</ref>;</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01001" kindref="compound">CpuState</ref>&amp;<sp/><ref refid="a01005_1a90309c49a06a3585499693ca005aa643" kindref="member">state</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01005_1af05aa34a76553dbe510a97b0c7027399" kindref="member">canRead</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01005_1ad4e3bd9b1c6831220b8c9802cbf679bf" kindref="member">runToEnd</ref>();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01005_1a2dbfa6b9bb02786f4e91770527d8624b" kindref="member">captureState</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82" refid="a01006_1ad12d07395a9bb6a137027a086bad44d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01006_1ad12d07395a9bb6a137027a086bad44d3" kindref="member">Cpu::setClock</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>clock)</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>cc<sp/>=<sp/>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2a8487c63d5dca7d87b359feca1a2c2ac8" kindref="member">Bit1</ref>)<sp/>!=<sp/>0;</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cc<sp/>!=<sp/>clock)</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(clock)</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>|=<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2a8487c63d5dca7d87b359feca1a2c2ac8" kindref="member">Bit1</ref>;</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;=<sp/>~<ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2a8487c63d5dca7d87b359feca1a2c2ac8" kindref="member">Bit1</ref>;</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>|=<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" kindref="member">Bit7</ref>;</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82" refid="a01005_1abf924e51c33908fd52168a0c29228d1c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="a01049" kindref="compound">Memory</ref>*<sp/><ref refid="a01005_1abf924e51c33908fd52168a0c29228d1c" kindref="member">Computer::memory</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="83"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_ram;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="a01005_1aa88d19943c50711fbe12d82e901fb21a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="a01121" kindref="compound">Rom32</ref>*<sp/><ref refid="a01005_1aa88d19943c50711fbe12d82e901fb21a" kindref="member">Computer::rom</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="88"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_rom;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="a01005_1a90309c49a06a3585499693ca005aa643" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01001" kindref="compound">CpuState</ref>&amp;<sp/><ref refid="a01005_1a90309c49a06a3585499693ca005aa643" kindref="member">Computer::state</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="93"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_cpuState;</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97" refid="a01006_1ac14c3298730fc31946de0c05ee2c7a2b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01006_1ac14c3298730fc31946de0c05ee2c7a2b" kindref="member">Cpu::setReset</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>reset)</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>cc<sp/>=<sp/>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" kindref="member">Bit0</ref>)<sp/>!=<sp/>0;</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cc<sp/>!=<sp/>reset)</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(reset)</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>|=<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" kindref="member">Bit0</ref>;</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;=<sp/>~<ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" kindref="member">Bit0</ref>;</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>|=<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" kindref="member">Bit7</ref>;</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight></codeline>
-<codeline lineno="110" refid="a01006_1aed70d190ffe8390a4ad3f74ade6e60fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01006_1aed70d190ffe8390a4ad3f74ade6e60fe" kindref="member">Cpu::setInstruction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01358" kindref="compound">uint16_t</ref>&amp;<sp/>instruction)</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ins<sp/>=<sp/>instruction;</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>|=<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" kindref="member">Bit7</ref>;</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"></highlight></codeline>
-<codeline lineno="116" refid="a01006_1a09ccfdbe1ebceb25ef9964834cee904f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01006_1a09ccfdbe1ebceb25ef9964834cee904f" kindref="member">Cpu::getWrite</ref>()</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00896_1a7a5791fb124e7aad6c36cca12afba484" kindref="member">CpuDirty</ref>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>))</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" kindref="member">Bit6</ref>)<sp/>!=<sp/>0;</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"></highlight></codeline>
-<codeline lineno="123" refid="a01006_1a1f9a2cb8f03f3196c82d0fca242c6903" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/><ref refid="a01006_1a1f9a2cb8f03f3196c82d0fca242c6903" kindref="member">Cpu::getOut</ref>()</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00896_1a7a5791fb124e7aad6c36cca12afba484" kindref="member">CpuDirty</ref>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>))</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_alu.<ref refid="a00958_1a0a6f75d46a2d234c77033a30fef51326" kindref="member">getOut</ref>();</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"></highlight></codeline>
-<codeline lineno="130" refid="a01006_1a5af96f7c73c15c4f0fff860481dc83bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/><ref refid="a01006_1a5af96f7c73c15c4f0fff860481dc83bf" kindref="member">Cpu::getAddress</ref>()</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00896_1a7a5791fb124e7aad6c36cca12afba484" kindref="member">CpuDirty</ref>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>))</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_a.<ref refid="a01114_1adac71e249b6e499425aac50f34eac07b" kindref="member">getOut</ref>();</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"></highlight></codeline>
-<codeline lineno="137" refid="a01006_1a91db924b7a0e4fe6b99999402b00336b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/><ref refid="a01006_1a91db924b7a0e4fe6b99999402b00336b" kindref="member">Cpu::getDRegister</ref>()</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00896_1a7a5791fb124e7aad6c36cca12afba484" kindref="member">CpuDirty</ref>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>))</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_d.<ref refid="a01114_1adac71e249b6e499425aac50f34eac07b" kindref="member">getOut</ref>();</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"></highlight></codeline>
-<codeline lineno="144" refid="a01006_1a6ac458a81ab675897e277d07cb093193" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/><ref refid="a01006_1a6ac458a81ab675897e277d07cb093193" kindref="member">Cpu::getAmRegister</ref>()</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00896_1a7a5791fb124e7aad6c36cca12afba484" kindref="member">CpuDirty</ref>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>))</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_a.<ref refid="a01114_1adac71e249b6e499425aac50f34eac07b" kindref="member">getOut</ref>();</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"></highlight></codeline>
-<codeline lineno="151" refid="a01006_1a9500b587542088fd9b9574d81508e6e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/><ref refid="a01006_1a9500b587542088fd9b9574d81508e6e2" kindref="member">Cpu::getNext</ref>()</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00896_1a7a5791fb124e7aad6c36cca12afba484" kindref="member">CpuDirty</ref>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>))</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_pc.<ref refid="a01094_1a1fb936fe940e54330e4f2616c123fafd" kindref="member">getOut</ref>();</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"></highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Cpu::isDirty()</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00896_1a7a5791fb124e7aad6c36cca12afba484" kindref="member">CpuDirty</ref>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>);</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"></highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Cpu::markDirty()</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>|=<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" kindref="member">Bit7</ref>;</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"></highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Cpu::evaluate()</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>IMPLEMENT_BLACK_BOX</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>And16<sp/>and16;</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mux16<sp/>m0,<sp/>m1;</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"></highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>codes[16];</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00986_1aeb4746b405570c6d38aebba1532c324c" kindref="member">B16::unpack</ref>(_ins,<sp/>codes);</highlight></codeline>
-<codeline lineno="176"><highlight class="normal"></highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>tick<sp/><sp/>=<sp/><ref refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(1);</highlight></codeline>
-<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>typeC<sp/>=<sp/>codes[15];</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>typeA<sp/>=<sp/><ref refid="a00897_1a47f1937b5e8e2f1f55c52ece2e236d9a" kindref="member">Gates::Not</ref>(typeC);</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"></highlight></codeline>
-<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m0.setA(_alu.<ref refid="a00958_1a0a6f75d46a2d234c77033a30fef51326" kindref="member">getOut</ref>());</highlight></codeline>
-<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m0.setB(_ins);</highlight></codeline>
-<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m0.setSel(typeA);</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"></highlight></codeline>
-<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>and16.setA(m0.getOut());</highlight></codeline>
-<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>and16.setB(0b0111111111111111);</highlight></codeline>
-<codeline lineno="187"><highlight class="normal"></highlight></codeline>
-<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_a.<ref refid="a01114_1aae6a1ef0fe5e583d92de6cb9da89f480" kindref="member">setLoad</ref>(<ref refid="a00897_1a5251fc609c60aa33cc653dc5bbfa39d4" kindref="member">Gates::Or</ref>(typeA,<sp/><ref refid="a00897_1ae497dca5e03287bf0b47755e4727966c" kindref="member">Gates::And</ref>(typeC,<sp/>codes[5])));</highlight></codeline>
-<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_a.<ref refid="a01114_1a2547034bc01798cc02dcd141a6a25b43" kindref="member">setIn</ref>(and16.getOut());</highlight></codeline>
-<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_a.<ref refid="a01114_1a9ed7e9ef8e47088db81077b5711e153f" kindref="member">setClock</ref>(tick);</highlight></codeline>
-<codeline lineno="191"><highlight class="normal"></highlight></codeline>
-<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m1.setA(_a.<ref refid="a01114_1adac71e249b6e499425aac50f34eac07b" kindref="member">getOut</ref>());</highlight></codeline>
-<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m1.setB(_in);</highlight></codeline>
-<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m1.setSel(<ref refid="a00897_1ae497dca5e03287bf0b47755e4727966c" kindref="member">Gates::And</ref>(typeC,<sp/>codes[12]));</highlight></codeline>
-<codeline lineno="195"><highlight class="normal"></highlight></codeline>
-<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>c[6]{codes[6],<sp/>codes[7],<sp/>codes[8],<sp/>codes[9],<sp/>codes[10],<sp/>codes[11]};</highlight></codeline>
-<codeline lineno="197"><highlight class="normal"></highlight></codeline>
-<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_alu.<ref refid="a00958_1ab78360af9a64fb57b2144516bf03de8a" kindref="member">setFlags</ref>(B8::pack&lt;6&gt;(c));</highlight></codeline>
-<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_alu.<ref refid="a00958_1af3082e0b359aebd367e56457b1d8ef52" kindref="member">setX</ref>(_d.<ref refid="a01114_1adac71e249b6e499425aac50f34eac07b" kindref="member">getOut</ref>());</highlight></codeline>
-<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_alu.<ref refid="a00958_1aa777e90d3af236329d8c7f9340a21a78" kindref="member">setY</ref>(m1.getOut());</highlight></codeline>
-<codeline lineno="201"><highlight class="normal"></highlight></codeline>
-<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_d.<ref refid="a01114_1aae6a1ef0fe5e583d92de6cb9da89f480" kindref="member">setLoad</ref>(<ref refid="a00897_1ae497dca5e03287bf0b47755e4727966c" kindref="member">Gates::And</ref>(typeC,<sp/>codes[4]));</highlight></codeline>
-<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_d.<ref refid="a01114_1a2547034bc01798cc02dcd141a6a25b43" kindref="member">setIn</ref>(_alu.<ref refid="a00958_1a0a6f75d46a2d234c77033a30fef51326" kindref="member">getOut</ref>());</highlight></codeline>
-<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_d.<ref refid="a01114_1a9ed7e9ef8e47088db81077b5711e153f" kindref="member">setClock</ref>(<ref refid="a00897_1a47f1937b5e8e2f1f55c52ece2e236d9a" kindref="member">Gates::Not</ref>(tick));<sp/><sp/></highlight><highlight class="comment">//<sp/>t-1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="205"><highlight class="normal"></highlight></codeline>
-<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pc.<ref refid="a01094_1a0fcf49248686a2473db97c221f3689a7" kindref="member">setLoad</ref>(<ref refid="a00897_1a6c50ba4cc3bfcf7d92a1628e357c19b1" kindref="member">Gates::Mux</ref>(</highlight></codeline>
-<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(0),</highlight></codeline>
-<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00897_1a6acffbc2c6a453d2d4f856180395cf24" kindref="member">Gates::Or3</ref>(<ref refid="a00897_1ae497dca5e03287bf0b47755e4727966c" kindref="member">Gates::And</ref>(<ref refid="a00897_1ae497dca5e03287bf0b47755e4727966c" kindref="member">Gates::And</ref>(typeC,<sp/>codes[0]),</highlight></codeline>
-<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00897_1ae497dca5e03287bf0b47755e4727966c" kindref="member">Gates::And</ref>(<ref refid="a00897_1a47f1937b5e8e2f1f55c52ece2e236d9a" kindref="member">Gates::Not</ref>(_alu.<ref refid="a00958_1a2f8ef9292d754e3b65079a0bae64076b" kindref="member">getZr</ref>()),</highlight></codeline>
-<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00897_1a47f1937b5e8e2f1f55c52ece2e236d9a" kindref="member">Gates::Not</ref>(_alu.<ref refid="a00958_1a85ae2abb1cd2db9cbc00d2d7131dc819" kindref="member">getNe</ref>()))),</highlight></codeline>
-<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00897_1ae497dca5e03287bf0b47755e4727966c" kindref="member">Gates::And</ref>(<ref refid="a00897_1ae497dca5e03287bf0b47755e4727966c" kindref="member">Gates::And</ref>(typeC,<sp/>codes[1]),<sp/>_alu.<ref refid="a00958_1a2f8ef9292d754e3b65079a0bae64076b" kindref="member">getZr</ref>()),</highlight></codeline>
-<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00897_1ae497dca5e03287bf0b47755e4727966c" kindref="member">Gates::And</ref>(<ref refid="a00897_1ae497dca5e03287bf0b47755e4727966c" kindref="member">Gates::And</ref>(typeC,<sp/>codes[2]),<sp/>_alu.<ref refid="a00958_1a85ae2abb1cd2db9cbc00d2d7131dc819" kindref="member">getNe</ref>()))));</highlight></codeline>
-<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pc.<ref refid="a01094_1a609ef4c3189b3cc5a3ab835c5be8510d" kindref="member">setIn</ref>(_a.<ref refid="a01114_1adac71e249b6e499425aac50f34eac07b" kindref="member">getOut</ref>());</highlight></codeline>
-<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pc.<ref refid="a01094_1a6cb44c6579a58a94a3f30e22e1b4856c" kindref="member">setInc</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pc.<ref refid="a01094_1accd1e5521922b6ad8b829e2b12d5bc1c" kindref="member">setReset</ref>(<ref refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(0));</highlight></codeline>
-<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pc.<ref refid="a01094_1a3621404b49cf9b287f3e1357bce37052" kindref="member">setClock</ref>(tick);</highlight></codeline>
-<codeline lineno="218"><highlight class="normal"></highlight></codeline>
-<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(6,<sp/><ref refid="a00897_1ae497dca5e03287bf0b47755e4727966c" kindref="member">Gates::And</ref>(typeC,<sp/>codes[3]));</highlight></codeline>
-<codeline lineno="220"><highlight class="normal"></highlight></codeline>
-<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pc.<ref refid="a01094_1a1fb936fe940e54330e4f2616c123fafd" kindref="member">getOut</ref>();</highlight></codeline>
-<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a21ec8cfbaba9e08deb3607c7eff9ad63" kindref="member" tooltip="Clears the bit at the supplied index. ">clearBit</ref>(7);</highlight></codeline>
-<codeline lineno="223"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00896_1ad7b6ac75288861f60b160dcdc43aa189" kindref="member">CpuIsLocked</ref>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref>))</highlight></codeline>
-<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>MessageException(</highlight><highlight class="stringliteral">&quot;evaluation<sp/>on<sp/>a<sp/>locked<sp/>CPU&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="226"><highlight class="normal"></highlight></codeline>
-<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>clock<sp/>is<sp/>in<sp/>bit<sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>tick<sp/>=<sp/>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2a8487c63d5dca7d87b359feca1a2c2ac8" kindref="member">Bit1</ref>)<sp/>!=<sp/>0;</highlight></codeline>
-<codeline lineno="229"><highlight class="normal"></highlight></codeline>
-<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>the<sp/>highest<sp/>bit<sp/>is<sp/>set,<sp/>it<sp/>is<sp/>a<sp/>c-type<sp/>instruction</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>typeC<sp/>=<sp/>(_ins<sp/>&amp;<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2aa92c380b2c00042b5105ede3c75f8d09" kindref="member">Bit15</ref>)<sp/>!=<sp/>0;</highlight></codeline>
-<codeline lineno="232"><highlight class="normal"></highlight></codeline>
-<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>otherwise<sp/>it&apos;s<sp/>an<sp/>a-type<sp/>instruction</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>typeA<sp/>=<sp/>!typeC;</highlight></codeline>
-<codeline lineno="235"><highlight class="normal"></highlight></codeline>
-<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>load<sp/>into<sp/>the<sp/>A<sp/>register<sp/>if<sp/>it<sp/>is<sp/>an<sp/>a-type</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>or<sp/>if<sp/>it&apos;s<sp/>a<sp/>c-type<sp/>and<sp/>the<sp/>a<sp/>destination</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>bit<sp/>is<sp/>set</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_a.<ref refid="a01114_1aae6a1ef0fe5e583d92de6cb9da89f480" kindref="member">setLoad</ref>(typeA<sp/>||<sp/>typeC<sp/>&amp;&amp;<sp/>(_ins<sp/>&amp;<sp/><ref refid="a00896_1ac2e8bb0a903ada736323d9ae15fbd83f" kindref="member">ALoad</ref>)<sp/>!=<sp/>0);</highlight></codeline>
-<codeline lineno="240"><highlight class="normal"></highlight></codeline>
-<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_a.<ref refid="a01114_1a2547034bc01798cc02dcd141a6a25b43" kindref="member">setIn</ref>((typeA<sp/>?<sp/>_ins<sp/>:<sp/>_alu.<ref refid="a00958_1a0a6f75d46a2d234c77033a30fef51326" kindref="member">getOut</ref>())<sp/>&amp;<sp/><ref refid="a00896_1a31b128b4961f42e0532f63a42c7e990c" kindref="member">RMask</ref>);</highlight></codeline>
-<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_a.<ref refid="a01114_1a9ed7e9ef8e47088db81077b5711e153f" kindref="member">setClock</ref>(tick);</highlight></codeline>
-<codeline lineno="243"><highlight class="normal"></highlight></codeline>
-<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>flags<sp/>are<sp/>the<sp/>ALU<sp/>ctrl-bits,<sp/>so<sp/>mask<sp/>them<sp/>off</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>shift<sp/>them<sp/>down<sp/>so<sp/>that<sp/>they<sp/>align<sp/>in<sp/>the<sp/>lower</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>six<sp/>bits<sp/>of<sp/>an<sp/>unsigned<sp/>char.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(typeC)</highlight></codeline>
-<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_alu.<ref refid="a00958_1ab78360af9a64fb57b2144516bf03de8a" kindref="member">setFlags</ref>((_ins<sp/>&amp;<sp/><ref refid="a00896_1aed76ec1c3c9eb7477302492f4a555347" kindref="member">CBits</ref>)<sp/>&gt;&gt;<sp/>6);</highlight></codeline>
-<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_alu.<ref refid="a00958_1af3082e0b359aebd367e56457b1d8ef52" kindref="member">setX</ref>(_d.<ref refid="a01114_1adac71e249b6e499425aac50f34eac07b" kindref="member">getOut</ref>());</highlight></codeline>
-<codeline lineno="250"><highlight class="normal"></highlight></codeline>
-<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A/M<sp/>the<sp/>a-bit<sp/>(12)<sp/>controls<sp/>the<sp/>M<sp/>type<sp/>commands</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>it<sp/>is<sp/>set<sp/>when<sp/>the<sp/>instruction<sp/>is<sp/>a<sp/>c-type<sp/>instruction,</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>use<sp/>the<sp/>CPU<sp/>input<sp/>(when<sp/>linked<sp/>to<sp/>RAM<sp/>its<sp/>the<sp/>RAM&apos;S<sp/>output<sp/>(M)).</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>otherwise<sp/>use<sp/>the<sp/>output<sp/>from<sp/>the<sp/>internal<sp/>(A)<sp/>register.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_alu.<ref refid="a00958_1aa777e90d3af236329d8c7f9340a21a78" kindref="member">setY</ref>(typeC<sp/>&amp;&amp;<sp/>(_ins<sp/>&amp;<sp/><ref refid="a00896_1aaba0ba71f01d3869fbd9d00e9c7c8843" kindref="member">ABits</ref>)<sp/>!=<sp/>0<sp/>?<sp/>_in<sp/>:<sp/>_a.<ref refid="a01114_1adac71e249b6e499425aac50f34eac07b" kindref="member">getOut</ref>());</highlight></codeline>
-<codeline lineno="256"><highlight class="normal"></highlight></codeline>
-<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_d.<ref refid="a01114_1aae6a1ef0fe5e583d92de6cb9da89f480" kindref="member">setLoad</ref>(typeC<sp/>&amp;&amp;<sp/>(_ins<sp/>&amp;<sp/><ref refid="a00896_1aecca554241805bc1e9d1d50df379efaa" kindref="member">DLoad</ref>)<sp/>!=<sp/>0);</highlight></codeline>
-<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_d.<ref refid="a01114_1a2547034bc01798cc02dcd141a6a25b43" kindref="member">setIn</ref>(_alu.<ref refid="a00958_1a0a6f75d46a2d234c77033a30fef51326" kindref="member">getOut</ref>());</highlight></codeline>
-<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_d.<ref refid="a01114_1a9ed7e9ef8e47088db81077b5711e153f" kindref="member">setClock</ref>(!tick);<sp/></highlight><highlight class="comment">//<sp/>t-1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="260"><highlight class="normal"></highlight></codeline>
-<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(typeC)</highlight></codeline>
-<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isZero<sp/>=<sp/>_alu.<ref refid="a00958_1a2f8ef9292d754e3b65079a0bae64076b" kindref="member">getZr</ref>();</highlight></codeline>
-<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isNeg<sp/><sp/>=<sp/>_alu.<ref refid="a00958_1a85ae2abb1cd2db9cbc00d2d7131dc819" kindref="member">getNe</ref>();</highlight></codeline>
-<codeline lineno="265"><highlight class="normal"></highlight></codeline>
-<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>jgt<sp/>=<sp/>_ins<sp/>&amp;<sp/>0b001;</highlight></codeline>
-<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>jeq<sp/>=<sp/>_ins<sp/>&amp;<sp/>0b010;</highlight></codeline>
-<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>jlt<sp/>=<sp/>_ins<sp/>&amp;<sp/>0b100;</highlight></codeline>
-<codeline lineno="269"><highlight class="normal"></highlight></codeline>
-<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(jgt<sp/>&amp;&amp;<sp/>!isZero<sp/>&amp;&amp;<sp/>!isNeg<sp/>||<sp/>jeq<sp/>&amp;&amp;<sp/>isZero<sp/>||<sp/>jlt<sp/>&amp;&amp;<sp/>isNeg)</highlight></codeline>
-<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pc.<ref refid="a01094_1a0fcf49248686a2473db97c221f3689a7" kindref="member">setLoad</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pc.<ref refid="a01094_1a0fcf49248686a2473db97c221f3689a7" kindref="member">setLoad</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pc.<ref refid="a01094_1a0fcf49248686a2473db97c221f3689a7" kindref="member">setLoad</ref>(<ref refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(0));</highlight></codeline>
-<codeline lineno="277"><highlight class="normal"></highlight></codeline>
-<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pc.<ref refid="a01094_1a609ef4c3189b3cc5a3ab835c5be8510d" kindref="member">setIn</ref>(_a.<ref refid="a01114_1adac71e249b6e499425aac50f34eac07b" kindref="member">getOut</ref>());</highlight></codeline>
-<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pc.<ref refid="a01094_1a6cb44c6579a58a94a3f30e22e1b4856c" kindref="member">setInc</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pc.<ref refid="a01094_1accd1e5521922b6ad8b829e2b12d5bc1c" kindref="member">setReset</ref>((<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" kindref="member">Bit0</ref>)<sp/>!=<sp/>0);</highlight></codeline>
-<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pc.<ref refid="a01094_1a3621404b49cf9b287f3e1357bce37052" kindref="member">setClock</ref>(tick);</highlight></codeline>
-<codeline lineno="282"><highlight class="normal"></highlight></codeline>
-<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>bit<sp/>6<sp/>controls<sp/>the<sp/>write<sp/>memory<sp/>flag</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>which<sp/>should<sp/>be<sp/>linked<sp/>to<sp/>the<sp/>load<sp/>bit<sp/>on<sp/>the</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>RAM.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(typeC)</highlight></codeline>
-<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((_ins<sp/>&amp;<sp/><ref refid="a00896_1abba66580760a71c292f9d27068d4b248" kindref="member">MLoad</ref>)<sp/>!=<sp/>0)</highlight></codeline>
-<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>|=<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" kindref="member">Bit6</ref>;</highlight></codeline>
-<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;=<sp/>~<ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" kindref="member">Bit6</ref>;</highlight></codeline>
-<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;=<sp/>~<ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" kindref="member">Bit6</ref>;</highlight></codeline>
-<codeline lineno="295"><highlight class="normal"></highlight></codeline>
-<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>evaluate<sp/>the<sp/>program<sp/>counter</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pc.<ref refid="a01094_1a1fb936fe940e54330e4f2616c123fafd" kindref="member">getOut</ref>();</highlight></codeline>
-<codeline lineno="298"><highlight class="normal"></highlight></codeline>
-<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>clear<sp/>the<sp/>dirty<sp/>flag</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;=<sp/>~<ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" kindref="member">Bit7</ref>;</highlight></codeline>
-<codeline lineno="301"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="303"><highlight class="normal"></highlight></codeline>
-<codeline lineno="304" refid="a01006_1a599e7ef3d1afa3a29c3f12f2e457f265" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01006_1a599e7ef3d1afa3a29c3f12f2e457f265" kindref="member">Cpu::clear</ref>()</highlight></codeline>
-<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_d.<ref refid="a01114_1a2547034bc01798cc02dcd141a6a25b43" kindref="member">setIn</ref>(0);</highlight></codeline>
-<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_d.<ref refid="a01114_1aae6a1ef0fe5e583d92de6cb9da89f480" kindref="member">setLoad</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_d.<ref refid="a01114_1a9ed7e9ef8e47088db81077b5711e153f" kindref="member">setClock</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="309"><highlight class="normal"></highlight></codeline>
-<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_a.<ref refid="a01114_1a2547034bc01798cc02dcd141a6a25b43" kindref="member">setIn</ref>(0);</highlight></codeline>
-<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_a.<ref refid="a01114_1aae6a1ef0fe5e583d92de6cb9da89f480" kindref="member">setLoad</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_a.<ref refid="a01114_1a9ed7e9ef8e47088db81077b5711e153f" kindref="member">setClock</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="313"><highlight class="normal"></highlight></codeline>
-<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pc.<ref refid="a01094_1a609ef4c3189b3cc5a3ab835c5be8510d" kindref="member">setIn</ref>(0);</highlight></codeline>
-<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pc.<ref refid="a01094_1a6cb44c6579a58a94a3f30e22e1b4856c" kindref="member">setInc</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pc.<ref refid="a01094_1a0fcf49248686a2473db97c221f3689a7" kindref="member">setLoad</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pc.<ref refid="a01094_1a3621404b49cf9b287f3e1357bce37052" kindref="member">setClock</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="318"><highlight class="normal"></highlight></codeline>
-<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ins<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_in<sp/><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_alu.<ref refid="a00958_1af3082e0b359aebd367e56457b1d8ef52" kindref="member">setX</ref>(0);</highlight></codeline>
-<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_alu.<ref refid="a00958_1aa777e90d3af236329d8c7f9340a21a78" kindref="member">setY</ref>(0);</highlight></codeline>
-<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_alu.<ref refid="a00958_1ab78360af9a64fb57b2144516bf03de8a" kindref="member">setFlags</ref>(0);</highlight></codeline>
-<codeline lineno="324"><highlight class="normal"></highlight></codeline>
-<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01126_1a7570f5f591474c56e6f96ab6d3f77044" kindref="member">Timer::reset</ref>();</highlight></codeline>
-<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="328"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Chips/CPU.cpp"/>
+    <location file="Source/Chips/Computer.h"/>
   </compounddef>
 </doxygen>

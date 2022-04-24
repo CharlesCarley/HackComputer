@@ -1,141 +1,112 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00692" kind="file" language="C++">
-    <compoundname>DotWriter.cpp</compoundname>
-    <includes refid="a00695" local="yes">Compiler/Common/DotWriter.h</includes>
-    <includes local="no">iomanip</includes>
-    <includes refid="a00701" local="yes">Compiler/Common/Node.h</includes>
+    <compoundname>ParseUtils.h</compoundname>
+    <includes refid="a00809" local="yes">Utils/Exception.h</includes>
+    <includes refid="a00845" local="yes">Utils/String.h</includes>
+    <includedby refid="a01598" local="yes">Source/Compiler/Analyzer/Parser.cpp</includedby>
+    <includedby refid="a00689" local="yes">Source/Compiler/Analyzer/ParseUtils.cpp</includedby>
     <incdepgraph>
-      <node id="2331">
+      <node id="2308">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="2332" relation="include">
+        <childnode refid="2309" relation="include">
         </childnode>
       </node>
-      <node id="2320">
-        <label>functional</label>
-      </node>
-      <node id="2318">
-        <label>iomanip</label>
-      </node>
-      <node id="2332">
+      <node id="2309">
         <label>cstdint</label>
       </node>
-      <node id="2313">
-        <label>Compiler/Common/DotWriter.h</label>
-        <childnode refid="2314" relation="include">
-        </childnode>
-      </node>
-      <node id="2321">
-        <label>Compiler/Common/NodeUtils.h</label>
-        <childnode refid="2314" relation="include">
-        </childnode>
-      </node>
-      <node id="2327">
+      <node id="2300">
         <label>stdexcept</label>
       </node>
-      <node id="2316">
+      <node id="2305">
         <label>string</label>
       </node>
-      <node id="2324">
-        <label>unordered_set</label>
-      </node>
-      <node id="2326">
+      <node id="2299">
         <label>exception</label>
       </node>
-      <node id="2330">
+      <node id="2307">
         <label>UserInterface/Context.h</label>
-        <childnode refid="2314" relation="include">
+        <childnode refid="2303" relation="include">
         </childnode>
-        <childnode refid="2331" relation="include">
+        <childnode refid="2308" relation="include">
         </childnode>
-        <childnode refid="2333" relation="include">
+        <childnode refid="2310" relation="include">
         </childnode>
       </node>
-      <node id="2333">
+      <node id="2310">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="2332" relation="include">
+        <childnode refid="2309" relation="include">
         </childnode>
-        <childnode refid="2317" relation="include">
+        <childnode refid="2306" relation="include">
         </childnode>
-        <childnode refid="2331" relation="include">
-        </childnode>
-      </node>
-      <node id="2322">
-        <label>Utils/IndexCache.h</label>
-        <childnode refid="2323" relation="include">
-        </childnode>
-        <childnode refid="2324" relation="include">
-        </childnode>
-        <childnode refid="2325" relation="include">
+        <childnode refid="2308" relation="include">
         </childnode>
       </node>
-      <node id="2329">
+      <node id="2302">
         <label>Utils/Console.h</label>
-        <childnode refid="2314" relation="include">
+        <childnode refid="2303" relation="include">
         </childnode>
-        <childnode refid="2330" relation="include">
+        <childnode refid="2307" relation="include">
         </childnode>
       </node>
-      <node id="2317">
+      <node id="2306">
         <label>vector</label>
       </node>
-      <node id="2328">
+      <node id="2301">
         <label>utility</label>
       </node>
-      <node id="2315">
+      <node id="2304">
         <label>sstream</label>
       </node>
-      <node id="2325">
+      <node id="2298">
         <label>Utils/Exception.h</label>
-        <childnode refid="2326" relation="include">
+        <childnode refid="2299" relation="include">
         </childnode>
-        <childnode refid="2327" relation="include">
+        <childnode refid="2300" relation="include">
         </childnode>
-        <childnode refid="2328" relation="include">
+        <childnode refid="2301" relation="include">
         </childnode>
-        <childnode refid="2329" relation="include">
+        <childnode refid="2302" relation="include">
         </childnode>
-        <childnode refid="2314" relation="include">
+        <childnode refid="2303" relation="include">
         </childnode>
       </node>
-      <node id="2312">
-        <label>Source/Compiler/Common/DotWriter.cpp</label>
+      <node id="2297">
+        <label>Source/Compiler/Analyzer/ParseUtils.h</label>
         <link refid="a00692"/>
-        <childnode refid="2313" relation="include">
+        <childnode refid="2298" relation="include">
         </childnode>
-        <childnode refid="2318" relation="include">
-        </childnode>
-        <childnode refid="2319" relation="include">
+        <childnode refid="2303" relation="include">
         </childnode>
       </node>
-      <node id="2323">
-        <label>unordered_map</label>
-      </node>
-      <node id="2319">
-        <label>Compiler/Common/Node.h</label>
-        <childnode refid="2320" relation="include">
+      <node id="2303">
+        <label>String.h</label>
+        <childnode refid="2304" relation="include">
         </childnode>
-        <childnode refid="2317" relation="include">
+        <childnode refid="2305" relation="include">
         </childnode>
-        <childnode refid="2321" relation="include">
-        </childnode>
-        <childnode refid="2322" relation="include">
-        </childnode>
-        <childnode refid="2314" relation="include">
-        </childnode>
-      </node>
-      <node id="2314">
-        <label>Utils/String.h</label>
-        <childnode refid="2315" relation="include">
-        </childnode>
-        <childnode refid="2316" relation="include">
-        </childnode>
-        <childnode refid="2317" relation="include">
+        <childnode refid="2306" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <innerclass refid="a01150" prot="public">Hack::Compiler::DotWriterImpl</innerclass>
-    <innernamespace refid="a00900">Hack::Compiler</innernamespace>
+    <invincdepgraph>
+      <node id="2312">
+        <label>Source/Compiler/Analyzer/Parser.cpp</label>
+      </node>
+      <node id="2311">
+        <label>Source/Compiler/Analyzer/ParseUtils.h</label>
+        <link refid="a00692"/>
+        <childnode refid="2312" relation="include">
+        </childnode>
+        <childnode refid="2313" relation="include">
+        </childnode>
+      </node>
+      <node id="2313">
+        <label>Source/Compiler/Analyzer/ParseUtils.cpp</label>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="a01141" prot="public">Hack::Compiler::Analyzer::ParseUtils</innerclass>
+    <innernamespace refid="a00902">Hack::Compiler::Analyzer</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -162,122 +133,35 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Compiler/Common/DotWriter.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Compiler/Common/Node.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/Exception.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/String.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00900" kindref="compound">Hack::Compiler</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00902" kindref="compound">Hack::Compiler::Analyzer</ref></highlight></codeline>
 <codeline lineno="27"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="28" refid="a01150" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01150" kindref="compound">DotWriterImpl</ref></highlight></codeline>
+<codeline lineno="28" refid="a01141" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01141" kindref="compound">ParseUtils</ref></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01158" kindref="compound">Node</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_root;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00894_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_stream;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00894_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref><sp/>_out;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><ref refid="a01141_1af4e5bdaea1a70383c0c02d702f69f2a9" kindref="member">string</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01141_1a9f48226f7f08ae3ec5bfe575f7c59c3b" kindref="member">isOperator</ref>(int8_t<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>writeNodeCluster(<ref refid="a01158" kindref="compound">Node</ref>*<sp/>nd)</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>str;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01162_1a94e7f1532c5032beadb07e27a83792e7" kindref="member" tooltip="Returns a exact string representation of the enum name ">NodeUtils::nodeTypeString</ref>(str,<sp/>nd);</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>&lt;&lt;<sp/>std::setw(3)<sp/>&lt;&lt;<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;node_&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::hex<sp/>&lt;&lt;<sp/>(size_t)nd<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>[shape=none,<sp/>label<sp/>=\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>str<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;]&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01141_1a537cc831bb3f8c69f1744476fb1f7096" kindref="member">isTerm</ref>(int8_t<sp/>t0);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01141_1a80dc891183adf97bd0b2df0341b87b13" kindref="member">isUnary</ref>(int8_t<sp/>t0,<sp/>int8_t<sp/>t1,<sp/>int8_t<sp/>t2);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01141_1a59847659483be6c6323ae16c504ffb30" kindref="member">isExpressionExitTerm</ref>(int8_t<sp/>t0);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01141_1ae05c21942052125755e6fe007b4a8aef" kindref="member">isFunctionCall</ref>(int8_t<sp/>t0,<sp/>int8_t<sp/>t1);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01141_1adfa39dfbbc491f4bf89ea81e6b303bd6" kindref="member">isMethodCall</ref>(int8_t<sp/>t0,<sp/>int8_t<sp/>t1,<sp/>int8_t<sp/>t2,<sp/>int8_t<sp/>t3);</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>writeNode(<ref refid="a01158" kindref="compound">Node</ref>*<sp/>nd)</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>str;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01162_1ad90f4a993ae2906e55130aba4d6e8e70" kindref="member" tooltip="Returns an XML representation of the enum name ">NodeUtils::nodeTypeXmlString</ref>(str,<sp/>nd);</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>&lt;&lt;<sp/>std::setw(3)<sp/>&lt;&lt;<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;node_&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::hex<sp/>&lt;&lt;<sp/>(size_t)nd<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;[shape=none,<sp/>label<sp/>=\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>str<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;]&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>lineTo(<ref refid="a01158" kindref="compound">Node</ref>*<sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01158" kindref="compound">Node</ref>*<sp/>b)</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>&lt;&lt;<sp/>std::setw(3)<sp/>&lt;&lt;<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;node_&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::hex<sp/>&lt;&lt;<sp/>(size_t)a;</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;-&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;node_&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::hex<sp/>&lt;&lt;<sp/>(size_t)b;</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;[&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;arrowhead=none&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;]&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="68" refid="a01150_1a57e97baa6ed67104895082b01aa32130" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01150_1a57e97baa6ed67104895082b01aa32130" kindref="member">DotWriterImpl</ref>(<ref refid="a01158" kindref="compound">Node</ref>*<sp/>root,<sp/><ref refid="a00894_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref>*<sp/>stream)<sp/>:</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_root(root),</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_stream(stream)</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74" refid="a01150_1aad192f3498cc303f21c551bb0ac50f65" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01150_1aad192f3498cc303f21c551bb0ac50f65" kindref="member">writeHeader</ref>()</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;digraph<sp/>ClassList<sp/>{&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>&lt;&lt;<sp/>std::setw(3)<sp/>&lt;&lt;<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;rankdir<sp/>=<sp/>LR;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>&lt;&lt;<sp/>std::setw(3)<sp/>&lt;&lt;<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;layout<sp/><sp/>=<sp/>dot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83" refid="a01150_1af259ba97d893458e5728a38876976ae4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01150_1af259ba97d893458e5728a38876976ae4" kindref="member">writeFooter</ref>()</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;}&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88" refid="a01150_1a22267cb5d0cb4d6b63e22a6aefebab5f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01150_1a22267cb5d0cb4d6b63e22a6aefebab5f" kindref="member">writeRule</ref>(<ref refid="a01158" kindref="compound">Node</ref>*<sp/>node)</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>writeNodeCluster(node);</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01262" kindref="compound">Node::Children</ref>&amp;<sp/>ch<sp/>=<sp/>node-&gt;<ref refid="a01158_1ac4754a4c2acc61cca8547e90af0302c7" kindref="member">children</ref>();</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="a01158" kindref="compound">Node</ref>*<sp/>nd<sp/>:<sp/>ch)</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>writeNode(nd);</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nd-&gt;<ref refid="a01158_1a82524b6de28524b2592bb0c6ba321696" kindref="member">isKeyword</ref>()<sp/>||<sp/>nd-&gt;<ref refid="a01158_1a65a7432b8abdb49bb61f7dada9fa4741" kindref="member">isConstant</ref>()<sp/>||<sp/>nd-&gt;<ref refid="a01158_1a9133827ec5791d7df189dc0f54b6f7b5" kindref="member">isSymbol</ref>())</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lineTo(node,<sp/>nd);</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nd-&gt;<ref refid="a01158_1a5159a3ebec4faae76ddc4e1a14910bbc" kindref="member">isRule</ref>())</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01150_1a22267cb5d0cb4d6b63e22a6aefebab5f" kindref="member">writeRule</ref>(nd);</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lineTo(node,<sp/>nd);</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"></highlight></codeline>
-<codeline lineno="108" refid="a01150_1a1546d87f7f5aec756e4ffa173195afca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01150_1a1546d87f7f5aec756e4ffa173195afca" kindref="member">write</ref>()</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01150_1aad192f3498cc303f21c551bb0ac50f65" kindref="member">writeHeader</ref>();</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01262" kindref="compound">Node::Children</ref>&amp;<sp/>ch<sp/>=<sp/>_root-&gt;<ref refid="a01158_1ac4754a4c2acc61cca8547e90af0302c7" kindref="member">children</ref>();</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="a01158" kindref="compound">Node</ref>*<sp/>nd<sp/>:<sp/>ch)</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nd-&gt;<ref refid="a01158_1a5159a3ebec4faae76ddc4e1a14910bbc" kindref="member">isRule</ref>())</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01150_1a22267cb5d0cb4d6b63e22a6aefebab5f" kindref="member">writeRule</ref>(nd);</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01150_1af259ba97d893458e5728a38876976ae4" kindref="member">writeFooter</ref>();</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>dest<sp/>=<sp/>_out.str();</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_stream-&gt;write(dest.c_str(),<sp/>dest.size());</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"></highlight></codeline>
-<codeline lineno="126" refid="a01154_1a1c2b9abbedc66bec1440fd028d434c44" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01154_1a1c2b9abbedc66bec1440fd028d434c44" kindref="member">DotWriter::DotWriter</ref>(<ref refid="a01158" kindref="compound">Node</ref>*<sp/>root)<sp/>:</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_root(root)</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"></highlight></codeline>
-<codeline lineno="131" refid="a01154_1a3c42eaf7c27647c3e266d5c02fc62e48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01154_1a3c42eaf7c27647c3e266d5c02fc62e48" kindref="member">DotWriter::write</ref>(<ref refid="a00894_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref>&amp;<sp/>out)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="132"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01150" kindref="compound">DotWriterImpl</ref><sp/>impl(_root,<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>impl.<ref refid="a01150_1a1546d87f7f5aec756e4ffa173195afca" kindref="member">write</ref>();</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="136"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01141_1a35ccb54979ab85176eacd434d2b1f52a" kindref="member">isCallTerm</ref>(int8_t<sp/>t0,<sp/>int8_t<sp/>t1,<sp/>int8_t<sp/>t2,<sp/>int8_t<sp/>t3);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01141_1a159c1acb728301d959cf4559bdcea9f1" kindref="member">isComplexTerm</ref>(int8_t<sp/>t0,<sp/>int8_t<sp/>t1,<sp/>int8_t<sp/>t2,<sp/>int8_t<sp/>t3);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler::Analyzer</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Compiler/Common/DotWriter.cpp"/>
+    <location file="Source/Compiler/Analyzer/ParseUtils.h"/>
   </compounddef>
 </doxygen>

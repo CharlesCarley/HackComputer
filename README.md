@@ -13,8 +13,8 @@ It also contains a setup for testing using GitHub actions.
 
 ## Current State
 
-This is still a work in progress. Its on hold for the time being until I have
-more time to devote to it. It doesn't really do much on the surface. The Jack
-language is still very basic.
-
-
+It is a work in progress, and it is on hold for the time being until more time is devoted to it. I think its a neat toy
+because it allows a complete perspective from code to execution.
+It could easily be expanded upon and taken to the 
+finish line. But at the end of the day it's only emulating the 
+actual process.

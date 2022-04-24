@@ -2,67 +2,92 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01648" kind="file" language="C++">
     <compoundname>Token.h</compoundname>
-    <includes refid="a00836" local="yes">Utils/ParserBase/TokenBase.h</includes>
-    <includedby refid="a01600" local="yes">Source/VirtualMachine/Parser.cpp</includedby>
-    <includedby refid="a01624" local="yes">Source/VirtualMachine/Scanner.cpp</includedby>
-    <includedby refid="a01636" local="yes">Source/VirtualMachine/Scanner.h</includedby>
+    <includes refid="a00845" local="yes">Utils/String.h</includes>
+    <includedby refid="a01636" local="yes">Source/Utils/CommandLine/Scanner.h</includedby>
     <incdepgraph>
-      <node id="638">
+      <node id="620">
+        <label>Source/Utils/CommandLine/Token.h</label>
+        <link refid="a01648"/>
+        <childnode refid="621" relation="include">
+        </childnode>
+      </node>
+      <node id="623">
         <label>string</label>
       </node>
-      <node id="635">
-        <label>Utils/ParserBase/TokenBase.h</label>
-        <childnode refid="636" relation="include">
-        </childnode>
-      </node>
-      <node id="634">
-        <label>Source/VirtualMachine/Token.h</label>
-        <link refid="a01648"/>
-        <childnode refid="635" relation="include">
-        </childnode>
-      </node>
-      <node id="639">
+      <node id="624">
         <label>vector</label>
       </node>
-      <node id="637">
+      <node id="622">
         <label>sstream</label>
       </node>
-      <node id="636">
+      <node id="621">
         <label>Utils/String.h</label>
-        <childnode refid="637" relation="include">
+        <childnode refid="622" relation="include">
         </childnode>
-        <childnode refid="638" relation="include">
+        <childnode refid="623" relation="include">
         </childnode>
-        <childnode refid="639" relation="include">
+        <childnode refid="624" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="643">
-        <label>Source/VirtualMachine/Scanner.h</label>
-        <childnode refid="641" relation="include">
+      <node id="627">
+        <label>Source/Utils/CommandLine/Parser.h</label>
+        <childnode refid="628" relation="include">
         </childnode>
-        <childnode refid="642" relation="include">
+        <childnode refid="629" relation="include">
+        </childnode>
+        <childnode refid="630" relation="include">
+        </childnode>
+        <childnode refid="631" relation="include">
+        </childnode>
+        <childnode refid="632" relation="include">
+        </childnode>
+        <childnode refid="633" relation="include">
+        </childnode>
+        <childnode refid="634" relation="include">
         </childnode>
       </node>
-      <node id="640">
-        <label>Source/VirtualMachine/Token.h</label>
+      <node id="634">
+        <label>Source/VirtualMachine/Main.cpp</label>
+      </node>
+      <node id="628">
+        <label>Source/Assembler/Main.cpp</label>
+      </node>
+      <node id="625">
+        <label>Source/Utils/CommandLine/Token.h</label>
         <link refid="a01648"/>
-        <childnode refid="641" relation="include">
-        </childnode>
-        <childnode refid="642" relation="include">
-        </childnode>
-        <childnode refid="643" relation="include">
+        <childnode refid="626" relation="include">
         </childnode>
       </node>
-      <node id="642">
-        <label>Source/VirtualMachine/Scanner.cpp</label>
+      <node id="630">
+        <label>Source/Compiler/Compiler/Main.cpp</label>
       </node>
-      <node id="641">
-        <label>Source/VirtualMachine/Parser.cpp</label>
+      <node id="633">
+        <label>Source/Utils/CommandLine/Parser.cpp</label>
+      </node>
+      <node id="626">
+        <label>Source/Utils/CommandLine/Scanner.h</label>
+        <childnode refid="627" relation="include">
+        </childnode>
+        <childnode refid="635" relation="include">
+        </childnode>
+      </node>
+      <node id="629">
+        <label>Source/Compiler/Analyzer/Main.cpp</label>
+      </node>
+      <node id="635">
+        <label>Source/Utils/CommandLine/Scanner.cpp</label>
+      </node>
+      <node id="632">
+        <label>Source/Computer/Application.cpp</label>
+      </node>
+      <node id="631">
+        <label>Source/Compiler/Generator/Main.cpp</label>
       </node>
     </invincdepgraph>
-    <innernamespace refid="a00902">Hack::VirtualMachine</innernamespace>
+    <innerclass refid="a01249" prot="public">Hack::CommandLine::Token</innerclass>
+    <innernamespace refid="a00910">Hack::CommandLine</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -90,52 +115,76 @@
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/ParserBase/TokenBase.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00902" kindref="compound">Hack::VirtualMachine</ref></highlight></codeline>
-<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="27" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8" kindref="member">TokenType</ref></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="29" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a71e915ab635f656148cf8990f77e5171" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a71e915ab635f656148cf8990f77e5171" kindref="member">TOK_ERROR</ref><sp/>=<sp/>-2,</highlight></codeline>
-<codeline lineno="30" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8aa3110406fa7d6ce5c6dba8fd3594d633" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8aa3110406fa7d6ce5c6dba8fd3594d633" kindref="member">TOK_EOF</ref>,</highlight></codeline>
-<codeline lineno="31" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8abe92c0e4ce7a4c0b26df409cab3cd1a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8abe92c0e4ce7a4c0b26df409cab3cd1a7" kindref="member">TOK_NULL</ref>,</highlight></codeline>
-<codeline lineno="32" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8af65d8765d7554151c22a5de2475e4a04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8af65d8765d7554151c22a5de2475e4a04" kindref="member">TOK_INTEGER</ref>,</highlight></codeline>
-<codeline lineno="33" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a79fe4d72ec11f5d2ba06c0f0818bc383" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a79fe4d72ec11f5d2ba06c0f0818bc383" kindref="member">TOK_IDENTIFIER</ref>,</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a15637fa7561d27e7ec3767c1234f30c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a15637fa7561d27e7ec3767c1234f30c8" kindref="member">TOK_PUSH</ref>,</highlight></codeline>
-<codeline lineno="36" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8acc1f94b8928811b09124734ee1597a55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8acc1f94b8928811b09124734ee1597a55" kindref="member">TOK_POP</ref>,</highlight></codeline>
-<codeline lineno="37" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8ac1c79b33295900ce5fb9b7388f9d3774" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8ac1c79b33295900ce5fb9b7388f9d3774" kindref="member">TOK_ARGUMENT</ref>,</highlight></codeline>
-<codeline lineno="38" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a884782019d67a9034800b2e52853285f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a884782019d67a9034800b2e52853285f" kindref="member">TOK_LOCAL</ref>,</highlight></codeline>
-<codeline lineno="39" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a34c8a308ae07cccf0911f5beedf966b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a34c8a308ae07cccf0911f5beedf966b1" kindref="member">TOK_STATIC</ref>,</highlight></codeline>
-<codeline lineno="40" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a1b5933cb66c94f5d52f4b26aa5d21687" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a1b5933cb66c94f5d52f4b26aa5d21687" kindref="member">TOK_CONSTANT</ref>,</highlight></codeline>
-<codeline lineno="41" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a336b66142cf793364a1852264a54363e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a336b66142cf793364a1852264a54363e" kindref="member">TOK_THIS</ref>,</highlight></codeline>
-<codeline lineno="42" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a4a6f04837563a657059418583b193f6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a4a6f04837563a657059418583b193f6d" kindref="member">TOK_THAT</ref>,</highlight></codeline>
-<codeline lineno="43" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a1ff62250b7cc15cf5232385336a43faa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a1ff62250b7cc15cf5232385336a43faa" kindref="member">TOK_POINTER</ref>,</highlight></codeline>
-<codeline lineno="44" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a9a81b7232eec35bfa052a1127102ef88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a9a81b7232eec35bfa052a1127102ef88" kindref="member">TOK_TEMP</ref>,</highlight></codeline>
-<codeline lineno="45" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a4e509ea02cf3295cfb974cbef858a2a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a4e509ea02cf3295cfb974cbef858a2a0" kindref="member">TOK_IF_GOTO</ref>,</highlight></codeline>
-<codeline lineno="46" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8adefb15a333279ec39429629d72c7247b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8adefb15a333279ec39429629d72c7247b" kindref="member">TOK_GOTO</ref>,</highlight></codeline>
-<codeline lineno="47" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8adea00dd7260945f628607920c28f4f88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8adea00dd7260945f628607920c28f4f88" kindref="member">TOK_LABEL</ref>,</highlight></codeline>
-<codeline lineno="48" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a8fe88815a953aa99c8e5c8d5ee61977b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a8fe88815a953aa99c8e5c8d5ee61977b" kindref="member">TOK_FUNCTION</ref>,</highlight></codeline>
-<codeline lineno="49" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8aba05bfde3b583f0f57670db082435502" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8aba05bfde3b583f0f57670db082435502" kindref="member">TOK_CALL</ref>,</highlight></codeline>
-<codeline lineno="50" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8aab8d542c9b300e713566c31fd04978b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8aab8d542c9b300e713566c31fd04978b2" kindref="member">TOK_RETURN</ref>,</highlight></codeline>
-<codeline lineno="51" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a93c0f222ca3e14bf194e2ada515f6231" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a93c0f222ca3e14bf194e2ada515f6231" kindref="member">TOK_EQ</ref>,</highlight></codeline>
-<codeline lineno="52" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8afa3234091b8747a25c81465bbc76356e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8afa3234091b8747a25c81465bbc76356e" kindref="member">TOK_GT</ref>,</highlight></codeline>
-<codeline lineno="53" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a34d01c2b796f4fba92dbbdba6829b4de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a34d01c2b796f4fba92dbbdba6829b4de" kindref="member">TOK_LT</ref>,</highlight></codeline>
-<codeline lineno="54" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8ad252188e8cc229f0e37a62bc2a6effbb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8ad252188e8cc229f0e37a62bc2a6effbb" kindref="member">TOK_ADD</ref>,</highlight></codeline>
-<codeline lineno="55" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a44c80f603918c4ec0059e90c6aec5da0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a44c80f603918c4ec0059e90c6aec5da0" kindref="member">TOK_SUB</ref>,</highlight></codeline>
-<codeline lineno="56" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a090fd2880780efacb459ca5a0f9108b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a090fd2880780efacb459ca5a0f9108b2" kindref="member">TOK_AND</ref>,</highlight></codeline>
-<codeline lineno="57" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8afc9b5bec56f03be602419b704b93791e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8afc9b5bec56f03be602419b704b93791e" kindref="member">TOK_OR</ref>,</highlight></codeline>
-<codeline lineno="58" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8ab3a17c6fa237215d3cbd4ef2147917c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8ab3a17c6fa237215d3cbd4ef2147917c5" kindref="member">TOK_NOT</ref>,</highlight></codeline>
-<codeline lineno="59" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a3528eed46cd82da594149f52de5580f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a3528eed46cd82da594149f52de5580f0" kindref="member">TOK_NEG</ref>,</highlight></codeline>
-<codeline lineno="60" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a3fa291fa8690f5c7571b54b2fa681b08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a3fa291fa8690f5c7571b54b2fa681b08" kindref="member">TOK_SET</ref>,</highlight></codeline>
-<codeline lineno="61" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a066351ce777c87e213b2dc4daf40e599" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a066351ce777c87e213b2dc4daf40e599" kindref="member">TOK_RESET</ref>,</highlight></codeline>
-<codeline lineno="62" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a8ecc09af794ba08a877a741036883409" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a8ecc09af794ba08a877a741036883409" kindref="member">TOK_HALT</ref>,</highlight></codeline>
-<codeline lineno="63" refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a4ab563e860977220dd359e7df2a3db53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00902_1a091fad0d0b4814af2f1f3f51d62033c8a4ab563e860977220dd359e7df2a3db53" kindref="member">TOK_ASM</ref>,</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66" refid="a00902_1a1256a43300d83510604c7b9755796e01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="a01286" kindref="compound">Token</ref><sp/>=<sp/><ref refid="a01286" kindref="compound">TokenBase</ref>;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::VirtualMachine</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/String.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00910" kindref="compound">Hack::CommandLine</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28" refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86" kindref="member">TokenType</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30" refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86a18937fa12a9efdd1df2262f17578b735" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86a18937fa12a9efdd1df2262f17578b735" kindref="member">TOK_NONE</ref>,</highlight></codeline>
+<codeline lineno="31" refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86a55849c5d51bca86446e7f7ac620d7d23" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86a55849c5d51bca86446e7f7ac620d7d23" kindref="member">TOK_SWITCH_SHORT</ref>,</highlight></codeline>
+<codeline lineno="32" refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86adf0cf175e182315d7ed141f8f08120e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86adf0cf175e182315d7ed141f8f08120e5" kindref="member">TOK_SWITCH_LONG</ref>,</highlight></codeline>
+<codeline lineno="33" refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86af245704ac1981ba509a2bf36c9f974de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86af245704ac1981ba509a2bf36c9f974de" kindref="member">TOK_NEXT</ref>,</highlight></codeline>
+<codeline lineno="34" refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86a1ec616246244f6453a7f66b5fb826ad3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86a1ec616246244f6453a7f66b5fb826ad3" kindref="member">TOK_OPTION</ref>,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>delete</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86a3098177307fabe9d80853b00deaff42d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86a3098177307fabe9d80853b00deaff42d" kindref="member">TOK_INTEGER</ref>,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>delete</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86ac5583780f8eea34fe0ee815f66fc1439" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86ac5583780f8eea34fe0ee815f66fc1439" kindref="member">TOK_REAL</ref>,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>delete</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86ad10952ab16deb1fdfc37ce82f5cb52e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86ad10952ab16deb1fdfc37ce82f5cb52e5" kindref="member">TOK_IDENTIFIER</ref>,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>rename<sp/>to<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86ac89e0f1937f562da1aa8f4ef6f0fae69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86ac89e0f1937f562da1aa8f4ef6f0fae69" kindref="member">TOK_FILEPATH</ref>,</highlight></codeline>
+<codeline lineno="43" refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86a728a7b175a948d4e4390726507f087b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86a728a7b175a948d4e4390726507f087b8" kindref="member">TOK_EOS</ref>,</highlight></codeline>
+<codeline lineno="44" refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86af499719b721526aa16a9b57e252fde89" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86af499719b721526aa16a9b57e252fde89" kindref="member">TOK_ERROR</ref></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="a01249" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01249" kindref="compound">Token</ref></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>_type;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>_value;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="54" refid="a01249_1a73d16c87d6b58feacf0ff92e99307d1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01249_1a73d16c87d6b58feacf0ff92e99307d1f" kindref="member">Token</ref>()<sp/>:</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_type(<ref refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86a18937fa12a9efdd1df2262f17578b735" kindref="member">TOK_NONE</ref>)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_value.reserve(64);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="a01249_1a1752c109f1e2547e133eb0e991eab9bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/><ref refid="a01249_1a1752c109f1e2547e133eb0e991eab9bc" kindref="member">getType</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="61"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_type;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="a01249_1a77060f2abe4e56c98ddd13fdfc83bc61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01249_1a77060f2abe4e56c98ddd13fdfc83bc61" kindref="member">setType</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>type)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_type<sp/>=<sp/>type;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="a01249_1a0394cc885ec75f298d503580570a3b25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/><ref refid="a01249_1a0394cc885ec75f298d503580570a3b25" kindref="member">getValue</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="71"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_value;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="a01249_1a39d0fdc550762a50ca37e08448d04212" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01249_1a39d0fdc550762a50ca37e08448d04212" kindref="member">append</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">&amp;<sp/>ch)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_value.push_back(ch);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="a01249_1a5c946ba65192d03a81d23486465fb977" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01249_1a5c946ba65192d03a81d23486465fb977" kindref="member">append</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>str)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_value.append(str);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="a01249_1a8566d5c471067be557dce98589f8ba69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01249_1a8566d5c471067be557dce98589f8ba69" kindref="member">clear</ref>()</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_type<sp/>=<sp/><ref refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86a728a7b175a948d4e4390726507f087b8" kindref="member">TOK_EOS</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_value.resize(0);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Utils::CommandLine</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/VirtualMachine/Token.h"/>
+    <location file="Source/Utils/CommandLine/Token.h"/>
   </compounddef>
 </doxygen>

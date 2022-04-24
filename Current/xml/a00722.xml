@@ -1,45 +1,54 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00722" kind="file" language="C++">
-    <compoundname>Expression.cpp</compoundname>
-    <includes refid="a00725" local="yes">Compiler/Generator/Expression.h</includes>
+    <compoundname>XmlWriter.h</compoundname>
+    <includes refid="a00845" local="yes">Utils/String.h</includes>
+    <includedby refid="a00713" local="yes">Source/Compiler/Common/Tree.cpp</includedby>
+    <includedby refid="a00719" local="yes">Source/Compiler/Common/XmlWriter.cpp</includedby>
     <incdepgraph>
-      <node id="2515">
-        <label>Compiler/Generator/Expression.h</label>
-        <childnode refid="2516" relation="include">
+      <node id="2508">
+        <label>Source/Compiler/Common/XmlWriter.h</label>
+        <link refid="a00722"/>
+        <childnode refid="2509" relation="include">
         </childnode>
       </node>
-      <node id="2519">
+      <node id="2511">
         <label>string</label>
       </node>
-      <node id="2514">
-        <label>Source/Compiler/Generator/Expression.cpp</label>
-        <link refid="a00722"/>
-        <childnode refid="2515" relation="include">
-        </childnode>
-      </node>
-      <node id="2520">
+      <node id="2512">
         <label>vector</label>
       </node>
-      <node id="2518">
+      <node id="2510">
         <label>sstream</label>
       </node>
-      <node id="2516">
-        <label>Compiler/Common/Tree.h</label>
-        <childnode refid="2517" relation="include">
-        </childnode>
-      </node>
-      <node id="2517">
+      <node id="2509">
         <label>Utils/String.h</label>
-        <childnode refid="2518" relation="include">
+        <childnode refid="2510" relation="include">
         </childnode>
-        <childnode refid="2519" relation="include">
+        <childnode refid="2511" relation="include">
         </childnode>
-        <childnode refid="2520" relation="include">
+        <childnode refid="2512" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <innernamespace refid="a00901">Hack::Compiler::CodeGenerator</innernamespace>
+    <invincdepgraph>
+      <node id="2513">
+        <label>Source/Compiler/Common/XmlWriter.h</label>
+        <link refid="a00722"/>
+        <childnode refid="2514" relation="include">
+        </childnode>
+        <childnode refid="2515" relation="include">
+        </childnode>
+      </node>
+      <node id="2514">
+        <label>Source/Compiler/Common/Tree.cpp</label>
+      </node>
+      <node id="2515">
+        <label>Source/Compiler/Common/XmlWriter.cpp</label>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="a01177" prot="public">Hack::Compiler::XmlWriter</innerclass>
+    <innernamespace refid="a00903">Hack::Compiler</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -66,12 +75,27 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Compiler/Generator/Expression.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24" refid="a00901" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00901" kindref="compound">Hack::Compiler::CodeGenerator</ref></highlight></codeline>
-<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="26"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler::CodeGenerator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/String.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00903" kindref="compound">Hack::Compiler</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Node;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="a01177" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01177" kindref="compound">XmlWriter</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01161" kindref="compound">Node</ref>*<sp/>_root;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="a01177_1a4c59931215e9baefd735d35d7a495873" kindref="member">XmlWriter</ref>(<ref refid="a01161" kindref="compound">Node</ref>*<sp/>root);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01177_1a76dd0f1a946c740e642b3d4a4067cd26" kindref="member">~XmlWriter</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01177_1a3cda3976be2f39380491275e681cdde9" kindref="member">write</ref>(<ref refid="a00897_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref>&amp;<sp/>out)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Compiler/Generator/Expression.cpp"/>
+    <location file="Source/Compiler/Common/XmlWriter.h"/>
   </compounddef>
 </doxygen>

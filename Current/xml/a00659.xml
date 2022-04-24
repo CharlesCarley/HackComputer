@@ -1,102 +1,170 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00659" kind="file" language="C++">
-    <compoundname>Rom32.cpp</compoundname>
-    <includes refid="a00662" local="yes">Chips/Rom32.h</includes>
-    <includes local="no">cstring</includes>
-    <includes local="no">fstream</includes>
+    <compoundname>Register.h</compoundname>
+    <includes refid="a00476" local="yes">Chips/Chip.h</includes>
+    <includedby refid="a00491" local="yes">Source/Chips/CPU.cpp</includedby>
+    <includedby refid="a00494" local="yes">Source/Chips/CPU.h</includedby>
+    <includedby refid="a00656" local="yes">Source/Chips/Register.cpp</includedby>
     <incdepgraph>
-      <node id="2115">
+      <node id="2089">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="2116" relation="include">
+        <childnode refid="2090" relation="include">
         </childnode>
       </node>
-      <node id="2107">
+      <node id="2081">
         <label>Chips/BitUtils.h</label>
-        <childnode refid="2108" relation="include">
+        <childnode refid="2082" relation="include">
         </childnode>
-        <childnode refid="2109" relation="include">
+        <childnode refid="2083" relation="include">
         </childnode>
       </node>
-      <node id="2116">
+      <node id="2090">
         <label>cstdint</label>
       </node>
-      <node id="2112">
+      <node id="2086">
         <label>string</label>
       </node>
-      <node id="2119">
-        <label>fstream</label>
-      </node>
-      <node id="2114">
+      <node id="2088">
         <label>UserInterface/Context.h</label>
-        <childnode refid="2110" relation="include">
+        <childnode refid="2084" relation="include">
         </childnode>
-        <childnode refid="2115" relation="include">
+        <childnode refid="2089" relation="include">
         </childnode>
-        <childnode refid="2117" relation="include">
+        <childnode refid="2091" relation="include">
         </childnode>
       </node>
-      <node id="2117">
+      <node id="2091">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="2116" relation="include">
+        <childnode refid="2090" relation="include">
         </childnode>
-        <childnode refid="2113" relation="include">
+        <childnode refid="2087" relation="include">
         </childnode>
-        <childnode refid="2115" relation="include">
+        <childnode refid="2089" relation="include">
         </childnode>
       </node>
-      <node id="2109">
+      <node id="2083">
         <label>Utils/Console.h</label>
-        <childnode refid="2110" relation="include">
+        <childnode refid="2084" relation="include">
         </childnode>
-        <childnode refid="2114" relation="include">
+        <childnode refid="2088" relation="include">
         </childnode>
       </node>
-      <node id="2108">
+      <node id="2082">
         <label>bitset</label>
       </node>
-      <node id="2113">
+      <node id="2087">
         <label>vector</label>
       </node>
-      <node id="2111">
+      <node id="2085">
         <label>sstream</label>
       </node>
-      <node id="2106">
+      <node id="2080">
         <label>Chips/Chip.h</label>
-        <childnode refid="2107" relation="include">
+        <childnode refid="2081" relation="include">
         </childnode>
-        <childnode refid="2109" relation="include">
-        </childnode>
-      </node>
-      <node id="2105">
-        <label>Chips/Rom32.h</label>
-        <childnode refid="2106" relation="include">
+        <childnode refid="2083" relation="include">
         </childnode>
       </node>
-      <node id="2104">
-        <label>Source/Chips/Rom32.cpp</label>
+      <node id="2079">
+        <label>Source/Chips/Register.h</label>
         <link refid="a00659"/>
-        <childnode refid="2105" relation="include">
-        </childnode>
-        <childnode refid="2118" relation="include">
-        </childnode>
-        <childnode refid="2119" relation="include">
+        <childnode refid="2080" relation="include">
         </childnode>
       </node>
-      <node id="2118">
-        <label>cstring</label>
-      </node>
-      <node id="2110">
+      <node id="2084">
         <label>String.h</label>
-        <childnode refid="2111" relation="include">
+        <childnode refid="2085" relation="include">
         </childnode>
-        <childnode refid="2112" relation="include">
+        <childnode refid="2086" relation="include">
         </childnode>
-        <childnode refid="2113" relation="include">
+        <childnode refid="2087" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <innernamespace refid="a00896">Hack::Chips</innernamespace>
+    <invincdepgraph>
+      <node id="2104">
+        <label>Source/Computer/RuntimeSDL.h</label>
+      </node>
+      <node id="2103">
+        <label>Source/Computer/DebugRuntime.h</label>
+        <childnode refid="2098" relation="include">
+        </childnode>
+        <childnode refid="2100" relation="include">
+        </childnode>
+      </node>
+      <node id="2095">
+        <label>Source/Chips/Computer.h</label>
+        <childnode refid="2096" relation="include">
+        </childnode>
+        <childnode refid="2097" relation="include">
+        </childnode>
+        <childnode refid="2098" relation="include">
+        </childnode>
+        <childnode refid="2099" relation="include">
+        </childnode>
+        <childnode refid="2100" relation="include">
+        </childnode>
+        <childnode refid="2101" relation="include">
+        </childnode>
+      </node>
+      <node id="2093">
+        <label>Source/Chips/CPU.cpp</label>
+      </node>
+      <node id="2096">
+        <label>Source/Bindings/Bindings.cpp</label>
+      </node>
+      <node id="2097">
+        <label>Source/Chips/Computer.cpp</label>
+      </node>
+      <node id="2099">
+        <label>Source/Computer/CommandRuntime.cpp</label>
+      </node>
+      <node id="2100">
+        <label>Source/Computer/DebugRuntime.cpp</label>
+      </node>
+      <node id="2105">
+        <label>Source/Chips/Register.cpp</label>
+      </node>
+      <node id="2098">
+        <label>Source/Computer/Application.cpp</label>
+      </node>
+      <node id="2101">
+        <label>Source/Computer/RuntimeInterface.h</label>
+        <childnode refid="2102" relation="include">
+        </childnode>
+        <childnode refid="2103" relation="include">
+        </childnode>
+        <childnode refid="2104" relation="include">
+        </childnode>
+      </node>
+      <node id="2092">
+        <label>Source/Chips/Register.h</label>
+        <link refid="a00659"/>
+        <childnode refid="2093" relation="include">
+        </childnode>
+        <childnode refid="2094" relation="include">
+        </childnode>
+        <childnode refid="2105" relation="include">
+        </childnode>
+      </node>
+      <node id="2102">
+        <label>Source/Computer/CommandRuntime.h</label>
+        <childnode refid="2098" relation="include">
+        </childnode>
+        <childnode refid="2099" relation="include">
+        </childnode>
+      </node>
+      <node id="2094">
+        <label>Source/Chips/CPU.h</label>
+        <childnode refid="2095" relation="include">
+        </childnode>
+        <childnode refid="2093" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="a01117" prot="public">Hack::Chips::Register</innerclass>
+    <innernamespace refid="a00899">Hack::Chips</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -123,106 +191,36 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Rom32.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00896" kindref="compound">Hack::Chips</ref></highlight></codeline>
-<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="28" refid="a01118_1a94b3cb4d07d1645ed3e61566809a1fd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01118_1a94b3cb4d07d1645ed3e61566809a1fd3" kindref="member">Rom32::Rom32</ref>()<sp/>:</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_in(0),</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out(0),</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_size(0),</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_r(nullptr)</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>|=<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" kindref="member">Bit7</ref>;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_r<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="a01358" kindref="compound">uint16_t</ref>[0x7FFF<sp/>+<sp/>1];</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memset(_r,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="a01358" kindref="compound">uint16_t</ref>)<sp/>*<sp/>0x7FFF<sp/>+<sp/>1);</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39" refid="a01118_1ac41d7ab3330bcc9055ac8b47285ec47a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01118_1ac41d7ab3330bcc9055ac8b47285ec47a" kindref="member">Rom32::~Rom32</ref>()</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>_r;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_r<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45" refid="a01118_1ae7bd95475bee92dfd9c9992da8fba511" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01118_1ae7bd95475bee92dfd9c9992da8fba511" kindref="member">Rom32::setIn</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01358" kindref="compound">uint16_t</ref>&amp;<sp/>v)</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_in<sp/>!=<sp/>v)</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>|=<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" kindref="member">Bit7</ref>;</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_in<sp/>=<sp/>v;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_in<sp/>&gt;=<sp/>0x7FFF)</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_in<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57" refid="a01118_1a767e0cee036509120d2a6436b7be26f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01118_1a767e0cee036509120d2a6436b7be26f4" kindref="member">Rom32::lock</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v)</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(v)</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>|=<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" kindref="member">Bit6</ref>;</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;=<sp/>~<ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" kindref="member">Bit6</ref>;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65" refid="a01118_1ac4786f98ecaa6c91a1cd31e438c29aab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/><ref refid="a01118_1ac4786f98ecaa6c91a1cd31e438c29aab" kindref="member">Rom32::getOut</ref>()</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" kindref="member">Bit7</ref>)<sp/>!=<sp/>0<sp/>&amp;&amp;<sp/>(<ref refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;<sp/><ref refid="a00896_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" kindref="member">Bit6</ref>)<sp/>==<sp/>0)</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_out;</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72" refid="a01118_1a5f035550d36a60b39767abc4d5942b46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01358" kindref="compound">uint16_t</ref><sp/><ref refid="a01118_1a5f035550d36a60b39767abc4d5942b46" kindref="member">Rom32::get</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>i)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="73"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>&lt;<sp/>0<sp/>||<sp/>i<sp/>&gt;<sp/>0x7FFF)</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_r[i];</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Rom32::isDirty()</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(7)<sp/>&amp;&amp;<sp/>!<ref refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(6);</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Rom32::evaluate()</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_in<sp/>&lt;<sp/>0x7FFF)</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>=<sp/>_r[_in];</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90" refid="a01118_1ac604efafb3c2bec9d439d7d33f551b2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01118_1ac604efafb3c2bec9d439d7d33f551b2a" kindref="member">Rom32::load</ref>(<ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>file)</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ifstream<sp/>fp(file);</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s;</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(_size<sp/>=<sp/>0;<sp/>_size<sp/>&lt;<sp/>0x7FFF<sp/>+<sp/>1;<sp/>++_size)</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fp<sp/>&gt;&gt;<sp/>s)</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_r[_size]<sp/>=<sp/><ref refid="a00986_1ac31a6aa587c55f64f6573492652e1730" kindref="member">B16::pack</ref>(s.c_str());</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104" refid="a01118_1aa360113b5ccbd7f3965ea6c70b87e618" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01118_1ac604efafb3c2bec9d439d7d33f551b2a" kindref="member">Rom32::load</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01358" kindref="compound">uint16_t</ref>*<sp/>data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(data<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>zero<sp/>any<sp/>memory<sp/>that<sp/>is<sp/>present</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memset(_r,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="a01358" kindref="compound">uint16_t</ref>)<sp/>*<sp/>0x7FFF);</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>force<sp/>the<sp/>supplied<sp/>size</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>conform<sp/>to<sp/>the<sp/>max</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_size<sp/>=<sp/>std::min&lt;uint16_t&gt;((<ref refid="a01358" kindref="compound">uint16_t</ref>)<ref refid="a01118_1aca05d80f8b7c52b5c17e0465fe2aeb7c" kindref="member">size</ref>,<sp/>0x7FFF);</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"></highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>copy<sp/>the<sp/>new<sp/>amount</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(_r,<sp/>data,<sp/>_size<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="a01358" kindref="compound">uint16_t</ref>));</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="120"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>IMPLEMENT_BLACK_BOX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Bit.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Chip.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00899" kindref="compound">Hack::Chips</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30" refid="a01117" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01117" kindref="compound">Register</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="a00993" kindref="compound" tooltip="Chip is the base class for all chips defined in this system. It uses a template integer for the _bits...">Chip</ref>&lt;bit64_t,<sp/>64&gt;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>evaluate();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isDirty()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>IMPLEMENT_BLACK_BOX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00973" kindref="compound">Bit</ref><sp/>_r[16];</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01117_1a57427a269e1416331bc95974c3d8acee" kindref="member">Register</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01117_1a2547034bc01798cc02dcd141a6a25b43" kindref="member">setIn</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01361" kindref="compound">uint16_t</ref>&amp;<sp/>v);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01117_1aae6a1ef0fe5e583d92de6cb9da89f480" kindref="member">setLoad</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>write);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01117_1a9ed7e9ef8e47088db81077b5711e153f" kindref="member">setClock</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>tick);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><ref refid="a01117_1adac71e249b6e499425aac50f34eac07b" kindref="member">getOut</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01117_1abf268bf9204e6b0661e639078499694e" kindref="member">lock</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Chips/Rom32.cpp"/>
+    <location file="Source/Chips/Register.h"/>
   </compounddef>
 </doxygen>

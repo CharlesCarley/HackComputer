@@ -29,6 +29,10 @@
 </a>
 </span>
 <br/>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Current/pages/Hc02Chips01.h#L1" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Hc02Chips01.h</span>
+</a>
+</span>
+<br/>
 <span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Current/pages/Hc03.Assembler.h#L1" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Hc03.Assembler.h</span>
 </a>
 </span>

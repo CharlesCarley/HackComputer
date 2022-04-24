@@ -1,298 +1,237 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
-  <compounddef id="a00912" kind="class" language="C++" prot="public">
-    <compoundname>Application</compoundname>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="a00912_1a43b8f4ff7f4d0c37c945d9e306273e2f" prot="private" static="no" mutable="no">
-        <type><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Application::_dir</definition>
+  <compounddef id="a00912" kind="namespace" language="C++">
+    <compoundname>Hack::Ui::Detail</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="a00912_1a33853f4a5a76638722e1febde2cee328" prot="public" static="no" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* Hack::Ui::Detail::Clear</definition>
         <argsstring></argsstring>
-        <name>_dir</name>
+        <name>Clear</name>
+        <initializer>= &quot;\x1b[2J&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Analyzer/Main.cpp" line="78" column="1" bodyfile="Source/Compiler/Analyzer/Main.cpp" bodystart="78" bodyend="-1"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="36" column="1" bodyfile="Source/Utils/UserInterface/Platform.h" bodystart="36" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a00912_1a4405764edadbf4be30941e617b27ac99" prot="private" static="no" mutable="no">
-        <type>bool</type>
-        <definition>bool Application::_dot</definition>
+      <memberdef kind="variable" id="a00912_1afe86bd2942c9eef87a316c286d47f510" prot="public" static="no" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* Hack::Ui::Detail::HideCursor</definition>
         <argsstring></argsstring>
-        <name>_dot</name>
+        <name>HideCursor</name>
+        <initializer>= &quot;\x1b[?25l&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Analyzer/Main.cpp" line="77" column="1" bodyfile="Source/Compiler/Analyzer/Main.cpp" bodystart="77" bodyend="-1"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="33" column="1" bodyfile="Source/Utils/UserInterface/Platform.h" bodystart="33" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a00912_1a18205096aac7e07ab8d3aec6cca6771f" prot="private" static="no" mutable="no">
-        <type>string</type>
-        <definition>string Application::_input</definition>
+      <memberdef kind="variable" id="a00912_1ae4506309ad509d4d28ac113620edd6ab" prot="public" static="no" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* Hack::Ui::Detail::LineHz</definition>
         <argsstring></argsstring>
-        <name>_input</name>
+        <name>LineHz</name>
+        <initializer>= &quot;\x1b(0q&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Assembler/Main.cpp" line="51" column="1" bodyfile="Source/Assembler/Main.cpp" bodystart="51" bodyend="-1"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="42" column="1" bodyfile="Source/Utils/UserInterface/Platform.h" bodystart="42" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a00912_1a79c475e8c61d2510d421ab54ee780bf7" prot="private" static="no" mutable="no">
-        <type>string</type>
-        <definition>string Application::_output</definition>
+      <memberdef kind="variable" id="a00912_1a44554fef2e43a64304c62333d3f7415e" prot="public" static="no" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* Hack::Ui::Detail::LineLb</definition>
         <argsstring></argsstring>
-        <name>_output</name>
+        <name>LineLb</name>
+        <initializer>= &quot;\x1b(0m&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Assembler/Main.cpp" line="52" column="1" bodyfile="Source/Assembler/Main.cpp" bodystart="52" bodyend="-1"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="47" column="1" bodyfile="Source/Utils/UserInterface/Platform.h" bodystart="47" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
-      <memberdef kind="function" id="a00912_1a03eb21681fbd7473ff2eb2c6009afa8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Application::Application</definition>
-        <argsstring>()=default</argsstring>
-        <name>Application</name>
+      <memberdef kind="variable" id="a00912_1a7e344cdf5463e56c211659e2a21af4f8" prot="public" static="no" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* Hack::Ui::Detail::LineLt</definition>
+        <argsstring></argsstring>
+        <name>LineLt</name>
+        <initializer>= &quot;\x1b(0l&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Compiler/Main.cpp" line="54" column="1"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="44" column="1" bodyfile="Source/Utils/UserInterface/Platform.h" bodystart="44" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a00912_1a03eb21681fbd7473ff2eb2c6009afa8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Application::Application</definition>
-        <argsstring>()=default</argsstring>
-        <name>Application</name>
+      <memberdef kind="variable" id="a00912_1a13d36030f4ce00dbd082a7b63f0f7e93" prot="public" static="no" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* Hack::Ui::Detail::LineRb</definition>
+        <argsstring></argsstring>
+        <name>LineRb</name>
+        <initializer>= &quot;\x1b(0j&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Assembler/Main.cpp" line="55" column="1"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="46" column="1" bodyfile="Source/Utils/UserInterface/Platform.h" bodystart="46" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a00912_1a03eb21681fbd7473ff2eb2c6009afa8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Application::Application</definition>
-        <argsstring>()=default</argsstring>
-        <name>Application</name>
+      <memberdef kind="variable" id="a00912_1a1151cd1c5a9ec7be5f775dee0ea61465" prot="public" static="no" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* Hack::Ui::Detail::LineRt</definition>
+        <argsstring></argsstring>
+        <name>LineRt</name>
+        <initializer>= &quot;\x1b(0k&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Main.cpp" line="57" column="1"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="45" column="1" bodyfile="Source/Utils/UserInterface/Platform.h" bodystart="45" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a00912_1afa8cc05ce6b6092be5ecdfdae44e05f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type></type>
-        <definition>Application::Application</definition>
-        <argsstring>()</argsstring>
-        <name>Application</name>
+      <memberdef kind="variable" id="a00912_1af5e7cd1af04685b1a1514b38541e8a81" prot="public" static="no" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* Hack::Ui::Detail::LineVertL</definition>
+        <argsstring></argsstring>
+        <name>LineVertL</name>
+        <initializer>= &quot;\x1b(0w&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Analyzer/Main.cpp" line="81" column="1" bodyfile="Source/Compiler/Analyzer/Main.cpp" bodystart="81" bodyend="84"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="49" column="1" bodyfile="Source/Utils/UserInterface/Platform.h" bodystart="49" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a00912_1a13a83479f691f96dc438a7dd72c98610" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>int</type>
-        <definition>int Application::go</definition>
-        <argsstring>() const</argsstring>
-        <name>go</name>
+      <memberdef kind="variable" id="a00912_1a2d75a0a649a37f46deb916f800a48e81" prot="public" static="no" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* Hack::Ui::Detail::LineVertR</definition>
+        <argsstring></argsstring>
+        <name>LineVertR</name>
+        <initializer>= &quot;\x1b(0t&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Compiler/Main.cpp" line="76" column="1" bodyfile="Source/Compiler/Compiler/Main.cpp" bodystart="76" bodyend="79"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="48" column="1" bodyfile="Source/Utils/UserInterface/Platform.h" bodystart="48" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a00912_1a13a83479f691f96dc438a7dd72c98610" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>int</type>
-        <definition>int Application::go</definition>
-        <argsstring>() const</argsstring>
-        <name>go</name>
+      <memberdef kind="variable" id="a00912_1a4ed8c1169133a213bf99ffad6fb30a86" prot="public" static="no" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* Hack::Ui::Detail::LineVt</definition>
+        <argsstring></argsstring>
+        <name>LineVt</name>
+        <initializer>= &quot;\x1b(0x&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Main.cpp" line="79" column="1" bodyfile="Source/VirtualMachine/Main.cpp" bodystart="79" bodyend="97"/>
-        <references refid="a01272_1a4668ec9b913931ce518de6d7f92fb4e0" compoundref="a00818" startline="76" endline="89">Hack::ParserBase::parse</references>
-        <references refid="a01272_1a4560ce70fee098d7508b053b409c1d19" compoundref="a00818" startline="107" endline="114">Hack::ParserBase::write</references>
+        <location file="Source/Utils/UserInterface/Platform.h" line="43" column="1" bodyfile="Source/Utils/UserInterface/Platform.h" bodystart="43" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a00912_1a13a83479f691f96dc438a7dd72c98610" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>int</type>
-        <definition>int Application::go</definition>
-        <argsstring>() const</argsstring>
-        <name>go</name>
+      <memberdef kind="variable" id="a00912_1aad13e43e04b9b3f5dd1366514a7926ce" prot="public" static="no" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* Hack::Ui::Detail::ResetColor</definition>
+        <argsstring></argsstring>
+        <name>ResetColor</name>
+        <initializer>= &quot;\x1b[0m&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Assembler/Main.cpp" line="79" column="1" bodyfile="Source/Assembler/Main.cpp" bodystart="79" bodyend="88"/>
-        <references refid="a01272_1a4668ec9b913931ce518de6d7f92fb4e0" compoundref="a00818" startline="76" endline="89">Hack::ParserBase::parse</references>
-        <references refid="a01272_1a4560ce70fee098d7508b053b409c1d19" compoundref="a00818" startline="107" endline="114">Hack::ParserBase::write</references>
+        <location file="Source/Utils/UserInterface/Platform.h" line="38" column="1" bodyfile="Source/Utils/UserInterface/Platform.h" bodystart="38" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a00912_1a13a83479f691f96dc438a7dd72c98610" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>int</type>
-        <definition>int Application::go</definition>
-        <argsstring>() const</argsstring>
-        <name>go</name>
+      <memberdef kind="variable" id="a00912_1a3576cc7ce9181a354daff9ded81c1b45" prot="public" static="no" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* Hack::Ui::Detail::SetCursor</definition>
+        <argsstring></argsstring>
+        <name>SetCursor</name>
+        <initializer>= &quot;\x1b[%d;%dH&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Analyzer/Main.cpp" line="112" column="1" bodyfile="Source/Compiler/Analyzer/Main.cpp" bodystart="112" bodyend="156"/>
-        <references refid="a01272_1a4668ec9b913931ce518de6d7f92fb4e0" compoundref="a00818" startline="76" endline="89">Hack::ParserBase::parse</references>
-        <references refid="a01272_1a4560ce70fee098d7508b053b409c1d19" compoundref="a00818" startline="107" endline="114">Hack::ParserBase::write</references>
-        <references refid="a01248_1ad552d982f58950c324eaebd2dfbd1fe2" compoundref="a00800" startline="64" endline="67">Hack::Exception::what</references>
+        <location file="Source/Utils/UserInterface/Platform.h" line="39" column="1" bodyfile="Source/Utils/UserInterface/Platform.h" bodystart="39" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a00912_1a045c846c566d8cbe75a94d7b341a8fe7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Application::parse</definition>
-        <argsstring>(const int argc, char **argv)</argsstring>
-        <name>parse</name>
-        <param>
-          <type>const int</type>
-          <declname>argc</declname>
-        </param>
-        <param>
-          <type>char **</type>
-          <declname>argv</declname>
-        </param>
+      <memberdef kind="variable" id="a00912_1a8bcc07654099d413e79fdbd087c37151" prot="public" static="no" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* Hack::Ui::Detail::ShowCursor</definition>
+        <argsstring></argsstring>
+        <name>ShowCursor</name>
+        <initializer>= &quot;\x1b[?25h&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Compiler/Main.cpp" line="56" column="1" bodyfile="Source/Compiler/Compiler/Main.cpp" bodystart="56" bodyend="74"/>
-        <references refid="a01232_1a304e3e2f4af07df0fb6c9cde37040e27" compoundref="a01590" startline="52" endline="176">Hack::CommandLine::Parser::parse</references>
-        <references refid="a01232_1a9da3aa8c56bad342c3a7c30eb98d9c17" compoundref="a01590" startline="245" endline="255">Hack::CommandLine::Parser::string</references>
-        <references refid="a01232_1ac7bc3f3c9e8b89b4a39b8dd9a36b713f" compoundref="a01602" startline="88" endline="91">Hack::CommandLine::Parser::arguments</references>
-        <references refid="a01232_1afd63d6cb40243606fe5d6c944754eb5b" compoundref="a01590" startline="257" endline="262">Hack::CommandLine::Parser::usage</references>
+        <location file="Source/Utils/UserInterface/Platform.h" line="32" column="1" bodyfile="Source/Utils/UserInterface/Platform.h" bodystart="32" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a00912_1a045c846c566d8cbe75a94d7b341a8fe7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Application::parse</definition>
-        <argsstring>(const int argc, char **argv)</argsstring>
-        <name>parse</name>
-        <param>
-          <type>const int</type>
-          <declname>argc</declname>
-        </param>
-        <param>
-          <type>char **</type>
-          <declname>argv</declname>
-        </param>
+      <memberdef kind="variable" id="a00912_1a86b05e3b4b571723251f84b66c5c7d9c" prot="public" static="no" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* Hack::Ui::Detail::UseBackBuffer</definition>
+        <argsstring></argsstring>
+        <name>UseBackBuffer</name>
+        <initializer>= &quot;\x1b[?1049h&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Assembler/Main.cpp" line="57" column="1" bodyfile="Source/Assembler/Main.cpp" bodystart="57" bodyend="77"/>
-        <references refid="a01232_1aaaa3cc28de66e1e9b2f64cd1e51f2fe1" compoundref="a01590" startline="178" endline="181">Hack::CommandLine::Parser::setHelpText</references>
-        <references refid="a01232_1a304e3e2f4af07df0fb6c9cde37040e27" compoundref="a01590" startline="52" endline="176">Hack::CommandLine::Parser::parse</references>
-        <references refid="a01232_1a9da3aa8c56bad342c3a7c30eb98d9c17" compoundref="a01590" startline="245" endline="255">Hack::CommandLine::Parser::string</references>
-        <references refid="a01232_1ac7bc3f3c9e8b89b4a39b8dd9a36b713f" compoundref="a01602" startline="88" endline="91">Hack::CommandLine::Parser::arguments</references>
-        <references refid="a01232_1afd63d6cb40243606fe5d6c944754eb5b" compoundref="a01590" startline="257" endline="262">Hack::CommandLine::Parser::usage</references>
+        <location file="Source/Utils/UserInterface/Platform.h" line="34" column="1" bodyfile="Source/Utils/UserInterface/Platform.h" bodystart="34" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a00912_1a045c846c566d8cbe75a94d7b341a8fe7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Application::parse</definition>
-        <argsstring>(const int argc, char **argv)</argsstring>
-        <name>parse</name>
-        <param>
-          <type>const int</type>
-          <declname>argc</declname>
-        </param>
-        <param>
-          <type>char **</type>
-          <declname>argv</declname>
-        </param>
+      <memberdef kind="variable" id="a00912_1afc2cfd341bffbc28a0829607f3bb4838" prot="public" static="no" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* Hack::Ui::Detail::UseFrontBuffer</definition>
+        <argsstring></argsstring>
+        <name>UseFrontBuffer</name>
+        <initializer>= &quot;\x1b[?1049l&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Main.cpp" line="59" column="1" bodyfile="Source/VirtualMachine/Main.cpp" bodystart="59" bodyend="77"/>
-        <references refid="a01232_1a304e3e2f4af07df0fb6c9cde37040e27" compoundref="a01590" startline="52" endline="176">Hack::CommandLine::Parser::parse</references>
-        <references refid="a01232_1a9da3aa8c56bad342c3a7c30eb98d9c17" compoundref="a01590" startline="245" endline="255">Hack::CommandLine::Parser::string</references>
-        <references refid="a01232_1ac7bc3f3c9e8b89b4a39b8dd9a36b713f" compoundref="a01602" startline="88" endline="91">Hack::CommandLine::Parser::arguments</references>
-        <references refid="a01232_1afd63d6cb40243606fe5d6c944754eb5b" compoundref="a01590" startline="257" endline="262">Hack::CommandLine::Parser::usage</references>
+        <location file="Source/Utils/UserInterface/Platform.h" line="35" column="1" bodyfile="Source/Utils/UserInterface/Platform.h" bodystart="35" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a00912_1a045c846c566d8cbe75a94d7b341a8fe7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Application::parse</definition>
-        <argsstring>(const int argc, char **argv)</argsstring>
-        <name>parse</name>
-        <param>
-          <type>const int</type>
-          <declname>argc</declname>
-        </param>
-        <param>
-          <type>char **</type>
-          <declname>argv</declname>
-        </param>
+      <memberdef kind="variable" id="a00912_1a127458bf42d95ddbb1004704935d8bcc" prot="public" static="no" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* Hack::Ui::Detail::ZeroCursor</definition>
+        <argsstring></argsstring>
+        <name>ZeroCursor</name>
+        <initializer>= &quot;\x1b[0;0H&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Analyzer/Main.cpp" line="86" column="1" bodyfile="Source/Compiler/Analyzer/Main.cpp" bodystart="86" bodyend="110"/>
-        <references refid="a01232_1a304e3e2f4af07df0fb6c9cde37040e27" compoundref="a01590" startline="52" endline="176">Hack::CommandLine::Parser::parse</references>
-        <references refid="a01232_1a9da3aa8c56bad342c3a7c30eb98d9c17" compoundref="a01590" startline="245" endline="255">Hack::CommandLine::Parser::string</references>
-        <references refid="a01232_1adbd749e0938e2b359ee7f719864d1451" compoundref="a01590" startline="205" endline="210">Hack::CommandLine::Parser::isPresent</references>
-        <references refid="a01232_1ac7bc3f3c9e8b89b4a39b8dd9a36b713f" compoundref="a01602" startline="88" endline="91">Hack::CommandLine::Parser::arguments</references>
-        <references refid="a01232_1afd63d6cb40243606fe5d6c944754eb5b" compoundref="a01590" startline="257" endline="262">Hack::CommandLine::Parser::usage</references>
+        <location file="Source/Utils/UserInterface/Platform.h" line="37" column="1" bodyfile="Source/Utils/UserInterface/Platform.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Assembler/Main.cpp" line="49" column="1" bodyfile="Source/Assembler/Main.cpp" bodystart="48" bodyend="89"/>
-    <listofallmembers>
-      <member refid="a00912_1a43b8f4ff7f4d0c37c945d9e306273e2f" prot="private" virt="non-virtual"><scope>Application</scope><name>_dir</name></member>
-      <member refid="a00912_1a4405764edadbf4be30941e617b27ac99" prot="private" virt="non-virtual"><scope>Application</scope><name>_dot</name></member>
-      <member refid="a00912_1a18205096aac7e07ab8d3aec6cca6771f" prot="private" virt="non-virtual"><scope>Application</scope><name>_input</name></member>
-      <member refid="a00912_1a79c475e8c61d2510d421ab54ee780bf7" prot="private" virt="non-virtual"><scope>Application</scope><name>_output</name></member>
-      <member refid="a00912_1a03eb21681fbd7473ff2eb2c6009afa8e" prot="public" virt="non-virtual"><scope>Application</scope><name>Application</name></member>
-      <member refid="a00912_1afa8cc05ce6b6092be5ecdfdae44e05f8" prot="public" virt="non-virtual"><scope>Application</scope><name>Application</name></member>
-      <member refid="a00912_1a03eb21681fbd7473ff2eb2c6009afa8e" prot="public" virt="non-virtual"><scope>Application</scope><name>Application</name></member>
-      <member refid="a00912_1a03eb21681fbd7473ff2eb2c6009afa8e" prot="public" virt="non-virtual"><scope>Application</scope><name>Application</name></member>
-      <member refid="a00912_1a13a83479f691f96dc438a7dd72c98610" prot="public" virt="non-virtual"><scope>Application</scope><name>go</name></member>
-      <member refid="a00912_1a13a83479f691f96dc438a7dd72c98610" prot="public" virt="non-virtual"><scope>Application</scope><name>go</name></member>
-      <member refid="a00912_1a13a83479f691f96dc438a7dd72c98610" prot="public" virt="non-virtual"><scope>Application</scope><name>go</name></member>
-      <member refid="a00912_1a13a83479f691f96dc438a7dd72c98610" prot="public" virt="non-virtual"><scope>Application</scope><name>go</name></member>
-      <member refid="a00912_1a045c846c566d8cbe75a94d7b341a8fe7" prot="public" virt="non-virtual"><scope>Application</scope><name>parse</name></member>
-      <member refid="a00912_1a045c846c566d8cbe75a94d7b341a8fe7" prot="public" virt="non-virtual"><scope>Application</scope><name>parse</name></member>
-      <member refid="a00912_1a045c846c566d8cbe75a94d7b341a8fe7" prot="public" virt="non-virtual"><scope>Application</scope><name>parse</name></member>
-      <member refid="a00912_1a045c846c566d8cbe75a94d7b341a8fe7" prot="public" virt="non-virtual"><scope>Application</scope><name>parse</name></member>
-    </listofallmembers>
+    <location file="Source/Utils/UserInterface/Platform.h" line="31" column="1"/>
   </compounddef>
 </doxygen>

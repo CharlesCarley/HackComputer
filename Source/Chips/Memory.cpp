@@ -32,7 +32,7 @@ namespace Hack::Chips
         _in(0),
         _out(0),
         _address(0),
-        _ram16(new Ram16K()),
+        _ram16(new Ram16k()),
         _screen(new ScreenSegment())
     {
     }

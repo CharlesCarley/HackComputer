@@ -24,5 +24,5 @@
 
 namespace Hack::Chips
 {
-    typedef DefaultMemorySegment<0x4000, 0x8000> Ram16K;
-} // namespace Hack::Chips
+    typedef DefaultMemorySegment<0x4000, 0x8000> Ram16k;
+}  // namespace Hack::Chips
