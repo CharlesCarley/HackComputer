@@ -1,43 +1,64 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
-  <compounddef id="a01255" kind="class" language="C++" prot="public">
-    <compoundname>Hack::FileSystem</compoundname>
-    <includes local="no">Source/Utils/FileSystem.h</includes>
-      <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="a01255_1abb591b7efcd5e7fa2d7cf15730f7d26e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00891_1a95e191d8af73e79ac197701ac6a6c9a6" kindref="member">Path</ref></type>
-        <definition>Path Hack::FileSystem::absolute</definition>
-        <argsstring>(const String &amp;input)</argsstring>
-        <name>absolute</name>
-        <param>
-          <type>const <ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>input</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/FileSystem.h" line="36" column="1" bodyfile="Source/Utils/FileSystem.cpp" bodystart="41" bodyend="54"/>
-        <references refid="a00891_1a0022073c844c619a094704ae6c9b14bf" compoundref="a00839" startline="71" endline="76">Hack::StringCombine</references>
-      </memberdef>
-      <memberdef kind="function" id="a01255_1ab965af65d819708b115b5501d81335fc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+  <compounddef id="a01255" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>Hack::Chips::Add16</compoundname>
+    <basecompoundref refid="a01291" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; bit64_t, 64 &gt;</basecompoundref>
+    <includes local="no">Source/Chips/Add16.h</includes>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="a01255_1a9cb9cd132c4d71cff914bdee5c9acbfd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::FileSystem::glob</definition>
-        <argsstring>(PathArray &amp;dest, const String &amp;dir, const String &amp;ext)</argsstring>
-        <name>glob</name>
+        <definition>void Hack::Chips::Add16::evaluate</definition>
+        <argsstring>()</argsstring>
+        <name>evaluate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Add16.h" line="30" column="1" bodyfile="Source/Chips/Add16.cpp" bodystart="55" bodyend="92"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a01255_1a136082c38be14e2d6b3542e1e5450f97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Chips::Add16::Add16</definition>
+        <argsstring>()</argsstring>
+        <name>Add16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Add16.h" line="33" column="1" bodyfile="Source/Chips/Add16.cpp" bodystart="29" bodyend="33"/>
+        <references refid="a01291_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00494" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a01283_1a741dc95ddcf042b70e2747571d95cd82" compoundref="a00491" startline="76">Hack::Chips::bit64_t::ll</references>
+        <references refid="a01283_1af415893333942f41fb4c4ad619083a16" compoundref="a00491" startline="78">Hack::Chips::bit64_t::s</references>
+      </memberdef>
+      <memberdef kind="function" id="a01255_1a27793b7baca03572a8420aa9dd993f9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t Hack::Chips::Add16::getOut</definition>
+        <argsstring>()</argsstring>
+        <name>getOut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Add16.h" line="39" column="1" bodyfile="Source/Chips/Add16.cpp" bodystart="47" bodyend="53"/>
+        <references refid="a01291_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00494" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a01283_1af415893333942f41fb4c4ad619083a16" compoundref="a00491" startline="78">Hack::Chips::bit64_t::s</references>
+      </memberdef>
+      <memberdef kind="function" id="a01255_1a17c5ae7fef533c9ef52f6822ec84ad86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Add16::setA</definition>
+        <argsstring>(const uint16_t &amp;a)</argsstring>
+        <name>setA</name>
         <param>
-          <type><ref refid="a00891_1a7c50e21fc90ae27988ef26dd0b40a118" kindref="member">PathArray</ref> &amp;</type>
-          <declname>dest</declname>
-        </param>
-        <param>
-          <type>const <ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>dir</declname>
-        </param>
-        <param>
-          <type>const <ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>ext</declname>
+          <type>const uint16_t &amp;</type>
+          <declname>a</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -45,17 +66,105 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/FileSystem.h" line="35" column="1" bodyfile="Source/Utils/FileSystem.cpp" bodystart="28" bodyend="39"/>
+        <location file="Source/Chips/Add16.h" line="35" column="1" bodyfile="Source/Chips/Add16.cpp" bodystart="35" bodyend="39"/>
+        <references refid="a01291_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00494" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a01283_1af415893333942f41fb4c4ad619083a16" compoundref="a00491" startline="78">Hack::Chips::bit64_t::s</references>
+      </memberdef>
+      <memberdef kind="function" id="a01255_1add21f4b571cf749cf1a686fba6d6bb93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Add16::setB</definition>
+        <argsstring>(const uint16_t &amp;b)</argsstring>
+        <name>setB</name>
+        <param>
+          <type>const uint16_t &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Add16.h" line="37" column="1" bodyfile="Source/Chips/Add16.cpp" bodystart="41" bodyend="45"/>
+        <references refid="a01291_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00494" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a01283_1af415893333942f41fb4c4ad619083a16" compoundref="a00491" startline="78">Hack::Chips::bit64_t::s</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Utils/FileSystem.h" line="33" column="1" bodyfile="Source/Utils/FileSystem.h" bodystart="32" bodyend="37"/>
+    <inheritancegraph>
+      <node id="417">
+        <label>Hack::Chips::Add16</label>
+        <link refid="a01255"/>
+        <childnode refid="418" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="418">
+        <label>Hack::Chips::Chip&lt; bit64_t, 64 &gt;</label>
+        <link refid="a01291"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="424">
+        <label>unsigned short</label>
+      </node>
+      <node id="422">
+        <label>unsigned long long</label>
+      </node>
+      <node id="419">
+        <label>Hack::Chips::Add16</label>
+        <link refid="a01255"/>
+        <childnode refid="420" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="425">
+        <label>int</label>
+      </node>
+      <node id="421">
+        <label>Hack::Chips::bit64_t</label>
+        <link refid="a01283"/>
+        <childnode refid="422" relation="usage">
+          <edgelabel>ll</edgelabel>
+        </childnode>
+        <childnode refid="423" relation="usage">
+          <edgelabel>b</edgelabel>
+        </childnode>
+        <childnode refid="424" relation="usage">
+          <edgelabel>s</edgelabel>
+        </childnode>
+        <childnode refid="425" relation="usage">
+          <edgelabel>i</edgelabel>
+        </childnode>
+      </node>
+      <node id="420">
+        <label>Hack::Chips::Chip&lt; bit64_t, 64 &gt;</label>
+        <link refid="a01291"/>
+        <childnode refid="421" relation="usage">
+          <edgelabel>_bits</edgelabel>
+        </childnode>
+      </node>
+      <node id="423">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Chips/Add16.h" line="28" column="1" bodyfile="Source/Chips/Add16.h" bodystart="27" bodyend="40"/>
     <listofallmembers>
-      <member refid="a01255_1abb591b7efcd5e7fa2d7cf15730f7d26e" prot="public" virt="non-virtual"><scope>Hack::FileSystem</scope><name>absolute</name></member>
-      <member refid="a01255_1ab965af65d819708b115b5501d81335fc" prot="public" virt="non-virtual"><scope>Hack::FileSystem</scope><name>glob</name></member>
+      <member refid="a01291_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Add16</scope><name>_bits</name></member>
+      <member refid="a01255_1a136082c38be14e2d6b3542e1e5450f97" prot="public" virt="non-virtual"><scope>Hack::Chips::Add16</scope><name>Add16</name></member>
+      <member refid="a01291_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::Add16</scope><name>applyBit</name></member>
+      <member refid="a01291_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::Add16</scope><name>assignBit</name></member>
+      <member refid="a01291_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::Add16</scope><name>Chip</name></member>
+      <member refid="a01291_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::Add16</scope><name>clearBit</name></member>
+      <member refid="a01255_1a9cb9cd132c4d71cff914bdee5c9acbfd" prot="private" virt="non-virtual"><scope>Hack::Chips::Add16</scope><name>evaluate</name></member>
+      <member refid="a01291_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::Add16</scope><name>getBit</name></member>
+      <member refid="a01255_1a27793b7baca03572a8420aa9dd993f9f" prot="public" virt="non-virtual"><scope>Hack::Chips::Add16</scope><name>getOut</name></member>
+      <member refid="a01291_1a63bb368bb0827830235759b33718d1b4" prot="protected" virt="virtual"><scope>Hack::Chips::Add16</scope><name>isDirty</name></member>
+      <member refid="a01255_1a17c5ae7fef533c9ef52f6822ec84ad86" prot="public" virt="non-virtual"><scope>Hack::Chips::Add16</scope><name>setA</name></member>
+      <member refid="a01255_1add21f4b571cf749cf1a686fba6d6bb93" prot="public" virt="non-virtual"><scope>Hack::Chips::Add16</scope><name>setB</name></member>
+      <member refid="a01291_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::Add16</scope><name>setBit</name></member>
+      <member refid="a01291_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::Add16</scope><name>~Chip</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

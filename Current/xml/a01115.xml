@@ -1,306 +1,43 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
-  <compounddef id="a01115" kind="class" language="C++" prot="public" final="yes">
-    <compoundname>Hack::Chips::Rom32</compoundname>
-    <basecompoundref refid="a00987" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; uint8_t, 8 &gt;</basecompoundref>
-    <includes local="no">Source/Chips/Rom32.h</includes>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="a01115_1a4e6a48e7ae94a1b2685fa75d4f262162" prot="private" static="no" mutable="no">
-        <type><ref refid="a01355" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::Rom32::_in</definition>
+  <compounddef id="a01115" kind="class" language="C++" prot="public">
+    <compoundname>docListItemType</compoundname>
+    <includes local="no">build/xml/compound.xsd.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="a01115_1accc93e7cc35d70b168bb427e6cadb4eb" prot="public" static="no" mutable="no">
+        <type><ref refid="a01087" kindref="compound">docParaType</ref></type>
+        <definition>docParaType docListItemType::para</definition>
         <argsstring></argsstring>
-        <name>_in</name>
+        <name>para</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Rom32.h" line="33" column="1" bodyfile="Source/Chips/Rom32.h" bodystart="33" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01115_1a440360878bbfd9d7eb7572f0457e02e4" prot="private" static="no" mutable="no">
-        <type><ref refid="a01355" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::Rom32::_out</definition>
-        <argsstring></argsstring>
-        <name>_out</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/Rom32.h" line="33" column="1" bodyfile="Source/Chips/Rom32.h" bodystart="33" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01115_1a337d4a40a089bcc2f290712ac73d873e" prot="private" static="no" mutable="no">
-        <type><ref refid="a01355" kindref="compound">uint16_t</ref> *</type>
-        <definition>uint16_t* Hack::Chips::Rom32::_r</definition>
-        <argsstring></argsstring>
-        <name>_r</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/Rom32.h" line="34" column="1" bodyfile="Source/Chips/Rom32.h" bodystart="34" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01115_1a2dbb50487463d1f28a3db77061c2ddc8" prot="private" static="no" mutable="no">
-        <type><ref refid="a01355" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::Rom32::_size</definition>
-        <argsstring></argsstring>
-        <name>_size</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/Rom32.h" line="33" column="1" bodyfile="Source/Chips/Rom32.h" bodystart="33" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="private-func">
-      <memberdef kind="function" id="a01115_1a67d49ead0a9aefb1318870d7066f948d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::Rom32::evaluate</definition>
-        <argsstring>()</argsstring>
-        <name>evaluate</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/Rom32.h" line="30" column="1" bodyfile="Source/Chips/Rom32.cpp" bodystart="84" bodyend="88"/>
-      </memberdef>
-      <memberdef kind="function" id="a01115_1a5a4736a4ef27ad20cf3bb689edede45a" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
-        <definition>bool Hack::Chips::Rom32::isDirty</definition>
-        <argsstring>() override</argsstring>
-        <name>isDirty</name>
-        <reimplements refid="a00987_1a63bb368bb0827830235759b33718d1b4">isDirty</reimplements>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/Rom32.h" line="31" column="1" bodyfile="Source/Chips/Rom32.cpp" bodystart="79" bodyend="82"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01115_1a94b3cb4d07d1645ed3e61566809a1fd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Hack::Chips::Rom32::Rom32</definition>
-        <argsstring>()</argsstring>
-        <name>Rom32</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/Rom32.h" line="37" column="1" bodyfile="Source/Chips/Rom32.cpp" bodystart="28" bodyend="37"/>
-        <references refid="a00987_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00470" startline="52">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
-        <references refid="a00893_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00467" startline="40">Hack::Chips::Bit7</references>
-      </memberdef>
-      <memberdef kind="function" id="a01115_1ac41d7ab3330bcc9055ac8b47285ec47a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Hack::Chips::Rom32::~Rom32</definition>
-        <argsstring>() override</argsstring>
-        <name>~Rom32</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/Rom32.h" line="38" column="1" bodyfile="Source/Chips/Rom32.cpp" bodystart="39" bodyend="43"/>
-      </memberdef>
-      <memberdef kind="function" id="a01115_1a5f035550d36a60b39767abc4d5942b46" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a01355" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::Rom32::get</definition>
-        <argsstring>(const int &amp;i) const</argsstring>
-        <name>get</name>
-        <param>
-          <type>const int &amp;</type>
-          <declname>i</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/Rom32.h" line="44" column="1" bodyfile="Source/Chips/Rom32.cpp" bodystart="72" bodyend="77"/>
-      </memberdef>
-      <memberdef kind="function" id="a01115_1ac4786f98ecaa6c91a1cd31e438c29aab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a01355" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::Rom32::getOut</definition>
-        <argsstring>()</argsstring>
-        <name>getOut</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/Rom32.h" line="42" column="1" bodyfile="Source/Chips/Rom32.cpp" bodystart="65" bodyend="70"/>
-        <references refid="a00987_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00470" startline="52">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
-        <references refid="a00893_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00467" startline="40">Hack::Chips::Bit7</references>
-        <references refid="a00893_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" compoundref="a00467" startline="39">Hack::Chips::Bit6</references>
-      </memberdef>
-      <memberdef kind="function" id="a01115_1ac604efafb3c2bec9d439d7d33f551b2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::Rom32::load</definition>
-        <argsstring>(String &amp;file)</argsstring>
-        <name>load</name>
-        <param>
-          <type><ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>file</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/Rom32.h" line="50" column="1" bodyfile="Source/Chips/Rom32.cpp" bodystart="90" bodyend="102"/>
-        <references refid="a00983_1ac31a6aa587c55f64f6573492652e1730" compoundref="a00467" startline="134" endline="143">Hack::Chips::BitUtils&lt; T, Count &gt;::pack</references>
-      </memberdef>
-      <memberdef kind="function" id="a01115_1aa360113b5ccbd7f3965ea6c70b87e618" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::Rom32::load</definition>
-        <argsstring>(const uint16_t *data, size_t size)</argsstring>
-        <name>load</name>
-        <param>
-          <type>const <ref refid="a01355" kindref="compound">uint16_t</ref> *</type>
-          <declname>data</declname>
-        </param>
-        <param>
-          <type>size_t</type>
-          <declname>size</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/Rom32.h" line="52" column="1" bodyfile="Source/Chips/Rom32.cpp" bodystart="104" bodyend="119"/>
-        <references refid="a01115_1aca05d80f8b7c52b5c17e0465fe2aeb7c" compoundref="a00659" startline="55" endline="58">size</references>
-      </memberdef>
-      <memberdef kind="function" id="a01115_1a767e0cee036509120d2a6436b7be26f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::Rom32::lock</definition>
-        <argsstring>(bool v)</argsstring>
-        <name>lock</name>
-        <param>
-          <type>bool</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/Rom32.h" line="48" column="1" bodyfile="Source/Chips/Rom32.cpp" bodystart="57" bodyend="63"/>
-        <references refid="a00987_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00470" startline="52">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
-        <references refid="a00893_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" compoundref="a00467" startline="39">Hack::Chips::Bit6</references>
-      </memberdef>
-      <memberdef kind="function" id="a01115_1ae7bd95475bee92dfd9c9992da8fba511" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::Rom32::setIn</definition>
-        <argsstring>(const uint16_t &amp;v)</argsstring>
-        <name>setIn</name>
-        <param>
-          <type>const <ref refid="a01355" kindref="compound">uint16_t</ref> &amp;</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/Rom32.h" line="40" column="1" bodyfile="Source/Chips/Rom32.cpp" bodystart="45" bodyend="55"/>
-        <references refid="a00987_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00470" startline="52">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
-        <references refid="a00893_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00467" startline="40">Hack::Chips::Bit7</references>
-      </memberdef>
-      <memberdef kind="function" id="a01115_1aca05d80f8b7c52b5c17e0465fe2aeb7c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="a01355" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::Rom32::size</definition>
-        <argsstring>() const</argsstring>
-        <name>size</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/Rom32.h" line="46" column="1" bodyfile="Source/Chips/Rom32.h" bodystart="55" bodyend="58"/>
+        <location file="build/xml/compound.xsd.h" line="776" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="776" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <inheritancegraph>
-      <node id="284">
-        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
-        <link refid="a00987"/>
-      </node>
-      <node id="283">
-        <label>Hack::Chips::Rom32</label>
-        <link refid="a01115"/>
-        <childnode refid="284" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
     <collaborationgraph>
-      <node id="287">
-        <label>uint8_t</label>
-        <link refid="a01367"/>
-      </node>
-      <node id="286">
-        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
-        <link refid="a00987"/>
-        <childnode refid="287" relation="usage">
-          <edgelabel>_bits</edgelabel>
-        </childnode>
-      </node>
-      <node id="285">
-        <label>Hack::Chips::Rom32</label>
+      <node id="172">
+        <label>docListItemType</label>
         <link refid="a01115"/>
-        <childnode refid="286" relation="public-inheritance">
+        <childnode refid="173" relation="usage">
+          <edgelabel>para</edgelabel>
         </childnode>
+      </node>
+      <node id="173">
+        <label>docParaType</label>
+        <link refid="a01087"/>
       </node>
     </collaborationgraph>
-    <location file="Source/Chips/Rom32.h" line="28" column="1" bodyfile="Source/Chips/Rom32.h" bodystart="27" bodyend="53"/>
+    <location file="build/xml/compound.xsd.h" line="774" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="773" bodyend="777"/>
     <listofallmembers>
-      <member refid="a00987_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Rom32</scope><name>_bits</name></member>
-      <member refid="a01115_1a4e6a48e7ae94a1b2685fa75d4f262162" prot="private" virt="non-virtual"><scope>Hack::Chips::Rom32</scope><name>_in</name></member>
-      <member refid="a01115_1a440360878bbfd9d7eb7572f0457e02e4" prot="private" virt="non-virtual"><scope>Hack::Chips::Rom32</scope><name>_out</name></member>
-      <member refid="a01115_1a337d4a40a089bcc2f290712ac73d873e" prot="private" virt="non-virtual"><scope>Hack::Chips::Rom32</scope><name>_r</name></member>
-      <member refid="a01115_1a2dbb50487463d1f28a3db77061c2ddc8" prot="private" virt="non-virtual"><scope>Hack::Chips::Rom32</scope><name>_size</name></member>
-      <member refid="a00987_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::Rom32</scope><name>applyBit</name></member>
-      <member refid="a00987_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::Rom32</scope><name>assignBit</name></member>
-      <member refid="a00987_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::Rom32</scope><name>Chip</name></member>
-      <member refid="a00987_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::Rom32</scope><name>clearBit</name></member>
-      <member refid="a01115_1a67d49ead0a9aefb1318870d7066f948d" prot="private" virt="non-virtual"><scope>Hack::Chips::Rom32</scope><name>evaluate</name></member>
-      <member refid="a01115_1a5f035550d36a60b39767abc4d5942b46" prot="public" virt="non-virtual"><scope>Hack::Chips::Rom32</scope><name>get</name></member>
-      <member refid="a00987_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::Rom32</scope><name>getBit</name></member>
-      <member refid="a01115_1ac4786f98ecaa6c91a1cd31e438c29aab" prot="public" virt="non-virtual"><scope>Hack::Chips::Rom32</scope><name>getOut</name></member>
-      <member refid="a01115_1a5a4736a4ef27ad20cf3bb689edede45a" prot="private" virt="virtual"><scope>Hack::Chips::Rom32</scope><name>isDirty</name></member>
-      <member refid="a01115_1ac604efafb3c2bec9d439d7d33f551b2a" prot="public" virt="non-virtual"><scope>Hack::Chips::Rom32</scope><name>load</name></member>
-      <member refid="a01115_1aa360113b5ccbd7f3965ea6c70b87e618" prot="public" virt="non-virtual"><scope>Hack::Chips::Rom32</scope><name>load</name></member>
-      <member refid="a01115_1a767e0cee036509120d2a6436b7be26f4" prot="public" virt="non-virtual"><scope>Hack::Chips::Rom32</scope><name>lock</name></member>
-      <member refid="a01115_1a94b3cb4d07d1645ed3e61566809a1fd3" prot="public" virt="non-virtual"><scope>Hack::Chips::Rom32</scope><name>Rom32</name></member>
-      <member refid="a00987_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::Rom32</scope><name>setBit</name></member>
-      <member refid="a01115_1ae7bd95475bee92dfd9c9992da8fba511" prot="public" virt="non-virtual"><scope>Hack::Chips::Rom32</scope><name>setIn</name></member>
-      <member refid="a01115_1aca05d80f8b7c52b5c17e0465fe2aeb7c" prot="public" virt="non-virtual"><scope>Hack::Chips::Rom32</scope><name>size</name></member>
-      <member refid="a00987_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::Rom32</scope><name>~Chip</name></member>
-      <member refid="a01115_1ac41d7ab3330bcc9055ac8b47285ec47a" prot="public" virt="non-virtual"><scope>Hack::Chips::Rom32</scope><name>~Rom32</name></member>
+      <member refid="a01115_1accc93e7cc35d70b168bb427e6cadb4eb" prot="public" virt="non-virtual"><scope>docListItemType</scope><name>para</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

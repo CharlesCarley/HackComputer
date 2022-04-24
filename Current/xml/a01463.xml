@@ -1,0 +1,355 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01463" kind="class" language="C++" prot="public">
+    <compoundname>Hack::Compiler::NodeUtils</compoundname>
+    <includes local="no">Source/Compiler/Common/NodeUtils.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="a01463_1abe088b42e7363f53cd4ee4970c6af47a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::NodeUtils::nodeSubtypeString</definition>
+        <argsstring>(String &amp;dest, Node *node)</argsstring>
+        <name>nodeSubtypeString</name>
+        <param>
+          <type><ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type><ref refid="a01459" kindref="compound">Node</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Returns a exact string representation of the Subtype_ name </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dest</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Common/NodeUtils.h" line="160" column="1" bodyfile="Source/Compiler/Common/NodeUtils.cpp" bodystart="266" bodyend="281"/>
+        <references refid="a01459_1a43701e9300a09cc248e5393993d9f95b" compoundref="a00722" startline="129" endline="132">Hack::Compiler::Node::subtype</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a6a900f6dff7c1a6f57cc24896d7b4f10" compoundref="a00728" startline="121">Hack::Compiler::SubtypeNone</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6aa0d8352ed2ca08217f9dc2b3ca635df4" compoundref="a00728" startline="122">Hack::Compiler::SubtypeExpressionGroup</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a22c529bdbb52ad409d9243fab183552b" compoundref="a00728" startline="123">Hack::Compiler::SubtypeCall</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a7ffb8ab9b38b4b338d446fc1ba39ad29" compoundref="a00728" startline="124">Hack::Compiler::SubtypeCallFunction</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a1cf72edfd7c12952849fd910e83f4052" compoundref="a00728" startline="125">Hack::Compiler::SubtypeCallMethod</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a41bd191826e40afa0260afee2fdaa6d6" compoundref="a00728" startline="126">Hack::Compiler::SubtypeArrayIndex</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a709cc210e1ab40744609244d1f7a3f8b" compoundref="a00728" startline="127">Hack::Compiler::SubtypeIfElseCombo</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a15bb148de2293807ec093fde1f2c22d5" compoundref="a00728" startline="128">Hack::Compiler::SubtypeTerm</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a19aa4a2351849e73de63c6464515bbcb" compoundref="a00728" startline="129">Hack::Compiler::SubtypeOpTerm</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a332598b2aac0805651f0039b3ff545fc" compoundref="a00728" startline="130">Hack::Compiler::SubtypeLetEqual</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a82b15984274411f0ed2e4fbc86f8c073" compoundref="a00728" startline="131">Hack::Compiler::SubtypeLetArrayEqual</references>
+      </memberdef>
+      <memberdef kind="function" id="a01463_1a94e7f1532c5032beadb07e27a83792e7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::NodeUtils::nodeTypeString</definition>
+        <argsstring>(String &amp;dest, Node *node)</argsstring>
+        <name>nodeTypeString</name>
+        <param>
+          <type><ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type><ref refid="a01459" kindref="compound">Node</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Returns a exact string representation of the enum name </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dest</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Common/NodeUtils.h" line="147" column="1" bodyfile="Source/Compiler/Common/NodeUtils.cpp" bodystart="48" bodyend="51"/>
+        <references refid="a01463_1a26e442f75c28641c4cc95546dc3bef16" compoundref="a00725" startline="53" endline="156">string</references>
+        <references refid="a01459_1a3b2715a2521b741f66f2592d66037d94" compoundref="a00722" startline="119" endline="122">Hack::Compiler::Node::type</references>
+      </memberdef>
+      <memberdef kind="function" id="a01463_1ad90f4a993ae2906e55130aba4d6e8e70" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::NodeUtils::nodeTypeXmlString</definition>
+        <argsstring>(String &amp;dest, Node *node)</argsstring>
+        <name>nodeTypeXmlString</name>
+        <param>
+          <type><ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type><ref refid="a01459" kindref="compound">Node</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Returns an XML representation of the enum name </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dest</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Common/NodeUtils.h" line="153" column="1" bodyfile="Source/Compiler/Common/NodeUtils.cpp" bodystart="158" bodyend="259"/>
+        <references refid="a01459_1a3b2715a2521b741f66f2592d66037d94" compoundref="a00722" startline="119" endline="122">Hack::Compiler::Node::type</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a12d787097fb230c34304927acb58a558" compoundref="a00728" startline="31">Hack::Compiler::Rule</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6af5fb400704892777118abdccc81b9194" compoundref="a00728" startline="32">Hack::Compiler::RuleClass</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6aa4a86eb5c36e73c82c0e65cb88c87860" compoundref="a00728" startline="33">Hack::Compiler::RuleClassDescription</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6af895d92a3471ae1dd81db116cb5683e4" compoundref="a00728" startline="34">Hack::Compiler::RuleField</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a83868e546ba4cf0544f7b704c9ad32ff" compoundref="a00728" startline="35">Hack::Compiler::RuleDataType</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a74a4a6265f456fe0176393106c407b6e" compoundref="a00728" startline="36">Hack::Compiler::RuleFieldSpecification</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a379776fb31e81b1baa8e37d597eb24a4" compoundref="a00728" startline="37">Hack::Compiler::RuleIdentifierList</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ad395ed3a48e79f471aa48780ebdc3ff1" compoundref="a00728" startline="38">Hack::Compiler::RuleMethod</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a8e21b2c6a1e2c1820fd46de24934b033" compoundref="a00728" startline="39">Hack::Compiler::RuleMethodSpecification</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a494bc4f5cb9c004cd62bfb5390eb7a33" compoundref="a00728" startline="40">Hack::Compiler::RuleMethodReturnType</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6acd4325f3ac0a467e6fefcb9bc2a57861" compoundref="a00728" startline="41">Hack::Compiler::RuleMethodBody</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a3f94a6a03101d7a4403e12934a7dd99d" compoundref="a00728" startline="42">Hack::Compiler::RuleBody</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ab2900197084b999d0d27771e8326970f" compoundref="a00728" startline="43">Hack::Compiler::RuleVariable</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ac1dea96e8aa8912884cd00534d5be418" compoundref="a00728" startline="44">Hack::Compiler::RuleStatement</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6acfa63bed354357c7c65733160ef9f4fa" compoundref="a00728" startline="47">Hack::Compiler::RuleLetStatement</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ad6c4df62cebed24c57fb5cf1cc636f8d" compoundref="a00728" startline="48">Hack::Compiler::RuleIfStatement</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a26dae7be723fdf8ba71202d29625f6f5" compoundref="a00728" startline="49">Hack::Compiler::RuleElseStatement</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a303329c590b8ca9e53bbac315017d365" compoundref="a00728" startline="50">Hack::Compiler::RuleWhileStatement</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ac0729f0dd5d255b9aa667cd581da95f4" compoundref="a00728" startline="51">Hack::Compiler::RuleDoStatement</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a87934873c24cbdc44c8fa785781b29d7" compoundref="a00728" startline="52">Hack::Compiler::RuleReturnStatement</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6aeac707ada70e601bbfc8325327da5dcb" compoundref="a00728" startline="53">Hack::Compiler::RuleStatementList</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a46ca516f5cbcd46c3029be456b9f500d" compoundref="a00728" startline="54">Hack::Compiler::RuleExpression</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a25ea761d296db24a901341598d7d4852" compoundref="a00728" startline="55">Hack::Compiler::RuleSingleExpression</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a9d0ef264a545c5117c990415ff883634" compoundref="a00728" startline="56">Hack::Compiler::RuleTerm</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a031b1a025a73129dff8de9246e61e2f2" compoundref="a00728" startline="57">Hack::Compiler::RuleSimpleTerm</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a3bd0a9809c3b1c83912b72eceb6cf4f5" compoundref="a00728" startline="58">Hack::Compiler::RuleComplexTerm</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a4bd47378515d925ac6426c0c397e5a27" compoundref="a00728" startline="59">Hack::Compiler::RuleOperator</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6afe7e8673ff8860700e770e2afee945a2" compoundref="a00728" startline="60">Hack::Compiler::RuleUnaryOperator</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a8d902d19f27773b8272d3f48adf6f135" compoundref="a00728" startline="61">Hack::Compiler::RuleExpressionList</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a228d7822b0f80c89a86e450a24d68ce4" compoundref="a00728" startline="62">Hack::Compiler::RuleCallMethod</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a7796c9aacca84a379e90aa2b1438901e" compoundref="a00728" startline="63">Hack::Compiler::RuleParameterList</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a7988966264071c4fc121bed42d6ae205" compoundref="a00728" startline="64">Hack::Compiler::RuleParameter</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6afe32ecf4dda649e33924606d05e85ccd" compoundref="a00728" startline="45">Hack::Compiler::RuleInlineVm</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6acbaba7a7dcfa3aeec822934d931f42c1" compoundref="a00728" startline="46">Hack::Compiler::RuleInlineAsm</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a65ff4e8ff9a2f029c5724550f90d8431" compoundref="a00728" startline="65">Hack::Compiler::RuleEnd</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ae20eb424b83e17c701a57261e73b9052" compoundref="a00728" startline="67">Hack::Compiler::Keyword</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ac31a70cbd9d9151351ffbe21b039ae4e" compoundref="a00728" startline="68">Hack::Compiler::KeywordClass</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ae581171931b8bf6afb42ff9893d97ab0" compoundref="a00728" startline="69">Hack::Compiler::KeywordConstructor</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ab26ac14d93f8a31f192b0e508f684a77" compoundref="a00728" startline="70">Hack::Compiler::KeywordFunction</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6aa0c2dc86da0f80dd9612abd2a3a77dd6" compoundref="a00728" startline="71">Hack::Compiler::KeywordMethod</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a8a27d8c907bccbea7451f6dd392bad75" compoundref="a00728" startline="72">Hack::Compiler::KeywordField</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a11680baf7488776f4bc0734b10035bc9" compoundref="a00728" startline="73">Hack::Compiler::KeywordStatic</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a2ba36ac2824b8af6298d1ba5bf5e4a06" compoundref="a00728" startline="74">Hack::Compiler::KeywordInt</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a97fc1d604682922b0b57eb05eaf7ed8a" compoundref="a00728" startline="75">Hack::Compiler::KeywordChar</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a4b6ed4a9c930866c2c694b2fc9d01fb9" compoundref="a00728" startline="76">Hack::Compiler::KeywordBool</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a5e0ca93da96ca2f39af10ed3f861e8c4" compoundref="a00728" startline="77">Hack::Compiler::KeywordVoid</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a4685a031adea4dbe1e7f657025fce740" compoundref="a00728" startline="78">Hack::Compiler::KeywordVar</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a7e5161b02ebb6784a0606285eb12dfd4" compoundref="a00728" startline="79">Hack::Compiler::KeywordLet</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a3a4ecc30d87ec79169e2bc7448a26b12" compoundref="a00728" startline="80">Hack::Compiler::KeywordIf</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a4c5a4ed9b73dd86745fcc5ce46e6edae" compoundref="a00728" startline="81">Hack::Compiler::KeywordElse</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a5229615543f1151e305ba04f60d8b9b8" compoundref="a00728" startline="82">Hack::Compiler::KeywordDo</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6aa4144c1216383931b91e4d06d8f2e5b9" compoundref="a00728" startline="83">Hack::Compiler::KeywordWhile</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a94e18e9f169344d2cc5308c7ae3cb4cc" compoundref="a00728" startline="84">Hack::Compiler::KeywordReturn</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a3efd6e34626ea06664a4e2bfbde6ac58" compoundref="a00728" startline="85">Hack::Compiler::KeywordEnd</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6aaf2cf666c2ba44b7ca371eb4b36991ce" compoundref="a00728" startline="87">Hack::Compiler::Symbol</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a2f8793e1c7bae9e986497c01c2be40f2" compoundref="a00728" startline="88">Hack::Compiler::SymbolOpenBrace</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a1b36db2997870e3f4750fe2bdacc1bf2" compoundref="a00728" startline="89">Hack::Compiler::SymbolCloseBrace</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ad186637e1f78fd0001af6cf552da87f5" compoundref="a00728" startline="90">Hack::Compiler::SymbolSemiColon</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a7449b679a50e24f41705008788c90370" compoundref="a00728" startline="91">Hack::Compiler::SymbolLeftParenthesis</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ab2c061b2efd2fbdd428ece15ed05ec27" compoundref="a00728" startline="92">Hack::Compiler::SymbolRightParenthesis</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a1c5da8e6a44118cb7af19c5966f611ab" compoundref="a00728" startline="93">Hack::Compiler::SymbolLeftBracket</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a8f7acc7cd1aa8763a3ec7c0723d3db3d" compoundref="a00728" startline="94">Hack::Compiler::SymbolRightBracket</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a69239f8c8f83820d5a13ad527a91316e" compoundref="a00728" startline="95">Hack::Compiler::SymbolComma</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6aa1c4e8b5a4bedf3e787d4c9b338b162a" compoundref="a00728" startline="96">Hack::Compiler::SymbolEquals</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ab1b59e86da4b072c9c28809e36054032" compoundref="a00728" startline="97">Hack::Compiler::SymbolPlus</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6acf933364f0a3278d3c703cae0290e773" compoundref="a00728" startline="98">Hack::Compiler::SymbolMinus</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a2a3779e8d88ff5f074b61b0fe92b0b58" compoundref="a00728" startline="99">Hack::Compiler::SymbolMultiply</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a249f0459fb4c38dfa2690f09164c6488" compoundref="a00728" startline="100">Hack::Compiler::SymbolDivide</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6abb1b9f57f66f57725a1527e2f7acaedf" compoundref="a00728" startline="101">Hack::Compiler::SymbolAnd</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a7a5091b144812532ee7bf44dedd63781" compoundref="a00728" startline="102">Hack::Compiler::SymbolOr</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a07219731941d199649962cab568a10e9" compoundref="a00728" startline="103">Hack::Compiler::SymbolGreater</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6aaf53fad5156cbe194d6ed4f960e18ec8" compoundref="a00728" startline="104">Hack::Compiler::SymbolLess</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a32d4f45905602f6394b83e167fd7291e" compoundref="a00728" startline="105">Hack::Compiler::SymbolNot</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6af78cd3fd81595b5027563fc46de176bd" compoundref="a00728" startline="106">Hack::Compiler::SymbolPeriod</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6aac55360a9e63b95a0fe018110cee4891" compoundref="a00728" startline="107">Hack::Compiler::SymbolEnd</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6aa9315da8cb5f19dba0d77daddab7b0bd" compoundref="a00728" startline="109">Hack::Compiler::Constant</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a99979f3b0a7ec4669e64804412671e01" compoundref="a00728" startline="110">Hack::Compiler::ConstantIdentifier</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6afbd47c44db84d19153a2178f5852a6e0" compoundref="a00728" startline="111">Hack::Compiler::ConstantInteger</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ad8221a84d21471ea7ad0dd3ecc349b12" compoundref="a00728" startline="117">Hack::Compiler::ConstantInlineVm</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a89061fb26c3f0c298b55ffca768debe8" compoundref="a00728" startline="118">Hack::Compiler::ConstantInlineAsm</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a3bedb2300b4e67173eba51e3ab99c230" compoundref="a00728" startline="112">Hack::Compiler::ConstantString</references>
+        <references refid="a01459_1a20e6fa06ee899f50ac30e9dafa0acdfb" compoundref="a00722" startline="169" endline="172">Hack::Compiler::Node::value</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a28c9451c0059f6fa453a7204a9c043be" compoundref="a00728" startline="113">Hack::Compiler::ConstantTrue</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ab42502c51c876d73e971e0b0db8a656e" compoundref="a00728" startline="114">Hack::Compiler::ConstantFalse</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ac8ac251b2349e2ea86042e71aec4f317" compoundref="a00728" startline="115">Hack::Compiler::ConstantNull</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a2534a9437f7adc210d06c1b351ed4445" compoundref="a00728" startline="116">Hack::Compiler::ConstantThis</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a3c41789e6326c83d485d3915fe44cb32" compoundref="a00728" startline="119">Hack::Compiler::ConstantEnd</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a6a900f6dff7c1a6f57cc24896d7b4f10" compoundref="a00728" startline="121">Hack::Compiler::SubtypeNone</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6aa0d8352ed2ca08217f9dc2b3ca635df4" compoundref="a00728" startline="122">Hack::Compiler::SubtypeExpressionGroup</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a22c529bdbb52ad409d9243fab183552b" compoundref="a00728" startline="123">Hack::Compiler::SubtypeCall</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a7ffb8ab9b38b4b338d446fc1ba39ad29" compoundref="a00728" startline="124">Hack::Compiler::SubtypeCallFunction</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a1cf72edfd7c12952849fd910e83f4052" compoundref="a00728" startline="125">Hack::Compiler::SubtypeCallMethod</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a41bd191826e40afa0260afee2fdaa6d6" compoundref="a00728" startline="126">Hack::Compiler::SubtypeArrayIndex</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a709cc210e1ab40744609244d1f7a3f8b" compoundref="a00728" startline="127">Hack::Compiler::SubtypeIfElseCombo</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a15bb148de2293807ec093fde1f2c22d5" compoundref="a00728" startline="128">Hack::Compiler::SubtypeTerm</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a19aa4a2351849e73de63c6464515bbcb" compoundref="a00728" startline="129">Hack::Compiler::SubtypeOpTerm</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a332598b2aac0805651f0039b3ff545fc" compoundref="a00728" startline="130">Hack::Compiler::SubtypeLetEqual</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a82b15984274411f0ed2e4fbc86f8c073" compoundref="a00728" startline="131">Hack::Compiler::SubtypeLetArrayEqual</references>
+      </memberdef>
+      <memberdef kind="function" id="a01463_1a26e442f75c28641c4cc95546dc3bef16" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
+        <definition>String Hack::Compiler::NodeUtils::string</definition>
+        <argsstring>(int8_t type)</argsstring>
+        <name>string</name>
+        <param>
+          <type>int8_t</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Returns a exact string representation of the enum name </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Common/NodeUtils.h" line="140" column="1" bodyfile="Source/Compiler/Common/NodeUtils.cpp" bodystart="53" bodyend="156"/>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a12d787097fb230c34304927acb58a558" compoundref="a00728" startline="31">Hack::Compiler::Rule</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6af5fb400704892777118abdccc81b9194" compoundref="a00728" startline="32">Hack::Compiler::RuleClass</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6aa4a86eb5c36e73c82c0e65cb88c87860" compoundref="a00728" startline="33">Hack::Compiler::RuleClassDescription</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6af895d92a3471ae1dd81db116cb5683e4" compoundref="a00728" startline="34">Hack::Compiler::RuleField</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a83868e546ba4cf0544f7b704c9ad32ff" compoundref="a00728" startline="35">Hack::Compiler::RuleDataType</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a74a4a6265f456fe0176393106c407b6e" compoundref="a00728" startline="36">Hack::Compiler::RuleFieldSpecification</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a379776fb31e81b1baa8e37d597eb24a4" compoundref="a00728" startline="37">Hack::Compiler::RuleIdentifierList</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ad395ed3a48e79f471aa48780ebdc3ff1" compoundref="a00728" startline="38">Hack::Compiler::RuleMethod</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a8e21b2c6a1e2c1820fd46de24934b033" compoundref="a00728" startline="39">Hack::Compiler::RuleMethodSpecification</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a494bc4f5cb9c004cd62bfb5390eb7a33" compoundref="a00728" startline="40">Hack::Compiler::RuleMethodReturnType</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6acd4325f3ac0a467e6fefcb9bc2a57861" compoundref="a00728" startline="41">Hack::Compiler::RuleMethodBody</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a3f94a6a03101d7a4403e12934a7dd99d" compoundref="a00728" startline="42">Hack::Compiler::RuleBody</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ab2900197084b999d0d27771e8326970f" compoundref="a00728" startline="43">Hack::Compiler::RuleVariable</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ac1dea96e8aa8912884cd00534d5be418" compoundref="a00728" startline="44">Hack::Compiler::RuleStatement</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6acfa63bed354357c7c65733160ef9f4fa" compoundref="a00728" startline="47">Hack::Compiler::RuleLetStatement</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ad6c4df62cebed24c57fb5cf1cc636f8d" compoundref="a00728" startline="48">Hack::Compiler::RuleIfStatement</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a26dae7be723fdf8ba71202d29625f6f5" compoundref="a00728" startline="49">Hack::Compiler::RuleElseStatement</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a303329c590b8ca9e53bbac315017d365" compoundref="a00728" startline="50">Hack::Compiler::RuleWhileStatement</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ac0729f0dd5d255b9aa667cd581da95f4" compoundref="a00728" startline="51">Hack::Compiler::RuleDoStatement</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a87934873c24cbdc44c8fa785781b29d7" compoundref="a00728" startline="52">Hack::Compiler::RuleReturnStatement</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6aeac707ada70e601bbfc8325327da5dcb" compoundref="a00728" startline="53">Hack::Compiler::RuleStatementList</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a46ca516f5cbcd46c3029be456b9f500d" compoundref="a00728" startline="54">Hack::Compiler::RuleExpression</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a25ea761d296db24a901341598d7d4852" compoundref="a00728" startline="55">Hack::Compiler::RuleSingleExpression</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a9d0ef264a545c5117c990415ff883634" compoundref="a00728" startline="56">Hack::Compiler::RuleTerm</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a031b1a025a73129dff8de9246e61e2f2" compoundref="a00728" startline="57">Hack::Compiler::RuleSimpleTerm</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a3bd0a9809c3b1c83912b72eceb6cf4f5" compoundref="a00728" startline="58">Hack::Compiler::RuleComplexTerm</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a4bd47378515d925ac6426c0c397e5a27" compoundref="a00728" startline="59">Hack::Compiler::RuleOperator</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6afe7e8673ff8860700e770e2afee945a2" compoundref="a00728" startline="60">Hack::Compiler::RuleUnaryOperator</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a8d902d19f27773b8272d3f48adf6f135" compoundref="a00728" startline="61">Hack::Compiler::RuleExpressionList</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a228d7822b0f80c89a86e450a24d68ce4" compoundref="a00728" startline="62">Hack::Compiler::RuleCallMethod</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a7796c9aacca84a379e90aa2b1438901e" compoundref="a00728" startline="63">Hack::Compiler::RuleParameterList</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a7988966264071c4fc121bed42d6ae205" compoundref="a00728" startline="64">Hack::Compiler::RuleParameter</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6afe32ecf4dda649e33924606d05e85ccd" compoundref="a00728" startline="45">Hack::Compiler::RuleInlineVm</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6acbaba7a7dcfa3aeec822934d931f42c1" compoundref="a00728" startline="46">Hack::Compiler::RuleInlineAsm</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a65ff4e8ff9a2f029c5724550f90d8431" compoundref="a00728" startline="65">Hack::Compiler::RuleEnd</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ae20eb424b83e17c701a57261e73b9052" compoundref="a00728" startline="67">Hack::Compiler::Keyword</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ac31a70cbd9d9151351ffbe21b039ae4e" compoundref="a00728" startline="68">Hack::Compiler::KeywordClass</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ae581171931b8bf6afb42ff9893d97ab0" compoundref="a00728" startline="69">Hack::Compiler::KeywordConstructor</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ab26ac14d93f8a31f192b0e508f684a77" compoundref="a00728" startline="70">Hack::Compiler::KeywordFunction</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6aa0c2dc86da0f80dd9612abd2a3a77dd6" compoundref="a00728" startline="71">Hack::Compiler::KeywordMethod</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a8a27d8c907bccbea7451f6dd392bad75" compoundref="a00728" startline="72">Hack::Compiler::KeywordField</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a11680baf7488776f4bc0734b10035bc9" compoundref="a00728" startline="73">Hack::Compiler::KeywordStatic</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a2ba36ac2824b8af6298d1ba5bf5e4a06" compoundref="a00728" startline="74">Hack::Compiler::KeywordInt</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a97fc1d604682922b0b57eb05eaf7ed8a" compoundref="a00728" startline="75">Hack::Compiler::KeywordChar</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a4b6ed4a9c930866c2c694b2fc9d01fb9" compoundref="a00728" startline="76">Hack::Compiler::KeywordBool</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a5e0ca93da96ca2f39af10ed3f861e8c4" compoundref="a00728" startline="77">Hack::Compiler::KeywordVoid</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a4685a031adea4dbe1e7f657025fce740" compoundref="a00728" startline="78">Hack::Compiler::KeywordVar</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a7e5161b02ebb6784a0606285eb12dfd4" compoundref="a00728" startline="79">Hack::Compiler::KeywordLet</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a3a4ecc30d87ec79169e2bc7448a26b12" compoundref="a00728" startline="80">Hack::Compiler::KeywordIf</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a4c5a4ed9b73dd86745fcc5ce46e6edae" compoundref="a00728" startline="81">Hack::Compiler::KeywordElse</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a5229615543f1151e305ba04f60d8b9b8" compoundref="a00728" startline="82">Hack::Compiler::KeywordDo</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6aa4144c1216383931b91e4d06d8f2e5b9" compoundref="a00728" startline="83">Hack::Compiler::KeywordWhile</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a94e18e9f169344d2cc5308c7ae3cb4cc" compoundref="a00728" startline="84">Hack::Compiler::KeywordReturn</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a3efd6e34626ea06664a4e2bfbde6ac58" compoundref="a00728" startline="85">Hack::Compiler::KeywordEnd</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6aaf2cf666c2ba44b7ca371eb4b36991ce" compoundref="a00728" startline="87">Hack::Compiler::Symbol</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a2f8793e1c7bae9e986497c01c2be40f2" compoundref="a00728" startline="88">Hack::Compiler::SymbolOpenBrace</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a1b36db2997870e3f4750fe2bdacc1bf2" compoundref="a00728" startline="89">Hack::Compiler::SymbolCloseBrace</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ad186637e1f78fd0001af6cf552da87f5" compoundref="a00728" startline="90">Hack::Compiler::SymbolSemiColon</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a7449b679a50e24f41705008788c90370" compoundref="a00728" startline="91">Hack::Compiler::SymbolLeftParenthesis</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ab2c061b2efd2fbdd428ece15ed05ec27" compoundref="a00728" startline="92">Hack::Compiler::SymbolRightParenthesis</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a1c5da8e6a44118cb7af19c5966f611ab" compoundref="a00728" startline="93">Hack::Compiler::SymbolLeftBracket</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a8f7acc7cd1aa8763a3ec7c0723d3db3d" compoundref="a00728" startline="94">Hack::Compiler::SymbolRightBracket</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a69239f8c8f83820d5a13ad527a91316e" compoundref="a00728" startline="95">Hack::Compiler::SymbolComma</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6aa1c4e8b5a4bedf3e787d4c9b338b162a" compoundref="a00728" startline="96">Hack::Compiler::SymbolEquals</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ab1b59e86da4b072c9c28809e36054032" compoundref="a00728" startline="97">Hack::Compiler::SymbolPlus</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6acf933364f0a3278d3c703cae0290e773" compoundref="a00728" startline="98">Hack::Compiler::SymbolMinus</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a2a3779e8d88ff5f074b61b0fe92b0b58" compoundref="a00728" startline="99">Hack::Compiler::SymbolMultiply</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a249f0459fb4c38dfa2690f09164c6488" compoundref="a00728" startline="100">Hack::Compiler::SymbolDivide</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6abb1b9f57f66f57725a1527e2f7acaedf" compoundref="a00728" startline="101">Hack::Compiler::SymbolAnd</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a7a5091b144812532ee7bf44dedd63781" compoundref="a00728" startline="102">Hack::Compiler::SymbolOr</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a07219731941d199649962cab568a10e9" compoundref="a00728" startline="103">Hack::Compiler::SymbolGreater</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6aaf53fad5156cbe194d6ed4f960e18ec8" compoundref="a00728" startline="104">Hack::Compiler::SymbolLess</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a32d4f45905602f6394b83e167fd7291e" compoundref="a00728" startline="105">Hack::Compiler::SymbolNot</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6af78cd3fd81595b5027563fc46de176bd" compoundref="a00728" startline="106">Hack::Compiler::SymbolPeriod</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6aac55360a9e63b95a0fe018110cee4891" compoundref="a00728" startline="107">Hack::Compiler::SymbolEnd</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6aa9315da8cb5f19dba0d77daddab7b0bd" compoundref="a00728" startline="109">Hack::Compiler::Constant</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a99979f3b0a7ec4669e64804412671e01" compoundref="a00728" startline="110">Hack::Compiler::ConstantIdentifier</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6afbd47c44db84d19153a2178f5852a6e0" compoundref="a00728" startline="111">Hack::Compiler::ConstantInteger</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a3bedb2300b4e67173eba51e3ab99c230" compoundref="a00728" startline="112">Hack::Compiler::ConstantString</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ad8221a84d21471ea7ad0dd3ecc349b12" compoundref="a00728" startline="117">Hack::Compiler::ConstantInlineVm</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a89061fb26c3f0c298b55ffca768debe8" compoundref="a00728" startline="118">Hack::Compiler::ConstantInlineAsm</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a28c9451c0059f6fa453a7204a9c043be" compoundref="a00728" startline="113">Hack::Compiler::ConstantTrue</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ab42502c51c876d73e971e0b0db8a656e" compoundref="a00728" startline="114">Hack::Compiler::ConstantFalse</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6ac8ac251b2349e2ea86042e71aec4f317" compoundref="a00728" startline="115">Hack::Compiler::ConstantNull</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a2534a9437f7adc210d06c1b351ed4445" compoundref="a00728" startline="116">Hack::Compiler::ConstantThis</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a3c41789e6326c83d485d3915fe44cb32" compoundref="a00728" startline="119">Hack::Compiler::ConstantEnd</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a6a900f6dff7c1a6f57cc24896d7b4f10" compoundref="a00728" startline="121">Hack::Compiler::SubtypeNone</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6aa0d8352ed2ca08217f9dc2b3ca635df4" compoundref="a00728" startline="122">Hack::Compiler::SubtypeExpressionGroup</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a22c529bdbb52ad409d9243fab183552b" compoundref="a00728" startline="123">Hack::Compiler::SubtypeCall</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a7ffb8ab9b38b4b338d446fc1ba39ad29" compoundref="a00728" startline="124">Hack::Compiler::SubtypeCallFunction</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a1cf72edfd7c12952849fd910e83f4052" compoundref="a00728" startline="125">Hack::Compiler::SubtypeCallMethod</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a41bd191826e40afa0260afee2fdaa6d6" compoundref="a00728" startline="126">Hack::Compiler::SubtypeArrayIndex</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a709cc210e1ab40744609244d1f7a3f8b" compoundref="a00728" startline="127">Hack::Compiler::SubtypeIfElseCombo</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a15bb148de2293807ec093fde1f2c22d5" compoundref="a00728" startline="128">Hack::Compiler::SubtypeTerm</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a19aa4a2351849e73de63c6464515bbcb" compoundref="a00728" startline="129">Hack::Compiler::SubtypeOpTerm</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a332598b2aac0805651f0039b3ff545fc" compoundref="a00728" startline="130">Hack::Compiler::SubtypeLetEqual</references>
+        <references refid="a00921_1a661f20cd8ee85e44fdd5e021df7c42b6a82b15984274411f0ed2e4fbc86f8c073" compoundref="a00728" startline="131">Hack::Compiler::SubtypeLetArrayEqual</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/Compiler/Common/NodeUtils.h" line="135" column="1" bodyfile="Source/Compiler/Common/NodeUtils.h" bodystart="134" bodyend="161"/>
+    <listofallmembers>
+      <member refid="a01463_1abe088b42e7363f53cd4ee4970c6af47a" prot="public" virt="non-virtual"><scope>Hack::Compiler::NodeUtils</scope><name>nodeSubtypeString</name></member>
+      <member refid="a01463_1a94e7f1532c5032beadb07e27a83792e7" prot="public" virt="non-virtual"><scope>Hack::Compiler::NodeUtils</scope><name>nodeTypeString</name></member>
+      <member refid="a01463_1ad90f4a993ae2906e55130aba4d6e8e70" prot="public" virt="non-virtual"><scope>Hack::Compiler::NodeUtils</scope><name>nodeTypeXmlString</name></member>
+      <member refid="a01463_1a26e442f75c28641c4cc95546dc3bef16" prot="public" virt="non-virtual"><scope>Hack::Compiler::NodeUtils</scope><name>string</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

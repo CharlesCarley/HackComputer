@@ -1,58 +1,58 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01243" kind="class" language="C++" prot="public">
-    <compoundname>Hack::CommandLine::Token</compoundname>
-    <includes local="no">Source/Utils/CommandLine/Token.h</includes>
+    <compoundname>Hack::Binding::RomWrapper</compoundname>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="a01243_1a3604ef65b5ad6ed6475bb53c5f081aa6" prot="private" static="no" mutable="no">
-        <type>int</type>
-        <definition>int Hack::CommandLine::Token::_type</definition>
+      <memberdef kind="variable" id="a01243_1a78a816a94fc0bd8d962d90932cc9e15d" prot="private" static="no" mutable="yes">
+        <type><ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
+        <definition>String Hack::Binding::RomWrapper::_cache</definition>
         <argsstring></argsstring>
-        <name>_type</name>
+        <name>_cache</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/CommandLine/Token.h" line="50" column="1" bodyfile="Source/Utils/CommandLine/Token.h" bodystart="50" bodyend="-1"/>
+        <location file="Source/Bindings/Bindings.cpp" line="55" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="55" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a01243_1a979a9c66317e53943ce1dff60bb18dc2" prot="private" static="no" mutable="no">
-        <type><ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Hack::CommandLine::Token::_value</definition>
+      <memberdef kind="variable" id="a01243_1a026eb53aef02d9c1fdb7f6b57ac1f21d" prot="private" static="no" mutable="no">
+        <type><ref refid="a01419" kindref="compound">Rom32</ref> *</type>
+        <definition>Rom32* Hack::Binding::RomWrapper::_rom</definition>
         <argsstring></argsstring>
-        <name>_value</name>
+        <name>_rom</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/CommandLine/Token.h" line="51" column="1" bodyfile="Source/Utils/CommandLine/Token.h" bodystart="51" bodyend="-1"/>
+        <location file="Source/Bindings/Bindings.cpp" line="53" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01243_1ae7d2fd6c9a84cfad3167fa000fc2b99e" prot="private" static="no" mutable="no">
+        <type>const uint64_t</type>
+        <definition>const uint64_t Hack::Binding::RomWrapper::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <initializer>= <ref refid="a00916_1ab9e96018072b404d8a46e2192f06b954" kindref="member">RomType</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="51" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="51" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01243_1a73d16c87d6b58feacf0ff92e99307d1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="a01243_1a430e884e4dfa1dec8dc20bb332bd0b3a" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
         <type></type>
-        <definition>Hack::Assembler::Token::Token</definition>
-        <argsstring>()</argsstring>
-        <name>Token</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/CommandLine/Token.h" line="54" column="1" bodyfile="Source/Utils/CommandLine/Token.h" bodystart="54" bodyend="58"/>
-      </memberdef>
-      <memberdef kind="function" id="a01243_1a39d0fdc550762a50ca37e08448d04212" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::CommandLine::Token::append</definition>
-        <argsstring>(const char &amp;ch)</argsstring>
-        <name>append</name>
+        <definition>Hack::Binding::RomWrapper::RomWrapper</definition>
+        <argsstring>(Rom32 *rom32)</argsstring>
+        <name>RomWrapper</name>
         <param>
-          <type>const char &amp;</type>
-          <declname>ch</declname>
+          <type><ref refid="a01419" kindref="compound">Rom32</ref> *</type>
+          <declname>rom32</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -60,16 +60,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/CommandLine/Token.h" line="75" column="1" bodyfile="Source/Utils/CommandLine/Token.h" bodystart="75" bodyend="78"/>
+        <location file="Source/Bindings/Bindings.cpp" line="58" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="58" bodyend="61"/>
       </memberdef>
-      <memberdef kind="function" id="a01243_1a5c946ba65192d03a81d23486465fb977" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::CommandLine::Token::append</definition>
-        <argsstring>(const String &amp;str)</argsstring>
-        <name>append</name>
+      <memberdef kind="function" id="a01243_1a9a9be8a8b466961c6a20ab9e89781200" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* Hack::Binding::RomWrapper::decode</definition>
+        <argsstring>(const int idx) const</argsstring>
+        <name>decode</name>
         <param>
-          <type>const <ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>str</declname>
+          <type>const int</type>
+          <declname>idx</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -77,56 +77,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/CommandLine/Token.h" line="80" column="1" bodyfile="Source/Utils/CommandLine/Token.h" bodystart="80" bodyend="83"/>
+        <location file="Source/Bindings/Bindings.cpp" line="71" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="71" bodyend="82"/>
+        <references refid="a01215_1ade81360d9e9ec9bdfedc8af1d0252a73" compoundref="a00431" startline="32" endline="37">Hack::Assembler::Instruction::string</references>
       </memberdef>
-      <memberdef kind="function" id="a01243_1a8566d5c471067be557dce98589f8ba69" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::CommandLine::Token::clear</definition>
-        <argsstring>()</argsstring>
-        <name>clear</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/CommandLine/Token.h" line="85" column="1" bodyfile="Source/Utils/CommandLine/Token.h" bodystart="85" bodyend="89"/>
-        <references refid="a00904_1a7bf8cf020e39f88d39725c1ec763cd86a728a7b175a948d4e4390726507f087b8" compoundref="a01642" startline="43">Hack::CommandLine::TOK_EOS</references>
-      </memberdef>
-      <memberdef kind="function" id="a01243_1a1752c109f1e2547e133eb0e991eab9bc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>const int &amp;</type>
-        <definition>const int&amp; Hack::CommandLine::Token::getType</definition>
-        <argsstring>() const</argsstring>
-        <name>getType</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/CommandLine/Token.h" line="60" column="1" bodyfile="Source/Utils/CommandLine/Token.h" bodystart="60" bodyend="63"/>
-      </memberdef>
-      <memberdef kind="function" id="a01243_1a0394cc885ec75f298d503580570a3b25" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>const <ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-        <definition>const String&amp; Hack::CommandLine::Token::getValue</definition>
-        <argsstring>() const</argsstring>
-        <name>getValue</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/CommandLine/Token.h" line="70" column="1" bodyfile="Source/Utils/CommandLine/Token.h" bodystart="70" bodyend="73"/>
-      </memberdef>
-      <memberdef kind="function" id="a01243_1a77060f2abe4e56c98ddd13fdfc83bc61" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::CommandLine::Token::setType</definition>
-        <argsstring>(const int &amp;type)</argsstring>
-        <name>setType</name>
+      <memberdef kind="function" id="a01243_1a707b3bc9bc40f455b80556dda7919bdc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Hack::Binding::RomWrapper::get</definition>
+        <argsstring>(const int idx) const</argsstring>
+        <name>get</name>
         <param>
-          <type>const int &amp;</type>
-          <declname>type</declname>
+          <type>const int</type>
+          <declname>idx</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -134,24 +95,44 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/CommandLine/Token.h" line="65" column="1" bodyfile="Source/Utils/CommandLine/Token.h" bodystart="65" bodyend="68"/>
+        <location file="Source/Bindings/Bindings.cpp" line="63" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="63" bodyend="69"/>
+        <references refid="a00916_1ab9e96018072b404d8a46e2192f06b954" compoundref="a00458" startline="45">Hack::Binding::RomType</references>
+        <references refid="a01419_1a5f035550d36a60b39767abc4d5942b46" compoundref="a00680" startline="72" endline="77">Hack::Chips::Rom32::get</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="a01243_1ac77d5275d6ebe3ea4efe37f262c48826" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="a01243" kindref="compound">RomWrapper</ref> *</type>
+        <definition>static const RomWrapper* Hack::Binding::RomWrapper::cast</definition>
+        <argsstring>(Handle handle)</argsstring>
+        <name>cast</name>
+        <param>
+          <type><ref refid="a01239" kindref="compound">Handle</ref></type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="84" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="84" bodyend="93"/>
+        <references refid="a00916_1ab9e96018072b404d8a46e2192f06b954" compoundref="a00458" startline="45">Hack::Binding::RomType</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Utils/CommandLine/Token.h" line="48" column="1" bodyfile="Source/Utils/CommandLine/Token.h" bodystart="47" bodyend="90"/>
+    <location file="Source/Bindings/Bindings.cpp" line="49" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="48" bodyend="94"/>
     <listofallmembers>
-      <member refid="a01243_1a3604ef65b5ad6ed6475bb53c5f081aa6" prot="private" virt="non-virtual"><scope>Hack::CommandLine::Token</scope><name>_type</name></member>
-      <member refid="a01243_1a979a9c66317e53943ce1dff60bb18dc2" prot="private" virt="non-virtual"><scope>Hack::CommandLine::Token</scope><name>_value</name></member>
-      <member refid="a01243_1a39d0fdc550762a50ca37e08448d04212" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Token</scope><name>append</name></member>
-      <member refid="a01243_1a5c946ba65192d03a81d23486465fb977" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Token</scope><name>append</name></member>
-      <member refid="a01243_1a8566d5c471067be557dce98589f8ba69" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Token</scope><name>clear</name></member>
-      <member refid="a01243_1a1752c109f1e2547e133eb0e991eab9bc" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Token</scope><name>getType</name></member>
-      <member refid="a01243_1a0394cc885ec75f298d503580570a3b25" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Token</scope><name>getValue</name></member>
-      <member refid="a01243_1a77060f2abe4e56c98ddd13fdfc83bc61" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Token</scope><name>setType</name></member>
-      <member refid="a01243_1a73d16c87d6b58feacf0ff92e99307d1f" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Token</scope><name>Token</name></member>
+      <member refid="a01243_1a78a816a94fc0bd8d962d90932cc9e15d" prot="private" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>_cache</name></member>
+      <member refid="a01243_1a026eb53aef02d9c1fdb7f6b57ac1f21d" prot="private" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>_rom</name></member>
+      <member refid="a01243_1ac77d5275d6ebe3ea4efe37f262c48826" prot="public" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>cast</name></member>
+      <member refid="a01243_1a9a9be8a8b466961c6a20ab9e89781200" prot="public" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>decode</name></member>
+      <member refid="a01243_1a707b3bc9bc40f455b80556dda7919bdc" prot="public" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>get</name></member>
+      <member refid="a01243_1a430e884e4dfa1dec8dc20bb332bd0b3a" prot="public" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>RomWrapper</name></member>
+      <member refid="a01243_1ae7d2fd6c9a84cfad3167fa000fc2b99e" prot="private" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>type</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

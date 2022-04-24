@@ -1,122 +1,237 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01291" kind="class" language="C++" prot="public">
-    <compoundname>Hack::Ui::ColorCacheItem</compoundname>
-    <includes local="no">Source/Utils/UserInterface/ColorCache.h</includes>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="a01291_1a413ff8f44079e59076eabdcefb7de39e" prot="private" static="no" mutable="no">
-        <type><ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Hack::Ui::ColorCacheItem::_bg</definition>
+    <compoundname>Hack::Chips::Chip</compoundname>
+    <includes local="no">Source/Chips/Chip.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+      <param>
+        <type>uint8_t</type>
+        <declname>Count</declname>
+        <defname>Count</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="a01291_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" static="no" mutable="no">
+        <type>T</type>
+        <definition>T Hack::Chips::Chip&lt; T, Count &gt;::_bits</definition>
         <argsstring></argsstring>
-        <name>_bg</name>
+        <name>_bits</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/UserInterface/ColorCache.h" line="32" column="1" bodyfile="Source/Utils/UserInterface/ColorCache.h" bodystart="32" bodyend="-1"/>
+        <location file="Source/Chips/Chip.h" line="52" column="1" bodyfile="Source/Chips/Chip.h" bodystart="52" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a01291_1ac78a0e7f7ef1bd7e282a391c11a5e470" prot="private" static="no" mutable="no">
-        <type>uint32_t</type>
-        <definition>uint32_t Hack::Ui::ColorCacheItem::_color</definition>
-        <argsstring></argsstring>
-        <name>_color</name>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="a01291_1a63bb368bb0827830235759b33718d1b4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::Chip&lt; T, Count &gt;::isDirty</definition>
+        <argsstring>()</argsstring>
+        <name>isDirty</name>
+        <reimplementedby refid="a01419_1a5a4736a4ef27ad20cf3bb689edede45a">isDirty</reimplementedby>
+        <reimplementedby refid="a01423_1ac96bf7c3215dd31fca8e63046b0431fa">isDirty</reimplementedby>
+        <reimplementedby refid="a01415_1aaf75c488721fd4f6ec9c50dd23c31291">isDirty</reimplementedby>
+        <reimplementedby refid="a01411_1a524b55db9a45f8be9b35ec2fd90627e5">isDirty</reimplementedby>
+        <reimplementedby refid="a01407_1aab09a5e80f3a09e435b5090f1858bc8c">isDirty</reimplementedby>
+        <reimplementedby refid="a01403_1a402bf76eb0ff96fe5e50fb423243cc0f">isDirty</reimplementedby>
+        <reimplementedby refid="a01399_1a3fe64ded7a0910d9318aa61c9dfbdc65">isDirty</reimplementedby>
+        <reimplementedby refid="a01307_1ac65d59dc6a974d8135a5f6f320756d9d">isDirty</reimplementedby>
+        <reimplementedby refid="a01347_1aac065d165b148fee6c54c1f6efe49f33">isDirty</reimplementedby>
+        <reimplementedby refid="a01395_1a0f47b8a836ccfabed9c7fe3ffa6532bc">isDirty</reimplementedby>
+        <reimplementedby refid="a01339_1a0adcc77581ef7d16475c343df92db060">isDirty</reimplementedby>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/UserInterface/ColorCache.h" line="33" column="1" bodyfile="Source/Utils/UserInterface/ColorCache.h" bodystart="33" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01291_1a630973c8e455d3a4ed51b9af806ec0eb" prot="private" static="no" mutable="no">
-        <type><ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Hack::Ui::ColorCacheItem::_fg</definition>
-        <argsstring></argsstring>
-        <name>_fg</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/UserInterface/ColorCache.h" line="31" column="1" bodyfile="Source/Utils/UserInterface/ColorCache.h" bodystart="31" bodyend="-1"/>
+        <location file="Source/Chips/Chip.h" line="50" column="1" bodyfile="Source/Chips/Chip.h" bodystart="94" bodyend="97"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01291_1a04350776fd6cc3d65ef7626e589768fb" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01291_1a485588367ebaefcaaec8847faffe8870" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>Hack::Ui::ColorCacheItem::ColorCacheItem</definition>
-        <argsstring>(uint32_t color)</argsstring>
-        <name>ColorCacheItem</name>
+        <definition>Hack::Chips::Chip&lt; T, Count &gt;::Chip</definition>
+        <argsstring>()</argsstring>
+        <name>Chip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Chip.h" line="55" column="1" bodyfile="Source/Chips/Chip.h" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="a01291_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual Hack::Chips::Chip&lt; T, Count &gt;::~Chip</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Chip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Chip.h" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a01291_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Chip&lt; T, Count &gt;::applyBit</definition>
+        <argsstring>(const uint8_t &amp;index, const bool value)</argsstring>
+        <name>applyBit</name>
         <param>
-          <type>uint32_t</type>
-          <declname>color</declname>
+          <type>const uint8_t &amp;</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>value</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Clears or sets the bit at the supplied index. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A value of true will set the bit.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/UserInterface/ColorCache.h" line="36" column="1" bodyfile="Source/Utils/UserInterface/ColorCache.cpp" bodystart="27" bodyend="30"/>
+        <location file="Source/Chips/Chip.h" line="84" column="1" bodyfile="Source/Chips/Chip.h" bodystart="124" bodyend="127"/>
       </memberdef>
-      <memberdef kind="function" id="a01291_1a1a5210b986d9ff0617c203130ef00920" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Hack::Ui::ColorCacheItem::~ColorCacheItem</definition>
-        <argsstring>()</argsstring>
-        <name>~ColorCacheItem</name>
+      <memberdef kind="function" id="a01291_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Chip&lt; T, Count &gt;::assignBit</definition>
+        <argsstring>(const uint8_t &amp;index)</argsstring>
+        <name>assignBit</name>
+        <param>
+          <type>const uint8_t &amp;</type>
+          <declname>index</declname>
+        </param>
         <briefdescription>
-        </briefdescription>
+<para>Zeros all bits except for the bit at the supplied index. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/UserInterface/ColorCache.h" line="37" column="1"/>
+        <location file="Source/Chips/Chip.h" line="72" column="1" bodyfile="Source/Chips/Chip.h" bodystart="112" bodyend="115"/>
       </memberdef>
-      <memberdef kind="function" id="a01291_1abf01becdb6124b1d41193946579e8b04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>const char *</type>
-        <definition>const char * Hack::Ui::ColorCacheItem::background</definition>
-        <argsstring>()</argsstring>
-        <name>background</name>
+      <memberdef kind="function" id="a01291_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Chip&lt; T, Count &gt;::clearBit</definition>
+        <argsstring>(const uint8_t &amp;index)</argsstring>
+        <name>clearBit</name>
+        <param>
+          <type>const uint8_t &amp;</type>
+          <declname>index</declname>
+        </param>
         <briefdescription>
-        </briefdescription>
+<para>Clears the bit at the supplied index. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/UserInterface/ColorCache.h" line="40" column="1" bodyfile="Source/Utils/UserInterface/ColorCache.cpp" bodystart="41" bodyend="46"/>
-        <references refid="a01315_1a2c11ad765cd58a32fc3d588f8d8f1cb3" compoundref="a00860" startline="184" endline="187">Hack::Ui::Color::background</references>
+        <location file="Source/Chips/Chip.h" line="77" column="1" bodyfile="Source/Chips/Chip.h" bodystart="118" bodyend="121"/>
       </memberdef>
-      <memberdef kind="function" id="a01291_1a4a1c504a633ab80a0a3a70dc0731e810" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>const char *</type>
-        <definition>const char * Hack::Ui::ColorCacheItem::foreground</definition>
-        <argsstring>()</argsstring>
-        <name>foreground</name>
+      <memberdef kind="function" id="a01291_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::Chip&lt; T, Count &gt;::getBit</definition>
+        <argsstring>(const uint8_t &amp;index)</argsstring>
+        <name>getBit</name>
+        <param>
+          <type>const uint8_t &amp;</type>
+          <declname>index</declname>
+        </param>
         <briefdescription>
-        </briefdescription>
+<para>Returns the state of the bit at the supplied index. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/UserInterface/ColorCache.h" line="39" column="1" bodyfile="Source/Utils/UserInterface/ColorCache.cpp" bodystart="34" bodyend="39"/>
-        <references refid="a01315_1a7df5afa30dd84cb9566b5122a7636d17" compoundref="a00860" startline="179" endline="182">Hack::Ui::Color::foreground</references>
+        <location file="Source/Chips/Chip.h" line="62" column="1" bodyfile="Source/Chips/Chip.h" bodystart="100" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="a01291_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Chip&lt; T, Count &gt;::setBit</definition>
+        <argsstring>(const uint8_t &amp;index)</argsstring>
+        <name>setBit</name>
+        <param>
+          <type>const uint8_t &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Sets the bit at the supplied index. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Chip.h" line="67" column="1" bodyfile="Source/Chips/Chip.h" bodystart="106" bodyend="109"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para><ref refid="a01291" kindref="compound">Chip</ref> is the base class for all chips defined in this system. It uses a template integer for the <bold>_bits</bold> member variable. Most chips should maintain a cache bit (usually the MSB) to control evaluation. Evaluation happens as follows: </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
-    <location file="Source/Utils/UserInterface/ColorCache.h" line="29" column="1" bodyfile="Source/Utils/UserInterface/ColorCache.h" bodystart="28" bodyend="41"/>
+<para><orderedlist>
+<listitem><para>If the input of the chip is modified mark the cache bit.</para></listitem><listitem><para>Any call to query an output should check this bit. a. If it is set call evaluate then return the output. b. If it is not set then return the output. </para></listitem></orderedlist>
+</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should be one of the uint8_t, uint16_t, uint32_t, uint64_t, <ref refid="a01275" kindref="compound">bit16_t</ref>, <ref refid="a01279" kindref="compound">bit32_t</ref>, or <ref refid="a01283" kindref="compound">bit64_t</ref> integer types. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should reflect the total number of bits stored in T. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="469">
+        <label>T</label>
+      </node>
+      <node id="468">
+        <label>Hack::Chips::Chip&lt; T, Count &gt;</label>
+        <link refid="a01291"/>
+        <childnode refid="469" relation="usage">
+          <edgelabel>_bits</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Chips/Chip.h" line="48" column="1" bodyfile="Source/Chips/Chip.h" bodystart="47" bodyend="85"/>
     <listofallmembers>
-      <member refid="a01291_1a413ff8f44079e59076eabdcefb7de39e" prot="private" virt="non-virtual"><scope>Hack::Ui::ColorCacheItem</scope><name>_bg</name></member>
-      <member refid="a01291_1ac78a0e7f7ef1bd7e282a391c11a5e470" prot="private" virt="non-virtual"><scope>Hack::Ui::ColorCacheItem</scope><name>_color</name></member>
-      <member refid="a01291_1a630973c8e455d3a4ed51b9af806ec0eb" prot="private" virt="non-virtual"><scope>Hack::Ui::ColorCacheItem</scope><name>_fg</name></member>
-      <member refid="a01291_1abf01becdb6124b1d41193946579e8b04" prot="public" virt="non-virtual"><scope>Hack::Ui::ColorCacheItem</scope><name>background</name></member>
-      <member refid="a01291_1a04350776fd6cc3d65ef7626e589768fb" prot="public" virt="non-virtual"><scope>Hack::Ui::ColorCacheItem</scope><name>ColorCacheItem</name></member>
-      <member refid="a01291_1a4a1c504a633ab80a0a3a70dc0731e810" prot="public" virt="non-virtual"><scope>Hack::Ui::ColorCacheItem</scope><name>foreground</name></member>
-      <member refid="a01291_1a1a5210b986d9ff0617c203130ef00920" prot="public" virt="non-virtual"><scope>Hack::Ui::ColorCacheItem</scope><name>~ColorCacheItem</name></member>
+      <member refid="a01291_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Chip</scope><name>_bits</name></member>
+      <member refid="a01291_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::Chip</scope><name>applyBit</name></member>
+      <member refid="a01291_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::Chip</scope><name>assignBit</name></member>
+      <member refid="a01291_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::Chip</scope><name>Chip</name></member>
+      <member refid="a01291_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::Chip</scope><name>clearBit</name></member>
+      <member refid="a01291_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::Chip</scope><name>getBit</name></member>
+      <member refid="a01291_1a63bb368bb0827830235759b33718d1b4" prot="protected" virt="virtual"><scope>Hack::Chips::Chip</scope><name>isDirty</name></member>
+      <member refid="a01291_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::Chip</scope><name>setBit</name></member>
+      <member refid="a01291_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::Chip</scope><name>~Chip</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

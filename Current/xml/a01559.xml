@@ -1,23 +1,61 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
-  <compounddef id="a01559" kind="page">
-    <compoundname>Hc02</compoundname>
-    <title>Chips</title>
+  <compounddef id="a01559" kind="class" language="C++" prot="public">
+    <compoundname>Hack::FileSystem</compoundname>
+    <includes local="no">Source/Utils/FileSystem.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="a01559_1abb591b7efcd5e7fa2d7cf15730f7d26e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00915_1a95e191d8af73e79ac197701ac6a6c9a6" kindref="member">Path</ref></type>
+        <definition>Path Hack::FileSystem::absolute</definition>
+        <argsstring>(const String &amp;input)</argsstring>
+        <name>absolute</name>
+        <param>
+          <type>const <ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/FileSystem.h" line="36" column="1" bodyfile="Source/Utils/FileSystem.cpp" bodystart="41" bodyend="54"/>
+        <references refid="a00915_1a0022073c844c619a094704ae6c9b14bf" compoundref="a00863" startline="71" endline="76">Hack::StringCombine</references>
+      </memberdef>
+      <memberdef kind="function" id="a01559_1ab965af65d819708b115b5501d81335fc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::FileSystem::glob</definition>
+        <argsstring>(PathArray &amp;dest, const String &amp;dir, const String &amp;ext)</argsstring>
+        <name>glob</name>
+        <param>
+          <type><ref refid="a00915_1a7c50e21fc90ae27988ef26dd0b40a118" kindref="member">PathArray</ref> &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>const <ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>ext</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/FileSystem.h" line="35" column="1" bodyfile="Source/Utils/FileSystem.cpp" bodystart="28" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
-<para>Implements a circuit class library. </para>    </briefdescription>
+    </briefdescription>
     <detaileddescription>
-<para>Implements a circuit class library.</para><para><linebreak/>
-It uses two separate implementations to compute the circuit logic.<linebreak/>
-<linebreak/>
- The first implementation is written to compute the value of each circuit. I wanted to keep the chip functionality present rather than abstract it away. It links the circuits together in code and computes the value of each bit.<linebreak/>
-<linebreak/>
- The second implementation is with the circuit behavior abstracted away. It replaces the circuit logic with a C++ implementation of for its operation.<linebreak/>
-<linebreak/>
- The build option that toggles this behavior is <computeroutput>Hack_IMPLEMENT_BLACK_BOX</computeroutput>.<linebreak/>
-<linebreak/>
- </para><sect1 id="a01559_1Hc02Defined">
-<title>Defined In</title>
-<para>The source is defined in <ulink url="../../Source/Chips/">Source/Chips</ulink> </para></sect1>
     </detaileddescription>
+    <location file="Source/Utils/FileSystem.h" line="33" column="1" bodyfile="Source/Utils/FileSystem.h" bodystart="32" bodyend="37"/>
+    <listofallmembers>
+      <member refid="a01559_1abb591b7efcd5e7fa2d7cf15730f7d26e" prot="public" virt="non-virtual"><scope>Hack::FileSystem</scope><name>absolute</name></member>
+      <member refid="a01559_1ab965af65d819708b115b5501d81335fc" prot="public" virt="non-virtual"><scope>Hack::FileSystem</scope><name>glob</name></member>
+    </listofallmembers>
   </compounddef>
 </doxygen>

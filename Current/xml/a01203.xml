@@ -1,204 +1,209 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
-  <compounddef id="a01203" kind="class" language="C++" prot="public" final="yes">
-    <compoundname>Hack::Computer::CommandRuntime</compoundname>
-    <basecompoundref refid="a01215" prot="public" virt="non-virtual">Hack::Computer::RuntimeInterface</basecompoundref>
-    <includes local="no">Source/Computer/CommandRuntime.h</includes>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="a01203_1a31f6edcba67151b5b75ae8a62fb63a9f" prot="private" static="no" mutable="no">
-        <type><ref refid="a01199" kindref="compound">CommandRuntimePrivate</ref> *</type>
-        <definition>CommandRuntimePrivate* Hack::Computer::CommandRuntime::_private</definition>
+  <compounddef id="a01203" kind="class" language="C++" prot="public">
+    <compoundname>docCopyType</compoundname>
+    <includes local="no">build/xml/compound.xsd.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="a01203_1a8c40167a287bab4b6be0cdb93df73fa6" prot="public" static="no" mutable="no">
+        <type><ref refid="a01055" kindref="compound">docInternalType</ref></type>
+        <definition>docInternalType docCopyType::internal</definition>
         <argsstring></argsstring>
-        <name>_private</name>
+        <name>internal</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/CommandRuntime.h" line="33" column="1" bodyfile="Source/Computer/CommandRuntime.h" bodystart="33" bodyend="-1"/>
+        <location file="build/xml/compound.xsd.h" line="935" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="935" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01203_1a2ef4a5b62fbcd614cf689013810a8c34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Hack::Computer::CommandRuntime::CommandRuntime</definition>
-        <argsstring>()</argsstring>
-        <name>CommandRuntime</name>
+      <memberdef kind="variable" id="a01203_1a5ed9d4bf5617c086a6eb2982d328efab" prot="public" static="no" mutable="no">
+        <type>String</type>
+        <definition>String docCopyType::link</definition>
+        <argsstring></argsstring>
+        <name>link</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/CommandRuntime.h" line="36" column="1" bodyfile="Source/Computer/CommandRuntime.cpp" bodystart="74" bodyend="77"/>
+        <location file="build/xml/compound.xsd.h" line="936" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="936" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a01203_1afda931b75420785bad498f1b1141d938" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Hack::Computer::CommandRuntime::~CommandRuntime</definition>
-        <argsstring>() override</argsstring>
-        <name>~CommandRuntime</name>
+      <memberdef kind="variable" id="a01203_1a8ac6f8236df64c2cbf43d271c0b10141" prot="public" static="no" mutable="no">
+        <type><ref refid="a01087" kindref="compound">docParaType</ref></type>
+        <definition>docParaType docCopyType::para</definition>
+        <argsstring></argsstring>
+        <name>para</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/CommandRuntime.h" line="38" column="1" bodyfile="Source/Computer/CommandRuntime.cpp" bodystart="79" bodyend="83"/>
+        <location file="build/xml/compound.xsd.h" line="933" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="933" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a01203_1acb3795487cd6907dfc21fd6afbe7826c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
-        <definition>bool Hack::Computer::CommandRuntime::exitRequest</definition>
-        <argsstring>() const override</argsstring>
-        <name>exitRequest</name>
-        <reimplements refid="a01215_1ae4fb11811510339381b65be887827dfc">exitRequest</reimplements>
+      <memberdef kind="variable" id="a01203_1a13739b1d452ffb9afeb2159d6d623d5d" prot="public" static="no" mutable="no">
+        <type><ref refid="a01039" kindref="compound">docSect1Type</ref></type>
+        <definition>docSect1Type docCopyType::sect1</definition>
+        <argsstring></argsstring>
+        <name>sect1</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/CommandRuntime.h" line="44" column="1" bodyfile="Source/Computer/CommandRuntime.cpp" bodystart="96" bodyend="99"/>
-        <references refid="a01199_1a808b4969f1087a0cd2145a08b0193f59" compoundref="a00761" startline="57" endline="60">Hack::Computer::CommandRuntimePrivate::input</references>
-        <references refid="a00905_1a7553833a41980e8c2bae00177d41129ead7a3bc54fb41225d6588c6fb307f0bcf" compoundref="a00848" startline="90">Hack::Ui::PR_EXIT</references>
-      </memberdef>
-      <memberdef kind="function" id="a01203_1aad566a5bee2b92a128e0e30739748c1e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
-        <definition>void Hack::Computer::CommandRuntime::flushMemory</definition>
-        <argsstring>(Chips::Computer *computer) const override</argsstring>
-        <name>flushMemory</name>
-        <reimplements refid="a01215_1af845999e44531fc6282d028402131fa9">flushMemory</reimplements>
-        <param>
-          <type><ref refid="a00999" kindref="compound">Chips::Computer</ref> *</type>
-          <declname>computer</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Computer/CommandRuntime.h" line="48" column="1" bodyfile="Source/Computer/CommandRuntime.cpp" bodystart="106" bodyend="108"/>
-      </memberdef>
-      <memberdef kind="function" id="a01203_1acccc797c5a77cf71015778c0a48a49c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
-        <definition>void Hack::Computer::CommandRuntime::initialize</definition>
-        <argsstring>(Chips::Computer *computer, Chips::Screen *) const override</argsstring>
-        <name>initialize</name>
-        <reimplements refid="a01215_1acfdf1e97cbbcc9a9f13ad26e6062b8d0">initialize</reimplements>
-        <param>
-          <type><ref refid="a00999" kindref="compound">Chips::Computer</ref> *</type>
-          <declname>computer</declname>
-        </param>
-        <param>
-          <type><ref refid="a00893_1a205aa97050ad01560145252139c81057" kindref="member">Chips::Screen</ref> *</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Computer/CommandRuntime.h" line="42" column="1" bodyfile="Source/Computer/CommandRuntime.cpp" bodystart="90" bodyend="94"/>
-        <references refid="a01199_1a94165bc7ad5907a5fc3b02b580f8cb74" compoundref="a00761" startline="51" endline="55">Hack::Computer::CommandRuntimePrivate::initialize</references>
-      </memberdef>
-      <memberdef kind="function" id="a01203_1ab48b3746adc94551350da3c9f065577d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
-        <definition>void Hack::Computer::CommandRuntime::processEvents</definition>
-        <argsstring>(Chips::Computer *computer) const override</argsstring>
-        <name>processEvents</name>
-        <reimplements refid="a01215_1a3cb1ab52903aaedabb0c9d49b013aab4">processEvents</reimplements>
-        <param>
-          <type><ref refid="a00999" kindref="compound">Chips::Computer</ref> *</type>
-          <declname>computer</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Computer/CommandRuntime.h" line="46" column="1" bodyfile="Source/Computer/CommandRuntime.cpp" bodystart="101" bodyend="104"/>
-        <references refid="a01199_1a9dcb89dd3e849351355169fb8fd40647" compoundref="a00761" startline="62" endline="66">Hack::Computer::CommandRuntimePrivate::processEvents</references>
-      </memberdef>
-      <memberdef kind="function" id="a01203_1aa9aa0a0efed236c2371afb8f6b31e030" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
-        <definition>bool Hack::Computer::CommandRuntime::shouldUpdate</definition>
-        <argsstring>() override</argsstring>
-        <name>shouldUpdate</name>
-        <reimplements refid="a01215_1a44e6d9da00af26f22941e1a0a540e797">shouldUpdate</reimplements>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Computer/CommandRuntime.h" line="40" column="1" bodyfile="Source/Computer/CommandRuntime.cpp" bodystart="85" bodyend="88"/>
-      </memberdef>
-      <memberdef kind="function" id="a01203_1ab738d56db4537f88d9141c7ae64aee5b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
-        <definition>void Hack::Computer::CommandRuntime::update</definition>
-        <argsstring>(Chips::Computer *computer) const override</argsstring>
-        <name>update</name>
-        <reimplements refid="a01215_1a5fe5dfa099bbf6ded85b29028440466d">update</reimplements>
-        <param>
-          <type><ref refid="a00999" kindref="compound">Chips::Computer</ref> *</type>
-          <declname>computer</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Computer/CommandRuntime.h" line="50" column="1" bodyfile="Source/Computer/CommandRuntime.cpp" bodystart="110" bodyend="116"/>
-        <references refid="a01215_1a0f5eca7470888a3c5190dd9c1ddc3f67" compoundref="a00773" startline="55" endline="58">Hack::Computer::RuntimeInterface::getRate</references>
-        <references refid="a00999_1aa44e98396b5191c503bd5255fe0ffa1f" compoundref="a00479" startline="104" endline="137">Hack::Chips::Computer::update</references>
-        <references refid="a01199_1a572a300abaacd09ef1a7e26be6b768e7" compoundref="a00761" startline="68" endline="71">Hack::Computer::CommandRuntimePrivate::update</references>
+        <location file="build/xml/compound.xsd.h" line="934" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="934" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <inheritancegraph>
-      <node id="366">
-        <label>Hack::Computer::RuntimeInterface</label>
-        <link refid="a01215"/>
-      </node>
-      <node id="365">
-        <label>Hack::Computer::CommandRuntime</label>
-        <link refid="a01203"/>
-        <childnode refid="366" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
     <collaborationgraph>
-      <node id="368">
-        <label>Hack::Computer::RuntimeInterface</label>
-        <link refid="a01215"/>
-      </node>
-      <node id="367">
-        <label>Hack::Computer::CommandRuntime</label>
-        <link refid="a01203"/>
-        <childnode refid="368" relation="public-inheritance">
+      <node id="95">
+        <label>docSect1Type</label>
+        <link refid="a01039"/>
+        <childnode refid="94" relation="usage">
+          <edgelabel>title</edgelabel>
+          <edgelabel>id</edgelabel>
         </childnode>
+        <childnode refid="96" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+        <childnode refid="97" relation="usage">
+          <edgelabel>internal</edgelabel>
+        </childnode>
+        <childnode refid="98" relation="usage">
+          <edgelabel>sect2</edgelabel>
+        </childnode>
+      </node>
+      <node id="97">
+        <label>docInternalS1Type</label>
+        <link refid="a01059"/>
+        <childnode refid="96" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+        <childnode refid="98" relation="usage">
+          <edgelabel>sect2</edgelabel>
+        </childnode>
+      </node>
+      <node id="98">
+        <label>docSect2Type</label>
+        <link refid="a01043"/>
+        <childnode refid="94" relation="usage">
+          <edgelabel>title</edgelabel>
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="96" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+        <childnode refid="99" relation="usage">
+          <edgelabel>internal</edgelabel>
+        </childnode>
+        <childnode refid="100" relation="usage">
+          <edgelabel>sect3</edgelabel>
+        </childnode>
+      </node>
+      <node id="99">
+        <label>docInternalS2Type</label>
+        <link refid="a01063"/>
+        <childnode refid="96" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+        <childnode refid="100" relation="usage">
+          <edgelabel>sect3</edgelabel>
+        </childnode>
+      </node>
+      <node id="94">
+        <label>String</label>
+      </node>
+      <node id="93">
+        <label>docCopyType</label>
+        <link refid="a01203"/>
+        <childnode refid="94" relation="usage">
+          <edgelabel>link</edgelabel>
+        </childnode>
+        <childnode refid="95" relation="usage">
+          <edgelabel>sect1</edgelabel>
+        </childnode>
+        <childnode refid="104" relation="usage">
+          <edgelabel>internal</edgelabel>
+        </childnode>
+        <childnode refid="96" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+      </node>
+      <node id="101">
+        <label>docInternalS3Type</label>
+        <link refid="a01067"/>
+        <childnode refid="96" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+        <childnode refid="102" relation="usage">
+          <edgelabel>sect3</edgelabel>
+        </childnode>
+      </node>
+      <node id="103">
+        <label>docInternalS4Type</label>
+        <link refid="a01071"/>
+        <childnode refid="96" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+      </node>
+      <node id="100">
+        <label>docSect3Type</label>
+        <link refid="a01047"/>
+        <childnode refid="94" relation="usage">
+          <edgelabel>title</edgelabel>
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="96" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+        <childnode refid="101" relation="usage">
+          <edgelabel>internal</edgelabel>
+        </childnode>
+        <childnode refid="102" relation="usage">
+          <edgelabel>sect4</edgelabel>
+        </childnode>
+      </node>
+      <node id="102">
+        <label>docSect4Type</label>
+        <link refid="a01051"/>
+        <childnode refid="94" relation="usage">
+          <edgelabel>title</edgelabel>
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="103" relation="usage">
+          <edgelabel>internal</edgelabel>
+        </childnode>
+        <childnode refid="96" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+      </node>
+      <node id="104">
+        <label>docInternalType</label>
+        <link refid="a01055"/>
+        <childnode refid="95" relation="usage">
+          <edgelabel>sect1</edgelabel>
+        </childnode>
+        <childnode refid="96" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+      </node>
+      <node id="96">
+        <label>docParaType</label>
+        <link refid="a01087"/>
       </node>
     </collaborationgraph>
-    <location file="Source/Computer/CommandRuntime.h" line="31" column="1" bodyfile="Source/Computer/CommandRuntime.h" bodystart="30" bodyend="51"/>
+    <location file="build/xml/compound.xsd.h" line="931" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="930" bodyend="937"/>
     <listofallmembers>
-      <member refid="a01203_1a31f6edcba67151b5b75ae8a62fb63a9f" prot="private" virt="non-virtual"><scope>Hack::Computer::CommandRuntime</scope><name>_private</name></member>
-      <member refid="a01203_1a2ef4a5b62fbcd614cf689013810a8c34" prot="public" virt="non-virtual"><scope>Hack::Computer::CommandRuntime</scope><name>CommandRuntime</name></member>
-      <member refid="a01203_1acb3795487cd6907dfc21fd6afbe7826c" prot="public" virt="virtual"><scope>Hack::Computer::CommandRuntime</scope><name>exitRequest</name></member>
-      <member refid="a01203_1aad566a5bee2b92a128e0e30739748c1e" prot="public" virt="virtual"><scope>Hack::Computer::CommandRuntime</scope><name>flushMemory</name></member>
-      <member refid="a01215_1a0f5eca7470888a3c5190dd9c1ddc3f67" prot="public" virt="virtual"><scope>Hack::Computer::CommandRuntime</scope><name>getRate</name></member>
-      <member refid="a01203_1acccc797c5a77cf71015778c0a48a49c8" prot="public" virt="virtual"><scope>Hack::Computer::CommandRuntime</scope><name>initialize</name></member>
-      <member refid="a01203_1ab48b3746adc94551350da3c9f065577d" prot="public" virt="virtual"><scope>Hack::Computer::CommandRuntime</scope><name>processEvents</name></member>
-      <member refid="a01215_1afac6241dfa4f6de4ca3353819786e5e3" prot="public" virt="virtual"><scope>Hack::Computer::CommandRuntime</scope><name>setRate</name></member>
-      <member refid="a01203_1aa9aa0a0efed236c2371afb8f6b31e030" prot="public" virt="virtual"><scope>Hack::Computer::CommandRuntime</scope><name>shouldUpdate</name></member>
-      <member refid="a01203_1ab738d56db4537f88d9141c7ae64aee5b" prot="public" virt="virtual"><scope>Hack::Computer::CommandRuntime</scope><name>update</name></member>
-      <member refid="a01203_1afda931b75420785bad498f1b1141d938" prot="public" virt="non-virtual"><scope>Hack::Computer::CommandRuntime</scope><name>~CommandRuntime</name></member>
-      <member refid="a01215_1a3e09aeb7e6d6907b58f7a2a40636ac37" prot="public" virt="virtual"><scope>Hack::Computer::CommandRuntime</scope><name>~RuntimeInterface</name></member>
+      <member refid="a01203_1a8c40167a287bab4b6be0cdb93df73fa6" prot="public" virt="non-virtual"><scope>docCopyType</scope><name>internal</name></member>
+      <member refid="a01203_1a5ed9d4bf5617c086a6eb2982d328efab" prot="public" virt="non-virtual"><scope>docCopyType</scope><name>link</name></member>
+      <member refid="a01203_1a8ac6f8236df64c2cbf43d271c0b10141" prot="public" virt="non-virtual"><scope>docCopyType</scope><name>para</name></member>
+      <member refid="a01203_1a13739b1d452ffb9afeb2159d6d623d5d" prot="public" virt="non-virtual"><scope>docCopyType</scope><name>sect1</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

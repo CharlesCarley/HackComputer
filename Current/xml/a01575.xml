@@ -1,276 +1,31 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
-  <compounddef id="a01575" kind="file" language="C++">
-    <compoundname>Main.cpp</compoundname>
-    <includes local="no">iostream</includes>
-    <includes refid="a01599" local="yes">Compiler/Analyzer/Parser.h</includes>
-    <includes refid="a00725" local="yes">Compiler/Generator/Generator.h</includes>
-    <includes refid="a01602" local="yes">Utils/CommandLine/Parser.h</includes>
-    <includes refid="a00797" local="yes">Utils/Console.h</includes>
-    <includes refid="a00800" local="yes">Utils/Exception.h</includes>
-    <includes refid="a00806" local="yes">Utils/FileSystem.h</includes>
-    <incdepgraph>
-      <node id="151">
-        <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="152" relation="include">
-        </childnode>
-      </node>
-      <node id="166">
-        <label>Utils/CommandLine/Parser.h</label>
-        <childnode refid="157" relation="include">
-        </childnode>
-        <childnode refid="167" relation="include">
-        </childnode>
-        <childnode refid="170" relation="include">
-        </childnode>
-        <childnode refid="172" relation="include">
-        </childnode>
-      </node>
-      <node id="163">
-        <label>functional</label>
-      </node>
-      <node id="173">
-        <label>filesystem</label>
-      </node>
-      <node id="161">
-        <label>Symbol.h</label>
-        <childnode refid="156" relation="include">
-        </childnode>
-      </node>
-      <node id="152">
-        <label>cstdint</label>
-      </node>
-      <node id="168">
-        <label>cassert</label>
-      </node>
-      <node id="164">
-        <label>Compiler/Common/NodeUtils.h</label>
-        <childnode refid="141" relation="include">
-        </childnode>
-      </node>
-      <node id="147">
-        <label>stdexcept</label>
-      </node>
-      <node id="171">
-        <label>Utils/CommandLine/Token.h</label>
-        <childnode refid="141" relation="include">
-        </childnode>
-      </node>
-      <node id="143">
-        <label>string</label>
-      </node>
-      <node id="158">
-        <label>unordered_set</label>
-      </node>
-      <node id="146">
-        <label>exception</label>
-      </node>
-      <node id="170">
-        <label>Utils/CommandLine/Scanner.h</label>
-        <childnode refid="171" relation="include">
-        </childnode>
-      </node>
-      <node id="155">
-        <label>ScannerBase.h</label>
-        <childnode refid="156" relation="include">
-        </childnode>
-        <childnode refid="159" relation="include">
-        </childnode>
-      </node>
-      <node id="165">
-        <label>Utils/ParserBase/ParseError.h</label>
-        <childnode refid="145" relation="include">
-        </childnode>
-      </node>
-      <node id="159">
-        <label>Utils/ParserBase/TokenBase.h</label>
-        <childnode refid="141" relation="include">
-        </childnode>
-      </node>
-      <node id="150">
-        <label>UserInterface/Context.h</label>
-        <childnode refid="141" relation="include">
-        </childnode>
-        <childnode refid="151" relation="include">
-        </childnode>
-        <childnode refid="153" relation="include">
-        </childnode>
-      </node>
-      <node id="153">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="152" relation="include">
-        </childnode>
-        <childnode refid="144" relation="include">
-        </childnode>
-        <childnode refid="151" relation="include">
-        </childnode>
-      </node>
-      <node id="156">
-        <label>Utils/IndexCache.h</label>
-        <childnode refid="157" relation="include">
-        </childnode>
-        <childnode refid="158" relation="include">
-        </childnode>
-        <childnode refid="145" relation="include">
-        </childnode>
-      </node>
-      <node id="149">
-        <label>Utils/Console.h</label>
-        <childnode refid="141" relation="include">
-        </childnode>
-        <childnode refid="150" relation="include">
-        </childnode>
-      </node>
-      <node id="144">
-        <label>vector</label>
-      </node>
-      <node id="139">
-        <label>stack</label>
-      </node>
-      <node id="148">
-        <label>utility</label>
-      </node>
-      <node id="142">
-        <label>sstream</label>
-      </node>
-      <node id="169">
-        <label>Utils/Char.h</label>
-        <childnode refid="152" relation="include">
-        </childnode>
-        <childnode refid="141" relation="include">
-        </childnode>
-      </node>
-      <node id="138">
-        <label>Compiler/Analyzer/Parser.h</label>
-        <childnode refid="139" relation="include">
-        </childnode>
-        <childnode refid="140" relation="include">
-        </childnode>
-        <childnode refid="145" relation="include">
-        </childnode>
-        <childnode refid="154" relation="include">
-        </childnode>
-        <childnode refid="141" relation="include">
-        </childnode>
-      </node>
-      <node id="145">
-        <label>Utils/Exception.h</label>
-        <childnode refid="146" relation="include">
-        </childnode>
-        <childnode refid="147" relation="include">
-        </childnode>
-        <childnode refid="148" relation="include">
-        </childnode>
-        <childnode refid="149" relation="include">
-        </childnode>
-        <childnode refid="141" relation="include">
-        </childnode>
-      </node>
-      <node id="137">
-        <label>iostream</label>
-      </node>
-      <node id="167">
-        <label>Utils/CommandLine/Option.h</label>
-        <childnode refid="168" relation="include">
-        </childnode>
-        <childnode refid="169" relation="include">
-        </childnode>
-        <childnode refid="141" relation="include">
-        </childnode>
-      </node>
-      <node id="157">
-        <label>unordered_map</label>
-      </node>
-      <node id="154">
-        <label>Utils/ParserBase/ParserBase.h</label>
-        <childnode refid="144" relation="include">
-        </childnode>
-        <childnode refid="155" relation="include">
-        </childnode>
-        <childnode refid="159" relation="include">
-        </childnode>
-      </node>
-      <node id="160">
-        <label>Compiler/Generator/Generator.h</label>
-        <childnode refid="161" relation="include">
-        </childnode>
-        <childnode refid="162" relation="include">
-        </childnode>
-        <childnode refid="140" relation="include">
-        </childnode>
-        <childnode refid="145" relation="include">
-        </childnode>
-        <childnode refid="165" relation="include">
-        </childnode>
-      </node>
-      <node id="140">
-        <label>Compiler/Common/Tree.h</label>
-        <childnode refid="141" relation="include">
-        </childnode>
-      </node>
-      <node id="136">
-        <label>Source/Compiler/Generator/Main.cpp</label>
-        <link refid="a01575"/>
-        <childnode refid="137" relation="include">
-        </childnode>
-        <childnode refid="138" relation="include">
-        </childnode>
-        <childnode refid="160" relation="include">
-        </childnode>
-        <childnode refid="166" relation="include">
-        </childnode>
-        <childnode refid="149" relation="include">
-        </childnode>
-        <childnode refid="145" relation="include">
-        </childnode>
-        <childnode refid="172" relation="include">
-        </childnode>
-      </node>
-      <node id="162">
-        <label>Compiler/Common/Node.h</label>
-        <childnode refid="163" relation="include">
-        </childnode>
-        <childnode refid="144" relation="include">
-        </childnode>
-        <childnode refid="164" relation="include">
-        </childnode>
-        <childnode refid="156" relation="include">
-        </childnode>
-        <childnode refid="141" relation="include">
-        </childnode>
-      </node>
-      <node id="141">
-        <label>Utils/String.h</label>
-        <childnode refid="142" relation="include">
-        </childnode>
-        <childnode refid="143" relation="include">
-        </childnode>
-        <childnode refid="144" relation="include">
-        </childnode>
-      </node>
-      <node id="172">
-        <label>Utils/FileSystem.h</label>
-        <childnode refid="173" relation="include">
-        </childnode>
-        <childnode refid="141" relation="include">
-        </childnode>
-      </node>
-    </incdepgraph>
-    <innerclass refid="a01176" prot="public">Hack::Programs::VmGeneratorApplication</innerclass>
-    <innernamespace refid="a00897">Hack::Programs</innernamespace>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="a01575_1aa06f5fbe915d0bf149dcf793acea47a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>int</type>
-        <definition>int main</definition>
-        <argsstring>(const int argc, char **argv)</argsstring>
-        <name>main</name>
+  <compounddef id="a01575" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>Hack::ParseError</compoundname>
+    <basecompoundref refid="a01555" prot="public" virt="non-virtual">Hack::Exception</basecompoundref>
+    <includes local="no">Source/Utils/ParserBase/ParseError.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a01575_1ad5fbf42e19047225a7de16baa8cda76e" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Hack::ParseError::ParseError</definition>
+        <argsstring>()</argsstring>
+        <name>ParseError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/ParserBase/ParseError.h" line="30" column="1" bodyfile="Source/Utils/ParserBase/ParseError.h" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="a01575_1a9a62c64f6fe1991bf379e478b6914c15" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Hack::ParseError::ParseError</definition>
+        <argsstring>(const String &amp;message)</argsstring>
+        <name>ParseError</name>
         <param>
-          <type>const int</type>
-          <declname>argc</declname>
-        </param>
-        <param>
-          <type>char **</type>
-          <declname>argv</declname>
+          <type>const <ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>message</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -278,133 +33,118 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Generator/Main.cpp" line="105" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="105" bodyend="118"/>
+        <location file="Source/Utils/ParserBase/ParseError.h" line="35" column="1" bodyfile="Source/Utils/ParserBase/ParseError.h" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="a01575_1a1b6d389020bc20c4f39bf6988ee782e4" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Hack::ParseError::ParseError</definition>
+        <argsstring>(const int stage, const String &amp;file, const size_t line, const String &amp;message)</argsstring>
+        <name>ParseError</name>
+        <param>
+          <type>const int</type>
+          <declname>stage</declname>
+        </param>
+        <param>
+          <type>const <ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const <ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/ParserBase/ParseError.h" line="40" column="1" bodyfile="Source/Utils/ParserBase/ParseError.h" bodystart="40" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="a01575_1a1b668fbd30a57da23ad40df61387dc26" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
+        <definition>String Hack::ParseError::getError</definition>
+        <argsstring>(int stage, const String &amp;file, const size_t &amp;line, const String &amp;message=&quot;&quot;)</argsstring>
+        <name>getError</name>
+        <param>
+          <type>int</type>
+          <declname>stage</declname>
+        </param>
+        <param>
+          <type>const <ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const <ref refid="a00915_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>message</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/ParserBase/ParseError.h" line="49" column="1" bodyfile="Source/Utils/ParserBase/ParseError.cpp" bodystart="26" bodyend="43"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <programlisting>
-<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="2"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
-<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>Charles<sp/>Carley.</highlight></codeline>
-<codeline lineno="4"><highlight class="comment"></highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>software<sp/>is<sp/>provided<sp/>&apos;as-is&apos;,<sp/>without<sp/>any<sp/>express<sp/>or<sp/>implied</highlight></codeline>
-<codeline lineno="6"><highlight class="comment"><sp/><sp/>warranty.<sp/>In<sp/>no<sp/>event<sp/>will<sp/>the<sp/>authors<sp/>be<sp/>held<sp/>liable<sp/>for<sp/>any<sp/>damages</highlight></codeline>
-<codeline lineno="7"><highlight class="comment"><sp/><sp/>arising<sp/>from<sp/>the<sp/>use<sp/>of<sp/>this<sp/>software.</highlight></codeline>
-<codeline lineno="8"><highlight class="comment"></highlight></codeline>
-<codeline lineno="9"><highlight class="comment"><sp/><sp/>Permission<sp/>is<sp/>granted<sp/>to<sp/>anyone<sp/>to<sp/>use<sp/>this<sp/>software<sp/>for<sp/>any<sp/>purpose,</highlight></codeline>
-<codeline lineno="10"><highlight class="comment"><sp/><sp/>including<sp/>commercial<sp/>applications,<sp/>and<sp/>to<sp/>alter<sp/>it<sp/>and<sp/>redistribute<sp/>it</highlight></codeline>
-<codeline lineno="11"><highlight class="comment"><sp/><sp/>freely,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>restrictions:</highlight></codeline>
-<codeline lineno="12"><highlight class="comment"></highlight></codeline>
-<codeline lineno="13"><highlight class="comment"><sp/><sp/>1.<sp/>The<sp/>origin<sp/>of<sp/>this<sp/>software<sp/>must<sp/>not<sp/>be<sp/>misrepresented;<sp/>you<sp/>must<sp/>not</highlight></codeline>
-<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>claim<sp/>that<sp/>you<sp/>wrote<sp/>the<sp/>original<sp/>software.<sp/>If<sp/>you<sp/>use<sp/>this<sp/>software</highlight></codeline>
-<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>in<sp/>a<sp/>product,<sp/>an<sp/>acknowledgment<sp/>in<sp/>the<sp/>product<sp/>documentation<sp/>would<sp/>be</highlight></codeline>
-<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>appreciated<sp/>but<sp/>is<sp/>not<sp/>required.</highlight></codeline>
-<codeline lineno="17"><highlight class="comment"><sp/><sp/>2.<sp/>Altered<sp/>source<sp/>versions<sp/>must<sp/>be<sp/>plainly<sp/>marked<sp/>as<sp/>such,<sp/>and<sp/>must<sp/>not<sp/>be</highlight></codeline>
-<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>misrepresented<sp/>as<sp/>being<sp/>the<sp/>original<sp/>software.</highlight></codeline>
-<codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
-<codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
-<codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Compiler/Analyzer/Parser.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Compiler/Generator/Generator.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/CommandLine/Parser.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/Console.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/Exception.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/FileSystem.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="a00904" kindref="compound">std</ref>;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32" refid="a00897" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00897" kindref="compound">Hack::Programs</ref></highlight></codeline>
-<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="34" refid="a00897_1abf03186f32cf652a3130af11201ad075" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="a00897_1abf03186f32cf652a3130af11201ad075" kindref="member">Options</ref></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="36" refid="a00897_1abf03186f32cf652a3130af11201ad075a885204b76dba92eaf23aca08ee5807b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OP_OUTPUT,</highlight></codeline>
-<codeline lineno="37" refid="a00897_1abf03186f32cf652a3130af11201ad075aaccd1ba868a2f5d31c1788dc25318016" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OP_MAX,</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40" refid="a00897_1a13ebb77912ec0bfaffec05c6825a7f9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="a01232" kindref="compound" tooltip="Simple command line parser ">CmdLine</ref><sp/>=<sp/><ref refid="a01232" kindref="compound" tooltip="Simple command line parser ">CommandLine::Parser</ref>;</highlight></codeline>
-<codeline lineno="41" refid="a00897_1ae8e8d238d0cc49784639419312e6ac31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="a01224" kindref="compound" tooltip="Represents a command line switch ">CmdSwitch</ref><sp/>=<sp/><ref refid="a01224" kindref="compound" tooltip="Represents a command line switch ">CommandLine::Switch</ref>;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43" refid="a00897_1abaf8ca10fec17b26f9d1fb59c924ef58" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/><ref refid="a01224" kindref="compound" tooltip="Represents a command line switch ">CmdSwitch</ref><sp/>Switches[OP_MAX]<sp/>=<sp/>{</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OP_OUTPUT,</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;o&apos;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;output&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Specify<sp/>an<sp/>output<sp/>file&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54" refid="a01176" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01176" kindref="compound">VmGeneratorApplication</ref></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00888_1a95e191d8af73e79ac197701ac6a6c9a6" kindref="member">Path</ref><sp/><sp/><sp/>_input;</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>_output;</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="61" refid="a01176_1a7871748e4ae624afa7e499c4a59fe5c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01176_1a7871748e4ae624afa7e499c4a59fe5c8" kindref="member">VmGeneratorApplication</ref>()<sp/>:</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_input(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66" refid="a01176_1a416a282d953f159c301c3614ec855482" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01176_1a416a282d953f159c301c3614ec855482" kindref="member">parse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv)</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01232" kindref="compound" tooltip="Simple command line parser ">CmdLine</ref><sp/>parser;</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(parser.<ref refid="a01232_1a304e3e2f4af07df0fb6c9cde37040e27" kindref="member" tooltip="Parses the command line. Any switches that are needed must be initialized via initializeSwitches. Arguments that have no switch are placed into an array and accessed via arguments ">parse</ref>(argc,<sp/>argv,<sp/>Switches,<sp/>OP_MAX)<sp/>&lt;<sp/>0)</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_output<sp/>=<sp/>parser.<ref refid="a01232_1a9da3aa8c56bad342c3a7c30eb98d9c17" kindref="member">string</ref>(OP_OUTPUT);</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00888_1a02a62f0f81901a275e5e91f45798b2de" kindref="member">StringArray</ref>&amp;<sp/>arguments<sp/>=<sp/>parser.<ref refid="a01232_1ac7bc3f3c9e8b89b4a39b8dd9a36b713f" kindref="member" tooltip="Returns the list of arguments that were not handled with switches. ">arguments</ref>();</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(arguments.empty())</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>usage;</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parser.<ref refid="a01232_1afd63d6cb40243606fe5d6c944754eb5b" kindref="member">usage</ref>(usage);</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>InputException(usage,<sp/></highlight><highlight class="stringliteral">&quot;Missing<sp/>file<sp/>input&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_input<sp/>=<sp/>filesystem::absolute(arguments[0]);</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87" refid="a01176_1a5b92f6570aa68ee0ac9ef75c0eb65196" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="a01176_1a5b92f6570aa68ee0ac9ef75c0eb65196" kindref="member">go</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="88"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01128" kindref="compound">Compiler::Analyzer::Parser</ref><sp/>parser;</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parser.<ref refid="a01272_1a4668ec9b913931ce518de6d7f92fb4e0" kindref="member">parse</ref>(_input.string());</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01172" kindref="compound">Compiler::CodeGenerator::Generator</ref><sp/>generator;</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>generator.<ref refid="a01172_1a56124ee10cf34c6d9fa38b9be1ebeeb7" kindref="member">compile</ref>(parser.<ref refid="a01128_1a19917dd91094e5a227a90d6cfaadb150" kindref="member">getTree</ref>().<ref refid="a01160_1a58e4ebbe1e9af83ed2d9ceb8843f90e4" kindref="member">getRoot</ref>());</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!_output.empty())</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>generator.<ref refid="a01172_1a698f9cac52d1b90feb9fc06b77ce649b" kindref="member">write</ref>(_output);</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>generator.<ref refid="a01172_1a698f9cac52d1b90feb9fc06b77ce649b" kindref="member">write</ref>(std::cout);</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="103"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Programs</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv)</highlight></codeline>
-<codeline lineno="106"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01176" kindref="compound">Hack::Programs::VmGeneratorApplication</ref><sp/>app;</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(app.<ref refid="a01176_1a416a282d953f159c301c3614ec855482" kindref="member">parse</ref>(argc,<sp/>argv))</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>app.<ref refid="a01176_1a5b92f6570aa68ee0ac9ef75c0eb65196" kindref="member">go</ref>();</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(std::exception&amp;<sp/>ex)</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01244_1aa1c8c889b2c89af6dc65a0973380f59c" kindref="member">Hack::Console::writeError</ref>(ex.what());</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
-<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
-    </programlisting>
-    <location file="Source/Compiler/Generator/Main.cpp"/>
+    <inheritancegraph>
+      <node id="769">
+        <label>std::exception</label>
+      </node>
+      <node id="767">
+        <label>Hack::ParseError</label>
+        <link refid="a01575"/>
+        <childnode refid="768" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="768">
+        <label>Hack::Exception</label>
+        <link refid="a01555"/>
+        <childnode refid="769" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="772">
+        <label>std::exception</label>
+      </node>
+      <node id="770">
+        <label>Hack::ParseError</label>
+        <link refid="a01575"/>
+        <childnode refid="771" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="771">
+        <label>Hack::Exception</label>
+        <link refid="a01555"/>
+        <childnode refid="772" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Utils/ParserBase/ParseError.h" line="28" column="1" bodyfile="Source/Utils/ParserBase/ParseError.h" bodystart="27" bodyend="53"/>
+    <listofallmembers>
+      <member refid="a01555_1abf07f31396bbcd6c6b006120d5d3e031" prot="public" virt="non-virtual"><scope>Hack::ParseError</scope><name>Exception</name></member>
+      <member refid="a01555_1ab4bb8a7159681d4e6776cec5a935eda5" prot="public" virt="non-virtual"><scope>Hack::ParseError</scope><name>Exception</name></member>
+      <member refid="a01555_1a8296ea42b1a1a21aa7cb4ea5bd5dc1af" prot="public" virt="non-virtual"><scope>Hack::ParseError</scope><name>Exception</name></member>
+      <member refid="a01575_1a1b668fbd30a57da23ad40df61387dc26" prot="private" virt="non-virtual"><scope>Hack::ParseError</scope><name>getError</name></member>
+      <member refid="a01575_1ad5fbf42e19047225a7de16baa8cda76e" prot="public" virt="non-virtual"><scope>Hack::ParseError</scope><name>ParseError</name></member>
+      <member refid="a01575_1a9a62c64f6fe1991bf379e478b6914c15" prot="public" virt="non-virtual"><scope>Hack::ParseError</scope><name>ParseError</name></member>
+      <member refid="a01575_1a1b6d389020bc20c4f39bf6988ee782e4" prot="public" virt="non-virtual"><scope>Hack::ParseError</scope><name>ParseError</name></member>
+      <member refid="a01555_1ad552d982f58950c324eaebd2dfbd1fe2" prot="public" virt="non-virtual"><scope>Hack::ParseError</scope><name>what</name></member>
+    </listofallmembers>
   </compounddef>
 </doxygen>

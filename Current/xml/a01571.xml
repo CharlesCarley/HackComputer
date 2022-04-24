@@ -4,19 +4,15 @@
     <compoundname>Hc08</compoundname>
     <title>Extra Tools</title>
     <briefdescription>
-<para>Extra optional tools that are not part of the source. </para>    </briefdescription>
+<para>Optional tools that are not part of the source. </para>    </briefdescription>
     <detaileddescription>
-<para>Extra optional tools that are not part of the source.</para><sect1 id="a01571_1Hc08Visual">
+<para>Optional tools that are not part of the source.</para><sect1 id="a01571_1Hc08Visual">
 <title>Parse Tree Visual</title>
-<para>The syntax analyzer has the extra option to output the parse tree in <computeroutput>.dot</computeroutput> format. The dot program is part of the graphviz tool-set.</para><para><itemizedlist>
-<listitem><para><ulink url="https://graphviz.org/">GraphViz</ulink></para></listitem></itemizedlist>
-</para><para><image type="html" name="Test10.svg"></image>
+<para>The syntax analyzer has the extra option to output the parse tree in <computeroutput>.dot</computeroutput> <ulink url="https://graphviz.org/">format</ulink></para><para><image type="html" name="Test10.svg"></image>
 </para></sect1>
 <sect1 id="a01571_1Hc08GRM">
 <title>GRM files</title>
-<para>The grammar files are for the most part reference only. They do not use any of the code generation features of the Gold Parsing Engine, but they were initially written and tested with the tool-set.</para><para>I believe it is a dead project, which is a shame because it is an awesome tool-set to <computeroutput>quickly</computeroutput> throw together and test grammars.</para><para><itemizedlist>
-<listitem><para><ulink url="http://www.goldparser.org/">GoldParser</ulink> </para></listitem></itemizedlist>
-</para></sect1>
+<para>The grammar files are for the most part reference only.They do not use any of the code generation features of the Gold Parsing Engine. They were initially written and tested with the tool-set.</para><para>I believe it is a dead <ulink url="http://www.goldparser.org/">project</ulink>, but it is an awesome tool to <computeroutput>quickly</computeroutput> throw together and test grammars. </para></sect1>
     </detaileddescription>
   </compounddef>
 </doxygen>

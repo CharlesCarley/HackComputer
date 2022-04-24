@@ -4,27 +4,25 @@
     <compoundname>Hc05</compoundname>
     <title>Compiler</title>
     <briefdescription>
-<para>Provides tools to parse <computeroutput>.jack</computeroutput> files. </para>    </briefdescription>
+<para>Implements the jack compiler. </para>    </briefdescription>
     <detaileddescription>
-<para>Provides tools to parse <computeroutput>.jack</computeroutput> files.</para><para><linebreak/>
+<para>Implements the jack compiler.</para><para><linebreak/>
 <linebreak/>
-The definition of the grammar can be found in <ulink url="../../Source/Compiler/Analyzer/Jack.grm">Jack.grm</ulink>.</para><para><linebreak/>
+The primary job of the compiler is to take the high level jack language and translate it from, jack, vm, asm, then finally to mc.</para><para><linebreak/>
 <linebreak/>
-Options not in the course specification.</para><para><itemizedlist>
-<listitem><para><bold>NOT</bold> <computeroutput>!</computeroutput><itemizedlist>
-<listitem><para>The not unary operator is implemented as &apos;~&apos; and &apos;!&apos;.</para></listitem></itemizedlist>
-</para></listitem></itemizedlist>
-</para><sect1 id="a01568_1Hc05Contents">
-<title>Contents</title>
-<para>The compiler consists of a set of tools to handle <computeroutput>.jack</computeroutput> files.</para><sect2 id="a01568_1Hc05SyntaxAnalyzer">
+</para><sect1 id="a01568_1Hc05SyntaxAnalyzer">
 <title>SyntaxAnalyzer</title>
-<para>Implements a static library to parse and compile the parse tree to a node tree.</para></sect2>
-<sect2 id="a01568_1Hc05CompileUtils">
+<para>Provides a static library that compiles the jack code into a parse tree. <linebreak/>
+<linebreak/>
+The definition for the jack grammar can be found <ulink url="../../Source/Compiler/Analyzer/Jack.grm">here.</ulink><itemizedlist>
+<listitem><para>Note: the not operator <computeroutput>!</computeroutput> is implemented both as &apos;~&apos; and &apos;!&apos;.</para></listitem></itemizedlist>
+</para></sect1>
+<sect1 id="a01568_1Hc05CompileUtils">
 <title>CompileUtils</title>
-<para>Provides a bridge to store the node tree in intermediate form.</para></sect2>
-<sect2 id="a01568_1Hc05Jack2XML">
+<para>Provides the code that implements the parse tree, as well as extra classes that operate on the parse tree.</para></sect1>
+<sect1 id="a01568_1Hc05Jack2XML">
 <title>Jack2XML</title>
-<para>Transforms the node tree into an output xml or dot file.<linebreak/>
+<para>Is the program that uses the parse tree and outputs inspection files. <linebreak/>
 <linebreak/>
  <programlisting filename=".txt"><codeline><highlight class="normal">Usage:<sp/>Jack2xml<sp/>&lt;options&gt;<sp/>&lt;arg[0]<sp/>..<sp/>arg[n]&gt;</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
@@ -35,11 +33,10 @@ Options not in the course specification.</para><para><itemizedlist>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-d,<sp/>--directory<sp/><sp/>Converts<sp/>all<sp/>.jack<sp/>files<sp/>in<sp/>the<sp/>current<sp/>directory<sp/>to<sp/>.xml</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-o,<sp/>--output<sp/><sp/><sp/><sp/><sp/>Specify<sp/>an<sp/>output<sp/>file</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>the<sp/>directory<sp/>option<sp/>takes<sp/>precedence</highlight></codeline>
-</programlisting></para></sect2>
-<sect2 id="a01568_1Hc05CodeGenerator">
+</programlisting></para></sect1>
+<sect1 id="a01568_1Hc05CodeGenerator">
 <title>CodeGenerator</title>
-<para>Implements a static library that converts the <computeroutput>.jack</computeroutput> parse tree into <computeroutput>.vm</computeroutput> form.</para></sect2>
-</sect1>
+<para>Is the static library that implements the parse tree conversion from jack to vm.</para></sect1>
 <sect1 id="a01568_1Hc05Defined">
 <title>Defined In</title>
 <para>The source is defined in <ulink url="../../Source/Compiler/">Source/Compiler</ulink> </para></sect1>

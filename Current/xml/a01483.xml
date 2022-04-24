@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01483" kind="class" language="C++" prot="public">
+    <compoundname>Hack::Programs::VmGeneratorApplication</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="a01483_1a3dc349440a2e7338e63a0e0d16aa2c49" prot="private" static="no" mutable="no">
+        <type><ref refid="a00915_1a95e191d8af73e79ac197701ac6a6c9a6" kindref="member">Path</ref></type>
+        <definition>Path Hack::Programs::VmGeneratorApplication::_input</definition>
+        <argsstring></argsstring>
+        <name>_input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Generator/Main.cpp" line="57" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01483_1a79b2d6266ff56283ca934da047267932" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Hack::Programs::VmGeneratorApplication::_output</definition>
+        <argsstring></argsstring>
+        <name>_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Generator/Main.cpp" line="58" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a01483_1a7871748e4ae624afa7e499c4a59fe5c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Programs::VmGeneratorApplication::VmGeneratorApplication</definition>
+        <argsstring>()</argsstring>
+        <name>VmGeneratorApplication</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Generator/Main.cpp" line="61" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="a01483_1a5b92f6570aa68ee0ac9ef75c0eb65196" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Hack::Programs::VmGeneratorApplication::go</definition>
+        <argsstring>() const</argsstring>
+        <name>go</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Generator/Main.cpp" line="87" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="87" bodyend="101"/>
+        <references refid="a01579_1a4668ec9b913931ce518de6d7f92fb4e0" compoundref="a00845" startline="76" endline="89">Hack::ParserBase::parse</references>
+        <references refid="a01479_1a56124ee10cf34c6d9fa38b9be1ebeeb7" compoundref="a00749" startline="702" endline="709">Hack::Compiler::CodeGenerator::Generator::compile</references>
+        <references refid="a01435_1a19917dd91094e5a227a90d6cfaadb150" compoundref="a02001" startline="143" endline="148">Hack::Compiler::Analyzer::Parser::getTree</references>
+        <references refid="a01467_1a58e4ebbe1e9af83ed2d9ceb8843f90e4" compoundref="a00734" startline="45" endline="48">Hack::Compiler::Tree::getRoot</references>
+        <references refid="a01479_1a698f9cac52d1b90feb9fc06b77ce649b" compoundref="a00749" startline="711" endline="725">Hack::Compiler::CodeGenerator::Generator::write</references>
+      </memberdef>
+      <memberdef kind="function" id="a01483_1a416a282d953f159c301c3614ec855482" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Programs::VmGeneratorApplication::parse</definition>
+        <argsstring>(const int argc, char **argv)</argsstring>
+        <name>parse</name>
+        <param>
+          <type>const int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Generator/Main.cpp" line="66" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="66" bodyend="85"/>
+        <references refid="a01539_1a304e3e2f4af07df0fb6c9cde37040e27" compoundref="a01992" startline="52" endline="176">Hack::CommandLine::Parser::parse</references>
+        <references refid="a01539_1a9da3aa8c56bad342c3a7c30eb98d9c17" compoundref="a01992" startline="245" endline="255">Hack::CommandLine::Parser::string</references>
+        <references refid="a01539_1ac7bc3f3c9e8b89b4a39b8dd9a36b713f" compoundref="a02004" startline="88" endline="91">Hack::CommandLine::Parser::arguments</references>
+        <references refid="a01539_1afd63d6cb40243606fe5d6c944754eb5b" compoundref="a01992" startline="257" endline="262">Hack::CommandLine::Parser::usage</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/Compiler/Generator/Main.cpp" line="55" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="54" bodyend="102"/>
+    <listofallmembers>
+      <member refid="a01483_1a3dc349440a2e7338e63a0e0d16aa2c49" prot="private" virt="non-virtual"><scope>Hack::Programs::VmGeneratorApplication</scope><name>_input</name></member>
+      <member refid="a01483_1a79b2d6266ff56283ca934da047267932" prot="private" virt="non-virtual"><scope>Hack::Programs::VmGeneratorApplication</scope><name>_output</name></member>
+      <member refid="a01483_1a5b92f6570aa68ee0ac9ef75c0eb65196" prot="public" virt="non-virtual"><scope>Hack::Programs::VmGeneratorApplication</scope><name>go</name></member>
+      <member refid="a01483_1a416a282d953f159c301c3614ec855482" prot="public" virt="non-virtual"><scope>Hack::Programs::VmGeneratorApplication</scope><name>parse</name></member>
+      <member refid="a01483_1a7871748e4ae624afa7e499c4a59fe5c8" prot="public" virt="non-virtual"><scope>Hack::Programs::VmGeneratorApplication</scope><name>VmGeneratorApplication</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

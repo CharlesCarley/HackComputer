@@ -1,33 +1,60 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
-  <compounddef id="a01139" kind="struct" language="C++" prot="public">
-    <compoundname>Hack::Compiler::Analyzer::KeywordTable</compoundname>
+  <compounddef id="a01139" kind="class" language="C++" prot="public">
+    <compoundname>docTableType</compoundname>
+    <includes local="no">build/xml/compound.xsd.h</includes>
       <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="a01139_1ac3bf68da1b9f3536a95ab4d1fb749265" prot="public" static="no" mutable="no">
-        <type>const char *</type>
-        <definition>const char* Hack::Compiler::Analyzer::KeywordTable::str</definition>
+      <memberdef kind="variable" id="a01139_1a1ab5ae00973095c121aaee7f312765ba" prot="public" static="no" mutable="no">
+        <type><ref refid="a01151" kindref="compound">docCaptionType</ref></type>
+        <definition>docCaptionType docTableType::caption</definition>
         <argsstring></argsstring>
-        <name>str</name>
+        <name>caption</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Analyzer/Scanner.cpp" line="33" column="1" bodyfile="Source/Compiler/Analyzer/Scanner.cpp" bodystart="33" bodyend="-1"/>
+        <location file="build/xml/compound.xsd.h" line="820" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="820" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a01139_1abcb9e9c0449857fdf7de0cbe49bc2c81" prot="public" static="no" mutable="no">
-        <type>int8_t</type>
-        <definition>int8_t Hack::Compiler::Analyzer::KeywordTable::tok</definition>
+      <memberdef kind="variable" id="a01139_1af90219088ff94a156f5e1fdbb5439857" prot="public" static="no" mutable="no">
+        <type>int64_t</type>
+        <definition>int64_t docTableType::cols</definition>
         <argsstring></argsstring>
-        <name>tok</name>
+        <name>cols</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Analyzer/Scanner.cpp" line="34" column="1" bodyfile="Source/Compiler/Analyzer/Scanner.cpp" bodystart="34" bodyend="-1"/>
+        <location file="build/xml/compound.xsd.h" line="822" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="822" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01139_1aff89eb89e048423dfa75b8f0d3325b76" prot="public" static="no" mutable="no">
+        <type><ref refid="a01143" kindref="compound">docRowType</ref></type>
+        <definition>docRowType docTableType::row</definition>
+        <argsstring></argsstring>
+        <name>row</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="819" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="819" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01139_1a099f100e2f03a52b8d69ce897fbbce2d" prot="public" static="no" mutable="no">
+        <type>int64_t</type>
+        <definition>int64_t docTableType::rows</definition>
+        <argsstring></argsstring>
+        <name>rows</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="821" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="821" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -35,27 +62,58 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="315">
-        <label>Hack::Compiler::Analyzer::KeywordTable</label>
+      <node id="299">
+        <label>docCaptionType</label>
+        <link refid="a01151"/>
+      </node>
+      <node id="297">
+        <label>DoxBool</label>
+      </node>
+      <node id="295">
+        <label>docEntryType</label>
+        <link refid="a01147"/>
+        <childnode refid="296" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+        <childnode refid="297" relation="usage">
+          <edgelabel>thead</edgelabel>
+        </childnode>
+      </node>
+      <node id="294">
+        <label>docRowType</label>
+        <link refid="a01143"/>
+        <childnode refid="295" relation="usage">
+          <edgelabel>entry</edgelabel>
+        </childnode>
+      </node>
+      <node id="298">
+        <label>signed long long</label>
+      </node>
+      <node id="293">
+        <label>docTableType</label>
         <link refid="a01139"/>
-        <childnode refid="316" relation="usage">
-          <edgelabel>tok</edgelabel>
+        <childnode refid="294" relation="usage">
+          <edgelabel>row</edgelabel>
         </childnode>
-        <childnode refid="317" relation="usage">
-          <edgelabel>str</edgelabel>
+        <childnode refid="298" relation="usage">
+          <edgelabel>cols</edgelabel>
+          <edgelabel>rows</edgelabel>
+        </childnode>
+        <childnode refid="299" relation="usage">
+          <edgelabel>caption</edgelabel>
         </childnode>
       </node>
-      <node id="317">
-        <label>const char *</label>
-      </node>
-      <node id="316">
-        <label>int8_t</label>
+      <node id="296">
+        <label>docParaType</label>
+        <link refid="a01087"/>
       </node>
     </collaborationgraph>
-    <location file="Source/Compiler/Analyzer/Scanner.cpp" line="32" column="1" bodyfile="Source/Compiler/Analyzer/Scanner.cpp" bodystart="31" bodyend="35"/>
+    <location file="build/xml/compound.xsd.h" line="817" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="816" bodyend="823"/>
     <listofallmembers>
-      <member refid="a01139_1ac3bf68da1b9f3536a95ab4d1fb749265" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::KeywordTable</scope><name>str</name></member>
-      <member refid="a01139_1abcb9e9c0449857fdf7de0cbe49bc2c81" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::KeywordTable</scope><name>tok</name></member>
+      <member refid="a01139_1a1ab5ae00973095c121aaee7f312765ba" prot="public" virt="non-virtual"><scope>docTableType</scope><name>caption</name></member>
+      <member refid="a01139_1af90219088ff94a156f5e1fdbb5439857" prot="public" virt="non-virtual"><scope>docTableType</scope><name>cols</name></member>
+      <member refid="a01139_1aff89eb89e048423dfa75b8f0d3325b76" prot="public" virt="non-virtual"><scope>docTableType</scope><name>row</name></member>
+      <member refid="a01139_1a099f100e2f03a52b8d69ce897fbbce2d" prot="public" virt="non-virtual"><scope>docTableType</scope><name>rows</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

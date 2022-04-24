@@ -1,35 +1,30 @@
+#pragma once
 /*!
 \page Hc05 Compiler
 
-\brief Provides tools to parse <tt>.jack</tt> files.
+\brief Implements the jack compiler.
 
 \n\n
-The definition of the grammar can be found in [Jack.grm](../../Source/Compiler/Analyzer/Jack.grm).
+The primary job of the compiler is to take the high level jack language
+and translate it from, jack, vm, asm, then finally to mc.
 
 \n\n
-Options not in the course specification.
+\section Hc05SyntaxAnalyzer SyntaxAnalyzer
 
-- __NOT__ `!`
-  - The not unary operator is implemented as '~' and '!'.
-
-
-\section Hc05Contents Contents
-
-The compiler consists of a set of tools to handle <tt>.jack</tt> files.
-
-\subsection Hc05SyntaxAnalyzer SyntaxAnalyzer
-
-Implements a static library to parse and compile the parse tree to a node tree.
+Provides a static library that compiles the jack code into a parse tree.
+\n\n
+The definition for the jack grammar can be found [here.](../../Source/Compiler/Analyzer/Jack.grm)
+- Note: the not operator `!` is implemented both as '~' and '!'.
 
 
-\subsection Hc05CompileUtils CompileUtils
+\section Hc05CompileUtils CompileUtils
 
-Provides a bridge to store the node tree in intermediate form. 
+Provides the code that implements the parse tree, as well as extra classes that operate on the parse tree.
 
+\section Hc05Jack2XML Jack2XML
 
-\subsection Hc05Jack2XML Jack2XML
-
-Transforms the node tree into an output xml or dot file.\n\n
+Is the program that uses the parse tree and outputs inspection files.
+\n\n
 
 \code{.txt}
 Usage: Jack2xml <options> <arg[0] .. arg[n]>
@@ -41,12 +36,12 @@ Usage: Jack2xml <options> <arg[0] .. arg[n]>
     -d, --directory  Converts all .jack files in the current directory to .xml
     -o, --output     Specify an output file
                        - the directory option takes precedence
+
 \endcode
 
+\section Hc05CodeGenerator CodeGenerator
 
-\subsection Hc05CodeGenerator CodeGenerator
-
-Implements a static library that converts the <tt>.jack</tt> parse tree into <tt>.vm</tt>  form.
+Is the static library that implements the parse tree conversion from jack to vm.
 
 
 \section Hc05Defined Defined In
@@ -54,4 +49,3 @@ Implements a static library that converts the <tt>.jack</tt> parse tree into <tt
 The source is defined in [Source/Compiler](../../Source/Compiler/)
 
 */
-#pragma once

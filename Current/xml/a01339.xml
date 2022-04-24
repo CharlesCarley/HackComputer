@@ -1,212 +1,356 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
-  <compounddef id="a01339" kind="class" language="C++" prot="public" final="yes">
-    <compoundname>Hack::VirtualMachine::Parser</compoundname>
-    <basecompoundref refid="a01275" prot="public" virt="non-virtual">Hack::ParserBase</basecompoundref>
-    <includes local="no">Source/VirtualMachine/Parser.h</includes>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="a01339_1a40e6dd5914c34a4bd5346ad5ba92a9e5" prot="private" static="no" mutable="no">
-        <type><ref refid="a01335" kindref="compound">Emitter</ref></type>
-        <definition>Emitter Hack::VirtualMachine::Parser::_emitter</definition>
+  <compounddef id="a01339" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Hack::Chips::IMemorySegment</compoundname>
+    <basecompoundref refid="a01291" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; uint8_t, 8 &gt;</basecompoundref>
+    <derivedcompoundref refid="a01311" prot="public" virt="non-virtual">Hack::Chips::DefaultMemorySegment&lt; High, ElementCount &gt;</derivedcompoundref>
+    <includes local="no">Source/Chips/IMemorySegment.h</includes>
+    <templateparamlist>
+      <param>
+        <type>uint16_t</type>
+        <declname>High</declname>
+        <defname>High</defname>
+      </param>
+      <param>
+        <type>uint16_t</type>
+        <declname>ElementCount</declname>
+        <defname>ElementCount</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="a01339_1aaf6fabe5db913367af8e124cd5ef30e1" prot="public" static="yes" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::HighAddress</definition>
         <argsstring></argsstring>
-        <name>_emitter</name>
+        <name>HighAddress</name>
+        <initializer>= High</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="35" column="1" bodyfile="Source/VirtualMachine/Parser.h" bodystart="35" bodyend="-1"/>
+        <location file="Source/Chips/IMemorySegment.h" line="32" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="32" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a01339_1a9cc376383e4999bb0a93edac61766007" prot="private" static="no" mutable="no">
-        <type><ref refid="a00899_1a02186d1a9c875e3583ff775f46ad7c0a" kindref="member">StringCache</ref></type>
-        <definition>StringCache Hack::VirtualMachine::Parser::_labels</definition>
+      <memberdef kind="variable" id="a01339_1aa48a78ccd8824a135002ef01092a2f92" prot="public" static="yes" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::Max</definition>
         <argsstring></argsstring>
-        <name>_labels</name>
+        <name>Max</name>
+        <initializer>= (High &lt;&lt; 1) + 1</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="36" column="1" bodyfile="Source/VirtualMachine/Parser.h" bodystart="36" bodyend="-1"/>
+        <location file="Source/Chips/IMemorySegment.h" line="33" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       </sectiondef>
-      <sectiondef kind="private-func">
-      <memberdef kind="function" id="a01339_1a41ca7b47bee3658c3c8e276c5feea298" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::VirtualMachine::Parser::callExpression</definition>
-        <argsstring>()</argsstring>
-        <name>callExpression</name>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="a01339_1a9683f3a1be07724bee0f2adfe59d90de" prot="protected" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::_address</definition>
+        <argsstring></argsstring>
+        <name>_address</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="55" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="217" bodyend="245"/>
+        <location file="Source/Chips/IMemorySegment.h" line="38" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="38" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a01339_1a3055c1a9b49a5d6c60a2e2aeab083ca0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::VirtualMachine::Parser::expression</definition>
-        <argsstring>()</argsstring>
-        <name>expression</name>
+      <memberdef kind="variable" id="a01339_1af4867aa2cec1454452363f1850fe39e6" prot="protected" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::_in</definition>
+        <argsstring></argsstring>
+        <name>_in</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="43" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="274" bodyend="370"/>
+        <location file="Source/Chips/IMemorySegment.h" line="36" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="36" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a01339_1a155771f46199422a961012ad64c81351" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::VirtualMachine::Parser::functionExpression</definition>
-        <argsstring>()</argsstring>
-        <name>functionExpression</name>
+      <memberdef kind="variable" id="a01339_1abee2969f70c7cad9ae4fc48c95b4ee34" prot="protected" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::_out</definition>
+        <argsstring></argsstring>
+        <name>_out</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="53" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="187" bodyend="215"/>
-      </memberdef>
-      <memberdef kind="function" id="a01339_1adec2438941d6f4f953dd7ee0868d62a5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::VirtualMachine::Parser::gotoExpression</definition>
-        <argsstring>()</argsstring>
-        <name>gotoExpression</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="49" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="161" bodyend="185"/>
-      </memberdef>
-      <memberdef kind="function" id="a01339_1aa34e3ff9365d53d7e24f155c27a728da" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::VirtualMachine::Parser::labelExpression</definition>
-        <argsstring>()</argsstring>
-        <name>labelExpression</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="51" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="139" bodyend="159"/>
-      </memberdef>
-      <memberdef kind="function" id="a01339_1a589fd449e99792f382a6ae6836782385" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
-        <definition>void Hack::VirtualMachine::Parser::parseImpl</definition>
-        <argsstring>(IStream &amp;is) override</argsstring>
-        <name>parseImpl</name>
-        <reimplements refid="a01275_1aca4fd325b8520d930ca612cf3337c625">parseImpl</reimplements>
-        <param>
-          <type><ref refid="a00891_1a830c8eb3c005ef2fbc470e0b141b93c5" kindref="member">IStream</ref> &amp;</type>
-          <declname>is</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="39" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="372" bodyend="397"/>
-      </memberdef>
-      <memberdef kind="function" id="a01339_1aba7d94d54c0c7abf94939367b760df26" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::VirtualMachine::Parser::popExpression</definition>
-        <argsstring>()</argsstring>
-        <name>popExpression</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="47" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="91" bodyend="137"/>
-      </memberdef>
-      <memberdef kind="function" id="a01339_1a71789d26d09a60a2acf04a0079aa2781" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::VirtualMachine::Parser::pushExpression</definition>
-        <argsstring>()</argsstring>
-        <name>pushExpression</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="45" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="41" bodyend="89"/>
-      </memberdef>
-      <memberdef kind="function" id="a01339_1ab701dd10cd0d609f6be1e706e7a76596" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::VirtualMachine::Parser::setExpression</definition>
-        <argsstring>()</argsstring>
-        <name>setExpression</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="57" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="247" bodyend="272"/>
-      </memberdef>
-      <memberdef kind="function" id="a01339_1ac42ce84084f3fd298399c330867c8697" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
-        <definition>void Hack::VirtualMachine::Parser::writeImpl</definition>
-        <argsstring>(OStream &amp;os, int format=0) override</argsstring>
-        <name>writeImpl</name>
-        <reimplements refid="a01275_1a4e9dd3f0283226de48b148d66b416f0f">writeImpl</reimplements>
-        <param>
-          <type><ref refid="a00891_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref> &amp;</type>
-          <declname>os</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>format</declname>
-          <defval>0</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="41" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="399" bodyend="403"/>
+        <location file="Source/Chips/IMemorySegment.h" line="37" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01339_1a8dd981d81ed31eb67c6090dd35345731" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01339_1a3f938d0e6ba15d79fedeece254327efe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>Hack::VirtualMachine::Parser::Parser</definition>
+        <definition>Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::IMemorySegment</definition>
         <argsstring>()</argsstring>
-        <name>Parser</name>
+        <name>IMemorySegment</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="60" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="30" bodyend="33"/>
-        <references refid="a01275_1aec27fb418bd286a67e449bbf42ddb4e7" compoundref="a00824" startline="40">Hack::ParserBase::_scanner</references>
+        <location file="Source/Chips/IMemorySegment.h" line="41" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="78" bodyend="84"/>
+        <references refid="a01291_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00494" startline="52">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
+        <references refid="a00917_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00491" startline="40">Hack::Chips::Bit7</references>
       </memberdef>
-      <memberdef kind="function" id="a01339_1ab3752f6d45ebb84a3fcd9f46a7a35d9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Hack::VirtualMachine::Parser::~Parser</definition>
-        <argsstring>() override</argsstring>
-        <name>~Parser</name>
+      <memberdef kind="function" id="a01339_1abd9da88a0da67c4ea4cebb492cef6b78" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>uint16_t</type>
+        <definition>virtual uint16_t Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::get</definition>
+        <argsstring>(const size_t &amp;index) const =0</argsstring>
+        <name>get</name>
+        <reimplementedby refid="a01311_1a94ef78fc28470abbd4b024e2b6d44510">get</reimplementedby>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>index</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="62" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="35" bodyend="39"/>
-        <references refid="a01275_1aec27fb418bd286a67e449bbf42ddb4e7" compoundref="a00824" startline="40">Hack::ParserBase::_scanner</references>
+        <location file="Source/Chips/IMemorySegment.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a01339_1a8886f1e112e29f9f4ba7ec1d6550cb7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>uint16_t</type>
+        <definition>virtual uint16_t Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::getOut</definition>
+        <argsstring>()=0</argsstring>
+        <name>getOut</name>
+        <reimplementedby refid="a01311_1a111146260aff6fd6a3c98ecbbfa14d26">getOut</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/IMemorySegment.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a01339_1adb872ebbc96cf2a449721f1a40754353" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::lock</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>lock</name>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/IMemorySegment.h" line="51" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="125" bodyend="131"/>
+        <references refid="a00917_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" compoundref="a00491" startline="39">Hack::Chips::Bit6</references>
+      </memberdef>
+      <memberdef kind="function" id="a01339_1a50ee5c87fba14eaaaa5c564c55d1f757" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::lockScreen</definition>
+        <argsstring>()</argsstring>
+        <name>lockScreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/IMemorySegment.h" line="63" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="134" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="a01339_1a928606841d9d6b0130aa7dbdbe7d294e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>uint16_t *</type>
+        <definition>virtual uint16_t* Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::pointer</definition>
+        <argsstring>(const size_t &amp;address) const =0</argsstring>
+        <name>pointer</name>
+        <reimplementedby refid="a01311_1ad4b862a78421101fef5afc7ad76cd942">pointer</reimplementedby>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/IMemorySegment.h" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a01339_1a9dcf0c5af1012d1d54492f216eb85a61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::setAddress</definition>
+        <argsstring>(const uint16_t &amp;address)</argsstring>
+        <name>setAddress</name>
+        <param>
+          <type>const uint16_t &amp;</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/IMemorySegment.h" line="45" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="94" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="a01339_1a8ad357587c581db496ef05f4fcd5c292" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::setClock</definition>
+        <argsstring>(bool clock)</argsstring>
+        <name>setClock</name>
+        <param>
+          <type>bool</type>
+          <declname>clock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/IMemorySegment.h" line="49" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="115" bodyend="122"/>
+        <references refid="a00917_1a89719f49d745047f03bca80bfff48bd2a8487c63d5dca7d87b359feca1a2c2ac8" compoundref="a00491" startline="34">Hack::Chips::Bit1</references>
+        <references refid="a00917_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00491" startline="40">Hack::Chips::Bit7</references>
+      </memberdef>
+      <memberdef kind="function" id="a01339_1a105e374a106c298b3a0426b8387260d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::setIn</definition>
+        <argsstring>(const uint16_t &amp;input)</argsstring>
+        <name>setIn</name>
+        <param>
+          <type>const uint16_t &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/IMemorySegment.h" line="43" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="87" bodyend="91"/>
+        <references refid="a00917_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00491" startline="40">Hack::Chips::Bit7</references>
+      </memberdef>
+      <memberdef kind="function" id="a01339_1a053f5b47a681f7e04ec9b8039f68363f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::setLoad</definition>
+        <argsstring>(bool load)</argsstring>
+        <name>setLoad</name>
+        <param>
+          <type>bool</type>
+          <declname>load</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/IMemorySegment.h" line="47" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="105" bodyend="112"/>
+        <references refid="a00917_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" compoundref="a00491" startline="33">Hack::Chips::Bit0</references>
+        <references refid="a00917_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00491" startline="40">Hack::Chips::Bit7</references>
+      </memberdef>
+      <memberdef kind="function" id="a01339_1a2fe4fb4ddf831109accb6c95f6dbf990" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::setValue</definition>
+        <argsstring>(const size_t &amp;address, const uint16_t &amp;value) const =0</argsstring>
+        <name>setValue</name>
+        <reimplementedby refid="a01311_1ac10efeb1855e75c99717840b6bca98d7">setValue</reimplementedby>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>const uint16_t &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/IMemorySegment.h" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a01339_1a6556e06d0b5c14d72336a25f67e2b217" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::sync</definition>
+        <argsstring>()</argsstring>
+        <name>sync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/IMemorySegment.h" line="65" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="65" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="a01339_1a09442f604ad85fdd0b02c8bdf2ca729d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::unlockScreen</definition>
+        <argsstring>()</argsstring>
+        <name>unlockScreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/IMemorySegment.h" line="69" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="139" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="a01339_1aae4cff10f3ec39ef2c6b08c42fcc937c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::zero</definition>
+        <argsstring>() const =0</argsstring>
+        <name>zero</name>
+        <reimplementedby refid="a01311_1af6db3804cc8555a3a302e9264885d5b4">zero</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/IMemorySegment.h" line="61" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="a01339_1a0adcc77581ef7d16475c343df92db060" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::isDirty</definition>
+        <argsstring>() override</argsstring>
+        <name>isDirty</name>
+        <reimplements refid="a01291_1a63bb368bb0827830235759b33718d1b4">isDirty</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/IMemorySegment.h" line="72" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="144" bodyend="147"/>
+        <references refid="a00917_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00491" startline="40">Hack::Chips::Bit7</references>
+        <references refid="a00917_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" compoundref="a00491" startline="39">Hack::Chips::Bit6</references>
+      </memberdef>
+      <memberdef kind="function" id="a01339_1a28c590cc3f546ec6938c5742dd8c7467" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::markDirty</definition>
+        <argsstring>()</argsstring>
+        <name>markDirty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/IMemorySegment.h" line="74" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="150" bodyend="153"/>
+        <references refid="a00917_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00491" startline="40">Hack::Chips::Bit7</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -214,118 +358,83 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="469">
-        <label>Hack::VirtualMachine::Parser</label>
+      <node id="525">
+        <label>Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;</label>
         <link refid="a01339"/>
-        <childnode refid="470" relation="public-inheritance">
+        <childnode refid="526" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="470">
-        <label>Hack::ParserBase</label>
-        <link refid="a01275"/>
+      <node id="526">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="a01291"/>
+      </node>
+      <node id="527">
+        <label>Hack::Chips::DefaultMemorySegment&lt; High, ElementCount &gt;</label>
+        <link refid="a01311"/>
+        <childnode refid="525" relation="public-inheritance">
+        </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="477">
-        <label>size_t</label>
+      <node id="531">
+        <label>unsigned short</label>
       </node>
-      <node id="475">
-        <label>Hack::IndexCache&lt; String &gt;</label>
-        <link refid="a01259"/>
-      </node>
-      <node id="479">
-        <label>IStream *</label>
-      </node>
-      <node id="480">
-        <label>int32_t</label>
-      </node>
-      <node id="471">
-        <label>Hack::VirtualMachine::Parser</label>
+      <node id="528">
+        <label>Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;</label>
         <link refid="a01339"/>
-        <childnode refid="472" relation="public-inheritance">
+        <childnode refid="529" relation="public-inheritance">
+        </childnode>
+        <childnode refid="531" relation="usage">
+          <edgelabel>HighAddress</edgelabel>
+          <edgelabel>_address</edgelabel>
+          <edgelabel>_out</edgelabel>
+          <edgelabel>_in</edgelabel>
+          <edgelabel>Max</edgelabel>
         </childnode>
       </node>
-      <node id="478">
-        <label>string</label>
+      <node id="530">
+        <label>uint8_t</label>
+        <link refid="a01671"/>
       </node>
-      <node id="473">
-        <label>vector&lt; TokenBase &gt;</label>
-      </node>
-      <node id="472">
-        <label>Hack::ParserBase</label>
-        <link refid="a01275"/>
-        <childnode refid="473" relation="usage">
-          <edgelabel>_tokens</edgelabel>
+      <node id="529">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="a01291"/>
+        <childnode refid="530" relation="usage">
+          <edgelabel>_bits</edgelabel>
         </childnode>
-        <childnode refid="474" relation="usage">
-          <edgelabel>_scanner</edgelabel>
-        </childnode>
-        <childnode refid="480" relation="usage">
-          <edgelabel>_cursor</edgelabel>
-        </childnode>
-        <childnode refid="478" relation="usage">
-          <edgelabel>_filePath</edgelabel>
-          <edgelabel>_file</edgelabel>
-        </childnode>
-      </node>
-      <node id="474">
-        <label>Hack::ScannerBase</label>
-        <link refid="a01279"/>
-        <childnode refid="475" relation="usage">
-          <edgelabel>_stringTable</edgelabel>
-        </childnode>
-        <childnode refid="476" relation="usage">
-          <edgelabel>_intTable</edgelabel>
-        </childnode>
-        <childnode refid="477" relation="usage">
-          <edgelabel>_line</edgelabel>
-        </childnode>
-        <childnode refid="478" relation="usage">
-          <edgelabel>_file</edgelabel>
-        </childnode>
-        <childnode refid="479" relation="usage">
-          <edgelabel>_stream</edgelabel>
-        </childnode>
-      </node>
-      <node id="476">
-        <label>Hack::IndexCache&lt; int &gt;</label>
-        <link refid="a01259"/>
       </node>
     </collaborationgraph>
-    <location file="Source/VirtualMachine/Parser.h" line="33" column="1" bodyfile="Source/VirtualMachine/Parser.h" bodystart="32" bodyend="63"/>
+    <location file="Source/Chips/IMemorySegment.h" line="30" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="29" bodyend="75"/>
     <listofallmembers>
-      <member refid="a01275_1a050b6fa7aa7a8a0ad9e6dc769c5fe1ab" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>_cursor</name></member>
-      <member refid="a01339_1a40e6dd5914c34a4bd5346ad5ba92a9e5" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>_emitter</name></member>
-      <member refid="a01275_1a3845bf25a071be865d1abf5d86547d4e" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>_file</name></member>
-      <member refid="a01275_1ab0e5c4de751cb9162c1068d08fe5108f" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>_filePath</name></member>
-      <member refid="a01339_1a9cc376383e4999bb0a93edac61766007" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>_labels</name></member>
-      <member refid="a01275_1aec27fb418bd286a67e449bbf42ddb4e7" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>_scanner</name></member>
-      <member refid="a01275_1a848d7a2893106ea47afc8839aae2f4e4" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>_tokens</name></member>
-      <member refid="a01275_1a857d4ca08875acc4a5ae351eab22ebee" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>advanceCursor</name></member>
-      <member refid="a01339_1a41ca7b47bee3658c3c8e276c5feea298" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>callExpression</name></member>
-      <member refid="a01339_1a3055c1a9b49a5d6c60a2e2aeab083ca0" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>expression</name></member>
-      <member refid="a01275_1ab701a1a26d52964d228d1c1472130483" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>filename</name></member>
-      <member refid="a01339_1a155771f46199422a961012ad64c81351" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>functionExpression</name></member>
-      <member refid="a01275_1a6b9602e4c23316318668f57da6db421c" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>getToken</name></member>
-      <member refid="a01339_1adec2438941d6f4f953dd7ee0868d62a5" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>gotoExpression</name></member>
-      <member refid="a01339_1aa34e3ff9365d53d7e24f155c27a728da" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>labelExpression</name></member>
-      <member refid="a01275_1a87c46515fd89517db2645943cb44493b" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>line</name></member>
-      <member refid="a01275_1a4668ec9b913931ce518de6d7f92fb4e0" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>parse</name></member>
-      <member refid="a01275_1a526cddbd87b36f03b8e76db9b7d640b9" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>parse</name></member>
-      <member refid="a01275_1aa78f3654190d9b4f2ea49f8bcfa97f2b" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>parseError</name></member>
-      <member refid="a01339_1a589fd449e99792f382a6ae6836782385" prot="private" virt="virtual"><scope>Hack::VirtualMachine::Parser</scope><name>parseImpl</name></member>
-      <member refid="a01339_1a8dd981d81ed31eb67c6090dd35345731" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>Parser</name></member>
-      <member refid="a01275_1ad2acc126d182c46c5d7f2afbb2aaeb66" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>ParserBase</name></member>
-      <member refid="a01339_1aba7d94d54c0c7abf94939367b760df26" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>popExpression</name></member>
-      <member refid="a01339_1a71789d26d09a60a2acf04a0079aa2781" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>pushExpression</name></member>
-      <member refid="a01275_1a8436c3d2c31c4a3e822c946c8a6b1a92" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>readToken</name></member>
-      <member refid="a01339_1ab701dd10cd0d609f6be1e706e7a76596" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>setExpression</name></member>
-      <member refid="a01275_1a7fbbfbffb70e56bfd7d117f8aabcd8f0" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>Tokens</name></member>
-      <member refid="a01275_1a4560ce70fee098d7508b053b409c1d19" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>write</name></member>
-      <member refid="a01275_1a644c6667a785050f490a4ee24a98e2e7" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>write</name></member>
-      <member refid="a01339_1ac42ce84084f3fd298399c330867c8697" prot="private" virt="virtual"><scope>Hack::VirtualMachine::Parser</scope><name>writeImpl</name></member>
-      <member refid="a01339_1ab3752f6d45ebb84a3fcd9f46a7a35d9a" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>~Parser</name></member>
-      <member refid="a01275_1a6e57377073e2e728304316b73986ded2" prot="public" virt="virtual"><scope>Hack::VirtualMachine::Parser</scope><name>~ParserBase</name></member>
+      <member refid="a01339_1a9683f3a1be07724bee0f2adfe59d90de" prot="protected" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>_address</name></member>
+      <member refid="a01291_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>_bits</name></member>
+      <member refid="a01339_1af4867aa2cec1454452363f1850fe39e6" prot="protected" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>_in</name></member>
+      <member refid="a01339_1abee2969f70c7cad9ae4fc48c95b4ee34" prot="protected" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>_out</name></member>
+      <member refid="a01291_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>applyBit</name></member>
+      <member refid="a01291_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>assignBit</name></member>
+      <member refid="a01291_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>Chip</name></member>
+      <member refid="a01291_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>clearBit</name></member>
+      <member refid="a01339_1abd9da88a0da67c4ea4cebb492cef6b78" prot="public" virt="pure-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>get</name></member>
+      <member refid="a01291_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>getBit</name></member>
+      <member refid="a01339_1a8886f1e112e29f9f4ba7ec1d6550cb7b" prot="public" virt="pure-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>getOut</name></member>
+      <member refid="a01339_1aaf6fabe5db913367af8e124cd5ef30e1" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>HighAddress</name></member>
+      <member refid="a01339_1a3f938d0e6ba15d79fedeece254327efe" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>IMemorySegment</name></member>
+      <member refid="a01339_1a0adcc77581ef7d16475c343df92db060" prot="protected" virt="virtual"><scope>Hack::Chips::IMemorySegment</scope><name>isDirty</name></member>
+      <member refid="a01339_1adb872ebbc96cf2a449721f1a40754353" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>lock</name></member>
+      <member refid="a01339_1a50ee5c87fba14eaaaa5c564c55d1f757" prot="public" virt="virtual"><scope>Hack::Chips::IMemorySegment</scope><name>lockScreen</name></member>
+      <member refid="a01339_1a28c590cc3f546ec6938c5742dd8c7467" prot="protected" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>markDirty</name></member>
+      <member refid="a01339_1aa48a78ccd8824a135002ef01092a2f92" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>Max</name></member>
+      <member refid="a01339_1a928606841d9d6b0130aa7dbdbe7d294e" prot="public" virt="pure-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>pointer</name></member>
+      <member refid="a01339_1a9dcf0c5af1012d1d54492f216eb85a61" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>setAddress</name></member>
+      <member refid="a01291_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>setBit</name></member>
+      <member refid="a01339_1a8ad357587c581db496ef05f4fcd5c292" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>setClock</name></member>
+      <member refid="a01339_1a105e374a106c298b3a0426b8387260d3" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>setIn</name></member>
+      <member refid="a01339_1a053f5b47a681f7e04ec9b8039f68363f" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>setLoad</name></member>
+      <member refid="a01339_1a2fe4fb4ddf831109accb6c95f6dbf990" prot="public" virt="pure-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>setValue</name></member>
+      <member refid="a01339_1a6556e06d0b5c14d72336a25f67e2b217" prot="public" virt="virtual"><scope>Hack::Chips::IMemorySegment</scope><name>sync</name></member>
+      <member refid="a01339_1a09442f604ad85fdd0b02c8bdf2ca729d" prot="public" virt="virtual"><scope>Hack::Chips::IMemorySegment</scope><name>unlockScreen</name></member>
+      <member refid="a01339_1aae4cff10f3ec39ef2c6b08c42fcc937c" prot="public" virt="pure-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>zero</name></member>
+      <member refid="a01291_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::IMemorySegment</scope><name>~Chip</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

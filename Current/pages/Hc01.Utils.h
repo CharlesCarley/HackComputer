@@ -2,8 +2,7 @@
 /*!
 \page Hc01 Utils
 
-\brief Implements general functionality classes that are used project wide.
-
+\brief Implements general functionality that is used project wide.
 
 \n\n
 - <tt>Source/Utils</tt> provides string conversion and console output utilities.
@@ -13,7 +12,6 @@
 \section Hc01Defined Defined In
 
 The source is defined in [Source/Utils](../../Source/Utils/)
-
 
  */
 

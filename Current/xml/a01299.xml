@@ -1,127 +1,138 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
-  <compounddef id="a01299" kind="class" language="C++" prot="public">
-    <compoundname>Hack::Ui::Point</compoundname>
-    <includes local="no">Source/Utils/UserInterface/Math.h</includes>
+  <compounddef id="a01299" kind="struct" language="C++" prot="public">
+    <compoundname>Hack::Chips::CpuState</compoundname>
+    <includes local="no">Source/Chips/Computer.h</includes>
       <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="a01299_1aa9335e7ea01d18489913ee919bcc22ea" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int Hack::Ui::Point::x</definition>
+      <memberdef kind="variable" id="a01299_1a7b6ea40228d9e23b00fd2ee43133a6f3" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Hack::Chips::CpuState::addrM</definition>
         <argsstring></argsstring>
-        <name>x</name>
-        <initializer>{}</initializer>
+        <name>addrM</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/UserInterface/Math.h" line="32" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="32" bodyend="-1"/>
+        <location file="Source/Chips/Computer.h" line="34" column="1" bodyfile="Source/Chips/Computer.h" bodystart="34" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a01299_1a7b3997703cfb10a093aacb82d4cc6ec7" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int Hack::Ui::Point::y</definition>
+      <memberdef kind="variable" id="a01299_1a5606ebaf9ae4d826b421dce343c223f9" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Hack::Chips::CpuState::clock</definition>
         <argsstring></argsstring>
-        <name>y</name>
-        <initializer>{}</initializer>
+        <name>clock</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/UserInterface/Math.h" line="32" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="32" bodyend="-1"/>
+        <location file="Source/Chips/Computer.h" line="37" column="1" bodyfile="Source/Chips/Computer.h" bodystart="37" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01299_1a6f5d53abb3a2a63ef97ca1a27d7739a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Hack::Ui::Point::Point</definition>
-        <argsstring>()=default</argsstring>
-        <name>Point</name>
+      <memberdef kind="variable" id="a01299_1a3bdae3da64a41fd9b98171cea0f1b1c1" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Hack::Chips::CpuState::inst</definition>
+        <argsstring></argsstring>
+        <name>inst</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/UserInterface/Math.h" line="35" column="1"/>
+        <location file="Source/Chips/Computer.h" line="38" column="1" bodyfile="Source/Chips/Computer.h" bodystart="38" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a01299_1a7b78ac0b1c8b605b3e49d8c63e81d75b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Hack::Ui::Point::Point</definition>
-        <argsstring>(const Point &amp;oth)=default</argsstring>
-        <name>Point</name>
-        <param>
-          <type>const <ref refid="a01299" kindref="compound">Point</ref> &amp;</type>
-          <declname>oth</declname>
-        </param>
+      <memberdef kind="variable" id="a01299_1a4898fb8aa66f45e0e07d4b754b8d93ba" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Hack::Chips::CpuState::outM</definition>
+        <argsstring></argsstring>
+        <name>outM</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/UserInterface/Math.h" line="36" column="1"/>
+        <location file="Source/Chips/Computer.h" line="33" column="1" bodyfile="Source/Chips/Computer.h" bodystart="33" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a01299_1adbb8b7e5c9d603688f1d03abfc15ef01" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type></type>
-        <definition>Hack::Ui::Point::Point</definition>
-        <argsstring>(const int &amp;nx, const int &amp;ny)</argsstring>
-        <name>Point</name>
-        <param>
-          <type>const int &amp;</type>
-          <declname>nx</declname>
-        </param>
-        <param>
-          <type>const int &amp;</type>
-          <declname>ny</declname>
-        </param>
+      <memberdef kind="variable" id="a01299_1a8ff12fb359df46f8c2b7bb4536b03bd2" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Hack::Chips::CpuState::pc</definition>
+        <argsstring></argsstring>
+        <name>pc</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/UserInterface/Math.h" line="38" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="38" bodyend="42"/>
+        <location file="Source/Chips/Computer.h" line="32" column="1" bodyfile="Source/Chips/Computer.h" bodystart="32" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a01299_1a673a523fadc1c109881aa6140f6e1b2f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="a01299" kindref="compound">Point</ref></type>
-        <definition>Point Hack::Ui::Point::maxPoint</definition>
-        <argsstring>(const Point &amp;rhs) const</argsstring>
-        <name>maxPoint</name>
-        <param>
-          <type>const <ref refid="a01299" kindref="compound">Point</ref> &amp;</type>
-          <declname>rhs</declname>
-        </param>
+      <memberdef kind="variable" id="a01299_1ae932a7489f8bdecf33ffd43c9410130f" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Hack::Chips::CpuState::ram</definition>
+        <argsstring></argsstring>
+        <name>ram</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/UserInterface/Math.h" line="44" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="44" bodyend="50"/>
-        <references refid="a01299_1aa9335e7ea01d18489913ee919bcc22ea" compoundref="a00860" startline="32">x</references>
-        <references refid="a01299_1a7b3997703cfb10a093aacb82d4cc6ec7" compoundref="a00860" startline="32">y</references>
+        <location file="Source/Chips/Computer.h" line="40" column="1" bodyfile="Source/Chips/Computer.h" bodystart="40" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a01299_1aec3e51560917b1a0f1ec978d3975ef46" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="a01299" kindref="compound">Point</ref></type>
-        <definition>Point Hack::Ui::Point::minPoint</definition>
-        <argsstring>(const Point &amp;rhs) const</argsstring>
-        <name>minPoint</name>
-        <param>
-          <type>const <ref refid="a01299" kindref="compound">Point</ref> &amp;</type>
-          <declname>rhs</declname>
-        </param>
+      <memberdef kind="variable" id="a01299_1a764dbb644ba5bb323c97e09cb26ae122" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Hack::Chips::CpuState::regA</definition>
+        <argsstring></argsstring>
+        <name>regA</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/UserInterface/Math.h" line="52" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="52" bodyend="58"/>
-        <references refid="a01299_1aa9335e7ea01d18489913ee919bcc22ea" compoundref="a00860" startline="32">x</references>
-        <references refid="a01299_1a7b3997703cfb10a093aacb82d4cc6ec7" compoundref="a00860" startline="32">y</references>
+        <location file="Source/Chips/Computer.h" line="36" column="1" bodyfile="Source/Chips/Computer.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01299_1a918ad89614f75599104e9c1a8123c916" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Hack::Chips::CpuState::regD</definition>
+        <argsstring></argsstring>
+        <name>regD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Computer.h" line="35" column="1" bodyfile="Source/Chips/Computer.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01299_1af9c11b4b51b6cd89cdfdcccdf52341db" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Hack::Chips::CpuState::reset</definition>
+        <argsstring></argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Computer.h" line="41" column="1" bodyfile="Source/Chips/Computer.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01299_1af1398587a09d5722d1d794f87d427a35" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Hack::Chips::CpuState::writeM</definition>
+        <argsstring></argsstring>
+        <name>writeM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Computer.h" line="39" column="1" bodyfile="Source/Chips/Computer.h" bodystart="39" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -129,27 +140,39 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="455">
-        <label>int</label>
+      <node id="486">
+        <label>unsigned short</label>
       </node>
-      <node id="454">
-        <label>Hack::Ui::Point</label>
+      <node id="485">
+        <label>Hack::Chips::CpuState</label>
         <link refid="a01299"/>
-        <childnode refid="455" relation="usage">
-          <edgelabel>x</edgelabel>
-          <edgelabel>y</edgelabel>
+        <childnode refid="486" relation="usage">
+          <edgelabel>regA</edgelabel>
+          <edgelabel>outM</edgelabel>
+          <edgelabel>regD</edgelabel>
+          <edgelabel>pc</edgelabel>
+          <edgelabel>inst</edgelabel>
+          <edgelabel>reset</edgelabel>
+          <edgelabel>ram</edgelabel>
+          <edgelabel>clock</edgelabel>
+          <edgelabel>addrM</edgelabel>
+          <edgelabel>writeM</edgelabel>
+          <edgelabel>...</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="Source/Utils/UserInterface/Math.h" line="30" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="29" bodyend="59"/>
+    <location file="Source/Chips/Computer.h" line="31" column="1" bodyfile="Source/Chips/Computer.h" bodystart="30" bodyend="42"/>
     <listofallmembers>
-      <member refid="a01299_1a673a523fadc1c109881aa6140f6e1b2f" prot="public" virt="non-virtual"><scope>Hack::Ui::Point</scope><name>maxPoint</name></member>
-      <member refid="a01299_1aec3e51560917b1a0f1ec978d3975ef46" prot="public" virt="non-virtual"><scope>Hack::Ui::Point</scope><name>minPoint</name></member>
-      <member refid="a01299_1a6f5d53abb3a2a63ef97ca1a27d7739a4" prot="public" virt="non-virtual"><scope>Hack::Ui::Point</scope><name>Point</name></member>
-      <member refid="a01299_1a7b78ac0b1c8b605b3e49d8c63e81d75b" prot="public" virt="non-virtual"><scope>Hack::Ui::Point</scope><name>Point</name></member>
-      <member refid="a01299_1adbb8b7e5c9d603688f1d03abfc15ef01" prot="public" virt="non-virtual"><scope>Hack::Ui::Point</scope><name>Point</name></member>
-      <member refid="a01299_1aa9335e7ea01d18489913ee919bcc22ea" prot="public" virt="non-virtual"><scope>Hack::Ui::Point</scope><name>x</name></member>
-      <member refid="a01299_1a7b3997703cfb10a093aacb82d4cc6ec7" prot="public" virt="non-virtual"><scope>Hack::Ui::Point</scope><name>y</name></member>
+      <member refid="a01299_1a7b6ea40228d9e23b00fd2ee43133a6f3" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>addrM</name></member>
+      <member refid="a01299_1a5606ebaf9ae4d826b421dce343c223f9" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>clock</name></member>
+      <member refid="a01299_1a3bdae3da64a41fd9b98171cea0f1b1c1" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>inst</name></member>
+      <member refid="a01299_1a4898fb8aa66f45e0e07d4b754b8d93ba" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>outM</name></member>
+      <member refid="a01299_1a8ff12fb359df46f8c2b7bb4536b03bd2" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>pc</name></member>
+      <member refid="a01299_1ae932a7489f8bdecf33ffd43c9410130f" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>ram</name></member>
+      <member refid="a01299_1a764dbb644ba5bb323c97e09cb26ae122" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>regA</name></member>
+      <member refid="a01299_1a918ad89614f75599104e9c1a8123c916" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>regD</name></member>
+      <member refid="a01299_1af9c11b4b51b6cd89cdfdcccdf52341db" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>reset</name></member>
+      <member refid="a01299_1af1398587a09d5722d1d794f87d427a35" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>writeM</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

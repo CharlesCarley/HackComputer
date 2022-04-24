@@ -1,138 +1,1003 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00939" kind="class" language="C++" prot="public">
-    <compoundname>Hack::Binding::RomWrapper</compoundname>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="a00939_1a78a816a94fc0bd8d962d90932cc9e15d" prot="private" static="no" mutable="yes">
-        <type><ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Hack::Binding::RomWrapper::_cache</definition>
+    <compoundname>compounddefType</compoundname>
+    <includes local="no">build/xml/compound.xsd.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="a00939_1a0622ddcb0c33fb692ee9e09610174b15" prot="public" static="no" mutable="no">
+        <type>DoxBool</type>
+        <definition>DoxBool compounddefType::abstract</definition>
         <argsstring></argsstring>
-        <name>_cache</name>
+        <name>abstract</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Bindings/Bindings.cpp" line="55" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="55" bodyend="-1"/>
+        <location file="build/xml/compound.xsd.h" line="42" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="42" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a00939_1a026eb53aef02d9c1fdb7f6b57ac1f21d" prot="private" static="no" mutable="no">
-        <type><ref refid="a01115" kindref="compound">Rom32</ref> *</type>
-        <definition>Rom32* Hack::Binding::RomWrapper::_rom</definition>
+      <memberdef kind="variable" id="a00939_1aa57cf14f3bc737b0b7a538797281d6cd" prot="public" static="no" mutable="no">
+        <type><ref refid="a00951" kindref="compound">compoundRefType</ref></type>
+        <definition>compoundRefType compounddefType::basecompoundref</definition>
         <argsstring></argsstring>
-        <name>_rom</name>
+        <name>basecompoundref</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Bindings/Bindings.cpp" line="53" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="53" bodyend="-1"/>
+        <location file="build/xml/compound.xsd.h" line="14" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="14" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a00939_1ae7d2fd6c9a84cfad3167fa000fc2b99e" prot="private" static="no" mutable="no">
-        <type>const uint64_t</type>
-        <definition>const uint64_t Hack::Binding::RomWrapper::type</definition>
+      <memberdef kind="variable" id="a00939_1a3e71d654e0826e46fc42066cfef78b1d" prot="public" static="no" mutable="no">
+        <type><ref refid="a00979" kindref="compound">descriptionType</ref></type>
+        <definition>descriptionType compounddefType::briefdescription</definition>
         <argsstring></argsstring>
-        <name>type</name>
-        <initializer>= <ref refid="a00892_1ab9e96018072b404d8a46e2192f06b954" kindref="member">RomType</ref></initializer>
+        <name>briefdescription</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Bindings/Bindings.cpp" line="51" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="51" bodyend="-1"/>
+        <location file="build/xml/compound.xsd.h" line="29" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="29" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
-      <memberdef kind="function" id="a00939_1a430e884e4dfa1dec8dc20bb332bd0b3a" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
-        <type></type>
-        <definition>Hack::Binding::RomWrapper::RomWrapper</definition>
-        <argsstring>(Rom32 *rom32)</argsstring>
-        <name>RomWrapper</name>
-        <param>
-          <type><ref refid="a01115" kindref="compound">Rom32</ref> *</type>
-          <declname>rom32</declname>
-        </param>
+      <memberdef kind="variable" id="a00939_1ae6de0645295a5da4be20764b4dcde31d" prot="public" static="no" mutable="no">
+        <type><ref refid="a00999" kindref="compound">graphType</ref></type>
+        <definition>graphType compounddefType::collaborationgraph</definition>
+        <argsstring></argsstring>
+        <name>collaborationgraph</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Bindings/Bindings.cpp" line="58" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="58" bodyend="61"/>
+        <location file="build/xml/compound.xsd.h" line="32" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="32" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a00939_1a9a9be8a8b466961c6a20ab9e89781200" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>const char *</type>
-        <definition>const char* Hack::Binding::RomWrapper::decode</definition>
-        <argsstring>(const int idx) const</argsstring>
-        <name>decode</name>
-        <param>
-          <type>const int</type>
-          <declname>idx</declname>
-        </param>
+      <memberdef kind="variable" id="a00939_1a6b22ed08d508e8c1bd3924a36635ce4f" prot="public" static="no" mutable="no">
+        <type>String</type>
+        <definition>String compounddefType::compoundname</definition>
+        <argsstring></argsstring>
+        <name>compoundname</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Bindings/Bindings.cpp" line="71" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="71" bodyend="82"/>
-        <references refid="a00911_1ade81360d9e9ec9bdfedc8af1d0252a73" compoundref="a00407" startline="32" endline="37">Hack::Assembler::Instruction::string</references>
+        <location file="build/xml/compound.xsd.h" line="12" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="12" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a00939_1a707b3bc9bc40f455b80556dda7919bdc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>int</type>
-        <definition>int Hack::Binding::RomWrapper::get</definition>
-        <argsstring>(const int idx) const</argsstring>
-        <name>get</name>
-        <param>
-          <type>const int</type>
-          <declname>idx</declname>
-        </param>
+      <memberdef kind="variable" id="a00939_1af9840f9350c1aa81693cf5700f7f7dba" prot="public" static="no" mutable="no">
+        <type><ref refid="a00951" kindref="compound">compoundRefType</ref></type>
+        <definition>compoundRefType compounddefType::derivedcompoundref</definition>
+        <argsstring></argsstring>
+        <name>derivedcompoundref</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Bindings/Bindings.cpp" line="63" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="63" bodyend="69"/>
-        <references refid="a00892_1ab9e96018072b404d8a46e2192f06b954" compoundref="a00434" startline="45">Hack::Binding::RomType</references>
-        <references refid="a01115_1a5f035550d36a60b39767abc4d5942b46" compoundref="a00656" startline="72" endline="77">Hack::Chips::Rom32::get</references>
+        <location file="build/xml/compound.xsd.h" line="15" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="15" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="a00939_1ac77d5275d6ebe3ea4efe37f262c48826" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>const <ref refid="a00939" kindref="compound">RomWrapper</ref> *</type>
-        <definition>static const RomWrapper* Hack::Binding::RomWrapper::cast</definition>
-        <argsstring>(Handle handle)</argsstring>
-        <name>cast</name>
-        <param>
-          <type><ref refid="a00935" kindref="compound">Handle</ref></type>
-          <declname>handle</declname>
-        </param>
+      <memberdef kind="variable" id="a00939_1a0625ebafe3300dd2db5f7764921ed689" prot="public" static="no" mutable="no">
+        <type><ref refid="a00979" kindref="compound">descriptionType</ref></type>
+        <definition>descriptionType compounddefType::detaileddescription</definition>
+        <argsstring></argsstring>
+        <name>detaileddescription</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Bindings/Bindings.cpp" line="84" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="84" bodyend="93"/>
-        <references refid="a00892_1ab9e96018072b404d8a46e2192f06b954" compoundref="a00434" startline="45">Hack::Binding::RomType</references>
+        <location file="build/xml/compound.xsd.h" line="30" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00939_1aebfd1bf43b39dbf05a5098f3c500a93e" prot="public" static="no" mutable="no">
+        <type>DoxBool</type>
+        <definition>DoxBool compounddefType::final</definition>
+        <argsstring></argsstring>
+        <name>final</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="40" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00939_1a17444501827a5ad7135f57ae3a381a3e" prot="public" static="no" mutable="no">
+        <type>String</type>
+        <definition>String compounddefType::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="36" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00939_1a0ecb49321887b0323e8f443bb38f634b" prot="public" static="no" mutable="no">
+        <type><ref refid="a00999" kindref="compound">graphType</ref></type>
+        <definition>graphType compounddefType::incdepgraph</definition>
+        <argsstring></argsstring>
+        <name>incdepgraph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="18" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00939_1a6d6fece9121c6adf826cd3805f8ea343" prot="public" static="no" mutable="no">
+        <type><ref refid="a00959" kindref="compound">incType</ref></type>
+        <definition>incType compounddefType::includedby</definition>
+        <argsstring></argsstring>
+        <name>includedby</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="17" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00939_1ae23ac814652cd0599329bbc42ac80b3d" prot="public" static="no" mutable="no">
+        <type><ref refid="a00959" kindref="compound">incType</ref></type>
+        <definition>incType compounddefType::includes</definition>
+        <argsstring></argsstring>
+        <name>includes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="16" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00939_1ae2fe458ce2b1689354093e70d85605b7" prot="public" static="no" mutable="no">
+        <type><ref refid="a00999" kindref="compound">graphType</ref></type>
+        <definition>graphType compounddefType::inheritancegraph</definition>
+        <argsstring></argsstring>
+        <name>inheritancegraph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="31" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00939_1aed4cc07268d9eb72a3d1d0ff05d39078" prot="public" static="no" mutable="no">
+        <type><ref refid="a00963" kindref="compound">refType</ref></type>
+        <definition>refType compounddefType::innerclass</definition>
+        <argsstring></argsstring>
+        <name>innerclass</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="22" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00939_1a324c49bf18c019a499dc8275c5832162" prot="public" static="no" mutable="no">
+        <type><ref refid="a00963" kindref="compound">refType</ref></type>
+        <definition>refType compounddefType::innerdir</definition>
+        <argsstring></argsstring>
+        <name>innerdir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="20" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00939_1ad3e08816ce3cef0667abb716c73cdbf1" prot="public" static="no" mutable="no">
+        <type><ref refid="a00963" kindref="compound">refType</ref></type>
+        <definition>refType compounddefType::innerfile</definition>
+        <argsstring></argsstring>
+        <name>innerfile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="21" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00939_1ac6acb0d0571ff428b53e9638edd55044" prot="public" static="no" mutable="no">
+        <type><ref refid="a00963" kindref="compound">refType</ref></type>
+        <definition>refType compounddefType::innergroup</definition>
+        <argsstring></argsstring>
+        <name>innergroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="25" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00939_1a5e9c9ce84e59799478d33d96295f38a4" prot="public" static="no" mutable="no">
+        <type><ref refid="a00963" kindref="compound">refType</ref></type>
+        <definition>refType compounddefType::innernamespace</definition>
+        <argsstring></argsstring>
+        <name>innernamespace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="23" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00939_1a607b2f13cf73a3e6d23bd91df0229837" prot="public" static="no" mutable="no">
+        <type><ref refid="a00963" kindref="compound">refType</ref></type>
+        <definition>refType compounddefType::innerpage</definition>
+        <argsstring></argsstring>
+        <name>innerpage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="24" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00939_1abbca6ac30d4792720d058709be3a03d6" prot="public" static="no" mutable="no">
+        <type><ref refid="a00999" kindref="compound">graphType</ref></type>
+        <definition>graphType compounddefType::invincdepgraph</definition>
+        <argsstring></argsstring>
+        <name>invincdepgraph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="19" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00939_1aa33e98277164786f6cf24ff413f4140d" prot="public" static="no" mutable="no">
+        <type>DoxCompoundKind</type>
+        <definition>DoxCompoundKind compounddefType::kind</definition>
+        <argsstring></argsstring>
+        <name>kind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="37" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00939_1acdd2db51f2bf4ce6668bd02e4f61acb5" prot="public" static="no" mutable="no">
+        <type>DoxLanguage</type>
+        <definition>DoxLanguage compounddefType::language</definition>
+        <argsstring></argsstring>
+        <name>language</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="38" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00939_1a9a2b1ed4e3c2e939e3a56c6fcfd540f5" prot="public" static="no" mutable="no">
+        <type><ref refid="a00943" kindref="compound">listofallmembersType</ref></type>
+        <definition>listofallmembersType compounddefType::listofallmembers</definition>
+        <argsstring></argsstring>
+        <name>listofallmembers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="35" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00939_1a3c67d8aad522dff97769945bb6ba9e1a" prot="public" static="no" mutable="no">
+        <type><ref refid="a01035" kindref="compound">locationType</ref></type>
+        <definition>locationType compounddefType::location</definition>
+        <argsstring></argsstring>
+        <name>location</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="34" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00939_1a73977f28b8426a0f48ec1abf7e19056c" prot="public" static="no" mutable="no">
+        <type><ref refid="a01015" kindref="compound">listingType</ref></type>
+        <definition>listingType compounddefType::programlisting</definition>
+        <argsstring></argsstring>
+        <name>programlisting</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="33" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00939_1a0d6bdfed4dda3ccf0accd27bcfca14cf" prot="public" static="no" mutable="no">
+        <type>DoxProtectionKind</type>
+        <definition>DoxProtectionKind compounddefType::prot</definition>
+        <argsstring></argsstring>
+        <name>prot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="39" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00939_1a9c162627ee1abfc313e397cbf4afbcfd" prot="public" static="no" mutable="no">
+        <type>DoxBool</type>
+        <definition>DoxBool compounddefType::sealed</definition>
+        <argsstring></argsstring>
+        <name>sealed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="41" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00939_1a8574cb4a5a4da1cca38d5faa06c19c7a" prot="public" static="no" mutable="no">
+        <type><ref refid="a00971" kindref="compound">sectiondefType</ref></type>
+        <definition>sectiondefType compounddefType::sectiondef</definition>
+        <argsstring></argsstring>
+        <name>sectiondef</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="27" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00939_1af38d962690c2cf962dce06278e9a1c57" prot="public" static="no" mutable="no">
+        <type>String</type>
+        <definition>String compounddefType::tableofcontents</definition>
+        <argsstring></argsstring>
+        <name>tableofcontents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="28" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00939_1a955cfa6186e17adda367d9e96e50b4e0" prot="public" static="no" mutable="no">
+        <type><ref refid="a00987" kindref="compound">templateparamlistType</ref></type>
+        <definition>templateparamlistType compounddefType::templateparamlist</definition>
+        <argsstring></argsstring>
+        <name>templateparamlist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="26" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00939_1ada63b315b4feef4e0f9e7e910e0dae0a" prot="public" static="no" mutable="no">
+        <type>String</type>
+        <definition>String compounddefType::title</definition>
+        <argsstring></argsstring>
+        <name>title</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="build/xml/compound.xsd.h" line="13" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="13" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Bindings/Bindings.cpp" line="49" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="48" bodyend="94"/>
+    <collaborationgraph>
+      <node id="63">
+        <label>listofallmembersType</label>
+        <link refid="a00943"/>
+        <childnode refid="64" relation="usage">
+          <edgelabel>member</edgelabel>
+        </childnode>
+      </node>
+      <node id="23">
+        <label>DoxVirtualKind</label>
+      </node>
+      <node id="17">
+        <label>compounddefType</label>
+        <link refid="a00939"/>
+        <childnode refid="18" relation="usage">
+          <edgelabel>language</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>innerclass</edgelabel>
+          <edgelabel>innerfile</edgelabel>
+          <edgelabel>innerpage</edgelabel>
+          <edgelabel>innerdir</edgelabel>
+          <edgelabel>innernamespace</edgelabel>
+          <edgelabel>innergroup</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>basecompoundref</edgelabel>
+          <edgelabel>derivedcompoundref</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>title</edgelabel>
+          <edgelabel>tableofcontents</edgelabel>
+          <edgelabel>id</edgelabel>
+          <edgelabel>compoundname</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>templateparamlist</edgelabel>
+        </childnode>
+        <childnode refid="40" relation="usage">
+          <edgelabel>programlisting</edgelabel>
+        </childnode>
+        <childnode refid="47" relation="usage">
+          <edgelabel>sectiondef</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>briefdescription</edgelabel>
+          <edgelabel>detaileddescription</edgelabel>
+        </childnode>
+        <childnode refid="52" relation="usage">
+          <edgelabel>location</edgelabel>
+        </childnode>
+        <childnode refid="57" relation="usage">
+          <edgelabel>inheritancegraph</edgelabel>
+          <edgelabel>invincdepgraph</edgelabel>
+          <edgelabel>collaborationgraph</edgelabel>
+          <edgelabel>incdepgraph</edgelabel>
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>abstract</edgelabel>
+          <edgelabel>sealed</edgelabel>
+          <edgelabel>final</edgelabel>
+        </childnode>
+        <childnode refid="62" relation="usage">
+          <edgelabel>kind</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>prot</edgelabel>
+        </childnode>
+        <childnode refid="63" relation="usage">
+          <edgelabel>listofallmembers</edgelabel>
+        </childnode>
+        <childnode refid="65" relation="usage">
+          <edgelabel>includes</edgelabel>
+          <edgelabel>includedby</edgelabel>
+        </childnode>
+      </node>
+      <node id="27">
+        <label>docSect1Type</label>
+        <link refid="a01039"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>title</edgelabel>
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>internal</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>sect2</edgelabel>
+        </childnode>
+      </node>
+      <node id="29">
+        <label>docInternalS1Type</label>
+        <link refid="a01059"/>
+        <childnode refid="28" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>sect2</edgelabel>
+        </childnode>
+      </node>
+      <node id="42">
+        <label>DoxBool</label>
+      </node>
+      <node id="58">
+        <label>nodeType</label>
+        <link refid="a01003"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="59" relation="usage">
+          <edgelabel>childnode</edgelabel>
+        </childnode>
+        <childnode refid="61" relation="usage">
+          <edgelabel>link</edgelabel>
+        </childnode>
+      </node>
+      <node id="30">
+        <label>docSect2Type</label>
+        <link refid="a01043"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>title</edgelabel>
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>internal</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>sect3</edgelabel>
+        </childnode>
+      </node>
+      <node id="31">
+        <label>docInternalS2Type</label>
+        <link refid="a01063"/>
+        <childnode refid="28" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>sect3</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>String</label>
+      </node>
+      <node id="60">
+        <label>DoxGraphRelation</label>
+      </node>
+      <node id="51">
+        <label>DoxRefQualifierKind</label>
+      </node>
+      <node id="26">
+        <label>descriptionType</label>
+        <link refid="a00979"/>
+        <childnode refid="27" relation="usage">
+          <edgelabel>sect1</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>title</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>internal</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>refType</label>
+        <link refid="a00963"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>refid</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>prot</edgelabel>
+        </childnode>
+      </node>
+      <node id="65">
+        <label>incType</label>
+        <link refid="a00959"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>refid</edgelabel>
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>local</edgelabel>
+        </childnode>
+      </node>
+      <node id="48">
+        <label>DoxSectionKind</label>
+      </node>
+      <node id="41">
+        <label>codelineType</label>
+        <link refid="a01019"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>refid</edgelabel>
+        </childnode>
+        <childnode refid="39" relation="usage">
+          <edgelabel>refkind</edgelabel>
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>external</edgelabel>
+        </childnode>
+        <childnode refid="43" relation="usage">
+          <edgelabel>lineno</edgelabel>
+        </childnode>
+        <childnode refid="44" relation="usage">
+          <edgelabel>highlight</edgelabel>
+        </childnode>
+      </node>
+      <node id="24">
+        <label>templateparamlistType</label>
+        <link refid="a00987"/>
+        <childnode refid="25" relation="usage">
+          <edgelabel>param</edgelabel>
+        </childnode>
+      </node>
+      <node id="33">
+        <label>docInternalS3Type</label>
+        <link refid="a01067"/>
+        <childnode refid="28" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>sect3</edgelabel>
+        </childnode>
+      </node>
+      <node id="40">
+        <label>listingType</label>
+        <link refid="a01015"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>filename</edgelabel>
+        </childnode>
+        <childnode refid="41" relation="usage">
+          <edgelabel>codeline</edgelabel>
+        </childnode>
+      </node>
+      <node id="55">
+        <label>reimplementType</label>
+        <link refid="a00955"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>refid</edgelabel>
+        </childnode>
+      </node>
+      <node id="50">
+        <label>enumvalueType</label>
+        <link refid="a00983"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>briefdescription</edgelabel>
+          <edgelabel>detaileddescription</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>prot</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>initializer</edgelabel>
+        </childnode>
+      </node>
+      <node id="47">
+        <label>sectiondefType</label>
+        <link refid="a00971"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>header</edgelabel>
+        </childnode>
+        <childnode refid="48" relation="usage">
+          <edgelabel>kind</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>description</edgelabel>
+        </childnode>
+        <childnode refid="49" relation="usage">
+          <edgelabel>memberdef</edgelabel>
+        </childnode>
+      </node>
+      <node id="35">
+        <label>docInternalS4Type</label>
+        <link refid="a01071"/>
+        <childnode refid="28" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+      </node>
+      <node id="37">
+        <label>linkedTextType</label>
+        <link refid="a00995"/>
+        <childnode refid="38" relation="usage">
+          <edgelabel>ref</edgelabel>
+        </childnode>
+      </node>
+      <node id="53">
+        <label>DoxMemberKind</label>
+      </node>
+      <node id="39">
+        <label>DoxRefKind</label>
+      </node>
+      <node id="44">
+        <label>highlightType</label>
+        <link refid="a01023"/>
+        <childnode refid="45" relation="usage">
+          <edgelabel>sp</edgelabel>
+        </childnode>
+        <childnode refid="38" relation="usage">
+          <edgelabel>ref</edgelabel>
+        </childnode>
+        <childnode refid="46" relation="usage">
+          <edgelabel>class</edgelabel>
+        </childnode>
+      </node>
+      <node id="43">
+        <label>signed long long</label>
+      </node>
+      <node id="62">
+        <label>DoxCompoundKind</label>
+      </node>
+      <node id="32">
+        <label>docSect3Type</label>
+        <link refid="a01047"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>title</edgelabel>
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>internal</edgelabel>
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>sect4</edgelabel>
+        </childnode>
+      </node>
+      <node id="38">
+        <label>refTextType</label>
+        <link refid="a00967"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>refid</edgelabel>
+          <edgelabel>external</edgelabel>
+          <edgelabel>tooltip</edgelabel>
+        </childnode>
+        <childnode refid="39" relation="usage">
+          <edgelabel>kindref</edgelabel>
+        </childnode>
+      </node>
+      <node id="34">
+        <label>docSect4Type</label>
+        <link refid="a01051"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>title</edgelabel>
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>internal</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+      </node>
+      <node id="54">
+        <label>referenceType</label>
+        <link refid="a01031"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>refid</edgelabel>
+          <edgelabel>compoundref</edgelabel>
+        </childnode>
+        <childnode refid="43" relation="usage">
+          <edgelabel>endline</edgelabel>
+          <edgelabel>startline</edgelabel>
+        </childnode>
+      </node>
+      <node id="61">
+        <label>linkType</label>
+        <link refid="a01011"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>refid</edgelabel>
+          <edgelabel>external</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>DoxProtectionKind</label>
+      </node>
+      <node id="49">
+        <label>memberdefType</label>
+        <link refid="a00975"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>virt</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>templateparamlist</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>param</edgelabel>
+        </childnode>
+        <childnode refid="50" relation="usage">
+          <edgelabel>enumvalue</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>briefdescription</edgelabel>
+          <edgelabel>detaileddescription</edgelabel>
+          <edgelabel>inbodydescription</edgelabel>
+        </childnode>
+        <childnode refid="51" relation="usage">
+          <edgelabel>refqual</edgelabel>
+        </childnode>
+        <childnode refid="52" relation="usage">
+          <edgelabel>location</edgelabel>
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>readable</edgelabel>
+          <edgelabel>volatile</edgelabel>
+          <edgelabel>maybedefault</edgelabel>
+          <edgelabel>removable</edgelabel>
+          <edgelabel>maybeambiguous</edgelabel>
+          <edgelabel>initonly</edgelabel>
+          <edgelabel>explicit</edgelabel>
+          <edgelabel>optional</edgelabel>
+          <edgelabel>writable</edgelabel>
+          <edgelabel>mutable</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="53" relation="usage">
+          <edgelabel>kind</edgelabel>
+        </childnode>
+        <childnode refid="54" relation="usage">
+          <edgelabel>referencedby</edgelabel>
+          <edgelabel>references</edgelabel>
+        </childnode>
+        <childnode refid="55" relation="usage">
+          <edgelabel>reimplementedby</edgelabel>
+          <edgelabel>reimplements</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>prot</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>initializer</edgelabel>
+          <edgelabel>type</edgelabel>
+          <edgelabel>exceptions</edgelabel>
+        </childnode>
+        <childnode refid="56" relation="usage">
+          <edgelabel>accessor</edgelabel>
+        </childnode>
+      </node>
+      <node id="46">
+        <label>DoxHighlightClass</label>
+      </node>
+      <node id="25">
+        <label>paramType</label>
+        <link refid="a00991"/>
+        <childnode refid="26" relation="usage">
+          <edgelabel>briefdescription</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>typeconstraint</edgelabel>
+          <edgelabel>defval</edgelabel>
+          <edgelabel>type</edgelabel>
+        </childnode>
+      </node>
+      <node id="45">
+        <label>spType</label>
+        <link refid="a01027"/>
+        <childnode refid="43" relation="usage">
+          <edgelabel>value</edgelabel>
+        </childnode>
+      </node>
+      <node id="52">
+        <label>locationType</label>
+        <link refid="a01035"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>bodyfile</edgelabel>
+          <edgelabel>file</edgelabel>
+        </childnode>
+        <childnode refid="43" relation="usage">
+          <edgelabel>bodystart</edgelabel>
+          <edgelabel>column</edgelabel>
+          <edgelabel>line</edgelabel>
+          <edgelabel>bodyend</edgelabel>
+        </childnode>
+      </node>
+      <node id="36">
+        <label>docInternalType</label>
+        <link refid="a01055"/>
+        <childnode refid="27" relation="usage">
+          <edgelabel>sect1</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+      </node>
+      <node id="64">
+        <label>memberRefType</label>
+        <link refid="a00947"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>refid</edgelabel>
+          <edgelabel>name</edgelabel>
+          <edgelabel>scope</edgelabel>
+          <edgelabel>ambiguityscope</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>virt</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>prot</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>DoxLanguage</label>
+      </node>
+      <node id="57">
+        <label>graphType</label>
+        <link refid="a00999"/>
+        <childnode refid="58" relation="usage">
+          <edgelabel>node</edgelabel>
+        </childnode>
+      </node>
+      <node id="59">
+        <label>childnodeType</label>
+        <link refid="a01007"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>refid</edgelabel>
+        </childnode>
+        <childnode refid="60" relation="usage">
+          <edgelabel>relation</edgelabel>
+        </childnode>
+      </node>
+      <node id="22">
+        <label>compoundRefType</label>
+        <link refid="a00951"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>refid</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>virt</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>prot</edgelabel>
+        </childnode>
+      </node>
+      <node id="56">
+        <label>DoxAccessor</label>
+      </node>
+      <node id="28">
+        <label>docParaType</label>
+        <link refid="a01087"/>
+      </node>
+    </collaborationgraph>
+    <location file="build/xml/compound.xsd.h" line="10" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="9" bodyend="43"/>
     <listofallmembers>
-      <member refid="a00939_1a78a816a94fc0bd8d962d90932cc9e15d" prot="private" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>_cache</name></member>
-      <member refid="a00939_1a026eb53aef02d9c1fdb7f6b57ac1f21d" prot="private" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>_rom</name></member>
-      <member refid="a00939_1ac77d5275d6ebe3ea4efe37f262c48826" prot="public" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>cast</name></member>
-      <member refid="a00939_1a9a9be8a8b466961c6a20ab9e89781200" prot="public" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>decode</name></member>
-      <member refid="a00939_1a707b3bc9bc40f455b80556dda7919bdc" prot="public" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>get</name></member>
-      <member refid="a00939_1a430e884e4dfa1dec8dc20bb332bd0b3a" prot="public" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>RomWrapper</name></member>
-      <member refid="a00939_1ae7d2fd6c9a84cfad3167fa000fc2b99e" prot="private" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>type</name></member>
+      <member refid="a00939_1a0622ddcb0c33fb692ee9e09610174b15" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>abstract</name></member>
+      <member refid="a00939_1aa57cf14f3bc737b0b7a538797281d6cd" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>basecompoundref</name></member>
+      <member refid="a00939_1a3e71d654e0826e46fc42066cfef78b1d" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>briefdescription</name></member>
+      <member refid="a00939_1ae6de0645295a5da4be20764b4dcde31d" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>collaborationgraph</name></member>
+      <member refid="a00939_1a6b22ed08d508e8c1bd3924a36635ce4f" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>compoundname</name></member>
+      <member refid="a00939_1af9840f9350c1aa81693cf5700f7f7dba" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>derivedcompoundref</name></member>
+      <member refid="a00939_1a0625ebafe3300dd2db5f7764921ed689" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>detaileddescription</name></member>
+      <member refid="a00939_1aebfd1bf43b39dbf05a5098f3c500a93e" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>final</name></member>
+      <member refid="a00939_1a17444501827a5ad7135f57ae3a381a3e" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>id</name></member>
+      <member refid="a00939_1a0ecb49321887b0323e8f443bb38f634b" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>incdepgraph</name></member>
+      <member refid="a00939_1a6d6fece9121c6adf826cd3805f8ea343" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>includedby</name></member>
+      <member refid="a00939_1ae23ac814652cd0599329bbc42ac80b3d" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>includes</name></member>
+      <member refid="a00939_1ae2fe458ce2b1689354093e70d85605b7" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>inheritancegraph</name></member>
+      <member refid="a00939_1aed4cc07268d9eb72a3d1d0ff05d39078" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>innerclass</name></member>
+      <member refid="a00939_1a324c49bf18c019a499dc8275c5832162" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>innerdir</name></member>
+      <member refid="a00939_1ad3e08816ce3cef0667abb716c73cdbf1" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>innerfile</name></member>
+      <member refid="a00939_1ac6acb0d0571ff428b53e9638edd55044" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>innergroup</name></member>
+      <member refid="a00939_1a5e9c9ce84e59799478d33d96295f38a4" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>innernamespace</name></member>
+      <member refid="a00939_1a607b2f13cf73a3e6d23bd91df0229837" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>innerpage</name></member>
+      <member refid="a00939_1abbca6ac30d4792720d058709be3a03d6" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>invincdepgraph</name></member>
+      <member refid="a00939_1aa33e98277164786f6cf24ff413f4140d" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>kind</name></member>
+      <member refid="a00939_1acdd2db51f2bf4ce6668bd02e4f61acb5" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>language</name></member>
+      <member refid="a00939_1a9a2b1ed4e3c2e939e3a56c6fcfd540f5" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>listofallmembers</name></member>
+      <member refid="a00939_1a3c67d8aad522dff97769945bb6ba9e1a" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>location</name></member>
+      <member refid="a00939_1a73977f28b8426a0f48ec1abf7e19056c" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>programlisting</name></member>
+      <member refid="a00939_1a0d6bdfed4dda3ccf0accd27bcfca14cf" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>prot</name></member>
+      <member refid="a00939_1a9c162627ee1abfc313e397cbf4afbcfd" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>sealed</name></member>
+      <member refid="a00939_1a8574cb4a5a4da1cca38d5faa06c19c7a" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>sectiondef</name></member>
+      <member refid="a00939_1af38d962690c2cf962dce06278e9a1c57" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>tableofcontents</name></member>
+      <member refid="a00939_1a955cfa6186e17adda367d9e96e50b4e0" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>templateparamlist</name></member>
+      <member refid="a00939_1ada63b315b4feef4e0f9e7e910e0dae0a" prot="public" virt="non-virtual"><scope>compounddefType</scope><name>title</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -1,82 +1,49 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01171" kind="class" language="C++" prot="public">
-    <compoundname>Hack::Compiler::XmlWriter</compoundname>
-    <includes local="no">Source/Compiler/Common/XmlWriter.h</includes>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="a01171_1a5cb0473afdc058fd997dccb6c5960451" prot="private" static="no" mutable="no">
-        <type><ref refid="a01155" kindref="compound">Node</ref> *</type>
-        <definition>Node* Hack::Compiler::XmlWriter::_root</definition>
+    <compoundname>docTocListType</compoundname>
+    <includes local="no">build/xml/compound.xsd.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="a01171_1a03e0cf1b312b0a3f4a32c77ad9265c3f" prot="public" static="no" mutable="no">
+        <type><ref refid="a01167" kindref="compound">docTocItemType</ref></type>
+        <definition>docTocItemType docTocListType::tocitem</definition>
         <argsstring></argsstring>
-        <name>_root</name>
+        <name>tocitem</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Common/XmlWriter.h" line="32" column="1" bodyfile="Source/Compiler/Common/XmlWriter.h" bodystart="32" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01171_1a4c59931215e9baefd735d35d7a495873" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Hack::Compiler::XmlWriter::XmlWriter</definition>
-        <argsstring>(Node *root)</argsstring>
-        <name>XmlWriter</name>
-        <param>
-          <type><ref refid="a01155" kindref="compound">Node</ref> *</type>
-          <declname>root</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Common/XmlWriter.h" line="35" column="1" bodyfile="Source/Compiler/Common/XmlWriter.cpp" bodystart="144" bodyend="147"/>
-      </memberdef>
-      <memberdef kind="function" id="a01171_1a76dd0f1a946c740e642b3d4a4067cd26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Hack::Compiler::XmlWriter::~XmlWriter</definition>
-        <argsstring>()=default</argsstring>
-        <name>~XmlWriter</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Common/XmlWriter.h" line="37" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a01171_1a3cda3976be2f39380491275e681cdde9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::XmlWriter::write</definition>
-        <argsstring>(OStream &amp;out) const</argsstring>
-        <name>write</name>
-        <param>
-          <type><ref refid="a00891_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref> &amp;</type>
-          <declname>out</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Common/XmlWriter.h" line="39" column="1" bodyfile="Source/Compiler/Common/XmlWriter.cpp" bodystart="149" bodyend="153"/>
+        <location file="build/xml/compound.xsd.h" line="878" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="878" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Compiler/Common/XmlWriter.h" line="30" column="1" bodyfile="Source/Compiler/Common/XmlWriter.h" bodystart="29" bodyend="40"/>
+    <collaborationgraph>
+      <node id="319">
+        <label>String</label>
+      </node>
+      <node id="318">
+        <label>docTocItemType</label>
+        <link refid="a01167"/>
+        <childnode refid="319" relation="usage">
+          <edgelabel>id</edgelabel>
+        </childnode>
+      </node>
+      <node id="317">
+        <label>docTocListType</label>
+        <link refid="a01171"/>
+        <childnode refid="318" relation="usage">
+          <edgelabel>tocitem</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="build/xml/compound.xsd.h" line="876" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="875" bodyend="879"/>
     <listofallmembers>
-      <member refid="a01171_1a5cb0473afdc058fd997dccb6c5960451" prot="private" virt="non-virtual"><scope>Hack::Compiler::XmlWriter</scope><name>_root</name></member>
-      <member refid="a01171_1a3cda3976be2f39380491275e681cdde9" prot="public" virt="non-virtual"><scope>Hack::Compiler::XmlWriter</scope><name>write</name></member>
-      <member refid="a01171_1a4c59931215e9baefd735d35d7a495873" prot="public" virt="non-virtual"><scope>Hack::Compiler::XmlWriter</scope><name>XmlWriter</name></member>
-      <member refid="a01171_1a76dd0f1a946c740e642b3d4a4067cd26" prot="public" virt="non-virtual"><scope>Hack::Compiler::XmlWriter</scope><name>~XmlWriter</name></member>
+      <member refid="a01171_1a03e0cf1b312b0a3f4a32c77ad9265c3f" prot="public" virt="non-virtual"><scope>docTocListType</scope><name>tocitem</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

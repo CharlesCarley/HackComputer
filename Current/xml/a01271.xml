@@ -1,92 +1,76 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01271" kind="class" language="C++" prot="public" final="yes">
-    <compoundname>Hack::ParseError</compoundname>
-    <basecompoundref refid="a01251" prot="public" virt="non-virtual">Hack::Exception</basecompoundref>
-    <includes local="no">Source/Utils/ParserBase/ParseError.h</includes>
-      <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01271_1ad5fbf42e19047225a7de16baa8cda76e" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
-        <type></type>
-        <definition>Hack::ParseError::ParseError</definition>
-        <argsstring>()</argsstring>
-        <name>ParseError</name>
+    <compoundname>Hack::Chips::Bit</compoundname>
+    <basecompoundref refid="a01291" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; uint8_t, 8 &gt;</basecompoundref>
+    <includes local="no">Source/Chips/Bit.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="a01271_1a171fcf84ce799cd02784d8fb4432ab94" prot="private" static="no" mutable="no">
+        <type><ref refid="a01315" kindref="compound">DFlipFlop</ref></type>
+        <definition>DFlipFlop Hack::Chips::Bit::_ff</definition>
+        <argsstring></argsstring>
+        <name>_ff</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParseError.h" line="30" column="1" bodyfile="Source/Utils/ParserBase/ParseError.h" bodystart="30" bodyend="33"/>
-      </memberdef>
-      <memberdef kind="function" id="a01271_1a9a62c64f6fe1991bf379e478b6914c15" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
-        <type></type>
-        <definition>Hack::ParseError::ParseError</definition>
-        <argsstring>(const String &amp;message)</argsstring>
-        <name>ParseError</name>
-        <param>
-          <type>const <ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>message</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParseError.h" line="35" column="1" bodyfile="Source/Utils/ParserBase/ParseError.h" bodystart="35" bodyend="38"/>
-      </memberdef>
-      <memberdef kind="function" id="a01271_1a1b6d389020bc20c4f39bf6988ee782e4" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
-        <type></type>
-        <definition>Hack::ParseError::ParseError</definition>
-        <argsstring>(const int stage, const String &amp;file, const size_t line, const String &amp;message)</argsstring>
-        <name>ParseError</name>
-        <param>
-          <type>const int</type>
-          <declname>stage</declname>
-        </param>
-        <param>
-          <type>const <ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>file</declname>
-        </param>
-        <param>
-          <type>const size_t</type>
-          <declname>line</declname>
-        </param>
-        <param>
-          <type>const <ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>message</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParseError.h" line="40" column="1" bodyfile="Source/Utils/ParserBase/ParseError.h" bodystart="40" bodyend="46"/>
+        <location file="Source/Chips/Bit.h" line="34" column="1" bodyfile="Source/Chips/Bit.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       </sectiondef>
-      <sectiondef kind="private-static-func">
-      <memberdef kind="function" id="a01271_1a1b668fbd30a57da23ad40df61387dc26" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Hack::ParseError::getError</definition>
-        <argsstring>(int stage, const String &amp;file, const size_t &amp;line, const String &amp;message=&quot;&quot;)</argsstring>
-        <name>getError</name>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="a01271_1a5d2190c9f3f438534dff9d9609a9181d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Bit::evaluate</definition>
+        <argsstring>()</argsstring>
+        <name>evaluate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Bit.h" line="32" column="1" bodyfile="Source/Chips/Bit.cpp" bodystart="58" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a01271_1ac2e65071f9fd28e71313633827a456f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Chips::Bit::Bit</definition>
+        <argsstring>()</argsstring>
+        <name>Bit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Bit.h" line="37" column="1" bodyfile="Source/Chips/Bit.cpp" bodystart="32" bodyend="35"/>
+        <references refid="a01291_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00494" startline="52">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
+      </memberdef>
+      <memberdef kind="function" id="a01271_1a74a55be20478dacf7da328d2bf7aa214" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::Bit::getOut</definition>
+        <argsstring>()</argsstring>
+        <name>getOut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Bit.h" line="45" column="1" bodyfile="Source/Chips/Bit.cpp" bodystart="52" bodyend="56"/>
+        <references refid="a01291_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00494" startline="100" endline="103">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::getBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01271_1a19452f2ad034d4fca589d1240ab6fe3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Bit::setClock</definition>
+        <argsstring>(bool clock)</argsstring>
+        <name>setClock</name>
         <param>
-          <type>int</type>
-          <declname>stage</declname>
-        </param>
-        <param>
-          <type>const <ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>file</declname>
-        </param>
-        <param>
-          <type>const size_t &amp;</type>
-          <declname>line</declname>
-        </param>
-        <param>
-          <type>const <ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>message</declname>
-          <defval>&quot;&quot;</defval>
+          <type>bool</type>
+          <declname>clock</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -94,7 +78,44 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParseError.h" line="49" column="1" bodyfile="Source/Utils/ParserBase/ParseError.cpp" bodystart="26" bodyend="43"/>
+        <location file="Source/Chips/Bit.h" line="43" column="1" bodyfile="Source/Chips/Bit.cpp" bodystart="47" bodyend="50"/>
+        <references refid="a01291_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00494" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01271_1a16defb3ec91face653726fc91bc38f5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Bit::setIn</definition>
+        <argsstring>(bool input)</argsstring>
+        <name>setIn</name>
+        <param>
+          <type>bool</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Bit.h" line="39" column="1" bodyfile="Source/Chips/Bit.cpp" bodystart="37" bodyend="40"/>
+        <references refid="a01291_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00494" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01271_1afc3484d908c45bef517b4582a2d6894c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Bit::setLoad</definition>
+        <argsstring>(bool load)</argsstring>
+        <name>setLoad</name>
+        <param>
+          <type>bool</type>
+          <declname>load</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Bit.h" line="41" column="1" bodyfile="Source/Chips/Bit.cpp" bodystart="42" bodyend="45"/>
+        <references refid="a01291_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00494" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -102,49 +123,54 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="398">
-        <label>std::exception</label>
+      <node id="446">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="a01291"/>
       </node>
-      <node id="396">
-        <label>Hack::ParseError</label>
+      <node id="445">
+        <label>Hack::Chips::Bit</label>
         <link refid="a01271"/>
-        <childnode refid="397" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="397">
-        <label>Hack::Exception</label>
-        <link refid="a01251"/>
-        <childnode refid="398" relation="public-inheritance">
+        <childnode refid="446" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="401">
-        <label>std::exception</label>
+      <node id="449">
+        <label>uint8_t</label>
+        <link refid="a01671"/>
       </node>
-      <node id="399">
-        <label>Hack::ParseError</label>
-        <link refid="a01271"/>
-        <childnode refid="400" relation="public-inheritance">
+      <node id="448">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="a01291"/>
+        <childnode refid="449" relation="usage">
+          <edgelabel>_bits</edgelabel>
         </childnode>
       </node>
-      <node id="400">
-        <label>Hack::Exception</label>
-        <link refid="a01251"/>
-        <childnode refid="401" relation="public-inheritance">
+      <node id="447">
+        <label>Hack::Chips::Bit</label>
+        <link refid="a01271"/>
+        <childnode refid="448" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="Source/Utils/ParserBase/ParseError.h" line="28" column="1" bodyfile="Source/Utils/ParserBase/ParseError.h" bodystart="27" bodyend="53"/>
+    <location file="Source/Chips/Bit.h" line="30" column="1" bodyfile="Source/Chips/Bit.h" bodystart="29" bodyend="46"/>
     <listofallmembers>
-      <member refid="a01251_1abf07f31396bbcd6c6b006120d5d3e031" prot="public" virt="non-virtual"><scope>Hack::ParseError</scope><name>Exception</name></member>
-      <member refid="a01251_1ab4bb8a7159681d4e6776cec5a935eda5" prot="public" virt="non-virtual"><scope>Hack::ParseError</scope><name>Exception</name></member>
-      <member refid="a01251_1a8296ea42b1a1a21aa7cb4ea5bd5dc1af" prot="public" virt="non-virtual"><scope>Hack::ParseError</scope><name>Exception</name></member>
-      <member refid="a01271_1a1b668fbd30a57da23ad40df61387dc26" prot="private" virt="non-virtual"><scope>Hack::ParseError</scope><name>getError</name></member>
-      <member refid="a01271_1ad5fbf42e19047225a7de16baa8cda76e" prot="public" virt="non-virtual"><scope>Hack::ParseError</scope><name>ParseError</name></member>
-      <member refid="a01271_1a9a62c64f6fe1991bf379e478b6914c15" prot="public" virt="non-virtual"><scope>Hack::ParseError</scope><name>ParseError</name></member>
-      <member refid="a01271_1a1b6d389020bc20c4f39bf6988ee782e4" prot="public" virt="non-virtual"><scope>Hack::ParseError</scope><name>ParseError</name></member>
-      <member refid="a01251_1ad552d982f58950c324eaebd2dfbd1fe2" prot="public" virt="non-virtual"><scope>Hack::ParseError</scope><name>what</name></member>
+      <member refid="a01291_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Bit</scope><name>_bits</name></member>
+      <member refid="a01271_1a171fcf84ce799cd02784d8fb4432ab94" prot="private" virt="non-virtual"><scope>Hack::Chips::Bit</scope><name>_ff</name></member>
+      <member refid="a01291_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::Bit</scope><name>applyBit</name></member>
+      <member refid="a01291_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::Bit</scope><name>assignBit</name></member>
+      <member refid="a01271_1ac2e65071f9fd28e71313633827a456f1" prot="public" virt="non-virtual"><scope>Hack::Chips::Bit</scope><name>Bit</name></member>
+      <member refid="a01291_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::Bit</scope><name>Chip</name></member>
+      <member refid="a01291_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::Bit</scope><name>clearBit</name></member>
+      <member refid="a01271_1a5d2190c9f3f438534dff9d9609a9181d" prot="private" virt="non-virtual"><scope>Hack::Chips::Bit</scope><name>evaluate</name></member>
+      <member refid="a01291_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::Bit</scope><name>getBit</name></member>
+      <member refid="a01271_1a74a55be20478dacf7da328d2bf7aa214" prot="public" virt="non-virtual"><scope>Hack::Chips::Bit</scope><name>getOut</name></member>
+      <member refid="a01291_1a63bb368bb0827830235759b33718d1b4" prot="protected" virt="virtual"><scope>Hack::Chips::Bit</scope><name>isDirty</name></member>
+      <member refid="a01291_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::Bit</scope><name>setBit</name></member>
+      <member refid="a01271_1a19452f2ad034d4fca589d1240ab6fe3b" prot="public" virt="non-virtual"><scope>Hack::Chips::Bit</scope><name>setClock</name></member>
+      <member refid="a01271_1a16defb3ec91face653726fc91bc38f5a" prot="public" virt="non-virtual"><scope>Hack::Chips::Bit</scope><name>setIn</name></member>
+      <member refid="a01271_1afc3484d908c45bef517b4582a2d6894c" prot="public" virt="non-virtual"><scope>Hack::Chips::Bit</scope><name>setLoad</name></member>
+      <member refid="a01291_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::Bit</scope><name>~Chip</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

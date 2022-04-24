@@ -1,76 +1,34 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01287" kind="class" language="C++" prot="public">
-    <compoundname>Hack::StringUtils</compoundname>
-    <includes local="no">Source/Utils/String.h</includes>
+    <compoundname>Hack::Chips::BitUtils</compoundname>
+    <includes local="no">Source/Chips/BitUtils.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type>uint8_t</type>
+        <declname>Count</declname>
+        <defname>Count</defname>
+      </param>
+    </templateparamlist>
       <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="a01287_1a8967bdf4168b1b6865eae69ce48e9d38" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01287_1a266db4b38d31abd421bdb6356b6d8f6a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::StringUtils::generate</definition>
-        <argsstring>(String &amp;dest, int &amp;counter, void *seed)</argsstring>
-        <name>generate</name>
+        <definition>void Hack::Chips::BitUtils&lt; T, Count &gt;::applyBit</definition>
+        <argsstring>(T &amp;bits, const T &amp;index, bool value)</argsstring>
+        <name>applyBit</name>
         <param>
-          <type><ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>dest</declname>
+          <type>T &amp;</type>
+          <declname>bits</declname>
         </param>
         <param>
-          <type>int &amp;</type>
-          <declname>counter</declname>
+          <type>const T &amp;</type>
+          <declname>index</declname>
         </param>
         <param>
-          <type>void *</type>
-          <declname>seed</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/String.h" line="47" column="1" bodyfile="Source/Utils/String.cpp" bodystart="148" bodyend="157"/>
-        <references refid="a01287_1a317411e0785122e1f415d6da27351ba6" compoundref="a00836" startline="132" endline="146">scramble</references>
-        <references refid="a00891_1a0022073c844c619a094704ae6c9b14bf" compoundref="a00839" startline="71" endline="76">Hack::StringCombine</references>
-      </memberdef>
-      <memberdef kind="function" id="a01287_1a69ee5b484bf63300d0a47a71ea806bcc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::StringUtils::replaceAll</definition>
-        <argsstring>(String &amp;dest, const String &amp;input, const String &amp;a, const String &amp;b)</argsstring>
-        <name>replaceAll</name>
-        <param>
-          <type><ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>dest</declname>
-        </param>
-        <param>
-          <type>const <ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>input</declname>
-        </param>
-        <param>
-          <type>const <ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>const <ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/String.h" line="59" column="1" bodyfile="Source/Utils/String.cpp" bodystart="30" bodyend="73"/>
-      </memberdef>
-      <memberdef kind="function" id="a01287_1a317411e0785122e1f415d6da27351ba6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::StringUtils::scramble</definition>
-        <argsstring>(String &amp;dest, size_t value)</argsstring>
-        <name>scramble</name>
-        <param>
-          <type><ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>dest</declname>
-        </param>
-        <param>
-          <type>size_t</type>
+          <type>bool</type>
           <declname>value</declname>
         </param>
         <briefdescription>
@@ -79,26 +37,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/String.h" line="45" column="1" bodyfile="Source/Utils/String.cpp" bodystart="132" bodyend="146"/>
-        <references refid="a00891_1ab2f01cb6501d226bff7dec88849a0f23" compoundref="a00836" startline="130">Hack::BaseCharsSize</references>
-        <references refid="a00891_1ae7e3e66ba861ebc2a81c74fab64eca4a" compoundref="a00836" startline="118">Hack::BaseChars</references>
+        <location file="Source/Chips/BitUtils.h" line="114" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="240" bodyend="243"/>
       </memberdef>
-      <memberdef kind="function" id="a01287_1a23bf4c692af3b432d695218ea0143544" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01287_1a8de689aae4b89fd7d06c770aed087e37" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::StringUtils::split</definition>
-        <argsstring>(StringArray &amp;dest, const String &amp;str, char sep)</argsstring>
-        <name>split</name>
+        <definition>void Hack::Chips::BitUtils&lt; T, Count &gt;::assignBit</definition>
+        <argsstring>(T &amp;bits, const T &amp;index)</argsstring>
+        <name>assignBit</name>
         <param>
-          <type><ref refid="a00891_1a02a62f0f81901a275e5e91f45798b2de" kindref="member">StringArray</ref> &amp;</type>
-          <declname>dest</declname>
+          <type>T &amp;</type>
+          <declname>bits</declname>
         </param>
         <param>
-          <type>const <ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>str</declname>
-        </param>
-        <param>
-          <type>char</type>
-          <declname>sep</declname>
+          <type>const T &amp;</type>
+          <declname>index</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -106,24 +58,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/String.h" line="41" column="1" bodyfile="Source/Utils/String.cpp" bodystart="92" bodyend="99"/>
+        <location file="Source/Chips/BitUtils.h" line="110" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="220" bodyend="227"/>
       </memberdef>
-      <memberdef kind="function" id="a01287_1a53310d5035726b278967009996f3f536" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01287_1adc5cf65b1d1ca5d3562cb57711d78ce9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::StringUtils::split</definition>
-        <argsstring>(StringArray &amp;dest, const String &amp;str, const String &amp;sep)</argsstring>
-        <name>split</name>
+        <definition>void Hack::Chips::BitUtils&lt; T, Count &gt;::clearBit</definition>
+        <argsstring>(T &amp;bits, const T &amp;index)</argsstring>
+        <name>clearBit</name>
         <param>
-          <type><ref refid="a00891_1a02a62f0f81901a275e5e91f45798b2de" kindref="member">StringArray</ref> &amp;</type>
-          <declname>dest</declname>
+          <type>T &amp;</type>
+          <declname>bits</declname>
         </param>
         <param>
-          <type>const <ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>str</declname>
-        </param>
-        <param>
-          <type>const <ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>sep</declname>
+          <type>const T &amp;</type>
+          <declname>index</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -131,52 +79,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/String.h" line="43" column="1" bodyfile="Source/Utils/String.cpp" bodystart="101" bodyend="115"/>
+        <location file="Source/Chips/BitUtils.h" line="112" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="230" bodyend="237"/>
       </memberdef>
-      <memberdef kind="function" id="a01287_1a3023cff3d330aedadb3eaea6f04ae076" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::StringUtils::splitLine</definition>
-        <argsstring>(StringArray &amp;dest, const String &amp;input, char swap=&apos;$&apos;)</argsstring>
-        <name>splitLine</name>
+      <memberdef kind="function" id="a01287_1ae3a8aa786d194eb21dc8a71b3d8de9af" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T Hack::Chips::BitUtils&lt; T, Count &gt;::extract</definition>
+        <argsstring>(const T &amp;in, const T &amp;lo, const T &amp;hi)</argsstring>
+        <name>extract</name>
         <param>
-          <type><ref refid="a00891_1a02a62f0f81901a275e5e91f45798b2de" kindref="member">StringArray</ref> &amp;</type>
-          <declname>dest</declname>
-        </param>
-        <param>
-          <type>const <ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>input</declname>
-        </param>
-        <param>
-          <type>char</type>
-          <declname>swap</declname>
-          <defval>&apos;$&apos;</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/String.h" line="57" column="1" bodyfile="Source/Utils/String.cpp" bodystart="75" bodyend="90"/>
-        <references refid="a01287_1a69ee5b484bf63300d0a47a71ea806bcc" compoundref="a00836" startline="30" endline="73">replaceAll</references>
-        <references refid="a01287_1a23bf4c692af3b432d695218ea0143544" compoundref="a00836" startline="92" endline="99">split</references>
-      </memberdef>
-      <memberdef kind="function" id="a01287_1af753b3b5d5e6d9a7122823f88d3cdd32" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::StringUtils::trim</definition>
-        <argsstring>(String &amp;dest, const String &amp;in, char ch)</argsstring>
-        <name>trim</name>
-        <param>
-          <type><ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>dest</declname>
-        </param>
-        <param>
-          <type>const <ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <type>const T &amp;</type>
           <declname>in</declname>
         </param>
         <param>
-          <type>char</type>
-          <declname>ch</declname>
+          <type>const T &amp;</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>hi</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -184,26 +104,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/String.h" line="51" column="1" bodyfile="Source/Utils/String.cpp" bodystart="159" bodyend="163"/>
-        <references refid="a01287_1a69f375e46be64e684cc13eca491ca216" compoundref="a00836" startline="195" endline="208">trimL</references>
-        <references refid="a01287_1ae247bfac8ee378f4ee806788f40fa8db" compoundref="a00836" startline="210" endline="228">trimR</references>
+        <location file="Source/Chips/BitUtils.h" line="104" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="187" bodyend="201"/>
       </memberdef>
-      <memberdef kind="function" id="a01287_1a69f375e46be64e684cc13eca491ca216" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::StringUtils::trimL</definition>
-        <argsstring>(String &amp;dest, const String &amp;in, char ch)</argsstring>
-        <name>trimL</name>
+      <memberdef kind="function" id="a01287_1a62cc15c18ccdd215a9ef08e8a8021564" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::BitUtils&lt; T, Count &gt;::getBit</definition>
+        <argsstring>(const T &amp;bits, const T &amp;index)</argsstring>
+        <name>getBit</name>
         <param>
-          <type><ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>dest</declname>
+          <type>const T &amp;</type>
+          <declname>bits</declname>
         </param>
         <param>
-          <type>const <ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>in</declname>
-        </param>
-        <param>
-          <type>char</type>
-          <declname>ch</declname>
+          <type>const T &amp;</type>
+          <declname>index</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -211,24 +125,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/String.h" line="53" column="1" bodyfile="Source/Utils/String.cpp" bodystart="195" bodyend="208"/>
+        <location file="Source/Chips/BitUtils.h" line="106" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="204" bodyend="211"/>
       </memberdef>
-      <memberdef kind="function" id="a01287_1ae247bfac8ee378f4ee806788f40fa8db" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::StringUtils::trimR</definition>
-        <argsstring>(String &amp;dest, const String &amp;in, char ch)</argsstring>
-        <name>trimR</name>
+      <memberdef kind="function" id="a01287_1ac31a6aa587c55f64f6573492652e1730" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T Hack::Chips::BitUtils&lt; T, Count &gt;::pack</definition>
+        <argsstring>(const uint8_t *array)</argsstring>
+        <name>pack</name>
         <param>
-          <type><ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>dest</declname>
-        </param>
-        <param>
-          <type>const <ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>in</declname>
-        </param>
-        <param>
-          <type>char</type>
-          <declname>ch</declname>
+          <type>const uint8_t *</type>
+          <declname>array</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -236,20 +142,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/String.h" line="55" column="1" bodyfile="Source/Utils/String.cpp" bodystart="210" bodyend="228"/>
+        <location file="Source/Chips/BitUtils.h" line="95" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="134" bodyend="143"/>
       </memberdef>
-      <memberdef kind="function" id="a01287_1a7aa6b5303b41ecaef5ae3ac881a6e984" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::StringUtils::trimWhiteSpace</definition>
-        <argsstring>(String &amp;dest, const String &amp;in)</argsstring>
-        <name>trimWhiteSpace</name>
+      <memberdef kind="function" id="a01287_1a15ca6f92f9fcfddbec6acfc088207580" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T Hack::Chips::BitUtils&lt; T, Count &gt;::pack</definition>
+        <argsstring>(const char *array)</argsstring>
+        <name>pack</name>
         <param>
-          <type><ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>dest</declname>
-        </param>
-        <param>
-          <type>const <ref refid="a00891_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>in</declname>
+          <type>const char *</type>
+          <declname>array</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -257,26 +159,151 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/String.h" line="49" column="1" bodyfile="Source/Utils/String.cpp" bodystart="165" bodyend="193"/>
-        <references refid="a00891_1afe2cb1512758851b265f12637bd5ec7c" compoundref="a00791" startline="181" endline="184">Hack::isWhiteSpace</references>
+        <location file="Source/Chips/BitUtils.h" line="97" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="146" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="a01287_1a6fd7a5127f6124328bcdce2c4f8f3746" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T Hack::Chips::BitUtils&lt; T, Count &gt;::pack</definition>
+        <argsstring>(const bool *array)</argsstring>
+        <name>pack</name>
+        <param>
+          <type>const bool *</type>
+          <declname>array</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/BitUtils.h" line="99" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="158" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="a01287_1a8f720f0a46647449b7ad1d440bc7bcc0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>uint8_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Hack::Chips::BitUtils&lt; T, Count &gt;::pack</definition>
+        <argsstring>(const bool array[N])</argsstring>
+        <name>pack</name>
+        <param>
+          <type>const bool</type>
+          <declname>array</declname>
+          <array>[N]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/BitUtils.h" line="102" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="171" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="a01287_1ad5c0a4604c2e2f1f84cfc932d703996f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::BitUtils&lt; T, Count &gt;::printBit</definition>
+        <argsstring>(const T &amp;bits)</argsstring>
+        <name>printBit</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>bits</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/BitUtils.h" line="116" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="246" bodyend="255"/>
+        <references refid="a01551_1aa75558c74eafde74be9d33818a79a3fe" compoundref="a00821" startline="199" endline="204">Hack::Console::writeLine</references>
+      </memberdef>
+      <memberdef kind="function" id="a01287_1ab1a8c5970c7a58f399c82c96c872a920" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::BitUtils&lt; T, Count &gt;::setBit</definition>
+        <argsstring>(T &amp;bits, const T &amp;index)</argsstring>
+        <name>setBit</name>
+        <param>
+          <type>T &amp;</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/BitUtils.h" line="108" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="214" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="a01287_1aeb4746b405570c6d38aebba1532c324c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::BitUtils&lt; T, Count &gt;::unpack</definition>
+        <argsstring>(const T &amp;value, bool *array)</argsstring>
+        <name>unpack</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>array</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/BitUtils.h" line="91" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="120" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="a01287_1a8c82269dbbcc05e6a5db4bba94b32c98" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::BitUtils&lt; T, Count &gt;::unpack</definition>
+        <argsstring>(const T &amp;value, uint8_t *array)</argsstring>
+        <name>unpack</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>array</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/BitUtils.h" line="93" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="127" bodyend="131"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Utils/String.h" line="39" column="1" bodyfile="Source/Utils/String.h" bodystart="38" bodyend="60"/>
+    <location file="Source/Chips/BitUtils.h" line="89" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="88" bodyend="117"/>
     <listofallmembers>
-      <member refid="a01287_1a8967bdf4168b1b6865eae69ce48e9d38" prot="public" virt="non-virtual"><scope>Hack::StringUtils</scope><name>generate</name></member>
-      <member refid="a01287_1a69ee5b484bf63300d0a47a71ea806bcc" prot="public" virt="non-virtual"><scope>Hack::StringUtils</scope><name>replaceAll</name></member>
-      <member refid="a01287_1a317411e0785122e1f415d6da27351ba6" prot="public" virt="non-virtual"><scope>Hack::StringUtils</scope><name>scramble</name></member>
-      <member refid="a01287_1a23bf4c692af3b432d695218ea0143544" prot="public" virt="non-virtual"><scope>Hack::StringUtils</scope><name>split</name></member>
-      <member refid="a01287_1a53310d5035726b278967009996f3f536" prot="public" virt="non-virtual"><scope>Hack::StringUtils</scope><name>split</name></member>
-      <member refid="a01287_1a3023cff3d330aedadb3eaea6f04ae076" prot="public" virt="non-virtual"><scope>Hack::StringUtils</scope><name>splitLine</name></member>
-      <member refid="a01287_1af753b3b5d5e6d9a7122823f88d3cdd32" prot="public" virt="non-virtual"><scope>Hack::StringUtils</scope><name>trim</name></member>
-      <member refid="a01287_1a69f375e46be64e684cc13eca491ca216" prot="public" virt="non-virtual"><scope>Hack::StringUtils</scope><name>trimL</name></member>
-      <member refid="a01287_1ae247bfac8ee378f4ee806788f40fa8db" prot="public" virt="non-virtual"><scope>Hack::StringUtils</scope><name>trimR</name></member>
-      <member refid="a01287_1a7aa6b5303b41ecaef5ae3ac881a6e984" prot="public" virt="non-virtual"><scope>Hack::StringUtils</scope><name>trimWhiteSpace</name></member>
+      <member refid="a01287_1a266db4b38d31abd421bdb6356b6d8f6a" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>applyBit</name></member>
+      <member refid="a01287_1a8de689aae4b89fd7d06c770aed087e37" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>assignBit</name></member>
+      <member refid="a01287_1adc5cf65b1d1ca5d3562cb57711d78ce9" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>clearBit</name></member>
+      <member refid="a01287_1ae3a8aa786d194eb21dc8a71b3d8de9af" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>extract</name></member>
+      <member refid="a01287_1a62cc15c18ccdd215a9ef08e8a8021564" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>getBit</name></member>
+      <member refid="a01287_1ac31a6aa587c55f64f6573492652e1730" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>pack</name></member>
+      <member refid="a01287_1a15ca6f92f9fcfddbec6acfc088207580" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>pack</name></member>
+      <member refid="a01287_1a6fd7a5127f6124328bcdce2c4f8f3746" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>pack</name></member>
+      <member refid="a01287_1a8f720f0a46647449b7ad1d440bc7bcc0" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>pack</name></member>
+      <member refid="a01287_1ad5c0a4604c2e2f1f84cfc932d703996f" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>printBit</name></member>
+      <member refid="a01287_1ab1a8c5970c7a58f399c82c96c872a920" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>setBit</name></member>
+      <member refid="a01287_1aeb4746b405570c6d38aebba1532c324c" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>unpack</name></member>
+      <member refid="a01287_1a8c82269dbbcc05e6a5db4bba94b32c98" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>unpack</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

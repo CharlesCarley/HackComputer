@@ -2,24 +2,18 @@
 /*!
 \page Hc07 Computer
 
-\brief Implements a program to tie the system together.
+\brief Defines the main program that ties the components together.
+
+\section Hc07Computer Computer
+
+The Hack::Computer class links together the ROM, RAM and CPU chips.
+It accepts as input an array of 16 bit integers.
+
+This projects responsibilities are to tie together the Hack::Computer class with rest of the system.
+And combine the result with a runtime interface. The runtime interface executes the supplied input with
+a user selected implementation.
 
 \n\n
-It ties together the ROM, RAM and CPU chips and implements multiple runtime targets.
-
-\n\n
-If SDL is enabled the default runtime will open a window and map the screen region of memory to a SDL window.
-Otherwise if SDL is disabled, the default and only runtime is the command line debugger.
-\n
-
-\section Hc07Debugger Debugger
-
-\image html Debugger.png
-\n\n
-
-
-\section Hc07Usage Usage
-
 \code{.txt}
 Usage: computer <options> <arg[0] .. arg[n]>
 
@@ -33,6 +27,28 @@ Usage: computer <options> <arg[0] .. arg[n]>
         --show-mc   Output the emitted machine code from the supplied file
 \endcode
 
+
+The runtime interface is composed of multiple back ends.
+\n
+- Command Line - Runs the file until completion
+- Command Line Debugger - Debugs the state of execution.
+- SDL runtime - Displays only the screen memory.
+
+If SDL is enabled, the default runtime will be SDL. Otherwise, the default runtime is the command line debugger.
+
+\n
+\subsection Hc07Debugger Command Line Debugger.
+
+The debugger will execute one instruction from ROM and refresh the console with the current state of the circuits.
+\n\n
+
+- The up-arrow key will initiate a tick.
+- The r key will reset execution.
+- The c key will loop execution.
+
+ 
+\n\n
+\image html Debugger.png
 
 \section Hc07Defines Defined In
 

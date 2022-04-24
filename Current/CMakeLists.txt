@@ -22,9 +22,9 @@ include(MdDoxBuilder)
 
 # Setup for generating the site
 
-set(MdDoxBuilder_SourceLocation  ${Hack_SOURCE_DIR}/Source)
+set(MdDoxBuilder_SourceLocation  ${Hack_SOURCE_DIR})
 set(MdDoxBuilder_OutputDir       ${Hack_SOURCE_DIR}/Current)
-set(MdDoxBuilder_SourceExclude   "")
+set(MdDoxBuilder_SourceExclude   ${Hack_SOURCE_DIR}/Test ${Hack_SOURCE_DIR}/Extern ${Hack_SOURCE_DIR}/CMake ${CMAKE_BINARY_DIR})
 set(MdDoxBuilder_SymbolExclude   "std")
 set(MdDoxBuilder_ExamplePaths    ${Hack_SOURCE_DIR}/Current/pages)
 set(MdDoxBuilder_ImagePaths      ${Hack_SOURCE_DIR}/Current/images)

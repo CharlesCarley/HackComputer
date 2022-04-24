@@ -6,11 +6,13 @@
 <span class="bold-text"><b></b></span>
 <br/>
 <br/>
-<span class="inline-text">This repository is my implementation of the </span>
+<span class="inline-text">This repository is an implementation of the </span>
 <a href="a00894.md#hack">Hack</a>
 <span class="inline-text"> computer in C++ from the </span>
 <a href="https://www.coursera.org/learn/build-a-computer#nand2tetris-course">NAnd2Tetris course</a>
-<span class="inline-text">. It is a bit over the top and does not strictly adhere to the course. I chose to opt out of the certificate of completion instead chose to support the authors by buying the e-book. I wanted something self-contained in the end. In order to do that, the supplied tools in the course materials were written from scratch, to some extent. </span>
+<span class="inline-text">. It is a bit over the top and does not strictly adhere to the course. I chose to opt out of the certificate of completion instead chose to support the authors by buying the </span>
+<a href="https://www.amazon.com/Elements-Computing-Systems-second-Principles-ebook-dp-B084V7R8PT/dp/B084V7R8PT/ref=mt_other?_encoding=UTF8&amp;me=&amp;qid=1650772950#e-book">e-book</a>
+<span class="inline-text">. I wanted something self-contained in the end. In order to do that, the supplied tools in the course materials were written from scratch. </span>
 <br/>
 <br/>
 <span class="inline-text">
@@ -23,35 +25,33 @@
 <h2>Project Structure</h2>
 <ul>
 <li><a href="a01564.md#hc01">Utils</a>
-<span class="inline-text"> Implements general functionality classes that are used project wide.</span>
+<span class="inline-text"> Implements general functionality that is used project wide.</span>
 </li>
 <li><a href="a01565.md#hc02">Chips</a>
-<span class="inline-text"> Implements a circuit class library.</span>
+<span class="inline-text"> Implements the circuit class library.</span>
 </li>
 <li><a href="a01566.md#hc03">Assembler</a>
-<span class="inline-text"> Implements a machine code compiler.</span>
+<span class="inline-text"> Implements the machine code compiler.</span>
 </li>
 <li><a href="a01567.md#hc04">Virtual Machine</a>
-<span class="inline-text"> Implements a virtual machine compiler.</span>
+<span class="inline-text"> Implements the virtual machine compiler.</span>
 </li>
 <li><a href="a01568.md#hc05">Compiler</a>
-<span class="inline-text"> Provides tools to parse </span>
-<code class="typewriter">.jack</code>
-<span class="inline-text"> files.</span>
+<span class="inline-text"> Implements the jack compiler.</span>
 </li>
 <li><a href="a01569.md#hc06">Bindings</a>
-<span class="inline-text"> provides a language inter-op binding interface.</span>
+<span class="inline-text"> Provides a script language binding interface.</span>
 </li>
 <li><a href="a01570.md#hc07">Computer</a>
-<span class="inline-text"> Implements a program to tie the system together.</span>
+<span class="inline-text"> Defines the main program that ties the components together.</span>
 </li>
 <li><a href="a01571.md#hc08">Extra Tools</a>
-<span class="inline-text"> Extra optional tools that are not part of the source.</span>
+<span class="inline-text"> Optional tools that are not part of the source.</span>
 </li>
 </ul>
 <a id="index_1hc002"></a>
-<a id="index"></a>
-<h2>Index</h2>
+<a id="documentation-index"></a>
+<h2>Documentation Index</h2>
 <ul>
 <li><a href="page_index.md#page-index">Page Index</a>
 </li>

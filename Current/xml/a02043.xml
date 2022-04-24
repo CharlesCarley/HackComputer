@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a02043" kind="file" language="C++">
+    <compoundname>VirtualMachine/Token.h</compoundname>
+    <includes refid="a00857" local="yes">Utils/ParserBase/TokenBase.h</includes>
+    <includedby refid="a01995" local="yes">Parser.cpp</includedby>
+    <includedby refid="a02019" local="yes">Scanner.cpp</includedby>
+    <includedby refid="a02031" local="yes">Scanner.h</includedby>
+    <incdepgraph>
+      <node id="4173">
+        <label>string</label>
+      </node>
+      <node id="4170">
+        <label>Utils/ParserBase/TokenBase.h</label>
+        <childnode refid="4171" relation="include">
+        </childnode>
+      </node>
+      <node id="4169">
+        <label>Token.h</label>
+        <link refid="a02043"/>
+        <childnode refid="4170" relation="include">
+        </childnode>
+      </node>
+      <node id="4174">
+        <label>vector</label>
+      </node>
+      <node id="4172">
+        <label>sstream</label>
+      </node>
+      <node id="4171">
+        <label>Utils/String.h</label>
+        <childnode refid="4172" relation="include">
+        </childnode>
+        <childnode refid="4173" relation="include">
+        </childnode>
+        <childnode refid="4174" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4178">
+        <label>Scanner.h</label>
+        <childnode refid="4176" relation="include">
+        </childnode>
+        <childnode refid="4177" relation="include">
+        </childnode>
+      </node>
+      <node id="4175">
+        <label>Token.h</label>
+        <link refid="a02043"/>
+        <childnode refid="4176" relation="include">
+        </childnode>
+        <childnode refid="4177" relation="include">
+        </childnode>
+        <childnode refid="4178" relation="include">
+        </childnode>
+      </node>
+      <node id="4177">
+        <label>Scanner.cpp</label>
+      </node>
+      <node id="4176">
+        <label>Parser.cpp</label>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="a00923">Hack::VirtualMachine</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>Charles<sp/>Carley.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>software<sp/>is<sp/>provided<sp/>&apos;as-is&apos;,<sp/>without<sp/>any<sp/>express<sp/>or<sp/>implied</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/>warranty.<sp/>In<sp/>no<sp/>event<sp/>will<sp/>the<sp/>authors<sp/>be<sp/>held<sp/>liable<sp/>for<sp/>any<sp/>damages</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>arising<sp/>from<sp/>the<sp/>use<sp/>of<sp/>this<sp/>software.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>Permission<sp/>is<sp/>granted<sp/>to<sp/>anyone<sp/>to<sp/>use<sp/>this<sp/>software<sp/>for<sp/>any<sp/>purpose,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>including<sp/>commercial<sp/>applications,<sp/>and<sp/>to<sp/>alter<sp/>it<sp/>and<sp/>redistribute<sp/>it</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/>freely,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>restrictions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>1.<sp/>The<sp/>origin<sp/>of<sp/>this<sp/>software<sp/>must<sp/>not<sp/>be<sp/>misrepresented;<sp/>you<sp/>must<sp/>not</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>claim<sp/>that<sp/>you<sp/>wrote<sp/>the<sp/>original<sp/>software.<sp/>If<sp/>you<sp/>use<sp/>this<sp/>software</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>in<sp/>a<sp/>product,<sp/>an<sp/>acknowledgment<sp/>in<sp/>the<sp/>product<sp/>documentation<sp/>would<sp/>be</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>appreciated<sp/>but<sp/>is<sp/>not<sp/>required.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>2.<sp/>Altered<sp/>source<sp/>versions<sp/>must<sp/>be<sp/>plainly<sp/>marked<sp/>as<sp/>such,<sp/>and<sp/>must<sp/>not<sp/>be</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>misrepresented<sp/>as<sp/>being<sp/>the<sp/>original<sp/>software.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/ParserBase/TokenBase.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00923" kindref="compound">Hack::VirtualMachine</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8" kindref="member">TokenType</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a71e915ab635f656148cf8990f77e5171" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a71e915ab635f656148cf8990f77e5171" kindref="member">TOK_ERROR</ref><sp/>=<sp/>-2,</highlight></codeline>
+<codeline lineno="30" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8aa3110406fa7d6ce5c6dba8fd3594d633" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8aa3110406fa7d6ce5c6dba8fd3594d633" kindref="member">TOK_EOF</ref>,</highlight></codeline>
+<codeline lineno="31" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8abe92c0e4ce7a4c0b26df409cab3cd1a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8abe92c0e4ce7a4c0b26df409cab3cd1a7" kindref="member">TOK_NULL</ref>,</highlight></codeline>
+<codeline lineno="32" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8af65d8765d7554151c22a5de2475e4a04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8af65d8765d7554151c22a5de2475e4a04" kindref="member">TOK_INTEGER</ref>,</highlight></codeline>
+<codeline lineno="33" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a79fe4d72ec11f5d2ba06c0f0818bc383" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a79fe4d72ec11f5d2ba06c0f0818bc383" kindref="member">TOK_IDENTIFIER</ref>,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a15637fa7561d27e7ec3767c1234f30c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a15637fa7561d27e7ec3767c1234f30c8" kindref="member">TOK_PUSH</ref>,</highlight></codeline>
+<codeline lineno="36" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8acc1f94b8928811b09124734ee1597a55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8acc1f94b8928811b09124734ee1597a55" kindref="member">TOK_POP</ref>,</highlight></codeline>
+<codeline lineno="37" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8ac1c79b33295900ce5fb9b7388f9d3774" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8ac1c79b33295900ce5fb9b7388f9d3774" kindref="member">TOK_ARGUMENT</ref>,</highlight></codeline>
+<codeline lineno="38" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a884782019d67a9034800b2e52853285f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a884782019d67a9034800b2e52853285f" kindref="member">TOK_LOCAL</ref>,</highlight></codeline>
+<codeline lineno="39" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a34c8a308ae07cccf0911f5beedf966b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a34c8a308ae07cccf0911f5beedf966b1" kindref="member">TOK_STATIC</ref>,</highlight></codeline>
+<codeline lineno="40" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a1b5933cb66c94f5d52f4b26aa5d21687" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a1b5933cb66c94f5d52f4b26aa5d21687" kindref="member">TOK_CONSTANT</ref>,</highlight></codeline>
+<codeline lineno="41" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a336b66142cf793364a1852264a54363e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a336b66142cf793364a1852264a54363e" kindref="member">TOK_THIS</ref>,</highlight></codeline>
+<codeline lineno="42" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a4a6f04837563a657059418583b193f6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a4a6f04837563a657059418583b193f6d" kindref="member">TOK_THAT</ref>,</highlight></codeline>
+<codeline lineno="43" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a1ff62250b7cc15cf5232385336a43faa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a1ff62250b7cc15cf5232385336a43faa" kindref="member">TOK_POINTER</ref>,</highlight></codeline>
+<codeline lineno="44" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a9a81b7232eec35bfa052a1127102ef88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a9a81b7232eec35bfa052a1127102ef88" kindref="member">TOK_TEMP</ref>,</highlight></codeline>
+<codeline lineno="45" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a4e509ea02cf3295cfb974cbef858a2a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a4e509ea02cf3295cfb974cbef858a2a0" kindref="member">TOK_IF_GOTO</ref>,</highlight></codeline>
+<codeline lineno="46" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8adefb15a333279ec39429629d72c7247b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8adefb15a333279ec39429629d72c7247b" kindref="member">TOK_GOTO</ref>,</highlight></codeline>
+<codeline lineno="47" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8adea00dd7260945f628607920c28f4f88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8adea00dd7260945f628607920c28f4f88" kindref="member">TOK_LABEL</ref>,</highlight></codeline>
+<codeline lineno="48" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a8fe88815a953aa99c8e5c8d5ee61977b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a8fe88815a953aa99c8e5c8d5ee61977b" kindref="member">TOK_FUNCTION</ref>,</highlight></codeline>
+<codeline lineno="49" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8aba05bfde3b583f0f57670db082435502" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8aba05bfde3b583f0f57670db082435502" kindref="member">TOK_CALL</ref>,</highlight></codeline>
+<codeline lineno="50" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8aab8d542c9b300e713566c31fd04978b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8aab8d542c9b300e713566c31fd04978b2" kindref="member">TOK_RETURN</ref>,</highlight></codeline>
+<codeline lineno="51" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a93c0f222ca3e14bf194e2ada515f6231" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a93c0f222ca3e14bf194e2ada515f6231" kindref="member">TOK_EQ</ref>,</highlight></codeline>
+<codeline lineno="52" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8afa3234091b8747a25c81465bbc76356e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8afa3234091b8747a25c81465bbc76356e" kindref="member">TOK_GT</ref>,</highlight></codeline>
+<codeline lineno="53" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a34d01c2b796f4fba92dbbdba6829b4de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a34d01c2b796f4fba92dbbdba6829b4de" kindref="member">TOK_LT</ref>,</highlight></codeline>
+<codeline lineno="54" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8ad252188e8cc229f0e37a62bc2a6effbb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8ad252188e8cc229f0e37a62bc2a6effbb" kindref="member">TOK_ADD</ref>,</highlight></codeline>
+<codeline lineno="55" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a44c80f603918c4ec0059e90c6aec5da0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a44c80f603918c4ec0059e90c6aec5da0" kindref="member">TOK_SUB</ref>,</highlight></codeline>
+<codeline lineno="56" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a090fd2880780efacb459ca5a0f9108b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a090fd2880780efacb459ca5a0f9108b2" kindref="member">TOK_AND</ref>,</highlight></codeline>
+<codeline lineno="57" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8afc9b5bec56f03be602419b704b93791e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8afc9b5bec56f03be602419b704b93791e" kindref="member">TOK_OR</ref>,</highlight></codeline>
+<codeline lineno="58" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8ab3a17c6fa237215d3cbd4ef2147917c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8ab3a17c6fa237215d3cbd4ef2147917c5" kindref="member">TOK_NOT</ref>,</highlight></codeline>
+<codeline lineno="59" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a3528eed46cd82da594149f52de5580f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a3528eed46cd82da594149f52de5580f0" kindref="member">TOK_NEG</ref>,</highlight></codeline>
+<codeline lineno="60" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a3fa291fa8690f5c7571b54b2fa681b08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a3fa291fa8690f5c7571b54b2fa681b08" kindref="member">TOK_SET</ref>,</highlight></codeline>
+<codeline lineno="61" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a066351ce777c87e213b2dc4daf40e599" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a066351ce777c87e213b2dc4daf40e599" kindref="member">TOK_RESET</ref>,</highlight></codeline>
+<codeline lineno="62" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a8ecc09af794ba08a877a741036883409" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a8ecc09af794ba08a877a741036883409" kindref="member">TOK_HALT</ref>,</highlight></codeline>
+<codeline lineno="63" refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a4ab563e860977220dd359e7df2a3db53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00923_1a091fad0d0b4814af2f1f3f51d62033c8a4ab563e860977220dd359e7df2a3db53" kindref="member">TOK_ASM</ref>,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="a00923_1a1256a43300d83510604c7b9755796e01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="a01587" kindref="compound">Token</ref><sp/>=<sp/><ref refid="a01587" kindref="compound">TokenBase</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::VirtualMachine</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Source/VirtualMachine/Token.h"/>
+  </compounddef>
+</doxygen>

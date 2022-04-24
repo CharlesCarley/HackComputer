@@ -1,132 +1,243 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
-  <compounddef id="a00991" kind="class" language="C++" prot="public" final="yes">
-    <compoundname>Hack::Chips::Clock</compoundname>
-    <basecompoundref refid="a00987" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; uint8_t, 8 &gt;</basecompoundref>
-    <includes local="no">Source/Chips/Clock.h</includes>
-      <sectiondef kind="public-func">
-      <memberdef kind="function" id="a00991_1a9922cf26014046b0b96db3a2f0e6f721" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Hack::Chips::Clock::Clock</definition>
-        <argsstring>()</argsstring>
-        <name>Clock</name>
+  <compounddef id="a00991" kind="class" language="C++" prot="public">
+    <compoundname>paramType</compoundname>
+    <includes local="no">build/xml/compound.xsd.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="a00991_1ae4969101ede579b8c2aab7d79b497b8d" prot="public" static="no" mutable="no">
+        <type><ref refid="a00979" kindref="compound">descriptionType</ref></type>
+        <definition>descriptionType paramType::briefdescription</definition>
+        <argsstring></argsstring>
+        <name>briefdescription</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Clock.h" line="30" column="1" bodyfile="Source/Chips/Clock.cpp" bodystart="28" bodyend="35"/>
-        <references refid="a00987_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00470" startline="52">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
+        <location file="build/xml/compound.xsd.h" line="219" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="219" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a00991_1acb81d1eb95bf01d4fe203701562da7d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Hack::Chips::Clock::getOut</definition>
-        <argsstring>()</argsstring>
-        <name>getOut</name>
+      <memberdef kind="variable" id="a00991_1afef55e68ffad84a8efdbf1dc6ce7c943" prot="public" static="no" mutable="no">
+        <type><ref refid="a00995" kindref="compound">linkedTextType</ref></type>
+        <definition>linkedTextType paramType::defval</definition>
+        <argsstring></argsstring>
+        <name>defval</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Clock.h" line="36" column="1" bodyfile="Source/Chips/Clock.cpp" bodystart="47" bodyend="75"/>
-        <references refid="a00987_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00470" startline="100" endline="103">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::getBit</references>
-        <references refid="a00987_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00470" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
-        <references refid="a00894_1a47f1937b5e8e2f1f55c52ece2e236d9a" compoundref="a00467" startline="267" endline="270">Hack::Chips::Gates::Not</references>
-        <references refid="a00987_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00470" startline="52">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
-        <references refid="a00893_1a1ff32d5ecd7b6fef93d19d0584f6a3de" compoundref="a00473" startline="26">Hack::Chips::ClockMask</references>
-        <references refid="a00893_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" compoundref="a00467" startline="39">Hack::Chips::Bit6</references>
-        <references refid="a00893_1a89719f49d745047f03bca80bfff48bd2a8487c63d5dca7d87b359feca1a2c2ac8" compoundref="a00467" startline="34">Hack::Chips::Bit1</references>
-        <references refid="a00893_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" compoundref="a00467" startline="33">Hack::Chips::Bit0</references>
+        <location file="build/xml/compound.xsd.h" line="217" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="217" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a00991_1ace2784b83c45b2f8ff31cfed7aaa739c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::Clock::setIn</definition>
-        <argsstring>(bool input)</argsstring>
-        <name>setIn</name>
-        <param>
-          <type>bool</type>
-          <declname>input</declname>
-        </param>
+      <memberdef kind="variable" id="a00991_1a696d80a81ba0bc69ef91b5345bc0c225" prot="public" static="no" mutable="no">
+        <type><ref refid="a00995" kindref="compound">linkedTextType</ref></type>
+        <definition>linkedTextType paramType::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Clock.h" line="32" column="1" bodyfile="Source/Chips/Clock.cpp" bodystart="37" bodyend="40"/>
-        <references refid="a00987_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00470" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
+        <location file="build/xml/compound.xsd.h" line="213" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="213" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a00991_1abb454609d9a6416ea16f15f9b7c78957" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::Clock::setReset</definition>
-        <argsstring>(bool reset)</argsstring>
-        <name>setReset</name>
-        <param>
-          <type>bool</type>
-          <declname>reset</declname>
-        </param>
+      <memberdef kind="variable" id="a00991_1a1a19a731994c5c7744a6c9ef6adb2ccb" prot="public" static="no" mutable="no">
+        <type><ref refid="a00995" kindref="compound">linkedTextType</ref></type>
+        <definition>linkedTextType paramType::typeconstraint</definition>
+        <argsstring></argsstring>
+        <name>typeconstraint</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Clock.h" line="34" column="1" bodyfile="Source/Chips/Clock.cpp" bodystart="42" bodyend="45"/>
-        <references refid="a00987_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00470" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
+        <location file="build/xml/compound.xsd.h" line="218" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="218" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <inheritancegraph>
-      <node id="97">
-        <label>Hack::Chips::Clock</label>
-        <link refid="a00991"/>
-        <childnode refid="98" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="98">
-        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
-        <link refid="a00987"/>
-      </node>
-    </inheritancegraph>
     <collaborationgraph>
-      <node id="101">
-        <label>uint8_t</label>
-        <link refid="a01367"/>
+      <node id="947">
+        <label>docSect1Type</label>
+        <link refid="a01039"/>
+        <childnode refid="948" relation="usage">
+          <edgelabel>title</edgelabel>
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="949" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+        <childnode refid="950" relation="usage">
+          <edgelabel>internal</edgelabel>
+        </childnode>
+        <childnode refid="951" relation="usage">
+          <edgelabel>sect2</edgelabel>
+        </childnode>
       </node>
-      <node id="99">
-        <label>Hack::Chips::Clock</label>
+      <node id="950">
+        <label>docInternalS1Type</label>
+        <link refid="a01059"/>
+        <childnode refid="949" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+        <childnode refid="951" relation="usage">
+          <edgelabel>sect2</edgelabel>
+        </childnode>
+      </node>
+      <node id="951">
+        <label>docSect2Type</label>
+        <link refid="a01043"/>
+        <childnode refid="948" relation="usage">
+          <edgelabel>title</edgelabel>
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="949" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+        <childnode refid="952" relation="usage">
+          <edgelabel>internal</edgelabel>
+        </childnode>
+        <childnode refid="953" relation="usage">
+          <edgelabel>sect3</edgelabel>
+        </childnode>
+      </node>
+      <node id="952">
+        <label>docInternalS2Type</label>
+        <link refid="a01063"/>
+        <childnode refid="949" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+        <childnode refid="953" relation="usage">
+          <edgelabel>sect3</edgelabel>
+        </childnode>
+      </node>
+      <node id="948">
+        <label>String</label>
+      </node>
+      <node id="946">
+        <label>descriptionType</label>
+        <link refid="a00979"/>
+        <childnode refid="947" relation="usage">
+          <edgelabel>sect1</edgelabel>
+        </childnode>
+        <childnode refid="948" relation="usage">
+          <edgelabel>title</edgelabel>
+        </childnode>
+        <childnode refid="957" relation="usage">
+          <edgelabel>internal</edgelabel>
+        </childnode>
+        <childnode refid="949" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+      </node>
+      <node id="954">
+        <label>docInternalS3Type</label>
+        <link refid="a01067"/>
+        <childnode refid="949" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+        <childnode refid="955" relation="usage">
+          <edgelabel>sect3</edgelabel>
+        </childnode>
+      </node>
+      <node id="956">
+        <label>docInternalS4Type</label>
+        <link refid="a01071"/>
+        <childnode refid="949" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+      </node>
+      <node id="958">
+        <label>linkedTextType</label>
+        <link refid="a00995"/>
+        <childnode refid="959" relation="usage">
+          <edgelabel>ref</edgelabel>
+        </childnode>
+      </node>
+      <node id="960">
+        <label>DoxRefKind</label>
+      </node>
+      <node id="953">
+        <label>docSect3Type</label>
+        <link refid="a01047"/>
+        <childnode refid="948" relation="usage">
+          <edgelabel>title</edgelabel>
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="949" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+        <childnode refid="954" relation="usage">
+          <edgelabel>internal</edgelabel>
+        </childnode>
+        <childnode refid="955" relation="usage">
+          <edgelabel>sect4</edgelabel>
+        </childnode>
+      </node>
+      <node id="959">
+        <label>refTextType</label>
+        <link refid="a00967"/>
+        <childnode refid="948" relation="usage">
+          <edgelabel>refid</edgelabel>
+          <edgelabel>external</edgelabel>
+          <edgelabel>tooltip</edgelabel>
+        </childnode>
+        <childnode refid="960" relation="usage">
+          <edgelabel>kindref</edgelabel>
+        </childnode>
+      </node>
+      <node id="955">
+        <label>docSect4Type</label>
+        <link refid="a01051"/>
+        <childnode refid="948" relation="usage">
+          <edgelabel>title</edgelabel>
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="956" relation="usage">
+          <edgelabel>internal</edgelabel>
+        </childnode>
+        <childnode refid="949" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+      </node>
+      <node id="945">
+        <label>paramType</label>
         <link refid="a00991"/>
-        <childnode refid="100" relation="public-inheritance">
+        <childnode refid="946" relation="usage">
+          <edgelabel>briefdescription</edgelabel>
+        </childnode>
+        <childnode refid="958" relation="usage">
+          <edgelabel>typeconstraint</edgelabel>
+          <edgelabel>defval</edgelabel>
+          <edgelabel>type</edgelabel>
         </childnode>
       </node>
-      <node id="100">
-        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
-        <link refid="a00987"/>
-        <childnode refid="101" relation="usage">
-          <edgelabel>_bits</edgelabel>
+      <node id="957">
+        <label>docInternalType</label>
+        <link refid="a01055"/>
+        <childnode refid="947" relation="usage">
+          <edgelabel>sect1</edgelabel>
         </childnode>
+        <childnode refid="949" relation="usage">
+          <edgelabel>para</edgelabel>
+        </childnode>
+      </node>
+      <node id="949">
+        <label>docParaType</label>
+        <link refid="a01087"/>
       </node>
     </collaborationgraph>
-    <location file="Source/Chips/Clock.h" line="28" column="1" bodyfile="Source/Chips/Clock.h" bodystart="27" bodyend="37"/>
+    <location file="build/xml/compound.xsd.h" line="210" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="209" bodyend="221"/>
     <listofallmembers>
-      <member refid="a00987_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Clock</scope><name>_bits</name></member>
-      <member refid="a00987_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::Clock</scope><name>applyBit</name></member>
-      <member refid="a00987_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::Clock</scope><name>assignBit</name></member>
-      <member refid="a00987_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::Clock</scope><name>Chip</name></member>
-      <member refid="a00987_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::Clock</scope><name>clearBit</name></member>
-      <member refid="a00991_1a9922cf26014046b0b96db3a2f0e6f721" prot="public" virt="non-virtual"><scope>Hack::Chips::Clock</scope><name>Clock</name></member>
-      <member refid="a00987_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::Clock</scope><name>getBit</name></member>
-      <member refid="a00991_1acb81d1eb95bf01d4fe203701562da7d0" prot="public" virt="non-virtual"><scope>Hack::Chips::Clock</scope><name>getOut</name></member>
-      <member refid="a00987_1a63bb368bb0827830235759b33718d1b4" prot="protected" virt="virtual"><scope>Hack::Chips::Clock</scope><name>isDirty</name></member>
-      <member refid="a00987_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::Clock</scope><name>setBit</name></member>
-      <member refid="a00991_1ace2784b83c45b2f8ff31cfed7aaa739c" prot="public" virt="non-virtual"><scope>Hack::Chips::Clock</scope><name>setIn</name></member>
-      <member refid="a00991_1abb454609d9a6416ea16f15f9b7c78957" prot="public" virt="non-virtual"><scope>Hack::Chips::Clock</scope><name>setReset</name></member>
-      <member refid="a00987_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::Clock</scope><name>~Chip</name></member>
+      <member refid="a00991_1ae4969101ede579b8c2aab7d79b497b8d" prot="public" virt="non-virtual"><scope>paramType</scope><name>briefdescription</name></member>
+      <member refid="a00991_1afef55e68ffad84a8efdbf1dc6ce7c943" prot="public" virt="non-virtual"><scope>paramType</scope><name>defval</name></member>
+      <member refid="a00991_1a696d80a81ba0bc69ef91b5345bc0c225" prot="public" virt="non-virtual"><scope>paramType</scope><name>type</name></member>
+      <member refid="a00991_1a1a19a731994c5c7744a6c9ef6adb2ccb" prot="public" virt="non-virtual"><scope>paramType</scope><name>typeconstraint</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

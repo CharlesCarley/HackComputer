@@ -59,6 +59,8 @@ public:
     bool parse(const int argc, char** argv)
     {
         CommandLine::Parser p;
+        p.setHelpText("where arg[0] is the input file");
+
         if (p.parse(argc, argv, Switches, OP_MAX) < 0)
             return false;
 

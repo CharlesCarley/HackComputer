@@ -1,33 +1,34 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
-  <compounddef id="a00935" kind="struct" language="C++" prot="public">
-    <compoundname>HandleType</compoundname>
+  <compounddef id="a00935" kind="class" language="C++" prot="public">
+    <compoundname>DoxygenType</compoundname>
+    <includes local="no">build/xml/compound.xsd.h</includes>
       <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="a00935_1abbb566befc5791ac90d23564b5d9939d" prot="public" static="no" mutable="no">
-        <type>uintptr_t</type>
-        <definition>uintptr_t HandleType::ptr</definition>
+      <memberdef kind="variable" id="a00935_1a1d298aea9a7446b2af7dbf7661baf2ed" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="a00939" kindref="compound">compounddefType</ref> &gt;</type>
+        <definition>std::vector&lt;compounddefType&gt; DoxygenType::compounddef</definition>
         <argsstring></argsstring>
-        <name>ptr</name>
+        <name>compounddef</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Bindings/Bindings.cpp" line="36" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="36" bodyend="-1"/>
+        <location file="build/xml/compound.xsd.h" line="5" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="5" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a00935_1a1d96c9ad14dfd59eb72ad17acd48550d" prot="public" static="no" mutable="no">
-        <type>uint64_t</type>
-        <definition>uint64_t HandleType::type</definition>
+      <memberdef kind="variable" id="a00935_1a8eddc4262919c7d2e262bedde3ea7479" prot="public" static="no" mutable="no">
+        <type>DoxVersionNumber</type>
+        <definition>DoxVersionNumber DoxygenType::version</definition>
         <argsstring></argsstring>
-        <name>type</name>
+        <name>version</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Bindings/Bindings.cpp" line="35" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="35" bodyend="-1"/>
+        <location file="build/xml/compound.xsd.h" line="6" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="6" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -35,27 +36,27 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="492">
-        <label>uint64_t</label>
-      </node>
-      <node id="491">
-        <label>HandleType</label>
+      <node id="349">
+        <label>DoxygenType</label>
         <link refid="a00935"/>
-        <childnode refid="492" relation="usage">
-          <edgelabel>type</edgelabel>
+        <childnode refid="350" relation="usage">
+          <edgelabel>compounddef</edgelabel>
         </childnode>
-        <childnode refid="493" relation="usage">
-          <edgelabel>ptr</edgelabel>
+        <childnode refid="351" relation="usage">
+          <edgelabel>version</edgelabel>
         </childnode>
       </node>
-      <node id="493">
-        <label>uintptr_t</label>
+      <node id="350">
+        <label>vector&lt; compounddefType &gt;</label>
+      </node>
+      <node id="351">
+        <label>DoxVersionNumber</label>
       </node>
     </collaborationgraph>
-    <location file="Source/Bindings/Bindings.cpp" line="34" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="33" bodyend="37"/>
+    <location file="build/xml/compound.xsd.h" line="3" column="1" bodyfile="build/xml/compound.xsd.h" bodystart="2" bodyend="7"/>
     <listofallmembers>
-      <member refid="a00935_1abbb566befc5791ac90d23564b5d9939d" prot="public" virt="non-virtual"><scope>HandleType</scope><name>ptr</name></member>
-      <member refid="a00935_1a1d96c9ad14dfd59eb72ad17acd48550d" prot="public" virt="non-virtual"><scope>HandleType</scope><name>type</name></member>
+      <member refid="a00935_1a1d298aea9a7446b2af7dbf7661baf2ed" prot="public" virt="non-virtual"><scope>DoxygenType</scope><name>compounddef</name></member>
+      <member refid="a00935_1a8eddc4262919c7d2e262bedde3ea7479" prot="public" virt="non-virtual"><scope>DoxygenType</scope><name>version</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>
