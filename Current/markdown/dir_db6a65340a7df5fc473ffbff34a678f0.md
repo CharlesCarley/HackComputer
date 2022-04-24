@@ -2,7 +2,7 @@
 <h1>OperatingSystem</h1>
 <a id="dir_db6a65340a7df5fc473ffbff34a678f0"></a>
 <a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
-<a href="index.md#index">Hack</a>
+<a href="index.md#index">HackComputer</a>
 <span class="inline-text">/</span>
 <a href="dir_74389ed8173ad57b461b9d623a1f3867.md#source">Source</a>
 <span class="inline-text">/</span>

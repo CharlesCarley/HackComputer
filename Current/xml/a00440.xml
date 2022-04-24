@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a00440" kind="file" language="C++">
+    <compoundname>ALU.cpp</compoundname>
+    <includes refid="a00443" local="yes">Chips/ALU.h</includes>
+    <includes refid="a00464" local="yes">Chips/BitUtils.h</includes>
+    <includes refid="a00467" local="yes">Chips/Chip.h</includes>
+    <includes refid="a00788" local="yes">Utils/Char.h</includes>
+    <incdepgraph>
+      <node id="722">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="723" relation="include">
+        </childnode>
+      </node>
+      <node id="714">
+        <label>Chips/BitUtils.h</label>
+        <childnode refid="715" relation="include">
+        </childnode>
+        <childnode refid="716" relation="include">
+        </childnode>
+      </node>
+      <node id="723">
+        <label>cstdint</label>
+      </node>
+      <node id="719">
+        <label>string</label>
+      </node>
+      <node id="721">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="717" relation="include">
+        </childnode>
+        <childnode refid="722" relation="include">
+        </childnode>
+        <childnode refid="724" relation="include">
+        </childnode>
+      </node>
+      <node id="724">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="723" relation="include">
+        </childnode>
+        <childnode refid="720" relation="include">
+        </childnode>
+        <childnode refid="722" relation="include">
+        </childnode>
+      </node>
+      <node id="716">
+        <label>Utils/Console.h</label>
+        <childnode refid="717" relation="include">
+        </childnode>
+        <childnode refid="721" relation="include">
+        </childnode>
+      </node>
+      <node id="711">
+        <label>Source/Chips/ALU.cpp</label>
+        <link refid="a00440"/>
+        <childnode refid="712" relation="include">
+        </childnode>
+        <childnode refid="714" relation="include">
+        </childnode>
+        <childnode refid="713" relation="include">
+        </childnode>
+        <childnode refid="725" relation="include">
+        </childnode>
+      </node>
+      <node id="715">
+        <label>bitset</label>
+      </node>
+      <node id="720">
+        <label>vector</label>
+      </node>
+      <node id="718">
+        <label>sstream</label>
+      </node>
+      <node id="713">
+        <label>Chips/Chip.h</label>
+        <childnode refid="714" relation="include">
+        </childnode>
+        <childnode refid="716" relation="include">
+        </childnode>
+      </node>
+      <node id="725">
+        <label>Utils/Char.h</label>
+        <childnode refid="723" relation="include">
+        </childnode>
+        <childnode refid="717" relation="include">
+        </childnode>
+      </node>
+      <node id="712">
+        <label>Chips/ALU.h</label>
+        <childnode refid="713" relation="include">
+        </childnode>
+      </node>
+      <node id="717">
+        <label>String.h</label>
+        <childnode refid="718" relation="include">
+        </childnode>
+        <childnode refid="719" relation="include">
+        </childnode>
+        <childnode refid="720" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="a00890">Hack::Chips</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="a00440_1a523539e781ed823ceb87bdeafaa1ee00" prot="public" static="no">
+        <name>InsertCheckFlags</name>
+        <initializer>if (_io.s[2] == 0)         \
+        _io.b[7] = Zr;         \
+    else if (_io.s[2] &amp; Bit15) \
+        _io.b[7] = Ne;         \
+    else                       \
+        _io.b[7] = 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/ALU.cpp" line="37" column="9" bodyfile="Source/Chips/ALU.cpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>Charles<sp/>Carley.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>software<sp/>is<sp/>provided<sp/>&apos;as-is&apos;,<sp/>without<sp/>any<sp/>express<sp/>or<sp/>implied</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/>warranty.<sp/>In<sp/>no<sp/>event<sp/>will<sp/>the<sp/>authors<sp/>be<sp/>held<sp/>liable<sp/>for<sp/>any<sp/>damages</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>arising<sp/>from<sp/>the<sp/>use<sp/>of<sp/>this<sp/>software.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>Permission<sp/>is<sp/>granted<sp/>to<sp/>anyone<sp/>to<sp/>use<sp/>this<sp/>software<sp/>for<sp/>any<sp/>purpose,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>including<sp/>commercial<sp/>applications,<sp/>and<sp/>to<sp/>alter<sp/>it<sp/>and<sp/>redistribute<sp/>it</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/>freely,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>restrictions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>1.<sp/>The<sp/>origin<sp/>of<sp/>this<sp/>software<sp/>must<sp/>not<sp/>be<sp/>misrepresented;<sp/>you<sp/>must<sp/>not</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>claim<sp/>that<sp/>you<sp/>wrote<sp/>the<sp/>original<sp/>software.<sp/>If<sp/>you<sp/>use<sp/>this<sp/>software</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>in<sp/>a<sp/>product,<sp/>an<sp/>acknowledgment<sp/>in<sp/>the<sp/>product<sp/>documentation<sp/>would<sp/>be</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>appreciated<sp/>but<sp/>is<sp/>not<sp/>required.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>2.<sp/>Altered<sp/>source<sp/>versions<sp/>must<sp/>be<sp/>plainly<sp/>marked<sp/>as<sp/>such,<sp/>and<sp/>must<sp/>not<sp/>be</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>misrepresented<sp/>as<sp/>being<sp/>the<sp/>original<sp/>software.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/ALU.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/BitUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Chip.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/Char.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>IMPLEMENT_BLACK_BOX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Add16.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/And16.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Mux16.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Not.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Not16.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Or.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Or8Way.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>InsertCheckFlags<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(_io.s[2]<sp/>==<sp/>0)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.b[7]<sp/>=<sp/>Zr;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>else<sp/>if<sp/>(_io.s[2]<sp/>&amp;<sp/>Bit15)<sp/>\</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.b[7]<sp/>=<sp/>Ne;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>else<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.b[7]<sp/>=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00890" kindref="compound">Hack::Chips</ref></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47" refid="a00952_1af17c289dd1252a047f2bf651707603d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00952_1af17c289dd1252a047f2bf651707603d4" kindref="member">Alu::Alu</ref>()<sp/>:</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io{}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.b[7]<sp/>=<sp/><ref refid="a00890_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" kindref="member">Bit0</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="a00952_1ab78360af9a64fb57b2144516bf03de8a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00952_1ab78360af9a64fb57b2144516bf03de8a" kindref="member">Alu::setFlags</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01364" kindref="compound">uint8_t</ref>&amp;<sp/>flags)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01364" kindref="compound">uint8_t</ref><sp/>ctrl<sp/>=<sp/>flags<sp/>&amp;<sp/>0b00111111;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6]<sp/>!=<sp/>ctrl)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6]<sp/>=<sp/>ctrl;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7]<sp/>|=<sp/><ref refid="a00890_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" kindref="member">Bit0</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="a00952_1aabd92bfe8970447e25ccd70f0a951530" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01364" kindref="compound">uint8_t</ref><sp/><ref refid="a00952_1aabd92bfe8970447e25ccd70f0a951530" kindref="member">Alu::getFlags</ref>()</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7]<sp/>&amp;<sp/><ref refid="a00890_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" kindref="member">Bit0</ref>)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7];</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="a00952_1af3082e0b359aebd367e56457b1d8ef52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00952_1af3082e0b359aebd367e56457b1d8ef52" kindref="member">Alu::setX</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01352" kindref="compound">uint16_t</ref>&amp;<sp/>x)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0]<sp/>!=<sp/>x)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0]<sp/>=<sp/>x;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7]<sp/>|=<sp/><ref refid="a00890_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" kindref="member">Bit0</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="a00952_1aa777e90d3af236329d8c7f9340a21a78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00952_1aa777e90d3af236329d8c7f9340a21a78" kindref="member">Alu::setY</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01352" kindref="compound">uint16_t</ref>&amp;<sp/>y)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[1]<sp/>!=<sp/>y)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[1]<sp/>=<sp/>y;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7]<sp/>|=<sp/><ref refid="a00890_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" kindref="member">Bit0</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="a00952_1a2f8ef9292d754e3b65079a0bae64076b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00952_1a2f8ef9292d754e3b65079a0bae64076b" kindref="member">Alu::getZr</ref>()</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7]<sp/>&amp;<sp/><ref refid="a00890_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" kindref="member">Bit0</ref>)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7]<sp/>&amp;<sp/><ref refid="a00890_1acabb309d3c28ba3a5f469d25dff4f144a315f157d7e9917bcfe8a0dcfa133f6fb" kindref="member">Zr</ref>)<sp/>!=<sp/>0;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="a00952_1a85ae2abb1cd2db9cbc00d2d7131dc819" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00952_1a85ae2abb1cd2db9cbc00d2d7131dc819" kindref="member">Alu::getNe</ref>()</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7]<sp/>&amp;<sp/><ref refid="a00890_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" kindref="member">Bit0</ref>)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7]<sp/>&amp;<sp/><ref refid="a00890_1acabb309d3c28ba3a5f469d25dff4f144a1630ccda3ce240ba49b84d1111d0adb8" kindref="member">Ne</ref>)<sp/>!=<sp/>0;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="a00952_1a0a6f75d46a2d234c77033a30fef51326" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01352" kindref="compound">uint16_t</ref><sp/><ref refid="a00952_1a0a6f75d46a2d234c77033a30fef51326" kindref="member">Alu::getOut</ref>()</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7]<sp/>&amp;<sp/><ref refid="a00890_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" kindref="member">Bit0</ref>)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2];</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Alu::evaluate()</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>IMPLEMENT_BLACK_BOX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01048" kindref="compound">Mux16</ref><sp/>mxA0,<sp/>mxA1;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01072" kindref="compound">Not16</ref><sp/>mxAn;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01048" kindref="compound">Mux16</ref><sp/>mxB0,<sp/>mxB1;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01072" kindref="compound">Not16</ref><sp/>mxBn;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00960" kindref="compound">And16</ref><sp/>xyAnd;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00948" kindref="compound">Add16</ref><sp/>xpy;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01048" kindref="compound">Mux16</ref><sp/>axy;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01072" kindref="compound">Not16</ref><sp/>axyN;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01048" kindref="compound">Mux16</ref><sp/>out;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mxA0.<ref refid="a01048_1a1bbaad4f7cfb18c2366180c3fabd67da" kindref="member">setA</ref>(_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0]);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mxA0.<ref refid="a01048_1a0b6138389a0cc6a4b99e1860c4c1d5ad" kindref="member">setB</ref>((<ref refid="a01352" kindref="compound">uint16_t</ref>)0b0000000000000000);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mxA0.<ref refid="a01048_1af45f56aaffd81b2fe735526d8da060de" kindref="member">setSel</ref>(_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6]<sp/>&amp;<sp/><ref refid="a00890_1acabb309d3c28ba3a5f469d25dff4f144a76fcc6dbc3a599d794f357556801298b" kindref="member">Zx</ref>);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mxAn.<ref refid="a01072_1afcc4cec3f1d5bf3837e22632ce8ce6d5" kindref="member">setIn</ref>(mxA0.<ref refid="a01048_1a422702d865f283f2f4a20acb2af25575" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mxA1.<ref refid="a01048_1a1bbaad4f7cfb18c2366180c3fabd67da" kindref="member">setA</ref>(mxA0.<ref refid="a01048_1a422702d865f283f2f4a20acb2af25575" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mxA1.<ref refid="a01048_1a0b6138389a0cc6a4b99e1860c4c1d5ad" kindref="member">setB</ref>(mxAn.<ref refid="a01072_1ace2108191134de75f5b514f6a09e4d85" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mxA1.<ref refid="a01048_1af45f56aaffd81b2fe735526d8da060de" kindref="member">setSel</ref>(_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6]<sp/>&amp;<sp/><ref refid="a00890_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" kindref="member">Nx</ref>);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mxB0.<ref refid="a01048_1a1bbaad4f7cfb18c2366180c3fabd67da" kindref="member">setA</ref>(_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[1]);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mxB0.<ref refid="a01048_1a0b6138389a0cc6a4b99e1860c4c1d5ad" kindref="member">setB</ref>((<ref refid="a01352" kindref="compound">uint16_t</ref>)0b0000000000000000);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mxB0.<ref refid="a01048_1af45f56aaffd81b2fe735526d8da060de" kindref="member">setSel</ref>(_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6]<sp/>&amp;<sp/><ref refid="a00890_1acabb309d3c28ba3a5f469d25dff4f144a36b5e715b100c9067069fcf166591565" kindref="member">Zy</ref>);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mxBn.<ref refid="a01072_1afcc4cec3f1d5bf3837e22632ce8ce6d5" kindref="member">setIn</ref>(mxB0.<ref refid="a01048_1a422702d865f283f2f4a20acb2af25575" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mxB1.<ref refid="a01048_1a1bbaad4f7cfb18c2366180c3fabd67da" kindref="member">setA</ref>(mxB0.<ref refid="a01048_1a422702d865f283f2f4a20acb2af25575" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mxB1.<ref refid="a01048_1a0b6138389a0cc6a4b99e1860c4c1d5ad" kindref="member">setB</ref>(mxBn.<ref refid="a01072_1ace2108191134de75f5b514f6a09e4d85" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mxB1.<ref refid="a01048_1af45f56aaffd81b2fe735526d8da060de" kindref="member">setSel</ref>(_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6]<sp/>&amp;<sp/><ref refid="a00890_1acabb309d3c28ba3a5f469d25dff4f144a4ceb8925d42a26780931ee5536ebbb88" kindref="member">Ny</ref>);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xyAnd.<ref refid="a00960_1a2a6c1af456a9034c224ada81ff269f8d" kindref="member">setA</ref>(mxA1.<ref refid="a01048_1a422702d865f283f2f4a20acb2af25575" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xyAnd.<ref refid="a00960_1ab9c4464952869595657d791a523c3780" kindref="member">setB</ref>(mxB1.<ref refid="a01048_1a422702d865f283f2f4a20acb2af25575" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xpy.<ref refid="a00948_1a17c5ae7fef533c9ef52f6822ec84ad86" kindref="member">setA</ref>(mxA1.<ref refid="a01048_1a422702d865f283f2f4a20acb2af25575" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xpy.<ref refid="a00948_1add21f4b571cf749cf1a686fba6d6bb93" kindref="member">setB</ref>(mxB1.<ref refid="a01048_1a422702d865f283f2f4a20acb2af25575" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>axy.<ref refid="a01048_1a1bbaad4f7cfb18c2366180c3fabd67da" kindref="member">setA</ref>(xyAnd.<ref refid="a00960_1a762408cdba407e959bb97cf4a96e8294" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>axy.<ref refid="a01048_1a0b6138389a0cc6a4b99e1860c4c1d5ad" kindref="member">setB</ref>(xpy.<ref refid="a00948_1a27793b7baca03572a8420aa9dd993f9f" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>axy.<ref refid="a01048_1af45f56aaffd81b2fe735526d8da060de" kindref="member">setSel</ref>(_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6]<sp/>&amp;<sp/><ref refid="a00890_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" kindref="member">Fn</ref>);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>axyN.<ref refid="a01072_1afcc4cec3f1d5bf3837e22632ce8ce6d5" kindref="member">setIn</ref>(axy.<ref refid="a01048_1a422702d865f283f2f4a20acb2af25575" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out.<ref refid="a01048_1a1bbaad4f7cfb18c2366180c3fabd67da" kindref="member">setA</ref>(axy.<ref refid="a01048_1a422702d865f283f2f4a20acb2af25575" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out.<ref refid="a01048_1a0b6138389a0cc6a4b99e1860c4c1d5ad" kindref="member">setB</ref>(axyN.<ref refid="a01072_1ace2108191134de75f5b514f6a09e4d85" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out.<ref refid="a01048_1af45f56aaffd81b2fe735526d8da060de" kindref="member">setSel</ref>(_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6]<sp/>&amp;<sp/><ref refid="a00890_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" kindref="member">No</ref>);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7]<sp/>&amp;=<sp/>~<ref refid="a00890_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" kindref="member">Bit0</ref>;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2]<sp/>=<sp/>out.<ref refid="a01048_1a422702d865f283f2f4a20acb2af25575" kindref="member">getOut</ref>();</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00968" kindref="compound">bit16_t</ref><sp/>b16;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b16.<ref refid="a00968_1af97e65eb3fc9302737f3fa2d46df9943" kindref="member">s</ref><sp/>=<sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2];</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01084" kindref="compound">Or8Way</ref><sp/>orh,<sp/>orl;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>orh.<ref refid="a01084_1afab4a119dd4ac7a7ef0311503fb10397" kindref="member">setIn</ref>(b16.<ref refid="a00968_1ad572825821646ad93481854ef8e6dcd7" kindref="member">b</ref>[1]);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>orl.<ref refid="a01084_1afab4a119dd4ac7a7ef0311503fb10397" kindref="member">setIn</ref>(b16.<ref refid="a00968_1ad572825821646ad93481854ef8e6dcd7" kindref="member">b</ref>[0]);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01076" kindref="compound">Or</ref><sp/>isZero;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>isZero.<ref refid="a01076_1ad564d4175209d9e1acb2b3500f3d10b6" kindref="member">setA</ref>(orh.<ref refid="a01084_1ae8ecce2b844d75c6849a99f2d2b6b933" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>isZero.<ref refid="a01076_1a2757aa09d39124e39e48148d549fcfb7" kindref="member">setB</ref>(orl.<ref refid="a01084_1ae8ecce2b844d75c6849a99f2d2b6b933" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01068" kindref="compound">Not</ref><sp/>zr;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zr.<ref refid="a01068_1a839b2ed314d61cb06ef294d5b608e643" kindref="member">setIn</ref>(isZero.<ref refid="a01076_1a8623bc37bda7b709a5c750f67a9d28c8" kindref="member">getOut</ref>());</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(zr.<ref refid="a01068_1ad0155e8af5013a4009a3a751d4908444" kindref="member">getOut</ref>())</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7]<sp/>=<sp/><ref refid="a00890_1acabb309d3c28ba3a5f469d25dff4f144a315f157d7e9917bcfe8a0dcfa133f6fb" kindref="member">Zr</ref>;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>if<sp/>(_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2]<sp/>&amp;<sp/>1<sp/>&lt;&lt;<sp/>15)</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7]<sp/>=<sp/><ref refid="a00890_1acabb309d3c28ba3a5f469d25dff4f144a1630ccda3ce240ba49b84d1111d0adb8" kindref="member">Ne</ref>;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6])</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="a00890_1a341881db4c30c6d32529deb197b5834ead194429bd882d774218235b665c40691" kindref="member">Zero</ref>:</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7]<sp/>=<sp/><ref refid="a00890_1acabb309d3c28ba3a5f469d25dff4f144a315f157d7e9917bcfe8a0dcfa133f6fb" kindref="member">Zr</ref>;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="a00890_1a341881db4c30c6d32529deb197b5834ea5bf31a73c4015858640cbf4525a0f635" kindref="member">One</ref>:</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="a00890_1a341881db4c30c6d32529deb197b5834ead8acdd64728db039cd19896192b6cb91" kindref="member">XAndY</ref>:</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2]<sp/>=<sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0]<sp/>&amp;<sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[1];</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InsertCheckFlags;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="a00890_1a341881db4c30c6d32529deb197b5834eace1f386fd2bfb62375cd39260f9bfaab" kindref="member">NegativeOne</ref>:</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2]<sp/>=<sp/>0xFFFF;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[7]<sp/>=<sp/><ref refid="a00890_1acabb309d3c28ba3a5f469d25dff4f144a1630ccda3ce240ba49b84d1111d0adb8" kindref="member">Ne</ref>;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="a00890_1a341881db4c30c6d32529deb197b5834eae9d7dcbb6f68eda355091b64af6963ac" kindref="member">OutX</ref>:</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2]<sp/>=<sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0];</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InsertCheckFlags;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="a00890_1a341881db4c30c6d32529deb197b5834ea64ecded9e9d4bce576320438afbcc0b5" kindref="member">OutY</ref>:</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2]<sp/>=<sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[1];</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InsertCheckFlags;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="a00890_1a341881db4c30c6d32529deb197b5834eae9410c9c533b94acf19cd933687903bb" kindref="member">NotX</ref>:</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2]<sp/>=<sp/>~_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0];</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InsertCheckFlags;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="a00890_1a341881db4c30c6d32529deb197b5834ea92d3c2bb6b5095ec608417078b9c7c65" kindref="member">NotY</ref>:</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2]<sp/>=<sp/>~_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[1];</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InsertCheckFlags;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="a00890_1a341881db4c30c6d32529deb197b5834ea135215f1f6dc8beda77599a341eb01e3" kindref="member">NegativeX</ref>:</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2]<sp/>=<sp/>-_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0];</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InsertCheckFlags;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="a00890_1a341881db4c30c6d32529deb197b5834ea4cd630e751714e9213ba6b4d317dad3d" kindref="member">NegativeY</ref>:</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2]<sp/>=<sp/>-_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[1];</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InsertCheckFlags;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="a00890_1a341881db4c30c6d32529deb197b5834ea5bf9e8694f6b94e54a595c35d5301561" kindref="member">XPlusOne</ref>:</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2]<sp/>=<sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0]<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InsertCheckFlags;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="a00890_1a341881db4c30c6d32529deb197b5834ea5799d387c4c6411ce163ace339f1134d" kindref="member">YPlusOne</ref>:</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2]<sp/>=<sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[1]<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InsertCheckFlags;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="a00890_1a341881db4c30c6d32529deb197b5834eadf026416b8f09401bdcec8d02ed4201e" kindref="member">XMinusOne</ref>:</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2]<sp/>=<sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0]<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InsertCheckFlags;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="a00890_1a341881db4c30c6d32529deb197b5834ea481daef132a274ac459f4776b68a4bf0" kindref="member">YMinusOne</ref>:</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2]<sp/>=<sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[1]<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InsertCheckFlags;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="a00890_1a341881db4c30c6d32529deb197b5834ea1c96e420eda712bdb7d30149dca9b84a" kindref="member">XPlusY</ref>:</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2]<sp/>=<sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0]<sp/>+<sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[1];</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InsertCheckFlags;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="a00890_1a341881db4c30c6d32529deb197b5834ea98319c0cfadf4a237d16b99336ade784" kindref="member">XMinusY</ref>:</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2]<sp/>=<sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0]<sp/>-<sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[1];</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InsertCheckFlags;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="a00890_1a341881db4c30c6d32529deb197b5834ea80e05ad94b2217d5b423e1a93d24bfdf" kindref="member">YMinusX</ref>:</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2]<sp/>=<sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[1]<sp/>-<sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0];</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InsertCheckFlags;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="a00890_1a341881db4c30c6d32529deb197b5834ea0908b6d56aaa80b7f079e5e115e89e41" kindref="member">XOrY</ref>:</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[2]<sp/>=<sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[0]<sp/>|<sp/>_io.<ref refid="a00976_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[1];</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InsertCheckFlags;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>InputException(</highlight><highlight class="stringliteral">&quot;ALU<sp/>function<sp/>&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01220_1a2e634e86f642f657dd42a2e967d99764" kindref="member">Char::toBinaryString</ref>(_io.<ref refid="a00976_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[6]),</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>not<sp/>found&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="265"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Source/Chips/ALU.cpp"/>
+  </compounddef>
+</doxygen>

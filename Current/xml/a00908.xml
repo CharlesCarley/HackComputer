@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a00908" kind="class" language="C++" prot="public">
+    <compoundname>Hack::Assembler::Instruction</compoundname>
+    <includes local="no">Source/Assembler/Instruction.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="a00908_1a518f1b24e8a190e2addaf89efd8ecb11" prot="private" static="no" mutable="no">
+        <type><ref refid="a01352" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Assembler::Instruction::_inst</definition>
+        <argsstring></argsstring>
+        <name>_inst</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Assembler/Instruction.h" line="34" column="1" bodyfile="Source/Assembler/Instruction.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a00908_1a9ba532f3dfc27e6d9bdf312d10eb6df1" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Assembler::Instruction::Instruction</definition>
+        <argsstring>(uint16_t inst)</argsstring>
+        <name>Instruction</name>
+        <param>
+          <type><ref refid="a01352" kindref="compound">uint16_t</ref></type>
+          <declname>inst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Assembler/Instruction.h" line="37" column="1" bodyfile="Source/Assembler/Instruction.cpp" bodystart="27" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="a00908_1ade81360d9e9ec9bdfedc8af1d0252a73" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
+        <definition>String Hack::Assembler::Instruction::string</definition>
+        <argsstring>() const</argsstring>
+        <name>string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Assembler/Instruction.h" line="39" column="1" bodyfile="Source/Assembler/Instruction.cpp" bodystart="32" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="a00908_1a049cb4b8f74738a93cd1e616301ab6d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Assembler::Instruction::string</definition>
+        <argsstring>(String &amp;dest) const</argsstring>
+        <name>string</name>
+        <param>
+          <type><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Assembler/Instruction.h" line="41" column="1" bodyfile="Source/Assembler/Instruction.cpp" bodystart="39" bodyend="221"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Utility class that converts a binary instruction to its symbolic string representation. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/Assembler/Instruction.h" line="32" column="1" bodyfile="Source/Assembler/Instruction.h" bodystart="31" bodyend="42"/>
+    <listofallmembers>
+      <member refid="a00908_1a518f1b24e8a190e2addaf89efd8ecb11" prot="private" virt="non-virtual"><scope>Hack::Assembler::Instruction</scope><name>_inst</name></member>
+      <member refid="a00908_1a9ba532f3dfc27e6d9bdf312d10eb6df1" prot="public" virt="non-virtual"><scope>Hack::Assembler::Instruction</scope><name>Instruction</name></member>
+      <member refid="a00908_1ade81360d9e9ec9bdfedc8af1d0252a73" prot="public" virt="non-virtual"><scope>Hack::Assembler::Instruction</scope><name>string</name></member>
+      <member refid="a00908_1a049cb4b8f74738a93cd1e616301ab6d1" prot="public" virt="non-virtual"><scope>Hack::Assembler::Instruction</scope><name>string</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

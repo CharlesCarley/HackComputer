@@ -1,0 +1,331 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01336" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>Hack::VirtualMachine::Parser</compoundname>
+    <basecompoundref refid="a01272" prot="public" virt="non-virtual">Hack::ParserBase</basecompoundref>
+    <includes local="no">Source/VirtualMachine/Parser.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="a01336_1a40e6dd5914c34a4bd5346ad5ba92a9e5" prot="private" static="no" mutable="no">
+        <type><ref refid="a01332" kindref="compound">Emitter</ref></type>
+        <definition>Emitter Hack::VirtualMachine::Parser::_emitter</definition>
+        <argsstring></argsstring>
+        <name>_emitter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Parser.h" line="35" column="1" bodyfile="Source/VirtualMachine/Parser.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01336_1a9cc376383e4999bb0a93edac61766007" prot="private" static="no" mutable="no">
+        <type><ref refid="a00896_1a02186d1a9c875e3583ff775f46ad7c0a" kindref="member">StringCache</ref></type>
+        <definition>StringCache Hack::VirtualMachine::Parser::_labels</definition>
+        <argsstring></argsstring>
+        <name>_labels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Parser.h" line="36" column="1" bodyfile="Source/VirtualMachine/Parser.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="a01336_1a41ca7b47bee3658c3c8e276c5feea298" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Parser::callExpression</definition>
+        <argsstring>()</argsstring>
+        <name>callExpression</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Parser.h" line="55" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="217" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="a01336_1a3055c1a9b49a5d6c60a2e2aeab083ca0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Parser::expression</definition>
+        <argsstring>()</argsstring>
+        <name>expression</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Parser.h" line="43" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="274" bodyend="370"/>
+      </memberdef>
+      <memberdef kind="function" id="a01336_1a155771f46199422a961012ad64c81351" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Parser::functionExpression</definition>
+        <argsstring>()</argsstring>
+        <name>functionExpression</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Parser.h" line="53" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="187" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="a01336_1adec2438941d6f4f953dd7ee0868d62a5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Parser::gotoExpression</definition>
+        <argsstring>()</argsstring>
+        <name>gotoExpression</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Parser.h" line="49" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="161" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="a01336_1aa34e3ff9365d53d7e24f155c27a728da" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Parser::labelExpression</definition>
+        <argsstring>()</argsstring>
+        <name>labelExpression</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Parser.h" line="51" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="139" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="a01336_1a589fd449e99792f382a6ae6836782385" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Parser::parseImpl</definition>
+        <argsstring>(IStream &amp;is) override</argsstring>
+        <name>parseImpl</name>
+        <reimplements refid="a01272_1aca4fd325b8520d930ca612cf3337c625">parseImpl</reimplements>
+        <param>
+          <type><ref refid="a00888_1a830c8eb3c005ef2fbc470e0b141b93c5" kindref="member">IStream</ref> &amp;</type>
+          <declname>is</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Parser.h" line="39" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="372" bodyend="397"/>
+      </memberdef>
+      <memberdef kind="function" id="a01336_1aba7d94d54c0c7abf94939367b760df26" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Parser::popExpression</definition>
+        <argsstring>()</argsstring>
+        <name>popExpression</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Parser.h" line="47" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="91" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="a01336_1a71789d26d09a60a2acf04a0079aa2781" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Parser::pushExpression</definition>
+        <argsstring>()</argsstring>
+        <name>pushExpression</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Parser.h" line="45" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="41" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="a01336_1ab701dd10cd0d609f6be1e706e7a76596" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Parser::setExpression</definition>
+        <argsstring>()</argsstring>
+        <name>setExpression</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Parser.h" line="57" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="247" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="a01336_1ac42ce84084f3fd298399c330867c8697" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Parser::writeImpl</definition>
+        <argsstring>(OStream &amp;os, int format=0) override</argsstring>
+        <name>writeImpl</name>
+        <reimplements refid="a01272_1a4e9dd3f0283226de48b148d66b416f0f">writeImpl</reimplements>
+        <param>
+          <type><ref refid="a00888_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref> &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>format</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Parser.h" line="41" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="399" bodyend="403"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a01336_1a8dd981d81ed31eb67c6090dd35345731" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::VirtualMachine::Parser::Parser</definition>
+        <argsstring>()</argsstring>
+        <name>Parser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Parser.h" line="60" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="30" bodyend="33"/>
+        <references refid="a01272_1aec27fb418bd286a67e449bbf42ddb4e7" compoundref="a00821" startline="40">Hack::ParserBase::_scanner</references>
+      </memberdef>
+      <memberdef kind="function" id="a01336_1ab3752f6d45ebb84a3fcd9f46a7a35d9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::VirtualMachine::Parser::~Parser</definition>
+        <argsstring>() override</argsstring>
+        <name>~Parser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Parser.h" line="62" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="35" bodyend="39"/>
+        <references refid="a01272_1aec27fb418bd286a67e449bbf42ddb4e7" compoundref="a00821" startline="40">Hack::ParserBase::_scanner</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="469">
+        <label>Hack::VirtualMachine::Parser</label>
+        <link refid="a01336"/>
+        <childnode refid="470" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="470">
+        <label>Hack::ParserBase</label>
+        <link refid="a01272"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="477">
+        <label>size_t</label>
+      </node>
+      <node id="475">
+        <label>Hack::IndexCache&lt; String &gt;</label>
+        <link refid="a01256"/>
+      </node>
+      <node id="479">
+        <label>IStream *</label>
+      </node>
+      <node id="480">
+        <label>int32_t</label>
+      </node>
+      <node id="471">
+        <label>Hack::VirtualMachine::Parser</label>
+        <link refid="a01336"/>
+        <childnode refid="472" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="478">
+        <label>string</label>
+      </node>
+      <node id="473">
+        <label>vector&lt; TokenBase &gt;</label>
+      </node>
+      <node id="472">
+        <label>Hack::ParserBase</label>
+        <link refid="a01272"/>
+        <childnode refid="473" relation="usage">
+          <edgelabel>_tokens</edgelabel>
+        </childnode>
+        <childnode refid="474" relation="usage">
+          <edgelabel>_scanner</edgelabel>
+        </childnode>
+        <childnode refid="480" relation="usage">
+          <edgelabel>_cursor</edgelabel>
+        </childnode>
+        <childnode refid="478" relation="usage">
+          <edgelabel>_filePath</edgelabel>
+          <edgelabel>_file</edgelabel>
+        </childnode>
+      </node>
+      <node id="474">
+        <label>Hack::ScannerBase</label>
+        <link refid="a01276"/>
+        <childnode refid="475" relation="usage">
+          <edgelabel>_stringTable</edgelabel>
+        </childnode>
+        <childnode refid="476" relation="usage">
+          <edgelabel>_intTable</edgelabel>
+        </childnode>
+        <childnode refid="477" relation="usage">
+          <edgelabel>_line</edgelabel>
+        </childnode>
+        <childnode refid="478" relation="usage">
+          <edgelabel>_file</edgelabel>
+        </childnode>
+        <childnode refid="479" relation="usage">
+          <edgelabel>_stream</edgelabel>
+        </childnode>
+      </node>
+      <node id="476">
+        <label>Hack::IndexCache&lt; int &gt;</label>
+        <link refid="a01256"/>
+      </node>
+    </collaborationgraph>
+    <location file="Source/VirtualMachine/Parser.h" line="33" column="1" bodyfile="Source/VirtualMachine/Parser.h" bodystart="32" bodyend="63"/>
+    <listofallmembers>
+      <member refid="a01272_1a050b6fa7aa7a8a0ad9e6dc769c5fe1ab" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>_cursor</name></member>
+      <member refid="a01336_1a40e6dd5914c34a4bd5346ad5ba92a9e5" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>_emitter</name></member>
+      <member refid="a01272_1a3845bf25a071be865d1abf5d86547d4e" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>_file</name></member>
+      <member refid="a01272_1ab0e5c4de751cb9162c1068d08fe5108f" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>_filePath</name></member>
+      <member refid="a01336_1a9cc376383e4999bb0a93edac61766007" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>_labels</name></member>
+      <member refid="a01272_1aec27fb418bd286a67e449bbf42ddb4e7" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>_scanner</name></member>
+      <member refid="a01272_1a848d7a2893106ea47afc8839aae2f4e4" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>_tokens</name></member>
+      <member refid="a01272_1a857d4ca08875acc4a5ae351eab22ebee" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>advanceCursor</name></member>
+      <member refid="a01336_1a41ca7b47bee3658c3c8e276c5feea298" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>callExpression</name></member>
+      <member refid="a01336_1a3055c1a9b49a5d6c60a2e2aeab083ca0" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>expression</name></member>
+      <member refid="a01272_1ab701a1a26d52964d228d1c1472130483" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>filename</name></member>
+      <member refid="a01336_1a155771f46199422a961012ad64c81351" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>functionExpression</name></member>
+      <member refid="a01272_1a6b9602e4c23316318668f57da6db421c" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>getToken</name></member>
+      <member refid="a01336_1adec2438941d6f4f953dd7ee0868d62a5" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>gotoExpression</name></member>
+      <member refid="a01336_1aa34e3ff9365d53d7e24f155c27a728da" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>labelExpression</name></member>
+      <member refid="a01272_1a87c46515fd89517db2645943cb44493b" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>line</name></member>
+      <member refid="a01272_1a4668ec9b913931ce518de6d7f92fb4e0" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>parse</name></member>
+      <member refid="a01272_1a526cddbd87b36f03b8e76db9b7d640b9" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>parse</name></member>
+      <member refid="a01272_1aa78f3654190d9b4f2ea49f8bcfa97f2b" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>parseError</name></member>
+      <member refid="a01336_1a589fd449e99792f382a6ae6836782385" prot="private" virt="virtual"><scope>Hack::VirtualMachine::Parser</scope><name>parseImpl</name></member>
+      <member refid="a01336_1a8dd981d81ed31eb67c6090dd35345731" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>Parser</name></member>
+      <member refid="a01272_1ad2acc126d182c46c5d7f2afbb2aaeb66" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>ParserBase</name></member>
+      <member refid="a01336_1aba7d94d54c0c7abf94939367b760df26" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>popExpression</name></member>
+      <member refid="a01336_1a71789d26d09a60a2acf04a0079aa2781" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>pushExpression</name></member>
+      <member refid="a01272_1a8436c3d2c31c4a3e822c946c8a6b1a92" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>readToken</name></member>
+      <member refid="a01336_1ab701dd10cd0d609f6be1e706e7a76596" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>setExpression</name></member>
+      <member refid="a01272_1a7fbbfbffb70e56bfd7d117f8aabcd8f0" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>Tokens</name></member>
+      <member refid="a01272_1a4560ce70fee098d7508b053b409c1d19" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>write</name></member>
+      <member refid="a01272_1a644c6667a785050f490a4ee24a98e2e7" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>write</name></member>
+      <member refid="a01336_1ac42ce84084f3fd298399c330867c8697" prot="private" virt="virtual"><scope>Hack::VirtualMachine::Parser</scope><name>writeImpl</name></member>
+      <member refid="a01336_1ab3752f6d45ebb84a3fcd9f46a7a35d9a" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>~Parser</name></member>
+      <member refid="a01272_1a6e57377073e2e728304316b73986ded2" prot="public" virt="virtual"><scope>Hack::VirtualMachine::Parser</scope><name>~ParserBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

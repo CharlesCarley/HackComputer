@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01576" kind="page">
+    <compoundname>Hc10</compoundname>
+    <title>Computer</title>
+    <briefdescription>
+<para>Implements a program to tie the system together. </para>    </briefdescription>
+    <detaileddescription>
+<para>Implements a program to tie the system together.</para><para>It ties together the ROM, RAM and CPU chips and implements multiple runtime targets.</para><para>If SDL is enabled the default runtime will open a window and map the screen region of memory to a SDL window. Otherwise if SDL is disabled, the default and only runtime is the command line debugger. <image type="html" name="Debugger.png">command line debugger</image>
+</para><para><programlisting filename=".txt"><codeline><highlight class="normal">Usage:<sp/>computer<sp/>&lt;options&gt;<sp/>&lt;arg[0]<sp/>..<sp/>arg[n]&gt;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-h,<sp/>--help<sp/><sp/><sp/><sp/><sp/><sp/>Display<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>help<sp/>message</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-c<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Use<sp/>the<sp/>command<sp/>line<sp/>runtime</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-d<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Debug<sp/>the<sp/>supplied<sp/>file</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-r,<sp/>--run-end<sp/><sp/><sp/>Run<sp/>the<sp/>supplied<sp/>file<sp/>until<sp/>it<sp/>exits</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-t,<sp/>--trace<sp/><sp/><sp/><sp/><sp/>Output<sp/>a<sp/>dump<sp/>of<sp/>the<sp/>non-zero<sp/>portions<sp/>of<sp/>ram</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--show-vm<sp/><sp/><sp/>Output<sp/>the<sp/>emitted<sp/>VM<sp/>code<sp/>from<sp/>the<sp/>supplied<sp/>file</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--show-</highlight><highlight class="keyword">asm</highlight><highlight class="normal"><sp/><sp/>Output<sp/>the<sp/>emitted<sp/>assembly<sp/>code<sp/>from<sp/>the<sp/>supplied<sp/>file</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--show-mc<sp/><sp/><sp/>Output<sp/>the<sp/>emitted<sp/>machine<sp/>code<sp/>from<sp/>the<sp/>supplied<sp/>file</highlight></codeline>
+</programlisting> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

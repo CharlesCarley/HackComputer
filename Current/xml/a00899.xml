@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a00899" kind="namespace" language="C++">
+    <compoundname>Hack::Computer::Detail</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="a00899_1aa4afbbad44ea4825f010eb45cae1921a" prot="public" static="no" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Hack::Computer::Detail::CpuHeight</definition>
+        <argsstring></argsstring>
+        <name>CpuHeight</name>
+        <initializer>= 12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/DebugRuntime.cpp" line="51" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00899_1aea1e334a76f2d7d3f968fbc724deefb7" prot="public" static="no" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Hack::Computer::Detail::CpuHeightH</definition>
+        <argsstring></argsstring>
+        <name>CpuHeightH</name>
+        <initializer>= <ref refid="a00899_1aa4afbbad44ea4825f010eb45cae1921a" kindref="member">CpuHeight</ref> &gt;&gt; 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/DebugRuntime.cpp" line="52" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00899_1a4f8d7dbd69a5f2fab5d4d597c3c7410e" prot="public" static="no" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Hack::Computer::Detail::CpuWidth</definition>
+        <argsstring></argsstring>
+        <name>CpuWidth</name>
+        <initializer>= 24</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/DebugRuntime.cpp" line="49" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00899_1a8252ac17c512721f037bb810e2fdadd0" prot="public" static="no" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Hack::Computer::Detail::CpuWidthH</definition>
+        <argsstring></argsstring>
+        <name>CpuWidthH</name>
+        <initializer>= <ref refid="a00899_1a4f8d7dbd69a5f2fab5d4d597c3c7410e" kindref="member">CpuWidth</ref> &gt;&gt; 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/DebugRuntime.cpp" line="50" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00899_1a02b35b35dc0cf08e801b7319d7187619" prot="public" static="no" mutable="no">
+        <type>const <ref refid="a01296" kindref="compound">Point</ref></type>
+        <definition>const Point Hack::Computer::Detail::RegSize</definition>
+        <argsstring></argsstring>
+        <name>RegSize</name>
+        <initializer>= <ref refid="a01296" kindref="compound">Point</ref>(12, 3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/DebugRuntime.cpp" line="57" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00899_1aae482b259939907b0455e00ddb1d6d29" prot="public" static="no" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Hack::Computer::Detail::SideBarWidth</definition>
+        <argsstring></argsstring>
+        <name>SideBarWidth</name>
+        <initializer>= 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/DebugRuntime.cpp" line="55" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00899_1a634e7d1cba7c2e041e76cf938876972f" prot="public" static="no" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Hack::Computer::Detail::SideBarWidthD</definition>
+        <argsstring></argsstring>
+        <name>SideBarWidthD</name>
+        <initializer>= <ref refid="a00899_1aae482b259939907b0455e00ddb1d6d29" kindref="member">SideBarWidth</ref> &lt;&lt; 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/DebugRuntime.cpp" line="56" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00899_1a85f5e165277e3188b5d60842d095ed6a" prot="public" static="no" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Hack::Computer::Detail::TitleOffs</definition>
+        <argsstring></argsstring>
+        <name>TitleOffs</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/DebugRuntime.cpp" line="53" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/Computer/DebugRuntime.cpp" line="48" column="1"/>
+  </compounddef>
+</doxygen>

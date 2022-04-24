@@ -54,7 +54,7 @@ namespace Hack::CommandLine
                       const Switch* switches,
                       uint32_t      count)
     {
-        if (!_programName.empty()) // using as a check for multiple calls
+        if (!_programName.empty())  // using as a check for multiple calls
             return 0;
 
         if (!initializeSwitches(switches, count))
@@ -129,7 +129,7 @@ namespace Hack::CommandLine
                         {
                             OutputStringStream os;
                             os << "invalid argument for option " << curSwitch
-                                << endl;
+                               << endl;
                             return writeError(os);
                         }
 
@@ -137,7 +137,7 @@ namespace Hack::CommandLine
                         {
                             OutputStringStream os;
                             os << "missing argument for option " << curSwitch
-                                << endl;
+                               << endl;
                             return writeError(os);
                         }
 
@@ -148,7 +148,7 @@ namespace Hack::CommandLine
                     {
                         OutputStringStream os;
                         os << "not all arguments converted when parsing switch "
-                            << curSwitch << endl;
+                           << curSwitch << endl;
                         return writeError(os);
                     }
                 }
@@ -173,6 +173,11 @@ namespace Hack::CommandLine
             return writeError(os);
         }
         return 0;
+    }
+
+    void Parser::setHelpText(const String& help)
+    {
+        _helpText = help;
     }
 
     void Parser::logInput() const
@@ -259,36 +264,41 @@ namespace Hack::CommandLine
     void Parser::usage(String& dest) const
     {
         const int          w = max(_maxLongSwitch + 2, 4);
-        OutputStringStream stream;
+        OutputStringStream out;
 
-        stream << "Usage: " << programName() << " <options> <arg[0] .. arg[n]>" << endl
-            << endl;
-        stream << pad(4) << "-h, --help" << pad(w - 4)
-            << "Display this help message" << endl;
+        out << "Usage: " << programName() << " <options> <arg[0] .. arg[n]>" << endl
+               << endl;
+        if (!_helpText.empty())
+        {
+            out << pad(2) << _helpText << endl
+                   << endl;
+        }
+        out << pad(4) << "-h, --help" << pad(w - 4)
+               << "Display this help message" << endl;
 
         for (ParseOption* opt : _options)
         {
             const Switch& switchVal = opt->getSwitch();
-            stream << pad(4);
+            out << pad(4);
 
             if (switchVal.shortSwitch != 0)
             {
-                stream << '-' << switchVal.shortSwitch;
+                out << '-' << switchVal.shortSwitch;
                 if (switchVal.longSwitch != nullptr)
-                    stream << ", ";
+                    out << ", ";
                 else
-                    stream << pad(4);
+                    out << pad(4);
             }
             else
-                stream << pad(4);
+                out << pad(4);
 
             int space = _maxLongSwitch;
             if (switchVal.longSwitch != nullptr)
             {
                 space -= (int)Char::length(switchVal.longSwitch);
-                stream << "--" << switchVal.longSwitch;
+                out << "--" << switchVal.longSwitch;
             }
-            stream << pad(space + 2);
+            out << pad(space + 2);
 
             if (switchVal.description != nullptr)
             {
@@ -298,18 +308,18 @@ namespace Hack::CommandLine
                 for (size_t i = 0; i < arr.size(); ++i)
                 {
                     const String& str = arr[i];
-                    stream << str;
+                    out << str;
                     if (i + 1 < arr.size())
                     {
-                        stream << endl
-                            << pad(w + 10);
+                        out << endl
+                               << pad(w + 10);
                     }
                 }
             }
-            stream << endl;
+            out << endl;
         }
-        stream << endl;
-        dest = stream.str();
+        out << endl;
+        dest = out.str();
     }
 
     bool Parser::initializeOption(ParseOption* opt, const Switch& sw)
@@ -391,4 +401,4 @@ namespace Hack::CommandLine
         usage();
         return -1;
     }
-} // namespace Hack::CommandLine
+}  // namespace Hack::CommandLine

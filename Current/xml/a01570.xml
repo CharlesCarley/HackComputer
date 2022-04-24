@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01570" kind="page">
+    <compoundname>Hc04</compoundname>
+    <title>Virtual Machine</title>
+    <briefdescription>
+<para>Implements a virtual machine compiler. </para>    </briefdescription>
+    <detaileddescription>
+<para>Implements a virtual machine compiler.</para><para><linebreak/>
+<linebreak/>
+The primary target is a static library so that it can be used in other areas of code. The file <ulink url="../../Source/VirtualMachine/VM.grm">VM.grm</ulink> defines the implemented grammar.</para><para><linebreak/>
+<linebreak/>
+It uses extra keywords that are not in the course specification.</para><para><itemizedlist>
+<listitem><para><bold>set</bold> <computeroutput>set &lt;int&gt; &lt;int&gt;</computeroutput><itemizedlist>
+<listitem><para>Allows directly setting RAM values</para></listitem></itemizedlist>
+</para></listitem><listitem><para><bold>reset</bold> <computeroutput>reset</computeroutput><itemizedlist>
+<listitem><para>Forces a CPU reset by jumping to the end of ROM<itemizedlist>
+<listitem><para><computeroutput>@32766 D=A;JMP</computeroutput></para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
+</para></listitem><listitem><para><bold>halt</bold> <computeroutput>halt</computeroutput><itemizedlist>
+<listitem><para>Will emit code that enters into an infinite loop</para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
+</para><sect1 id="a01570_1Hc04S2">
+<title>Vm2Asm</title>
+<para>Is the program that inputs a <computeroutput>.vm</computeroutput> file as and outputs an assembly file. The output file can be compiled to machine code with the <ref refid="a01569" kindref="compound">Assembler</ref></para><para><linebreak/>
+<linebreak/>
+<programlisting filename=".txt"><codeline><highlight class="normal">Usage:<sp/>vm2mc<sp/>&lt;options&gt;<sp/>&lt;arg[0]<sp/>..<sp/>arg[n]&gt;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-h,<sp/>--help<sp/><sp/><sp/><sp/>Display<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>help<sp/>message</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-o,<sp/>--output<sp/><sp/>Specify<sp/>an<sp/>output<sp/>file</highlight></codeline>
+</programlisting></para></sect1>
+<sect1 id="a01570_1Hc04Defined">
+<title>Defined In</title>
+<para>The source is defined in <ulink url="../../Source/VirtualMachine/">Source/VirtualMachine</ulink> </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

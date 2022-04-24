@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a00993" kind="class" language="C++" prot="public">
+    <compoundname>Hack::Chips::Chip</compoundname>
+    <includes local="no">Source/Chips/Chip.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+      <param>
+        <type><ref refid="a01373" kindref="compound">uint8_t</ref></type>
+        <declname>Count</declname>
+        <defname>Count</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="a00993_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" static="no" mutable="no">
+        <type>T</type>
+        <definition>T Hack::Chips::Chip&lt; T, Count &gt;::_bits</definition>
+        <argsstring></argsstring>
+        <name>_bits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Chip.h" line="52" column="1" bodyfile="Source/Chips/Chip.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="a00993_1a63bb368bb0827830235759b33718d1b4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::Chip&lt; T, Count &gt;::isDirty</definition>
+        <argsstring>()</argsstring>
+        <name>isDirty</name>
+        <reimplementedby refid="a01121_1a5a4736a4ef27ad20cf3bb689edede45a">isDirty</reimplementedby>
+        <reimplementedby refid="a01125_1ac96bf7c3215dd31fca8e63046b0431fa">isDirty</reimplementedby>
+        <reimplementedby refid="a01117_1aaf75c488721fd4f6ec9c50dd23c31291">isDirty</reimplementedby>
+        <reimplementedby refid="a01113_1a524b55db9a45f8be9b35ec2fd90627e5">isDirty</reimplementedby>
+        <reimplementedby refid="a01109_1aab09a5e80f3a09e435b5090f1858bc8c">isDirty</reimplementedby>
+        <reimplementedby refid="a01105_1a402bf76eb0ff96fe5e50fb423243cc0f">isDirty</reimplementedby>
+        <reimplementedby refid="a01101_1a3fe64ded7a0910d9318aa61c9dfbdc65">isDirty</reimplementedby>
+        <reimplementedby refid="a01009_1ac65d59dc6a974d8135a5f6f320756d9d">isDirty</reimplementedby>
+        <reimplementedby refid="a01049_1aac065d165b148fee6c54c1f6efe49f33">isDirty</reimplementedby>
+        <reimplementedby refid="a01097_1a0f47b8a836ccfabed9c7fe3ffa6532bc">isDirty</reimplementedby>
+        <reimplementedby refid="a01041_1a0adcc77581ef7d16475c343df92db060">isDirty</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Chip.h" line="50" column="1" bodyfile="Source/Chips/Chip.h" bodystart="94" bodyend="97"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a00993_1a485588367ebaefcaaec8847faffe8870" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Chips::Chip&lt; T, Count &gt;::Chip</definition>
+        <argsstring>()</argsstring>
+        <name>Chip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Chip.h" line="55" column="1" bodyfile="Source/Chips/Chip.h" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="a00993_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual Hack::Chips::Chip&lt; T, Count &gt;::~Chip</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Chip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Chip.h" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00993_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Chip&lt; T, Count &gt;::applyBit</definition>
+        <argsstring>(const uint8_t &amp;index, const bool value)</argsstring>
+        <name>applyBit</name>
+        <param>
+          <type>const <ref refid="a01373" kindref="compound">uint8_t</ref> &amp;</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Clears or sets the bit at the supplied index. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A value of true will set the bit.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Chip.h" line="84" column="1" bodyfile="Source/Chips/Chip.h" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="a00993_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Chip&lt; T, Count &gt;::assignBit</definition>
+        <argsstring>(const uint8_t &amp;index)</argsstring>
+        <name>assignBit</name>
+        <param>
+          <type>const <ref refid="a01373" kindref="compound">uint8_t</ref> &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Zeros all bits except for the bit at the supplied index. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Chip.h" line="72" column="1" bodyfile="Source/Chips/Chip.h" bodystart="112" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="a00993_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Chip&lt; T, Count &gt;::clearBit</definition>
+        <argsstring>(const uint8_t &amp;index)</argsstring>
+        <name>clearBit</name>
+        <param>
+          <type>const <ref refid="a01373" kindref="compound">uint8_t</ref> &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Clears the bit at the supplied index. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Chip.h" line="77" column="1" bodyfile="Source/Chips/Chip.h" bodystart="118" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="a00993_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::Chip&lt; T, Count &gt;::getBit</definition>
+        <argsstring>(const uint8_t &amp;index)</argsstring>
+        <name>getBit</name>
+        <param>
+          <type>const <ref refid="a01373" kindref="compound">uint8_t</ref> &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Returns the state of the bit at the supplied index. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Chip.h" line="62" column="1" bodyfile="Source/Chips/Chip.h" bodystart="100" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="a00993_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Chip&lt; T, Count &gt;::setBit</definition>
+        <argsstring>(const uint8_t &amp;index)</argsstring>
+        <name>setBit</name>
+        <param>
+          <type>const <ref refid="a01373" kindref="compound">uint8_t</ref> &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Sets the bit at the supplied index. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Chip.h" line="67" column="1" bodyfile="Source/Chips/Chip.h" bodystart="106" bodyend="109"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="a00993" kindref="compound">Chip</ref> is the base class for all chips defined in this system. It uses a template integer for the <bold>_bits</bold> member variable. Most chips should maintain a cache bit (usually the MSB) to control evaluation. Evaluation happens as follows: </para>    </briefdescription>
+    <detaileddescription>
+<para><orderedlist>
+<listitem><para>If the input of the chip is modified mark the cache bit.</para></listitem><listitem><para>Any call to query an output should check this bit. a. If it is set call evaluate then return the output. b. If it is not set then return the output. </para></listitem></orderedlist>
+</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should be one of the uint8_t, uint16_t, uint32_t, uint64_t, <ref refid="a00977" kindref="compound">bit16_t</ref>, <ref refid="a00981" kindref="compound">bit32_t</ref>, or <ref refid="a00985" kindref="compound">bit64_t</ref> integer types. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should reflect the total number of bits stored in T. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="96">
+        <label>T</label>
+      </node>
+      <node id="95">
+        <label>Hack::Chips::Chip&lt; T, Count &gt;</label>
+        <link refid="a00993"/>
+        <childnode refid="96" relation="usage">
+          <edgelabel>_bits</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Chips/Chip.h" line="48" column="1" bodyfile="Source/Chips/Chip.h" bodystart="47" bodyend="85"/>
+    <listofallmembers>
+      <member refid="a00993_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Chip</scope><name>_bits</name></member>
+      <member refid="a00993_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::Chip</scope><name>applyBit</name></member>
+      <member refid="a00993_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::Chip</scope><name>assignBit</name></member>
+      <member refid="a00993_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::Chip</scope><name>Chip</name></member>
+      <member refid="a00993_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::Chip</scope><name>clearBit</name></member>
+      <member refid="a00993_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::Chip</scope><name>getBit</name></member>
+      <member refid="a00993_1a63bb368bb0827830235759b33718d1b4" prot="protected" virt="virtual"><scope>Hack::Chips::Chip</scope><name>isDirty</name></member>
+      <member refid="a00993_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::Chip</scope><name>setBit</name></member>
+      <member refid="a00993_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::Chip</scope><name>~Chip</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

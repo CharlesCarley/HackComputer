@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01240" kind="class" language="C++" prot="public">
+    <compoundname>Hack::CommandLine::Token</compoundname>
+    <includes local="no">Source/Utils/CommandLine/Token.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="a01240_1a3604ef65b5ad6ed6475bb53c5f081aa6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Hack::CommandLine::Token::_type</definition>
+        <argsstring></argsstring>
+        <name>_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Token.h" line="50" column="1" bodyfile="Source/Utils/CommandLine/Token.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01240_1a979a9c66317e53943ce1dff60bb18dc2" prot="private" static="no" mutable="no">
+        <type><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
+        <definition>String Hack::CommandLine::Token::_value</definition>
+        <argsstring></argsstring>
+        <name>_value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Token.h" line="51" column="1" bodyfile="Source/Utils/CommandLine/Token.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a01240_1a73d16c87d6b58feacf0ff92e99307d1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Assembler::Token::Token</definition>
+        <argsstring>()</argsstring>
+        <name>Token</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Token.h" line="54" column="1" bodyfile="Source/Utils/CommandLine/Token.h" bodystart="54" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="a01240_1a39d0fdc550762a50ca37e08448d04212" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::CommandLine::Token::append</definition>
+        <argsstring>(const char &amp;ch)</argsstring>
+        <name>append</name>
+        <param>
+          <type>const char &amp;</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Token.h" line="75" column="1" bodyfile="Source/Utils/CommandLine/Token.h" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="a01240_1a5c946ba65192d03a81d23486465fb977" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::CommandLine::Token::append</definition>
+        <argsstring>(const String &amp;str)</argsstring>
+        <name>append</name>
+        <param>
+          <type>const <ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Token.h" line="80" column="1" bodyfile="Source/Utils/CommandLine/Token.h" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="a01240_1a8566d5c471067be557dce98589f8ba69" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::CommandLine::Token::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Token.h" line="85" column="1" bodyfile="Source/Utils/CommandLine/Token.h" bodystart="85" bodyend="89"/>
+        <references refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86a728a7b175a948d4e4390726507f087b8" compoundref="a01638" startline="43">Hack::CommandLine::TOK_EOS</references>
+      </memberdef>
+      <memberdef kind="function" id="a01240_1a1752c109f1e2547e133eb0e991eab9bc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const int &amp;</type>
+        <definition>const int&amp; Hack::CommandLine::Token::getType</definition>
+        <argsstring>() const</argsstring>
+        <name>getType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Token.h" line="60" column="1" bodyfile="Source/Utils/CommandLine/Token.h" bodystart="60" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="a01240_1a0394cc885ec75f298d503580570a3b25" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+        <definition>const String&amp; Hack::CommandLine::Token::getValue</definition>
+        <argsstring>() const</argsstring>
+        <name>getValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Token.h" line="70" column="1" bodyfile="Source/Utils/CommandLine/Token.h" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="a01240_1a77060f2abe4e56c98ddd13fdfc83bc61" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::CommandLine::Token::setType</definition>
+        <argsstring>(const int &amp;type)</argsstring>
+        <name>setType</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Token.h" line="65" column="1" bodyfile="Source/Utils/CommandLine/Token.h" bodystart="65" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/Utils/CommandLine/Token.h" line="48" column="1" bodyfile="Source/Utils/CommandLine/Token.h" bodystart="47" bodyend="90"/>
+    <listofallmembers>
+      <member refid="a01240_1a3604ef65b5ad6ed6475bb53c5f081aa6" prot="private" virt="non-virtual"><scope>Hack::CommandLine::Token</scope><name>_type</name></member>
+      <member refid="a01240_1a979a9c66317e53943ce1dff60bb18dc2" prot="private" virt="non-virtual"><scope>Hack::CommandLine::Token</scope><name>_value</name></member>
+      <member refid="a01240_1a39d0fdc550762a50ca37e08448d04212" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Token</scope><name>append</name></member>
+      <member refid="a01240_1a5c946ba65192d03a81d23486465fb977" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Token</scope><name>append</name></member>
+      <member refid="a01240_1a8566d5c471067be557dce98589f8ba69" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Token</scope><name>clear</name></member>
+      <member refid="a01240_1a1752c109f1e2547e133eb0e991eab9bc" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Token</scope><name>getType</name></member>
+      <member refid="a01240_1a0394cc885ec75f298d503580570a3b25" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Token</scope><name>getValue</name></member>
+      <member refid="a01240_1a77060f2abe4e56c98ddd13fdfc83bc61" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Token</scope><name>setType</name></member>
+      <member refid="a01240_1a73d16c87d6b58feacf0ff92e99307d1f" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Token</scope><name>Token</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,465 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a00887" kind="namespace" language="C++">
+    <compoundname>Hack::Assembler</compoundname>
+    <innerclass refid="a00908" prot="public">Hack::Assembler::Instruction</innerclass>
+    <innerclass refid="a00920" prot="public">Hack::Assembler::KeywordTable</innerclass>
+    <innerclass refid="a00916" prot="public">Hack::Assembler::Parser</innerclass>
+    <innerclass refid="a00924" prot="public">Hack::Assembler::ReservedWordTable</innerclass>
+    <innerclass refid="a00928" prot="public">Hack::Assembler::Scanner</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="a00887_1ab52345149881cbf184ed8dbc45774908" prot="public" static="no" strong="no">
+        <type></type>
+        <name>TokenType</name>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908aaa80392be0382d077bae11ca09cec3ca" prot="public">
+          <name>TOK_ERROR</name>
+          <initializer>= -2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908a0b04f0c4d57271cb40554de353dc604a" prot="public">
+          <name>TOK_EOF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908a8d9967af0244b14438091db8babef208" prot="public">
+          <name>TOK_NULL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908a5f2e8b1da23246a6ef8f73752b64730e" prot="public">
+          <name>TOK_D_START</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908ab581a0e588797e0c6496e87b6811d588" prot="public">
+          <name>TOK_M</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908a56a0c3c5c2e60c4815989d806ad4cf7c" prot="public">
+          <name>TOK_D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908a9d157b6a03086be0fd1de4d86472d080" prot="public">
+          <name>TOK_MD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908a0537cef36a1e6265be68356ab5cdead0" prot="public">
+          <name>TOK_A</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908a088bd7f385e2a4096728599e6bebc7b7" prot="public">
+          <name>TOK_AM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908abcc84dac310829c9a62148765a8a250e" prot="public">
+          <name>TOK_AD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908af5554f8bc380b1604f24c2dd78373880" prot="public">
+          <name>TOK_AMD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908a8705e27aeefb1cafd4bb5fbdd48cbe53" prot="public">
+          <name>TOK_J_START</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908a00a5e4936b8f21d85966bc510b9cf90d" prot="public">
+          <name>TOK_JGT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908a8aa5db527baacc19c6b5b6b01e2491fd" prot="public">
+          <name>TOK_JEQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908a1f0d06a89639748e3a8b75c113d5d06d" prot="public">
+          <name>TOK_JGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908aa02bae4eda01057babd2b906433a4cb1" prot="public">
+          <name>TOK_JLT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908a4cb282cdab169fa23a83251051d08834" prot="public">
+          <name>TOK_JNE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908ae8772c050e0a8b9141a92741af54fe15" prot="public">
+          <name>TOK_JLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908abbbee45b0a8f7973ea9c97ba81bbfab1" prot="public">
+          <name>TOK_JMP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908a8d150987e2f8f89304456e401c7de979" prot="public">
+          <name>TOK_ZERO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908a4ff9eb9fe01140f2790d23262aee15b9" prot="public">
+          <name>TOK_MINUS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908aa40c60bb7f9740a9bf55e8483a17b2cf" prot="public">
+          <name>TOK_NOT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908aa25dfa8318505862372dc7e5ab7a1105" prot="public">
+          <name>TOK_PLUS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908a57fc3c8374e06e1a4aad4dd701ddfc14" prot="public">
+          <name>TOK_AND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908a4d7b6070721cbd12a68714ef366b7710" prot="public">
+          <name>TOK_OR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908a6e216370a7594ccc1bba1c215c1aea55" prot="public">
+          <name>TOK_AT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908a5a07d14bb9d7796ce1fd76da13d97329" prot="public">
+          <name>TOK_SEMI_COLON</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908a9f29e07041ce4ada94e31fc4188ff8eb" prot="public">
+          <name>TOK_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908a1d63c313df724c7f5becbc7061c98233" prot="public">
+          <name>TOK_L_PAREN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908af9015f131c8e3d89a5c90de1f2c71c12" prot="public">
+          <name>TOK_R_PAREN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908a30c6aba6b3c729e7150c79e60a4fc6f9" prot="public">
+          <name>TOK_COMMA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908a4a3cce8834d15a4d16c2a53273864549" prot="public">
+          <name>TOK_ONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908ad0f4584c48727b093746e2500d3e315c" prot="public">
+          <name>TOK_INTEGER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00887_1ab52345149881cbf184ed8dbc45774908abf7077806b8936246ac762409fdbcc19" prot="public">
+          <name>TOK_LABEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Assembler/Token.h" line="28" column="1" bodyfile="Source/Assembler/Token.h" bodystart="27" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="a00887_1ad1af9d4a0a202058a0d533d12c60c3b6" prot="public" static="no">
+        <type>std::pair&lt; <ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>, size_t &gt;</type>
+        <definition>using Hack::Assembler::StringIndex = typedef std::pair&lt;String, size_t&gt;</definition>
+        <argsstring></argsstring>
+        <name>StringIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Assembler/Parser.h" line="29" column="1" bodyfile="Source/Assembler/Parser.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="a00887_1a9a9dde9280f429162b9c9d91279c7f26" prot="public" static="no">
+        <type><ref refid="a01280" kindref="compound">TokenBase</ref></type>
+        <definition>using Hack::Assembler::Token = typedef TokenBase</definition>
+        <argsstring></argsstring>
+        <name>Token</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Assembler/Token.h" line="68" column="1" bodyfile="Source/Assembler/Token.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="a00887_1ae2f6ce5908b46df7a68cf1eb884200b1" prot="public" static="no" mutable="no">
+        <type>constexpr <ref refid="a00920" kindref="compound">KeywordTable</ref></type>
+        <definition>constexpr KeywordTable Hack::Assembler::DestAndJumpTable[]</definition>
+        <argsstring>[]</argsstring>
+        <name>DestAndJumpTable</name>
+        <initializer>= {
+        {&apos;J&apos;, &apos;M&apos;, &apos;P&apos;, <ref refid="a00887_1ab52345149881cbf184ed8dbc45774908abbbee45b0a8f7973ea9c97ba81bbfab1" kindref="member">TOK_JMP</ref>},
+        {&apos;J&apos;, &apos;G&apos;, &apos;T&apos;, <ref refid="a00887_1ab52345149881cbf184ed8dbc45774908a00a5e4936b8f21d85966bc510b9cf90d" kindref="member">TOK_JGT</ref>},
+        {&apos;J&apos;, &apos;E&apos;, &apos;Q&apos;, <ref refid="a00887_1ab52345149881cbf184ed8dbc45774908a8aa5db527baacc19c6b5b6b01e2491fd" kindref="member">TOK_JEQ</ref>},
+        {&apos;J&apos;, &apos;G&apos;, &apos;E&apos;, <ref refid="a00887_1ab52345149881cbf184ed8dbc45774908a1f0d06a89639748e3a8b75c113d5d06d" kindref="member">TOK_JGE</ref>},
+        {&apos;J&apos;, &apos;L&apos;, &apos;T&apos;, <ref refid="a00887_1ab52345149881cbf184ed8dbc45774908aa02bae4eda01057babd2b906433a4cb1" kindref="member">TOK_JLT</ref>},
+        {&apos;J&apos;, &apos;N&apos;, &apos;E&apos;, <ref refid="a00887_1ab52345149881cbf184ed8dbc45774908a4cb282cdab169fa23a83251051d08834" kindref="member">TOK_JNE</ref>},
+        {&apos;J&apos;, &apos;L&apos;, &apos;E&apos;, <ref refid="a00887_1ab52345149881cbf184ed8dbc45774908ae8772c050e0a8b9141a92741af54fe15" kindref="member">TOK_JLE</ref>},
+        {&apos;A&apos;, &apos;M&apos;, &apos;D&apos;, <ref refid="a00887_1ab52345149881cbf184ed8dbc45774908af5554f8bc380b1604f24c2dd78373880" kindref="member">TOK_AMD</ref>},
+        {&apos;A&apos;, &apos;D&apos;, 0x0, TOK_AD},
+        {&apos;A&apos;, &apos;M&apos;, 0x0, TOK_AM},
+        {&apos;M&apos;, &apos;D&apos;, 0x0, TOK_MD},
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Assembler/Scanner.cpp" line="42" column="1" bodyfile="Source/Assembler/Scanner.cpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00887_1ae799752966aa2ea9694b8a6731972e75" prot="public" static="no" mutable="no">
+        <type>constexpr <ref refid="a00924" kindref="compound">ReservedWordTable</ref></type>
+        <definition>constexpr ReservedWordTable Hack::Assembler::ReservedAddresses[]</definition>
+        <argsstring>[]</argsstring>
+        <name>ReservedAddresses</name>
+        <initializer>= {
+        {&quot;SP&quot;, 2, 0x0000},
+        {&quot;LCL&quot;, 3, 0x0001},
+        {&quot;ARG&quot;, 3, 0x0002},
+        {&quot;THIS&quot;, 4, 0x0003},
+        {&quot;THAT&quot;, 4, 0x0004},
+        {&quot;SCREEN&quot;, 5, 0x4000},
+        {&quot;KBD&quot;, 3, 0x6000},
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Assembler/Scanner.cpp" line="57" column="1" bodyfile="Source/Assembler/Scanner.cpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="a00887_1adb92ac7ffed77431eefafce90381ea63" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Assembler::isConstantToken</definition>
+        <argsstring>(const int8_t type)</argsstring>
+        <name>isConstantToken</name>
+        <param>
+          <type>const int8_t</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Assembler/Parser.cpp" line="47" column="1" bodyfile="Source/Assembler/Parser.cpp" bodystart="47" bodyend="50"/>
+        <references refid="a00887_1ab52345149881cbf184ed8dbc45774908a8d150987e2f8f89304456e401c7de979" compoundref="a01632" startline="51">TOK_ZERO</references>
+        <references refid="a00887_1ab52345149881cbf184ed8dbc45774908a4a3cce8834d15a4d16c2a53273864549" compoundref="a01632" startline="63">TOK_ONE</references>
+        <references refid="a00887_1ab52345149881cbf184ed8dbc45774908ad0f4584c48727b093746e2500d3e315c" compoundref="a01632" startline="64">TOK_INTEGER</references>
+      </memberdef>
+      <memberdef kind="function" id="a00887_1a0a9928530d915b203b72a0f6b3c38b17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Assembler::isDestToken</definition>
+        <argsstring>(const int8_t type)</argsstring>
+        <name>isDestToken</name>
+        <param>
+          <type>const int8_t</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Assembler/Parser.cpp" line="42" column="1" bodyfile="Source/Assembler/Parser.cpp" bodystart="42" bodyend="45"/>
+        <references refid="a00887_1ab52345149881cbf184ed8dbc45774908ab581a0e588797e0c6496e87b6811d588" compoundref="a01632" startline="34">TOK_M</references>
+        <references refid="a00887_1ab52345149881cbf184ed8dbc45774908af5554f8bc380b1604f24c2dd78373880" compoundref="a01632" startline="40">TOK_AMD</references>
+      </memberdef>
+      <memberdef kind="function" id="a00887_1a38549c40184116e8029bcf0539e5c729" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Assembler::isJumpToken</definition>
+        <argsstring>(const int8_t type)</argsstring>
+        <name>isJumpToken</name>
+        <param>
+          <type>const int8_t</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Assembler/Parser.cpp" line="58" column="1" bodyfile="Source/Assembler/Parser.cpp" bodystart="58" bodyend="61"/>
+        <references refid="a00887_1ab52345149881cbf184ed8dbc45774908a00a5e4936b8f21d85966bc510b9cf90d" compoundref="a01632" startline="43">TOK_JGT</references>
+        <references refid="a00887_1ab52345149881cbf184ed8dbc45774908abbbee45b0a8f7973ea9c97ba81bbfab1" compoundref="a01632" startline="49">TOK_JMP</references>
+      </memberdef>
+      <memberdef kind="function" id="a00887_1a835fdd9f927ed102f232768fd9f2b1f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Assembler::isOperatorToken</definition>
+        <argsstring>(const int8_t type)</argsstring>
+        <name>isOperatorToken</name>
+        <param>
+          <type>const int8_t</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Assembler/Parser.cpp" line="52" column="1" bodyfile="Source/Assembler/Parser.cpp" bodystart="52" bodyend="56"/>
+        <references refid="a00887_1ab52345149881cbf184ed8dbc45774908aa25dfa8318505862372dc7e5ab7a1105" compoundref="a01632" startline="54">TOK_PLUS</references>
+        <references refid="a00887_1ab52345149881cbf184ed8dbc45774908a4ff9eb9fe01140f2790d23262aee15b9" compoundref="a01632" startline="52">TOK_MINUS</references>
+        <references refid="a00887_1ab52345149881cbf184ed8dbc45774908a57fc3c8374e06e1a4aad4dd701ddfc14" compoundref="a01632" startline="55">TOK_AND</references>
+        <references refid="a00887_1ab52345149881cbf184ed8dbc45774908a4d7b6070721cbd12a68714ef366b7710" compoundref="a01632" startline="56">TOK_OR</references>
+        <references refid="a00887_1ab52345149881cbf184ed8dbc45774908aa40c60bb7f9740a9bf55e8483a17b2cf" compoundref="a01632" startline="53">TOK_NOT</references>
+      </memberdef>
+      <memberdef kind="function" id="a00887_1a58f9edf51b63e59ae9b3d54aaf179f3b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Assembler::testCompoundExpression</definition>
+        <argsstring>(const int8_t a, const int8_t b, const int8_t c, const int8_t d, const int8_t e, const int8_t f)</argsstring>
+        <name>testCompoundExpression</name>
+        <param>
+          <type>const int8_t</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const int8_t</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const int8_t</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const int8_t</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>const int8_t</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>const int8_t</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Assembler/Parser.cpp" line="32" column="1" bodyfile="Source/Assembler/Parser.cpp" bodystart="32" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/Assembler/Instruction.cpp" line="26" column="1"/>
+  </compounddef>
+</doxygen>

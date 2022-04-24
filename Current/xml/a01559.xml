@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01559" kind="page">
+    <compoundname>Hc02</compoundname>
+    <title>Chips</title>
+    <briefdescription>
+<para>Implements a circuit class library. </para>    </briefdescription>
+    <detaileddescription>
+<para>Implements a circuit class library.</para><para><linebreak/>
+It uses two separate implementations to compute the circuit logic.<linebreak/>
+<linebreak/>
+ The first implementation is written to compute the value of each circuit. I wanted to keep the chip functionality present rather than abstract it away. It links the circuits together in code and computes the value of each bit.<linebreak/>
+<linebreak/>
+ The second implementation is with the circuit behavior abstracted away. It replaces the circuit logic with a C++ implementation of for its operation.<linebreak/>
+<linebreak/>
+ The build option that toggles this behavior is <computeroutput>Hack_IMPLEMENT_BLACK_BOX</computeroutput>.<linebreak/>
+<linebreak/>
+ </para><sect1 id="a01559_1Hc02Defined">
+<title>Defined In</title>
+<para>The source is defined in <ulink url="../../Source/Chips/">Source/Chips</ulink> </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

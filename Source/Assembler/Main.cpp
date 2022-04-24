@@ -34,15 +34,15 @@ enum Options
     OP_MAX,
 };
 
-constexpr CommandLine::Switch Switches[OP_MAX] = {{
+constexpr CommandLine::Switch Switches[OP_MAX] = {
+    {
         OP_OUTPUT,
         'o',
         "output",
         "Specify an output file",
         true,
         1,
-    }
-
+    },
 };
 
 class Application
@@ -57,6 +57,8 @@ public:
     bool parse(const int argc, char** argv)
     {
         CommandLine::Parser p;
+        p.setHelpText("where arg[0] is the input file");
+
         if (p.parse(argc, argv, Switches, OP_MAX) < 0)
             return false;
 

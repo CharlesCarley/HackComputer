@@ -1,0 +1,311 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01141" kind="class" language="C++" prot="public">
+    <compoundname>Hack::Compiler::Analyzer::ParseUtils</compoundname>
+    <includes local="no">Source/Compiler/Analyzer/ParseUtils.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="a01141_1a35ccb54979ab85176eacd434d2b1f52a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Compiler::Analyzer::ParseUtils::isCallTerm</definition>
+        <argsstring>(int8_t t0, int8_t t1, int8_t t2, int8_t t3)</argsstring>
+        <name>isCallTerm</name>
+        <param>
+          <type>int8_t</type>
+          <declname>t0</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>t1</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>t2</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>t3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/ParseUtils.h" line="45" column="1" bodyfile="Source/Compiler/Analyzer/ParseUtils.cpp" bodystart="114" bodyend="120"/>
+        <references refid="a01141_1ae05c21942052125755e6fe007b4a8aef" compoundref="a00689" startline="95" endline="101">isFunctionCall</references>
+        <references refid="a01141_1adfa39dfbbc491f4bf89ea81e6b303bd6" compoundref="a00689" startline="103" endline="112">isMethodCall</references>
+      </memberdef>
+      <memberdef kind="function" id="a01141_1a159c1acb728301d959cf4559bdcea9f1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Compiler::Analyzer::ParseUtils::isComplexTerm</definition>
+        <argsstring>(int8_t t0, int8_t t1, int8_t t2, int8_t t3)</argsstring>
+        <name>isComplexTerm</name>
+        <param>
+          <type>int8_t</type>
+          <declname>t0</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>t1</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>t2</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>t3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/ParseUtils.h" line="47" column="1" bodyfile="Source/Compiler/Analyzer/ParseUtils.cpp" bodystart="122" bodyend="132"/>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea3e31bd9b170ad514bb5a76e879112bf4" compoundref="a01647" startline="74">Hack::Compiler::Analyzer::TokSymLPar</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea891b4734b63678b1e02b1b8b9f13f9b2" compoundref="a01647" startline="34">Hack::Compiler::Analyzer::TokId</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eafb944d2a0e4ad0c586816d56c1029078" compoundref="a01647" startline="70">Hack::Compiler::Analyzer::TokSymLBracket</references>
+        <references refid="a01141_1a35ccb54979ab85176eacd434d2b1f52a" compoundref="a00689" startline="114" endline="120">isCallTerm</references>
+      </memberdef>
+      <memberdef kind="function" id="a01141_1a59847659483be6c6323ae16c504ffb30" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Compiler::Analyzer::ParseUtils::isExpressionExitTerm</definition>
+        <argsstring>(int8_t t0)</argsstring>
+        <name>isExpressionExitTerm</name>
+        <param>
+          <type>int8_t</type>
+          <declname>t0</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/ParseUtils.h" line="39" column="1" bodyfile="Source/Compiler/Analyzer/ParseUtils.cpp" bodystart="66" bodyend="78"/>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eaaf7e383183280f916f91b4cc577b6666" compoundref="a01647" startline="71">Hack::Compiler::Analyzer::TokSymRBracket</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eafbeba2a07000ac4e4118f1b8f2a9ea20" compoundref="a01647" startline="78">Hack::Compiler::Analyzer::TokSymSemicolon</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea832c288ebb3bb5101fcf65fe48ef307d" compoundref="a01647" startline="75">Hack::Compiler::Analyzer::TokSymRPar</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea17c04349dc66747e992f5f8fe52c61bb" compoundref="a01647" startline="77">Hack::Compiler::Analyzer::TokSymComma</references>
+      </memberdef>
+      <memberdef kind="function" id="a01141_1ae05c21942052125755e6fe007b4a8aef" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Compiler::Analyzer::ParseUtils::isFunctionCall</definition>
+        <argsstring>(int8_t t0, int8_t t1)</argsstring>
+        <name>isFunctionCall</name>
+        <param>
+          <type>int8_t</type>
+          <declname>t0</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>t1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/ParseUtils.h" line="41" column="1" bodyfile="Source/Compiler/Analyzer/ParseUtils.cpp" bodystart="95" bodyend="101"/>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea891b4734b63678b1e02b1b8b9f13f9b2" compoundref="a01647" startline="34">Hack::Compiler::Analyzer::TokId</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea3e31bd9b170ad514bb5a76e879112bf4" compoundref="a01647" startline="74">Hack::Compiler::Analyzer::TokSymLPar</references>
+      </memberdef>
+      <memberdef kind="function" id="a01141_1adfa39dfbbc491f4bf89ea81e6b303bd6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Compiler::Analyzer::ParseUtils::isMethodCall</definition>
+        <argsstring>(int8_t t0, int8_t t1, int8_t t2, int8_t t3)</argsstring>
+        <name>isMethodCall</name>
+        <param>
+          <type>int8_t</type>
+          <declname>t0</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>t1</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>t2</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>t3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/ParseUtils.h" line="43" column="1" bodyfile="Source/Compiler/Analyzer/ParseUtils.cpp" bodystart="103" bodyend="112"/>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea891b4734b63678b1e02b1b8b9f13f9b2" compoundref="a01647" startline="34">Hack::Compiler::Analyzer::TokId</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eabed8d290ba00a9c4a2f05ebed54483bd" compoundref="a01647" startline="56">Hack::Compiler::Analyzer::TokKwThis</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea3f40c46f83b01cd10c2f0e44f488b7a0" compoundref="a01647" startline="76">Hack::Compiler::Analyzer::TokSymPeriod</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea3e31bd9b170ad514bb5a76e879112bf4" compoundref="a01647" startline="74">Hack::Compiler::Analyzer::TokSymLPar</references>
+      </memberdef>
+      <memberdef kind="function" id="a01141_1a9f48226f7f08ae3ec5bfe575f7c59c3b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Compiler::Analyzer::ParseUtils::isOperator</definition>
+        <argsstring>(int8_t id)</argsstring>
+        <name>isOperator</name>
+        <param>
+          <type>int8_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/ParseUtils.h" line="33" column="1" bodyfile="Source/Compiler/Analyzer/ParseUtils.cpp" bodystart="29" bodyend="46"/>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea43ad123222961ed0ba51292c5477456e" compoundref="a01647" startline="61">Hack::Compiler::Analyzer::TokOpMinus</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea7137a22e01a5be5107a978261d9e516c" compoundref="a01647" startline="60">Hack::Compiler::Analyzer::TokOpPlus</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea0b94377eace5b63712399ac9217a16f3" compoundref="a01647" startline="62">Hack::Compiler::Analyzer::TokOpMultiply</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eafb37aafcf316cd19f283b70185a6c7db" compoundref="a01647" startline="63">Hack::Compiler::Analyzer::TokOpDivide</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eae145e1948582f41d8142b03f672577e0" compoundref="a01647" startline="64">Hack::Compiler::Analyzer::TokOpAnd</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea9e7478436d156c0c3a1db85422186218" compoundref="a01647" startline="65">Hack::Compiler::Analyzer::TokOpOr</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eafb2ee9a2e649e7cca8fae5a74f4150ea" compoundref="a01647" startline="67">Hack::Compiler::Analyzer::TokOpGt</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea35aaca16e06f074aac288a35ea1fb334" compoundref="a01647" startline="68">Hack::Compiler::Analyzer::TokOpLt</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea59302097276b3efce9d00a1b56260b53" compoundref="a01647" startline="69">Hack::Compiler::Analyzer::TokOpEq</references>
+      </memberdef>
+      <memberdef kind="function" id="a01141_1a537cc831bb3f8c69f1744476fb1f7096" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Compiler::Analyzer::ParseUtils::isTerm</definition>
+        <argsstring>(int8_t t0)</argsstring>
+        <name>isTerm</name>
+        <param>
+          <type>int8_t</type>
+          <declname>t0</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/ParseUtils.h" line="35" column="1" bodyfile="Source/Compiler/Analyzer/ParseUtils.cpp" bodystart="48" bodyend="64"/>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea891b4734b63678b1e02b1b8b9f13f9b2" compoundref="a01647" startline="34">Hack::Compiler::Analyzer::TokId</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eaa145d7ff1b1544932f018e4c7416e3f0" compoundref="a01647" startline="33">Hack::Compiler::Analyzer::TokInt</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea5ed57746b9abdc5453a78be28262d994" compoundref="a01647" startline="35">Hack::Compiler::Analyzer::TokString</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eaea87287587de0856df0952777164bc59" compoundref="a01647" startline="54">Hack::Compiler::Analyzer::TokKwFalse</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea691d340728bd1c0633eb4956e30214bd" compoundref="a01647" startline="53">Hack::Compiler::Analyzer::TokKwTrue</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea2fb9ed390da565ed30445e486683fd12" compoundref="a01647" startline="55">Hack::Compiler::Analyzer::TokKwNull</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eabed8d290ba00a9c4a2f05ebed54483bd" compoundref="a01647" startline="56">Hack::Compiler::Analyzer::TokKwThis</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea3e31bd9b170ad514bb5a76e879112bf4" compoundref="a01647" startline="74">Hack::Compiler::Analyzer::TokSymLPar</references>
+      </memberdef>
+      <memberdef kind="function" id="a01141_1a80dc891183adf97bd0b2df0341b87b13" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Compiler::Analyzer::ParseUtils::isUnary</definition>
+        <argsstring>(int8_t t0, int8_t t1, int8_t t2)</argsstring>
+        <name>isUnary</name>
+        <param>
+          <type>int8_t</type>
+          <declname>t0</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>t1</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>t2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/ParseUtils.h" line="37" column="1" bodyfile="Source/Compiler/Analyzer/ParseUtils.cpp" bodystart="80" bodyend="93"/>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea6d8bef72aaef7e066efde4ac33be78b7" compoundref="a01647" startline="66">Hack::Compiler::Analyzer::TokOpNot</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea43ad123222961ed0ba51292c5477456e" compoundref="a01647" startline="61">Hack::Compiler::Analyzer::TokOpMinus</references>
+        <references refid="a01141_1a537cc831bb3f8c69f1744476fb1f7096" compoundref="a00689" startline="48" endline="64">isTerm</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea3e31bd9b170ad514bb5a76e879112bf4" compoundref="a01647" startline="74">Hack::Compiler::Analyzer::TokSymLPar</references>
+      </memberdef>
+      <memberdef kind="function" id="a01141_1af4e5bdaea1a70383c0c02d702f69f2a9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
+        <definition>String Hack::Compiler::Analyzer::ParseUtils::string</definition>
+        <argsstring>(int index)</argsstring>
+        <name>string</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/ParseUtils.h" line="31" column="1" bodyfile="Source/Compiler/Analyzer/ParseUtils.cpp" bodystart="134" bodyend="236"/>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea4fdcf1312581f32a2b868e5d8887b130" compoundref="a01647" startline="31">Hack::Compiler::Analyzer::TokNull</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea6b35e077d6922de3009e3b220254c978" compoundref="a01647" startline="29">Hack::Compiler::Analyzer::TokError</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea1ba4f9d692cc431d36fb140c844a9aaa" compoundref="a01647" startline="30">Hack::Compiler::Analyzer::TokEof</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eaa145d7ff1b1544932f018e4c7416e3f0" compoundref="a01647" startline="33">Hack::Compiler::Analyzer::TokInt</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea891b4734b63678b1e02b1b8b9f13f9b2" compoundref="a01647" startline="34">Hack::Compiler::Analyzer::TokId</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea5ed57746b9abdc5453a78be28262d994" compoundref="a01647" startline="35">Hack::Compiler::Analyzer::TokString</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea3683a4a8d9bdc7b0b2464d047b288dcf" compoundref="a01647" startline="36">Hack::Compiler::Analyzer::TokKwClass</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eafb1fb17048d6b03064d3ff99ab8d541d" compoundref="a01647" startline="37">Hack::Compiler::Analyzer::TokKwConstructor</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea8378aa98bd996b1a1c8c8d7613d5d381" compoundref="a01647" startline="38">Hack::Compiler::Analyzer::TokKwFunction</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eafdb4aa87958bd43b2b033989acf334ce" compoundref="a01647" startline="39">Hack::Compiler::Analyzer::TokKwMethod</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eaac16f1f376e1c88c29e36c61541ed6ed" compoundref="a01647" startline="40">Hack::Compiler::Analyzer::TokKwField</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea41ff45e379695623a95dc6ae81ba184a" compoundref="a01647" startline="41">Hack::Compiler::Analyzer::TokKwStatic</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eabee3fe36ff107d8c12098b56a6dfd3be" compoundref="a01647" startline="42">Hack::Compiler::Analyzer::TokKwVar</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea00c5a3bd7d23d99702b1e4a468d703eb" compoundref="a01647" startline="43">Hack::Compiler::Analyzer::TokKwInt</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea69ed9ded5c7bc79c1f9f605af67db523" compoundref="a01647" startline="44">Hack::Compiler::Analyzer::TokKwChar</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ead3accc88d83f2804a36fb69c3a69efc5" compoundref="a01647" startline="45">Hack::Compiler::Analyzer::TokKwBool</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eaa943f9dd346815c158a3b016ce8b529d" compoundref="a01647" startline="46">Hack::Compiler::Analyzer::TokKwVoid</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eaeeac2f18a174d237cf037b611f8fdfe5" compoundref="a01647" startline="47">Hack::Compiler::Analyzer::TokKwLet</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea0a7f0a131aeb14c0fa31a04334f8a346" compoundref="a01647" startline="48">Hack::Compiler::Analyzer::TokKwDo</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea7fe7d6fd910001a9f951e25c694ba7b4" compoundref="a01647" startline="49">Hack::Compiler::Analyzer::TokKwIf</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea46582649acdbceba292a221af2333715" compoundref="a01647" startline="50">Hack::Compiler::Analyzer::TokKwElse</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eaa71bf47574690cb47f749bafef229864" compoundref="a01647" startline="51">Hack::Compiler::Analyzer::TokKwWhile</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eacc7bf307a84d19b1d06537181b6e4318" compoundref="a01647" startline="52">Hack::Compiler::Analyzer::TokKwReturn</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea691d340728bd1c0633eb4956e30214bd" compoundref="a01647" startline="53">Hack::Compiler::Analyzer::TokKwTrue</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eaea87287587de0856df0952777164bc59" compoundref="a01647" startline="54">Hack::Compiler::Analyzer::TokKwFalse</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea2fb9ed390da565ed30445e486683fd12" compoundref="a01647" startline="55">Hack::Compiler::Analyzer::TokKwNull</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eabed8d290ba00a9c4a2f05ebed54483bd" compoundref="a01647" startline="56">Hack::Compiler::Analyzer::TokKwThis</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eaaf652b4a06fb74f6dc211693e2e769a3" compoundref="a01647" startline="57">Hack::Compiler::Analyzer::TokKwInlineVm</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eadcf7897b3f892f5487862015ab078438" compoundref="a01647" startline="58">Hack::Compiler::Analyzer::TokKwInlineAsm</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea7137a22e01a5be5107a978261d9e516c" compoundref="a01647" startline="60">Hack::Compiler::Analyzer::TokOpPlus</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea43ad123222961ed0ba51292c5477456e" compoundref="a01647" startline="61">Hack::Compiler::Analyzer::TokOpMinus</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea0b94377eace5b63712399ac9217a16f3" compoundref="a01647" startline="62">Hack::Compiler::Analyzer::TokOpMultiply</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eafb37aafcf316cd19f283b70185a6c7db" compoundref="a01647" startline="63">Hack::Compiler::Analyzer::TokOpDivide</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eae145e1948582f41d8142b03f672577e0" compoundref="a01647" startline="64">Hack::Compiler::Analyzer::TokOpAnd</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea9e7478436d156c0c3a1db85422186218" compoundref="a01647" startline="65">Hack::Compiler::Analyzer::TokOpOr</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea6d8bef72aaef7e066efde4ac33be78b7" compoundref="a01647" startline="66">Hack::Compiler::Analyzer::TokOpNot</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eafb2ee9a2e649e7cca8fae5a74f4150ea" compoundref="a01647" startline="67">Hack::Compiler::Analyzer::TokOpGt</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea35aaca16e06f074aac288a35ea1fb334" compoundref="a01647" startline="68">Hack::Compiler::Analyzer::TokOpLt</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea59302097276b3efce9d00a1b56260b53" compoundref="a01647" startline="69">Hack::Compiler::Analyzer::TokOpEq</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eafb944d2a0e4ad0c586816d56c1029078" compoundref="a01647" startline="70">Hack::Compiler::Analyzer::TokSymLBracket</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eaaf7e383183280f916f91b4cc577b6666" compoundref="a01647" startline="71">Hack::Compiler::Analyzer::TokSymRBracket</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea75b99e6336f6b1f0c48e8b0152258abe" compoundref="a01647" startline="72">Hack::Compiler::Analyzer::TokSymLBrace</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea74d79d469720fac9d5dd69b4875a1b84" compoundref="a01647" startline="73">Hack::Compiler::Analyzer::TokSymRBrace</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea3e31bd9b170ad514bb5a76e879112bf4" compoundref="a01647" startline="74">Hack::Compiler::Analyzer::TokSymLPar</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea832c288ebb3bb5101fcf65fe48ef307d" compoundref="a01647" startline="75">Hack::Compiler::Analyzer::TokSymRPar</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea3f40c46f83b01cd10c2f0e44f488b7a0" compoundref="a01647" startline="76">Hack::Compiler::Analyzer::TokSymPeriod</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213ea17c04349dc66747e992f5f8fe52c61bb" compoundref="a01647" startline="77">Hack::Compiler::Analyzer::TokSymComma</references>
+        <references refid="a00902_1af2b20fa0841330bfd08bb1cbae04213eafbeba2a07000ac4e4118f1b8f2a9ea20" compoundref="a01647" startline="78">Hack::Compiler::Analyzer::TokSymSemicolon</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/Compiler/Analyzer/ParseUtils.h" line="29" column="1" bodyfile="Source/Compiler/Analyzer/ParseUtils.h" bodystart="28" bodyend="48"/>
+    <listofallmembers>
+      <member refid="a01141_1a35ccb54979ab85176eacd434d2b1f52a" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::ParseUtils</scope><name>isCallTerm</name></member>
+      <member refid="a01141_1a159c1acb728301d959cf4559bdcea9f1" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::ParseUtils</scope><name>isComplexTerm</name></member>
+      <member refid="a01141_1a59847659483be6c6323ae16c504ffb30" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::ParseUtils</scope><name>isExpressionExitTerm</name></member>
+      <member refid="a01141_1ae05c21942052125755e6fe007b4a8aef" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::ParseUtils</scope><name>isFunctionCall</name></member>
+      <member refid="a01141_1adfa39dfbbc491f4bf89ea81e6b303bd6" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::ParseUtils</scope><name>isMethodCall</name></member>
+      <member refid="a01141_1a9f48226f7f08ae3ec5bfe575f7c59c3b" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::ParseUtils</scope><name>isOperator</name></member>
+      <member refid="a01141_1a537cc831bb3f8c69f1744476fb1f7096" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::ParseUtils</scope><name>isTerm</name></member>
+      <member refid="a01141_1a80dc891183adf97bd0b2df0341b87b13" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::ParseUtils</scope><name>isUnary</name></member>
+      <member refid="a01141_1af4e5bdaea1a70383c0c02d702f69f2a9" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::ParseUtils</scope><name>string</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

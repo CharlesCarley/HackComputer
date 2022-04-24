@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01268" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>Hack::ParseError</compoundname>
+    <basecompoundref refid="a01248" prot="public" virt="non-virtual">Hack::Exception</basecompoundref>
+    <includes local="no">Source/Utils/ParserBase/ParseError.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a01268_1ad5fbf42e19047225a7de16baa8cda76e" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Hack::ParseError::ParseError</definition>
+        <argsstring>()</argsstring>
+        <name>ParseError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/ParserBase/ParseError.h" line="30" column="1" bodyfile="Source/Utils/ParserBase/ParseError.h" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="a01268_1a9a62c64f6fe1991bf379e478b6914c15" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Hack::ParseError::ParseError</definition>
+        <argsstring>(const String &amp;message)</argsstring>
+        <name>ParseError</name>
+        <param>
+          <type>const <ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/ParserBase/ParseError.h" line="35" column="1" bodyfile="Source/Utils/ParserBase/ParseError.h" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="a01268_1a1b6d389020bc20c4f39bf6988ee782e4" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Hack::ParseError::ParseError</definition>
+        <argsstring>(const int stage, const String &amp;file, const size_t line, const String &amp;message)</argsstring>
+        <name>ParseError</name>
+        <param>
+          <type>const int</type>
+          <declname>stage</declname>
+        </param>
+        <param>
+          <type>const <ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const <ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/ParserBase/ParseError.h" line="40" column="1" bodyfile="Source/Utils/ParserBase/ParseError.h" bodystart="40" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="a01268_1a1b668fbd30a57da23ad40df61387dc26" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
+        <definition>String Hack::ParseError::getError</definition>
+        <argsstring>(int stage, const String &amp;file, const size_t &amp;line, const String &amp;message=&quot;&quot;)</argsstring>
+        <name>getError</name>
+        <param>
+          <type>int</type>
+          <declname>stage</declname>
+        </param>
+        <param>
+          <type>const <ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const <ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>message</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/ParserBase/ParseError.h" line="49" column="1" bodyfile="Source/Utils/ParserBase/ParseError.cpp" bodystart="26" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="398">
+        <label>std::exception</label>
+      </node>
+      <node id="396">
+        <label>Hack::ParseError</label>
+        <link refid="a01268"/>
+        <childnode refid="397" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="397">
+        <label>Hack::Exception</label>
+        <link refid="a01248"/>
+        <childnode refid="398" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="401">
+        <label>std::exception</label>
+      </node>
+      <node id="399">
+        <label>Hack::ParseError</label>
+        <link refid="a01268"/>
+        <childnode refid="400" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="400">
+        <label>Hack::Exception</label>
+        <link refid="a01248"/>
+        <childnode refid="401" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Utils/ParserBase/ParseError.h" line="28" column="1" bodyfile="Source/Utils/ParserBase/ParseError.h" bodystart="27" bodyend="53"/>
+    <listofallmembers>
+      <member refid="a01248_1abf07f31396bbcd6c6b006120d5d3e031" prot="public" virt="non-virtual"><scope>Hack::ParseError</scope><name>Exception</name></member>
+      <member refid="a01248_1ab4bb8a7159681d4e6776cec5a935eda5" prot="public" virt="non-virtual"><scope>Hack::ParseError</scope><name>Exception</name></member>
+      <member refid="a01248_1a8296ea42b1a1a21aa7cb4ea5bd5dc1af" prot="public" virt="non-virtual"><scope>Hack::ParseError</scope><name>Exception</name></member>
+      <member refid="a01268_1a1b668fbd30a57da23ad40df61387dc26" prot="private" virt="non-virtual"><scope>Hack::ParseError</scope><name>getError</name></member>
+      <member refid="a01268_1ad5fbf42e19047225a7de16baa8cda76e" prot="public" virt="non-virtual"><scope>Hack::ParseError</scope><name>ParseError</name></member>
+      <member refid="a01268_1a9a62c64f6fe1991bf379e478b6914c15" prot="public" virt="non-virtual"><scope>Hack::ParseError</scope><name>ParseError</name></member>
+      <member refid="a01268_1a1b6d389020bc20c4f39bf6988ee782e4" prot="public" virt="non-virtual"><scope>Hack::ParseError</scope><name>ParseError</name></member>
+      <member refid="a01248_1ad552d982f58950c324eaebd2dfbd1fe2" prot="public" virt="non-virtual"><scope>Hack::ParseError</scope><name>what</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

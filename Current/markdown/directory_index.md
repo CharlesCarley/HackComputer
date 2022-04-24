@@ -1,7 +1,7 @@
 <a id="directory-index"></a>
 <h1>Directory Index</h1>
 <a href="https://github.com/CharlesCarley/HackComputer#~">~</a>
-<a href="index.md#index">Hack</a>
+<a href="index.md#index">HackComputer</a>
 <span class="inline-text">/</span>
 <span class="bold-text"><b>Directory Index</b></span>
 <br/>

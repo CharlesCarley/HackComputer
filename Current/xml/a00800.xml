@@ -1,0 +1,592 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a00800" kind="file" language="C++">
+    <compoundname>Exception.h</compoundname>
+    <includes local="no">exception</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">utility</includes>
+    <includes refid="a00797" local="yes">Utils/Console.h</includes>
+    <includes refid="a00836" local="yes">Utils/String.h</includes>
+    <includedby refid="a01566" local="yes">Source/Assembler/Main.cpp</includedby>
+    <includedby refid="a00431" local="yes">Source/Bindings/Bindings.cpp</includedby>
+    <includedby refid="a00482" local="yes">Source/Chips/CPU.cpp</includedby>
+    <includedby refid="a01569" local="yes">Source/Compiler/Analyzer/Main.cpp</includedby>
+    <includedby refid="a01599" local="yes">Source/Compiler/Analyzer/Parser.h</includedby>
+    <includedby refid="a00683" local="yes">Source/Compiler/Analyzer/ParseUtils.h</includedby>
+    <includedby refid="a01611" local="yes">Source/Compiler/Analyzer/Scanner.cpp</includedby>
+    <includedby refid="a00692" local="yes">Source/Compiler/Common/Node.cpp</includedby>
+    <includedby refid="a01572" local="yes">Source/Compiler/Compiler/Main.cpp</includedby>
+    <includedby refid="a00722" local="yes">Source/Compiler/Generator/Generator.cpp</includedby>
+    <includedby refid="a00725" local="yes">Source/Compiler/Generator/Generator.h</includedby>
+    <includedby refid="a01575" local="yes">Source/Compiler/Generator/Main.cpp</includedby>
+    <includedby refid="a00752" local="yes">Source/Computer/Application.cpp</includedby>
+    <includedby refid="a00764" local="yes">Source/Computer/DebugRuntime.cpp</includedby>
+    <includedby refid="a00809" local="yes">Source/Utils/IndexCache.h</includedby>
+    <includedby refid="a00815" local="yes">Source/Utils/ParserBase/ParseError.h</includedby>
+    <includedby refid="a01581" local="yes">Source/VirtualMachine/Main.cpp</includedby>
+    <incdepgraph>
+      <node id="3225">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="3226" relation="include">
+        </childnode>
+      </node>
+      <node id="3226">
+        <label>cstdint</label>
+      </node>
+      <node id="3217">
+        <label>stdexcept</label>
+      </node>
+      <node id="3222">
+        <label>string</label>
+      </node>
+      <node id="3216">
+        <label>exception</label>
+      </node>
+      <node id="3224">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="3220" relation="include">
+        </childnode>
+        <childnode refid="3225" relation="include">
+        </childnode>
+        <childnode refid="3227" relation="include">
+        </childnode>
+      </node>
+      <node id="3227">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="3226" relation="include">
+        </childnode>
+        <childnode refid="3223" relation="include">
+        </childnode>
+        <childnode refid="3225" relation="include">
+        </childnode>
+      </node>
+      <node id="3219">
+        <label>Utils/Console.h</label>
+        <childnode refid="3220" relation="include">
+        </childnode>
+        <childnode refid="3224" relation="include">
+        </childnode>
+      </node>
+      <node id="3223">
+        <label>vector</label>
+      </node>
+      <node id="3218">
+        <label>utility</label>
+      </node>
+      <node id="3221">
+        <label>sstream</label>
+      </node>
+      <node id="3215">
+        <label>Source/Utils/Exception.h</label>
+        <link refid="a00800"/>
+        <childnode refid="3216" relation="include">
+        </childnode>
+        <childnode refid="3217" relation="include">
+        </childnode>
+        <childnode refid="3218" relation="include">
+        </childnode>
+        <childnode refid="3219" relation="include">
+        </childnode>
+        <childnode refid="3220" relation="include">
+        </childnode>
+      </node>
+      <node id="3220">
+        <label>String.h</label>
+        <childnode refid="3221" relation="include">
+        </childnode>
+        <childnode refid="3222" relation="include">
+        </childnode>
+        <childnode refid="3223" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3265">
+        <label>Source/VirtualMachine/Parser.h</label>
+        <childnode refid="3237" relation="include">
+        </childnode>
+        <childnode refid="3266" relation="include">
+        </childnode>
+        <childnode refid="3267" relation="include">
+        </childnode>
+      </node>
+      <node id="3264">
+        <label>Source/Assembler/Parser.h</label>
+        <childnode refid="3229" relation="include">
+        </childnode>
+        <childnode refid="3259" relation="include">
+        </childnode>
+        <childnode refid="3230" relation="include">
+        </childnode>
+        <childnode refid="3237" relation="include">
+        </childnode>
+      </node>
+      <node id="3266">
+        <label>Source/VirtualMachine/Main.cpp</label>
+      </node>
+      <node id="3253">
+        <label>Source/Compiler/Generator/Symbol.h</label>
+        <childnode refid="3243" relation="include">
+        </childnode>
+        <childnode refid="3254" relation="include">
+        </childnode>
+        <childnode refid="3255" relation="include">
+        </childnode>
+        <childnode refid="3251" relation="include">
+        </childnode>
+      </node>
+      <node id="3261">
+        <label>Source/Compiler/Analyzer/Scanner.h</label>
+        <childnode refid="3234" relation="include">
+        </childnode>
+        <childnode refid="3240" relation="include">
+        </childnode>
+      </node>
+      <node id="3229">
+        <label>Source/Assembler/Main.cpp</label>
+      </node>
+      <node id="3271">
+        <label>Source/VirtualMachine/Scanner.h</label>
+        <childnode refid="3267" relation="include">
+        </childnode>
+        <childnode refid="3272" relation="include">
+        </childnode>
+      </node>
+      <node id="3231">
+        <label>Source/Chips/CPU.cpp</label>
+      </node>
+      <node id="3242">
+        <label>Source/Compiler/Compiler/Main.cpp</label>
+      </node>
+      <node id="3230">
+        <label>Source/Bindings/Bindings.cpp</label>
+      </node>
+      <node id="3259">
+        <label>Source/Assembler/Parser.cpp</label>
+      </node>
+      <node id="3257">
+        <label>Source/Utils/ParserBase/ScannerBase.h</label>
+        <childnode refid="3258" relation="include">
+        </childnode>
+        <childnode refid="3261" relation="include">
+        </childnode>
+        <childnode refid="3262" relation="include">
+        </childnode>
+        <childnode refid="3263" relation="include">
+        </childnode>
+        <childnode refid="3268" relation="include">
+        </childnode>
+        <childnode refid="3269" relation="include">
+        </childnode>
+        <childnode refid="3271" relation="include">
+        </childnode>
+      </node>
+      <node id="3273">
+        <label>Source/Utils/ParserBase/ParseError.h</label>
+        <childnode refid="3243" relation="include">
+        </childnode>
+        <childnode refid="3274" relation="include">
+        </childnode>
+        <childnode refid="3262" relation="include">
+        </childnode>
+        <childnode refid="3268" relation="include">
+        </childnode>
+      </node>
+      <node id="3256">
+        <label>Source/Compiler/Generator/SymbolTable.cpp</label>
+      </node>
+      <node id="3245">
+        <label>Source/Utils/IndexCache.h</label>
+        <childnode refid="3246" relation="include">
+        </childnode>
+        <childnode refid="3253" relation="include">
+        </childnode>
+        <childnode refid="3255" relation="include">
+        </childnode>
+        <childnode refid="3257" relation="include">
+        </childnode>
+      </node>
+      <node id="3235">
+        <label>Source/Compiler/Generator/Generator.cpp</label>
+      </node>
+      <node id="3255">
+        <label>Source/Compiler/Generator/SymbolTable.h</label>
+        <childnode refid="3235" relation="include">
+        </childnode>
+        <childnode refid="3256" relation="include">
+        </childnode>
+      </node>
+      <node id="3251">
+        <label>Source/Compiler/Generator/VmEmitter.h</label>
+        <childnode refid="3235" relation="include">
+        </childnode>
+        <childnode refid="3252" relation="include">
+        </childnode>
+      </node>
+      <node id="3241">
+        <label>Source/Compiler/Common/Node.cpp</label>
+      </node>
+      <node id="3270">
+        <label>Source/VirtualMachine/Emitter.cpp</label>
+      </node>
+      <node id="3252">
+        <label>Source/Compiler/Generator/VmEmitter.cpp</label>
+      </node>
+      <node id="3272">
+        <label>Source/VirtualMachine/Scanner.cpp</label>
+      </node>
+      <node id="3240">
+        <label>Source/Compiler/Analyzer/Scanner.cpp</label>
+      </node>
+      <node id="3274">
+        <label>Source/Utils/ParserBase/ParseError.cpp</label>
+      </node>
+      <node id="3269">
+        <label>Source/VirtualMachine/Emitter.h</label>
+        <childnode refid="3270" relation="include">
+        </childnode>
+        <childnode refid="3265" relation="include">
+        </childnode>
+      </node>
+      <node id="3268">
+        <label>Source/Utils/ParserBase/ScannerBase.cpp</label>
+      </node>
+      <node id="3249">
+        <label>Source/Compiler/Common/Tree.cpp</label>
+      </node>
+      <node id="3258">
+        <label>Source/Assembler/Scanner.h</label>
+        <childnode refid="3259" relation="include">
+        </childnode>
+        <childnode refid="3260" relation="include">
+        </childnode>
+      </node>
+      <node id="3250">
+        <label>Source/Compiler/Common/XmlWriter.cpp</label>
+      </node>
+      <node id="3233">
+        <label>Source/Compiler/Analyzer/Parser.h</label>
+        <childnode refid="3232" relation="include">
+        </childnode>
+        <childnode refid="3234" relation="include">
+        </childnode>
+        <childnode refid="3235" relation="include">
+        </childnode>
+        <childnode refid="3236" relation="include">
+        </childnode>
+        <childnode refid="3237" relation="include">
+        </childnode>
+      </node>
+      <node id="3234">
+        <label>Source/Compiler/Analyzer/Parser.cpp</label>
+      </node>
+      <node id="3244">
+        <label>Source/Computer/DebugRuntime.cpp</label>
+      </node>
+      <node id="3228">
+        <label>Source/Utils/Exception.h</label>
+        <link refid="a00800"/>
+        <childnode refid="3229" relation="include">
+        </childnode>
+        <childnode refid="3230" relation="include">
+        </childnode>
+        <childnode refid="3231" relation="include">
+        </childnode>
+        <childnode refid="3232" relation="include">
+        </childnode>
+        <childnode refid="3233" relation="include">
+        </childnode>
+        <childnode refid="3238" relation="include">
+        </childnode>
+        <childnode refid="3240" relation="include">
+        </childnode>
+        <childnode refid="3241" relation="include">
+        </childnode>
+        <childnode refid="3242" relation="include">
+        </childnode>
+        <childnode refid="3235" relation="include">
+        </childnode>
+        <childnode refid="3243" relation="include">
+        </childnode>
+        <childnode refid="3236" relation="include">
+        </childnode>
+        <childnode refid="3237" relation="include">
+        </childnode>
+        <childnode refid="3244" relation="include">
+        </childnode>
+        <childnode refid="3245" relation="include">
+        </childnode>
+        <childnode refid="3273" relation="include">
+        </childnode>
+        <childnode refid="3266" relation="include">
+        </childnode>
+      </node>
+      <node id="3267">
+        <label>Source/VirtualMachine/Parser.cpp</label>
+      </node>
+      <node id="3262">
+        <label>Source/Utils/ParserBase/ParserBase.cpp</label>
+      </node>
+      <node id="3232">
+        <label>Source/Compiler/Analyzer/Main.cpp</label>
+      </node>
+      <node id="3238">
+        <label>Source/Compiler/Analyzer/ParseUtils.h</label>
+        <childnode refid="3234" relation="include">
+        </childnode>
+        <childnode refid="3239" relation="include">
+        </childnode>
+      </node>
+      <node id="3247">
+        <label>Source/Compiler/Common/DotWriter.cpp</label>
+      </node>
+      <node id="3263">
+        <label>Source/Utils/ParserBase/ParserBase.h</label>
+        <childnode refid="3264" relation="include">
+        </childnode>
+        <childnode refid="3233" relation="include">
+        </childnode>
+        <childnode refid="3262" relation="include">
+        </childnode>
+        <childnode refid="3265" relation="include">
+        </childnode>
+      </node>
+      <node id="3237">
+        <label>Source/Computer/Application.cpp</label>
+      </node>
+      <node id="3243">
+        <label>Source/Compiler/Generator/Generator.h</label>
+        <childnode refid="3235" relation="include">
+        </childnode>
+        <childnode refid="3236" relation="include">
+        </childnode>
+        <childnode refid="3237" relation="include">
+        </childnode>
+      </node>
+      <node id="3239">
+        <label>Source/Compiler/Analyzer/ParseUtils.cpp</label>
+      </node>
+      <node id="3260">
+        <label>Source/Assembler/Scanner.cpp</label>
+      </node>
+      <node id="3236">
+        <label>Source/Compiler/Generator/Main.cpp</label>
+      </node>
+      <node id="3254">
+        <label>Source/Compiler/Generator/Symbol.cpp</label>
+      </node>
+      <node id="3248">
+        <label>Source/Compiler/Common/NodeUtils.cpp</label>
+      </node>
+      <node id="3246">
+        <label>Source/Compiler/Common/Node.h</label>
+        <childnode refid="3234" relation="include">
+        </childnode>
+        <childnode refid="3239" relation="include">
+        </childnode>
+        <childnode refid="3247" relation="include">
+        </childnode>
+        <childnode refid="3241" relation="include">
+        </childnode>
+        <childnode refid="3248" relation="include">
+        </childnode>
+        <childnode refid="3249" relation="include">
+        </childnode>
+        <childnode refid="3250" relation="include">
+        </childnode>
+        <childnode refid="3235" relation="include">
+        </childnode>
+        <childnode refid="3243" relation="include">
+        </childnode>
+        <childnode refid="3251" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="a01248" prot="public">Hack::Exception</innerclass>
+    <innernamespace refid="a00888">Hack</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="a00800_1ac1164df13e715364a5cd65e192513826" prot="public" static="no">
+        <name>IndexOutOfBounds</name>
+        <param></param>
+        <initializer>Exception(&quot;array index out of bounds&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Exception.h" line="82" column="13" bodyfile="Source/Utils/Exception.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="a00800_1adfc16123f1d9a4be310fc07c19ac2e9c" prot="public" static="no">
+        <name>InputException</name>
+        <param><defname>msg</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>Exception(msg, __VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Exception.h" line="85" column="13" bodyfile="Source/Utils/Exception.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="a00800_1a4fc6793fe96e18ed1a6bd985318c59f7" prot="public" static="no">
+        <name>InvalidPointer</name>
+        <param></param>
+        <initializer>Exception(&quot;invalid pointer&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Exception.h" line="84" column="13" bodyfile="Source/Utils/Exception.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="a00800_1a82d014f17d8f8c6b6fc3da097c89afb5" prot="public" static="no">
+        <name>MessageException</name>
+        <param><defname>msg</defname></param>
+        <initializer>Exception(msg)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Exception.h" line="86" column="13" bodyfile="Source/Utils/Exception.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="a00800_1a68f8e9e3ac3d7829c531fd864f73e740" prot="public" static="no">
+        <name>NotFound</name>
+        <param></param>
+        <initializer>Exception(&quot;not found&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Exception.h" line="83" column="13" bodyfile="Source/Utils/Exception.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="a00800_1ac9f8dec9dca79e02098daf925ed44a10" prot="public" static="no">
+        <name>NotImplemented</name>
+        <param></param>
+        <initializer>Exception(&quot;not implemented&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Exception.h" line="81" column="14" bodyfile="Source/Utils/Exception.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="a00800_1ac3e050a4f799a41fda0d24c94fe632d3" prot="public" static="no">
+        <name>NullOrEmptyString</name>
+        <param></param>
+        <initializer>Exception(&quot;the supplied string is empty&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Exception.h" line="87" column="13" bodyfile="Source/Utils/Exception.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>Charles<sp/>Carley.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>software<sp/>is<sp/>provided<sp/>&apos;as-is&apos;,<sp/>without<sp/>any<sp/>express<sp/>or<sp/>implied</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/>warranty.<sp/>In<sp/>no<sp/>event<sp/>will<sp/>the<sp/>authors<sp/>be<sp/>held<sp/>liable<sp/>for<sp/>any<sp/>damages</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>arising<sp/>from<sp/>the<sp/>use<sp/>of<sp/>this<sp/>software.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>Permission<sp/>is<sp/>granted<sp/>to<sp/>anyone<sp/>to<sp/>use<sp/>this<sp/>software<sp/>for<sp/>any<sp/>purpose,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>including<sp/>commercial<sp/>applications,<sp/>and<sp/>to<sp/>alter<sp/>it<sp/>and<sp/>redistribute<sp/>it</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/>freely,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>restrictions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>1.<sp/>The<sp/>origin<sp/>of<sp/>this<sp/>software<sp/>must<sp/>not<sp/>be<sp/>misrepresented;<sp/>you<sp/>must<sp/>not</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>claim<sp/>that<sp/>you<sp/>wrote<sp/>the<sp/>original<sp/>software.<sp/>If<sp/>you<sp/>use<sp/>this<sp/>software</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>in<sp/>a<sp/>product,<sp/>an<sp/>acknowledgment<sp/>in<sp/>the<sp/>product<sp/>documentation<sp/>would<sp/>be</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>appreciated<sp/>but<sp/>is<sp/>not<sp/>required.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>2.<sp/>Altered<sp/>source<sp/>versions<sp/>must<sp/>be<sp/>plainly<sp/>marked<sp/>as<sp/>such,<sp/>and<sp/>must<sp/>not<sp/>be</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>misrepresented<sp/>as<sp/>being<sp/>the<sp/>original<sp/>software.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;exception&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/Console.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/String.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00888" kindref="compound">Hack</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32" refid="a01248" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01248" kindref="compound">Exception</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::exception</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>_string;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38" refid="a01248_1abf07f31396bbcd6c6b006120d5d3e031" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="a01248_1abf07f31396bbcd6c6b006120d5d3e031" kindref="member">Exception</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="a01248_1ad552d982f58950c324eaebd2dfbd1fe2" kindref="member">what</ref>)<sp/>:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00904" kindref="compound">std</ref>::exception(),</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_string(<ref refid="a01248_1ad552d982f58950c324eaebd2dfbd1fe2" kindref="member">what</ref>)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01244_1a24edb98095550871d32879f324e39e19" kindref="member">Console::debugBreak</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="a01248_1ab4bb8a7159681d4e6776cec5a935eda5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="a01248_1ab4bb8a7159681d4e6776cec5a935eda5" kindref="member">Exception</ref>(<ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><ref refid="a01248_1ad552d982f58950c324eaebd2dfbd1fe2" kindref="member">what</ref>)<sp/>:</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00904" kindref="compound">std</ref>::exception(),</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_string(<ref refid="a00904" kindref="compound">std</ref>::move(<ref refid="a01248_1ad552d982f58950c324eaebd2dfbd1fe2" kindref="member">what</ref>))</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01244_1a24edb98095550871d32879f324e39e19" kindref="member">Console::debugBreak</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Args&gt;</highlight></codeline>
+<codeline lineno="53" refid="a01248_1a8296ea42b1a1a21aa7cb4ea5bd5dc1af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="a01248_1a8296ea42b1a1a21aa7cb4ea5bd5dc1af" kindref="member">Exception</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/><ref refid="a01248_1ad552d982f58950c324eaebd2dfbd1fe2" kindref="member">what</ref>,<sp/>Args&amp;&amp;...args)<sp/>:</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00904" kindref="compound">std</ref>::exception()</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00888_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref><sp/>oss;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oss<sp/>&lt;&lt;<sp/><ref refid="a01248_1ad552d982f58950c324eaebd2dfbd1fe2" kindref="member">what</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((oss<sp/>&lt;&lt;<sp/>std::forward&lt;Args&gt;(args)),<sp/>...);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_string<sp/>=<sp/>oss.str();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01244_1a24edb98095550871d32879f324e39e19" kindref="member">Console::debugBreak</ref>();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="a01248_1ad552d982f58950c324eaebd2dfbd1fe2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="a01248_1ad552d982f58950c324eaebd2dfbd1fe2" kindref="member">what</ref>()<sp/>const<sp/>noexcept</highlight><highlight class="keyword"><sp/>override</highlight></codeline>
+<codeline lineno="65"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_string.c_str();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>clang-format<sp/>off</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLS<sp/>__FILE__<sp/>&quot;(&quot;,<sp/>__LINE__,<sp/>&quot;):\n\t&quot;<sp/>__FUNCTION__<sp/>&quot;\n\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NotImplemented()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Exception(FLS,<sp/>&quot;not<sp/>implemented&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IndexOutOfBounds()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Exception(FLS,<sp/>&quot;array<sp/>index<sp/>out<sp/>of<sp/>bounds&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NotFound()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Exception(FLS,<sp/>&quot;not<sp/>found&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>InvalidPointer()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Exception(FLS,<sp/>&quot;invalid<sp/>pointer&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>InputException(msg,<sp/>...)<sp/><sp/><sp/><sp/>Exception(FLS,<sp/>msg,<sp/>__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MessageException(msg)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Exception(FLS,<sp/>msg)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NullOrEmptyString()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Exception(FLS,<sp/>&quot;the<sp/>supplied<sp/>string<sp/>is<sp/>empty&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>NotImplemented()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Exception(&quot;not<sp/>implemented&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>IndexOutOfBounds()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Exception(&quot;array<sp/>index<sp/>out<sp/>of<sp/>bounds&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>NotFound()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Exception(&quot;not<sp/>found&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>InvalidPointer()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Exception(&quot;invalid<sp/>pointer&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>InputException(msg,<sp/>...)<sp/><sp/><sp/><sp/>Exception(msg,<sp/>__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>MessageException(msg)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Exception(msg)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>NullOrEmptyString()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Exception(&quot;the<sp/>supplied<sp/>string<sp/>is<sp/>empty&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>clang-format<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Source/Utils/Exception.h"/>
+  </compounddef>
+</doxygen>

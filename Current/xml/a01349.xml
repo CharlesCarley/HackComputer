@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01349" kind="struct" language="C++" prot="public">
+    <compoundname>Hack::VirtualMachine::KeywordTable</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="a01349_1a1495fd1ba0b00924bb94421ed83b0f60" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* Hack::VirtualMachine::KeywordTable::str</definition>
+        <argsstring></argsstring>
+        <name>str</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Scanner.cpp" line="32" column="1" bodyfile="Source/VirtualMachine/Scanner.cpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01349_1a5bb11a2ec99050a57211d950bf24b570" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t Hack::VirtualMachine::KeywordTable::tok</definition>
+        <argsstring></argsstring>
+        <name>tok</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Scanner.cpp" line="33" column="1" bodyfile="Source/VirtualMachine/Scanner.cpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="467">
+        <label>int8_t</label>
+      </node>
+      <node id="466">
+        <label>Hack::VirtualMachine::KeywordTable</label>
+        <link refid="a01349"/>
+        <childnode refid="467" relation="usage">
+          <edgelabel>tok</edgelabel>
+        </childnode>
+        <childnode refid="468" relation="usage">
+          <edgelabel>str</edgelabel>
+        </childnode>
+      </node>
+      <node id="468">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="Source/VirtualMachine/Scanner.cpp" line="31" column="1" bodyfile="Source/VirtualMachine/Scanner.cpp" bodystart="30" bodyend="34"/>
+    <listofallmembers>
+      <member refid="a01349_1a1495fd1ba0b00924bb94421ed83b0f60" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::KeywordTable</scope><name>str</name></member>
+      <member refid="a01349_1a5bb11a2ec99050a57211d950bf24b570" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::KeywordTable</scope><name>tok</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

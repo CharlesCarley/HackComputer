@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01638" kind="file" language="C++">
+    <compoundname>Token.h</compoundname>
+    <includes refid="a00836" local="yes">Utils/String.h</includes>
+    <includedby refid="a01626" local="yes">Source/Utils/CommandLine/Scanner.h</includedby>
+    <incdepgraph>
+      <node id="616">
+        <label>Source/Utils/CommandLine/Token.h</label>
+        <link refid="a01638"/>
+        <childnode refid="617" relation="include">
+        </childnode>
+      </node>
+      <node id="619">
+        <label>string</label>
+      </node>
+      <node id="620">
+        <label>vector</label>
+      </node>
+      <node id="618">
+        <label>sstream</label>
+      </node>
+      <node id="617">
+        <label>Utils/String.h</label>
+        <childnode refid="618" relation="include">
+        </childnode>
+        <childnode refid="619" relation="include">
+        </childnode>
+        <childnode refid="620" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="623">
+        <label>Source/Utils/CommandLine/Parser.h</label>
+        <childnode refid="624" relation="include">
+        </childnode>
+        <childnode refid="625" relation="include">
+        </childnode>
+        <childnode refid="626" relation="include">
+        </childnode>
+        <childnode refid="627" relation="include">
+        </childnode>
+        <childnode refid="628" relation="include">
+        </childnode>
+        <childnode refid="629" relation="include">
+        </childnode>
+        <childnode refid="630" relation="include">
+        </childnode>
+      </node>
+      <node id="630">
+        <label>Source/VirtualMachine/Main.cpp</label>
+      </node>
+      <node id="624">
+        <label>Source/Assembler/Main.cpp</label>
+      </node>
+      <node id="621">
+        <label>Source/Utils/CommandLine/Token.h</label>
+        <link refid="a01638"/>
+        <childnode refid="622" relation="include">
+        </childnode>
+      </node>
+      <node id="626">
+        <label>Source/Compiler/Compiler/Main.cpp</label>
+      </node>
+      <node id="629">
+        <label>Source/Utils/CommandLine/Parser.cpp</label>
+      </node>
+      <node id="622">
+        <label>Source/Utils/CommandLine/Scanner.h</label>
+        <childnode refid="623" relation="include">
+        </childnode>
+        <childnode refid="631" relation="include">
+        </childnode>
+      </node>
+      <node id="625">
+        <label>Source/Compiler/Analyzer/Main.cpp</label>
+      </node>
+      <node id="631">
+        <label>Source/Utils/CommandLine/Scanner.cpp</label>
+      </node>
+      <node id="628">
+        <label>Source/Computer/Application.cpp</label>
+      </node>
+      <node id="627">
+        <label>Source/Compiler/Generator/Main.cpp</label>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="a01240" prot="public">Hack::CommandLine::Token</innerclass>
+    <innernamespace refid="a00901">Hack::CommandLine</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>Charles<sp/>Carley.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>software<sp/>is<sp/>provided<sp/>&apos;as-is&apos;,<sp/>without<sp/>any<sp/>express<sp/>or<sp/>implied</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/>warranty.<sp/>In<sp/>no<sp/>event<sp/>will<sp/>the<sp/>authors<sp/>be<sp/>held<sp/>liable<sp/>for<sp/>any<sp/>damages</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>arising<sp/>from<sp/>the<sp/>use<sp/>of<sp/>this<sp/>software.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>Permission<sp/>is<sp/>granted<sp/>to<sp/>anyone<sp/>to<sp/>use<sp/>this<sp/>software<sp/>for<sp/>any<sp/>purpose,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>including<sp/>commercial<sp/>applications,<sp/>and<sp/>to<sp/>alter<sp/>it<sp/>and<sp/>redistribute<sp/>it</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/>freely,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>restrictions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>1.<sp/>The<sp/>origin<sp/>of<sp/>this<sp/>software<sp/>must<sp/>not<sp/>be<sp/>misrepresented;<sp/>you<sp/>must<sp/>not</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>claim<sp/>that<sp/>you<sp/>wrote<sp/>the<sp/>original<sp/>software.<sp/>If<sp/>you<sp/>use<sp/>this<sp/>software</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>in<sp/>a<sp/>product,<sp/>an<sp/>acknowledgment<sp/>in<sp/>the<sp/>product<sp/>documentation<sp/>would<sp/>be</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>appreciated<sp/>but<sp/>is<sp/>not<sp/>required.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>2.<sp/>Altered<sp/>source<sp/>versions<sp/>must<sp/>be<sp/>plainly<sp/>marked<sp/>as<sp/>such,<sp/>and<sp/>must<sp/>not<sp/>be</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>misrepresented<sp/>as<sp/>being<sp/>the<sp/>original<sp/>software.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/String.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00901" kindref="compound">Hack::CommandLine</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28" refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86" kindref="member">TokenType</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30" refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86a18937fa12a9efdd1df2262f17578b735" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86a18937fa12a9efdd1df2262f17578b735" kindref="member">TOK_NONE</ref>,</highlight></codeline>
+<codeline lineno="31" refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86a55849c5d51bca86446e7f7ac620d7d23" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86a55849c5d51bca86446e7f7ac620d7d23" kindref="member">TOK_SWITCH_SHORT</ref>,</highlight></codeline>
+<codeline lineno="32" refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86adf0cf175e182315d7ed141f8f08120e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86adf0cf175e182315d7ed141f8f08120e5" kindref="member">TOK_SWITCH_LONG</ref>,</highlight></codeline>
+<codeline lineno="33" refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86af245704ac1981ba509a2bf36c9f974de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86af245704ac1981ba509a2bf36c9f974de" kindref="member">TOK_NEXT</ref>,</highlight></codeline>
+<codeline lineno="34" refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86a1ec616246244f6453a7f66b5fb826ad3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86a1ec616246244f6453a7f66b5fb826ad3" kindref="member">TOK_OPTION</ref>,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>delete</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86a3098177307fabe9d80853b00deaff42d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86a3098177307fabe9d80853b00deaff42d" kindref="member">TOK_INTEGER</ref>,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>delete</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86ac5583780f8eea34fe0ee815f66fc1439" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86ac5583780f8eea34fe0ee815f66fc1439" kindref="member">TOK_REAL</ref>,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>delete</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86ad10952ab16deb1fdfc37ce82f5cb52e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86ad10952ab16deb1fdfc37ce82f5cb52e5" kindref="member">TOK_IDENTIFIER</ref>,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>rename<sp/>to<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86ac89e0f1937f562da1aa8f4ef6f0fae69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86ac89e0f1937f562da1aa8f4ef6f0fae69" kindref="member">TOK_FILEPATH</ref>,</highlight></codeline>
+<codeline lineno="43" refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86a728a7b175a948d4e4390726507f087b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86a728a7b175a948d4e4390726507f087b8" kindref="member">TOK_EOS</ref>,</highlight></codeline>
+<codeline lineno="44" refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86af499719b721526aa16a9b57e252fde89" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86af499719b721526aa16a9b57e252fde89" kindref="member">TOK_ERROR</ref></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="a01240" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01240" kindref="compound">Token</ref></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>_type;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>_value;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="54" refid="a01240_1a73d16c87d6b58feacf0ff92e99307d1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01240_1a73d16c87d6b58feacf0ff92e99307d1f" kindref="member">Token</ref>()<sp/>:</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_type(<ref refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86a18937fa12a9efdd1df2262f17578b735" kindref="member">TOK_NONE</ref>)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_value.reserve(64);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="a01240_1a1752c109f1e2547e133eb0e991eab9bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/><ref refid="a01240_1a1752c109f1e2547e133eb0e991eab9bc" kindref="member">getType</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="61"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_type;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="a01240_1a77060f2abe4e56c98ddd13fdfc83bc61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01240_1a77060f2abe4e56c98ddd13fdfc83bc61" kindref="member">setType</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>type)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_type<sp/>=<sp/>type;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="a01240_1a0394cc885ec75f298d503580570a3b25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/><ref refid="a01240_1a0394cc885ec75f298d503580570a3b25" kindref="member">getValue</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="71"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_value;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="a01240_1a39d0fdc550762a50ca37e08448d04212" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01240_1a39d0fdc550762a50ca37e08448d04212" kindref="member">append</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">&amp;<sp/>ch)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_value.push_back(ch);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="a01240_1a5c946ba65192d03a81d23486465fb977" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01240_1a5c946ba65192d03a81d23486465fb977" kindref="member">append</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>str)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_value.append(str);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="a01240_1a8566d5c471067be557dce98589f8ba69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01240_1a8566d5c471067be557dce98589f8ba69" kindref="member">clear</ref>()</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_type<sp/>=<sp/><ref refid="a00901_1a7bf8cf020e39f88d39725c1ec763cd86a728a7b175a948d4e4390726507f087b8" kindref="member">TOK_EOS</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_value.resize(0);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Utils::CommandLine</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Source/Utils/CommandLine/Token.h"/>
+  </compounddef>
+</doxygen>

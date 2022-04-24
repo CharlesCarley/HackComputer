@@ -1,0 +1,1260 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a00836" kind="file" language="C++">
+    <compoundname>String.h</compoundname>
+    <includes local="no">sstream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="a01599" local="yes">Source/Compiler/Analyzer/Parser.h</includedby>
+    <includedby refid="a00683" local="yes">Source/Compiler/Analyzer/ParseUtils.h</includedby>
+    <includedby refid="a00689" local="yes">Source/Compiler/Common/DotWriter.h</includedby>
+    <includedby refid="a00695" local="yes">Source/Compiler/Common/Node.h</includedby>
+    <includedby refid="a00701" local="yes">Source/Compiler/Common/NodeUtils.h</includedby>
+    <includedby refid="a00707" local="yes">Source/Compiler/Common/Tree.h</includedby>
+    <includedby refid="a00713" local="yes">Source/Compiler/Common/XmlWriter.h</includedby>
+    <includedby refid="a00749" local="yes">Source/Compiler/Generator/VmEmitter.h</includedby>
+    <includedby refid="a00785" local="yes">Source/Utils/Char.cpp</includedby>
+    <includedby refid="a00788" local="yes">Source/Utils/Char.h</includedby>
+    <includedby refid="a00791" local="yes">Source/Utils/CommandLine/Option.h</includedby>
+    <includedby refid="a01638" local="yes">Source/Utils/CommandLine/Token.h</includedby>
+    <includedby refid="a00797" local="yes">Source/Utils/Console.h</includedby>
+    <includedby refid="a00851" local="yes">Source/Utils/UserInterface/Context.h</includedby>
+    <includedby refid="a00800" local="yes">Source/Utils/Exception.h</includedby>
+    <includedby refid="a00806" local="yes">Source/Utils/FileSystem.h</includedby>
+    <includedby refid="a00830" local="yes">Source/Utils/ParserBase/TokenBase.h</includedby>
+    <includedby refid="a00833" local="yes">Source/Utils/String.cpp</includedby>
+    <includedby refid="a00842" local="yes">Source/Utils/UserInterface/ColorCache.h</includedby>
+    <includedby refid="a00884" local="yes">Source/VirtualMachine/Emitter.h</includedby>
+    <includedby refid="a01605" local="yes">Source/VirtualMachine/Parser.h</includedby>
+    <incdepgraph>
+      <node id="3569">
+        <label>string</label>
+      </node>
+      <node id="3570">
+        <label>vector</label>
+      </node>
+      <node id="3568">
+        <label>sstream</label>
+      </node>
+      <node id="3567">
+        <label>Source/Utils/String.h</label>
+        <link refid="a00836"/>
+        <childnode refid="3568" relation="include">
+        </childnode>
+        <childnode refid="3569" relation="include">
+        </childnode>
+        <childnode refid="3570" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3718">
+        <label>Source/VirtualMachine/Parser.h</label>
+        <childnode refid="3577" relation="include">
+        </childnode>
+        <childnode refid="3611" relation="include">
+        </childnode>
+        <childnode refid="3616" relation="include">
+        </childnode>
+      </node>
+      <node id="3706">
+        <label>Source/Utils/Console.cpp</label>
+      </node>
+      <node id="3717">
+        <label>Source/Assembler/Parser.h</label>
+        <childnode refid="3608" relation="include">
+        </childnode>
+        <childnode refid="3599" relation="include">
+        </childnode>
+        <childnode refid="3631" relation="include">
+        </childnode>
+        <childnode refid="3577" relation="include">
+        </childnode>
+      </node>
+      <node id="3677">
+        <label>Source/Chips/NOr.cpp</label>
+      </node>
+      <node id="3626">
+        <label>Source/Chips/Add16.cpp</label>
+      </node>
+      <node id="3607">
+        <label>Source/Utils/CommandLine/Parser.h</label>
+        <childnode refid="3608" relation="include">
+        </childnode>
+        <childnode refid="3573" relation="include">
+        </childnode>
+        <childnode refid="3609" relation="include">
+        </childnode>
+        <childnode refid="3576" relation="include">
+        </childnode>
+        <childnode refid="3577" relation="include">
+        </childnode>
+        <childnode refid="3610" relation="include">
+        </childnode>
+        <childnode refid="3611" relation="include">
+        </childnode>
+      </node>
+      <node id="3671">
+        <label>Source/Chips/Mux4Way16.h</label>
+        <childnode refid="3670" relation="include">
+        </childnode>
+      </node>
+      <node id="3635">
+        <label>Source/Computer/RuntimeSDL.h</label>
+      </node>
+      <node id="3622">
+        <label>Source/Chips/BitUtils.h</label>
+        <childnode refid="3623" relation="include">
+        </childnode>
+        <childnode refid="3601" relation="include">
+        </childnode>
+        <childnode refid="3624" relation="include">
+        </childnode>
+      </node>
+      <node id="3669">
+        <label>Source/Chips/Mux16.cpp</label>
+      </node>
+      <node id="3654">
+        <label>Source/Chips/DMux8Way.cpp</label>
+      </node>
+      <node id="3735">
+        <label>Source/Utils/UserInterface/Platform.h</label>
+        <childnode refid="3736" relation="include">
+        </childnode>
+        <childnode refid="3737" relation="include">
+        </childnode>
+      </node>
+      <node id="3611">
+        <label>Source/VirtualMachine/Main.cpp</label>
+      </node>
+      <node id="3636">
+        <label>Source/Chips/And.h</label>
+        <childnode refid="3637" relation="include">
+        </childnode>
+        <childnode refid="3638" relation="include">
+        </childnode>
+      </node>
+      <node id="3596">
+        <label>Source/Compiler/Common/XmlWriter.h</label>
+        <childnode refid="3582" relation="include">
+        </childnode>
+        <childnode refid="3586" relation="include">
+        </childnode>
+      </node>
+      <node id="3733">
+        <label>Source/Utils/UserInterface/ColorCache.h</label>
+        <childnode refid="3734" relation="include">
+        </childnode>
+        <childnode refid="3735" relation="include">
+        </childnode>
+      </node>
+      <node id="3709">
+        <label>Source/Compiler/Generator/Symbol.h</label>
+        <childnode refid="3587" relation="include">
+        </childnode>
+        <childnode refid="3710" relation="include">
+        </childnode>
+        <childnode refid="3711" relation="include">
+        </childnode>
+        <childnode refid="3588" relation="include">
+        </childnode>
+      </node>
+      <node id="3672">
+        <label>Source/Chips/Mux8Way16.h</label>
+        <childnode refid="3673" relation="include">
+        </childnode>
+      </node>
+      <node id="3634">
+        <label>Source/Computer/DebugRuntime.h</label>
+        <childnode refid="3577" relation="include">
+        </childnode>
+        <childnode refid="3605" relation="include">
+        </childnode>
+      </node>
+      <node id="3684">
+        <label>Source/Chips/Or16.h</label>
+        <childnode refid="3685" relation="include">
+        </childnode>
+      </node>
+      <node id="3648">
+        <label>Source/Chips/DFlipFlop.cpp</label>
+      </node>
+      <node id="3687">
+        <label>Source/Chips/Or8Way.cpp</label>
+      </node>
+      <node id="3652">
+        <label>Source/Chips/DMux4Way.cpp</label>
+      </node>
+      <node id="3678">
+        <label>Source/Chips/Not.h</label>
+        <childnode refid="3679" relation="include">
+        </childnode>
+      </node>
+      <node id="3731">
+        <label>Source/Compiler/Analyzer/Token.h</label>
+        <childnode refid="3574" relation="include">
+        </childnode>
+        <childnode refid="3579" relation="include">
+        </childnode>
+        <childnode refid="3603" relation="include">
+        </childnode>
+        <childnode refid="3715" relation="include">
+        </childnode>
+      </node>
+      <node id="3640">
+        <label>Source/Chips/And16.cpp</label>
+      </node>
+      <node id="3646">
+        <label>Source/Chips/Timer.cpp</label>
+      </node>
+      <node id="3715">
+        <label>Source/Compiler/Analyzer/Scanner.h</label>
+        <childnode refid="3574" relation="include">
+        </childnode>
+        <childnode refid="3603" relation="include">
+        </childnode>
+      </node>
+      <node id="3625">
+        <label>Source/Chips/Add16.h</label>
+        <childnode refid="3626" relation="include">
+        </childnode>
+      </node>
+      <node id="3580">
+        <label>Source/Compiler/Common/DotWriter.h</label>
+        <childnode refid="3581" relation="include">
+        </childnode>
+        <childnode refid="3582" relation="include">
+        </childnode>
+      </node>
+      <node id="3592">
+        <label>Source/Compiler/Generator/Expression.h</label>
+        <childnode refid="3593" relation="include">
+        </childnode>
+      </node>
+      <node id="3630">
+        <label>Source/Chips/Computer.h</label>
+        <childnode refid="3631" relation="include">
+        </childnode>
+        <childnode refid="3602" relation="include">
+        </childnode>
+        <childnode refid="3577" relation="include">
+        </childnode>
+        <childnode refid="3604" relation="include">
+        </childnode>
+        <childnode refid="3605" relation="include">
+        </childnode>
+        <childnode refid="3632" relation="include">
+        </childnode>
+      </node>
+      <node id="3690">
+        <label>Source/Chips/Ram4k.h</label>
+        <childnode refid="3691" relation="include">
+        </childnode>
+      </node>
+      <node id="3703">
+        <label>Source/Chips/SRLatch.cpp</label>
+      </node>
+      <node id="3693">
+        <label>Source/Chips/Ram512.cpp</label>
+      </node>
+      <node id="3608">
+        <label>Source/Assembler/Main.cpp</label>
+      </node>
+      <node id="3734">
+        <label>Source/Utils/UserInterface/ColorCache.cpp</label>
+      </node>
+      <node id="3720">
+        <label>Source/VirtualMachine/Scanner.h</label>
+        <childnode refid="3616" relation="include">
+        </childnode>
+        <childnode refid="3617" relation="include">
+        </childnode>
+      </node>
+      <node id="3614">
+        <label>Source/Utils/String.cpp</label>
+      </node>
+      <node id="3590">
+        <label>Source/Compiler/Common/NodeUtils.h</label>
+        <childnode refid="3583" relation="include">
+        </childnode>
+        <childnode refid="3585" relation="include">
+        </childnode>
+      </node>
+      <node id="3628">
+        <label>Source/Chips/CPU.cpp</label>
+      </node>
+      <node id="3670">
+        <label>Source/Chips/Mux4Way16.cpp</label>
+      </node>
+      <node id="3661">
+        <label>Source/Chips/Memory.h</label>
+        <childnode refid="3630" relation="include">
+        </childnode>
+        <childnode refid="3662" relation="include">
+        </childnode>
+      </node>
+      <node id="3618">
+        <label>Source/Utils/CommandLine/Token.h</label>
+        <childnode refid="3619" relation="include">
+        </childnode>
+      </node>
+      <node id="3705">
+        <label>Source/Chips/XOr.cpp</label>
+      </node>
+      <node id="3683">
+        <label>Source/Chips/Or.cpp</label>
+      </node>
+      <node id="3691">
+        <label>Source/Chips/Ram4K.cpp</label>
+      </node>
+      <node id="3609">
+        <label>Source/Compiler/Compiler/Main.cpp</label>
+      </node>
+      <node id="3649">
+        <label>Source/Chips/DMux.h</label>
+        <childnode refid="3650" relation="include">
+        </childnode>
+      </node>
+      <node id="3631">
+        <label>Source/Bindings/Bindings.cpp</label>
+      </node>
+      <node id="3610">
+        <label>Source/Utils/CommandLine/Parser.cpp</label>
+      </node>
+      <node id="3619">
+        <label>Source/Utils/CommandLine/Scanner.h</label>
+        <childnode refid="3607" relation="include">
+        </childnode>
+        <childnode refid="3620" relation="include">
+        </childnode>
+      </node>
+      <node id="3655">
+        <label>Source/Chips/FullAdder.h</label>
+        <childnode refid="3638" relation="include">
+        </childnode>
+      </node>
+      <node id="3599">
+        <label>Source/Assembler/Parser.cpp</label>
+      </node>
+      <node id="3675">
+        <label>Source/Chips/Nand.cpp</label>
+      </node>
+      <node id="3682">
+        <label>Source/Chips/Or.h</label>
+        <childnode refid="3638" relation="include">
+        </childnode>
+        <childnode refid="3683" relation="include">
+        </childnode>
+      </node>
+      <node id="3713">
+        <label>Source/Utils/ParserBase/ScannerBase.h</label>
+        <childnode refid="3714" relation="include">
+        </childnode>
+        <childnode refid="3715" relation="include">
+        </childnode>
+        <childnode refid="3612" relation="include">
+        </childnode>
+        <childnode refid="3716" relation="include">
+        </childnode>
+        <childnode refid="3613" relation="include">
+        </childnode>
+        <childnode refid="3719" relation="include">
+        </childnode>
+        <childnode refid="3720" relation="include">
+        </childnode>
+      </node>
+      <node id="3721">
+        <label>Source/Utils/ParserBase/ParseError.h</label>
+        <childnode refid="3587" relation="include">
+        </childnode>
+        <childnode refid="3722" relation="include">
+        </childnode>
+        <childnode refid="3612" relation="include">
+        </childnode>
+        <childnode refid="3613" relation="include">
+        </childnode>
+      </node>
+      <node id="3724">
+        <label>Source/Utils/UserInterface/Context.cpp</label>
+      </node>
+      <node id="3712">
+        <label>Source/Compiler/Generator/SymbolTable.cpp</label>
+      </node>
+      <node id="3692">
+        <label>Source/Chips/Ram512.h</label>
+        <childnode refid="3693" relation="include">
+        </childnode>
+      </node>
+      <node id="3727">
+        <label>Source/Utils/ParserBase/TokenBase.h</label>
+        <childnode refid="3728" relation="include">
+        </childnode>
+        <childnode refid="3731" relation="include">
+        </childnode>
+        <childnode refid="3612" relation="include">
+        </childnode>
+        <childnode refid="3713" relation="include">
+        </childnode>
+        <childnode refid="3716" relation="include">
+        </childnode>
+        <childnode refid="3732" relation="include">
+        </childnode>
+      </node>
+      <node id="3723">
+        <label>Source/Utils/UserInterface/Context.h</label>
+        <childnode refid="3604" relation="include">
+        </childnode>
+        <childnode refid="3605" relation="include">
+        </childnode>
+        <childnode refid="3621" relation="include">
+        </childnode>
+        <childnode refid="3724" relation="include">
+        </childnode>
+      </node>
+      <node id="3729">
+        <label>Source/Assembler/Instruction.h</label>
+        <childnode refid="3623" relation="include">
+        </childnode>
+        <childnode refid="3631" relation="include">
+        </childnode>
+        <childnode refid="3605" relation="include">
+        </childnode>
+      </node>
+      <node id="3688">
+        <label>Source/Chips/ProgramCounter.h</label>
+        <childnode refid="3628" relation="include">
+        </childnode>
+        <childnode refid="3629" relation="include">
+        </childnode>
+        <childnode refid="3689" relation="include">
+        </childnode>
+      </node>
+      <node id="3726">
+        <label>Source/Utils/FileSystem.cpp</label>
+      </node>
+      <node id="3708">
+        <label>Source/Utils/IndexCache.h</label>
+        <childnode refid="3583" relation="include">
+        </childnode>
+        <childnode refid="3709" relation="include">
+        </childnode>
+        <childnode refid="3711" relation="include">
+        </childnode>
+        <childnode refid="3713" relation="include">
+        </childnode>
+      </node>
+      <node id="3738">
+        <label>Source/Utils/UserInterface/PlatformUnix.cpp</label>
+      </node>
+      <node id="3593">
+        <label>Source/Compiler/Generator/Expression.cpp</label>
+      </node>
+      <node id="3641">
+        <label>Source/Chips/Bit.h</label>
+        <childnode refid="3642" relation="include">
+        </childnode>
+      </node>
+      <node id="3621">
+        <label>Source/Utils/Console.h</label>
+        <childnode refid="3608" relation="include">
+        </childnode>
+        <childnode refid="3622" relation="include">
+        </childnode>
+        <childnode refid="3624" relation="include">
+        </childnode>
+        <childnode refid="3573" relation="include">
+        </childnode>
+        <childnode refid="3609" relation="include">
+        </childnode>
+        <childnode refid="3576" relation="include">
+        </childnode>
+        <childnode refid="3610" relation="include">
+        </childnode>
+        <childnode refid="3706" relation="include">
+        </childnode>
+        <childnode refid="3707" relation="include">
+        </childnode>
+        <childnode refid="3611" relation="include">
+        </childnode>
+      </node>
+      <node id="3673">
+        <label>Source/Chips/Mux8Way16.cpp</label>
+      </node>
+      <node id="3575">
+        <label>Source/Compiler/Generator/Generator.cpp</label>
+      </node>
+      <node id="3685">
+        <label>Source/Chips/Or16.cpp</label>
+      </node>
+      <node id="3681">
+        <label>Source/Chips/Not16.cpp</label>
+      </node>
+      <node id="3668">
+        <label>Source/Chips/Mux16.h</label>
+        <childnode refid="3669" relation="include">
+        </childnode>
+        <childnode refid="3670" relation="include">
+        </childnode>
+      </node>
+      <node id="3639">
+        <label>Source/Chips/And16.h</label>
+        <childnode refid="3640" relation="include">
+        </childnode>
+      </node>
+      <node id="3711">
+        <label>Source/Compiler/Generator/SymbolTable.h</label>
+        <childnode refid="3575" relation="include">
+        </childnode>
+        <childnode refid="3712" relation="include">
+        </childnode>
+      </node>
+      <node id="3653">
+        <label>Source/Chips/DMux8Way.h</label>
+        <childnode refid="3654" relation="include">
+        </childnode>
+      </node>
+      <node id="3696">
+        <label>Source/Chips/Ram8.cpp</label>
+      </node>
+      <node id="3674">
+        <label>Source/Chips/NAnd.h</label>
+        <childnode refid="3675" relation="include">
+        </childnode>
+      </node>
+      <node id="3601">
+        <label>Source/Chips/ALU.cpp</label>
+      </node>
+      <node id="3588">
+        <label>Source/Compiler/Generator/VmEmitter.h</label>
+        <childnode refid="3575" relation="include">
+        </childnode>
+        <childnode refid="3589" relation="include">
+        </childnode>
+      </node>
+      <node id="3584">
+        <label>Source/Compiler/Common/Node.cpp</label>
+      </node>
+      <node id="3695">
+        <label>Source/Chips/Ram64.cpp</label>
+      </node>
+      <node id="3686">
+        <label>Source/Chips/Or8Way.h</label>
+        <childnode refid="3687" relation="include">
+        </childnode>
+      </node>
+      <node id="3615">
+        <label>Source/VirtualMachine/Emitter.cpp</label>
+      </node>
+      <node id="3676">
+        <label>Source/Chips/NOr.h</label>
+        <childnode refid="3677" relation="include">
+        </childnode>
+      </node>
+      <node id="3589">
+        <label>Source/Compiler/Generator/VmEmitter.cpp</label>
+      </node>
+      <node id="3643">
+        <label>Source/Chips/Clock.h</label>
+        <childnode refid="3644" relation="include">
+        </childnode>
+        <childnode refid="3645" relation="include">
+        </childnode>
+      </node>
+      <node id="3702">
+        <label>Source/Chips/SRLatch.h</label>
+        <childnode refid="3703" relation="include">
+        </childnode>
+      </node>
+      <node id="3732">
+        <label>Source/VirtualMachine/Token.h</label>
+        <childnode refid="3616" relation="include">
+        </childnode>
+        <childnode refid="3617" relation="include">
+        </childnode>
+        <childnode refid="3720" relation="include">
+        </childnode>
+      </node>
+      <node id="3617">
+        <label>Source/VirtualMachine/Scanner.cpp</label>
+      </node>
+      <node id="3638">
+        <label>Source/Chips/FullAdder.cpp</label>
+      </node>
+      <node id="3730">
+        <label>Source/Assembler/Token.cpp</label>
+      </node>
+      <node id="3602">
+        <label>Source/Chips/Computer.cpp</label>
+      </node>
+      <node id="3603">
+        <label>Source/Compiler/Analyzer/Scanner.cpp</label>
+      </node>
+      <node id="3722">
+        <label>Source/Utils/ParserBase/ParseError.cpp</label>
+      </node>
+      <node id="3719">
+        <label>Source/VirtualMachine/Emitter.h</label>
+        <childnode refid="3615" relation="include">
+        </childnode>
+        <childnode refid="3718" relation="include">
+        </childnode>
+      </node>
+      <node id="3651">
+        <label>Source/Chips/DMux4Way.h</label>
+        <childnode refid="3652" relation="include">
+        </childnode>
+      </node>
+      <node id="3613">
+        <label>Source/Utils/ParserBase/ScannerBase.cpp</label>
+      </node>
+      <node id="3728">
+        <label>Source/Assembler/Token.h</label>
+        <childnode refid="3729" relation="include">
+        </childnode>
+        <childnode refid="3714" relation="include">
+        </childnode>
+        <childnode refid="3730" relation="include">
+        </childnode>
+      </node>
+      <node id="3604">
+        <label>Source/Computer/CommandRuntime.cpp</label>
+      </node>
+      <node id="3667">
+        <label>Source/Chips/Mux.cpp</label>
+      </node>
+      <node id="3680">
+        <label>Source/Chips/Not16.h</label>
+        <childnode refid="3681" relation="include">
+        </childnode>
+      </node>
+      <node id="3662">
+        <label>Source/Chips/Memory.cpp</label>
+      </node>
+      <node id="3624">
+        <label>Source/Chips/Chip.h</label>
+        <childnode refid="3625" relation="include">
+        </childnode>
+        <childnode refid="3601" relation="include">
+        </childnode>
+        <childnode refid="3627" relation="include">
+        </childnode>
+        <childnode refid="3636" relation="include">
+        </childnode>
+        <childnode refid="3639" relation="include">
+        </childnode>
+        <childnode refid="3641" relation="include">
+        </childnode>
+        <childnode refid="3643" relation="include">
+        </childnode>
+        <childnode refid="3629" relation="include">
+        </childnode>
+        <childnode refid="3647" relation="include">
+        </childnode>
+        <childnode refid="3649" relation="include">
+        </childnode>
+        <childnode refid="3651" relation="include">
+        </childnode>
+        <childnode refid="3653" relation="include">
+        </childnode>
+        <childnode refid="3655" relation="include">
+        </childnode>
+        <childnode refid="3656" relation="include">
+        </childnode>
+        <childnode refid="3658" relation="include">
+        </childnode>
+        <childnode refid="3664" relation="include">
+        </childnode>
+        <childnode refid="3661" relation="include">
+        </childnode>
+        <childnode refid="3666" relation="include">
+        </childnode>
+        <childnode refid="3668" relation="include">
+        </childnode>
+        <childnode refid="3671" relation="include">
+        </childnode>
+        <childnode refid="3672" relation="include">
+        </childnode>
+        <childnode refid="3674" relation="include">
+        </childnode>
+        <childnode refid="3676" relation="include">
+        </childnode>
+        <childnode refid="3678" relation="include">
+        </childnode>
+        <childnode refid="3680" relation="include">
+        </childnode>
+        <childnode refid="3682" relation="include">
+        </childnode>
+        <childnode refid="3684" relation="include">
+        </childnode>
+        <childnode refid="3686" relation="include">
+        </childnode>
+        <childnode refid="3688" relation="include">
+        </childnode>
+        <childnode refid="3690" relation="include">
+        </childnode>
+        <childnode refid="3692" relation="include">
+        </childnode>
+        <childnode refid="3694" relation="include">
+        </childnode>
+        <childnode refid="3697" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+        <childnode refid="3700" relation="include">
+        </childnode>
+        <childnode refid="3702" relation="include">
+        </childnode>
+        <childnode refid="3704" relation="include">
+        </childnode>
+      </node>
+      <node id="3598">
+        <label>Source/Utils/Char.h</label>
+        <childnode refid="3599" relation="include">
+        </childnode>
+        <childnode refid="3600" relation="include">
+        </childnode>
+        <childnode refid="3601" relation="include">
+        </childnode>
+        <childnode refid="3602" relation="include">
+        </childnode>
+        <childnode refid="3574" relation="include">
+        </childnode>
+        <childnode refid="3579" relation="include">
+        </childnode>
+        <childnode refid="3603" relation="include">
+        </childnode>
+        <childnode refid="3589" relation="include">
+        </childnode>
+        <childnode refid="3604" relation="include">
+        </childnode>
+        <childnode refid="3605" relation="include">
+        </childnode>
+        <childnode refid="3597" relation="include">
+        </childnode>
+        <childnode refid="3606" relation="include">
+        </childnode>
+        <childnode refid="3612" relation="include">
+        </childnode>
+        <childnode refid="3613" relation="include">
+        </childnode>
+        <childnode refid="3614" relation="include">
+        </childnode>
+        <childnode refid="3615" relation="include">
+        </childnode>
+        <childnode refid="3616" relation="include">
+        </childnode>
+        <childnode refid="3617" relation="include">
+        </childnode>
+      </node>
+      <node id="3582">
+        <label>Source/Compiler/Common/Tree.cpp</label>
+      </node>
+      <node id="3659">
+        <label>Source/Chips/DefaultMemorySegment.h</label>
+        <childnode refid="3660" relation="include">
+        </childnode>
+        <childnode refid="3663" relation="include">
+        </childnode>
+      </node>
+      <node id="3637">
+        <label>Source/Chips/And.cpp</label>
+      </node>
+      <node id="3714">
+        <label>Source/Assembler/Scanner.h</label>
+        <childnode refid="3599" relation="include">
+        </childnode>
+        <childnode refid="3600" relation="include">
+        </childnode>
+      </node>
+      <node id="3647">
+        <label>Source/Chips/DFlipFlop.h</label>
+        <childnode refid="3641" relation="include">
+        </childnode>
+        <childnode refid="3648" relation="include">
+        </childnode>
+      </node>
+      <node id="3586">
+        <label>Source/Compiler/Common/XmlWriter.cpp</label>
+      </node>
+      <node id="3572">
+        <label>Source/Compiler/Analyzer/Parser.h</label>
+        <childnode refid="3573" relation="include">
+        </childnode>
+        <childnode refid="3574" relation="include">
+        </childnode>
+        <childnode refid="3575" relation="include">
+        </childnode>
+        <childnode refid="3576" relation="include">
+        </childnode>
+        <childnode refid="3577" relation="include">
+        </childnode>
+      </node>
+      <node id="3574">
+        <label>Source/Compiler/Analyzer/Parser.cpp</label>
+      </node>
+      <node id="3605">
+        <label>Source/Computer/DebugRuntime.cpp</label>
+      </node>
+      <node id="3650">
+        <label>Source/Chips/DMux.cpp</label>
+      </node>
+      <node id="3737">
+        <label>Source/Utils/UserInterface/PlatformUnix.h</label>
+        <childnode refid="3724" relation="include">
+        </childnode>
+        <childnode refid="3738" relation="include">
+        </childnode>
+      </node>
+      <node id="3707">
+        <label>Source/Utils/Exception.h</label>
+        <childnode refid="3608" relation="include">
+        </childnode>
+        <childnode refid="3631" relation="include">
+        </childnode>
+        <childnode refid="3628" relation="include">
+        </childnode>
+        <childnode refid="3573" relation="include">
+        </childnode>
+        <childnode refid="3572" relation="include">
+        </childnode>
+        <childnode refid="3578" relation="include">
+        </childnode>
+        <childnode refid="3603" relation="include">
+        </childnode>
+        <childnode refid="3584" relation="include">
+        </childnode>
+        <childnode refid="3609" relation="include">
+        </childnode>
+        <childnode refid="3575" relation="include">
+        </childnode>
+        <childnode refid="3587" relation="include">
+        </childnode>
+        <childnode refid="3576" relation="include">
+        </childnode>
+        <childnode refid="3577" relation="include">
+        </childnode>
+        <childnode refid="3605" relation="include">
+        </childnode>
+        <childnode refid="3708" relation="include">
+        </childnode>
+        <childnode refid="3721" relation="include">
+        </childnode>
+        <childnode refid="3611" relation="include">
+        </childnode>
+      </node>
+      <node id="3645">
+        <label>Source/Chips/Timer.h</label>
+        <childnode refid="3602" relation="include">
+        </childnode>
+        <childnode refid="3628" relation="include">
+        </childnode>
+        <childnode refid="3646" relation="include">
+        </childnode>
+      </node>
+      <node id="3616">
+        <label>Source/VirtualMachine/Parser.cpp</label>
+      </node>
+      <node id="3694">
+        <label>Source/Chips/Ram8.h</label>
+        <childnode refid="3695" relation="include">
+        </childnode>
+        <childnode refid="3696" relation="include">
+        </childnode>
+      </node>
+      <node id="3612">
+        <label>Source/Utils/ParserBase/ParserBase.cpp</label>
+      </node>
+      <node id="3573">
+        <label>Source/Compiler/Analyzer/Main.cpp</label>
+      </node>
+      <node id="3578">
+        <label>Source/Compiler/Analyzer/ParseUtils.h</label>
+        <childnode refid="3574" relation="include">
+        </childnode>
+        <childnode refid="3579" relation="include">
+        </childnode>
+      </node>
+      <node id="3620">
+        <label>Source/Utils/CommandLine/Scanner.cpp</label>
+      </node>
+      <node id="3665">
+        <label>Source/Chips/Inc16.cpp</label>
+      </node>
+      <node id="3581">
+        <label>Source/Compiler/Common/DotWriter.cpp</label>
+      </node>
+      <node id="3699">
+        <label>Source/Chips/Register.cpp</label>
+      </node>
+      <node id="3606">
+        <label>Source/Utils/CommandLine/Option.h</label>
+        <childnode refid="3607" relation="include">
+        </childnode>
+      </node>
+      <node id="3666">
+        <label>Source/Chips/Mux.h</label>
+        <childnode refid="3667" relation="include">
+        </childnode>
+      </node>
+      <node id="3700">
+        <label>Source/Chips/Rom32.h</label>
+        <childnode refid="3630" relation="include">
+        </childnode>
+        <childnode refid="3701" relation="include">
+        </childnode>
+      </node>
+      <node id="3716">
+        <label>Source/Utils/ParserBase/ParserBase.h</label>
+        <childnode refid="3717" relation="include">
+        </childnode>
+        <childnode refid="3572" relation="include">
+        </childnode>
+        <childnode refid="3612" relation="include">
+        </childnode>
+        <childnode refid="3718" relation="include">
+        </childnode>
+      </node>
+      <node id="3679">
+        <label>Source/Chips/Not.cpp</label>
+      </node>
+      <node id="3644">
+        <label>Source/Chips/Clock.cpp</label>
+      </node>
+      <node id="3660">
+        <label>Source/Chips/Ram16k.h</label>
+        <childnode refid="3661" relation="include">
+        </childnode>
+      </node>
+      <node id="3658">
+        <label>Source/Chips/IMemorySegment.h</label>
+        <childnode refid="3659" relation="include">
+        </childnode>
+      </node>
+      <node id="3689">
+        <label>Source/Chips/ProgramCounter.cpp</label>
+      </node>
+      <node id="3623">
+        <label>Source/Assembler/Instruction.cpp</label>
+      </node>
+      <node id="3697">
+        <label>Source/Chips/Ram64.h</label>
+        <childnode refid="3695" relation="include">
+        </childnode>
+      </node>
+      <node id="3594">
+        <label>Source/Compiler/Generator/Scope.h</label>
+        <childnode refid="3595" relation="include">
+        </childnode>
+      </node>
+      <node id="3663">
+        <label>Source/Chips/Screen.h</label>
+        <childnode refid="3661" relation="include">
+        </childnode>
+        <childnode refid="3633" relation="include">
+        </childnode>
+        <childnode refid="3634" relation="include">
+        </childnode>
+        <childnode refid="3632" relation="include">
+        </childnode>
+        <childnode refid="3635" relation="include">
+        </childnode>
+      </node>
+      <node id="3577">
+        <label>Source/Computer/Application.cpp</label>
+      </node>
+      <node id="3701">
+        <label>Source/Chips/Rom32.cpp</label>
+      </node>
+      <node id="3657">
+        <label>Source/Chips/HalfAdder.cpp</label>
+      </node>
+      <node id="3632">
+        <label>Source/Computer/RuntimeInterface.h</label>
+        <childnode refid="3633" relation="include">
+        </childnode>
+        <childnode refid="3634" relation="include">
+        </childnode>
+        <childnode refid="3635" relation="include">
+        </childnode>
+      </node>
+      <node id="3587">
+        <label>Source/Compiler/Generator/Generator.h</label>
+        <childnode refid="3575" relation="include">
+        </childnode>
+        <childnode refid="3576" relation="include">
+        </childnode>
+        <childnode refid="3577" relation="include">
+        </childnode>
+      </node>
+      <node id="3579">
+        <label>Source/Compiler/Analyzer/ParseUtils.cpp</label>
+      </node>
+      <node id="3642">
+        <label>Source/Chips/Bit.cpp</label>
+      </node>
+      <node id="3595">
+        <label>Source/Compiler/Generator/Scope.cpp</label>
+      </node>
+      <node id="3597">
+        <label>Source/Utils/Char.cpp</label>
+      </node>
+      <node id="3698">
+        <label>Source/Chips/Register.h</label>
+        <childnode refid="3628" relation="include">
+        </childnode>
+        <childnode refid="3629" relation="include">
+        </childnode>
+        <childnode refid="3699" relation="include">
+        </childnode>
+      </node>
+      <node id="3600">
+        <label>Source/Assembler/Scanner.cpp</label>
+      </node>
+      <node id="3591">
+        <label>Source/Compiler/Common/Tree.h</label>
+        <childnode refid="3572" relation="include">
+        </childnode>
+        <childnode refid="3582" relation="include">
+        </childnode>
+        <childnode refid="3592" relation="include">
+        </childnode>
+        <childnode refid="3587" relation="include">
+        </childnode>
+        <childnode refid="3594" relation="include">
+        </childnode>
+      </node>
+      <node id="3656">
+        <label>Source/Chips/HalfAdder.h</label>
+        <childnode refid="3657" relation="include">
+        </childnode>
+      </node>
+      <node id="3627">
+        <label>Source/Chips/ALU.h</label>
+        <childnode refid="3601" relation="include">
+        </childnode>
+        <childnode refid="3628" relation="include">
+        </childnode>
+        <childnode refid="3629" relation="include">
+        </childnode>
+      </node>
+      <node id="3576">
+        <label>Source/Compiler/Generator/Main.cpp</label>
+      </node>
+      <node id="3704">
+        <label>Source/Chips/XOr.h</label>
+        <childnode refid="3638" relation="include">
+        </childnode>
+        <childnode refid="3705" relation="include">
+        </childnode>
+      </node>
+      <node id="3664">
+        <label>Source/Chips/Inc16.h</label>
+        <childnode refid="3665" relation="include">
+        </childnode>
+      </node>
+      <node id="3710">
+        <label>Source/Compiler/Generator/Symbol.cpp</label>
+      </node>
+      <node id="3585">
+        <label>Source/Compiler/Common/NodeUtils.cpp</label>
+      </node>
+      <node id="3633">
+        <label>Source/Computer/CommandRuntime.h</label>
+        <childnode refid="3577" relation="include">
+        </childnode>
+        <childnode refid="3604" relation="include">
+        </childnode>
+      </node>
+      <node id="3629">
+        <label>Source/Chips/CPU.h</label>
+        <childnode refid="3630" relation="include">
+        </childnode>
+        <childnode refid="3628" relation="include">
+        </childnode>
+      </node>
+      <node id="3583">
+        <label>Source/Compiler/Common/Node.h</label>
+        <childnode refid="3574" relation="include">
+        </childnode>
+        <childnode refid="3579" relation="include">
+        </childnode>
+        <childnode refid="3581" relation="include">
+        </childnode>
+        <childnode refid="3584" relation="include">
+        </childnode>
+        <childnode refid="3585" relation="include">
+        </childnode>
+        <childnode refid="3582" relation="include">
+        </childnode>
+        <childnode refid="3586" relation="include">
+        </childnode>
+        <childnode refid="3575" relation="include">
+        </childnode>
+        <childnode refid="3587" relation="include">
+        </childnode>
+        <childnode refid="3588" relation="include">
+        </childnode>
+      </node>
+      <node id="3736">
+        <label>Source/Utils/UserInterface/Platform.cpp</label>
+      </node>
+      <node id="3571">
+        <label>Source/Utils/String.h</label>
+        <link refid="a00836"/>
+        <childnode refid="3572" relation="include">
+        </childnode>
+        <childnode refid="3578" relation="include">
+        </childnode>
+        <childnode refid="3580" relation="include">
+        </childnode>
+        <childnode refid="3583" relation="include">
+        </childnode>
+        <childnode refid="3590" relation="include">
+        </childnode>
+        <childnode refid="3591" relation="include">
+        </childnode>
+        <childnode refid="3596" relation="include">
+        </childnode>
+        <childnode refid="3588" relation="include">
+        </childnode>
+        <childnode refid="3597" relation="include">
+        </childnode>
+        <childnode refid="3598" relation="include">
+        </childnode>
+        <childnode refid="3606" relation="include">
+        </childnode>
+        <childnode refid="3618" relation="include">
+        </childnode>
+        <childnode refid="3621" relation="include">
+        </childnode>
+        <childnode refid="3723" relation="include">
+        </childnode>
+        <childnode refid="3707" relation="include">
+        </childnode>
+        <childnode refid="3725" relation="include">
+        </childnode>
+        <childnode refid="3727" relation="include">
+        </childnode>
+        <childnode refid="3614" relation="include">
+        </childnode>
+        <childnode refid="3733" relation="include">
+        </childnode>
+        <childnode refid="3719" relation="include">
+        </childnode>
+        <childnode refid="3718" relation="include">
+        </childnode>
+      </node>
+      <node id="3725">
+        <label>Source/Utils/FileSystem.h</label>
+        <childnode refid="3573" relation="include">
+        </childnode>
+        <childnode refid="3586" relation="include">
+        </childnode>
+        <childnode refid="3575" relation="include">
+        </childnode>
+        <childnode refid="3576" relation="include">
+        </childnode>
+        <childnode refid="3577" relation="include">
+        </childnode>
+        <childnode refid="3607" relation="include">
+        </childnode>
+        <childnode refid="3726" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="a01284" prot="public">Hack::StringUtils</innerclass>
+    <innernamespace refid="a00888">Hack</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>Charles<sp/>Carley.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>software<sp/>is<sp/>provided<sp/>&apos;as-is&apos;,<sp/>without<sp/>any<sp/>express<sp/>or<sp/>implied</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/>warranty.<sp/>In<sp/>no<sp/>event<sp/>will<sp/>the<sp/>authors<sp/>be<sp/>held<sp/>liable<sp/>for<sp/>any<sp/>damages</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>arising<sp/>from<sp/>the<sp/>use<sp/>of<sp/>this<sp/>software.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>Permission<sp/>is<sp/>granted<sp/>to<sp/>anyone<sp/>to<sp/>use<sp/>this<sp/>software<sp/>for<sp/>any<sp/>purpose,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>including<sp/>commercial<sp/>applications,<sp/>and<sp/>to<sp/>alter<sp/>it<sp/>and<sp/>redistribute<sp/>it</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/>freely,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>restrictions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>1.<sp/>The<sp/>origin<sp/>of<sp/>this<sp/>software<sp/>must<sp/>not<sp/>be<sp/>misrepresented;<sp/>you<sp/>must<sp/>not</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>claim<sp/>that<sp/>you<sp/>wrote<sp/>the<sp/>original<sp/>software.<sp/>If<sp/>you<sp/>use<sp/>this<sp/>software</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>in<sp/>a<sp/>product,<sp/>an<sp/>acknowledgment<sp/>in<sp/>the<sp/>product<sp/>documentation<sp/>would<sp/>be</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>appreciated<sp/>but<sp/>is<sp/>not<sp/>required.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>2.<sp/>Altered<sp/>source<sp/>versions<sp/>must<sp/>be<sp/>plainly<sp/>marked<sp/>as<sp/>such,<sp/>and<sp/>must<sp/>not<sp/>be</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>misrepresented<sp/>as<sp/>being<sp/>the<sp/>original<sp/>software.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00888" kindref="compound">Hack</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30" refid="a00888_1af578ea8fc214989b8ebeece788fa787d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>=<sp/>std::string;</highlight></codeline>
+<codeline lineno="31" refid="a00888_1a02a62f0f81901a275e5e91f45798b2de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="a00888_1a02a62f0f81901a275e5e91f45798b2de" kindref="member">StringArray</ref><sp/>=<sp/>std::vector&lt;std::string&gt;;</highlight></codeline>
+<codeline lineno="32" refid="a00888_1a3359517a07995b79651874c054caa348" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="a00888_1a3359517a07995b79651874c054caa348" kindref="member">StringStream</ref><sp/>=<sp/>std::stringstream;</highlight></codeline>
+<codeline lineno="33" refid="a00888_1ab983b76961e0322ec2ffdfd7d0e17a6c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="a00888_1ab983b76961e0322ec2ffdfd7d0e17a6c" kindref="member">InputStringStream</ref><sp/>=<sp/>std::istringstream;</highlight></codeline>
+<codeline lineno="34" refid="a00888_1ae3a6ca87ce783b824591a2858b2409a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="a00888_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref><sp/>=<sp/>std::ostringstream;</highlight></codeline>
+<codeline lineno="35" refid="a00888_1a830c8eb3c005ef2fbc470e0b141b93c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="a00888_1a830c8eb3c005ef2fbc470e0b141b93c5" kindref="member">IStream</ref><sp/>=<sp/>std::istream;</highlight></codeline>
+<codeline lineno="36" refid="a00888_1a404ae4dff97be2fec362955db83690da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="a00888_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref><sp/>=<sp/>std::ostream;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="a01284" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01284" kindref="compound">StringUtils</ref></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01284_1a23bf4c692af3b432d695218ea0143544" kindref="member">split</ref>(<ref refid="a00888_1a02a62f0f81901a275e5e91f45798b2de" kindref="member">StringArray</ref>&amp;<sp/>dest,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>str,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>sep);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01284_1a23bf4c692af3b432d695218ea0143544" kindref="member">split</ref>(<ref refid="a00888_1a02a62f0f81901a275e5e91f45798b2de" kindref="member">StringArray</ref>&amp;<sp/>dest,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>str,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>sep);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01284_1a317411e0785122e1f415d6da27351ba6" kindref="member">scramble</ref>(<ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01284_1a8967bdf4168b1b6865eae69ce48e9d38" kindref="member">generate</ref>(<ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>counter,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>seed);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01284_1a7aa6b5303b41ecaef5ae3ac881a6e984" kindref="member">trimWhiteSpace</ref>(<ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>in);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01284_1af753b3b5d5e6d9a7122823f88d3cdd32" kindref="member">trim</ref>(<ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>in,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>ch);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01284_1a69f375e46be64e684cc13eca491ca216" kindref="member">trimL</ref>(<ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>in,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>ch);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01284_1ae247bfac8ee378f4ee806788f40fa8db" kindref="member">trimR</ref>(<ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>in,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>ch);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01284_1a3023cff3d330aedadb3eaea6f04ae076" kindref="member">splitLine</ref>(<ref refid="a00888_1a02a62f0f81901a275e5e91f45798b2de" kindref="member">StringArray</ref>&amp;<sp/>dest,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>input,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>swap<sp/>=<sp/></highlight><highlight class="charliteral">&apos;$&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01284_1a69ee5b484bf63300d0a47a71ea806bcc" kindref="member">replaceAll</ref>(<ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>input,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>b);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Args&gt;</highlight></codeline>
+<codeline lineno="63" refid="a00888_1a5364723a01adba9b9d85c38f1cb8e9df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00888_1a5364723a01adba9b9d85c38f1cb8e9df" kindref="member">StreamMerge</ref>(<ref refid="a00888_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref>&amp;<sp/>dest,<sp/>Args&amp;&amp;...args)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00888_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref><sp/>oss;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((oss<sp/>&lt;&lt;<sp/>std::forward&lt;Args&gt;(args)),<sp/>...);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest<sp/>&lt;&lt;<sp/>oss.str()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Args&gt;</highlight></codeline>
+<codeline lineno="71" refid="a00888_1a0022073c844c619a094704ae6c9b14bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00888_1a0022073c844c619a094704ae6c9b14bf" kindref="member">StringCombine</ref>(<ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/>Args&amp;&amp;...args)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00888_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref><sp/>oss;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((oss<sp/>&lt;&lt;<sp/>std::forward&lt;Args&gt;(args)),<sp/>...);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest<sp/>=<sp/>oss.str();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Args&gt;</highlight></codeline>
+<codeline lineno="79" refid="a00888_1ab53f5c42920e217a6da19d1e7b0bed33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><ref refid="a00888_1a0022073c844c619a094704ae6c9b14bf" kindref="member">StringCombine</ref>(Args&amp;&amp;...args)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00888_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref><sp/>oss;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((oss<sp/>&lt;&lt;<sp/>std::forward&lt;Args&gt;(args)),<sp/>...);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>oss.str();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Source/Utils/String.h"/>
+  </compounddef>
+</doxygen>

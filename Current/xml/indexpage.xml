@@ -6,8 +6,15 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<sect1 id="index_1HC001">
-<title>Contents</title>
+<para>This repository is my implementation of the <ref refid="a00888" kindref="compound">Hack</ref> computer in C++ from the <ulink url="https://www.coursera.org/learn/build-a-computer">NAnd2Tetris course</ulink>. It is a bit over the top and does not strictly adhere to the course. I chose to opt out of the certificate of completion instead chose to support the authors by buying the e-book. I wanted something self-contained in the end. In order to do that, the supplied tools in the course materials were written from scratch, to some extent. <linebreak/>
+<linebreak/>
+ It uses <ulink url="https://cmake.org/">CMake</ulink> for its build system. <ref refid="a01557" kindref="compound">more...</ref></para><sect1 id="index_1HC001">
+<title>Project Structure</title>
+<para><itemizedlist>
+<listitem><para><ref refid="a01558" kindref="compound">Utils</ref> Implements general functionality classes that are used project wide.</para></listitem><listitem><para><ref refid="a01559" kindref="compound">Chips</ref> Implements a circuit class library.</para></listitem><listitem><para><ref refid="a01560" kindref="compound">Assembler</ref> Implements a machine code compiler.</para></listitem><listitem><para><ref refid="a01561" kindref="compound">Virtual Machine</ref> Implements a virtual machine compiler.</para></listitem><listitem><para><ref refid="a01562" kindref="compound">Compiler</ref> Provides tools to parse <computeroutput>.jack</computeroutput> files.</para></listitem><listitem><para><ref refid="a01563" kindref="compound">Bindings</ref> provides a language inter-op binding interface.</para></listitem><listitem><para><ref refid="a01564" kindref="compound">Computer</ref> Implements a program to tie the system together.</para></listitem></itemizedlist>
+</para></sect1>
+<sect1 id="index_1HC002">
+<title>Index</title>
 </sect1>
     </detaileddescription>
   </compounddef>

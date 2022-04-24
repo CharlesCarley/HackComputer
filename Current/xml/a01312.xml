@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01312" kind="class" language="C++" prot="public">
+    <compoundname>Hack::Ui::Color</compoundname>
+    <includes local="no">Source/Utils/UserInterface/Math.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="a01312_1a9af96eb67422f054ba8d50ad3c2bf841" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Hack::Ui::Color::Rgb</definition>
+        <argsstring></argsstring>
+        <name>Rgb</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Math.h" line="157" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="a01312_1a2d6b7092854f49d1d437477049078f79" prot="private" static="no" mutable="yes">
+        <type>char</type>
+        <definition>char Hack::Ui::Color::_scratch[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>_scratch</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Math.h" line="160" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="a01312_1a7dc94d62f27aca8f18b2ab70a4821945" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * Hack::Ui::Color::extractSequence</definition>
+        <argsstring>(const char *buf) const</argsstring>
+        <name>extractSequence</name>
+        <param>
+          <type>const char *</type>
+          <declname>buf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Math.h" line="162" column="1" bodyfile="Source/Utils/UserInterface/Math.cpp" bodystart="27" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a01312_1ab6e2b6a99744650ef27e124c4c619247" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Ui::Color::Color</definition>
+        <argsstring>()=default</argsstring>
+        <name>Color</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Math.h" line="165" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a01312_1aca45abd832d82d0d9f2c00a498a104ff" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Ui::Color::Color</definition>
+        <argsstring>(const uint32_t &amp;v)</argsstring>
+        <name>Color</name>
+        <param>
+          <type>const uint32_t &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Math.h" line="167" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="167" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="a01312_1a3ec135484774dffc5b529cee9dfa3059" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Ui::Color::Color</definition>
+        <argsstring>(const uint8_t r, const uint8_t g, const uint8_t b)</argsstring>
+        <name>Color</name>
+        <param>
+          <type>const <ref refid="a01364" kindref="compound">uint8_t</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const <ref refid="a01364" kindref="compound">uint8_t</ref></type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>const <ref refid="a01364" kindref="compound">uint8_t</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Math.h" line="172" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="172" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="a01312_1a2c11ad765cd58a32fc3d588f8d8f1cb3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* Hack::Ui::Color::background</definition>
+        <argsstring>() const</argsstring>
+        <name>background</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Math.h" line="184" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="184" bodyend="187"/>
+        <references refid="a00902_1afa04eb3bbd4814431ab8fce1f562166f" compoundref="a00845" startline="35">Hack::Ui::RgbFormatBg</references>
+      </memberdef>
+      <memberdef kind="function" id="a01312_1a7df5afa30dd84cb9566b5122a7636d17" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* Hack::Ui::Color::foreground</definition>
+        <argsstring>() const</argsstring>
+        <name>foreground</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Math.h" line="179" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="179" bodyend="182"/>
+        <references refid="a00902_1aefd7f2d50548723bc913d2c3289e31c1" compoundref="a00845" startline="34">Hack::Ui::RgbFormatFg</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="432">
+        <label>Hack::Ui::Color</label>
+        <link refid="a01312"/>
+        <childnode refid="433" relation="usage">
+          <edgelabel>Rgb</edgelabel>
+        </childnode>
+      </node>
+      <node id="433">
+        <label>uint32_t</label>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Utils/UserInterface/Math.h" line="155" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="154" bodyend="188"/>
+    <listofallmembers>
+      <member refid="a01312_1a2d6b7092854f49d1d437477049078f79" prot="private" virt="non-virtual"><scope>Hack::Ui::Color</scope><name>_scratch</name></member>
+      <member refid="a01312_1a2c11ad765cd58a32fc3d588f8d8f1cb3" prot="public" virt="non-virtual"><scope>Hack::Ui::Color</scope><name>background</name></member>
+      <member refid="a01312_1ab6e2b6a99744650ef27e124c4c619247" prot="public" virt="non-virtual"><scope>Hack::Ui::Color</scope><name>Color</name></member>
+      <member refid="a01312_1aca45abd832d82d0d9f2c00a498a104ff" prot="public" virt="non-virtual"><scope>Hack::Ui::Color</scope><name>Color</name></member>
+      <member refid="a01312_1a3ec135484774dffc5b529cee9dfa3059" prot="public" virt="non-virtual"><scope>Hack::Ui::Color</scope><name>Color</name></member>
+      <member refid="a01312_1a7dc94d62f27aca8f18b2ab70a4821945" prot="private" virt="non-virtual"><scope>Hack::Ui::Color</scope><name>extractSequence</name></member>
+      <member refid="a01312_1a7df5afa30dd84cb9566b5122a7636d17" prot="public" virt="non-virtual"><scope>Hack::Ui::Color</scope><name>foreground</name></member>
+      <member refid="a01312_1a9af96eb67422f054ba8d50ad3c2bf841" prot="public" virt="non-virtual"><scope>Hack::Ui::Color</scope><name>Rgb</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

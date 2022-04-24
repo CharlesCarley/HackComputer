@@ -46,6 +46,7 @@ namespace Hack::CommandLine
         Switches    _switches;
         StringArray _argumentList;
         Options     _options;
+        String      _helpText;
 
         bool hasSwitch(const String& sw) const;
 
@@ -73,6 +74,8 @@ namespace Hack::CommandLine
                   char**        argv,
                   const Switch* switches,
                   uint32_t      count);
+
+        void setHelpText(const String& help);
 
         /// <summary>
         /// Logs the command line verbatim
@@ -138,4 +141,4 @@ namespace Hack::CommandLine
 
         void usage(String& dest) const;
     };
-} // namespace Hack::CommandLine
+}  // namespace Hack::CommandLine
