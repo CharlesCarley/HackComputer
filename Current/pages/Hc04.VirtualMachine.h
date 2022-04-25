@@ -22,9 +22,7 @@ Usage: vm2mc <options> <arg[0] .. arg[n]>
 \subsection Hc04Grammar Grammar
 
 The grammar for the VM can be found [here.](../../Source/VirtualMachine/VM.grm) 
-
-\subsubsection Hc04GrammarNotes Note
-
+\br
 It uses extra keywords that are not in the course specification.
 
 - __set__ `set <int> <int>` Allows directly setting RAM values
@@ -32,9 +30,9 @@ It uses extra keywords that are not in the course specification.
 - __halt__ `halt` Will emit code that enters into an infinite loop
 
 
-\section Hc04Defined Defined In
-
-The source is defined in [Source/VirtualMachine](../../Source/VirtualMachine/)
+\n
+\defined{Hc04Defined}
+\defined_in{Source/VirtualMachine}
 
  */
 #pragma once

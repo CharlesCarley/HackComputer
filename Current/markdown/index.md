@@ -6,20 +6,20 @@
 <span class="bold-text"><b></b></span>
 <br/>
 <br/>
-<span class="inline-text">This repository is an implementation of the </span>
+<span class="inline-text">This repository is my implementation of the </span>
 <a href="a00897.md#hack">Hack</a>
 <span class="inline-text"> computer in C++ from the </span>
-<a href="https://www.coursera.org/learn/build-a-computer#nand2tetris-course">NAnd2Tetris course</a>
-<span class="inline-text">. It is a bit over the top and does not strictly adhere to the course. I chose to opt out of the certificate of completion instead chose to support the authors by buying the </span>
-<a href="https://www.amazon.com/Elements-Computing-Systems-second-Principles-ebook-dp-B084V7R8PT/dp/B084V7R8PT/ref=mt_other?_encoding=UTF8&amp;me=&amp;qid=1650772950#e-book">e-book</a>
-<span class="inline-text">. I wanted something self-contained in the end. In order to do that, the supplied tools in the course materials were written from scratch. </span>
+<a href="https://www.coursera.org/learn/build-a-computer#nand2tetris-course.">NAnd2Tetris course.</a>
 <br/>
 <br/>
 <span class="inline-text">
- It uses </span>
-<a href="https://cmake.org/#cmake">CMake</a>
+I wanted to explore a more in-depth perspective, so it does not strictly adhere to the course. Plus I wanted something self-contained in the end. In order to do that, the supplied tools in the course materials were written from scratch. </span>
+<br/>
+<br/>
+<span class="inline-text">
+It uses </span>
+<a href="a01566.md#hc00">CMake</a>
 <span class="inline-text"> for its build system. </span>
-<a href="a01566.md#hc00">more...</a>
 <a id="index_1hc001"></a>
 <a id="project-structure"></a>
 <h2>Project Structure</h2>
@@ -37,10 +37,10 @@
 <span class="inline-text"> Implements the virtual machine compiler.</span>
 </li>
 <li><a href="a01572.md#hc05">Compiler</a>
-<span class="inline-text"> Implements the jack compiler.</span>
+<span class="inline-text"> Implements the compiler for the .jack format.</span>
 </li>
 <li><a href="a01573.md#hc06">Bindings</a>
-<span class="inline-text"> Provides a script language binding interface.</span>
+<span class="inline-text"> Provides a script language interface.</span>
 </li>
 <li><a href="a01574.md#hc07">Computer</a>
 <span class="inline-text"> Defines the main program that ties the components together.</span>

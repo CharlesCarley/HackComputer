@@ -21,9 +21,9 @@ The build option that toggles this behavior is `Hack_IMPLEMENT_BLACK_BOX`.
 See \ref Hc0201 for more information.
 
 
-\n\n
-\section Hc02Defined Defined In
-The source is defined in [Source/Chips](../../Source/Chips/)
+\n
+\defined{Hc02Defined}
+\defined_in{Source/Chips}
 
 */
 #pragma once

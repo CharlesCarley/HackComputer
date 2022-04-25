@@ -1,12 +1,12 @@
 /*!
 \page Hc00 CMake
 
-\brief It uses [CMake](https://cmake.org/) for its build system.
+\brief It uses \ref Hc00 for its build system.
 
-\n\n
-It is tested using the `Unix Makefiles` and `Visual Studio 2019` generators.
+\br
+It has been tested using the `Unix Makefiles` and `Visual Studio 2019` generators.
 
-\n\n
+\br
 It provides the following options to control the build.
 \n
 - Hack_BUILD_TEST | OFF

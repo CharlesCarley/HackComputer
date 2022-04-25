@@ -29,7 +29,7 @@ Usage: asm2mc <options> <arg[0] .. arg[n]>
 The following code illustrates the conversion.
 \n\n
 
-<b>Assembly:</b>
+\sec{Assembly:}
 \code{.txt}
 @123
 D=A
@@ -42,7 +42,7 @@ M=D
 @32766 D=A;JMP
 \endcode
 
-<b>Machine Code:</b>
+\sec{Machine-Code:}
 \code{.txt}
 0000000001111011
 1110110000010000
@@ -60,9 +60,9 @@ M=D
 \subsection Hc03AsmGrammar Grammar
 The grammar for the assembly can be found [here](../../Source/Assembler/ASM.grm).
 
-\section Hc03Defined Defined In
-
-The source is defined in [Source/Assembler](../../Source/Assembler/)
+\n
+\defined{Hc03Defined}
+\defined_in{Source/Assembler}
 
  */
 #pragma once

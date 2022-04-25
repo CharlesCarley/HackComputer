@@ -20,7 +20,8 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-o,<sp/>--output<sp/><sp/>Specify<sp/>an<sp/>output<sp/>file.</highlight></codeline>
 </programlisting></para><para>The following code illustrates the conversion. <linebreak/>
 <linebreak/>
- <bold>Assembly:</bold> <programlisting filename=".txt"><codeline><highlight class="normal">@123</highlight></codeline>
+ <linebreak/>
+<bold>Assembly:</bold> <programlisting filename=".txt"><codeline><highlight class="normal">@123</highlight></codeline>
 <codeline><highlight class="normal">D=A</highlight></codeline>
 <codeline><highlight class="normal">@0</highlight></codeline>
 <codeline><highlight class="normal">M=D</highlight></codeline>
@@ -29,7 +30,9 @@
 <codeline><highlight class="normal">@2</highlight></codeline>
 <codeline><highlight class="normal">M=D</highlight></codeline>
 <codeline><highlight class="normal">@32766<sp/>D=A;JMP</highlight></codeline>
-</programlisting></para><para><bold>Machine Code:</bold> <programlisting filename=".txt"><codeline><highlight class="normal">0000000001111011</highlight></codeline>
+</programlisting></para><para><linebreak/>
+<bold>Machine-Code</bold>:<linebreak/>
+<programlisting filename=".txt"><codeline><highlight class="normal">0000000001111011</highlight></codeline>
 <codeline><highlight class="normal">1110110000010000</highlight></codeline>
 <codeline><highlight class="normal">0000000000000000</highlight></codeline>
 <codeline><highlight class="normal">1110001100001000</highlight></codeline>
@@ -43,11 +46,13 @@
  </para></sect2>
 <sect2 id="a01570_1Hc03AsmGrammar">
 <title>Grammar</title>
-<para>The grammar for the assembly can be found <ulink url="../../Source/Assembler/ASM.grm">here</ulink>.</para></sect2>
+<para>The grammar for the assembly can be found <ulink url="../../Source/Assembler/ASM.grm">here</ulink>.</para><para><linebreak/>
+</para></sect2>
 </sect1>
 <sect1 id="a01570_1Hc03Defined">
-<title>Defined In</title>
-<para>The source is defined in <ulink url="../../Source/Assembler/">Source/Assembler</ulink> </para></sect1>
+<title>Defined in</title>
+<para>The source is defined in <ulink url="../../Source/Assembler">Source/Assembler</ulink><linebreak/>
+</para></sect1>
     </detaileddescription>
   </compounddef>
 </doxygen>

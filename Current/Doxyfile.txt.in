@@ -334,3 +334,11 @@ DOT_TRANSPARENT        = YES
 DOT_MULTI_TARGETS      = NO
 GENERATE_LEGEND        = NO
 DOT_CLEANUP            = YES
+
+
+ALIASES += dir_link{1}="[\1](../../\1)"
+ALIASES += defined_in{1}="The source is defined in \dir_link{\1}\n"
+ALIASES += ref_brief{1}="\ref \1 \copybrief \1"
+ALIASES += defined{1}="\section \1 Defined in"
+ALIASES += br="\n\n"
+ALIASES += sec{1}="\n\b \1\n"

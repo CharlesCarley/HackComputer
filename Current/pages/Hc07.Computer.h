@@ -50,8 +50,10 @@ The debugger will execute one instruction from ROM and refresh the console with 
 \n\n
 \image html Debugger.png
 
-\section Hc07Defines Defined In
 
-The source is defined in [Source/Computer](../../Source/Computer/)
+\n
+\defined{Hc07Defined}
+\defined_in{Source/Computer}
+
 */
 
