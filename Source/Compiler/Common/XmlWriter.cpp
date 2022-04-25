@@ -34,7 +34,7 @@ namespace Hack::Compiler
         Node*              _root;
         OStream*           _stream;
         OutputStringStream _out;
-        bool               _showLineNr{false};
+        bool               _showLineNr{true};
         int                _indent;
 
         void openTag(const String& name, Node* node)
