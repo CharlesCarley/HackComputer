@@ -1,50 +1,24 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01210" kind="class" language="C++" prot="public">
-    <compoundname>Hack::Computer::DebugRuntimePrivate</compoundname>
+    <compoundname>Hack::Computer::Application</compoundname>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="a01210_1ab7fc4706051a56fc12099bc290a14210" prot="private" static="no" mutable="no">
-        <type>bool</type>
-        <definition>bool Hack::Computer::DebugRuntimePrivate::_block</definition>
+      <memberdef kind="variable" id="a01210_1a02bd37095de7616d554393403fc365c7" prot="private" static="no" mutable="no">
+        <type><ref refid="a01014" kindref="compound">Chips::Computer</ref> *</type>
+        <definition>Chips::Computer* Hack::Computer::Application::_computer</definition>
         <argsstring></argsstring>
-        <name>_block</name>
+        <name>_computer</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.cpp" line="65" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="65" bodyend="-1"/>
+        <location file="Source/Computer/Application.cpp" line="145" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="145" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a01210_1a376661284058c712af4d8fc090095c84" prot="private" static="no" mutable="no">
-        <type><ref refid="a00998" kindref="compound">CpuState</ref></type>
-        <definition>CpuState Hack::Computer::DebugRuntimePrivate::_cpuState</definition>
-        <argsstring></argsstring>
-        <name>_cpuState</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.cpp" line="69" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="69" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01210_1a87692081907fe47d271e0b94cc430f63" prot="private" static="no" mutable="no">
-        <type><ref refid="a01298" kindref="compound">Context</ref> *</type>
-        <definition>Context* Hack::Computer::DebugRuntimePrivate::_ctx</definition>
-        <argsstring></argsstring>
-        <name>_ctx</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.cpp" line="66" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="66" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01210_1a6c36e0247accc9533b80c6f40414e567" prot="private" static="no" mutable="no">
-        <type>int</type>
-        <definition>int Hack::Computer::DebugRuntimePrivate::_input</definition>
+      <memberdef kind="variable" id="a01210_1a42ca4cb86830b738538070f96d345b61" prot="private" static="no" mutable="no">
+        <type><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
+        <definition>String Hack::Computer::Application::_input</definition>
         <argsstring></argsstring>
         <name>_input</name>
         <briefdescription>
@@ -53,335 +27,269 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.cpp" line="63" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="63" bodyend="-1"/>
+        <location file="Source/Computer/Application.cpp" line="148" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="148" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a01210_1ad0fdaee3a30e830c5fc67894bdc71593" prot="private" static="no" mutable="no">
-        <type>int</type>
-        <definition>int Hack::Computer::DebugRuntimePrivate::_mode</definition>
+      <memberdef kind="variable" id="a01210_1a6f7bd40e552996845a091884588fa47f" prot="private" static="no" mutable="no">
+        <type><ref refid="a01230" kindref="compound">RuntimeInterface</ref> *</type>
+        <definition>RuntimeInterface* Hack::Computer::Application::_runtime</definition>
         <argsstring></argsstring>
-        <name>_mode</name>
+        <name>_runtime</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.cpp" line="64" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="64" bodyend="-1"/>
+        <location file="Source/Computer/Application.cpp" line="147" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="147" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a01210_1a21e8bbbeff8f96c268f06e5f5d8c06ef" prot="private" static="no" mutable="no">
-        <type><ref refid="a00998" kindref="compound">CpuState</ref></type>
-        <definition>CpuState Hack::Computer::DebugRuntimePrivate::_prevCpuState</definition>
+      <memberdef kind="variable" id="a01210_1a44b1ea59de5c2e7ae4a0cb5ff2069836" prot="private" static="no" mutable="no">
+        <type><ref refid="a00908_1a205aa97050ad01560145252139c81057" kindref="member">Chips::Screen</ref> *</type>
+        <definition>Chips::Screen* Hack::Computer::Application::_screen</definition>
         <argsstring></argsstring>
-        <name>_prevCpuState</name>
+        <name>_screen</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.cpp" line="70" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="70" bodyend="-1"/>
+        <location file="Source/Computer/Application.cpp" line="146" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="146" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a01210_1aa549b9fc0c844b204d2ed815191207b2" prot="private" static="no" mutable="no">
-        <type><ref refid="a01046" kindref="compound">Memory</ref> *</type>
-        <definition>Memory* Hack::Computer::DebugRuntimePrivate::_ram</definition>
+      <memberdef kind="variable" id="a01210_1aaca32e9473028f2822acf59e50a5f7e2" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Hack::Computer::Application::_showAsm</definition>
         <argsstring></argsstring>
-        <name>_ram</name>
+        <name>_showAsm</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.cpp" line="67" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="67" bodyend="-1"/>
+        <location file="Source/Computer/Application.cpp" line="151" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="151" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a01210_1a10120905b044dbbe875f41758004a134" prot="private" static="no" mutable="no">
-        <type><ref refid="a01118" kindref="compound">Rom32</ref> *</type>
-        <definition>Rom32* Hack::Computer::DebugRuntimePrivate::_rom</definition>
+      <memberdef kind="variable" id="a01210_1ac10a91de722dac52cc3b5e9d936aa938" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Hack::Computer::Application::_showDot</definition>
         <argsstring></argsstring>
-        <name>_rom</name>
+        <name>_showDot</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.cpp" line="68" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="68" bodyend="-1"/>
+        <location file="Source/Computer/Application.cpp" line="154" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01210_1ace703ad729b7bae16f51d5e7cff74eba" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Hack::Computer::Application::_showMc</definition>
+        <argsstring></argsstring>
+        <name>_showMc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/Application.cpp" line="152" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01210_1a1d87eb44c92bc694f72cf0d4b620b75d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Hack::Computer::Application::_showVm</definition>
+        <argsstring></argsstring>
+        <name>_showVm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/Application.cpp" line="150" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01210_1a15e35cededa094ad6119675584607dc4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Hack::Computer::Application::_showXml</definition>
+        <argsstring></argsstring>
+        <name>_showXml</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/Application.cpp" line="153" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01210_1aa066b87d13a73873800c3d323f1539b6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Hack::Computer::Application::_trace</definition>
+        <argsstring></argsstring>
+        <name>_trace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/Application.cpp" line="149" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="a01210_1a70baf0120ac06c41dcf876a86b2295ea" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application::assemble</definition>
+        <argsstring>(AsmParser &amp;assembler) const</argsstring>
+        <name>assemble</name>
+        <param>
+          <type><ref refid="a00916_1aba32ded0cec6b006c47567a0e1882e10" kindref="member">AsmParser</ref> &amp;</type>
+          <declname>assembler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/Application.cpp" line="160" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="271" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="a01210_1a1d4038756689e703b48882306795b6ca" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application::compile</definition>
+        <argsstring>(CodeGen &amp;compiler) const</argsstring>
+        <name>compile</name>
+        <param>
+          <type><ref refid="a00916_1aac63dd835bedf1d4c3c8b26f777db86d" kindref="member">CodeGen</ref> &amp;</type>
+          <declname>compiler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/Application.cpp" line="164" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="295" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="a01210_1a1419d8fec9fea1ee5825dc616fa8e311" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application::generate</definition>
+        <argsstring>(VmParser &amp;emitter) const</argsstring>
+        <name>generate</name>
+        <param>
+          <type><ref refid="a00916_1ae7e2f73e4f04af1c84f92348e8d432a1" kindref="member">VmParser</ref> &amp;</type>
+          <declname>emitter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/Application.cpp" line="162" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="281" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="a01210_1ac64b5e75c0584552eb7d6247ef63cef0" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application::load</definition>
+        <argsstring>() const</argsstring>
+        <name>load</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/Application.cpp" line="156" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="312" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="a01210_1ab19ce99d4d99ea0be886755aadff42a6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application::setupScreen</definition>
+        <argsstring>()</argsstring>
+        <name>setupScreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/Application.cpp" line="166" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="355" bodyend="366"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="a01210_1ad60059877ed85dd617d13a3f8713e6f1" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application::trace</definition>
+        <argsstring>(Chips::Computer *computer)</argsstring>
+        <name>trace</name>
+        <param>
+          <type><ref refid="a01014" kindref="compound">Chips::Computer</ref> *</type>
+          <declname>computer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/Application.cpp" line="158" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="239" bodyend="269"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01210_1afc8fa9c26c028b31f6770dfc8a97cb8d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="a01210_1afa8cc05ce6b6092be5ecdfdae44e05f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>Hack::Computer::DebugRuntimePrivate::DebugRuntimePrivate</definition>
+        <definition>Application::Application</definition>
         <argsstring>()</argsstring>
-        <name>DebugRuntimePrivate</name>
+        <name>Application</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.cpp" line="73" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="73" bodyend="83"/>
-        <references refid="a00908_1a7553833a41980e8c2bae00177d41129ea628e6c1cd2f76b3b8b8346aaa4dfecf1" compoundref="a00851" startline="91">Hack::Ui::PR_NO_INPUT</references>
+        <location file="Source/Computer/Application.cpp" line="169" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="177" bodyend="188"/>
       </memberdef>
-      <memberdef kind="function" id="a01210_1ae47c52343361332fc549a8e39412e029" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="a01210_1a748bca84fefb9c12661cfaa2f623748d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>Hack::Computer::DebugRuntimePrivate::~DebugRuntimePrivate</definition>
+        <definition>Application::~Application</definition>
         <argsstring>()</argsstring>
-        <name>~DebugRuntimePrivate</name>
+        <name>~Application</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.cpp" line="85" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="85" bodyend="89"/>
+        <location file="Source/Computer/Application.cpp" line="170" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="190" bodyend="197"/>
       </memberdef>
-      <memberdef kind="function" id="a01210_1a74f4ddc2111c8b2112b70775dfc7df71" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Hack::Computer::DebugRuntimePrivate::block</definition>
-        <argsstring>() const</argsstring>
-        <name>block</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.cpp" line="113" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="113" bodyend="116"/>
-      </memberdef>
-      <memberdef kind="function" id="a01210_1ac62ec8ded54ce104106cd3078cd08a03" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Computer::DebugRuntimePrivate::displayCpu</definition>
-        <argsstring>(Context &amp;ctx) const</argsstring>
-        <name>displayCpu</name>
-        <param>
-          <type><ref refid="a01298" kindref="compound">Context</ref> &amp;</type>
-          <declname>ctx</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.cpp" line="290" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="290" bodyend="509"/>
-        <references refid="a01298_1aac7c82f9a0deee33d34432b8a25b24e4" compoundref="a00857" startline="123" endline="126">Hack::Ui::Context::height</references>
-        <references refid="a01298_1adc3528448341074f5406246ca00200a9" compoundref="a00857" startline="118" endline="121">Hack::Ui::Context::width</references>
-        <references refid="a01306_1a7e62fda117e61b5591988b2ff84fc9cf" compoundref="a00863" startline="93" endline="96">Hack::Ui::Rectangle::midX</references>
-        <references refid="a01306_1a89f58c9760e2d297f618df18f761ccd0" compoundref="a00863" startline="108" endline="111">Hack::Ui::Rectangle::midY</references>
-        <references refid="a01298_1a9b10579d2510a8592129535be1623f89" compoundref="a00854" startline="284" endline="288">Hack::Ui::Context::reset</references>
-        <references refid="a01298_1a4a5c359b8eed0171acb0c472104394d3" compoundref="a00857" startline="128" endline="131">Hack::Ui::Context::foreground</references>
-        <references refid="a00904_1a6ee97e54ce2758fcfe70e172c882b9bbaa486485fc55b5cc36bd0f71b07d3ccbe" compoundref="a00770" startline="41">Hack::Computer::Wire</references>
-        <references refid="a01298_1a2a058cd4692db657acbc90a431247bb2" compoundref="a00854" startline="219" endline="235">Hack::Ui::Context::rectangle</references>
-        <references refid="a00904_1a6ee97e54ce2758fcfe70e172c882b9bba18e2c54dbcfb73c3aa981698f4a62d4c" compoundref="a00770" startline="42">Hack::Computer::Title</references>
-        <references refid="a01298_1a2db02147c02dee479e0417490377d77e" compoundref="a00854" startline="181" endline="187">Hack::Ui::Context::string</references>
-        <references refid="a01306_1a34fe79574ec8879d9454c1778a68cd20" compoundref="a00863" startline="83" endline="86">Hack::Ui::Rectangle::left</references>
-        <references refid="a01306_1aa1822657968c6b8394c5173342f43411" compoundref="a00863" startline="98" endline="101">Hack::Ui::Rectangle::top</references>
-        <references refid="a01306_1a812fb622a1abb08efd76b30dd904b9ae" compoundref="a00863" startline="66">Hack::Ui::Rectangle::w</references>
-        <references refid="a00998_1af1398587a09d5722d1d794f87d427a35" compoundref="a00485" startline="39">Hack::Chips::CpuState::writeM</references>
-        <references refid="a00904_1a6ee97e54ce2758fcfe70e172c882b9bbaa743894e7b4ca3f69492d489e09b6013" compoundref="a00770" startline="44">Hack::Computer::WireLight</references>
-        <references refid="a01298_1a15e60c63d8971ce688651c63e89f80d5" compoundref="a00854" startline="194" endline="212">Hack::Ui::Context::line</references>
-        <references refid="a01306_1ae8393bc46e735d03ee4bbd28d3b29bf6" compoundref="a00863" startline="88" endline="91">Hack::Ui::Rectangle::right</references>
-        <references refid="a00908_1a52a9537a5cb72fb438de8f7331ffd9a2a271c30a3b0460f8419bd335556d6a496" compoundref="a00851" startline="84">Hack::Ui::OR_HORIZONTAL</references>
-        <references refid="a00904_1a6ee97e54ce2758fcfe70e172c882b9bba1395267cd84975a8d8c1e054512ecd10" compoundref="a00770" startline="38">Hack::Computer::WireTitle</references>
-        <references refid="a00998_1a7b6ea40228d9e23b00fd2ee43133a6f3" compoundref="a00485" startline="34">Hack::Chips::CpuState::addrM</references>
-        <references refid="a00998_1a4898fb8aa66f45e0e07d4b754b8d93ba" compoundref="a00485" startline="33">Hack::Chips::CpuState::outM</references>
-        <references refid="a01298_1a54867790cdaae0780975e76d6ed99000" compoundref="a00854" startline="242" endline="246">Hack::Ui::Context::moveTo</references>
-        <references refid="a01306_1a687b3128d595a84fa9cf0ba1a84b3c50" compoundref="a00863" startline="103" endline="106">Hack::Ui::Rectangle::bottom</references>
-        <references refid="a01298_1ab340b1cb2b0bf4f3b27cbe2999235147" compoundref="a00854" startline="248" endline="268">Hack::Ui::Context::lineTo</references>
-        <references refid="a00908_1a52a9537a5cb72fb438de8f7331ffd9a2a447f7e8d33ccc8b1edc5aa00e8f5202f" compoundref="a00851" startline="85">Hack::Ui::OR_VERTICAL</references>
-        <references refid="a01298_1ad62d5e8c10bc606c482cb24f42f5d241" compoundref="a00854" startline="169" endline="174">Hack::Ui::Context::character</references>
-        <references refid="a00908_1a1d16939595474e3adb96cc6d05ed7aa0a753412f679e04e3ba44c25dbb93d6131" compoundref="a00851" startline="42">Hack::Ui::CS_RECT_RT</references>
-        <references refid="a00908_1a1d16939595474e3adb96cc6d05ed7aa0a073a22d37e6a995b7c17ddfc65661e7d" compoundref="a00851" startline="44">Hack::Ui::CS_RECT_LB</references>
-        <references refid="a00908_1a1d16939595474e3adb96cc6d05ed7aa0a998b2d1dfa04163699d0ada53e82f922" compoundref="a00851" startline="41">Hack::Ui::CS_RECT_RB</references>
-        <references refid="a00904_1a6ee97e54ce2758fcfe70e172c882b9bbaf6a6ac45348d5f3cd60894f729d9b618" compoundref="a00770" startline="39">Hack::Computer::Action</references>
-        <references refid="a01226_1a3a5e5db497a735c1cec92d748b513c9d" compoundref="a00791" startline="205" endline="210">Hack::Char::toString</references>
-        <references refid="a00998_1a3bdae3da64a41fd9b98171cea0f1b1c1" compoundref="a00485" startline="38">Hack::Chips::CpuState::inst</references>
-        <references refid="a00998_1a8ff12fb359df46f8c2b7bb4536b03bd2" compoundref="a00485" startline="32">Hack::Chips::CpuState::pc</references>
-        <references refid="a00908_1a1d16939595474e3adb96cc6d05ed7aa0a5d03c84a5b72b5dbe74459bf33791a08" compoundref="a00851" startline="43">Hack::Ui::CS_RECT_LT</references>
-        <references refid="a00998_1ae932a7489f8bdecf33ffd43c9410130f" compoundref="a00485" startline="40">Hack::Chips::CpuState::ram</references>
-        <references refid="a00914_1ade81360d9e9ec9bdfedc8af1d0252a73" compoundref="a00410" startline="32" endline="37">Hack::Assembler::Instruction::string</references>
-        <references refid="a00998_1a5606ebaf9ae4d826b421dce343c223f9" compoundref="a00485" startline="37">Hack::Chips::CpuState::clock</references>
-        <references refid="a00998_1a764dbb644ba5bb323c97e09cb26ae122" compoundref="a00485" startline="36">Hack::Chips::CpuState::regA</references>
-        <references refid="a00998_1a918ad89614f75599104e9c1a8123c916" compoundref="a00485" startline="35">Hack::Chips::CpuState::regD</references>
-        <references refid="a00998_1af9c11b4b51b6cd89cdfdcccdf52341db" compoundref="a00485" startline="41">Hack::Chips::CpuState::reset</references>
-      </memberdef>
-      <memberdef kind="function" id="a01210_1a693057de2cf2142c3841a94acc5ec8e0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Computer::DebugRuntimePrivate::displayMemoryContents</definition>
-        <argsstring>(Context &amp;ctx, const Rectangle &amp;bounds, const String &amp;value, const int index, const int offset, const bool highlight) const</argsstring>
-        <name>displayMemoryContents</name>
-        <param>
-          <type><ref refid="a01298" kindref="compound">Context</ref> &amp;</type>
-          <declname>ctx</declname>
-        </param>
-        <param>
-          <type>const <ref refid="a01306" kindref="compound">Rectangle</ref> &amp;</type>
-          <declname>bounds</declname>
-        </param>
-        <param>
-          <type>const <ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>value</declname>
-        </param>
-        <param>
-          <type>const int</type>
-          <declname>index</declname>
-        </param>
-        <param>
-          <type>const int</type>
-          <declname>offset</declname>
-        </param>
-        <param>
-          <type>const bool</type>
-          <declname>highlight</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.cpp" line="153" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="153" bodyend="197"/>
-        <references refid="a01298_1a911b798e01c75e90a47a67722549d12e" compoundref="a00857" startline="133" endline="136">Hack::Ui::Context::background</references>
-        <references refid="a00904_1a6ee97e54ce2758fcfe70e172c882b9bbab6c91e70d12f0fb5a6fd8a5bf49a8dd3" compoundref="a00770" startline="43">Hack::Computer::WireShadow</references>
-        <references refid="a01298_1a4a5c359b8eed0171acb0c472104394d3" compoundref="a00857" startline="128" endline="131">Hack::Ui::Context::foreground</references>
-        <references refid="a01298_1a15e60c63d8971ce688651c63e89f80d5" compoundref="a00854" startline="194" endline="212">Hack::Ui::Context::line</references>
-        <references refid="a01306_1a94211dbb4e2c23d85c1cd9570e53f94f" compoundref="a00863" startline="66">Hack::Ui::Rectangle::x</references>
-        <references refid="a01306_1a89f58c9760e2d297f618df18f761ccd0" compoundref="a00863" startline="108" endline="111">Hack::Ui::Rectangle::midY</references>
-        <references refid="a01306_1a812fb622a1abb08efd76b30dd904b9ae" compoundref="a00863" startline="66">Hack::Ui::Rectangle::w</references>
-        <references refid="a00908_1a52a9537a5cb72fb438de8f7331ffd9a2a271c30a3b0460f8419bd335556d6a496" compoundref="a00851" startline="84">Hack::Ui::OR_HORIZONTAL</references>
-        <references refid="a00904_1a6ee97e54ce2758fcfe70e172c882b9bba523f19de5aed5dbd2040373dba07824f" compoundref="a00770" startline="37">Hack::Computer::Highlight</references>
-        <references refid="a00904_1a6ee97e54ce2758fcfe70e172c882b9bbad75fff1f9779ab03efb0978a8eb03ff9" compoundref="a00770" startline="40">Hack::Computer::Action2</references>
-        <references refid="a00904_1a6ee97e54ce2758fcfe70e172c882b9bba7e22e0614cab05eee2406a31b577c1cb" compoundref="a00770" startline="36">Hack::Computer::Grey</references>
-        <references refid="a01298_1a2db02147c02dee479e0417490377d77e" compoundref="a00854" startline="181" endline="187">Hack::Ui::Context::string</references>
-        <references refid="a01306_1ae8393bc46e735d03ee4bbd28d3b29bf6" compoundref="a00863" startline="88" endline="91">Hack::Ui::Rectangle::right</references>
-        <references refid="a00904_1a6ee97e54ce2758fcfe70e172c882b9bbaf6a6ac45348d5f3cd60894f729d9b618" compoundref="a00770" startline="39">Hack::Computer::Action</references>
-        <references refid="a01226_1a3a5e5db497a735c1cec92d748b513c9d" compoundref="a00791" startline="205" endline="210">Hack::Char::toString</references>
-      </memberdef>
-      <memberdef kind="function" id="a01210_1a12771136bae9d060b0b3e44ebe496948" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Computer::DebugRuntimePrivate::displayRam</definition>
-        <argsstring>(Context &amp;ctx) const</argsstring>
-        <name>displayRam</name>
-        <param>
-          <type><ref refid="a01298" kindref="compound">Context</ref> &amp;</type>
-          <declname>ctx</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.cpp" line="236" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="236" bodyend="288"/>
-        <references refid="a01298_1aac7c82f9a0deee33d34432b8a25b24e4" compoundref="a00857" startline="123" endline="126">Hack::Ui::Context::height</references>
-        <references refid="a01298_1adc3528448341074f5406246ca00200a9" compoundref="a00857" startline="118" endline="121">Hack::Ui::Context::width</references>
-        <references refid="a01298_1a9b10579d2510a8592129535be1623f89" compoundref="a00854" startline="284" endline="288">Hack::Ui::Context::reset</references>
-        <references refid="a01298_1a4a5c359b8eed0171acb0c472104394d3" compoundref="a00857" startline="128" endline="131">Hack::Ui::Context::foreground</references>
-        <references refid="a00904_1a6ee97e54ce2758fcfe70e172c882b9bbaa486485fc55b5cc36bd0f71b07d3ccbe" compoundref="a00770" startline="41">Hack::Computer::Wire</references>
-        <references refid="a01298_1a2a058cd4692db657acbc90a431247bb2" compoundref="a00854" startline="219" endline="235">Hack::Ui::Context::rectangle</references>
-        <references refid="a00904_1a6ee97e54ce2758fcfe70e172c882b9bba18e2c54dbcfb73c3aa981698f4a62d4c" compoundref="a00770" startline="42">Hack::Computer::Title</references>
-        <references refid="a01298_1a2db02147c02dee479e0417490377d77e" compoundref="a00854" startline="181" endline="187">Hack::Ui::Context::string</references>
-        <references refid="a01306_1a34fe79574ec8879d9454c1778a68cd20" compoundref="a00863" startline="83" endline="86">Hack::Ui::Rectangle::left</references>
-        <references refid="a01306_1aa1822657968c6b8394c5173342f43411" compoundref="a00863" startline="98" endline="101">Hack::Ui::Rectangle::top</references>
-        <references refid="a01306_1a1333d6a207e65bbce26b489376a6911e" compoundref="a00863" startline="66">Hack::Ui::Rectangle::h</references>
-        <references refid="a00998_1a7b6ea40228d9e23b00fd2ee43133a6f3" compoundref="a00485" startline="34">Hack::Chips::CpuState::addrM</references>
-        <references refid="a01046_1a7f5b5e64aa1b441be1bc547e27602559" compoundref="a01651" startline="121" endline="130">Hack::Chips::Memory::get</references>
-        <references refid="a01226_1a3a5e5db497a735c1cec92d748b513c9d" compoundref="a00791" startline="205" endline="210">Hack::Char::toString</references>
-        <references refid="a01226_1ad54d719cdd63fa3f265ade5ca54ec679" compoundref="a00791" startline="263" endline="268">Hack::Char::toHexString</references>
-        <references refid="a01226_1a2e634e86f642f657dd42a2e967d99764" compoundref="a00791" startline="229" endline="233">Hack::Char::toBinaryString</references>
-      </memberdef>
-      <memberdef kind="function" id="a01210_1a3c44032383ab1d4841e5bf47796599d2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Computer::DebugRuntimePrivate::displayRom</definition>
-        <argsstring>(Context &amp;ctx) const</argsstring>
-        <name>displayRom</name>
-        <param>
-          <type><ref refid="a01298" kindref="compound">Context</ref> &amp;</type>
-          <declname>ctx</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.cpp" line="199" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="199" bodyend="234"/>
-        <references refid="a01298_1aac7c82f9a0deee33d34432b8a25b24e4" compoundref="a00857" startline="123" endline="126">Hack::Ui::Context::height</references>
-        <references refid="a01298_1a9b10579d2510a8592129535be1623f89" compoundref="a00854" startline="284" endline="288">Hack::Ui::Context::reset</references>
-        <references refid="a01298_1a4a5c359b8eed0171acb0c472104394d3" compoundref="a00857" startline="128" endline="131">Hack::Ui::Context::foreground</references>
-        <references refid="a00904_1a6ee97e54ce2758fcfe70e172c882b9bbaa486485fc55b5cc36bd0f71b07d3ccbe" compoundref="a00770" startline="41">Hack::Computer::Wire</references>
-        <references refid="a01298_1a2a058cd4692db657acbc90a431247bb2" compoundref="a00854" startline="219" endline="235">Hack::Ui::Context::rectangle</references>
-        <references refid="a00904_1a6ee97e54ce2758fcfe70e172c882b9bba18e2c54dbcfb73c3aa981698f4a62d4c" compoundref="a00770" startline="42">Hack::Computer::Title</references>
-        <references refid="a01298_1a2db02147c02dee479e0417490377d77e" compoundref="a00854" startline="181" endline="187">Hack::Ui::Context::string</references>
-        <references refid="a01306_1a94211dbb4e2c23d85c1cd9570e53f94f" compoundref="a00863" startline="66">Hack::Ui::Rectangle::x</references>
-        <references refid="a01306_1a380058068595421366abc3a96ea717f0" compoundref="a00863" startline="66">Hack::Ui::Rectangle::y</references>
-        <references refid="a01306_1a1333d6a207e65bbce26b489376a6911e" compoundref="a00863" startline="66">Hack::Ui::Rectangle::h</references>
-        <references refid="a00998_1a8ff12fb359df46f8c2b7bb4536b03bd2" compoundref="a00485" startline="32">Hack::Chips::CpuState::pc</references>
-        <references refid="a01118_1a5f035550d36a60b39767abc4d5942b46" compoundref="a00659" startline="72" endline="77">Hack::Chips::Rom32::get</references>
-        <references refid="a00914_1ade81360d9e9ec9bdfedc8af1d0252a73" compoundref="a00410" startline="32" endline="37">Hack::Assembler::Instruction::string</references>
-      </memberdef>
-      <memberdef kind="function" id="a01210_1a05e86f865706ec018a5856b2cae527fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Computer::DebugRuntimePrivate::flushMemory</definition>
-        <argsstring>(Chips::Computer *computer)</argsstring>
-        <name>flushMemory</name>
-        <param>
-          <type><ref refid="a01002" kindref="compound">Chips::Computer</ref> *</type>
-          <declname>computer</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.cpp" line="141" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="141" bodyend="151"/>
-        <references refid="a01298_1a2b4afce9f2834f80209250eaad2254fb" compoundref="a00854" startline="350" endline="370">Hack::Ui::Context::clear</references>
-        <references refid="a01002_1a90309c49a06a3585499693ca005aa643" compoundref="a00485" startline="92" endline="95">Hack::Chips::Computer::state</references>
-        <references refid="a01298_1a386ce2479241e71caf86ef94618a8a6f" compoundref="a00854" startline="372" endline="415">Hack::Ui::Context::flush</references>
-      </memberdef>
-      <memberdef kind="function" id="a01210_1ab39c71410b1af25c8910ddef0a653ebe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Computer::DebugRuntimePrivate::initialize</definition>
-        <argsstring>(Chips::Computer *computer)</argsstring>
-        <name>initialize</name>
-        <param>
-          <type><ref refid="a01002" kindref="compound">Chips::Computer</ref> *</type>
-          <declname>computer</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.cpp" line="91" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="91" bodyend="106"/>
-        <references refid="a01002_1aa88d19943c50711fbe12d82e901fb21a" compoundref="a00485" startline="87" endline="90">Hack::Chips::Computer::rom</references>
-        <references refid="a01002_1abf924e51c33908fd52168a0c29228d1c" compoundref="a00485" startline="82" endline="85">Hack::Chips::Computer::memory</references>
-        <references refid="a01298_1a88771b1f87caffb79b45d560e0a9201a" compoundref="a00854" startline="98" endline="116">Hack::Ui::Context::createColor</references>
-      </memberdef>
-      <memberdef kind="function" id="a01210_1a8e827619e3caeeed369299fe5228b7ff" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="a01210_1ab90f4f0a3af39cdc69bf69c013d64f7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
-        <definition>int Hack::Computer::DebugRuntimePrivate::input</definition>
-        <argsstring>() const</argsstring>
-        <name>input</name>
+        <definition>int Application::go</definition>
+        <argsstring>()</argsstring>
+        <name>go</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.cpp" line="108" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="108" bodyend="111"/>
+        <location file="Source/Computer/Application.cpp" line="174" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="368" bodyend="398"/>
+        <references refid="a01230_1acfdf1e97cbbcc9a9f13ad26e6062b8d0">Hack::Computer::RuntimeInterface::initialize</references>
+        <references refid="a01230_1ae4fb11811510339381b65be887827dfc">Hack::Computer::RuntimeInterface::exitRequest</references>
+        <references refid="a01230_1a3cb1ab52903aaedabb0c9d49b013aab4">Hack::Computer::RuntimeInterface::processEvents</references>
+        <references refid="a01230_1a44e6d9da00af26f22941e1a0a540e797" compoundref="a00788" startline="50" endline="53">Hack::Computer::RuntimeInterface::shouldUpdate</references>
+        <references refid="a01230_1a5fe5dfa099bbf6ded85b29028440466d">Hack::Computer::RuntimeInterface::update</references>
+        <references refid="a01230_1af845999e44531fc6282d028402131fa9">Hack::Computer::RuntimeInterface::flushMemory</references>
       </memberdef>
-      <memberdef kind="function" id="a01210_1afb2e833f6eb3a365f1d734b51e9ee359" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Computer::DebugRuntimePrivate::processEvents</definition>
-        <argsstring>(Chips::Computer *computer)</argsstring>
-        <name>processEvents</name>
+      <memberdef kind="function" id="a01210_1ac86dd9ec39462319a65b782e377247c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Application::parse</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>parse</name>
         <param>
-          <type><ref refid="a01002" kindref="compound">Chips::Computer</ref> *</type>
-          <declname>computer</declname>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -389,72 +297,49 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.cpp" line="118" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="118" bodyend="139"/>
-        <references refid="a01298_1a5d996403bde1288eb419f7a4beec0167" compoundref="a00854" startline="296" endline="307">Hack::Ui::Context::poll</references>
-        <references refid="a00908_1a7553833a41980e8c2bae00177d41129eac5bfa9b08ea8636eb07cf284d5307f20" compoundref="a00851" startline="106">Hack::Ui::PR_C</references>
-        <references refid="a00908_1a7553833a41980e8c2bae00177d41129eadce783d1df91b3fd26fd5817f0ff07c6" compoundref="a00851" startline="121">Hack::Ui::PR_R</references>
-        <references refid="a01002_1a5e2ff33095c4f19eecdfdbfdba101b52" compoundref="a00482" startline="139" endline="142">Hack::Chips::Computer::reset</references>
-        <references refid="a00908_1a7553833a41980e8c2bae00177d41129ea9a8a91789ebb52f8166f7a8d2407057c" compoundref="a00851" startline="94">Hack::Ui::PR_1</references>
-        <references refid="a00908_1a7553833a41980e8c2bae00177d41129ea5d6a27ad614058c15c679f4a7fe99d48" compoundref="a00851" startline="95">Hack::Ui::PR_2</references>
-        <references refid="a00908_1a7553833a41980e8c2bae00177d41129ea33335fa899c442d134eb40ce5c993426" compoundref="a00851" startline="96">Hack::Ui::PR_3</references>
-        <references refid="a00908_1a7553833a41980e8c2bae00177d41129ea79877e014f1a2ad5cf2568728d4cb866" compoundref="a00851" startline="97">Hack::Ui::PR_4</references>
-        <references refid="a00908_1a7553833a41980e8c2bae00177d41129ea7d0aa57d06151d917be3d0a2a61a475f" compoundref="a00851" startline="139">Hack::Ui::PR_ESC</references>
-        <references refid="a00908_1a7553833a41980e8c2bae00177d41129ead7a3bc54fb41225d6588c6fb307f0bcf" compoundref="a00851" startline="90">Hack::Ui::PR_EXIT</references>
-      </memberdef>
-      <memberdef kind="function" id="a01210_1ab37ea24b505951a022ca9beba2be7d37" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Computer::DebugRuntimePrivate::render</definition>
-        <argsstring>(Context &amp;ctx) const</argsstring>
-        <name>render</name>
-        <param>
-          <type><ref refid="a01298" kindref="compound">Context</ref> &amp;</type>
-          <declname>ctx</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.cpp" line="511" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="511" bodyend="532"/>
-        <references refid="a01298_1a9b10579d2510a8592129535be1623f89" compoundref="a00854" startline="284" endline="288">Hack::Ui::Context::reset</references>
-        <references refid="a01298_1adc3528448341074f5406246ca00200a9" compoundref="a00857" startline="118" endline="121">Hack::Ui::Context::width</references>
-        <references refid="a01298_1a911b798e01c75e90a47a67722549d12e" compoundref="a00857" startline="133" endline="136">Hack::Ui::Context::background</references>
-        <references refid="a00904_1a6ee97e54ce2758fcfe70e172c882b9bbab6c91e70d12f0fb5a6fd8a5bf49a8dd3" compoundref="a00770" startline="43">Hack::Computer::WireShadow</references>
-        <references refid="a01298_1a4a5c359b8eed0171acb0c472104394d3" compoundref="a00857" startline="128" endline="131">Hack::Ui::Context::foreground</references>
-        <references refid="a01298_1a15e60c63d8971ce688651c63e89f80d5" compoundref="a00854" startline="194" endline="212">Hack::Ui::Context::line</references>
-        <references refid="a00908_1a52a9537a5cb72fb438de8f7331ffd9a2a271c30a3b0460f8419bd335556d6a496" compoundref="a00851" startline="84">Hack::Ui::OR_HORIZONTAL</references>
-        <references refid="a00904_1a6ee97e54ce2758fcfe70e172c882b9bba523f19de5aed5dbd2040373dba07824f" compoundref="a00770" startline="37">Hack::Computer::Highlight</references>
-        <references refid="a01298_1a2db02147c02dee479e0417490377d77e" compoundref="a00854" startline="181" endline="187">Hack::Ui::Context::string</references>
-        <references refid="a01298_1aa866af5f45565c383b6ea38594631df6" compoundref="a00857" startline="108" endline="111">Hack::Ui::Context::useExtended</references>
+        <location file="Source/Computer/Application.cpp" line="172" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="199" bodyend="237"/>
+        <references refid="a01250_1a304e3e2f4af07df0fb6c9cde37040e27" compoundref="a01610" startline="52" endline="176">Hack::CommandLine::Parser::parse</references>
+        <references refid="a00916_1a1a5d69e12118b3a2c1fd1aec69e262fc" compoundref="a00770" startline="67">Hack::Computer::Switches</references>
+        <references refid="a00916_1a5ead6eecb040356778165b52450fac0fa395bf60d8da91644da7f1a7d65f9bc1b" compoundref="a00770" startline="64">Hack::Computer::OP_MAX</references>
+        <references refid="a01250_1ac7bc3f3c9e8b89b4a39b8dd9a36b713f" compoundref="a01622" startline="88" endline="91">Hack::CommandLine::Parser::arguments</references>
+        <references refid="a01250_1afd63d6cb40243606fe5d6c944754eb5b" compoundref="a01610" startline="257" endline="262">Hack::CommandLine::Parser::usage</references>
+        <references refid="a01250_1adbd749e0938e2b359ee7f719864d1451" compoundref="a01610" startline="205" endline="210">Hack::CommandLine::Parser::isPresent</references>
+        <references refid="a00916_1a5ead6eecb040356778165b52450fac0fa5ccb26246212b9bdc557ac4aca6ef740" compoundref="a00770" startline="56">Hack::Computer::OP_DEBUG</references>
+        <references refid="a00916_1a5ead6eecb040356778165b52450fac0fa0e2329db25c9227ee69e8336b3f982a8" compoundref="a00770" startline="55">Hack::Computer::OP_CMD</references>
+        <references refid="a00916_1a5ead6eecb040356778165b52450fac0fa1fb6c22b6bdc59404f77be8cfd8ee59a" compoundref="a00770" startline="58">Hack::Computer::OP_TRACE_MEM</references>
+        <references refid="a00916_1a5ead6eecb040356778165b52450fac0fa7017bdbf89e2e8e4ee8477f18f3a795d" compoundref="a00770" startline="62">Hack::Computer::OP_SHOW_ASM</references>
+        <references refid="a00916_1a5ead6eecb040356778165b52450fac0fa5f7d0e79a3908016de1de9a918f77c70" compoundref="a00770" startline="61">Hack::Computer::OP_SHOW_VM</references>
+        <references refid="a00916_1a5ead6eecb040356778165b52450fac0fabf65c654b7921c6f8247d6de80763985" compoundref="a00770" startline="63">Hack::Computer::OP_SHOW_MC</references>
+        <references refid="a00916_1a5ead6eecb040356778165b52450fac0fa17d658589c9d9b505b731b3eddb352ce" compoundref="a00770" startline="59">Hack::Computer::OP_SHOW_XML</references>
+        <references refid="a00916_1a5ead6eecb040356778165b52450fac0fa1aad4222a6e1d1bcb81d8f5c4c2db80d" compoundref="a00770" startline="60">Hack::Computer::OP_SHOW_DOT</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Computer/DebugRuntime.cpp" line="61" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="60" bodyend="533"/>
+    <location file="Source/Computer/Application.cpp" line="143" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="142" bodyend="175"/>
     <listofallmembers>
-      <member refid="a01210_1ab7fc4706051a56fc12099bc290a14210" prot="private" virt="non-virtual"><scope>Hack::Computer::DebugRuntimePrivate</scope><name>_block</name></member>
-      <member refid="a01210_1a376661284058c712af4d8fc090095c84" prot="private" virt="non-virtual"><scope>Hack::Computer::DebugRuntimePrivate</scope><name>_cpuState</name></member>
-      <member refid="a01210_1a87692081907fe47d271e0b94cc430f63" prot="private" virt="non-virtual"><scope>Hack::Computer::DebugRuntimePrivate</scope><name>_ctx</name></member>
-      <member refid="a01210_1a6c36e0247accc9533b80c6f40414e567" prot="private" virt="non-virtual"><scope>Hack::Computer::DebugRuntimePrivate</scope><name>_input</name></member>
-      <member refid="a01210_1ad0fdaee3a30e830c5fc67894bdc71593" prot="private" virt="non-virtual"><scope>Hack::Computer::DebugRuntimePrivate</scope><name>_mode</name></member>
-      <member refid="a01210_1a21e8bbbeff8f96c268f06e5f5d8c06ef" prot="private" virt="non-virtual"><scope>Hack::Computer::DebugRuntimePrivate</scope><name>_prevCpuState</name></member>
-      <member refid="a01210_1aa549b9fc0c844b204d2ed815191207b2" prot="private" virt="non-virtual"><scope>Hack::Computer::DebugRuntimePrivate</scope><name>_ram</name></member>
-      <member refid="a01210_1a10120905b044dbbe875f41758004a134" prot="private" virt="non-virtual"><scope>Hack::Computer::DebugRuntimePrivate</scope><name>_rom</name></member>
-      <member refid="a01210_1a74f4ddc2111c8b2112b70775dfc7df71" prot="public" virt="non-virtual"><scope>Hack::Computer::DebugRuntimePrivate</scope><name>block</name></member>
-      <member refid="a01210_1afc8fa9c26c028b31f6770dfc8a97cb8d" prot="public" virt="non-virtual"><scope>Hack::Computer::DebugRuntimePrivate</scope><name>DebugRuntimePrivate</name></member>
-      <member refid="a01210_1ac62ec8ded54ce104106cd3078cd08a03" prot="public" virt="non-virtual"><scope>Hack::Computer::DebugRuntimePrivate</scope><name>displayCpu</name></member>
-      <member refid="a01210_1a693057de2cf2142c3841a94acc5ec8e0" prot="public" virt="non-virtual"><scope>Hack::Computer::DebugRuntimePrivate</scope><name>displayMemoryContents</name></member>
-      <member refid="a01210_1a12771136bae9d060b0b3e44ebe496948" prot="public" virt="non-virtual"><scope>Hack::Computer::DebugRuntimePrivate</scope><name>displayRam</name></member>
-      <member refid="a01210_1a3c44032383ab1d4841e5bf47796599d2" prot="public" virt="non-virtual"><scope>Hack::Computer::DebugRuntimePrivate</scope><name>displayRom</name></member>
-      <member refid="a01210_1a05e86f865706ec018a5856b2cae527fe" prot="public" virt="non-virtual"><scope>Hack::Computer::DebugRuntimePrivate</scope><name>flushMemory</name></member>
-      <member refid="a01210_1ab39c71410b1af25c8910ddef0a653ebe" prot="public" virt="non-virtual"><scope>Hack::Computer::DebugRuntimePrivate</scope><name>initialize</name></member>
-      <member refid="a01210_1a8e827619e3caeeed369299fe5228b7ff" prot="public" virt="non-virtual"><scope>Hack::Computer::DebugRuntimePrivate</scope><name>input</name></member>
-      <member refid="a01210_1afb2e833f6eb3a365f1d734b51e9ee359" prot="public" virt="non-virtual"><scope>Hack::Computer::DebugRuntimePrivate</scope><name>processEvents</name></member>
-      <member refid="a01210_1ab37ea24b505951a022ca9beba2be7d37" prot="public" virt="non-virtual"><scope>Hack::Computer::DebugRuntimePrivate</scope><name>render</name></member>
-      <member refid="a01210_1ae47c52343361332fc549a8e39412e029" prot="public" virt="non-virtual"><scope>Hack::Computer::DebugRuntimePrivate</scope><name>~DebugRuntimePrivate</name></member>
+      <member refid="a01210_1a02bd37095de7616d554393403fc365c7" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>_computer</name></member>
+      <member refid="a01210_1a42ca4cb86830b738538070f96d345b61" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>_input</name></member>
+      <member refid="a01210_1a6f7bd40e552996845a091884588fa47f" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>_runtime</name></member>
+      <member refid="a01210_1a44b1ea59de5c2e7ae4a0cb5ff2069836" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>_screen</name></member>
+      <member refid="a01210_1aaca32e9473028f2822acf59e50a5f7e2" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>_showAsm</name></member>
+      <member refid="a01210_1ac10a91de722dac52cc3b5e9d936aa938" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>_showDot</name></member>
+      <member refid="a01210_1ace703ad729b7bae16f51d5e7cff74eba" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>_showMc</name></member>
+      <member refid="a01210_1a1d87eb44c92bc694f72cf0d4b620b75d" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>_showVm</name></member>
+      <member refid="a01210_1a15e35cededa094ad6119675584607dc4" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>_showXml</name></member>
+      <member refid="a01210_1aa066b87d13a73873800c3d323f1539b6" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>_trace</name></member>
+      <member refid="a01210_1afa8cc05ce6b6092be5ecdfdae44e05f8" prot="public" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>Application</name></member>
+      <member refid="a01210_1a70baf0120ac06c41dcf876a86b2295ea" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>assemble</name></member>
+      <member refid="a01210_1a1d4038756689e703b48882306795b6ca" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>compile</name></member>
+      <member refid="a01210_1a1419d8fec9fea1ee5825dc616fa8e311" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>generate</name></member>
+      <member refid="a01210_1ab90f4f0a3af39cdc69bf69c013d64f7d" prot="public" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>go</name></member>
+      <member refid="a01210_1ac64b5e75c0584552eb7d6247ef63cef0" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>load</name></member>
+      <member refid="a01210_1ac86dd9ec39462319a65b782e377247c2" prot="public" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>parse</name></member>
+      <member refid="a01210_1ab19ce99d4d99ea0be886755aadff42a6" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>setupScreen</name></member>
+      <member refid="a01210_1ad60059877ed85dd617d13a3f8713e6f1" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>trace</name></member>
+      <member refid="a01210_1a748bca84fefb9c12661cfaa2f623748d" prot="public" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>~Application</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

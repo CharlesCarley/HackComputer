@@ -2,11 +2,12 @@
 /*!
  \page Hc08 Extra Tools
 
-\brief Optional tools that are not part of the source. 
+\brief Describes extra tools that were used that are not part of the source. 
 
 \section Hc08Visual Parse Tree Visual
 
-The syntax analyzer has the extra option to output the parse tree in `.dot` [format](https://graphviz.org/)
+The \ref Hc05Jack2XML executable has an extra option that allows
+the parse tree to be output in `.dot` [format.](https://graphviz.org/)
 
 \image html Test10.svg
 

@@ -1,114 +1,97 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
-  <compounddef id="a01214" kind="class" language="C++" prot="public" final="yes">
-    <compoundname>Hack::Computer::DebugRuntime</compoundname>
-    <basecompoundref refid="a01218" prot="public" virt="non-virtual">Hack::Computer::RuntimeInterface</basecompoundref>
-    <includes local="no">Source/Computer/DebugRuntime.h</includes>
+  <compounddef id="a01214" kind="class" language="C++" prot="public">
+    <compoundname>Hack::Computer::CommandRuntimePrivate</compoundname>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="a01214_1a76670657c1725ecef554d76bb46d597b" prot="private" static="no" mutable="no">
-        <type><ref refid="a01210" kindref="compound">DebugRuntimePrivate</ref> *</type>
-        <definition>DebugRuntimePrivate* Hack::Computer::DebugRuntime::_private</definition>
+      <memberdef kind="variable" id="a01214_1a2711d2abfd041f5a8236c9d74b15a56a" prot="private" static="no" mutable="no">
+        <type><ref refid="a01010" kindref="compound">CpuState</ref></type>
+        <definition>CpuState Hack::Computer::CommandRuntimePrivate::_cpuState</definition>
         <argsstring></argsstring>
-        <name>_private</name>
+        <name>_cpuState</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.h" line="33" column="1" bodyfile="Source/Computer/DebugRuntime.h" bodystart="33" bodyend="-1"/>
+        <location file="Source/Computer/CommandRuntime.cpp" line="38" column="1" bodyfile="Source/Computer/CommandRuntime.cpp" bodystart="38" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="private-func">
-      <memberdef kind="function" id="a01214_1ace069a8cbf49c271f047e62868763c2e" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
-        <type>int16_t</type>
-        <definition>int16_t Hack::Computer::DebugRuntime::getRate</definition>
-        <argsstring>() const override</argsstring>
-        <name>getRate</name>
-        <reimplements refid="a01218_1a0f5eca7470888a3c5190dd9c1ddc3f67">getRate</reimplements>
+      <memberdef kind="variable" id="a01214_1a489fced83a973780623acfb976f00bdb" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Hack::Computer::CommandRuntimePrivate::_input</definition>
+        <argsstring></argsstring>
+        <name>_input</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.h" line="35" column="1" bodyfile="Source/Computer/DebugRuntime.h" bodystart="35" bodyend="38"/>
+        <location file="Source/Computer/CommandRuntime.cpp" line="35" column="1" bodyfile="Source/Computer/CommandRuntime.cpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01214_1a19fbd95ce30c06c4bfcee63744fb3f8e" prot="private" static="no" mutable="no">
+        <type><ref refid="a01058" kindref="compound">Memory</ref> *</type>
+        <definition>Memory* Hack::Computer::CommandRuntimePrivate::_ram</definition>
+        <argsstring></argsstring>
+        <name>_ram</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/CommandRuntime.cpp" line="36" column="1" bodyfile="Source/Computer/CommandRuntime.cpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01214_1a10c4b8a2a7bd03f96d667b429ee3341b" prot="private" static="no" mutable="no">
+        <type><ref refid="a01130" kindref="compound">Rom32</ref> *</type>
+        <definition>Rom32* Hack::Computer::CommandRuntimePrivate::_rom</definition>
+        <argsstring></argsstring>
+        <name>_rom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/CommandRuntime.cpp" line="37" column="1" bodyfile="Source/Computer/CommandRuntime.cpp" bodystart="37" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01214_1a0e32a9d599cd72cea3b394d325c1f6cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01214_1ae4ee5101b4b4c516dc780bd7e4f3dd23" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
-        <definition>Hack::Computer::DebugRuntime::DebugRuntime</definition>
+        <definition>Hack::Computer::CommandRuntimePrivate::CommandRuntimePrivate</definition>
         <argsstring>()</argsstring>
-        <name>DebugRuntime</name>
+        <name>CommandRuntimePrivate</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.h" line="41" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="535" bodyend="538"/>
+        <location file="Source/Computer/CommandRuntime.cpp" line="41" column="1" bodyfile="Source/Computer/CommandRuntime.cpp" bodystart="41" bodyend="47"/>
+        <references refid="a00920_1a7553833a41980e8c2bae00177d41129ea628e6c1cd2f76b3b8b8346aaa4dfecf1" compoundref="a00863" startline="91">Hack::Ui::PR_NO_INPUT</references>
       </memberdef>
-      <memberdef kind="function" id="a01214_1a651c25202fe8c26358f7be25c3fb5536" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01214_1a38d6ff4338338df892f1efb3aaa3ba32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>Hack::Computer::DebugRuntime::~DebugRuntime</definition>
-        <argsstring>() override</argsstring>
-        <name>~DebugRuntime</name>
+        <definition>Hack::Computer::CommandRuntimePrivate::~CommandRuntimePrivate</definition>
+        <argsstring>()=default</argsstring>
+        <name>~CommandRuntimePrivate</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.h" line="43" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="540" bodyend="544"/>
+        <location file="Source/Computer/CommandRuntime.cpp" line="49" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="a01214_1acce22e29456976ba86f505c06b5fff81" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
-        <definition>bool Hack::Computer::DebugRuntime::exitRequest</definition>
-        <argsstring>() const override</argsstring>
-        <name>exitRequest</name>
-        <reimplements refid="a01218_1ae4fb11811510339381b65be887827dfc">exitRequest</reimplements>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.h" line="49" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="558" bodyend="561"/>
-        <references refid="a01210_1a8e827619e3caeeed369299fe5228b7ff" compoundref="a00770" startline="108" endline="111">Hack::Computer::DebugRuntimePrivate::input</references>
-        <references refid="a00908_1a7553833a41980e8c2bae00177d41129ead7a3bc54fb41225d6588c6fb307f0bcf" compoundref="a00851" startline="90">Hack::Ui::PR_EXIT</references>
-      </memberdef>
-      <memberdef kind="function" id="a01214_1aee00ac57512447b7655ed7cdc54b025d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="a01214_1a94165bc7ad5907a5fc3b02b580f8cb74" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::Computer::DebugRuntime::flushMemory</definition>
-        <argsstring>(Chips::Computer *computer) const override</argsstring>
-        <name>flushMemory</name>
-        <reimplements refid="a01218_1af845999e44531fc6282d028402131fa9">flushMemory</reimplements>
-        <param>
-          <type><ref refid="a01002" kindref="compound">Chips::Computer</ref> *</type>
-          <declname>computer</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.h" line="53" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="568" bodyend="571"/>
-        <references refid="a01210_1a05e86f865706ec018a5856b2cae527fe" compoundref="a00770" startline="141" endline="151">Hack::Computer::DebugRuntimePrivate::flushMemory</references>
-      </memberdef>
-      <memberdef kind="function" id="a01214_1a8514e728f96721d941711bf25d74517a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
-        <definition>void Hack::Computer::DebugRuntime::initialize</definition>
-        <argsstring>(Chips::Computer *computer, Chips::Screen *) const override</argsstring>
+        <definition>void Hack::Computer::CommandRuntimePrivate::initialize</definition>
+        <argsstring>(Chips::Computer *computer)</argsstring>
         <name>initialize</name>
-        <reimplements refid="a01218_1acfdf1e97cbbcc9a9f13ad26e6062b8d0">initialize</reimplements>
         <param>
-          <type><ref refid="a01002" kindref="compound">Chips::Computer</ref> *</type>
+          <type><ref refid="a01014" kindref="compound">Chips::Computer</ref> *</type>
           <declname>computer</declname>
-        </param>
-        <param>
-          <type><ref refid="a00896_1a205aa97050ad01560145252139c81057" kindref="member">Chips::Screen</ref> *</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -116,55 +99,46 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.h" line="47" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="552" bodyend="556"/>
-        <references refid="a01210_1ab39c71410b1af25c8910ddef0a653ebe" compoundref="a00770" startline="91" endline="106">Hack::Computer::DebugRuntimePrivate::initialize</references>
-        <references refid="a01210_1a05e86f865706ec018a5856b2cae527fe" compoundref="a00770" startline="141" endline="151">Hack::Computer::DebugRuntimePrivate::flushMemory</references>
+        <location file="Source/Computer/CommandRuntime.cpp" line="51" column="1" bodyfile="Source/Computer/CommandRuntime.cpp" bodystart="51" bodyend="55"/>
+        <references refid="a01014_1aa88d19943c50711fbe12d82e901fb21a" compoundref="a00497" startline="87" endline="90">Hack::Chips::Computer::rom</references>
+        <references refid="a01014_1abf924e51c33908fd52168a0c29228d1c" compoundref="a00497" startline="82" endline="85">Hack::Chips::Computer::memory</references>
       </memberdef>
-      <memberdef kind="function" id="a01214_1a4811a14fcdfa33479b429ecd07bbc9d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="a01214_1a808b4969f1087a0cd2145a08b0193f59" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Hack::Computer::CommandRuntimePrivate::input</definition>
+        <argsstring>() const</argsstring>
+        <name>input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/CommandRuntime.cpp" line="57" column="1" bodyfile="Source/Computer/CommandRuntime.cpp" bodystart="57" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="a01214_1a9dcb89dd3e849351355169fb8fd40647" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::Computer::DebugRuntime::processEvents</definition>
-        <argsstring>(Chips::Computer *computer) const override</argsstring>
+        <definition>void Hack::Computer::CommandRuntimePrivate::processEvents</definition>
+        <argsstring>()</argsstring>
         <name>processEvents</name>
-        <reimplements refid="a01218_1a3cb1ab52903aaedabb0c9d49b013aab4">processEvents</reimplements>
-        <param>
-          <type><ref refid="a01002" kindref="compound">Chips::Computer</ref> *</type>
-          <declname>computer</declname>
-        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.h" line="51" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="563" bodyend="566"/>
-        <references refid="a01210_1afb2e833f6eb3a365f1d734b51e9ee359" compoundref="a00770" startline="118" endline="139">Hack::Computer::DebugRuntimePrivate::processEvents</references>
+        <location file="Source/Computer/CommandRuntime.cpp" line="62" column="1" bodyfile="Source/Computer/CommandRuntime.cpp" bodystart="62" bodyend="66"/>
+        <references refid="a01010_1a8ff12fb359df46f8c2b7bb4536b03bd2" compoundref="a00497" startline="32">Hack::Chips::CpuState::pc</references>
+        <references refid="a01130_1aca05d80f8b7c52b5c17e0465fe2aeb7c" compoundref="a00674" startline="55" endline="58">Hack::Chips::Rom32::size</references>
+        <references refid="a00920_1a7553833a41980e8c2bae00177d41129ead7a3bc54fb41225d6588c6fb307f0bcf" compoundref="a00863" startline="90">Hack::Ui::PR_EXIT</references>
       </memberdef>
-      <memberdef kind="function" id="a01214_1ab171edd61256c2eac08cdc2528a551f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
-        <definition>bool Hack::Computer::DebugRuntime::shouldUpdate</definition>
-        <argsstring>() override</argsstring>
-        <name>shouldUpdate</name>
-        <reimplements refid="a01218_1a44e6d9da00af26f22941e1a0a540e797">shouldUpdate</reimplements>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.h" line="45" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="546" bodyend="550"/>
-        <references refid="a01210_1a8e827619e3caeeed369299fe5228b7ff" compoundref="a00770" startline="108" endline="111">Hack::Computer::DebugRuntimePrivate::input</references>
-        <references refid="a00908_1a7553833a41980e8c2bae00177d41129ea35bf1e881e438245e59ccdf1cd1d0774" compoundref="a00851" startline="131">Hack::Ui::PR_UP_ARROW</references>
-        <references refid="a00908_1a7553833a41980e8c2bae00177d41129eadce783d1df91b3fd26fd5817f0ff07c6" compoundref="a00851" startline="121">Hack::Ui::PR_R</references>
-        <references refid="a01210_1a74f4ddc2111c8b2112b70775dfc7df71" compoundref="a00770" startline="113" endline="116">Hack::Computer::DebugRuntimePrivate::block</references>
-      </memberdef>
-      <memberdef kind="function" id="a01214_1a3bd47a61275e31af0bf9056a6097712c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="a01214_1a572a300abaacd09ef1a7e26be6b768e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::Computer::DebugRuntime::update</definition>
-        <argsstring>(Chips::Computer *computer) const override</argsstring>
+        <definition>void Hack::Computer::CommandRuntimePrivate::update</definition>
+        <argsstring>(Chips::Computer *computer)</argsstring>
         <name>update</name>
-        <reimplements refid="a01218_1a5fe5dfa099bbf6ded85b29028440466d">update</reimplements>
         <param>
-          <type><ref refid="a01002" kindref="compound">Chips::Computer</ref> *</type>
+          <type><ref refid="a01014" kindref="compound">Chips::Computer</ref> *</type>
           <declname>computer</declname>
         </param>
         <briefdescription>
@@ -173,53 +147,26 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Computer/DebugRuntime.h" line="55" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="573" bodyend="580"/>
-        <references refid="a01002_1aa44e98396b5191c503bd5255fe0ffa1f" compoundref="a00482" startline="104" endline="137">Hack::Chips::Computer::update</references>
-        <references refid="a01002_1a2dbfa6b9bb02786f4e91770527d8624b" compoundref="a00482" startline="80" endline="101">Hack::Chips::Computer::captureState</references>
+        <location file="Source/Computer/CommandRuntime.cpp" line="68" column="1" bodyfile="Source/Computer/CommandRuntime.cpp" bodystart="68" bodyend="71"/>
+        <references refid="a01014_1a90309c49a06a3585499693ca005aa643" compoundref="a00497" startline="92" endline="95">Hack::Chips::Computer::state</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <inheritancegraph>
-      <node id="372">
-        <label>Hack::Computer::RuntimeInterface</label>
-        <link refid="a01218"/>
-      </node>
-      <node id="371">
-        <label>Hack::Computer::DebugRuntime</label>
-        <link refid="a01214"/>
-        <childnode refid="372" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="374">
-        <label>Hack::Computer::RuntimeInterface</label>
-        <link refid="a01218"/>
-      </node>
-      <node id="373">
-        <label>Hack::Computer::DebugRuntime</label>
-        <link refid="a01214"/>
-        <childnode refid="374" relation="public-inheritance">
-        </childnode>
-      </node>
-    </collaborationgraph>
-    <location file="Source/Computer/DebugRuntime.h" line="31" column="1" bodyfile="Source/Computer/DebugRuntime.h" bodystart="30" bodyend="56"/>
+    <location file="Source/Computer/CommandRuntime.cpp" line="33" column="1" bodyfile="Source/Computer/CommandRuntime.cpp" bodystart="32" bodyend="72"/>
     <listofallmembers>
-      <member refid="a01214_1a76670657c1725ecef554d76bb46d597b" prot="private" virt="non-virtual"><scope>Hack::Computer::DebugRuntime</scope><name>_private</name></member>
-      <member refid="a01214_1a0e32a9d599cd72cea3b394d325c1f6cf" prot="public" virt="non-virtual"><scope>Hack::Computer::DebugRuntime</scope><name>DebugRuntime</name></member>
-      <member refid="a01214_1acce22e29456976ba86f505c06b5fff81" prot="public" virt="virtual"><scope>Hack::Computer::DebugRuntime</scope><name>exitRequest</name></member>
-      <member refid="a01214_1aee00ac57512447b7655ed7cdc54b025d" prot="public" virt="virtual"><scope>Hack::Computer::DebugRuntime</scope><name>flushMemory</name></member>
-      <member refid="a01214_1ace069a8cbf49c271f047e62868763c2e" prot="private" virt="virtual"><scope>Hack::Computer::DebugRuntime</scope><name>getRate</name></member>
-      <member refid="a01214_1a8514e728f96721d941711bf25d74517a" prot="public" virt="virtual"><scope>Hack::Computer::DebugRuntime</scope><name>initialize</name></member>
-      <member refid="a01214_1a4811a14fcdfa33479b429ecd07bbc9d1" prot="public" virt="virtual"><scope>Hack::Computer::DebugRuntime</scope><name>processEvents</name></member>
-      <member refid="a01218_1afac6241dfa4f6de4ca3353819786e5e3" prot="public" virt="virtual"><scope>Hack::Computer::DebugRuntime</scope><name>setRate</name></member>
-      <member refid="a01214_1ab171edd61256c2eac08cdc2528a551f2" prot="public" virt="virtual"><scope>Hack::Computer::DebugRuntime</scope><name>shouldUpdate</name></member>
-      <member refid="a01214_1a3bd47a61275e31af0bf9056a6097712c" prot="public" virt="virtual"><scope>Hack::Computer::DebugRuntime</scope><name>update</name></member>
-      <member refid="a01214_1a651c25202fe8c26358f7be25c3fb5536" prot="public" virt="non-virtual"><scope>Hack::Computer::DebugRuntime</scope><name>~DebugRuntime</name></member>
-      <member refid="a01218_1a3e09aeb7e6d6907b58f7a2a40636ac37" prot="public" virt="virtual"><scope>Hack::Computer::DebugRuntime</scope><name>~RuntimeInterface</name></member>
+      <member refid="a01214_1a2711d2abfd041f5a8236c9d74b15a56a" prot="private" virt="non-virtual"><scope>Hack::Computer::CommandRuntimePrivate</scope><name>_cpuState</name></member>
+      <member refid="a01214_1a489fced83a973780623acfb976f00bdb" prot="private" virt="non-virtual"><scope>Hack::Computer::CommandRuntimePrivate</scope><name>_input</name></member>
+      <member refid="a01214_1a19fbd95ce30c06c4bfcee63744fb3f8e" prot="private" virt="non-virtual"><scope>Hack::Computer::CommandRuntimePrivate</scope><name>_ram</name></member>
+      <member refid="a01214_1a10c4b8a2a7bd03f96d667b429ee3341b" prot="private" virt="non-virtual"><scope>Hack::Computer::CommandRuntimePrivate</scope><name>_rom</name></member>
+      <member refid="a01214_1ae4ee5101b4b4c516dc780bd7e4f3dd23" prot="public" virt="non-virtual"><scope>Hack::Computer::CommandRuntimePrivate</scope><name>CommandRuntimePrivate</name></member>
+      <member refid="a01214_1a94165bc7ad5907a5fc3b02b580f8cb74" prot="public" virt="non-virtual"><scope>Hack::Computer::CommandRuntimePrivate</scope><name>initialize</name></member>
+      <member refid="a01214_1a808b4969f1087a0cd2145a08b0193f59" prot="public" virt="non-virtual"><scope>Hack::Computer::CommandRuntimePrivate</scope><name>input</name></member>
+      <member refid="a01214_1a9dcb89dd3e849351355169fb8fd40647" prot="public" virt="non-virtual"><scope>Hack::Computer::CommandRuntimePrivate</scope><name>processEvents</name></member>
+      <member refid="a01214_1a572a300abaacd09ef1a7e26be6b768e7" prot="public" virt="non-virtual"><scope>Hack::Computer::CommandRuntimePrivate</scope><name>update</name></member>
+      <member refid="a01214_1a38d6ff4338338df892f1efb3aaa3ba32" prot="public" virt="non-virtual"><scope>Hack::Computer::CommandRuntimePrivate</scope><name>~CommandRuntimePrivate</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

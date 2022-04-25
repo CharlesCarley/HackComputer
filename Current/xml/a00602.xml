@@ -1,98 +1,90 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00602" kind="file" language="C++">
-    <compoundname>Not16.h</compoundname>
-    <includes refid="a00476" local="yes">Chips/Chip.h</includes>
-    <includedby refid="a00599" local="yes">Source/Chips/Not16.cpp</includedby>
+    <compoundname>Not.cpp</compoundname>
+    <includes refid="a00605" local="yes">Chips/Not.h</includes>
     <incdepgraph>
-      <node id="1772">
+      <node id="1728">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="1773" relation="include">
+        <childnode refid="1729" relation="include">
         </childnode>
       </node>
-      <node id="1764">
+      <node id="1720">
         <label>Chips/BitUtils.h</label>
-        <childnode refid="1765" relation="include">
+        <childnode refid="1721" relation="include">
         </childnode>
-        <childnode refid="1766" relation="include">
+        <childnode refid="1722" relation="include">
         </childnode>
       </node>
-      <node id="1773">
+      <node id="1729">
         <label>cstdint</label>
       </node>
-      <node id="1769">
+      <node id="1718">
+        <label>Chips/Not.h</label>
+        <childnode refid="1719" relation="include">
+        </childnode>
+      </node>
+      <node id="1725">
         <label>string</label>
       </node>
-      <node id="1771">
+      <node id="1727">
         <label>UserInterface/Context.h</label>
-        <childnode refid="1767" relation="include">
+        <childnode refid="1723" relation="include">
         </childnode>
-        <childnode refid="1772" relation="include">
+        <childnode refid="1728" relation="include">
         </childnode>
-        <childnode refid="1774" relation="include">
+        <childnode refid="1730" relation="include">
         </childnode>
       </node>
-      <node id="1774">
+      <node id="1730">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="1773" relation="include">
+        <childnode refid="1729" relation="include">
         </childnode>
-        <childnode refid="1770" relation="include">
+        <childnode refid="1726" relation="include">
         </childnode>
-        <childnode refid="1772" relation="include">
+        <childnode refid="1728" relation="include">
         </childnode>
       </node>
-      <node id="1766">
+      <node id="1722">
         <label>Utils/Console.h</label>
-        <childnode refid="1767" relation="include">
+        <childnode refid="1723" relation="include">
         </childnode>
-        <childnode refid="1771" relation="include">
+        <childnode refid="1727" relation="include">
         </childnode>
       </node>
-      <node id="1765">
+      <node id="1721">
         <label>bitset</label>
       </node>
-      <node id="1770">
+      <node id="1726">
         <label>vector</label>
       </node>
-      <node id="1768">
+      <node id="1724">
         <label>sstream</label>
       </node>
-      <node id="1762">
-        <label>Source/Chips/Not16.h</label>
-        <link refid="a00602"/>
-        <childnode refid="1763" relation="include">
-        </childnode>
-      </node>
-      <node id="1763">
+      <node id="1719">
         <label>Chips/Chip.h</label>
-        <childnode refid="1764" relation="include">
+        <childnode refid="1720" relation="include">
         </childnode>
-        <childnode refid="1766" relation="include">
+        <childnode refid="1722" relation="include">
         </childnode>
       </node>
-      <node id="1767">
+      <node id="1717">
+        <label>Source/Chips/Not.cpp</label>
+        <link refid="a00602"/>
+        <childnode refid="1718" relation="include">
+        </childnode>
+      </node>
+      <node id="1723">
         <label>String.h</label>
-        <childnode refid="1768" relation="include">
+        <childnode refid="1724" relation="include">
         </childnode>
-        <childnode refid="1769" relation="include">
+        <childnode refid="1725" relation="include">
         </childnode>
-        <childnode refid="1770" relation="include">
+        <childnode refid="1726" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <invincdepgraph>
-      <node id="1776">
-        <label>Source/Chips/Not16.cpp</label>
-      </node>
-      <node id="1775">
-        <label>Source/Chips/Not16.h</label>
-        <link refid="a00602"/>
-        <childnode refid="1776" relation="include">
-        </childnode>
-      </node>
-    </invincdepgraph>
-    <innerclass refid="a01081" prot="public">Hack::Chips::Not16</innerclass>
-    <innernamespace refid="a00899">Hack::Chips</innernamespace>
+    <innernamespace refid="a00908">Hack::Chips</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -119,25 +111,39 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Chip.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00899" kindref="compound">Hack::Chips</ref></highlight></codeline>
-<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="27" refid="a01081" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01081" kindref="compound">Not16</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="a00993" kindref="compound" tooltip="Chip is the base class for all chips defined in this system. It uses a template integer for the _bits...">Chip</ref>&lt;uint16_t,<sp/>16&gt;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>evaluate();</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01081_1a94bf1a1ed46afd41b23494cbfde87b50" kindref="member">Not16</ref>();</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01081_1afcc4cec3f1d5bf3837e22632ce8ce6d5" kindref="member">setIn</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01361" kindref="compound">uint16_t</ref>&amp;<sp/>v);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Not.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00908" kindref="compound">Hack::Chips</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26" refid="a01086_1a3dabb7dcbf3678cece55980d2658624b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01086_1a3dabb7dcbf3678cece55980d2658624b" kindref="member">Not::Not</ref>()</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01002_1a5a604431fa35bc87e0d7f4328b4ad4a1" kindref="member" tooltip="Zeros all bits except for the bit at the supplied index. ">assignBit</ref>(7);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="a01086_1a839b2ed314d61cb06ef294d5b608e643" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01086_1a839b2ed314d61cb06ef294d5b608e643" kindref="member">Not::setIn</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01002_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(0,<sp/>v);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01002_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><ref refid="a01081_1ace2108191134de75f5b514f6a09e4d85" kindref="member">getOut</ref>();</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="39"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Not::evaluate()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>IMPLEMENT_BLACK_BOX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01002_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(6,<sp/><ref refid="a00909_1a47f1937b5e8e2f1f55c52ece2e236d9a" kindref="member">Gates::Not</ref>(<ref refid="a01002_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(0)));</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01002_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(6,<sp/>!<ref refid="a01002_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(0));</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01002_1a21ec8cfbaba9e08deb3607c7eff9ad63" kindref="member" tooltip="Clears the bit at the supplied index. ">clearBit</ref>(7);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="a01086_1ad0155e8af5013a4009a3a751d4908444" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01086_1ad0155e8af5013a4009a3a751d4908444" kindref="member">Not::getOut</ref>()</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a01002_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(7))</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a01002_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(6);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Chips/Not16.h"/>
+    <location file="Source/Chips/Not.cpp"/>
   </compounddef>
 </doxygen>

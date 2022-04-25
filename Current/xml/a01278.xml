@@ -1,312 +1,71 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
-  <compounddef id="a01278" kind="class" language="C++" prot="public" abstract="yes">
-    <compoundname>Hack::ParserBase</compoundname>
-    <derivedcompoundref refid="a00922" prot="public" virt="non-virtual">Hack::Assembler::Parser</derivedcompoundref>
-    <derivedcompoundref refid="a01134" prot="public" virt="non-virtual">Hack::Compiler::Analyzer::Parser</derivedcompoundref>
-    <derivedcompoundref refid="a01342" prot="public" virt="non-virtual">Hack::VirtualMachine::Parser</derivedcompoundref>
-    <includes local="no">Source/Utils/ParserBase/ParserBase.h</includes>
+  <compounddef id="a01278" kind="class" language="C++" prot="public">
+    <compoundname>Hack::Cache</compoundname>
+    <includes local="no">Source/Utils/IndexCache.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
       <sectiondef kind="public-type">
-      <memberdef kind="typedef" id="a01278_1a7fbbfbffb70e56bfd7d117f8aabcd8f0" prot="public" static="no">
-        <type>std::vector&lt; <ref refid="a01286" kindref="compound">TokenBase</ref> &gt;</type>
-        <definition>typedef std::vector&lt;TokenBase&gt; Hack::ParserBase::Tokens</definition>
+      <memberdef kind="typedef" id="a01278_1a3b2040bc6de6c1e487280462fa8400d1" prot="public" static="no">
+        <type>std::unordered_set&lt; T &gt;</type>
+        <definition>typedef std::unordered_set&lt;T&gt; Hack::Cache&lt; T &gt;::Table</definition>
         <argsstring></argsstring>
-        <name>Tokens</name>
+        <name>Table</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParserBase.h" line="35" column="1" bodyfile="Source/Utils/ParserBase/ParserBase.h" bodystart="35" bodyend="-1"/>
+        <location file="Source/Utils/IndexCache.h" line="121" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="121" bodyend="-1"/>
       </memberdef>
       </sectiondef>
-      <sectiondef kind="protected-attrib">
-      <memberdef kind="variable" id="a01278_1a050b6fa7aa7a8a0ad9e6dc769c5fe1ab" prot="protected" static="no" mutable="no">
-        <type>int32_t</type>
-        <definition>int32_t Hack::ParserBase::_cursor</definition>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="a01278_1a090f3d35ee7b3b05e432004a19152072" prot="private" static="no" mutable="no">
+        <type><ref refid="a01278_1a3b2040bc6de6c1e487280462fa8400d1" kindref="member">Table</ref></type>
+        <definition>Table Hack::Cache&lt; T &gt;::_elements</definition>
         <argsstring></argsstring>
-        <name>_cursor</name>
+        <name>_elements</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParserBase.h" line="39" column="1" bodyfile="Source/Utils/ParserBase/ParserBase.h" bodystart="39" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01278_1a3845bf25a071be865d1abf5d86547d4e" prot="protected" static="no" mutable="no">
-        <type><ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Hack::ParserBase::_file</definition>
-        <argsstring></argsstring>
-        <name>_file</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParserBase.h" line="41" column="1" bodyfile="Source/Utils/ParserBase/ParserBase.h" bodystart="41" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01278_1ab0e5c4de751cb9162c1068d08fe5108f" prot="protected" static="no" mutable="no">
-        <type><ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Hack::ParserBase::_filePath</definition>
-        <argsstring></argsstring>
-        <name>_filePath</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParserBase.h" line="42" column="1" bodyfile="Source/Utils/ParserBase/ParserBase.h" bodystart="42" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01278_1aec27fb418bd286a67e449bbf42ddb4e7" prot="protected" static="no" mutable="no">
-        <type><ref refid="a01282" kindref="compound">ScannerBase</ref> *</type>
-        <definition>ScannerBase* Hack::ParserBase::_scanner</definition>
-        <argsstring></argsstring>
-        <name>_scanner</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParserBase.h" line="40" column="1" bodyfile="Source/Utils/ParserBase/ParserBase.h" bodystart="40" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01278_1a848d7a2893106ea47afc8839aae2f4e4" prot="protected" static="no" mutable="no">
-        <type><ref refid="a01278_1a7fbbfbffb70e56bfd7d117f8aabcd8f0" kindref="member">Tokens</ref></type>
-        <definition>Tokens Hack::ParserBase::_tokens</definition>
-        <argsstring></argsstring>
-        <name>_tokens</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParserBase.h" line="38" column="1" bodyfile="Source/Utils/ParserBase/ParserBase.h" bodystart="38" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="protected-func">
-      <memberdef kind="function" id="a01278_1a857d4ca08875acc4a5ae351eab22ebee" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::ParserBase::advanceCursor</definition>
-        <argsstring>(int32_t n=1)</argsstring>
-        <name>advanceCursor</name>
-        <param>
-          <type>int32_t</type>
-          <declname>n</declname>
-          <defval>1</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParserBase.h" line="50" column="1" bodyfile="Source/Utils/ParserBase/ParserBase.cpp" bodystart="66" bodyend="69"/>
-        <references refid="a01278_1a050b6fa7aa7a8a0ad9e6dc769c5fe1ab" compoundref="a00827" startline="39">_cursor</references>
-      </memberdef>
-      <memberdef kind="function" id="a01278_1a6b9602e4c23316318668f57da6db421c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a01286" kindref="compound">TokenBase</ref></type>
-        <definition>TokenBase Hack::ParserBase::getToken</definition>
-        <argsstring>(int32_t offs)</argsstring>
-        <name>getToken</name>
-        <param>
-          <type>int32_t</type>
-          <declname>offs</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParserBase.h" line="48" column="1" bodyfile="Source/Utils/ParserBase/ParserBase.cpp" bodystart="53" bodyend="64"/>
-        <references refid="a01278_1a050b6fa7aa7a8a0ad9e6dc769c5fe1ab" compoundref="a00827" startline="39">_cursor</references>
-        <references refid="a01278_1a848d7a2893106ea47afc8839aae2f4e4" compoundref="a00827" startline="38">_tokens</references>
-        <references refid="a01278_1a8436c3d2c31c4a3e822c946c8a6b1a92" compoundref="a00824" startline="41" endline="51">readToken</references>
-        <references refid="a01278_1aa78f3654190d9b4f2ea49f8bcfa97f2b" compoundref="a00827" startline="55" endline="61">parseError</references>
-      </memberdef>
-      <memberdef kind="function" id="a01278_1aa78f3654190d9b4f2ea49f8bcfa97f2b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename...</type>
-            <declname>Args</declname>
-            <defname>Args</defname>
-          </param>
-        </templateparamlist>
-        <type>void</type>
-        <definition>void Hack::ParserBase::parseError</definition>
-        <argsstring>(const String &amp;what, Args &amp;&amp;...args)</argsstring>
-        <name>parseError</name>
-        <param>
-          <type>const <ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>what</declname>
-        </param>
-        <param>
-          <type>Args &amp;&amp;...</type>
-          <declname>args</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParserBase.h" line="55" column="1" bodyfile="Source/Utils/ParserBase/ParserBase.h" bodystart="55" bodyend="61"/>
-      </memberdef>
-      <memberdef kind="function" id="a01278_1aca4fd325b8520d930ca612cf3337c625" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
-        <type>void</type>
-        <definition>virtual void Hack::ParserBase::parseImpl</definition>
-        <argsstring>(IStream &amp;is)=0</argsstring>
-        <name>parseImpl</name>
-        <reimplementedby refid="a01342_1a589fd449e99792f382a6ae6836782385">parseImpl</reimplementedby>
-        <reimplementedby refid="a01134_1a91a2299f319767a8f2aa9d5d72ccdccb">parseImpl</reimplementedby>
-        <reimplementedby refid="a00922_1a80c15795f9a3fc4b6c89680bb5ce6095">parseImpl</reimplementedby>
-        <param>
-          <type><ref refid="a00894_1a830c8eb3c005ef2fbc470e0b141b93c5" kindref="member">IStream</ref> &amp;</type>
-          <declname>is</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParserBase.h" line="44" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a01278_1a8436c3d2c31c4a3e822c946c8a6b1a92" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::ParserBase::readToken</definition>
-        <argsstring>(int32_t n=1)</argsstring>
-        <name>readToken</name>
-        <param>
-          <type>int32_t</type>
-          <declname>n</declname>
-          <defval>1</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParserBase.h" line="52" column="1" bodyfile="Source/Utils/ParserBase/ParserBase.cpp" bodystart="41" bodyend="51"/>
-        <references refid="a01278_1aec27fb418bd286a67e449bbf42ddb4e7" compoundref="a00827" startline="40">_scanner</references>
-        <references refid="a01282_1ac24b88935d8f5463217aacbfa9b87e9b">Hack::ScannerBase::scan</references>
-        <references refid="a01278_1a848d7a2893106ea47afc8839aae2f4e4" compoundref="a00827" startline="38">_tokens</references>
-      </memberdef>
-      <memberdef kind="function" id="a01278_1a4e9dd3f0283226de48b148d66b416f0f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
-        <type>void</type>
-        <definition>virtual void Hack::ParserBase::writeImpl</definition>
-        <argsstring>(OStream &amp;is, int format=0)=0</argsstring>
-        <name>writeImpl</name>
-        <reimplementedby refid="a01342_1ac42ce84084f3fd298399c330867c8697">writeImpl</reimplementedby>
-        <reimplementedby refid="a01134_1a2dd7713d5148b3a7b771478d92a4fa10">writeImpl</reimplementedby>
-        <reimplementedby refid="a00922_1a02ab9d276c5d8c6152d2392e417cfe2b">writeImpl</reimplementedby>
-        <param>
-          <type><ref refid="a00894_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref> &amp;</type>
-          <declname>is</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>format</declname>
-          <defval>0</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParserBase.h" line="46" column="1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="private-func">
-      <memberdef kind="function" id="a01278_1a442bf1b892c490d3c58de5bc16b610a9" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::ParserBase::parseErrorThrow</definition>
-        <argsstring>(const String &amp;message) const</argsstring>
-        <name>parseErrorThrow</name>
-        <param>
-          <type>const <ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>message</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParserBase.h" line="64" column="1" bodyfile="Source/Utils/ParserBase/ParserBase.cpp" bodystart="71" bodyend="74"/>
+        <location file="Source/Utils/IndexCache.h" line="124" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="124" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01278_1ad2acc126d182c46c5d7f2afbb2aaeb66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Hack::ParserBase::ParserBase</definition>
-        <argsstring>()</argsstring>
-        <name>ParserBase</name>
+      <memberdef kind="function" id="a01278_1ac27cbcca1412f7d4e02e51c68d154f64" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Cache&lt; T &gt;::exists</definition>
+        <argsstring>(const T &amp;value) const</argsstring>
+        <name>exists</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParserBase.h" line="67" column="1" bodyfile="Source/Utils/ParserBase/ParserBase.cpp" bodystart="33" bodyend="37"/>
+        <location file="Source/Utils/IndexCache.h" line="135" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="135" bodyend="139"/>
       </memberdef>
-      <memberdef kind="function" id="a01278_1a6e57377073e2e728304316b73986ded2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type></type>
-        <definition>Hack::ParserBase::~ParserBase</definition>
-        <argsstring>()</argsstring>
-        <name>~ParserBase</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParserBase.h" line="68" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a01278_1ab701a1a26d52964d228d1c1472130483" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>const <ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-        <definition>const String &amp; Hack::ParserBase::filename</definition>
-        <argsstring>() const</argsstring>
-        <name>filename</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParserBase.h" line="78" column="1" bodyfile="Source/Utils/ParserBase/ParserBase.h" bodystart="83" bodyend="86"/>
-        <references refid="a01278_1ab0e5c4de751cb9162c1068d08fe5108f" compoundref="a00827" startline="42">_filePath</references>
-      </memberdef>
-      <memberdef kind="function" id="a01278_1a87c46515fd89517db2645943cb44493b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>size_t</type>
-        <definition>size_t Hack::ParserBase::line</definition>
-        <argsstring>() const</argsstring>
-        <name>line</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParserBase.h" line="80" column="1" bodyfile="Source/Utils/ParserBase/ParserBase.h" bodystart="88" bodyend="93"/>
-        <references refid="a01278_1aec27fb418bd286a67e449bbf42ddb4e7" compoundref="a00827" startline="40">_scanner</references>
-        <references refid="a01282_1a30f51f62024dec9e10aae0f40bfe04e6" compoundref="a00833" startline="94" endline="97">Hack::ScannerBase::line</references>
-      </memberdef>
-      <memberdef kind="function" id="a01278_1a4668ec9b913931ce518de6d7f92fb4e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01278_1af5110a76c5d7beba01cd77b726689afe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::ParserBase::parse</definition>
-        <argsstring>(const String &amp;file)</argsstring>
-        <name>parse</name>
+        <definition>void Hack::Cache&lt; T &gt;::save</definition>
+        <argsstring>(const T &amp;value)</argsstring>
+        <name>save</name>
         <param>
-          <type>const <ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>file</declname>
+          <type>const T &amp;</type>
+          <declname>value</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -314,197 +73,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParserBase.h" line="70" column="1" bodyfile="Source/Utils/ParserBase/ParserBase.cpp" bodystart="76" bodyend="89"/>
-        <references refid="a01278_1a3845bf25a071be865d1abf5d86547d4e" compoundref="a00827" startline="41">_file</references>
-        <references refid="a01278_1ab0e5c4de751cb9162c1068d08fe5108f" compoundref="a00827" startline="42">_filePath</references>
-        <references refid="a01278_1aca4fd325b8520d930ca612cf3337c625">parseImpl</references>
-      </memberdef>
-      <memberdef kind="function" id="a01278_1a526cddbd87b36f03b8e76db9b7d640b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::ParserBase::parse</definition>
-        <argsstring>(IStream &amp;is, const String &amp;file=&quot;&quot;)</argsstring>
-        <name>parse</name>
-        <param>
-          <type><ref refid="a00894_1a830c8eb3c005ef2fbc470e0b141b93c5" kindref="member">IStream</ref> &amp;</type>
-          <declname>is</declname>
-        </param>
-        <param>
-          <type>const <ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>file</declname>
-          <defval>&quot;&quot;</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParserBase.h" line="72" column="1" bodyfile="Source/Utils/ParserBase/ParserBase.cpp" bodystart="91" bodyend="105"/>
-        <references refid="a01290_1a317411e0785122e1f415d6da27351ba6" compoundref="a00839" startline="132" endline="146">Hack::StringUtils::scramble</references>
-        <references refid="a01278_1a3845bf25a071be865d1abf5d86547d4e" compoundref="a00827" startline="41">_file</references>
-        <references refid="a00894_1a0022073c844c619a094704ae6c9b14bf" compoundref="a00842" startline="71" endline="76">Hack::StringCombine</references>
-        <references refid="a01278_1ab0e5c4de751cb9162c1068d08fe5108f" compoundref="a00827" startline="42">_filePath</references>
-        <references refid="a01278_1aca4fd325b8520d930ca612cf3337c625">parseImpl</references>
-      </memberdef>
-      <memberdef kind="function" id="a01278_1a4560ce70fee098d7508b053b409c1d19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::ParserBase::write</definition>
-        <argsstring>(const String &amp;file, int format=0)</argsstring>
-        <name>write</name>
-        <param>
-          <type>const <ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>file</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>format</declname>
-          <defval>0</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParserBase.h" line="74" column="1" bodyfile="Source/Utils/ParserBase/ParserBase.cpp" bodystart="107" bodyend="114"/>
-        <references refid="a01278_1a4e9dd3f0283226de48b148d66b416f0f">writeImpl</references>
-      </memberdef>
-      <memberdef kind="function" id="a01278_1a644c6667a785050f490a4ee24a98e2e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::ParserBase::write</definition>
-        <argsstring>(OStream &amp;os, int format=0)</argsstring>
-        <name>write</name>
-        <param>
-          <type><ref refid="a00894_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref> &amp;</type>
-          <declname>os</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>format</declname>
-          <defval>0</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/ParserBase/ParserBase.h" line="76" column="1" bodyfile="Source/Utils/ParserBase/ParserBase.cpp" bodystart="116" bodyend="119"/>
-        <references refid="a01278_1a4e9dd3f0283226de48b148d66b416f0f">writeImpl</references>
+        <location file="Source/Utils/IndexCache.h" line="127" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="127" bodyend="133"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <inheritancegraph>
-      <node id="404">
-        <label>Hack::Compiler::Analyzer::Parser</label>
-        <link refid="a01134"/>
-        <childnode refid="402" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="405">
-        <label>Hack::VirtualMachine::Parser</label>
-        <link refid="a01342"/>
-        <childnode refid="402" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="402">
-        <label>Hack::ParserBase</label>
-        <link refid="a01278"/>
-      </node>
-      <node id="403">
-        <label>Hack::Assembler::Parser</label>
-        <link refid="a00922"/>
-        <childnode refid="402" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="411">
-        <label>size_t</label>
-      </node>
-      <node id="409">
-        <label>Hack::IndexCache&lt; String &gt;</label>
-        <link refid="a01262"/>
-      </node>
-      <node id="413">
-        <label>IStream *</label>
-      </node>
-      <node id="414">
-        <label>int32_t</label>
-      </node>
-      <node id="412">
-        <label>string</label>
-      </node>
-      <node id="407">
-        <label>vector&lt; TokenBase &gt;</label>
-      </node>
-      <node id="406">
-        <label>Hack::ParserBase</label>
-        <link refid="a01278"/>
-        <childnode refid="407" relation="usage">
-          <edgelabel>_tokens</edgelabel>
-        </childnode>
-        <childnode refid="408" relation="usage">
-          <edgelabel>_scanner</edgelabel>
-        </childnode>
-        <childnode refid="414" relation="usage">
-          <edgelabel>_cursor</edgelabel>
-        </childnode>
-        <childnode refid="412" relation="usage">
-          <edgelabel>_filePath</edgelabel>
-          <edgelabel>_file</edgelabel>
-        </childnode>
-      </node>
-      <node id="408">
-        <label>Hack::ScannerBase</label>
-        <link refid="a01282"/>
-        <childnode refid="409" relation="usage">
-          <edgelabel>_stringTable</edgelabel>
-        </childnode>
-        <childnode refid="410" relation="usage">
-          <edgelabel>_intTable</edgelabel>
-        </childnode>
-        <childnode refid="411" relation="usage">
-          <edgelabel>_line</edgelabel>
-        </childnode>
-        <childnode refid="412" relation="usage">
-          <edgelabel>_file</edgelabel>
-        </childnode>
-        <childnode refid="413" relation="usage">
-          <edgelabel>_stream</edgelabel>
-        </childnode>
-      </node>
-      <node id="410">
-        <label>Hack::IndexCache&lt; int &gt;</label>
-        <link refid="a01262"/>
-      </node>
-    </collaborationgraph>
-    <location file="Source/Utils/ParserBase/ParserBase.h" line="33" column="1" bodyfile="Source/Utils/ParserBase/ParserBase.h" bodystart="32" bodyend="81"/>
+    <location file="Source/Utils/IndexCache.h" line="119" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="118" bodyend="140"/>
     <listofallmembers>
-      <member refid="a01278_1a050b6fa7aa7a8a0ad9e6dc769c5fe1ab" prot="protected" virt="non-virtual"><scope>Hack::ParserBase</scope><name>_cursor</name></member>
-      <member refid="a01278_1a3845bf25a071be865d1abf5d86547d4e" prot="protected" virt="non-virtual"><scope>Hack::ParserBase</scope><name>_file</name></member>
-      <member refid="a01278_1ab0e5c4de751cb9162c1068d08fe5108f" prot="protected" virt="non-virtual"><scope>Hack::ParserBase</scope><name>_filePath</name></member>
-      <member refid="a01278_1aec27fb418bd286a67e449bbf42ddb4e7" prot="protected" virt="non-virtual"><scope>Hack::ParserBase</scope><name>_scanner</name></member>
-      <member refid="a01278_1a848d7a2893106ea47afc8839aae2f4e4" prot="protected" virt="non-virtual"><scope>Hack::ParserBase</scope><name>_tokens</name></member>
-      <member refid="a01278_1a857d4ca08875acc4a5ae351eab22ebee" prot="protected" virt="non-virtual"><scope>Hack::ParserBase</scope><name>advanceCursor</name></member>
-      <member refid="a01278_1ab701a1a26d52964d228d1c1472130483" prot="public" virt="non-virtual"><scope>Hack::ParserBase</scope><name>filename</name></member>
-      <member refid="a01278_1a6b9602e4c23316318668f57da6db421c" prot="protected" virt="non-virtual"><scope>Hack::ParserBase</scope><name>getToken</name></member>
-      <member refid="a01278_1a87c46515fd89517db2645943cb44493b" prot="public" virt="non-virtual"><scope>Hack::ParserBase</scope><name>line</name></member>
-      <member refid="a01278_1a4668ec9b913931ce518de6d7f92fb4e0" prot="public" virt="non-virtual"><scope>Hack::ParserBase</scope><name>parse</name></member>
-      <member refid="a01278_1a526cddbd87b36f03b8e76db9b7d640b9" prot="public" virt="non-virtual"><scope>Hack::ParserBase</scope><name>parse</name></member>
-      <member refid="a01278_1aa78f3654190d9b4f2ea49f8bcfa97f2b" prot="protected" virt="non-virtual"><scope>Hack::ParserBase</scope><name>parseError</name></member>
-      <member refid="a01278_1a442bf1b892c490d3c58de5bc16b610a9" prot="private" virt="non-virtual"><scope>Hack::ParserBase</scope><name>parseErrorThrow</name></member>
-      <member refid="a01278_1aca4fd325b8520d930ca612cf3337c625" prot="protected" virt="pure-virtual"><scope>Hack::ParserBase</scope><name>parseImpl</name></member>
-      <member refid="a01278_1ad2acc126d182c46c5d7f2afbb2aaeb66" prot="public" virt="non-virtual"><scope>Hack::ParserBase</scope><name>ParserBase</name></member>
-      <member refid="a01278_1a8436c3d2c31c4a3e822c946c8a6b1a92" prot="protected" virt="non-virtual"><scope>Hack::ParserBase</scope><name>readToken</name></member>
-      <member refid="a01278_1a7fbbfbffb70e56bfd7d117f8aabcd8f0" prot="public" virt="non-virtual"><scope>Hack::ParserBase</scope><name>Tokens</name></member>
-      <member refid="a01278_1a4560ce70fee098d7508b053b409c1d19" prot="public" virt="non-virtual"><scope>Hack::ParserBase</scope><name>write</name></member>
-      <member refid="a01278_1a644c6667a785050f490a4ee24a98e2e7" prot="public" virt="non-virtual"><scope>Hack::ParserBase</scope><name>write</name></member>
-      <member refid="a01278_1a4e9dd3f0283226de48b148d66b416f0f" prot="protected" virt="pure-virtual"><scope>Hack::ParserBase</scope><name>writeImpl</name></member>
-      <member refid="a01278_1a6e57377073e2e728304316b73986ded2" prot="public" virt="virtual"><scope>Hack::ParserBase</scope><name>~ParserBase</name></member>
+      <member refid="a01278_1a090f3d35ee7b3b05e432004a19152072" prot="private" virt="non-virtual"><scope>Hack::Cache</scope><name>_elements</name></member>
+      <member refid="a01278_1ac27cbcca1412f7d4e02e51c68d154f64" prot="public" virt="non-virtual"><scope>Hack::Cache</scope><name>exists</name></member>
+      <member refid="a01278_1af5110a76c5d7beba01cd77b726689afe" prot="public" virt="non-virtual"><scope>Hack::Cache</scope><name>save</name></member>
+      <member refid="a01278_1a3b2040bc6de6c1e487280462fa8400d1" prot="public" virt="non-virtual"><scope>Hack::Cache</scope><name>Table</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

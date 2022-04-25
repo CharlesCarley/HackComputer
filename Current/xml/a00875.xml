@@ -1,129 +1,912 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00875" kind="file" language="C++">
-    <compoundname>PlatformUnix.cpp</compoundname>
-    <includes refid="a00878" local="yes">Utils/UserInterface/PlatformUnix.h</includes>
-    <includes local="no">sys/ioctl.h</includes>
-    <includes local="no">sys/select.h</includes>
-    <includes local="no">termios.h</includes>
-    <includes local="no">unistd.h</includes>
-    <includes local="no">cassert</includes>
-    <includes local="no">csignal</includes>
-    <includes local="no">cstdio</includes>
-    <includes local="no">cstdlib</includes>
+    <compoundname>Math.h</compoundname>
+    <includes local="no">cstdint</includes>
+    <includes local="no">vector</includes>
+    <includes refid="a00863" local="yes">Utils/UserInterface/Common.h</includes>
+    <includedby refid="a00869" local="yes">Source/Utils/UserInterface/Context.h</includedby>
+    <includedby refid="a00857" local="yes">Source/Utils/UserInterface/ColorCache.cpp</includedby>
+    <includedby refid="a00872" local="yes">Source/Utils/UserInterface/Math.cpp</includedby>
+    <includedby refid="a00881" local="yes">Source/Utils/UserInterface/Platform.h</includedby>
     <incdepgraph>
-      <node id="4273">
+      <node id="4087">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="4265" relation="include">
+        <childnode refid="4085" relation="include">
         </childnode>
       </node>
-      <node id="4275">
-        <label>sys/select.h</label>
-      </node>
-      <node id="4264">
-        <label>Utils/UserInterface/Platform.h</label>
-        <childnode refid="4265" relation="include">
-        </childnode>
-        <childnode refid="4266" relation="include">
-        </childnode>
-        <childnode refid="4267" relation="include">
-        </childnode>
-        <childnode refid="4272" relation="include">
-        </childnode>
-      </node>
-      <node id="4267">
-        <label>Utils/UserInterface/ColorCache.h</label>
-        <childnode refid="4265" relation="include">
-        </childnode>
-        <childnode refid="4268" relation="include">
-        </childnode>
-      </node>
-      <node id="4265">
+      <node id="4085">
         <label>cstdint</label>
       </node>
-      <node id="4277">
-        <label>cassert</label>
-      </node>
-      <node id="4263">
-        <label>termios.h</label>
-      </node>
-      <node id="4270">
-        <label>string</label>
-      </node>
-      <node id="4274">
-        <label>sys/ioctl.h</label>
-      </node>
-      <node id="4272">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="4265" relation="include">
-        </childnode>
-        <childnode refid="4271" relation="include">
-        </childnode>
-        <childnode refid="4273" relation="include">
-        </childnode>
-      </node>
-      <node id="4261">
-        <label>Source/Utils/UserInterface/PlatformUnix.cpp</label>
+      <node id="4084">
+        <label>Source/Utils/UserInterface/Math.h</label>
         <link refid="a00875"/>
-        <childnode refid="4262" relation="include">
+        <childnode refid="4085" relation="include">
         </childnode>
-        <childnode refid="4274" relation="include">
+        <childnode refid="4086" relation="include">
         </childnode>
-        <childnode refid="4275" relation="include">
-        </childnode>
-        <childnode refid="4263" relation="include">
-        </childnode>
-        <childnode refid="4276" relation="include">
-        </childnode>
-        <childnode refid="4277" relation="include">
-        </childnode>
-        <childnode refid="4278" relation="include">
-        </childnode>
-        <childnode refid="4279" relation="include">
-        </childnode>
-        <childnode refid="4280" relation="include">
+        <childnode refid="4087" relation="include">
         </childnode>
       </node>
-      <node id="4279">
-        <label>cstdio</label>
-      </node>
-      <node id="4276">
-        <label>unistd.h</label>
-      </node>
-      <node id="4271">
+      <node id="4086">
         <label>vector</label>
       </node>
-      <node id="4269">
-        <label>sstream</label>
-      </node>
-      <node id="4262">
-        <label>Utils/UserInterface/PlatformUnix.h</label>
-        <childnode refid="4263" relation="include">
-        </childnode>
-        <childnode refid="4264" relation="include">
-        </childnode>
-      </node>
-      <node id="4280">
-        <label>cstdlib</label>
-      </node>
-      <node id="4266">
-        <label>unordered_map</label>
-      </node>
-      <node id="4278">
-        <label>csignal</label>
-      </node>
-      <node id="4268">
-        <label>Utils/String.h</label>
-        <childnode refid="4269" relation="include">
-        </childnode>
-        <childnode refid="4270" relation="include">
-        </childnode>
-        <childnode refid="4271" relation="include">
-        </childnode>
-      </node>
     </incdepgraph>
-    <innerclass refid="a01329" prot="public">Hack::Ui::Terminal</innerclass>
-    <innernamespace refid="a00911">Hack::Ui</innernamespace>
+    <invincdepgraph>
+      <node id="4215">
+        <label>Source/VirtualMachine/Parser.h</label>
+        <childnode refid="4106" relation="include">
+        </childnode>
+        <childnode refid="4216" relation="include">
+        </childnode>
+        <childnode refid="4217" relation="include">
+        </childnode>
+      </node>
+      <node id="4185">
+        <label>Source/Utils/Console.cpp</label>
+      </node>
+      <node id="4214">
+        <label>Source/Assembler/Parser.h</label>
+        <childnode refid="4093" relation="include">
+        </childnode>
+        <childnode refid="4209" relation="include">
+        </childnode>
+        <childnode refid="4104" relation="include">
+        </childnode>
+        <childnode refid="4106" relation="include">
+        </childnode>
+      </node>
+      <node id="4152">
+        <label>Source/Chips/NOr.cpp</label>
+      </node>
+      <node id="4099">
+        <label>Source/Chips/Add16.cpp</label>
+      </node>
+      <node id="4146">
+        <label>Source/Chips/Mux4Way16.h</label>
+        <childnode refid="4145" relation="include">
+        </childnode>
+      </node>
+      <node id="4110">
+        <label>Source/Computer/RuntimeSDL.h</label>
+      </node>
+      <node id="4094">
+        <label>Source/Chips/BitUtils.h</label>
+        <childnode refid="4095" relation="include">
+        </childnode>
+        <childnode refid="4096" relation="include">
+        </childnode>
+        <childnode refid="4097" relation="include">
+        </childnode>
+      </node>
+      <node id="4144">
+        <label>Source/Chips/Mux16.cpp</label>
+      </node>
+      <node id="4129">
+        <label>Source/Chips/DMux8Way.cpp</label>
+      </node>
+      <node id="4228">
+        <label>Source/Utils/UserInterface/Platform.h</label>
+        <childnode refid="4229" relation="include">
+        </childnode>
+        <childnode refid="4230" relation="include">
+        </childnode>
+      </node>
+      <node id="4216">
+        <label>Source/VirtualMachine/Main.cpp</label>
+      </node>
+      <node id="4111">
+        <label>Source/Chips/And.h</label>
+        <childnode refid="4112" relation="include">
+        </childnode>
+        <childnode refid="4113" relation="include">
+        </childnode>
+      </node>
+      <node id="4203">
+        <label>Source/Compiler/Generator/Symbol.h</label>
+        <childnode refid="4194" relation="include">
+        </childnode>
+        <childnode refid="4204" relation="include">
+        </childnode>
+        <childnode refid="4205" relation="include">
+        </childnode>
+        <childnode refid="4201" relation="include">
+        </childnode>
+      </node>
+      <node id="4147">
+        <label>Source/Chips/Mux8Way16.h</label>
+        <childnode refid="4148" relation="include">
+        </childnode>
+      </node>
+      <node id="4109">
+        <label>Source/Computer/DebugRuntime.h</label>
+        <childnode refid="4106" relation="include">
+        </childnode>
+        <childnode refid="4091" relation="include">
+        </childnode>
+      </node>
+      <node id="4159">
+        <label>Source/Chips/Or16.h</label>
+        <childnode refid="4160" relation="include">
+        </childnode>
+      </node>
+      <node id="4123">
+        <label>Source/Chips/DFlipFlop.cpp</label>
+      </node>
+      <node id="4162">
+        <label>Source/Chips/Or8Way.cpp</label>
+      </node>
+      <node id="4127">
+        <label>Source/Chips/DMux4Way.cpp</label>
+      </node>
+      <node id="4153">
+        <label>Source/Chips/Not.h</label>
+        <childnode refid="4154" relation="include">
+        </childnode>
+      </node>
+      <node id="4115">
+        <label>Source/Chips/And16.cpp</label>
+      </node>
+      <node id="4121">
+        <label>Source/Chips/Timer.cpp</label>
+      </node>
+      <node id="4211">
+        <label>Source/Compiler/Analyzer/Scanner.h</label>
+        <childnode refid="4188" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
+        </childnode>
+      </node>
+      <node id="4098">
+        <label>Source/Chips/Add16.h</label>
+        <childnode refid="4099" relation="include">
+        </childnode>
+      </node>
+      <node id="4103">
+        <label>Source/Chips/Computer.h</label>
+        <childnode refid="4104" relation="include">
+        </childnode>
+        <childnode refid="4105" relation="include">
+        </childnode>
+        <childnode refid="4106" relation="include">
+        </childnode>
+        <childnode refid="4090" relation="include">
+        </childnode>
+        <childnode refid="4091" relation="include">
+        </childnode>
+        <childnode refid="4107" relation="include">
+        </childnode>
+      </node>
+      <node id="4165">
+        <label>Source/Chips/Ram4k.h</label>
+        <childnode refid="4166" relation="include">
+        </childnode>
+      </node>
+      <node id="4178">
+        <label>Source/Chips/SRLatch.cpp</label>
+      </node>
+      <node id="4168">
+        <label>Source/Chips/Ram512.cpp</label>
+      </node>
+      <node id="4093">
+        <label>Source/Assembler/Main.cpp</label>
+      </node>
+      <node id="4226">
+        <label>Source/Utils/UserInterface/ColorCache.cpp</label>
+      </node>
+      <node id="4221">
+        <label>Source/VirtualMachine/Scanner.h</label>
+        <childnode refid="4217" relation="include">
+        </childnode>
+        <childnode refid="4222" relation="include">
+        </childnode>
+      </node>
+      <node id="4101">
+        <label>Source/Chips/CPU.cpp</label>
+      </node>
+      <node id="4145">
+        <label>Source/Chips/Mux4Way16.cpp</label>
+      </node>
+      <node id="4136">
+        <label>Source/Chips/Memory.h</label>
+        <childnode refid="4103" relation="include">
+        </childnode>
+        <childnode refid="4137" relation="include">
+        </childnode>
+      </node>
+      <node id="4180">
+        <label>Source/Chips/XOr.cpp</label>
+      </node>
+      <node id="4158">
+        <label>Source/Chips/Or.cpp</label>
+      </node>
+      <node id="4227">
+        <label>Source/Utils/UserInterface/Math.cpp</label>
+      </node>
+      <node id="4182">
+        <label>Source/Compiler/Compiler/Main.cpp</label>
+      </node>
+      <node id="4166">
+        <label>Source/Chips/Ram4K.cpp</label>
+      </node>
+      <node id="4124">
+        <label>Source/Chips/DMux.h</label>
+        <childnode refid="4125" relation="include">
+        </childnode>
+      </node>
+      <node id="4104">
+        <label>Source/Bindings/Bindings.cpp</label>
+      </node>
+      <node id="4184">
+        <label>Source/Utils/CommandLine/Parser.cpp</label>
+      </node>
+      <node id="4130">
+        <label>Source/Chips/FullAdder.h</label>
+        <childnode refid="4113" relation="include">
+        </childnode>
+      </node>
+      <node id="4209">
+        <label>Source/Assembler/Parser.cpp</label>
+      </node>
+      <node id="4150">
+        <label>Source/Chips/Nand.cpp</label>
+      </node>
+      <node id="4157">
+        <label>Source/Chips/Or.h</label>
+        <childnode refid="4113" relation="include">
+        </childnode>
+        <childnode refid="4158" relation="include">
+        </childnode>
+      </node>
+      <node id="4207">
+        <label>Source/Utils/ParserBase/ScannerBase.h</label>
+        <childnode refid="4208" relation="include">
+        </childnode>
+        <childnode refid="4211" relation="include">
+        </childnode>
+        <childnode refid="4212" relation="include">
+        </childnode>
+        <childnode refid="4213" relation="include">
+        </childnode>
+        <childnode refid="4218" relation="include">
+        </childnode>
+        <childnode refid="4219" relation="include">
+        </childnode>
+        <childnode refid="4221" relation="include">
+        </childnode>
+      </node>
+      <node id="4223">
+        <label>Source/Utils/ParserBase/ParseError.h</label>
+        <childnode refid="4194" relation="include">
+        </childnode>
+        <childnode refid="4224" relation="include">
+        </childnode>
+        <childnode refid="4212" relation="include">
+        </childnode>
+        <childnode refid="4218" relation="include">
+        </childnode>
+      </node>
+      <node id="4225">
+        <label>Source/Utils/UserInterface/Context.cpp</label>
+      </node>
+      <node id="4206">
+        <label>Source/Compiler/Generator/SymbolTable.cpp</label>
+      </node>
+      <node id="4167">
+        <label>Source/Chips/Ram512.h</label>
+        <childnode refid="4168" relation="include">
+        </childnode>
+      </node>
+      <node id="4089">
+        <label>Source/Utils/UserInterface/Context.h</label>
+        <childnode refid="4090" relation="include">
+        </childnode>
+        <childnode refid="4091" relation="include">
+        </childnode>
+        <childnode refid="4092" relation="include">
+        </childnode>
+        <childnode refid="4225" relation="include">
+        </childnode>
+      </node>
+      <node id="4088">
+        <label>Source/Utils/UserInterface/Math.h</label>
+        <link refid="a00875"/>
+        <childnode refid="4089" relation="include">
+        </childnode>
+        <childnode refid="4226" relation="include">
+        </childnode>
+        <childnode refid="4227" relation="include">
+        </childnode>
+        <childnode refid="4228" relation="include">
+        </childnode>
+      </node>
+      <node id="4163">
+        <label>Source/Chips/ProgramCounter.h</label>
+        <childnode refid="4101" relation="include">
+        </childnode>
+        <childnode refid="4102" relation="include">
+        </childnode>
+        <childnode refid="4164" relation="include">
+        </childnode>
+      </node>
+      <node id="4195">
+        <label>Source/Utils/IndexCache.h</label>
+        <childnode refid="4196" relation="include">
+        </childnode>
+        <childnode refid="4203" relation="include">
+        </childnode>
+        <childnode refid="4205" relation="include">
+        </childnode>
+        <childnode refid="4207" relation="include">
+        </childnode>
+      </node>
+      <node id="4231">
+        <label>Source/Utils/UserInterface/PlatformUnix.cpp</label>
+      </node>
+      <node id="4116">
+        <label>Source/Chips/Bit.h</label>
+        <childnode refid="4117" relation="include">
+        </childnode>
+      </node>
+      <node id="4092">
+        <label>Source/Utils/Console.h</label>
+        <childnode refid="4093" relation="include">
+        </childnode>
+        <childnode refid="4094" relation="include">
+        </childnode>
+        <childnode refid="4097" relation="include">
+        </childnode>
+        <childnode refid="4181" relation="include">
+        </childnode>
+        <childnode refid="4182" relation="include">
+        </childnode>
+        <childnode refid="4183" relation="include">
+        </childnode>
+        <childnode refid="4184" relation="include">
+        </childnode>
+        <childnode refid="4185" relation="include">
+        </childnode>
+        <childnode refid="4186" relation="include">
+        </childnode>
+        <childnode refid="4216" relation="include">
+        </childnode>
+      </node>
+      <node id="4148">
+        <label>Source/Chips/Mux8Way16.cpp</label>
+      </node>
+      <node id="4189">
+        <label>Source/Compiler/Generator/Generator.cpp</label>
+      </node>
+      <node id="4160">
+        <label>Source/Chips/Or16.cpp</label>
+      </node>
+      <node id="4156">
+        <label>Source/Chips/Not16.cpp</label>
+      </node>
+      <node id="4143">
+        <label>Source/Chips/Mux16.h</label>
+        <childnode refid="4144" relation="include">
+        </childnode>
+        <childnode refid="4145" relation="include">
+        </childnode>
+      </node>
+      <node id="4114">
+        <label>Source/Chips/And16.h</label>
+        <childnode refid="4115" relation="include">
+        </childnode>
+      </node>
+      <node id="4205">
+        <label>Source/Compiler/Generator/SymbolTable.h</label>
+        <childnode refid="4189" relation="include">
+        </childnode>
+        <childnode refid="4206" relation="include">
+        </childnode>
+      </node>
+      <node id="4128">
+        <label>Source/Chips/DMux8Way.h</label>
+        <childnode refid="4129" relation="include">
+        </childnode>
+      </node>
+      <node id="4171">
+        <label>Source/Chips/Ram8.cpp</label>
+      </node>
+      <node id="4149">
+        <label>Source/Chips/NAnd.h</label>
+        <childnode refid="4150" relation="include">
+        </childnode>
+      </node>
+      <node id="4096">
+        <label>Source/Chips/ALU.cpp</label>
+      </node>
+      <node id="4201">
+        <label>Source/Compiler/Generator/VmEmitter.h</label>
+        <childnode refid="4189" relation="include">
+        </childnode>
+        <childnode refid="4202" relation="include">
+        </childnode>
+      </node>
+      <node id="4193">
+        <label>Source/Compiler/Common/Node.cpp</label>
+      </node>
+      <node id="4170">
+        <label>Source/Chips/Ram64.cpp</label>
+      </node>
+      <node id="4161">
+        <label>Source/Chips/Or8Way.h</label>
+        <childnode refid="4162" relation="include">
+        </childnode>
+      </node>
+      <node id="4220">
+        <label>Source/VirtualMachine/Emitter.cpp</label>
+      </node>
+      <node id="4202">
+        <label>Source/Compiler/Generator/VmEmitter.cpp</label>
+      </node>
+      <node id="4151">
+        <label>Source/Chips/NOr.h</label>
+        <childnode refid="4152" relation="include">
+        </childnode>
+      </node>
+      <node id="4118">
+        <label>Source/Chips/Clock.h</label>
+        <childnode refid="4119" relation="include">
+        </childnode>
+        <childnode refid="4120" relation="include">
+        </childnode>
+      </node>
+      <node id="4177">
+        <label>Source/Chips/SRLatch.h</label>
+        <childnode refid="4178" relation="include">
+        </childnode>
+      </node>
+      <node id="4222">
+        <label>Source/VirtualMachine/Scanner.cpp</label>
+      </node>
+      <node id="4113">
+        <label>Source/Chips/FullAdder.cpp</label>
+      </node>
+      <node id="4105">
+        <label>Source/Chips/Computer.cpp</label>
+      </node>
+      <node id="4192">
+        <label>Source/Compiler/Analyzer/Scanner.cpp</label>
+      </node>
+      <node id="4224">
+        <label>Source/Utils/ParserBase/ParseError.cpp</label>
+      </node>
+      <node id="4219">
+        <label>Source/VirtualMachine/Emitter.h</label>
+        <childnode refid="4220" relation="include">
+        </childnode>
+        <childnode refid="4215" relation="include">
+        </childnode>
+      </node>
+      <node id="4218">
+        <label>Source/Utils/ParserBase/ScannerBase.cpp</label>
+      </node>
+      <node id="4126">
+        <label>Source/Chips/DMux4Way.h</label>
+        <childnode refid="4127" relation="include">
+        </childnode>
+      </node>
+      <node id="4090">
+        <label>Source/Computer/CommandRuntime.cpp</label>
+      </node>
+      <node id="4142">
+        <label>Source/Chips/Mux.cpp</label>
+      </node>
+      <node id="4155">
+        <label>Source/Chips/Not16.h</label>
+        <childnode refid="4156" relation="include">
+        </childnode>
+      </node>
+      <node id="4137">
+        <label>Source/Chips/Memory.cpp</label>
+      </node>
+      <node id="4097">
+        <label>Source/Chips/Chip.h</label>
+        <childnode refid="4098" relation="include">
+        </childnode>
+        <childnode refid="4096" relation="include">
+        </childnode>
+        <childnode refid="4100" relation="include">
+        </childnode>
+        <childnode refid="4111" relation="include">
+        </childnode>
+        <childnode refid="4114" relation="include">
+        </childnode>
+        <childnode refid="4116" relation="include">
+        </childnode>
+        <childnode refid="4118" relation="include">
+        </childnode>
+        <childnode refid="4102" relation="include">
+        </childnode>
+        <childnode refid="4122" relation="include">
+        </childnode>
+        <childnode refid="4124" relation="include">
+        </childnode>
+        <childnode refid="4126" relation="include">
+        </childnode>
+        <childnode refid="4128" relation="include">
+        </childnode>
+        <childnode refid="4130" relation="include">
+        </childnode>
+        <childnode refid="4131" relation="include">
+        </childnode>
+        <childnode refid="4133" relation="include">
+        </childnode>
+        <childnode refid="4139" relation="include">
+        </childnode>
+        <childnode refid="4136" relation="include">
+        </childnode>
+        <childnode refid="4141" relation="include">
+        </childnode>
+        <childnode refid="4143" relation="include">
+        </childnode>
+        <childnode refid="4146" relation="include">
+        </childnode>
+        <childnode refid="4147" relation="include">
+        </childnode>
+        <childnode refid="4149" relation="include">
+        </childnode>
+        <childnode refid="4151" relation="include">
+        </childnode>
+        <childnode refid="4153" relation="include">
+        </childnode>
+        <childnode refid="4155" relation="include">
+        </childnode>
+        <childnode refid="4157" relation="include">
+        </childnode>
+        <childnode refid="4159" relation="include">
+        </childnode>
+        <childnode refid="4161" relation="include">
+        </childnode>
+        <childnode refid="4163" relation="include">
+        </childnode>
+        <childnode refid="4165" relation="include">
+        </childnode>
+        <childnode refid="4167" relation="include">
+        </childnode>
+        <childnode refid="4169" relation="include">
+        </childnode>
+        <childnode refid="4172" relation="include">
+        </childnode>
+        <childnode refid="4173" relation="include">
+        </childnode>
+        <childnode refid="4175" relation="include">
+        </childnode>
+        <childnode refid="4177" relation="include">
+        </childnode>
+        <childnode refid="4179" relation="include">
+        </childnode>
+      </node>
+      <node id="4199">
+        <label>Source/Compiler/Common/Tree.cpp</label>
+      </node>
+      <node id="4134">
+        <label>Source/Chips/DefaultMemorySegment.h</label>
+        <childnode refid="4135" relation="include">
+        </childnode>
+        <childnode refid="4138" relation="include">
+        </childnode>
+      </node>
+      <node id="4112">
+        <label>Source/Chips/And.cpp</label>
+      </node>
+      <node id="4208">
+        <label>Source/Assembler/Scanner.h</label>
+        <childnode refid="4209" relation="include">
+        </childnode>
+        <childnode refid="4210" relation="include">
+        </childnode>
+      </node>
+      <node id="4122">
+        <label>Source/Chips/DFlipFlop.h</label>
+        <childnode refid="4116" relation="include">
+        </childnode>
+        <childnode refid="4123" relation="include">
+        </childnode>
+      </node>
+      <node id="4200">
+        <label>Source/Compiler/Common/XmlWriter.cpp</label>
+      </node>
+      <node id="4187">
+        <label>Source/Compiler/Analyzer/Parser.h</label>
+        <childnode refid="4181" relation="include">
+        </childnode>
+        <childnode refid="4188" relation="include">
+        </childnode>
+        <childnode refid="4189" relation="include">
+        </childnode>
+        <childnode refid="4183" relation="include">
+        </childnode>
+        <childnode refid="4106" relation="include">
+        </childnode>
+      </node>
+      <node id="4188">
+        <label>Source/Compiler/Analyzer/Parser.cpp</label>
+      </node>
+      <node id="4091">
+        <label>Source/Computer/DebugRuntime.cpp</label>
+      </node>
+      <node id="4125">
+        <label>Source/Chips/DMux.cpp</label>
+      </node>
+      <node id="4230">
+        <label>Source/Utils/UserInterface/PlatformUnix.h</label>
+        <childnode refid="4225" relation="include">
+        </childnode>
+        <childnode refid="4231" relation="include">
+        </childnode>
+      </node>
+      <node id="4186">
+        <label>Source/Utils/Exception.h</label>
+        <childnode refid="4093" relation="include">
+        </childnode>
+        <childnode refid="4104" relation="include">
+        </childnode>
+        <childnode refid="4101" relation="include">
+        </childnode>
+        <childnode refid="4181" relation="include">
+        </childnode>
+        <childnode refid="4187" relation="include">
+        </childnode>
+        <childnode refid="4190" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
+        </childnode>
+        <childnode refid="4193" relation="include">
+        </childnode>
+        <childnode refid="4182" relation="include">
+        </childnode>
+        <childnode refid="4189" relation="include">
+        </childnode>
+        <childnode refid="4194" relation="include">
+        </childnode>
+        <childnode refid="4183" relation="include">
+        </childnode>
+        <childnode refid="4106" relation="include">
+        </childnode>
+        <childnode refid="4091" relation="include">
+        </childnode>
+        <childnode refid="4195" relation="include">
+        </childnode>
+        <childnode refid="4223" relation="include">
+        </childnode>
+        <childnode refid="4216" relation="include">
+        </childnode>
+      </node>
+      <node id="4120">
+        <label>Source/Chips/Timer.h</label>
+        <childnode refid="4105" relation="include">
+        </childnode>
+        <childnode refid="4101" relation="include">
+        </childnode>
+        <childnode refid="4121" relation="include">
+        </childnode>
+      </node>
+      <node id="4217">
+        <label>Source/VirtualMachine/Parser.cpp</label>
+      </node>
+      <node id="4169">
+        <label>Source/Chips/Ram8.h</label>
+        <childnode refid="4170" relation="include">
+        </childnode>
+        <childnode refid="4171" relation="include">
+        </childnode>
+      </node>
+      <node id="4212">
+        <label>Source/Utils/ParserBase/ParserBase.cpp</label>
+      </node>
+      <node id="4181">
+        <label>Source/Compiler/Analyzer/Main.cpp</label>
+      </node>
+      <node id="4190">
+        <label>Source/Compiler/Analyzer/ParseUtils.h</label>
+        <childnode refid="4188" relation="include">
+        </childnode>
+        <childnode refid="4191" relation="include">
+        </childnode>
+      </node>
+      <node id="4140">
+        <label>Source/Chips/Inc16.cpp</label>
+      </node>
+      <node id="4197">
+        <label>Source/Compiler/Common/DotWriter.cpp</label>
+      </node>
+      <node id="4174">
+        <label>Source/Chips/Register.cpp</label>
+      </node>
+      <node id="4141">
+        <label>Source/Chips/Mux.h</label>
+        <childnode refid="4142" relation="include">
+        </childnode>
+      </node>
+      <node id="4175">
+        <label>Source/Chips/Rom32.h</label>
+        <childnode refid="4103" relation="include">
+        </childnode>
+        <childnode refid="4176" relation="include">
+        </childnode>
+      </node>
+      <node id="4213">
+        <label>Source/Utils/ParserBase/ParserBase.h</label>
+        <childnode refid="4214" relation="include">
+        </childnode>
+        <childnode refid="4187" relation="include">
+        </childnode>
+        <childnode refid="4212" relation="include">
+        </childnode>
+        <childnode refid="4215" relation="include">
+        </childnode>
+      </node>
+      <node id="4154">
+        <label>Source/Chips/Not.cpp</label>
+      </node>
+      <node id="4119">
+        <label>Source/Chips/Clock.cpp</label>
+      </node>
+      <node id="4135">
+        <label>Source/Chips/Ram16k.h</label>
+        <childnode refid="4136" relation="include">
+        </childnode>
+      </node>
+      <node id="4133">
+        <label>Source/Chips/IMemorySegment.h</label>
+        <childnode refid="4134" relation="include">
+        </childnode>
+      </node>
+      <node id="4164">
+        <label>Source/Chips/ProgramCounter.cpp</label>
+      </node>
+      <node id="4095">
+        <label>Source/Assembler/Instruction.cpp</label>
+      </node>
+      <node id="4172">
+        <label>Source/Chips/Ram64.h</label>
+        <childnode refid="4170" relation="include">
+        </childnode>
+      </node>
+      <node id="4138">
+        <label>Source/Chips/Screen.h</label>
+        <childnode refid="4136" relation="include">
+        </childnode>
+        <childnode refid="4108" relation="include">
+        </childnode>
+        <childnode refid="4109" relation="include">
+        </childnode>
+        <childnode refid="4107" relation="include">
+        </childnode>
+        <childnode refid="4110" relation="include">
+        </childnode>
+      </node>
+      <node id="4106">
+        <label>Source/Computer/Application.cpp</label>
+      </node>
+      <node id="4176">
+        <label>Source/Chips/Rom32.cpp</label>
+      </node>
+      <node id="4132">
+        <label>Source/Chips/HalfAdder.cpp</label>
+      </node>
+      <node id="4107">
+        <label>Source/Computer/RuntimeInterface.h</label>
+        <childnode refid="4108" relation="include">
+        </childnode>
+        <childnode refid="4109" relation="include">
+        </childnode>
+        <childnode refid="4110" relation="include">
+        </childnode>
+      </node>
+      <node id="4194">
+        <label>Source/Compiler/Generator/Generator.h</label>
+        <childnode refid="4189" relation="include">
+        </childnode>
+        <childnode refid="4183" relation="include">
+        </childnode>
+        <childnode refid="4106" relation="include">
+        </childnode>
+      </node>
+      <node id="4191">
+        <label>Source/Compiler/Analyzer/ParseUtils.cpp</label>
+      </node>
+      <node id="4117">
+        <label>Source/Chips/Bit.cpp</label>
+      </node>
+      <node id="4173">
+        <label>Source/Chips/Register.h</label>
+        <childnode refid="4101" relation="include">
+        </childnode>
+        <childnode refid="4102" relation="include">
+        </childnode>
+        <childnode refid="4174" relation="include">
+        </childnode>
+      </node>
+      <node id="4210">
+        <label>Source/Assembler/Scanner.cpp</label>
+      </node>
+      <node id="4131">
+        <label>Source/Chips/HalfAdder.h</label>
+        <childnode refid="4132" relation="include">
+        </childnode>
+      </node>
+      <node id="4183">
+        <label>Source/Compiler/Generator/Main.cpp</label>
+      </node>
+      <node id="4100">
+        <label>Source/Chips/ALU.h</label>
+        <childnode refid="4096" relation="include">
+        </childnode>
+        <childnode refid="4101" relation="include">
+        </childnode>
+        <childnode refid="4102" relation="include">
+        </childnode>
+      </node>
+      <node id="4179">
+        <label>Source/Chips/XOr.h</label>
+        <childnode refid="4113" relation="include">
+        </childnode>
+        <childnode refid="4180" relation="include">
+        </childnode>
+      </node>
+      <node id="4139">
+        <label>Source/Chips/Inc16.h</label>
+        <childnode refid="4140" relation="include">
+        </childnode>
+      </node>
+      <node id="4204">
+        <label>Source/Compiler/Generator/Symbol.cpp</label>
+      </node>
+      <node id="4198">
+        <label>Source/Compiler/Common/NodeUtils.cpp</label>
+      </node>
+      <node id="4108">
+        <label>Source/Computer/CommandRuntime.h</label>
+        <childnode refid="4106" relation="include">
+        </childnode>
+        <childnode refid="4090" relation="include">
+        </childnode>
+      </node>
+      <node id="4102">
+        <label>Source/Chips/CPU.h</label>
+        <childnode refid="4103" relation="include">
+        </childnode>
+        <childnode refid="4101" relation="include">
+        </childnode>
+      </node>
+      <node id="4196">
+        <label>Source/Compiler/Common/Node.h</label>
+        <childnode refid="4188" relation="include">
+        </childnode>
+        <childnode refid="4191" relation="include">
+        </childnode>
+        <childnode refid="4197" relation="include">
+        </childnode>
+        <childnode refid="4193" relation="include">
+        </childnode>
+        <childnode refid="4198" relation="include">
+        </childnode>
+        <childnode refid="4199" relation="include">
+        </childnode>
+        <childnode refid="4200" relation="include">
+        </childnode>
+        <childnode refid="4189" relation="include">
+        </childnode>
+        <childnode refid="4194" relation="include">
+        </childnode>
+        <childnode refid="4201" relation="include">
+        </childnode>
+      </node>
+      <node id="4229">
+        <label>Source/Utils/UserInterface/Platform.cpp</label>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="a01330" prot="public">Hack::Ui::Color</innerclass>
+    <innerclass refid="a01326" prot="public">Hack::Ui::ColorBuffer</innerclass>
+    <innerclass refid="a01322" prot="public">Hack::Ui::ColorU</innerclass>
+    <innerclass refid="a01314" prot="public">Hack::Ui::Point</innerclass>
+    <innerclass refid="a01318" prot="public">Hack::Ui::Rectangle</innerclass>
+    <innernamespace refid="a00920">Hack::Ui</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -150,304 +933,186 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>WIN32</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/UserInterface/PlatformUnix.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/ioctl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/select.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;termios.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;csignal&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdio&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00911" kindref="compound">Hack::Ui</ref></highlight></codeline>
-<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="35" refid="a00911_1a0d4a60535dddbf3b72b7d84ac8a25bc3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="a00911_1a0d4a60535dddbf3b72b7d84ac8a25bc3" kindref="member">StdInput</ref><sp/><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="36" refid="a00911_1abb4f00c31f8360c500f8ac00c478bd8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="a00911_1abb4f00c31f8360c500f8ac00c478bd8b" kindref="member">StdOutput</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/UserInterface/Common.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00920" kindref="compound">Hack::Ui</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29" refid="a01314" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01314" kindref="compound">Point</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32" refid="a01314_1a7b3997703cfb10a093aacb82d4cc6ec7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="a01314_1aa9335e7ea01d18489913ee919bcc22ea" kindref="member">x</ref>{},<sp/><ref refid="a01314_1a7b3997703cfb10a093aacb82d4cc6ec7" kindref="member">y</ref>{};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01314_1a6f5d53abb3a2a63ef97ca1a27d7739a4" kindref="member">Point</ref>()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01314_1a6f5d53abb3a2a63ef97ca1a27d7739a4" kindref="member">Point</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01314_1a6f5d53abb3a2a63ef97ca1a27d7739a4" kindref="member">Point</ref>&amp;<sp/>oth)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38" refid="a01329" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01329" kindref="compound">Terminal</ref></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="a01329" kindref="compound">Terminal</ref>*<sp/>_inst;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_resize;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_exitRequest;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>termios<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_oldTerm;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>termios<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_term;</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="48" refid="a01329_1a83d90a176010044fa991ed84e5576cd7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01329_1a83d90a176010044fa991ed84e5576cd7" kindref="member">Terminal</ref>()<sp/>:</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_oldTerm{},</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_term{}</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_inst<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55" refid="a01329_1ae1ab44977adcb6fd61a09a56ebb7f8fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01329_1ae1ab44977adcb6fd61a09a56ebb7f8fc" kindref="member">~Terminal</ref>()</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_inst<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tcsetattr(<ref refid="a00911_1a0d4a60535dddbf3b72b7d84ac8a25bc3" kindref="member">StdInput</ref>,<sp/>TCSANOW,<sp/>&amp;_oldTerm);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38" refid="a01314_1adbb8b7e5c9d603688f1d03abfc15ef01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01314_1adbb8b7e5c9d603688f1d03abfc15ef01" kindref="member">Point</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>nx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>ny)<sp/>:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01314_1aa9335e7ea01d18489913ee919bcc22ea" kindref="member">x</ref>(nx),</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01314_1a7b3997703cfb10a093aacb82d4cc6ec7" kindref="member">y</ref>(ny)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="a01314_1a673a523fadc1c109881aa6140f6e1b2f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01314" kindref="compound">Point</ref><sp/><ref refid="a01314_1a673a523fadc1c109881aa6140f6e1b2f" kindref="member">maxPoint</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01314" kindref="compound">Point</ref>&amp;<sp/>rhs)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="45"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::max&lt;int&gt;(<ref refid="a01314_1aa9335e7ea01d18489913ee919bcc22ea" kindref="member">x</ref>,<sp/>rhs.<ref refid="a01314_1aa9335e7ea01d18489913ee919bcc22ea" kindref="member">x</ref>),</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::max&lt;int&gt;(<ref refid="a01314_1a7b3997703cfb10a093aacb82d4cc6ec7" kindref="member">y</ref>,<sp/>rhs.<ref refid="a01314_1a7b3997703cfb10a093aacb82d4cc6ec7" kindref="member">y</ref>),</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="a01314_1aec3e51560917b1a0f1ec978d3975ef46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01314" kindref="compound">Point</ref><sp/><ref refid="a01314_1aec3e51560917b1a0f1ec978d3975ef46" kindref="member">minPoint</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01314" kindref="compound">Point</ref>&amp;<sp/>rhs)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="53"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::min&lt;int&gt;(<ref refid="a01314_1aa9335e7ea01d18489913ee919bcc22ea" kindref="member">x</ref>,<sp/>rhs.<ref refid="a01314_1aa9335e7ea01d18489913ee919bcc22ea" kindref="member">x</ref>),</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::min&lt;int&gt;(<ref refid="a01314_1a7b3997703cfb10a093aacb82d4cc6ec7" kindref="member">y</ref>,<sp/>rhs.<ref refid="a01314_1a7b3997703cfb10a093aacb82d4cc6ec7" kindref="member">y</ref>),</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61" refid="a01329_1af8d73aa359cd3a059a321bf3b7729293" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01329_1af8d73aa359cd3a059a321bf3b7729293" kindref="member">initialize</ref>()</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tcgetattr(<ref refid="a00911_1a0d4a60535dddbf3b72b7d84ac8a25bc3" kindref="member">StdInput</ref>,<sp/>&amp;_oldTerm);</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_term<sp/>=<sp/>_oldTerm;</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_term.c_lflag<sp/>&amp;=<sp/>~ICANON;</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_term.c_lflag<sp/>&amp;=<sp/>~ECHO;</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>no-blocking:<sp/>read<sp/>returns<sp/>immediately</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_term.c_cc[VMIN]<sp/><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_term.c_cc[VTIME]<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tcsetattr(<ref refid="a00911_1a0d4a60535dddbf3b72b7d84ac8a25bc3" kindref="member">StdInput</ref>,<sp/>TCSANOW,<sp/>&amp;_term);</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76" refid="a01329_1aeccb64e59dc322032634d38c5cdc1c71" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01329_1aeccb64e59dc322032634d38c5cdc1c71" kindref="member">wake</ref>()</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_term.c_cc[VMIN]<sp/><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_term.c_cc[VTIME]<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tcsetattr(<ref refid="a00911_1a0d4a60535dddbf3b72b7d84ac8a25bc3" kindref="member">StdInput</ref>,<sp/>TCSANOW,<sp/>&amp;_term);</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tcflush(<ref refid="a00911_1a0d4a60535dddbf3b72b7d84ac8a25bc3" kindref="member">StdInput</ref>,<sp/>TCIOFLUSH);</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fputc(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">,<sp/>stdin);</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fputc(</highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">,<sp/>stdin);</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fflush(stdin);</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89" refid="a01329_1a2507298f9de6d97fa2d224f91ade9e5f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01329_1a2507298f9de6d97fa2d224f91ade9e5f" kindref="member">update</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>block)</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>oldMin<sp/>=<sp/>_term.c_cc[VMIN];</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(block)</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(oldMin<sp/>==<sp/>0)</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>MIN<sp/>&gt;<sp/>0,<sp/>TIME<sp/>==<sp/>0<sp/>(blocking<sp/>read)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_term.c_cc[VMIN]<sp/><sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_term.c_cc[VTIME]<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tcsetattr(<ref refid="a00911_1a0d4a60535dddbf3b72b7d84ac8a25bc3" kindref="member">StdInput</ref>,<sp/>TCSANOW,<sp/>&amp;_term);</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(oldMin<sp/>!=<sp/>0)</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_term.c_cc[VMIN]<sp/><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_term.c_cc[VTIME]<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tcsetattr(<ref refid="a00911_1a0d4a60535dddbf3b72b7d84ac8a25bc3" kindref="member">StdInput</ref>,<sp/>TCSANOW,<sp/>&amp;_term);</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61" refid="a00920_1a4f45196c0f3ee54c6c4dcff9b593a42b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="a00920_1a4f45196c0f3ee54c6c4dcff9b593a42b" kindref="member">Path</ref><sp/>=<sp/>std::vector&lt;Point&gt;;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="a01318" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01318" kindref="compound">Rectangle</ref></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="66" refid="a01318_1a380058068595421366abc3a96ea717f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="a01318_1a94211dbb4e2c23d85c1cd9570e53f94f" kindref="member">x</ref>{},<sp/><ref refid="a01318_1a380058068595421366abc3a96ea717f0" kindref="member">y</ref>{},<sp/><ref refid="a01318_1a812fb622a1abb08efd76b30dd904b9ae" kindref="member">w</ref>{},<sp/><ref refid="a01318_1a1333d6a207e65bbce26b489376a6911e" kindref="member">h</ref>{};</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01318_1a56441b0596899be2f652b3de945b95e3" kindref="member">Rectangle</ref>()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01318_1a56441b0596899be2f652b3de945b95e3" kindref="member">Rectangle</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01318_1a56441b0596899be2f652b3de945b95e3" kindref="member">Rectangle</ref>&amp;<sp/>oth)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="a01318_1a25370c73302ced2ccc4c05f0371b4776" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01318_1a25370c73302ced2ccc4c05f0371b4776" kindref="member">Rectangle</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>nx,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>ny,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>nw,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>nh)<sp/>:</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01318_1a94211dbb4e2c23d85c1cd9570e53f94f" kindref="member">x</ref>(nx),</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01318_1a380058068595421366abc3a96ea717f0" kindref="member">y</ref>(ny),</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01318_1a812fb622a1abb08efd76b30dd904b9ae" kindref="member">w</ref>(nw),</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01318_1a1333d6a207e65bbce26b489376a6911e" kindref="member">h</ref>(nh)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="a01318_1a34fe79574ec8879d9454c1778a68cd20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="a01318_1a34fe79574ec8879d9454c1778a68cd20" kindref="member">left</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="84"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a01318_1a94211dbb4e2c23d85c1cd9570e53f94f" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="a01318_1ae8393bc46e735d03ee4bbd28d3b29bf6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="a01318_1ae8393bc46e735d03ee4bbd28d3b29bf6" kindref="member">right</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="89"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a01318_1a94211dbb4e2c23d85c1cd9570e53f94f" kindref="member">x</ref><sp/>+<sp/><ref refid="a01318_1a812fb622a1abb08efd76b30dd904b9ae" kindref="member">w</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="a01318_1a7e62fda117e61b5591988b2ff84fc9cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="a01318_1a7e62fda117e61b5591988b2ff84fc9cf" kindref="member">midX</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="94"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a01318_1a94211dbb4e2c23d85c1cd9570e53f94f" kindref="member">x</ref><sp/>+<sp/>(<ref refid="a01318_1a812fb622a1abb08efd76b30dd904b9ae" kindref="member">w</ref><sp/>&gt;&gt;<sp/>1);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="a01318_1aa1822657968c6b8394c5173342f43411" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="a01318_1aa1822657968c6b8394c5173342f43411" kindref="member">top</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="99"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a01318_1a380058068595421366abc3a96ea717f0" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="a01318_1a687b3128d595a84fa9cf0ba1a84b3c50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="a01318_1a687b3128d595a84fa9cf0ba1a84b3c50" kindref="member">bottom</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="104"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a01318_1a380058068595421366abc3a96ea717f0" kindref="member">y</ref><sp/>+<sp/><ref refid="a01318_1a1333d6a207e65bbce26b489376a6911e" kindref="member">h</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="a01318_1a89f58c9760e2d297f618df18f761ccd0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="a01318_1a89f58c9760e2d297f618df18f761ccd0" kindref="member">midY</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="109"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a01318_1a380058068595421366abc3a96ea717f0" kindref="member">y</ref><sp/>+<sp/>(<ref refid="a01318_1a1333d6a207e65bbce26b489376a6911e" kindref="member">h</ref><sp/>&gt;&gt;<sp/>1);</highlight></codeline>
 <codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"></highlight></codeline>
-<codeline lineno="113" refid="a01329_1a2a462ee8b64c18127ed62181ffb6c859" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01329_1a2a462ee8b64c18127ed62181ffb6c859" kindref="member">reset</ref>()</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_resize<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113" refid="a01318_1ace017bb8afc60f1f176d6a3cfed876fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01314" kindref="compound">Point</ref><sp/><ref refid="a01318_1ace017bb8afc60f1f176d6a3cfed876fc" kindref="member">position</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="114"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{<ref refid="a01318_1a94211dbb4e2c23d85c1cd9570e53f94f" kindref="member">x</ref>,<sp/><ref refid="a01318_1a380058068595421366abc3a96ea717f0" kindref="member">y</ref>};</highlight></codeline>
 <codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="117"><highlight class="normal"></highlight></codeline>
-<codeline lineno="118" refid="a01329_1af39930a76abfd22b621090720296c40b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01329_1af39930a76abfd22b621090720296c40b" kindref="member">exitHandler</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_exitRequest<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_inst)</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_inst-&gt;<ref refid="a01329_1aeccb64e59dc322032634d38c5cdc1c71" kindref="member">wake</ref>();</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"></highlight></codeline>
-<codeline lineno="125" refid="a01329_1a9557e74f61d71421be7ead68005fc8d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01329_1a9557e74f61d71421be7ead68005fc8d4" kindref="member">exitHandler</ref>()</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01329_1a9557e74f61d71421be7ead68005fc8d4" kindref="member">exitHandler</ref>(0);</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"></highlight></codeline>
-<codeline lineno="130" refid="a01329_1a50937b18e337a79d1a6c5dd7ac8b772e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01329_1a50937b18e337a79d1a6c5dd7ac8b772e" kindref="member">sizeHandler</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="118" refid="a01318_1a89c8e851589edbe7ecd4308c94e213ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01314" kindref="compound">Point</ref><sp/><ref refid="a01318_1a89c8e851589edbe7ecd4308c94e213ab" kindref="member">size</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="119"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{<ref refid="a01318_1a812fb622a1abb08efd76b30dd904b9ae" kindref="member">w</ref>,<sp/><ref refid="a01318_1a1333d6a207e65bbce26b489376a6911e" kindref="member">h</ref>};</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="a01322" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal"><ref refid="a01322" kindref="compound">ColorU</ref></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="126" refid="a01322_1a2e3c918e51b53ee649b58b357bfb31c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="a01322_1a2e3c918e51b53ee649b58b357bfb31c8" kindref="member">i</ref>{};</highlight></codeline>
+<codeline lineno="127" refid="a01322_1a6aff8d54d6ddb0b9e125401d4d9e72f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01382" kindref="compound">uint8_t</ref><sp/><sp/><ref refid="a01322_1a6aff8d54d6ddb0b9e125401d4d9e72f2" kindref="member">b</ref>[4];</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="a01322_1a26783de60e400bd4d9bd02dffc7064dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="a01322_1a26783de60e400bd4d9bd02dffc7064dc" kindref="member">ColorU</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>v)<sp/>:</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01322_1a6aff8d54d6ddb0b9e125401d4d9e72f2" kindref="member">b</ref>{0,<sp/>0,<sp/>0,<sp/>0}</highlight></codeline>
 <codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_resize<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_inst)</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_inst-&gt;<ref refid="a01329_1aeccb64e59dc322032634d38c5cdc1c71" kindref="member">wake</ref>();</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"></highlight></codeline>
-<codeline lineno="137" refid="a01329_1a79519bdb030b700564babbde37214dbe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01329_1a79519bdb030b700564babbde37214dbe" kindref="member">resized</ref>()</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_resize;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01322_1a2e3c918e51b53ee649b58b357bfb31c8" kindref="member">i</ref><sp/>=<sp/>v;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="a01322_1a46389f66533c11d15482aa42dc2c233f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="a01322_1a46389f66533c11d15482aa42dc2c233f" kindref="member">ColorU</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01382" kindref="compound">uint8_t</ref><sp/>r,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01382" kindref="compound">uint8_t</ref><sp/>g,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01382" kindref="compound">uint8_t</ref><sp/><ref refid="a01322_1a6aff8d54d6ddb0b9e125401d4d9e72f2" kindref="member">b</ref>)<sp/>:</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01322_1a6aff8d54d6ddb0b9e125401d4d9e72f2" kindref="member">b</ref>{r,<sp/>g,<sp/><ref refid="a01322_1a6aff8d54d6ddb0b9e125401d4d9e72f2" kindref="member">b</ref>,<sp/>0}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="141"><highlight class="normal"></highlight></codeline>
-<codeline lineno="142" refid="a01329_1af53df65b141c3fe05d4539e5dee14a4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01329_1af53df65b141c3fe05d4539e5dee14a4d" kindref="member">exitRequested</ref>()</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_exitRequest;</highlight></codeline>
+<codeline lineno="142" refid="a01322_1a48a0588323da8fd71858be57e0b2c07b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>int()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="143"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a01322_1a2e3c918e51b53ee649b58b357bfb31c8" kindref="member">i</ref>;</highlight></codeline>
 <codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="147"><highlight class="normal"></highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>Terminal*<sp/>Terminal::_inst<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Terminal::_resize<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Terminal::_exitRequest<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"></highlight></codeline>
-<codeline lineno="152" refid="a01333_1adfcb6e6d0b18cebdbe6c96d2465fed82" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01333_1adfcb6e6d0b18cebdbe6c96d2465fed82" kindref="member">PlatformUnix::PlatformUnix</ref>()<sp/>:</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_term(nullptr),</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_size{0,<sp/>0}</highlight></codeline>
+<codeline lineno="148" refid="a01326" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal"><ref refid="a01326" kindref="compound">ColorBuffer</ref></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="150" refid="a01326_1a463d0ac8e2d5ab0b7938e0b9a81b3e86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01370" kindref="compound">uint16_t</ref><sp/><ref refid="a01326_1a463d0ac8e2d5ab0b7938e0b9a81b3e86" kindref="member">s</ref>{};</highlight></codeline>
+<codeline lineno="151" refid="a01326_1a15c30d909a6fb366461c0539d423bc8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01382" kindref="compound">uint8_t</ref><sp/><sp/><ref refid="a01326_1a15c30d909a6fb366461c0539d423bc8b" kindref="member">b</ref>[2];</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="a01330" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01330" kindref="compound">Color</ref></highlight></codeline>
 <codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>saveState();</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="157" refid="a01330_1a9af96eb67422f054ba8d50ad3c2bf841" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="a01330_1a9af96eb67422f054ba8d50ad3c2bf841" kindref="member">Rgb</ref>{};</highlight></codeline>
 <codeline lineno="158"><highlight class="normal"></highlight></codeline>
-<codeline lineno="159" refid="a01333_1a29eeecc62bd694cdd256f4fbf78dc425" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01333_1a29eeecc62bd694cdd256f4fbf78dc425" kindref="member">PlatformUnix::~PlatformUnix</ref>()</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>restoreState();</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>_scratch[32]{};</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>extractSequence(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buf)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="163"><highlight class="normal"></highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PlatformUnix::saveState()</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_term<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="a01329" kindref="compound">Terminal</ref>();</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_term-&gt;<ref refid="a01329_1af8d73aa359cd3a059a321bf3b7729293" kindref="member">initialize</ref>();</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"></highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>signal(SIGINT,<sp/><ref refid="a01329_1a9557e74f61d71421be7ead68005fc8d4" kindref="member">Terminal::exitHandler</ref>);</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>signal(SIGTERM,<sp/><ref refid="a01329_1a9557e74f61d71421be7ead68005fc8d4" kindref="member">Terminal::exitHandler</ref>);</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>signal(SIGQUIT,<sp/><ref refid="a01329_1a9557e74f61d71421be7ead68005fc8d4" kindref="member">Terminal::exitHandler</ref>);</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>signal(SIGKILL,<sp/><ref refid="a01329_1a9557e74f61d71421be7ead68005fc8d4" kindref="member">Terminal::exitHandler</ref>);</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>signal(SIGWINCH,<sp/><ref refid="a01329_1a50937b18e337a79d1a6c5dd7ac8b772e" kindref="member">Terminal::sizeHandler</ref>);</highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>atexit(<ref refid="a01329_1a9557e74f61d71421be7ead68005fc8d4" kindref="member">Terminal::exitHandler</ref>);</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"></highlight></codeline>
-<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01325_1aecbdaddb564da342d970727a7475b360" kindref="member">useBackBuffer</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01330_1ab6e2b6a99744650ef27e124c4c619247" kindref="member">Color</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167" refid="a01330_1aca45abd832d82d0d9f2c00a498a104ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="a01330_1aca45abd832d82d0d9f2c00a498a104ff" kindref="member">Color</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t&amp;<sp/>v)<sp/>:</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01330_1a9af96eb67422f054ba8d50ad3c2bf841" kindref="member">Rgb</ref>(v)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="a01330_1a3ec135484774dffc5b529cee9dfa3059" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01330_1a3ec135484774dffc5b529cee9dfa3059" kindref="member">Color</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01382" kindref="compound">uint8_t</ref><sp/>r,</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01382" kindref="compound">uint8_t</ref><sp/>g,</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01382" kindref="compound">uint8_t</ref><sp/>b)<sp/>:</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01330_1a9af96eb67422f054ba8d50ad3c2bf841" kindref="member">Rgb</ref>((int)<ref refid="a01322" kindref="compound">ColorU</ref>(r,<sp/>g,<sp/>b))</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="178"><highlight class="normal"></highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PlatformUnix::restoreState()</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01325_1aecbdaddb564da342d970727a7475b360" kindref="member">useBackBuffer</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="182"><highlight class="normal"></highlight></codeline>
-<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>_term;</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_term<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="186"><highlight class="normal"></highlight></codeline>
-<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>PlatformUnix::checkSize()</highlight></codeline>
-<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">winsize<sp/>ws;</highlight></codeline>
-<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ioctl(<ref refid="a00911_1abb4f00c31f8360c500f8ac00c478bd8b" kindref="member">StdOutput</ref>,<sp/>TIOCGWINSZ,<sp/>&amp;ws);</highlight></codeline>
-<codeline lineno="191"><highlight class="normal"></highlight></codeline>
-<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ws.ws_col<sp/>!=<sp/>_size.<ref refid="a01305_1aa9335e7ea01d18489913ee919bcc22ea" kindref="member">x</ref><sp/>||<sp/>ws.ws_row<sp/>!=<sp/>_size.<ref refid="a01305_1a7b3997703cfb10a093aacb82d4cc6ec7" kindref="member">y</ref>)</highlight></codeline>
-<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_size.<ref refid="a01305_1aa9335e7ea01d18489913ee919bcc22ea" kindref="member">x</ref><sp/>=<sp/>ws.ws_col;</highlight></codeline>
-<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_size.<ref refid="a01305_1a7b3997703cfb10a093aacb82d4cc6ec7" kindref="member">y</ref><sp/>=<sp/>ws.ws_row;</highlight></codeline>
-<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="179" refid="a01330_1a7df5afa30dd84cb9566b5122a7636d17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="a01330_1a7df5afa30dd84cb9566b5122a7636d17" kindref="member">foreground</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="180"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>extractSequence(<ref refid="a00920_1aefd7f2d50548723bc913d2c3289e31c1" kindref="member">RgbFormatFg</ref>);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184" refid="a01330_1a2c11ad765cd58a32fc3d588f8d8f1cb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="a01330_1a2c11ad765cd58a32fc3d588f8d8f1cb3" kindref="member">background</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="185"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>extractSequence(<ref refid="a00920_1afa04eb3bbd4814431ab8fce1f562166f" kindref="member">RgbFormatBg</ref>);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190" refid="a00920_1af8c1578b66f9a23dd22d006b8fcc42c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="a00920_1af8c1578b66f9a23dd22d006b8fcc42c6" kindref="member">Clamp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>in,</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>start,</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>end)</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>in<sp/>&lt;<sp/>start</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>?<sp/>start</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>in<sp/>&gt;<sp/>end</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>?<sp/>end</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>in;</highlight></codeline>
 <codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="200"><highlight class="normal"></highlight></codeline>
-<codeline lineno="201" refid="a01333_1a7ddb3f7fb3607a643acf4cf236d28f7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01333_1a7ddb3f7fb3607a643acf4cf236d28f7b" kindref="member">PlatformUnix::getScreenSize</ref>(<ref refid="a01305" kindref="compound">Point</ref>&amp;<sp/>sz)</highlight></codeline>
-<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>checkSize();</highlight></codeline>
-<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sz<sp/>=<sp/>_size;</highlight></codeline>
-<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="206"><highlight class="normal"></highlight></codeline>
-<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>PlatformUnix::scan(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>cp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len)</highlight></codeline>
-<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/>c<sp/><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>ch<sp/>=<sp/>*cp++,<sp/>nch;</highlight></codeline>
-<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ch<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;\x1b&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>*cp<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;\x5b&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++cp;</highlight></codeline>
-<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ch<sp/><sp/>=<sp/>*cp++;</highlight></codeline>
-<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nch<sp/>=<sp/>*cp;</highlight></codeline>
-<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;1&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>nch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;;&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++cp;</highlight></codeline>
-<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ch<sp/><sp/>=<sp/>*cp++;</highlight></codeline>
-<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nch<sp/>=<sp/>*cp;</highlight></codeline>
-<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;5&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>nch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;A&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00911_1a7553833a41980e8c2bae00177d41129ea35bf1e881e438245e59ccdf1cd1d0774" kindref="member">PR_UP_ARROW</ref>;</highlight></codeline>
-<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;5&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>nch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;B&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00911_1a7553833a41980e8c2bae00177d41129ea3c5a3820b4f7ada22ec68576968bd89d" kindref="member">PR_DOWN_ARROW</ref>;</highlight></codeline>
-<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;5&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>nch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;C&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00911_1a7553833a41980e8c2bae00177d41129ea930343c4a28078ebe2a6b9cfeb4ba56e" kindref="member">PR_RIGHT_ARROW</ref>;</highlight></codeline>
-<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;5&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>nch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;D&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00911_1a7553833a41980e8c2bae00177d41129ead791c01c4f98f1dccf5b6bd16ff003bf" kindref="member">PR_LEFT_ARROW</ref>;</highlight></codeline>
-<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;A&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00911_1a7553833a41980e8c2bae00177d41129ea35bf1e881e438245e59ccdf1cd1d0774" kindref="member">PR_UP_ARROW</ref>;</highlight></codeline>
-<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;B&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00911_1a7553833a41980e8c2bae00177d41129ea3c5a3820b4f7ada22ec68576968bd89d" kindref="member">PR_DOWN_ARROW</ref>;</highlight></codeline>
-<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;C&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00911_1a7553833a41980e8c2bae00177d41129ea930343c4a28078ebe2a6b9cfeb4ba56e" kindref="member">PR_RIGHT_ARROW</ref>;</highlight></codeline>
-<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;D&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00911_1a7553833a41980e8c2bae00177d41129ead791c01c4f98f1dccf5b6bd16ff003bf" kindref="member">PR_LEFT_ARROW</ref>;</highlight></codeline>
-<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;c&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00911_1a7553833a41980e8c2bae00177d41129ead7a3bc54fb41225d6588c6fb307f0bcf" kindref="member">PR_EXIT</ref>;</highlight></codeline>
-<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00911_1a7553833a41980e8c2bae00177d41129ea628e6c1cd2f76b3b8b8346aaa4dfecf1" kindref="member">PR_NO_INPUT</ref>;</highlight></codeline>
-<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ch<sp/>&gt;=<sp/></highlight><highlight class="charliteral">&apos;A&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>ch<sp/>&lt;=<sp/></highlight><highlight class="charliteral">&apos;Z&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ch<sp/>-=<sp/></highlight><highlight class="charliteral">&apos;A&apos;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00911_1a7553833a41980e8c2bae00177d41129ea2627c1de742b4d08526efd3e20d70eea" kindref="member">PR_A</ref><sp/>+<sp/>ch;</highlight></codeline>
-<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ch<sp/>&gt;=<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>ch<sp/>&lt;=<sp/></highlight><highlight class="charliteral">&apos;z&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ch<sp/>-=<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00911_1a7553833a41980e8c2bae00177d41129ea2627c1de742b4d08526efd3e20d70eea" kindref="member">PR_A</ref><sp/>+<sp/>ch;</highlight></codeline>
-<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ch<sp/>&gt;=<sp/></highlight><highlight class="charliteral">&apos;0&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>ch<sp/>&lt;=<sp/></highlight><highlight class="charliteral">&apos;9&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ch<sp/>-=<sp/></highlight><highlight class="charliteral">&apos;0&apos;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00911_1a7553833a41980e8c2bae00177d41129ea312b0a8f38ea0bb8efd0aab28979ede1" kindref="member">PR_0</ref><sp/>+<sp/>ch;</highlight></codeline>
-<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ch<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;\x1b&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00911_1a7553833a41980e8c2bae00177d41129ea7d0aa57d06151d917be3d0a2a61a475f" kindref="member">PR_ESC</ref>;</highlight></codeline>
-<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ch;</highlight></codeline>
-<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="262"><highlight class="normal"></highlight></codeline>
-<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>PlatformUnix::readStdin()</highlight></codeline>
-<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fd_set<sp/>fd;</highlight></codeline>
-<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FD_ZERO(&amp;fd);</highlight></codeline>
-<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FD_SET(<ref refid="a00911_1a0d4a60535dddbf3b72b7d84ac8a25bc3" kindref="member">StdInput</ref>,<sp/>&amp;fd);</highlight></codeline>
-<codeline lineno="268"><highlight class="normal"></highlight></codeline>
-<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timeval<sp/>tv{};</highlight></codeline>
-<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tv.tv_sec<sp/>=<sp/>-1;</highlight></codeline>
-<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>select(1,<sp/>&amp;fd,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;tv);</highlight></codeline>
-<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(FD_ISSET(<ref refid="a00911_1a0d4a60535dddbf3b72b7d84ac8a25bc3" kindref="member">StdInput</ref>,<sp/>&amp;fd))</highlight></codeline>
-<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buf[128];</highlight></codeline>
-<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/>br<sp/>=<sp/>read(<ref refid="a00911_1a0d4a60535dddbf3b72b7d84ac8a25bc3" kindref="member">StdInput</ref>,<sp/>buf,<sp/>127);</highlight></codeline>
-<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(br<sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/>br<sp/>&lt;<sp/>128)</highlight></codeline>
-<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buf[br]<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>scan(buf,<sp/>br);</highlight></codeline>
-<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00911_1a7553833a41980e8c2bae00177d41129ea628e6c1cd2f76b3b8b8346aaa4dfecf1" kindref="member">PR_NO_INPUT</ref>;</highlight></codeline>
-<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="284"><highlight class="normal"></highlight></codeline>
-<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>PlatformUnix::checkSignals()</highlight></codeline>
-<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_term-&gt;<ref refid="a01329_1af53df65b141c3fe05d4539e5dee14a4d" kindref="member">exitRequested</ref>())</highlight></codeline>
-<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00911_1a7553833a41980e8c2bae00177d41129ead7a3bc54fb41225d6588c6fb307f0bcf" kindref="member">PR_EXIT</ref>;</highlight></codeline>
-<codeline lineno="289"><highlight class="normal"></highlight></codeline>
-<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_term-&gt;<ref refid="a01329_1a79519bdb030b700564babbde37214dbe" kindref="member">resized</ref>())</highlight></codeline>
-<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_term-&gt;<ref refid="a01329_1a2a462ee8b64c18127ed62181ffb6c859" kindref="member">reset</ref>();</highlight></codeline>
-<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00911_1a7553833a41980e8c2bae00177d41129ea3dde91a4939857995c340109342db15b" kindref="member">PR_RESIZE</ref>;</highlight></codeline>
-<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00911_1a7553833a41980e8c2bae00177d41129ea628e6c1cd2f76b3b8b8346aaa4dfecf1" kindref="member">PR_NO_INPUT</ref>;</highlight></codeline>
-<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="297"><highlight class="normal"></highlight></codeline>
-<codeline lineno="298" refid="a01333_1a061f1bbd721feb4a7b370a7f7f951bcd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="a01333_1a061f1bbd721feb4a7b370a7f7f951bcd" kindref="member">PlatformUnix::poll</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>block)</highlight></codeline>
-<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>evt<sp/>=<sp/>checkSignals();</highlight></codeline>
-<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(evt<sp/>!=<sp/><ref refid="a00911_1a7553833a41980e8c2bae00177d41129ea628e6c1cd2f76b3b8b8346aaa4dfecf1" kindref="member">PR_NO_INPUT</ref>)</highlight></codeline>
-<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>evt;</highlight></codeline>
-<codeline lineno="303"><highlight class="normal"></highlight></codeline>
-<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_term-&gt;<ref refid="a01329_1a2507298f9de6d97fa2d224f91ade9e5f" kindref="member">update</ref>(block);</highlight></codeline>
-<codeline lineno="305"><highlight class="normal"></highlight></codeline>
-<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evt<sp/>=<sp/>readStdin();</highlight></codeline>
-<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(evt<sp/>!=<sp/><ref refid="a00911_1a7553833a41980e8c2bae00177d41129ead7a3bc54fb41225d6588c6fb307f0bcf" kindref="member">PR_EXIT</ref><sp/>&amp;&amp;<sp/>evt<sp/>!=<sp/><ref refid="a00911_1a7553833a41980e8c2bae00177d41129ea3dde91a4939857995c340109342db15b" kindref="member">PR_RESIZE</ref>)</highlight></codeline>
-<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>evt;</highlight></codeline>
-<codeline lineno="309"><highlight class="normal"></highlight></codeline>
-<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evt<sp/>=<sp/>checkSignals();</highlight></codeline>
-<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(evt<sp/>!=<sp/><ref refid="a00911_1a7553833a41980e8c2bae00177d41129ea628e6c1cd2f76b3b8b8346aaa4dfecf1" kindref="member">PR_NO_INPUT</ref>)</highlight></codeline>
-<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>evt;</highlight></codeline>
-<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00911_1a7553833a41980e8c2bae00177d41129ea628e6c1cd2f76b3b8b8346aaa4dfecf1" kindref="member">PR_NO_INPUT</ref>;</highlight></codeline>
-<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="315"><highlight class="normal"></highlight></codeline>
-<codeline lineno="316"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Ui</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="317"><highlight class="normal"></highlight></codeline>
-<codeline lineno="318"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="200"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Ui</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Utils/UserInterface/PlatformUnix.cpp"/>
+    <location file="Source/Utils/UserInterface/Math.h"/>
   </compounddef>
 </doxygen>

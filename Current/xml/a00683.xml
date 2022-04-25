@@ -1,90 +1,98 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00683" kind="file" language="C++">
-    <compoundname>XOr.cpp</compoundname>
-    <includes refid="a00686" local="yes">Chips/XOr.h</includes>
+    <compoundname>SRLatch.h</compoundname>
+    <includes refid="a00485" local="yes">Chips/Chip.h</includes>
+    <includedby refid="a00680" local="yes">Source/Chips/SRLatch.cpp</includedby>
     <incdepgraph>
-      <node id="2252">
+      <node id="2202">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="2253" relation="include">
+        <childnode refid="2203" relation="include">
         </childnode>
       </node>
-      <node id="2244">
+      <node id="2194">
         <label>Chips/BitUtils.h</label>
-        <childnode refid="2245" relation="include">
+        <childnode refid="2195" relation="include">
         </childnode>
-        <childnode refid="2246" relation="include">
+        <childnode refid="2196" relation="include">
         </childnode>
       </node>
-      <node id="2253">
+      <node id="2203">
         <label>cstdint</label>
       </node>
-      <node id="2249">
+      <node id="2199">
         <label>string</label>
       </node>
-      <node id="2241">
-        <label>Source/Chips/XOr.cpp</label>
-        <link refid="a00683"/>
-        <childnode refid="2242" relation="include">
-        </childnode>
-      </node>
-      <node id="2251">
+      <node id="2201">
         <label>UserInterface/Context.h</label>
-        <childnode refid="2247" relation="include">
+        <childnode refid="2197" relation="include">
         </childnode>
-        <childnode refid="2252" relation="include">
+        <childnode refid="2202" relation="include">
         </childnode>
-        <childnode refid="2254" relation="include">
+        <childnode refid="2204" relation="include">
         </childnode>
       </node>
-      <node id="2254">
+      <node id="2204">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="2253" relation="include">
+        <childnode refid="2203" relation="include">
         </childnode>
-        <childnode refid="2250" relation="include">
+        <childnode refid="2200" relation="include">
         </childnode>
-        <childnode refid="2252" relation="include">
+        <childnode refid="2202" relation="include">
         </childnode>
       </node>
-      <node id="2246">
+      <node id="2196">
         <label>Utils/Console.h</label>
-        <childnode refid="2247" relation="include">
+        <childnode refid="2197" relation="include">
         </childnode>
-        <childnode refid="2251" relation="include">
+        <childnode refid="2201" relation="include">
         </childnode>
       </node>
-      <node id="2245">
+      <node id="2195">
         <label>bitset</label>
       </node>
-      <node id="2250">
+      <node id="2192">
+        <label>Source/Chips/SRLatch.h</label>
+        <link refid="a00683"/>
+        <childnode refid="2193" relation="include">
+        </childnode>
+      </node>
+      <node id="2200">
         <label>vector</label>
       </node>
-      <node id="2248">
+      <node id="2198">
         <label>sstream</label>
       </node>
-      <node id="2243">
+      <node id="2193">
         <label>Chips/Chip.h</label>
-        <childnode refid="2244" relation="include">
+        <childnode refid="2194" relation="include">
         </childnode>
-        <childnode refid="2246" relation="include">
-        </childnode>
-      </node>
-      <node id="2242">
-        <label>Chips/XOr.h</label>
-        <childnode refid="2243" relation="include">
+        <childnode refid="2196" relation="include">
         </childnode>
       </node>
-      <node id="2247">
+      <node id="2197">
         <label>String.h</label>
-        <childnode refid="2248" relation="include">
+        <childnode refid="2198" relation="include">
         </childnode>
-        <childnode refid="2249" relation="include">
+        <childnode refid="2199" relation="include">
         </childnode>
-        <childnode refid="2250" relation="include">
+        <childnode refid="2200" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <innernamespace refid="a00899">Hack::Chips</innernamespace>
+    <invincdepgraph>
+      <node id="2206">
+        <label>Source/Chips/SRLatch.cpp</label>
+      </node>
+      <node id="2205">
+        <label>Source/Chips/SRLatch.h</label>
+        <link refid="a00683"/>
+        <childnode refid="2206" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="a01134" prot="public">Hack::Chips::SRLatch</innerclass>
+    <innernamespace refid="a00908">Hack::Chips</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -111,45 +119,33 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/XOr.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00899" kindref="compound">Hack::Chips</ref></highlight></codeline>
-<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="26" refid="a01133_1a548f217e98ab7bbd10eafdf1c677912c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01133_1a548f217e98ab7bbd10eafdf1c677912c" kindref="member">XOr::XOr</ref>()</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00993_1a5a604431fa35bc87e0d7f4328b4ad4a1" kindref="member" tooltip="Zeros all bits except for the bit at the supplied index. ">assignBit</ref>(7);</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31" refid="a01133_1a8c95c1e512936632c88c673a4f6d0b31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01133_1a8c95c1e512936632c88c673a4f6d0b31" kindref="member">XOr::setA</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v)</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00993_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(0,<sp/>v);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00993_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Chip.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00908" kindref="compound">Hack::Chips</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27" refid="a01134" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01134" kindref="compound">SRLatch</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="a01002" kindref="compound" tooltip="Chip is the base class for all chips defined in this system. It uses a template integer for the _bits...">Chip</ref>&lt;uint8_t,<sp/>8&gt;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>evaluate();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isDirty()</highlight><highlight class="keyword"><sp/>override</highlight></codeline>
+<codeline lineno="33"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a01002_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(7);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37" refid="a01133_1a5b5680c517fe3da9ea28552c22639fdf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01133_1a5b5680c517fe3da9ea28552c22639fdf" kindref="member">XOr::setB</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v)</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00993_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(1,<sp/>v);</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00993_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>XOr::evaluate()</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>IMPLEMENT_BLACK_BOX</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00993_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(6,<sp/><ref refid="a00900_1a002092c1145c7301b06c0a0cab9fc889" kindref="member">Gates::XOr</ref>(<ref refid="a00993_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(0),<sp/><ref refid="a00993_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(1)));</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00993_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(6,<sp/><ref refid="a00993_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(0)<sp/>^<sp/><ref refid="a00993_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(1));</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00993_1a21ec8cfbaba9e08deb3607c7eff9ad63" kindref="member" tooltip="Clears the bit at the supplied index. ">clearBit</ref>(7);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53" refid="a01133_1a63b186e9bcc271c6b5895f5ed4e8ac4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01133_1a63b186e9bcc271c6b5895f5ed4e8ac4b" kindref="member">XOr::getOut</ref>()</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00993_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(7))</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00993_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(6);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="59"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01134_1ab4024d57ab5595233ac4c3dc6828336a" kindref="member">SRLatch</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01134_1a439b80b9ddb355d12431020e5aa85bd3" kindref="member">setS</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01134_1a54e7a2f18ea3941477404a43b29938aa" kindref="member">setR</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01134_1a1be3e2f9a12b13a1403615c3f31ce609" kindref="member">setQn</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01134_1a50289416e241035b969e5ad069aed676" kindref="member">getQ</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01134_1ad1af33b9f4ff6c5e85ff709d81d830c9" kindref="member">getQPlus</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Chips/XOr.cpp"/>
+    <location file="Source/Chips/SRLatch.h"/>
   </compounddef>
 </doxygen>

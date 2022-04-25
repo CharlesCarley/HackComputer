@@ -1,585 +1,98 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00473" kind="file" language="C++">
-    <compoundname>BitUtils.h</compoundname>
-    <includes local="no">bitset</includes>
-    <includes refid="a00806" local="yes">Utils/Console.h</includes>
-    <includedby refid="a00413" local="yes">Source/Assembler/Instruction.cpp</includedby>
-    <includedby refid="a00449" local="yes">Source/Chips/ALU.cpp</includedby>
-    <includedby refid="a00476" local="yes">Source/Chips/Chip.h</includedby>
+    <compoundname>And16.h</compoundname>
+    <includes refid="a00485" local="yes">Chips/Chip.h</includes>
+    <includedby refid="a00470" local="yes">Source/Chips/And16.cpp</includedby>
     <incdepgraph>
-      <node id="859">
+      <node id="814">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="860" relation="include">
+        <childnode refid="815" relation="include">
         </childnode>
       </node>
-      <node id="851">
-        <label>Source/Chips/BitUtils.h</label>
-        <link refid="a00473"/>
-        <childnode refid="852" relation="include">
+      <node id="806">
+        <label>Chips/BitUtils.h</label>
+        <childnode refid="807" relation="include">
         </childnode>
-        <childnode refid="853" relation="include">
+        <childnode refid="808" relation="include">
         </childnode>
       </node>
-      <node id="860">
+      <node id="815">
         <label>cstdint</label>
       </node>
-      <node id="856">
+      <node id="811">
         <label>string</label>
       </node>
-      <node id="858">
+      <node id="813">
         <label>UserInterface/Context.h</label>
-        <childnode refid="854" relation="include">
+        <childnode refid="809" relation="include">
         </childnode>
-        <childnode refid="859" relation="include">
+        <childnode refid="814" relation="include">
         </childnode>
-        <childnode refid="861" relation="include">
+        <childnode refid="816" relation="include">
         </childnode>
       </node>
-      <node id="861">
+      <node id="816">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="860" relation="include">
+        <childnode refid="815" relation="include">
         </childnode>
-        <childnode refid="857" relation="include">
+        <childnode refid="812" relation="include">
         </childnode>
-        <childnode refid="859" relation="include">
+        <childnode refid="814" relation="include">
         </childnode>
       </node>
-      <node id="853">
+      <node id="808">
         <label>Utils/Console.h</label>
-        <childnode refid="854" relation="include">
+        <childnode refid="809" relation="include">
         </childnode>
-        <childnode refid="858" relation="include">
+        <childnode refid="813" relation="include">
         </childnode>
       </node>
-      <node id="852">
+      <node id="804">
+        <label>Source/Chips/And16.h</label>
+        <link refid="a00473"/>
+        <childnode refid="805" relation="include">
+        </childnode>
+      </node>
+      <node id="807">
         <label>bitset</label>
       </node>
-      <node id="857">
+      <node id="812">
         <label>vector</label>
       </node>
-      <node id="855">
+      <node id="810">
         <label>sstream</label>
       </node>
-      <node id="854">
+      <node id="805">
+        <label>Chips/Chip.h</label>
+        <childnode refid="806" relation="include">
+        </childnode>
+        <childnode refid="808" relation="include">
+        </childnode>
+      </node>
+      <node id="809">
         <label>String.h</label>
-        <childnode refid="855" relation="include">
+        <childnode refid="810" relation="include">
         </childnode>
-        <childnode refid="856" relation="include">
+        <childnode refid="811" relation="include">
         </childnode>
-        <childnode refid="857" relation="include">
+        <childnode refid="812" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="922">
-        <label>Source/Chips/NOr.cpp</label>
-      </node>
-      <node id="867">
-        <label>Source/Chips/Add16.cpp</label>
-      </node>
-      <node id="916">
-        <label>Source/Chips/Mux4Way16.h</label>
-        <childnode refid="915" relation="include">
-        </childnode>
-      </node>
-      <node id="880">
-        <label>Source/Computer/RuntimeSDL.h</label>
-      </node>
-      <node id="862">
-        <label>Source/Chips/BitUtils.h</label>
-        <link refid="a00473"/>
-        <childnode refid="863" relation="include">
-        </childnode>
-        <childnode refid="864" relation="include">
-        </childnode>
-        <childnode refid="865" relation="include">
-        </childnode>
-      </node>
-      <node id="914">
-        <label>Source/Chips/Mux16.cpp</label>
-      </node>
-      <node id="899">
-        <label>Source/Chips/DMux8Way.cpp</label>
-      </node>
-      <node id="881">
-        <label>Source/Chips/And.h</label>
-        <childnode refid="882" relation="include">
-        </childnode>
-        <childnode refid="883" relation="include">
-        </childnode>
-      </node>
-      <node id="917">
-        <label>Source/Chips/Mux8Way16.h</label>
-        <childnode refid="918" relation="include">
-        </childnode>
-      </node>
-      <node id="879">
-        <label>Source/Computer/DebugRuntime.h</label>
-        <childnode refid="874" relation="include">
-        </childnode>
-        <childnode refid="876" relation="include">
-        </childnode>
-      </node>
-      <node id="929">
-        <label>Source/Chips/Or16.h</label>
-        <childnode refid="930" relation="include">
-        </childnode>
-      </node>
-      <node id="893">
-        <label>Source/Chips/DFlipFlop.cpp</label>
-      </node>
-      <node id="932">
-        <label>Source/Chips/Or8Way.cpp</label>
-      </node>
-      <node id="897">
-        <label>Source/Chips/DMux4Way.cpp</label>
-      </node>
-      <node id="923">
-        <label>Source/Chips/Not.h</label>
-        <childnode refid="924" relation="include">
-        </childnode>
-      </node>
-      <node id="885">
+      <node id="818">
         <label>Source/Chips/And16.cpp</label>
       </node>
-      <node id="891">
-        <label>Source/Chips/Timer.cpp</label>
-      </node>
-      <node id="866">
-        <label>Source/Chips/Add16.h</label>
-        <childnode refid="867" relation="include">
-        </childnode>
-      </node>
-      <node id="871">
-        <label>Source/Chips/Computer.h</label>
-        <childnode refid="872" relation="include">
-        </childnode>
-        <childnode refid="873" relation="include">
-        </childnode>
-        <childnode refid="874" relation="include">
-        </childnode>
-        <childnode refid="875" relation="include">
-        </childnode>
-        <childnode refid="876" relation="include">
-        </childnode>
-        <childnode refid="877" relation="include">
-        </childnode>
-      </node>
-      <node id="935">
-        <label>Source/Chips/Ram4k.h</label>
-        <childnode refid="936" relation="include">
-        </childnode>
-      </node>
-      <node id="948">
-        <label>Source/Chips/SRLatch.cpp</label>
-      </node>
-      <node id="938">
-        <label>Source/Chips/Ram512.cpp</label>
-      </node>
-      <node id="869">
-        <label>Source/Chips/CPU.cpp</label>
-      </node>
-      <node id="915">
-        <label>Source/Chips/Mux4Way16.cpp</label>
-      </node>
-      <node id="906">
-        <label>Source/Chips/Memory.h</label>
-        <childnode refid="871" relation="include">
-        </childnode>
-        <childnode refid="907" relation="include">
-        </childnode>
-      </node>
-      <node id="950">
-        <label>Source/Chips/XOr.cpp</label>
-      </node>
-      <node id="928">
-        <label>Source/Chips/Or.cpp</label>
-      </node>
-      <node id="936">
-        <label>Source/Chips/Ram4K.cpp</label>
-      </node>
-      <node id="894">
-        <label>Source/Chips/DMux.h</label>
-        <childnode refid="895" relation="include">
-        </childnode>
-      </node>
-      <node id="872">
-        <label>Source/Bindings/Bindings.cpp</label>
-      </node>
-      <node id="900">
-        <label>Source/Chips/FullAdder.h</label>
-        <childnode refid="883" relation="include">
-        </childnode>
-      </node>
-      <node id="920">
-        <label>Source/Chips/Nand.cpp</label>
-      </node>
-      <node id="927">
-        <label>Source/Chips/Or.h</label>
-        <childnode refid="883" relation="include">
-        </childnode>
-        <childnode refid="928" relation="include">
-        </childnode>
-      </node>
-      <node id="937">
-        <label>Source/Chips/Ram512.h</label>
-        <childnode refid="938" relation="include">
-        </childnode>
-      </node>
-      <node id="933">
-        <label>Source/Chips/ProgramCounter.h</label>
-        <childnode refid="869" relation="include">
-        </childnode>
-        <childnode refid="870" relation="include">
-        </childnode>
-        <childnode refid="934" relation="include">
-        </childnode>
-      </node>
-      <node id="886">
-        <label>Source/Chips/Bit.h</label>
-        <childnode refid="887" relation="include">
-        </childnode>
-      </node>
-      <node id="918">
-        <label>Source/Chips/Mux8Way16.cpp</label>
-      </node>
-      <node id="930">
-        <label>Source/Chips/Or16.cpp</label>
-      </node>
-      <node id="926">
-        <label>Source/Chips/Not16.cpp</label>
-      </node>
-      <node id="913">
-        <label>Source/Chips/Mux16.h</label>
-        <childnode refid="914" relation="include">
-        </childnode>
-        <childnode refid="915" relation="include">
-        </childnode>
-      </node>
-      <node id="884">
+      <node id="817">
         <label>Source/Chips/And16.h</label>
-        <childnode refid="885" relation="include">
-        </childnode>
-      </node>
-      <node id="898">
-        <label>Source/Chips/DMux8Way.h</label>
-        <childnode refid="899" relation="include">
-        </childnode>
-      </node>
-      <node id="941">
-        <label>Source/Chips/Ram8.cpp</label>
-      </node>
-      <node id="919">
-        <label>Source/Chips/NAnd.h</label>
-        <childnode refid="920" relation="include">
-        </childnode>
-      </node>
-      <node id="864">
-        <label>Source/Chips/ALU.cpp</label>
-      </node>
-      <node id="940">
-        <label>Source/Chips/Ram64.cpp</label>
-      </node>
-      <node id="931">
-        <label>Source/Chips/Or8Way.h</label>
-        <childnode refid="932" relation="include">
-        </childnode>
-      </node>
-      <node id="921">
-        <label>Source/Chips/NOr.h</label>
-        <childnode refid="922" relation="include">
-        </childnode>
-      </node>
-      <node id="888">
-        <label>Source/Chips/Clock.h</label>
-        <childnode refid="889" relation="include">
-        </childnode>
-        <childnode refid="890" relation="include">
-        </childnode>
-      </node>
-      <node id="947">
-        <label>Source/Chips/SRLatch.h</label>
-        <childnode refid="948" relation="include">
-        </childnode>
-      </node>
-      <node id="883">
-        <label>Source/Chips/FullAdder.cpp</label>
-      </node>
-      <node id="873">
-        <label>Source/Chips/Computer.cpp</label>
-      </node>
-      <node id="896">
-        <label>Source/Chips/DMux4Way.h</label>
-        <childnode refid="897" relation="include">
-        </childnode>
-      </node>
-      <node id="875">
-        <label>Source/Computer/CommandRuntime.cpp</label>
-      </node>
-      <node id="912">
-        <label>Source/Chips/Mux.cpp</label>
-      </node>
-      <node id="925">
-        <label>Source/Chips/Not16.h</label>
-        <childnode refid="926" relation="include">
-        </childnode>
-      </node>
-      <node id="907">
-        <label>Source/Chips/Memory.cpp</label>
-      </node>
-      <node id="865">
-        <label>Source/Chips/Chip.h</label>
-        <childnode refid="866" relation="include">
-        </childnode>
-        <childnode refid="864" relation="include">
-        </childnode>
-        <childnode refid="868" relation="include">
-        </childnode>
-        <childnode refid="881" relation="include">
-        </childnode>
-        <childnode refid="884" relation="include">
-        </childnode>
-        <childnode refid="886" relation="include">
-        </childnode>
-        <childnode refid="888" relation="include">
-        </childnode>
-        <childnode refid="870" relation="include">
-        </childnode>
-        <childnode refid="892" relation="include">
-        </childnode>
-        <childnode refid="894" relation="include">
-        </childnode>
-        <childnode refid="896" relation="include">
-        </childnode>
-        <childnode refid="898" relation="include">
-        </childnode>
-        <childnode refid="900" relation="include">
-        </childnode>
-        <childnode refid="901" relation="include">
-        </childnode>
-        <childnode refid="903" relation="include">
-        </childnode>
-        <childnode refid="909" relation="include">
-        </childnode>
-        <childnode refid="906" relation="include">
-        </childnode>
-        <childnode refid="911" relation="include">
-        </childnode>
-        <childnode refid="913" relation="include">
-        </childnode>
-        <childnode refid="916" relation="include">
-        </childnode>
-        <childnode refid="917" relation="include">
-        </childnode>
-        <childnode refid="919" relation="include">
-        </childnode>
-        <childnode refid="921" relation="include">
-        </childnode>
-        <childnode refid="923" relation="include">
-        </childnode>
-        <childnode refid="925" relation="include">
-        </childnode>
-        <childnode refid="927" relation="include">
-        </childnode>
-        <childnode refid="929" relation="include">
-        </childnode>
-        <childnode refid="931" relation="include">
-        </childnode>
-        <childnode refid="933" relation="include">
-        </childnode>
-        <childnode refid="935" relation="include">
-        </childnode>
-        <childnode refid="937" relation="include">
-        </childnode>
-        <childnode refid="939" relation="include">
-        </childnode>
-        <childnode refid="942" relation="include">
-        </childnode>
-        <childnode refid="943" relation="include">
-        </childnode>
-        <childnode refid="945" relation="include">
-        </childnode>
-        <childnode refid="947" relation="include">
-        </childnode>
-        <childnode refid="949" relation="include">
-        </childnode>
-      </node>
-      <node id="904">
-        <label>Source/Chips/DefaultMemorySegment.h</label>
-        <childnode refid="905" relation="include">
-        </childnode>
-        <childnode refid="908" relation="include">
-        </childnode>
-      </node>
-      <node id="882">
-        <label>Source/Chips/And.cpp</label>
-      </node>
-      <node id="892">
-        <label>Source/Chips/DFlipFlop.h</label>
-        <childnode refid="886" relation="include">
-        </childnode>
-        <childnode refid="893" relation="include">
-        </childnode>
-      </node>
-      <node id="876">
-        <label>Source/Computer/DebugRuntime.cpp</label>
-      </node>
-      <node id="895">
-        <label>Source/Chips/DMux.cpp</label>
-      </node>
-      <node id="890">
-        <label>Source/Chips/Timer.h</label>
-        <childnode refid="873" relation="include">
-        </childnode>
-        <childnode refid="869" relation="include">
-        </childnode>
-        <childnode refid="891" relation="include">
-        </childnode>
-      </node>
-      <node id="939">
-        <label>Source/Chips/Ram8.h</label>
-        <childnode refid="940" relation="include">
-        </childnode>
-        <childnode refid="941" relation="include">
-        </childnode>
-      </node>
-      <node id="910">
-        <label>Source/Chips/Inc16.cpp</label>
-      </node>
-      <node id="944">
-        <label>Source/Chips/Register.cpp</label>
-      </node>
-      <node id="911">
-        <label>Source/Chips/Mux.h</label>
-        <childnode refid="912" relation="include">
-        </childnode>
-      </node>
-      <node id="945">
-        <label>Source/Chips/Rom32.h</label>
-        <childnode refid="871" relation="include">
-        </childnode>
-        <childnode refid="946" relation="include">
-        </childnode>
-      </node>
-      <node id="924">
-        <label>Source/Chips/Not.cpp</label>
-      </node>
-      <node id="889">
-        <label>Source/Chips/Clock.cpp</label>
-      </node>
-      <node id="905">
-        <label>Source/Chips/Ram16k.h</label>
-        <childnode refid="906" relation="include">
-        </childnode>
-      </node>
-      <node id="903">
-        <label>Source/Chips/IMemorySegment.h</label>
-        <childnode refid="904" relation="include">
-        </childnode>
-      </node>
-      <node id="934">
-        <label>Source/Chips/ProgramCounter.cpp</label>
-      </node>
-      <node id="863">
-        <label>Source/Assembler/Instruction.cpp</label>
-      </node>
-      <node id="942">
-        <label>Source/Chips/Ram64.h</label>
-        <childnode refid="940" relation="include">
-        </childnode>
-      </node>
-      <node id="908">
-        <label>Source/Chips/Screen.h</label>
-        <childnode refid="906" relation="include">
-        </childnode>
-        <childnode refid="878" relation="include">
-        </childnode>
-        <childnode refid="879" relation="include">
-        </childnode>
-        <childnode refid="877" relation="include">
-        </childnode>
-        <childnode refid="880" relation="include">
-        </childnode>
-      </node>
-      <node id="874">
-        <label>Source/Computer/Application.cpp</label>
-      </node>
-      <node id="946">
-        <label>Source/Chips/Rom32.cpp</label>
-      </node>
-      <node id="902">
-        <label>Source/Chips/HalfAdder.cpp</label>
-      </node>
-      <node id="877">
-        <label>Source/Computer/RuntimeInterface.h</label>
-        <childnode refid="878" relation="include">
-        </childnode>
-        <childnode refid="879" relation="include">
-        </childnode>
-        <childnode refid="880" relation="include">
-        </childnode>
-      </node>
-      <node id="887">
-        <label>Source/Chips/Bit.cpp</label>
-      </node>
-      <node id="943">
-        <label>Source/Chips/Register.h</label>
-        <childnode refid="869" relation="include">
-        </childnode>
-        <childnode refid="870" relation="include">
-        </childnode>
-        <childnode refid="944" relation="include">
-        </childnode>
-      </node>
-      <node id="901">
-        <label>Source/Chips/HalfAdder.h</label>
-        <childnode refid="902" relation="include">
-        </childnode>
-      </node>
-      <node id="868">
-        <label>Source/Chips/ALU.h</label>
-        <childnode refid="864" relation="include">
-        </childnode>
-        <childnode refid="869" relation="include">
-        </childnode>
-        <childnode refid="870" relation="include">
-        </childnode>
-      </node>
-      <node id="949">
-        <label>Source/Chips/XOr.h</label>
-        <childnode refid="883" relation="include">
-        </childnode>
-        <childnode refid="950" relation="include">
-        </childnode>
-      </node>
-      <node id="909">
-        <label>Source/Chips/Inc16.h</label>
-        <childnode refid="910" relation="include">
-        </childnode>
-      </node>
-      <node id="878">
-        <label>Source/Computer/CommandRuntime.h</label>
-        <childnode refid="874" relation="include">
-        </childnode>
-        <childnode refid="875" relation="include">
-        </childnode>
-      </node>
-      <node id="870">
-        <label>Source/Chips/CPU.h</label>
-        <childnode refid="871" relation="include">
-        </childnode>
-        <childnode refid="869" relation="include">
+        <link refid="a00473"/>
+        <childnode refid="818" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
-    <innerclass refid="a00977" prot="public">Hack::Chips::bit16_t</innerclass>
-    <innerclass refid="a00981" prot="public">Hack::Chips::bit32_t</innerclass>
-    <innerclass refid="a00985" prot="public">Hack::Chips::bit64_t</innerclass>
-    <innerclass refid="a00989" prot="public">Hack::Chips::BitUtils</innerclass>
-    <innernamespace refid="a00899">Hack::Chips</innernamespace>
-    <innernamespace refid="a00901">Hack::Chips::BitwiseGates</innernamespace>
-    <innernamespace refid="a00900">Hack::Chips::Gates</innernamespace>
+    <innerclass refid="a00978" prot="public">Hack::Chips::And16</innerclass>
+    <innernamespace refid="a00908">Hack::Chips</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -607,340 +120,26 @@
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;bitset&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CHECK_INT_BOUNDS</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/Exception.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/Console.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00899" kindref="compound">Hack::Chips</ref></highlight></codeline>
-<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="31" refid="a00899_1a89719f49d745047f03bca80bfff48bd2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="a00899_1a89719f49d745047f03bca80bfff48bd2" kindref="member">BitIndex</ref></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="33" refid="a00899_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" kindref="member">Bit0</ref><sp/>=<sp/>0x0001,</highlight></codeline>
-<codeline lineno="34" refid="a00899_1a89719f49d745047f03bca80bfff48bd2a8487c63d5dca7d87b359feca1a2c2ac8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a89719f49d745047f03bca80bfff48bd2a8487c63d5dca7d87b359feca1a2c2ac8" kindref="member">Bit1</ref><sp/>=<sp/>0x0002,</highlight></codeline>
-<codeline lineno="35" refid="a00899_1a89719f49d745047f03bca80bfff48bd2a8a09deb894b81cd01eb5ea4d9f1f1cf5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a89719f49d745047f03bca80bfff48bd2a8a09deb894b81cd01eb5ea4d9f1f1cf5" kindref="member">Bit2</ref><sp/>=<sp/>0x0004,</highlight></codeline>
-<codeline lineno="36" refid="a00899_1a89719f49d745047f03bca80bfff48bd2ae436844fb061392d7357a1ee7fecfa14" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a89719f49d745047f03bca80bfff48bd2ae436844fb061392d7357a1ee7fecfa14" kindref="member">Bit3</ref><sp/>=<sp/>0x0008,</highlight></codeline>
-<codeline lineno="37" refid="a00899_1a89719f49d745047f03bca80bfff48bd2a98268d4e716682d4a223961ff7b3ed46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a89719f49d745047f03bca80bfff48bd2a98268d4e716682d4a223961ff7b3ed46" kindref="member">Bit4</ref><sp/>=<sp/>0x0010,</highlight></codeline>
-<codeline lineno="38" refid="a00899_1a89719f49d745047f03bca80bfff48bd2a1595b1dc7056ca6b1d0a681fb1c54c44" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a89719f49d745047f03bca80bfff48bd2a1595b1dc7056ca6b1d0a681fb1c54c44" kindref="member">Bit5</ref><sp/>=<sp/>0x0020,</highlight></codeline>
-<codeline lineno="39" refid="a00899_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" kindref="member">Bit6</ref><sp/>=<sp/>0x0040,</highlight></codeline>
-<codeline lineno="40" refid="a00899_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" kindref="member">Bit7</ref><sp/>=<sp/>0x0080,</highlight></codeline>
-<codeline lineno="41" refid="a00899_1a89719f49d745047f03bca80bfff48bd2aadd805ed9e083686a8c569e80dcc38a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a89719f49d745047f03bca80bfff48bd2aadd805ed9e083686a8c569e80dcc38a8" kindref="member">Bit8</ref><sp/>=<sp/>0x0100,</highlight></codeline>
-<codeline lineno="42" refid="a00899_1a89719f49d745047f03bca80bfff48bd2a263e88c74e7f1a10437657aeb1351029" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a89719f49d745047f03bca80bfff48bd2a263e88c74e7f1a10437657aeb1351029" kindref="member">Bit9</ref><sp/>=<sp/>0x0200,</highlight></codeline>
-<codeline lineno="43" refid="a00899_1a89719f49d745047f03bca80bfff48bd2ab2a082f07330f8fc6c5153790cd17105" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a89719f49d745047f03bca80bfff48bd2ab2a082f07330f8fc6c5153790cd17105" kindref="member">Bit10</ref><sp/>=<sp/>0x0400,</highlight></codeline>
-<codeline lineno="44" refid="a00899_1a89719f49d745047f03bca80bfff48bd2a9d3016c29dafb97ff8d2c5398dbd8378" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a89719f49d745047f03bca80bfff48bd2a9d3016c29dafb97ff8d2c5398dbd8378" kindref="member">Bit11</ref><sp/>=<sp/>0x0800,</highlight></codeline>
-<codeline lineno="45" refid="a00899_1a89719f49d745047f03bca80bfff48bd2af9d278a7553cfe77cccec3401041f75d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a89719f49d745047f03bca80bfff48bd2af9d278a7553cfe77cccec3401041f75d" kindref="member">Bit12</ref><sp/>=<sp/>0x1000,</highlight></codeline>
-<codeline lineno="46" refid="a00899_1a89719f49d745047f03bca80bfff48bd2aa8948efac0cff6eb7b03915be33594b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a89719f49d745047f03bca80bfff48bd2aa8948efac0cff6eb7b03915be33594b2" kindref="member">Bit13</ref><sp/>=<sp/>0x2000,</highlight></codeline>
-<codeline lineno="47" refid="a00899_1a89719f49d745047f03bca80bfff48bd2a10ace9286e9376c3e786ad829115ec61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a89719f49d745047f03bca80bfff48bd2a10ace9286e9376c3e786ad829115ec61" kindref="member">Bit14</ref><sp/>=<sp/>0x4000,</highlight></codeline>
-<codeline lineno="48" refid="a00899_1a89719f49d745047f03bca80bfff48bd2aa92c380b2c00042b5105ede3c75f8d09" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00899_1a89719f49d745047f03bca80bfff48bd2aa92c380b2c00042b5105ede3c75f8d09" kindref="member">Bit15</ref><sp/>=<sp/>0x8000,</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51" refid="a00977" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal"><ref refid="a00977" kindref="compound">bit16_t</ref></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="53" refid="a00977_1af97e65eb3fc9302737f3fa2d46df9943" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><ref refid="a00977_1af97e65eb3fc9302737f3fa2d46df9943" kindref="member">s</ref>;</highlight></codeline>
-<codeline lineno="54" refid="a00977_1ad572825821646ad93481854ef8e6dcd7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01373" kindref="compound">uint8_t</ref><sp/><sp/><ref refid="a00977_1ad572825821646ad93481854ef8e6dcd7" kindref="member">b</ref>[2];</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56" refid="a00977_1a0b55fad3b0e70d5191e9069494c4c2f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>size_t()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="57"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00977_1af97e65eb3fc9302737f3fa2d46df9943" kindref="member">s</ref>;</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62" refid="a00981" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal"><ref refid="a00981" kindref="compound">bit32_t</ref></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="64" refid="a00981_1ac1778e20e9d9bd65e4c15b915504b429" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="a00981_1ac1778e20e9d9bd65e4c15b915504b429" kindref="member">i</ref>;</highlight></codeline>
-<codeline lineno="65" refid="a00981_1a028e84a90747978a00bff7cb482fce4c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><ref refid="a00981_1a028e84a90747978a00bff7cb482fce4c" kindref="member">s</ref>[2];</highlight></codeline>
-<codeline lineno="66" refid="a00981_1ac6d57cbc5e709599e951462f13947201" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01373" kindref="compound">uint8_t</ref><sp/><sp/><ref refid="a00981_1ac6d57cbc5e709599e951462f13947201" kindref="member">b</ref>[4];</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68" refid="a00981_1a07ce6611b56c2dd8ee291ce66485d2ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>size_t()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="69"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00981_1ac1778e20e9d9bd65e4c15b915504b429" kindref="member">i</ref>;</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74" refid="a00985" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal"><ref refid="a00985" kindref="compound">bit64_t</ref></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="76" refid="a00985_1a741dc95ddcf042b70e2747571d95cd82" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="a00985_1a741dc95ddcf042b70e2747571d95cd82" kindref="member">ll</ref>;</highlight></codeline>
-<codeline lineno="77" refid="a00985_1a1689837bb7b76d3b28fd1e9c7892f3a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="a00985_1a1689837bb7b76d3b28fd1e9c7892f3a4" kindref="member">i</ref>[2];</highlight></codeline>
-<codeline lineno="78" refid="a00985_1af415893333942f41fb4c4ad619083a16" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><ref refid="a00985_1af415893333942f41fb4c4ad619083a16" kindref="member">s</ref>[4];</highlight></codeline>
-<codeline lineno="79" refid="a00985_1a768ed5502c17271b965e340e048ae5c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01373" kindref="compound">uint8_t</ref><sp/><sp/><ref refid="a00985_1a768ed5502c17271b965e340e048ae5c5" kindref="member">b</ref>[8];</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81" refid="a00985_1a19a8c3d82a6fe7bd190d1a663cf99211" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>size_t()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="82"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00985_1a741dc95ddcf042b70e2747571d95cd82" kindref="member">ll</ref>;</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">8_t<sp/>Count&gt;</highlight></codeline>
-<codeline lineno="88" refid="a00989" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a00989" kindref="compound">BitUtils</ref></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00989_1aeb4746b405570c6d38aebba1532c324c" kindref="member">unpack</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>value,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>array);</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00989_1aeb4746b405570c6d38aebba1532c324c" kindref="member">unpack</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>value,<sp/><ref refid="a01373" kindref="compound">uint8_t</ref>*<sp/>array);</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>T<sp/><ref refid="a00989_1ac31a6aa587c55f64f6573492652e1730" kindref="member">pack</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01373" kindref="compound">uint8_t</ref>*<sp/>array);</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>T<sp/><ref refid="a00989_1ac31a6aa587c55f64f6573492652e1730" kindref="member">pack</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>array);</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>T<sp/><ref refid="a00989_1ac31a6aa587c55f64f6573492652e1730" kindref="member">pack</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>array);</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">8_t<sp/>N&gt;</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>T<sp/><ref refid="a00989_1ac31a6aa587c55f64f6573492652e1730" kindref="member">pack</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>array[N]);</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>T<sp/><ref refid="a00989_1ae3a8aa786d194eb21dc8a71b3d8de9af" kindref="member">extract</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>in,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>lo,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>hi);</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"></highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00989_1a62cc15c18ccdd215a9ef08e8a8021564" kindref="member">getBit</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>bits,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>index);</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"></highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00989_1ab1a8c5970c7a58f399c82c96c872a920" kindref="member">setBit</ref>(T&amp;<sp/>bits,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>index);</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00989_1a8de689aae4b89fd7d06c770aed087e37" kindref="member">assignBit</ref>(T&amp;<sp/>bits,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>index);</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00989_1adc5cf65b1d1ca5d3562cb57711d78ce9" kindref="member">clearBit</ref>(T&amp;<sp/>bits,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>index);</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00989_1a266db4b38d31abd421bdb6356b6d8f6a" kindref="member">applyBit</ref>(T&amp;<sp/>bits,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>index,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"></highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00989_1ad5c0a4604c2e2f1f84cfc932d703996f" kindref="member">printBit</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>bits);</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">8_t<sp/>Count&gt;</highlight></codeline>
-<codeline lineno="120" refid="a00989_1aeb4746b405570c6d38aebba1532c324c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00989_1aeb4746b405570c6d38aebba1532c324c" kindref="member">BitUtils&lt;T, Count&gt;::unpack</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>value,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>array)</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="a01373" kindref="compound">uint8_t</ref><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>Count;<sp/>++i)</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array[i]<sp/><sp/><sp/>=<sp/>(value<sp/>&amp;<sp/>1<sp/>&lt;&lt;<sp/>i)<sp/>!=<sp/>0;</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"></highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">8_t<sp/>Count&gt;</highlight></codeline>
-<codeline lineno="127" refid="a00989_1a8c82269dbbcc05e6a5db4bba94b32c98" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00989_1aeb4746b405570c6d38aebba1532c324c" kindref="member">BitUtils&lt;T, Count&gt;::unpack</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>value,<sp/><ref refid="a01373" kindref="compound">uint8_t</ref>*<sp/>array)</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="a01373" kindref="compound">uint8_t</ref><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>Count;<sp/>++i)</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array[i]<sp/><sp/><sp/>=<sp/>(value<sp/>&amp;<sp/>1<sp/>&lt;&lt;<sp/>i)<sp/>!=<sp/>0;</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"></highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">8_t<sp/>Count&gt;</highlight></codeline>
-<codeline lineno="134" refid="a00989_1ac31a6aa587c55f64f6573492652e1730" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="a00989_1ac31a6aa587c55f64f6573492652e1730" kindref="member">BitUtils&lt;T, Count&gt;::pack</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01373" kindref="compound">uint8_t</ref>*<sp/>array)</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>ret<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="a01373" kindref="compound">uint8_t</ref><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>Count;<sp/>++i)</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array[i])</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>|=<sp/>1<sp/>&lt;&lt;<sp/>i;</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"></highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">8_t<sp/>Count&gt;</highlight></codeline>
-<codeline lineno="146" refid="a00989_1a15ca6f92f9fcfddbec6acfc088207580" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="a00989_1ac31a6aa587c55f64f6573492652e1730" kindref="member">BitUtils&lt;T, Count&gt;::pack</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>array)</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>ret<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="a01373" kindref="compound">uint8_t</ref><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>Count;<sp/>++i)</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array[i])</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>|=<sp/>1<sp/>&lt;&lt;<sp/>(Count<sp/>-<sp/>1<sp/>-<sp/>i);</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"></highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">8_t<sp/>Count&gt;</highlight></codeline>
-<codeline lineno="158" refid="a00989_1a6fd7a5127f6124328bcdce2c4f8f3746" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="a00989_1ac31a6aa587c55f64f6573492652e1730" kindref="member">BitUtils&lt;T, Count&gt;::pack</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>array)</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>ret<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="a01373" kindref="compound">uint8_t</ref><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>Count;<sp/>++i)</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array[i])</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>|=<sp/>1<sp/>&lt;&lt;<sp/>i;</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"></highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">8_t<sp/>Count&gt;</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">8_t<sp/>N&gt;</highlight></codeline>
-<codeline lineno="171" refid="a00989_1a8f720f0a46647449b7ad1d440bc7bcc0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="a00989_1ac31a6aa587c55f64f6573492652e1730" kindref="member">BitUtils&lt;T, Count&gt;::pack</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>array[N])</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CHECK_INT_BOUNDS</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(N<sp/>&gt;=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T)<sp/>*<sp/>8)</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>IndexOutOfBounds();</highlight></codeline>
-<codeline lineno="176"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>ret<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>N;<sp/>++i)</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array[i])</highlight></codeline>
-<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>|=<sp/>1<sp/>&lt;&lt;<sp/>i;</highlight></codeline>
-<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"></highlight></codeline>
-<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">8_t<sp/>Count&gt;</highlight></codeline>
-<codeline lineno="187" refid="a00989_1ae3a8aa786d194eb21dc8a71b3d8de9af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="a00989_1ae3a8aa786d194eb21dc8a71b3d8de9af" kindref="member">BitUtils&lt;T, Count&gt;::extract</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>in,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>lo,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>hi)</highlight></codeline>
-<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="189"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CHECK_INT_BOUNDS</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(lo<sp/>&gt;=<sp/>Count<sp/>||<sp/>hi<sp/>&gt;=<sp/>Count)</highlight></codeline>
-<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>IndexOutOfBounds();</highlight></codeline>
-<codeline lineno="192"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>ret<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(T<sp/>i<sp/>=<sp/>lo;<sp/>i<sp/>&lt;=<sp/>hi;<sp/>++i)</highlight></codeline>
-<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>p<sp/>=<sp/>1<sp/>&lt;&lt;<sp/>i;</highlight></codeline>
-<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(in<sp/>&amp;<sp/>p)</highlight></codeline>
-<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>|=<sp/>1<sp/>&lt;&lt;<sp/>(i<sp/>-<sp/>lo);</highlight></codeline>
-<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
-<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="202"><highlight class="normal"></highlight></codeline>
-<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">8_t<sp/>Count&gt;</highlight></codeline>
-<codeline lineno="204" refid="a00989_1a62cc15c18ccdd215a9ef08e8a8021564" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00989_1a62cc15c18ccdd215a9ef08e8a8021564" kindref="member">BitUtils&lt;T, Count&gt;::getBit</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>bits,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>index)</highlight></codeline>
-<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="206"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CHECK_INT_BOUNDS</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>&gt;=<sp/>Count)</highlight></codeline>
-<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>IndexOutOfBounds();</highlight></codeline>
-<codeline lineno="209"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(bits<sp/>&amp;<sp/>1<sp/>&lt;&lt;<sp/>index)<sp/>!=<sp/>0;</highlight></codeline>
-<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="212"><highlight class="normal"></highlight></codeline>
-<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">8_t<sp/>Count&gt;</highlight></codeline>
-<codeline lineno="214" refid="a00989_1ab1a8c5970c7a58f399c82c96c872a920" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00989_1ab1a8c5970c7a58f399c82c96c872a920" kindref="member">BitUtils&lt;T, Count&gt;::setBit</ref>(T&amp;<sp/>bits,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>index)</highlight></codeline>
-<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bits<sp/>|=<sp/>1<sp/>&lt;&lt;<sp/>index;</highlight></codeline>
-<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="218"><highlight class="normal"></highlight></codeline>
-<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">8_t<sp/>Count&gt;</highlight></codeline>
-<codeline lineno="220" refid="a00989_1a8de689aae4b89fd7d06c770aed087e37" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00989_1a8de689aae4b89fd7d06c770aed087e37" kindref="member">BitUtils&lt;T, Count&gt;::assignBit</ref>(T&amp;<sp/>bits,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>index)</highlight></codeline>
-<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="222"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CHECK_INT_BOUNDS</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>&gt;=<sp/>Count)</highlight></codeline>
-<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>IndexOutOfBounds();</highlight></codeline>
-<codeline lineno="225"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bits<sp/>=<sp/>(T)(1<sp/>&lt;&lt;<sp/>index);</highlight></codeline>
-<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="228"><highlight class="normal"></highlight></codeline>
-<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">8_t<sp/>Count&gt;</highlight></codeline>
-<codeline lineno="230" refid="a00989_1adc5cf65b1d1ca5d3562cb57711d78ce9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00989_1adc5cf65b1d1ca5d3562cb57711d78ce9" kindref="member">BitUtils&lt;T, Count&gt;::clearBit</ref>(T&amp;<sp/>bits,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>index)</highlight></codeline>
-<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="232"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CHECK_INT_BOUNDS</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>&gt;=<sp/>Count)</highlight></codeline>
-<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>IndexOutOfBounds();</highlight></codeline>
-<codeline lineno="235"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bits<sp/>&amp;=<sp/>~(1<sp/>&lt;&lt;<sp/>index);</highlight></codeline>
-<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="238"><highlight class="normal"></highlight></codeline>
-<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">8_t<sp/>Count&gt;</highlight></codeline>
-<codeline lineno="240" refid="a00989_1a266db4b38d31abd421bdb6356b6d8f6a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00989_1a266db4b38d31abd421bdb6356b6d8f6a" kindref="member">BitUtils&lt;T, Count&gt;::applyBit</ref>(T&amp;<sp/>bits,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>index,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>value)</highlight></codeline>
-<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value<sp/>?<sp/>setBit(bits,<sp/>index)<sp/>:<sp/>clearBit(bits,<sp/>index);</highlight></codeline>
-<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="244"><highlight class="normal"></highlight></codeline>
-<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">8_t<sp/>Count&gt;</highlight></codeline>
-<codeline lineno="246" refid="a00989_1ad5c0a4604c2e2f1f84cfc932d703996f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00989_1ad5c0a4604c2e2f1f84cfc932d703996f" kindref="member">BitUtils&lt;T, Count&gt;::printBit</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>bits)</highlight></codeline>
-<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00897_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref><sp/>os;</highlight></codeline>
-<codeline lineno="249"><highlight class="normal"></highlight></codeline>
-<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>v<sp/>=<sp/>(size_t)bits;</highlight></codeline>
-<codeline lineno="251"><highlight class="normal"></highlight></codeline>
-<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::bitset&lt;Count&gt;<sp/>b(v);</highlight></codeline>
-<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/>b<sp/>&lt;&lt;<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="charliteral">&apos;|&apos;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>v;</highlight></codeline>
-<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01253_1aa75558c74eafde74be9d33818a79a3fe" kindref="member">Console::writeLine</ref>(os);</highlight></codeline>
-<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="256"><highlight class="normal"></highlight></codeline>
-<codeline lineno="257" refid="a00899_1ab9cb4d5d1bc25154100e519567e6c702" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="a00989" kindref="compound">B8</ref><sp/>=<sp/><ref refid="a00989" kindref="compound">BitUtils&lt;uint8_t, 8&gt;</ref>;</highlight></codeline>
-<codeline lineno="258" refid="a00899_1a8619ab45f63c5c97d4b5430487adbaf2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="a00989" kindref="compound">B16</ref><sp/>=<sp/><ref refid="a00989" kindref="compound">BitUtils&lt;uint16_t, 16&gt;</ref>;</highlight></codeline>
-<codeline lineno="259"><highlight class="normal"></highlight></codeline>
-<codeline lineno="260" refid="a00900" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Gates</highlight></codeline>
-<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="262" refid="a00900_1ada9a46218595da6aec64c80462c5c48f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00900_1ada9a46218595da6aec64c80462c5c48f" kindref="member">NAnd</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>b)</highlight></codeline>
-<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!(a<sp/>&amp;&amp;<sp/>b);</highlight></codeline>
-<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="266"><highlight class="normal"></highlight></codeline>
-<codeline lineno="267" refid="a00900_1a47f1937b5e8e2f1f55c52ece2e236d9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00900_1a47f1937b5e8e2f1f55c52ece2e236d9a" kindref="member">Not</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>a)</highlight></codeline>
-<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00900_1ada9a46218595da6aec64c80462c5c48f" kindref="member">NAnd</ref>(a,<sp/>a);</highlight></codeline>
-<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="271"><highlight class="normal"></highlight></codeline>
-<codeline lineno="272" refid="a00900_1ae497dca5e03287bf0b47755e4727966c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00900_1ae497dca5e03287bf0b47755e4727966c" kindref="member">And</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>b)</highlight></codeline>
-<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>c<sp/>=<sp/><ref refid="a00900_1ada9a46218595da6aec64c80462c5c48f" kindref="member">NAnd</ref>(a,<sp/>b);</highlight></codeline>
-<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00900_1ada9a46218595da6aec64c80462c5c48f" kindref="member">NAnd</ref>(c,<sp/>c);</highlight></codeline>
-<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="277"><highlight class="normal"></highlight></codeline>
-<codeline lineno="278" refid="a00900_1a498cc0f1f89eba40c58e757c83ef9efc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00900_1a498cc0f1f89eba40c58e757c83ef9efc" kindref="member">And3</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>b,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>c)</highlight></codeline>
-<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00900_1ae497dca5e03287bf0b47755e4727966c" kindref="member">And</ref>(a,<sp/><ref refid="a00900_1ae497dca5e03287bf0b47755e4727966c" kindref="member">And</ref>(b,<sp/>c));</highlight></codeline>
-<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="282"><highlight class="normal"></highlight></codeline>
-<codeline lineno="283" refid="a00900_1a5251fc609c60aa33cc653dc5bbfa39d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00900_1a5251fc609c60aa33cc653dc5bbfa39d4" kindref="member">Or</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>b)</highlight></codeline>
-<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00900_1ada9a46218595da6aec64c80462c5c48f" kindref="member">NAnd</ref>(<ref refid="a00900_1a47f1937b5e8e2f1f55c52ece2e236d9a" kindref="member">Not</ref>(a),<sp/><ref refid="a00900_1a47f1937b5e8e2f1f55c52ece2e236d9a" kindref="member">Not</ref>(b));</highlight></codeline>
-<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="287"><highlight class="normal"></highlight></codeline>
-<codeline lineno="288" refid="a00900_1a6acffbc2c6a453d2d4f856180395cf24" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00900_1a6acffbc2c6a453d2d4f856180395cf24" kindref="member">Or3</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>b,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>c)</highlight></codeline>
-<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00900_1a5251fc609c60aa33cc653dc5bbfa39d4" kindref="member">Or</ref>(a,<sp/><ref refid="a00900_1a5251fc609c60aa33cc653dc5bbfa39d4" kindref="member">Or</ref>(b,<sp/>c));</highlight></codeline>
-<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="292"><highlight class="normal"></highlight></codeline>
-<codeline lineno="293" refid="a00900_1a0a9a77de5bb6d99ccb690718019659b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00900_1a0a9a77de5bb6d99ccb690718019659b6" kindref="member">NOr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>b)</highlight></codeline>
-<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00900_1a47f1937b5e8e2f1f55c52ece2e236d9a" kindref="member">Not</ref>(<ref refid="a00900_1ada9a46218595da6aec64c80462c5c48f" kindref="member">NAnd</ref>(<ref refid="a00900_1a47f1937b5e8e2f1f55c52ece2e236d9a" kindref="member">Not</ref>(a),<sp/><ref refid="a00900_1a47f1937b5e8e2f1f55c52ece2e236d9a" kindref="member">Not</ref>(b)));</highlight></codeline>
-<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="297"><highlight class="normal"></highlight></codeline>
-<codeline lineno="298" refid="a00900_1a002092c1145c7301b06c0a0cab9fc889" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00900_1a002092c1145c7301b06c0a0cab9fc889" kindref="member">XOr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>b)</highlight></codeline>
-<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>c<sp/>=<sp/><ref refid="a00900_1ada9a46218595da6aec64c80462c5c48f" kindref="member">NAnd</ref>(a,<sp/>b);</highlight></codeline>
-<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00900_1ada9a46218595da6aec64c80462c5c48f" kindref="member">NAnd</ref>(<ref refid="a00900_1ada9a46218595da6aec64c80462c5c48f" kindref="member">NAnd</ref>(a,<sp/>c),<sp/><ref refid="a00900_1ada9a46218595da6aec64c80462c5c48f" kindref="member">NAnd</ref>(c,<sp/>b));</highlight></codeline>
-<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="303"><highlight class="normal"></highlight></codeline>
-<codeline lineno="304" refid="a00900_1a6c50ba4cc3bfcf7d92a1628e357c19b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00900_1a6c50ba4cc3bfcf7d92a1628e357c19b1" kindref="member">Mux</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>b,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>s)</highlight></codeline>
-<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00900_1a5251fc609c60aa33cc653dc5bbfa39d4" kindref="member">Or</ref>(<ref refid="a00900_1ae497dca5e03287bf0b47755e4727966c" kindref="member">And</ref>(a,<sp/><ref refid="a00900_1a47f1937b5e8e2f1f55c52ece2e236d9a" kindref="member">Not</ref>(s)),<sp/><ref refid="a00900_1ae497dca5e03287bf0b47755e4727966c" kindref="member">And</ref>(b,<sp/>s));</highlight></codeline>
-<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Gates</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="309"><highlight class="normal"></highlight></codeline>
-<codeline lineno="310" refid="a00901" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">BitwiseGates</highlight></codeline>
-<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="313" refid="a00901_1ae6b0c9d01ef62c0bc80a18accd7d6ca9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/><ref refid="a00901_1ae6b0c9d01ef62c0bc80a18accd7d6ca9" kindref="member">NAnd</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>b)</highlight></codeline>
-<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>~(a<sp/>&amp;<sp/>b);</highlight></codeline>
-<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="317"><highlight class="normal"></highlight></codeline>
-<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="319" refid="a00901_1a84d09455d2c5d520a37804d10bcedef4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/><ref refid="a00901_1a84d09455d2c5d520a37804d10bcedef4" kindref="member">Not</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>a)</highlight></codeline>
-<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a01069" kindref="compound">NAnd&lt;T&gt;</ref>(a,<sp/>a);</highlight></codeline>
-<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="323"><highlight class="normal"></highlight></codeline>
-<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="325" refid="a00901_1a84362f3ebaddfd42c327c37f29d808d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/><ref refid="a00901_1a84362f3ebaddfd42c327c37f29d808d5" kindref="member">And</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>b)</highlight></codeline>
-<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a01069" kindref="compound">NAnd&lt;T&gt;</ref>(<ref refid="a01069" kindref="compound">NAnd&lt;T&gt;</ref>(a,<sp/>b),<sp/><ref refid="a01069" kindref="compound">NAnd&lt;T&gt;</ref>(a,<sp/>b));</highlight></codeline>
-<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="329"><highlight class="normal"></highlight></codeline>
-<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="331" refid="a00901_1aa46e2bc824542f8c88678197e54892b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/><ref refid="a00901_1aa46e2bc824542f8c88678197e54892b5" kindref="member">Or</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>b)</highlight></codeline>
-<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a01069" kindref="compound">NAnd&lt;T&gt;</ref>(<ref refid="a01077" kindref="compound">Not&lt;T&gt;</ref>(a),<sp/><ref refid="a01077" kindref="compound">Not&lt;T&gt;</ref>(b));</highlight></codeline>
-<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="335"><highlight class="normal"></highlight></codeline>
-<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="337" refid="a00901_1a3118052ddcc3b5956dccfa1c9cd50528" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/><ref refid="a00901_1a3118052ddcc3b5956dccfa1c9cd50528" kindref="member">NOr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>b)</highlight></codeline>
-<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a01077" kindref="compound">Not&lt;T&gt;</ref>(<ref refid="a01069" kindref="compound">NAnd&lt;T&gt;</ref>(<ref refid="a01069" kindref="compound">NAnd&lt;T&gt;</ref>(a,<sp/>a),<sp/><ref refid="a01069" kindref="compound">NAnd&lt;T&gt;</ref>(b,<sp/>b)));</highlight></codeline>
-<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="341"><highlight class="normal"></highlight></codeline>
-<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="343" refid="a00901_1a87f9b215940bce4b2d6ae012557b3fdf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/><ref refid="a00901_1a87f9b215940bce4b2d6ae012557b3fdf" kindref="member">XOr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>b)</highlight></codeline>
-<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>c<sp/>=<sp/><ref refid="a01069" kindref="compound">NAnd&lt;T&gt;</ref>(a,<sp/>b);</highlight></codeline>
-<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a01069" kindref="compound">NAnd&lt;T&gt;</ref>(<ref refid="a01069" kindref="compound">NAnd&lt;T&gt;</ref>(a,<sp/>c),<sp/><ref refid="a01069" kindref="compound">NAnd&lt;T&gt;</ref>(c,<sp/>b));</highlight></codeline>
-<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="348"><highlight class="normal"></highlight></codeline>
-<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="350" refid="a00901_1ad70c68df991a03702b6e44507ff2a0e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/><ref refid="a00901_1ad70c68df991a03702b6e44507ff2a0e1" kindref="member">Mux</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>b,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>s)</highlight></codeline>
-<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a01085" kindref="compound">Or&lt;T&gt;</ref>(<ref refid="a00965" kindref="compound">And&lt;T&gt;</ref>(a,<sp/><ref refid="a01077" kindref="compound">Not&lt;T&gt;</ref>(s)),<sp/><ref refid="a00965" kindref="compound">And&lt;T&gt;</ref>(b,<sp/>s));</highlight></codeline>
-<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>BitwiseGates</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="355"><highlight class="normal">}<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Chip.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00908" kindref="compound">Hack::Chips</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27" refid="a00978" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a00978" kindref="compound">And16</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="a01002" kindref="compound" tooltip="Chip is the base class for all chips defined in this system. It uses a template integer for the _bits...">Chip</ref>&lt;bit64_t,<sp/>64&gt;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>evaluate();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00978_1a243bd3b731c1e40c85af69caff6bad22" kindref="member">And16</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00978_1a2a6c1af456a9034c224ada81ff269f8d" kindref="member">setA</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01370" kindref="compound">uint16_t</ref>&amp;<sp/>a);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00978_1ab9c4464952869595657d791a523c3780" kindref="member">setB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01370" kindref="compound">uint16_t</ref>&amp;<sp/>b);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01370" kindref="compound">uint16_t</ref><sp/><ref refid="a00978_1a762408cdba407e959bb97cf4a96e8294" kindref="member">getOut</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Chips/BitUtils.h"/>
+    <location file="Source/Chips/And16.h"/>
   </compounddef>
 </doxygen>

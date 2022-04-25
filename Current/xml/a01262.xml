@@ -1,144 +1,243 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01262" kind="class" language="C++" prot="public">
-    <compoundname>Hack::IndexCache</compoundname>
-    <includes local="no">Source/Utils/IndexCache.h</includes>
-    <templateparamlist>
-      <param>
-        <type>typename</type>
-        <declname>T</declname>
-        <defname>T</defname>
-      </param>
-    </templateparamlist>
-      <sectiondef kind="public-type">
-      <memberdef kind="typedef" id="a01262_1a35bba19b55830e0f1e0abbf57e4857eb" prot="public" static="no">
-        <type>std::vector&lt; T &gt;</type>
-        <definition>typedef std::vector&lt;T&gt; Hack::IndexCache&lt; T &gt;::Array</definition>
-        <argsstring></argsstring>
-        <name>Array</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/IndexCache.h" line="34" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="34" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="a01262_1a58d643c7021a8e432c0cb50c34a701e0" prot="public" static="no">
-        <type>std::unordered_map&lt; T, size_t &gt;</type>
-        <definition>typedef std::unordered_map&lt;T, size_t&gt; Hack::IndexCache&lt; T &gt;::Table</definition>
-        <argsstring></argsstring>
-        <name>Table</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/IndexCache.h" line="33" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="33" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="a01262_1a07eff8e764a122085d1eff7fc144136d" prot="private" static="no" mutable="no">
-        <type><ref refid="a01262_1a58d643c7021a8e432c0cb50c34a701e0" kindref="member">Table</ref></type>
-        <definition>Table Hack::IndexCache&lt; T &gt;::_elements</definition>
-        <argsstring></argsstring>
-        <name>_elements</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/IndexCache.h" line="37" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="37" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01262_1af96cab70bed98e3790541fd8a9298f1a" prot="private" static="no" mutable="no">
-        <type><ref refid="a01262_1a35bba19b55830e0f1e0abbf57e4857eb" kindref="member">Array</ref></type>
-        <definition>Array Hack::IndexCache&lt; T &gt;::_list</definition>
-        <argsstring></argsstring>
-        <name>_list</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/IndexCache.h" line="38" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="38" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01262_1ab01608c27db3ac4be90bf52ce1d4c0c3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+    <compoundname>Hack::Console</compoundname>
+    <includes local="no">Source/Utils/Console.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="a01262_1a24edb98095550871d32879f324e39e19" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::IndexCache&lt; T &gt;::at</definition>
-        <argsstring>(T &amp;dest, const size_t &amp;index) const</argsstring>
-        <name>at</name>
-        <param>
-          <type>T &amp;</type>
-          <declname>dest</declname>
-        </param>
-        <param>
-          <type>const size_t &amp;</type>
-          <declname>index</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/IndexCache.h" line="59" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="59" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="a01262_1a902ffa3068422edb3fee0b4cdaabff49" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>const T &amp;</type>
-        <definition>const T&amp; Hack::IndexCache&lt; T &gt;::at</definition>
-        <argsstring>(const size_t &amp;index) const</argsstring>
-        <name>at</name>
-        <param>
-          <type>const size_t &amp;</type>
-          <declname>index</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/IndexCache.h" line="67" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="67" bodyend="73"/>
-      </memberdef>
-      <memberdef kind="function" id="a01262_1a937eb5cd44aa067611509f5559f09425" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>Array::const_iterator</type>
-        <definition>Array::const_iterator Hack::IndexCache&lt; T &gt;::begin</definition>
-        <argsstring>() const</argsstring>
-        <name>begin</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/IndexCache.h" line="106" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="106" bodyend="109"/>
-      </memberdef>
-      <memberdef kind="function" id="a01262_1af9003f1c606faeb1ed81da3e6724afdf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::IndexCache&lt; T &gt;::clear</definition>
+        <definition>void Hack::Console::debugBreak</definition>
         <argsstring>()</argsstring>
-        <name>clear</name>
+        <name>debugBreak</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/IndexCache.h" line="100" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="100" bodyend="104"/>
+        <location file="Source/Utils/Console.h" line="148" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="228" bodyend="234"/>
       </memberdef>
-      <memberdef kind="function" id="a01262_1a677054e7114594776d14288e2a7fb6f4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Hack::IndexCache&lt; T &gt;::contains</definition>
-        <argsstring>(const size_t &amp;index) const</argsstring>
-        <name>contains</name>
+      <memberdef kind="function" id="a01262_1a9f1670e1ae36c8eeabff7b1b7b0216d0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Console::read</definition>
+        <argsstring>()</argsstring>
+        <name>read</name>
+        <briefdescription>
+<para>Blocks until a character is pressed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Console.h" line="58" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="115" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1a4aea7b1c8d663a45e907fbeb8c9073bc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Console::read</definition>
+        <argsstring>(int8_t &amp;v)</argsstring>
+        <name>read</name>
         <param>
-          <type>const size_t &amp;</type>
-          <declname>index</declname>
+          <type>int8_t &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Reads a single character from stdin. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination character.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Console.h" line="64" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="120" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1a06f3a79594e7054b8aac2d7e9bf90044" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Console::read</definition>
+        <argsstring>(uint8_t &amp;v)</argsstring>
+        <name>read</name>
+        <param>
+          <type><ref refid="a01382" kindref="compound">uint8_t</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Reads a single character from stdin. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination character.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Console.h" line="70" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="125" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1a6128ded1482f4ca7602aea2abd95c126" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Console::read</definition>
+        <argsstring>(int16_t &amp;v)</argsstring>
+        <name>read</name>
+        <param>
+          <type>int16_t &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Reads a single short from stdin. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination memory.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Console.h" line="76" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="130" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1ab6d7cdedaf97894f7eb49c5555d26206" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Console::read</definition>
+        <argsstring>(uint16_t &amp;v)</argsstring>
+        <name>read</name>
+        <param>
+          <type><ref refid="a01370" kindref="compound">uint16_t</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Reads a single unsigned short from stdin. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination memory.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Console.h" line="82" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="135" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1a996ef0fae332871838054096a0b93599" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Console::read</definition>
+        <argsstring>(int32_t &amp;v)</argsstring>
+        <name>read</name>
+        <param>
+          <type>int32_t &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Reads a single int from stdin. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination memory.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Console.h" line="88" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="140" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1a628012e2826450df083498b8c15f8389" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Console::read</definition>
+        <argsstring>(uint32_t &amp;v)</argsstring>
+        <name>read</name>
+        <param>
+          <type>uint32_t &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Reads a single unsigned int from stdin. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination memory.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Console.h" line="94" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="145" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1af6acc907e42505cb46e74428abe1192a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Console::read</definition>
+        <argsstring>(int64_t &amp;v)</argsstring>
+        <name>read</name>
+        <param>
+          <type>int64_t &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Reads a single 64bit integer from stdin. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination memory.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Console.h" line="100" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="150" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1a84d8734d29f8438d84ece8849bf11fc6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Console::read</definition>
+        <argsstring>(uint64_t &amp;v)</argsstring>
+        <name>read</name>
+        <param>
+          <type>uint64_t &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Reads a single unsigned 64bit integer from stdin. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination memory.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Console.h" line="106" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="155" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1ab6cf180d585b20876761979b270536d8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Console::read</definition>
+        <argsstring>(String &amp;v)</argsstring>
+        <name>read</name>
+        <param>
+          <type><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>v</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -146,16 +245,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/IndexCache.h" line="75" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="75" bodyend="78"/>
+        <location file="Source/Utils/Console.h" line="108" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="160" bodyend="163"/>
       </memberdef>
-      <memberdef kind="function" id="a01262_1a0f40060d06258d8985ed3511aa7a5728" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Hack::IndexCache&lt; T &gt;::contains</definition>
-        <argsstring>(const T &amp;value) const</argsstring>
-        <name>contains</name>
+      <memberdef kind="function" id="a01262_1a5c033a63b623fbd23d3eef4d8075ee86" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Console::readLine</definition>
+        <argsstring>(String &amp;v)</argsstring>
+        <name>readLine</name>
         <param>
-          <type>const T &amp;</type>
-          <declname>value</declname>
+          <type><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>v</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -163,29 +262,31 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/IndexCache.h" line="80" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="80" bodyend="84"/>
+        <location file="Source/Utils/Console.h" line="110" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="165" bodyend="168"/>
       </memberdef>
-      <memberdef kind="function" id="a01262_1a061f94f9c3f4b68039a653a682424d4c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>Array::const_iterator</type>
-        <definition>Array::const_iterator Hack::IndexCache&lt; T &gt;::end</definition>
-        <argsstring>() const</argsstring>
-        <name>end</name>
+      <memberdef kind="function" id="a01262_1a2687a8f8471d2a44f8d6bf1f51626dd0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Console::resetColor</definition>
+        <argsstring>()</argsstring>
+        <name>resetColor</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/IndexCache.h" line="111" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="111" bodyend="114"/>
+        <location file="Source/Utils/Console.h" line="116" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="180" bodyend="191"/>
+        <references refid="a00906_1a36cd9148d33ac143e1ab550c0cc95422aad0499502630b8e0c45c07d85d8dd477" compoundref="a00815" startline="45">Hack::CS_WHITE</references>
+        <references refid="a00906_1a36cd9148d33ac143e1ab550c0cc95422ac12944af8b48da06fea92305e07d5a86" compoundref="a00815" startline="30">Hack::CS_BLACK</references>
       </memberdef>
-      <memberdef kind="function" id="a01262_1a9ed2e1e8ac63d2383b14f2a1f9fd3247" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>size_t</type>
-        <definition>size_t Hack::IndexCache&lt; T &gt;::get</definition>
-        <argsstring>(const T &amp;value) const</argsstring>
-        <name>get</name>
+      <memberdef kind="function" id="a01262_1a79a6f43eebb7245d9bdcd3a0697a60e1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Console::setBackground</definition>
+        <argsstring>(ConsoleColor col)</argsstring>
+        <name>setBackground</name>
         <param>
-          <type>const T &amp;</type>
-          <declname>value</declname>
+          <type><ref refid="a00906_1a36cd9148d33ac143e1ab550c0cc95422" kindref="member">ConsoleColor</ref></type>
+          <declname>col</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -193,16 +294,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/IndexCache.h" line="86" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="86" bodyend="93"/>
+        <location file="Source/Utils/Console.h" line="114" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="175" bodyend="178"/>
       </memberdef>
-      <memberdef kind="function" id="a01262_1a049a43563b3a4a2b23e47a4da2425c3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>size_t</type>
-        <definition>size_t Hack::IndexCache&lt; T &gt;::insert</definition>
-        <argsstring>(const T &amp;value)</argsstring>
-        <name>insert</name>
+      <memberdef kind="function" id="a01262_1a70f7cbd759456099caeeb4c4486bd6fe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Console::setForeground</definition>
+        <argsstring>(ConsoleColor col)</argsstring>
+        <name>setForeground</name>
         <param>
-          <type>const T &amp;</type>
-          <declname>value</declname>
+          <type><ref refid="a00906_1a36cd9148d33ac143e1ab550c0cc95422" kindref="member">ConsoleColor</ref></type>
+          <declname>col</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -210,42 +311,202 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/IndexCache.h" line="41" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="41" bodyend="57"/>
+        <location file="Source/Utils/Console.h" line="112" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="170" bodyend="173"/>
       </memberdef>
-      <memberdef kind="function" id="a01262_1a1c40fbac04597a5f4255de48cc2830c9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>size_t</type>
-        <definition>size_t Hack::IndexCache&lt; T &gt;::size</definition>
-        <argsstring>() const</argsstring>
-        <name>size</name>
+      <memberdef kind="function" id="a01262_1a8c963f238cccb5daee6ea66f242243cf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Console::write</definition>
+        <argsstring>(const String &amp;str)</argsstring>
+        <name>write</name>
+        <param>
+          <type>const <ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/IndexCache.h" line="95" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="95" bodyend="98"/>
+        <location file="Source/Utils/Console.h" line="118" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="193" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1a5cf84c73fa70c41518f806c15b5f7556" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void Hack::Console::write</definition>
+        <argsstring>(const String &amp;str, Args &amp;&amp;...args)</argsstring>
+        <name>write</name>
+        <param>
+          <type>const <ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Console.h" line="136" column="1" bodyfile="Source/Utils/Console.h" bodystart="136" bodyend="142"/>
+        <references refid="a01262_1a8c963f238cccb5daee6ea66f242243cf" compoundref="a00812" startline="193" endline="197">write</references>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1aa1c8c889b2c89af6dc65a0973380f59c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Console::writeError</definition>
+        <argsstring>(const String &amp;str)</argsstring>
+        <name>writeError</name>
+        <param>
+          <type>const <ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Console.h" line="124" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="206" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1a458b34a956e8dedc5b548a72e964b9a6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Console::writeError</definition>
+        <argsstring>(const OutputStringStream &amp;str)</argsstring>
+        <name>writeError</name>
+        <param>
+          <type>const <ref refid="a00906_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Console.h" line="146" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="223" bodyend="226"/>
+        <references refid="a01262_1aa1c8c889b2c89af6dc65a0973380f59c" compoundref="a00812" startline="206" endline="209">writeError</references>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1aa75558c74eafde74be9d33818a79a3fe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Console::writeLine</definition>
+        <argsstring>(const String &amp;str)</argsstring>
+        <name>writeLine</name>
+        <param>
+          <type>const <ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Console.h" line="120" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="199" bodyend="204"/>
+        <references refid="a01262_1a2687a8f8471d2a44f8d6bf1f51626dd0" compoundref="a00812" startline="180" endline="191">resetColor</references>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1a7482ad4d74db3a2fc9db3dc9dad20bab" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Console::writeLine</definition>
+        <argsstring>(const int64_t &amp;i)</argsstring>
+        <name>writeLine</name>
+        <param>
+          <type>const int64_t &amp;</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Console.h" line="122" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="211" bodyend="216"/>
+        <references refid="a01262_1aa75558c74eafde74be9d33818a79a3fe" compoundref="a00812" startline="199" endline="204">writeLine</references>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1a4abd549dea9eb4dd1dd60c4e654104b5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void Hack::Console::writeLine</definition>
+        <argsstring>(const String &amp;str, Args &amp;&amp;...args)</argsstring>
+        <name>writeLine</name>
+        <param>
+          <type>const <ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Console.h" line="127" column="1" bodyfile="Source/Utils/Console.h" bodystart="127" bodyend="133"/>
+        <references refid="a01262_1aa75558c74eafde74be9d33818a79a3fe" compoundref="a00812" startline="199" endline="204">writeLine</references>
+      </memberdef>
+      <memberdef kind="function" id="a01262_1ad324e3f1ec872d0063e302b5940c5ea8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Console::writeLine</definition>
+        <argsstring>(const OutputStringStream &amp;str)</argsstring>
+        <name>writeLine</name>
+        <param>
+          <type>const <ref refid="a00906_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/Console.h" line="144" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="218" bodyend="221"/>
+        <references refid="a01262_1aa75558c74eafde74be9d33818a79a3fe" compoundref="a00812" startline="199" endline="204">writeLine</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Utility console class. Makes use of std::cout, std::cin and std::cerr </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Utils/IndexCache.h" line="31" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="30" bodyend="115"/>
+    <location file="Source/Utils/Console.h" line="53" column="1" bodyfile="Source/Utils/Console.h" bodystart="52" bodyend="149"/>
     <listofallmembers>
-      <member refid="a01262_1a07eff8e764a122085d1eff7fc144136d" prot="private" virt="non-virtual"><scope>Hack::IndexCache</scope><name>_elements</name></member>
-      <member refid="a01262_1af96cab70bed98e3790541fd8a9298f1a" prot="private" virt="non-virtual"><scope>Hack::IndexCache</scope><name>_list</name></member>
-      <member refid="a01262_1a35bba19b55830e0f1e0abbf57e4857eb" prot="public" virt="non-virtual"><scope>Hack::IndexCache</scope><name>Array</name></member>
-      <member refid="a01262_1ab01608c27db3ac4be90bf52ce1d4c0c3" prot="public" virt="non-virtual"><scope>Hack::IndexCache</scope><name>at</name></member>
-      <member refid="a01262_1a902ffa3068422edb3fee0b4cdaabff49" prot="public" virt="non-virtual"><scope>Hack::IndexCache</scope><name>at</name></member>
-      <member refid="a01262_1a937eb5cd44aa067611509f5559f09425" prot="public" virt="non-virtual"><scope>Hack::IndexCache</scope><name>begin</name></member>
-      <member refid="a01262_1af9003f1c606faeb1ed81da3e6724afdf" prot="public" virt="non-virtual"><scope>Hack::IndexCache</scope><name>clear</name></member>
-      <member refid="a01262_1a677054e7114594776d14288e2a7fb6f4" prot="public" virt="non-virtual"><scope>Hack::IndexCache</scope><name>contains</name></member>
-      <member refid="a01262_1a0f40060d06258d8985ed3511aa7a5728" prot="public" virt="non-virtual"><scope>Hack::IndexCache</scope><name>contains</name></member>
-      <member refid="a01262_1a061f94f9c3f4b68039a653a682424d4c" prot="public" virt="non-virtual"><scope>Hack::IndexCache</scope><name>end</name></member>
-      <member refid="a01262_1a9ed2e1e8ac63d2383b14f2a1f9fd3247" prot="public" virt="non-virtual"><scope>Hack::IndexCache</scope><name>get</name></member>
-      <member refid="a01262_1a049a43563b3a4a2b23e47a4da2425c3f" prot="public" virt="non-virtual"><scope>Hack::IndexCache</scope><name>insert</name></member>
-      <member refid="a01262_1a1c40fbac04597a5f4255de48cc2830c9" prot="public" virt="non-virtual"><scope>Hack::IndexCache</scope><name>size</name></member>
-      <member refid="a01262_1a58d643c7021a8e432c0cb50c34a701e0" prot="public" virt="non-virtual"><scope>Hack::IndexCache</scope><name>Table</name></member>
+      <member refid="a01262_1a24edb98095550871d32879f324e39e19" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>debugBreak</name></member>
+      <member refid="a01262_1a9f1670e1ae36c8eeabff7b1b7b0216d0" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>read</name></member>
+      <member refid="a01262_1a4aea7b1c8d663a45e907fbeb8c9073bc" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>read</name></member>
+      <member refid="a01262_1a06f3a79594e7054b8aac2d7e9bf90044" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>read</name></member>
+      <member refid="a01262_1a6128ded1482f4ca7602aea2abd95c126" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>read</name></member>
+      <member refid="a01262_1ab6d7cdedaf97894f7eb49c5555d26206" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>read</name></member>
+      <member refid="a01262_1a996ef0fae332871838054096a0b93599" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>read</name></member>
+      <member refid="a01262_1a628012e2826450df083498b8c15f8389" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>read</name></member>
+      <member refid="a01262_1af6acc907e42505cb46e74428abe1192a" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>read</name></member>
+      <member refid="a01262_1a84d8734d29f8438d84ece8849bf11fc6" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>read</name></member>
+      <member refid="a01262_1ab6cf180d585b20876761979b270536d8" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>read</name></member>
+      <member refid="a01262_1a5c033a63b623fbd23d3eef4d8075ee86" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>readLine</name></member>
+      <member refid="a01262_1a2687a8f8471d2a44f8d6bf1f51626dd0" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>resetColor</name></member>
+      <member refid="a01262_1a79a6f43eebb7245d9bdcd3a0697a60e1" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>setBackground</name></member>
+      <member refid="a01262_1a70f7cbd759456099caeeb4c4486bd6fe" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>setForeground</name></member>
+      <member refid="a01262_1a8c963f238cccb5daee6ea66f242243cf" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>write</name></member>
+      <member refid="a01262_1a5cf84c73fa70c41518f806c15b5f7556" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>write</name></member>
+      <member refid="a01262_1aa1c8c889b2c89af6dc65a0973380f59c" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>writeError</name></member>
+      <member refid="a01262_1a458b34a956e8dedc5b548a72e964b9a6" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>writeError</name></member>
+      <member refid="a01262_1aa75558c74eafde74be9d33818a79a3fe" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>writeLine</name></member>
+      <member refid="a01262_1a7482ad4d74db3a2fc9db3dc9dad20bab" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>writeLine</name></member>
+      <member refid="a01262_1a4abd549dea9eb4dd1dd60c4e654104b5" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>writeLine</name></member>
+      <member refid="a01262_1ad324e3f1ec872d0063e302b5940c5ea8" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>writeLine</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

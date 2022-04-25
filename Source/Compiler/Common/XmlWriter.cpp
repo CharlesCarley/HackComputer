@@ -34,14 +34,15 @@ namespace Hack::Compiler
         Node*              _root;
         OStream*           _stream;
         OutputStringStream _out;
-
-        int _indent;
+        bool               _showLineNr{false};
+        int                _indent;
 
         void openTag(const String& name, Node* node)
         {
             _out << std::setw((size_t)(_indent - 1)) << ' ';
             _out << '<' << name;
-            _out << " Line=\"" << node->line() << "\"";
+            if (_showLineNr)
+                _out << " Line=\"" << node->line() << "\"";
             if (node->subtype() != SubtypeNone)
             {
                 String subTypeName;
@@ -66,11 +67,15 @@ namespace Hack::Compiler
         {
             _out << std::setw((size_t)(_indent - 1)) << ' ';
             _out << '<'
-                << name
-                << " Line=\""
-                << node->line()
-                << "\">"
-                << value;
+                 << name;
+            if (_showLineNr)
+            {
+                _out << " Line=\""
+                     << node->line()
+                     << "\"";
+            }
+
+            _out << '>' << value;
             _out << '<' << '/' << name << '>' << std::endl;
         }
 
@@ -86,9 +91,9 @@ namespace Hack::Compiler
         {
             _out << "<?xml version='1.0'?>" << std::endl;
             _out << "<ClassList Filename=\""
-                << Path(_root->filename()).filename().string()
-                << "\">"
-                << std::endl;
+                 << Path(_root->filename()).filename().string()
+                 << "\">"
+                 << std::endl;
             _indent += Indent;
         }
 
@@ -151,4 +156,4 @@ namespace Hack::Compiler
         XmlWriterImpl impl(_root, &out);
         impl.write();
     }
-} // namespace Hack::Compiler
+}  // namespace Hack::Compiler

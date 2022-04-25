@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01036" kind="class" language="C++" prot="public" final="yes">
-    <compoundname>Hack::Chips::Inc16</compoundname>
-    <basecompoundref refid="a00984" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; uint16_t, 16 &gt;</basecompoundref>
-    <includes local="no">Source/Chips/Inc16.h</includes>
+    <compoundname>Hack::Chips::FullAdder</compoundname>
+    <basecompoundref refid="a00996" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; uint8_t, 8 &gt;</basecompoundref>
+    <includes local="no">Source/Chips/FullAdder.h</includes>
       <sectiondef kind="private-func">
-      <memberdef kind="function" id="a01036_1a4509107c87947ca2724dcaa9fe7021c7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01036_1a9a030af0e029d5956b018dbf2c1bcca6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::Chips::Inc16::evaluate</definition>
+        <definition>void Hack::Chips::FullAdder::evaluate</definition>
         <argsstring>()</argsstring>
         <name>evaluate</name>
         <briefdescription>
@@ -16,46 +16,60 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Inc16.h" line="30" column="1" bodyfile="Source/Chips/Inc16.cpp" bodystart="45" bodyend="69"/>
+        <location file="Source/Chips/FullAdder.h" line="30" column="1" bodyfile="Source/Chips/FullAdder.cpp" bodystart="66" bodyend="88"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01036_1ab99136c316dabce6cb1c0985eeaba2d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01036_1aacdc3b474e0d525611f29516618f5b28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>Hack::Chips::Inc16::Inc16</definition>
+        <definition>Hack::Chips::FullAdder::FullAdder</definition>
         <argsstring>()</argsstring>
-        <name>Inc16</name>
+        <name>FullAdder</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Inc16.h" line="33" column="1" bodyfile="Source/Chips/Inc16.cpp" bodystart="29" bodyend="32"/>
-        <references refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00467" startline="52">Hack::Chips::Chip&lt; uint16_t, 16 &gt;::_bits</references>
+        <location file="Source/Chips/FullAdder.h" line="33" column="1" bodyfile="Source/Chips/FullAdder.cpp" bodystart="29" bodyend="32"/>
+        <references refid="a00996_1a5a604431fa35bc87e0d7f4328b4ad4a1" compoundref="a00479" startline="112" endline="115">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::assignBit</references>
       </memberdef>
-      <memberdef kind="function" id="a01036_1aa10737e25c30db65cf310bbb99a84eb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a01352" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::Inc16::getOut</definition>
+      <memberdef kind="function" id="a01036_1a58e6c589ca23ca70f631b584fb98c31c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::FullAdder::getCary</definition>
         <argsstring>()</argsstring>
-        <name>getOut</name>
+        <name>getCary</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Inc16.h" line="37" column="1" bodyfile="Source/Chips/Inc16.cpp" bodystart="39" bodyend="43"/>
-        <references refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00467" startline="52">Hack::Chips::Chip&lt; uint16_t, 16 &gt;::_bits</references>
+        <location file="Source/Chips/FullAdder.h" line="42" column="1" bodyfile="Source/Chips/FullAdder.cpp" bodystart="59" bodyend="64"/>
+        <references refid="a00996_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00479" startline="100" endline="103">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::getBit</references>
       </memberdef>
-      <memberdef kind="function" id="a01036_1a6e17288412195c8e273423752dabb2d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01036_1a1cbc633d0a2501de5094feeac597516c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::FullAdder::getSum</definition>
+        <argsstring>()</argsstring>
+        <name>getSum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/FullAdder.h" line="40" column="1" bodyfile="Source/Chips/FullAdder.cpp" bodystart="52" bodyend="57"/>
+        <references refid="a00996_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00479" startline="100" endline="103">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::getBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01036_1a64891928d2e7b30966aba6eeff53d273" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::Chips::Inc16::setIn</definition>
-        <argsstring>(const uint16_t &amp;v)</argsstring>
-        <name>setIn</name>
+        <definition>void Hack::Chips::FullAdder::setA</definition>
+        <argsstring>(bool a)</argsstring>
+        <name>setA</name>
         <param>
-          <type>const <ref refid="a01352" kindref="compound">uint16_t</ref> &amp;</type>
-          <declname>v</declname>
+          <type>bool</type>
+          <declname>a</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -63,8 +77,47 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Inc16.h" line="35" column="1" bodyfile="Source/Chips/Inc16.cpp" bodystart="34" bodyend="37"/>
-        <references refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00467" startline="52">Hack::Chips::Chip&lt; uint16_t, 16 &gt;::_bits</references>
+        <location file="Source/Chips/FullAdder.h" line="35" column="1" bodyfile="Source/Chips/FullAdder.cpp" bodystart="34" bodyend="38"/>
+        <references refid="a00996_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00479" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
+        <references refid="a00996_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="a00479" startline="106" endline="109">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::setBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01036_1a6afaf79fb36b108b83d7ae78f5557d07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::FullAdder::setB</definition>
+        <argsstring>(bool b)</argsstring>
+        <name>setB</name>
+        <param>
+          <type>bool</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/FullAdder.h" line="36" column="1" bodyfile="Source/Chips/FullAdder.cpp" bodystart="40" bodyend="44"/>
+        <references refid="a00996_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00479" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
+        <references refid="a00996_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="a00479" startline="106" endline="109">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::setBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01036_1a45aedf6321833672440a6c45e26c0718" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::FullAdder::setCary</definition>
+        <argsstring>(bool cary)</argsstring>
+        <name>setCary</name>
+        <param>
+          <type>bool</type>
+          <declname>cary</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/FullAdder.h" line="38" column="1" bodyfile="Source/Chips/FullAdder.cpp" bodystart="46" bodyend="50"/>
+        <references refid="a00996_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00479" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
+        <references refid="a00996_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="a00479" startline="106" endline="109">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::setBit</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -72,51 +125,54 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="160">
-        <label>Hack::Chips::Chip&lt; uint16_t, 16 &gt;</label>
-        <link refid="a00984"/>
+      <node id="143">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="a00996"/>
       </node>
-      <node id="159">
-        <label>Hack::Chips::Inc16</label>
+      <node id="142">
+        <label>Hack::Chips::FullAdder</label>
         <link refid="a01036"/>
-        <childnode refid="160" relation="public-inheritance">
+        <childnode refid="143" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="162">
-        <label>Hack::Chips::Chip&lt; uint16_t, 16 &gt;</label>
-        <link refid="a00984"/>
-        <childnode refid="163" relation="usage">
+      <node id="146">
+        <label>uint8_t</label>
+        <link refid="a01376"/>
+      </node>
+      <node id="145">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="a00996"/>
+        <childnode refid="146" relation="usage">
           <edgelabel>_bits</edgelabel>
         </childnode>
       </node>
-      <node id="163">
-        <label>uint16_t</label>
-        <link refid="a01352"/>
-      </node>
-      <node id="161">
-        <label>Hack::Chips::Inc16</label>
+      <node id="144">
+        <label>Hack::Chips::FullAdder</label>
         <link refid="a01036"/>
-        <childnode refid="162" relation="public-inheritance">
+        <childnode refid="145" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="Source/Chips/Inc16.h" line="28" column="1" bodyfile="Source/Chips/Inc16.h" bodystart="27" bodyend="38"/>
+    <location file="Source/Chips/FullAdder.h" line="28" column="1" bodyfile="Source/Chips/FullAdder.h" bodystart="27" bodyend="43"/>
     <listofallmembers>
-      <member refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Inc16</scope><name>_bits</name></member>
-      <member refid="a00984_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::Inc16</scope><name>applyBit</name></member>
-      <member refid="a00984_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::Inc16</scope><name>assignBit</name></member>
-      <member refid="a00984_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::Inc16</scope><name>Chip</name></member>
-      <member refid="a00984_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::Inc16</scope><name>clearBit</name></member>
-      <member refid="a01036_1a4509107c87947ca2724dcaa9fe7021c7" prot="private" virt="non-virtual"><scope>Hack::Chips::Inc16</scope><name>evaluate</name></member>
-      <member refid="a00984_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::Inc16</scope><name>getBit</name></member>
-      <member refid="a01036_1aa10737e25c30db65cf310bbb99a84eb6" prot="public" virt="non-virtual"><scope>Hack::Chips::Inc16</scope><name>getOut</name></member>
-      <member refid="a01036_1ab99136c316dabce6cb1c0985eeaba2d5" prot="public" virt="non-virtual"><scope>Hack::Chips::Inc16</scope><name>Inc16</name></member>
-      <member refid="a00984_1a63bb368bb0827830235759b33718d1b4" prot="protected" virt="virtual"><scope>Hack::Chips::Inc16</scope><name>isDirty</name></member>
-      <member refid="a00984_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::Inc16</scope><name>setBit</name></member>
-      <member refid="a01036_1a6e17288412195c8e273423752dabb2d6" prot="public" virt="non-virtual"><scope>Hack::Chips::Inc16</scope><name>setIn</name></member>
-      <member refid="a00984_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::Inc16</scope><name>~Chip</name></member>
+      <member refid="a00996_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>_bits</name></member>
+      <member refid="a00996_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>applyBit</name></member>
+      <member refid="a00996_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>assignBit</name></member>
+      <member refid="a00996_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>Chip</name></member>
+      <member refid="a00996_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>clearBit</name></member>
+      <member refid="a01036_1a9a030af0e029d5956b018dbf2c1bcca6" prot="private" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>evaluate</name></member>
+      <member refid="a01036_1aacdc3b474e0d525611f29516618f5b28" prot="public" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>FullAdder</name></member>
+      <member refid="a00996_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>getBit</name></member>
+      <member refid="a01036_1a58e6c589ca23ca70f631b584fb98c31c" prot="public" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>getCary</name></member>
+      <member refid="a01036_1a1cbc633d0a2501de5094feeac597516c" prot="public" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>getSum</name></member>
+      <member refid="a00996_1a63bb368bb0827830235759b33718d1b4" prot="protected" virt="virtual"><scope>Hack::Chips::FullAdder</scope><name>isDirty</name></member>
+      <member refid="a01036_1a64891928d2e7b30966aba6eeff53d273" prot="public" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>setA</name></member>
+      <member refid="a01036_1a6afaf79fb36b108b83d7ae78f5557d07" prot="public" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>setB</name></member>
+      <member refid="a00996_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>setBit</name></member>
+      <member refid="a01036_1a45aedf6321833672440a6c45e26c0718" prot="public" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>setCary</name></member>
+      <member refid="a00996_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::FullAdder</scope><name>~Chip</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

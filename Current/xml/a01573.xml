@@ -1,20 +1,57 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01573" kind="page">
-    <compoundname>Hc06</compoundname>
-    <title>Bindings</title>
+    <compoundname>Hc03</compoundname>
+    <title>Assembler</title>
     <briefdescription>
-<para>Provides a script language interface. </para>    </briefdescription>
+<para>Implements the machine code compiler. </para>    </briefdescription>
     <detaileddescription>
-<para>Provides a script language interface.</para><para><linebreak/>
+<para>Implements the machine code compiler.</para><para><linebreak/>
 <linebreak/>
-It is currently on the back-burner until primary functionality is complete.</para><para><linebreak/>
+ The primary job of the assembler is to convert the input assembly into 16 bit binary codes that can be handed to the Cpu.</para><sect1 id="a01573_1Hc03Asm2Mc">
+<title>Asm2Mc</title>
+<para>Is the executable that implements this conversion.</para><sect2 id="a01573_1Hc03Asm2McUsage">
+<title>Usage</title>
+<para><programlisting filename=".txt"><codeline><highlight class="normal">Usage:<sp/>asm2mc<sp/>&lt;options&gt;<sp/>&lt;arg[0]<sp/>..<sp/>arg[n]&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>where<sp/>arg[0]<sp/>is<sp/>the<sp/>input<sp/>file</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-h,<sp/>--help<sp/><sp/><sp/><sp/>Display<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>help<sp/>message</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-o,<sp/>--output<sp/><sp/>Specify<sp/>an<sp/>output<sp/>file.</highlight></codeline>
+</programlisting></para><para>The following code illustrates the conversion. <linebreak/>
 <linebreak/>
-The proof of concept flutter app can be found in the flutter branch. <linebreak/>
-It uses this interface to communicate with dart.</para><para><linebreak/>
-</para><sect1 id="a01573_1Hc06Defined">
+ <linebreak/>
+<bold>Assembly:</bold> <programlisting filename=".txt"><codeline><highlight class="normal">@123</highlight></codeline>
+<codeline><highlight class="normal">D=A</highlight></codeline>
+<codeline><highlight class="normal">@0</highlight></codeline>
+<codeline><highlight class="normal">M=D</highlight></codeline>
+<codeline><highlight class="normal">@1</highlight></codeline>
+<codeline><highlight class="normal">M=D</highlight></codeline>
+<codeline><highlight class="normal">@2</highlight></codeline>
+<codeline><highlight class="normal">M=D</highlight></codeline>
+<codeline><highlight class="normal">@32766<sp/>D=A;JMP</highlight></codeline>
+</programlisting></para><para><linebreak/>
+<bold>Machine-Code</bold>:<linebreak/>
+<programlisting filename=".txt"><codeline><highlight class="normal">0000000001111011</highlight></codeline>
+<codeline><highlight class="normal">1110110000010000</highlight></codeline>
+<codeline><highlight class="normal">0000000000000000</highlight></codeline>
+<codeline><highlight class="normal">1110001100001000</highlight></codeline>
+<codeline><highlight class="normal">0000000000000001</highlight></codeline>
+<codeline><highlight class="normal">1110001100001000</highlight></codeline>
+<codeline><highlight class="normal">0000000000000010</highlight></codeline>
+<codeline><highlight class="normal">1110001100001000</highlight></codeline>
+<codeline><highlight class="normal">0111111111111110</highlight></codeline>
+<codeline><highlight class="normal">1110110000010111</highlight></codeline>
+</programlisting> <linebreak/>
+ </para></sect2>
+<sect2 id="a01573_1Hc03AsmGrammar">
+<title>Grammar</title>
+<para>The grammar for the assembly can be found <ulink url="../../Source/Assembler/ASM.grm">here</ulink>.</para><para><linebreak/>
+</para></sect2>
+</sect1>
+<sect1 id="a01573_1Hc03Defined">
 <title>Defined in</title>
-<para>The source is defined in <ulink url="../../Source/Bindings">Source/Bindings</ulink><linebreak/>
+<para>The source is defined in <ulink url="../../Source/Assembler">Source/Assembler</ulink><linebreak/>
 </para></sect1>
     </detaileddescription>
   </compounddef>

@@ -1,13 +1,28 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01116" kind="class" language="C++" prot="public" final="yes">
-    <compoundname>Hack::Chips::SRLatch</compoundname>
-    <basecompoundref refid="a00984" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; uint8_t, 8 &gt;</basecompoundref>
-    <includes local="no">Source/Chips/SRLatch.h</includes>
+    <compoundname>Hack::Chips::Ram8</compoundname>
+    <basecompoundref refid="a00996" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; bit64_t, 64 &gt;</basecompoundref>
+    <includes local="no">Source/Chips/Ram8.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="a01116_1a2cc320102780a8b6c85fe1621b3ed597" prot="private" static="no" mutable="no">
+        <type><ref refid="a00984" kindref="compound">bit32_t</ref></type>
+        <definition>bit32_t Hack::Chips::Ram8::_r[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>_r</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Ram8.h" line="39" column="1" bodyfile="Source/Chips/Ram8.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="private-func">
-      <memberdef kind="function" id="a01116_1a86d30f083d36e99eedfc32bfd7f90763" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01116_1a51ab475022a15d891a4d79118ad0cb97" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::Chips::SRLatch::evaluate</definition>
+        <definition>void Hack::Chips::Ram8::evaluate</definition>
         <argsstring>()</argsstring>
         <name>evaluate</name>
         <briefdescription>
@@ -16,74 +31,65 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/SRLatch.h" line="30" column="1" bodyfile="Source/Chips/SRLatch.cpp" bodystart="66" bodyend="81"/>
+        <location file="Source/Chips/Ram8.h" line="33" column="1" bodyfile="Source/Chips/Ram8.cpp" bodystart="74" bodyend="125"/>
       </memberdef>
-      <memberdef kind="function" id="a01116_1ac96bf7c3215dd31fca8e63046b0431fa" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+      <memberdef kind="function" id="a01116_1a524b55db9a45f8be9b35ec2fd90627e5" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
-        <definition>bool Hack::Chips::SRLatch::isDirty</definition>
+        <definition>bool Hack::Chips::Ram8::isDirty</definition>
         <argsstring>() override</argsstring>
         <name>isDirty</name>
-        <reimplements refid="a00984_1a63bb368bb0827830235759b33718d1b4">isDirty</reimplements>
+        <reimplements refid="a00996_1a63bb368bb0827830235759b33718d1b4">isDirty</reimplements>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/SRLatch.h" line="32" column="1" bodyfile="Source/Chips/SRLatch.h" bodystart="32" bodyend="35"/>
+        <location file="Source/Chips/Ram8.h" line="34" column="1" bodyfile="Source/Chips/Ram8.cpp" bodystart="69" bodyend="72"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01116_1ab4024d57ab5595233ac4c3dc6828336a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01116_1a1bdd2f188028038eeb2b218c852fb86b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>Hack::Chips::SRLatch::SRLatch</definition>
+        <definition>Hack::Chips::Ram8::Ram8</definition>
         <argsstring>()</argsstring>
-        <name>SRLatch</name>
+        <name>Ram8</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/SRLatch.h" line="38" column="1" bodyfile="Source/Chips/SRLatch.cpp" bodystart="28" bodyend="32"/>
-        <references refid="a00984_1a5a604431fa35bc87e0d7f4328b4ad4a1" compoundref="a00467" startline="112" endline="115">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::assignBit</references>
-        <references refid="a00984_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="a00467" startline="106" endline="109">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::setBit</references>
+        <location file="Source/Chips/Ram8.h" line="43" column="1" bodyfile="Source/Chips/Ram8.cpp" bodystart="31" bodyend="36"/>
+        <references refid="a00996_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00479" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00988_1a741dc95ddcf042b70e2747571d95cd82" compoundref="a00476" startline="76">Hack::Chips::bit64_t::ll</references>
+        <references refid="a00992_1a8de689aae4b89fd7d06c770aed087e37" compoundref="a00476" startline="220" endline="227">Hack::Chips::BitUtils&lt; T, Count &gt;::assignBit</references>
+        <references refid="a00988_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00476" startline="79">Hack::Chips::bit64_t::b</references>
       </memberdef>
-      <memberdef kind="function" id="a01116_1a50289416e241035b969e5ad069aed676" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Hack::Chips::SRLatch::getQ</definition>
+      <memberdef kind="function" id="a01116_1a5e347a8538f541c1775389125298cc92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a01364" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::Ram8::getOut</definition>
         <argsstring>()</argsstring>
-        <name>getQ</name>
+        <name>getOut</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/SRLatch.h" line="44" column="1" bodyfile="Source/Chips/SRLatch.cpp" bodystart="52" bodyend="57"/>
-        <references refid="a00984_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00467" startline="100" endline="103">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::getBit</references>
+        <location file="Source/Chips/Ram8.h" line="50" column="1" bodyfile="Source/Chips/Ram8.cpp" bodystart="62" bodyend="67"/>
+        <references refid="a00992_1a62cc15c18ccdd215a9ef08e8a8021564" compoundref="a00476" startline="204" endline="211">Hack::Chips::BitUtils&lt; T, Count &gt;::getBit</references>
+        <references refid="a00996_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00479" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00988_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00476" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="a00988_1af415893333942f41fb4c4ad619083a16" compoundref="a00476" startline="78">Hack::Chips::bit64_t::s</references>
       </memberdef>
-      <memberdef kind="function" id="a01116_1ad1af33b9f4ff6c5e85ff709d81d830c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Hack::Chips::SRLatch::getQPlus</definition>
-        <argsstring>()</argsstring>
-        <name>getQPlus</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/SRLatch.h" line="45" column="1" bodyfile="Source/Chips/SRLatch.cpp" bodystart="59" bodyend="64"/>
-        <references refid="a00984_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00467" startline="100" endline="103">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::getBit</references>
-      </memberdef>
-      <memberdef kind="function" id="a01116_1a1be3e2f9a12b13a1403615c3f31ce609" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01116_1a419712fb2a9e015e68fdd0d69459ba7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::Chips::SRLatch::setQn</definition>
-        <argsstring>(bool v)</argsstring>
-        <name>setQn</name>
+        <definition>void Hack::Chips::Ram8::setAddress</definition>
+        <argsstring>(const uint8_t &amp;v)</argsstring>
+        <name>setAddress</name>
         <param>
-          <type>bool</type>
+          <type>const <ref refid="a01376" kindref="compound">uint8_t</ref> &amp;</type>
           <declname>v</declname>
         </param>
         <briefdescription>
@@ -92,16 +98,39 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/SRLatch.h" line="42" column="1" bodyfile="Source/Chips/SRLatch.cpp" bodystart="46" bodyend="50"/>
-        <references refid="a00984_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="a00467" startline="106" endline="109">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::setBit</references>
+        <location file="Source/Chips/Ram8.h" line="46" column="1" bodyfile="Source/Chips/Ram8.cpp" bodystart="44" bodyend="48"/>
+        <references refid="a00996_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00479" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00988_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00476" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="a00992_1ab1a8c5970c7a58f399c82c96c872a920" compoundref="a00476" startline="214" endline="217">Hack::Chips::BitUtils&lt; T, Count &gt;::setBit</references>
       </memberdef>
-      <memberdef kind="function" id="a01116_1a54e7a2f18ea3941477404a43b29938aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01116_1af477e46639f4b51245bb12a69cced6a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::Chips::SRLatch::setR</definition>
-        <argsstring>(bool v)</argsstring>
-        <name>setR</name>
+        <definition>void Hack::Chips::Ram8::setClock</definition>
+        <argsstring>(bool tick)</argsstring>
+        <name>setClock</name>
         <param>
           <type>bool</type>
+          <declname>tick</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Ram8.h" line="48" column="1" bodyfile="Source/Chips/Ram8.cpp" bodystart="56" bodyend="60"/>
+        <references refid="a00992_1a266db4b38d31abd421bdb6356b6d8f6a" compoundref="a00476" startline="240" endline="243">Hack::Chips::BitUtils&lt; T, Count &gt;::applyBit</references>
+        <references refid="a00996_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00479" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00988_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00476" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="a00992_1ab1a8c5970c7a58f399c82c96c872a920" compoundref="a00476" startline="214" endline="217">Hack::Chips::BitUtils&lt; T, Count &gt;::setBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01116_1a274789bd03402b62376b6cd5f126b8b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Ram8::setIn</definition>
+        <argsstring>(const uint16_t &amp;v)</argsstring>
+        <name>setIn</name>
+        <param>
+          <type>const <ref refid="a01364" kindref="compound">uint16_t</ref> &amp;</type>
           <declname>v</declname>
         </param>
         <briefdescription>
@@ -110,18 +139,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/SRLatch.h" line="41" column="1" bodyfile="Source/Chips/SRLatch.cpp" bodystart="40" bodyend="44"/>
-        <references refid="a00984_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00467" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
-        <references refid="a00984_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="a00467" startline="106" endline="109">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::setBit</references>
+        <location file="Source/Chips/Ram8.h" line="45" column="1" bodyfile="Source/Chips/Ram8.cpp" bodystart="38" bodyend="42"/>
+        <references refid="a00996_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00479" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00988_1af415893333942f41fb4c4ad619083a16" compoundref="a00476" startline="78">Hack::Chips::bit64_t::s</references>
+        <references refid="a00992_1ab1a8c5970c7a58f399c82c96c872a920" compoundref="a00476" startline="214" endline="217">Hack::Chips::BitUtils&lt; T, Count &gt;::setBit</references>
+        <references refid="a00988_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00476" startline="79">Hack::Chips::bit64_t::b</references>
       </memberdef>
-      <memberdef kind="function" id="a01116_1a439b80b9ddb355d12431020e5aa85bd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01116_1a6444ef52a1722c762eec05391bd7863c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::Chips::SRLatch::setS</definition>
-        <argsstring>(bool v)</argsstring>
-        <name>setS</name>
+        <definition>void Hack::Chips::Ram8::setLoad</definition>
+        <argsstring>(bool write)</argsstring>
+        <name>setLoad</name>
         <param>
           <type>bool</type>
-          <declname>v</declname>
+          <declname>write</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -129,9 +160,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/SRLatch.h" line="40" column="1" bodyfile="Source/Chips/SRLatch.cpp" bodystart="34" bodyend="38"/>
-        <references refid="a00984_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00467" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
-        <references refid="a00984_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="a00467" startline="106" endline="109">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::setBit</references>
+        <location file="Source/Chips/Ram8.h" line="47" column="1" bodyfile="Source/Chips/Ram8.cpp" bodystart="50" bodyend="54"/>
+        <references refid="a00992_1a266db4b38d31abd421bdb6356b6d8f6a" compoundref="a00476" startline="240" endline="243">Hack::Chips::BitUtils&lt; T, Count &gt;::applyBit</references>
+        <references refid="a00996_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00479" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00988_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00476" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="a00992_1ab1a8c5970c7a58f399c82c96c872a920" compoundref="a00476" startline="214" endline="217">Hack::Chips::BitUtils&lt; T, Count &gt;::setBit</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -139,54 +172,81 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="289">
-        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
-        <link refid="a00984"/>
-      </node>
-      <node id="288">
-        <label>Hack::Chips::SRLatch</label>
+      <node id="265">
+        <label>Hack::Chips::Ram8</label>
         <link refid="a01116"/>
-        <childnode refid="289" relation="public-inheritance">
+        <childnode refid="266" relation="public-inheritance">
         </childnode>
+      </node>
+      <node id="266">
+        <label>Hack::Chips::Chip&lt; bit64_t, 64 &gt;</label>
+        <link refid="a00996"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="292">
-        <label>uint8_t</label>
+      <node id="270">
+        <label>uint64_t</label>
+      </node>
+      <node id="271">
+        <label>uint16_t</label>
         <link refid="a01364"/>
       </node>
-      <node id="291">
-        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
-        <link refid="a00984"/>
-        <childnode refid="292" relation="usage">
+      <node id="267">
+        <label>Hack::Chips::Ram8</label>
+        <link refid="a01116"/>
+        <childnode refid="268" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="272">
+        <label>uint32_t</label>
+      </node>
+      <node id="273">
+        <label>uint8_t</label>
+        <link refid="a01376"/>
+      </node>
+      <node id="269">
+        <label>Hack::Chips::bit64_t</label>
+        <link refid="a00988"/>
+        <childnode refid="270" relation="usage">
+          <edgelabel>ll</edgelabel>
+        </childnode>
+        <childnode refid="271" relation="usage">
+          <edgelabel>s</edgelabel>
+        </childnode>
+        <childnode refid="272" relation="usage">
+          <edgelabel>i</edgelabel>
+        </childnode>
+        <childnode refid="273" relation="usage">
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="268">
+        <label>Hack::Chips::Chip&lt; bit64_t, 64 &gt;</label>
+        <link refid="a00996"/>
+        <childnode refid="269" relation="usage">
           <edgelabel>_bits</edgelabel>
         </childnode>
       </node>
-      <node id="290">
-        <label>Hack::Chips::SRLatch</label>
-        <link refid="a01116"/>
-        <childnode refid="291" relation="public-inheritance">
-        </childnode>
-      </node>
     </collaborationgraph>
-    <location file="Source/Chips/SRLatch.h" line="28" column="1" bodyfile="Source/Chips/SRLatch.h" bodystart="27" bodyend="46"/>
+    <location file="Source/Chips/Ram8.h" line="31" column="1" bodyfile="Source/Chips/Ram8.h" bodystart="30" bodyend="51"/>
     <listofallmembers>
-      <member refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::SRLatch</scope><name>_bits</name></member>
-      <member refid="a00984_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::SRLatch</scope><name>applyBit</name></member>
-      <member refid="a00984_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::SRLatch</scope><name>assignBit</name></member>
-      <member refid="a00984_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::SRLatch</scope><name>Chip</name></member>
-      <member refid="a00984_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::SRLatch</scope><name>clearBit</name></member>
-      <member refid="a01116_1a86d30f083d36e99eedfc32bfd7f90763" prot="private" virt="non-virtual"><scope>Hack::Chips::SRLatch</scope><name>evaluate</name></member>
-      <member refid="a00984_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::SRLatch</scope><name>getBit</name></member>
-      <member refid="a01116_1a50289416e241035b969e5ad069aed676" prot="public" virt="non-virtual"><scope>Hack::Chips::SRLatch</scope><name>getQ</name></member>
-      <member refid="a01116_1ad1af33b9f4ff6c5e85ff709d81d830c9" prot="public" virt="non-virtual"><scope>Hack::Chips::SRLatch</scope><name>getQPlus</name></member>
-      <member refid="a01116_1ac96bf7c3215dd31fca8e63046b0431fa" prot="private" virt="virtual"><scope>Hack::Chips::SRLatch</scope><name>isDirty</name></member>
-      <member refid="a00984_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::SRLatch</scope><name>setBit</name></member>
-      <member refid="a01116_1a1be3e2f9a12b13a1403615c3f31ce609" prot="public" virt="non-virtual"><scope>Hack::Chips::SRLatch</scope><name>setQn</name></member>
-      <member refid="a01116_1a54e7a2f18ea3941477404a43b29938aa" prot="public" virt="non-virtual"><scope>Hack::Chips::SRLatch</scope><name>setR</name></member>
-      <member refid="a01116_1a439b80b9ddb355d12431020e5aa85bd3" prot="public" virt="non-virtual"><scope>Hack::Chips::SRLatch</scope><name>setS</name></member>
-      <member refid="a01116_1ab4024d57ab5595233ac4c3dc6828336a" prot="public" virt="non-virtual"><scope>Hack::Chips::SRLatch</scope><name>SRLatch</name></member>
-      <member refid="a00984_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::SRLatch</scope><name>~Chip</name></member>
+      <member refid="a00996_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Ram8</scope><name>_bits</name></member>
+      <member refid="a01116_1a2cc320102780a8b6c85fe1621b3ed597" prot="private" virt="non-virtual"><scope>Hack::Chips::Ram8</scope><name>_r</name></member>
+      <member refid="a00996_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram8</scope><name>applyBit</name></member>
+      <member refid="a00996_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram8</scope><name>assignBit</name></member>
+      <member refid="a00996_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram8</scope><name>Chip</name></member>
+      <member refid="a00996_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram8</scope><name>clearBit</name></member>
+      <member refid="a01116_1a51ab475022a15d891a4d79118ad0cb97" prot="private" virt="non-virtual"><scope>Hack::Chips::Ram8</scope><name>evaluate</name></member>
+      <member refid="a00996_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram8</scope><name>getBit</name></member>
+      <member refid="a01116_1a5e347a8538f541c1775389125298cc92" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram8</scope><name>getOut</name></member>
+      <member refid="a01116_1a524b55db9a45f8be9b35ec2fd90627e5" prot="private" virt="virtual"><scope>Hack::Chips::Ram8</scope><name>isDirty</name></member>
+      <member refid="a01116_1a1bdd2f188028038eeb2b218c852fb86b" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram8</scope><name>Ram8</name></member>
+      <member refid="a01116_1a419712fb2a9e015e68fdd0d69459ba7a" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram8</scope><name>setAddress</name></member>
+      <member refid="a00996_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram8</scope><name>setBit</name></member>
+      <member refid="a01116_1af477e46639f4b51245bb12a69cced6a3" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram8</scope><name>setClock</name></member>
+      <member refid="a01116_1a274789bd03402b62376b6cd5f126b8b5" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram8</scope><name>setIn</name></member>
+      <member refid="a01116_1a6444ef52a1722c762eec05391bd7863c" prot="public" virt="non-virtual"><scope>Hack::Chips::Ram8</scope><name>setLoad</name></member>
+      <member refid="a00996_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::Ram8</scope><name>~Chip</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

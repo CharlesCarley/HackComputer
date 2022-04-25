@@ -1,138 +1,82 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
-  <compounddef id="a00942" kind="class" language="C++" prot="public">
-    <compoundname>Hack::Binding::RomWrapper</compoundname>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="a00942_1a78a816a94fc0bd8d962d90932cc9e15d" prot="private" static="no" mutable="yes">
-        <type><ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Hack::Binding::RomWrapper::_cache</definition>
+  <compounddef id="a00942" kind="struct" language="C++" prot="public">
+    <compoundname>Hack::Assembler::ReservedWordTable</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="a00942_1adaeb309900546c0aa40efea576acc420" prot="public" static="no" mutable="no">
+        <type><ref refid="a01370" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Assembler::ReservedWordTable::address</definition>
         <argsstring></argsstring>
-        <name>_cache</name>
+        <name>address</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Bindings/Bindings.cpp" line="55" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="55" bodyend="-1"/>
+        <location file="Source/Assembler/Scanner.cpp" line="39" column="1" bodyfile="Source/Assembler/Scanner.cpp" bodystart="39" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a00942_1a026eb53aef02d9c1fdb7f6b57ac1f21d" prot="private" static="no" mutable="no">
-        <type><ref refid="a01118" kindref="compound">Rom32</ref> *</type>
-        <definition>Rom32* Hack::Binding::RomWrapper::_rom</definition>
+      <memberdef kind="variable" id="a00942_1aa0ecd707ff8c8761f5a2744dc6048838" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Hack::Assembler::ReservedWordTable::len</definition>
         <argsstring></argsstring>
-        <name>_rom</name>
+        <name>len</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Bindings/Bindings.cpp" line="53" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="53" bodyend="-1"/>
+        <location file="Source/Assembler/Scanner.cpp" line="38" column="1" bodyfile="Source/Assembler/Scanner.cpp" bodystart="38" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a00942_1ae7d2fd6c9a84cfad3167fa000fc2b99e" prot="private" static="no" mutable="no">
-        <type>const uint64_t</type>
-        <definition>const uint64_t Hack::Binding::RomWrapper::type</definition>
-        <argsstring></argsstring>
-        <name>type</name>
-        <initializer>= <ref refid="a00895_1ab9e96018072b404d8a46e2192f06b954" kindref="member">RomType</ref></initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Bindings/Bindings.cpp" line="51" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="51" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
-      <memberdef kind="function" id="a00942_1a430e884e4dfa1dec8dc20bb332bd0b3a" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
-        <type></type>
-        <definition>Hack::Binding::RomWrapper::RomWrapper</definition>
-        <argsstring>(Rom32 *rom32)</argsstring>
-        <name>RomWrapper</name>
-        <param>
-          <type><ref refid="a01118" kindref="compound">Rom32</ref> *</type>
-          <declname>rom32</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Bindings/Bindings.cpp" line="58" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="58" bodyend="61"/>
-      </memberdef>
-      <memberdef kind="function" id="a00942_1a9a9be8a8b466961c6a20ab9e89781200" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="variable" id="a00942_1a002ef177a39e4ebb15eee1aca6a9eaa6" prot="public" static="no" mutable="no">
         <type>const char *</type>
-        <definition>const char* Hack::Binding::RomWrapper::decode</definition>
-        <argsstring>(const int idx) const</argsstring>
-        <name>decode</name>
-        <param>
-          <type>const int</type>
-          <declname>idx</declname>
-        </param>
+        <definition>const char* Hack::Assembler::ReservedWordTable::val</definition>
+        <argsstring></argsstring>
+        <name>val</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Bindings/Bindings.cpp" line="71" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="71" bodyend="82"/>
-        <references refid="a00914_1ade81360d9e9ec9bdfedc8af1d0252a73" compoundref="a00410" startline="32" endline="37">Hack::Assembler::Instruction::string</references>
-      </memberdef>
-      <memberdef kind="function" id="a00942_1a707b3bc9bc40f455b80556dda7919bdc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>int</type>
-        <definition>int Hack::Binding::RomWrapper::get</definition>
-        <argsstring>(const int idx) const</argsstring>
-        <name>get</name>
-        <param>
-          <type>const int</type>
-          <declname>idx</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Bindings/Bindings.cpp" line="63" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="63" bodyend="69"/>
-        <references refid="a00895_1ab9e96018072b404d8a46e2192f06b954" compoundref="a00437" startline="45">Hack::Binding::RomType</references>
-        <references refid="a01118_1a5f035550d36a60b39767abc4d5942b46" compoundref="a00659" startline="72" endline="77">Hack::Chips::Rom32::get</references>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="a00942_1ac77d5275d6ebe3ea4efe37f262c48826" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>const <ref refid="a00942" kindref="compound">RomWrapper</ref> *</type>
-        <definition>static const RomWrapper* Hack::Binding::RomWrapper::cast</definition>
-        <argsstring>(Handle handle)</argsstring>
-        <name>cast</name>
-        <param>
-          <type><ref refid="a00938" kindref="compound">Handle</ref></type>
-          <declname>handle</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Bindings/Bindings.cpp" line="84" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="84" bodyend="93"/>
-        <references refid="a00895_1ab9e96018072b404d8a46e2192f06b954" compoundref="a00437" startline="45">Hack::Binding::RomType</references>
+        <location file="Source/Assembler/Scanner.cpp" line="37" column="1" bodyfile="Source/Assembler/Scanner.cpp" bodystart="37" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Bindings/Bindings.cpp" line="49" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="48" bodyend="94"/>
+    <collaborationgraph>
+      <node id="24">
+        <label>size_t</label>
+      </node>
+      <node id="21">
+        <label>Hack::Assembler::ReservedWordTable</label>
+        <link refid="a00942"/>
+        <childnode refid="22" relation="usage">
+          <edgelabel>address</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>val</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>len</edgelabel>
+        </childnode>
+      </node>
+      <node id="22">
+        <label>uint16_t</label>
+        <link refid="a01370"/>
+      </node>
+      <node id="23">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Assembler/Scanner.cpp" line="36" column="1" bodyfile="Source/Assembler/Scanner.cpp" bodystart="35" bodyend="40"/>
     <listofallmembers>
-      <member refid="a00942_1a78a816a94fc0bd8d962d90932cc9e15d" prot="private" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>_cache</name></member>
-      <member refid="a00942_1a026eb53aef02d9c1fdb7f6b57ac1f21d" prot="private" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>_rom</name></member>
-      <member refid="a00942_1ac77d5275d6ebe3ea4efe37f262c48826" prot="public" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>cast</name></member>
-      <member refid="a00942_1a9a9be8a8b466961c6a20ab9e89781200" prot="public" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>decode</name></member>
-      <member refid="a00942_1a707b3bc9bc40f455b80556dda7919bdc" prot="public" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>get</name></member>
-      <member refid="a00942_1a430e884e4dfa1dec8dc20bb332bd0b3a" prot="public" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>RomWrapper</name></member>
-      <member refid="a00942_1ae7d2fd6c9a84cfad3167fa000fc2b99e" prot="private" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>type</name></member>
+      <member refid="a00942_1adaeb309900546c0aa40efea576acc420" prot="public" virt="non-virtual"><scope>Hack::Assembler::ReservedWordTable</scope><name>address</name></member>
+      <member refid="a00942_1aa0ecd707ff8c8761f5a2744dc6048838" prot="public" virt="non-virtual"><scope>Hack::Assembler::ReservedWordTable</scope><name>len</name></member>
+      <member refid="a00942_1a002ef177a39e4ebb15eee1aca6a9eaa6" prot="public" virt="non-virtual"><scope>Hack::Assembler::ReservedWordTable</scope><name>val</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

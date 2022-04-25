@@ -2,29 +2,36 @@
 /*!
 \page Hc05 Compiler
 
-\brief Implements the compiler for the .jack format.
+\brief Implements the compiler for the .jack source file.
 
 \br
-
 The primary job of the compiler is to take the high-level jack language
-and translate it from, .jack, .vm, .asm, then finally to machine code.
+and translate it from, <tt>.jack,</tt> to <tt>.vm,</tt> then <tt>.asm,</tt> and finally to machine code.
 
 \section Hc05SyntaxAnalyzer SyntaxAnalyzer
 
-Provides static library that compiles the jack code into an intermediate parse tree.
-\n\n
-The definition for the jack grammar can be found [here.](../../Source/Compiler/Analyzer/Jack.grm)
-- The not operator `!` is implemented both as '~' and '!'.
+The SyntaxAnalyzer project provides a static library that compiles the jack code
+into an intermediate parse tree.
+\br
+The definition for the jack grammar can be found
+\file_ref{here.,Source/Compiler/Analyzer/Jack.grm}
+Where the primary difference in syntax between this implementation and the course
+is that the not operator `!` is implemented both as '~' and '!'.
 
 
 \section Hc05CompileUtils CompileUtils
 
-Provides the code that implements the parse tree, as well as extra classes that operate on the parse tree.
+Provides an intermediate static library that implements the parse tree structure.
+The parse tree structure is meant to be shared between multiple projects. 
+
+It also contains extra general classes that provide output formats for
+the parse tree.
 
 \section Hc05Jack2XML Jack2XML
 
-Uses the parse tree and outputs inspection files.
-\n\n
+Is an executable project that provides the means to output inspection files.
+
+\br
 
 \code{.txt}
 Usage: Jack2xml <options> <arg[0] .. arg[n]>
@@ -38,138 +45,83 @@ Usage: Jack2xml <options> <arg[0] .. arg[n]>
                        - the directory option takes precedence
 
 \endcode
-\br
 
-The following shows example output with the supplied <tt>.jack</tt> source file.
-\sec{Test10}
+\subsection Hc05Jack2XML_0 Example
+\isec{Input: The following shows the output of Jack2XML using the supplied <tt>.jack</tt> source file.}
 \code{.txt}
-class Main {
-	method void main() {
-		var int x,y;
-		let x = 2;
-		let y = 6;
-		return x+y;
-	}
+class Main
+{
+    function int main()
+    {
+        return 0;
+    }
 }
 \endcode
 
-\sec{XML}
+\isec{Xml: Shows the output using \ref Hack::Compiler::XmlWriterImpl}
 \code{.xml}
 <?xml version='1.0'?>
-<ClassList Filename="Test10.jack">
- <RuleClass Line="3">
-   <Keyword Line="3">class</Keyword>
-   <Identifier Line="3">Main</Identifier>
-   <Symbol Line="3">{</Symbol>
-   <RuleClassDescription Line="3">
-     <RuleMethod Line="5">
-       <RuleMethodSpecification Line="5">
-         <Keyword Line="5">method</Keyword>
+<ClassList Filename="example.jack">
+ <RuleClass>
+   <Keyword>class</Keyword>
+   <Identifier>Main</Identifier>
+   <Symbol>{</Symbol>
+   <RuleClassDescription>
+     <RuleMethod>
+       <RuleMethodSpecification>
+         <Keyword>function</Keyword>
        </RuleMethodSpecification>
-       <RuleMethodReturnType Line="5">
-         <Keyword Line="5">void</Keyword>
+       <RuleMethodReturnType>
+         <RuleDataType>
+           <Keyword>int</Keyword>
+         </RuleDataType>
        </RuleMethodReturnType>
-       <Identifier Line="5">main</Identifier>
-       <Symbol Line="5">(</Symbol>
-       <RuleParameterList Line="5">
+       <Identifier>main</Identifier>
+       <Symbol>(</Symbol>
+       <RuleParameterList>
        </RuleParameterList>
-       <Symbol Line="5">)</Symbol>
-       <RuleMethodBody Line="5">
-         <Symbol Line="5">{</Symbol>
-         <RuleBody Line="6">
-           <RuleVariable Line="6">
-             <Keyword Line="6">var</Keyword>
-             <RuleDataType Line="6">
-               <Keyword Line="6">int</Keyword>
-             </RuleDataType>
-             <RuleIdentifierList Line="6">
-               <Identifier Line="6">x</Identifier>
-               <Identifier Line="6">y</Identifier>
-             </RuleIdentifierList>
-             <Symbol Line="6">;</Symbol>
-           </RuleVariable>
-           <RuleStatement Line="7">
-             <RuleLetStatement Line="7" Subtype="SubtypeLetEqual">
-               <Keyword Line="7">let</Keyword>
-               <Identifier Line="7">x</Identifier>
-               <Symbol Line="7">=</Symbol>
-               <RuleExpression Line="7">
-                 <RuleSingleExpression Line="7" Subtype="SubtypeTerm">
-                   <RuleTerm Line="7">
-                     <RuleSimpleTerm Line="8">
-                       <Identifier Line="8">2</Identifier>
+       <Symbol>)</Symbol>
+       <RuleMethodBody>
+         <Symbol>{</Symbol>
+         <RuleBody>
+           <RuleStatement>
+             <RuleReturnStatement>
+               <Keyword>return</Keyword>
+               <RuleExpression>
+                 <RuleSingleExpression Subtype="SubtypeTerm">
+                   <RuleTerm>
+                     <RuleSimpleTerm>
+                       <Identifier>0</Identifier>
                      </RuleSimpleTerm>
                    </RuleTerm>
                  </RuleSingleExpression>
                </RuleExpression>
-               <Symbol Line="8">;</Symbol>
-             </RuleLetStatement>
-           </RuleStatement>
-           <RuleStatement Line="8">
-             <RuleLetStatement Line="8" Subtype="SubtypeLetEqual">
-               <Keyword Line="8">let</Keyword>
-               <Identifier Line="8">y</Identifier>
-               <Symbol Line="8">=</Symbol>
-               <RuleExpression Line="8">
-                 <RuleSingleExpression Line="8" Subtype="SubtypeTerm">
-                   <RuleTerm Line="8">
-                     <RuleSimpleTerm Line="9">
-                       <Identifier Line="9">6</Identifier>
-                     </RuleSimpleTerm>
-                   </RuleTerm>
-                 </RuleSingleExpression>
-               </RuleExpression>
-               <Symbol Line="9">;</Symbol>
-             </RuleLetStatement>
-           </RuleStatement>
-           <RuleStatement Line="9">
-             <RuleReturnStatement Line="9">
-               <Keyword Line="9">return</Keyword>
-               <RuleExpression Line="9">
-                 <RuleSingleExpression Line="9" Subtype="SubtypeTerm">
-                   <RuleTerm Line="9">
-                     <RuleSimpleTerm Line="9">
-                       <Identifier Line="9">x</Identifier>
-                     </RuleSimpleTerm>
-                   </RuleTerm>
-                 </RuleSingleExpression>
-                 <RuleSingleExpression Line="9" Subtype="SubtypeOpTerm">
-                   <RuleOperator Line="9">
-                     <Symbol Line="9">+</Symbol>
-                   </RuleOperator>
-                   <RuleTerm Line="9">
-                     <RuleSimpleTerm Line="11">
-                       <Identifier Line="11">y</Identifier>
-                     </RuleSimpleTerm>
-                   </RuleTerm>
-                 </RuleSingleExpression>
-               </RuleExpression>
-               <Symbol Line="11">;</Symbol>
+               <Symbol>;</Symbol>
              </RuleReturnStatement>
            </RuleStatement>
          </RuleBody>
-         <Symbol Line="11">}</Symbol>
+         <Symbol>}</Symbol>
        </RuleMethodBody>
      </RuleMethod>
    </RuleClassDescription>
-   <Symbol Line="11">}</Symbol>
+   <Symbol>}</Symbol>
  </RuleClass>
 </ClassList>
 \endcode
 
-\sec{DOT}
-\image html Test10.svg
+\isec{dot: Shows the output using \ref Hack::Compiler::DotWriterImpl after it has be converted to SVG with dot.}
+\image html Example.svg
 
 
 \section Hc05CodeGenerator CodeGenerator
 
-Is the static library that implements the parse tree conversion from jack to vm.
+Is a static library which implements the conversion from parse tree to <tt>.vm</tt>.
 
 
 \section Hc05compiler Compiler
 
-The current state does not implement a standalone compiler.
-Compilation happens in the \ref Hc07 "Computer" executable.
+The current state of this project does not implement a standalone compiler.
+Instead, compilation happens in the \ref Hc07 "Computer" executable.
  
 
 \defined{Hc05Defined}

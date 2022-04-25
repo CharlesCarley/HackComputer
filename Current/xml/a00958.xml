@@ -1,124 +1,45 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
-  <compounddef id="a00958" kind="class" language="C++" prot="public" final="yes">
-    <compoundname>Hack::Chips::Alu</compoundname>
-    <basecompoundref refid="a00990" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; uint8_t, 8 &gt;</basecompoundref>
-    <includes local="no">Source/Chips/ALU.h</includes>
+  <compounddef id="a00958" kind="class" language="C++" prot="public">
+    <compoundname>Hack::Binding::RamWrapper</compoundname>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="a00958_1ae8dd1ef437ddbd7103c40a8cc47754de" prot="private" static="no" mutable="no">
-        <type><ref refid="a00982" kindref="compound">bit64_t</ref></type>
-        <definition>bit64_t Hack::Chips::Alu::_io</definition>
+      <memberdef kind="variable" id="a00958_1aec58e3f4d8650bbf02398a12208be7df" prot="private" static="no" mutable="no">
+        <type><ref refid="a01058" kindref="compound">Memory</ref> *</type>
+        <definition>Memory* Hack::Binding::RamWrapper::_memory</definition>
         <argsstring></argsstring>
-        <name>_io</name>
+        <name>_memory</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/ALU.h" line="66" column="1" bodyfile="Source/Chips/ALU.h" bodystart="66" bodyend="-1"/>
+        <location file="Source/Bindings/Bindings.cpp" line="101" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="101" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="private-func">
-      <memberdef kind="function" id="a00958_1a875ff59790e59b7330e35475d4070205" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::Alu::evaluate</definition>
-        <argsstring>()</argsstring>
-        <name>evaluate</name>
+      <memberdef kind="variable" id="a00958_1a8f53cb859689b4d6223611ccb9cf0b0b" prot="private" static="no" mutable="no">
+        <type>const uint64_t</type>
+        <definition>const uint64_t Hack::Binding::RamWrapper::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <initializer>= <ref refid="a00907_1afa6a47600d4368c4198b7292deb32747" kindref="member">RamType</ref></initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/ALU.h" line="64" column="1" bodyfile="Source/Chips/ALU.cpp" bodystart="110" bodyend="264"/>
+        <location file="Source/Bindings/Bindings.cpp" line="99" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="99" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="a00958_1af17c289dd1252a047f2bf651707603d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a00958_1a1b5b1caf9f894916102fb72f44b26c97" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
         <type></type>
-        <definition>Hack::Chips::Alu::Alu</definition>
-        <argsstring>()</argsstring>
-        <name>Alu</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/ALU.h" line="69" column="1" bodyfile="Source/Chips/ALU.cpp" bodystart="47" bodyend="51"/>
-      </memberdef>
-      <memberdef kind="function" id="a00958_1aabd92bfe8970447e25ccd70f0a951530" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a01370" kindref="compound">uint8_t</ref></type>
-        <definition>uint8_t Hack::Chips::Alu::getFlags</definition>
-        <argsstring>()</argsstring>
-        <name>getFlags</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/ALU.h" line="73" column="1" bodyfile="Source/Chips/ALU.cpp" bodystart="64" bodyend="69"/>
-        <references refid="a00982_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00470" startline="79">Hack::Chips::bit64_t::b</references>
-        <references refid="a00896_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" compoundref="a00470" startline="33">Hack::Chips::Bit0</references>
-      </memberdef>
-      <memberdef kind="function" id="a00958_1a85ae2abb1cd2db9cbc00d2d7131dc819" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Hack::Chips::Alu::getNe</definition>
-        <argsstring>()</argsstring>
-        <name>getNe</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/ALU.h" line="83" column="1" bodyfile="Source/Chips/ALU.cpp" bodystart="96" bodyend="101"/>
-        <references refid="a00982_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00470" startline="79">Hack::Chips::bit64_t::b</references>
-        <references refid="a00896_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" compoundref="a00470" startline="33">Hack::Chips::Bit0</references>
-        <references refid="a00896_1acabb309d3c28ba3a5f469d25dff4f144a1630ccda3ce240ba49b84d1111d0adb8" compoundref="a00449" startline="35">Hack::Chips::Ne</references>
-      </memberdef>
-      <memberdef kind="function" id="a00958_1a0a6f75d46a2d234c77033a30fef51326" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a01358" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::Alu::getOut</definition>
-        <argsstring>()</argsstring>
-        <name>getOut</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/ALU.h" line="79" column="1" bodyfile="Source/Chips/ALU.cpp" bodystart="103" bodyend="108"/>
-        <references refid="a00982_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00470" startline="79">Hack::Chips::bit64_t::b</references>
-        <references refid="a00896_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" compoundref="a00470" startline="33">Hack::Chips::Bit0</references>
-        <references refid="a00982_1af415893333942f41fb4c4ad619083a16" compoundref="a00470" startline="78">Hack::Chips::bit64_t::s</references>
-      </memberdef>
-      <memberdef kind="function" id="a00958_1a2f8ef9292d754e3b65079a0bae64076b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Hack::Chips::Alu::getZr</definition>
-        <argsstring>()</argsstring>
-        <name>getZr</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/ALU.h" line="81" column="1" bodyfile="Source/Chips/ALU.cpp" bodystart="89" bodyend="94"/>
-        <references refid="a00982_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00470" startline="79">Hack::Chips::bit64_t::b</references>
-        <references refid="a00896_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" compoundref="a00470" startline="33">Hack::Chips::Bit0</references>
-        <references refid="a00896_1acabb309d3c28ba3a5f469d25dff4f144a315f157d7e9917bcfe8a0dcfa133f6fb" compoundref="a00449" startline="36">Hack::Chips::Zr</references>
-      </memberdef>
-      <memberdef kind="function" id="a00958_1ab78360af9a64fb57b2144516bf03de8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::Alu::setFlags</definition>
-        <argsstring>(const uint8_t &amp;flags)</argsstring>
-        <name>setFlags</name>
+        <definition>Hack::Binding::RamWrapper::RamWrapper</definition>
+        <argsstring>(Memory *mem)</argsstring>
+        <name>RamWrapper</name>
         <param>
-          <type>const <ref refid="a01370" kindref="compound">uint8_t</ref> &amp;</type>
-          <declname>flags</declname>
+          <type><ref refid="a01058" kindref="compound">Memory</ref> *</type>
+          <declname>mem</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -126,18 +47,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/ALU.h" line="71" column="1" bodyfile="Source/Chips/ALU.cpp" bodystart="53" bodyend="62"/>
-        <references refid="a00982_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00470" startline="79">Hack::Chips::bit64_t::b</references>
-        <references refid="a00896_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" compoundref="a00470" startline="33">Hack::Chips::Bit0</references>
+        <location file="Source/Bindings/Bindings.cpp" line="104" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="104" bodyend="107"/>
       </memberdef>
-      <memberdef kind="function" id="a00958_1af3082e0b359aebd367e56457b1d8ef52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::Alu::setX</definition>
-        <argsstring>(const uint16_t &amp;x)</argsstring>
-        <name>setX</name>
+      <memberdef kind="function" id="a00958_1a65d06a289f5f265e71f03473f86f5ae1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Hack::Binding::RamWrapper::get</definition>
+        <argsstring>(const int idx) const</argsstring>
+        <name>get</name>
         <param>
-          <type>const <ref refid="a01358" kindref="compound">uint16_t</ref> &amp;</type>
-          <declname>x</declname>
+          <type>const int</type>
+          <declname>idx</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -145,19 +64,35 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/ALU.h" line="75" column="1" bodyfile="Source/Chips/ALU.cpp" bodystart="71" bodyend="78"/>
-        <references refid="a00982_1af415893333942f41fb4c4ad619083a16" compoundref="a00470" startline="78">Hack::Chips::bit64_t::s</references>
-        <references refid="a00982_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00470" startline="79">Hack::Chips::bit64_t::b</references>
-        <references refid="a00896_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" compoundref="a00470" startline="33">Hack::Chips::Bit0</references>
+        <location file="Source/Bindings/Bindings.cpp" line="109" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="109" bodyend="114"/>
+        <references refid="a00907_1afa6a47600d4368c4198b7292deb32747" compoundref="a00449" startline="46">Hack::Binding::RamType</references>
+        <references refid="a01058_1a7f5b5e64aa1b441be1bc547e27602559" compoundref="a01664" startline="121" endline="130">Hack::Chips::Memory::get</references>
       </memberdef>
-      <memberdef kind="function" id="a00958_1aa777e90d3af236329d8c7f9340a21a78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a00958_1a761fe5370d34e73b261692cc622ea7af" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::Chips::Alu::setY</definition>
-        <argsstring>(const uint16_t &amp;y)</argsstring>
-        <name>setY</name>
+        <definition>void Hack::Binding::RamWrapper::zeroMemory</definition>
+        <argsstring>() const</argsstring>
+        <name>zeroMemory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="116" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="116" bodyend="120"/>
+        <references refid="a00907_1afa6a47600d4368c4198b7292deb32747" compoundref="a00449" startline="46">Hack::Binding::RamType</references>
+        <references refid="a01058_1a0f261c4cfff3ae3fcd99537d2588a180" compoundref="a01664" startline="139" endline="143">Hack::Chips::Memory::zero</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="a00958_1a3a20c0f0773900ddb9d76d1ed0ff120f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="a00958" kindref="compound">RamWrapper</ref> *</type>
+        <definition>static const RamWrapper* Hack::Binding::RamWrapper::cast</definition>
+        <argsstring>(const Handle handle)</argsstring>
+        <name>cast</name>
         <param>
-          <type>const <ref refid="a01358" kindref="compound">uint16_t</ref> &amp;</type>
-          <declname>y</declname>
+          <type>const <ref refid="a00950" kindref="compound">Handle</ref></type>
+          <declname>handle</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -165,68 +100,22 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/ALU.h" line="77" column="1" bodyfile="Source/Chips/ALU.cpp" bodystart="80" bodyend="87"/>
-        <references refid="a00982_1af415893333942f41fb4c4ad619083a16" compoundref="a00470" startline="78">Hack::Chips::bit64_t::s</references>
-        <references refid="a00982_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00470" startline="79">Hack::Chips::bit64_t::b</references>
-        <references refid="a00896_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" compoundref="a00470" startline="33">Hack::Chips::Bit0</references>
+        <location file="Source/Bindings/Bindings.cpp" line="122" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="122" bodyend="131"/>
+        <references refid="a00907_1afa6a47600d4368c4198b7292deb32747" compoundref="a00449" startline="46">Hack::Binding::RamType</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <inheritancegraph>
-      <node id="53">
-        <label>Hack::Chips::Alu</label>
-        <link refid="a00958"/>
-        <childnode refid="54" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="54">
-        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
-        <link refid="a00990"/>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="55">
-        <label>Hack::Chips::Alu</label>
-        <link refid="a00958"/>
-        <childnode refid="56" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="57">
-        <label>uint8_t</label>
-        <link refid="a01370"/>
-      </node>
-      <node id="56">
-        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
-        <link refid="a00990"/>
-        <childnode refid="57" relation="usage">
-          <edgelabel>_bits</edgelabel>
-        </childnode>
-      </node>
-    </collaborationgraph>
-    <location file="Source/Chips/ALU.h" line="62" column="1" bodyfile="Source/Chips/ALU.h" bodystart="61" bodyend="84"/>
+    <location file="Source/Bindings/Bindings.cpp" line="97" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="96" bodyend="132"/>
     <listofallmembers>
-      <member refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>_bits</name></member>
-      <member refid="a00958_1ae8dd1ef437ddbd7103c40a8cc47754de" prot="private" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>_io</name></member>
-      <member refid="a00958_1af17c289dd1252a047f2bf651707603d4" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>Alu</name></member>
-      <member refid="a00990_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>applyBit</name></member>
-      <member refid="a00990_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>assignBit</name></member>
-      <member refid="a00990_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>Chip</name></member>
-      <member refid="a00990_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>clearBit</name></member>
-      <member refid="a00958_1a875ff59790e59b7330e35475d4070205" prot="private" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>evaluate</name></member>
-      <member refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>getBit</name></member>
-      <member refid="a00958_1aabd92bfe8970447e25ccd70f0a951530" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>getFlags</name></member>
-      <member refid="a00958_1a85ae2abb1cd2db9cbc00d2d7131dc819" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>getNe</name></member>
-      <member refid="a00958_1a0a6f75d46a2d234c77033a30fef51326" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>getOut</name></member>
-      <member refid="a00958_1a2f8ef9292d754e3b65079a0bae64076b" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>getZr</name></member>
-      <member refid="a00990_1a63bb368bb0827830235759b33718d1b4" prot="protected" virt="virtual"><scope>Hack::Chips::Alu</scope><name>isDirty</name></member>
-      <member refid="a00990_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>setBit</name></member>
-      <member refid="a00958_1ab78360af9a64fb57b2144516bf03de8a" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>setFlags</name></member>
-      <member refid="a00958_1af3082e0b359aebd367e56457b1d8ef52" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>setX</name></member>
-      <member refid="a00958_1aa777e90d3af236329d8c7f9340a21a78" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>setY</name></member>
-      <member refid="a00990_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::Alu</scope><name>~Chip</name></member>
+      <member refid="a00958_1aec58e3f4d8650bbf02398a12208be7df" prot="private" virt="non-virtual"><scope>Hack::Binding::RamWrapper</scope><name>_memory</name></member>
+      <member refid="a00958_1a3a20c0f0773900ddb9d76d1ed0ff120f" prot="public" virt="non-virtual"><scope>Hack::Binding::RamWrapper</scope><name>cast</name></member>
+      <member refid="a00958_1a65d06a289f5f265e71f03473f86f5ae1" prot="public" virt="non-virtual"><scope>Hack::Binding::RamWrapper</scope><name>get</name></member>
+      <member refid="a00958_1a1b5b1caf9f894916102fb72f44b26c97" prot="public" virt="non-virtual"><scope>Hack::Binding::RamWrapper</scope><name>RamWrapper</name></member>
+      <member refid="a00958_1a8f53cb859689b4d6223611ccb9cf0b0b" prot="private" virt="non-virtual"><scope>Hack::Binding::RamWrapper</scope><name>type</name></member>
+      <member refid="a00958_1a761fe5370d34e73b261692cc622ea7af" prot="public" virt="non-virtual"><scope>Hack::Binding::RamWrapper</scope><name>zeroMemory</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -1,751 +1,58 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01178" kind="class" language="C++" prot="public">
-    <compoundname>Hack::Compiler::CodeGenerator::Generator</compoundname>
-    <includes local="no">Source/Compiler/Generator/Generator.h</includes>
+    <compoundname>Hack::Compiler::Tree</compoundname>
+    <includes local="no">Source/Compiler/Common/Tree.h</includes>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="a01178_1a919582829bf53223821fa1b32ebd5f0a" prot="private" static="no" mutable="yes">
-        <type><ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Hack::Compiler::CodeGenerator::Generator::_elseEnd</definition>
+      <memberdef kind="variable" id="a01178_1a71af1e32842d01a8cb34947b582ead35" prot="private" static="no" mutable="no">
+        <type><ref refid="a01170" kindref="compound">Node</ref> *</type>
+        <definition>Node* Hack::Compiler::Tree::_root</definition>
         <argsstring></argsstring>
-        <name>_elseEnd</name>
+        <name>_root</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="58" column="1" bodyfile="Source/Compiler/Generator/Generator.h" bodystart="58" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01178_1aa475fd5cdb9e40a59fb639983c810d86" prot="private" static="no" mutable="no">
-        <type><ref refid="a01194" kindref="compound">VmEmitter</ref> *</type>
-        <definition>VmEmitter* Hack::Compiler::CodeGenerator::Generator::_emitter</definition>
-        <argsstring></argsstring>
-        <name>_emitter</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="55" column="1" bodyfile="Source/Compiler/Generator/Generator.h" bodystart="55" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01178_1a7aac7ad14da5f8dc568862f0a5df1637" prot="private" static="no" mutable="no">
-        <type><ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Hack::Compiler::CodeGenerator::Generator::_fileName</definition>
-        <argsstring></argsstring>
-        <name>_fileName</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="56" column="1" bodyfile="Source/Compiler/Generator/Generator.h" bodystart="56" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01178_1ac0ece3810f6f701ffa1cdfa18ef8f213" prot="private" static="no" mutable="no">
-        <type><ref refid="a01190" kindref="compound">SymbolTable</ref> *</type>
-        <definition>SymbolTable* Hack::Compiler::CodeGenerator::Generator::_globals</definition>
-        <argsstring></argsstring>
-        <name>_globals</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="53" column="1" bodyfile="Source/Compiler/Generator/Generator.h" bodystart="53" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01178_1ab157d6d7d8fb38c166a46d5aa9708e55" prot="private" static="no" mutable="yes">
-        <type>bool</type>
-        <definition>bool Hack::Compiler::CodeGenerator::Generator::_hasReturn</definition>
-        <argsstring></argsstring>
-        <name>_hasReturn</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="57" column="1" bodyfile="Source/Compiler/Generator/Generator.h" bodystart="57" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01178_1a863877b03c0707599f7809db747af44d" prot="private" static="no" mutable="no">
-        <type><ref refid="a01190" kindref="compound">SymbolTable</ref> *</type>
-        <definition>SymbolTable* Hack::Compiler::CodeGenerator::Generator::_locals</definition>
-        <argsstring></argsstring>
-        <name>_locals</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="54" column="1" bodyfile="Source/Compiler/Generator/Generator.h" bodystart="54" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="private-func">
-      <memberdef kind="function" id="a01178_1ab4d65e17fadfeb8d67d26469c5d161f0" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::buildCallMethod</definition>
-        <argsstring>(const Node &amp;callMethod) const</argsstring>
-        <name>buildCallMethod</name>
-        <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> &amp;</type>
-          <declname>callMethod</declname>
-        </param>
-        <briefdescription>
-<para><programlisting><codeline><highlight class="normal">CallMethod<sp/>::=<sp/>Identifier<sp/>&apos;(&apos;<sp/>ExpressionList<sp/>&apos;)&apos;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Identifier<sp/>&apos;.&apos;<sp/>Identifier<sp/>&apos;(&apos;<sp/>ExpressionList<sp/>&apos;)&apos;</highlight></codeline>
-</programlisting> </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>callMethod</parametername>
-</parameternamelist>
-<parameterdescription>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="96" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="371" bodyend="401"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1ab31fda65afa44a70948b197076a6ae58" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::buildClass</definition>
-        <argsstring>(Node *node) const</argsstring>
-        <name>buildClass</name>
-        <param>
-          <type><ref refid="a01158" kindref="compound">Node</ref> *</type>
-          <declname>node</declname>
-        </param>
-        <briefdescription>
-<para><programlisting><codeline><highlight class="normal">Class<sp/>::=<sp/>Class<sp/>Identifier<sp/>&apos;{&apos;<sp/>ClassDescription<sp/>&apos;}&apos;</highlight></codeline>
-</programlisting> </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>node</parametername>
-</parameternamelist>
-<parameterdescription>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="64" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="675" bodyend="680"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1a116fee5e412bb045f778e7cd180ef4fa" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::buildClassDescription</definition>
-        <argsstring>(const Node &amp;classDescription) const</argsstring>
-        <name>buildClassDescription</name>
-        <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> &amp;</type>
-          <declname>classDescription</declname>
-        </param>
-        <briefdescription>
-<para><programlisting><codeline><highlight class="normal">ClassDescription<sp/><sp/>::=<sp/>ClassDescription<sp/>Field<sp/>&apos;;&apos;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>ClassDescription<sp/>Method</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
-</programlisting> </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>classDescription</parametername>
-</parameternamelist>
-<parameterdescription>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="68" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="609" bodyend="643"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1a7f156c7eb18929fa03a2fbdfcdf4a2df" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::buildComplexTerm</definition>
-        <argsstring>(const Node &amp;complexTerm) const</argsstring>
-        <name>buildComplexTerm</name>
-        <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> &amp;</type>
-          <declname>complexTerm</declname>
-        </param>
-        <briefdescription>
-<para><programlisting><codeline><highlight class="normal">ComplexTerm<sp/>::=<sp/>Identifier<sp/>&apos;[&apos;<sp/>Expression<sp/>&apos;]&apos;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>CallMethod</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>&apos;(&apos;<sp/>Expression<sp/><sp/>&apos;)&apos;</highlight></codeline>
-</programlisting> </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>complexTerm</parametername>
-</parameternamelist>
-<parameterdescription>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="82" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="177" bodyend="191"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1acf2157166909722f0fb0546004b1b8a1" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::buildConstant</definition>
-        <argsstring>(const Node &amp;simpleTerm) const</argsstring>
-        <name>buildConstant</name>
-        <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> &amp;</type>
-          <declname>simpleTerm</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="74" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="74" bodyend="97"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1a1f7d4816798cd9f9eae2e8c1fa0b4adc" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::buildDoStatement</definition>
-        <argsstring>(const Node &amp;statement) const</argsstring>
-        <name>buildDoStatement</name>
-        <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> &amp;</type>
-          <declname>statement</declname>
-        </param>
-        <briefdescription>
-<para><programlisting><codeline><highlight class="normal">DoStatement<sp/>::=<sp/>Do<sp/>CallMethod<sp/>&apos;;&apos;</highlight></codeline>
-</programlisting> </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>statement</parametername>
-</parameternamelist>
-<parameterdescription>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="98" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="409" bodyend="413"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1a4829710c00228d1b2573d24b78722de2" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::buildElseStatement</definition>
-        <argsstring>(const Node &amp;statement) const</argsstring>
-        <name>buildElseStatement</name>
-        <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> &amp;</type>
-          <declname>statement</declname>
-        </param>
-        <briefdescription>
-<para><programlisting><codeline><highlight class="normal">IfStatement<sp/>::=<sp/>If<sp/>&apos;(&apos;<sp/>Expression<sp/>&apos;)&apos;<sp/>&apos;{&apos;<sp/>StatementList<sp/>&apos;}&apos;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Else<sp/>&apos;{&apos;<sp/><sp/>StatementList<sp/><sp/>&apos;}&apos;</highlight></codeline>
-</programlisting> </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>statement</parametername>
-</parameternamelist>
-<parameterdescription>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="102" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="422" bodyend="430"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1add5e0708c71cf995eb8ec12376d0b909" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::buildExpression</definition>
-        <argsstring>(const Node &amp;expression) const</argsstring>
-        <name>buildExpression</name>
-        <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> &amp;</type>
-          <declname>expression</declname>
-        </param>
-        <briefdescription>
-<para><programlisting><codeline><highlight class="normal">Expression<sp/>::=<sp/>ExpressionSingleExpression</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>SingleExpression</highlight></codeline>
-</programlisting> </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>expression</parametername>
-</parameternamelist>
-<parameterdescription>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="88" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="336" bodyend="343"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1a089dc2d422aebef1e1605ea9d3ac4a02" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::buildExpressionList</definition>
-        <argsstring>(const Node &amp;expressionList) const</argsstring>
-        <name>buildExpressionList</name>
-        <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> &amp;</type>
-          <declname>expressionList</declname>
-        </param>
-        <briefdescription>
-<para><programlisting><codeline><highlight class="normal">ExpressionList<sp/>::=<sp/>ExpressionList<sp/>&apos;,&apos;<sp/><sp/>Expression</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Expression</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>!&amp;ndash;empty&amp;ndash;</highlight></codeline>
-</programlisting> </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>expressionList</parametername>
-</parameternamelist>
-<parameterdescription>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="94" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="353" bodyend="362"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1ac86cfcd6a9c7f3689b0ec084f39a71ad" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::buildGlobals</definition>
-        <argsstring>(const Node &amp;classDescription) const</argsstring>
-        <name>buildGlobals</name>
-        <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> &amp;</type>
-          <declname>classDescription</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="66" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="645" bodyend="667"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1abf26bd6bb91ac3863ea25f8358d5b33a" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::buildIfStatement</definition>
-        <argsstring>(const Node &amp;statement) const</argsstring>
-        <name>buildIfStatement</name>
-        <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> &amp;</type>
-          <declname>statement</declname>
-        </param>
-        <briefdescription>
-<para><programlisting><codeline><highlight class="normal">IfStatement<sp/>::=<sp/>If<sp/>&apos;(&apos;<sp/>Expression<sp/>&apos;)&apos;<sp/>&apos;{&apos;<sp/>StatementList<sp/>&apos;}&apos;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Else<sp/>&apos;{&apos;<sp/><sp/>StatementList<sp/><sp/>&apos;}&apos;</highlight></codeline>
-</programlisting> </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>statement</parametername>
-</parameternamelist>
-<parameterdescription>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="100" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="439" bodyend="458"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1a9e05c99a07e49506e3b76b336b7795c1" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::buildLetStatement</definition>
-        <argsstring>(const Node &amp;statement) const</argsstring>
-        <name>buildLetStatement</name>
-        <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> &amp;</type>
-          <declname>statement</declname>
-        </param>
-        <briefdescription>
-<para><programlisting><codeline><highlight class="normal">LetStatement<sp/>::=<sp/>Let<sp/>Identifier<sp/>&apos;=&apos;<sp/>Expression<sp/>&apos;;&apos;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Let<sp/>Identifier<sp/>&apos;[&apos;<sp/><sp/>Expression<sp/><sp/>&apos;]&apos;<sp/>&apos;=&apos;<sp/><sp/>Expression<sp/><sp/>&apos;;&apos;</highlight></codeline>
-</programlisting> </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>statement</parametername>
-</parameternamelist>
-<parameterdescription>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="90" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="227" bodyend="264"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1a0df80677e03bb1d054640f0ea04b9e3a" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::buildLocals</definition>
-        <argsstring>(const Node &amp;bodyNode, const Node &amp;parameters) const</argsstring>
-        <name>buildLocals</name>
-        <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> &amp;</type>
-          <declname>bodyNode</declname>
-        </param>
-        <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> &amp;</type>
-          <declname>parameters</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="70" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="570" bodyend="599"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1a03dadcfc8ac8f00b4328593325f84a9c" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::buildOperation</definition>
-        <argsstring>(const Node &amp;op) const</argsstring>
-        <name>buildOperation</name>
-        <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> &amp;</type>
-          <declname>op</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="78" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="114" bodyend="142"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1a39c418dfd063976f9ed820c8aae10ba1" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::buildReturnStatement</definition>
-        <argsstring>(const Node &amp;statement) const</argsstring>
-        <name>buildReturnStatement</name>
-        <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> &amp;</type>
-          <declname>statement</declname>
-        </param>
-        <briefdescription>
-<para>ReturnStatement ::= Return &apos;;&apos; | Return Expression &apos;;&apos; <programlisting></programlisting> </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>statement</parametername>
-</parameternamelist>
-<parameterdescription>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="92" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="271" bodyend="285"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1a9f0e86d6baca0b60c647a42664e7620f" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::buildSimpleTerm</definition>
-        <argsstring>(const Node &amp;simpleTerm) const</argsstring>
-        <name>buildSimpleTerm</name>
-        <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> &amp;</type>
-          <declname>simpleTerm</declname>
-        </param>
-        <briefdescription>
-<para><programlisting><codeline><highlight class="normal">&lt;SimpleTerm&gt;<sp/>::=<sp/>Integer</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>String</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>True</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>False</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Null</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>This</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Identifier</highlight></codeline>
-</programlisting> </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>simpleTerm</parametername>
-</parameternamelist>
-<parameterdescription>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="80" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="156" bodyend="167"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1ae22da05d5e07d17afafa44806bc67831" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::buildSingleExpression</definition>
-        <argsstring>(const Node &amp;expression) const</argsstring>
-        <name>buildSingleExpression</name>
-        <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> &amp;</type>
-          <declname>expression</declname>
-          <defname>singleExpression</defname>
-        </param>
-        <briefdescription>
-<para><programlisting><codeline><highlight class="normal">SingleExpression<sp/>::=<sp/>Term</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Operator<sp/>Term</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>UnaryOperator<sp/>Term</highlight></codeline>
-</programlisting> </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>singleExpression</parametername>
-</parameternamelist>
-<parameterdescription>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="86" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="295" bodyend="327"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1a8caef4cef83e1bb349c1066e84b57d88" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::buildStatements</definition>
-        <argsstring>(const Node &amp;methodBody) const</argsstring>
-        <name>buildStatements</name>
-        <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> &amp;</type>
-          <declname>methodBody</declname>
-        </param>
-        <briefdescription>
-<para><programlisting><codeline><highlight class="normal">StatementList<sp/>::=<sp/>StatementList<sp/>Statement</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Statement</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
-</programlisting> </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>methodBody</parametername>
-</parameternamelist>
-<parameterdescription>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="106" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="492" bodyend="538"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1a4172744950fa46889929ecc6fd0ca6ab" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::buildTerm</definition>
-        <argsstring>(const Node &amp;term) const</argsstring>
-        <name>buildTerm</name>
-        <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> &amp;</type>
-          <declname>term</declname>
-        </param>
-        <briefdescription>
-<para><programlisting><codeline><highlight class="normal">Term<sp/>::=<sp/>SimpleTerm<sp/>|<sp/>ComplexTerm</highlight></codeline>
-</programlisting> </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>term</parametername>
-</parameternamelist>
-<parameterdescription>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="84" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="199" bodyend="218"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1abf41a405179f690b4b1ed59947e91af7" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::buildUnaryOperation</definition>
-        <argsstring>(const Node &amp;unary) const</argsstring>
-        <name>buildUnaryOperation</name>
-        <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> &amp;</type>
-          <declname>unary</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="76" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="99" bodyend="112"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1ae90c7df57df9d660b6f775fd97f8ecce" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::buildWhileStatement</definition>
-        <argsstring>(const Node &amp;statement) const</argsstring>
-        <name>buildWhileStatement</name>
-        <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> &amp;</type>
-          <declname>statement</declname>
-        </param>
-        <briefdescription>
-<para><programlisting><codeline><highlight class="normal">WhileStatement<sp/>::=<sp/>While<sp/>&apos;(&apos;<sp/>Expression<sp/>&apos;)&apos;<sp/>&apos;{&apos;<sp/>StatementList<sp/>&apos;}&apos;</highlight></codeline>
-</programlisting> </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>statement</parametername>
-</parameternamelist>
-<parameterdescription>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="104" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="466" bodyend="482"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1af8eb3c005cf81e98d1dd1fcf74795d0e" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename...</type>
-            <declname>Args</declname>
-            <defname>Args</defname>
-          </param>
-        </templateparamlist>
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::compileError</definition>
-        <argsstring>(const Node &amp;node, const String &amp;what, Args &amp;&amp;...args) const</argsstring>
-        <name>compileError</name>
-        <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> &amp;</type>
-          <declname>node</declname>
-        </param>
-        <param>
-          <type>const <ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>what</declname>
-        </param>
-        <param>
-          <type>Args &amp;&amp;...</type>
-          <declname>args</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="111" column="1" bodyfile="Source/Compiler/Generator/Generator.h" bodystart="111" bodyend="117"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1a73527bbc1d81ce0571628d3c61065410" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a01186" kindref="compound">Symbol</ref></type>
-        <definition>Symbol Hack::Compiler::CodeGenerator::Generator::lookup</definition>
-        <argsstring>(const String &amp;name) const</argsstring>
-        <name>lookup</name>
-        <param>
-          <type>const <ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>name</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="60" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="540" bodyend="547"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1a2c29d6924758038c2b78fd2db3b9348e" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::parseImpl</definition>
-        <argsstring>(const Node *root) const</argsstring>
-        <name>parseImpl</name>
-        <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> *</type>
-          <declname>root</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="108" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="682" bodyend="700"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1ae05d574b477a31565911b2881e62eafc" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::popSymbol</definition>
-        <argsstring>(const Symbol &amp;symbol) const</argsstring>
-        <name>popSymbol</name>
-        <param>
-          <type>const <ref refid="a01186" kindref="compound">Symbol</ref> &amp;</type>
-          <declname>symbol</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="62" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="549" bodyend="568"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1ae3da2b18abec548ee4777002d810abeb" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::pushIdentifier</definition>
-        <argsstring>(const Node &amp;constantIdentifier) const</argsstring>
-        <name>pushIdentifier</name>
-        <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> &amp;</type>
-          <declname>constantIdentifier</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="72" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="48" bodyend="72"/>
+        <location file="Source/Compiler/Common/Tree.h" line="32" column="1" bodyfile="Source/Compiler/Common/Tree.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01178_1aa715d55887bafd9366a846a71a221237" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01178_1a23c525c96dd46a4b7982949318112499" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>Hack::Compiler::CodeGenerator::Generator::Generator</definition>
+        <definition>Hack::Compiler::Tree::Tree</definition>
         <argsstring>()</argsstring>
-        <name>Generator</name>
+        <name>Tree</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="120" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="33" bodyend="39"/>
+        <location file="Source/Compiler/Common/Tree.h" line="35" column="1" bodyfile="Source/Compiler/Common/Tree.cpp" bodystart="30" bodyend="33"/>
       </memberdef>
-      <memberdef kind="function" id="a01178_1ac9dbc82f77eb95c9c63157f9408743cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01178_1a45358a8d6576f798c84aa599d3c8968e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>Hack::Compiler::CodeGenerator::Generator::~Generator</definition>
+        <definition>Hack::Compiler::Tree::~Tree</definition>
         <argsstring>()</argsstring>
-        <name>~Generator</name>
+        <name>~Tree</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="121" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="41" bodyend="46"/>
+        <location file="Source/Compiler/Common/Tree.h" line="36" column="1" bodyfile="Source/Compiler/Common/Tree.cpp" bodystart="35" bodyend="39"/>
       </memberdef>
-      <memberdef kind="function" id="a01178_1a56124ee10cf34c6d9fa38b9be1ebeeb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01178_1ab00b92685755429ac933b3507a79bcd0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::compile</definition>
-        <argsstring>(const Node *tree)</argsstring>
-        <name>compile</name>
+        <definition>void Hack::Compiler::Tree::filename</definition>
+        <argsstring>(const String &amp;fileName) const</argsstring>
+        <name>filename</name>
         <param>
-          <type>const <ref refid="a01158" kindref="compound">Node</ref> *</type>
-          <declname>tree</declname>
+          <type>const <ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>fileName</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -753,34 +60,34 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="127" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="702" bodyend="709"/>
-        <references refid="a01158_1a7159b0a48fe5e2fff5ffe0472666a016" compoundref="a00701" startline="206" endline="209">Hack::Compiler::Node::filename</references>
+        <location file="Source/Compiler/Common/Tree.h" line="42" column="1" bodyfile="Source/Compiler/Common/Tree.cpp" bodystart="42" bodyend="45"/>
+        <references refid="a01170_1a7159b0a48fe5e2fff5ffe0472666a016" compoundref="a00713" startline="206" endline="209">Hack::Compiler::Node::filename</references>
       </memberdef>
-      <memberdef kind="function" id="a01178_1a698f9cac52d1b90feb9fc06b77ce649b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01178_1a58e4ebbe1e9af83ed2d9ceb8843f90e4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="a01170" kindref="compound">Node</ref> *</type>
+        <definition>Node * Hack::Compiler::Tree::getRoot</definition>
+        <argsstring>() const</argsstring>
+        <name>getRoot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Common/Tree.h" line="38" column="1" bodyfile="Source/Compiler/Common/Tree.h" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="a01178_1a6a896a5aa2081ea5b7acbb59c82b9b69" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::write</definition>
-        <argsstring>(const String &amp;file) const</argsstring>
+        <definition>void Hack::Compiler::Tree::write</definition>
+        <argsstring>(OStream &amp;out, int format) const</argsstring>
         <name>write</name>
         <param>
-          <type>const <ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>file</declname>
+          <type><ref refid="a00906_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref> &amp;</type>
+          <declname>out</declname>
         </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="123" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="711" bodyend="725"/>
-      </memberdef>
-      <memberdef kind="function" id="a01178_1a98632e09cf5573e9ca1f043a4f5366a0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::CodeGenerator::Generator::write</definition>
-        <argsstring>(OStream &amp;stream) const</argsstring>
-        <name>write</name>
         <param>
-          <type><ref refid="a00894_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref> &amp;</type>
-          <declname>stream</declname>
+          <type>int</type>
+          <declname>format</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -788,53 +95,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Generator/Generator.h" line="125" column="1" bodyfile="Source/Compiler/Generator/Generator.cpp" bodystart="727" bodyend="731"/>
-        <references refid="a01194_1a437cd42d4486dc6d1072f58b0517a187" compoundref="a00755" startline="136" endline="139">Hack::Compiler::CodeGenerator::VmEmitter::stream</references>
+        <location file="Source/Compiler/Common/Tree.h" line="40" column="1" bodyfile="Source/Compiler/Common/Tree.cpp" bodystart="47" bodyend="59"/>
+        <references refid="a01186_1a3cda3976be2f39380491275e681cdde9" compoundref="a00728" startline="154" endline="158">Hack::Compiler::XmlWriter::write</references>
+        <references refid="a01166_1a3c42eaf7c27647c3e266d5c02fc62e48" compoundref="a00704" startline="131" endline="135">Hack::Compiler::DotWriter::write</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Compiler/Generator/Generator.h" line="51" column="1" bodyfile="Source/Compiler/Generator/Generator.h" bodystart="50" bodyend="128"/>
+    <location file="Source/Compiler/Common/Tree.h" line="30" column="1" bodyfile="Source/Compiler/Common/Tree.h" bodystart="29" bodyend="43"/>
     <listofallmembers>
-      <member refid="a01178_1a919582829bf53223821fa1b32ebd5f0a" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>_elseEnd</name></member>
-      <member refid="a01178_1aa475fd5cdb9e40a59fb639983c810d86" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>_emitter</name></member>
-      <member refid="a01178_1a7aac7ad14da5f8dc568862f0a5df1637" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>_fileName</name></member>
-      <member refid="a01178_1ac0ece3810f6f701ffa1cdfa18ef8f213" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>_globals</name></member>
-      <member refid="a01178_1ab157d6d7d8fb38c166a46d5aa9708e55" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>_hasReturn</name></member>
-      <member refid="a01178_1a863877b03c0707599f7809db747af44d" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>_locals</name></member>
-      <member refid="a01178_1ab4d65e17fadfeb8d67d26469c5d161f0" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>buildCallMethod</name></member>
-      <member refid="a01178_1ab31fda65afa44a70948b197076a6ae58" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>buildClass</name></member>
-      <member refid="a01178_1a116fee5e412bb045f778e7cd180ef4fa" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>buildClassDescription</name></member>
-      <member refid="a01178_1a7f156c7eb18929fa03a2fbdfcdf4a2df" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>buildComplexTerm</name></member>
-      <member refid="a01178_1acf2157166909722f0fb0546004b1b8a1" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>buildConstant</name></member>
-      <member refid="a01178_1a1f7d4816798cd9f9eae2e8c1fa0b4adc" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>buildDoStatement</name></member>
-      <member refid="a01178_1a4829710c00228d1b2573d24b78722de2" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>buildElseStatement</name></member>
-      <member refid="a01178_1add5e0708c71cf995eb8ec12376d0b909" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>buildExpression</name></member>
-      <member refid="a01178_1a089dc2d422aebef1e1605ea9d3ac4a02" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>buildExpressionList</name></member>
-      <member refid="a01178_1ac86cfcd6a9c7f3689b0ec084f39a71ad" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>buildGlobals</name></member>
-      <member refid="a01178_1abf26bd6bb91ac3863ea25f8358d5b33a" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>buildIfStatement</name></member>
-      <member refid="a01178_1a9e05c99a07e49506e3b76b336b7795c1" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>buildLetStatement</name></member>
-      <member refid="a01178_1a0df80677e03bb1d054640f0ea04b9e3a" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>buildLocals</name></member>
-      <member refid="a01178_1a03dadcfc8ac8f00b4328593325f84a9c" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>buildOperation</name></member>
-      <member refid="a01178_1a39c418dfd063976f9ed820c8aae10ba1" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>buildReturnStatement</name></member>
-      <member refid="a01178_1a9f0e86d6baca0b60c647a42664e7620f" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>buildSimpleTerm</name></member>
-      <member refid="a01178_1ae22da05d5e07d17afafa44806bc67831" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>buildSingleExpression</name></member>
-      <member refid="a01178_1a8caef4cef83e1bb349c1066e84b57d88" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>buildStatements</name></member>
-      <member refid="a01178_1a4172744950fa46889929ecc6fd0ca6ab" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>buildTerm</name></member>
-      <member refid="a01178_1abf41a405179f690b4b1ed59947e91af7" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>buildUnaryOperation</name></member>
-      <member refid="a01178_1ae90c7df57df9d660b6f775fd97f8ecce" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>buildWhileStatement</name></member>
-      <member refid="a01178_1a56124ee10cf34c6d9fa38b9be1ebeeb7" prot="public" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>compile</name></member>
-      <member refid="a01178_1af8eb3c005cf81e98d1dd1fcf74795d0e" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>compileError</name></member>
-      <member refid="a01178_1aa715d55887bafd9366a846a71a221237" prot="public" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>Generator</name></member>
-      <member refid="a01178_1a73527bbc1d81ce0571628d3c61065410" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>lookup</name></member>
-      <member refid="a01178_1a2c29d6924758038c2b78fd2db3b9348e" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>parseImpl</name></member>
-      <member refid="a01178_1ae05d574b477a31565911b2881e62eafc" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>popSymbol</name></member>
-      <member refid="a01178_1ae3da2b18abec548ee4777002d810abeb" prot="private" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>pushIdentifier</name></member>
-      <member refid="a01178_1a698f9cac52d1b90feb9fc06b77ce649b" prot="public" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>write</name></member>
-      <member refid="a01178_1a98632e09cf5573e9ca1f043a4f5366a0" prot="public" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>write</name></member>
-      <member refid="a01178_1ac9dbc82f77eb95c9c63157f9408743cc" prot="public" virt="non-virtual"><scope>Hack::Compiler::CodeGenerator::Generator</scope><name>~Generator</name></member>
+      <member refid="a01178_1a71af1e32842d01a8cb34947b582ead35" prot="private" virt="non-virtual"><scope>Hack::Compiler::Tree</scope><name>_root</name></member>
+      <member refid="a01178_1ab00b92685755429ac933b3507a79bcd0" prot="public" virt="non-virtual"><scope>Hack::Compiler::Tree</scope><name>filename</name></member>
+      <member refid="a01178_1a58e4ebbe1e9af83ed2d9ceb8843f90e4" prot="public" virt="non-virtual"><scope>Hack::Compiler::Tree</scope><name>getRoot</name></member>
+      <member refid="a01178_1a23c525c96dd46a4b7982949318112499" prot="public" virt="non-virtual"><scope>Hack::Compiler::Tree</scope><name>Tree</name></member>
+      <member refid="a01178_1a6a896a5aa2081ea5b7acbb59c82b9b69" prot="public" virt="non-virtual"><scope>Hack::Compiler::Tree</scope><name>write</name></member>
+      <member refid="a01178_1a45358a8d6576f798c84aa599d3c8968e" prot="public" virt="non-virtual"><scope>Hack::Compiler::Tree</scope><name>~Tree</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

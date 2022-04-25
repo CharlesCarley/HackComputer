@@ -1,175 +1,98 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00629" kind="file" language="C++">
-    <compoundname>Ram16k.h</compoundname>
-    <includes refid="a00497" local="yes">Chips/DefaultMemorySegment.h</includes>
-    <includedby refid="a01661" local="yes">Source/Chips/Memory.h</includedby>
+    <compoundname>Or8Way.h</compoundname>
+    <includes refid="a00485" local="yes">Chips/Chip.h</includes>
+    <includedby refid="a00626" local="yes">Source/Chips/Or8Way.cpp</includedby>
     <incdepgraph>
-      <node id="1923">
+      <node id="1863">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="1924" relation="include">
+        <childnode refid="1864" relation="include">
         </childnode>
       </node>
-      <node id="1915">
+      <node id="1855">
         <label>Chips/BitUtils.h</label>
-        <childnode refid="1916" relation="include">
+        <childnode refid="1856" relation="include">
         </childnode>
-        <childnode refid="1917" relation="include">
+        <childnode refid="1857" relation="include">
         </childnode>
       </node>
-      <node id="1924">
+      <node id="1864">
         <label>cstdint</label>
       </node>
-      <node id="1920">
+      <node id="1860">
         <label>string</label>
       </node>
-      <node id="1922">
+      <node id="1862">
         <label>UserInterface/Context.h</label>
-        <childnode refid="1918" relation="include">
+        <childnode refid="1858" relation="include">
         </childnode>
-        <childnode refid="1923" relation="include">
+        <childnode refid="1863" relation="include">
         </childnode>
-        <childnode refid="1925" relation="include">
+        <childnode refid="1865" relation="include">
         </childnode>
       </node>
-      <node id="1925">
+      <node id="1865">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="1924" relation="include">
+        <childnode refid="1864" relation="include">
         </childnode>
-        <childnode refid="1921" relation="include">
+        <childnode refid="1861" relation="include">
         </childnode>
-        <childnode refid="1923" relation="include">
+        <childnode refid="1863" relation="include">
         </childnode>
       </node>
-      <node id="1917">
+      <node id="1857">
         <label>Utils/Console.h</label>
-        <childnode refid="1918" relation="include">
+        <childnode refid="1858" relation="include">
         </childnode>
-        <childnode refid="1922" relation="include">
+        <childnode refid="1862" relation="include">
         </childnode>
       </node>
-      <node id="1916">
+      <node id="1853">
+        <label>Source/Chips/Or8Way.h</label>
+        <link refid="a00629"/>
+        <childnode refid="1854" relation="include">
+        </childnode>
+      </node>
+      <node id="1856">
         <label>bitset</label>
       </node>
-      <node id="1921">
+      <node id="1861">
         <label>vector</label>
       </node>
-      <node id="1919">
+      <node id="1859">
         <label>sstream</label>
       </node>
-      <node id="1914">
+      <node id="1854">
         <label>Chips/Chip.h</label>
-        <childnode refid="1915" relation="include">
+        <childnode refid="1855" relation="include">
         </childnode>
-        <childnode refid="1917" relation="include">
-        </childnode>
-      </node>
-      <node id="1911">
-        <label>Chips/DefaultMemorySegment.h</label>
-        <childnode refid="1912" relation="include">
+        <childnode refid="1857" relation="include">
         </childnode>
       </node>
-      <node id="1912">
-        <label>Chips/IMemorySegment.h</label>
-        <childnode refid="1913" relation="include">
-        </childnode>
-        <childnode refid="1914" relation="include">
-        </childnode>
-      </node>
-      <node id="1910">
-        <label>Source/Chips/Ram16k.h</label>
-        <link refid="a00629"/>
-        <childnode refid="1911" relation="include">
-        </childnode>
-      </node>
-      <node id="1913">
-        <label>cstring</label>
-      </node>
-      <node id="1918">
+      <node id="1858">
         <label>String.h</label>
-        <childnode refid="1919" relation="include">
+        <childnode refid="1859" relation="include">
         </childnode>
-        <childnode refid="1920" relation="include">
+        <childnode refid="1860" relation="include">
         </childnode>
-        <childnode refid="1921" relation="include">
+        <childnode refid="1861" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="1937">
-        <label>Source/Computer/RuntimeSDL.h</label>
+      <node id="1867">
+        <label>Source/Chips/Or8Way.cpp</label>
       </node>
-      <node id="1936">
-        <label>Source/Computer/DebugRuntime.h</label>
-        <childnode refid="1931" relation="include">
-        </childnode>
-        <childnode refid="1933" relation="include">
-        </childnode>
-      </node>
-      <node id="1928">
-        <label>Source/Chips/Computer.h</label>
-        <childnode refid="1929" relation="include">
-        </childnode>
-        <childnode refid="1930" relation="include">
-        </childnode>
-        <childnode refid="1931" relation="include">
-        </childnode>
-        <childnode refid="1932" relation="include">
-        </childnode>
-        <childnode refid="1933" relation="include">
-        </childnode>
-        <childnode refid="1934" relation="include">
-        </childnode>
-      </node>
-      <node id="1927">
-        <label>Source/Chips/Memory.h</label>
-        <childnode refid="1928" relation="include">
-        </childnode>
-        <childnode refid="1938" relation="include">
-        </childnode>
-      </node>
-      <node id="1929">
-        <label>Source/Bindings/Bindings.cpp</label>
-      </node>
-      <node id="1930">
-        <label>Source/Chips/Computer.cpp</label>
-      </node>
-      <node id="1932">
-        <label>Source/Computer/CommandRuntime.cpp</label>
-      </node>
-      <node id="1938">
-        <label>Source/Chips/Memory.cpp</label>
-      </node>
-      <node id="1933">
-        <label>Source/Computer/DebugRuntime.cpp</label>
-      </node>
-      <node id="1926">
-        <label>Source/Chips/Ram16k.h</label>
+      <node id="1866">
+        <label>Source/Chips/Or8Way.h</label>
         <link refid="a00629"/>
-        <childnode refid="1927" relation="include">
-        </childnode>
-      </node>
-      <node id="1931">
-        <label>Source/Computer/Application.cpp</label>
-      </node>
-      <node id="1934">
-        <label>Source/Computer/RuntimeInterface.h</label>
-        <childnode refid="1935" relation="include">
-        </childnode>
-        <childnode refid="1936" relation="include">
-        </childnode>
-        <childnode refid="1937" relation="include">
-        </childnode>
-      </node>
-      <node id="1935">
-        <label>Source/Computer/CommandRuntime.h</label>
-        <childnode refid="1931" relation="include">
-        </childnode>
-        <childnode refid="1932" relation="include">
+        <childnode refid="1867" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
-    <innernamespace refid="a00899">Hack::Chips</innernamespace>
+    <innerclass refid="a01102" prot="public">Hack::Chips::Or8Way</innerclass>
+    <innernamespace refid="a00908">Hack::Chips</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -197,13 +120,24 @@
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/DefaultMemorySegment.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Chip.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00899" kindref="compound">Hack::Chips</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00908" kindref="compound">Hack::Chips</ref></highlight></codeline>
 <codeline lineno="26"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="27" refid="a00899_1a34177040653a4658b7c74d3846e164e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="a01013" kindref="compound">DefaultMemorySegment&lt;0x4000, 0x8000&gt;</ref><sp/><ref refid="a00899_1a34177040653a4658b7c74d3846e164e1" kindref="member">Ram16k</ref>;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="a01102" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01102" kindref="compound">Or8Way</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="a01002" kindref="compound" tooltip="Chip is the base class for all chips defined in this system. It uses a template integer for the _bits...">Chip</ref>&lt;uint16_t,<sp/>16&gt;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>evaluate();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01102_1a089fdad3284020eea4be1c5bf7112f9a" kindref="member">Or8Way</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01102_1afab4a119dd4ac7a7ef0311503fb10397" kindref="member">setIn</ref>(<ref refid="a01382" kindref="compound">uint8_t</ref><sp/>v);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01102_1ae8ecce2b844d75c6849a99f2d2b6b933" kindref="member">getOut</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Chips/Ram16k.h"/>
+    <location file="Source/Chips/Or8Way.h"/>
   </compounddef>
 </doxygen>

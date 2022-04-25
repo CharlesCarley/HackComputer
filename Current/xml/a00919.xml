@@ -1,195 +1,106 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00919" kind="namespace" language="C++">
-    <compoundname>Hack::Chips::BitwiseGates</compoundname>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="a00919_1a84362f3ebaddfd42c327c37f29d808d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>T</type>
-        <definition>T Hack::Chips::BitwiseGates::And</definition>
-        <argsstring>(const T &amp;a, const T &amp;b)</argsstring>
-        <name>And</name>
-        <param>
-          <type>const T &amp;</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>const T &amp;</type>
-          <declname>b</declname>
-        </param>
+    <compoundname>Hack::CommandLine</compoundname>
+    <innerclass refid="a01246" prot="public">Hack::CommandLine::ParseOption</innerclass>
+    <innerclass refid="a01250" prot="public">Hack::CommandLine::Parser</innerclass>
+    <innerclass refid="a01254" prot="public">Hack::CommandLine::Scanner</innerclass>
+    <innerclass refid="a01242" prot="public">Hack::CommandLine::Switch</innerclass>
+    <innerclass refid="a01258" prot="public">Hack::CommandLine::Token</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="a00919_1a7bf8cf020e39f88d39725c1ec763cd86" prot="public" static="no" strong="no">
+        <type></type>
+        <name>TokenType</name>
+        <enumvalue id="a00919_1a7bf8cf020e39f88d39725c1ec763cd86a18937fa12a9efdd1df2262f17578b735" prot="public">
+          <name>TOK_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00919_1a7bf8cf020e39f88d39725c1ec763cd86a55849c5d51bca86446e7f7ac620d7d23" prot="public">
+          <name>TOK_SWITCH_SHORT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00919_1a7bf8cf020e39f88d39725c1ec763cd86adf0cf175e182315d7ed141f8f08120e5" prot="public">
+          <name>TOK_SWITCH_LONG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00919_1a7bf8cf020e39f88d39725c1ec763cd86af245704ac1981ba509a2bf36c9f974de" prot="public">
+          <name>TOK_NEXT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00919_1a7bf8cf020e39f88d39725c1ec763cd86a1ec616246244f6453a7f66b5fb826ad3" prot="public">
+          <name>TOK_OPTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00919_1a7bf8cf020e39f88d39725c1ec763cd86a3098177307fabe9d80853b00deaff42d" prot="public">
+          <name>TOK_INTEGER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00919_1a7bf8cf020e39f88d39725c1ec763cd86ac5583780f8eea34fe0ee815f66fc1439" prot="public">
+          <name>TOK_REAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00919_1a7bf8cf020e39f88d39725c1ec763cd86ad10952ab16deb1fdfc37ce82f5cb52e5" prot="public">
+          <name>TOK_IDENTIFIER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00919_1a7bf8cf020e39f88d39725c1ec763cd86ac89e0f1937f562da1aa8f4ef6f0fae69" prot="public">
+          <name>TOK_FILEPATH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00919_1a7bf8cf020e39f88d39725c1ec763cd86a728a7b175a948d4e4390726507f087b8" prot="public">
+          <name>TOK_EOS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00919_1a7bf8cf020e39f88d39725c1ec763cd86af499719b721526aa16a9b57e252fde89" prot="public">
+          <name>TOK_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/BitUtils.h" line="325" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="325" bodyend="328"/>
-      </memberdef>
-      <memberdef kind="function" id="a00919_1ad70c68df991a03702b6e44507ff2a0e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>T</type>
-        <definition>T Hack::Chips::BitwiseGates::Mux</definition>
-        <argsstring>(const T &amp;a, const T &amp;b, const T &amp;s)</argsstring>
-        <name>Mux</name>
-        <param>
-          <type>const T &amp;</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>const T &amp;</type>
-          <declname>b</declname>
-        </param>
-        <param>
-          <type>const T &amp;</type>
-          <declname>s</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/BitUtils.h" line="350" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="350" bodyend="353"/>
-      </memberdef>
-      <memberdef kind="function" id="a00919_1ae6b0c9d01ef62c0bc80a18accd7d6ca9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>T</type>
-        <definition>T Hack::Chips::BitwiseGates::NAnd</definition>
-        <argsstring>(const T &amp;a, const T &amp;b)</argsstring>
-        <name>NAnd</name>
-        <param>
-          <type>const T &amp;</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>const T &amp;</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/BitUtils.h" line="313" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="313" bodyend="316"/>
-      </memberdef>
-      <memberdef kind="function" id="a00919_1a3118052ddcc3b5956dccfa1c9cd50528" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>T</type>
-        <definition>T Hack::Chips::BitwiseGates::NOr</definition>
-        <argsstring>(const T &amp;a, const T &amp;b)</argsstring>
-        <name>NOr</name>
-        <param>
-          <type>const T &amp;</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>const T &amp;</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/BitUtils.h" line="337" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="337" bodyend="340"/>
-      </memberdef>
-      <memberdef kind="function" id="a00919_1a84d09455d2c5d520a37804d10bcedef4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>T</type>
-        <definition>T Hack::Chips::BitwiseGates::Not</definition>
-        <argsstring>(const T &amp;a)</argsstring>
-        <name>Not</name>
-        <param>
-          <type>const T &amp;</type>
-          <declname>a</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/BitUtils.h" line="319" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="319" bodyend="322"/>
-      </memberdef>
-      <memberdef kind="function" id="a00919_1aa46e2bc824542f8c88678197e54892b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>T</type>
-        <definition>T Hack::Chips::BitwiseGates::Or</definition>
-        <argsstring>(const T &amp;a, const T &amp;b)</argsstring>
-        <name>Or</name>
-        <param>
-          <type>const T &amp;</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>const T &amp;</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/BitUtils.h" line="331" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="331" bodyend="334"/>
-      </memberdef>
-      <memberdef kind="function" id="a00919_1a87f9b215940bce4b2d6ae012557b3fdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>T</type>
-        <definition>T Hack::Chips::BitwiseGates::XOr</definition>
-        <argsstring>(const T &amp;a, const T &amp;b)</argsstring>
-        <name>XOr</name>
-        <param>
-          <type>const T &amp;</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>const T &amp;</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/BitUtils.h" line="343" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="343" bodyend="347"/>
+        <location file="Source/Utils/CommandLine/Token.h" line="29" column="1" bodyfile="Source/Utils/CommandLine/Token.h" bodystart="28" bodyend="45"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Chips/BitUtils.h" line="311" column="1"/>
+    <location file="Source/Utils/CommandLine/Option.h" line="29" column="1"/>
   </compounddef>
 </doxygen>

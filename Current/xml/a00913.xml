@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a00913" kind="namespace" language="C++">
+    <compoundname>Hack::Compiler::CodeGenerator</compoundname>
+    <innerclass refid="a01190" prot="public">Hack::Compiler::CodeGenerator::Generator</innerclass>
+    <innerclass refid="a01198" prot="public">Hack::Compiler::CodeGenerator::Symbol</innerclass>
+    <innerclass refid="a01202" prot="public">Hack::Compiler::CodeGenerator::SymbolTable</innerclass>
+    <innerclass refid="a01206" prot="public">Hack::Compiler::CodeGenerator::VmEmitter</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="a00913_1ac08293c0a6cadd380abba4ce7069b7bc" prot="public" static="no" strong="no">
+        <type></type>
+        <name>SymbolKind</name>
+        <enumvalue id="a00913_1ac08293c0a6cadd380abba4ce7069b7bca33eb8724d1cfb37808fb1dd2a3c24812" prot="public">
+          <name>None</name>
+          <initializer>=-1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00913_1ac08293c0a6cadd380abba4ce7069b7bca758124b318712f1ca6e7abfcceb26517" prot="public">
+          <name>Field</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00913_1ac08293c0a6cadd380abba4ce7069b7bca4e24ef81cf7ed83a94dc616bb8b510a8" prot="public">
+          <name>Static</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00913_1ac08293c0a6cadd380abba4ce7069b7bcac16d59cf9aa39e37737b703b8d21a9ee" prot="public">
+          <name>Local</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00913_1ac08293c0a6cadd380abba4ce7069b7bcac846b86715799a34e6b35cfef36ea1bb" prot="public">
+          <name>Argument</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Generator/Symbol.h" line="28" column="1" bodyfile="Source/Compiler/Generator/Symbol.h" bodystart="27" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/Compiler/Generator/Expression.cpp" line="25" column="1"/>
+  </compounddef>
+</doxygen>

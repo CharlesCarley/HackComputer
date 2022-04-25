@@ -1,21 +1,34 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01569" kind="page">
-    <compoundname>Hc0201</compoundname>
-    <title>Implemented Chips</title>
+    <compoundname>Hc00</compoundname>
+    <title>CMake</title>
     <briefdescription>
-    </briefdescription>
+<para>It uses <ref refid="a01569" kindref="compound">CMake</ref> for its build system. </para>    </briefdescription>
     <detaileddescription>
-<sect1 id="a01569_1Hc0201Standalone">
-<title>Standalone Chips</title>
-<para><itemizedlist>
-<listitem><para><ref refid="a00965" kindref="compound">Hack::Chips::And</ref></para></listitem><listitem><para><ref refid="a00997" kindref="compound">Hack::Chips::Clock</ref></para></listitem><listitem><para><ref refid="a01021" kindref="compound">Hack::Chips::DMux</ref></para></listitem><listitem><para><ref refid="a01053" kindref="compound">Hack::Chips::Mux</ref></para></listitem><listitem><para><ref refid="a01133" kindref="compound">Hack::Chips::XOr</ref></para></listitem><listitem><para><ref refid="a01085" kindref="compound">Hack::Chips::Or</ref></para></listitem><listitem><para><ref refid="a01077" kindref="compound">Hack::Chips::Not</ref></para></listitem><listitem><para><ref refid="a01069" kindref="compound">Hack::Chips::NAnd</ref></para></listitem><listitem><para><ref refid="a01073" kindref="compound">Hack::Chips::NOr</ref></para></listitem></itemizedlist>
-</para></sect1>
-<sect1 id="a01569_1Hc0201Combination">
-<title>Combination Chips</title>
-<para><itemizedlist>
-<listitem><para><ref refid="a01005" kindref="compound">Hack::Chips::Computer</ref></para></listitem><listitem><para><ref refid="a00957" kindref="compound">Hack::Chips::Add16</ref></para></listitem><listitem><para><ref refid="a00961" kindref="compound">Hack::Chips::Alu</ref></para></listitem><listitem><para><ref refid="a00969" kindref="compound">Hack::Chips::And16</ref></para></listitem><listitem><para><ref refid="a00973" kindref="compound">Hack::Chips::Bit</ref></para></listitem><listitem><para><ref refid="a01009" kindref="compound">Hack::Chips::Cpu</ref></para></listitem><listitem><para><ref refid="a01017" kindref="compound">Hack::Chips::DFlipFlop</ref></para></listitem><listitem><para><ref refid="a01025" kindref="compound">Hack::Chips::DMux4Way</ref></para></listitem><listitem><para><ref refid="a01029" kindref="compound">Hack::Chips::DMux8Way</ref></para></listitem><listitem><para><ref refid="a01033" kindref="compound">Hack::Chips::FullAdder</ref></para></listitem><listitem><para><ref refid="a01037" kindref="compound">Hack::Chips::HalfAdder</ref></para></listitem><listitem><para><ref refid="a01045" kindref="compound">Hack::Chips::Inc16</ref></para></listitem><listitem><para><ref refid="a01049" kindref="compound">Hack::Chips::Memory</ref></para></listitem><listitem><para><ref refid="a01057" kindref="compound">Hack::Chips::Mux16</ref></para></listitem><listitem><para><ref refid="a01061" kindref="compound">Hack::Chips::Mux4Way16</ref></para></listitem><listitem><para><ref refid="a01065" kindref="compound">Hack::Chips::Mux8Way16</ref></para></listitem><listitem><para><ref refid="a01081" kindref="compound">Hack::Chips::Not16</ref></para></listitem><listitem><para><ref refid="a01089" kindref="compound">Hack::Chips::Or16</ref></para></listitem><listitem><para><ref refid="a01093" kindref="compound">Hack::Chips::Or8Way</ref></para></listitem><listitem><para><ref refid="a01097" kindref="compound">Hack::Chips::ProgramCounter</ref></para></listitem><listitem><para><ref refid="a00899_1a34177040653a4658b7c74d3846e164e1" kindref="member">Hack::Chips::Ram16k</ref></para></listitem><listitem><para><ref refid="a01101" kindref="compound">Hack::Chips::Ram4k</ref></para></listitem><listitem><para><ref refid="a01105" kindref="compound">Hack::Chips::Ram512</ref></para></listitem><listitem><para><ref refid="a01109" kindref="compound">Hack::Chips::Ram64</ref></para></listitem><listitem><para><ref refid="a01113" kindref="compound">Hack::Chips::Ram8</ref></para></listitem><listitem><para><ref refid="a01117" kindref="compound">Hack::Chips::Register</ref></para></listitem><listitem><para><ref refid="a01121" kindref="compound">Hack::Chips::Rom32</ref></para></listitem><listitem><para><ref refid="a00899_1a205aa97050ad01560145252139c81057" kindref="member">Hack::Chips::Screen</ref></para></listitem><listitem><para><ref refid="a01125" kindref="compound">Hack::Chips::SRLatch</ref></para></listitem><listitem><para><ref refid="a01129" kindref="compound">Hack::Chips::Timer</ref> </para></listitem></itemizedlist>
-</para></sect1>
-    </detaileddescription>
+<para>It uses <ref refid="a01569" kindref="compound">CMake</ref> for its build system.</para><para><linebreak/>
+<linebreak/>
+It has been tested using the <computeroutput>Unix Makefiles</computeroutput> and <computeroutput>Visual Studio 2019</computeroutput> generators.</para><para><linebreak/>
+<linebreak/>
+It provides the following options to control the build. <linebreak/>
+<itemizedlist>
+<listitem><para>Hack_BUILD_TEST | OFF<itemizedlist>
+<listitem><para>Enables building the unit test program.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_AUTO_RUN_TEST | OFF<itemizedlist>
+<listitem><para>Automatically runs the unit test program after each build.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_CHECK_INT_BOUNDS | ON<itemizedlist>
+<listitem><para>Enables throwing an overflow exception when manipulating individual bits.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_IMPLEMENT_BLACK_BOX | ON<itemizedlist>
+<listitem><para>If this is true most chips will be implemented with computed logic gates.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_PRINT_CHIP_STATE | OFF<itemizedlist>
+<listitem><para>Enables the print method defined in the Hack::Chip base class.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_VM_ZERO_RAM | OFF<itemizedlist>
+<listitem><para>Emits extra instructions to zero RAM values that are no longer in use.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_BLOCK_PUSH | OFF<itemizedlist>
+<listitem><para>Emits conditional instructions to prevent pushing ram segments when its out of context.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_USE_SDL | OFF<itemizedlist>
+<listitem><para>Enables or disables the SDL runtime. </para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
+</para>    </detaileddescription>
   </compounddef>
 </doxygen>

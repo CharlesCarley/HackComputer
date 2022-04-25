@@ -3,13 +3,12 @@
 
 \brief Provides a script language interface.
 
-\n\n
+\br
 It is currently on the back-burner until primary functionality is complete.
 
-\n\n
-The proof of concept flutter app can be found in the flutter branch.
-\n
-It uses this interface to communicate with dart.
+\br
+A proof of concept Flutter application can be found in the flutter branch.
+It makes use of this interface to communicate with dart to replicate the command line debugger in Flutter.
 
 \n
 \defined{Hc06Defined}

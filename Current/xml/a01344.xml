@@ -1,33 +1,73 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
-  <compounddef id="a01344" kind="class" language="C++" prot="public" final="yes">
-    <compoundname>Hack::VirtualMachine::Scanner</compoundname>
-    <basecompoundref refid="a01276" prot="public" virt="non-virtual">Hack::ScannerBase</basecompoundref>
-    <includes local="no">Source/VirtualMachine/Scanner.h</includes>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="a01344_1ad98d5bb5dbb1e17960467e679de5bdec" prot="private" static="no" mutable="no">
-        <type><ref refid="a00896_1a08484157b85b2bda07ff1e0c32072f10" kindref="member">CodeCache</ref></type>
-        <definition>CodeCache Hack::VirtualMachine::Scanner::_code</definition>
+  <compounddef id="a01344" kind="class" language="C++" prot="public">
+    <compoundname>Hack::VirtualMachine::Emitter</compoundname>
+    <includes local="no">Source/VirtualMachine/Emitter.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="a01344_1aa8ce88c353ba6d22e7540662e1df2a8a" prot="public" static="no">
+        <type>std::stack&lt; <ref refid="a00900_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &gt;</type>
+        <definition>typedef std::stack&lt;String&gt; Hack::VirtualMachine::Emitter::StringStack</definition>
         <argsstring></argsstring>
-        <name>_code</name>
+        <name>StringStack</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Scanner.h" line="33" column="1" bodyfile="Source/VirtualMachine/Scanner.h" bodystart="33" bodyend="-1"/>
+        <location file="Source/VirtualMachine/Emitter.h" line="34" column="1" bodyfile="Source/VirtualMachine/Emitter.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="a01344_1aa6b5ac5c97bec2417d1dfa1c439a0280" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Hack::VirtualMachine::Emitter::_cmp</definition>
+        <argsstring></argsstring>
+        <name>_cmp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="38" column="1" bodyfile="Source/VirtualMachine/Emitter.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01344_1a2a92e3c12f741967213cc4c6b461716b" prot="private" static="no" mutable="no">
+        <type><ref refid="a01344_1aa8ce88c353ba6d22e7540662e1df2a8a" kindref="member">StringStack</ref></type>
+        <definition>StringStack Hack::VirtualMachine::Emitter::_functions</definition>
+        <argsstring></argsstring>
+        <name>_functions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="39" column="1" bodyfile="Source/VirtualMachine/Emitter.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01344_1affa86d2748d6dd7e7ea5afac5cb9b2c4" prot="private" static="no" mutable="no">
+        <type><ref refid="a00900_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref></type>
+        <definition>OutputStringStream Hack::VirtualMachine::Emitter::_stream</definition>
+        <argsstring></argsstring>
+        <name>_stream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="37" column="1" bodyfile="Source/VirtualMachine/Emitter.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
-      <memberdef kind="function" id="a01344_1a2a35b55baeecb5d2bbae555ae21f4853" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01344_1afd58fa95f0cbf406512c90c9215c7a52" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::VirtualMachine::Scanner::scanCode</definition>
-        <argsstring>(Token &amp;tok)</argsstring>
-        <name>scanCode</name>
+        <definition>void Hack::VirtualMachine::Emitter::genLabel</definition>
+        <argsstring>(String &amp;val)</argsstring>
+        <name>genLabel</name>
         <param>
-          <type><ref refid="a00896_1a1256a43300d83510604c7b9755796e01" kindref="member">Token</ref> &amp;</type>
-          <declname>tok</declname>
+          <type><ref refid="a00900_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>val</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -35,16 +75,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Scanner.h" line="35" column="1" bodyfile="Source/VirtualMachine/Scanner.cpp" bodystart="75" bodyend="82"/>
+        <location file="Source/VirtualMachine/Emitter.h" line="44" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="406" bodyend="410"/>
       </memberdef>
-      <memberdef kind="function" id="a01344_1a7e287d18444a38ca51bedd81f0aa78cc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01344_1a80a58b11a57fdcbd4f0a4ea91ddf029f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::VirtualMachine::Scanner::scanDigit</definition>
-        <argsstring>(Token &amp;tok)</argsstring>
-        <name>scanDigit</name>
+        <definition>void Hack::VirtualMachine::Emitter::getJumpLabels</definition>
+        <argsstring>(String &amp;valTrue, String &amp;valDone)</argsstring>
+        <name>getJumpLabels</name>
         <param>
-          <type><ref refid="a00896_1a1256a43300d83510604c7b9755796e01" kindref="member">Token</ref> &amp;</type>
-          <declname>tok</declname>
+          <type><ref refid="a00900_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>valTrue</declname>
+        </param>
+        <param>
+          <type><ref refid="a00900_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>valDone</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -52,48 +96,105 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Scanner.h" line="39" column="1" bodyfile="Source/VirtualMachine/Scanner.cpp" bodystart="127" bodyend="143"/>
-      </memberdef>
-      <memberdef kind="function" id="a01344_1a6c303071aff73d2a8bc5d680a2f98f5c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::VirtualMachine::Scanner::scanSymbol</definition>
-        <argsstring>(Token &amp;tok)</argsstring>
-        <name>scanSymbol</name>
-        <param>
-          <type><ref refid="a00896_1a1256a43300d83510604c7b9755796e01" kindref="member">Token</ref> &amp;</type>
-          <declname>tok</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/VirtualMachine/Scanner.h" line="37" column="1" bodyfile="Source/VirtualMachine/Scanner.cpp" bodystart="92" bodyend="125"/>
+        <location file="Source/VirtualMachine/Emitter.h" line="42" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="398" bodyend="404"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01344_1a492f69304cf8afa9a9c08db6aea3858d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01344_1aed412b794ba08f97702b7c9e1ddc936f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>Hack::VirtualMachine::Scanner::Scanner</definition>
+        <definition>Hack::VirtualMachine::Emitter::Emitter</definition>
         <argsstring>()</argsstring>
-        <name>Scanner</name>
+        <name>Emitter</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Scanner.h" line="42" column="1"/>
+        <location file="Source/VirtualMachine/Emitter.h" line="47" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="388" bodyend="391"/>
       </memberdef>
-      <memberdef kind="function" id="a01344_1aecf5a1159531823bd1e53aac834e9f73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01344_1af262bc1ecd8d3450375f9f4e450a7c19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::VirtualMachine::Scanner::getCode</definition>
-        <argsstring>(String &amp;dest, const size_t &amp;idx)</argsstring>
-        <name>getCode</name>
+        <definition>void Hack::VirtualMachine::Emitter::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="49" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="393" bodyend="396"/>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1abc0dabd1997693d70d9703aa4c861abd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::popArgument</definition>
+        <argsstring>(const size_t &amp;idx)</argsstring>
+        <name>popArgument</name>
         <param>
-          <type><ref refid="a00888_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>dest</declname>
+          <type>const size_t &amp;</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="84" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="555" bodyend="559"/>
+        <references refid="a01340_1ada6099787eff578a9980ab4f38e27eb1" compoundref="a00893" startline="361" endline="374">Hack::VirtualMachine::CodeStream::popSegment</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827a8ca2cf3937e5c6f1e63ee3b602fdf814" compoundref="a00890" startline="30">Hack::VirtualMachine::ARG</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1a1eb323d646263c89efbd6b4b609709f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::popLocal</definition>
+        <argsstring>(const size_t &amp;idx)</argsstring>
+        <name>popLocal</name>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="74" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="549" bodyend="553"/>
+        <references refid="a01340_1ada6099787eff578a9980ab4f38e27eb1" compoundref="a00893" startline="361" endline="374">Hack::VirtualMachine::CodeStream::popSegment</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827acf4f05429d20255bf7128cebaf158e72" compoundref="a00890" startline="29">Hack::VirtualMachine::LCL</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1a56edb8fc5daceb2c366c6a06709f5d51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::popPointer</definition>
+        <argsstring>(const size_t &amp;idx)</argsstring>
+        <name>popPointer</name>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="82" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="608" bodyend="623"/>
+        <references refid="a01340_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="a00893" startline="298" endline="302">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
+        <references refid="a01340_1a6224864f8951a6763574738729682f4b" compoundref="a00893" startline="154" endline="160">Hack::VirtualMachine::CodeStream::moveMIntoD</references>
+        <references refid="a01340_1a90a38165d26c1c452fdff88b0a83a928" compoundref="a00893" startline="167" endline="171">Hack::VirtualMachine::CodeStream::moveDIntoX</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827a0edd4176219c47bc38b154d7319b2b0c" compoundref="a00890" startline="31">Hack::VirtualMachine::THS</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827a892ac688cf8f49defc936c85521c630b" compoundref="a00890" startline="32">Hack::VirtualMachine::THT</references>
+        <references refid="a01340_1ab437fc0874dd768e6cad8960e446f870" compoundref="a00893" startline="121" endline="129">Hack::VirtualMachine::CodeStream::decrement</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1a2fa0b264ae63445fad0a8db36d20075a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::popStatic</definition>
+        <argsstring>(const String &amp;context, const size_t &amp;idx)</argsstring>
+        <name>popStatic</name>
+        <param>
+          <type>const <ref refid="a00900_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>context</declname>
         </param>
         <param>
           <type>const size_t &amp;</type>
@@ -105,18 +206,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Scanner.h" line="46" column="1" bodyfile="Source/VirtualMachine/Scanner.cpp" bodystart="84" bodyend="90"/>
-        <references refid="a01276_1a0aa5a628913e1c8f04db54201f97e1a7" compoundref="a00827" startline="51" endline="57">Hack::ScannerBase::syntaxError</references>
+        <location file="Source/VirtualMachine/Emitter.h" line="86" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="561" bodyend="571"/>
+        <references refid="a00900_1a0022073c844c619a094704ae6c9b14bf" compoundref="a00848" startline="71" endline="76">Hack::StringCombine</references>
+        <references refid="a01340_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="a00893" startline="298" endline="302">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
+        <references refid="a01340_1a6224864f8951a6763574738729682f4b" compoundref="a00893" startline="154" endline="160">Hack::VirtualMachine::CodeStream::moveMIntoD</references>
+        <references refid="a01340_1a90a38165d26c1c452fdff88b0a83a928" compoundref="a00893" startline="167" endline="171">Hack::VirtualMachine::CodeStream::moveDIntoX</references>
+        <references refid="a01340_1ab437fc0874dd768e6cad8960e446f870" compoundref="a00893" startline="121" endline="129">Hack::VirtualMachine::CodeStream::decrement</references>
       </memberdef>
-      <memberdef kind="function" id="a01344_1a4997cadc71378e0fd99ba4309507442c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="a01344_1a144f81f654a07f4f2b488b9424629bfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::VirtualMachine::Scanner::scan</definition>
-        <argsstring>(Token &amp;tok) override</argsstring>
-        <name>scan</name>
-        <reimplements refid="a01276_1ac24b88935d8f5463217aacbfa9b87e9b">scan</reimplements>
+        <definition>void Hack::VirtualMachine::Emitter::popTemp</definition>
+        <argsstring>(const size_t &amp;idx)</argsstring>
+        <name>popTemp</name>
         <param>
-          <type><ref refid="a00896_1a1256a43300d83510604c7b9755796e01" kindref="member">Token</ref> &amp;</type>
-          <declname>tok</declname>
+          <type>const size_t &amp;</type>
+          <declname>idx</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -124,109 +228,704 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Scanner.h" line="44" column="1" bodyfile="Source/VirtualMachine/Scanner.cpp" bodystart="145" bodyend="195"/>
-        <references refid="a01276_1a553484b098225d77804ffcfbf0382922" compoundref="a00827" startline="34">Hack::ScannerBase::_stream</references>
-        <references refid="a01276_1a0aa5a628913e1c8f04db54201f97e1a7" compoundref="a00827" startline="51" endline="57">Hack::ScannerBase::syntaxError</references>
-        <references refid="a01280_1a30cd135b1d593a583b727309323138ad" compoundref="a00830" startline="47" endline="56">Hack::TokenBase::clear</references>
-        <references refid="a01280_1ae4eadcf3980d196a66db3dc5a1c0d4bd" compoundref="a00830" startline="96" endline="99">Hack::TokenBase::setLine</references>
-        <references refid="a01276_1ac7ff4bb59d95de6dcd83f827794086f2" compoundref="a00827" startline="38">Hack::ScannerBase::_line</references>
-        <references refid="a01276_1a16d67c5310c35106dd5caed204460adb" compoundref="a00824" startline="66" endline="76">Hack::ScannerBase::scanLineComment</references>
-        <references refid="a01276_1af515b00a44514c004aaefa7da2944674" compoundref="a00824" startline="78">Hack::ScannerBase::scanMultiLineComment</references>
-        <references refid="a01276_1a4b419e3a4f91e1f4f136ead8941b7c5e">Hack::ScannerBase::scanWhiteSpace</references>
-        <references refid="a01280_1aa299ccac72d52b74f3ebc2ce2dcf96a1" compoundref="a00425" startline="38" endline="41">Hack::TokenBase::setType</references>
-        <references refid="a00896_1a091fad0d0b4814af2f1f3f51d62033c8aa3110406fa7d6ce5c6dba8fd3594d633" compoundref="a01641" startline="30">Hack::VirtualMachine::TOK_EOF</references>
+        <location file="Source/VirtualMachine/Emitter.h" line="80" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="585" bodyend="606"/>
+        <references refid="a01340_1aefd34367173992dca2ece0c2166786c4" compoundref="a00893" startline="146" endline="152">Hack::VirtualMachine::CodeStream::offsetTo</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827a7257ce4a14d1f26d6858febfad59e371" compoundref="a00890" startline="33">Hack::VirtualMachine::TMP</references>
+        <references refid="a01340_1a90a38165d26c1c452fdff88b0a83a928" compoundref="a00893" startline="167" endline="171">Hack::VirtualMachine::CodeStream::moveDIntoX</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827ac877118ac6aa475e26bcdc4dd5952f52" compoundref="a00890" startline="35">Hack::VirtualMachine::SW0</references>
+        <references refid="a01340_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="a00893" startline="298" endline="302">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
+        <references refid="a01340_1a6224864f8951a6763574738729682f4b" compoundref="a00893" startline="154" endline="160">Hack::VirtualMachine::CodeStream::moveMIntoD</references>
+        <references refid="a01340_1a12bef7f8bfeef851d75676553207b359" compoundref="a00893" startline="78" endline="82">Hack::VirtualMachine::CodeStream::jumpToAddressIn</references>
+        <references refid="a01340_1a741754f2400fa7216c34d068f8f72cbd" compoundref="a00893" startline="179" endline="182">Hack::VirtualMachine::CodeStream::moveDIntoM</references>
+        <references refid="a01340_1ab437fc0874dd768e6cad8960e446f870" compoundref="a00893" startline="121" endline="129">Hack::VirtualMachine::CodeStream::decrement</references>
+        <references refid="a01340_1aa1d9895c4a583e36a7b7767bce78384f" compoundref="a00893" startline="189" endline="195">Hack::VirtualMachine::CodeStream::move</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1a2de462d5d98a35b4366d15d2801d157d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::popThat</definition>
+        <argsstring>(const size_t &amp;idx)</argsstring>
+        <name>popThat</name>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="78" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="579" bodyend="583"/>
+        <references refid="a01340_1ada6099787eff578a9980ab4f38e27eb1" compoundref="a00893" startline="361" endline="374">Hack::VirtualMachine::CodeStream::popSegment</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827a892ac688cf8f49defc936c85521c630b" compoundref="a00890" startline="32">Hack::VirtualMachine::THT</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1a02258187ea3b8426a88a2a6d63dda0f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::popThis</definition>
+        <argsstring>(const size_t &amp;idx)</argsstring>
+        <name>popThis</name>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="76" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="573" bodyend="577"/>
+        <references refid="a01340_1ada6099787eff578a9980ab4f38e27eb1" compoundref="a00893" startline="361" endline="374">Hack::VirtualMachine::CodeStream::popSegment</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827a0edd4176219c47bc38b154d7319b2b0c" compoundref="a00890" startline="31">Hack::VirtualMachine::THS</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1a5cbf52561c2c0e632664e9da1ef93b8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::pushArgument</definition>
+        <argsstring>(const size_t &amp;idx)</argsstring>
+        <name>pushArgument</name>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="62" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="491" bodyend="508"/>
+        <references refid="a01340_1abbbfef8a14e762f28b7b2be672a4e658" compoundref="a00893" startline="376" endline="385">Hack::VirtualMachine::CodeStream::compareDIntoX</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827ae6201d4edf7d9066f2245e0d75ac1805" compoundref="a00890" startline="37">Hack::VirtualMachine::SW2</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827a8ca2cf3937e5c6f1e63ee3b602fdf814" compoundref="a00890" startline="30">Hack::VirtualMachine::ARG</references>
+        <references refid="a01340_1a909f708f9e837b0183f4dd47e3ee4cc1" compoundref="a00893" startline="322" endline="326">Hack::VirtualMachine::CodeStream::jumpIfEquals</references>
+        <references refid="a01340_1a59e701f5c538e3641f8605cf4b4b87a4" compoundref="a00893" startline="137" endline="144">Hack::VirtualMachine::CodeStream::dereferenceOffset</references>
+        <references refid="a01340_1a8fe8623ebe79e65925e9be23d07750ae" compoundref="a00893" startline="162" endline="165">Hack::VirtualMachine::CodeStream::copyMIntoD</references>
+        <references refid="a01340_1aa312694a897020b8a667fc0140a7de43" compoundref="a00893" startline="276" endline="280">Hack::VirtualMachine::CodeStream::pushD</references>
+        <references refid="a01340_1a3d6772c8a20f7028ddd70a4da12cc520" compoundref="a00893" startline="73" endline="76">Hack::VirtualMachine::CodeStream::label</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1aaa58d2ca0cd17e6d4a3b6dec96d53d76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::pushConstant</definition>
+        <argsstring>(const int &amp;idx)</argsstring>
+        <name>pushConstant</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="58" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="418" bodyend="422"/>
+        <references refid="a01340_1a34acb94db32ce9546ba3b32e11043fd4" compoundref="a00893" startline="268" endline="274">Hack::VirtualMachine::CodeStream::push</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1a8f6a6b66be4690f4b9aeb6eddfff713f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::pushLocal</definition>
+        <argsstring>(const size_t &amp;idx)</argsstring>
+        <name>pushLocal</name>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="60" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="424" bodyend="443"/>
+        <references refid="a01340_1abbbfef8a14e762f28b7b2be672a4e658" compoundref="a00893" startline="376" endline="385">Hack::VirtualMachine::CodeStream::compareDIntoX</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827ae6201d4edf7d9066f2245e0d75ac1805" compoundref="a00890" startline="37">Hack::VirtualMachine::SW2</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827acf4f05429d20255bf7128cebaf158e72" compoundref="a00890" startline="29">Hack::VirtualMachine::LCL</references>
+        <references refid="a01340_1a909f708f9e837b0183f4dd47e3ee4cc1" compoundref="a00893" startline="322" endline="326">Hack::VirtualMachine::CodeStream::jumpIfEquals</references>
+        <references refid="a01340_1a59e701f5c538e3641f8605cf4b4b87a4" compoundref="a00893" startline="137" endline="144">Hack::VirtualMachine::CodeStream::dereferenceOffset</references>
+        <references refid="a01340_1a8fe8623ebe79e65925e9be23d07750ae" compoundref="a00893" startline="162" endline="165">Hack::VirtualMachine::CodeStream::copyMIntoD</references>
+        <references refid="a01340_1aa312694a897020b8a667fc0140a7de43" compoundref="a00893" startline="276" endline="280">Hack::VirtualMachine::CodeStream::pushD</references>
+        <references refid="a01340_1a3d6772c8a20f7028ddd70a4da12cc520" compoundref="a00893" startline="73" endline="76">Hack::VirtualMachine::CodeStream::label</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1ab918a95684ae69febf08ff7df0dc7977" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::pushPointer</definition>
+        <argsstring>(const size_t &amp;idx)</argsstring>
+        <name>pushPointer</name>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="72" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="510" bodyend="536"/>
+        <references refid="a01340_1abbbfef8a14e762f28b7b2be672a4e658" compoundref="a00893" startline="376" endline="385">Hack::VirtualMachine::CodeStream::compareDIntoX</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827ae6201d4edf7d9066f2245e0d75ac1805" compoundref="a00890" startline="37">Hack::VirtualMachine::SW2</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827a8ca2cf3937e5c6f1e63ee3b602fdf814" compoundref="a00890" startline="30">Hack::VirtualMachine::ARG</references>
+        <references refid="a01340_1a909f708f9e837b0183f4dd47e3ee4cc1" compoundref="a00893" startline="322" endline="326">Hack::VirtualMachine::CodeStream::jumpIfEquals</references>
+        <references refid="a01340_1aefd34367173992dca2ece0c2166786c4" compoundref="a00893" startline="146" endline="152">Hack::VirtualMachine::CodeStream::offsetTo</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827a0edd4176219c47bc38b154d7319b2b0c" compoundref="a00890" startline="31">Hack::VirtualMachine::THS</references>
+        <references refid="a01340_1a8fe8623ebe79e65925e9be23d07750ae" compoundref="a00893" startline="162" endline="165">Hack::VirtualMachine::CodeStream::copyMIntoD</references>
+        <references refid="a01340_1aa312694a897020b8a667fc0140a7de43" compoundref="a00893" startline="276" endline="280">Hack::VirtualMachine::CodeStream::pushD</references>
+        <references refid="a01340_1a3d6772c8a20f7028ddd70a4da12cc520" compoundref="a00893" startline="73" endline="76">Hack::VirtualMachine::CodeStream::label</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1a058483c1d4c8d8f37cb173df25aaf0cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::pushStatic</definition>
+        <argsstring>(const String &amp;context, const size_t &amp;idx)</argsstring>
+        <name>pushStatic</name>
+        <param>
+          <type>const <ref refid="a00900_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="68" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="538" bodyend="547"/>
+        <references refid="a00900_1a0022073c844c619a094704ae6c9b14bf" compoundref="a00848" startline="71" endline="76">Hack::StringCombine</references>
+        <references refid="a01340_1a175bf06345174fcce65d1191e39a3003" compoundref="a00893" startline="48" endline="51">Hack::VirtualMachine::CodeStream::atAddressOf</references>
+        <references refid="a01340_1a8fe8623ebe79e65925e9be23d07750ae" compoundref="a00893" startline="162" endline="165">Hack::VirtualMachine::CodeStream::copyMIntoD</references>
+        <references refid="a01340_1a200c1f50e617de5b500ce368db456fbb" compoundref="a00893" startline="131" endline="135">Hack::VirtualMachine::CodeStream::incrementAndJump</references>
+        <references refid="a01340_1a741754f2400fa7216c34d068f8f72cbd" compoundref="a00893" startline="179" endline="182">Hack::VirtualMachine::CodeStream::moveDIntoM</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1a7e845f9ab740405fc8cac69e48e3f35e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::pushTemp</definition>
+        <argsstring>(const size_t &amp;idx)</argsstring>
+        <name>pushTemp</name>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="70" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="483" bodyend="489"/>
+        <references refid="a01340_1aefd34367173992dca2ece0c2166786c4" compoundref="a00893" startline="146" endline="152">Hack::VirtualMachine::CodeStream::offsetTo</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827a7257ce4a14d1f26d6858febfad59e371" compoundref="a00890" startline="33">Hack::VirtualMachine::TMP</references>
+        <references refid="a01340_1a6224864f8951a6763574738729682f4b" compoundref="a00893" startline="154" endline="160">Hack::VirtualMachine::CodeStream::moveMIntoD</references>
+        <references refid="a01340_1aa312694a897020b8a667fc0140a7de43" compoundref="a00893" startline="276" endline="280">Hack::VirtualMachine::CodeStream::pushD</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1af1a7a98b19545def95f6bc05e3e573d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::pushThat</definition>
+        <argsstring>(const size_t &amp;idx)</argsstring>
+        <name>pushThat</name>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="66" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="464" bodyend="481"/>
+        <references refid="a01340_1abbbfef8a14e762f28b7b2be672a4e658" compoundref="a00893" startline="376" endline="385">Hack::VirtualMachine::CodeStream::compareDIntoX</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827ae6201d4edf7d9066f2245e0d75ac1805" compoundref="a00890" startline="37">Hack::VirtualMachine::SW2</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827a892ac688cf8f49defc936c85521c630b" compoundref="a00890" startline="32">Hack::VirtualMachine::THT</references>
+        <references refid="a01340_1a909f708f9e837b0183f4dd47e3ee4cc1" compoundref="a00893" startline="322" endline="326">Hack::VirtualMachine::CodeStream::jumpIfEquals</references>
+        <references refid="a01340_1a59e701f5c538e3641f8605cf4b4b87a4" compoundref="a00893" startline="137" endline="144">Hack::VirtualMachine::CodeStream::dereferenceOffset</references>
+        <references refid="a01340_1a8fe8623ebe79e65925e9be23d07750ae" compoundref="a00893" startline="162" endline="165">Hack::VirtualMachine::CodeStream::copyMIntoD</references>
+        <references refid="a01340_1aa312694a897020b8a667fc0140a7de43" compoundref="a00893" startline="276" endline="280">Hack::VirtualMachine::CodeStream::pushD</references>
+        <references refid="a01340_1a3d6772c8a20f7028ddd70a4da12cc520" compoundref="a00893" startline="73" endline="76">Hack::VirtualMachine::CodeStream::label</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1a0aa1816c96c0f6deb1971ef113a79af3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::pushThis</definition>
+        <argsstring>(const size_t &amp;idx)</argsstring>
+        <name>pushThis</name>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="64" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="445" bodyend="462"/>
+        <references refid="a01340_1abbbfef8a14e762f28b7b2be672a4e658" compoundref="a00893" startline="376" endline="385">Hack::VirtualMachine::CodeStream::compareDIntoX</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827ae6201d4edf7d9066f2245e0d75ac1805" compoundref="a00890" startline="37">Hack::VirtualMachine::SW2</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827a0edd4176219c47bc38b154d7319b2b0c" compoundref="a00890" startline="31">Hack::VirtualMachine::THS</references>
+        <references refid="a01340_1a909f708f9e837b0183f4dd47e3ee4cc1" compoundref="a00893" startline="322" endline="326">Hack::VirtualMachine::CodeStream::jumpIfEquals</references>
+        <references refid="a01340_1a59e701f5c538e3641f8605cf4b4b87a4" compoundref="a00893" startline="137" endline="144">Hack::VirtualMachine::CodeStream::dereferenceOffset</references>
+        <references refid="a01340_1a8fe8623ebe79e65925e9be23d07750ae" compoundref="a00893" startline="162" endline="165">Hack::VirtualMachine::CodeStream::copyMIntoD</references>
+        <references refid="a01340_1aa312694a897020b8a667fc0140a7de43" compoundref="a00893" startline="276" endline="280">Hack::VirtualMachine::CodeStream::pushD</references>
+        <references refid="a01340_1a3d6772c8a20f7028ddd70a4da12cc520" compoundref="a00893" startline="73" endline="76">Hack::VirtualMachine::CodeStream::label</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1aa6529297748da36b15e9ed7674ec60b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::setRam</definition>
+        <argsstring>(int index, int value)</argsstring>
+        <name>setRam</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="56" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="412" bodyend="416"/>
+        <references refid="a01340_1aa1d9895c4a583e36a7b7767bce78384f" compoundref="a00893" startline="189" endline="195">Hack::VirtualMachine::CodeStream::move</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1a3944cc6bbc9993953d7b4543af940128" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="a00900_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref> &amp;</type>
+        <definition>OutputStringStream&amp; Hack::VirtualMachine::Emitter::stream</definition>
+        <argsstring>()</argsstring>
+        <name>stream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="51" column="1" bodyfile="Source/VirtualMachine/Emitter.h" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1aaace24f338366621d97233f0a0505e38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::writeAdd</definition>
+        <argsstring>()</argsstring>
+        <name>writeAdd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="94" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="655" bodyend="663"/>
+        <references refid="a01340_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="a00893" startline="298" endline="302">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
+        <references refid="a01340_1a6224864f8951a6763574738729682f4b" compoundref="a00893" startline="154" endline="160">Hack::VirtualMachine::CodeStream::moveMIntoD</references>
+        <references refid="a01340_1a63f901cea27d2aea7ce908221a7dcd29" compoundref="a00893" startline="116" endline="119">Hack::VirtualMachine::CodeStream::decrementA</references>
+        <references refid="a01340_1af986393f5cbff6ce44748f241c15c63b" compoundref="a00893" startline="207" endline="210">Hack::VirtualMachine::CodeStream::addDmIntoM</references>
+        <references refid="a01340_1ab437fc0874dd768e6cad8960e446f870" compoundref="a00893" startline="121" endline="129">Hack::VirtualMachine::CodeStream::decrement</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1ae83c1294d792a8a07a2c2d1ae42b65ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::writeAnd</definition>
+        <argsstring>()</argsstring>
+        <name>writeAnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="90" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="635" bodyend="643"/>
+        <references refid="a01340_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="a00893" startline="298" endline="302">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
+        <references refid="a01340_1a6224864f8951a6763574738729682f4b" compoundref="a00893" startline="154" endline="160">Hack::VirtualMachine::CodeStream::moveMIntoD</references>
+        <references refid="a01340_1a63f901cea27d2aea7ce908221a7dcd29" compoundref="a00893" startline="116" endline="119">Hack::VirtualMachine::CodeStream::decrementA</references>
+        <references refid="a01340_1a55d42e45337699cea476f3d217d8839b" compoundref="a00893" startline="231" endline="234">Hack::VirtualMachine::CodeStream::andDmIntoM</references>
+        <references refid="a01340_1ab437fc0874dd768e6cad8960e446f870" compoundref="a00893" startline="121" endline="129">Hack::VirtualMachine::CodeStream::decrement</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1ad150c2fea65ae75600e16c7af316999e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::writeCall</definition>
+        <argsstring>(const String &amp;name, const int &amp;args)</argsstring>
+        <name>writeCall</name>
+        <param>
+          <type>const <ref refid="a00900_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="118" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="800" bodyend="853"/>
+        <references refid="a01340_1ae92290ff5aa525f4872f52c11ecfba2f" compoundref="a00893" startline="290" endline="296">Hack::VirtualMachine::CodeStream::setD</references>
+        <references refid="a01340_1aa312694a897020b8a667fc0140a7de43" compoundref="a00893" startline="276" endline="280">Hack::VirtualMachine::CodeStream::pushD</references>
+        <references refid="a01340_1a175bf06345174fcce65d1191e39a3003" compoundref="a00893" startline="48" endline="51">Hack::VirtualMachine::CodeStream::atAddressOf</references>
+        <references refid="a01340_1adac2df82286980d0157b3d7ca5f84db2" compoundref="a00893" startline="184" endline="187">Hack::VirtualMachine::CodeStream::moveAIntoD</references>
+        <references refid="a01340_1aa64fee49965171d8b1977dbb310fa314" compoundref="a00893" startline="334" endline="338">Hack::VirtualMachine::CodeStream::copyMIntoDAt</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827acf4f05429d20255bf7128cebaf158e72" compoundref="a00890" startline="29">Hack::VirtualMachine::LCL</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827a8ca2cf3937e5c6f1e63ee3b602fdf814" compoundref="a00890" startline="30">Hack::VirtualMachine::ARG</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827a0edd4176219c47bc38b154d7319b2b0c" compoundref="a00890" startline="31">Hack::VirtualMachine::THS</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827a892ac688cf8f49defc936c85521c630b" compoundref="a00890" startline="32">Hack::VirtualMachine::THT</references>
+        <references refid="a01340_1a7b3485d5bcdb0077f04a795300192aa1" compoundref="a00893" startline="256" endline="260">Hack::VirtualMachine::CodeStream::addXToD</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827a863abda83f7c8925cceaf04098e3cb34" compoundref="a00890" startline="28">Hack::VirtualMachine::STP</references>
+        <references refid="a01340_1a77ac380a3651c409a3c5d9cfa595f44a" compoundref="a00893" startline="217" endline="220">Hack::VirtualMachine::CodeStream::subDmIntoD</references>
+        <references refid="a01340_1a8e21be8722f05faaf98bf330cc90cdb3" compoundref="a00893" startline="262" endline="266">Hack::VirtualMachine::CodeStream::subXFromD</references>
+        <references refid="a01340_1a741754f2400fa7216c34d068f8f72cbd" compoundref="a00893" startline="179" endline="182">Hack::VirtualMachine::CodeStream::moveDIntoM</references>
+        <references refid="a01340_1a173d6752019266017c924ba132da9730" compoundref="a00893" startline="310" endline="314">Hack::VirtualMachine::CodeStream::jumpTo</references>
+        <references refid="a01340_1a3d6772c8a20f7028ddd70a4da12cc520" compoundref="a00893" startline="73" endline="76">Hack::VirtualMachine::CodeStream::label</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1aaf525ae23391a46b4ede8a6313f6a5d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::writeCode</definition>
+        <argsstring>(const String &amp;cs)</argsstring>
+        <name>writeCode</name>
+        <param>
+          <type>const <ref refid="a00900_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="122" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="891" bodyend="895"/>
+        <references refid="a01340_1a5a6c6aa70bf459a3ab1ac0e3c3f5e309" compoundref="a00893" startline="41" endline="46">Hack::VirtualMachine::CodeStream::write</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1ab7130849685d66f3dbfdb66516a6666b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::writeEq</definition>
+        <argsstring>()</argsstring>
+        <name>writeEq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="100" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="679" bodyend="700"/>
+        <references refid="a01340_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="a00893" startline="298" endline="302">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
+        <references refid="a01340_1a8fe8623ebe79e65925e9be23d07750ae" compoundref="a00893" startline="162" endline="165">Hack::VirtualMachine::CodeStream::copyMIntoD</references>
+        <references refid="a01340_1a63f901cea27d2aea7ce908221a7dcd29" compoundref="a00893" startline="116" endline="119">Hack::VirtualMachine::CodeStream::decrementA</references>
+        <references refid="a01340_1abede0a565d50c119dde2f3c1176da963" compoundref="a00893" startline="251" endline="254">Hack::VirtualMachine::CodeStream::subMdIntoD</references>
+        <references refid="a01340_1a909f708f9e837b0183f4dd47e3ee4cc1" compoundref="a00893" startline="322" endline="326">Hack::VirtualMachine::CodeStream::jumpIfEquals</references>
+        <references refid="a01340_1ae92290ff5aa525f4872f52c11ecfba2f" compoundref="a00893" startline="290" endline="296">Hack::VirtualMachine::CodeStream::setD</references>
+        <references refid="a01340_1a173d6752019266017c924ba132da9730" compoundref="a00893" startline="310" endline="314">Hack::VirtualMachine::CodeStream::jumpTo</references>
+        <references refid="a01340_1a3d6772c8a20f7028ddd70a4da12cc520" compoundref="a00893" startline="73" endline="76">Hack::VirtualMachine::CodeStream::label</references>
+        <references refid="a01340_1a741754f2400fa7216c34d068f8f72cbd" compoundref="a00893" startline="179" endline="182">Hack::VirtualMachine::CodeStream::moveDIntoM</references>
+        <references refid="a01340_1ab437fc0874dd768e6cad8960e446f870" compoundref="a00893" startline="121" endline="129">Hack::VirtualMachine::CodeStream::decrement</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1aab3f6bc5273771ec46046381c7253242" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::writeFunction</definition>
+        <argsstring>(const String &amp;name, const int &amp;locals)</argsstring>
+        <name>writeFunction</name>
+        <param>
+          <type>const <ref refid="a00900_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>locals</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="116" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="783" bodyend="798"/>
+        <references refid="a01340_1a3d6772c8a20f7028ddd70a4da12cc520" compoundref="a00893" startline="73" endline="76">Hack::VirtualMachine::CodeStream::label</references>
+        <references refid="a01340_1a59e701f5c538e3641f8605cf4b4b87a4" compoundref="a00893" startline="137" endline="144">Hack::VirtualMachine::CodeStream::dereferenceOffset</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827acf4f05429d20255bf7128cebaf158e72" compoundref="a00890" startline="29">Hack::VirtualMachine::LCL</references>
+        <references refid="a01340_1ad8f38975cc515f0db92975ffb113d023" compoundref="a00893" startline="282" endline="288">Hack::VirtualMachine::CodeStream::setM</references>
+        <references refid="a01340_1ae12a2b3735c9ad4c7ffcf06f4e8f235a" compoundref="a00893" startline="110" endline="114">Hack::VirtualMachine::CodeStream::increment</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1a755e9953659ecf7df60423bd30dfe80c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::writeGt</definition>
+        <argsstring>()</argsstring>
+        <name>writeGt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="104" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="724" bodyend="744"/>
+        <references refid="a01340_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="a00893" startline="298" endline="302">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
+        <references refid="a01340_1a8fe8623ebe79e65925e9be23d07750ae" compoundref="a00893" startline="162" endline="165">Hack::VirtualMachine::CodeStream::copyMIntoD</references>
+        <references refid="a01340_1a63f901cea27d2aea7ce908221a7dcd29" compoundref="a00893" startline="116" endline="119">Hack::VirtualMachine::CodeStream::decrementA</references>
+        <references refid="a01340_1abede0a565d50c119dde2f3c1176da963" compoundref="a00893" startline="251" endline="254">Hack::VirtualMachine::CodeStream::subMdIntoD</references>
+        <references refid="a01340_1a7742f807f5a50d04bf97199b2250f131" compoundref="a00893" startline="304" endline="308">Hack::VirtualMachine::CodeStream::jumpIfGreater</references>
+        <references refid="a01340_1ae92290ff5aa525f4872f52c11ecfba2f" compoundref="a00893" startline="290" endline="296">Hack::VirtualMachine::CodeStream::setD</references>
+        <references refid="a01340_1a173d6752019266017c924ba132da9730" compoundref="a00893" startline="310" endline="314">Hack::VirtualMachine::CodeStream::jumpTo</references>
+        <references refid="a01340_1a3d6772c8a20f7028ddd70a4da12cc520" compoundref="a00893" startline="73" endline="76">Hack::VirtualMachine::CodeStream::label</references>
+        <references refid="a01340_1a741754f2400fa7216c34d068f8f72cbd" compoundref="a00893" startline="179" endline="182">Hack::VirtualMachine::CodeStream::moveDIntoM</references>
+        <references refid="a01340_1ab437fc0874dd768e6cad8960e446f870" compoundref="a00893" startline="121" endline="129">Hack::VirtualMachine::CodeStream::decrement</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1a0257d1433f36b284b726033a6f6760f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::writeHalt</definition>
+        <argsstring>()</argsstring>
+        <name>writeHalt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="108" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="752" bodyend="760"/>
+        <references refid="a01340_1a3d6772c8a20f7028ddd70a4da12cc520" compoundref="a00893" startline="73" endline="76">Hack::VirtualMachine::CodeStream::label</references>
+        <references refid="a01340_1a4fea9b6b37191464b43ba65b5a5e5685" compoundref="a00893" startline="84" endline="88">Hack::VirtualMachine::CodeStream::jumpToRomAddress</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1aaca9c3ae0e13532b9d44339d7ecbc06d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::writeLabel</definition>
+        <argsstring>(const String &amp;value)</argsstring>
+        <name>writeLabel</name>
+        <param>
+          <type>const <ref refid="a00900_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="114" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="777" bodyend="781"/>
+        <references refid="a01340_1a3d6772c8a20f7028ddd70a4da12cc520" compoundref="a00893" startline="73" endline="76">Hack::VirtualMachine::CodeStream::label</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1a1628ba2540e176473ece7714482fd895" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::writeLt</definition>
+        <argsstring>()</argsstring>
+        <name>writeLt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="102" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="702" bodyend="722"/>
+        <references refid="a01340_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="a00893" startline="298" endline="302">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
+        <references refid="a01340_1a8fe8623ebe79e65925e9be23d07750ae" compoundref="a00893" startline="162" endline="165">Hack::VirtualMachine::CodeStream::copyMIntoD</references>
+        <references refid="a01340_1a63f901cea27d2aea7ce908221a7dcd29" compoundref="a00893" startline="116" endline="119">Hack::VirtualMachine::CodeStream::decrementA</references>
+        <references refid="a01340_1abede0a565d50c119dde2f3c1176da963" compoundref="a00893" startline="251" endline="254">Hack::VirtualMachine::CodeStream::subMdIntoD</references>
+        <references refid="a01340_1a2936d187196df9f509153d44f3c50aef" compoundref="a00893" startline="316" endline="320">Hack::VirtualMachine::CodeStream::jumpIfLess</references>
+        <references refid="a01340_1ae92290ff5aa525f4872f52c11ecfba2f" compoundref="a00893" startline="290" endline="296">Hack::VirtualMachine::CodeStream::setD</references>
+        <references refid="a01340_1a173d6752019266017c924ba132da9730" compoundref="a00893" startline="310" endline="314">Hack::VirtualMachine::CodeStream::jumpTo</references>
+        <references refid="a01340_1a3d6772c8a20f7028ddd70a4da12cc520" compoundref="a00893" startline="73" endline="76">Hack::VirtualMachine::CodeStream::label</references>
+        <references refid="a01340_1a741754f2400fa7216c34d068f8f72cbd" compoundref="a00893" startline="179" endline="182">Hack::VirtualMachine::CodeStream::moveDIntoM</references>
+        <references refid="a01340_1ab437fc0874dd768e6cad8960e446f870" compoundref="a00893" startline="121" endline="129">Hack::VirtualMachine::CodeStream::decrement</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1a2f860b25cccd5835f087d13a33f6f4ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::writeNeg</definition>
+        <argsstring>()</argsstring>
+        <name>writeNeg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="98" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="672" bodyend="677"/>
+        <references refid="a01340_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="a00893" startline="298" endline="302">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
+        <references refid="a01340_1ab42de1bc627a17990d40b6871d4a2041" compoundref="a00893" startline="246" endline="249">Hack::VirtualMachine::CodeStream::negMIntoM</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1a79e7c8b178799150cf1bc9a0179bfcc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::writeNot</definition>
+        <argsstring>()</argsstring>
+        <name>writeNot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="96" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="665" bodyend="670"/>
+        <references refid="a01340_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="a00893" startline="298" endline="302">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
+        <references refid="a01340_1a7b1173a77edb1d1791096d55dbee2ee4" compoundref="a00893" startline="241" endline="244">Hack::VirtualMachine::CodeStream::notMIntoM</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1a5a9dd7c8028d6eb7a0f10f04d727ffb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::writeOr</definition>
+        <argsstring>()</argsstring>
+        <name>writeOr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="88" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="625" bodyend="633"/>
+        <references refid="a01340_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="a00893" startline="298" endline="302">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
+        <references refid="a01340_1a6224864f8951a6763574738729682f4b" compoundref="a00893" startline="154" endline="160">Hack::VirtualMachine::CodeStream::moveMIntoD</references>
+        <references refid="a01340_1a63f901cea27d2aea7ce908221a7dcd29" compoundref="a00893" startline="116" endline="119">Hack::VirtualMachine::CodeStream::decrementA</references>
+        <references refid="a01340_1a191dcae54a330f670280a08629a5b6cc" compoundref="a00893" startline="236" endline="239">Hack::VirtualMachine::CodeStream::orDmIntoM</references>
+        <references refid="a01340_1ab437fc0874dd768e6cad8960e446f870" compoundref="a00893" startline="121" endline="129">Hack::VirtualMachine::CodeStream::decrement</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1a2fdb4876761af2db20b9511303b432bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::writeReset</definition>
+        <argsstring>()</argsstring>
+        <name>writeReset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="106" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="746" bodyend="750"/>
+        <references refid="a01340_1a4fea9b6b37191464b43ba65b5a5e5685" compoundref="a00893" startline="84" endline="88">Hack::VirtualMachine::CodeStream::jumpToRomAddress</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1a02fbd64d23b39a2a5b4bc631d94aedae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::writeReturn</definition>
+        <argsstring>()</argsstring>
+        <name>writeReturn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="120" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="855" bodyend="888"/>
+        <references refid="a01340_1aa64fee49965171d8b1977dbb310fa314" compoundref="a00893" startline="334" endline="338">Hack::VirtualMachine::CodeStream::copyMIntoDAt</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827acf4f05429d20255bf7128cebaf158e72" compoundref="a00890" startline="29">Hack::VirtualMachine::LCL</references>
+        <references refid="a01340_1a90a38165d26c1c452fdff88b0a83a928" compoundref="a00893" startline="167" endline="171">Hack::VirtualMachine::CodeStream::moveDIntoX</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827ac877118ac6aa475e26bcdc4dd5952f52" compoundref="a00890" startline="35">Hack::VirtualMachine::SW0</references>
+        <references refid="a01340_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="a00893" startline="298" endline="302">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
+        <references refid="a01340_1a6224864f8951a6763574738729682f4b" compoundref="a00893" startline="154" endline="160">Hack::VirtualMachine::CodeStream::moveMIntoD</references>
+        <references refid="a01340_1ab437fc0874dd768e6cad8960e446f870" compoundref="a00893" startline="121" endline="129">Hack::VirtualMachine::CodeStream::decrement</references>
+        <references refid="a01340_1a96425b2e3bba2e053c15308f32ed124a" compoundref="a00893" startline="58" endline="62">Hack::VirtualMachine::CodeStream::atDeReferencedAddressOf</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827a8ca2cf3937e5c6f1e63ee3b602fdf814" compoundref="a00890" startline="30">Hack::VirtualMachine::ARG</references>
+        <references refid="a01340_1a741754f2400fa7216c34d068f8f72cbd" compoundref="a00893" startline="179" endline="182">Hack::VirtualMachine::CodeStream::moveDIntoM</references>
+        <references refid="a01340_1a7b3485d5bcdb0077f04a795300192aa1" compoundref="a00893" startline="256" endline="260">Hack::VirtualMachine::CodeStream::addXToD</references>
+        <references refid="a01340_1a175bf06345174fcce65d1191e39a3003" compoundref="a00893" startline="48" endline="51">Hack::VirtualMachine::CodeStream::atAddressOf</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827a863abda83f7c8925cceaf04098e3cb34" compoundref="a00890" startline="28">Hack::VirtualMachine::STP</references>
+        <references refid="a01340_1aa362e930130af35f89144bcb3408b85f" compoundref="a00893" startline="64" endline="71">Hack::VirtualMachine::CodeStream::popStackFrame</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827a892ac688cf8f49defc936c85521c630b" compoundref="a00890" startline="32">Hack::VirtualMachine::THT</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827a0edd4176219c47bc38b154d7319b2b0c" compoundref="a00890" startline="31">Hack::VirtualMachine::THS</references>
+        <references refid="a01340_1ab03c98b791f59029938061bb68180ea7" compoundref="a00893" startline="340" endline="344">Hack::VirtualMachine::CodeStream::moveMIntoDAt</references>
+        <references refid="a01340_1a8e21be8722f05faaf98bf330cc90cdb3" compoundref="a00893" startline="262" endline="266">Hack::VirtualMachine::CodeStream::subXFromD</references>
+        <references refid="a01340_1a85ac74c78a8b176ded04af2096eac85d" compoundref="a00893" startline="346" endline="349">Hack::VirtualMachine::CodeStream::dereferenceD</references>
+        <references refid="a00908_1ab2a36ae607c4ab166da225c1f6f71827ae6201d4edf7d9066f2245e0d75ac1805" compoundref="a00890" startline="37">Hack::VirtualMachine::SW2</references>
+        <references refid="a01340_1a3c5bdd06abb474311bd67e86f4235573" compoundref="a00893" startline="356" endline="359">Hack::VirtualMachine::CodeStream::jumpToD</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1ace6851f1122c7b49eaf7363d0fd00311" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::writeSub</definition>
+        <argsstring>()</argsstring>
+        <name>writeSub</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="92" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="645" bodyend="653"/>
+        <references refid="a01340_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="a00893" startline="298" endline="302">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
+        <references refid="a01340_1a6224864f8951a6763574738729682f4b" compoundref="a00893" startline="154" endline="160">Hack::VirtualMachine::CodeStream::moveMIntoD</references>
+        <references refid="a01340_1a63f901cea27d2aea7ce908221a7dcd29" compoundref="a00893" startline="116" endline="119">Hack::VirtualMachine::CodeStream::decrementA</references>
+        <references refid="a01340_1a881189b74424125c63a8424483775ae3" compoundref="a00893" startline="212" endline="215">Hack::VirtualMachine::CodeStream::subMdIntoM</references>
+        <references refid="a01340_1ab437fc0874dd768e6cad8960e446f870" compoundref="a00893" startline="121" endline="129">Hack::VirtualMachine::CodeStream::decrement</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1a732f25ca250ae685216a138788a8ab83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::writGoto</definition>
+        <argsstring>(const String &amp;value)</argsstring>
+        <name>writGoto</name>
+        <param>
+          <type>const <ref refid="a00900_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="110" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="762" bodyend="766"/>
+        <references refid="a01340_1a4fea9b6b37191464b43ba65b5a5e5685" compoundref="a00893" startline="84" endline="88">Hack::VirtualMachine::CodeStream::jumpToRomAddress</references>
+      </memberdef>
+      <memberdef kind="function" id="a01344_1a838a57865474ad8fed8f0d872ade28e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Emitter::writIfGoto</definition>
+        <argsstring>(const String &amp;value)</argsstring>
+        <name>writIfGoto</name>
+        <param>
+          <type>const <ref refid="a00900_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="112" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="768" bodyend="775"/>
+        <references refid="a01340_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="a00893" startline="298" endline="302">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
+        <references refid="a01340_1a6224864f8951a6763574738729682f4b" compoundref="a00893" startline="154" endline="160">Hack::VirtualMachine::CodeStream::moveMIntoD</references>
+        <references refid="a01340_1ab437fc0874dd768e6cad8960e446f870" compoundref="a00893" startline="121" endline="129">Hack::VirtualMachine::CodeStream::decrement</references>
+        <references refid="a01340_1a514fbe2de487f40838e2f2e06375321a" compoundref="a00893" startline="328" endline="332">Hack::VirtualMachine::CodeStream::jumpIfNotEquals</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <inheritancegraph>
-      <node id="481">
-        <label>Hack::VirtualMachine::Scanner</label>
-        <link refid="a01344"/>
-        <childnode refid="482" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="482">
-        <label>Hack::ScannerBase</label>
-        <link refid="a01276"/>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="487">
-        <label>size_t</label>
-      </node>
-      <node id="485">
-        <label>Hack::IndexCache&lt; String &gt;</label>
-        <link refid="a01256"/>
-      </node>
-      <node id="489">
-        <label>IStream *</label>
-      </node>
-      <node id="488">
-        <label>string</label>
-      </node>
-      <node id="483">
-        <label>Hack::VirtualMachine::Scanner</label>
-        <link refid="a01344"/>
-        <childnode refid="484" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="484">
-        <label>Hack::ScannerBase</label>
-        <link refid="a01276"/>
-        <childnode refid="485" relation="usage">
-          <edgelabel>_stringTable</edgelabel>
-        </childnode>
-        <childnode refid="486" relation="usage">
-          <edgelabel>_intTable</edgelabel>
-        </childnode>
-        <childnode refid="487" relation="usage">
-          <edgelabel>_line</edgelabel>
-        </childnode>
-        <childnode refid="488" relation="usage">
-          <edgelabel>_file</edgelabel>
-        </childnode>
-        <childnode refid="489" relation="usage">
-          <edgelabel>_stream</edgelabel>
-        </childnode>
-      </node>
-      <node id="486">
-        <label>Hack::IndexCache&lt; int &gt;</label>
-        <link refid="a01256"/>
-      </node>
-    </collaborationgraph>
-    <location file="Source/VirtualMachine/Scanner.h" line="31" column="1" bodyfile="Source/VirtualMachine/Scanner.h" bodystart="30" bodyend="47"/>
+    <location file="Source/VirtualMachine/Emitter.h" line="32" column="1" bodyfile="Source/VirtualMachine/Emitter.h" bodystart="31" bodyend="123"/>
     <listofallmembers>
-      <member refid="a01344_1ad98d5bb5dbb1e17960467e679de5bdec" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>_code</name></member>
-      <member refid="a01276_1aee2410ff35c9642a4addab5377339b99" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>_file</name></member>
-      <member refid="a01276_1aa2fe138fe481c6a129d048ed4d58bab8" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>_intTable</name></member>
-      <member refid="a01276_1ac7ff4bb59d95de6dcd83f827794086f2" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>_line</name></member>
-      <member refid="a01276_1a553484b098225d77804ffcfbf0382922" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>_stream</name></member>
-      <member refid="a01276_1a414a40b1cf631e4125e828c2607ee137" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>_stringTable</name></member>
-      <member refid="a01276_1a2412fd20aba2fc636877f3ac8db780d0" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>attach</name></member>
-      <member refid="a01276_1a5255f93a5545c9c6e5ea7a80f9ed12f5" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>containsString</name></member>
-      <member refid="a01276_1a60a1083d1af7068a54330d565ddcb44f" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>extractCode</name></member>
-      <member refid="a01344_1aecf5a1159531823bd1e53aac834e9f73" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>getCode</name></member>
-      <member refid="a01276_1ad43d94370b9191abd0a79c6148f1ce5c" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>integer</name></member>
-      <member refid="a01276_1a30f51f62024dec9e10aae0f40bfe04e6" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>line</name></member>
-      <member refid="a01276_1ac95ab910b82639657337e5a3f6b634ed" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>save</name></member>
-      <member refid="a01276_1a857c80250b61d01dc34925958b979362" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>save</name></member>
-      <member refid="a01344_1a4997cadc71378e0fd99ba4309507442c" prot="public" virt="virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>scan</name></member>
-      <member refid="a01276_1a4d2174fd338ba032ccb9101087e752dd" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>scanAny</name></member>
-      <member refid="a01344_1a2a35b55baeecb5d2bbae555ae21f4853" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>scanCode</name></member>
-      <member refid="a01344_1a7e287d18444a38ca51bedd81f0aa78cc" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>scanDigit</name></member>
-      <member refid="a01276_1a16d67c5310c35106dd5caed204460adb" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>scanLineComment</name></member>
-      <member refid="a01276_1af515b00a44514c004aaefa7da2944674" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>scanMultiLineComment</name></member>
-      <member refid="a01344_1a492f69304cf8afa9a9c08db6aea3858d" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>Scanner</name></member>
-      <member refid="a01276_1a39a50ecb7b671cefcbf45b1900c10ffb" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>ScannerBase</name></member>
-      <member refid="a01344_1a6c303071aff73d2a8bc5d680a2f98f5c" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>scanSymbol</name></member>
-      <member refid="a01276_1a4b419e3a4f91e1f4f136ead8941b7c5e" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>scanWhiteSpace</name></member>
-      <member refid="a01276_1aa7dc42bcd86a806dffaf235aed8efeb6" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>string</name></member>
-      <member refid="a01276_1a2b080ab6ef2ee68120cbc10a883c92bd" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>string</name></member>
-      <member refid="a01276_1a0aa5a628913e1c8f04db54201f97e1a7" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>syntaxError</name></member>
-      <member refid="a01276_1a3ed512a25958a785d2ca050c254d113e" prot="public" virt="virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>~ScannerBase</name></member>
+      <member refid="a01344_1aa6b5ac5c97bec2417d1dfa1c439a0280" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>_cmp</name></member>
+      <member refid="a01344_1a2a92e3c12f741967213cc4c6b461716b" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>_functions</name></member>
+      <member refid="a01344_1affa86d2748d6dd7e7ea5afac5cb9b2c4" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>_stream</name></member>
+      <member refid="a01344_1af262bc1ecd8d3450375f9f4e450a7c19" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>clear</name></member>
+      <member refid="a01344_1aed412b794ba08f97702b7c9e1ddc936f" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>Emitter</name></member>
+      <member refid="a01344_1afd58fa95f0cbf406512c90c9215c7a52" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>genLabel</name></member>
+      <member refid="a01344_1a80a58b11a57fdcbd4f0a4ea91ddf029f" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>getJumpLabels</name></member>
+      <member refid="a01344_1abc0dabd1997693d70d9703aa4c861abd" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>popArgument</name></member>
+      <member refid="a01344_1a1eb323d646263c89efbd6b4b609709f6" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>popLocal</name></member>
+      <member refid="a01344_1a56edb8fc5daceb2c366c6a06709f5d51" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>popPointer</name></member>
+      <member refid="a01344_1a2fa0b264ae63445fad0a8db36d20075a" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>popStatic</name></member>
+      <member refid="a01344_1a144f81f654a07f4f2b488b9424629bfd" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>popTemp</name></member>
+      <member refid="a01344_1a2de462d5d98a35b4366d15d2801d157d" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>popThat</name></member>
+      <member refid="a01344_1a02258187ea3b8426a88a2a6d63dda0f4" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>popThis</name></member>
+      <member refid="a01344_1a5cbf52561c2c0e632664e9da1ef93b8d" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>pushArgument</name></member>
+      <member refid="a01344_1aaa58d2ca0cd17e6d4a3b6dec96d53d76" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>pushConstant</name></member>
+      <member refid="a01344_1a8f6a6b66be4690f4b9aeb6eddfff713f" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>pushLocal</name></member>
+      <member refid="a01344_1ab918a95684ae69febf08ff7df0dc7977" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>pushPointer</name></member>
+      <member refid="a01344_1a058483c1d4c8d8f37cb173df25aaf0cb" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>pushStatic</name></member>
+      <member refid="a01344_1a7e845f9ab740405fc8cac69e48e3f35e" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>pushTemp</name></member>
+      <member refid="a01344_1af1a7a98b19545def95f6bc05e3e573d1" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>pushThat</name></member>
+      <member refid="a01344_1a0aa1816c96c0f6deb1971ef113a79af3" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>pushThis</name></member>
+      <member refid="a01344_1aa6529297748da36b15e9ed7674ec60b2" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>setRam</name></member>
+      <member refid="a01344_1a3944cc6bbc9993953d7b4543af940128" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>stream</name></member>
+      <member refid="a01344_1aa8ce88c353ba6d22e7540662e1df2a8a" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>StringStack</name></member>
+      <member refid="a01344_1aaace24f338366621d97233f0a0505e38" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>writeAdd</name></member>
+      <member refid="a01344_1ae83c1294d792a8a07a2c2d1ae42b65ae" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>writeAnd</name></member>
+      <member refid="a01344_1ad150c2fea65ae75600e16c7af316999e" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>writeCall</name></member>
+      <member refid="a01344_1aaf525ae23391a46b4ede8a6313f6a5d9" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>writeCode</name></member>
+      <member refid="a01344_1ab7130849685d66f3dbfdb66516a6666b" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>writeEq</name></member>
+      <member refid="a01344_1aab3f6bc5273771ec46046381c7253242" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>writeFunction</name></member>
+      <member refid="a01344_1a755e9953659ecf7df60423bd30dfe80c" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>writeGt</name></member>
+      <member refid="a01344_1a0257d1433f36b284b726033a6f6760f2" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>writeHalt</name></member>
+      <member refid="a01344_1aaca9c3ae0e13532b9d44339d7ecbc06d" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>writeLabel</name></member>
+      <member refid="a01344_1a1628ba2540e176473ece7714482fd895" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>writeLt</name></member>
+      <member refid="a01344_1a2f860b25cccd5835f087d13a33f6f4ff" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>writeNeg</name></member>
+      <member refid="a01344_1a79e7c8b178799150cf1bc9a0179bfcc2" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>writeNot</name></member>
+      <member refid="a01344_1a5a9dd7c8028d6eb7a0f10f04d727ffb8" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>writeOr</name></member>
+      <member refid="a01344_1a2fdb4876761af2db20b9511303b432bc" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>writeReset</name></member>
+      <member refid="a01344_1a02fbd64d23b39a2a5b4bc631d94aedae" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>writeReturn</name></member>
+      <member refid="a01344_1ace6851f1122c7b49eaf7363d0fd00311" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>writeSub</name></member>
+      <member refid="a01344_1a732f25ca250ae685216a138788a8ab83" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>writGoto</name></member>
+      <member refid="a01344_1a838a57865474ad8fed8f0d872ade28e2" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>writIfGoto</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

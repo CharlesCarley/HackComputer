@@ -1,79 +1,209 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01176" kind="class" language="C++" prot="public">
-    <compoundname>Hack::Programs::VmGeneratorApplication</compoundname>
+    <compoundname>Hack::Compiler::XmlWriterImpl</compoundname>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="a01176_1a3dc349440a2e7338e63a0e0d16aa2c49" prot="private" static="no" mutable="no">
-        <type><ref refid="a00888_1a95e191d8af73e79ac197701ac6a6c9a6" kindref="member">Path</ref></type>
-        <definition>Path Hack::Programs::VmGeneratorApplication::_input</definition>
+      <memberdef kind="variable" id="a01176_1a3d2d164224a102dc1c2311df92b895dc" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Hack::Compiler::XmlWriterImpl::_indent</definition>
         <argsstring></argsstring>
-        <name>_input</name>
+        <name>_indent</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Generator/Main.cpp" line="57" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="57" bodyend="-1"/>
+        <location file="Source/Compiler/Common/XmlWriter.cpp" line="38" column="1" bodyfile="Source/Compiler/Common/XmlWriter.cpp" bodystart="38" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a01176_1a79b2d6266ff56283ca934da047267932" prot="private" static="no" mutable="no">
-        <type>string</type>
-        <definition>string Hack::Programs::VmGeneratorApplication::_output</definition>
+      <memberdef kind="variable" id="a01176_1a906c7cd5e6ac1b7133f6dbc87de8ec01" prot="private" static="no" mutable="no">
+        <type><ref refid="a00900_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref></type>
+        <definition>OutputStringStream Hack::Compiler::XmlWriterImpl::_out</definition>
         <argsstring></argsstring>
-        <name>_output</name>
+        <name>_out</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Generator/Main.cpp" line="58" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="58" bodyend="-1"/>
+        <location file="Source/Compiler/Common/XmlWriter.cpp" line="36" column="1" bodyfile="Source/Compiler/Common/XmlWriter.cpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01176_1abbf3c01a6c4cd8ed3789133cd45aec5e" prot="private" static="no" mutable="no">
+        <type><ref refid="a01164" kindref="compound">Node</ref> *</type>
+        <definition>Node* Hack::Compiler::XmlWriterImpl::_root</definition>
+        <argsstring></argsstring>
+        <name>_root</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Common/XmlWriter.cpp" line="34" column="1" bodyfile="Source/Compiler/Common/XmlWriter.cpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01176_1a8ec91e58f092803c0c2b7de3065f4488" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Hack::Compiler::XmlWriterImpl::_showLineNr</definition>
+        <argsstring></argsstring>
+        <name>_showLineNr</name>
+        <initializer>{false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Common/XmlWriter.cpp" line="37" column="1" bodyfile="Source/Compiler/Common/XmlWriter.cpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01176_1abdba7a25cc721f663c3be6ff7b474f8d" prot="private" static="no" mutable="no">
+        <type><ref refid="a00900_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref> *</type>
+        <definition>OStream* Hack::Compiler::XmlWriterImpl::_stream</definition>
+        <argsstring></argsstring>
+        <name>_stream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Common/XmlWriter.cpp" line="35" column="1" bodyfile="Source/Compiler/Common/XmlWriter.cpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="a01176_1a6ba5bac674bc72b4dbf3eec287e07325" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::XmlWriterImpl::closeTag</definition>
+        <argsstring>(const String &amp;name)</argsstring>
+        <name>closeTag</name>
+        <param>
+          <type>const <ref refid="a00900_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Common/XmlWriter.cpp" line="59" column="1" bodyfile="Source/Compiler/Common/XmlWriter.cpp" bodystart="59" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="a01176_1af39bbb42981d037bd00eb4b093cad606" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::XmlWriterImpl::inlineTag</definition>
+        <argsstring>(const String &amp;name, Node *node, const String &amp;value)</argsstring>
+        <name>inlineTag</name>
+        <param>
+          <type>const <ref refid="a00900_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="a01164" kindref="compound">Node</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="a00900_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Common/XmlWriter.cpp" line="66" column="1" bodyfile="Source/Compiler/Common/XmlWriter.cpp" bodystart="66" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="a01176_1a1d3bb248a6f268dbbf661002b3cf2f73" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::XmlWriterImpl::openTag</definition>
+        <argsstring>(const String &amp;name, Node *node)</argsstring>
+        <name>openTag</name>
+        <param>
+          <type>const <ref refid="a00900_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="a01164" kindref="compound">Node</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Common/XmlWriter.cpp" line="40" column="1" bodyfile="Source/Compiler/Common/XmlWriter.cpp" bodystart="40" bodyend="57"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01176_1a7871748e4ae624afa7e499c4a59fe5c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="a01176_1a0ba9b2365e3565db42433b4423722263" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
         <type></type>
-        <definition>Hack::Programs::VmGeneratorApplication::VmGeneratorApplication</definition>
+        <definition>Hack::Compiler::XmlWriterImpl::XmlWriterImpl</definition>
+        <argsstring>(Node *root, OStream *stream)</argsstring>
+        <name>XmlWriterImpl</name>
+        <param>
+          <type><ref refid="a01164" kindref="compound">Node</ref> *</type>
+          <declname>root</declname>
+        </param>
+        <param>
+          <type><ref refid="a00900_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Common/XmlWriter.cpp" line="83" column="1" bodyfile="Source/Compiler/Common/XmlWriter.cpp" bodystart="83" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="a01176_1a773084b2433473c2debb94e8ed974066" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::XmlWriterImpl::write</definition>
         <argsstring>()</argsstring>
-        <name>VmGeneratorApplication</name>
+        <name>write</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Generator/Main.cpp" line="61" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="61" bodyend="64"/>
+        <location file="Source/Compiler/Common/XmlWriter.cpp" line="131" column="1" bodyfile="Source/Compiler/Common/XmlWriter.cpp" bodystart="131" bodyend="146"/>
       </memberdef>
-      <memberdef kind="function" id="a01176_1a5b92f6570aa68ee0ac9ef75c0eb65196" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>int</type>
-        <definition>int Hack::Programs::VmGeneratorApplication::go</definition>
-        <argsstring>() const</argsstring>
-        <name>go</name>
+      <memberdef kind="function" id="a01176_1afd349a9bec9d84dbadd743f199cb42e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::XmlWriterImpl::writeFooter</definition>
+        <argsstring>()</argsstring>
+        <name>writeFooter</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Generator/Main.cpp" line="87" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="87" bodyend="101"/>
-        <references refid="a01272_1a4668ec9b913931ce518de6d7f92fb4e0" compoundref="a00818" startline="76" endline="89">Hack::ParserBase::parse</references>
-        <references refid="a01172_1a56124ee10cf34c6d9fa38b9be1ebeeb7" compoundref="a00722" startline="702" endline="709">Hack::Compiler::CodeGenerator::Generator::compile</references>
-        <references refid="a01128_1a19917dd91094e5a227a90d6cfaadb150" compoundref="a01599" startline="143" endline="148">Hack::Compiler::Analyzer::Parser::getTree</references>
-        <references refid="a01160_1a58e4ebbe1e9af83ed2d9ceb8843f90e4" compoundref="a00707" startline="45" endline="48">Hack::Compiler::Tree::getRoot</references>
-        <references refid="a01172_1a698f9cac52d1b90feb9fc06b77ce649b" compoundref="a00722" startline="711" endline="725">Hack::Compiler::CodeGenerator::Generator::write</references>
+        <location file="Source/Compiler/Common/XmlWriter.cpp" line="100" column="1" bodyfile="Source/Compiler/Common/XmlWriter.cpp" bodystart="100" bodyend="104"/>
       </memberdef>
-      <memberdef kind="function" id="a01176_1a416a282d953f159c301c3614ec855482" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Hack::Programs::VmGeneratorApplication::parse</definition>
-        <argsstring>(const int argc, char **argv)</argsstring>
-        <name>parse</name>
+      <memberdef kind="function" id="a01176_1a91d64e648b81c030dd10c2d77f204c43" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::XmlWriterImpl::writeHeader</definition>
+        <argsstring>()</argsstring>
+        <name>writeHeader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Common/XmlWriter.cpp" line="90" column="1" bodyfile="Source/Compiler/Common/XmlWriter.cpp" bodystart="90" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="a01176_1a8f7135b7a89487bb2bf0a209cca495b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::XmlWriterImpl::writeRule</definition>
+        <argsstring>(Node *rule)</argsstring>
+        <name>writeRule</name>
         <param>
-          <type>const int</type>
-          <declname>argc</declname>
-        </param>
-        <param>
-          <type>char **</type>
-          <declname>argv</declname>
+          <type><ref refid="a01164" kindref="compound">Node</ref> *</type>
+          <declname>rule</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -81,24 +211,28 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Generator/Main.cpp" line="66" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="66" bodyend="85"/>
-        <references refid="a01232_1a304e3e2f4af07df0fb6c9cde37040e27" compoundref="a01590" startline="52" endline="176">Hack::CommandLine::Parser::parse</references>
-        <references refid="a01232_1a9da3aa8c56bad342c3a7c30eb98d9c17" compoundref="a01590" startline="245" endline="255">Hack::CommandLine::Parser::string</references>
-        <references refid="a01232_1ac7bc3f3c9e8b89b4a39b8dd9a36b713f" compoundref="a01602" startline="88" endline="91">Hack::CommandLine::Parser::arguments</references>
-        <references refid="a01232_1afd63d6cb40243606fe5d6c944754eb5b" compoundref="a01590" startline="257" endline="262">Hack::CommandLine::Parser::usage</references>
+        <location file="Source/Compiler/Common/XmlWriter.cpp" line="106" column="1" bodyfile="Source/Compiler/Common/XmlWriter.cpp" bodystart="106" bodyend="129"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Compiler/Generator/Main.cpp" line="55" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="54" bodyend="102"/>
+    <location file="Source/Compiler/Common/XmlWriter.cpp" line="32" column="1" bodyfile="Source/Compiler/Common/XmlWriter.cpp" bodystart="31" bodyend="147"/>
     <listofallmembers>
-      <member refid="a01176_1a3dc349440a2e7338e63a0e0d16aa2c49" prot="private" virt="non-virtual"><scope>Hack::Programs::VmGeneratorApplication</scope><name>_input</name></member>
-      <member refid="a01176_1a79b2d6266ff56283ca934da047267932" prot="private" virt="non-virtual"><scope>Hack::Programs::VmGeneratorApplication</scope><name>_output</name></member>
-      <member refid="a01176_1a5b92f6570aa68ee0ac9ef75c0eb65196" prot="public" virt="non-virtual"><scope>Hack::Programs::VmGeneratorApplication</scope><name>go</name></member>
-      <member refid="a01176_1a416a282d953f159c301c3614ec855482" prot="public" virt="non-virtual"><scope>Hack::Programs::VmGeneratorApplication</scope><name>parse</name></member>
-      <member refid="a01176_1a7871748e4ae624afa7e499c4a59fe5c8" prot="public" virt="non-virtual"><scope>Hack::Programs::VmGeneratorApplication</scope><name>VmGeneratorApplication</name></member>
+      <member refid="a01176_1a3d2d164224a102dc1c2311df92b895dc" prot="private" virt="non-virtual"><scope>Hack::Compiler::XmlWriterImpl</scope><name>_indent</name></member>
+      <member refid="a01176_1a906c7cd5e6ac1b7133f6dbc87de8ec01" prot="private" virt="non-virtual"><scope>Hack::Compiler::XmlWriterImpl</scope><name>_out</name></member>
+      <member refid="a01176_1abbf3c01a6c4cd8ed3789133cd45aec5e" prot="private" virt="non-virtual"><scope>Hack::Compiler::XmlWriterImpl</scope><name>_root</name></member>
+      <member refid="a01176_1a8ec91e58f092803c0c2b7de3065f4488" prot="private" virt="non-virtual"><scope>Hack::Compiler::XmlWriterImpl</scope><name>_showLineNr</name></member>
+      <member refid="a01176_1abdba7a25cc721f663c3be6ff7b474f8d" prot="private" virt="non-virtual"><scope>Hack::Compiler::XmlWriterImpl</scope><name>_stream</name></member>
+      <member refid="a01176_1a6ba5bac674bc72b4dbf3eec287e07325" prot="private" virt="non-virtual"><scope>Hack::Compiler::XmlWriterImpl</scope><name>closeTag</name></member>
+      <member refid="a01176_1af39bbb42981d037bd00eb4b093cad606" prot="private" virt="non-virtual"><scope>Hack::Compiler::XmlWriterImpl</scope><name>inlineTag</name></member>
+      <member refid="a01176_1a1d3bb248a6f268dbbf661002b3cf2f73" prot="private" virt="non-virtual"><scope>Hack::Compiler::XmlWriterImpl</scope><name>openTag</name></member>
+      <member refid="a01176_1a773084b2433473c2debb94e8ed974066" prot="public" virt="non-virtual"><scope>Hack::Compiler::XmlWriterImpl</scope><name>write</name></member>
+      <member refid="a01176_1afd349a9bec9d84dbadd743f199cb42e4" prot="public" virt="non-virtual"><scope>Hack::Compiler::XmlWriterImpl</scope><name>writeFooter</name></member>
+      <member refid="a01176_1a91d64e648b81c030dd10c2d77f204c43" prot="public" virt="non-virtual"><scope>Hack::Compiler::XmlWriterImpl</scope><name>writeHeader</name></member>
+      <member refid="a01176_1a8f7135b7a89487bb2bf0a209cca495b8" prot="public" virt="non-virtual"><scope>Hack::Compiler::XmlWriterImpl</scope><name>writeRule</name></member>
+      <member refid="a01176_1a0ba9b2365e3565db42433b4423722263" prot="public" virt="non-virtual"><scope>Hack::Compiler::XmlWriterImpl</scope><name>XmlWriterImpl</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -1,148 +1,348 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01601" kind="file" language="C++">
-    <compoundname>Parser.cpp</compoundname>
-    <includes refid="a01613" local="yes">Parser.h</includes>
-    <includes local="no">filesystem</includes>
+    <compoundname>Main.cpp</compoundname>
+    <includes local="no">fstream</includes>
     <includes local="no">iostream</includes>
-    <includes local="no">sstream</includes>
-    <includes refid="a00806" local="yes">Utils/Console.h</includes>
+    <includes refid="a01625" local="yes">VirtualMachine/Parser.h</includes>
+    <includes refid="a01622" local="yes">Utils/CommandLine/Parser.h</includes>
+    <includes refid="a00815" local="yes">Utils/Console.h</includes>
+    <includes refid="a00818" local="yes">Utils/Exception.h</includes>
     <incdepgraph>
-      <node id="292">
+      <node id="184">
+        <label>VirtualMachine/Parser.h</label>
+        <childnode refid="185" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+        <childnode refid="204" relation="include">
+        </childnode>
+      </node>
+      <node id="200">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="280" relation="include">
+        <childnode refid="201" relation="include">
         </childnode>
       </node>
-      <node id="275">
-        <label>Parser.h</label>
-        <childnode refid="276" relation="include">
+      <node id="206">
+        <label>Utils/CommandLine/Parser.h</label>
+        <childnode refid="189" relation="include">
         </childnode>
-        <childnode refid="277" relation="include">
+        <childnode refid="207" relation="include">
         </childnode>
-        <childnode refid="285" relation="include">
+        <childnode refid="210" relation="include">
         </childnode>
-        <childnode refid="287" relation="include">
+        <childnode refid="212" relation="include">
         </childnode>
       </node>
-      <node id="288">
+      <node id="213">
         <label>filesystem</label>
       </node>
-      <node id="280">
+      <node id="181">
+        <label>Source/VirtualMachine/Main.cpp</label>
+        <link refid="a01601"/>
+        <childnode refid="182" relation="include">
+        </childnode>
+        <childnode refid="183" relation="include">
+        </childnode>
+        <childnode refid="184" relation="include">
+        </childnode>
+        <childnode refid="206" relation="include">
+        </childnode>
+        <childnode refid="195" relation="include">
+        </childnode>
+        <childnode refid="191" relation="include">
+        </childnode>
+      </node>
+      <node id="201">
         <label>cstdint</label>
       </node>
-      <node id="278">
+      <node id="208">
         <label>cassert</label>
       </node>
-      <node id="286">
+      <node id="193">
+        <label>stdexcept</label>
+      </node>
+      <node id="211">
         <label>Utils/CommandLine/Token.h</label>
-        <childnode refid="281" relation="include">
+        <childnode refid="196" relation="include">
         </childnode>
       </node>
-      <node id="283">
+      <node id="198">
         <label>string</label>
       </node>
-      <node id="274">
-        <label>Source/Utils/CommandLine/Parser.cpp</label>
-        <link refid="a01601"/>
-        <childnode refid="275" relation="include">
-        </childnode>
-        <childnode refid="288" relation="include">
-        </childnode>
-        <childnode refid="289" relation="include">
-        </childnode>
-        <childnode refid="282" relation="include">
-        </childnode>
-        <childnode refid="290" relation="include">
-        </childnode>
+      <node id="190">
+        <label>unordered_set</label>
       </node>
-      <node id="285">
+      <node id="192">
+        <label>exception</label>
+      </node>
+      <node id="210">
         <label>Utils/CommandLine/Scanner.h</label>
-        <childnode refid="286" relation="include">
+        <childnode refid="211" relation="include">
         </childnode>
       </node>
-      <node id="291">
+      <node id="182">
+        <label>fstream</label>
+      </node>
+      <node id="187">
+        <label>ScannerBase.h</label>
+        <childnode refid="188" relation="include">
+        </childnode>
+        <childnode refid="203" relation="include">
+        </childnode>
+      </node>
+      <node id="203">
+        <label>Utils/ParserBase/TokenBase.h</label>
+        <childnode refid="196" relation="include">
+        </childnode>
+      </node>
+      <node id="199">
         <label>UserInterface/Context.h</label>
-        <childnode refid="281" relation="include">
+        <childnode refid="196" relation="include">
         </childnode>
-        <childnode refid="292" relation="include">
+        <childnode refid="200" relation="include">
         </childnode>
-        <childnode refid="293" relation="include">
+        <childnode refid="202" relation="include">
         </childnode>
       </node>
-      <node id="293">
+      <node id="202">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="280" relation="include">
+        <childnode refid="201" relation="include">
         </childnode>
-        <childnode refid="284" relation="include">
+        <childnode refid="186" relation="include">
         </childnode>
-        <childnode refid="292" relation="include">
+        <childnode refid="200" relation="include">
         </childnode>
       </node>
-      <node id="290">
+      <node id="188">
+        <label>Utils/IndexCache.h</label>
+        <childnode refid="189" relation="include">
+        </childnode>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="191" relation="include">
+        </childnode>
+      </node>
+      <node id="195">
         <label>Utils/Console.h</label>
-        <childnode refid="281" relation="include">
+        <childnode refid="196" relation="include">
         </childnode>
-        <childnode refid="291" relation="include">
+        <childnode refid="199" relation="include">
         </childnode>
       </node>
-      <node id="284">
+      <node id="205">
+        <label>stack</label>
+      </node>
+      <node id="186">
         <label>vector</label>
       </node>
-      <node id="282">
+      <node id="204">
+        <label>VirtualMachine/Emitter.h</label>
+        <childnode refid="205" relation="include">
+        </childnode>
+        <childnode refid="187" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+      </node>
+      <node id="194">
+        <label>utility</label>
+      </node>
+      <node id="197">
         <label>sstream</label>
       </node>
-      <node id="279">
+      <node id="209">
         <label>Utils/Char.h</label>
-        <childnode refid="280" relation="include">
+        <childnode refid="201" relation="include">
         </childnode>
-        <childnode refid="281" relation="include">
+        <childnode refid="196" relation="include">
         </childnode>
       </node>
-      <node id="289">
+      <node id="191">
+        <label>Utils/Exception.h</label>
+        <childnode refid="192" relation="include">
+        </childnode>
+        <childnode refid="193" relation="include">
+        </childnode>
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="195" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+      </node>
+      <node id="183">
         <label>iostream</label>
       </node>
-      <node id="277">
+      <node id="207">
         <label>Utils/CommandLine/Option.h</label>
-        <childnode refid="278" relation="include">
+        <childnode refid="208" relation="include">
         </childnode>
-        <childnode refid="279" relation="include">
+        <childnode refid="209" relation="include">
         </childnode>
-        <childnode refid="281" relation="include">
+        <childnode refid="196" relation="include">
         </childnode>
       </node>
-      <node id="276">
+      <node id="189">
         <label>unordered_map</label>
       </node>
-      <node id="281">
-        <label>Utils/String.h</label>
-        <childnode refid="282" relation="include">
+      <node id="185">
+        <label>Utils/ParserBase/ParserBase.h</label>
+        <childnode refid="186" relation="include">
         </childnode>
-        <childnode refid="283" relation="include">
+        <childnode refid="187" relation="include">
         </childnode>
-        <childnode refid="284" relation="include">
+        <childnode refid="203" relation="include">
         </childnode>
       </node>
-      <node id="287">
-        <label>Utils/FileSystem.h</label>
-        <childnode refid="288" relation="include">
+      <node id="196">
+        <label>String.h</label>
+        <childnode refid="197" relation="include">
         </childnode>
-        <childnode refid="281" relation="include">
+        <childnode refid="198" relation="include">
+        </childnode>
+        <childnode refid="186" relation="include">
+        </childnode>
+      </node>
+      <node id="212">
+        <label>Utils/FileSystem.h</label>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <innernamespace refid="a00910">Hack::CommandLine</innernamespace>
-      <sectiondef kind="define">
-      <memberdef kind="define" id="a01601_1a5a93f561424c1ab4b6dbd1d569b14bb3" prot="public" static="no">
-        <name>pad</name>
-        <param><defname>w</defname></param>
-        <initializer>setw((w)) &lt;&lt; &apos; &apos;</initializer>
+    <innerclass refid="a00930" prot="public">Application</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="a01601_1adf7c3ac791f996a56160a12f379cbd99" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Options</name>
+        <enumvalue id="a01586_1adf7c3ac791f996a56160a12f379cbd99a754e75f91ab2276abfbed3267a2a0930" prot="public">
+          <name>OP_OUTPUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a01586_1adf7c3ac791f996a56160a12f379cbd99a5c270cf3e25cfa83f27b787be93b99f9" prot="public">
+          <name>OP_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a01589_1adf7c3ac791f996a56160a12f379cbd99a4affdc447c94e0a37bfd812674866426" prot="public">
+          <name>OP_FMT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a01589_1adf7c3ac791f996a56160a12f379cbd99ad0cf9bb97c9c3845ca0d4daed8372bca" prot="public">
+          <name>OP_DIR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a01589_1adf7c3ac791f996a56160a12f379cbd99a754e75f91ab2276abfbed3267a2a0930" prot="public">
+          <name>OP_OUTPUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a01589_1adf7c3ac791f996a56160a12f379cbd99a5c270cf3e25cfa83f27b787be93b99f9" prot="public">
+          <name>OP_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a01592_1adf7c3ac791f996a56160a12f379cbd99a754e75f91ab2276abfbed3267a2a0930" prot="public">
+          <name>OP_OUTPUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a01592_1adf7c3ac791f996a56160a12f379cbd99a5c270cf3e25cfa83f27b787be93b99f9" prot="public">
+          <name>OP_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a01601_1adf7c3ac791f996a56160a12f379cbd99a754e75f91ab2276abfbed3267a2a0930" prot="public">
+          <name>OP_OUTPUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a01601_1adf7c3ac791f996a56160a12f379cbd99a5c270cf3e25cfa83f27b787be93b99f9" prot="public">
+          <name>OP_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/CommandLine/Parser.cpp" line="28" column="9" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="28" bodyend="-1"/>
+        <location file="Source/VirtualMachine/Main.cpp" line="33" column="1" bodyfile="Source/VirtualMachine/Main.cpp" bodystart="32" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="a01601_1ad7c5254e1705c59aa9bf4c16d149187e" prot="public" static="no" mutable="no">
+        <type>constexpr <ref refid="a01242" kindref="compound">CommandLine::Switch</ref></type>
+        <definition>constexpr CommandLine::Switch Switches[OP_MAX]</definition>
+        <argsstring>[OP_MAX]</argsstring>
+        <name>Switches</name>
+        <initializer>= {{
+        OP_OUTPUT,
+        &apos;o&apos;,
+        &quot;output&quot;,
+        &quot;Specify an output file\n&quot;
+        &quot; -- If one is not supplied the program&apos;s output will be sent to stdout&quot;,
+        true,
+        1,
+    }
+
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Main.cpp" line="38" column="1" bodyfile="Source/VirtualMachine/Main.cpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="a01601_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Main.cpp" line="102" column="1" bodyfile="Source/VirtualMachine/Main.cpp" bodystart="102" bodyend="115"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -171,390 +371,101 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Parser.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;filesystem&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;VirtualMachine/Parser.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/CommandLine/Parser.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/Console.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pad(w)<sp/>setw((w))<sp/>&lt;&lt;<sp/>&apos;<sp/>&apos;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00910" kindref="compound">Hack::CommandLine</ref></highlight></codeline>
-<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="a00913" kindref="compound">std</ref>;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="a01241_1aeafa84d86ac6c8437b6153a2627cbfb2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01241_1aeafa84d86ac6c8437b6153a2627cbfb2" kindref="member">Parser::Parser</ref>()<sp/>:</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_maxLongSwitch(4),</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_required(0),</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_used(0)</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41" refid="a01241_1a4aef7be4832a2db2e62f2b44617eff9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01241_1a4aef7be4832a2db2e62f2b44617eff9f" kindref="member">Parser::~Parser</ref>()</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="a01237" kindref="compound">ParseOption</ref>*<sp/>op<sp/>:<sp/>_options)</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>op;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Parser::hasSwitch(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>sw)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="48"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_switches.find(sw)<sp/>!=<sp/>_switches.end();</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52" refid="a01241_1a304e3e2f4af07df0fb6c9cde37040e27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="a01241_1a304e3e2f4af07df0fb6c9cde37040e27" kindref="member" tooltip="Parses the command line. Any switches that are needed must be initialized via initializeSwitches. Arguments that have no switch are placed into an array and accessed via arguments ">Parser::parse</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>argc,</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>argv,</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01233" kindref="compound" tooltip="Represents a command line switch ">Switch</ref>*<sp/>switches,</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/>count)</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!_programName.empty())<sp/><sp/></highlight><highlight class="comment">//<sp/>using<sp/>as<sp/>a<sp/>check<sp/>for<sp/>multiple<sp/>calls</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!initializeSwitches(switches,<sp/>count))</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_programName<sp/>=<sp/>argv[0];</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_used<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_scanner.<ref refid="a01245_1a1974539a58027b0ba339b019d8fcddf9" kindref="member">clear</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/Exception.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="a00922" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="a00906" kindref="compound">Hack</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>Options</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>OP_OUTPUT,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>OP_MAX,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">constexpr<sp/><ref refid="a01242" kindref="compound" tooltip="Represents a command line switch ">CommandLine::Switch</ref><sp/>Switches[OP_MAX]<sp/>=<sp/>{{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OP_OUTPUT,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;o&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;output&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Specify<sp/>an<sp/>output<sp/>file\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>--<sp/>If<sp/>one<sp/>is<sp/>not<sp/>supplied<sp/>the<sp/>program&apos;s<sp/>output<sp/>will<sp/>be<sp/>sent<sp/>to<sp/>stdout&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a00930" kindref="compound">Application</ref></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>_input;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>_output;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00930" kindref="compound">Application</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="a00930_1a045c846c566d8cbe75a94d7b341a8fe7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00930_1a045c846c566d8cbe75a94d7b341a8fe7" kindref="member">parse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01250" kindref="compound" tooltip="Simple command line parser ">CommandLine::Parser</ref><sp/>p;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p.<ref refid="a01250_1aaaa3cc28de66e1e9b2f64cd1e51f2fe1" kindref="member">setHelpText</ref>(</highlight><highlight class="stringliteral">&quot;where<sp/>arg[0]<sp/>is<sp/>the<sp/>input<sp/>file&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(p.<ref refid="a01250_1a304e3e2f4af07df0fb6c9cde37040e27" kindref="member" tooltip="Parses the command line. Any switches that are needed must be initialized via initializeSwitches. Arguments that have no switch are placed into an array and accessed via arguments ">parse</ref>(argc,<sp/>argv,<sp/>Switches,<sp/>OP_MAX)<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>argc;<sp/>++i)</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_scanner.<ref refid="a01245_1af65558f33766054df253ab6efb378fd9" kindref="member">append</ref>(argv[i]);</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>curSwitch;</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>curSwitch.reserve(16);</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01249" kindref="compound">Token</ref><sp/>a;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(a.<ref refid="a01249_1a1752c109f1e2547e133eb0e991eab9bc" kindref="member">getType</ref>()<sp/>!=<sp/><ref refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86a728a7b175a948d4e4390726507f087b8" kindref="member">TOK_EOS</ref>)</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_scanner.<ref refid="a01245_1af56e25fc560f1b2fb71e93ab5d2599c5" kindref="member">lex</ref>(a);</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type<sp/>=<sp/>a.<ref refid="a01249_1a1752c109f1e2547e133eb0e991eab9bc" kindref="member">getType</ref>();</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a.<ref refid="a01249_1a1752c109f1e2547e133eb0e991eab9bc" kindref="member">getType</ref>()<sp/>==<sp/><ref refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86af499719b721526aa16a9b57e252fde89" kindref="member">TOK_ERROR</ref>)</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/>a.<ref refid="a01249_1a0394cc885ec75f298d503580570a3b25" kindref="member">getValue</ref>()<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01241_1afd63d6cb40243606fe5d6c944754eb5b" kindref="member">usage</ref>();</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(type<sp/>==<sp/><ref refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86a55849c5d51bca86446e7f7ac620d7d23" kindref="member">TOK_SWITCH_SHORT</ref><sp/>||<sp/>type<sp/>==<sp/><ref refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86adf0cf175e182315d7ed141f8f08120e5" kindref="member">TOK_SWITCH_LONG</ref>)</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>grab<sp/>the<sp/>next<sp/>token</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_scanner.<ref refid="a01245_1af56e25fc560f1b2fb71e93ab5d2599c5" kindref="member">lex</ref>(a);</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a.<ref refid="a01249_1a1752c109f1e2547e133eb0e991eab9bc" kindref="member">getType</ref>()<sp/>==<sp/><ref refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86af245704ac1981ba509a2bf36c9f974de" kindref="member">TOK_NEXT</ref><sp/>||<sp/>a.<ref refid="a01249_1a1752c109f1e2547e133eb0e991eab9bc" kindref="member">getType</ref>()<sp/>==<sp/><ref refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86a728a7b175a948d4e4390726507f087b8" kindref="member">TOK_EOS</ref>)</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00897_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref><sp/>os;</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;expected<sp/>a<sp/>switch<sp/>value<sp/>to<sp/>follow<sp/>&apos;-&apos;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>writeError(os);</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a.<ref refid="a01249_1a0394cc885ec75f298d503580570a3b25" kindref="member">getValue</ref>()<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;help&quot;</highlight><highlight class="normal"><sp/>||<sp/>a.<ref refid="a01249_1a0394cc885ec75f298d503580570a3b25" kindref="member">getValue</ref>()<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;h&quot;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01241_1afd63d6cb40243606fe5d6c944754eb5b" kindref="member">usage</ref>();</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Switches::iterator<sp/>it<sp/>=<sp/>_switches.find(a.<ref refid="a01249_1a0394cc885ec75f298d503580570a3b25" kindref="member">getValue</ref>());</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it<sp/>==<sp/>_switches.end())</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00897_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref><sp/>os;</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;unknown<sp/>option<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>a.<ref refid="a01249_1a0394cc885ec75f298d503580570a3b25" kindref="member">getValue</ref>()<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>writeError(os);</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>curSwitch.assign(a.<ref refid="a01249_1a0394cc885ec75f298d503580570a3b25" kindref="member">getValue</ref>());</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01237" kindref="compound">ParseOption</ref>*<sp/>opt<sp/>=<sp/>it-&gt;second;</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>opt-&gt;<ref refid="a01237_1a3947a9d6cb146aa14cc72f51b04a85bb" kindref="member">makePresent</ref>();</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!opt-&gt;<ref refid="a01237_1a55cc1ccc8cbd5e96b2af48e86d0d6324" kindref="member">isOptional</ref>())</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_used++;</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"></highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nArgs<sp/>=<sp/>opt-&gt;<ref refid="a01237_1a3e4adbad4b5893ad3b7369ff60fcaf79" kindref="member">getArgCount</ref>();</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nArgs<sp/>&gt;<sp/>0)</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>nArgs;<sp/>++i)</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_scanner.<ref refid="a01245_1af56e25fc560f1b2fb71e93ab5d2599c5" kindref="member">lex</ref>(a);</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"></highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a.<ref refid="a01249_1a1752c109f1e2547e133eb0e991eab9bc" kindref="member">getType</ref>()<sp/>!=<sp/><ref refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86ad10952ab16deb1fdfc37ce82f5cb52e5" kindref="member">TOK_IDENTIFIER</ref>)</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00897_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref><sp/>os;</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>argument<sp/>for<sp/>option<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>curSwitch</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>writeError(os);</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"></highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a.<ref refid="a01249_1a0394cc885ec75f298d503580570a3b25" kindref="member">getValue</ref>().empty())</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00897_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref><sp/>os;</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;missing<sp/>argument<sp/>for<sp/>option<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>curSwitch</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>writeError(os);</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"></highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>opt-&gt;<ref refid="a01237_1a256c761eeb80fa36003c935bc5706a44" kindref="member">setValue</ref>(i,<sp/>a.<ref refid="a01249_1a0394cc885ec75f298d503580570a3b25" kindref="member">getValue</ref>());</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"></highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>!=<sp/>nArgs)</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00897_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref><sp/>os;</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;not<sp/>all<sp/>arguments<sp/>converted<sp/>when<sp/>parsing<sp/>switch<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>curSwitch<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>writeError(os);</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(type<sp/>&gt;=<sp/><ref refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86a1ec616246244f6453a7f66b5fb826ad3" kindref="member">TOK_OPTION</ref><sp/>&amp;&amp;<sp/>type<sp/>&lt;<sp/><ref refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86a728a7b175a948d4e4390726507f087b8" kindref="member">TOK_EOS</ref>)</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_argumentList.push_back(a.<ref refid="a01249_1a0394cc885ec75f298d503580570a3b25" kindref="member">getValue</ref>());</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(type<sp/>!=<sp/><ref refid="a00910_1a7bf8cf020e39f88d39725c1ec763cd86a728a7b175a948d4e4390726507f087b8" kindref="member">TOK_EOS</ref>)</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00897_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref><sp/>os;</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;unknown<sp/>option<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>a.<ref refid="a01249_1a0394cc885ec75f298d503580570a3b25" kindref="member">getValue</ref>().c_str()<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>writeError(os);</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"></highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_used<sp/>!=<sp/>_required)</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00897_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref><sp/>os;</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;missing<sp/>required<sp/>options&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>writeError(os);</highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="177"><highlight class="normal"></highlight></codeline>
-<codeline lineno="178" refid="a01241_1aaaa3cc28de66e1e9b2f64cd1e51f2fe1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01241_1aaaa3cc28de66e1e9b2f64cd1e51f2fe1" kindref="member">Parser::setHelpText</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>help)</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_helpText<sp/>=<sp/>help;</highlight></codeline>
-<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="182"><highlight class="normal"></highlight></codeline>
-<codeline lineno="183" refid="a01241_1a1fd715bf284528379a1440e2d8199aae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01241_1a1fd715bf284528379a1440e2d8199aae" kindref="member" tooltip="Logs the command line verbatim ">Parser::logInput</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="184"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>curInp<sp/>=<sp/>_scanner.<ref refid="a01245_1ae8cbee55ad5f4cd3dda81e0cff2a07b5" kindref="member">getValue</ref>();</highlight></codeline>
-<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!curInp.empty())</highlight></codeline>
-<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01253_1aa75558c74eafde74be9d33818a79a3fe" kindref="member">Console::writeLine</ref>(curInp);</highlight></codeline>
-<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="189"><highlight class="normal"></highlight></codeline>
-<codeline lineno="190" refid="a01241_1a8024c6934e384f16819773b2e71a99af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><ref refid="a01241_1a8024c6934e384f16819773b2e71a99af" kindref="member" tooltip="Returns only the file name portion of the program that was supplied to main via argv[0] ...">Parser::programName</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="191"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_programName.stem().string();</highlight></codeline>
-<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="194"><highlight class="normal"></highlight></codeline>
-<codeline lineno="195" refid="a01241_1a81a0d1863ce4cf9de5fe2a49bdac010c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><ref refid="a01241_1a81a0d1863ce4cf9de5fe2a49bdac010c" kindref="member" tooltip="Extracts the directory from the supplied path to main. ">Parser::programDirectory</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="196"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_programName.root_directory().string();</highlight></codeline>
-<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="199"><highlight class="normal"></highlight></codeline>
-<codeline lineno="200" refid="a01241_1a0cde77f2b98611d60d9e2cc9394ff2fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><ref refid="a01241_1a0cde77f2b98611d60d9e2cc9394ff2fa" kindref="member" tooltip="Returns the current working directory for this process. ">Parser::currentDirectory</ref>()</highlight></codeline>
-<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::filesystem::current_path().string();</highlight></codeline>
-<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="204"><highlight class="normal"></highlight></codeline>
-<codeline lineno="205" refid="a01241_1adbd749e0938e2b359ee7f719864d1451" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01241_1adbd749e0938e2b359ee7f719864d1451" kindref="member">Parser::isPresent</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t&amp;<sp/>enumId)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="206"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enumId<sp/>&lt;<sp/>_options.size())</highlight></codeline>
-<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_options[enumId]-&gt;<ref refid="a01241_1adbd749e0938e2b359ee7f719864d1451" kindref="member">isPresent</ref>();</highlight></codeline>
-<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="211"><highlight class="normal"></highlight></codeline>
-<codeline lineno="212" refid="a01241_1ab5d11dfcdacd8b91069814891ef7f20c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01237" kindref="compound">ParseOption</ref>*<sp/><ref refid="a01241_1ab5d11dfcdacd8b91069814891ef7f20c" kindref="member">Parser::option</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t&amp;<sp/>enumId)</highlight></codeline>
-<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enumId<sp/>&lt;<sp/>_options.size())</highlight></codeline>
-<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_options[enumId];</highlight></codeline>
-<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="218"><highlight class="normal"></highlight></codeline>
-<codeline lineno="219" refid="a01241_1afde565b48fd1ed72c1732fd9be7b6f84" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="a01241_1afde565b48fd1ed72c1732fd9be7b6f84" kindref="member">Parser::int32</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t&amp;<sp/>enumId,</highlight></codeline>
-<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>idx,</highlight></codeline>
-<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32_t<sp/><sp/><sp/>defaultValue,</highlight></codeline>
-<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32_t<sp/><sp/><sp/>base)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="223"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enumId<sp/>&lt;<sp/>_options.size())</highlight></codeline>
-<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_options[enumId]<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_options[enumId]-&gt;getInt(idx,<sp/>defaultValue,<sp/>base);</highlight></codeline>
-<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>defaultValue;</highlight></codeline>
-<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="231"><highlight class="normal"></highlight></codeline>
-<codeline lineno="232" refid="a01241_1a4613b666cccdbdf99dec16293c4ebba6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/><ref refid="a01241_1a4613b666cccdbdf99dec16293c4ebba6" kindref="member">Parser::int64</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t&amp;<sp/>enumId,</highlight></codeline>
-<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>idx,</highlight></codeline>
-<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int64_t<sp/><sp/><sp/>defaultValue,</highlight></codeline>
-<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="236"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enumId<sp/>&lt;<sp/>_options.size())</highlight></codeline>
-<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_options[enumId]<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_options[enumId]-&gt;getInt64(idx,<sp/>defaultValue,<sp/>base);</highlight></codeline>
-<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>defaultValue;</highlight></codeline>
-<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="244"><highlight class="normal"></highlight></codeline>
-<codeline lineno="245" refid="a01241_1a9da3aa8c56bad342c3a7c30eb98d9c17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/><ref refid="a01241_1a9da3aa8c56bad342c3a7c30eb98d9c17" kindref="member">Parser::string</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t&amp;<sp/>enumId,</highlight></codeline>
-<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idx,</highlight></codeline>
-<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/><sp/><sp/>defaultValue)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="248"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enumId<sp/>&lt;<sp/>_options.size())</highlight></codeline>
-<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_options[enumId]<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_options[enumId]-&gt;getValue(idx);</highlight></codeline>
-<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>defaultValue;</highlight></codeline>
-<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="256"><highlight class="normal"></highlight></codeline>
-<codeline lineno="257" refid="a01241_1afd63d6cb40243606fe5d6c944754eb5b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01241_1afd63d6cb40243606fe5d6c944754eb5b" kindref="member">Parser::usage</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="258"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>usageString;</highlight></codeline>
-<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01241_1afd63d6cb40243606fe5d6c944754eb5b" kindref="member">usage</ref>(usageString);</highlight></codeline>
-<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01253_1aa75558c74eafde74be9d33818a79a3fe" kindref="member">Console::writeLine</ref>(usageString);</highlight></codeline>
-<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="263"><highlight class="normal"></highlight></codeline>
-<codeline lineno="264" refid="a01241_1a238f1d7d7475b6138f572ecb314c020b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01241_1afd63d6cb40243606fe5d6c944754eb5b" kindref="member">Parser::usage</ref>(<ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="265"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w<sp/>=<sp/>max(_maxLongSwitch<sp/>+<sp/>2,<sp/>4);</highlight></codeline>
-<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00897_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref><sp/>out;</highlight></codeline>
-<codeline lineno="268"><highlight class="normal"></highlight></codeline>
-<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Usage:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="a01241_1a8024c6934e384f16819773b2e71a99af" kindref="member" tooltip="Returns only the file name portion of the program that was supplied to main via argv[0] ...">programName</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&lt;options&gt;<sp/>&lt;arg[0]<sp/>..<sp/>arg[n]&gt;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl</highlight></codeline>
-<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!_helpText.empty())</highlight></codeline>
-<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/>pad(2)<sp/>&lt;&lt;<sp/>_helpText<sp/>&lt;&lt;<sp/>endl</highlight></codeline>
-<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/>pad(4)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;-h,<sp/>--help&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>pad(w<sp/>-<sp/>4)</highlight></codeline>
-<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Display<sp/>this<sp/>help<sp/>message&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="278"><highlight class="normal"></highlight></codeline>
-<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="a01237" kindref="compound">ParseOption</ref>*<sp/>opt<sp/>:<sp/>_options)</highlight></codeline>
-<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01233" kindref="compound" tooltip="Represents a command line switch ">Switch</ref>&amp;<sp/>switchVal<sp/>=<sp/>opt-&gt;getSwitch();</highlight></codeline>
-<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/>pad(4);</highlight></codeline>
-<codeline lineno="283"><highlight class="normal"></highlight></codeline>
-<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(switchVal.<ref refid="a01233_1ad725d98dbe8d12706bd7851f5d3d905c" kindref="member">shortSwitch</ref><sp/>!=<sp/>0)</highlight></codeline>
-<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="charliteral">&apos;-&apos;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>switchVal.<ref refid="a01233_1ad725d98dbe8d12706bd7851f5d3d905c" kindref="member">shortSwitch</ref>;</highlight></codeline>
-<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(switchVal.<ref refid="a01233_1a2fcdf7ee4ff6df3990cf86d1b5470a83" kindref="member">longSwitch</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/>pad(4);</highlight></codeline>
-<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/>pad(4);</highlight></codeline>
-<codeline lineno="294"><highlight class="normal"></highlight></codeline>
-<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>space<sp/>=<sp/>_maxLongSwitch;</highlight></codeline>
-<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(switchVal.<ref refid="a01233_1a2fcdf7ee4ff6df3990cf86d1b5470a83" kindref="member">longSwitch</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>space<sp/>-=<sp/>(int)<ref refid="a01229_1aec2f1d7549e6794e9f1b12e18d12602a" kindref="member" tooltip="Counts the number of characters up to the first occurrence of a null character &amp;#39;\0&amp;#39; ...">Char::length</ref>(switchVal.<ref refid="a01233_1a2fcdf7ee4ff6df3990cf86d1b5470a83" kindref="member">longSwitch</ref>);</highlight></codeline>
-<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;--&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>switchVal.<ref refid="a01233_1a2fcdf7ee4ff6df3990cf86d1b5470a83" kindref="member">longSwitch</ref>;</highlight></codeline>
-<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/>pad(space<sp/>+<sp/>2);</highlight></codeline>
-<codeline lineno="302"><highlight class="normal"></highlight></codeline>
-<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(switchVal.<ref refid="a01233_1ab100a397f7937d57fd07818559cc4768" kindref="member" tooltip="A brief description for the -h, –help builtin option. ">description</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01241_1aabea897d89f924f1ff868eedbd316f70" kindref="member">StringArray</ref><sp/>arr;</highlight></codeline>
-<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01293_1a23bf4c692af3b432d695218ea0143544" kindref="member">StringUtils::split</ref>(arr,<sp/>switchVal.<ref refid="a01233_1ab100a397f7937d57fd07818559cc4768" kindref="member" tooltip="A brief description for the -h, –help builtin option. ">description</ref>,<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="307"><highlight class="normal"></highlight></codeline>
-<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>arr.size();<sp/>++i)</highlight></codeline>
-<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>str<sp/>=<sp/>arr[i];</highlight></codeline>
-<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/>str;</highlight></codeline>
-<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>+<sp/>1<sp/>&lt;<sp/>arr.size())</highlight></codeline>
-<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/>endl</highlight></codeline>
-<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>pad(w<sp/>+<sp/>10);</highlight></codeline>
-<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest<sp/>=<sp/>out.str();</highlight></codeline>
-<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="324"><highlight class="normal"></highlight></codeline>
-<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Parser::initializeOption(<ref refid="a01237" kindref="compound">ParseOption</ref>*<sp/>opt,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01233" kindref="compound" tooltip="Represents a command line switch ">Switch</ref>&amp;<sp/>sw)</highlight></codeline>
-<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sw.<ref refid="a01233_1ad725d98dbe8d12706bd7851f5d3d905c" kindref="member">shortSwitch</ref><sp/>==<sp/>0<sp/>&amp;&amp;<sp/>sw.<ref refid="a01233_1a2fcdf7ee4ff6df3990cf86d1b5470a83" kindref="member">longSwitch</ref><sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01253_1aa1c8c889b2c89af6dc65a0973380f59c" kindref="member">Console::writeError</ref>(</highlight></codeline>
-<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;A<sp/>switch<sp/>must<sp/>have<sp/>at<sp/>least<sp/>a<sp/>long<sp/>or<sp/>short<sp/>name&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="333"><highlight class="normal"></highlight></codeline>
-<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sw.<ref refid="a01233_1ad725d98dbe8d12706bd7851f5d3d905c" kindref="member">shortSwitch</ref><sp/>!=<sp/>0)</highlight></codeline>
-<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hasSwitch(<ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>(sw.<ref refid="a01233_1ad725d98dbe8d12706bd7851f5d3d905c" kindref="member">shortSwitch</ref>,<sp/>1)))</highlight></codeline>
-<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00897_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref><sp/>stream;</highlight></codeline>
-<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stream<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Duplicate<sp/>switch<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>sw.<ref refid="a01233_1ad725d98dbe8d12706bd7851f5d3d905c" kindref="member">shortSwitch</ref>;</highlight></codeline>
-<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01253_1aa1c8c889b2c89af6dc65a0973380f59c" kindref="member">Console::writeError</ref>(stream);</highlight></codeline>
-<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="344"><highlight class="normal"></highlight></codeline>
-<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sw.<ref refid="a01233_1a2fcdf7ee4ff6df3990cf86d1b5470a83" kindref="member">longSwitch</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>lsw<sp/>=<sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>(sw.<ref refid="a01233_1a2fcdf7ee4ff6df3990cf86d1b5470a83" kindref="member">longSwitch</ref>);</highlight></codeline>
-<codeline lineno="348"><highlight class="normal"></highlight></codeline>
-<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_maxLongSwitch<sp/>=<sp/>max(_maxLongSwitch,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)lsw.size());</highlight></codeline>
-<codeline lineno="350"><highlight class="normal"></highlight></codeline>
-<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hasSwitch(lsw))</highlight></codeline>
-<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00897_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref><sp/>stream;</highlight></codeline>
-<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stream<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Duplicate<sp/>switch<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>sw.<ref refid="a01233_1a2fcdf7ee4ff6df3990cf86d1b5470a83" kindref="member">longSwitch</ref>;</highlight></codeline>
-<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01253_1aa1c8c889b2c89af6dc65a0973380f59c" kindref="member">Console::writeError</ref>(stream);</highlight></codeline>
-<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="359"><highlight class="normal"></highlight></codeline>
-<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sw.<ref refid="a01233_1ad725d98dbe8d12706bd7851f5d3d905c" kindref="member">shortSwitch</ref><sp/>!=<sp/>0)</highlight></codeline>
-<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_switches.insert(make_pair(<ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>(1,<sp/>sw.<ref refid="a01233_1ad725d98dbe8d12706bd7851f5d3d905c" kindref="member">shortSwitch</ref>),<sp/>opt));</highlight></codeline>
-<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sw.<ref refid="a01233_1a2fcdf7ee4ff6df3990cf86d1b5470a83" kindref="member">longSwitch</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_switches.insert(make_pair(sw.<ref refid="a01233_1a2fcdf7ee4ff6df3990cf86d1b5470a83" kindref="member">longSwitch</ref>,<sp/>opt));</highlight></codeline>
-<codeline lineno="364"><highlight class="normal"></highlight></codeline>
-<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="367"><highlight class="normal"></highlight></codeline>
-<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Parser::initializeSwitches(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Switch*<sp/>switches,<sp/>uint32_t<sp/>count)</highlight></codeline>
-<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(switches<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>||<sp/>count<sp/>==<sp/>0<sp/>||<sp/>count<sp/>==<sp/>(uint32_t)-1)</highlight></codeline>
-<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="372"><highlight class="normal"></highlight></codeline>
-<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count<sp/>=<sp/>min&lt;uint32_t&gt;(count,<sp/>0x100);</highlight></codeline>
-<codeline lineno="374"><highlight class="normal"></highlight></codeline>
-<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_options.resize(count);</highlight></codeline>
-<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>result<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="377"><highlight class="normal"></highlight></codeline>
-<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>count<sp/>&amp;&amp;<sp/>result;<sp/>++i)</highlight></codeline>
-<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(switches[i].</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>!=<sp/>i)</highlight></codeline>
-<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01253_1aa1c8c889b2c89af6dc65a0973380f59c" kindref="member">Console::writeError</ref>(</highlight><highlight class="stringliteral">&quot;Misaligned<sp/>switch<sp/>id&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!switches[i].optional)</highlight></codeline>
-<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_required++;</highlight></codeline>
-<codeline lineno="389"><highlight class="normal"></highlight></codeline>
-<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_options[i]<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>ParseOption(switches[i]);</highlight></codeline>
-<codeline lineno="391"><highlight class="normal"></highlight></codeline>
-<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>initializeOption(_options[i],<sp/>switches[i]);</highlight></codeline>
-<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
-<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="397"><highlight class="normal"></highlight></codeline>
-<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Parser::writeError(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00897_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref>&amp;<sp/>stream)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="399"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01253_1aa1c8c889b2c89af6dc65a0973380f59c" kindref="member">Console::writeError</ref>(stream);</highlight></codeline>
-<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01241_1afd63d6cb40243606fe5d6c944754eb5b" kindref="member">usage</ref>();</highlight></codeline>
-<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
-<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="404"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::CommandLine</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_output<sp/>=<sp/>p.<ref refid="a01250_1a9da3aa8c56bad342c3a7c30eb98d9c17" kindref="member">string</ref>(OP_OUTPUT,<sp/>0);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00906_1a02a62f0f81901a275e5e91f45798b2de" kindref="member">StringArray</ref>&amp;<sp/>args<sp/>=<sp/>p.<ref refid="a01250_1ac7bc3f3c9e8b89b4a39b8dd9a36b713f" kindref="member" tooltip="Returns the list of arguments that were not handled with switches. ">arguments</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(args.empty())</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>usage;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p.<ref refid="a01250_1afd63d6cb40243606fe5d6c944754eb5b" kindref="member">usage</ref>(usage);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="a01266" kindref="compound">Exception</ref>(usage,<sp/></highlight><highlight class="stringliteral">&quot;Missing<sp/>input<sp/>file&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_input<sp/>=<sp/>args[0];</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="a00930_1a13a83479f691f96dc438a7dd72c98610" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="a00930_1a13a83479f691f96dc438a7dd72c98610" kindref="member">go</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="82"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01354" kindref="compound">VirtualMachine::Parser</ref><sp/>vmp;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vmp.<ref refid="a01290_1a4668ec9b913931ce518de6d7f92fb4e0" kindref="member">parse</ref>(_input);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_output.empty())</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vmp.<ref refid="a01290_1a4560ce70fee098d7508b053b409c1d19" kindref="member">write</ref>(cout);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ofstream<sp/>out(_output.c_str());</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(out.is_open())</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vmp.<ref refid="a01290_1a4560ce70fee098d7508b053b409c1d19" kindref="member">write</ref>(out);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="a01266" kindref="compound">Exception</ref>(</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>open<sp/>the<sp/>supplied<sp/>output<sp/>file<sp/>&apos;&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_output,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&apos;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00930" kindref="compound">Application</ref><sp/>app;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(app.<ref refid="a00930_1a045c846c566d8cbe75a94d7b341a8fe7" kindref="member">parse</ref>(argc,<sp/>argv))</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>app.<ref refid="a00930_1a13a83479f691f96dc438a7dd72c98610" kindref="member">go</ref>();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(std::exception&amp;<sp/>ex)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Console::writeError(ex.what());</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="Source/Utils/CommandLine/Parser.cpp"/>
+    <location file="Source/VirtualMachine/Main.cpp"/>
   </compounddef>
 </doxygen>

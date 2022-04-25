@@ -1,61 +1,143 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
-  <compounddef id="a01136" kind="struct" language="C++" prot="public">
-    <compoundname>Hack::Compiler::Analyzer::KeywordTable</compoundname>
-      <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="a01136_1ac3bf68da1b9f3536a95ab4d1fb749265" prot="public" static="no" mutable="no">
-        <type>const char *</type>
-        <definition>const char* Hack::Compiler::Analyzer::KeywordTable::str</definition>
-        <argsstring></argsstring>
-        <name>str</name>
+  <compounddef id="a01136" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>Hack::Chips::XOr</compoundname>
+    <basecompoundref refid="a00996" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; uint8_t, 8 &gt;</basecompoundref>
+    <includes local="no">Source/Chips/XOr.h</includes>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="a01136_1aa2ac97f9e67d108f2d5dc740ed82fc98" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::XOr::evaluate</definition>
+        <argsstring>()</argsstring>
+        <name>evaluate</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Analyzer/Scanner.cpp" line="33" column="1" bodyfile="Source/Compiler/Analyzer/Scanner.cpp" bodystart="33" bodyend="-1"/>
+        <location file="Source/Chips/XOr.h" line="30" column="1" bodyfile="Source/Chips/XOr.cpp" bodystart="43" bodyend="51"/>
       </memberdef>
-      <memberdef kind="variable" id="a01136_1abcb9e9c0449857fdf7de0cbe49bc2c81" prot="public" static="no" mutable="no">
-        <type>int8_t</type>
-        <definition>int8_t Hack::Compiler::Analyzer::KeywordTable::tok</definition>
-        <argsstring></argsstring>
-        <name>tok</name>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a01136_1a548f217e98ab7bbd10eafdf1c677912c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Chips::XOr::XOr</definition>
+        <argsstring>()</argsstring>
+        <name>XOr</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Analyzer/Scanner.cpp" line="34" column="1" bodyfile="Source/Compiler/Analyzer/Scanner.cpp" bodystart="34" bodyend="-1"/>
+        <location file="Source/Chips/XOr.h" line="33" column="1" bodyfile="Source/Chips/XOr.cpp" bodystart="26" bodyend="29"/>
+        <references refid="a00996_1a5a604431fa35bc87e0d7f4328b4ad4a1" compoundref="a00479" startline="112" endline="115">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::assignBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01136_1a63b186e9bcc271c6b5895f5ed4e8ac4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::XOr::getOut</definition>
+        <argsstring>()</argsstring>
+        <name>getOut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/XOr.h" line="37" column="1" bodyfile="Source/Chips/XOr.cpp" bodystart="53" bodyend="58"/>
+        <references refid="a00996_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00479" startline="100" endline="103">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::getBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01136_1a8c95c1e512936632c88c673a4f6d0b31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::XOr::setA</definition>
+        <argsstring>(bool v)</argsstring>
+        <name>setA</name>
+        <param>
+          <type>bool</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/XOr.h" line="35" column="1" bodyfile="Source/Chips/XOr.cpp" bodystart="31" bodyend="35"/>
+        <references refid="a00996_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00479" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
+        <references refid="a00996_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="a00479" startline="106" endline="109">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::setBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01136_1a5b5680c517fe3da9ea28552c22639fdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::XOr::setB</definition>
+        <argsstring>(bool v)</argsstring>
+        <name>setB</name>
+        <param>
+          <type>bool</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/XOr.h" line="36" column="1" bodyfile="Source/Chips/XOr.cpp" bodystart="37" bodyend="41"/>
+        <references refid="a00996_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00479" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
+        <references refid="a00996_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="a00479" startline="106" endline="109">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::setBit</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <collaborationgraph>
-      <node id="315">
-        <label>Hack::Compiler::Analyzer::KeywordTable</label>
+    <inheritancegraph>
+      <node id="296">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="a00996"/>
+      </node>
+      <node id="295">
+        <label>Hack::Chips::XOr</label>
         <link refid="a01136"/>
-        <childnode refid="316" relation="usage">
-          <edgelabel>tok</edgelabel>
-        </childnode>
-        <childnode refid="317" relation="usage">
-          <edgelabel>str</edgelabel>
+        <childnode refid="296" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="317">
-        <label>const char *</label>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="299">
+        <label>uint8_t</label>
+        <link refid="a01376"/>
       </node>
-      <node id="316">
-        <label>int8_t</label>
+      <node id="298">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="a00996"/>
+        <childnode refid="299" relation="usage">
+          <edgelabel>_bits</edgelabel>
+        </childnode>
+      </node>
+      <node id="297">
+        <label>Hack::Chips::XOr</label>
+        <link refid="a01136"/>
+        <childnode refid="298" relation="public-inheritance">
+        </childnode>
       </node>
     </collaborationgraph>
-    <location file="Source/Compiler/Analyzer/Scanner.cpp" line="32" column="1" bodyfile="Source/Compiler/Analyzer/Scanner.cpp" bodystart="31" bodyend="35"/>
+    <location file="Source/Chips/XOr.h" line="28" column="1" bodyfile="Source/Chips/XOr.h" bodystart="27" bodyend="38"/>
     <listofallmembers>
-      <member refid="a01136_1ac3bf68da1b9f3536a95ab4d1fb749265" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::KeywordTable</scope><name>str</name></member>
-      <member refid="a01136_1abcb9e9c0449857fdf7de0cbe49bc2c81" prot="public" virt="non-virtual"><scope>Hack::Compiler::Analyzer::KeywordTable</scope><name>tok</name></member>
+      <member refid="a00996_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::XOr</scope><name>_bits</name></member>
+      <member refid="a00996_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::XOr</scope><name>applyBit</name></member>
+      <member refid="a00996_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::XOr</scope><name>assignBit</name></member>
+      <member refid="a00996_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::XOr</scope><name>Chip</name></member>
+      <member refid="a00996_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::XOr</scope><name>clearBit</name></member>
+      <member refid="a01136_1aa2ac97f9e67d108f2d5dc740ed82fc98" prot="private" virt="non-virtual"><scope>Hack::Chips::XOr</scope><name>evaluate</name></member>
+      <member refid="a00996_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::XOr</scope><name>getBit</name></member>
+      <member refid="a01136_1a63b186e9bcc271c6b5895f5ed4e8ac4b" prot="public" virt="non-virtual"><scope>Hack::Chips::XOr</scope><name>getOut</name></member>
+      <member refid="a00996_1a63bb368bb0827830235759b33718d1b4" prot="protected" virt="virtual"><scope>Hack::Chips::XOr</scope><name>isDirty</name></member>
+      <member refid="a01136_1a8c95c1e512936632c88c673a4f6d0b31" prot="public" virt="non-virtual"><scope>Hack::Chips::XOr</scope><name>setA</name></member>
+      <member refid="a01136_1a5b5680c517fe3da9ea28552c22639fdf" prot="public" virt="non-virtual"><scope>Hack::Chips::XOr</scope><name>setB</name></member>
+      <member refid="a00996_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::XOr</scope><name>setBit</name></member>
+      <member refid="a01136_1a548f217e98ab7bbd10eafdf1c677912c" prot="public" virt="non-virtual"><scope>Hack::Chips::XOr</scope><name>XOr</name></member>
+      <member refid="a00996_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::XOr</scope><name>~Chip</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

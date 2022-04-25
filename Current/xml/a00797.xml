@@ -1,196 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00797" kind="file" language="C++">
-    <compoundname>Char.h</compoundname>
-    <includes local="no">cstdint</includes>
-    <includes refid="a00845" local="yes">Utils/String.h</includes>
-    <includedby refid="a01595" local="yes">Source/Assembler/Parser.cpp</includedby>
-    <includedby refid="a01619" local="yes">Source/Assembler/Scanner.cpp</includedby>
-    <includedby refid="a00449" local="yes">Source/Chips/ALU.cpp</includedby>
-    <includedby refid="a00485" local="yes">Source/Chips/Computer.cpp</includedby>
-    <includedby refid="a01598" local="yes">Source/Compiler/Analyzer/Parser.cpp</includedby>
-    <includedby refid="a00689" local="yes">Source/Compiler/Analyzer/ParseUtils.cpp</includedby>
-    <includedby refid="a01622" local="yes">Source/Compiler/Analyzer/Scanner.cpp</includedby>
-    <includedby refid="a00755" local="yes">Source/Compiler/Generator/VmEmitter.cpp</includedby>
-    <includedby refid="a00767" local="yes">Source/Computer/CommandRuntime.cpp</includedby>
-    <includedby refid="a00773" local="yes">Source/Computer/DebugRuntime.cpp</includedby>
-    <includedby refid="a00794" local="yes">Source/Utils/Char.cpp</includedby>
-    <includedby refid="a00800" local="yes">Source/Utils/CommandLine/Option.h</includedby>
-    <includedby refid="a00827" local="yes">Source/Utils/ParserBase/ParserBase.cpp</includedby>
-    <includedby refid="a00833" local="yes">Source/Utils/ParserBase/ScannerBase.cpp</includedby>
-    <includedby refid="a00842" local="yes">Source/Utils/String.cpp</includedby>
-    <includedby refid="a00890" local="yes">Source/VirtualMachine/Emitter.cpp</includedby>
-    <includedby refid="a01604" local="yes">Source/VirtualMachine/Parser.cpp</includedby>
-    <includedby refid="a01628" local="yes">Source/VirtualMachine/Scanner.cpp</includedby>
-    <incdepgraph>
-      <node id="3014">
-        <label>cstdint</label>
-      </node>
-      <node id="3017">
-        <label>string</label>
-      </node>
-      <node id="3018">
-        <label>vector</label>
-      </node>
-      <node id="3016">
-        <label>sstream</label>
-      </node>
-      <node id="3013">
-        <label>Source/Utils/Char.h</label>
-        <link refid="a00797"/>
-        <childnode refid="3014" relation="include">
-        </childnode>
-        <childnode refid="3015" relation="include">
-        </childnode>
-      </node>
-      <node id="3015">
-        <label>Utils/String.h</label>
-        <childnode refid="3016" relation="include">
-        </childnode>
-        <childnode refid="3017" relation="include">
-        </childnode>
-        <childnode refid="3018" relation="include">
-        </childnode>
-      </node>
-    </incdepgraph>
-    <invincdepgraph>
-      <node id="3032">
-        <label>Source/Utils/CommandLine/Parser.h</label>
-        <childnode refid="3033" relation="include">
-        </childnode>
-        <childnode refid="3034" relation="include">
-        </childnode>
-        <childnode refid="3035" relation="include">
-        </childnode>
-        <childnode refid="3036" relation="include">
-        </childnode>
-        <childnode refid="3037" relation="include">
-        </childnode>
-        <childnode refid="3038" relation="include">
-        </childnode>
-        <childnode refid="3039" relation="include">
-        </childnode>
-      </node>
-      <node id="3039">
-        <label>Source/VirtualMachine/Main.cpp</label>
-      </node>
-      <node id="3033">
-        <label>Source/Assembler/Main.cpp</label>
-      </node>
-      <node id="3042">
-        <label>Source/Utils/String.cpp</label>
-      </node>
-      <node id="3035">
-        <label>Source/Compiler/Compiler/Main.cpp</label>
-      </node>
-      <node id="3038">
-        <label>Source/Utils/CommandLine/Parser.cpp</label>
-      </node>
-      <node id="3020">
-        <label>Source/Assembler/Parser.cpp</label>
-      </node>
-      <node id="3022">
-        <label>Source/Chips/ALU.cpp</label>
-      </node>
-      <node id="3043">
-        <label>Source/VirtualMachine/Emitter.cpp</label>
-      </node>
-      <node id="3027">
-        <label>Source/Compiler/Generator/VmEmitter.cpp</label>
-      </node>
-      <node id="3045">
-        <label>Source/VirtualMachine/Scanner.cpp</label>
-      </node>
-      <node id="3023">
-        <label>Source/Chips/Computer.cpp</label>
-      </node>
-      <node id="3026">
-        <label>Source/Compiler/Analyzer/Scanner.cpp</label>
-      </node>
-      <node id="3041">
-        <label>Source/Utils/ParserBase/ScannerBase.cpp</label>
-      </node>
-      <node id="3028">
-        <label>Source/Computer/CommandRuntime.cpp</label>
-      </node>
-      <node id="3019">
-        <label>Source/Utils/Char.h</label>
-        <link refid="a00797"/>
-        <childnode refid="3020" relation="include">
-        </childnode>
-        <childnode refid="3021" relation="include">
-        </childnode>
-        <childnode refid="3022" relation="include">
-        </childnode>
-        <childnode refid="3023" relation="include">
-        </childnode>
-        <childnode refid="3024" relation="include">
-        </childnode>
-        <childnode refid="3025" relation="include">
-        </childnode>
-        <childnode refid="3026" relation="include">
-        </childnode>
-        <childnode refid="3027" relation="include">
-        </childnode>
-        <childnode refid="3028" relation="include">
-        </childnode>
-        <childnode refid="3029" relation="include">
-        </childnode>
-        <childnode refid="3030" relation="include">
-        </childnode>
-        <childnode refid="3031" relation="include">
-        </childnode>
-        <childnode refid="3040" relation="include">
-        </childnode>
-        <childnode refid="3041" relation="include">
-        </childnode>
-        <childnode refid="3042" relation="include">
-        </childnode>
-        <childnode refid="3043" relation="include">
-        </childnode>
-        <childnode refid="3044" relation="include">
-        </childnode>
-        <childnode refid="3045" relation="include">
-        </childnode>
-      </node>
-      <node id="3024">
-        <label>Source/Compiler/Analyzer/Parser.cpp</label>
-      </node>
-      <node id="3029">
-        <label>Source/Computer/DebugRuntime.cpp</label>
-      </node>
-      <node id="3044">
-        <label>Source/VirtualMachine/Parser.cpp</label>
-      </node>
-      <node id="3040">
-        <label>Source/Utils/ParserBase/ParserBase.cpp</label>
-      </node>
-      <node id="3034">
-        <label>Source/Compiler/Analyzer/Main.cpp</label>
-      </node>
-      <node id="3031">
-        <label>Source/Utils/CommandLine/Option.h</label>
-        <childnode refid="3032" relation="include">
-        </childnode>
-      </node>
-      <node id="3037">
-        <label>Source/Computer/Application.cpp</label>
-      </node>
-      <node id="3025">
-        <label>Source/Compiler/Analyzer/ParseUtils.cpp</label>
-      </node>
-      <node id="3030">
-        <label>Source/Utils/Char.cpp</label>
-      </node>
-      <node id="3021">
-        <label>Source/Assembler/Scanner.cpp</label>
-      </node>
-      <node id="3036">
-        <label>Source/Compiler/Generator/Main.cpp</label>
-      </node>
-    </invincdepgraph>
-    <innerclass refid="a01229" prot="public">Hack::Char</innerclass>
-    <innernamespace refid="a00897">Hack</innernamespace>
+    <compoundname>ScreenSDL.cpp</compoundname>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -217,153 +28,181 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/String.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>USE_SDL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Computer/ScreenSDL.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00897" kindref="compound">Hack</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00908" kindref="compound">Hack::Chips</ref></highlight></codeline>
 <codeline lineno="27"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="31" refid="a01229" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01229" kindref="compound" tooltip="Provides conversion utilities between char pointers and strings. ">Char</ref></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="a01229_1aec2f1d7549e6794e9f1b12e18d12602a" kindref="member" tooltip="Counts the number of characters up to the first occurrence of a null character &amp;#39;\0&amp;#39; ...">length</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>input);</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01229_1acadfc20f5f4f4ff24916c56d4aafc07c" kindref="member" tooltip="Tests the strings for equality ">equals</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>b,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>max);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>ScreenSDL::ScreenSDL()<sp/>:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ram(new<sp/><ref refid="a01370" kindref="compound">uint16_t</ref>[Max<sp/>+<sp/>1]),</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_texture(nullptr),</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_renderer(nullptr),</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pixels(nullptr),</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pitch(0)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zero();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>ScreenSDL::~ScreenSDL()</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[]<sp/>_ram;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01370" kindref="compound">uint16_t</ref><sp/>ScreenSDL::get(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>i)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="44"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>&lt;<sp/>HighAddress)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_ram[i];</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CHECK_INT_BOUNDS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>IndexOutOfBounds();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>int16_t<sp/><ref refid="a01229_1a1d1dca952e59d2b38615e7240d3b9055" kindref="member">toInt16</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>in,<sp/>int16_t<sp/>def<sp/>=<sp/>-1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>base<sp/>=<sp/>10);</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>int32_t<sp/><ref refid="a01229_1a532f1147a1db35423d47c99351d146d0" kindref="member">toInt32</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>in,<sp/>int32_t<sp/>def<sp/>=<sp/>-1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>base<sp/>=<sp/>10);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>int64_t<sp/><ref refid="a01229_1af184cc5ddf904290b7665776e0b74471" kindref="member">toInt64</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>in,<sp/>int64_t<sp/>def<sp/>=<sp/>-1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>base<sp/>=<sp/>10);</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><ref refid="a01229_1a9ed9382e14ad5abe9c33e8597f2708f3" kindref="member">toUint16</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>in,</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><sp/><sp/><sp/>def<sp/><sp/>=<sp/>(<ref refid="a01361" kindref="compound">uint16_t</ref>)-1,</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base<sp/>=<sp/>10);</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="a01229_1ae88f7c140ddd3b671003a6be455b21c0" kindref="member">toUint32</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>in,</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/>def<sp/><sp/>=<sp/>(uint32_t)-1,</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base<sp/>=<sp/>10);</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint64_t<sp/><ref refid="a01229_1a93f6e45cc3480aa1403694a46af317cb" kindref="member">toUint64</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>in,</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/>def<sp/><sp/>=<sp/>(uint64_t)-1,</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base<sp/>=<sp/>10);</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>int16_t<sp/><ref refid="a01229_1a1d1dca952e59d2b38615e7240d3b9055" kindref="member">toInt16</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>in,</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>def<sp/><sp/>=<sp/>-1,</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base<sp/>=<sp/>10);</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>int32_t<sp/><ref refid="a01229_1a532f1147a1db35423d47c99351d146d0" kindref="member">toInt32</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>in,</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>def<sp/><sp/>=<sp/>-1,</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base<sp/>=<sp/>10);</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>int64_t<sp/><ref refid="a01229_1af184cc5ddf904290b7665776e0b74471" kindref="member">toInt64</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>in,</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/>def<sp/><sp/>=<sp/>-1,</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base<sp/>=<sp/>10);</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><ref refid="a01229_1a9ed9382e14ad5abe9c33e8597f2708f3" kindref="member">toUint16</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>in,</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/><sp/><sp/><sp/><sp/><sp/>def<sp/><sp/>=<sp/>(<ref refid="a01361" kindref="compound">uint16_t</ref>)-1,</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base<sp/>=<sp/>10);</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="a01229_1ae88f7c140ddd3b671003a6be455b21c0" kindref="member">toUint32</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>in,</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/>def<sp/><sp/>=<sp/>(uint32_t)-1,</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base<sp/>=<sp/>10);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01370" kindref="compound">uint16_t</ref>*<sp/>ScreenSDL::pointer(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>address)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="56"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(address<sp/>&lt;<sp/>HighAddress)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;_ram[address];</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ScreenSDL::setValue(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>address,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01370" kindref="compound">uint16_t</ref>&amp;<sp/>v)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="63"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(address<sp/>&lt;<sp/>HighAddress)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ram[address]<sp/>=<sp/>_ram[address<sp/>+<sp/>HighAddress]<sp/>=<sp/>v;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>IndexOutOfBounds();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ScreenSDL::zero()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="71"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memset(_ram,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="a01370" kindref="compound">uint16_t</ref>)<sp/>*<sp/>Max);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Texture*<sp/>ScreenSDL::createBuffer(SDL_Renderer*<sp/>renderer)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_renderer<sp/>=<sp/>renderer;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_texture<sp/><sp/>=<sp/>SDL_CreateTexture(renderer,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_PIXELFORMAT_ABGR32,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_TEXTUREACCESS_STREAMING,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>512,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>256);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_texture;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ScreenSDL::lockScreen()</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_texture)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pixels;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/>pitch;</highlight></codeline>
 <codeline lineno="92"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint64_t<sp/><ref refid="a01229_1a93f6e45cc3480aa1403694a46af317cb" kindref="member">toUint64</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>in,</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/>def<sp/><sp/>=<sp/>(uint64_t)-1,</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base<sp/>=<sp/>10);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_pixels<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_LockTexture(_texture,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;pixels,<sp/>&amp;pitch);</highlight></codeline>
 <codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01229_1a173f103b04790960e358ffcce33ab1e9" kindref="member">isNullOrEmpty</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>in);</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01229_1adea31e16265cdb63ea40f07034073edd" kindref="member">toBool</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>in);</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="a01229_1a9706e2040a6912a05cb39486930ba5a5" kindref="member">toFloat</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>in,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>def<sp/>=<sp/>0.f);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pixels<sp/>=<sp/>(<ref refid="a01382" kindref="compound">uint8_t</ref>*)pixels;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pitch<sp/><sp/>=<sp/>(size_t)pitch;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="102"><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="a01229_1a8ca6361d986b2d2f34fc0b28dd5d68c3" kindref="member">toDouble</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>in,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>def<sp/>=<sp/>0.0);</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01229_1adea31e16265cdb63ea40f07034073edd" kindref="member">toBool</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>in);</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="a01229_1a9706e2040a6912a05cb39486930ba5a5" kindref="member">toFloat</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>in,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>def<sp/>=<sp/>0.f);</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="a01229_1a8ca6361d986b2d2f34fc0b28dd5d68c3" kindref="member">toDouble</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>in,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>def<sp/>=<sp/>0.0);</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" kindref="member">toString</ref>(<ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>v);</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" kindref="member">toString</ref>(<ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ScreenSDL::unlockScreen()</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_texture)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pixels<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_pitch<sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_UnlockTexture(_texture);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>grab<sp/>the<sp/>final<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Rect<sp/>dest<sp/>=<sp/>{0,<sp/>0,<sp/>0,<sp/>0};</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_GetRendererOutputSize(_renderer,<sp/>&amp;dest.w,<sp/>&amp;dest.h);</highlight></codeline>
 <codeline lineno="114"><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" kindref="member">toString</ref>(<ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v);</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01229_1a2e634e86f642f657dd42a2e967d99764" kindref="member">toBinaryString</ref>(<ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/><ref refid="a01373" kindref="compound">uint8_t</ref><sp/>v);</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" kindref="member">toString</ref>(<ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/>int16_t<sp/>v);</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" kindref="member">toString</ref>(<ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/>int32_t<sp/>v);</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"></highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" kindref="member">toString</ref>(<ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/>int64_t<sp/>v);</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"></highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" kindref="member">toString</ref>(<ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/>v);</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"></highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01229_1ad54d719cdd63fa3f265ade5ca54ec679" kindref="member">toHexString</ref>(<ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/>v);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Rect<sp/>src<sp/>=<sp/>{0,<sp/>0,<sp/>512,<sp/>256};</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_RenderCopy(_renderer,<sp/>_texture,<sp/>&amp;src,<sp/>&amp;dest);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_RenderPresent(_renderer);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01370" kindref="compound">uint16_t</ref><sp/>ScreenSDL::getOut()</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((_bits<sp/>&amp;<sp/>Bit7)<sp/>!=<sp/>0<sp/>&amp;&amp;<sp/>!(_bits<sp/>&amp;<sp/>Bit6))</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_out;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="128"><highlight class="normal"></highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01229_1a2e634e86f642f657dd42a2e967d99764" kindref="member">toBinaryString</ref>(<ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/><ref refid="a01361" kindref="compound">uint16_t</ref><sp/>v);</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"></highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" kindref="member">toString</ref>(<ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/>uint32_t<sp/>v);</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"></highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01229_1ad54d719cdd63fa3f265ade5ca54ec679" kindref="member">toHexString</ref>(<ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/>uint32_t<sp/>v);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ScreenSDL::evaluate()</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01370" kindref="compound">uint16_t</ref><sp/>loAddr<sp/>=<sp/>_address;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(loAddr<sp/>&gt;=<sp/>HighAddress)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="134"><highlight class="normal"></highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" kindref="member">toString</ref>(<ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/>uint64_t<sp/>v);</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"></highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01229_1ad54d719cdd63fa3f265ade5ca54ec679" kindref="member">toHexString</ref>(<ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/>uint64_t<sp/>v);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_bits<sp/>&amp;<sp/>Bit0)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01370" kindref="compound">uint16_t</ref><sp/>hiAddr<sp/>=<sp/>loAddr<sp/>+<sp/>HighAddress;</highlight></codeline>
 <codeline lineno="138"><highlight class="normal"></highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><ref refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" kindref="member">toString</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>v);</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"></highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><ref refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" kindref="member">toString</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v);</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"></highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><ref refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" kindref="member">toString</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v);</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"></highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><ref refid="a01229_1a2e634e86f642f657dd42a2e967d99764" kindref="member">toBinaryString</ref>(<ref refid="a01373" kindref="compound">uint8_t</ref><sp/>v);</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"></highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><ref refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" kindref="member">toString</ref>(int16_t<sp/>v);</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"></highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><ref refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" kindref="member">toString</ref>(int32_t<sp/>v);</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"></highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><ref refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" kindref="member">toString</ref>(int64_t<sp/>v);</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"></highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><ref refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" kindref="member">toString</ref>(<ref refid="a01361" kindref="compound">uint16_t</ref><sp/>v);</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"></highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><ref refid="a01229_1ad54d719cdd63fa3f265ade5ca54ec679" kindref="member">toHexString</ref>(<ref refid="a01361" kindref="compound">uint16_t</ref><sp/>v);</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"></highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><ref refid="a01229_1a2e634e86f642f657dd42a2e967d99764" kindref="member">toBinaryString</ref>(<ref refid="a01361" kindref="compound">uint16_t</ref><sp/>v);</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"></highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><ref refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" kindref="member">toString</ref>(uint32_t<sp/>v);</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"></highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><ref refid="a01229_1ad54d719cdd63fa3f265ade5ca54ec679" kindref="member">toHexString</ref>(uint32_t<sp/>v);</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"></highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><ref refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" kindref="member">toString</ref>(uint64_t<sp/>v);</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"></highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><ref refid="a01229_1ad54d719cdd63fa3f265ade5ca54ec679" kindref="member">toHexString</ref>(uint64_t<sp/>v);</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"></highlight></codeline>
-<codeline lineno="172" refid="a00897_1a997ba9c78deb35bd113a03a3da54f8cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00897_1a997ba9c78deb35bd113a03a3da54f8cd" kindref="member">isNewLine</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>constant)</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>constant<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\r&apos;</highlight><highlight class="normal"><sp/>||<sp/>constant<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="176"><highlight class="normal"></highlight></codeline>
-<codeline lineno="181" refid="a00897_1afe2cb1512758851b265f12637bd5ec7c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00897_1afe2cb1512758851b265f12637bd5ec7c" kindref="member">isWhiteSpace</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ch)</highlight></codeline>
-<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal"><sp/>||<sp/>ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\t&apos;</highlight><highlight class="normal"><sp/>||<sp/><ref refid="a00897_1a997ba9c78deb35bd113a03a3da54f8cd" kindref="member">isNewLine</ref>(ch);</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"></highlight></codeline>
-<codeline lineno="187" refid="a00897_1a3072f15c6cc44192ad127f00ab7430cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00897_1a3072f15c6cc44192ad127f00ab7430cd" kindref="member" tooltip="True if the character is in the range of [0-9]">isDecimal</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ch)</highlight></codeline>
-<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ch<sp/>&gt;=<sp/></highlight><highlight class="charliteral">&apos;0&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>ch<sp/>&lt;=<sp/></highlight><highlight class="charliteral">&apos;9&apos;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="191"><highlight class="normal"></highlight></codeline>
-<codeline lineno="193" refid="a00897_1a3b7e26319acf069b65ddb8e0f3f34812" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00897_1a3b7e26319acf069b65ddb8e0f3f34812" kindref="member" tooltip="True if the character is in the range of [a-zA-Z]">isLetter</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ch)</highlight></codeline>
-<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ch<sp/>&gt;=<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>ch<sp/>&lt;=<sp/>&apos;z&apos;<sp/>||<sp/>ch<sp/>&gt;=<sp/></highlight><highlight class="charliteral">&apos;A&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>ch<sp/>&lt;=<sp/></highlight><highlight class="charliteral">&apos;Z&apos;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="197"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hiAddr<sp/>&lt;<sp/>Max)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_bits<sp/>&amp;<sp/>Bit1)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ram[loAddr]<sp/>=<sp/>_ram[hiAddr]<sp/>=<sp/>_in;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ram[loAddr]<sp/>=<sp/>_ram[hiAddr];</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ram[hiAddr]<sp/>=<sp/>_in;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>InputException(</highlight><highlight class="stringliteral">&quot;ram<sp/>index<sp/>(&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hiAddr,</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;)<sp/>out<sp/>of<sp/>bounds<sp/>[0,<sp/>&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hiAddr,</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;]&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>=<sp/>_ram[loAddr];</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_bits<sp/>&amp;=<sp/>0b01111100;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ScreenSDL::writeToBuffer()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="163"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_pixels)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>0x2000;<sp/>++i)</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>baseAddr<sp/>=<sp/>(size_t)&amp;_pixels[i<sp/>*<sp/>64];</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t*<sp/><sp/><sp/><sp/><sp/><sp/>base<sp/>=<sp/>(uint32_t*)baseAddr;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01370" kindref="compound">uint16_t</ref><sp/>out<sp/><sp/>=<sp/>_ram[i];</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*base++<sp/>=<sp/>out<sp/>&amp;<sp/><ref refid="a00908_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" kindref="member">Bit0</ref><sp/>?<sp/>0xFFFFFFFF<sp/>:<sp/>0xFF;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*base++<sp/>=<sp/>out<sp/>&amp;<sp/><ref refid="a00908_1a89719f49d745047f03bca80bfff48bd2a8487c63d5dca7d87b359feca1a2c2ac8" kindref="member">Bit1</ref><sp/>?<sp/>0xFFFFFFFF<sp/>:<sp/>0xFF;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*base++<sp/>=<sp/>out<sp/>&amp;<sp/><ref refid="a00908_1a89719f49d745047f03bca80bfff48bd2a8a09deb894b81cd01eb5ea4d9f1f1cf5" kindref="member">Bit2</ref><sp/>?<sp/>0xFFFFFFFF<sp/>:<sp/>0xFF;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*base++<sp/>=<sp/>out<sp/>&amp;<sp/><ref refid="a00908_1a89719f49d745047f03bca80bfff48bd2ae436844fb061392d7357a1ee7fecfa14" kindref="member">Bit3</ref><sp/>?<sp/>0xFFFFFFFF<sp/>:<sp/>0xFF;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*base++<sp/>=<sp/>out<sp/>&amp;<sp/><ref refid="a00908_1a89719f49d745047f03bca80bfff48bd2a98268d4e716682d4a223961ff7b3ed46" kindref="member">Bit4</ref><sp/>?<sp/>0xFFFFFFFF<sp/>:<sp/>0xFF;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*base++<sp/>=<sp/>out<sp/>&amp;<sp/><ref refid="a00908_1a89719f49d745047f03bca80bfff48bd2a1595b1dc7056ca6b1d0a681fb1c54c44" kindref="member">Bit5</ref><sp/>?<sp/>0xFFFFFFFF<sp/>:<sp/>0xFF;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*base++<sp/>=<sp/>out<sp/>&amp;<sp/><ref refid="a00908_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" kindref="member">Bit6</ref><sp/>?<sp/>0xFFFFFFFF<sp/>:<sp/>0xFF;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*base++<sp/>=<sp/>out<sp/>&amp;<sp/><ref refid="a00908_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" kindref="member">Bit7</ref><sp/>?<sp/>0xFFFFFFFF<sp/>:<sp/>0xFF;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*base++<sp/>=<sp/>out<sp/>&amp;<sp/><ref refid="a00908_1a89719f49d745047f03bca80bfff48bd2aadd805ed9e083686a8c569e80dcc38a8" kindref="member">Bit8</ref><sp/>?<sp/>0xFFFFFFFF<sp/>:<sp/>0xFF;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*base++<sp/>=<sp/>out<sp/>&amp;<sp/><ref refid="a00908_1a89719f49d745047f03bca80bfff48bd2a263e88c74e7f1a10437657aeb1351029" kindref="member">Bit9</ref><sp/>?<sp/>0xFFFFFFFF<sp/>:<sp/>0xFF;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*base++<sp/>=<sp/>out<sp/>&amp;<sp/><ref refid="a00908_1a89719f49d745047f03bca80bfff48bd2ab2a082f07330f8fc6c5153790cd17105" kindref="member">Bit10</ref><sp/>?<sp/>0xFFFFFFFF<sp/>:<sp/>0xFF;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*base++<sp/>=<sp/>out<sp/>&amp;<sp/><ref refid="a00908_1a89719f49d745047f03bca80bfff48bd2a9d3016c29dafb97ff8d2c5398dbd8378" kindref="member">Bit11</ref><sp/>?<sp/>0xFFFFFFFF<sp/>:<sp/>0xFF;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*base++<sp/>=<sp/>out<sp/>&amp;<sp/><ref refid="a00908_1a89719f49d745047f03bca80bfff48bd2af9d278a7553cfe77cccec3401041f75d" kindref="member">Bit12</ref><sp/>?<sp/>0xFFFFFFFF<sp/>:<sp/>0xFF;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*base++<sp/>=<sp/>out<sp/>&amp;<sp/><ref refid="a00908_1a89719f49d745047f03bca80bfff48bd2aa8948efac0cff6eb7b03915be33594b2" kindref="member">Bit13</ref><sp/>?<sp/>0xFFFFFFFF<sp/>:<sp/>0xFF;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*base++<sp/>=<sp/>out<sp/>&amp;<sp/><ref refid="a00908_1a89719f49d745047f03bca80bfff48bd2a10ace9286e9376c3e786ad829115ec61" kindref="member">Bit14</ref><sp/>?<sp/>0xFFFFFFFF<sp/>:<sp/>0xFF;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*base<sp/><sp/><sp/>=<sp/>out<sp/>&amp;<sp/><ref refid="a00908_1a89719f49d745047f03bca80bfff48bd2aa92c380b2c00042b5105ede3c75f8d09" kindref="member">Bit15</ref><sp/>?<sp/>0xFFFFFFFF<sp/>:<sp/>0xFF;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="Source/Utils/Char.h"/>
+    <location file="Source/Computer/ScreenSDL.cpp"/>
   </compounddef>
 </doxygen>

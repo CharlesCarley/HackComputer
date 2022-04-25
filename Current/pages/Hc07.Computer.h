@@ -2,18 +2,27 @@
 /*!
 \page Hc07 Computer
 
-\brief Defines the main program that ties the components together.
+\brief Implements the primary program that ties the project's components together.
 
 \section Hc07Computer Computer
 
-The Hack::Computer class links together the ROM, RAM and CPU chips.
-It accepts as input an array of 16 bit integers.
 
-This projects responsibilities are to tie together the Hack::Computer class with rest of the system.
-And combine the result with a runtime interface. The runtime interface executes the supplied input with
-a user selected implementation.
+The computer executable accepts any of the source file formats that are
+defined in this project as its input. It then reduces the input into an array of
+16-bit integers, and passes it to the \ref Hack::Computer "Computer" class, and
+finally to the \ref Hack::Chips::Rom32 "Rom32" class.
+The \ref Hack::Computer::RuntimeInterface "RuntimeInterface" is used to
+execute the code in various ways.
+\br
 
-\n\n
+- Command Line - Runs the file until completion.
+- Command Line Debugger - Debugs the state of execution.
+- SDL Runtime - Displays only the screen memory.
+
+If SDL is enabled, the default runtime will be SDL otherwise, the default
+runtime is the command line debugger.
+
+\br
 \code{.txt}
 Usage: computer <options> <arg[0] .. arg[n]>
 
@@ -27,31 +36,17 @@ Usage: computer <options> <arg[0] .. arg[n]>
         --show-mc   Output the emitted machine code from the supplied file
 \endcode
 
-
-The runtime interface is composed of multiple back ends.
-\n
-- Command Line - Runs the file until completion
-- Command Line Debugger - Debugs the state of execution.
-- SDL runtime - Displays only the screen memory.
-
-If SDL is enabled, the default runtime will be SDL. Otherwise, the default runtime is the command line debugger.
-
 \n
 \subsection Hc07Debugger Command Line Debugger.
 
-The debugger will execute one instruction from ROM and refresh the console with the current state of the circuits.
-\n\n
-
+The debugger will execute one instruction and refresh the console display with the current state of the chips.
+\br
 - The up-arrow key will initiate a tick.
 - The r key will reset execution.
 - The c key will loop execution.
-
- 
-\n\n
+\br
 \image html Debugger.png
 
-
-\n
 \defined{Hc07Defined}
 \defined_in{Source/Computer}
 

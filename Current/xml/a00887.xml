@@ -1,20 +1,98 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00887" kind="file" language="C++">
-    <compoundname>Constants.h</compoundname>
-    <includedby refid="a00890" local="yes">Source/VirtualMachine/Emitter.cpp</includedby>
-    <invincdepgraph>
-      <node id="4303">
-        <label>Source/VirtualMachine/Emitter.cpp</label>
+    <compoundname>PlatformUnix.h</compoundname>
+    <includes local="no">termios.h</includes>
+    <includes refid="a00881" local="yes">Utils/UserInterface/Platform.h</includes>
+    <includedby refid="a00866" local="yes">Source/Utils/UserInterface/Context.cpp</includedby>
+    <includedby refid="a00884" local="yes">Source/Utils/UserInterface/PlatformUnix.cpp</includedby>
+    <incdepgraph>
+      <node id="4293">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="4285" relation="include">
+        </childnode>
       </node>
-      <node id="4302">
-        <label>Source/VirtualMachine/Constants.h</label>
+      <node id="4284">
+        <label>Utils/UserInterface/Platform.h</label>
+        <childnode refid="4285" relation="include">
+        </childnode>
+        <childnode refid="4286" relation="include">
+        </childnode>
+        <childnode refid="4287" relation="include">
+        </childnode>
+        <childnode refid="4292" relation="include">
+        </childnode>
+      </node>
+      <node id="4287">
+        <label>Utils/UserInterface/ColorCache.h</label>
+        <childnode refid="4285" relation="include">
+        </childnode>
+        <childnode refid="4288" relation="include">
+        </childnode>
+      </node>
+      <node id="4285">
+        <label>cstdint</label>
+      </node>
+      <node id="4283">
+        <label>termios.h</label>
+      </node>
+      <node id="4290">
+        <label>string</label>
+      </node>
+      <node id="4292">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="4285" relation="include">
+        </childnode>
+        <childnode refid="4291" relation="include">
+        </childnode>
+        <childnode refid="4293" relation="include">
+        </childnode>
+      </node>
+      <node id="4291">
+        <label>vector</label>
+      </node>
+      <node id="4289">
+        <label>sstream</label>
+      </node>
+      <node id="4282">
+        <label>Source/Utils/UserInterface/PlatformUnix.h</label>
         <link refid="a00887"/>
-        <childnode refid="4303" relation="include">
+        <childnode refid="4283" relation="include">
+        </childnode>
+        <childnode refid="4284" relation="include">
+        </childnode>
+      </node>
+      <node id="4286">
+        <label>unordered_map</label>
+      </node>
+      <node id="4288">
+        <label>Utils/String.h</label>
+        <childnode refid="4289" relation="include">
+        </childnode>
+        <childnode refid="4290" relation="include">
+        </childnode>
+        <childnode refid="4291" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4295">
+        <label>Source/Utils/UserInterface/Context.cpp</label>
+      </node>
+      <node id="4296">
+        <label>Source/Utils/UserInterface/PlatformUnix.cpp</label>
+      </node>
+      <node id="4294">
+        <label>Source/Utils/UserInterface/PlatformUnix.h</label>
+        <link refid="a00887"/>
+        <childnode refid="4295" relation="include">
+        </childnode>
+        <childnode refid="4296" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
-    <innernamespace refid="a00905">Hack::VirtualMachine</innernamespace>
+    <innerclass refid="a01342" prot="public">Hack::Ui::PlatformUnix</innerclass>
+    <innernamespace refid="a00920">Hack::Ui</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -42,24 +120,45 @@
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00905" kindref="compound">Hack::VirtualMachine</ref></highlight></codeline>
-<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="26" refid="a00905_1ab2a36ae607c4ab166da225c1f6f71827" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="a00905_1ab2a36ae607c4ab166da225c1f6f71827" kindref="member">RamIndices</ref></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="28" refid="a00905_1ab2a36ae607c4ab166da225c1f6f71827a863abda83f7c8925cceaf04098e3cb34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00905_1ab2a36ae607c4ab166da225c1f6f71827a863abda83f7c8925cceaf04098e3cb34" kindref="member">STP</ref><sp/>=<sp/>0,</highlight></codeline>
-<codeline lineno="29" refid="a00905_1ab2a36ae607c4ab166da225c1f6f71827acf4f05429d20255bf7128cebaf158e72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00905_1ab2a36ae607c4ab166da225c1f6f71827acf4f05429d20255bf7128cebaf158e72" kindref="member">LCL</ref>,</highlight></codeline>
-<codeline lineno="30" refid="a00905_1ab2a36ae607c4ab166da225c1f6f71827a8ca2cf3937e5c6f1e63ee3b602fdf814" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00905_1ab2a36ae607c4ab166da225c1f6f71827a8ca2cf3937e5c6f1e63ee3b602fdf814" kindref="member">ARG</ref>,</highlight></codeline>
-<codeline lineno="31" refid="a00905_1ab2a36ae607c4ab166da225c1f6f71827a0edd4176219c47bc38b154d7319b2b0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00905_1ab2a36ae607c4ab166da225c1f6f71827a0edd4176219c47bc38b154d7319b2b0c" kindref="member">THS</ref>,</highlight></codeline>
-<codeline lineno="32" refid="a00905_1ab2a36ae607c4ab166da225c1f6f71827a892ac688cf8f49defc936c85521c630b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00905_1ab2a36ae607c4ab166da225c1f6f71827a892ac688cf8f49defc936c85521c630b" kindref="member">THT</ref>,</highlight></codeline>
-<codeline lineno="33" refid="a00905_1ab2a36ae607c4ab166da225c1f6f71827a7257ce4a14d1f26d6858febfad59e371" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00905_1ab2a36ae607c4ab166da225c1f6f71827a7257ce4a14d1f26d6858febfad59e371" kindref="member">TMP</ref>,</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>8<sp/>entries</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35" refid="a00905_1ab2a36ae607c4ab166da225c1f6f71827ac877118ac6aa475e26bcdc4dd5952f52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00905_1ab2a36ae607c4ab166da225c1f6f71827ac877118ac6aa475e26bcdc4dd5952f52" kindref="member">SW0</ref><sp/>=<sp/>13,</highlight></codeline>
-<codeline lineno="36" refid="a00905_1ab2a36ae607c4ab166da225c1f6f71827ac160ec799f9773ab331ad17427c85d75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00905_1ab2a36ae607c4ab166da225c1f6f71827ac160ec799f9773ab331ad17427c85d75" kindref="member">SW1</ref>,</highlight></codeline>
-<codeline lineno="37" refid="a00905_1ab2a36ae607c4ab166da225c1f6f71827ae6201d4edf7d9066f2245e0d75ac1805" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00905_1ab2a36ae607c4ab166da225c1f6f71827ae6201d4edf7d9066f2245e0d75ac1805" kindref="member">SW2</ref></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="39"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::VirtualMachine</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;termios.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/UserInterface/Platform.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">termios;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00920" kindref="compound">Hack::Ui</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31" refid="a01342" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01342" kindref="compound">PlatformUnix</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="a01334" kindref="compound">Platform</ref></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01338" kindref="compound">Terminal</ref>*<sp/>_term;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01314" kindref="compound">Point</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_size;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_message;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>saveState();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>restoreState();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>checkSize();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>readStdin();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scan(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>cp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>checkSignals();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01342_1adfcb6e6d0b18cebdbe6c96d2465fed82" kindref="member">PlatformUnix</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01342_1a29eeecc62bd694cdd256f4fbf78dc425" kindref="member">~PlatformUnix</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01342_1a7ddb3f7fb3607a643acf4cf236d28f7b" kindref="member">getScreenSize</ref>(<ref refid="a01314" kindref="compound">Point</ref>&amp;<sp/>sz)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="a01342_1a061f1bbd721feb4a7b370a7f7f951bcd" kindref="member">poll</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>block)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Ui</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="Source/VirtualMachine/Constants.h"/>
+    <location file="Source/Utils/UserInterface/PlatformUnix.h"/>
   </compounddef>
 </doxygen>

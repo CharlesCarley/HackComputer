@@ -1,512 +1,670 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01250" kind="class" language="C++" prot="public">
-    <compoundname>Hack::Console</compoundname>
-    <includes local="no">Source/Utils/Console.h</includes>
+    <compoundname>Hack::CommandLine::Parser</compoundname>
+    <includes local="no">Source/Utils/CommandLine/Parser.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="a01250_1a002a0dbbd4e1272345eddde68276530a" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="a01246" kindref="compound">ParseOption</ref> * &gt;</type>
+        <definition>typedef std::vector&lt;ParseOption*&gt; Hack::CommandLine::Parser::Options</definition>
+        <argsstring></argsstring>
+        <name>Options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="37" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="a01250_1aabea897d89f924f1ff868eedbd316f70" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &gt;</type>
+        <definition>typedef std::vector&lt;String&gt; Hack::CommandLine::Parser::StringArray</definition>
+        <argsstring></argsstring>
+        <name>StringArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="38" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="a01250_1a67bf8f3ad66b044129c002d49d9b9566" prot="public" static="no">
+        <type>std::unordered_map&lt; <ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>, <ref refid="a01246" kindref="compound">ParseOption</ref> * &gt;</type>
+        <definition>typedef std::unordered_map&lt;String, ParseOption*&gt; Hack::CommandLine::Parser::Switches</definition>
+        <argsstring></argsstring>
+        <name>Switches</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="36" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="a01250_1ac6eac96be035465d45566eb06f69d881" prot="private" static="no" mutable="no">
+        <type><ref refid="a01250_1aabea897d89f924f1ff868eedbd316f70" kindref="member">StringArray</ref></type>
+        <definition>StringArray Hack::CommandLine::Parser::_argumentList</definition>
+        <argsstring></argsstring>
+        <name>_argumentList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="47" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01250_1afc28d359bbd2f4402f71da533cd30ea7" prot="private" static="no" mutable="no">
+        <type><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
+        <definition>String Hack::CommandLine::Parser::_helpText</definition>
+        <argsstring></argsstring>
+        <name>_helpText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="49" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01250_1ae4280801677cbbada1c4fe9f09009489" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Hack::CommandLine::Parser::_maxLongSwitch</definition>
+        <argsstring></argsstring>
+        <name>_maxLongSwitch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="42" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01250_1a6c506b42c0db03ee80ee3a78f2c798de" prot="private" static="no" mutable="no">
+        <type><ref refid="a01250_1a002a0dbbd4e1272345eddde68276530a" kindref="member">Options</ref></type>
+        <definition>Options Hack::CommandLine::Parser::_options</definition>
+        <argsstring></argsstring>
+        <name>_options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="48" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01250_1ad6c2c875b579de915a057c4d1fcae94f" prot="private" static="no" mutable="no">
+        <type><ref refid="a00906_1a95e191d8af73e79ac197701ac6a6c9a6" kindref="member">Path</ref></type>
+        <definition>Path Hack::CommandLine::Parser::_programName</definition>
+        <argsstring></argsstring>
+        <name>_programName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="41" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01250_1a664949c3062b0e9a97cc56c2d4885089" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Hack::CommandLine::Parser::_required</definition>
+        <argsstring></argsstring>
+        <name>_required</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="43" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01250_1a5927563108b37e09ee3dac6d6dfe5e10" prot="private" static="no" mutable="no">
+        <type><ref refid="a01254" kindref="compound">Scanner</ref></type>
+        <definition>Scanner Hack::CommandLine::Parser::_scanner</definition>
+        <argsstring></argsstring>
+        <name>_scanner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="45" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01250_1a5c67da01c7032bf931506b1fe180bc3b" prot="private" static="no" mutable="no">
+        <type><ref refid="a01250_1a67bf8f3ad66b044129c002d49d9b9566" kindref="member">Switches</ref></type>
+        <definition>Switches Hack::CommandLine::Parser::_switches</definition>
+        <argsstring></argsstring>
+        <name>_switches</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="46" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01250_1a7ac5a222206a94d4bdac63103a98011e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Hack::CommandLine::Parser::_used</definition>
+        <argsstring></argsstring>
+        <name>_used</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="44" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="a01250_1a1e8a5bbeccc097c739f413dea48ee32f" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::CommandLine::Parser::hasSwitch</definition>
+        <argsstring>(const String &amp;sw) const</argsstring>
+        <name>hasSwitch</name>
+        <param>
+          <type>const <ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>sw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="51" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="a01250_1a58b4de6ab5c36036424c05e122b22ad6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::CommandLine::Parser::initializeOption</definition>
+        <argsstring>(ParseOption *opt, const Switch &amp;sw)</argsstring>
+        <name>initializeOption</name>
+        <param>
+          <type><ref refid="a01246" kindref="compound">ParseOption</ref> *</type>
+          <declname>opt</declname>
+        </param>
+        <param>
+          <type>const <ref refid="a01242" kindref="compound">Switch</ref> &amp;</type>
+          <declname>sw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="53" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="325" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="function" id="a01250_1a0c1d0d13f95b4276f53e6e08a083e1b9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::CommandLine::Parser::initializeSwitches</definition>
+        <argsstring>(const Switch *switches, uint32_t count)</argsstring>
+        <name>initializeSwitches</name>
+        <param>
+          <type>const <ref refid="a01242" kindref="compound">Switch</ref> *</type>
+          <declname>switches</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="55" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="368" bodyend="396"/>
+      </memberdef>
+      <memberdef kind="function" id="a01250_1ab440adc6e5356b7e7df51d3cbdab4f8d" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Hack::CommandLine::Parser::writeError</definition>
+        <argsstring>(const OutputStringStream &amp;stream) const</argsstring>
+        <name>writeError</name>
+        <param>
+          <type>const <ref refid="a00906_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref> &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="57" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="398" bodyend="403"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a01250_1aeafa84d86ac6c8437b6153a2627cbfb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::CommandLine::Parser::Parser</definition>
+        <argsstring>()</argsstring>
+        <name>Parser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="60" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="34" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="a01250_1a4aef7be4832a2db2e62f2b44617eff9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::CommandLine::Parser::~Parser</definition>
+        <argsstring>()</argsstring>
+        <name>~Parser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="61" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="41" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="a01250_1ac7bc3f3c9e8b89b4a39b8dd9a36b713f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="a01250_1aabea897d89f924f1ff868eedbd316f70" kindref="member">StringArray</ref> &amp;</type>
+        <definition>StringArray&amp; Hack::CommandLine::Parser::arguments</definition>
+        <argsstring>()</argsstring>
+        <name>arguments</name>
+        <briefdescription>
+<para>Returns the list of arguments that were not handled with switches. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="88" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="a01250_1afde565b48fd1ed72c1732fd9be7b6f84" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t Hack::CommandLine::Parser::int32</definition>
+        <argsstring>(const uint32_t &amp;enumId, size_t idx=0, int32_t defaultValue=-1, int32_t base=10) const</argsstring>
+        <name>int32</name>
+        <param>
+          <type>const uint32_t &amp;</type>
+          <declname>enumId</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>idx</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>defaultValue</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>base</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="126" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="219" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="a01250_1a4613b666cccdbdf99dec16293c4ebba6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t Hack::CommandLine::Parser::int64</definition>
+        <argsstring>(const uint32_t &amp;enumId, size_t idx=0, int64_t defaultValue=-1, int32_t base=10) const</argsstring>
+        <name>int64</name>
+        <param>
+          <type>const uint32_t &amp;</type>
+          <declname>enumId</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>idx</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>defaultValue</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>base</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="131" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="232" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="a01250_1adbd749e0938e2b359ee7f719864d1451" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::CommandLine::Parser::isPresent</definition>
+        <argsstring>(const uint32_t &amp;enumId) const</argsstring>
+        <name>isPresent</name>
+        <param>
+          <type>const uint32_t &amp;</type>
+          <declname>enumId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enumId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The switch id</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if it is supplied on the command line false otherwise</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="120" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="205" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="a01250_1a1fd715bf284528379a1440e2d8199aae" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::CommandLine::Parser::logInput</definition>
+        <argsstring>() const</argsstring>
+        <name>logInput</name>
+        <briefdescription>
+<para>Logs the command line verbatim </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="83" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="183" bodyend="188"/>
+        <references refid="a01254_1ae8cbee55ad5f4cd3dda81e0cff2a07b5" compoundref="a01646" startline="45" endline="48">Hack::CommandLine::Scanner::getValue</references>
+        <references refid="a01262_1aa75558c74eafde74be9d33818a79a3fe" compoundref="a00812" startline="199" endline="204">Hack::Console::writeLine</references>
+      </memberdef>
+      <memberdef kind="function" id="a01250_1ab5d11dfcdacd8b91069814891ef7f20c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a01246" kindref="compound">ParseOption</ref> *</type>
+        <definition>ParseOption * Hack::CommandLine::Parser::option</definition>
+        <argsstring>(const uint32_t &amp;enumId)</argsstring>
+        <name>option</name>
+        <param>
+          <type>const uint32_t &amp;</type>
+          <declname>enumId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enumId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The switch id</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the option at the enumId or null if the id is out of bounds</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="124" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="212" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="a01250_1a304e3e2f4af07df0fb6c9cde37040e27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Hack::CommandLine::Parser::parse</definition>
+        <argsstring>(int argc, char **argv, const Switch *switches, uint32_t count)</argsstring>
+        <name>parse</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <param>
+          <type>const <ref refid="a01242" kindref="compound">Switch</ref> *</type>
+          <declname>switches</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Parses the command line. Any switches that are needed must be initialized via initializeSwitches. Arguments that have no switch are placed into an array and accessed via arguments </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The argument count on program start.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The argument vector on program start.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>switches</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A const array of <ref refid="a01242" kindref="compound">Switch</ref> structures.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the switch structure array.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns -1 on any error otherwise it returns 0</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="73" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="52" bodyend="176"/>
+        <references refid="a01254_1a1974539a58027b0ba339b019d8fcddf9" compoundref="a01634" startline="57" endline="60">Hack::CommandLine::Scanner::clear</references>
+        <references refid="a01254_1af65558f33766054df253ab6efb378fd9" compoundref="a01634" startline="62" endline="66">Hack::CommandLine::Scanner::append</references>
+        <references refid="a01258_1a1752c109f1e2547e133eb0e991eab9bc" compoundref="a01658" startline="60" endline="63">Hack::CommandLine::Token::getType</references>
+        <references refid="a00919_1a7bf8cf020e39f88d39725c1ec763cd86a728a7b175a948d4e4390726507f087b8" compoundref="a01658" startline="43">Hack::CommandLine::TOK_EOS</references>
+        <references refid="a01254_1af56e25fc560f1b2fb71e93ab5d2599c5" compoundref="a01634" startline="68" endline="142">Hack::CommandLine::Scanner::lex</references>
+        <references refid="a00919_1a7bf8cf020e39f88d39725c1ec763cd86af499719b721526aa16a9b57e252fde89" compoundref="a01658" startline="44">Hack::CommandLine::TOK_ERROR</references>
+        <references refid="a01258_1a0394cc885ec75f298d503580570a3b25" compoundref="a01658" startline="70" endline="73">Hack::CommandLine::Token::getValue</references>
+        <references refid="a01250_1afd63d6cb40243606fe5d6c944754eb5b" compoundref="a01610" startline="257" endline="262">usage</references>
+        <references refid="a00919_1a7bf8cf020e39f88d39725c1ec763cd86a55849c5d51bca86446e7f7ac620d7d23" compoundref="a01658" startline="31">Hack::CommandLine::TOK_SWITCH_SHORT</references>
+        <references refid="a00919_1a7bf8cf020e39f88d39725c1ec763cd86adf0cf175e182315d7ed141f8f08120e5" compoundref="a01658" startline="32">Hack::CommandLine::TOK_SWITCH_LONG</references>
+        <references refid="a00919_1a7bf8cf020e39f88d39725c1ec763cd86af245704ac1981ba509a2bf36c9f974de" compoundref="a01658" startline="33">Hack::CommandLine::TOK_NEXT</references>
+        <references refid="a01246_1a3947a9d6cb146aa14cc72f51b04a85bb" compoundref="a00809" startline="123" endline="126">Hack::CommandLine::ParseOption::makePresent</references>
+        <references refid="a01246_1a55cc1ccc8cbd5e96b2af48e86d0d6324" compoundref="a00809" startline="108" endline="111">Hack::CommandLine::ParseOption::isOptional</references>
+        <references refid="a01246_1a3e4adbad4b5893ad3b7369ff60fcaf79" compoundref="a00809" startline="118" endline="121">Hack::CommandLine::ParseOption::getArgCount</references>
+        <references refid="a00919_1a7bf8cf020e39f88d39725c1ec763cd86ad10952ab16deb1fdfc37ce82f5cb52e5" compoundref="a01658" startline="40">Hack::CommandLine::TOK_IDENTIFIER</references>
+        <references refid="a01246_1a256c761eeb80fa36003c935bc5706a44" compoundref="a00809" startline="144" endline="148">Hack::CommandLine::ParseOption::setValue</references>
+        <references refid="a00919_1a7bf8cf020e39f88d39725c1ec763cd86a1ec616246244f6453a7f66b5fb826ad3" compoundref="a01658" startline="34">Hack::CommandLine::TOK_OPTION</references>
+      </memberdef>
+      <memberdef kind="function" id="a01250_1a81a0d1863ce4cf9de5fe2a49bdac010c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
+        <definition>String Hack::CommandLine::Parser::programDirectory</definition>
+        <argsstring>() const</argsstring>
+        <name>programDirectory</name>
+        <briefdescription>
+<para>Extracts the directory from the supplied path to main. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The directory name of the program from argv[0]</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="110" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="195" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="a01250_1a8024c6934e384f16819773b2e71a99af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
+        <definition>String Hack::CommandLine::Parser::programName</definition>
+        <argsstring>() const</argsstring>
+        <name>programName</name>
+        <briefdescription>
+<para>Returns only the file name portion of the program that was supplied to main via argv[0] </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="104" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="190" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="a01250_1a771cadb12127507b34252295025a2612" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
+        <definition>String Hack::CommandLine::Parser::programPath</definition>
+        <argsstring>() const</argsstring>
+        <name>programPath</name>
+        <briefdescription>
+<para>Returns the path of the program that was supplied to main via argv[0] </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="96" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="a01250_1aaaa3cc28de66e1e9b2f64cd1e51f2fe1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::CommandLine::Parser::setHelpText</definition>
+        <argsstring>(const String &amp;help)</argsstring>
+        <name>setHelpText</name>
+        <param>
+          <type>const <ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>help</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="78" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="178" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="a01250_1a9da3aa8c56bad342c3a7c30eb98d9c17" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+        <definition>const String &amp; Hack::CommandLine::Parser::string</definition>
+        <argsstring>(const uint32_t &amp;enumId, size_t idx=0, const String &amp;defaultValue=&quot;&quot;) const</argsstring>
+        <name>string</name>
+        <param>
+          <type>const uint32_t &amp;</type>
+          <declname>enumId</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>idx</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const <ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>defaultValue</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="136" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="245" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="a01250_1afd63d6cb40243606fe5d6c944754eb5b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::CommandLine::Parser::usage</definition>
+        <argsstring>() const</argsstring>
+        <name>usage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="140" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="257" bodyend="262"/>
+        <references refid="a01262_1aa75558c74eafde74be9d33818a79a3fe" compoundref="a00812" startline="199" endline="204">Hack::Console::writeLine</references>
+      </memberdef>
+      <memberdef kind="function" id="a01250_1a238f1d7d7475b6138f572ecb314c020b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::CommandLine::Parser::usage</definition>
+        <argsstring>(String &amp;dest) const</argsstring>
+        <name>usage</name>
+        <param>
+          <type><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/CommandLine/Parser.h" line="142" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="264" bodyend="323"/>
+        <references refid="a01250_1a8024c6934e384f16819773b2e71a99af" compoundref="a01610" startline="190" endline="193">programName</references>
+        <references refid="a01242_1ad725d98dbe8d12706bd7851f5d3d905c" compoundref="a00809" startline="41">Hack::CommandLine::Switch::shortSwitch</references>
+        <references refid="a01242_1a2fcdf7ee4ff6df3990cf86d1b5470a83" compoundref="a00809" startline="45">Hack::CommandLine::Switch::longSwitch</references>
+        <references refid="a01238_1aec2f1d7549e6794e9f1b12e18d12602a" compoundref="a00803" startline="35" endline="38">Hack::Char::length</references>
+        <references refid="a01242_1ab100a397f7937d57fd07818559cc4768" compoundref="a00809" startline="48">Hack::CommandLine::Switch::description</references>
+        <references refid="a01302_1a23bf4c692af3b432d695218ea0143544" compoundref="a00851" startline="92" endline="99">Hack::StringUtils::split</references>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="a01250_1a24edb98095550871d32879f324e39e19" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Console::debugBreak</definition>
+      <memberdef kind="function" id="a01250_1a0cde77f2b98611d60d9e2cc9394ff2fa" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
+        <definition>String Hack::CommandLine::Parser::currentDirectory</definition>
         <argsstring>()</argsstring>
-        <name>debugBreak</name>
+        <name>currentDirectory</name>
         <briefdescription>
-        </briefdescription>
+<para>Returns the current working directory for this process. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Console.h" line="148" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="228" bodyend="234"/>
-      </memberdef>
-      <memberdef kind="function" id="a01250_1a9f1670e1ae36c8eeabff7b1b7b0216d0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Console::read</definition>
-        <argsstring>()</argsstring>
-        <name>read</name>
-        <briefdescription>
-<para>Blocks until a character is pressed. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Console.h" line="58" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="115" bodyend="118"/>
-      </memberdef>
-      <memberdef kind="function" id="a01250_1a4aea7b1c8d663a45e907fbeb8c9073bc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Console::read</definition>
-        <argsstring>(int8_t &amp;v)</argsstring>
-        <name>read</name>
-        <param>
-          <type>int8_t &amp;</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-<para>Reads a single character from stdin. </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>v</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Destination character.</para></parameterdescription>
-</parameteritem>
-</parameterlist>
+<para><simplesect kind="return"><para>The current working directory.</para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/Console.h" line="64" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="120" bodyend="123"/>
-      </memberdef>
-      <memberdef kind="function" id="a01250_1a06f3a79594e7054b8aac2d7e9bf90044" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Console::read</definition>
-        <argsstring>(uint8_t &amp;v)</argsstring>
-        <name>read</name>
-        <param>
-          <type><ref refid="a01370" kindref="compound">uint8_t</ref> &amp;</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-<para>Reads a single character from stdin. </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>v</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Destination character.</para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Console.h" line="70" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="125" bodyend="128"/>
-      </memberdef>
-      <memberdef kind="function" id="a01250_1a6128ded1482f4ca7602aea2abd95c126" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Console::read</definition>
-        <argsstring>(int16_t &amp;v)</argsstring>
-        <name>read</name>
-        <param>
-          <type>int16_t &amp;</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-<para>Reads a single short from stdin. </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>v</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Destination memory.</para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Console.h" line="76" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="130" bodyend="133"/>
-      </memberdef>
-      <memberdef kind="function" id="a01250_1ab6d7cdedaf97894f7eb49c5555d26206" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Console::read</definition>
-        <argsstring>(uint16_t &amp;v)</argsstring>
-        <name>read</name>
-        <param>
-          <type><ref refid="a01358" kindref="compound">uint16_t</ref> &amp;</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-<para>Reads a single unsigned short from stdin. </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>v</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Destination memory.</para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Console.h" line="82" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="135" bodyend="138"/>
-      </memberdef>
-      <memberdef kind="function" id="a01250_1a996ef0fae332871838054096a0b93599" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Console::read</definition>
-        <argsstring>(int32_t &amp;v)</argsstring>
-        <name>read</name>
-        <param>
-          <type>int32_t &amp;</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-<para>Reads a single int from stdin. </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>v</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Destination memory.</para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Console.h" line="88" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="140" bodyend="143"/>
-      </memberdef>
-      <memberdef kind="function" id="a01250_1a628012e2826450df083498b8c15f8389" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Console::read</definition>
-        <argsstring>(uint32_t &amp;v)</argsstring>
-        <name>read</name>
-        <param>
-          <type>uint32_t &amp;</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-<para>Reads a single unsigned int from stdin. </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>v</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Destination memory.</para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Console.h" line="94" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="145" bodyend="148"/>
-      </memberdef>
-      <memberdef kind="function" id="a01250_1af6acc907e42505cb46e74428abe1192a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Console::read</definition>
-        <argsstring>(int64_t &amp;v)</argsstring>
-        <name>read</name>
-        <param>
-          <type>int64_t &amp;</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-<para>Reads a single 64bit integer from stdin. </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>v</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Destination memory.</para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Console.h" line="100" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="150" bodyend="153"/>
-      </memberdef>
-      <memberdef kind="function" id="a01250_1a84d8734d29f8438d84ece8849bf11fc6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Console::read</definition>
-        <argsstring>(uint64_t &amp;v)</argsstring>
-        <name>read</name>
-        <param>
-          <type>uint64_t &amp;</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-<para>Reads a single unsigned 64bit integer from stdin. </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>v</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Destination memory.</para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Console.h" line="106" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="155" bodyend="158"/>
-      </memberdef>
-      <memberdef kind="function" id="a01250_1ab6cf180d585b20876761979b270536d8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Console::read</definition>
-        <argsstring>(String &amp;v)</argsstring>
-        <name>read</name>
-        <param>
-          <type><ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Console.h" line="108" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="160" bodyend="163"/>
-      </memberdef>
-      <memberdef kind="function" id="a01250_1a5c033a63b623fbd23d3eef4d8075ee86" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Console::readLine</definition>
-        <argsstring>(String &amp;v)</argsstring>
-        <name>readLine</name>
-        <param>
-          <type><ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Console.h" line="110" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="165" bodyend="168"/>
-      </memberdef>
-      <memberdef kind="function" id="a01250_1a2687a8f8471d2a44f8d6bf1f51626dd0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Console::resetColor</definition>
-        <argsstring>()</argsstring>
-        <name>resetColor</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Console.h" line="116" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="180" bodyend="191"/>
-        <references refid="a00894_1a36cd9148d33ac143e1ab550c0cc95422aad0499502630b8e0c45c07d85d8dd477" compoundref="a00803" startline="45">Hack::CS_WHITE</references>
-        <references refid="a00894_1a36cd9148d33ac143e1ab550c0cc95422ac12944af8b48da06fea92305e07d5a86" compoundref="a00803" startline="30">Hack::CS_BLACK</references>
-      </memberdef>
-      <memberdef kind="function" id="a01250_1a79a6f43eebb7245d9bdcd3a0697a60e1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Console::setBackground</definition>
-        <argsstring>(ConsoleColor col)</argsstring>
-        <name>setBackground</name>
-        <param>
-          <type><ref refid="a00894_1a36cd9148d33ac143e1ab550c0cc95422" kindref="member">ConsoleColor</ref></type>
-          <declname>col</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Console.h" line="114" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="175" bodyend="178"/>
-      </memberdef>
-      <memberdef kind="function" id="a01250_1a70f7cbd759456099caeeb4c4486bd6fe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Console::setForeground</definition>
-        <argsstring>(ConsoleColor col)</argsstring>
-        <name>setForeground</name>
-        <param>
-          <type><ref refid="a00894_1a36cd9148d33ac143e1ab550c0cc95422" kindref="member">ConsoleColor</ref></type>
-          <declname>col</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Console.h" line="112" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="170" bodyend="173"/>
-      </memberdef>
-      <memberdef kind="function" id="a01250_1a8c963f238cccb5daee6ea66f242243cf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Console::write</definition>
-        <argsstring>(const String &amp;str)</argsstring>
-        <name>write</name>
-        <param>
-          <type>const <ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>str</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Console.h" line="118" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="193" bodyend="197"/>
-      </memberdef>
-      <memberdef kind="function" id="a01250_1a5cf84c73fa70c41518f806c15b5f7556" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename...</type>
-            <declname>Args</declname>
-            <defname>Args</defname>
-          </param>
-        </templateparamlist>
-        <type>void</type>
-        <definition>static void Hack::Console::write</definition>
-        <argsstring>(const String &amp;str, Args &amp;&amp;...args)</argsstring>
-        <name>write</name>
-        <param>
-          <type>const <ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>str</declname>
-        </param>
-        <param>
-          <type>Args &amp;&amp;...</type>
-          <declname>args</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Console.h" line="136" column="1" bodyfile="Source/Utils/Console.h" bodystart="136" bodyend="142"/>
-        <references refid="a01250_1a8c963f238cccb5daee6ea66f242243cf" compoundref="a00800" startline="193" endline="197">write</references>
-      </memberdef>
-      <memberdef kind="function" id="a01250_1aa1c8c889b2c89af6dc65a0973380f59c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Console::writeError</definition>
-        <argsstring>(const String &amp;str)</argsstring>
-        <name>writeError</name>
-        <param>
-          <type>const <ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>str</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Console.h" line="124" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="206" bodyend="209"/>
-      </memberdef>
-      <memberdef kind="function" id="a01250_1a458b34a956e8dedc5b548a72e964b9a6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Console::writeError</definition>
-        <argsstring>(const OutputStringStream &amp;str)</argsstring>
-        <name>writeError</name>
-        <param>
-          <type>const <ref refid="a00894_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref> &amp;</type>
-          <declname>str</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Console.h" line="146" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="223" bodyend="226"/>
-        <references refid="a01250_1aa1c8c889b2c89af6dc65a0973380f59c" compoundref="a00800" startline="206" endline="209">writeError</references>
-      </memberdef>
-      <memberdef kind="function" id="a01250_1aa75558c74eafde74be9d33818a79a3fe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Console::writeLine</definition>
-        <argsstring>(const String &amp;str)</argsstring>
-        <name>writeLine</name>
-        <param>
-          <type>const <ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>str</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Console.h" line="120" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="199" bodyend="204"/>
-        <references refid="a01250_1a2687a8f8471d2a44f8d6bf1f51626dd0" compoundref="a00800" startline="180" endline="191">resetColor</references>
-      </memberdef>
-      <memberdef kind="function" id="a01250_1a7482ad4d74db3a2fc9db3dc9dad20bab" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Console::writeLine</definition>
-        <argsstring>(const int64_t &amp;i)</argsstring>
-        <name>writeLine</name>
-        <param>
-          <type>const int64_t &amp;</type>
-          <declname>i</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Console.h" line="122" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="211" bodyend="216"/>
-        <references refid="a01250_1aa75558c74eafde74be9d33818a79a3fe" compoundref="a00800" startline="199" endline="204">writeLine</references>
-      </memberdef>
-      <memberdef kind="function" id="a01250_1a4abd549dea9eb4dd1dd60c4e654104b5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename...</type>
-            <declname>Args</declname>
-            <defname>Args</defname>
-          </param>
-        </templateparamlist>
-        <type>void</type>
-        <definition>static void Hack::Console::writeLine</definition>
-        <argsstring>(const String &amp;str, Args &amp;&amp;...args)</argsstring>
-        <name>writeLine</name>
-        <param>
-          <type>const <ref refid="a00894_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>str</declname>
-        </param>
-        <param>
-          <type>Args &amp;&amp;...</type>
-          <declname>args</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Console.h" line="127" column="1" bodyfile="Source/Utils/Console.h" bodystart="127" bodyend="133"/>
-        <references refid="a01250_1aa75558c74eafde74be9d33818a79a3fe" compoundref="a00800" startline="199" endline="204">writeLine</references>
-      </memberdef>
-      <memberdef kind="function" id="a01250_1ad324e3f1ec872d0063e302b5940c5ea8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Console::writeLine</definition>
-        <argsstring>(const OutputStringStream &amp;str)</argsstring>
-        <name>writeLine</name>
-        <param>
-          <type>const <ref refid="a00894_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref> &amp;</type>
-          <declname>str</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Console.h" line="144" column="1" bodyfile="Source/Utils/Console.cpp" bodystart="218" bodyend="221"/>
-        <references refid="a01250_1aa75558c74eafde74be9d33818a79a3fe" compoundref="a00800" startline="199" endline="204">writeLine</references>
+        <location file="Source/Utils/CommandLine/Parser.h" line="116" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="200" bodyend="203"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Utility console class. Makes use of std::cout, std::cin and std::cerr </para>    </briefdescription>
+<para>Simple command line parser </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Utils/Console.h" line="53" column="1" bodyfile="Source/Utils/Console.h" bodystart="52" bodyend="149"/>
+    <location file="Source/Utils/CommandLine/Parser.h" line="34" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="33" bodyend="143"/>
     <listofallmembers>
-      <member refid="a01250_1a24edb98095550871d32879f324e39e19" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>debugBreak</name></member>
-      <member refid="a01250_1a9f1670e1ae36c8eeabff7b1b7b0216d0" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>read</name></member>
-      <member refid="a01250_1a4aea7b1c8d663a45e907fbeb8c9073bc" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>read</name></member>
-      <member refid="a01250_1a06f3a79594e7054b8aac2d7e9bf90044" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>read</name></member>
-      <member refid="a01250_1a6128ded1482f4ca7602aea2abd95c126" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>read</name></member>
-      <member refid="a01250_1ab6d7cdedaf97894f7eb49c5555d26206" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>read</name></member>
-      <member refid="a01250_1a996ef0fae332871838054096a0b93599" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>read</name></member>
-      <member refid="a01250_1a628012e2826450df083498b8c15f8389" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>read</name></member>
-      <member refid="a01250_1af6acc907e42505cb46e74428abe1192a" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>read</name></member>
-      <member refid="a01250_1a84d8734d29f8438d84ece8849bf11fc6" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>read</name></member>
-      <member refid="a01250_1ab6cf180d585b20876761979b270536d8" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>read</name></member>
-      <member refid="a01250_1a5c033a63b623fbd23d3eef4d8075ee86" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>readLine</name></member>
-      <member refid="a01250_1a2687a8f8471d2a44f8d6bf1f51626dd0" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>resetColor</name></member>
-      <member refid="a01250_1a79a6f43eebb7245d9bdcd3a0697a60e1" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>setBackground</name></member>
-      <member refid="a01250_1a70f7cbd759456099caeeb4c4486bd6fe" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>setForeground</name></member>
-      <member refid="a01250_1a8c963f238cccb5daee6ea66f242243cf" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>write</name></member>
-      <member refid="a01250_1a5cf84c73fa70c41518f806c15b5f7556" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>write</name></member>
-      <member refid="a01250_1aa1c8c889b2c89af6dc65a0973380f59c" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>writeError</name></member>
-      <member refid="a01250_1a458b34a956e8dedc5b548a72e964b9a6" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>writeError</name></member>
-      <member refid="a01250_1aa75558c74eafde74be9d33818a79a3fe" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>writeLine</name></member>
-      <member refid="a01250_1a7482ad4d74db3a2fc9db3dc9dad20bab" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>writeLine</name></member>
-      <member refid="a01250_1a4abd549dea9eb4dd1dd60c4e654104b5" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>writeLine</name></member>
-      <member refid="a01250_1ad324e3f1ec872d0063e302b5940c5ea8" prot="public" virt="non-virtual"><scope>Hack::Console</scope><name>writeLine</name></member>
+      <member refid="a01250_1ac6eac96be035465d45566eb06f69d881" prot="private" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>_argumentList</name></member>
+      <member refid="a01250_1afc28d359bbd2f4402f71da533cd30ea7" prot="private" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>_helpText</name></member>
+      <member refid="a01250_1ae4280801677cbbada1c4fe9f09009489" prot="private" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>_maxLongSwitch</name></member>
+      <member refid="a01250_1a6c506b42c0db03ee80ee3a78f2c798de" prot="private" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>_options</name></member>
+      <member refid="a01250_1ad6c2c875b579de915a057c4d1fcae94f" prot="private" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>_programName</name></member>
+      <member refid="a01250_1a664949c3062b0e9a97cc56c2d4885089" prot="private" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>_required</name></member>
+      <member refid="a01250_1a5927563108b37e09ee3dac6d6dfe5e10" prot="private" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>_scanner</name></member>
+      <member refid="a01250_1a5c67da01c7032bf931506b1fe180bc3b" prot="private" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>_switches</name></member>
+      <member refid="a01250_1a7ac5a222206a94d4bdac63103a98011e" prot="private" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>_used</name></member>
+      <member refid="a01250_1ac7bc3f3c9e8b89b4a39b8dd9a36b713f" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>arguments</name></member>
+      <member refid="a01250_1a0cde77f2b98611d60d9e2cc9394ff2fa" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>currentDirectory</name></member>
+      <member refid="a01250_1a1e8a5bbeccc097c739f413dea48ee32f" prot="private" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>hasSwitch</name></member>
+      <member refid="a01250_1a58b4de6ab5c36036424c05e122b22ad6" prot="private" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>initializeOption</name></member>
+      <member refid="a01250_1a0c1d0d13f95b4276f53e6e08a083e1b9" prot="private" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>initializeSwitches</name></member>
+      <member refid="a01250_1afde565b48fd1ed72c1732fd9be7b6f84" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>int32</name></member>
+      <member refid="a01250_1a4613b666cccdbdf99dec16293c4ebba6" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>int64</name></member>
+      <member refid="a01250_1adbd749e0938e2b359ee7f719864d1451" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>isPresent</name></member>
+      <member refid="a01250_1a1fd715bf284528379a1440e2d8199aae" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>logInput</name></member>
+      <member refid="a01250_1ab5d11dfcdacd8b91069814891ef7f20c" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>option</name></member>
+      <member refid="a01250_1a002a0dbbd4e1272345eddde68276530a" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>Options</name></member>
+      <member refid="a01250_1a304e3e2f4af07df0fb6c9cde37040e27" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>parse</name></member>
+      <member refid="a01250_1aeafa84d86ac6c8437b6153a2627cbfb2" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>Parser</name></member>
+      <member refid="a01250_1a81a0d1863ce4cf9de5fe2a49bdac010c" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>programDirectory</name></member>
+      <member refid="a01250_1a8024c6934e384f16819773b2e71a99af" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>programName</name></member>
+      <member refid="a01250_1a771cadb12127507b34252295025a2612" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>programPath</name></member>
+      <member refid="a01250_1aaaa3cc28de66e1e9b2f64cd1e51f2fe1" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>setHelpText</name></member>
+      <member refid="a01250_1a9da3aa8c56bad342c3a7c30eb98d9c17" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>string</name></member>
+      <member refid="a01250_1aabea897d89f924f1ff868eedbd316f70" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>StringArray</name></member>
+      <member refid="a01250_1a67bf8f3ad66b044129c002d49d9b9566" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>Switches</name></member>
+      <member refid="a01250_1afd63d6cb40243606fe5d6c944754eb5b" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>usage</name></member>
+      <member refid="a01250_1a238f1d7d7475b6138f572ecb314c020b" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>usage</name></member>
+      <member refid="a01250_1ab440adc6e5356b7e7df51d3cbdab4f8d" prot="private" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>writeError</name></member>
+      <member refid="a01250_1a4aef7be4832a2db2e62f2b44617eff9f" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>~Parser</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

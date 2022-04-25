@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01084" kind="class" language="C++" prot="public" final="yes">
-    <compoundname>Hack::Chips::Or8Way</compoundname>
-    <basecompoundref refid="a00984" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; uint16_t, 16 &gt;</basecompoundref>
-    <includes local="no">Source/Chips/Or8Way.h</includes>
+    <compoundname>Hack::Chips::Not16</compoundname>
+    <basecompoundref refid="a00996" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; uint16_t, 16 &gt;</basecompoundref>
+    <includes local="no">Source/Chips/Not16.h</includes>
       <sectiondef kind="private-func">
-      <memberdef kind="function" id="a01084_1a86ebf565fca8197690e4ab00544d336a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01084_1a1b3f03da9586ded88887c8462dd4674d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::Chips::Or8Way::evaluate</definition>
+        <definition>void Hack::Chips::Not16::evaluate</definition>
         <argsstring>()</argsstring>
         <name>evaluate</name>
         <briefdescription>
@@ -16,27 +16,27 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Or8Way.h" line="30" column="1" bodyfile="Source/Chips/Or8Way.cpp" bodystart="48" bodyend="64"/>
+        <location file="Source/Chips/Not16.h" line="30" column="1" bodyfile="Source/Chips/Not16.cpp" bodystart="45" bodyend="57"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01084_1a089fdad3284020eea4be1c5bf7112f9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01084_1a94bf1a1ed46afd41b23494cbfde87b50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>Hack::Chips::Or8Way::Or8Way</definition>
+        <definition>Hack::Chips::Not16::Not16</definition>
         <argsstring>()</argsstring>
-        <name>Or8Way</name>
+        <name>Not16</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Or8Way.h" line="33" column="1" bodyfile="Source/Chips/Or8Way.cpp" bodystart="26" bodyend="29"/>
-        <references refid="a00984_1a5a604431fa35bc87e0d7f4328b4ad4a1" compoundref="a00467" startline="112" endline="115">Hack::Chips::Chip&lt; uint16_t, 16 &gt;::assignBit</references>
+        <location file="Source/Chips/Not16.h" line="33" column="1" bodyfile="Source/Chips/Not16.cpp" bodystart="29" bodyend="32"/>
+        <references refid="a00996_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00479" startline="52">Hack::Chips::Chip&lt; uint16_t, 16 &gt;::_bits</references>
       </memberdef>
-      <memberdef kind="function" id="a01084_1ae8ecce2b844d75c6849a99f2d2b6b933" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Hack::Chips::Or8Way::getOut</definition>
+      <memberdef kind="function" id="a01084_1ace2108191134de75f5b514f6a09e4d85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a01364" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::Not16::getOut</definition>
         <argsstring>()</argsstring>
         <name>getOut</name>
         <briefdescription>
@@ -45,16 +45,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Or8Way.h" line="37" column="1" bodyfile="Source/Chips/Or8Way.cpp" bodystart="41" bodyend="46"/>
-        <references refid="a00984_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00467" startline="100" endline="103">Hack::Chips::Chip&lt; uint16_t, 16 &gt;::getBit</references>
+        <location file="Source/Chips/Not16.h" line="37" column="1" bodyfile="Source/Chips/Not16.cpp" bodystart="39" bodyend="43"/>
+        <references refid="a00996_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00479" startline="52">Hack::Chips::Chip&lt; uint16_t, 16 &gt;::_bits</references>
       </memberdef>
-      <memberdef kind="function" id="a01084_1afab4a119dd4ac7a7ef0311503fb10397" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01084_1afcc4cec3f1d5bf3837e22632ce8ce6d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::Chips::Or8Way::setIn</definition>
-        <argsstring>(uint8_t v)</argsstring>
+        <definition>void Hack::Chips::Not16::setIn</definition>
+        <argsstring>(const uint16_t &amp;v)</argsstring>
         <name>setIn</name>
         <param>
-          <type><ref refid="a01364" kindref="compound">uint8_t</ref></type>
+          <type>const <ref refid="a01364" kindref="compound">uint16_t</ref> &amp;</type>
           <declname>v</declname>
         </param>
         <briefdescription>
@@ -63,10 +63,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Or8Way.h" line="35" column="1" bodyfile="Source/Chips/Or8Way.cpp" bodystart="31" bodyend="39"/>
-        <references refid="a00968_1ad572825821646ad93481854ef8e6dcd7" compoundref="a00464" startline="54">Hack::Chips::bit16_t::b</references>
-        <references refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00467" startline="52">Hack::Chips::Chip&lt; uint16_t, 16 &gt;::_bits</references>
-        <references refid="a00984_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="a00467" startline="106" endline="109">Hack::Chips::Chip&lt; uint16_t, 16 &gt;::setBit</references>
+        <location file="Source/Chips/Not16.h" line="35" column="1" bodyfile="Source/Chips/Not16.cpp" bodystart="34" bodyend="37"/>
+        <references refid="a00996_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00479" startline="52">Hack::Chips::Chip&lt; uint16_t, 16 &gt;::_bits</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -74,51 +72,51 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="233">
+      <node id="214">
         <label>Hack::Chips::Chip&lt; uint16_t, 16 &gt;</label>
-        <link refid="a00984"/>
+        <link refid="a00996"/>
       </node>
-      <node id="232">
-        <label>Hack::Chips::Or8Way</label>
+      <node id="213">
+        <label>Hack::Chips::Not16</label>
         <link refid="a01084"/>
-        <childnode refid="233" relation="public-inheritance">
+        <childnode refid="214" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="235">
+      <node id="216">
         <label>Hack::Chips::Chip&lt; uint16_t, 16 &gt;</label>
-        <link refid="a00984"/>
-        <childnode refid="236" relation="usage">
+        <link refid="a00996"/>
+        <childnode refid="217" relation="usage">
           <edgelabel>_bits</edgelabel>
         </childnode>
       </node>
-      <node id="236">
-        <label>uint16_t</label>
-        <link refid="a01352"/>
-      </node>
-      <node id="234">
-        <label>Hack::Chips::Or8Way</label>
+      <node id="215">
+        <label>Hack::Chips::Not16</label>
         <link refid="a01084"/>
-        <childnode refid="235" relation="public-inheritance">
+        <childnode refid="216" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="217">
+        <label>uint16_t</label>
+        <link refid="a01364"/>
+      </node>
     </collaborationgraph>
-    <location file="Source/Chips/Or8Way.h" line="28" column="1" bodyfile="Source/Chips/Or8Way.h" bodystart="27" bodyend="38"/>
+    <location file="Source/Chips/Not16.h" line="28" column="1" bodyfile="Source/Chips/Not16.h" bodystart="27" bodyend="38"/>
     <listofallmembers>
-      <member refid="a00984_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Or8Way</scope><name>_bits</name></member>
-      <member refid="a00984_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::Or8Way</scope><name>applyBit</name></member>
-      <member refid="a00984_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::Or8Way</scope><name>assignBit</name></member>
-      <member refid="a00984_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::Or8Way</scope><name>Chip</name></member>
-      <member refid="a00984_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::Or8Way</scope><name>clearBit</name></member>
-      <member refid="a01084_1a86ebf565fca8197690e4ab00544d336a" prot="private" virt="non-virtual"><scope>Hack::Chips::Or8Way</scope><name>evaluate</name></member>
-      <member refid="a00984_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::Or8Way</scope><name>getBit</name></member>
-      <member refid="a01084_1ae8ecce2b844d75c6849a99f2d2b6b933" prot="public" virt="non-virtual"><scope>Hack::Chips::Or8Way</scope><name>getOut</name></member>
-      <member refid="a00984_1a63bb368bb0827830235759b33718d1b4" prot="protected" virt="virtual"><scope>Hack::Chips::Or8Way</scope><name>isDirty</name></member>
-      <member refid="a01084_1a089fdad3284020eea4be1c5bf7112f9a" prot="public" virt="non-virtual"><scope>Hack::Chips::Or8Way</scope><name>Or8Way</name></member>
-      <member refid="a00984_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::Or8Way</scope><name>setBit</name></member>
-      <member refid="a01084_1afab4a119dd4ac7a7ef0311503fb10397" prot="public" virt="non-virtual"><scope>Hack::Chips::Or8Way</scope><name>setIn</name></member>
-      <member refid="a00984_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::Or8Way</scope><name>~Chip</name></member>
+      <member refid="a00996_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Not16</scope><name>_bits</name></member>
+      <member refid="a00996_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::Not16</scope><name>applyBit</name></member>
+      <member refid="a00996_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::Not16</scope><name>assignBit</name></member>
+      <member refid="a00996_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::Not16</scope><name>Chip</name></member>
+      <member refid="a00996_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::Not16</scope><name>clearBit</name></member>
+      <member refid="a01084_1a1b3f03da9586ded88887c8462dd4674d" prot="private" virt="non-virtual"><scope>Hack::Chips::Not16</scope><name>evaluate</name></member>
+      <member refid="a00996_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::Not16</scope><name>getBit</name></member>
+      <member refid="a01084_1ace2108191134de75f5b514f6a09e4d85" prot="public" virt="non-virtual"><scope>Hack::Chips::Not16</scope><name>getOut</name></member>
+      <member refid="a00996_1a63bb368bb0827830235759b33718d1b4" prot="protected" virt="virtual"><scope>Hack::Chips::Not16</scope><name>isDirty</name></member>
+      <member refid="a01084_1a94bf1a1ed46afd41b23494cbfde87b50" prot="public" virt="non-virtual"><scope>Hack::Chips::Not16</scope><name>Not16</name></member>
+      <member refid="a00996_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::Not16</scope><name>setBit</name></member>
+      <member refid="a01084_1afcc4cec3f1d5bf3837e22632ce8ce6d5" prot="public" virt="non-virtual"><scope>Hack::Chips::Not16</scope><name>setIn</name></member>
+      <member refid="a00996_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::Not16</scope><name>~Chip</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

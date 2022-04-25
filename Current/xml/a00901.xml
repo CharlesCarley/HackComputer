@@ -1,195 +1,58 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00901" kind="namespace" language="C++">
-    <compoundname>Hack::Chips::BitwiseGates</compoundname>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="a00901_1a84362f3ebaddfd42c327c37f29d808d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>T</type>
-        <definition>T Hack::Chips::BitwiseGates::And</definition>
-        <argsstring>(const T &amp;a, const T &amp;b)</argsstring>
-        <name>And</name>
-        <param>
-          <type>const T &amp;</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>const T &amp;</type>
-          <declname>b</declname>
-        </param>
+    <compoundname>Hack::Binding</compoundname>
+    <innerclass refid="a00956" prot="public">Hack::Binding::ComputerWrapper</innerclass>
+    <innerclass refid="a00952" prot="public">Hack::Binding::RamWrapper</innerclass>
+    <innerclass refid="a00948" prot="public">Hack::Binding::RomWrapper</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="a00901_1a0a115b3347cdfd195e6032ae7fca252d" prot="public" static="no" mutable="no">
+        <type>constexpr uint64_t</type>
+        <definition>constexpr uint64_t Hack::Binding::ComputerType</definition>
+        <argsstring></argsstring>
+        <name>ComputerType</name>
+        <initializer>= 0x6543F55D6F4A3D0F</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/BitUtils.h" line="325" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="325" bodyend="328"/>
+        <location file="Source/Bindings/Bindings.cpp" line="44" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="44" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a00901_1ad70c68df991a03702b6e44507ff2a0e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>T</type>
-        <definition>T Hack::Chips::BitwiseGates::Mux</definition>
-        <argsstring>(const T &amp;a, const T &amp;b, const T &amp;s)</argsstring>
-        <name>Mux</name>
-        <param>
-          <type>const T &amp;</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>const T &amp;</type>
-          <declname>b</declname>
-        </param>
-        <param>
-          <type>const T &amp;</type>
-          <declname>s</declname>
-        </param>
+      <memberdef kind="variable" id="a00901_1afa6a47600d4368c4198b7292deb32747" prot="public" static="no" mutable="no">
+        <type>constexpr uint64_t</type>
+        <definition>constexpr uint64_t Hack::Binding::RamType</definition>
+        <argsstring></argsstring>
+        <name>RamType</name>
+        <initializer>= 0x3D654F7A36F4A3D0</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/BitUtils.h" line="350" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="350" bodyend="353"/>
+        <location file="Source/Bindings/Bindings.cpp" line="46" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="46" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a00901_1ae6b0c9d01ef62c0bc80a18accd7d6ca9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>T</type>
-        <definition>T Hack::Chips::BitwiseGates::NAnd</definition>
-        <argsstring>(const T &amp;a, const T &amp;b)</argsstring>
-        <name>NAnd</name>
-        <param>
-          <type>const T &amp;</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>const T &amp;</type>
-          <declname>b</declname>
-        </param>
+      <memberdef kind="variable" id="a00901_1ab9e96018072b404d8a46e2192f06b954" prot="public" static="no" mutable="no">
+        <type>constexpr uint64_t</type>
+        <definition>constexpr uint64_t Hack::Binding::RomType</definition>
+        <argsstring></argsstring>
+        <name>RomType</name>
+        <initializer>= 0x06D5DAF556F4ADB3</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/BitUtils.h" line="313" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="313" bodyend="316"/>
-      </memberdef>
-      <memberdef kind="function" id="a00901_1a3118052ddcc3b5956dccfa1c9cd50528" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>T</type>
-        <definition>T Hack::Chips::BitwiseGates::NOr</definition>
-        <argsstring>(const T &amp;a, const T &amp;b)</argsstring>
-        <name>NOr</name>
-        <param>
-          <type>const T &amp;</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>const T &amp;</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/BitUtils.h" line="337" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="337" bodyend="340"/>
-      </memberdef>
-      <memberdef kind="function" id="a00901_1a84d09455d2c5d520a37804d10bcedef4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>T</type>
-        <definition>T Hack::Chips::BitwiseGates::Not</definition>
-        <argsstring>(const T &amp;a)</argsstring>
-        <name>Not</name>
-        <param>
-          <type>const T &amp;</type>
-          <declname>a</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/BitUtils.h" line="319" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="319" bodyend="322"/>
-      </memberdef>
-      <memberdef kind="function" id="a00901_1aa46e2bc824542f8c88678197e54892b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>T</type>
-        <definition>T Hack::Chips::BitwiseGates::Or</definition>
-        <argsstring>(const T &amp;a, const T &amp;b)</argsstring>
-        <name>Or</name>
-        <param>
-          <type>const T &amp;</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>const T &amp;</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/BitUtils.h" line="331" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="331" bodyend="334"/>
-      </memberdef>
-      <memberdef kind="function" id="a00901_1a87f9b215940bce4b2d6ae012557b3fdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>T</type>
-        <definition>T Hack::Chips::BitwiseGates::XOr</definition>
-        <argsstring>(const T &amp;a, const T &amp;b)</argsstring>
-        <name>XOr</name>
-        <param>
-          <type>const T &amp;</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>const T &amp;</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/BitUtils.h" line="343" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="343" bodyend="347"/>
+        <location file="Source/Bindings/Bindings.cpp" line="45" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="45" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Chips/BitUtils.h" line="311" column="1"/>
+    <location file="Source/Bindings/Bindings.cpp" line="40" column="1"/>
   </compounddef>
 </doxygen>

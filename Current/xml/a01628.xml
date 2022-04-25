@@ -2,142 +2,140 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01628" kind="file" language="C++">
     <compoundname>Scanner.cpp</compoundname>
-    <includes refid="a01640" local="yes">VirtualMachine/Scanner.h</includes>
-    <includes refid="a00797" local="yes">Utils/Char.h</includes>
-    <includes refid="a01652" local="yes">VirtualMachine/Token.h</includes>
+    <includes refid="a01640" local="yes">Assembler/Scanner.h</includes>
+    <includes refid="a00806" local="yes">Utils/Char.h</includes>
     <incdepgraph>
-      <node id="494">
+      <node id="442">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="495" relation="include">
+        <childnode refid="443" relation="include">
         </childnode>
       </node>
-      <node id="495">
+      <node id="443">
         <label>cstdint</label>
       </node>
-      <node id="479">
-        <label>VirtualMachine/Scanner.h</label>
-        <childnode refid="480" relation="include">
-        </childnode>
-        <childnode refid="498" relation="include">
-        </childnode>
-      </node>
-      <node id="486">
+      <node id="438">
         <label>stdexcept</label>
       </node>
-      <node id="491">
+      <node id="430">
         <label>string</label>
       </node>
-      <node id="483">
+      <node id="435">
         <label>unordered_set</label>
       </node>
-      <node id="485">
+      <node id="437">
         <label>exception</label>
       </node>
-      <node id="480">
+      <node id="432">
         <label>Utils/ParserBase/ScannerBase.h</label>
-        <childnode refid="481" relation="include">
+        <childnode refid="433" relation="include">
         </childnode>
-        <childnode refid="497" relation="include">
+        <childnode refid="427" relation="include">
         </childnode>
       </node>
-      <node id="497">
+      <node id="427">
         <label>Utils/ParserBase/TokenBase.h</label>
-        <childnode refid="489" relation="include">
+        <childnode refid="428" relation="include">
         </childnode>
       </node>
-      <node id="493">
+      <node id="441">
         <label>UserInterface/Context.h</label>
-        <childnode refid="489" relation="include">
+        <childnode refid="428" relation="include">
         </childnode>
-        <childnode refid="494" relation="include">
+        <childnode refid="442" relation="include">
         </childnode>
-        <childnode refid="496" relation="include">
+        <childnode refid="444" relation="include">
         </childnode>
       </node>
-      <node id="496">
+      <node id="444">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="495" relation="include">
+        <childnode refid="443" relation="include">
         </childnode>
-        <childnode refid="492" relation="include">
+        <childnode refid="431" relation="include">
         </childnode>
-        <childnode refid="494" relation="include">
+        <childnode refid="442" relation="include">
         </childnode>
       </node>
-      <node id="481">
+      <node id="433">
         <label>Utils/IndexCache.h</label>
-        <childnode refid="482" relation="include">
+        <childnode refid="434" relation="include">
         </childnode>
-        <childnode refid="483" relation="include">
+        <childnode refid="435" relation="include">
         </childnode>
-        <childnode refid="484" relation="include">
+        <childnode refid="436" relation="include">
         </childnode>
       </node>
-      <node id="488">
+      <node id="440">
         <label>Utils/Console.h</label>
-        <childnode refid="489" relation="include">
+        <childnode refid="428" relation="include">
         </childnode>
-        <childnode refid="493" relation="include">
-        </childnode>
-      </node>
-      <node id="498">
-        <label>VirtualMachine/Token.h</label>
-        <childnode refid="497" relation="include">
+        <childnode refid="441" relation="include">
         </childnode>
       </node>
-      <node id="478">
-        <label>Source/VirtualMachine/Scanner.cpp</label>
-        <link refid="a01628"/>
-        <childnode refid="479" relation="include">
-        </childnode>
-        <childnode refid="499" relation="include">
-        </childnode>
-        <childnode refid="498" relation="include">
-        </childnode>
-      </node>
-      <node id="492">
+      <node id="431">
         <label>vector</label>
       </node>
-      <node id="487">
+      <node id="426">
+        <label>Assembler/Token.h</label>
+        <childnode refid="427" relation="include">
+        </childnode>
+      </node>
+      <node id="439">
         <label>utility</label>
       </node>
-      <node id="490">
+      <node id="429">
         <label>sstream</label>
       </node>
-      <node id="499">
+      <node id="445">
         <label>Utils/Char.h</label>
-        <childnode refid="495" relation="include">
+        <childnode refid="443" relation="include">
         </childnode>
-        <childnode refid="489" relation="include">
+        <childnode refid="428" relation="include">
         </childnode>
       </node>
-      <node id="484">
+      <node id="425">
+        <label>Assembler/Scanner.h</label>
+        <childnode refid="426" relation="include">
+        </childnode>
+        <childnode refid="432" relation="include">
+        </childnode>
+      </node>
+      <node id="436">
         <label>Utils/Exception.h</label>
-        <childnode refid="485" relation="include">
+        <childnode refid="437" relation="include">
         </childnode>
-        <childnode refid="486" relation="include">
+        <childnode refid="438" relation="include">
         </childnode>
-        <childnode refid="487" relation="include">
+        <childnode refid="439" relation="include">
         </childnode>
-        <childnode refid="488" relation="include">
+        <childnode refid="440" relation="include">
         </childnode>
-        <childnode refid="489" relation="include">
+        <childnode refid="428" relation="include">
         </childnode>
       </node>
-      <node id="482">
+      <node id="434">
         <label>unordered_map</label>
       </node>
-      <node id="489">
-        <label>String.h</label>
-        <childnode refid="490" relation="include">
+      <node id="424">
+        <label>Source/Assembler/Scanner.cpp</label>
+        <link refid="a01628"/>
+        <childnode refid="425" relation="include">
         </childnode>
-        <childnode refid="491" relation="include">
+        <childnode refid="445" relation="include">
         </childnode>
-        <childnode refid="492" relation="include">
+      </node>
+      <node id="428">
+        <label>Utils/String.h</label>
+        <childnode refid="429" relation="include">
+        </childnode>
+        <childnode refid="430" relation="include">
+        </childnode>
+        <childnode refid="431" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <innerclass refid="a01349" prot="public">Hack::VirtualMachine::KeywordTable</innerclass>
-    <innernamespace refid="a00905">Hack::VirtualMachine</innernamespace>
+    <innerclass refid="a00938" prot="public">Hack::Assembler::KeywordTable</innerclass>
+    <innerclass refid="a00942" prot="public">Hack::Assembler::ReservedWordTable</innerclass>
+    <innernamespace refid="a00905">Hack::Assembler</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -164,182 +162,348 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;VirtualMachine/Scanner.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Assembler/Scanner.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/Char.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;VirtualMachine/Token.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00905" kindref="compound">Hack::VirtualMachine</ref></highlight></codeline>
-<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01353_1a492f69304cf8afa9a9c08db6aea3858d" kindref="member">Scanner::Scanner</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30" refid="a01349" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="a01349" kindref="compound">KeywordTable</ref></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="32" refid="a01349_1a1495fd1ba0b00924bb94421ed83b0f60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="a01349_1a1495fd1ba0b00924bb94421ed83b0f60" kindref="member">str</ref>;</highlight></codeline>
-<codeline lineno="33" refid="a01349_1a5bb11a2ec99050a57211d950bf24b570" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int8_t<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01349_1a5bb11a2ec99050a57211d950bf24b570" kindref="member">tok</ref>;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>clang-format<sp/>off</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37" refid="a00905_1a30e923dda3e21a2da18e80be744949c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/><ref refid="a01349" kindref="compound">KeywordTable</ref><sp/><ref refid="a00905_1a30e923dda3e21a2da18e80be744949c7" kindref="member">Reserved</ref>[]<sp/>=<sp/>{</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;argument&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8ac1c79b33295900ce5fb9b7388f9d3774" kindref="member">TOK_ARGUMENT</ref>},</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;constant&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a1b5933cb66c94f5d52f4b26aa5d21687" kindref="member">TOK_CONSTANT</ref>},</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;function&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a8fe88815a953aa99c8e5c8d5ee61977b" kindref="member">TOK_FUNCTION</ref>},</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;pointer&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a1ff62250b7cc15cf5232385336a43faa" kindref="member">TOK_POINTER</ref>},</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;if-goto&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a4e509ea02cf3295cfb974cbef858a2a0" kindref="member">TOK_IF_GOTO</ref>},</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;return&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8aab8d542c9b300e713566c31fd04978b2" kindref="member">TOK_RETURN</ref>},</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;local&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a884782019d67a9034800b2e52853285f" kindref="member">TOK_LOCAL</ref>},</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;label&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8adea00dd7260945f628607920c28f4f88" kindref="member">TOK_LABEL</ref>},</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;static&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a34c8a308ae07cccf0911f5beedf966b1" kindref="member">TOK_STATIC</ref>},</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;call&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8aba05bfde3b583f0f57670db082435502" kindref="member">TOK_CALL</ref>},</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;goto&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8adefb15a333279ec39429629d72c7247b" kindref="member">TOK_GOTO</ref>},</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;this&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a336b66142cf793364a1852264a54363e" kindref="member">TOK_THIS</ref>},</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;that&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a4a6f04837563a657059418583b193f6d" kindref="member">TOK_THAT</ref>},</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;temp&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a9a81b7232eec35bfa052a1127102ef88" kindref="member">TOK_TEMP</ref>},</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;push&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a15637fa7561d27e7ec3767c1234f30c8" kindref="member">TOK_PUSH</ref>},</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;pop&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8acc1f94b8928811b09124734ee1597a55" kindref="member">TOK_POP</ref>},</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;add&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8ad252188e8cc229f0e37a62bc2a6effbb" kindref="member">TOK_ADD</ref>},</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;sub&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a44c80f603918c4ec0059e90c6aec5da0" kindref="member">TOK_SUB</ref>},</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;not&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8ab3a17c6fa237215d3cbd4ef2147917c5" kindref="member">TOK_NOT</ref>},</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;neg&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a3528eed46cd82da594149f52de5580f0" kindref="member">TOK_NEG</ref>},</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;and&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a090fd2880780efacb459ca5a0f9108b2" kindref="member">TOK_AND</ref>},</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;or&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8afc9b5bec56f03be602419b704b93791e" kindref="member">TOK_OR</ref>},</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;eq&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a93c0f222ca3e14bf194e2ada515f6231" kindref="member">TOK_EQ</ref>},</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;gt&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8afa3234091b8747a25c81465bbc76356e" kindref="member">TOK_GT</ref>},</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;lt&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a34d01c2b796f4fba92dbbdba6829b4de" kindref="member">TOK_LT</ref>},</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;set&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a3fa291fa8690f5c7571b54b2fa681b08" kindref="member">TOK_SET</ref>},</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;reset&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a066351ce777c87e213b2dc4daf40e599" kindref="member">TOK_RESET</ref>},</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;halt&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a8ecc09af794ba08a877a741036883409" kindref="member">TOK_HALT</ref>},</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;asm&quot;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a4ab563e860977220dd359e7df2a3db53" kindref="member">TOK_ASM</ref>},</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>clang-format<sp/>on</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70" refid="a00905_1ad47a4e14037dad618c52c200c3c35fc0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00905_1ad47a4e14037dad618c52c200c3c35fc0" kindref="member">isValidCharacter</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ch)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="a00906" kindref="compound">Hack</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00905" kindref="compound">Hack::Assembler</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29" refid="a00938" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="a00938" kindref="compound">KeywordTable</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31" refid="a00938_1af1c493cbef9c934bb844657bb5ba6a08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="a00938_1a3a799883949994254e70f80b3eda7848" kindref="member">a</ref>,<sp/><ref refid="a00938_1adb93bccff1776e812c8dc3355e357c35" kindref="member">b</ref>,<sp/><ref refid="a00938_1af1c493cbef9c934bb844657bb5ba6a08" kindref="member">c</ref>;</highlight></codeline>
+<codeline lineno="32" refid="a00938_1abbe8f69932a707048810eaf446118627" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="a00938_1abbe8f69932a707048810eaf446118627" kindref="member">tok</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="a00942" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="a00942" kindref="compound">ReservedWordTable</ref></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37" refid="a00942_1a002ef177a39e4ebb15eee1aca6a9eaa6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="a00942_1a002ef177a39e4ebb15eee1aca6a9eaa6" kindref="member">val</ref>;</highlight></codeline>
+<codeline lineno="38" refid="a00942_1aa0ecd707ff8c8761f5a2744dc6048838" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00942_1aa0ecd707ff8c8761f5a2744dc6048838" kindref="member">len</ref>;</highlight></codeline>
+<codeline lineno="39" refid="a00942_1adaeb309900546c0aa40efea576acc420" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01370" kindref="compound">uint16_t</ref><sp/><sp/><sp/><sp/><ref refid="a00942_1adaeb309900546c0aa40efea576acc420" kindref="member">address</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="a00905_1ae2f6ce5908b46df7a68cf1eb884200b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/><ref refid="a00938" kindref="compound">KeywordTable</ref><sp/><ref refid="a00905_1ae2f6ce5908b46df7a68cf1eb884200b1" kindref="member">DestAndJumpTable</ref>[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="charliteral">&apos;J&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;M&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;P&apos;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1ab52345149881cbf184ed8dbc45774908abbbee45b0a8f7973ea9c97ba81bbfab1" kindref="member">TOK_JMP</ref>},</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="charliteral">&apos;J&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;G&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;T&apos;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1ab52345149881cbf184ed8dbc45774908a00a5e4936b8f21d85966bc510b9cf90d" kindref="member">TOK_JGT</ref>},</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="charliteral">&apos;J&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;E&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;Q&apos;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1ab52345149881cbf184ed8dbc45774908a8aa5db527baacc19c6b5b6b01e2491fd" kindref="member">TOK_JEQ</ref>},</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="charliteral">&apos;J&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;G&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;E&apos;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1ab52345149881cbf184ed8dbc45774908a1f0d06a89639748e3a8b75c113d5d06d" kindref="member">TOK_JGE</ref>},</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="charliteral">&apos;J&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;L&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;T&apos;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1ab52345149881cbf184ed8dbc45774908aa02bae4eda01057babd2b906433a4cb1" kindref="member">TOK_JLT</ref>},</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="charliteral">&apos;J&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;N&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;E&apos;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1ab52345149881cbf184ed8dbc45774908a4cb282cdab169fa23a83251051d08834" kindref="member">TOK_JNE</ref>},</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="charliteral">&apos;J&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;L&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;E&apos;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1ab52345149881cbf184ed8dbc45774908ae8772c050e0a8b9141a92741af54fe15" kindref="member">TOK_JLE</ref>},</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="charliteral">&apos;A&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;M&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;D&apos;</highlight><highlight class="normal">,<sp/><ref refid="a00905_1ab52345149881cbf184ed8dbc45774908af5554f8bc380b1604f24c2dd78373880" kindref="member">TOK_AMD</ref>},</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="charliteral">&apos;A&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;D&apos;</highlight><highlight class="normal">,<sp/>0x0,<sp/><ref refid="a00905_1ab52345149881cbf184ed8dbc45774908abcc84dac310829c9a62148765a8a250e" kindref="member">TOK_AD</ref>},</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="charliteral">&apos;A&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;M&apos;</highlight><highlight class="normal">,<sp/>0x0,<sp/><ref refid="a00905_1ab52345149881cbf184ed8dbc45774908a088bd7f385e2a4096728599e6bebc7b7" kindref="member">TOK_AM</ref>},</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="charliteral">&apos;M&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;D&apos;</highlight><highlight class="normal">,<sp/>0x0,<sp/><ref refid="a00905_1ab52345149881cbf184ed8dbc45774908a9d157b6a03086be0fd1de4d86472d080" kindref="member">TOK_MD</ref>},</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>clang-format<sp/>off</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="a00905_1ae799752966aa2ea9694b8a6731972e75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/><ref refid="a00942" kindref="compound">ReservedWordTable</ref><sp/><ref refid="a00905_1ae799752966aa2ea9694b8a6731972e75" kindref="member">ReservedAddresses</ref>[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;SP&quot;</highlight><highlight class="normal">,<sp/>2,<sp/>0x0000},</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;LCL&quot;</highlight><highlight class="normal">,<sp/>3,<sp/>0x0001},</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;ARG&quot;</highlight><highlight class="normal">,<sp/>3,<sp/>0x0002},</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;THIS&quot;</highlight><highlight class="normal">,<sp/>4,<sp/>0x0003},</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;THAT&quot;</highlight><highlight class="normal">,<sp/>4,<sp/>0x0004},</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;SCREEN&quot;</highlight><highlight class="normal">,<sp/>5,<sp/>0x4000},</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;KBD&quot;</highlight><highlight class="normal">,<sp/>3,<sp/>0x6000},</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>clang-format<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="a00946_1a3892c05ec60454b2a695452a238e18d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00946_1a3892c05ec60454b2a695452a238e18d2" kindref="member">Scanner::Scanner</ref>()<sp/>:</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_fsr(0),</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_offs(0)</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a00897_1a3b7e26319acf069b65ddb8e0f3f34812" kindref="member" tooltip="True if the character is in the range of [a-zA-Z]">isLetter</ref>(ch)<sp/>||<sp/><ref refid="a00897_1a3072f15c6cc44192ad127f00ab7430cd" kindref="member" tooltip="True if the character is in the range of [0-9]">isDecimal</ref>(ch)<sp/>||<sp/>ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;-&apos;</highlight><highlight class="normal"><sp/>||<sp/>ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;_&apos;</highlight><highlight class="normal"><sp/>||<sp/>ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>initializeTables();</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Scanner::scanCode(<ref refid="a00905_1a1256a43300d83510604c7b9755796e01" kindref="member">Token</ref>&amp;<sp/>tok)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Scanner::initializeTables()</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>block;</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01285_1a60a1083d1af7068a54330d565ddcb44f" kindref="member">extractCode</ref>(block,<sp/></highlight><highlight class="charliteral">&apos;[&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;]&apos;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.setIndex(_code.size());</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_code.push_back(block);</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Save<sp/>0<sp/>-<sp/>15<sp/>as<sp/>a<sp/>string.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>16;<sp/>++i)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01294_1ac95ab910b82639657337e5a3f6b634ed" kindref="member">save</ref>(<ref refid="a01238_1a3a5e5db497a735c1cec92d748b513c9d" kindref="member">Char::toString</ref>(i));</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>determine<sp/>the<sp/>first<sp/>static<sp/>register.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_fsr<sp/>=<sp/><ref refid="a01294_1a414a40b1cf631e4125e828c2607ee137" kindref="member">_stringTable</ref>.<ref refid="a01274_1a1c40fbac04597a5f4255de48cc2830c9" kindref="member">size</ref>();</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84" refid="a01353_1aecf5a1159531823bd1e53aac834e9f73" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01353_1aecf5a1159531823bd1e53aac834e9f73" kindref="member">Scanner::getCode</ref>(<ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx)</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(idx<sp/>&lt;<sp/>_code.size())</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest<sp/>=<sp/>_code.at(idx);</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01285_1a0aa5a628913e1c8f04db54201f97e1a7" kindref="member">syntaxError</ref>(</highlight><highlight class="stringliteral">&quot;code<sp/>index<sp/>out<sp/>of<sp/>bounds&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Scanner::scanSymbol(<ref refid="a01289" kindref="compound">Token</ref>&amp;<sp/>tok)</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ch<sp/>=<sp/><ref refid="a01285_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;get();</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00897_1a3b7e26319acf069b65ddb8e0f3f34812" kindref="member" tooltip="True if the character is in the range of [a-zA-Z]">isLetter</ref>(ch)<sp/>||<sp/>ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;_&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>cmp;</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="a00905_1ad47a4e14037dad618c52c200c3c35fc0" kindref="member">isValidCharacter</ref>(ch))</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmp.push_back((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)ch);</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ch<sp/>=<sp/><ref refid="a01285_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;get();</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01285_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;putback((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)ch);</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>KeywordTable&amp;<sp/>res<sp/>:<sp/><ref refid="a00905_1a30e923dda3e21a2da18e80be744949c7" kindref="member">Reserved</ref>)</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cmp<sp/>==<sp/>res.str)</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.<ref refid="a01289_1aa299ccac72d52b74f3ebc2ce2dcf96a1" kindref="member">setType</ref>(res.tok);</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(res.tok<sp/>==<sp/><ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a4ab563e860977220dd359e7df2a3db53" kindref="member">TOK_ASM</ref>)</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanCode(tok);</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>it&apos;s<sp/>not<sp/>a<sp/>reserved<sp/>word<sp/>save<sp/>it<sp/>as<sp/>an<sp/>identifier,</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>use<sp/>it<sp/>as<sp/>either<sp/>a<sp/>label<sp/>or<sp/>a<sp/>static<sp/>variable.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"></highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.<ref refid="a01289_1aa299ccac72d52b74f3ebc2ce2dcf96a1" kindref="member">setType</ref>(<ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8a79fe4d72ec11f5d2ba06c0f0818bc383" kindref="member">TOK_IDENTIFIER</ref>);</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.<ref refid="a01289_1a5bcb92d0834eedab9aa27d7e3316e59b" kindref="member">setIndex</ref>(<ref refid="a01285_1ac95ab910b82639657337e5a3f6b634ed" kindref="member">save</ref>(cmp));</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pre<sp/>save<sp/>all<sp/>the<sp/>reserved<sp/>names</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00942" kindref="compound">ReservedWordTable</ref>&amp;<sp/>res<sp/>:<sp/><ref refid="a00905_1ae799752966aa2ea9694b8a6731972e75" kindref="member">ReservedAddresses</ref>)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01294_1ac95ab910b82639657337e5a3f6b634ed" kindref="member">save</ref>(res.val);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>it&apos;s<sp/>not<sp/>already<sp/>saved,<sp/>save<sp/>it<sp/>as<sp/>well.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(res.address<sp/>&gt;<sp/>16)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01294_1ac95ab910b82639657337e5a3f6b634ed" kindref="member">save</ref>(<ref refid="a01238_1a3a5e5db497a735c1cec92d748b513c9d" kindref="member">Char::toString</ref>(res.address));</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Scanner::scanDecimal(<ref refid="a00905_1a9a9dde9280f429162b9c9d91279c7f26" kindref="member">Token</ref>&amp;<sp/>tok)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ch<sp/>=<sp/><ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;get();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;1&apos;</highlight><highlight class="normal"><sp/>||<sp/>ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;0&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>the<sp/>next<sp/>characters.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>lh<sp/>=<sp/>(char)<ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;peek();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(lh<sp/>&gt;=<sp/></highlight><highlight class="charliteral">&apos;0&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>lh<sp/>&lt;=<sp/></highlight><highlight class="charliteral">&apos;9&apos;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.setType(ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;1&apos;</highlight><highlight class="normal"><sp/>?<sp/><ref refid="a00905_1ab52345149881cbf184ed8dbc45774908a4a3cce8834d15a4d16c2a53273864549" kindref="member">TOK_ONE</ref><sp/>:<sp/><ref refid="a00905_1ab52345149881cbf184ed8dbc45774908a8d150987e2f8f89304456e401c7de979" kindref="member">TOK_ZERO</ref>);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;putback((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)ch);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>v;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="a00906_1a3072f15c6cc44192ad127f00ab7430cd" kindref="member" tooltip="True if the character is in the range of [0-9]">isDecimal</ref>(ch))</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ch<sp/>=<sp/><ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;get();</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00906_1a3072f15c6cc44192ad127f00ab7430cd" kindref="member" tooltip="True if the character is in the range of [0-9]">isDecimal</ref>(ch))</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v.push_back((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)ch);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.setType(<ref refid="a00905_1ab52345149881cbf184ed8dbc45774908ad0f4584c48727b093746e2500d3e315c" kindref="member">TOK_INTEGER</ref>);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.setIndex(<ref refid="a01294_1ac95ab910b82639657337e5a3f6b634ed" kindref="member">save</ref>(v));</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ch<sp/>&gt;<sp/>-1)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;putback((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)ch);</highlight></codeline>
 <codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="126"><highlight class="normal"></highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Scanner::scanDigit(<ref refid="a00905_1a1256a43300d83510604c7b9755796e01" kindref="member">Token</ref>&amp;<sp/>tok)</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ch<sp/>=<sp/><ref refid="a01285_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;peek();</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"></highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>v;</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="a00897_1a3072f15c6cc44192ad127f00ab7430cd" kindref="member" tooltip="True if the character is in the range of [0-9]">isDecimal</ref>(ch)<sp/>||<sp/>ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;-&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ch<sp/>=<sp/><ref refid="a01285_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;get();</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00897_1a3072f15c6cc44192ad127f00ab7430cd" kindref="member" tooltip="True if the character is in the range of [0-9]">isDecimal</ref>(ch)<sp/>||<sp/>ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;-&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v.push_back((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)ch);</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01285_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;putback((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)ch);</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"></highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.setType(<ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8af65d8765d7554151c22a5de2475e4a04" kindref="member">TOK_INTEGER</ref>);</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.setIndex(<ref refid="a01285_1ac95ab910b82639657337e5a3f6b634ed" kindref="member">save</ref>(<ref refid="a01229_1a532f1147a1db35423d47c99351d146d0" kindref="member">Char::toInt32</ref>(v)));</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"></highlight></codeline>
-<codeline lineno="145" refid="a01353_1a4997cadc71378e0fd99ba4309507442c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01353_1a4997cadc71378e0fd99ba4309507442c" kindref="member">Scanner::scan</ref>(<ref refid="a01289" kindref="compound">Token</ref>&amp;<sp/>tok)</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a01285_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref><sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01285_1a0aa5a628913e1c8f04db54201f97e1a7" kindref="member">syntaxError</ref>(</highlight><highlight class="stringliteral">&quot;No<sp/>supplied<sp/>stream&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="127" refid="a00946_1aff82440b93c9dbacb6e0243ef5c75f60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="a00946_1aff82440b93c9dbacb6e0243ef5c75f60" kindref="member">Scanner::firstStaticRegister</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="128"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_fsr;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="a00946_1a5a52101959a1324e168049b8d681131d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="a00946_1a5a52101959a1324e168049b8d681131d" kindref="member">Scanner::nextStaticRegister</ref>()</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>_fsr<sp/>+<sp/>_offs;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++_offs;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Scanner::extractRSymbol(<ref refid="a01298" kindref="compound">Token</ref>&amp;<sp/>tok)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>str;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ch<sp/>=<sp/><ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;get();</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="a00906_1a3072f15c6cc44192ad127f00ab7430cd" kindref="member" tooltip="True if the character is in the range of [0-9]">isDecimal</ref>(ch))</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str.push_back((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)ch);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ch<sp/>=<sp/><ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;get();</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="149"><highlight class="normal"></highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.<ref refid="a01289_1a30cd135b1d593a583b727309323138ad" kindref="member">clear</ref>();</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;putback((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)ch);</highlight></codeline>
 <codeline lineno="151"><highlight class="normal"></highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ch;</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((ch<sp/>=<sp/><ref refid="a01285_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;get())<sp/>&gt;<sp/>0)</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.<ref refid="a01289_1ae4eadcf3980d196a66db3dc5a1c0d4bd" kindref="member">setLine</ref>(<ref refid="a01285_1ac7ff4bb59d95de6dcd83f827794086f2" kindref="member">_line</ref>);</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"></highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(ch)</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;#&apos;</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01285_1a16d67c5310c35106dd5caed204460adb" kindref="member">scanLineComment</ref>();</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a01285_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;peek()<sp/>==<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01285_1a16d67c5310c35106dd5caed204460adb" kindref="member">scanLineComment</ref>();</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a01285_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;peek()<sp/>==<sp/></highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01285_1af515b00a44514c004aaefa7da2944674" kindref="member">scanMultiLineComment</ref>();</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;-&apos;</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>Digits09:</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01285_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;putback((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)ch);</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanDigit(tok);</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;_&apos;</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>UpperCaseAz:</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>LowerCaseAz:</highlight></codeline>
-<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01285_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;putback((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)ch);</highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanSymbol(tok);</highlight></codeline>
-<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;\r&apos;</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\r&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/><ref refid="a01285_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;peek()<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01285_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;get();</highlight></codeline>
-<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++<ref refid="a01285_1ac7ff4bb59d95de6dcd83f827794086f2" kindref="member">_line</ref>;</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;\t&apos;</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01285_1a4b419e3a4f91e1f4f136ead8941b7c5e" kindref="member">scanWhiteSpace</ref>();</highlight></codeline>
-<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01285_1a0aa5a628913e1c8f04db54201f97e1a7" kindref="member">syntaxError</ref>(</highlight><highlight class="stringliteral">&quot;unknown<sp/>character<sp/>parsed<sp/>&apos;&quot;</highlight><highlight class="normal">,<sp/>ch,<sp/></highlight><highlight class="stringliteral">&quot;&apos;&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="193"><highlight class="normal"></highlight></codeline>
-<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.<ref refid="a01289_1aa299ccac72d52b74f3ebc2ce2dcf96a1" kindref="member">setType</ref>(<ref refid="a00905_1a091fad0d0b4814af2f1f3f51d62033c8aa3110406fa7d6ce5c6dba8fd3594d633" kindref="member">TOK_EOF</ref>);</highlight></codeline>
-<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="196"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::VirtualMachine</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint64_t<sp/>iv<sp/>=<sp/><ref refid="a01238_1a93f6e45cc3480aa1403694a46af317cb" kindref="member">Char::toUint64</ref>(str);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(iv<sp/>&lt;<sp/>16)</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.<ref refid="a01298_1aa299ccac72d52b74f3ebc2ce2dcf96a1" kindref="member">setType</ref>(<ref refid="a00905_1ab52345149881cbf184ed8dbc45774908ad0f4584c48727b093746e2500d3e315c" kindref="member">TOK_INTEGER</ref>);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.<ref refid="a01298_1a5bcb92d0834eedab9aa27d7e3316e59b" kindref="member">setIndex</ref>(<ref refid="a01294_1ac95ab910b82639657337e5a3f6b634ed" kindref="member">save</ref>(str));</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Scanner::readSymbol(<ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="164"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ch<sp/>=<sp/><ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;get();</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest.clear();</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>first<sp/>should<sp/>be<sp/>a<sp/>letter<sp/>prior</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>entry<sp/>into<sp/>this<sp/>method.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="a00906_1a3b7e26319acf069b65ddb8e0f3f34812" kindref="member" tooltip="True if the character is in the range of [a-zA-Z]">isLetter</ref>(ch)<sp/>||<sp/><ref refid="a00906_1a3072f15c6cc44192ad127f00ab7430cd" kindref="member" tooltip="True if the character is in the range of [0-9]">isDecimal</ref>(ch)<sp/>||<sp/>ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal"><sp/>||<sp/>ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;_&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest.push_back((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)ch);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ch<sp/>=<sp/><ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;get();</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;putback((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)ch);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Scanner::testSingleRegister(<ref refid="a00905_1a9a9dde9280f429162b9c9d91279c7f26" kindref="member">Token</ref>&amp;<sp/>tok)</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>tries<sp/>to<sp/>resolve<sp/>the<sp/>case<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>a<sp/>single<sp/>destination<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>example,<sp/>A=&lt;expression&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ch<sp/>=<sp/><ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;get();</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nx<sp/>=<sp/><ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;peek();</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="a00906_1a3b7e26319acf069b65ddb8e0f3f34812" kindref="member" tooltip="True if the character is in the range of [a-zA-Z]">isLetter</ref>(nx))</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(ch)</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;A&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.setType(<ref refid="a00905_1ab52345149881cbf184ed8dbc45774908a0537cef36a1e6265be68356ab5cdead0" kindref="member">TOK_A</ref>);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;D&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.setType(<ref refid="a00905_1ab52345149881cbf184ed8dbc45774908a56a0c3c5c2e60c4815989d806ad4cf7c" kindref="member">TOK_D</ref>);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;M&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.setType(<ref refid="a00905_1ab52345149881cbf184ed8dbc45774908ab581a0e588797e0c6496e87b6811d588" kindref="member">TOK_M</ref>);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;R&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a00906_1a3072f15c6cc44192ad127f00ab7430cd" kindref="member" tooltip="True if the character is in the range of [0-9]">isDecimal</ref>(nx)<sp/>&amp;&amp;<sp/>extractRSymbol(tok))</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;[[fallthrough]];</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>just<sp/>keep<sp/>going</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;putback((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)ch);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Scanner::testMultipleRegisterAndJump(<ref refid="a00905_1a9a9dde9280f429162b9c9d91279c7f26" kindref="member">Token</ref>&amp;<sp/>tok)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="217"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>tries<sp/>to<sp/>resolve<sp/>the<sp/>case<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>a<sp/>multiple<sp/>destination<sp/>registers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>example,<sp/>MD=&lt;expression&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pc<sp/>=<sp/><ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;get();</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ch<sp/>=<sp/><ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;get();</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nx<sp/>=<sp/><ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;peek();</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="a00906_1a3b7e26319acf069b65ddb8e0f3f34812" kindref="member" tooltip="True if the character is in the range of [a-zA-Z]">isLetter</ref>(nx))</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nx<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>KeywordTable&amp;<sp/>djt<sp/>:<sp/><ref refid="a00905_1ae2f6ce5908b46df7a68cf1eb884200b1" kindref="member">DestAndJumpTable</ref>)</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pc<sp/>==<sp/>djt.a<sp/>&amp;&amp;<sp/>ch<sp/>==<sp/>djt.b<sp/>&amp;&amp;<sp/>nx<sp/>==<sp/>djt.c)</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nx<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>consume<sp/>the<sp/>next</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;get();</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.setType(djt.tok);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;putback((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)ch);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;putback((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)pc);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Scanner::scanSymbol(<ref refid="a00905_1a9a9dde9280f429162b9c9d91279c7f26" kindref="member">Token</ref>&amp;<sp/>tok)</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Test<sp/>the<sp/>simple<sp/>case<sp/>first</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(testSingleRegister(tok))</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Test<sp/>the<sp/>multiple<sp/>destination<sp/>case,<sp/>as</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>well<sp/>as<sp/>the<sp/>jump<sp/>symbols.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(testMultipleRegisterAndJump(tok))</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>nothing<sp/>has<sp/>been<sp/>ruled<sp/>out,<sp/>so<sp/>read<sp/>what&apos;s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>available<sp/>and<sp/>test<sp/>it<sp/>against<sp/>reserved<sp/>words</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>buf;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>readSymbol(buf);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ReservedWordTable&amp;<sp/>ele<sp/>:<sp/><ref refid="a00905_1ae799752966aa2ea9694b8a6731972e75" kindref="member">ReservedAddresses</ref>)</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a01238_1acadfc20f5f4f4ff24916c56d4aafc07c" kindref="member" tooltip="Tests the strings for equality ">Char::equals</ref>(buf.c_str(),</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ele.val,</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::min(buf.size(),<sp/>ele.len)))</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.setType(<ref refid="a00905_1ab52345149881cbf184ed8dbc45774908ad0f4584c48727b093746e2500d3e315c" kindref="member">TOK_INTEGER</ref>);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.setIndex(<ref refid="a01294_1a414a40b1cf631e4125e828c2607ee137" kindref="member">_stringTable</ref>.<ref refid="a01274_1a9ed2e1e8ac63d2383b14f2a1f9fd3247" kindref="member">get</ref>(<ref refid="a01238_1a3a5e5db497a735c1cec92d748b513c9d" kindref="member">Char::toString</ref>(ele.address)));</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>any<sp/>other<sp/>string<sp/>should<sp/>be<sp/>saved<sp/>and<sp/>looked<sp/>back<sp/>up</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.setType(<ref refid="a00905_1ab52345149881cbf184ed8dbc45774908abf7077806b8936246ac762409fdbcc19" kindref="member">TOK_LABEL</ref>);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.setIndex(<ref refid="a01294_1ac95ab910b82639657337e5a3f6b634ed" kindref="member">save</ref>(buf));</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285" refid="a00946_1aa9e49e0419656f2c55d98ed200ceb7f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00946_1aa9e49e0419656f2c55d98ed200ceb7f2" kindref="member">Scanner::scan</ref>(<ref refid="a01298" kindref="compound">Token</ref>&amp;<sp/>tok)</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref><sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="a01266" kindref="compound">Exception</ref>(</highlight><highlight class="stringliteral">&quot;no<sp/>stream<sp/>was<sp/>supplied<sp/>to<sp/>the<sp/>scanner&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.<ref refid="a01298_1a30cd135b1d593a583b727309323138ad" kindref="member">clear</ref>();</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ch;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((ch<sp/>=<sp/><ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;get())<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.<ref refid="a01298_1ae4eadcf3980d196a66db3dc5a1c0d4bd" kindref="member">setLine</ref>(<ref refid="a01294_1ac7ff4bb59d95de6dcd83f827794086f2" kindref="member">_line</ref>);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(ch)</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;#&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01294_1a16d67c5310c35106dd5caed204460adb" kindref="member">scanLineComment</ref>();</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;peek()<sp/>==<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01294_1a16d67c5310c35106dd5caed204460adb" kindref="member">scanLineComment</ref>();</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;@&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.<ref refid="a01298_1aa299ccac72d52b74f3ebc2ce2dcf96a1" kindref="member">setType</ref>(<ref refid="a00905_1ab52345149881cbf184ed8dbc45774908a6e216370a7594ccc1bba1c215c1aea55" kindref="member">TOK_AT</ref>);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;-&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.<ref refid="a01298_1aa299ccac72d52b74f3ebc2ce2dcf96a1" kindref="member">setType</ref>(<ref refid="a00905_1ab52345149881cbf184ed8dbc45774908a4ff9eb9fe01140f2790d23262aee15b9" kindref="member">TOK_MINUS</ref>);</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;&amp;&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.<ref refid="a01298_1aa299ccac72d52b74f3ebc2ce2dcf96a1" kindref="member">setType</ref>(<ref refid="a00905_1ab52345149881cbf184ed8dbc45774908a57fc3c8374e06e1a4aad4dd701ddfc14" kindref="member">TOK_AND</ref>);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;|&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.<ref refid="a01298_1aa299ccac72d52b74f3ebc2ce2dcf96a1" kindref="member">setType</ref>(<ref refid="a00905_1ab52345149881cbf184ed8dbc45774908a4d7b6070721cbd12a68714ef366b7710" kindref="member">TOK_OR</ref>);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;!&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.<ref refid="a01298_1aa299ccac72d52b74f3ebc2ce2dcf96a1" kindref="member">setType</ref>(<ref refid="a00905_1ab52345149881cbf184ed8dbc45774908aa40c60bb7f9740a9bf55e8483a17b2cf" kindref="member">TOK_NOT</ref>);</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;;&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.<ref refid="a01298_1aa299ccac72d52b74f3ebc2ce2dcf96a1" kindref="member">setType</ref>(<ref refid="a00905_1ab52345149881cbf184ed8dbc45774908a5a07d14bb9d7796ce1fd76da13d97329" kindref="member">TOK_SEMI_COLON</ref>);</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;+&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.<ref refid="a01298_1aa299ccac72d52b74f3ebc2ce2dcf96a1" kindref="member">setType</ref>(<ref refid="a00905_1ab52345149881cbf184ed8dbc45774908aa25dfa8318505862372dc7e5ab7a1105" kindref="member">TOK_PLUS</ref>);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;=&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.<ref refid="a01298_1aa299ccac72d52b74f3ebc2ce2dcf96a1" kindref="member">setType</ref>(<ref refid="a00905_1ab52345149881cbf184ed8dbc45774908a9f29e07041ce4ada94e31fc4188ff8eb" kindref="member">TOK_EQUAL</ref>);</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;(&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.<ref refid="a01298_1aa299ccac72d52b74f3ebc2ce2dcf96a1" kindref="member">setType</ref>(<ref refid="a00905_1ab52345149881cbf184ed8dbc45774908a1d63c313df724c7f5becbc7061c98233" kindref="member">TOK_L_PAREN</ref>);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;)&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.<ref refid="a01298_1aa299ccac72d52b74f3ebc2ce2dcf96a1" kindref="member">setType</ref>(<ref refid="a00905_1ab52345149881cbf184ed8dbc45774908af9015f131c8e3d89a5c90de1f2c71c12" kindref="member">TOK_R_PAREN</ref>);</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>Digits09:</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;putback((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)ch);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanDecimal(tok);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;_&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>LowerCaseAz:</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>UpperCaseAz:</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;putback((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)ch);</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scanSymbol(tok);</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;\r&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\r&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/><ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;peek()<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01294_1a553484b098225d77804ffcfbf0382922" kindref="member">_stream</ref>-&gt;get();</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01294_1ac7ff4bb59d95de6dcd83f827794086f2" kindref="member">_line</ref>++;</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;\t&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01294_1a4b419e3a4f91e1f4f136ead8941b7c5e" kindref="member">scanWhiteSpace</ref>();</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01294_1a0aa5a628913e1c8f04db54201f97e1a7" kindref="member">syntaxError</ref>(</highlight><highlight class="stringliteral">&quot;unknown<sp/>character<sp/>parsed<sp/>&apos;&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)ch,<sp/></highlight><highlight class="charliteral">&apos;\&apos;&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tok.<ref refid="a01298_1aa299ccac72d52b74f3ebc2ce2dcf96a1" kindref="member">setType</ref>(<ref refid="a00905_1ab52345149881cbf184ed8dbc45774908a0b04f0c4d57271cb40554de353dc604a" kindref="member">TOK_EOF</ref>);</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="362"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Assembler</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/VirtualMachine/Scanner.cpp"/>
+    <location file="Source/Assembler/Scanner.cpp"/>
   </compounddef>
 </doxygen>

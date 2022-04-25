@@ -1,57 +1,19 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01570" kind="page">
-    <compoundname>Hc03</compoundname>
-    <title>Assembler</title>
+    <compoundname>Hc01</compoundname>
+    <title>Utils</title>
     <briefdescription>
-<para>Implements the machine code compiler. </para>    </briefdescription>
+<para>Implements general functionality that is used project wide. </para>    </briefdescription>
     <detaileddescription>
-<para>Implements the machine code compiler.</para><para><linebreak/>
+<para>Implements general functionality that is used project wide.</para><para><linebreak/>
 <linebreak/>
- The primary job of the assembler is to convert the input assembly into 16 bit binary codes that can be handed to the Cpu.</para><sect1 id="a01570_1Hc03Asm2Mc">
-<title>Asm2Mc</title>
-<para>Is the executable that implements this conversion.</para><sect2 id="a01570_1Hc03Asm2McUsage">
-<title>Usage</title>
-<para><programlisting filename=".txt"><codeline><highlight class="normal">Usage:<sp/>asm2mc<sp/>&lt;options&gt;<sp/>&lt;arg[0]<sp/>..<sp/>arg[n]&gt;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/>where<sp/>arg[0]<sp/>is<sp/>the<sp/>input<sp/>file</highlight></codeline>
-<codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-h,<sp/>--help<sp/><sp/><sp/><sp/>Display<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>help<sp/>message</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-o,<sp/>--output<sp/><sp/>Specify<sp/>an<sp/>output<sp/>file.</highlight></codeline>
-</programlisting></para><para>The following code illustrates the conversion. <linebreak/>
-<linebreak/>
- <linebreak/>
-<bold>Assembly:</bold> <programlisting filename=".txt"><codeline><highlight class="normal">@123</highlight></codeline>
-<codeline><highlight class="normal">D=A</highlight></codeline>
-<codeline><highlight class="normal">@0</highlight></codeline>
-<codeline><highlight class="normal">M=D</highlight></codeline>
-<codeline><highlight class="normal">@1</highlight></codeline>
-<codeline><highlight class="normal">M=D</highlight></codeline>
-<codeline><highlight class="normal">@2</highlight></codeline>
-<codeline><highlight class="normal">M=D</highlight></codeline>
-<codeline><highlight class="normal">@32766<sp/>D=A;JMP</highlight></codeline>
-</programlisting></para><para><linebreak/>
-<bold>Machine-Code</bold>:<linebreak/>
-<programlisting filename=".txt"><codeline><highlight class="normal">0000000001111011</highlight></codeline>
-<codeline><highlight class="normal">1110110000010000</highlight></codeline>
-<codeline><highlight class="normal">0000000000000000</highlight></codeline>
-<codeline><highlight class="normal">1110001100001000</highlight></codeline>
-<codeline><highlight class="normal">0000000000000001</highlight></codeline>
-<codeline><highlight class="normal">1110001100001000</highlight></codeline>
-<codeline><highlight class="normal">0000000000000010</highlight></codeline>
-<codeline><highlight class="normal">1110001100001000</highlight></codeline>
-<codeline><highlight class="normal">0111111111111110</highlight></codeline>
-<codeline><highlight class="normal">1110110000010111</highlight></codeline>
-</programlisting> <linebreak/>
- </para></sect2>
-<sect2 id="a01570_1Hc03AsmGrammar">
-<title>Grammar</title>
-<para>The grammar for the assembly can be found <ulink url="../../Source/Assembler/ASM.grm">here</ulink>.</para><para><linebreak/>
-</para></sect2>
-</sect1>
-<sect1 id="a01570_1Hc03Defined">
+<itemizedlist>
+<listitem><para><ulink url="../../Source/Utils/">Source/Utils/</ulink> provides string conversion and console output utilities.</para></listitem><listitem><para><ulink url="../../Source/Utils/CommandLine">Source/Utils/CommandLine</ulink> implements a command line argument parser.</para></listitem><listitem><para><ulink url="../../Source/Utils/UserInterface">Source/Utils/UserInterface</ulink> provides a terminal drawing context.</para></listitem></itemizedlist>
+</para><para><linebreak/>
+</para><sect1 id="a01571_1Hc02Defined">
 <title>Defined in</title>
-<para>The source is defined in <ulink url="../../Source/Assembler">Source/Assembler</ulink><linebreak/>
+<para>The source is defined in <ulink url="../../Source/Chips">Source/Chips</ulink><linebreak/>
 </para></sect1>
     </detaileddescription>
   </compounddef>

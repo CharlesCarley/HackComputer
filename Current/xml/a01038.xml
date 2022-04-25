@@ -1,233 +1,172 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
-  <compounddef id="a01038" kind="class" language="C++" prot="public" abstract="yes">
-    <compoundname>Hack::Chips::IMemorySegment</compoundname>
-    <basecompoundref refid="a00990" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; uint8_t, 8 &gt;</basecompoundref>
-    <derivedcompoundref refid="a01010" prot="public" virt="non-virtual">Hack::Chips::DefaultMemorySegment&lt; High, ElementCount &gt;</derivedcompoundref>
-    <includes local="no">Source/Chips/IMemorySegment.h</includes>
-    <templateparamlist>
-      <param>
-        <type><ref refid="a01358" kindref="compound">uint16_t</ref></type>
-        <declname>High</declname>
-        <defname>High</defname>
-      </param>
-      <param>
-        <type><ref refid="a01358" kindref="compound">uint16_t</ref></type>
-        <declname>ElementCount</declname>
-        <defname>ElementCount</defname>
-      </param>
-    </templateparamlist>
-      <sectiondef kind="public-static-attrib">
-      <memberdef kind="variable" id="a01038_1aaf6fabe5db913367af8e124cd5ef30e1" prot="public" static="yes" mutable="no">
-        <type>const <ref refid="a01358" kindref="compound">uint16_t</ref></type>
-        <definition>const uint16_t Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::HighAddress</definition>
-        <argsstring></argsstring>
-        <name>HighAddress</name>
-        <initializer>= High</initializer>
+  <compounddef id="a01038" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>Hack::Chips::DMux8Way</compoundname>
+    <basecompoundref refid="a01002" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; uint16_t, 16 &gt;</basecompoundref>
+    <includes local="no">Source/Chips/DMux8Way.h</includes>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="a01038_1a73aa8775df607d9ececf2626872ffb66" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::DMux8Way::evaluate</definition>
+        <argsstring>()</argsstring>
+        <name>evaluate</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="32" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="32" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01038_1aa48a78ccd8824a135002ef01092a2f92" prot="public" static="yes" mutable="no">
-        <type>const <ref refid="a01358" kindref="compound">uint16_t</ref></type>
-        <definition>const uint16_t Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::Max</definition>
-        <argsstring></argsstring>
-        <name>Max</name>
-        <initializer>= (High &lt;&lt; 1) + 1</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="33" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="33" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="protected-attrib">
-      <memberdef kind="variable" id="a01038_1a9683f3a1be07724bee0f2adfe59d90de" prot="protected" static="no" mutable="no">
-        <type><ref refid="a01358" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::_address</definition>
-        <argsstring></argsstring>
-        <name>_address</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="38" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="38" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01038_1af4867aa2cec1454452363f1850fe39e6" prot="protected" static="no" mutable="no">
-        <type><ref refid="a01358" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::_in</definition>
-        <argsstring></argsstring>
-        <name>_in</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="36" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="36" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01038_1abee2969f70c7cad9ae4fc48c95b4ee34" prot="protected" static="no" mutable="no">
-        <type><ref refid="a01358" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::_out</definition>
-        <argsstring></argsstring>
-        <name>_out</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="37" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="37" bodyend="-1"/>
+        <location file="Source/Chips/DMux8Way.h" line="30" column="1" bodyfile="Source/Chips/DMux8Way.cpp" bodystart="133" bodyend="167"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01038_1a3f938d0e6ba15d79fedeece254327efe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01038_1acf482fcb79b7f1ea5c425c27c49a74c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::IMemorySegment</definition>
+        <definition>Hack::Chips::DMux8Way::DMux8Way</definition>
         <argsstring>()</argsstring>
-        <name>IMemorySegment</name>
+        <name>DMux8Way</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="41" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="78" bodyend="84"/>
-        <references refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00473" startline="52">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
-        <references refid="a00896_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00470" startline="40">Hack::Chips::Bit7</references>
+        <location file="Source/Chips/DMux8Way.h" line="33" column="1" bodyfile="Source/Chips/DMux8Way.cpp" bodystart="32" bodyend="35"/>
+        <references refid="a01002_1a5a604431fa35bc87e0d7f4328b4ad4a1" compoundref="a00485" startline="112" endline="115">Hack::Chips::Chip&lt; uint16_t, 16 &gt;::assignBit</references>
       </memberdef>
-      <memberdef kind="function" id="a01038_1abd9da88a0da67c4ea4cebb492cef6b78" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
-        <type><ref refid="a01358" kindref="compound">uint16_t</ref></type>
-        <definition>virtual uint16_t Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::get</definition>
-        <argsstring>(const size_t &amp;index) const =0</argsstring>
-        <name>get</name>
-        <reimplementedby refid="a01010_1a94ef78fc28470abbd4b024e2b6d44510">get</reimplementedby>
-        <param>
-          <type>const size_t &amp;</type>
-          <declname>index</declname>
-        </param>
+      <memberdef kind="function" id="a01038_1abb3738614a44f125a3f3170cfeaa41e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::DMux8Way::getA</definition>
+        <argsstring>()</argsstring>
+        <name>getA</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="55" column="1"/>
+        <location file="Source/Chips/DMux8Way.h" line="39" column="1" bodyfile="Source/Chips/DMux8Way.cpp" bodystart="51" bodyend="56"/>
+        <references refid="a01002_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00485" startline="100" endline="103">Hack::Chips::Chip&lt; uint16_t, 16 &gt;::getBit</references>
       </memberdef>
-      <memberdef kind="function" id="a01038_1a8886f1e112e29f9f4ba7ec1d6550cb7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
-        <type><ref refid="a01358" kindref="compound">uint16_t</ref></type>
-        <definition>virtual uint16_t Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::getOut</definition>
-        <argsstring>()=0</argsstring>
+      <memberdef kind="function" id="a01038_1a6151f81178e5a08789ac06b2b44fa9bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::DMux8Way::getB</definition>
+        <argsstring>()</argsstring>
+        <name>getB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/DMux8Way.h" line="41" column="1" bodyfile="Source/Chips/DMux8Way.cpp" bodystart="58" bodyend="63"/>
+        <references refid="a01002_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00485" startline="100" endline="103">Hack::Chips::Chip&lt; uint16_t, 16 &gt;::getBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01038_1aa7c7fd1db4e48eff6a91dd60c405a3ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::DMux8Way::getC</definition>
+        <argsstring>()</argsstring>
+        <name>getC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/DMux8Way.h" line="43" column="1" bodyfile="Source/Chips/DMux8Way.cpp" bodystart="65" bodyend="70"/>
+        <references refid="a01002_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00485" startline="100" endline="103">Hack::Chips::Chip&lt; uint16_t, 16 &gt;::getBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01038_1a2e013f1b61831e56294f1f9f1101ea13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::DMux8Way::getD</definition>
+        <argsstring>()</argsstring>
+        <name>getD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/DMux8Way.h" line="45" column="1" bodyfile="Source/Chips/DMux8Way.cpp" bodystart="72" bodyend="77"/>
+        <references refid="a01002_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00485" startline="100" endline="103">Hack::Chips::Chip&lt; uint16_t, 16 &gt;::getBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01038_1a7b76060d80f9badaa1db6edf01626d51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::DMux8Way::getE</definition>
+        <argsstring>()</argsstring>
+        <name>getE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/DMux8Way.h" line="47" column="1" bodyfile="Source/Chips/DMux8Way.cpp" bodystart="79" bodyend="84"/>
+        <references refid="a01002_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00485" startline="100" endline="103">Hack::Chips::Chip&lt; uint16_t, 16 &gt;::getBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01038_1af3c9353fb0320dacacf875e3e1d85d4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::DMux8Way::getF</definition>
+        <argsstring>()</argsstring>
+        <name>getF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/DMux8Way.h" line="49" column="1" bodyfile="Source/Chips/DMux8Way.cpp" bodystart="86" bodyend="91"/>
+        <references refid="a01002_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00485" startline="100" endline="103">Hack::Chips::Chip&lt; uint16_t, 16 &gt;::getBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01038_1aa8225987b02c7ffeb6f89cd9f742131f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::DMux8Way::getG</definition>
+        <argsstring>()</argsstring>
+        <name>getG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/DMux8Way.h" line="51" column="1" bodyfile="Source/Chips/DMux8Way.cpp" bodystart="93" bodyend="98"/>
+        <references refid="a01002_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00485" startline="100" endline="103">Hack::Chips::Chip&lt; uint16_t, 16 &gt;::getBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01038_1a1cab370c7f20c85b4a403c4403aee911" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::DMux8Way::getH</definition>
+        <argsstring>()</argsstring>
+        <name>getH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/DMux8Way.h" line="53" column="1" bodyfile="Source/Chips/DMux8Way.cpp" bodystart="100" bodyend="105"/>
+        <references refid="a01002_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00485" startline="100" endline="103">Hack::Chips::Chip&lt; uint16_t, 16 &gt;::getBit</references>
+      </memberdef>
+      <memberdef kind="function" id="a01038_1a75c8382bcaa366855d0256b28d6c96ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a01382" kindref="compound">uint8_t</ref></type>
+        <definition>uint8_t Hack::Chips::DMux8Way::getOut</definition>
+        <argsstring>()</argsstring>
         <name>getOut</name>
-        <reimplementedby refid="a01010_1a111146260aff6fd6a3c98ecbbfa14d26">getOut</reimplementedby>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="53" column="1"/>
+        <location file="Source/Chips/DMux8Way.h" line="55" column="1" bodyfile="Source/Chips/DMux8Way.cpp" bodystart="107" bodyend="130"/>
+        <references refid="a01002_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00485" startline="100" endline="103">Hack::Chips::Chip&lt; uint16_t, 16 &gt;::getBit</references>
       </memberdef>
-      <memberdef kind="function" id="a01038_1adb872ebbc96cf2a449721f1a40754353" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01038_1af84f536333042ba130a9f6ac956ac363" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::lock</definition>
-        <argsstring>(bool state)</argsstring>
-        <name>lock</name>
-        <param>
-          <type>bool</type>
-          <declname>state</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="51" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="125" bodyend="131"/>
-        <references refid="a00896_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" compoundref="a00470" startline="39">Hack::Chips::Bit6</references>
-      </memberdef>
-      <memberdef kind="function" id="a01038_1a50ee5c87fba14eaaaa5c564c55d1f757" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::lockScreen</definition>
-        <argsstring>()</argsstring>
-        <name>lockScreen</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="63" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="134" bodyend="136"/>
-      </memberdef>
-      <memberdef kind="function" id="a01038_1a928606841d9d6b0130aa7dbdbe7d294e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
-        <type><ref refid="a01358" kindref="compound">uint16_t</ref> *</type>
-        <definition>virtual uint16_t* Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::pointer</definition>
-        <argsstring>(const size_t &amp;address) const =0</argsstring>
-        <name>pointer</name>
-        <reimplementedby refid="a01010_1ad4b862a78421101fef5afc7ad76cd942">pointer</reimplementedby>
-        <param>
-          <type>const size_t &amp;</type>
-          <declname>address</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="57" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a01038_1a9dcf0c5af1012d1d54492f216eb85a61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::setAddress</definition>
-        <argsstring>(const uint16_t &amp;address)</argsstring>
-        <name>setAddress</name>
-        <param>
-          <type>const <ref refid="a01358" kindref="compound">uint16_t</ref> &amp;</type>
-          <declname>address</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="45" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="94" bodyend="102"/>
-      </memberdef>
-      <memberdef kind="function" id="a01038_1a8ad357587c581db496ef05f4fcd5c292" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::setClock</definition>
-        <argsstring>(bool clock)</argsstring>
-        <name>setClock</name>
-        <param>
-          <type>bool</type>
-          <declname>clock</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="49" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="115" bodyend="122"/>
-        <references refid="a00896_1a89719f49d745047f03bca80bfff48bd2a8487c63d5dca7d87b359feca1a2c2ac8" compoundref="a00470" startline="34">Hack::Chips::Bit1</references>
-        <references refid="a00896_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00470" startline="40">Hack::Chips::Bit7</references>
-      </memberdef>
-      <memberdef kind="function" id="a01038_1a105e374a106c298b3a0426b8387260d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::setIn</definition>
-        <argsstring>(const uint16_t &amp;input)</argsstring>
+        <definition>void Hack::Chips::DMux8Way::setIn</definition>
+        <argsstring>(bool input)</argsstring>
         <name>setIn</name>
         <param>
-          <type>const <ref refid="a01358" kindref="compound">uint16_t</ref> &amp;</type>
+          <type>bool</type>
           <declname>input</declname>
         </param>
         <briefdescription>
@@ -236,17 +175,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="43" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="87" bodyend="91"/>
-        <references refid="a00896_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00470" startline="40">Hack::Chips::Bit7</references>
+        <location file="Source/Chips/DMux8Way.h" line="35" column="1" bodyfile="Source/Chips/DMux8Way.cpp" bodystart="37" bodyend="41"/>
+        <references refid="a01002_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00485" startline="124" endline="127">Hack::Chips::Chip&lt; uint16_t, 16 &gt;::applyBit</references>
+        <references refid="a01002_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="a00485" startline="106" endline="109">Hack::Chips::Chip&lt; uint16_t, 16 &gt;::setBit</references>
       </memberdef>
-      <memberdef kind="function" id="a01038_1a053f5b47a681f7e04ec9b8039f68363f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01038_1a3c683f9b48d2a2ca3db4c703df084e7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::setLoad</definition>
-        <argsstring>(bool load)</argsstring>
-        <name>setLoad</name>
+        <definition>void Hack::Chips::DMux8Way::setSel</definition>
+        <argsstring>(const uint8_t &amp;selection)</argsstring>
+        <name>setSel</name>
         <param>
-          <type>bool</type>
-          <declname>load</declname>
+          <type>const <ref refid="a01382" kindref="compound">uint8_t</ref> &amp;</type>
+          <declname>selection</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -254,103 +194,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="47" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="105" bodyend="112"/>
-        <references refid="a00896_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" compoundref="a00470" startline="33">Hack::Chips::Bit0</references>
-        <references refid="a00896_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00470" startline="40">Hack::Chips::Bit7</references>
-      </memberdef>
-      <memberdef kind="function" id="a01038_1a2fe4fb4ddf831109accb6c95f6dbf990" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
-        <type>void</type>
-        <definition>virtual void Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::setValue</definition>
-        <argsstring>(const size_t &amp;address, const uint16_t &amp;value) const =0</argsstring>
-        <name>setValue</name>
-        <reimplementedby refid="a01010_1ac10efeb1855e75c99717840b6bca98d7">setValue</reimplementedby>
-        <param>
-          <type>const size_t &amp;</type>
-          <declname>address</declname>
-        </param>
-        <param>
-          <type>const <ref refid="a01358" kindref="compound">uint16_t</ref> &amp;</type>
-          <declname>value</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="59" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a01038_1a6556e06d0b5c14d72336a25f67e2b217" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
-        <type>void</type>
-        <definition>virtual void Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::sync</definition>
-        <argsstring>()</argsstring>
-        <name>sync</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="65" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="65" bodyend="67"/>
-      </memberdef>
-      <memberdef kind="function" id="a01038_1a09442f604ad85fdd0b02c8bdf2ca729d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::unlockScreen</definition>
-        <argsstring>()</argsstring>
-        <name>unlockScreen</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="69" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="139" bodyend="141"/>
-      </memberdef>
-      <memberdef kind="function" id="a01038_1aae4cff10f3ec39ef2c6b08c42fcc937c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
-        <type>void</type>
-        <definition>virtual void Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::zero</definition>
-        <argsstring>() const =0</argsstring>
-        <name>zero</name>
-        <reimplementedby refid="a01010_1af6db3804cc8555a3a302e9264885d5b4">zero</reimplementedby>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="61" column="1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="protected-func">
-      <memberdef kind="function" id="a01038_1a0adcc77581ef7d16475c343df92db060" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
-        <definition>bool Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::isDirty</definition>
-        <argsstring>() override</argsstring>
-        <name>isDirty</name>
-        <reimplements refid="a00990_1a63bb368bb0827830235759b33718d1b4">isDirty</reimplements>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="72" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="144" bodyend="147"/>
-        <references refid="a00896_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00470" startline="40">Hack::Chips::Bit7</references>
-        <references refid="a00896_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" compoundref="a00470" startline="39">Hack::Chips::Bit6</references>
-      </memberdef>
-      <memberdef kind="function" id="a01038_1a28c590cc3f546ec6938c5742dd8c7467" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;::markDirty</definition>
-        <argsstring>()</argsstring>
-        <name>markDirty</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="74" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="150" bodyend="153"/>
-        <references refid="a00896_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00470" startline="40">Hack::Chips::Bit7</references>
+        <location file="Source/Chips/DMux8Way.h" line="37" column="1" bodyfile="Source/Chips/DMux8Way.cpp" bodystart="43" bodyend="49"/>
+        <references refid="a01002_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00485" startline="124" endline="127">Hack::Chips::Chip&lt; uint16_t, 16 &gt;::applyBit</references>
+        <references refid="a01002_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="a00485" startline="106" endline="109">Hack::Chips::Chip&lt; uint16_t, 16 &gt;::setBit</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -358,84 +204,60 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="152">
-        <label>Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;</label>
+      <node id="138">
+        <label>Hack::Chips::Chip&lt; uint16_t, 16 &gt;</label>
+        <link refid="a01002"/>
+      </node>
+      <node id="137">
+        <label>Hack::Chips::DMux8Way</label>
         <link refid="a01038"/>
-        <childnode refid="153" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="153">
-        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
-        <link refid="a00990"/>
-      </node>
-      <node id="154">
-        <label>Hack::Chips::DefaultMemorySegment&lt; High, ElementCount &gt;</label>
-        <link refid="a01010"/>
-        <childnode refid="152" relation="public-inheritance">
+        <childnode refid="138" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="155">
-        <label>Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;</label>
-        <link refid="a01038"/>
-        <childnode refid="156" relation="public-inheritance">
-        </childnode>
-        <childnode refid="158" relation="usage">
-          <edgelabel>HighAddress</edgelabel>
-          <edgelabel>_address</edgelabel>
-          <edgelabel>_out</edgelabel>
-          <edgelabel>_in</edgelabel>
-          <edgelabel>Max</edgelabel>
-        </childnode>
-      </node>
-      <node id="158">
-        <label>uint16_t</label>
-        <link refid="a01358"/>
-      </node>
-      <node id="157">
-        <label>uint8_t</label>
-        <link refid="a01370"/>
-      </node>
-      <node id="156">
-        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
-        <link refid="a00990"/>
-        <childnode refid="157" relation="usage">
+      <node id="140">
+        <label>Hack::Chips::Chip&lt; uint16_t, 16 &gt;</label>
+        <link refid="a01002"/>
+        <childnode refid="141" relation="usage">
           <edgelabel>_bits</edgelabel>
         </childnode>
       </node>
+      <node id="139">
+        <label>Hack::Chips::DMux8Way</label>
+        <link refid="a01038"/>
+        <childnode refid="140" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="141">
+        <label>uint16_t</label>
+        <link refid="a01370"/>
+      </node>
     </collaborationgraph>
-    <location file="Source/Chips/IMemorySegment.h" line="30" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="29" bodyend="75"/>
+    <location file="Source/Chips/DMux8Way.h" line="28" column="1" bodyfile="Source/Chips/DMux8Way.h" bodystart="27" bodyend="56"/>
     <listofallmembers>
-      <member refid="a01038_1a9683f3a1be07724bee0f2adfe59d90de" prot="protected" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>_address</name></member>
-      <member refid="a00990_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>_bits</name></member>
-      <member refid="a01038_1af4867aa2cec1454452363f1850fe39e6" prot="protected" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>_in</name></member>
-      <member refid="a01038_1abee2969f70c7cad9ae4fc48c95b4ee34" prot="protected" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>_out</name></member>
-      <member refid="a00990_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>applyBit</name></member>
-      <member refid="a00990_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>assignBit</name></member>
-      <member refid="a00990_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>Chip</name></member>
-      <member refid="a00990_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>clearBit</name></member>
-      <member refid="a01038_1abd9da88a0da67c4ea4cebb492cef6b78" prot="public" virt="pure-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>get</name></member>
-      <member refid="a00990_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>getBit</name></member>
-      <member refid="a01038_1a8886f1e112e29f9f4ba7ec1d6550cb7b" prot="public" virt="pure-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>getOut</name></member>
-      <member refid="a01038_1aaf6fabe5db913367af8e124cd5ef30e1" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>HighAddress</name></member>
-      <member refid="a01038_1a3f938d0e6ba15d79fedeece254327efe" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>IMemorySegment</name></member>
-      <member refid="a01038_1a0adcc77581ef7d16475c343df92db060" prot="protected" virt="virtual"><scope>Hack::Chips::IMemorySegment</scope><name>isDirty</name></member>
-      <member refid="a01038_1adb872ebbc96cf2a449721f1a40754353" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>lock</name></member>
-      <member refid="a01038_1a50ee5c87fba14eaaaa5c564c55d1f757" prot="public" virt="virtual"><scope>Hack::Chips::IMemorySegment</scope><name>lockScreen</name></member>
-      <member refid="a01038_1a28c590cc3f546ec6938c5742dd8c7467" prot="protected" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>markDirty</name></member>
-      <member refid="a01038_1aa48a78ccd8824a135002ef01092a2f92" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>Max</name></member>
-      <member refid="a01038_1a928606841d9d6b0130aa7dbdbe7d294e" prot="public" virt="pure-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>pointer</name></member>
-      <member refid="a01038_1a9dcf0c5af1012d1d54492f216eb85a61" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>setAddress</name></member>
-      <member refid="a00990_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>setBit</name></member>
-      <member refid="a01038_1a8ad357587c581db496ef05f4fcd5c292" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>setClock</name></member>
-      <member refid="a01038_1a105e374a106c298b3a0426b8387260d3" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>setIn</name></member>
-      <member refid="a01038_1a053f5b47a681f7e04ec9b8039f68363f" prot="public" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>setLoad</name></member>
-      <member refid="a01038_1a2fe4fb4ddf831109accb6c95f6dbf990" prot="public" virt="pure-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>setValue</name></member>
-      <member refid="a01038_1a6556e06d0b5c14d72336a25f67e2b217" prot="public" virt="virtual"><scope>Hack::Chips::IMemorySegment</scope><name>sync</name></member>
-      <member refid="a01038_1a09442f604ad85fdd0b02c8bdf2ca729d" prot="public" virt="virtual"><scope>Hack::Chips::IMemorySegment</scope><name>unlockScreen</name></member>
-      <member refid="a01038_1aae4cff10f3ec39ef2c6b08c42fcc937c" prot="public" virt="pure-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>zero</name></member>
-      <member refid="a00990_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::IMemorySegment</scope><name>~Chip</name></member>
+      <member refid="a01002_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::DMux8Way</scope><name>_bits</name></member>
+      <member refid="a01002_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux8Way</scope><name>applyBit</name></member>
+      <member refid="a01002_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux8Way</scope><name>assignBit</name></member>
+      <member refid="a01002_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux8Way</scope><name>Chip</name></member>
+      <member refid="a01002_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux8Way</scope><name>clearBit</name></member>
+      <member refid="a01038_1acf482fcb79b7f1ea5c425c27c49a74c8" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux8Way</scope><name>DMux8Way</name></member>
+      <member refid="a01038_1a73aa8775df607d9ececf2626872ffb66" prot="private" virt="non-virtual"><scope>Hack::Chips::DMux8Way</scope><name>evaluate</name></member>
+      <member refid="a01038_1abb3738614a44f125a3f3170cfeaa41e5" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux8Way</scope><name>getA</name></member>
+      <member refid="a01038_1a6151f81178e5a08789ac06b2b44fa9bc" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux8Way</scope><name>getB</name></member>
+      <member refid="a01002_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux8Way</scope><name>getBit</name></member>
+      <member refid="a01038_1aa7c7fd1db4e48eff6a91dd60c405a3ec" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux8Way</scope><name>getC</name></member>
+      <member refid="a01038_1a2e013f1b61831e56294f1f9f1101ea13" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux8Way</scope><name>getD</name></member>
+      <member refid="a01038_1a7b76060d80f9badaa1db6edf01626d51" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux8Way</scope><name>getE</name></member>
+      <member refid="a01038_1af3c9353fb0320dacacf875e3e1d85d4c" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux8Way</scope><name>getF</name></member>
+      <member refid="a01038_1aa8225987b02c7ffeb6f89cd9f742131f" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux8Way</scope><name>getG</name></member>
+      <member refid="a01038_1a1cab370c7f20c85b4a403c4403aee911" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux8Way</scope><name>getH</name></member>
+      <member refid="a01038_1a75c8382bcaa366855d0256b28d6c96ab" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux8Way</scope><name>getOut</name></member>
+      <member refid="a01002_1a63bb368bb0827830235759b33718d1b4" prot="protected" virt="virtual"><scope>Hack::Chips::DMux8Way</scope><name>isDirty</name></member>
+      <member refid="a01002_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux8Way</scope><name>setBit</name></member>
+      <member refid="a01038_1af84f536333042ba130a9f6ac956ac363" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux8Way</scope><name>setIn</name></member>
+      <member refid="a01038_1a3c683f9b48d2a2ca3db4c703df084e7b" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux8Way</scope><name>setSel</name></member>
+      <member refid="a01002_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::DMux8Way</scope><name>~Chip</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -1,179 +1,309 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
-  <compounddef id="a00992" kind="struct" language="C++" prot="public">
-    <compoundname>Hack::Chips::CpuState</compoundname>
-    <includes local="no">Source/Chips/Computer.h</includes>
-      <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="a00992_1a7b6ea40228d9e23b00fd2ee43133a6f3" prot="public" static="no" mutable="no">
-        <type><ref refid="a01352" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::CpuState::addrM</definition>
-        <argsstring></argsstring>
-        <name>addrM</name>
+  <compounddef id="a00992" kind="class" language="C++" prot="public">
+    <compoundname>Hack::Chips::BitUtils</compoundname>
+    <includes local="no">Source/Chips/BitUtils.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type><ref refid="a01376" kindref="compound">uint8_t</ref></type>
+        <declname>Count</declname>
+        <defname>Count</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="a00992_1a266db4b38d31abd421bdb6356b6d8f6a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::BitUtils&lt; T, Count &gt;::applyBit</definition>
+        <argsstring>(T &amp;bits, const T &amp;index, bool value)</argsstring>
+        <name>applyBit</name>
+        <param>
+          <type>T &amp;</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Computer.h" line="34" column="1" bodyfile="Source/Chips/Computer.h" bodystart="34" bodyend="-1"/>
+        <location file="Source/Chips/BitUtils.h" line="114" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="240" bodyend="243"/>
       </memberdef>
-      <memberdef kind="variable" id="a00992_1a5606ebaf9ae4d826b421dce343c223f9" prot="public" static="no" mutable="no">
-        <type><ref refid="a01352" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::CpuState::clock</definition>
-        <argsstring></argsstring>
-        <name>clock</name>
+      <memberdef kind="function" id="a00992_1a8de689aae4b89fd7d06c770aed087e37" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::BitUtils&lt; T, Count &gt;::assignBit</definition>
+        <argsstring>(T &amp;bits, const T &amp;index)</argsstring>
+        <name>assignBit</name>
+        <param>
+          <type>T &amp;</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>index</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Computer.h" line="37" column="1" bodyfile="Source/Chips/Computer.h" bodystart="37" bodyend="-1"/>
+        <location file="Source/Chips/BitUtils.h" line="110" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="220" bodyend="227"/>
       </memberdef>
-      <memberdef kind="variable" id="a00992_1a3bdae3da64a41fd9b98171cea0f1b1c1" prot="public" static="no" mutable="no">
-        <type><ref refid="a01352" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::CpuState::inst</definition>
-        <argsstring></argsstring>
-        <name>inst</name>
+      <memberdef kind="function" id="a00992_1adc5cf65b1d1ca5d3562cb57711d78ce9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::BitUtils&lt; T, Count &gt;::clearBit</definition>
+        <argsstring>(T &amp;bits, const T &amp;index)</argsstring>
+        <name>clearBit</name>
+        <param>
+          <type>T &amp;</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>index</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Computer.h" line="38" column="1" bodyfile="Source/Chips/Computer.h" bodystart="38" bodyend="-1"/>
+        <location file="Source/Chips/BitUtils.h" line="112" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="230" bodyend="237"/>
       </memberdef>
-      <memberdef kind="variable" id="a00992_1a4898fb8aa66f45e0e07d4b754b8d93ba" prot="public" static="no" mutable="no">
-        <type><ref refid="a01352" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::CpuState::outM</definition>
-        <argsstring></argsstring>
-        <name>outM</name>
+      <memberdef kind="function" id="a00992_1ae3a8aa786d194eb21dc8a71b3d8de9af" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T Hack::Chips::BitUtils&lt; T, Count &gt;::extract</definition>
+        <argsstring>(const T &amp;in, const T &amp;lo, const T &amp;hi)</argsstring>
+        <name>extract</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>hi</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Computer.h" line="33" column="1" bodyfile="Source/Chips/Computer.h" bodystart="33" bodyend="-1"/>
+        <location file="Source/Chips/BitUtils.h" line="104" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="187" bodyend="201"/>
       </memberdef>
-      <memberdef kind="variable" id="a00992_1a8ff12fb359df46f8c2b7bb4536b03bd2" prot="public" static="no" mutable="no">
-        <type><ref refid="a01352" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::CpuState::pc</definition>
-        <argsstring></argsstring>
-        <name>pc</name>
+      <memberdef kind="function" id="a00992_1a62cc15c18ccdd215a9ef08e8a8021564" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::BitUtils&lt; T, Count &gt;::getBit</definition>
+        <argsstring>(const T &amp;bits, const T &amp;index)</argsstring>
+        <name>getBit</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>index</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Computer.h" line="32" column="1" bodyfile="Source/Chips/Computer.h" bodystart="32" bodyend="-1"/>
+        <location file="Source/Chips/BitUtils.h" line="106" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="204" bodyend="211"/>
       </memberdef>
-      <memberdef kind="variable" id="a00992_1ae932a7489f8bdecf33ffd43c9410130f" prot="public" static="no" mutable="no">
-        <type><ref refid="a01352" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::CpuState::ram</definition>
-        <argsstring></argsstring>
-        <name>ram</name>
+      <memberdef kind="function" id="a00992_1ac31a6aa587c55f64f6573492652e1730" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T Hack::Chips::BitUtils&lt; T, Count &gt;::pack</definition>
+        <argsstring>(const uint8_t *array)</argsstring>
+        <name>pack</name>
+        <param>
+          <type>const <ref refid="a01376" kindref="compound">uint8_t</ref> *</type>
+          <declname>array</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Computer.h" line="40" column="1" bodyfile="Source/Chips/Computer.h" bodystart="40" bodyend="-1"/>
+        <location file="Source/Chips/BitUtils.h" line="95" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="134" bodyend="143"/>
       </memberdef>
-      <memberdef kind="variable" id="a00992_1a764dbb644ba5bb323c97e09cb26ae122" prot="public" static="no" mutable="no">
-        <type><ref refid="a01352" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::CpuState::regA</definition>
-        <argsstring></argsstring>
-        <name>regA</name>
+      <memberdef kind="function" id="a00992_1a15ca6f92f9fcfddbec6acfc088207580" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T Hack::Chips::BitUtils&lt; T, Count &gt;::pack</definition>
+        <argsstring>(const char *array)</argsstring>
+        <name>pack</name>
+        <param>
+          <type>const char *</type>
+          <declname>array</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Computer.h" line="36" column="1" bodyfile="Source/Chips/Computer.h" bodystart="36" bodyend="-1"/>
+        <location file="Source/Chips/BitUtils.h" line="97" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="146" bodyend="155"/>
       </memberdef>
-      <memberdef kind="variable" id="a00992_1a918ad89614f75599104e9c1a8123c916" prot="public" static="no" mutable="no">
-        <type><ref refid="a01352" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::CpuState::regD</definition>
-        <argsstring></argsstring>
-        <name>regD</name>
+      <memberdef kind="function" id="a00992_1a6fd7a5127f6124328bcdce2c4f8f3746" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T Hack::Chips::BitUtils&lt; T, Count &gt;::pack</definition>
+        <argsstring>(const bool *array)</argsstring>
+        <name>pack</name>
+        <param>
+          <type>const bool *</type>
+          <declname>array</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Computer.h" line="35" column="1" bodyfile="Source/Chips/Computer.h" bodystart="35" bodyend="-1"/>
+        <location file="Source/Chips/BitUtils.h" line="99" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="158" bodyend="167"/>
       </memberdef>
-      <memberdef kind="variable" id="a00992_1af9c11b4b51b6cd89cdfdcccdf52341db" prot="public" static="no" mutable="no">
-        <type><ref refid="a01352" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::CpuState::reset</definition>
-        <argsstring></argsstring>
-        <name>reset</name>
+      <memberdef kind="function" id="a00992_1a8f720f0a46647449b7ad1d440bc7bcc0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type><ref refid="a01376" kindref="compound">uint8_t</ref></type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Hack::Chips::BitUtils&lt; T, Count &gt;::pack</definition>
+        <argsstring>(const bool array[N])</argsstring>
+        <name>pack</name>
+        <param>
+          <type>const bool</type>
+          <declname>array</declname>
+          <array>[N]</array>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Computer.h" line="41" column="1" bodyfile="Source/Chips/Computer.h" bodystart="41" bodyend="-1"/>
+        <location file="Source/Chips/BitUtils.h" line="102" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="171" bodyend="184"/>
       </memberdef>
-      <memberdef kind="variable" id="a00992_1af1398587a09d5722d1d794f87d427a35" prot="public" static="no" mutable="no">
-        <type><ref refid="a01352" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::CpuState::writeM</definition>
-        <argsstring></argsstring>
-        <name>writeM</name>
+      <memberdef kind="function" id="a00992_1ad5c0a4604c2e2f1f84cfc932d703996f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::BitUtils&lt; T, Count &gt;::printBit</definition>
+        <argsstring>(const T &amp;bits)</argsstring>
+        <name>printBit</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>bits</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Computer.h" line="39" column="1" bodyfile="Source/Chips/Computer.h" bodystart="39" bodyend="-1"/>
+        <location file="Source/Chips/BitUtils.h" line="116" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="246" bodyend="255"/>
+        <references refid="a01256_1aa75558c74eafde74be9d33818a79a3fe" compoundref="a00806" startline="199" endline="204">Hack::Console::writeLine</references>
+      </memberdef>
+      <memberdef kind="function" id="a00992_1ab1a8c5970c7a58f399c82c96c872a920" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::BitUtils&lt; T, Count &gt;::setBit</definition>
+        <argsstring>(T &amp;bits, const T &amp;index)</argsstring>
+        <name>setBit</name>
+        <param>
+          <type>T &amp;</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/BitUtils.h" line="108" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="214" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="a00992_1aeb4746b405570c6d38aebba1532c324c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::BitUtils&lt; T, Count &gt;::unpack</definition>
+        <argsstring>(const T &amp;value, bool *array)</argsstring>
+        <name>unpack</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>array</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/BitUtils.h" line="91" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="120" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="a00992_1a8c82269dbbcc05e6a5db4bba94b32c98" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::BitUtils&lt; T, Count &gt;::unpack</definition>
+        <argsstring>(const T &amp;value, uint8_t *array)</argsstring>
+        <name>unpack</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type><ref refid="a01376" kindref="compound">uint8_t</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/BitUtils.h" line="93" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="127" bodyend="131"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <collaborationgraph>
-      <node id="113">
-        <label>uint16_t</label>
-        <link refid="a01352"/>
-      </node>
-      <node id="112">
-        <label>Hack::Chips::CpuState</label>
-        <link refid="a00992"/>
-        <childnode refid="113" relation="usage">
-          <edgelabel>regA</edgelabel>
-          <edgelabel>outM</edgelabel>
-          <edgelabel>regD</edgelabel>
-          <edgelabel>pc</edgelabel>
-          <edgelabel>inst</edgelabel>
-          <edgelabel>reset</edgelabel>
-          <edgelabel>ram</edgelabel>
-          <edgelabel>clock</edgelabel>
-          <edgelabel>addrM</edgelabel>
-          <edgelabel>writeM</edgelabel>
-          <edgelabel>...</edgelabel>
-        </childnode>
-      </node>
-    </collaborationgraph>
-    <location file="Source/Chips/Computer.h" line="31" column="1" bodyfile="Source/Chips/Computer.h" bodystart="30" bodyend="42"/>
+    <location file="Source/Chips/BitUtils.h" line="89" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="88" bodyend="117"/>
     <listofallmembers>
-      <member refid="a00992_1a7b6ea40228d9e23b00fd2ee43133a6f3" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>addrM</name></member>
-      <member refid="a00992_1a5606ebaf9ae4d826b421dce343c223f9" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>clock</name></member>
-      <member refid="a00992_1a3bdae3da64a41fd9b98171cea0f1b1c1" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>inst</name></member>
-      <member refid="a00992_1a4898fb8aa66f45e0e07d4b754b8d93ba" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>outM</name></member>
-      <member refid="a00992_1a8ff12fb359df46f8c2b7bb4536b03bd2" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>pc</name></member>
-      <member refid="a00992_1ae932a7489f8bdecf33ffd43c9410130f" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>ram</name></member>
-      <member refid="a00992_1a764dbb644ba5bb323c97e09cb26ae122" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>regA</name></member>
-      <member refid="a00992_1a918ad89614f75599104e9c1a8123c916" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>regD</name></member>
-      <member refid="a00992_1af9c11b4b51b6cd89cdfdcccdf52341db" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>reset</name></member>
-      <member refid="a00992_1af1398587a09d5722d1d794f87d427a35" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>writeM</name></member>
+      <member refid="a00992_1a266db4b38d31abd421bdb6356b6d8f6a" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>applyBit</name></member>
+      <member refid="a00992_1a8de689aae4b89fd7d06c770aed087e37" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>assignBit</name></member>
+      <member refid="a00992_1adc5cf65b1d1ca5d3562cb57711d78ce9" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>clearBit</name></member>
+      <member refid="a00992_1ae3a8aa786d194eb21dc8a71b3d8de9af" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>extract</name></member>
+      <member refid="a00992_1a62cc15c18ccdd215a9ef08e8a8021564" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>getBit</name></member>
+      <member refid="a00992_1ac31a6aa587c55f64f6573492652e1730" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>pack</name></member>
+      <member refid="a00992_1a15ca6f92f9fcfddbec6acfc088207580" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>pack</name></member>
+      <member refid="a00992_1a6fd7a5127f6124328bcdce2c4f8f3746" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>pack</name></member>
+      <member refid="a00992_1a8f720f0a46647449b7ad1d440bc7bcc0" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>pack</name></member>
+      <member refid="a00992_1ad5c0a4604c2e2f1f84cfc932d703996f" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>printBit</name></member>
+      <member refid="a00992_1ab1a8c5970c7a58f399c82c96c872a920" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>setBit</name></member>
+      <member refid="a00992_1aeb4746b405570c6d38aebba1532c324c" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>unpack</name></member>
+      <member refid="a00992_1a8c82269dbbcc05e6a5db4bba94b32c98" prot="public" virt="non-virtual"><scope>Hack::Chips::BitUtils</scope><name>unpack</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

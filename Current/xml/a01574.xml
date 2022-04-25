@@ -1,44 +1,34 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01574" kind="page">
-    <compoundname>Hc07</compoundname>
-    <title>Computer</title>
+    <compoundname>Hc04</compoundname>
+    <title>Virtual Machine</title>
     <briefdescription>
-<para>Defines the main program that ties the components together. </para>    </briefdescription>
+<para>Implements the virtual machine compiler. </para>    </briefdescription>
     <detaileddescription>
-<para>Defines the main program that ties the components together.</para><sect1 id="a01574_1Hc07Computer">
-<title>Computer</title>
-<para>The <ref refid="a00907" kindref="compound">Hack::Computer</ref> class links together the ROM, RAM and CPU chips. It accepts as input an array of 16 bit integers.</para><para>This projects responsibilities are to tie together the <ref refid="a00907" kindref="compound">Hack::Computer</ref> class with rest of the system. And combine the result with a runtime interface. The runtime interface executes the supplied input with a user selected implementation.</para><para><linebreak/>
+<para>Implements the virtual machine compiler.</para><para><linebreak/>
+ </para><sect1 id="a01574_1Hc04SVm2Asm">
+<title>Vm2Asm</title>
+<para>The primary job of the compiler is to switch abstractions from VM to ASM code.</para><para><linebreak/>
 <linebreak/>
-<programlisting filename=".txt"><codeline><highlight class="normal">Usage:<sp/>computer<sp/>&lt;options&gt;<sp/>&lt;arg[0]<sp/>..<sp/>arg[n]&gt;</highlight></codeline>
+<programlisting filename=".txt"><codeline><highlight class="normal">Usage:<sp/>vm2mc<sp/>&lt;options&gt;<sp/>&lt;arg[0]<sp/>..<sp/>arg[n]&gt;</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-h,<sp/>--help<sp/><sp/><sp/><sp/><sp/><sp/>Display<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>help<sp/>message</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-c<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Use<sp/>the<sp/>command<sp/>line<sp/>runtime</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-d<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Debug<sp/>the<sp/>supplied<sp/>file</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-r,<sp/>--run-end<sp/><sp/><sp/>Run<sp/>the<sp/>supplied<sp/>file<sp/>until<sp/>it<sp/>exits</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-t,<sp/>--trace<sp/><sp/><sp/><sp/><sp/>Output<sp/>a<sp/>dump<sp/>of<sp/>the<sp/>non-zero<sp/>portions<sp/>of<sp/>ram</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--show-vm<sp/><sp/><sp/>Output<sp/>the<sp/>emitted<sp/>VM<sp/>code<sp/>from<sp/>the<sp/>supplied<sp/>file</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--show-</highlight><highlight class="keyword">asm</highlight><highlight class="normal"><sp/><sp/>Output<sp/>the<sp/>emitted<sp/>assembly<sp/>code<sp/>from<sp/>the<sp/>supplied<sp/>file</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--show-mc<sp/><sp/><sp/>Output<sp/>the<sp/>emitted<sp/>machine<sp/>code<sp/>from<sp/>the<sp/>supplied<sp/>file</highlight></codeline>
-</programlisting></para><para>The runtime interface is composed of multiple back ends. <linebreak/>
-<itemizedlist>
-<listitem><para>Command Line - Runs the file until completion</para></listitem><listitem><para>Command Line Debugger - Debugs the state of execution.</para></listitem><listitem><para>SDL runtime - Displays only the screen memory.</para></listitem></itemizedlist>
-</para><para>If SDL is enabled, the default runtime will be SDL. Otherwise, the default runtime is the command line debugger.</para><para><linebreak/>
-</para><sect2 id="a01574_1Hc07Debugger">
-<title>Command Line Debugger.</title>
-<para>The debugger will execute one instruction from ROM and refresh the console with the current state of the circuits. <linebreak/>
+<codeline><highlight class="normal"><sp/><sp/>where<sp/>arg[0]<sp/>is<sp/>the<sp/>input<sp/>file</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-h,<sp/>--help<sp/><sp/><sp/><sp/>Display<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>help<sp/>message</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-o,<sp/>--output<sp/><sp/>Specify<sp/>an<sp/>output<sp/>file</highlight></codeline>
+</programlisting></para><sect2 id="a01574_1Hc04Grammar">
+<title>Grammar</title>
+<para>The grammar for the VM can be found <ulink url="../../Source/VirtualMachine/VM.grm">here.</ulink> <linebreak/>
 <linebreak/>
-<itemizedlist>
-<listitem><para>The up-arrow key will initiate a tick.</para></listitem><listitem><para>The r key will reset execution.</para></listitem><listitem><para>The c key will loop execution.</para></listitem></itemizedlist>
-</para><para><linebreak/>
-<linebreak/>
-<image type="html" name="Debugger.png"></image>
+It uses extra keywords that are not in the course specification.</para><para><itemizedlist>
+<listitem><para><bold>set</bold> <computeroutput>set &lt;int&gt; &lt;int&gt;</computeroutput> Allows directly setting RAM values</para></listitem><listitem><para><bold>reset</bold> <computeroutput>reset</computeroutput> Forces a CPU reset by jumping to the end of ROM <computeroutput>@32766 D=A;JMP</computeroutput></para></listitem><listitem><para><bold>halt</bold> <computeroutput>halt</computeroutput> Will emit code that enters into an infinite loop</para></listitem></itemizedlist>
 </para><para><linebreak/>
 </para></sect2>
 </sect1>
-<sect1 id="a01574_1Hc07Defined">
+<sect1 id="a01574_1Hc04Defined">
 <title>Defined in</title>
-<para>The source is defined in <ulink url="../../Source/Computer">Source/Computer</ulink><linebreak/>
+<para>The source is defined in <ulink url="../../Source/VirtualMachine">Source/VirtualMachine</ulink><linebreak/>
 </para></sect1>
     </detaileddescription>
   </compounddef>

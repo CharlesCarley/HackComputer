@@ -7,7 +7,7 @@
 <br/>
 <br/>
 <span class="inline-text">This repository is my implementation of the </span>
-<a href="a00897.md#hack">Hack</a>
+<a href="a00906.md#hack">Hack</a>
 <span class="inline-text"> computer in C++ from the </span>
 <a href="https://www.coursera.org/learn/build-a-computer#nand2tetris-course.">NAnd2Tetris course.</a>
 <br/>
@@ -18,35 +18,35 @@ I wanted to explore a more in-depth perspective, so it does not strictly adhere 
 <br/>
 <span class="inline-text">
 It uses </span>
-<a href="a01566.md#hc00">CMake</a>
+<a href="a01575.md#hc00">CMake</a>
 <span class="inline-text"> for its build system. </span>
 <a id="index_1hc001"></a>
 <a id="project-structure"></a>
 <h2>Project Structure</h2>
 <ul>
-<li><a href="a01567.md#hc01">Utils</a>
+<li><a href="a01576.md#hc01">Utils</a>
 <span class="inline-text"> Implements general functionality that is used project wide.</span>
 </li>
-<li><a href="a01568.md#hc02">Chips</a>
+<li><a href="a01577.md#hc02">Chips</a>
 <span class="inline-text"> Implements the circuit class library.</span>
 </li>
-<li><a href="a01570.md#hc03">Assembler</a>
+<li><a href="a01579.md#hc03">Assembler</a>
 <span class="inline-text"> Implements the machine code compiler.</span>
 </li>
-<li><a href="a01571.md#hc04">Virtual Machine</a>
+<li><a href="a01580.md#hc04">Virtual Machine</a>
 <span class="inline-text"> Implements the virtual machine compiler.</span>
 </li>
-<li><a href="a01572.md#hc05">Compiler</a>
-<span class="inline-text"> Implements the compiler for the .jack format.</span>
+<li><a href="a01581.md#hc05">Compiler</a>
+<span class="inline-text"> Implements the compiler for the .jack source file.</span>
 </li>
-<li><a href="a01573.md#hc06">Bindings</a>
+<li><a href="a01582.md#hc06">Bindings</a>
 <span class="inline-text"> Provides a script language interface.</span>
 </li>
-<li><a href="a01574.md#hc07">Computer</a>
-<span class="inline-text"> Defines the main program that ties the components together.</span>
+<li><a href="a01583.md#hc07">Computer</a>
+<span class="inline-text"> Implements the primary program that ties the project&apos;s components together.</span>
 </li>
-<li><a href="a01575.md#hc08">Extra Tools</a>
-<span class="inline-text"> Optional tools that are not part of the source.</span>
+<li><a href="a01584.md#hc08">Extra Tools</a>
+<span class="inline-text"> Describes extra tools that were used that are not part of the source.</span>
 </li>
 </ul>
 <a id="index_1hc002"></a>

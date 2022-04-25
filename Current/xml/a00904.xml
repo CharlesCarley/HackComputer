@@ -1,64 +1,195 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00904" kind="namespace" language="C++">
-    <compoundname>Hack::Compiler::CodeGenerator</compoundname>
-    <innerclass refid="a01181" prot="public">Hack::Compiler::CodeGenerator::Generator</innerclass>
-    <innerclass refid="a01189" prot="public">Hack::Compiler::CodeGenerator::Symbol</innerclass>
-    <innerclass refid="a01193" prot="public">Hack::Compiler::CodeGenerator::SymbolTable</innerclass>
-    <innerclass refid="a01197" prot="public">Hack::Compiler::CodeGenerator::VmEmitter</innerclass>
-      <sectiondef kind="enum">
-      <memberdef kind="enum" id="a00904_1ac08293c0a6cadd380abba4ce7069b7bc" prot="public" static="no" strong="no">
-        <type></type>
-        <name>SymbolKind</name>
-        <enumvalue id="a00904_1ac08293c0a6cadd380abba4ce7069b7bca33eb8724d1cfb37808fb1dd2a3c24812" prot="public">
-          <name>None</name>
-          <initializer>=-1</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00904_1ac08293c0a6cadd380abba4ce7069b7bca758124b318712f1ca6e7abfcceb26517" prot="public">
-          <name>Field</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00904_1ac08293c0a6cadd380abba4ce7069b7bca4e24ef81cf7ed83a94dc616bb8b510a8" prot="public">
-          <name>Static</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00904_1ac08293c0a6cadd380abba4ce7069b7bcac16d59cf9aa39e37737b703b8d21a9ee" prot="public">
-          <name>Local</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00904_1ac08293c0a6cadd380abba4ce7069b7bcac846b86715799a34e6b35cfef36ea1bb" prot="public">
-          <name>Argument</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
+    <compoundname>Hack::Chips::BitwiseGates</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="a00904_1a84362f3ebaddfd42c327c37f29d808d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Hack::Chips::BitwiseGates::And</definition>
+        <argsstring>(const T &amp;a, const T &amp;b)</argsstring>
+        <name>And</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>b</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Generator/Symbol.h" line="28" column="1" bodyfile="Source/Compiler/Generator/Symbol.h" bodystart="27" bodyend="34"/>
+        <location file="Source/Chips/BitUtils.h" line="325" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="325" bodyend="328"/>
+      </memberdef>
+      <memberdef kind="function" id="a00904_1ad70c68df991a03702b6e44507ff2a0e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Hack::Chips::BitwiseGates::Mux</definition>
+        <argsstring>(const T &amp;a, const T &amp;b, const T &amp;s)</argsstring>
+        <name>Mux</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/BitUtils.h" line="350" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="350" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="a00904_1ae6b0c9d01ef62c0bc80a18accd7d6ca9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Hack::Chips::BitwiseGates::NAnd</definition>
+        <argsstring>(const T &amp;a, const T &amp;b)</argsstring>
+        <name>NAnd</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/BitUtils.h" line="313" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="313" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="a00904_1a3118052ddcc3b5956dccfa1c9cd50528" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Hack::Chips::BitwiseGates::NOr</definition>
+        <argsstring>(const T &amp;a, const T &amp;b)</argsstring>
+        <name>NOr</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/BitUtils.h" line="337" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="337" bodyend="340"/>
+      </memberdef>
+      <memberdef kind="function" id="a00904_1a84d09455d2c5d520a37804d10bcedef4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Hack::Chips::BitwiseGates::Not</definition>
+        <argsstring>(const T &amp;a)</argsstring>
+        <name>Not</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/BitUtils.h" line="319" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="319" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="a00904_1aa46e2bc824542f8c88678197e54892b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Hack::Chips::BitwiseGates::Or</definition>
+        <argsstring>(const T &amp;a, const T &amp;b)</argsstring>
+        <name>Or</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/BitUtils.h" line="331" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="331" bodyend="334"/>
+      </memberdef>
+      <memberdef kind="function" id="a00904_1a87f9b215940bce4b2d6ae012557b3fdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Hack::Chips::BitwiseGates::XOr</definition>
+        <argsstring>(const T &amp;a, const T &amp;b)</argsstring>
+        <name>XOr</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/BitUtils.h" line="343" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="343" bodyend="347"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Compiler/Generator/Expression.cpp" line="25" column="1"/>
+    <location file="Source/Chips/BitUtils.h" line="311" column="1"/>
   </compounddef>
 </doxygen>
