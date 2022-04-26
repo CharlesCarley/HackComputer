@@ -1,10 +1,10 @@
 #pragma once
 /*!
-\page Hc07 Computer
+\page Hc06 Computer
 
 \brief Implements the primary program that ties the project's components together.
 
-\section Hc07Computer Computer
+\section Hc06Computer Computer
 
 
 The computer executable accepts any of the source file formats that are
@@ -37,7 +37,7 @@ Usage: computer <options> <arg[0] .. arg[n]>
 \endcode
 
 \n
-\subsection Hc07Debugger Command Line Debugger.
+\subsection Hc06Debugger Command Line Debugger.
 
 The debugger will execute one instruction and refresh the console display with the current state of the chips.
 \br
@@ -47,7 +47,7 @@ The debugger will execute one instruction and refresh the console display with t
 \br
 \image html Debugger.png
 
-\defined{Hc07Defined}
+\defined{Hc06Defined}
 \defined_in{Source/Computer}
 
 */

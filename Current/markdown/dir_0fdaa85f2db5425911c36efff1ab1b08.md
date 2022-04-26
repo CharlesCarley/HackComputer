@@ -45,11 +45,11 @@
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Current/pages/Hc06.Bindings.h#L1" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Hc06.Bindings.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Current/pages/Hc06.Computer.h#L1" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Hc06.Computer.h</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Current/pages/Hc07.Computer.h#L1" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Hc07.Computer.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Current/pages/Hc07.Bindings.h#L1" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Hc07.Bindings.h</span>
 </a>
 </span>
 <br/>

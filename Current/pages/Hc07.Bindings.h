@@ -1,5 +1,5 @@
 /*!
-\page Hc06 Bindings
+\page Hc07 Bindings
 
 \brief Provides a script language interface.
 
@@ -11,7 +11,7 @@ A proof of concept Flutter application can be found in the flutter branch.
 It makes use of this interface to communicate with dart to replicate the command line debugger in Flutter.
 
 \n
-\defined{Hc06Defined}
+\defined{Hc07Defined}
 \defined_in{Source/Bindings}
 
 */

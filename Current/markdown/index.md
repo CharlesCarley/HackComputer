@@ -39,11 +39,11 @@ It uses </span>
 <li><a href="a01581.md#hc05">Compiler</a>
 <span class="inline-text"> Implements the compiler for the .jack source file.</span>
 </li>
-<li><a href="a01582.md#hc06">Bindings</a>
-<span class="inline-text"> Provides a script language interface.</span>
-</li>
-<li><a href="a01583.md#hc07">Computer</a>
+<li><a href="a01582.md#hc06">Computer</a>
 <span class="inline-text"> Implements the primary program that ties the project&apos;s components together.</span>
+</li>
+<li><a href="a01583.md#hc07">Bindings</a>
+<span class="inline-text"> Provides a script language interface.</span>
 </li>
 <li><a href="a01584.md#hc08">Extra Tools</a>
 <span class="inline-text"> Describes extra tools that were used that are not part of the source.</span>

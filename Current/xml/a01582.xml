@@ -2,18 +2,43 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01582" kind="page">
     <compoundname>Hc06</compoundname>
-    <title>Bindings</title>
+    <title>Computer</title>
     <briefdescription>
-<para>Provides a script language interface. </para>    </briefdescription>
+<para>Implements the primary program that ties the project&apos;s components together. </para>    </briefdescription>
     <detaileddescription>
-<para>Provides a script language interface.</para><para><linebreak/>
+<para>Implements the primary program that ties the project&apos;s components together.</para><sect1 id="a01582_1Hc06Computer">
+<title>Computer</title>
+<para>The computer executable accepts any of the source file formats that are defined in this project as its input. It then reduces the input into an array of 16-bit integers, and passes it to the <ref refid="a00916" kindref="compound">Computer</ref> class, and finally to the <ref refid="a01130" kindref="compound">Rom32</ref> class. The <ref refid="a01230" kindref="compound">RuntimeInterface</ref> is used to execute the code in various ways. <linebreak/>
 <linebreak/>
-It is currently on the back-burner until primary functionality is complete.</para><para><linebreak/>
+<itemizedlist>
+<listitem><para>Command Line - Runs the file until completion.</para></listitem><listitem><para>Command Line Debugger - Debugs the state of execution.</para></listitem><listitem><para>SDL Runtime - Displays only the screen memory.</para></listitem></itemizedlist>
+</para><para>If SDL is enabled, the default runtime will be SDL otherwise, the default runtime is the command line debugger.</para><para><linebreak/>
 <linebreak/>
-A proof of concept Flutter application can be found in the flutter branch. It makes use of this interface to communicate with dart to replicate the command line debugger in Flutter.</para><para><linebreak/>
-</para><sect1 id="a01582_1Hc06Defined">
+<programlisting filename=".txt"><codeline><highlight class="normal">Usage:<sp/>computer<sp/>&lt;options&gt;<sp/>&lt;arg[0]<sp/>..<sp/>arg[n]&gt;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-h,<sp/>--help<sp/><sp/><sp/><sp/><sp/><sp/>Display<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>help<sp/>message</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-c<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Use<sp/>the<sp/>command<sp/>line<sp/>runtime</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-d<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Debug<sp/>the<sp/>supplied<sp/>file</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-r,<sp/>--run-end<sp/><sp/><sp/>Run<sp/>the<sp/>supplied<sp/>file<sp/>until<sp/>it<sp/>exits</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-t,<sp/>--trace<sp/><sp/><sp/><sp/><sp/>Output<sp/>a<sp/>dump<sp/>of<sp/>the<sp/>non-zero<sp/>portions<sp/>of<sp/>ram</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--show-vm<sp/><sp/><sp/>Output<sp/>the<sp/>emitted<sp/>VM<sp/>code<sp/>from<sp/>the<sp/>supplied<sp/>file</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--show-</highlight><highlight class="keyword">asm</highlight><highlight class="normal"><sp/><sp/>Output<sp/>the<sp/>emitted<sp/>assembly<sp/>code<sp/>from<sp/>the<sp/>supplied<sp/>file</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--show-mc<sp/><sp/><sp/>Output<sp/>the<sp/>emitted<sp/>machine<sp/>code<sp/>from<sp/>the<sp/>supplied<sp/>file</highlight></codeline>
+</programlisting></para><para><linebreak/>
+</para><sect2 id="a01582_1Hc06Debugger">
+<title>Command Line Debugger.</title>
+<para>The debugger will execute one instruction and refresh the console display with the current state of the chips. <linebreak/>
+<linebreak/>
+<itemizedlist>
+<listitem><para>The up-arrow key will initiate a tick.</para></listitem><listitem><para>The r key will reset execution.</para></listitem><listitem><para>The c key will loop execution. <linebreak/>
+<linebreak/>
+<image type="html" name="Debugger.png"></image>
+</para></listitem></itemizedlist>
+</para></sect2>
+</sect1>
+<sect1 id="a01582_1Hc06Defined">
 <title>Defined in</title>
-<para>The source is defined in <ulink url="../../Source/Bindings">Source/Bindings</ulink><linebreak/>
+<para>The source is defined in <ulink url="../../Source/Computer">Source/Computer</ulink><linebreak/>
 </para></sect1>
     </detaileddescription>
   </compounddef>
