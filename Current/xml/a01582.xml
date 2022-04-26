@@ -8,7 +8,7 @@
     <detaileddescription>
 <para>Implements the machine code compiler.</para><para><linebreak/>
 <linebreak/>
-The primary job of the assembler is to convert the input assembly into 16 bit binary codes that can be handed to the Cpu.</para><para><heading level="2">Asm2Mc</heading>
+The primary job of the assembler is to convert the input assembly into 16 bit binary codes so that they can be handed to the CPU.</para><para><heading level="2">Asm2Mc</heading>
 </para><para>Is the executable that implements this conversion.</para><para><heading level="3">Usage</heading>
 </para><para><programlisting filename=".txt"><codeline><highlight class="normal">Usage:<sp/>asm2mc<sp/>&lt;options&gt;<sp/>&lt;arg[0]<sp/>..<sp/>arg[n]&gt;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/></highlight></codeline>

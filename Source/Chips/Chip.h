@@ -25,24 +25,21 @@
 
 namespace Hack::Chips
 {
-    /// <summary>
-    /// Chip is the base class for all chips defined in this system.
-    /// It uses a template integer for the <b>_bits</b> member variable.
-    /// Most chips should maintain a cache bit (usually the MSB) to
-    /// control evaluation.
-    /// Evaluation happens as follows:
-    ///  1. If the input of the chip is modified mark the cache bit.
-    ///  2. Any call to query an output should check this bit.
-    ///     a. If it is set call evaluate then return the output.
-    ///     b. If it is not set then return the output.
-    /// </summary>
-    /// <typeparam name="T">
-    /// Should be one of the uint8_t, uint16_t, uint32_t,
-    /// uint64_t, bit16_t, bit32_t, or bit64_t integer types.
-    /// </typeparam>
-    /// <typeparam name="Count">
-    /// Should reflect the total number of bits stored in T.
-    /// </typeparam>
+    
+    /*!
+     * \brief \ref Hack::Chips::Chip "Chip" is the base class for all chips defined in this system.
+     *
+     * It uses a template integer for the <b>_bits</b> member variable. Most
+     * chips should maintain a cache bit (usually the MSB) to control evaluation
+     * \br
+     *
+     * Evaluation happens as follows:
+     *
+     * - If an input on the chip is modified, mark the cache bit.
+     * - Any call to query an output will check this bit.
+     *  - If the bit is set call evaluate then return the output.
+     *  - If it is not set then return the previous output.
+     */
     template <typename T, uint8_t Count>
     class Chip
     {

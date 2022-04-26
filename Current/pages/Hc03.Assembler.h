@@ -5,7 +5,7 @@
 
 \br
 The primary job of the assembler is to convert the input assembly into
-16 bit binary codes that can be handed to the Cpu.
+16 bit binary codes so that they can be handed to the CPU.
 
 \h1 Asm2Mc
 

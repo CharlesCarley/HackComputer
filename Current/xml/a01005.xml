@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Chip.h" line="52" column="1" bodyfile="Source/Chips/Chip.h" bodystart="52" bodyend="-1"/>
+        <location file="Source/Chips/Chip.h" line="49" column="1" bodyfile="Source/Chips/Chip.h" bodystart="49" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Chip.h" line="50" column="1" bodyfile="Source/Chips/Chip.h" bodystart="94" bodyend="97"/>
+        <location file="Source/Chips/Chip.h" line="47" column="1" bodyfile="Source/Chips/Chip.h" bodystart="91" bodyend="94"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Chip.h" line="55" column="1" bodyfile="Source/Chips/Chip.h" bodystart="88" bodyend="91"/>
+        <location file="Source/Chips/Chip.h" line="52" column="1" bodyfile="Source/Chips/Chip.h" bodystart="85" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="a01005_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Chip.h" line="57" column="1"/>
+        <location file="Source/Chips/Chip.h" line="54" column="1"/>
       </memberdef>
       <memberdef kind="function" id="a01005_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -117,7 +117,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Chip.h" line="84" column="1" bodyfile="Source/Chips/Chip.h" bodystart="124" bodyend="127"/>
+        <location file="Source/Chips/Chip.h" line="81" column="1" bodyfile="Source/Chips/Chip.h" bodystart="121" bodyend="124"/>
       </memberdef>
       <memberdef kind="function" id="a01005_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -134,7 +134,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Chip.h" line="72" column="1" bodyfile="Source/Chips/Chip.h" bodystart="112" bodyend="115"/>
+        <location file="Source/Chips/Chip.h" line="69" column="1" bodyfile="Source/Chips/Chip.h" bodystart="109" bodyend="112"/>
       </memberdef>
       <memberdef kind="function" id="a01005_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -151,7 +151,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Chip.h" line="77" column="1" bodyfile="Source/Chips/Chip.h" bodystart="118" bodyend="121"/>
+        <location file="Source/Chips/Chip.h" line="74" column="1" bodyfile="Source/Chips/Chip.h" bodystart="115" bodyend="118"/>
       </memberdef>
       <memberdef kind="function" id="a01005_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -168,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Chip.h" line="62" column="1" bodyfile="Source/Chips/Chip.h" bodystart="100" bodyend="103"/>
+        <location file="Source/Chips/Chip.h" line="59" column="1" bodyfile="Source/Chips/Chip.h" bodystart="97" bodyend="100"/>
       </memberdef>
       <memberdef kind="function" id="a01005_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -185,29 +185,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Chip.h" line="67" column="1" bodyfile="Source/Chips/Chip.h" bodystart="106" bodyend="109"/>
+        <location file="Source/Chips/Chip.h" line="64" column="1" bodyfile="Source/Chips/Chip.h" bodystart="103" bodyend="106"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para><ref refid="a01005" kindref="compound">Chip</ref> is the base class for all chips defined in this system. It uses a template integer for the <bold>_bits</bold> member variable. Most chips should maintain a cache bit (usually the MSB) to control evaluation. Evaluation happens as follows: </para>    </briefdescription>
+<para><ref refid="a01005" kindref="compound">Chip</ref> is the base class for all chips defined in this system. </para>    </briefdescription>
     <detaileddescription>
-<para><orderedlist>
-<listitem><para>If the input of the chip is modified mark the cache bit.</para></listitem><listitem><para>Any call to query an output should check this bit. a. If it is set call evaluate then return the output. b. If it is not set then return the output. </para></listitem></orderedlist>
-</para><para><parameterlist kind="templateparam"><parameteritem>
-<parameternamelist>
-<parametername>T</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Should be one of the uint8_t, uint16_t, uint32_t, uint64_t, <ref refid="a00989" kindref="compound">bit16_t</ref>, <ref refid="a00993" kindref="compound">bit32_t</ref>, or <ref refid="a00997" kindref="compound">bit64_t</ref> integer types. </para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>Count</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Should reflect the total number of bits stored in T. </para></parameterdescription>
-</parameteritem>
-</parameterlist>
+<para>It uses a template integer for the <bold>_bits</bold> member variable. Most chips should maintain a cache bit (usually the MSB) to control evaluation <linebreak/>
+<linebreak/>
+ Evaluation happens as follows:</para><para><itemizedlist>
+<listitem><para>If an input on the chip is modified, mark the cache bit.</para></listitem><listitem><para>Any call to query an output will check this bit.<itemizedlist>
+<listitem><para>If the bit is set call evaluate then return the output.</para></listitem><listitem><para>If it is not set then return the previous output. </para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
 </para>    </detaileddescription>
     <collaborationgraph>
       <node id="96">
@@ -221,7 +210,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="Source/Chips/Chip.h" line="48" column="1" bodyfile="Source/Chips/Chip.h" bodystart="47" bodyend="85"/>
+    <location file="Source/Chips/Chip.h" line="45" column="1" bodyfile="Source/Chips/Chip.h" bodystart="44" bodyend="82"/>
     <listofallmembers>
       <member refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Chip</scope><name>_bits</name></member>
       <member refid="a01005_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::Chip</scope><name>applyBit</name></member>

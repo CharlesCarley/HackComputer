@@ -345,6 +345,13 @@ ALIASES += br="\n\n"
 ALIASES += sec{1}="\n\b \1\n\n"
 ALIASES += isec{1}="\n\em \1\n\n"
 
+ALIASES += class_icon="\image html class.svg \"...\" width=24px "
+
+# Links to chip classes
+ALIASES += chip{1}="\ref Hack::Chips::\1 \"\1\""
+
+
+
 # Sections
 ALIASES += h1="##"
 ALIASES += h2="###"
