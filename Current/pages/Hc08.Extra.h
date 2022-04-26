@@ -6,7 +6,7 @@
 
 \h1 Parse Tree Visual
 
-The \ref Hc05Jack2XML executable has an extra option that allows
+The Jack2XML executable has an extra option that allows
 the parse tree to be output in `.dot` [format.](https://graphviz.org/)
 
 \image html Test10.svg
