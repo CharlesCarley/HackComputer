@@ -9,7 +9,6 @@
 - \dir_link{Source/Utils/CommandLine} implements a command line argument parser.
 - \dir_link{Source/Utils/UserInterface} provides a terminal drawing context.
 
-\n
 \defined{Hc02Defined}
 \defined_in{Source/Chips}
 

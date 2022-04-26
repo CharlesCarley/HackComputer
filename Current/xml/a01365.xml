@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01365" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>Hack::VirtualMachine::Scanner</compoundname>
+    <basecompoundref refid="a01297" prot="public" virt="non-virtual">Hack::ScannerBase</basecompoundref>
+    <includes local="no">Source/VirtualMachine/Scanner.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="a01365_1ad98d5bb5dbb1e17960467e679de5bdec" prot="private" static="no" mutable="no">
+        <type><ref refid="a00917_1a08484157b85b2bda07ff1e0c32072f10" kindref="member">CodeCache</ref></type>
+        <definition>CodeCache Hack::VirtualMachine::Scanner::_code</definition>
+        <argsstring></argsstring>
+        <name>_code</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Scanner.h" line="33" column="1" bodyfile="Source/VirtualMachine/Scanner.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="a01365_1a2a35b55baeecb5d2bbae555ae21f4853" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Scanner::scanCode</definition>
+        <argsstring>(Token &amp;tok)</argsstring>
+        <name>scanCode</name>
+        <param>
+          <type><ref refid="a00917_1a1256a43300d83510604c7b9755796e01" kindref="member">Token</ref> &amp;</type>
+          <declname>tok</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Scanner.h" line="35" column="1" bodyfile="Source/VirtualMachine/Scanner.cpp" bodystart="75" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="a01365_1a7e287d18444a38ca51bedd81f0aa78cc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Scanner::scanDigit</definition>
+        <argsstring>(Token &amp;tok)</argsstring>
+        <name>scanDigit</name>
+        <param>
+          <type><ref refid="a00917_1a1256a43300d83510604c7b9755796e01" kindref="member">Token</ref> &amp;</type>
+          <declname>tok</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Scanner.h" line="39" column="1" bodyfile="Source/VirtualMachine/Scanner.cpp" bodystart="127" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="a01365_1a6c303071aff73d2a8bc5d680a2f98f5c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Scanner::scanSymbol</definition>
+        <argsstring>(Token &amp;tok)</argsstring>
+        <name>scanSymbol</name>
+        <param>
+          <type><ref refid="a00917_1a1256a43300d83510604c7b9755796e01" kindref="member">Token</ref> &amp;</type>
+          <declname>tok</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Scanner.h" line="37" column="1" bodyfile="Source/VirtualMachine/Scanner.cpp" bodystart="92" bodyend="125"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a01365_1a492f69304cf8afa9a9c08db6aea3858d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::VirtualMachine::Scanner::Scanner</definition>
+        <argsstring>()</argsstring>
+        <name>Scanner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Scanner.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a01365_1aecf5a1159531823bd1e53aac834e9f73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Scanner::getCode</definition>
+        <argsstring>(String &amp;dest, const size_t &amp;idx)</argsstring>
+        <name>getCode</name>
+        <param>
+          <type><ref refid="a00909_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Scanner.h" line="46" column="1" bodyfile="Source/VirtualMachine/Scanner.cpp" bodystart="84" bodyend="90"/>
+        <references refid="a01297_1a0aa5a628913e1c8f04db54201f97e1a7" compoundref="a00848" startline="51" endline="57">Hack::ScannerBase::syntaxError</references>
+      </memberdef>
+      <memberdef kind="function" id="a01365_1a4997cadc71378e0fd99ba4309507442c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Hack::VirtualMachine::Scanner::scan</definition>
+        <argsstring>(Token &amp;tok) override</argsstring>
+        <name>scan</name>
+        <reimplements refid="a01297_1ac24b88935d8f5463217aacbfa9b87e9b">scan</reimplements>
+        <param>
+          <type><ref refid="a00917_1a1256a43300d83510604c7b9755796e01" kindref="member">Token</ref> &amp;</type>
+          <declname>tok</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Scanner.h" line="44" column="1" bodyfile="Source/VirtualMachine/Scanner.cpp" bodystart="145" bodyend="195"/>
+        <references refid="a01297_1a553484b098225d77804ffcfbf0382922" compoundref="a00848" startline="34">Hack::ScannerBase::_stream</references>
+        <references refid="a01297_1a0aa5a628913e1c8f04db54201f97e1a7" compoundref="a00848" startline="51" endline="57">Hack::ScannerBase::syntaxError</references>
+        <references refid="a01301_1a30cd135b1d593a583b727309323138ad" compoundref="a00851" startline="47" endline="56">Hack::TokenBase::clear</references>
+        <references refid="a01301_1ae4eadcf3980d196a66db3dc5a1c0d4bd" compoundref="a00851" startline="96" endline="99">Hack::TokenBase::setLine</references>
+        <references refid="a01297_1ac7ff4bb59d95de6dcd83f827794086f2" compoundref="a00848" startline="38">Hack::ScannerBase::_line</references>
+        <references refid="a01297_1a16d67c5310c35106dd5caed204460adb" compoundref="a00845" startline="66" endline="76">Hack::ScannerBase::scanLineComment</references>
+        <references refid="a01297_1af515b00a44514c004aaefa7da2944674" compoundref="a00845" startline="78">Hack::ScannerBase::scanMultiLineComment</references>
+        <references refid="a01297_1a4b419e3a4f91e1f4f136ead8941b7c5e">Hack::ScannerBase::scanWhiteSpace</references>
+        <references refid="a01301_1aa299ccac72d52b74f3ebc2ce2dcf96a1" compoundref="a00446" startline="38" endline="41">Hack::TokenBase::setType</references>
+        <references refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8aa3110406fa7d6ce5c6dba8fd3594d633" compoundref="a01664" startline="30">Hack::VirtualMachine::TOK_EOF</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="481">
+        <label>Hack::VirtualMachine::Scanner</label>
+        <link refid="a01365"/>
+        <childnode refid="482" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="482">
+        <label>Hack::ScannerBase</label>
+        <link refid="a01297"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="487">
+        <label>size_t</label>
+      </node>
+      <node id="485">
+        <label>Hack::IndexCache&lt; String &gt;</label>
+        <link refid="a01277"/>
+      </node>
+      <node id="489">
+        <label>IStream *</label>
+      </node>
+      <node id="488">
+        <label>string</label>
+      </node>
+      <node id="483">
+        <label>Hack::VirtualMachine::Scanner</label>
+        <link refid="a01365"/>
+        <childnode refid="484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="484">
+        <label>Hack::ScannerBase</label>
+        <link refid="a01297"/>
+        <childnode refid="485" relation="usage">
+          <edgelabel>_stringTable</edgelabel>
+        </childnode>
+        <childnode refid="486" relation="usage">
+          <edgelabel>_intTable</edgelabel>
+        </childnode>
+        <childnode refid="487" relation="usage">
+          <edgelabel>_line</edgelabel>
+        </childnode>
+        <childnode refid="488" relation="usage">
+          <edgelabel>_file</edgelabel>
+        </childnode>
+        <childnode refid="489" relation="usage">
+          <edgelabel>_stream</edgelabel>
+        </childnode>
+      </node>
+      <node id="486">
+        <label>Hack::IndexCache&lt; int &gt;</label>
+        <link refid="a01277"/>
+      </node>
+    </collaborationgraph>
+    <location file="Source/VirtualMachine/Scanner.h" line="31" column="1" bodyfile="Source/VirtualMachine/Scanner.h" bodystart="30" bodyend="47"/>
+    <listofallmembers>
+      <member refid="a01365_1ad98d5bb5dbb1e17960467e679de5bdec" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>_code</name></member>
+      <member refid="a01297_1aee2410ff35c9642a4addab5377339b99" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>_file</name></member>
+      <member refid="a01297_1aa2fe138fe481c6a129d048ed4d58bab8" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>_intTable</name></member>
+      <member refid="a01297_1ac7ff4bb59d95de6dcd83f827794086f2" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>_line</name></member>
+      <member refid="a01297_1a553484b098225d77804ffcfbf0382922" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>_stream</name></member>
+      <member refid="a01297_1a414a40b1cf631e4125e828c2607ee137" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>_stringTable</name></member>
+      <member refid="a01297_1a2412fd20aba2fc636877f3ac8db780d0" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>attach</name></member>
+      <member refid="a01297_1a5255f93a5545c9c6e5ea7a80f9ed12f5" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>containsString</name></member>
+      <member refid="a01297_1a60a1083d1af7068a54330d565ddcb44f" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>extractCode</name></member>
+      <member refid="a01365_1aecf5a1159531823bd1e53aac834e9f73" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>getCode</name></member>
+      <member refid="a01297_1ad43d94370b9191abd0a79c6148f1ce5c" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>integer</name></member>
+      <member refid="a01297_1a30f51f62024dec9e10aae0f40bfe04e6" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>line</name></member>
+      <member refid="a01297_1ac95ab910b82639657337e5a3f6b634ed" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>save</name></member>
+      <member refid="a01297_1a857c80250b61d01dc34925958b979362" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>save</name></member>
+      <member refid="a01365_1a4997cadc71378e0fd99ba4309507442c" prot="public" virt="virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>scan</name></member>
+      <member refid="a01297_1a4d2174fd338ba032ccb9101087e752dd" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>scanAny</name></member>
+      <member refid="a01365_1a2a35b55baeecb5d2bbae555ae21f4853" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>scanCode</name></member>
+      <member refid="a01365_1a7e287d18444a38ca51bedd81f0aa78cc" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>scanDigit</name></member>
+      <member refid="a01297_1a16d67c5310c35106dd5caed204460adb" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>scanLineComment</name></member>
+      <member refid="a01297_1af515b00a44514c004aaefa7da2944674" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>scanMultiLineComment</name></member>
+      <member refid="a01365_1a492f69304cf8afa9a9c08db6aea3858d" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>Scanner</name></member>
+      <member refid="a01297_1a39a50ecb7b671cefcbf45b1900c10ffb" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>ScannerBase</name></member>
+      <member refid="a01365_1a6c303071aff73d2a8bc5d680a2f98f5c" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>scanSymbol</name></member>
+      <member refid="a01297_1a4b419e3a4f91e1f4f136ead8941b7c5e" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>scanWhiteSpace</name></member>
+      <member refid="a01297_1aa7dc42bcd86a806dffaf235aed8efeb6" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>string</name></member>
+      <member refid="a01297_1a2b080ab6ef2ee68120cbc10a883c92bd" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>string</name></member>
+      <member refid="a01297_1a0aa5a628913e1c8f04db54201f97e1a7" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>syntaxError</name></member>
+      <member refid="a01297_1a3ed512a25958a785d2ca050c254d113e" prot="public" virt="virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>~ScannerBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

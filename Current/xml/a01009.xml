@@ -1,237 +1,27 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01009" kind="class" language="C++" prot="public" final="yes">
-    <compoundname>Hack::Chips::Cpu</compoundname>
-    <basecompoundref refid="a00993" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; uint8_t, 8 &gt;</basecompoundref>
-    <includes local="no">Source/Chips/CPU.h</includes>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="a01009_1a99b4991868e8a52b0c64cbaff739fc58" prot="private" static="no" mutable="no">
-        <type><ref refid="a01117" kindref="compound">Register</ref></type>
-        <definition>Register Hack::Chips::Cpu::_a</definition>
-        <argsstring></argsstring>
-        <name>_a</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/CPU.h" line="39" column="1" bodyfile="Source/Chips/CPU.h" bodystart="39" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01009_1a82f65502ec4f311da051666228396eb3" prot="private" static="no" mutable="no">
-        <type><ref refid="a00961" kindref="compound">Alu</ref></type>
-        <definition>Alu Hack::Chips::Cpu::_alu</definition>
-        <argsstring></argsstring>
-        <name>_alu</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/CPU.h" line="43" column="1" bodyfile="Source/Chips/CPU.h" bodystart="43" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01009_1ac380755d2ad3a78660858ca0b6d2f787" prot="private" static="no" mutable="no">
-        <type><ref refid="a01117" kindref="compound">Register</ref></type>
-        <definition>Register Hack::Chips::Cpu::_d</definition>
-        <argsstring></argsstring>
-        <name>_d</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/CPU.h" line="39" column="1" bodyfile="Source/Chips/CPU.h" bodystart="39" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01009_1aa63cad21c8d0e139b4b5507f1ea43602" prot="private" static="no" mutable="no">
-        <type><ref refid="a01361" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::Cpu::_in</definition>
-        <argsstring></argsstring>
-        <name>_in</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/CPU.h" line="42" column="1" bodyfile="Source/Chips/CPU.h" bodystart="42" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01009_1a72672c4420e007a50a2ce1e1cdba50e2" prot="private" static="no" mutable="no">
-        <type><ref refid="a01361" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::Cpu::_ins</definition>
-        <argsstring></argsstring>
-        <name>_ins</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/CPU.h" line="41" column="1" bodyfile="Source/Chips/CPU.h" bodystart="41" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01009_1af3f8b885d4f551385b3127e7ed052b9e" prot="private" static="no" mutable="no">
-        <type><ref refid="a01097" kindref="compound">ProgramCounter</ref></type>
-        <definition>ProgramCounter Hack::Chips::Cpu::_pc</definition>
-        <argsstring></argsstring>
-        <name>_pc</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/CPU.h" line="40" column="1" bodyfile="Source/Chips/CPU.h" bodystart="40" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="private-func">
-      <memberdef kind="function" id="a01009_1a3da2176ff143970a8f01c56774058b51" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::Cpu::evaluate</definition>
-        <argsstring>()</argsstring>
-        <name>evaluate</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/CPU.h" line="33" column="1" bodyfile="Source/Chips/CPU.cpp" bodystart="168" bodyend="302"/>
-      </memberdef>
-      <memberdef kind="function" id="a01009_1ac65d59dc6a974d8135a5f6f320756d9d" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
-        <definition>bool Hack::Chips::Cpu::isDirty</definition>
-        <argsstring>() override</argsstring>
-        <name>isDirty</name>
-        <reimplements refid="a00993_1a63bb368bb0827830235759b33718d1b4">isDirty</reimplements>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/CPU.h" line="35" column="1" bodyfile="Source/Chips/CPU.cpp" bodystart="158" bodyend="161"/>
-      </memberdef>
-      <memberdef kind="function" id="a01009_1a4314b6ed8307fac3596818c36c8767fd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::Cpu::markDirty</definition>
-        <argsstring>()</argsstring>
-        <name>markDirty</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/CPU.h" line="37" column="1" bodyfile="Source/Chips/CPU.cpp" bodystart="163" bodyend="166"/>
-      </memberdef>
-      </sectiondef>
+    <compoundname>Hack::Chips::Clock</compoundname>
+    <basecompoundref refid="a01005" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; uint8_t, 8 &gt;</basecompoundref>
+    <includes local="no">Source/Chips/Clock.h</includes>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01009_1a5543e5ad5c5fcc2dcc166787b6bba8b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01009_1a9922cf26014046b0b96db3a2f0e6f721" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>Hack::Chips::Cpu::Cpu</definition>
+        <definition>Hack::Chips::Clock::Clock</definition>
         <argsstring>()</argsstring>
-        <name>Cpu</name>
+        <name>Clock</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/CPU.h" line="46" column="1" bodyfile="Source/Chips/CPU.cpp" bodystart="53" bodyend="59"/>
+        <location file="Source/Chips/Clock.h" line="30" column="1" bodyfile="Source/Chips/Clock.cpp" bodystart="28" bodyend="35"/>
+        <references refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00488" startline="52">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
       </memberdef>
-      <memberdef kind="function" id="a01009_1a599e7ef3d1afa3a29c3f12f2e457f265" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::Cpu::clear</definition>
-        <argsstring>()</argsstring>
-        <name>clear</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/CPU.h" line="70" column="1" bodyfile="Source/Chips/CPU.cpp" bodystart="304" bodyend="327"/>
-        <references refid="a01117_1a2547034bc01798cc02dcd141a6a25b43" compoundref="a00656" startline="32" endline="39">Hack::Chips::Register::setIn</references>
-        <references refid="a01117_1aae6a1ef0fe5e583d92de6cb9da89f480" compoundref="a00656" startline="41" endline="52">Hack::Chips::Register::setLoad</references>
-        <references refid="a01117_1a9ed7e9ef8e47088db81077b5711e153f" compoundref="a00656" startline="54" endline="66">Hack::Chips::Register::setClock</references>
-        <references refid="a01097_1a609ef4c3189b3cc5a3ab835c5be8510d" compoundref="a00623" startline="38" endline="42">Hack::Chips::ProgramCounter::setIn</references>
-        <references refid="a01097_1a6cb44c6579a58a94a3f30e22e1b4856c" compoundref="a00623" startline="58" endline="66">Hack::Chips::ProgramCounter::setInc</references>
-        <references refid="a01097_1a0fcf49248686a2473db97c221f3689a7" compoundref="a00623" startline="78" endline="86">Hack::Chips::ProgramCounter::setLoad</references>
-        <references refid="a01097_1a3621404b49cf9b287f3e1357bce37052" compoundref="a00623" startline="88" endline="92">Hack::Chips::ProgramCounter::setClock</references>
-        <references refid="a00961_1af3082e0b359aebd367e56457b1d8ef52" compoundref="a00449" startline="71" endline="78">Hack::Chips::Alu::setX</references>
-        <references refid="a00961_1aa777e90d3af236329d8c7f9340a21a78" compoundref="a00449" startline="80" endline="87">Hack::Chips::Alu::setY</references>
-        <references refid="a00961_1ab78360af9a64fb57b2144516bf03de8a" compoundref="a00449" startline="53" endline="62">Hack::Chips::Alu::setFlags</references>
-        <references refid="a00993_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00476" startline="52">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
-        <references refid="a01129_1a7570f5f591474c56e6f96ab6d3f77044" compoundref="a00677" startline="34" endline="37">Hack::Chips::Timer::reset</references>
-      </memberdef>
-      <memberdef kind="function" id="a01009_1a5af96f7c73c15c4f0fff860481dc83bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a01361" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::Cpu::getAddress</definition>
-        <argsstring>()</argsstring>
-        <name>getAddress</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/CPU.h" line="60" column="1" bodyfile="Source/Chips/CPU.cpp" bodystart="130" bodyend="135"/>
-        <references refid="a00899_1a7a5791fb124e7aad6c36cca12afba484" compoundref="a00491" startline="40" endline="43">Hack::Chips::CpuDirty</references>
-        <references refid="a00993_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00476" startline="52">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
-        <references refid="a01117_1adac71e249b6e499425aac50f34eac07b" compoundref="a00656" startline="68" endline="73">Hack::Chips::Register::getOut</references>
-      </memberdef>
-      <memberdef kind="function" id="a01009_1a6ac458a81ab675897e277d07cb093193" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a01361" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::Cpu::getAmRegister</definition>
-        <argsstring>()</argsstring>
-        <name>getAmRegister</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/CPU.h" line="66" column="1" bodyfile="Source/Chips/CPU.cpp" bodystart="144" bodyend="149"/>
-        <references refid="a00899_1a7a5791fb124e7aad6c36cca12afba484" compoundref="a00491" startline="40" endline="43">Hack::Chips::CpuDirty</references>
-        <references refid="a00993_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00476" startline="52">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
-        <references refid="a01117_1adac71e249b6e499425aac50f34eac07b" compoundref="a00656" startline="68" endline="73">Hack::Chips::Register::getOut</references>
-      </memberdef>
-      <memberdef kind="function" id="a01009_1a91db924b7a0e4fe6b99999402b00336b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a01361" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::Cpu::getDRegister</definition>
-        <argsstring>()</argsstring>
-        <name>getDRegister</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/CPU.h" line="64" column="1" bodyfile="Source/Chips/CPU.cpp" bodystart="137" bodyend="142"/>
-        <references refid="a00899_1a7a5791fb124e7aad6c36cca12afba484" compoundref="a00491" startline="40" endline="43">Hack::Chips::CpuDirty</references>
-        <references refid="a00993_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00476" startline="52">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
-        <references refid="a01117_1adac71e249b6e499425aac50f34eac07b" compoundref="a00656" startline="68" endline="73">Hack::Chips::Register::getOut</references>
-      </memberdef>
-      <memberdef kind="function" id="a01009_1a9500b587542088fd9b9574d81508e6e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a01361" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::Cpu::getNext</definition>
-        <argsstring>()</argsstring>
-        <name>getNext</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/CPU.h" line="62" column="1" bodyfile="Source/Chips/CPU.cpp" bodystart="151" bodyend="156"/>
-        <references refid="a00899_1a7a5791fb124e7aad6c36cca12afba484" compoundref="a00491" startline="40" endline="43">Hack::Chips::CpuDirty</references>
-        <references refid="a00993_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00476" startline="52">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
-        <references refid="a01097_1a1fb936fe940e54330e4f2616c123fafd" compoundref="a00623" startline="94" endline="99">Hack::Chips::ProgramCounter::getOut</references>
-      </memberdef>
-      <memberdef kind="function" id="a01009_1a1f9a2cb8f03f3196c82d0fca242c6903" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a01361" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::Cpu::getOut</definition>
+      <memberdef kind="function" id="a01009_1acb81d1eb95bf01d4fe203701562da7d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::Clock::getOut</definition>
         <argsstring>()</argsstring>
         <name>getOut</name>
         <briefdescription>
@@ -240,75 +30,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/CPU.h" line="58" column="1" bodyfile="Source/Chips/CPU.cpp" bodystart="123" bodyend="128"/>
-        <references refid="a00899_1a7a5791fb124e7aad6c36cca12afba484" compoundref="a00491" startline="40" endline="43">Hack::Chips::CpuDirty</references>
-        <references refid="a00993_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00476" startline="52">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
-        <references refid="a00961_1a0a6f75d46a2d234c77033a30fef51326" compoundref="a00449" startline="103" endline="108">Hack::Chips::Alu::getOut</references>
+        <location file="Source/Chips/Clock.h" line="36" column="1" bodyfile="Source/Chips/Clock.cpp" bodystart="47" bodyend="75"/>
+        <references refid="a01005_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00488" startline="100" endline="103">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::getBit</references>
+        <references refid="a01005_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00488" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
+        <references refid="a00912_1a47f1937b5e8e2f1f55c52ece2e236d9a" compoundref="a00485" startline="267" endline="270">Hack::Chips::Gates::Not</references>
+        <references refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00488" startline="52">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
+        <references refid="a00911_1a1ff32d5ecd7b6fef93d19d0584f6a3de" compoundref="a00491" startline="26">Hack::Chips::ClockMask</references>
+        <references refid="a00911_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" compoundref="a00485" startline="39">Hack::Chips::Bit6</references>
+        <references refid="a00911_1a89719f49d745047f03bca80bfff48bd2a8487c63d5dca7d87b359feca1a2c2ac8" compoundref="a00485" startline="34">Hack::Chips::Bit1</references>
+        <references refid="a00911_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" compoundref="a00485" startline="33">Hack::Chips::Bit0</references>
       </memberdef>
-      <memberdef kind="function" id="a01009_1a09ccfdbe1ebceb25ef9964834cee904f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Hack::Chips::Cpu::getWrite</definition>
-        <argsstring>()</argsstring>
-        <name>getWrite</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/CPU.h" line="56" column="1" bodyfile="Source/Chips/CPU.cpp" bodystart="116" bodyend="121"/>
-        <references refid="a00899_1a7a5791fb124e7aad6c36cca12afba484" compoundref="a00491" startline="40" endline="43">Hack::Chips::CpuDirty</references>
-        <references refid="a00993_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00476" startline="52">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
-        <references refid="a00899_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" compoundref="a00473" startline="39">Hack::Chips::Bit6</references>
-      </memberdef>
-      <memberdef kind="function" id="a01009_1ae5b1d8f46e76e589ca99c6dee2fd7390" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01009_1ace2784b83c45b2f8ff31cfed7aaa739c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::Chips::Cpu::lock</definition>
-        <argsstring>(bool state)</argsstring>
-        <name>lock</name>
+        <definition>void Hack::Chips::Clock::setIn</definition>
+        <argsstring>(bool input)</argsstring>
+        <name>setIn</name>
         <param>
           <type>bool</type>
-          <declname>state</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/CPU.h" line="68" column="1" bodyfile="Source/Chips/CPU.cpp" bodystart="61" bodyend="71"/>
-        <references refid="a00993_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00476" startline="52">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
-        <references refid="a00899_1a89719f49d745047f03bca80bfff48bd2a8a09deb894b81cd01eb5ea4d9f1f1cf5" compoundref="a00473" startline="35">Hack::Chips::Bit2</references>
-        <references refid="a01117_1abf268bf9204e6b0661e639078499694e" compoundref="a00656" startline="75" endline="81">Hack::Chips::Register::lock</references>
-        <references refid="a01097_1a29da0fadf3fa09aaf42825d04338ffc7" compoundref="a00623" startline="50" endline="56">Hack::Chips::ProgramCounter::lock</references>
-      </memberdef>
-      <memberdef kind="function" id="a01009_1ad12d07395a9bb6a137027a086bad44d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::Cpu::setClock</definition>
-        <argsstring>(bool clock)</argsstring>
-        <name>setClock</name>
-        <param>
-          <type>bool</type>
-          <declname>clock</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/CPU.h" line="50" column="1" bodyfile="Source/Chips/CPU.cpp" bodystart="82" bodyend="95"/>
-        <references refid="a00993_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00476" startline="52">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
-        <references refid="a00899_1a89719f49d745047f03bca80bfff48bd2a8487c63d5dca7d87b359feca1a2c2ac8" compoundref="a00473" startline="34">Hack::Chips::Bit1</references>
-        <references refid="a00899_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00473" startline="40">Hack::Chips::Bit7</references>
-      </memberdef>
-      <memberdef kind="function" id="a01009_1a79cecbb18e73a58f32d84d8a4da53dc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::Cpu::setInMemory</definition>
-        <argsstring>(const uint16_t &amp;input)</argsstring>
-        <name>setInMemory</name>
-        <param>
-          <type>const <ref refid="a01361" kindref="compound">uint16_t</ref> &amp;</type>
           <declname>input</declname>
         </param>
         <briefdescription>
@@ -317,32 +55,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/CPU.h" line="48" column="1" bodyfile="Source/Chips/CPU.cpp" bodystart="73" bodyend="80"/>
-        <references refid="a00993_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00476" startline="52">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
-        <references refid="a00899_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00473" startline="40">Hack::Chips::Bit7</references>
+        <location file="Source/Chips/Clock.h" line="32" column="1" bodyfile="Source/Chips/Clock.cpp" bodystart="37" bodyend="40"/>
+        <references refid="a01005_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00488" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
       </memberdef>
-      <memberdef kind="function" id="a01009_1aed70d190ffe8390a4ad3f74ade6e60fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01009_1abb454609d9a6416ea16f15f9b7c78957" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::Chips::Cpu::setInstruction</definition>
-        <argsstring>(const uint16_t &amp;instruction)</argsstring>
-        <name>setInstruction</name>
-        <param>
-          <type>const <ref refid="a01361" kindref="compound">uint16_t</ref> &amp;</type>
-          <declname>instruction</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/CPU.h" line="54" column="1" bodyfile="Source/Chips/CPU.cpp" bodystart="110" bodyend="114"/>
-        <references refid="a00993_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00476" startline="52">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
-        <references refid="a00899_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00473" startline="40">Hack::Chips::Bit7</references>
-      </memberdef>
-      <memberdef kind="function" id="a01009_1ac14c3298730fc31946de0c05ee2c7a2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::Cpu::setReset</definition>
+        <definition>void Hack::Chips::Clock::setReset</definition>
         <argsstring>(bool reset)</argsstring>
         <name>setReset</name>
         <param>
@@ -355,10 +73,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/CPU.h" line="52" column="1" bodyfile="Source/Chips/CPU.cpp" bodystart="97" bodyend="108"/>
-        <references refid="a00993_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00476" startline="52">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
-        <references refid="a00899_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" compoundref="a00473" startline="33">Hack::Chips::Bit0</references>
-        <references refid="a00899_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00473" startline="40">Hack::Chips::Bit7</references>
+        <location file="Source/Chips/Clock.h" line="34" column="1" bodyfile="Source/Chips/Clock.cpp" bodystart="42" bodyend="45"/>
+        <references refid="a01005_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00488" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -366,68 +82,51 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="107">
-        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
-        <link refid="a00993"/>
-      </node>
-      <node id="106">
-        <label>Hack::Chips::Cpu</label>
+      <node id="97">
+        <label>Hack::Chips::Clock</label>
         <link refid="a01009"/>
-        <childnode refid="107" relation="public-inheritance">
+        <childnode refid="98" relation="public-inheritance">
         </childnode>
+      </node>
+      <node id="98">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="a01005"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="110">
+      <node id="101">
         <label>uint8_t</label>
-        <link refid="a01373"/>
+        <link refid="a01385"/>
       </node>
-      <node id="109">
+      <node id="99">
+        <label>Hack::Chips::Clock</label>
+        <link refid="a01009"/>
+        <childnode refid="100" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="100">
         <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
-        <link refid="a00993"/>
-        <childnode refid="110" relation="usage">
+        <link refid="a01005"/>
+        <childnode refid="101" relation="usage">
           <edgelabel>_bits</edgelabel>
         </childnode>
       </node>
-      <node id="108">
-        <label>Hack::Chips::Cpu</label>
-        <link refid="a01009"/>
-        <childnode refid="109" relation="public-inheritance">
-        </childnode>
-      </node>
     </collaborationgraph>
-    <location file="Source/Chips/CPU.h" line="31" column="1" bodyfile="Source/Chips/CPU.h" bodystart="30" bodyend="71"/>
+    <location file="Source/Chips/Clock.h" line="28" column="1" bodyfile="Source/Chips/Clock.h" bodystart="27" bodyend="37"/>
     <listofallmembers>
-      <member refid="a01009_1a99b4991868e8a52b0c64cbaff739fc58" prot="private" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>_a</name></member>
-      <member refid="a01009_1a82f65502ec4f311da051666228396eb3" prot="private" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>_alu</name></member>
-      <member refid="a00993_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>_bits</name></member>
-      <member refid="a01009_1ac380755d2ad3a78660858ca0b6d2f787" prot="private" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>_d</name></member>
-      <member refid="a01009_1aa63cad21c8d0e139b4b5507f1ea43602" prot="private" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>_in</name></member>
-      <member refid="a01009_1a72672c4420e007a50a2ce1e1cdba50e2" prot="private" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>_ins</name></member>
-      <member refid="a01009_1af3f8b885d4f551385b3127e7ed052b9e" prot="private" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>_pc</name></member>
-      <member refid="a00993_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>applyBit</name></member>
-      <member refid="a00993_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>assignBit</name></member>
-      <member refid="a00993_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>Chip</name></member>
-      <member refid="a01009_1a599e7ef3d1afa3a29c3f12f2e457f265" prot="public" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>clear</name></member>
-      <member refid="a00993_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>clearBit</name></member>
-      <member refid="a01009_1a5543e5ad5c5fcc2dcc166787b6bba8b4" prot="public" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>Cpu</name></member>
-      <member refid="a01009_1a3da2176ff143970a8f01c56774058b51" prot="private" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>evaluate</name></member>
-      <member refid="a01009_1a5af96f7c73c15c4f0fff860481dc83bf" prot="public" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>getAddress</name></member>
-      <member refid="a01009_1a6ac458a81ab675897e277d07cb093193" prot="public" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>getAmRegister</name></member>
-      <member refid="a00993_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>getBit</name></member>
-      <member refid="a01009_1a91db924b7a0e4fe6b99999402b00336b" prot="public" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>getDRegister</name></member>
-      <member refid="a01009_1a9500b587542088fd9b9574d81508e6e2" prot="public" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>getNext</name></member>
-      <member refid="a01009_1a1f9a2cb8f03f3196c82d0fca242c6903" prot="public" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>getOut</name></member>
-      <member refid="a01009_1a09ccfdbe1ebceb25ef9964834cee904f" prot="public" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>getWrite</name></member>
-      <member refid="a01009_1ac65d59dc6a974d8135a5f6f320756d9d" prot="private" virt="virtual"><scope>Hack::Chips::Cpu</scope><name>isDirty</name></member>
-      <member refid="a01009_1ae5b1d8f46e76e589ca99c6dee2fd7390" prot="public" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>lock</name></member>
-      <member refid="a01009_1a4314b6ed8307fac3596818c36c8767fd" prot="private" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>markDirty</name></member>
-      <member refid="a00993_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>setBit</name></member>
-      <member refid="a01009_1ad12d07395a9bb6a137027a086bad44d3" prot="public" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>setClock</name></member>
-      <member refid="a01009_1a79cecbb18e73a58f32d84d8a4da53dc8" prot="public" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>setInMemory</name></member>
-      <member refid="a01009_1aed70d190ffe8390a4ad3f74ade6e60fe" prot="public" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>setInstruction</name></member>
-      <member refid="a01009_1ac14c3298730fc31946de0c05ee2c7a2b" prot="public" virt="non-virtual"><scope>Hack::Chips::Cpu</scope><name>setReset</name></member>
-      <member refid="a00993_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::Cpu</scope><name>~Chip</name></member>
+      <member refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Clock</scope><name>_bits</name></member>
+      <member refid="a01005_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::Clock</scope><name>applyBit</name></member>
+      <member refid="a01005_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::Clock</scope><name>assignBit</name></member>
+      <member refid="a01005_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::Clock</scope><name>Chip</name></member>
+      <member refid="a01005_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::Clock</scope><name>clearBit</name></member>
+      <member refid="a01009_1a9922cf26014046b0b96db3a2f0e6f721" prot="public" virt="non-virtual"><scope>Hack::Chips::Clock</scope><name>Clock</name></member>
+      <member refid="a01005_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::Clock</scope><name>getBit</name></member>
+      <member refid="a01009_1acb81d1eb95bf01d4fe203701562da7d0" prot="public" virt="non-virtual"><scope>Hack::Chips::Clock</scope><name>getOut</name></member>
+      <member refid="a01005_1a63bb368bb0827830235759b33718d1b4" prot="protected" virt="virtual"><scope>Hack::Chips::Clock</scope><name>isDirty</name></member>
+      <member refid="a01005_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::Clock</scope><name>setBit</name></member>
+      <member refid="a01009_1ace2784b83c45b2f8ff31cfed7aaa739c" prot="public" virt="non-virtual"><scope>Hack::Chips::Clock</scope><name>setIn</name></member>
+      <member refid="a01009_1abb454609d9a6416ea16f15f9b7c78957" prot="public" virt="non-virtual"><scope>Hack::Chips::Clock</scope><name>setReset</name></member>
+      <member refid="a01005_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::Clock</scope><name>~Chip</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -4,7 +4,7 @@
 
 \brief Implements the primary program that ties the project's components together.
 
-\section Hc06Computer Computer
+\h1 Computer
 
 
 The computer executable accepts any of the source file formats that are
@@ -37,14 +37,15 @@ Usage: computer <options> <arg[0] .. arg[n]>
 \endcode
 
 \n
-\subsection Hc06Debugger Command Line Debugger.
+\h2 Command Line Debugger.
 
 The debugger will execute one instruction and refresh the console display with the current state of the chips.
 \br
 - The up-arrow key will initiate a tick.
 - The r key will reset execution.
 - The c key will loop execution.
-\br
+
+
 \image html Debugger.png
 
 \defined{Hc06Defined}

@@ -1,598 +1,92 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
-  <compounddef id="a01229" kind="class" language="C++" prot="public">
-    <compoundname>Hack::Char</compoundname>
-    <includes local="no">Source/Utils/Char.h</includes>
-      <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="a01229_1acadfc20f5f4f4ff24916c56d4aafc07c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Hack::Char::equals</definition>
-        <argsstring>(const char *a, const char *b, size_t max)</argsstring>
-        <name>equals</name>
-        <param>
-          <type>const char *</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>const char *</type>
-          <declname>b</declname>
-        </param>
-        <param>
-          <type>size_t</type>
-          <declname>max</declname>
-        </param>
-        <briefdescription>
-<para>Tests the strings for equality </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>a</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The first string.</para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>b</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The second string.</para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>max</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The maximum number of bytes to test.</para></parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>False if a or b is null, false if the first character in a does not equal the first character in b, otherwise returns the result of strncmp. </para></simplesect>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="53" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="40" bodyend="48"/>
-        <references refid="a01229_1aec2f1d7549e6794e9f1b12e18d12602a" compoundref="a00794" startline="35" endline="38">length</references>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a173f103b04790960e358ffcce33ab1e9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Hack::Char::isNullOrEmpty</definition>
-        <argsstring>(const char *in)</argsstring>
-        <name>isNullOrEmpty</name>
-        <param>
-          <type>const char *</type>
-          <declname>in</declname>
-        </param>
+  <compounddef id="a01229" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>Hack::Computer::DebugRuntime</compoundname>
+    <basecompoundref refid="a01233" prot="public" virt="non-virtual">Hack::Computer::RuntimeInterface</basecompoundref>
+    <includes local="no">Source/Computer/DebugRuntime.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="a01229_1a76670657c1725ecef554d76bb46d597b" prot="private" static="no" mutable="no">
+        <type><ref refid="a01225" kindref="compound">DebugRuntimePrivate</ref> *</type>
+        <definition>DebugRuntimePrivate* Hack::Computer::DebugRuntime::_private</definition>
+        <argsstring></argsstring>
+        <name>_private</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/Char.h" line="97" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="152" bodyend="155"/>
+        <location file="Source/Computer/DebugRuntime.h" line="33" column="1" bodyfile="Source/Computer/DebugRuntime.h" bodystart="33" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a01229_1aec2f1d7549e6794e9f1b12e18d12602a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>size_t</type>
-        <definition>size_t Hack::Char::length</definition>
-        <argsstring>(const char *input)</argsstring>
-        <name>length</name>
-        <param>
-          <type>const char *</type>
-          <declname>input</declname>
-        </param>
-        <briefdescription>
-<para>Counts the number of characters up to the first occurrence of a null character &apos;\0&apos; </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>input</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The char pointer to use to compute the length. </para></parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>The total number of characters.</para></simplesect>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="40" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="35" bodyend="38"/>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a2e634e86f642f657dd42a2e967d99764" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Char::toBinaryString</definition>
-        <argsstring>(String &amp;dest, uint8_t v)</argsstring>
-        <name>toBinaryString</name>
-        <param>
-          <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>dest</declname>
-        </param>
-        <param>
-          <type><ref refid="a01373" kindref="compound">uint8_t</ref></type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="117" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="229" bodyend="233"/>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a3a7e07c47aa6ddf1872fd0a22aa4beee" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Char::toBinaryString</definition>
-        <argsstring>(String &amp;dest, uint16_t v)</argsstring>
-        <name>toBinaryString</name>
-        <param>
-          <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>dest</declname>
-        </param>
-        <param>
-          <type><ref refid="a01361" kindref="compound">uint16_t</ref></type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="129" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="270" bodyend="274"/>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a49e41e2ec48dac4cd43de3f13416e54d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Hack::Char::toBinaryString</definition>
-        <argsstring>(uint8_t v)</argsstring>
-        <name>toBinaryString</name>
-        <param>
-          <type><ref refid="a01373" kindref="compound">uint8_t</ref></type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="145" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="325" bodyend="330"/>
-        <references refid="a01229_1a2e634e86f642f657dd42a2e967d99764" compoundref="a00794" startline="229" endline="233">toBinaryString</references>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a6109b7ac33a168c0d32bb0cf3e021b9c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Hack::Char::toBinaryString</definition>
-        <argsstring>(uint16_t v)</argsstring>
-        <name>toBinaryString</name>
-        <param>
-          <type><ref refid="a01361" kindref="compound">uint16_t</ref></type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="157" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="367" bodyend="372"/>
-        <references refid="a01229_1a2e634e86f642f657dd42a2e967d99764" compoundref="a00794" startline="229" endline="233">toBinaryString</references>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1adea31e16265cdb63ea40f07034073edd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Hack::Char::toBool</definition>
-        <argsstring>(const char *in)</argsstring>
-        <name>toBool</name>
-        <param>
-          <type>const char *</type>
-          <declname>in</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="99" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="157" bodyend="174"/>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1acf474c4941309b5295a371d929d86b76" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Hack::Char::toBool</definition>
-        <argsstring>(const String &amp;in)</argsstring>
-        <name>toBool</name>
-        <param>
-          <type>const <ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>in</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="105" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="190" bodyend="193"/>
-        <references refid="a01229_1adea31e16265cdb63ea40f07034073edd" compoundref="a00794" startline="157" endline="174">toBool</references>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a8ca6361d986b2d2f34fc0b28dd5d68c3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>double</type>
-        <definition>double Hack::Char::toDouble</definition>
-        <argsstring>(const char *in, const double &amp;def=0.0)</argsstring>
-        <name>toDouble</name>
-        <param>
-          <type>const char *</type>
-          <declname>in</declname>
-        </param>
-        <param>
-          <type>const double &amp;</type>
-          <declname>def</declname>
-          <defval>0.0</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="103" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="183" bodyend="188"/>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a23040a5aaccecd64f3432ff1d1388a3e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>double</type>
-        <definition>double Hack::Char::toDouble</definition>
-        <argsstring>(const String &amp;in, const double &amp;def=0.0)</argsstring>
-        <name>toDouble</name>
-        <param>
-          <type>const <ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>in</declname>
-        </param>
-        <param>
-          <type>const double &amp;</type>
-          <declname>def</declname>
-          <defval>0.0</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="109" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="200" bodyend="203"/>
-        <references refid="a01229_1a8ca6361d986b2d2f34fc0b28dd5d68c3" compoundref="a00794" startline="183" endline="188">toDouble</references>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a9706e2040a6912a05cb39486930ba5a5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>float</type>
-        <definition>float Hack::Char::toFloat</definition>
-        <argsstring>(const char *in, const float &amp;def=0.f)</argsstring>
-        <name>toFloat</name>
-        <param>
-          <type>const char *</type>
-          <declname>in</declname>
-        </param>
-        <param>
-          <type>const float &amp;</type>
-          <declname>def</declname>
-          <defval>0.f</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="101" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="176" bodyend="181"/>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a3ea30b82aea1fe96651b4ff7f1b6541f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>float</type>
-        <definition>float Hack::Char::toFloat</definition>
-        <argsstring>(const String &amp;in, const float &amp;def=0.f)</argsstring>
-        <name>toFloat</name>
-        <param>
-          <type>const <ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>in</declname>
-        </param>
-        <param>
-          <type>const float &amp;</type>
-          <declname>def</declname>
-          <defval>0.f</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="107" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="195" bodyend="198"/>
-        <references refid="a01229_1a9706e2040a6912a05cb39486930ba5a5" compoundref="a00794" startline="176" endline="181">toFloat</references>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1ad54d719cdd63fa3f265ade5ca54ec679" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Char::toHexString</definition>
-        <argsstring>(String &amp;dest, uint16_t v)</argsstring>
-        <name>toHexString</name>
-        <param>
-          <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>dest</declname>
-        </param>
-        <param>
-          <type><ref refid="a01361" kindref="compound">uint16_t</ref></type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="127" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="263" bodyend="268"/>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a218d64307f0a0c4c129e7e07cf3a5e24" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Char::toHexString</definition>
-        <argsstring>(String &amp;dest, uint32_t v)</argsstring>
-        <name>toHexString</name>
-        <param>
-          <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>dest</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="133" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="283" bodyend="288"/>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a2f5b041019556c2552ad7c76d40323d0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Char::toHexString</definition>
-        <argsstring>(String &amp;dest, uint64_t v)</argsstring>
-        <name>toHexString</name>
-        <param>
-          <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>dest</declname>
-        </param>
-        <param>
-          <type>uint64_t</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="137" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="297" bodyend="302"/>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1ab16c60f5441a1fba11356d908046fec2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Hack::Char::toHexString</definition>
-        <argsstring>(uint16_t v)</argsstring>
-        <name>toHexString</name>
-        <param>
-          <type><ref refid="a01361" kindref="compound">uint16_t</ref></type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="155" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="360" bodyend="365"/>
-        <references refid="a01229_1ad54d719cdd63fa3f265ade5ca54ec679" compoundref="a00794" startline="263" endline="268">toHexString</references>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1ac7c18ba28e074214a77bc406b0a20b6c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Hack::Char::toHexString</definition>
-        <argsstring>(uint32_t v)</argsstring>
-        <name>toHexString</name>
-        <param>
-          <type>uint32_t</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="161" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="381" bodyend="386"/>
-        <references refid="a01229_1ad54d719cdd63fa3f265ade5ca54ec679" compoundref="a00794" startline="263" endline="268">toHexString</references>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1ac01d0bd168317ae2f1247a67e0b9032b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Hack::Char::toHexString</definition>
-        <argsstring>(uint64_t v)</argsstring>
-        <name>toHexString</name>
-        <param>
-          <type>uint64_t</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="165" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="395" bodyend="400"/>
-        <references refid="a01229_1ad54d719cdd63fa3f265ade5ca54ec679" compoundref="a00794" startline="263" endline="268">toHexString</references>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a1d1dca952e59d2b38615e7240d3b9055" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="a01229_1ace069a8cbf49c271f047e62868763c2e" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>int16_t</type>
-        <definition>int16_t Hack::Char::toInt16</definition>
-        <argsstring>(const char *in, int16_t def=-1, int base=10)</argsstring>
-        <name>toInt16</name>
-        <param>
-          <type>const char *</type>
-          <declname>in</declname>
-        </param>
-        <param>
-          <type>int16_t</type>
-          <declname>def</declname>
-          <defval>-1</defval>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>base</declname>
-          <defval>10</defval>
-        </param>
+        <definition>int16_t Hack::Computer::DebugRuntime::getRate</definition>
+        <argsstring>() const override</argsstring>
+        <name>getRate</name>
+        <reimplements refid="a01233_1a0f5eca7470888a3c5190dd9c1ddc3f67">getRate</reimplements>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/Char.h" line="55" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="50" bodyend="62"/>
+        <location file="Source/Computer/DebugRuntime.h" line="35" column="1" bodyfile="Source/Computer/DebugRuntime.h" bodystart="35" bodyend="38"/>
       </memberdef>
-      <memberdef kind="function" id="a01229_1a88b4b474b015d4f9d86e74859d54453a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>int16_t</type>
-        <definition>int16_t Hack::Char::toInt16</definition>
-        <argsstring>(const String &amp;in, int16_t def=-1, int base=10)</argsstring>
-        <name>toInt16</name>
-        <param>
-          <type>const <ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>in</declname>
-        </param>
-        <param>
-          <type>int16_t</type>
-          <declname>def</declname>
-          <defval>-1</defval>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>base</declname>
-          <defval>10</defval>
-        </param>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a01229_1a0e32a9d599cd72cea3b394d325c1f6cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Computer::DebugRuntime::DebugRuntime</definition>
+        <argsstring>()</argsstring>
+        <name>DebugRuntime</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/Char.h" line="73" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="116" bodyend="119"/>
-        <references refid="a01229_1a1d1dca952e59d2b38615e7240d3b9055" compoundref="a00794" startline="50" endline="62">toInt16</references>
+        <location file="Source/Computer/DebugRuntime.h" line="41" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="535" bodyend="538"/>
       </memberdef>
-      <memberdef kind="function" id="a01229_1a532f1147a1db35423d47c99351d146d0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>int32_t</type>
-        <definition>int32_t Hack::Char::toInt32</definition>
-        <argsstring>(const char *in, int32_t def=-1, int base=10)</argsstring>
-        <name>toInt32</name>
-        <param>
-          <type>const char *</type>
-          <declname>in</declname>
-        </param>
-        <param>
-          <type>int32_t</type>
-          <declname>def</declname>
-          <defval>-1</defval>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>base</declname>
-          <defval>10</defval>
-        </param>
+      <memberdef kind="function" id="a01229_1a651c25202fe8c26358f7be25c3fb5536" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Computer::DebugRuntime::~DebugRuntime</definition>
+        <argsstring>() override</argsstring>
+        <name>~DebugRuntime</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/Char.h" line="57" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="64" bodyend="76"/>
+        <location file="Source/Computer/DebugRuntime.h" line="43" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="540" bodyend="544"/>
       </memberdef>
-      <memberdef kind="function" id="a01229_1a92f5742036276858a88b74eb66ed1f72" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>int32_t</type>
-        <definition>int32_t Hack::Char::toInt32</definition>
-        <argsstring>(const String &amp;in, int32_t def=-1, int base=10)</argsstring>
-        <name>toInt32</name>
-        <param>
-          <type>const <ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>in</declname>
-        </param>
-        <param>
-          <type>int32_t</type>
-          <declname>def</declname>
-          <defval>-1</defval>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>base</declname>
-          <defval>10</defval>
-        </param>
+      <memberdef kind="function" id="a01229_1acce22e29456976ba86f505c06b5fff81" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Hack::Computer::DebugRuntime::exitRequest</definition>
+        <argsstring>() const override</argsstring>
+        <name>exitRequest</name>
+        <reimplements refid="a01233_1ae4fb11811510339381b65be887827dfc">exitRequest</reimplements>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/Char.h" line="77" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="121" bodyend="124"/>
-        <references refid="a01229_1a532f1147a1db35423d47c99351d146d0" compoundref="a00794" startline="64" endline="76">toInt32</references>
+        <location file="Source/Computer/DebugRuntime.h" line="49" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="558" bodyend="561"/>
+        <references refid="a01225_1a8e827619e3caeeed369299fe5228b7ff" compoundref="a00785" startline="108" endline="111">Hack::Computer::DebugRuntimePrivate::input</references>
+        <references refid="a00923_1a7553833a41980e8c2bae00177d41129ead7a3bc54fb41225d6588c6fb307f0bcf" compoundref="a00866" startline="90">Hack::Ui::PR_EXIT</references>
       </memberdef>
-      <memberdef kind="function" id="a01229_1af184cc5ddf904290b7665776e0b74471" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>int64_t</type>
-        <definition>int64_t Hack::Char::toInt64</definition>
-        <argsstring>(const char *in, int64_t def=-1, int base=10)</argsstring>
-        <name>toInt64</name>
-        <param>
-          <type>const char *</type>
-          <declname>in</declname>
-        </param>
-        <param>
-          <type>int64_t</type>
-          <declname>def</declname>
-          <defval>-1</defval>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>base</declname>
-          <defval>10</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="59" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="78" bodyend="83"/>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a84f3cab6a06ab9051f2dc486d410a43d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>int64_t</type>
-        <definition>int64_t Hack::Char::toInt64</definition>
-        <argsstring>(const String &amp;in, int64_t def=-1, int base=10)</argsstring>
-        <name>toInt64</name>
-        <param>
-          <type>const <ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>in</declname>
-        </param>
-        <param>
-          <type>int64_t</type>
-          <declname>def</declname>
-          <defval>-1</defval>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>base</declname>
-          <defval>10</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="81" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="126" bodyend="129"/>
-        <references refid="a01229_1af184cc5ddf904290b7665776e0b74471" compoundref="a00794" startline="78" endline="83">toInt64</references>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a3a5e5db497a735c1cec92d748b513c9d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01229_1aee00ac57512447b7655ed7cdc54b025d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
-        <definition>void Hack::Char::toString</definition>
-        <argsstring>(String &amp;dest, float v)</argsstring>
-        <name>toString</name>
+        <definition>void Hack::Computer::DebugRuntime::flushMemory</definition>
+        <argsstring>(Chips::Computer *computer) const override</argsstring>
+        <name>flushMemory</name>
+        <reimplements refid="a01233_1af845999e44531fc6282d028402131fa9">flushMemory</reimplements>
         <param>
-          <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>dest</declname>
-        </param>
-        <param>
-          <type>float</type>
-          <declname>v</declname>
+          <type><ref refid="a01017" kindref="compound">Chips::Computer</ref> *</type>
+          <declname>computer</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -600,20 +94,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/Char.h" line="111" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="205" bodyend="210"/>
+        <location file="Source/Computer/DebugRuntime.h" line="53" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="568" bodyend="571"/>
+        <references refid="a01225_1a05e86f865706ec018a5856b2cae527fe" compoundref="a00785" startline="141" endline="151">Hack::Computer::DebugRuntimePrivate::flushMemory</references>
       </memberdef>
-      <memberdef kind="function" id="a01229_1a845c1f415bf8640d9b1fb83e4aca484c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01229_1a8514e728f96721d941711bf25d74517a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
-        <definition>void Hack::Char::toString</definition>
-        <argsstring>(String &amp;dest, double v)</argsstring>
-        <name>toString</name>
+        <definition>void Hack::Computer::DebugRuntime::initialize</definition>
+        <argsstring>(Chips::Computer *computer, Chips::Screen *) const override</argsstring>
+        <name>initialize</name>
+        <reimplements refid="a01233_1acfdf1e97cbbcc9a9f13ad26e6062b8d0">initialize</reimplements>
         <param>
-          <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>dest</declname>
+          <type><ref refid="a01017" kindref="compound">Chips::Computer</ref> *</type>
+          <declname>computer</declname>
         </param>
         <param>
-          <type>double</type>
-          <declname>v</declname>
+          <type><ref refid="a00911_1a205aa97050ad01560145252139c81057" kindref="member">Chips::Screen</ref> *</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -621,20 +116,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/Char.h" line="113" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="212" bodyend="217"/>
+        <location file="Source/Computer/DebugRuntime.h" line="47" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="552" bodyend="556"/>
+        <references refid="a01225_1ab39c71410b1af25c8910ddef0a653ebe" compoundref="a00785" startline="91" endline="106">Hack::Computer::DebugRuntimePrivate::initialize</references>
+        <references refid="a01225_1a05e86f865706ec018a5856b2cae527fe" compoundref="a00785" startline="141" endline="151">Hack::Computer::DebugRuntimePrivate::flushMemory</references>
       </memberdef>
-      <memberdef kind="function" id="a01229_1a93229ebcd3ee13e8cfd84773d0068d45" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01229_1a4811a14fcdfa33479b429ecd07bbc9d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
-        <definition>void Hack::Char::toString</definition>
-        <argsstring>(String &amp;dest, bool v)</argsstring>
-        <name>toString</name>
+        <definition>void Hack::Computer::DebugRuntime::processEvents</definition>
+        <argsstring>(Chips::Computer *computer) const override</argsstring>
+        <name>processEvents</name>
+        <reimplements refid="a01233_1a3cb1ab52903aaedabb0c9d49b013aab4">processEvents</reimplements>
         <param>
-          <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>dest</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>v</declname>
+          <type><ref refid="a01017" kindref="compound">Chips::Computer</ref> *</type>
+          <declname>computer</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -642,20 +136,36 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/Char.h" line="115" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="219" bodyend="227"/>
+        <location file="Source/Computer/DebugRuntime.h" line="51" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="563" bodyend="566"/>
+        <references refid="a01225_1afb2e833f6eb3a365f1d734b51e9ee359" compoundref="a00785" startline="118" endline="139">Hack::Computer::DebugRuntimePrivate::processEvents</references>
       </memberdef>
-      <memberdef kind="function" id="a01229_1adccd2a2ec6c50d9c8f54b4d6d711de22" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01229_1ab171edd61256c2eac08cdc2528a551f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Hack::Computer::DebugRuntime::shouldUpdate</definition>
+        <argsstring>() override</argsstring>
+        <name>shouldUpdate</name>
+        <reimplements refid="a01233_1a44e6d9da00af26f22941e1a0a540e797">shouldUpdate</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/DebugRuntime.h" line="45" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="546" bodyend="550"/>
+        <references refid="a01225_1a8e827619e3caeeed369299fe5228b7ff" compoundref="a00785" startline="108" endline="111">Hack::Computer::DebugRuntimePrivate::input</references>
+        <references refid="a00923_1a7553833a41980e8c2bae00177d41129ea35bf1e881e438245e59ccdf1cd1d0774" compoundref="a00866" startline="131">Hack::Ui::PR_UP_ARROW</references>
+        <references refid="a00923_1a7553833a41980e8c2bae00177d41129eadce783d1df91b3fd26fd5817f0ff07c6" compoundref="a00866" startline="121">Hack::Ui::PR_R</references>
+        <references refid="a01225_1a74f4ddc2111c8b2112b70775dfc7df71" compoundref="a00785" startline="113" endline="116">Hack::Computer::DebugRuntimePrivate::block</references>
+      </memberdef>
+      <memberdef kind="function" id="a01229_1a3bd47a61275e31af0bf9056a6097712c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
-        <definition>void Hack::Char::toString</definition>
-        <argsstring>(String &amp;dest, int16_t v)</argsstring>
-        <name>toString</name>
+        <definition>void Hack::Computer::DebugRuntime::update</definition>
+        <argsstring>(Chips::Computer *computer) const override</argsstring>
+        <name>update</name>
+        <reimplements refid="a01233_1a5fe5dfa099bbf6ded85b29028440466d">update</reimplements>
         <param>
-          <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>dest</declname>
-        </param>
-        <param>
-          <type>int16_t</type>
-          <declname>v</declname>
+          <type><ref refid="a01017" kindref="compound">Chips::Computer</ref> *</type>
+          <declname>computer</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -663,496 +173,53 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/Char.h" line="119" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="235" bodyend="240"/>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a92c68f951be4f2ff7869f10900de8f32" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Char::toString</definition>
-        <argsstring>(String &amp;dest, int32_t v)</argsstring>
-        <name>toString</name>
-        <param>
-          <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>dest</declname>
-        </param>
-        <param>
-          <type>int32_t</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="121" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="242" bodyend="247"/>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a387afc88f71084e205bd191447ff7e14" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Char::toString</definition>
-        <argsstring>(String &amp;dest, int64_t v)</argsstring>
-        <name>toString</name>
-        <param>
-          <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>dest</declname>
-        </param>
-        <param>
-          <type>int64_t</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="123" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="249" bodyend="254"/>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a60e31bb0a93db1f3677452084a7bd091" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Char::toString</definition>
-        <argsstring>(String &amp;dest, uint16_t v)</argsstring>
-        <name>toString</name>
-        <param>
-          <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>dest</declname>
-        </param>
-        <param>
-          <type><ref refid="a01361" kindref="compound">uint16_t</ref></type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="125" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="256" bodyend="261"/>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a632185cfd44aed668cf4de8e856f957c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Char::toString</definition>
-        <argsstring>(String &amp;dest, uint32_t v)</argsstring>
-        <name>toString</name>
-        <param>
-          <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>dest</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="131" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="276" bodyend="281"/>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a45935e552da4f01458f47ed81eb7d1d8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Char::toString</definition>
-        <argsstring>(String &amp;dest, uint64_t v)</argsstring>
-        <name>toString</name>
-        <param>
-          <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>dest</declname>
-        </param>
-        <param>
-          <type>uint64_t</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="135" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="290" bodyend="295"/>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a380d184f547e0e1baa566fc896a26703" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Hack::Char::toString</definition>
-        <argsstring>(float v)</argsstring>
-        <name>toString</name>
-        <param>
-          <type>float</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="139" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="304" bodyend="309"/>
-        <references refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" compoundref="a00794" startline="205" endline="210">toString</references>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1af1c5b232d3b511919ccecdb5c3a4c14c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Hack::Char::toString</definition>
-        <argsstring>(double v)</argsstring>
-        <name>toString</name>
-        <param>
-          <type>double</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="141" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="311" bodyend="316"/>
-        <references refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" compoundref="a00794" startline="205" endline="210">toString</references>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a2f005a674b721242cb618f7d1864e775" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Hack::Char::toString</definition>
-        <argsstring>(bool v)</argsstring>
-        <name>toString</name>
-        <param>
-          <type>bool</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="143" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="318" bodyend="323"/>
-        <references refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" compoundref="a00794" startline="205" endline="210">toString</references>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a08d79154f3eb758afad70d859f11f9ec" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Hack::Char::toString</definition>
-        <argsstring>(int16_t v)</argsstring>
-        <name>toString</name>
-        <param>
-          <type>int16_t</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="147" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="332" bodyend="337"/>
-        <references refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" compoundref="a00794" startline="205" endline="210">toString</references>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1aec97be472177a04f2c44d70131fb3388" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Hack::Char::toString</definition>
-        <argsstring>(int32_t v)</argsstring>
-        <name>toString</name>
-        <param>
-          <type>int32_t</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="149" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="339" bodyend="344"/>
-        <references refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" compoundref="a00794" startline="205" endline="210">toString</references>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a84c81cbe8e1f77dd787ed0ae9454e9c7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Hack::Char::toString</definition>
-        <argsstring>(int64_t v)</argsstring>
-        <name>toString</name>
-        <param>
-          <type>int64_t</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="151" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="346" bodyend="351"/>
-        <references refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" compoundref="a00794" startline="205" endline="210">toString</references>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1ac7470348173eccaa382ca511f4debdbb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Hack::Char::toString</definition>
-        <argsstring>(uint16_t v)</argsstring>
-        <name>toString</name>
-        <param>
-          <type><ref refid="a01361" kindref="compound">uint16_t</ref></type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="153" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="353" bodyend="358"/>
-        <references refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" compoundref="a00794" startline="205" endline="210">toString</references>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a71bedf8ccd42038fed290a85ae410d97" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Hack::Char::toString</definition>
-        <argsstring>(uint32_t v)</argsstring>
-        <name>toString</name>
-        <param>
-          <type>uint32_t</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="159" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="374" bodyend="379"/>
-        <references refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" compoundref="a00794" startline="205" endline="210">toString</references>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a66042986b814ca9edcf22abd0817d1a9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
-        <definition>String Hack::Char::toString</definition>
-        <argsstring>(uint64_t v)</argsstring>
-        <name>toString</name>
-        <param>
-          <type>uint64_t</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="163" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="388" bodyend="393"/>
-        <references refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" compoundref="a00794" startline="205" endline="210">toString</references>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a9ed9382e14ad5abe9c33e8597f2708f3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a01361" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Char::toUint16</definition>
-        <argsstring>(const char *in, uint16_t def=(uint16_t) -1, int base=10)</argsstring>
-        <name>toUint16</name>
-        <param>
-          <type>const char *</type>
-          <declname>in</declname>
-        </param>
-        <param>
-          <type><ref refid="a01361" kindref="compound">uint16_t</ref></type>
-          <declname>def</declname>
-          <defval>(<ref refid="a01361" kindref="compound">uint16_t</ref>) -1</defval>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>base</declname>
-          <defval>10</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="61" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="85" bodyend="95"/>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a1781b1dccd8889a869c98afd5b2fc2f9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a01361" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Char::toUint16</definition>
-        <argsstring>(const String &amp;in, uint16_t def=(uint16_t) -1, int base=10)</argsstring>
-        <name>toUint16</name>
-        <param>
-          <type>const <ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>in</declname>
-        </param>
-        <param>
-          <type><ref refid="a01361" kindref="compound">uint16_t</ref></type>
-          <declname>def</declname>
-          <defval>(<ref refid="a01361" kindref="compound">uint16_t</ref>) -1</defval>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>base</declname>
-          <defval>10</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="85" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="131" bodyend="136"/>
-        <references refid="a01229_1a9ed9382e14ad5abe9c33e8597f2708f3" compoundref="a00794" startline="85" endline="95">toUint16</references>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1ae88f7c140ddd3b671003a6be455b21c0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>uint32_t</type>
-        <definition>uint32_t Hack::Char::toUint32</definition>
-        <argsstring>(const char *in, uint32_t def=(uint32_t) -1, int base=10)</argsstring>
-        <name>toUint32</name>
-        <param>
-          <type>const char *</type>
-          <declname>in</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>def</declname>
-          <defval>(uint32_t) -1</defval>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>base</declname>
-          <defval>10</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="65" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="97" bodyend="107"/>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a653dbcf71840c2c25e4a1b331081a5a9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>uint32_t</type>
-        <definition>uint32_t Hack::Char::toUint32</definition>
-        <argsstring>(const String &amp;in, uint32_t def=(uint32_t) -1, int base=10)</argsstring>
-        <name>toUint32</name>
-        <param>
-          <type>const <ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>in</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>def</declname>
-          <defval>(uint32_t) -1</defval>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>base</declname>
-          <defval>10</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="89" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="138" bodyend="143"/>
-        <references refid="a01229_1ae88f7c140ddd3b671003a6be455b21c0" compoundref="a00794" startline="97" endline="107">toUint32</references>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1a93f6e45cc3480aa1403694a46af317cb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>uint64_t</type>
-        <definition>uint64_t Hack::Char::toUint64</definition>
-        <argsstring>(const char *in, uint64_t def=(uint64_t) -1, int base=10)</argsstring>
-        <name>toUint64</name>
-        <param>
-          <type>const char *</type>
-          <declname>in</declname>
-        </param>
-        <param>
-          <type>uint64_t</type>
-          <declname>def</declname>
-          <defval>(uint64_t) -1</defval>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>base</declname>
-          <defval>10</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="69" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="109" bodyend="114"/>
-      </memberdef>
-      <memberdef kind="function" id="a01229_1ab116bb576dc7e403b3a6f891d1c3e1ad" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>uint64_t</type>
-        <definition>uint64_t Hack::Char::toUint64</definition>
-        <argsstring>(const String &amp;in, uint64_t def=(uint64_t) -1, int base=10)</argsstring>
-        <name>toUint64</name>
-        <param>
-          <type>const <ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>in</declname>
-        </param>
-        <param>
-          <type>uint64_t</type>
-          <declname>def</declname>
-          <defval>(uint64_t) -1</defval>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>base</declname>
-          <defval>10</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/Char.h" line="93" column="1" bodyfile="Source/Utils/Char.cpp" bodystart="145" bodyend="150"/>
-        <references refid="a01229_1a93f6e45cc3480aa1403694a46af317cb" compoundref="a00794" startline="109" endline="114">toUint64</references>
+        <location file="Source/Computer/DebugRuntime.h" line="55" column="1" bodyfile="Source/Computer/DebugRuntime.cpp" bodystart="573" bodyend="580"/>
+        <references refid="a01017_1aa44e98396b5191c503bd5255fe0ffa1f" compoundref="a00497" startline="104" endline="137">Hack::Chips::Computer::update</references>
+        <references refid="a01017_1a2dbfa6b9bb02786f4e91770527d8624b" compoundref="a00497" startline="80" endline="101">Hack::Chips::Computer::captureState</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Provides conversion utilities between char pointers and strings. </para>    </briefdescription>
+    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Utils/Char.h" line="32" column="1" bodyfile="Source/Utils/Char.h" bodystart="31" bodyend="166"/>
+    <inheritancegraph>
+      <node id="372">
+        <label>Hack::Computer::RuntimeInterface</label>
+        <link refid="a01233"/>
+      </node>
+      <node id="371">
+        <label>Hack::Computer::DebugRuntime</label>
+        <link refid="a01229"/>
+        <childnode refid="372" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="374">
+        <label>Hack::Computer::RuntimeInterface</label>
+        <link refid="a01233"/>
+      </node>
+      <node id="373">
+        <label>Hack::Computer::DebugRuntime</label>
+        <link refid="a01229"/>
+        <childnode refid="374" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Computer/DebugRuntime.h" line="31" column="1" bodyfile="Source/Computer/DebugRuntime.h" bodystart="30" bodyend="56"/>
     <listofallmembers>
-      <member refid="a01229_1acadfc20f5f4f4ff24916c56d4aafc07c" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>equals</name></member>
-      <member refid="a01229_1a173f103b04790960e358ffcce33ab1e9" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>isNullOrEmpty</name></member>
-      <member refid="a01229_1aec2f1d7549e6794e9f1b12e18d12602a" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>length</name></member>
-      <member refid="a01229_1a2e634e86f642f657dd42a2e967d99764" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toBinaryString</name></member>
-      <member refid="a01229_1a3a7e07c47aa6ddf1872fd0a22aa4beee" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toBinaryString</name></member>
-      <member refid="a01229_1a49e41e2ec48dac4cd43de3f13416e54d" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toBinaryString</name></member>
-      <member refid="a01229_1a6109b7ac33a168c0d32bb0cf3e021b9c" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toBinaryString</name></member>
-      <member refid="a01229_1adea31e16265cdb63ea40f07034073edd" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toBool</name></member>
-      <member refid="a01229_1acf474c4941309b5295a371d929d86b76" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toBool</name></member>
-      <member refid="a01229_1a8ca6361d986b2d2f34fc0b28dd5d68c3" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toDouble</name></member>
-      <member refid="a01229_1a23040a5aaccecd64f3432ff1d1388a3e" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toDouble</name></member>
-      <member refid="a01229_1a9706e2040a6912a05cb39486930ba5a5" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toFloat</name></member>
-      <member refid="a01229_1a3ea30b82aea1fe96651b4ff7f1b6541f" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toFloat</name></member>
-      <member refid="a01229_1ad54d719cdd63fa3f265ade5ca54ec679" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toHexString</name></member>
-      <member refid="a01229_1a218d64307f0a0c4c129e7e07cf3a5e24" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toHexString</name></member>
-      <member refid="a01229_1a2f5b041019556c2552ad7c76d40323d0" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toHexString</name></member>
-      <member refid="a01229_1ab16c60f5441a1fba11356d908046fec2" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toHexString</name></member>
-      <member refid="a01229_1ac7c18ba28e074214a77bc406b0a20b6c" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toHexString</name></member>
-      <member refid="a01229_1ac01d0bd168317ae2f1247a67e0b9032b" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toHexString</name></member>
-      <member refid="a01229_1a1d1dca952e59d2b38615e7240d3b9055" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toInt16</name></member>
-      <member refid="a01229_1a88b4b474b015d4f9d86e74859d54453a" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toInt16</name></member>
-      <member refid="a01229_1a532f1147a1db35423d47c99351d146d0" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toInt32</name></member>
-      <member refid="a01229_1a92f5742036276858a88b74eb66ed1f72" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toInt32</name></member>
-      <member refid="a01229_1af184cc5ddf904290b7665776e0b74471" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toInt64</name></member>
-      <member refid="a01229_1a84f3cab6a06ab9051f2dc486d410a43d" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toInt64</name></member>
-      <member refid="a01229_1a3a5e5db497a735c1cec92d748b513c9d" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toString</name></member>
-      <member refid="a01229_1a845c1f415bf8640d9b1fb83e4aca484c" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toString</name></member>
-      <member refid="a01229_1a93229ebcd3ee13e8cfd84773d0068d45" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toString</name></member>
-      <member refid="a01229_1adccd2a2ec6c50d9c8f54b4d6d711de22" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toString</name></member>
-      <member refid="a01229_1a92c68f951be4f2ff7869f10900de8f32" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toString</name></member>
-      <member refid="a01229_1a387afc88f71084e205bd191447ff7e14" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toString</name></member>
-      <member refid="a01229_1a60e31bb0a93db1f3677452084a7bd091" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toString</name></member>
-      <member refid="a01229_1a632185cfd44aed668cf4de8e856f957c" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toString</name></member>
-      <member refid="a01229_1a45935e552da4f01458f47ed81eb7d1d8" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toString</name></member>
-      <member refid="a01229_1a380d184f547e0e1baa566fc896a26703" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toString</name></member>
-      <member refid="a01229_1af1c5b232d3b511919ccecdb5c3a4c14c" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toString</name></member>
-      <member refid="a01229_1a2f005a674b721242cb618f7d1864e775" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toString</name></member>
-      <member refid="a01229_1a08d79154f3eb758afad70d859f11f9ec" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toString</name></member>
-      <member refid="a01229_1aec97be472177a04f2c44d70131fb3388" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toString</name></member>
-      <member refid="a01229_1a84c81cbe8e1f77dd787ed0ae9454e9c7" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toString</name></member>
-      <member refid="a01229_1ac7470348173eccaa382ca511f4debdbb" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toString</name></member>
-      <member refid="a01229_1a71bedf8ccd42038fed290a85ae410d97" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toString</name></member>
-      <member refid="a01229_1a66042986b814ca9edcf22abd0817d1a9" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toString</name></member>
-      <member refid="a01229_1a9ed9382e14ad5abe9c33e8597f2708f3" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toUint16</name></member>
-      <member refid="a01229_1a1781b1dccd8889a869c98afd5b2fc2f9" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toUint16</name></member>
-      <member refid="a01229_1ae88f7c140ddd3b671003a6be455b21c0" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toUint32</name></member>
-      <member refid="a01229_1a653dbcf71840c2c25e4a1b331081a5a9" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toUint32</name></member>
-      <member refid="a01229_1a93f6e45cc3480aa1403694a46af317cb" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toUint64</name></member>
-      <member refid="a01229_1ab116bb576dc7e403b3a6f891d1c3e1ad" prot="public" virt="non-virtual"><scope>Hack::Char</scope><name>toUint64</name></member>
+      <member refid="a01229_1a76670657c1725ecef554d76bb46d597b" prot="private" virt="non-virtual"><scope>Hack::Computer::DebugRuntime</scope><name>_private</name></member>
+      <member refid="a01229_1a0e32a9d599cd72cea3b394d325c1f6cf" prot="public" virt="non-virtual"><scope>Hack::Computer::DebugRuntime</scope><name>DebugRuntime</name></member>
+      <member refid="a01229_1acce22e29456976ba86f505c06b5fff81" prot="public" virt="virtual"><scope>Hack::Computer::DebugRuntime</scope><name>exitRequest</name></member>
+      <member refid="a01229_1aee00ac57512447b7655ed7cdc54b025d" prot="public" virt="virtual"><scope>Hack::Computer::DebugRuntime</scope><name>flushMemory</name></member>
+      <member refid="a01229_1ace069a8cbf49c271f047e62868763c2e" prot="private" virt="virtual"><scope>Hack::Computer::DebugRuntime</scope><name>getRate</name></member>
+      <member refid="a01229_1a8514e728f96721d941711bf25d74517a" prot="public" virt="virtual"><scope>Hack::Computer::DebugRuntime</scope><name>initialize</name></member>
+      <member refid="a01229_1a4811a14fcdfa33479b429ecd07bbc9d1" prot="public" virt="virtual"><scope>Hack::Computer::DebugRuntime</scope><name>processEvents</name></member>
+      <member refid="a01233_1afac6241dfa4f6de4ca3353819786e5e3" prot="public" virt="virtual"><scope>Hack::Computer::DebugRuntime</scope><name>setRate</name></member>
+      <member refid="a01229_1ab171edd61256c2eac08cdc2528a551f2" prot="public" virt="virtual"><scope>Hack::Computer::DebugRuntime</scope><name>shouldUpdate</name></member>
+      <member refid="a01229_1a3bd47a61275e31af0bf9056a6097712c" prot="public" virt="virtual"><scope>Hack::Computer::DebugRuntime</scope><name>update</name></member>
+      <member refid="a01229_1a651c25202fe8c26358f7be25c3fb5536" prot="public" virt="non-virtual"><scope>Hack::Computer::DebugRuntime</scope><name>~DebugRuntime</name></member>
+      <member refid="a01233_1a3e09aeb7e6d6907b58f7a2a40636ac37" prot="public" virt="virtual"><scope>Hack::Computer::DebugRuntime</scope><name>~RuntimeInterface</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

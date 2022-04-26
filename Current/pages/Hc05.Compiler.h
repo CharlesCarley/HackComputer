@@ -8,31 +8,29 @@
 The primary job of the compiler is to take the high-level jack language
 and translate it from, <tt>.jack,</tt> to <tt>.vm,</tt> then <tt>.asm,</tt> and finally to machine code.
 
-\section Hc05SyntaxAnalyzer SyntaxAnalyzer
+\h1 SyntaxAnalyzer
 
 The SyntaxAnalyzer project provides a static library that compiles the jack code
 into an intermediate parse tree.
 \br
 The definition for the jack grammar can be found
 \file_ref{here.,Source/Compiler/Analyzer/Jack.grm}
-Where the primary difference in syntax between this implementation and the course
+The primary difference in syntax between this implementation and the course
 is that the not operator `!` is implemented both as '~' and '!'.
 
 
-\section Hc05CompileUtils CompileUtils
+\h1 CompileUtils
 
 Provides an intermediate static library that implements the parse tree structure.
-The parse tree structure is meant to be shared between multiple projects. 
-
-It also contains extra general classes that provide output formats for
+The tree structure is meant to be shared between multiple projects. This library provides
+that space. As such, it also contains extra classes that provide output formats for
 the parse tree.
 
-\section Hc05Jack2XML Jack2XML
+\h1 Jack2XML
 
 Is an executable project that provides the means to output inspection files.
 
 \br
-
 \code{.txt}
 Usage: Jack2xml <options> <arg[0] .. arg[n]>
 
@@ -46,8 +44,10 @@ Usage: Jack2xml <options> <arg[0] .. arg[n]>
 
 \endcode
 
-\subsection Hc05Jack2XML_0 Example
-\isec{Input: The following shows the output of Jack2XML using the supplied <tt>.jack</tt> source file.}
+\h2 Example
+
+The following shows the different outputs of Jack2XML using the supplied <tt>.jack</tt> source file.
+
 \code{.txt}
 class Main
 {
@@ -58,7 +58,8 @@ class Main
 }
 \endcode
 
-\isec{Xml: Shows the output using \ref Hack::Compiler::XmlWriterImpl}
+Using \ref Hack::Compiler::XmlWriterImpl "XmlWriter"
+
 \code{.xml}
 <?xml version='1.0'?>
 <ClassList Filename="example.jack">
@@ -109,16 +110,16 @@ class Main
 </ClassList>
 \endcode
 
-\isec{dot: Shows the output using \ref Hack::Compiler::DotWriterImpl after it has be converted to SVG with dot.}
+Using \ref Hack::Compiler::DotWriterImpl "DotWriter" after it has be converted to SVG with dot.
+
 \image html Example.svg
 
 
-\section Hc05CodeGenerator CodeGenerator
-
+\h1 CodeGenerator
 Is a static library which implements the conversion from parse tree to <tt>.vm</tt>.
 
 
-\section Hc05compiler Compiler
+\h1 Compiler
 
 The current state of this project does not implement a standalone compiler.
 Instead, compilation happens in the \ref Hc07 "Computer" executable.

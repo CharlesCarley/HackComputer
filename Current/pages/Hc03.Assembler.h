@@ -3,20 +3,17 @@
 
 \brief Implements the machine code compiler.
 
-
-\n\n
-
+\br
 The primary job of the assembler is to convert the input assembly into
 16 bit binary codes that can be handed to the Cpu.
 
-\section Hc03Asm2Mc Asm2Mc
+\h1 Asm2Mc
 
 Is the executable that implements this conversion.
 
-\subsection Hc03Asm2McUsage Usage
+\h2 Usage
 
 \code{.txt}
-
 Usage: asm2mc <options> <arg[0] .. arg[n]>
   
   where arg[0] is the input file
@@ -26,10 +23,11 @@ Usage: asm2mc <options> <arg[0] .. arg[n]>
 
 \endcode
 
-The following code illustrates the conversion.
-\n\n
 
-\sec{Assembly:}
+\h3 Example
+
+The following code illustrates the output of Asm2Mc from assembly to machine code.
+\br
 \code{.txt}
 @123
 D=A
@@ -42,7 +40,6 @@ M=D
 @32766 D=A;JMP
 \endcode
 
-\sec{Machine-Code:}
 \code{.txt}
 0000000001111011
 1110110000010000
@@ -55,12 +52,10 @@ M=D
 0111111111111110
 1110110000010111
 \endcode
-\n
 
-\subsection Hc03AsmGrammar Grammar
-The grammar for the assembly can be found [here](../../Source/Assembler/ASM.grm).
+\h2 Grammar
+The grammar for the assembly syntax can be found [here.](../../Source/Assembler/ASM.grm)
 
-\n
 \defined{Hc03Defined}
 \defined_in{Source/Assembler}
 

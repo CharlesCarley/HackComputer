@@ -1,110 +1,52 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00752" kind="file" language="C++">
-    <compoundname>Symbol.cpp</compoundname>
-    <includes refid="a00755" local="yes">Compiler/Generator/Symbol.h</includes>
+    <compoundname>Scope.h</compoundname>
+    <includes refid="a00728" local="yes">Compiler/Common/Tree.h</includes>
+    <includedby refid="a00749" local="yes">Source/Compiler/Generator/Scope.cpp</includedby>
     <incdepgraph>
-      <node id="2625">
-        <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="2626" relation="include">
-        </childnode>
-      </node>
-      <node id="2611">
-        <label>Compiler/Generator/Symbol.h</label>
-        <childnode refid="2612" relation="include">
-        </childnode>
-      </node>
-      <node id="2626">
-        <label>cstdint</label>
-      </node>
-      <node id="2617">
-        <label>stdexcept</label>
-      </node>
-      <node id="2622">
+      <node id="2606">
         <label>string</label>
       </node>
-      <node id="2614">
-        <label>unordered_set</label>
-      </node>
-      <node id="2616">
-        <label>exception</label>
-      </node>
-      <node id="2624">
-        <label>UserInterface/Context.h</label>
-        <childnode refid="2620" relation="include">
-        </childnode>
-        <childnode refid="2625" relation="include">
-        </childnode>
-        <childnode refid="2627" relation="include">
-        </childnode>
-      </node>
-      <node id="2627">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="2626" relation="include">
-        </childnode>
-        <childnode refid="2623" relation="include">
-        </childnode>
-        <childnode refid="2625" relation="include">
-        </childnode>
-      </node>
-      <node id="2612">
-        <label>Utils/IndexCache.h</label>
-        <childnode refid="2613" relation="include">
-        </childnode>
-        <childnode refid="2614" relation="include">
-        </childnode>
-        <childnode refid="2615" relation="include">
-        </childnode>
-      </node>
-      <node id="2619">
-        <label>Utils/Console.h</label>
-        <childnode refid="2620" relation="include">
-        </childnode>
-        <childnode refid="2624" relation="include">
-        </childnode>
-      </node>
-      <node id="2623">
+      <node id="2607">
         <label>vector</label>
       </node>
-      <node id="2618">
-        <label>utility</label>
-      </node>
-      <node id="2621">
+      <node id="2605">
         <label>sstream</label>
       </node>
-      <node id="2615">
-        <label>Utils/Exception.h</label>
-        <childnode refid="2616" relation="include">
-        </childnode>
-        <childnode refid="2617" relation="include">
-        </childnode>
-        <childnode refid="2618" relation="include">
-        </childnode>
-        <childnode refid="2619" relation="include">
-        </childnode>
-        <childnode refid="2620" relation="include">
-        </childnode>
-      </node>
-      <node id="2613">
-        <label>unordered_map</label>
-      </node>
-      <node id="2610">
-        <label>Source/Compiler/Generator/Symbol.cpp</label>
+      <node id="2602">
+        <label>Source/Compiler/Generator/Scope.h</label>
         <link refid="a00752"/>
-        <childnode refid="2611" relation="include">
+        <childnode refid="2603" relation="include">
         </childnode>
       </node>
-      <node id="2620">
-        <label>String.h</label>
-        <childnode refid="2621" relation="include">
+      <node id="2603">
+        <label>Compiler/Common/Tree.h</label>
+        <childnode refid="2604" relation="include">
         </childnode>
-        <childnode refid="2622" relation="include">
+      </node>
+      <node id="2604">
+        <label>Utils/String.h</label>
+        <childnode refid="2605" relation="include">
         </childnode>
-        <childnode refid="2623" relation="include">
+        <childnode refid="2606" relation="include">
+        </childnode>
+        <childnode refid="2607" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <innernamespace refid="a00913">Hack::Compiler::CodeGenerator</innernamespace>
+    <invincdepgraph>
+      <node id="2608">
+        <label>Source/Compiler/Generator/Scope.h</label>
+        <link refid="a00752"/>
+        <childnode refid="2609" relation="include">
+        </childnode>
+      </node>
+      <node id="2609">
+        <label>Source/Compiler/Generator/Scope.cpp</label>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="a00916">Hack::Compiler::CodeGenerator</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -131,26 +73,13 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Compiler/Generator/Symbol.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00913" kindref="compound">Hack::Compiler::CodeGenerator</ref></highlight></codeline>
-<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="26" refid="a01198_1a4aaf0b7b3e7f348677d6e987a0345bb5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01198_1a4aaf0b7b3e7f348677d6e987a0345bb5" kindref="member">Symbol::Symbol</ref>()<sp/>:</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_type(-1),</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_kind(<ref refid="a00913_1ac08293c0a6cadd380abba4ce7069b7bca33eb8724d1cfb37808fb1dd2a3c24812" kindref="member">None</ref>),</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_entry(-1)</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33" refid="a01198_1a42a37a3aa91720ae15a7abd248997911" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01198_1a4aaf0b7b3e7f348677d6e987a0345bb5" kindref="member">Symbol::Symbol</ref>(<ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int8_t<sp/>type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int8_t<sp/>kind,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>entry)<sp/>:</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_name(<ref refid="a00922" kindref="compound">std</ref>::move(name)),</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_type(type),</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_kind(kind),</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_entry(entry)</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="40"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler::CodeGenerator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Compiler/Common/Tree.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00916" kindref="compound">Hack::Compiler::CodeGenerator</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler::CodeGenerator</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Compiler/Generator/Symbol.cpp"/>
+    <location file="Source/Compiler/Generator/Scope.h"/>
   </compounddef>
 </doxygen>

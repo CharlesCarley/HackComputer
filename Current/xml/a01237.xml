@@ -1,316 +1,44 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01237" kind="class" language="C++" prot="public">
-    <compoundname>Hack::CommandLine::ParseOption</compoundname>
-    <includes local="no">Source/Utils/CommandLine/Option.h</includes>
-      <sectiondef kind="public-type">
-      <memberdef kind="typedef" id="a01237_1a6abf40fe5bace6448ca4d65d157b5596" prot="public" static="no">
-        <type>std::vector&lt; <ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &gt;</type>
-        <definition>typedef std::vector&lt;String&gt; Hack::CommandLine::ParseOption::Arguments</definition>
-        <argsstring></argsstring>
-        <name>Arguments</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/CommandLine/Option.h" line="60" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="60" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="a01237_1ababb0040f0c90754cffceb2cea9d65ac" prot="private" static="no" mutable="no">
-        <type>bool</type>
-        <definition>bool Hack::CommandLine::ParseOption::_isPresent</definition>
-        <argsstring></argsstring>
-        <name>_isPresent</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/CommandLine/Option.h" line="65" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="65" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01237_1a3e522b33074e7b62223dc629ba011dd4" prot="private" static="no" mutable="no">
-        <type>const <ref refid="a01233" kindref="compound">Switch</ref></type>
-        <definition>const Switch Hack::CommandLine::ParseOption::_switches</definition>
-        <argsstring></argsstring>
-        <name>_switches</name>
-        <initializer>{}</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/CommandLine/Option.h" line="63" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="63" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a01237_1a1b8e9c6b363b6659da9b46f00a6e1c13" prot="private" static="no" mutable="no">
-        <type><ref refid="a01237_1a6abf40fe5bace6448ca4d65d157b5596" kindref="member">Arguments</ref></type>
-        <definition>Arguments Hack::CommandLine::ParseOption::_values</definition>
-        <argsstring></argsstring>
-        <name>_values</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/CommandLine/Option.h" line="64" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="64" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
+    <compoundname>Hack::OperatingSystem::Memory</compoundname>
+    <includes local="no">Source/OperatingSystem/Memory.h</includes>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01237_1aafa05c84542e6d3e2decf816dbec6510" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="a01237_1a64b6bc6a1bfc966b0b079221aeb4bf10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>Hack::CommandLine::ParseOption::ParseOption</definition>
+        <definition>Hack::OperatingSystem::Memory::Memory</definition>
         <argsstring>()</argsstring>
-        <name>ParseOption</name>
+        <name>Memory</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/CommandLine/Option.h" line="68" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="68" bodyend="71"/>
+        <location file="Source/OperatingSystem/Memory.h" line="29" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="a01237_1ac18ecdaf3823dc503630bb300b287dfc" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="a01237_1a313e7430b9453db49502c81795a08df4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>Hack::CommandLine::ParseOption::ParseOption</definition>
-        <argsstring>(const Switch &amp;sw)</argsstring>
-        <name>ParseOption</name>
-        <param>
-          <type>const <ref refid="a01233" kindref="compound">Switch</ref> &amp;</type>
-          <declname>sw</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/CommandLine/Option.h" line="73" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="73" bodyend="79"/>
-        <references refid="a01233_1a002425f1bb1d230c56836920850857f4" compoundref="a00800" startline="54">Hack::CommandLine::Switch::argCount</references>
-      </memberdef>
-      <memberdef kind="function" id="a01237_1a3e4adbad4b5893ad3b7369ff60fcaf79" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>size_t</type>
-        <definition>size_t Hack::CommandLine::ParseOption::getArgCount</definition>
-        <argsstring>() const</argsstring>
-        <name>getArgCount</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/CommandLine/Option.h" line="85" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="118" bodyend="121"/>
-      </memberdef>
-      <memberdef kind="function" id="a01237_1a1a3bef09b3b7286c74386217255d6494" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>int</type>
-        <definition>int Hack::CommandLine::ParseOption::getInt</definition>
-        <argsstring>(const size_t &amp;idx=0, const int &amp;defaultValue=-1, const int &amp;base=10)</argsstring>
-        <name>getInt</name>
-        <param>
-          <type>const size_t &amp;</type>
-          <declname>idx</declname>
-          <defval>0</defval>
-        </param>
-        <param>
-          <type>const int &amp;</type>
-          <declname>defaultValue</declname>
-          <defval>-1</defval>
-        </param>
-        <param>
-          <type>const int &amp;</type>
-          <declname>base</declname>
-          <defval>10</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/CommandLine/Option.h" line="97" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="150" bodyend="157"/>
-        <references refid="a01229_1a532f1147a1db35423d47c99351d146d0" compoundref="a00794" startline="64" endline="76">Hack::Char::toInt32</references>
-        <references refid="a01237_1ac74557a5de3f5699e36bdaf2bcb0106f" compoundref="a00800" startline="138" endline="142">getValue</references>
-      </memberdef>
-      <memberdef kind="function" id="a01237_1af60a5028994e8e00bdd592aee9b3c88e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>uint64_t</type>
-        <definition>uint64_t Hack::CommandLine::ParseOption::getInt64</definition>
-        <argsstring>(const size_t &amp;idx=0, const int64_t &amp;defaultValue=-1, const int &amp;base=10)</argsstring>
-        <name>getInt64</name>
-        <param>
-          <type>const size_t &amp;</type>
-          <declname>idx</declname>
-          <defval>0</defval>
-        </param>
-        <param>
-          <type>const int64_t &amp;</type>
-          <declname>defaultValue</declname>
-          <defval>-1</defval>
-        </param>
-        <param>
-          <type>const int &amp;</type>
-          <declname>base</declname>
-          <defval>10</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/CommandLine/Option.h" line="101" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="159" bodyend="166"/>
-        <references refid="a01229_1af184cc5ddf904290b7665776e0b74471" compoundref="a00794" startline="78" endline="83">Hack::Char::toInt64</references>
-        <references refid="a01237_1ac74557a5de3f5699e36bdaf2bcb0106f" compoundref="a00800" startline="138" endline="142">getValue</references>
-      </memberdef>
-      <memberdef kind="function" id="a01237_1a9e6b009546c4ddd04ae1040ddcebe250" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>const <ref refid="a01233" kindref="compound">Switch</ref> &amp;</type>
-        <definition>const Switch &amp; Hack::CommandLine::ParseOption::getSwitch</definition>
-        <argsstring>() const</argsstring>
-        <name>getSwitch</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/CommandLine/Option.h" line="89" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="128" bodyend="131"/>
-      </memberdef>
-      <memberdef kind="function" id="a01237_1ac74557a5de3f5699e36bdaf2bcb0106f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>const <ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-        <definition>const String &amp; Hack::CommandLine::ParseOption::getValue</definition>
-        <argsstring>(const size_t &amp;idx=0)</argsstring>
-        <name>getValue</name>
-        <param>
-          <type>const size_t &amp;</type>
-          <declname>idx</declname>
-          <defval>0</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/CommandLine/Option.h" line="93" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="138" bodyend="142"/>
-      </memberdef>
-      <memberdef kind="function" id="a01237_1af972b50565b56bd6103a64b6366848ec" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>const <ref refid="a01237_1a6abf40fe5bace6448ca4d65d157b5596" kindref="member">Arguments</ref> &amp;</type>
-        <definition>const ParseOption::Arguments &amp; Hack::CommandLine::ParseOption::getValues</definition>
-        <argsstring>() const</argsstring>
-        <name>getValues</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/CommandLine/Option.h" line="91" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="133" bodyend="136"/>
-      </memberdef>
-      <memberdef kind="function" id="a01237_1a55cc1ccc8cbd5e96b2af48e86d0d6324" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Hack::CommandLine::ParseOption::isOptional</definition>
-        <argsstring>() const</argsstring>
-        <name>isOptional</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/CommandLine/Option.h" line="81" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="108" bodyend="111"/>
-        <references refid="a01233_1a584e5301f7bab584467a66879cc18c21" compoundref="a00800" startline="51">Hack::CommandLine::Switch::optional</references>
-      </memberdef>
-      <memberdef kind="function" id="a01237_1a76b97e320f9883fcdf96e7f5175a6da5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Hack::CommandLine::ParseOption::isPresent</definition>
-        <argsstring>() const</argsstring>
-        <name>isPresent</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/CommandLine/Option.h" line="83" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="113" bodyend="116"/>
-      </memberdef>
-      <memberdef kind="function" id="a01237_1a3947a9d6cb146aa14cc72f51b04a85bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::CommandLine::ParseOption::makePresent</definition>
+        <definition>Hack::OperatingSystem::Memory::~Memory</definition>
         <argsstring>()</argsstring>
-        <name>makePresent</name>
+        <name>~Memory</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/CommandLine/Option.h" line="87" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="123" bodyend="126"/>
-      </memberdef>
-      <memberdef kind="function" id="a01237_1a256c761eeb80fa36003c935bc5706a44" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::CommandLine::ParseOption::setValue</definition>
-        <argsstring>(const String &amp;str)</argsstring>
-        <name>setValue</name>
-        <param>
-          <type>const <ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>str</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/CommandLine/Option.h" line="95" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="144" bodyend="148"/>
-      </memberdef>
-      <memberdef kind="function" id="a01237_1a596951c9f45692d56530143353073188" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::CommandLine::ParseOption::setValue</definition>
-        <argsstring>(const size_t &amp;index, const String &amp;str)</argsstring>
-        <name>setValue</name>
-        <param>
-          <type>const size_t &amp;</type>
-          <declname>index</declname>
-        </param>
-        <param>
-          <type>const <ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>str</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Utils/CommandLine/Option.h" line="105" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="168" bodyend="172"/>
+        <location file="Source/OperatingSystem/Memory.h" line="30" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Utils/CommandLine/Option.h" line="58" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="57" bodyend="106"/>
+    <location file="Source/OperatingSystem/Memory.h" line="27" column="1" bodyfile="Source/OperatingSystem/Memory.h" bodystart="26" bodyend="31"/>
     <listofallmembers>
-      <member refid="a01237_1ababb0040f0c90754cffceb2cea9d65ac" prot="private" virt="non-virtual"><scope>Hack::CommandLine::ParseOption</scope><name>_isPresent</name></member>
-      <member refid="a01237_1a3e522b33074e7b62223dc629ba011dd4" prot="private" virt="non-virtual"><scope>Hack::CommandLine::ParseOption</scope><name>_switches</name></member>
-      <member refid="a01237_1a1b8e9c6b363b6659da9b46f00a6e1c13" prot="private" virt="non-virtual"><scope>Hack::CommandLine::ParseOption</scope><name>_values</name></member>
-      <member refid="a01237_1a6abf40fe5bace6448ca4d65d157b5596" prot="public" virt="non-virtual"><scope>Hack::CommandLine::ParseOption</scope><name>Arguments</name></member>
-      <member refid="a01237_1a3e4adbad4b5893ad3b7369ff60fcaf79" prot="public" virt="non-virtual"><scope>Hack::CommandLine::ParseOption</scope><name>getArgCount</name></member>
-      <member refid="a01237_1a1a3bef09b3b7286c74386217255d6494" prot="public" virt="non-virtual"><scope>Hack::CommandLine::ParseOption</scope><name>getInt</name></member>
-      <member refid="a01237_1af60a5028994e8e00bdd592aee9b3c88e" prot="public" virt="non-virtual"><scope>Hack::CommandLine::ParseOption</scope><name>getInt64</name></member>
-      <member refid="a01237_1a9e6b009546c4ddd04ae1040ddcebe250" prot="public" virt="non-virtual"><scope>Hack::CommandLine::ParseOption</scope><name>getSwitch</name></member>
-      <member refid="a01237_1ac74557a5de3f5699e36bdaf2bcb0106f" prot="public" virt="non-virtual"><scope>Hack::CommandLine::ParseOption</scope><name>getValue</name></member>
-      <member refid="a01237_1af972b50565b56bd6103a64b6366848ec" prot="public" virt="non-virtual"><scope>Hack::CommandLine::ParseOption</scope><name>getValues</name></member>
-      <member refid="a01237_1a55cc1ccc8cbd5e96b2af48e86d0d6324" prot="public" virt="non-virtual"><scope>Hack::CommandLine::ParseOption</scope><name>isOptional</name></member>
-      <member refid="a01237_1a76b97e320f9883fcdf96e7f5175a6da5" prot="public" virt="non-virtual"><scope>Hack::CommandLine::ParseOption</scope><name>isPresent</name></member>
-      <member refid="a01237_1a3947a9d6cb146aa14cc72f51b04a85bb" prot="public" virt="non-virtual"><scope>Hack::CommandLine::ParseOption</scope><name>makePresent</name></member>
-      <member refid="a01237_1aafa05c84542e6d3e2decf816dbec6510" prot="public" virt="non-virtual"><scope>Hack::CommandLine::ParseOption</scope><name>ParseOption</name></member>
-      <member refid="a01237_1ac18ecdaf3823dc503630bb300b287dfc" prot="public" virt="non-virtual"><scope>Hack::CommandLine::ParseOption</scope><name>ParseOption</name></member>
-      <member refid="a01237_1a256c761eeb80fa36003c935bc5706a44" prot="public" virt="non-virtual"><scope>Hack::CommandLine::ParseOption</scope><name>setValue</name></member>
-      <member refid="a01237_1a596951c9f45692d56530143353073188" prot="public" virt="non-virtual"><scope>Hack::CommandLine::ParseOption</scope><name>setValue</name></member>
+      <member refid="a01237_1a64b6bc6a1bfc966b0b079221aeb4bf10" prot="public" virt="non-virtual"><scope>Hack::OperatingSystem::Memory</scope><name>Memory</name></member>
+      <member refid="a01237_1a313e7430b9453db49502c81795a08df4" prot="public" virt="non-virtual"><scope>Hack::OperatingSystem::Memory</scope><name>~Memory</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

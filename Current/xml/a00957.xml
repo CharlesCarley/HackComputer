@@ -1,64 +1,58 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
-  <compounddef id="a00957" kind="class" language="C++" prot="public" final="yes">
-    <compoundname>Hack::Chips::Add16</compoundname>
-    <basecompoundref refid="a00993" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; bit64_t, 64 &gt;</basecompoundref>
-    <includes local="no">Source/Chips/Add16.h</includes>
-      <sectiondef kind="private-func">
-      <memberdef kind="function" id="a00957_1a9cb9cd132c4d71cff914bdee5c9acbfd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::Add16::evaluate</definition>
-        <argsstring>()</argsstring>
-        <name>evaluate</name>
+  <compounddef id="a00957" kind="class" language="C++" prot="public">
+    <compoundname>Hack::Binding::RomWrapper</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="a00957_1a78a816a94fc0bd8d962d90932cc9e15d" prot="private" static="no" mutable="yes">
+        <type><ref refid="a00909_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
+        <definition>String Hack::Binding::RomWrapper::_cache</definition>
+        <argsstring></argsstring>
+        <name>_cache</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Add16.h" line="30" column="1" bodyfile="Source/Chips/Add16.cpp" bodystart="55" bodyend="92"/>
+        <location file="Source/Bindings/Bindings.cpp" line="55" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00957_1a026eb53aef02d9c1fdb7f6b57ac1f21d" prot="private" static="no" mutable="no">
+        <type><ref refid="a01133" kindref="compound">Rom32</ref> *</type>
+        <definition>Rom32* Hack::Binding::RomWrapper::_rom</definition>
+        <argsstring></argsstring>
+        <name>_rom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="53" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00957_1ae7d2fd6c9a84cfad3167fa000fc2b99e" prot="private" static="no" mutable="no">
+        <type>const uint64_t</type>
+        <definition>const uint64_t Hack::Binding::RomWrapper::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <initializer>= <ref refid="a00910_1ab9e96018072b404d8a46e2192f06b954" kindref="member">RomType</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="51" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="51" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="a00957_1a136082c38be14e2d6b3542e1e5450f97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a00957_1a430e884e4dfa1dec8dc20bb332bd0b3a" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
         <type></type>
-        <definition>Hack::Chips::Add16::Add16</definition>
-        <argsstring>()</argsstring>
-        <name>Add16</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/Add16.h" line="33" column="1" bodyfile="Source/Chips/Add16.cpp" bodystart="29" bodyend="33"/>
-        <references refid="a00993_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00476" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
-        <references refid="a00985_1a741dc95ddcf042b70e2747571d95cd82" compoundref="a00473" startline="76">Hack::Chips::bit64_t::ll</references>
-        <references refid="a00985_1af415893333942f41fb4c4ad619083a16" compoundref="a00473" startline="78">Hack::Chips::bit64_t::s</references>
-      </memberdef>
-      <memberdef kind="function" id="a00957_1a27793b7baca03572a8420aa9dd993f9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a01361" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::Add16::getOut</definition>
-        <argsstring>()</argsstring>
-        <name>getOut</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/Add16.h" line="39" column="1" bodyfile="Source/Chips/Add16.cpp" bodystart="47" bodyend="53"/>
-        <references refid="a00993_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00476" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
-        <references refid="a00985_1af415893333942f41fb4c4ad619083a16" compoundref="a00473" startline="78">Hack::Chips::bit64_t::s</references>
-      </memberdef>
-      <memberdef kind="function" id="a00957_1a17c5ae7fef533c9ef52f6822ec84ad86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::Add16::setA</definition>
-        <argsstring>(const uint16_t &amp;a)</argsstring>
-        <name>setA</name>
+        <definition>Hack::Binding::RomWrapper::RomWrapper</definition>
+        <argsstring>(Rom32 *rom32)</argsstring>
+        <name>RomWrapper</name>
         <param>
-          <type>const <ref refid="a01361" kindref="compound">uint16_t</ref> &amp;</type>
-          <declname>a</declname>
+          <type><ref refid="a01133" kindref="compound">Rom32</ref> *</type>
+          <declname>rom32</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -66,18 +60,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Add16.h" line="35" column="1" bodyfile="Source/Chips/Add16.cpp" bodystart="35" bodyend="39"/>
-        <references refid="a00993_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00476" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
-        <references refid="a00985_1af415893333942f41fb4c4ad619083a16" compoundref="a00473" startline="78">Hack::Chips::bit64_t::s</references>
+        <location file="Source/Bindings/Bindings.cpp" line="58" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="58" bodyend="61"/>
       </memberdef>
-      <memberdef kind="function" id="a00957_1add21f4b571cf749cf1a686fba6d6bb93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::Add16::setB</definition>
-        <argsstring>(const uint16_t &amp;b)</argsstring>
-        <name>setB</name>
+      <memberdef kind="function" id="a00957_1a9a9be8a8b466961c6a20ab9e89781200" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* Hack::Binding::RomWrapper::decode</definition>
+        <argsstring>(const int idx) const</argsstring>
+        <name>decode</name>
         <param>
-          <type>const <ref refid="a01361" kindref="compound">uint16_t</ref> &amp;</type>
-          <declname>b</declname>
+          <type>const int</type>
+          <declname>idx</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -85,88 +77,62 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Add16.h" line="37" column="1" bodyfile="Source/Chips/Add16.cpp" bodystart="41" bodyend="45"/>
-        <references refid="a00993_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00476" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
-        <references refid="a00985_1af415893333942f41fb4c4ad619083a16" compoundref="a00473" startline="78">Hack::Chips::bit64_t::s</references>
+        <location file="Source/Bindings/Bindings.cpp" line="71" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="71" bodyend="82"/>
+        <references refid="a00929_1ade81360d9e9ec9bdfedc8af1d0252a73" compoundref="a00425" startline="32" endline="37">Hack::Assembler::Instruction::string</references>
+      </memberdef>
+      <memberdef kind="function" id="a00957_1a707b3bc9bc40f455b80556dda7919bdc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Hack::Binding::RomWrapper::get</definition>
+        <argsstring>(const int idx) const</argsstring>
+        <name>get</name>
+        <param>
+          <type>const int</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="63" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="63" bodyend="69"/>
+        <references refid="a00910_1ab9e96018072b404d8a46e2192f06b954" compoundref="a00452" startline="45">Hack::Binding::RomType</references>
+        <references refid="a01133_1a5f035550d36a60b39767abc4d5942b46" compoundref="a00674" startline="72" endline="77">Hack::Chips::Rom32::get</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="a00957_1ac77d5275d6ebe3ea4efe37f262c48826" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="a00957" kindref="compound">RomWrapper</ref> *</type>
+        <definition>static const RomWrapper* Hack::Binding::RomWrapper::cast</definition>
+        <argsstring>(Handle handle)</argsstring>
+        <name>cast</name>
+        <param>
+          <type><ref refid="a00953" kindref="compound">Handle</ref></type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="84" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="84" bodyend="93"/>
+        <references refid="a00910_1ab9e96018072b404d8a46e2192f06b954" compoundref="a00452" startline="45">Hack::Binding::RomType</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <inheritancegraph>
-      <node id="44">
-        <label>Hack::Chips::Add16</label>
-        <link refid="a00957"/>
-        <childnode refid="45" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="45">
-        <label>Hack::Chips::Chip&lt; bit64_t, 64 &gt;</label>
-        <link refid="a00993"/>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="49">
-        <label>uint64_t</label>
-      </node>
-      <node id="46">
-        <label>Hack::Chips::Add16</label>
-        <link refid="a00957"/>
-        <childnode refid="47" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="50">
-        <label>uint16_t</label>
-        <link refid="a01361"/>
-      </node>
-      <node id="51">
-        <label>uint32_t</label>
-      </node>
-      <node id="52">
-        <label>uint8_t</label>
-        <link refid="a01373"/>
-      </node>
-      <node id="48">
-        <label>Hack::Chips::bit64_t</label>
-        <link refid="a00985"/>
-        <childnode refid="49" relation="usage">
-          <edgelabel>ll</edgelabel>
-        </childnode>
-        <childnode refid="50" relation="usage">
-          <edgelabel>s</edgelabel>
-        </childnode>
-        <childnode refid="51" relation="usage">
-          <edgelabel>i</edgelabel>
-        </childnode>
-        <childnode refid="52" relation="usage">
-          <edgelabel>b</edgelabel>
-        </childnode>
-      </node>
-      <node id="47">
-        <label>Hack::Chips::Chip&lt; bit64_t, 64 &gt;</label>
-        <link refid="a00993"/>
-        <childnode refid="48" relation="usage">
-          <edgelabel>_bits</edgelabel>
-        </childnode>
-      </node>
-    </collaborationgraph>
-    <location file="Source/Chips/Add16.h" line="28" column="1" bodyfile="Source/Chips/Add16.h" bodystart="27" bodyend="40"/>
+    <location file="Source/Bindings/Bindings.cpp" line="49" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="48" bodyend="94"/>
     <listofallmembers>
-      <member refid="a00993_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Add16</scope><name>_bits</name></member>
-      <member refid="a00957_1a136082c38be14e2d6b3542e1e5450f97" prot="public" virt="non-virtual"><scope>Hack::Chips::Add16</scope><name>Add16</name></member>
-      <member refid="a00993_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::Add16</scope><name>applyBit</name></member>
-      <member refid="a00993_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::Add16</scope><name>assignBit</name></member>
-      <member refid="a00993_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::Add16</scope><name>Chip</name></member>
-      <member refid="a00993_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::Add16</scope><name>clearBit</name></member>
-      <member refid="a00957_1a9cb9cd132c4d71cff914bdee5c9acbfd" prot="private" virt="non-virtual"><scope>Hack::Chips::Add16</scope><name>evaluate</name></member>
-      <member refid="a00993_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::Add16</scope><name>getBit</name></member>
-      <member refid="a00957_1a27793b7baca03572a8420aa9dd993f9f" prot="public" virt="non-virtual"><scope>Hack::Chips::Add16</scope><name>getOut</name></member>
-      <member refid="a00993_1a63bb368bb0827830235759b33718d1b4" prot="protected" virt="virtual"><scope>Hack::Chips::Add16</scope><name>isDirty</name></member>
-      <member refid="a00957_1a17c5ae7fef533c9ef52f6822ec84ad86" prot="public" virt="non-virtual"><scope>Hack::Chips::Add16</scope><name>setA</name></member>
-      <member refid="a00957_1add21f4b571cf749cf1a686fba6d6bb93" prot="public" virt="non-virtual"><scope>Hack::Chips::Add16</scope><name>setB</name></member>
-      <member refid="a00993_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::Add16</scope><name>setBit</name></member>
-      <member refid="a00993_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::Add16</scope><name>~Chip</name></member>
+      <member refid="a00957_1a78a816a94fc0bd8d962d90932cc9e15d" prot="private" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>_cache</name></member>
+      <member refid="a00957_1a026eb53aef02d9c1fdb7f6b57ac1f21d" prot="private" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>_rom</name></member>
+      <member refid="a00957_1ac77d5275d6ebe3ea4efe37f262c48826" prot="public" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>cast</name></member>
+      <member refid="a00957_1a9a9be8a8b466961c6a20ab9e89781200" prot="public" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>decode</name></member>
+      <member refid="a00957_1a707b3bc9bc40f455b80556dda7919bdc" prot="public" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>get</name></member>
+      <member refid="a00957_1a430e884e4dfa1dec8dc20bb332bd0b3a" prot="public" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>RomWrapper</name></member>
+      <member refid="a00957_1ae7d2fd6c9a84cfad3167fa000fc2b99e" prot="private" virt="non-virtual"><scope>Hack::Binding::RomWrapper</scope><name>type</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

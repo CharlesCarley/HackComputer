@@ -6,18 +6,14 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>This repository is my implementation of the <ref refid="a00906" kindref="compound">Hack</ref> computer in C++ from the <ulink url="https://www.coursera.org/learn/build-a-computer">NAnd2Tetris course.</ulink> <linebreak/>
+<para>This repository is my implementation of the <ref refid="a00909" kindref="compound">Hack</ref> computer in C++ from the <ulink url="https://www.coursera.org/learn/build-a-computer">NAnd2Tetris course.</ulink> <linebreak/>
 <linebreak/>
 I wanted to explore a more in-depth perspective, so it does not strictly adhere to the course. Plus I wanted something self-contained in the end. In order to do that, the supplied tools in the course materials were written from scratch. <linebreak/>
  <linebreak/>
-It uses <ref refid="a01575" kindref="compound">CMake</ref> for its build system. </para><sect1 id="index_1HC001">
-<title>Project Structure</title>
-<para><itemizedlist>
-<listitem><para><ref refid="a01576" kindref="compound">Utils</ref> Implements general functionality that is used project wide.</para></listitem><listitem><para><ref refid="a01577" kindref="compound">Chips</ref> Implements the circuit class library.</para></listitem><listitem><para><ref refid="a01579" kindref="compound">Assembler</ref> Implements the machine code compiler.</para></listitem><listitem><para><ref refid="a01580" kindref="compound">Virtual Machine</ref> Implements the virtual machine compiler.</para></listitem><listitem><para><ref refid="a01581" kindref="compound">Compiler</ref> Implements the compiler for the .jack source file.</para></listitem><listitem><para><ref refid="a01582" kindref="compound">Computer</ref> Implements the primary program that ties the project&apos;s components together.</para></listitem><listitem><para><ref refid="a01583" kindref="compound">Bindings</ref> Provides a script language interface.</para></listitem><listitem><para><ref refid="a01584" kindref="compound">Extra Tools</ref> Describes extra tools that were used that are not part of the source.</para></listitem></itemizedlist>
-</para></sect1>
-<sect1 id="index_1HC002">
-<title>Documentation Index</title>
-</sect1>
-    </detaileddescription>
+It uses <ref refid="a01578" kindref="compound">CMake</ref> for its build system.</para><para><heading level="2">Project Structure</heading>
+</para><para><itemizedlist>
+<listitem><para><ref refid="a01579" kindref="compound">Utils</ref> Implements general functionality that is used project wide.</para></listitem><listitem><para><ref refid="a01580" kindref="compound">Chips</ref> Implements the circuit class library.</para></listitem><listitem><para><ref refid="a01582" kindref="compound">Assembler</ref> Implements the machine code compiler.</para></listitem><listitem><para><ref refid="a01583" kindref="compound">Virtual Machine</ref> Implements the virtual machine compiler.</para></listitem><listitem><para><ref refid="a01584" kindref="compound">Compiler</ref> Implements the compiler for the .jack source file.</para></listitem><listitem><para><ref refid="a01585" kindref="compound">Computer</ref> Implements the primary program that ties the project&apos;s components together.</para></listitem><listitem><para><ref refid="a01586" kindref="compound">Bindings</ref> Provides a script language interface.</para></listitem><listitem><para><ref refid="a01587" kindref="compound">Extra Tools</ref> Describes extra tools that were used that are not part of the source.</para></listitem></itemizedlist>
+</para><para><heading level="2">Source Index</heading>
+</para>    </detaileddescription>
   </compounddef>
 </doxygen>

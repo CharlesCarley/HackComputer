@@ -1,174 +1,128 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01345" kind="class" language="C++" prot="public" final="yes">
-    <compoundname>Hack::VirtualMachine::Parser</compoundname>
-    <basecompoundref refid="a01281" prot="public" virt="non-virtual">Hack::ParserBase</basecompoundref>
-    <includes local="no">Source/VirtualMachine/Parser.h</includes>
+    <compoundname>Hack::Ui::PlatformUnix</compoundname>
+    <basecompoundref refid="a01337" prot="public" virt="non-virtual">Hack::Ui::Platform</basecompoundref>
+    <includes local="no">Source/Utils/UserInterface/PlatformUnix.h</includes>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="a01345_1a40e6dd5914c34a4bd5346ad5ba92a9e5" prot="private" static="no" mutable="no">
-        <type><ref refid="a01341" kindref="compound">Emitter</ref></type>
-        <definition>Emitter Hack::VirtualMachine::Parser::_emitter</definition>
+      <memberdef kind="variable" id="a01345_1a5cd0028e7fe0d979b17eab1d02f3640b" prot="private" static="no" mutable="no">
+        <type><ref refid="a00909_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
+        <definition>String Hack::Ui::PlatformUnix::_message</definition>
         <argsstring></argsstring>
-        <name>_emitter</name>
+        <name>_message</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="35" column="1" bodyfile="Source/VirtualMachine/Parser.h" bodystart="35" bodyend="-1"/>
+        <location file="Source/Utils/UserInterface/PlatformUnix.h" line="36" column="1" bodyfile="Source/Utils/UserInterface/PlatformUnix.h" bodystart="36" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a01345_1a9cc376383e4999bb0a93edac61766007" prot="private" static="no" mutable="no">
-        <type><ref refid="a00905_1a02186d1a9c875e3583ff775f46ad7c0a" kindref="member">StringCache</ref></type>
-        <definition>StringCache Hack::VirtualMachine::Parser::_labels</definition>
+      <memberdef kind="variable" id="a01345_1afa71ef58d5641b3d8c988e9eb767a37e" prot="private" static="no" mutable="no">
+        <type><ref refid="a01317" kindref="compound">Point</ref></type>
+        <definition>Point Hack::Ui::PlatformUnix::_size</definition>
         <argsstring></argsstring>
-        <name>_labels</name>
+        <name>_size</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="36" column="1" bodyfile="Source/VirtualMachine/Parser.h" bodystart="36" bodyend="-1"/>
+        <location file="Source/Utils/UserInterface/PlatformUnix.h" line="35" column="1" bodyfile="Source/Utils/UserInterface/PlatformUnix.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01345_1ab3311391df3b457f408811374c354629" prot="private" static="no" mutable="no">
+        <type>class <ref refid="a01341" kindref="compound">Terminal</ref> *</type>
+        <definition>class Terminal* Hack::Ui::PlatformUnix::_term</definition>
+        <argsstring></argsstring>
+        <name>_term</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/PlatformUnix.h" line="34" column="1" bodyfile="Source/Utils/UserInterface/PlatformUnix.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
-      <memberdef kind="function" id="a01345_1a41ca7b47bee3658c3c8e276c5feea298" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::VirtualMachine::Parser::callExpression</definition>
+      <memberdef kind="function" id="a01345_1a9d444d942c39afae53fea8e440804a57" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Hack::Ui::PlatformUnix::checkSignals</definition>
         <argsstring>()</argsstring>
-        <name>callExpression</name>
+        <name>checkSignals</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="55" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="217" bodyend="245"/>
+        <location file="Source/Utils/UserInterface/PlatformUnix.h" line="48" column="1" bodyfile="Source/Utils/UserInterface/PlatformUnix.cpp" bodystart="285" bodyend="296"/>
       </memberdef>
-      <memberdef kind="function" id="a01345_1a3055c1a9b49a5d6c60a2e2aeab083ca0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::VirtualMachine::Parser::expression</definition>
+      <memberdef kind="function" id="a01345_1a2563fbaf82e4c0d0a5503000302e5891" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Ui::PlatformUnix::checkSize</definition>
         <argsstring>()</argsstring>
-        <name>expression</name>
+        <name>checkSize</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="43" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="274" bodyend="370"/>
+        <location file="Source/Utils/UserInterface/PlatformUnix.h" line="42" column="1" bodyfile="Source/Utils/UserInterface/PlatformUnix.cpp" bodystart="187" bodyend="199"/>
       </memberdef>
-      <memberdef kind="function" id="a01345_1a155771f46199422a961012ad64c81351" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::VirtualMachine::Parser::functionExpression</definition>
+      <memberdef kind="function" id="a01345_1adbc9b7d57fcf103f67afcb965b023a70" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Hack::Ui::PlatformUnix::readStdin</definition>
         <argsstring>()</argsstring>
-        <name>functionExpression</name>
+        <name>readStdin</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="53" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="187" bodyend="215"/>
+        <location file="Source/Utils/UserInterface/PlatformUnix.h" line="44" column="1" bodyfile="Source/Utils/UserInterface/PlatformUnix.cpp" bodystart="263" bodyend="283"/>
       </memberdef>
-      <memberdef kind="function" id="a01345_1adec2438941d6f4f953dd7ee0868d62a5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01345_1aef8510e0e788d783ce60b2c5ba47dd9d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::VirtualMachine::Parser::gotoExpression</definition>
+        <definition>void Hack::Ui::PlatformUnix::restoreState</definition>
         <argsstring>()</argsstring>
-        <name>gotoExpression</name>
+        <name>restoreState</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="49" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="161" bodyend="185"/>
+        <location file="Source/Utils/UserInterface/PlatformUnix.h" line="40" column="1" bodyfile="Source/Utils/UserInterface/PlatformUnix.cpp" bodystart="179" bodyend="185"/>
       </memberdef>
-      <memberdef kind="function" id="a01345_1aa34e3ff9365d53d7e24f155c27a728da" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01345_1aaa01d5ea77af13d35f6d9ad604145c77" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::VirtualMachine::Parser::labelExpression</definition>
+        <definition>void Hack::Ui::PlatformUnix::saveState</definition>
         <argsstring>()</argsstring>
-        <name>labelExpression</name>
+        <name>saveState</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="51" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="139" bodyend="159"/>
+        <location file="Source/Utils/UserInterface/PlatformUnix.h" line="38" column="1" bodyfile="Source/Utils/UserInterface/PlatformUnix.cpp" bodystart="164" bodyend="177"/>
       </memberdef>
-      <memberdef kind="function" id="a01345_1a589fd449e99792f382a6ae6836782385" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
-        <definition>void Hack::VirtualMachine::Parser::parseImpl</definition>
-        <argsstring>(IStream &amp;is) override</argsstring>
-        <name>parseImpl</name>
-        <reimplements refid="a01281_1aca4fd325b8520d930ca612cf3337c625">parseImpl</reimplements>
+      <memberdef kind="function" id="a01345_1a98baf3c1c053b8550484e4f409568353" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Hack::Ui::PlatformUnix::scan</definition>
+        <argsstring>(const char *cp, int len)</argsstring>
+        <name>scan</name>
         <param>
-          <type><ref refid="a00897_1a830c8eb3c005ef2fbc470e0b141b93c5" kindref="member">IStream</ref> &amp;</type>
-          <declname>is</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="39" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="372" bodyend="397"/>
-      </memberdef>
-      <memberdef kind="function" id="a01345_1aba7d94d54c0c7abf94939367b760df26" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::VirtualMachine::Parser::popExpression</definition>
-        <argsstring>()</argsstring>
-        <name>popExpression</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="47" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="91" bodyend="137"/>
-      </memberdef>
-      <memberdef kind="function" id="a01345_1a71789d26d09a60a2acf04a0079aa2781" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::VirtualMachine::Parser::pushExpression</definition>
-        <argsstring>()</argsstring>
-        <name>pushExpression</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="45" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="41" bodyend="89"/>
-      </memberdef>
-      <memberdef kind="function" id="a01345_1ab701dd10cd0d609f6be1e706e7a76596" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::VirtualMachine::Parser::setExpression</definition>
-        <argsstring>()</argsstring>
-        <name>setExpression</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="57" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="247" bodyend="272"/>
-      </memberdef>
-      <memberdef kind="function" id="a01345_1ac42ce84084f3fd298399c330867c8697" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
-        <definition>void Hack::VirtualMachine::Parser::writeImpl</definition>
-        <argsstring>(OStream &amp;os, int format=0) override</argsstring>
-        <name>writeImpl</name>
-        <reimplements refid="a01281_1a4e9dd3f0283226de48b148d66b416f0f">writeImpl</reimplements>
-        <param>
-          <type><ref refid="a00897_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref> &amp;</type>
-          <declname>os</declname>
+          <type>const char *</type>
+          <declname>cp</declname>
         </param>
         <param>
           <type>int</type>
-          <declname>format</declname>
-          <defval>0</defval>
+          <declname>len</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -176,37 +130,75 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="41" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="399" bodyend="403"/>
+        <location file="Source/Utils/UserInterface/PlatformUnix.h" line="46" column="1" bodyfile="Source/Utils/UserInterface/PlatformUnix.cpp" bodystart="207" bodyend="261"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01345_1a8dd981d81ed31eb67c6090dd35345731" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01345_1adfcb6e6d0b18cebdbe6c96d2465fed82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>Hack::VirtualMachine::Parser::Parser</definition>
+        <definition>Hack::Ui::PlatformUnix::PlatformUnix</definition>
         <argsstring>()</argsstring>
-        <name>Parser</name>
+        <name>PlatformUnix</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="60" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="30" bodyend="33"/>
-        <references refid="a01281_1aec27fb418bd286a67e449bbf42ddb4e7" compoundref="a00830" startline="40">Hack::ParserBase::_scanner</references>
+        <location file="Source/Utils/UserInterface/PlatformUnix.h" line="51" column="1" bodyfile="Source/Utils/UserInterface/PlatformUnix.cpp" bodystart="152" bodyend="157"/>
       </memberdef>
-      <memberdef kind="function" id="a01345_1ab3752f6d45ebb84a3fcd9f46a7a35d9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01345_1a29eeecc62bd694cdd256f4fbf78dc425" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>Hack::VirtualMachine::Parser::~Parser</definition>
+        <definition>Hack::Ui::PlatformUnix::~PlatformUnix</definition>
         <argsstring>() override</argsstring>
-        <name>~Parser</name>
+        <name>~PlatformUnix</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Parser.h" line="62" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="35" bodyend="39"/>
-        <references refid="a01281_1aec27fb418bd286a67e449bbf42ddb4e7" compoundref="a00830" startline="40">Hack::ParserBase::_scanner</references>
+        <location file="Source/Utils/UserInterface/PlatformUnix.h" line="52" column="1" bodyfile="Source/Utils/UserInterface/PlatformUnix.cpp" bodystart="159" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="a01345_1a7ddb3f7fb3607a643acf4cf236d28f7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Hack::Ui::PlatformUnix::getScreenSize</definition>
+        <argsstring>(Point &amp;sz) override</argsstring>
+        <name>getScreenSize</name>
+        <reimplements refid="a01337_1a812312c281345be05294a3d99b909732">getScreenSize</reimplements>
+        <param>
+          <type><ref refid="a01317" kindref="compound">Point</ref> &amp;</type>
+          <declname>sz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/PlatformUnix.h" line="54" column="1" bodyfile="Source/Utils/UserInterface/PlatformUnix.cpp" bodystart="201" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="a01345_1a061f1bbd721feb4a7b370a7f7f951bcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int Hack::Ui::PlatformUnix::poll</definition>
+        <argsstring>(bool block) override</argsstring>
+        <name>poll</name>
+        <reimplements refid="a01337_1a0b6f15d06279d86dc25a72cb4d49dbe9">poll</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>block</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/PlatformUnix.h" line="56" column="1" bodyfile="Source/Utils/UserInterface/PlatformUnix.cpp" bodystart="298" bodyend="314"/>
+        <references refid="a00923_1a7553833a41980e8c2bae00177d41129ea628e6c1cd2f76b3b8b8346aaa4dfecf1" compoundref="a00866" startline="91">Hack::Ui::PR_NO_INPUT</references>
+        <references refid="a01341_1a2507298f9de6d97fa2d224f91ade9e5f" compoundref="a00887" startline="89" endline="111">Hack::Ui::Terminal::update</references>
+        <references refid="a00923_1a7553833a41980e8c2bae00177d41129ead7a3bc54fb41225d6588c6fb307f0bcf" compoundref="a00866" startline="90">Hack::Ui::PR_EXIT</references>
+        <references refid="a00923_1a7553833a41980e8c2bae00177d41129ea3dde91a4939857995c340109342db15b" compoundref="a00866" startline="92">Hack::Ui::PR_RESIZE</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -214,118 +206,58 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="469">
-        <label>Hack::VirtualMachine::Parser</label>
-        <link refid="a01345"/>
-        <childnode refid="470" relation="public-inheritance">
-        </childnode>
+      <node id="450">
+        <label>Hack::Ui::Platform</label>
+        <link refid="a01337"/>
       </node>
-      <node id="470">
-        <label>Hack::ParserBase</label>
-        <link refid="a01281"/>
+      <node id="449">
+        <label>Hack::Ui::PlatformUnix</label>
+        <link refid="a01345"/>
+        <childnode refid="450" relation="public-inheritance">
+        </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="477">
-        <label>size_t</label>
+      <node id="452">
+        <label>Hack::Ui::Platform</label>
+        <link refid="a01337"/>
       </node>
-      <node id="475">
-        <label>Hack::IndexCache&lt; String &gt;</label>
-        <link refid="a01265"/>
-      </node>
-      <node id="479">
-        <label>IStream *</label>
-      </node>
-      <node id="480">
-        <label>int32_t</label>
-      </node>
-      <node id="471">
-        <label>Hack::VirtualMachine::Parser</label>
+      <node id="451">
+        <label>Hack::Ui::PlatformUnix</label>
         <link refid="a01345"/>
-        <childnode refid="472" relation="public-inheritance">
+        <childnode refid="452" relation="public-inheritance">
         </childnode>
-      </node>
-      <node id="478">
-        <label>string</label>
-      </node>
-      <node id="473">
-        <label>vector&lt; TokenBase &gt;</label>
-      </node>
-      <node id="472">
-        <label>Hack::ParserBase</label>
-        <link refid="a01281"/>
-        <childnode refid="473" relation="usage">
-          <edgelabel>_tokens</edgelabel>
-        </childnode>
-        <childnode refid="474" relation="usage">
-          <edgelabel>_scanner</edgelabel>
-        </childnode>
-        <childnode refid="480" relation="usage">
-          <edgelabel>_cursor</edgelabel>
-        </childnode>
-        <childnode refid="478" relation="usage">
-          <edgelabel>_filePath</edgelabel>
-          <edgelabel>_file</edgelabel>
-        </childnode>
-      </node>
-      <node id="474">
-        <label>Hack::ScannerBase</label>
-        <link refid="a01285"/>
-        <childnode refid="475" relation="usage">
-          <edgelabel>_stringTable</edgelabel>
-        </childnode>
-        <childnode refid="476" relation="usage">
-          <edgelabel>_intTable</edgelabel>
-        </childnode>
-        <childnode refid="477" relation="usage">
-          <edgelabel>_line</edgelabel>
-        </childnode>
-        <childnode refid="478" relation="usage">
-          <edgelabel>_file</edgelabel>
-        </childnode>
-        <childnode refid="479" relation="usage">
-          <edgelabel>_stream</edgelabel>
-        </childnode>
-      </node>
-      <node id="476">
-        <label>Hack::IndexCache&lt; int &gt;</label>
-        <link refid="a01265"/>
       </node>
     </collaborationgraph>
-    <location file="Source/VirtualMachine/Parser.h" line="33" column="1" bodyfile="Source/VirtualMachine/Parser.h" bodystart="32" bodyend="63"/>
+    <location file="Source/Utils/UserInterface/PlatformUnix.h" line="32" column="1" bodyfile="Source/Utils/UserInterface/PlatformUnix.h" bodystart="31" bodyend="57"/>
     <listofallmembers>
-      <member refid="a01281_1a050b6fa7aa7a8a0ad9e6dc769c5fe1ab" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>_cursor</name></member>
-      <member refid="a01345_1a40e6dd5914c34a4bd5346ad5ba92a9e5" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>_emitter</name></member>
-      <member refid="a01281_1a3845bf25a071be865d1abf5d86547d4e" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>_file</name></member>
-      <member refid="a01281_1ab0e5c4de751cb9162c1068d08fe5108f" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>_filePath</name></member>
-      <member refid="a01345_1a9cc376383e4999bb0a93edac61766007" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>_labels</name></member>
-      <member refid="a01281_1aec27fb418bd286a67e449bbf42ddb4e7" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>_scanner</name></member>
-      <member refid="a01281_1a848d7a2893106ea47afc8839aae2f4e4" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>_tokens</name></member>
-      <member refid="a01281_1a857d4ca08875acc4a5ae351eab22ebee" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>advanceCursor</name></member>
-      <member refid="a01345_1a41ca7b47bee3658c3c8e276c5feea298" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>callExpression</name></member>
-      <member refid="a01345_1a3055c1a9b49a5d6c60a2e2aeab083ca0" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>expression</name></member>
-      <member refid="a01281_1ab701a1a26d52964d228d1c1472130483" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>filename</name></member>
-      <member refid="a01345_1a155771f46199422a961012ad64c81351" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>functionExpression</name></member>
-      <member refid="a01281_1a6b9602e4c23316318668f57da6db421c" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>getToken</name></member>
-      <member refid="a01345_1adec2438941d6f4f953dd7ee0868d62a5" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>gotoExpression</name></member>
-      <member refid="a01345_1aa34e3ff9365d53d7e24f155c27a728da" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>labelExpression</name></member>
-      <member refid="a01281_1a87c46515fd89517db2645943cb44493b" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>line</name></member>
-      <member refid="a01281_1a4668ec9b913931ce518de6d7f92fb4e0" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>parse</name></member>
-      <member refid="a01281_1a526cddbd87b36f03b8e76db9b7d640b9" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>parse</name></member>
-      <member refid="a01281_1aa78f3654190d9b4f2ea49f8bcfa97f2b" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>parseError</name></member>
-      <member refid="a01345_1a589fd449e99792f382a6ae6836782385" prot="private" virt="virtual"><scope>Hack::VirtualMachine::Parser</scope><name>parseImpl</name></member>
-      <member refid="a01345_1a8dd981d81ed31eb67c6090dd35345731" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>Parser</name></member>
-      <member refid="a01281_1ad2acc126d182c46c5d7f2afbb2aaeb66" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>ParserBase</name></member>
-      <member refid="a01345_1aba7d94d54c0c7abf94939367b760df26" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>popExpression</name></member>
-      <member refid="a01345_1a71789d26d09a60a2acf04a0079aa2781" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>pushExpression</name></member>
-      <member refid="a01281_1a8436c3d2c31c4a3e822c946c8a6b1a92" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>readToken</name></member>
-      <member refid="a01345_1ab701dd10cd0d609f6be1e706e7a76596" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>setExpression</name></member>
-      <member refid="a01281_1a7fbbfbffb70e56bfd7d117f8aabcd8f0" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>Tokens</name></member>
-      <member refid="a01281_1a4560ce70fee098d7508b053b409c1d19" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>write</name></member>
-      <member refid="a01281_1a644c6667a785050f490a4ee24a98e2e7" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>write</name></member>
-      <member refid="a01345_1ac42ce84084f3fd298399c330867c8697" prot="private" virt="virtual"><scope>Hack::VirtualMachine::Parser</scope><name>writeImpl</name></member>
-      <member refid="a01345_1ab3752f6d45ebb84a3fcd9f46a7a35d9a" prot="public" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>~Parser</name></member>
-      <member refid="a01281_1a6e57377073e2e728304316b73986ded2" prot="public" virt="virtual"><scope>Hack::VirtualMachine::Parser</scope><name>~ParserBase</name></member>
+      <member refid="a01345_1a5cd0028e7fe0d979b17eab1d02f3640b" prot="private" virt="non-virtual"><scope>Hack::Ui::PlatformUnix</scope><name>_message</name></member>
+      <member refid="a01345_1afa71ef58d5641b3d8c988e9eb767a37e" prot="private" virt="non-virtual"><scope>Hack::Ui::PlatformUnix</scope><name>_size</name></member>
+      <member refid="a01345_1ab3311391df3b457f408811374c354629" prot="private" virt="non-virtual"><scope>Hack::Ui::PlatformUnix</scope><name>_term</name></member>
+      <member refid="a01345_1a9d444d942c39afae53fea8e440804a57" prot="private" virt="non-virtual"><scope>Hack::Ui::PlatformUnix</scope><name>checkSignals</name></member>
+      <member refid="a01345_1a2563fbaf82e4c0d0a5503000302e5891" prot="private" virt="non-virtual"><scope>Hack::Ui::PlatformUnix</scope><name>checkSize</name></member>
+      <member refid="a01337_1aa24be0702916597fc5143dca16e369a6" prot="public" virt="virtual"><scope>Hack::Ui::PlatformUnix</scope><name>clear</name></member>
+      <member refid="a01337_1af8c071d83f5d72d196e43a167ad598eb" prot="public" virt="virtual"><scope>Hack::Ui::PlatformUnix</scope><name>color</name></member>
+      <member refid="a01337_1a4e3b5013683b0e76d9cf8a7fc393739b" prot="public" virt="non-virtual"><scope>Hack::Ui::PlatformUnix</scope><name>ColorCache</name></member>
+      <member refid="a01337_1aa3054a397921f0b3b33f7b70d8fb45d8" prot="public" virt="virtual"><scope>Hack::Ui::PlatformUnix</scope><name>flush</name></member>
+      <member refid="a01345_1a7ddb3f7fb3607a643acf4cf236d28f7b" prot="public" virt="virtual"><scope>Hack::Ui::PlatformUnix</scope><name>getScreenSize</name></member>
+      <member refid="a01337_1a594724e6217b28fea8d8e02f9ec5c1cc" prot="public" virt="non-virtual"><scope>Hack::Ui::PlatformUnix</scope><name>Platform</name></member>
+      <member refid="a01345_1adfcb6e6d0b18cebdbe6c96d2465fed82" prot="public" virt="non-virtual"><scope>Hack::Ui::PlatformUnix</scope><name>PlatformUnix</name></member>
+      <member refid="a01345_1a061f1bbd721feb4a7b370a7f7f951bcd" prot="public" virt="virtual"><scope>Hack::Ui::PlatformUnix</scope><name>poll</name></member>
+      <member refid="a01337_1a56a8aba33c5882abf0afc3a299353365" prot="public" virt="virtual"><scope>Hack::Ui::PlatformUnix</scope><name>put</name></member>
+      <member refid="a01337_1aa74beaf8e59c3c525aa9592fc6af6211" prot="public" virt="virtual"><scope>Hack::Ui::PlatformUnix</scope><name>put</name></member>
+      <member refid="a01345_1adbc9b7d57fcf103f67afcb965b023a70" prot="private" virt="non-virtual"><scope>Hack::Ui::PlatformUnix</scope><name>readStdin</name></member>
+      <member refid="a01337_1a3c654cae3feb0c3134a4164e72666144" prot="public" virt="virtual"><scope>Hack::Ui::PlatformUnix</scope><name>resetColor</name></member>
+      <member refid="a01337_1adde1b619c1d73187a0e1d3f9f0ca01e5" prot="public" virt="virtual"><scope>Hack::Ui::PlatformUnix</scope><name>resetCursor</name></member>
+      <member refid="a01345_1aef8510e0e788d783ce60b2c5ba47dd9d" prot="private" virt="non-virtual"><scope>Hack::Ui::PlatformUnix</scope><name>restoreState</name></member>
+      <member refid="a01345_1aaa01d5ea77af13d35f6d9ad604145c77" prot="private" virt="non-virtual"><scope>Hack::Ui::PlatformUnix</scope><name>saveState</name></member>
+      <member refid="a01345_1a98baf3c1c053b8550484e4f409568353" prot="private" virt="non-virtual"><scope>Hack::Ui::PlatformUnix</scope><name>scan</name></member>
+      <member refid="a01337_1a86fcdb4fbf68b809d3572c1867920679" prot="public" virt="virtual"><scope>Hack::Ui::PlatformUnix</scope><name>setCursor</name></member>
+      <member refid="a01337_1a8248f8b05e4e341bc274d8a87f198590" prot="public" virt="virtual"><scope>Hack::Ui::PlatformUnix</scope><name>showCursor</name></member>
+      <member refid="a01337_1ad3ce58985cbdf1e835fabf88e32a64c8" prot="public" virt="non-virtual"><scope>Hack::Ui::PlatformUnix</scope><name>sleep</name></member>
+      <member refid="a01337_1aecbdaddb564da342d970727a7475b360" prot="public" virt="virtual"><scope>Hack::Ui::PlatformUnix</scope><name>useBackBuffer</name></member>
+      <member refid="a01337_1a52466ae630306e7f4f87b6797bcd4539" prot="public" virt="virtual"><scope>Hack::Ui::PlatformUnix</scope><name>~Platform</name></member>
+      <member refid="a01345_1a29eeecc62bd694cdd256f4fbf78dc425" prot="public" virt="non-virtual"><scope>Hack::Ui::PlatformUnix</scope><name>~PlatformUnix</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

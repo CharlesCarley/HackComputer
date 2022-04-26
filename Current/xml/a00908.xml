@@ -1,117 +1,250 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00908" kind="namespace" language="C++">
-    <compoundname>Hack::Chips</compoundname>
-    <innerclass refid="a00966" prot="public">Hack::Chips::Add16</innerclass>
-    <innerclass refid="a00970" prot="public">Hack::Chips::Alu</innerclass>
-    <innerclass refid="a00974" prot="public">Hack::Chips::And</innerclass>
-    <innerclass refid="a00978" prot="public">Hack::Chips::And16</innerclass>
-    <innerclass refid="a00982" prot="public">Hack::Chips::Bit</innerclass>
-    <innerclass refid="a00986" prot="public">Hack::Chips::bit16_t</innerclass>
-    <innerclass refid="a00990" prot="public">Hack::Chips::bit32_t</innerclass>
-    <innerclass refid="a00994" prot="public">Hack::Chips::bit64_t</innerclass>
-    <innerclass refid="a00998" prot="public">Hack::Chips::BitUtils</innerclass>
-    <innerclass refid="a01002" prot="public">Hack::Chips::Chip</innerclass>
-    <innerclass refid="a01006" prot="public">Hack::Chips::Clock</innerclass>
-    <innerclass refid="a01014" prot="public">Hack::Chips::Computer</innerclass>
-    <innerclass refid="a01018" prot="public">Hack::Chips::Cpu</innerclass>
-    <innerclass refid="a01010" prot="public">Hack::Chips::CpuState</innerclass>
-    <innerclass refid="a01022" prot="public">Hack::Chips::DefaultMemorySegment</innerclass>
-    <innerclass refid="a01026" prot="public">Hack::Chips::DFlipFlop</innerclass>
-    <innerclass refid="a01030" prot="public">Hack::Chips::DMux</innerclass>
-    <innerclass refid="a01034" prot="public">Hack::Chips::DMux4Way</innerclass>
-    <innerclass refid="a01038" prot="public">Hack::Chips::DMux8Way</innerclass>
-    <innerclass refid="a01042" prot="public">Hack::Chips::FullAdder</innerclass>
-    <innerclass refid="a01046" prot="public">Hack::Chips::HalfAdder</innerclass>
-    <innerclass refid="a01050" prot="public">Hack::Chips::IMemorySegment</innerclass>
-    <innerclass refid="a01054" prot="public">Hack::Chips::Inc16</innerclass>
-    <innerclass refid="a01058" prot="public">Hack::Chips::Memory</innerclass>
-    <innerclass refid="a01062" prot="public">Hack::Chips::Mux</innerclass>
-    <innerclass refid="a01066" prot="public">Hack::Chips::Mux16</innerclass>
-    <innerclass refid="a01070" prot="public">Hack::Chips::Mux4Way16</innerclass>
-    <innerclass refid="a01074" prot="public">Hack::Chips::Mux8Way16</innerclass>
-    <innerclass refid="a01078" prot="public">Hack::Chips::NAnd</innerclass>
-    <innerclass refid="a01082" prot="public">Hack::Chips::NOr</innerclass>
-    <innerclass refid="a01086" prot="public">Hack::Chips::Not</innerclass>
-    <innerclass refid="a01090" prot="public">Hack::Chips::Not16</innerclass>
-    <innerclass refid="a01094" prot="public">Hack::Chips::Or</innerclass>
-    <innerclass refid="a01098" prot="public">Hack::Chips::Or16</innerclass>
-    <innerclass refid="a01102" prot="public">Hack::Chips::Or8Way</innerclass>
-    <innerclass refid="a01106" prot="public">Hack::Chips::ProgramCounter</innerclass>
-    <innerclass refid="a01110" prot="public">Hack::Chips::Ram4k</innerclass>
-    <innerclass refid="a01114" prot="public">Hack::Chips::Ram512</innerclass>
-    <innerclass refid="a01118" prot="public">Hack::Chips::Ram64</innerclass>
-    <innerclass refid="a01122" prot="public">Hack::Chips::Ram8</innerclass>
-    <innerclass refid="a01126" prot="public">Hack::Chips::Register</innerclass>
-    <innerclass refid="a01130" prot="public">Hack::Chips::Rom32</innerclass>
-    <innerclass refid="a01134" prot="public">Hack::Chips::SRLatch</innerclass>
-    <innerclass refid="a01138" prot="public">Hack::Chips::Timer</innerclass>
-    <innerclass refid="a01142" prot="public">Hack::Chips::XOr</innerclass>
-    <innernamespace refid="a00910">Hack::Chips::BitwiseGates</innernamespace>
-    <innernamespace refid="a00909">Hack::Chips::Gates</innernamespace>
+    <compoundname>Hack::Assembler</compoundname>
+    <innerclass refid="a00929" prot="public">Hack::Assembler::Instruction</innerclass>
+    <innerclass refid="a00941" prot="public">Hack::Assembler::KeywordTable</innerclass>
+    <innerclass refid="a00937" prot="public">Hack::Assembler::Parser</innerclass>
+    <innerclass refid="a00945" prot="public">Hack::Assembler::ReservedWordTable</innerclass>
+    <innerclass refid="a00949" prot="public">Hack::Assembler::Scanner</innerclass>
       <sectiondef kind="enum">
-      <memberdef kind="enum" id="a00908_1acabb309d3c28ba3a5f469d25dff4f144" prot="public" static="no" strong="no">
+      <memberdef kind="enum" id="a00908_1ab52345149881cbf184ed8dbc45774908" prot="public" static="no" strong="no">
         <type></type>
-        <name>AluFlags</name>
-        <enumvalue id="a00908_1acabb309d3c28ba3a5f469d25dff4f144a66c2bb2834916dff1b9df0c8de5da09c" prot="public">
-          <name>No</name>
-          <initializer>= 1 &lt;&lt; 0</initializer>
+        <name>TokenType</name>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908aaa80392be0382d077bae11ca09cec3ca" prot="public">
+          <name>TOK_ERROR</name>
+          <initializer>= -2</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00908_1acabb309d3c28ba3a5f469d25dff4f144acfa209a14a88c38e78524f1d6cd6883b" prot="public">
-          <name>Fn</name>
-          <initializer>= 1 &lt;&lt; 1</initializer>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908a0b04f0c4d57271cb40554de353dc604a" prot="public">
+          <name>TOK_EOF</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00908_1acabb309d3c28ba3a5f469d25dff4f144a4ceb8925d42a26780931ee5536ebbb88" prot="public">
-          <name>Ny</name>
-          <initializer>= 1 &lt;&lt; 2</initializer>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908a8d9967af0244b14438091db8babef208" prot="public">
+          <name>TOK_NULL</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00908_1acabb309d3c28ba3a5f469d25dff4f144a36b5e715b100c9067069fcf166591565" prot="public">
-          <name>Zy</name>
-          <initializer>= 1 &lt;&lt; 3</initializer>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908a5f2e8b1da23246a6ef8f73752b64730e" prot="public">
+          <name>TOK_D_START</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00908_1acabb309d3c28ba3a5f469d25dff4f144a668c51179b74d30abfc0f28b97d99a62" prot="public">
-          <name>Nx</name>
-          <initializer>= 1 &lt;&lt; 4</initializer>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908ab581a0e588797e0c6496e87b6811d588" prot="public">
+          <name>TOK_M</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00908_1acabb309d3c28ba3a5f469d25dff4f144a76fcc6dbc3a599d794f357556801298b" prot="public">
-          <name>Zx</name>
-          <initializer>= 1 &lt;&lt; 5</initializer>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908a56a0c3c5c2e60c4815989d806ad4cf7c" prot="public">
+          <name>TOK_D</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00908_1acabb309d3c28ba3a5f469d25dff4f144a1630ccda3ce240ba49b84d1111d0adb8" prot="public">
-          <name>Ne</name>
-          <initializer>= 1 &lt;&lt; 6</initializer>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908a9d157b6a03086be0fd1de4d86472d080" prot="public">
+          <name>TOK_MD</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="a00908_1acabb309d3c28ba3a5f469d25dff4f144a315f157d7e9917bcfe8a0dcfa133f6fb" prot="public">
-          <name>Zr</name>
-          <initializer>= 1 &lt;&lt; 7</initializer>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908a0537cef36a1e6265be68356ab5cdead0" prot="public">
+          <name>TOK_A</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908a088bd7f385e2a4096728599e6bebc7b7" prot="public">
+          <name>TOK_AM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908abcc84dac310829c9a62148765a8a250e" prot="public">
+          <name>TOK_AD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908af5554f8bc380b1604f24c2dd78373880" prot="public">
+          <name>TOK_AMD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908a8705e27aeefb1cafd4bb5fbdd48cbe53" prot="public">
+          <name>TOK_J_START</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908a00a5e4936b8f21d85966bc510b9cf90d" prot="public">
+          <name>TOK_JGT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908a8aa5db527baacc19c6b5b6b01e2491fd" prot="public">
+          <name>TOK_JEQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908a1f0d06a89639748e3a8b75c113d5d06d" prot="public">
+          <name>TOK_JGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908aa02bae4eda01057babd2b906433a4cb1" prot="public">
+          <name>TOK_JLT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908a4cb282cdab169fa23a83251051d08834" prot="public">
+          <name>TOK_JNE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908ae8772c050e0a8b9141a92741af54fe15" prot="public">
+          <name>TOK_JLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908abbbee45b0a8f7973ea9c97ba81bbfab1" prot="public">
+          <name>TOK_JMP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908a8d150987e2f8f89304456e401c7de979" prot="public">
+          <name>TOK_ZERO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908a4ff9eb9fe01140f2790d23262aee15b9" prot="public">
+          <name>TOK_MINUS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908aa40c60bb7f9740a9bf55e8483a17b2cf" prot="public">
+          <name>TOK_NOT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908aa25dfa8318505862372dc7e5ab7a1105" prot="public">
+          <name>TOK_PLUS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908a57fc3c8374e06e1a4aad4dd701ddfc14" prot="public">
+          <name>TOK_AND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908a4d7b6070721cbd12a68714ef366b7710" prot="public">
+          <name>TOK_OR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908a6e216370a7594ccc1bba1c215c1aea55" prot="public">
+          <name>TOK_AT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908a5a07d14bb9d7796ce1fd76da13d97329" prot="public">
+          <name>TOK_SEMI_COLON</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908a9f29e07041ce4ada94e31fc4188ff8eb" prot="public">
+          <name>TOK_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908a1d63c313df724c7f5becbc7061c98233" prot="public">
+          <name>TOK_L_PAREN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908af9015f131c8e3d89a5c90de1f2c71c12" prot="public">
+          <name>TOK_R_PAREN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908a30c6aba6b3c729e7150c79e60a4fc6f9" prot="public">
+          <name>TOK_COMMA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908a4a3cce8834d15a4d16c2a53273864549" prot="public">
+          <name>TOK_ONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908ad0f4584c48727b093746e2500d3e315c" prot="public">
+          <name>TOK_INTEGER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00908_1ab52345149881cbf184ed8dbc45774908abf7077806b8936246ac762409fdbcc19" prot="public">
+          <name>TOK_LABEL</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -123,570 +256,96 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/ALU.h" line="28" column="1" bodyfile="Source/Chips/ALU.h" bodystart="27" bodyend="37"/>
-      </memberdef>
-      <memberdef kind="enum" id="a00908_1a89719f49d745047f03bca80bfff48bd2" prot="public" static="no" strong="no">
-        <type></type>
-        <name>BitIndex</name>
-        <enumvalue id="a00908_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" prot="public">
-          <name>Bit0</name>
-          <initializer>= 0x0001</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a89719f49d745047f03bca80bfff48bd2a8487c63d5dca7d87b359feca1a2c2ac8" prot="public">
-          <name>Bit1</name>
-          <initializer>= 0x0002</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a89719f49d745047f03bca80bfff48bd2a8a09deb894b81cd01eb5ea4d9f1f1cf5" prot="public">
-          <name>Bit2</name>
-          <initializer>= 0x0004</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a89719f49d745047f03bca80bfff48bd2ae436844fb061392d7357a1ee7fecfa14" prot="public">
-          <name>Bit3</name>
-          <initializer>= 0x0008</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a89719f49d745047f03bca80bfff48bd2a98268d4e716682d4a223961ff7b3ed46" prot="public">
-          <name>Bit4</name>
-          <initializer>= 0x0010</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a89719f49d745047f03bca80bfff48bd2a1595b1dc7056ca6b1d0a681fb1c54c44" prot="public">
-          <name>Bit5</name>
-          <initializer>= 0x0020</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" prot="public">
-          <name>Bit6</name>
-          <initializer>= 0x0040</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" prot="public">
-          <name>Bit7</name>
-          <initializer>= 0x0080</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a89719f49d745047f03bca80bfff48bd2aadd805ed9e083686a8c569e80dcc38a8" prot="public">
-          <name>Bit8</name>
-          <initializer>= 0x0100</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a89719f49d745047f03bca80bfff48bd2a263e88c74e7f1a10437657aeb1351029" prot="public">
-          <name>Bit9</name>
-          <initializer>= 0x0200</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a89719f49d745047f03bca80bfff48bd2ab2a082f07330f8fc6c5153790cd17105" prot="public">
-          <name>Bit10</name>
-          <initializer>= 0x0400</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a89719f49d745047f03bca80bfff48bd2a9d3016c29dafb97ff8d2c5398dbd8378" prot="public">
-          <name>Bit11</name>
-          <initializer>= 0x0800</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a89719f49d745047f03bca80bfff48bd2af9d278a7553cfe77cccec3401041f75d" prot="public">
-          <name>Bit12</name>
-          <initializer>= 0x1000</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a89719f49d745047f03bca80bfff48bd2aa8948efac0cff6eb7b03915be33594b2" prot="public">
-          <name>Bit13</name>
-          <initializer>= 0x2000</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a89719f49d745047f03bca80bfff48bd2a10ace9286e9376c3e786ad829115ec61" prot="public">
-          <name>Bit14</name>
-          <initializer>= 0x4000</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a89719f49d745047f03bca80bfff48bd2aa92c380b2c00042b5105ede3c75f8d09" prot="public">
-          <name>Bit15</name>
-          <initializer>= 0x8000</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/BitUtils.h" line="32" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="31" bodyend="49"/>
-      </memberdef>
-      <memberdef kind="enum" id="a00908_1a341881db4c30c6d32529deb197b5834e" prot="public" static="no" strong="no">
-        <type></type>
-        <name>Control</name>
-        <enumvalue id="a00908_1a341881db4c30c6d32529deb197b5834ead8acdd64728db039cd19896192b6cb91" prot="public">
-          <name>XAndY</name>
-          <initializer>= 0</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a341881db4c30c6d32529deb197b5834ead194429bd882d774218235b665c40691" prot="public">
-          <name>Zero</name>
-          <initializer>= Zx | Zy | Fn</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a341881db4c30c6d32529deb197b5834ea5bf31a73c4015858640cbf4525a0f635" prot="public">
-          <name>One</name>
-          <initializer>= Zx | Nx | Zy | Ny | Fn | No</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a341881db4c30c6d32529deb197b5834eace1f386fd2bfb62375cd39260f9bfaab" prot="public">
-          <name>NegativeOne</name>
-          <initializer>= Zx | Nx | Zy | Fn</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a341881db4c30c6d32529deb197b5834eae9d7dcbb6f68eda355091b64af6963ac" prot="public">
-          <name>OutX</name>
-          <initializer>= Zy | Ny</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a341881db4c30c6d32529deb197b5834ea64ecded9e9d4bce576320438afbcc0b5" prot="public">
-          <name>OutY</name>
-          <initializer>= Zx | Nx</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a341881db4c30c6d32529deb197b5834eae9410c9c533b94acf19cd933687903bb" prot="public">
-          <name>NotX</name>
-          <initializer>= Zy | Ny | No</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a341881db4c30c6d32529deb197b5834ea92d3c2bb6b5095ec608417078b9c7c65" prot="public">
-          <name>NotY</name>
-          <initializer>= Zx | Nx | No</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a341881db4c30c6d32529deb197b5834ea135215f1f6dc8beda77599a341eb01e3" prot="public">
-          <name>NegativeX</name>
-          <initializer>= Zy | Ny | No | Fn</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a341881db4c30c6d32529deb197b5834ea4cd630e751714e9213ba6b4d317dad3d" prot="public">
-          <name>NegativeY</name>
-          <initializer>= Zx | Nx | No | Fn</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a341881db4c30c6d32529deb197b5834ea5bf9e8694f6b94e54a595c35d5301561" prot="public">
-          <name>XPlusOne</name>
-          <initializer>= Nx | Zy | Ny | Fn | No</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a341881db4c30c6d32529deb197b5834ea5799d387c4c6411ce163ace339f1134d" prot="public">
-          <name>YPlusOne</name>
-          <initializer>= Zx | Nx | Ny | Fn | No</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a341881db4c30c6d32529deb197b5834eadf026416b8f09401bdcec8d02ed4201e" prot="public">
-          <name>XMinusOne</name>
-          <initializer>= Zy | Ny | Fn</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a341881db4c30c6d32529deb197b5834ea481daef132a274ac459f4776b68a4bf0" prot="public">
-          <name>YMinusOne</name>
-          <initializer>= Zx | Nx | Fn</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a341881db4c30c6d32529deb197b5834ea1c96e420eda712bdb7d30149dca9b84a" prot="public">
-          <name>XPlusY</name>
-          <initializer>= Fn</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a341881db4c30c6d32529deb197b5834ea98319c0cfadf4a237d16b99336ade784" prot="public">
-          <name>XMinusY</name>
-          <initializer>= Nx | Fn | No</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a341881db4c30c6d32529deb197b5834ea80e05ad94b2217d5b423e1a93d24bfdf" prot="public">
-          <name>YMinusX</name>
-          <initializer>= Ny | Fn | No</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1a341881db4c30c6d32529deb197b5834ea0908b6d56aaa80b7f079e5e115e89e41" prot="public">
-          <name>XOrY</name>
-          <initializer>= Nx | Ny | No</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/ALU.h" line="40" column="1" bodyfile="Source/Chips/ALU.h" bodystart="39" bodyend="59"/>
-      </memberdef>
-      <memberdef kind="enum" id="a00908_1ad2616e1e96fd36f082180cb74e89acc3" prot="public" static="no" strong="no">
-        <type></type>
-        <name>ProgramCounterFlags</name>
-        <enumvalue id="a00908_1ad2616e1e96fd36f082180cb74e89acc3aa20daca2730050cc52329e14fb86997c" prot="public">
-          <name>PCF_INC</name>
-          <initializer>= 1</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1ad2616e1e96fd36f082180cb74e89acc3ab2070c4d59e83b5d3a362c64140bf449" prot="public">
-          <name>PCF_RESET</name>
-          <initializer>= 2</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="a00908_1ad2616e1e96fd36f082180cb74e89acc3a8d3b4cad187bfc23e962373076c7b347" prot="public">
-          <name>PCF_LOAD</name>
-          <initializer>= 4</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/ProgramCounter.h" line="32" column="1" bodyfile="Source/Chips/ProgramCounter.h" bodystart="31" bodyend="36"/>
+        <location file="Source/Assembler/Token.h" line="28" column="1" bodyfile="Source/Assembler/Token.h" bodystart="27" bodyend="66"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="a00908_1a8619ab45f63c5c97d4b5430487adbaf2" prot="public" static="no">
-        <type><ref refid="a00998" kindref="compound">BitUtils</ref>&lt; <ref refid="a01370" kindref="compound">uint16_t</ref>, 16 &gt;</type>
-        <definition>using Hack::Chips::B16 = typedef BitUtils&lt;uint16_t, 16&gt;</definition>
+      <memberdef kind="typedef" id="a00908_1ad1af9d4a0a202058a0d533d12c60c3b6" prot="public" static="no">
+        <type>std::pair&lt; <ref refid="a00909_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>, size_t &gt;</type>
+        <definition>using Hack::Assembler::StringIndex = typedef std::pair&lt;String, size_t&gt;</definition>
         <argsstring></argsstring>
-        <name>B16</name>
+        <name>StringIndex</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/BitUtils.h" line="258" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="258" bodyend="-1"/>
+        <location file="Source/Assembler/Parser.h" line="29" column="1" bodyfile="Source/Assembler/Parser.h" bodystart="29" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="a00908_1ab9cb4d5d1bc25154100e519567e6c702" prot="public" static="no">
-        <type><ref refid="a00998" kindref="compound">BitUtils</ref>&lt; <ref refid="a01382" kindref="compound">uint8_t</ref>, 8 &gt;</type>
-        <definition>using Hack::Chips::B8 = typedef BitUtils&lt;uint8_t, 8&gt;</definition>
+      <memberdef kind="typedef" id="a00908_1a9a9dde9280f429162b9c9d91279c7f26" prot="public" static="no">
+        <type><ref refid="a01301" kindref="compound">TokenBase</ref></type>
+        <definition>using Hack::Assembler::Token = typedef TokenBase</definition>
         <argsstring></argsstring>
-        <name>B8</name>
+        <name>Token</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/BitUtils.h" line="257" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="257" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="a00908_1a34177040653a4658b7c74d3846e164e1" prot="public" static="no">
-        <type><ref refid="a01022" kindref="compound">DefaultMemorySegment</ref>&lt; 0x4000, 0x8000 &gt;</type>
-        <definition>typedef DefaultMemorySegment&lt;0x4000, 0x8000&gt; Hack::Chips::Ram16k</definition>
-        <argsstring></argsstring>
-        <name>Ram16k</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/Ram16k.h" line="27" column="1" bodyfile="Source/Chips/Ram16k.h" bodystart="27" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="a00908_1a205aa97050ad01560145252139c81057" prot="public" static="no">
-        <type><ref refid="a01050" kindref="compound">IMemorySegment</ref>&lt; 0x6000, 0x4000 &gt;</type>
-        <definition>typedef IMemorySegment&lt;0x6000, 0x4000&gt; Hack::Chips::Screen</definition>
-        <argsstring></argsstring>
-        <name>Screen</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/Screen.h" line="27" column="1" bodyfile="Source/Chips/Screen.h" bodystart="27" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="a00908_1a40609e493601249c692ffb4b5d2d31a3" prot="public" static="no">
-        <type><ref refid="a01022" kindref="compound">DefaultMemorySegment</ref>&lt; 0x6000, 0x4000 &gt;</type>
-        <definition>using Hack::Chips::ScreenSegment = typedef DefaultMemorySegment&lt;0x6000, 0x4000&gt;</definition>
-        <argsstring></argsstring>
-        <name>ScreenSegment</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/Screen.h" line="28" column="1" bodyfile="Source/Chips/Screen.h" bodystart="28" bodyend="-1"/>
+        <location file="Source/Assembler/Token.h" line="68" column="1" bodyfile="Source/Assembler/Token.h" bodystart="68" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="a00908_1aaba0ba71f01d3869fbd9d00e9c7c8843" prot="public" static="no" mutable="no">
-        <type>constexpr <ref refid="a01370" kindref="compound">uint16_t</ref></type>
-        <definition>constexpr uint16_t Hack::Chips::ABits</definition>
-        <argsstring></argsstring>
-        <name>ABits</name>
-        <initializer>= 0b0&apos;00&apos;1&apos;000000&apos;000&apos;000</initializer>
+      <memberdef kind="variable" id="a00908_1ae2f6ce5908b46df7a68cf1eb884200b1" prot="public" static="no" mutable="no">
+        <type>constexpr <ref refid="a00941" kindref="compound">KeywordTable</ref></type>
+        <definition>constexpr KeywordTable Hack::Assembler::DestAndJumpTable[]</definition>
+        <argsstring>[]</argsstring>
+        <name>DestAndJumpTable</name>
+        <initializer>= {
+        {&apos;J&apos;, &apos;M&apos;, &apos;P&apos;, <ref refid="a00908_1ab52345149881cbf184ed8dbc45774908abbbee45b0a8f7973ea9c97ba81bbfab1" kindref="member">TOK_JMP</ref>},
+        {&apos;J&apos;, &apos;G&apos;, &apos;T&apos;, <ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a00a5e4936b8f21d85966bc510b9cf90d" kindref="member">TOK_JGT</ref>},
+        {&apos;J&apos;, &apos;E&apos;, &apos;Q&apos;, <ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a8aa5db527baacc19c6b5b6b01e2491fd" kindref="member">TOK_JEQ</ref>},
+        {&apos;J&apos;, &apos;G&apos;, &apos;E&apos;, <ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a1f0d06a89639748e3a8b75c113d5d06d" kindref="member">TOK_JGE</ref>},
+        {&apos;J&apos;, &apos;L&apos;, &apos;T&apos;, <ref refid="a00908_1ab52345149881cbf184ed8dbc45774908aa02bae4eda01057babd2b906433a4cb1" kindref="member">TOK_JLT</ref>},
+        {&apos;J&apos;, &apos;N&apos;, &apos;E&apos;, <ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a4cb282cdab169fa23a83251051d08834" kindref="member">TOK_JNE</ref>},
+        {&apos;J&apos;, &apos;L&apos;, &apos;E&apos;, <ref refid="a00908_1ab52345149881cbf184ed8dbc45774908ae8772c050e0a8b9141a92741af54fe15" kindref="member">TOK_JLE</ref>},
+        {&apos;A&apos;, &apos;M&apos;, &apos;D&apos;, <ref refid="a00908_1ab52345149881cbf184ed8dbc45774908af5554f8bc380b1604f24c2dd78373880" kindref="member">TOK_AMD</ref>},
+        {&apos;A&apos;, &apos;D&apos;, 0x0, TOK_AD},
+        {&apos;A&apos;, &apos;M&apos;, 0x0, TOK_AM},
+        {&apos;M&apos;, &apos;D&apos;, 0x0, TOK_MD},
+    }</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/CPU.cpp" line="50" column="1" bodyfile="Source/Chips/CPU.cpp" bodystart="50" bodyend="-1"/>
+        <location file="Source/Assembler/Scanner.cpp" line="42" column="1" bodyfile="Source/Assembler/Scanner.cpp" bodystart="42" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a00908_1ac2e8bb0a903ada736323d9ae15fbd83f" prot="public" static="no" mutable="no">
-        <type>constexpr <ref refid="a01370" kindref="compound">uint16_t</ref></type>
-        <definition>constexpr uint16_t Hack::Chips::ALoad</definition>
-        <argsstring></argsstring>
-        <name>ALoad</name>
-        <initializer>= 0b0&apos;00&apos;0&apos;000000&apos;100&apos;000</initializer>
+      <memberdef kind="variable" id="a00908_1ae799752966aa2ea9694b8a6731972e75" prot="public" static="no" mutable="no">
+        <type>constexpr <ref refid="a00945" kindref="compound">ReservedWordTable</ref></type>
+        <definition>constexpr ReservedWordTable Hack::Assembler::ReservedAddresses[]</definition>
+        <argsstring>[]</argsstring>
+        <name>ReservedAddresses</name>
+        <initializer>= {
+        {&quot;SP&quot;, 2, 0x0000},
+        {&quot;LCL&quot;, 3, 0x0001},
+        {&quot;ARG&quot;, 3, 0x0002},
+        {&quot;THIS&quot;, 4, 0x0003},
+        {&quot;THAT&quot;, 4, 0x0004},
+        {&quot;SCREEN&quot;, 5, 0x4000},
+        {&quot;KBD&quot;, 3, 0x6000},
+    }</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/CPU.cpp" line="49" column="1" bodyfile="Source/Chips/CPU.cpp" bodystart="49" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00908_1a9da8a364a75104615da123f1e3c5e457" prot="public" static="no" mutable="no">
-        <type>constexpr <ref refid="a01382" kindref="compound">uint8_t</ref></type>
-        <definition>constexpr uint8_t Hack::Chips::BitMask</definition>
-        <argsstring></argsstring>
-        <name>BitMask</name>
-        <initializer>= 0b01011111</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/Bit.cpp" line="30" column="1" bodyfile="Source/Chips/Bit.cpp" bodystart="30" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00908_1aed76ec1c3c9eb7477302492f4a555347" prot="public" static="no" mutable="no">
-        <type>constexpr <ref refid="a01370" kindref="compound">uint16_t</ref></type>
-        <definition>constexpr uint16_t Hack::Chips::CBits</definition>
-        <argsstring></argsstring>
-        <name>CBits</name>
-        <initializer>= 0b0&apos;00&apos;0&apos;111111&apos;000&apos;000</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/CPU.cpp" line="51" column="1" bodyfile="Source/Chips/CPU.cpp" bodystart="51" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00908_1a1ff32d5ecd7b6fef93d19d0584f6a3de" prot="public" static="no" mutable="no">
-        <type>constexpr <ref refid="a01382" kindref="compound">uint8_t</ref></type>
-        <definition>constexpr uint8_t Hack::Chips::ClockMask</definition>
-        <argsstring></argsstring>
-        <name>ClockMask</name>
-        <initializer>= 0b00000011</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/Clock.cpp" line="26" column="1" bodyfile="Source/Chips/Clock.cpp" bodystart="26" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00908_1aecca554241805bc1e9d1d50df379efaa" prot="public" static="no" mutable="no">
-        <type>constexpr <ref refid="a01370" kindref="compound">uint16_t</ref></type>
-        <definition>constexpr uint16_t Hack::Chips::DLoad</definition>
-        <argsstring></argsstring>
-        <name>DLoad</name>
-        <initializer>= 0b0&apos;00&apos;0&apos;000000&apos;010&apos;000</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/CPU.cpp" line="48" column="1" bodyfile="Source/Chips/CPU.cpp" bodystart="48" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00908_1a39ffb7370967401379a3867a99c0d502" prot="public" static="no" mutable="no">
-        <type>constexpr <ref refid="a01370" kindref="compound">uint16_t</ref></type>
-        <definition>constexpr uint16_t Hack::Chips::DMux8WayMask</definition>
-        <argsstring></argsstring>
-        <name>DMux8WayMask</name>
-        <initializer>= 0b0000111111111111</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/DMux8Way.cpp" line="30" column="1" bodyfile="Source/Chips/DMux8Way.cpp" bodystart="30" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00908_1abba66580760a71c292f9d27068d4b248" prot="public" static="no" mutable="no">
-        <type>constexpr <ref refid="a01370" kindref="compound">uint16_t</ref></type>
-        <definition>constexpr uint16_t Hack::Chips::MLoad</definition>
-        <argsstring></argsstring>
-        <name>MLoad</name>
-        <initializer>= 0b0&apos;00&apos;0&apos;000000&apos;001&apos;000</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/CPU.cpp" line="47" column="1" bodyfile="Source/Chips/CPU.cpp" bodystart="47" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00908_1ae1b67452b254db5b0d86e024b16194d7" prot="public" static="no" mutable="no">
-        <type>constexpr <ref refid="a01382" kindref="compound">uint8_t</ref></type>
-        <definition>constexpr uint8_t Hack::Chips::Mux8Way16Mask</definition>
-        <argsstring></argsstring>
-        <name>Mux8Way16Mask</name>
-        <initializer>= 0b00000111</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/Mux8Way16.cpp" line="30" column="1" bodyfile="Source/Chips/Mux8Way16.cpp" bodystart="30" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00908_1a31b128b4961f42e0532f63a42c7e990c" prot="public" static="no" mutable="no">
-        <type>constexpr <ref refid="a01370" kindref="compound">uint16_t</ref></type>
-        <definition>constexpr uint16_t Hack::Chips::RMask</definition>
-        <argsstring></argsstring>
-        <name>RMask</name>
-        <initializer>= 0b0111&apos;1111&apos;1111&apos;1111</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/CPU.cpp" line="46" column="1" bodyfile="Source/Chips/CPU.cpp" bodystart="46" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00908_1aa30bb2bb6c1f3ec73c3b5046db26ada2" prot="public" static="no" mutable="no">
-        <type>constexpr <ref refid="a01382" kindref="compound">uint8_t</ref></type>
-        <definition>constexpr uint8_t Hack::Chips::SrLatchMask</definition>
-        <argsstring></argsstring>
-        <name>SrLatchMask</name>
-        <initializer>= 0b01101111</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/SRLatch.cpp" line="26" column="1" bodyfile="Source/Chips/SRLatch.cpp" bodystart="26" bodyend="-1"/>
+        <location file="Source/Assembler/Scanner.cpp" line="57" column="1" bodyfile="Source/Assembler/Scanner.cpp" bodystart="57" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="a00908_1a7a5791fb124e7aad6c36cca12afba484" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="a00908_1adb92ac7ffed77431eefafce90381ea63" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
-        <definition>bool Hack::Chips::CpuDirty</definition>
-        <argsstring>(const uint8_t &amp;bits)</argsstring>
-        <name>CpuDirty</name>
+        <definition>bool Hack::Assembler::isConstantToken</definition>
+        <argsstring>(const int8_t type)</argsstring>
+        <name>isConstantToken</name>
         <param>
-          <type>const <ref refid="a01382" kindref="compound">uint8_t</ref> &amp;</type>
-          <declname>bits</declname>
+          <type>const int8_t</type>
+          <declname>type</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -694,18 +353,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/CPU.cpp" line="40" column="1" bodyfile="Source/Chips/CPU.cpp" bodystart="40" bodyend="43"/>
-        <references refid="a00908_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00482" startline="40">Bit7</references>
-        <references refid="a00908_1ad7b6ac75288861f60b160dcdc43aa189" compoundref="a00500" startline="35" endline="38">CpuIsLocked</references>
+        <location file="Source/Assembler/Parser.cpp" line="47" column="1" bodyfile="Source/Assembler/Parser.cpp" bodystart="47" bodyend="50"/>
+        <references refid="a00908_1ab52345149881cbf184ed8dbc45774908a8d150987e2f8f89304456e401c7de979" compoundref="a01655" startline="51">TOK_ZERO</references>
+        <references refid="a00908_1ab52345149881cbf184ed8dbc45774908a4a3cce8834d15a4d16c2a53273864549" compoundref="a01655" startline="63">TOK_ONE</references>
+        <references refid="a00908_1ab52345149881cbf184ed8dbc45774908ad0f4584c48727b093746e2500d3e315c" compoundref="a01655" startline="64">TOK_INTEGER</references>
       </memberdef>
-      <memberdef kind="function" id="a00908_1ad7b6ac75288861f60b160dcdc43aa189" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="a00908_1a0a9928530d915b203b72a0f6b3c38b17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
-        <definition>bool Hack::Chips::CpuIsLocked</definition>
-        <argsstring>(const uint8_t &amp;bits)</argsstring>
-        <name>CpuIsLocked</name>
+        <definition>bool Hack::Assembler::isDestToken</definition>
+        <argsstring>(const int8_t type)</argsstring>
+        <name>isDestToken</name>
         <param>
-          <type>const <ref refid="a01382" kindref="compound">uint8_t</ref> &amp;</type>
-          <declname>bits</declname>
+          <type>const int8_t</type>
+          <declname>type</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -713,14 +373,93 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/CPU.cpp" line="35" column="1" bodyfile="Source/Chips/CPU.cpp" bodystart="35" bodyend="38"/>
-        <references refid="a00908_1a89719f49d745047f03bca80bfff48bd2a8a09deb894b81cd01eb5ea4d9f1f1cf5" compoundref="a00482" startline="35">Bit2</references>
+        <location file="Source/Assembler/Parser.cpp" line="42" column="1" bodyfile="Source/Assembler/Parser.cpp" bodystart="42" bodyend="45"/>
+        <references refid="a00908_1ab52345149881cbf184ed8dbc45774908ab581a0e588797e0c6496e87b6811d588" compoundref="a01655" startline="34">TOK_M</references>
+        <references refid="a00908_1ab52345149881cbf184ed8dbc45774908af5554f8bc380b1604f24c2dd78373880" compoundref="a01655" startline="40">TOK_AMD</references>
+      </memberdef>
+      <memberdef kind="function" id="a00908_1a38549c40184116e8029bcf0539e5c729" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Assembler::isJumpToken</definition>
+        <argsstring>(const int8_t type)</argsstring>
+        <name>isJumpToken</name>
+        <param>
+          <type>const int8_t</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Assembler/Parser.cpp" line="58" column="1" bodyfile="Source/Assembler/Parser.cpp" bodystart="58" bodyend="61"/>
+        <references refid="a00908_1ab52345149881cbf184ed8dbc45774908a00a5e4936b8f21d85966bc510b9cf90d" compoundref="a01655" startline="43">TOK_JGT</references>
+        <references refid="a00908_1ab52345149881cbf184ed8dbc45774908abbbee45b0a8f7973ea9c97ba81bbfab1" compoundref="a01655" startline="49">TOK_JMP</references>
+      </memberdef>
+      <memberdef kind="function" id="a00908_1a835fdd9f927ed102f232768fd9f2b1f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Assembler::isOperatorToken</definition>
+        <argsstring>(const int8_t type)</argsstring>
+        <name>isOperatorToken</name>
+        <param>
+          <type>const int8_t</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Assembler/Parser.cpp" line="52" column="1" bodyfile="Source/Assembler/Parser.cpp" bodystart="52" bodyend="56"/>
+        <references refid="a00908_1ab52345149881cbf184ed8dbc45774908aa25dfa8318505862372dc7e5ab7a1105" compoundref="a01655" startline="54">TOK_PLUS</references>
+        <references refid="a00908_1ab52345149881cbf184ed8dbc45774908a4ff9eb9fe01140f2790d23262aee15b9" compoundref="a01655" startline="52">TOK_MINUS</references>
+        <references refid="a00908_1ab52345149881cbf184ed8dbc45774908a57fc3c8374e06e1a4aad4dd701ddfc14" compoundref="a01655" startline="55">TOK_AND</references>
+        <references refid="a00908_1ab52345149881cbf184ed8dbc45774908a4d7b6070721cbd12a68714ef366b7710" compoundref="a01655" startline="56">TOK_OR</references>
+        <references refid="a00908_1ab52345149881cbf184ed8dbc45774908aa40c60bb7f9740a9bf55e8483a17b2cf" compoundref="a01655" startline="53">TOK_NOT</references>
+      </memberdef>
+      <memberdef kind="function" id="a00908_1a58f9edf51b63e59ae9b3d54aaf179f3b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Assembler::testCompoundExpression</definition>
+        <argsstring>(const int8_t a, const int8_t b, const int8_t c, const int8_t d, const int8_t e, const int8_t f)</argsstring>
+        <name>testCompoundExpression</name>
+        <param>
+          <type>const int8_t</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const int8_t</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const int8_t</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const int8_t</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>const int8_t</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>const int8_t</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Assembler/Parser.cpp" line="32" column="1" bodyfile="Source/Assembler/Parser.cpp" bodystart="32" bodyend="40"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Chips/Add16.cpp" line="28" column="1"/>
+    <location file="Source/Assembler/Instruction.cpp" line="26" column="1"/>
   </compounddef>
 </doxygen>

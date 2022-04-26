@@ -2,93 +2,143 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01646" kind="file" language="C++">
     <compoundname>Scanner.h</compoundname>
-    <includes refid="a01658" local="yes">Utils/CommandLine/Token.h</includes>
-    <includedby refid="a01622" local="yes">Source/Utils/CommandLine/Parser.h</includedby>
-    <includedby refid="a01634" local="yes">Source/Utils/CommandLine/Scanner.cpp</includedby>
+    <includes refid="a00848" local="yes">Utils/ParserBase/ScannerBase.h</includes>
+    <includes refid="a01658" local="yes">Compiler/Analyzer/Token.h</includes>
+    <includedby refid="a01610" local="yes">Source/Compiler/Analyzer/Parser.cpp</includedby>
+    <includedby refid="a01634" local="yes">Source/Compiler/Analyzer/Scanner.cpp</includedby>
     <incdepgraph>
-      <node id="548">
-        <label>Utils/CommandLine/Token.h</label>
-        <childnode refid="549" relation="include">
+      <node id="539">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="540" relation="include">
         </childnode>
       </node>
-      <node id="551">
+      <node id="540">
+        <label>cstdint</label>
+      </node>
+      <node id="543">
+        <label>Compiler/Analyzer/Token.h</label>
+        <childnode refid="542" relation="include">
+        </childnode>
+      </node>
+      <node id="524">
+        <label>Source/Compiler/Analyzer/Scanner.h</label>
+        <link refid="a01646"/>
+        <childnode refid="525" relation="include">
+        </childnode>
+        <childnode refid="543" relation="include">
+        </childnode>
+      </node>
+      <node id="531">
+        <label>stdexcept</label>
+      </node>
+      <node id="536">
         <label>string</label>
       </node>
-      <node id="547">
-        <label>Source/Utils/CommandLine/Scanner.h</label>
-        <link refid="a01646"/>
-        <childnode refid="548" relation="include">
+      <node id="528">
+        <label>unordered_set</label>
+      </node>
+      <node id="530">
+        <label>exception</label>
+      </node>
+      <node id="525">
+        <label>Utils/ParserBase/ScannerBase.h</label>
+        <childnode refid="526" relation="include">
+        </childnode>
+        <childnode refid="542" relation="include">
         </childnode>
       </node>
-      <node id="552">
+      <node id="542">
+        <label>Utils/ParserBase/TokenBase.h</label>
+        <childnode refid="534" relation="include">
+        </childnode>
+      </node>
+      <node id="538">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="534" relation="include">
+        </childnode>
+        <childnode refid="539" relation="include">
+        </childnode>
+        <childnode refid="541" relation="include">
+        </childnode>
+      </node>
+      <node id="541">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="540" relation="include">
+        </childnode>
+        <childnode refid="537" relation="include">
+        </childnode>
+        <childnode refid="539" relation="include">
+        </childnode>
+      </node>
+      <node id="526">
+        <label>Utils/IndexCache.h</label>
+        <childnode refid="527" relation="include">
+        </childnode>
+        <childnode refid="528" relation="include">
+        </childnode>
+        <childnode refid="529" relation="include">
+        </childnode>
+      </node>
+      <node id="533">
+        <label>Utils/Console.h</label>
+        <childnode refid="534" relation="include">
+        </childnode>
+        <childnode refid="538" relation="include">
+        </childnode>
+      </node>
+      <node id="537">
         <label>vector</label>
       </node>
-      <node id="550">
+      <node id="532">
+        <label>utility</label>
+      </node>
+      <node id="535">
         <label>sstream</label>
       </node>
-      <node id="549">
-        <label>Utils/String.h</label>
-        <childnode refid="550" relation="include">
+      <node id="529">
+        <label>Utils/Exception.h</label>
+        <childnode refid="530" relation="include">
         </childnode>
-        <childnode refid="551" relation="include">
+        <childnode refid="531" relation="include">
         </childnode>
-        <childnode refid="552" relation="include">
+        <childnode refid="532" relation="include">
+        </childnode>
+        <childnode refid="533" relation="include">
+        </childnode>
+        <childnode refid="534" relation="include">
+        </childnode>
+      </node>
+      <node id="527">
+        <label>unordered_map</label>
+      </node>
+      <node id="534">
+        <label>String.h</label>
+        <childnode refid="535" relation="include">
+        </childnode>
+        <childnode refid="536" relation="include">
+        </childnode>
+        <childnode refid="537" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="554">
-        <label>Source/Utils/CommandLine/Parser.h</label>
-        <childnode refid="555" relation="include">
-        </childnode>
-        <childnode refid="556" relation="include">
-        </childnode>
-        <childnode refid="557" relation="include">
-        </childnode>
-        <childnode refid="558" relation="include">
-        </childnode>
-        <childnode refid="559" relation="include">
-        </childnode>
-        <childnode refid="560" relation="include">
-        </childnode>
-        <childnode refid="561" relation="include">
-        </childnode>
-      </node>
-      <node id="561">
-        <label>Source/VirtualMachine/Main.cpp</label>
-      </node>
-      <node id="555">
-        <label>Source/Assembler/Main.cpp</label>
-      </node>
-      <node id="557">
-        <label>Source/Compiler/Compiler/Main.cpp</label>
-      </node>
-      <node id="560">
-        <label>Source/Utils/CommandLine/Parser.cpp</label>
-      </node>
-      <node id="553">
-        <label>Source/Utils/CommandLine/Scanner.h</label>
+      <node id="544">
+        <label>Source/Compiler/Analyzer/Scanner.h</label>
         <link refid="a01646"/>
-        <childnode refid="554" relation="include">
+        <childnode refid="545" relation="include">
         </childnode>
-        <childnode refid="562" relation="include">
+        <childnode refid="546" relation="include">
         </childnode>
       </node>
-      <node id="556">
-        <label>Source/Compiler/Analyzer/Main.cpp</label>
+      <node id="546">
+        <label>Source/Compiler/Analyzer/Scanner.cpp</label>
       </node>
-      <node id="562">
-        <label>Source/Utils/CommandLine/Scanner.cpp</label>
-      </node>
-      <node id="559">
-        <label>Source/Computer/Application.cpp</label>
-      </node>
-      <node id="558">
-        <label>Source/Compiler/Generator/Main.cpp</label>
+      <node id="545">
+        <label>Source/Compiler/Analyzer/Parser.cpp</label>
       </node>
     </invincdepgraph>
-    <innerclass refid="a01254" prot="public">Hack::CommandLine::Scanner</innerclass>
-    <innernamespace refid="a00919">Hack::CommandLine</innernamespace>
+    <innerclass refid="a01161" prot="public">Hack::Compiler::Analyzer::Scanner</innerclass>
+    <innernamespace refid="a00914">Hack::Compiler::Analyzer</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -116,34 +166,38 @@
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/CommandLine/Token.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00919" kindref="compound">Hack::CommandLine</ref></highlight></codeline>
-<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="27" refid="a01254" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01254" kindref="compound">Scanner</ref></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>_buffer;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>_position;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01254_1aaca6b758a45a97728f3fe0107f4d6270" kindref="member">Scanner</ref>();</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01254_1a1974539a58027b0ba339b019d8fcddf9" kindref="member">clear</ref>();</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01254_1af56e25fc560f1b2fb71e93ab5d2599c5" kindref="member">lex</ref>(<ref refid="a01258" kindref="compound">Token</ref>&amp;<sp/>tok);</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01254_1af65558f33766054df253ab6efb378fd9" kindref="member">append</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>arg);</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/><ref refid="a01254_1ae8cbee55ad5f4cd3dda81e0cff2a07b5" kindref="member">getValue</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/ParserBase/ScannerBase.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Compiler/Analyzer/Token.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00914" kindref="compound">Hack::Compiler::Analyzer</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28" refid="a00914_1a5d51cba76b1c9a4e05f7a36a0912c98e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="a00914_1a5d51cba76b1c9a4e05f7a36a0912c98e" kindref="member">CodeCache</ref><sp/>=<sp/>std::vector&lt;String&gt;;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="a01161" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01161" kindref="compound">Scanner</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="a01297" kindref="compound">ScannerBase</ref></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1a5d51cba76b1c9a4e05f7a36a0912c98e" kindref="member">CodeCache</ref><sp/>_code;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>scanCode(<ref refid="a01301" kindref="compound">Token</ref>&amp;<sp/>tok);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>scanSymbol(<ref refid="a01301" kindref="compound">Token</ref>&amp;<sp/>tok);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>scanDigit(<ref refid="a01301" kindref="compound">Token</ref>&amp;<sp/>tok);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>scanString(<ref refid="a01301" kindref="compound">Token</ref>&amp;<sp/>tok);</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45" refid="a01254_1ae8cbee55ad5f4cd3dda81e0cff2a07b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/><ref refid="a01254_1ae8cbee55ad5f4cd3dda81e0cff2a07b5" kindref="member">Scanner::getValue</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="46"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_buffer;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="49"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::CommandLine</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01161_1a22bbfeed6a0fd316f2d4c05b8fe47bd8" kindref="member">Scanner</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01161_1af357c61090b712e7cfcc4cbaeaa68a3f" kindref="member">scan</ref>(<ref refid="a01301" kindref="compound">Token</ref>&amp;<sp/>tok)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01161_1a719fc526a3ad0ea70ed7dbba71f0b686" kindref="member">getCode</ref>(<ref refid="a00909_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::VirtualMachine</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Utils/CommandLine/Scanner.h"/>
+    <location file="Source/Compiler/Analyzer/Scanner.h"/>
   </compounddef>
 </doxygen>

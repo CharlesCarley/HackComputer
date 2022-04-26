@@ -1,115 +1,95 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00689" kind="file" language="C++">
-    <compoundname>Timer.h</compoundname>
-    <includes refid="a00491" local="yes">Chips/Clock.h</includes>
-    <includedby refid="a00494" local="yes">Source/Chips/Computer.cpp</includedby>
-    <includedby refid="a00500" local="yes">Source/Chips/CPU.cpp</includedby>
-    <includedby refid="a00686" local="yes">Source/Chips/Timer.cpp</includedby>
+    <compoundname>Timer.cpp</compoundname>
+    <includes refid="a00692" local="yes">Chips/Timer.h</includes>
     <incdepgraph>
-      <node id="2234">
+      <node id="2219">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="2235" relation="include">
+        <childnode refid="2220" relation="include">
         </childnode>
       </node>
-      <node id="2226">
+      <node id="2211">
         <label>Chips/BitUtils.h</label>
-        <childnode refid="2227" relation="include">
+        <childnode refid="2212" relation="include">
         </childnode>
-        <childnode refid="2228" relation="include">
+        <childnode refid="2213" relation="include">
         </childnode>
       </node>
-      <node id="2235">
+      <node id="2220">
         <label>cstdint</label>
       </node>
-      <node id="2231">
+      <node id="2207">
+        <label>Source/Chips/Timer.cpp</label>
+        <link refid="a00689"/>
+        <childnode refid="2208" relation="include">
+        </childnode>
+      </node>
+      <node id="2216">
         <label>string</label>
       </node>
-      <node id="2233">
+      <node id="2218">
         <label>UserInterface/Context.h</label>
-        <childnode refid="2229" relation="include">
+        <childnode refid="2214" relation="include">
         </childnode>
-        <childnode refid="2234" relation="include">
+        <childnode refid="2219" relation="include">
         </childnode>
-        <childnode refid="2236" relation="include">
+        <childnode refid="2221" relation="include">
         </childnode>
       </node>
-      <node id="2236">
+      <node id="2221">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="2235" relation="include">
+        <childnode refid="2220" relation="include">
         </childnode>
-        <childnode refid="2232" relation="include">
+        <childnode refid="2217" relation="include">
         </childnode>
-        <childnode refid="2234" relation="include">
+        <childnode refid="2219" relation="include">
         </childnode>
       </node>
-      <node id="2228">
+      <node id="2213">
         <label>Utils/Console.h</label>
-        <childnode refid="2229" relation="include">
+        <childnode refid="2214" relation="include">
         </childnode>
-        <childnode refid="2233" relation="include">
+        <childnode refid="2218" relation="include">
         </childnode>
       </node>
-      <node id="2227">
+      <node id="2212">
         <label>bitset</label>
       </node>
-      <node id="2224">
+      <node id="2209">
         <label>Chips/Clock.h</label>
-        <childnode refid="2225" relation="include">
+        <childnode refid="2210" relation="include">
         </childnode>
       </node>
-      <node id="2232">
+      <node id="2217">
         <label>vector</label>
       </node>
-      <node id="2230">
+      <node id="2215">
         <label>sstream</label>
       </node>
-      <node id="2225">
+      <node id="2210">
         <label>Chips/Chip.h</label>
-        <childnode refid="2226" relation="include">
+        <childnode refid="2211" relation="include">
         </childnode>
-        <childnode refid="2228" relation="include">
-        </childnode>
-      </node>
-      <node id="2223">
-        <label>Source/Chips/Timer.h</label>
-        <link refid="a00689"/>
-        <childnode refid="2224" relation="include">
+        <childnode refid="2213" relation="include">
         </childnode>
       </node>
-      <node id="2229">
+      <node id="2208">
+        <label>Chips/Timer.h</label>
+        <childnode refid="2209" relation="include">
+        </childnode>
+      </node>
+      <node id="2214">
         <label>String.h</label>
-        <childnode refid="2230" relation="include">
+        <childnode refid="2215" relation="include">
         </childnode>
-        <childnode refid="2231" relation="include">
+        <childnode refid="2216" relation="include">
         </childnode>
-        <childnode refid="2232" relation="include">
+        <childnode refid="2217" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <invincdepgraph>
-      <node id="2240">
-        <label>Source/Chips/Timer.cpp</label>
-      </node>
-      <node id="2239">
-        <label>Source/Chips/CPU.cpp</label>
-      </node>
-      <node id="2238">
-        <label>Source/Chips/Computer.cpp</label>
-      </node>
-      <node id="2237">
-        <label>Source/Chips/Timer.h</label>
-        <link refid="a00689"/>
-        <childnode refid="2238" relation="include">
-        </childnode>
-        <childnode refid="2239" relation="include">
-        </childnode>
-        <childnode refid="2240" relation="include">
-        </childnode>
-      </node>
-    </invincdepgraph>
-    <innerclass refid="a01138" prot="public">Hack::Chips::Timer</innerclass>
-    <innernamespace refid="a00908">Hack::Chips</innernamespace>
+    <innernamespace refid="a00911">Hack::Chips</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -136,22 +116,24 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Clock.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00908" kindref="compound">Hack::Chips</ref></highlight></codeline>
-<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="27" refid="a01138" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01138" kindref="compound">Timer</ref></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="a01006" kindref="compound">Clock</ref><sp/>_clock;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01138_1a06197be547ad70f903d23120252cf044" kindref="member">tick</ref>();</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01138_1a7570f5f591474c56e6f96ab6d3f77044" kindref="member">reset</ref>();</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="36"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Timer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00911" kindref="compound">Hack::Chips</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>should<sp/>be<sp/>a<sp/>pointer,<sp/>but<sp/>for<sp/>now:<sp/>have<sp/>a<sp/>at-exit<sp/>call</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00919_1a9a8e3139231dc9b3e84768479987047a" kindref="member">Clock</ref><sp/>Timer::_clock<sp/>=<sp/><ref refid="a00919_1a9a8e3139231dc9b3e84768479987047a" kindref="member">Clock</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="a01141_1a06197be547ad70f903d23120252cf044" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01141_1a06197be547ad70f903d23120252cf044" kindref="member">Timer::tick</ref>()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_clock.<ref refid="a01009_1acb81d1eb95bf01d4fe203701562da7d0" kindref="member">getOut</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="a01141_1a7570f5f591474c56e6f96ab6d3f77044" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01141_1a7570f5f591474c56e6f96ab6d3f77044" kindref="member">Timer::reset</ref>()</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_clock.<ref refid="a01009_1abb454609d9a6416ea16f15f9b7c78957" kindref="member">setReset</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Chips/Timer.h"/>
+    <location file="Source/Chips/Timer.cpp"/>
   </compounddef>
 </doxygen>

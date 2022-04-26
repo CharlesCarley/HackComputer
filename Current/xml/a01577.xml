@@ -6,9 +6,8 @@
     <briefdescription>
 <para>Implements the circuit class library. </para>    </briefdescription>
     <detaileddescription>
-<para>Implements the circuit class library.</para><sect1 id="a01577_1Hc02Impl">
-<title>Implementation</title>
-<para>It uses two separate implementations to compute the circuit logic.<linebreak/>
+<para>Implements the circuit class library.</para><para><heading level="2">Implementation</heading>
+</para><para>It uses two separate implementations to compute the circuit logic.<linebreak/>
 <linebreak/>
  The first implementation is written to compute the value of each circuit. It links the circuits together in code and computes the value of each bit. <linebreak/>
 <linebreak/>
@@ -16,9 +15,7 @@
 <linebreak/>
  The build option that toggles this behavior is <computeroutput>Hack_IMPLEMENT_BLACK_BOX</computeroutput>. <linebreak/>
 <linebreak/>
-</para><para>See <ref refid="a01578" kindref="compound">Implemented Chips</ref> for more information.</para><para><linebreak/>
-</para></sect1>
-<sect1 id="a01577_1Hc02Defined">
+ See the <ref refid="a01578" kindref="compound">Implemented Chips</ref> document for more information.</para><sect1 id="a01577_1Hc02Defined">
 <title>Defined in</title>
 <para>The source is defined in <ulink url="../../Source/Chips">Source/Chips</ulink><linebreak/>
 </para></sect1>

@@ -3,13 +3,11 @@
 
 \brief Implements the virtual machine compiler.
 
-\n
+\h1 Vm2Asm
 
-\section Hc04SVm2Asm Vm2Asm
+The primary job of this compiler is to switch abstractions from a stack based virtual machine to assembly code.
+\br
 
-The primary job of the compiler is to switch abstractions from VM to ASM code.
-
-\n\n
 \code{.txt}
 Usage: vm2mc <options> <arg[0] .. arg[n]>
 
@@ -19,18 +17,14 @@ Usage: vm2mc <options> <arg[0] .. arg[n]>
     -o, --output  Specify an output file
 \endcode
 
-\subsection Hc04Grammar Grammar
+\h2 Grammar
 
-The grammar for the VM can be found [here.](../../Source/VirtualMachine/VM.grm) 
-\br
-It uses extra keywords that are not in the course specification.
-
+The grammar for the VM syntax can be found [here.](../../Source/VirtualMachine/VM.grm) \n
+It uses the following extra keywords that are not in the course specification.
 - __set__ `set <int> <int>` Allows directly setting RAM values
 - __reset__ `reset` Forces a CPU reset by jumping to the end of ROM `@32766 D=A;JMP`
 - __halt__ `halt` Will emit code that enters into an infinite loop
 
-
-\n
 \defined{Hc04Defined}
 \defined_in{Source/VirtualMachine}
 

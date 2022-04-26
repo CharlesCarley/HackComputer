@@ -1,156 +1,120 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00722" kind="file" language="C++">
-    <compoundname>Tree.cpp</compoundname>
-    <includes refid="a00725" local="yes">Compiler/Common/Tree.h</includes>
-    <includes local="no">fstream</includes>
-    <includes refid="a00713" local="yes">Compiler/Common/Node.h</includes>
-    <includes refid="a00731" local="yes">Compiler/Common/XmlWriter.h</includes>
-    <includes refid="a00707" local="yes">Compiler/Common/DotWriter.h</includes>
+    <compoundname>NodeUtils.h</compoundname>
+    <includes refid="a00857" local="yes">Utils/String.h</includes>
+    <includedby refid="a00716" local="yes">Source/Compiler/Common/Node.h</includedby>
+    <includedby refid="a00719" local="yes">Source/Compiler/Common/NodeUtils.cpp</includedby>
     <incdepgraph>
-      <node id="2459">
-        <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="2460" relation="include">
+      <node id="2420">
+        <label>Source/Compiler/Common/NodeUtils.h</label>
+        <link refid="a00722"/>
+        <childnode refid="2421" relation="include">
         </childnode>
       </node>
-      <node id="2448">
-        <label>functional</label>
-      </node>
-      <node id="2462">
-        <label>Compiler/Common/XmlWriter.h</label>
-        <childnode refid="2442" relation="include">
-        </childnode>
-      </node>
-      <node id="2460">
-        <label>cstdint</label>
-      </node>
-      <node id="2463">
-        <label>Compiler/Common/DotWriter.h</label>
-        <childnode refid="2442" relation="include">
-        </childnode>
-      </node>
-      <node id="2449">
-        <label>Compiler/Common/NodeUtils.h</label>
-        <childnode refid="2442" relation="include">
-        </childnode>
-      </node>
-      <node id="2455">
-        <label>stdexcept</label>
-      </node>
-      <node id="2444">
+      <node id="2423">
         <label>string</label>
       </node>
-      <node id="2452">
-        <label>unordered_set</label>
-      </node>
-      <node id="2454">
-        <label>exception</label>
-      </node>
-      <node id="2446">
-        <label>fstream</label>
-      </node>
-      <node id="2458">
-        <label>UserInterface/Context.h</label>
-        <childnode refid="2442" relation="include">
-        </childnode>
-        <childnode refid="2459" relation="include">
-        </childnode>
-        <childnode refid="2461" relation="include">
-        </childnode>
-      </node>
-      <node id="2461">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="2460" relation="include">
-        </childnode>
-        <childnode refid="2445" relation="include">
-        </childnode>
-        <childnode refid="2459" relation="include">
-        </childnode>
-      </node>
-      <node id="2450">
-        <label>Utils/IndexCache.h</label>
-        <childnode refid="2451" relation="include">
-        </childnode>
-        <childnode refid="2452" relation="include">
-        </childnode>
-        <childnode refid="2453" relation="include">
-        </childnode>
-      </node>
-      <node id="2457">
-        <label>Utils/Console.h</label>
-        <childnode refid="2442" relation="include">
-        </childnode>
-        <childnode refid="2458" relation="include">
-        </childnode>
-      </node>
-      <node id="2445">
+      <node id="2424">
         <label>vector</label>
       </node>
-      <node id="2456">
-        <label>utility</label>
-      </node>
-      <node id="2443">
+      <node id="2422">
         <label>sstream</label>
       </node>
-      <node id="2440">
-        <label>Source/Compiler/Common/Tree.cpp</label>
-        <link refid="a00722"/>
-        <childnode refid="2441" relation="include">
-        </childnode>
-        <childnode refid="2446" relation="include">
-        </childnode>
-        <childnode refid="2447" relation="include">
-        </childnode>
-        <childnode refid="2462" relation="include">
-        </childnode>
-        <childnode refid="2463" relation="include">
-        </childnode>
-      </node>
-      <node id="2453">
-        <label>Utils/Exception.h</label>
-        <childnode refid="2454" relation="include">
-        </childnode>
-        <childnode refid="2455" relation="include">
-        </childnode>
-        <childnode refid="2456" relation="include">
-        </childnode>
-        <childnode refid="2457" relation="include">
-        </childnode>
-        <childnode refid="2442" relation="include">
-        </childnode>
-      </node>
-      <node id="2451">
-        <label>unordered_map</label>
-      </node>
-      <node id="2441">
-        <label>Compiler/Common/Tree.h</label>
-        <childnode refid="2442" relation="include">
-        </childnode>
-      </node>
-      <node id="2447">
-        <label>Compiler/Common/Node.h</label>
-        <childnode refid="2448" relation="include">
-        </childnode>
-        <childnode refid="2445" relation="include">
-        </childnode>
-        <childnode refid="2449" relation="include">
-        </childnode>
-        <childnode refid="2450" relation="include">
-        </childnode>
-        <childnode refid="2442" relation="include">
-        </childnode>
-      </node>
-      <node id="2442">
+      <node id="2421">
         <label>Utils/String.h</label>
-        <childnode refid="2443" relation="include">
+        <childnode refid="2422" relation="include">
         </childnode>
-        <childnode refid="2444" relation="include">
+        <childnode refid="2423" relation="include">
         </childnode>
-        <childnode refid="2445" relation="include">
+        <childnode refid="2424" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <innernamespace refid="a00912">Hack::Compiler</innernamespace>
+    <invincdepgraph>
+      <node id="2425">
+        <label>Source/Compiler/Common/NodeUtils.h</label>
+        <link refid="a00722"/>
+        <childnode refid="2426" relation="include">
+        </childnode>
+        <childnode refid="2431" relation="include">
+        </childnode>
+      </node>
+      <node id="2434">
+        <label>Source/Compiler/Generator/Generator.cpp</label>
+      </node>
+      <node id="2438">
+        <label>Source/Compiler/Generator/VmEmitter.h</label>
+        <childnode refid="2434" relation="include">
+        </childnode>
+        <childnode refid="2439" relation="include">
+        </childnode>
+      </node>
+      <node id="2430">
+        <label>Source/Compiler/Common/Node.cpp</label>
+      </node>
+      <node id="2439">
+        <label>Source/Compiler/Generator/VmEmitter.cpp</label>
+      </node>
+      <node id="2432">
+        <label>Source/Compiler/Common/Tree.cpp</label>
+      </node>
+      <node id="2433">
+        <label>Source/Compiler/Common/XmlWriter.cpp</label>
+      </node>
+      <node id="2427">
+        <label>Source/Compiler/Analyzer/Parser.cpp</label>
+      </node>
+      <node id="2429">
+        <label>Source/Compiler/Common/DotWriter.cpp</label>
+      </node>
+      <node id="2437">
+        <label>Source/Computer/Application.cpp</label>
+      </node>
+      <node id="2435">
+        <label>Source/Compiler/Generator/Generator.h</label>
+        <childnode refid="2434" relation="include">
+        </childnode>
+        <childnode refid="2436" relation="include">
+        </childnode>
+        <childnode refid="2437" relation="include">
+        </childnode>
+      </node>
+      <node id="2428">
+        <label>Source/Compiler/Analyzer/ParseUtils.cpp</label>
+      </node>
+      <node id="2436">
+        <label>Source/Compiler/Generator/Main.cpp</label>
+      </node>
+      <node id="2431">
+        <label>Source/Compiler/Common/NodeUtils.cpp</label>
+      </node>
+      <node id="2426">
+        <label>Source/Compiler/Common/Node.h</label>
+        <childnode refid="2427" relation="include">
+        </childnode>
+        <childnode refid="2428" relation="include">
+        </childnode>
+        <childnode refid="2429" relation="include">
+        </childnode>
+        <childnode refid="2430" relation="include">
+        </childnode>
+        <childnode refid="2431" relation="include">
+        </childnode>
+        <childnode refid="2432" relation="include">
+        </childnode>
+        <childnode refid="2433" relation="include">
+        </childnode>
+        <childnode refid="2434" relation="include">
+        </childnode>
+        <childnode refid="2435" relation="include">
+        </childnode>
+        <childnode refid="2438" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="a01177" prot="public">Hack::Compiler::NodeUtils</innerclass>
+    <innernamespace refid="a00915">Hack::Compiler</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -177,46 +141,130 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Compiler/Common/Tree.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Compiler/Common/Node.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Compiler/Common/XmlWriter.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Compiler/Common/DotWriter.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00912" kindref="compound">Hack::Compiler</ref></highlight></codeline>
-<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="30" refid="a01178_1a23c525c96dd46a4b7982949318112499" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01178_1a23c525c96dd46a4b7982949318112499" kindref="member">Tree::Tree</ref>()<sp/>:</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_root(new<sp/><ref refid="a01170" kindref="compound">Node</ref>())</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35" refid="a01178_1a45358a8d6576f798c84aa599d3c8968e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01178_1a45358a8d6576f798c84aa599d3c8968e" kindref="member">Tree::~Tree</ref>()</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>_root;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_root<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42" refid="a01178_1ab00b92685755429ac933b3507a79bcd0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01178_1ab00b92685755429ac933b3507a79bcd0" kindref="member">Tree::filename</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>fileName)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="43"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_root-&gt;<ref refid="a01170_1a7159b0a48fe5e2fff5ffe0472666a016" kindref="member">filename</ref>(fileName);</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47" refid="a01178_1a6a896a5aa2081ea5b7acbb59c82b9b69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01178_1a6a896a5aa2081ea5b7acbb59c82b9b69" kindref="member">Tree::write</ref>(<ref refid="a00906_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref>&amp;<sp/>out,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>format)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="48"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(format<sp/>==<sp/>0)</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01186" kindref="compound">XmlWriter</ref><sp/>writer(_root);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>writer.<ref refid="a01186_1a3cda3976be2f39380491275e681cdde9" kindref="member">write</ref>(out);</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01166" kindref="compound">DotWriter</ref><sp/>writer(_root);</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>writer.<ref refid="a01166_1a3c42eaf7c27647c3e266d5c02fc62e48" kindref="member">write</ref>(out);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="60"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/String.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00915" kindref="compound">Hack::Compiler</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Node;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6" kindref="member">NodeType</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a12d787097fb230c34304927acb58a558" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a12d787097fb230c34304927acb58a558" kindref="member">Rule</ref>,</highlight></codeline>
+<codeline lineno="32" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6af5fb400704892777118abdccc81b9194" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6af5fb400704892777118abdccc81b9194" kindref="member">RuleClass</ref>,</highlight></codeline>
+<codeline lineno="33" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6aa4a86eb5c36e73c82c0e65cb88c87860" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6aa4a86eb5c36e73c82c0e65cb88c87860" kindref="member">RuleClassDescription</ref>,</highlight></codeline>
+<codeline lineno="34" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6af895d92a3471ae1dd81db116cb5683e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6af895d92a3471ae1dd81db116cb5683e4" kindref="member">RuleField</ref>,</highlight></codeline>
+<codeline lineno="35" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a83868e546ba4cf0544f7b704c9ad32ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a83868e546ba4cf0544f7b704c9ad32ff" kindref="member">RuleDataType</ref>,</highlight></codeline>
+<codeline lineno="36" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a74a4a6265f456fe0176393106c407b6e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a74a4a6265f456fe0176393106c407b6e" kindref="member">RuleFieldSpecification</ref>,</highlight></codeline>
+<codeline lineno="37" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a379776fb31e81b1baa8e37d597eb24a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a379776fb31e81b1baa8e37d597eb24a4" kindref="member">RuleIdentifierList</ref>,</highlight></codeline>
+<codeline lineno="38" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ad395ed3a48e79f471aa48780ebdc3ff1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ad395ed3a48e79f471aa48780ebdc3ff1" kindref="member">RuleMethod</ref>,</highlight></codeline>
+<codeline lineno="39" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a8e21b2c6a1e2c1820fd46de24934b033" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a8e21b2c6a1e2c1820fd46de24934b033" kindref="member">RuleMethodSpecification</ref>,</highlight></codeline>
+<codeline lineno="40" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a494bc4f5cb9c004cd62bfb5390eb7a33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a494bc4f5cb9c004cd62bfb5390eb7a33" kindref="member">RuleMethodReturnType</ref>,</highlight></codeline>
+<codeline lineno="41" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6acd4325f3ac0a467e6fefcb9bc2a57861" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6acd4325f3ac0a467e6fefcb9bc2a57861" kindref="member">RuleMethodBody</ref>,</highlight></codeline>
+<codeline lineno="42" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a3f94a6a03101d7a4403e12934a7dd99d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a3f94a6a03101d7a4403e12934a7dd99d" kindref="member">RuleBody</ref>,</highlight></codeline>
+<codeline lineno="43" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ab2900197084b999d0d27771e8326970f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ab2900197084b999d0d27771e8326970f" kindref="member">RuleVariable</ref>,</highlight></codeline>
+<codeline lineno="44" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ac1dea96e8aa8912884cd00534d5be418" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ac1dea96e8aa8912884cd00534d5be418" kindref="member">RuleStatement</ref>,</highlight></codeline>
+<codeline lineno="45" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6afe32ecf4dda649e33924606d05e85ccd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6afe32ecf4dda649e33924606d05e85ccd" kindref="member">RuleInlineVm</ref>,</highlight></codeline>
+<codeline lineno="46" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6acbaba7a7dcfa3aeec822934d931f42c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6acbaba7a7dcfa3aeec822934d931f42c1" kindref="member">RuleInlineAsm</ref>,</highlight></codeline>
+<codeline lineno="47" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6acfa63bed354357c7c65733160ef9f4fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6acfa63bed354357c7c65733160ef9f4fa" kindref="member">RuleLetStatement</ref>,</highlight></codeline>
+<codeline lineno="48" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ad6c4df62cebed24c57fb5cf1cc636f8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ad6c4df62cebed24c57fb5cf1cc636f8d" kindref="member">RuleIfStatement</ref>,</highlight></codeline>
+<codeline lineno="49" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a26dae7be723fdf8ba71202d29625f6f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a26dae7be723fdf8ba71202d29625f6f5" kindref="member">RuleElseStatement</ref>,</highlight></codeline>
+<codeline lineno="50" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a303329c590b8ca9e53bbac315017d365" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a303329c590b8ca9e53bbac315017d365" kindref="member">RuleWhileStatement</ref>,</highlight></codeline>
+<codeline lineno="51" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ac0729f0dd5d255b9aa667cd581da95f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ac0729f0dd5d255b9aa667cd581da95f4" kindref="member">RuleDoStatement</ref>,</highlight></codeline>
+<codeline lineno="52" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a87934873c24cbdc44c8fa785781b29d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a87934873c24cbdc44c8fa785781b29d7" kindref="member">RuleReturnStatement</ref>,</highlight></codeline>
+<codeline lineno="53" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6aeac707ada70e601bbfc8325327da5dcb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6aeac707ada70e601bbfc8325327da5dcb" kindref="member">RuleStatementList</ref>,</highlight></codeline>
+<codeline lineno="54" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a46ca516f5cbcd46c3029be456b9f500d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a46ca516f5cbcd46c3029be456b9f500d" kindref="member">RuleExpression</ref>,</highlight></codeline>
+<codeline lineno="55" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a25ea761d296db24a901341598d7d4852" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a25ea761d296db24a901341598d7d4852" kindref="member">RuleSingleExpression</ref>,</highlight></codeline>
+<codeline lineno="56" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a9d0ef264a545c5117c990415ff883634" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a9d0ef264a545c5117c990415ff883634" kindref="member">RuleTerm</ref>,</highlight></codeline>
+<codeline lineno="57" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a031b1a025a73129dff8de9246e61e2f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a031b1a025a73129dff8de9246e61e2f2" kindref="member">RuleSimpleTerm</ref>,</highlight></codeline>
+<codeline lineno="58" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a3bd0a9809c3b1c83912b72eceb6cf4f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a3bd0a9809c3b1c83912b72eceb6cf4f5" kindref="member">RuleComplexTerm</ref>,</highlight></codeline>
+<codeline lineno="59" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a4bd47378515d925ac6426c0c397e5a27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a4bd47378515d925ac6426c0c397e5a27" kindref="member">RuleOperator</ref>,</highlight></codeline>
+<codeline lineno="60" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6afe7e8673ff8860700e770e2afee945a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6afe7e8673ff8860700e770e2afee945a2" kindref="member">RuleUnaryOperator</ref>,</highlight></codeline>
+<codeline lineno="61" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a8d902d19f27773b8272d3f48adf6f135" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a8d902d19f27773b8272d3f48adf6f135" kindref="member">RuleExpressionList</ref>,</highlight></codeline>
+<codeline lineno="62" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a228d7822b0f80c89a86e450a24d68ce4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a228d7822b0f80c89a86e450a24d68ce4" kindref="member">RuleCallMethod</ref>,</highlight></codeline>
+<codeline lineno="63" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a7796c9aacca84a379e90aa2b1438901e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a7796c9aacca84a379e90aa2b1438901e" kindref="member">RuleParameterList</ref>,</highlight></codeline>
+<codeline lineno="64" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a7988966264071c4fc121bed42d6ae205" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a7988966264071c4fc121bed42d6ae205" kindref="member">RuleParameter</ref>,</highlight></codeline>
+<codeline lineno="65" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a65ff4e8ff9a2f029c5724550f90d8431" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a65ff4e8ff9a2f029c5724550f90d8431" kindref="member">RuleEnd</ref>,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ae20eb424b83e17c701a57261e73b9052" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ae20eb424b83e17c701a57261e73b9052" kindref="member">Keyword</ref>,</highlight></codeline>
+<codeline lineno="68" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ac31a70cbd9d9151351ffbe21b039ae4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ac31a70cbd9d9151351ffbe21b039ae4e" kindref="member">KeywordClass</ref>,</highlight></codeline>
+<codeline lineno="69" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ae581171931b8bf6afb42ff9893d97ab0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ae581171931b8bf6afb42ff9893d97ab0" kindref="member">KeywordConstructor</ref>,</highlight></codeline>
+<codeline lineno="70" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ab26ac14d93f8a31f192b0e508f684a77" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ab26ac14d93f8a31f192b0e508f684a77" kindref="member">KeywordFunction</ref>,</highlight></codeline>
+<codeline lineno="71" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6aa0c2dc86da0f80dd9612abd2a3a77dd6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6aa0c2dc86da0f80dd9612abd2a3a77dd6" kindref="member">KeywordMethod</ref>,</highlight></codeline>
+<codeline lineno="72" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a8a27d8c907bccbea7451f6dd392bad75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a8a27d8c907bccbea7451f6dd392bad75" kindref="member">KeywordField</ref>,</highlight></codeline>
+<codeline lineno="73" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a11680baf7488776f4bc0734b10035bc9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a11680baf7488776f4bc0734b10035bc9" kindref="member">KeywordStatic</ref>,</highlight></codeline>
+<codeline lineno="74" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a2ba36ac2824b8af6298d1ba5bf5e4a06" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a2ba36ac2824b8af6298d1ba5bf5e4a06" kindref="member">KeywordInt</ref>,</highlight></codeline>
+<codeline lineno="75" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a97fc1d604682922b0b57eb05eaf7ed8a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a97fc1d604682922b0b57eb05eaf7ed8a" kindref="member">KeywordChar</ref>,</highlight></codeline>
+<codeline lineno="76" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a4b6ed4a9c930866c2c694b2fc9d01fb9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a4b6ed4a9c930866c2c694b2fc9d01fb9" kindref="member">KeywordBool</ref>,</highlight></codeline>
+<codeline lineno="77" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a5e0ca93da96ca2f39af10ed3f861e8c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a5e0ca93da96ca2f39af10ed3f861e8c4" kindref="member">KeywordVoid</ref>,</highlight></codeline>
+<codeline lineno="78" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a4685a031adea4dbe1e7f657025fce740" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a4685a031adea4dbe1e7f657025fce740" kindref="member">KeywordVar</ref>,</highlight></codeline>
+<codeline lineno="79" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a7e5161b02ebb6784a0606285eb12dfd4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a7e5161b02ebb6784a0606285eb12dfd4" kindref="member">KeywordLet</ref>,</highlight></codeline>
+<codeline lineno="80" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a3a4ecc30d87ec79169e2bc7448a26b12" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a3a4ecc30d87ec79169e2bc7448a26b12" kindref="member">KeywordIf</ref>,</highlight></codeline>
+<codeline lineno="81" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a4c5a4ed9b73dd86745fcc5ce46e6edae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a4c5a4ed9b73dd86745fcc5ce46e6edae" kindref="member">KeywordElse</ref>,</highlight></codeline>
+<codeline lineno="82" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a5229615543f1151e305ba04f60d8b9b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a5229615543f1151e305ba04f60d8b9b8" kindref="member">KeywordDo</ref>,</highlight></codeline>
+<codeline lineno="83" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6aa4144c1216383931b91e4d06d8f2e5b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6aa4144c1216383931b91e4d06d8f2e5b9" kindref="member">KeywordWhile</ref>,</highlight></codeline>
+<codeline lineno="84" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a94e18e9f169344d2cc5308c7ae3cb4cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a94e18e9f169344d2cc5308c7ae3cb4cc" kindref="member">KeywordReturn</ref>,</highlight></codeline>
+<codeline lineno="85" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a3efd6e34626ea06664a4e2bfbde6ac58" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a3efd6e34626ea06664a4e2bfbde6ac58" kindref="member">KeywordEnd</ref>,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6aaf2cf666c2ba44b7ca371eb4b36991ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6aaf2cf666c2ba44b7ca371eb4b36991ce" kindref="member">Symbol</ref>,</highlight></codeline>
+<codeline lineno="88" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a2f8793e1c7bae9e986497c01c2be40f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a2f8793e1c7bae9e986497c01c2be40f2" kindref="member">SymbolOpenBrace</ref>,</highlight></codeline>
+<codeline lineno="89" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a1b36db2997870e3f4750fe2bdacc1bf2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a1b36db2997870e3f4750fe2bdacc1bf2" kindref="member">SymbolCloseBrace</ref>,</highlight></codeline>
+<codeline lineno="90" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ad186637e1f78fd0001af6cf552da87f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ad186637e1f78fd0001af6cf552da87f5" kindref="member">SymbolSemiColon</ref>,</highlight></codeline>
+<codeline lineno="91" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a7449b679a50e24f41705008788c90370" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a7449b679a50e24f41705008788c90370" kindref="member">SymbolLeftParenthesis</ref>,</highlight></codeline>
+<codeline lineno="92" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ab2c061b2efd2fbdd428ece15ed05ec27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ab2c061b2efd2fbdd428ece15ed05ec27" kindref="member">SymbolRightParenthesis</ref>,</highlight></codeline>
+<codeline lineno="93" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a1c5da8e6a44118cb7af19c5966f611ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a1c5da8e6a44118cb7af19c5966f611ab" kindref="member">SymbolLeftBracket</ref>,</highlight></codeline>
+<codeline lineno="94" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a8f7acc7cd1aa8763a3ec7c0723d3db3d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a8f7acc7cd1aa8763a3ec7c0723d3db3d" kindref="member">SymbolRightBracket</ref>,</highlight></codeline>
+<codeline lineno="95" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a69239f8c8f83820d5a13ad527a91316e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a69239f8c8f83820d5a13ad527a91316e" kindref="member">SymbolComma</ref>,</highlight></codeline>
+<codeline lineno="96" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6aa1c4e8b5a4bedf3e787d4c9b338b162a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6aa1c4e8b5a4bedf3e787d4c9b338b162a" kindref="member">SymbolEquals</ref>,</highlight></codeline>
+<codeline lineno="97" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ab1b59e86da4b072c9c28809e36054032" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ab1b59e86da4b072c9c28809e36054032" kindref="member">SymbolPlus</ref>,</highlight></codeline>
+<codeline lineno="98" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6acf933364f0a3278d3c703cae0290e773" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6acf933364f0a3278d3c703cae0290e773" kindref="member">SymbolMinus</ref>,</highlight></codeline>
+<codeline lineno="99" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a2a3779e8d88ff5f074b61b0fe92b0b58" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a2a3779e8d88ff5f074b61b0fe92b0b58" kindref="member">SymbolMultiply</ref>,</highlight></codeline>
+<codeline lineno="100" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a249f0459fb4c38dfa2690f09164c6488" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a249f0459fb4c38dfa2690f09164c6488" kindref="member">SymbolDivide</ref>,</highlight></codeline>
+<codeline lineno="101" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6abb1b9f57f66f57725a1527e2f7acaedf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6abb1b9f57f66f57725a1527e2f7acaedf" kindref="member">SymbolAnd</ref>,</highlight></codeline>
+<codeline lineno="102" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a7a5091b144812532ee7bf44dedd63781" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a7a5091b144812532ee7bf44dedd63781" kindref="member">SymbolOr</ref>,</highlight></codeline>
+<codeline lineno="103" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a07219731941d199649962cab568a10e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a07219731941d199649962cab568a10e9" kindref="member">SymbolGreater</ref>,</highlight></codeline>
+<codeline lineno="104" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6aaf53fad5156cbe194d6ed4f960e18ec8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6aaf53fad5156cbe194d6ed4f960e18ec8" kindref="member">SymbolLess</ref>,</highlight></codeline>
+<codeline lineno="105" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a32d4f45905602f6394b83e167fd7291e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a32d4f45905602f6394b83e167fd7291e" kindref="member">SymbolNot</ref>,</highlight></codeline>
+<codeline lineno="106" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6af78cd3fd81595b5027563fc46de176bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6af78cd3fd81595b5027563fc46de176bd" kindref="member">SymbolPeriod</ref>,</highlight></codeline>
+<codeline lineno="107" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6aac55360a9e63b95a0fe018110cee4891" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6aac55360a9e63b95a0fe018110cee4891" kindref="member">SymbolEnd</ref>,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6aa9315da8cb5f19dba0d77daddab7b0bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6aa9315da8cb5f19dba0d77daddab7b0bd" kindref="member">Constant</ref>,</highlight></codeline>
+<codeline lineno="110" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a99979f3b0a7ec4669e64804412671e01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a99979f3b0a7ec4669e64804412671e01" kindref="member">ConstantIdentifier</ref>,</highlight></codeline>
+<codeline lineno="111" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6afbd47c44db84d19153a2178f5852a6e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6afbd47c44db84d19153a2178f5852a6e0" kindref="member">ConstantInteger</ref>,</highlight></codeline>
+<codeline lineno="112" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a3bedb2300b4e67173eba51e3ab99c230" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a3bedb2300b4e67173eba51e3ab99c230" kindref="member">ConstantString</ref>,</highlight></codeline>
+<codeline lineno="113" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a28c9451c0059f6fa453a7204a9c043be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a28c9451c0059f6fa453a7204a9c043be" kindref="member">ConstantTrue</ref>,</highlight></codeline>
+<codeline lineno="114" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ab42502c51c876d73e971e0b0db8a656e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ab42502c51c876d73e971e0b0db8a656e" kindref="member">ConstantFalse</ref>,</highlight></codeline>
+<codeline lineno="115" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ac8ac251b2349e2ea86042e71aec4f317" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ac8ac251b2349e2ea86042e71aec4f317" kindref="member">ConstantNull</ref>,</highlight></codeline>
+<codeline lineno="116" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a2534a9437f7adc210d06c1b351ed4445" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a2534a9437f7adc210d06c1b351ed4445" kindref="member">ConstantThis</ref>,</highlight></codeline>
+<codeline lineno="117" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ad8221a84d21471ea7ad0dd3ecc349b12" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6ad8221a84d21471ea7ad0dd3ecc349b12" kindref="member">ConstantInlineVm</ref>,</highlight></codeline>
+<codeline lineno="118" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a89061fb26c3f0c298b55ffca768debe8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a89061fb26c3f0c298b55ffca768debe8" kindref="member">ConstantInlineAsm</ref>,</highlight></codeline>
+<codeline lineno="119" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a3c41789e6326c83d485d3915fe44cb32" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a3c41789e6326c83d485d3915fe44cb32" kindref="member">ConstantEnd</ref>,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a6a900f6dff7c1a6f57cc24896d7b4f10" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a6a900f6dff7c1a6f57cc24896d7b4f10" kindref="member">SubtypeNone</ref>,</highlight></codeline>
+<codeline lineno="122" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6aa0d8352ed2ca08217f9dc2b3ca635df4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6aa0d8352ed2ca08217f9dc2b3ca635df4" kindref="member">SubtypeExpressionGroup</ref>,</highlight></codeline>
+<codeline lineno="123" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a22c529bdbb52ad409d9243fab183552b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a22c529bdbb52ad409d9243fab183552b" kindref="member">SubtypeCall</ref>,</highlight></codeline>
+<codeline lineno="124" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a7ffb8ab9b38b4b338d446fc1ba39ad29" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a7ffb8ab9b38b4b338d446fc1ba39ad29" kindref="member">SubtypeCallFunction</ref>,</highlight></codeline>
+<codeline lineno="125" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a1cf72edfd7c12952849fd910e83f4052" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a1cf72edfd7c12952849fd910e83f4052" kindref="member">SubtypeCallMethod</ref>,</highlight></codeline>
+<codeline lineno="126" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a41bd191826e40afa0260afee2fdaa6d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a41bd191826e40afa0260afee2fdaa6d6" kindref="member">SubtypeArrayIndex</ref>,</highlight></codeline>
+<codeline lineno="127" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a709cc210e1ab40744609244d1f7a3f8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a709cc210e1ab40744609244d1f7a3f8b" kindref="member">SubtypeIfElseCombo</ref>,</highlight></codeline>
+<codeline lineno="128" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a15bb148de2293807ec093fde1f2c22d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a15bb148de2293807ec093fde1f2c22d5" kindref="member">SubtypeTerm</ref>,</highlight></codeline>
+<codeline lineno="129" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a19aa4a2351849e73de63c6464515bbcb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a19aa4a2351849e73de63c6464515bbcb" kindref="member">SubtypeOpTerm</ref>,</highlight></codeline>
+<codeline lineno="130" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a332598b2aac0805651f0039b3ff545fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a332598b2aac0805651f0039b3ff545fc" kindref="member">SubtypeLetEqual</ref>,</highlight></codeline>
+<codeline lineno="131" refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a82b15984274411f0ed2e4fbc86f8c073" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00915_1a661f20cd8ee85e44fdd5e021df7c42b6a82b15984274411f0ed2e4fbc86f8c073" kindref="member">SubtypeLetArrayEqual</ref>,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="a01177" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01177" kindref="compound">NodeUtils</ref></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="a00909_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><ref refid="a01177_1a26e442f75c28641c4cc95546dc3bef16" kindref="member" tooltip="Returns a exact string representation of the enum name ">string</ref>(int8_t<sp/>type);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01177_1a94e7f1532c5032beadb07e27a83792e7" kindref="member" tooltip="Returns a exact string representation of the enum name ">nodeTypeString</ref>(<ref refid="a00909_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/><ref refid="a01173" kindref="compound">Node</ref>*<sp/>node);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01177_1ad90f4a993ae2906e55130aba4d6e8e70" kindref="member" tooltip="Returns an XML representation of the enum name ">nodeTypeXmlString</ref>(<ref refid="a00909_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/><ref refid="a01173" kindref="compound">Node</ref>*<sp/>node);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01177_1abe088b42e7363f53cd4ee4970c6af47a" kindref="member" tooltip="Returns a exact string representation of the Subtype_ name ">nodeSubtypeString</ref>(<ref refid="a00909_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dest,<sp/><ref refid="a01173" kindref="compound">Node</ref>*<sp/>node);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Compiler/Common/Tree.cpp"/>
+    <location file="Source/Compiler/Common/NodeUtils.h"/>
   </compounddef>
 </doxygen>

@@ -1,187 +1,157 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00677" kind="file" language="C++">
-    <compoundname>Screen.h</compoundname>
-    <includes refid="a00506" local="yes">Chips/DefaultMemorySegment.h</includes>
-    <includedby refid="a01670" local="yes">Source/Chips/Memory.h</includedby>
-    <includedby refid="a00779" local="yes">Source/Computer/CommandRuntime.h</includedby>
-    <includedby refid="a00785" local="yes">Source/Computer/DebugRuntime.h</includedby>
-    <includedby refid="a00788" local="yes">Source/Computer/RuntimeInterface.h</includedby>
-    <includedby refid="a00794" local="yes">Source/Computer/RuntimeSDL.h</includedby>
+    <compoundname>Rom32.h</compoundname>
+    <includes refid="a00488" local="yes">Chips/Chip.h</includes>
+    <includedby refid="a00500" local="yes">Source/Chips/Computer.h</includedby>
+    <includedby refid="a00674" local="yes">Source/Chips/Rom32.cpp</includedby>
     <incdepgraph>
-      <node id="2161">
+      <node id="2133">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="2162" relation="include">
+        <childnode refid="2134" relation="include">
         </childnode>
       </node>
-      <node id="2153">
+      <node id="2125">
         <label>Chips/BitUtils.h</label>
-        <childnode refid="2154" relation="include">
+        <childnode refid="2126" relation="include">
         </childnode>
-        <childnode refid="2155" relation="include">
+        <childnode refid="2127" relation="include">
         </childnode>
       </node>
-      <node id="2162">
+      <node id="2134">
         <label>cstdint</label>
       </node>
-      <node id="2158">
+      <node id="2130">
         <label>string</label>
       </node>
-      <node id="2160">
+      <node id="2132">
         <label>UserInterface/Context.h</label>
-        <childnode refid="2156" relation="include">
+        <childnode refid="2128" relation="include">
         </childnode>
-        <childnode refid="2161" relation="include">
+        <childnode refid="2133" relation="include">
         </childnode>
-        <childnode refid="2163" relation="include">
+        <childnode refid="2135" relation="include">
         </childnode>
       </node>
-      <node id="2163">
+      <node id="2135">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="2162" relation="include">
+        <childnode refid="2134" relation="include">
         </childnode>
-        <childnode refid="2159" relation="include">
+        <childnode refid="2131" relation="include">
         </childnode>
-        <childnode refid="2161" relation="include">
+        <childnode refid="2133" relation="include">
         </childnode>
       </node>
-      <node id="2155">
+      <node id="2127">
         <label>Utils/Console.h</label>
-        <childnode refid="2156" relation="include">
+        <childnode refid="2128" relation="include">
         </childnode>
-        <childnode refid="2160" relation="include">
+        <childnode refid="2132" relation="include">
         </childnode>
       </node>
-      <node id="2154">
+      <node id="2126">
         <label>bitset</label>
       </node>
-      <node id="2159">
+      <node id="2131">
         <label>vector</label>
       </node>
-      <node id="2157">
+      <node id="2129">
         <label>sstream</label>
       </node>
-      <node id="2152">
+      <node id="2124">
         <label>Chips/Chip.h</label>
-        <childnode refid="2153" relation="include">
+        <childnode refid="2125" relation="include">
         </childnode>
-        <childnode refid="2155" relation="include">
-        </childnode>
-      </node>
-      <node id="2149">
-        <label>Chips/DefaultMemorySegment.h</label>
-        <childnode refid="2150" relation="include">
+        <childnode refid="2127" relation="include">
         </childnode>
       </node>
-      <node id="2150">
-        <label>Chips/IMemorySegment.h</label>
-        <childnode refid="2151" relation="include">
-        </childnode>
-        <childnode refid="2152" relation="include">
-        </childnode>
-      </node>
-      <node id="2148">
-        <label>Source/Chips/Screen.h</label>
+      <node id="2123">
+        <label>Source/Chips/Rom32.h</label>
         <link refid="a00677"/>
-        <childnode refid="2149" relation="include">
+        <childnode refid="2124" relation="include">
         </childnode>
       </node>
-      <node id="2151">
-        <label>cstring</label>
-      </node>
-      <node id="2156">
+      <node id="2128">
         <label>String.h</label>
-        <childnode refid="2157" relation="include">
+        <childnode refid="2129" relation="include">
         </childnode>
-        <childnode refid="2158" relation="include">
+        <childnode refid="2130" relation="include">
         </childnode>
-        <childnode refid="2159" relation="include">
+        <childnode refid="2131" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2175">
+      <node id="2146">
         <label>Source/Computer/RuntimeSDL.h</label>
       </node>
-      <node id="2174">
+      <node id="2145">
         <label>Source/Computer/DebugRuntime.h</label>
-        <childnode refid="2169" relation="include">
+        <childnode refid="2140" relation="include">
         </childnode>
-        <childnode refid="2171" relation="include">
+        <childnode refid="2142" relation="include">
         </childnode>
       </node>
-      <node id="2166">
+      <node id="2137">
         <label>Source/Chips/Computer.h</label>
-        <childnode refid="2167" relation="include">
+        <childnode refid="2138" relation="include">
         </childnode>
-        <childnode refid="2168" relation="include">
+        <childnode refid="2139" relation="include">
         </childnode>
-        <childnode refid="2169" relation="include">
+        <childnode refid="2140" relation="include">
         </childnode>
-        <childnode refid="2170" relation="include">
+        <childnode refid="2141" relation="include">
         </childnode>
-        <childnode refid="2171" relation="include">
+        <childnode refid="2142" relation="include">
         </childnode>
-        <childnode refid="2172" relation="include">
-        </childnode>
-      </node>
-      <node id="2165">
-        <label>Source/Chips/Memory.h</label>
-        <childnode refid="2166" relation="include">
-        </childnode>
-        <childnode refid="2176" relation="include">
+        <childnode refid="2143" relation="include">
         </childnode>
       </node>
-      <node id="2167">
+      <node id="2138">
         <label>Source/Bindings/Bindings.cpp</label>
       </node>
-      <node id="2168">
+      <node id="2139">
         <label>Source/Chips/Computer.cpp</label>
       </node>
-      <node id="2170">
+      <node id="2141">
         <label>Source/Computer/CommandRuntime.cpp</label>
       </node>
-      <node id="2176">
-        <label>Source/Chips/Memory.cpp</label>
-      </node>
-      <node id="2171">
+      <node id="2142">
         <label>Source/Computer/DebugRuntime.cpp</label>
       </node>
-      <node id="2164">
-        <label>Source/Chips/Screen.h</label>
+      <node id="2136">
+        <label>Source/Chips/Rom32.h</label>
         <link refid="a00677"/>
-        <childnode refid="2165" relation="include">
+        <childnode refid="2137" relation="include">
         </childnode>
-        <childnode refid="2173" relation="include">
-        </childnode>
-        <childnode refid="2174" relation="include">
-        </childnode>
-        <childnode refid="2172" relation="include">
-        </childnode>
-        <childnode refid="2175" relation="include">
+        <childnode refid="2147" relation="include">
         </childnode>
       </node>
-      <node id="2169">
+      <node id="2140">
         <label>Source/Computer/Application.cpp</label>
       </node>
-      <node id="2172">
+      <node id="2147">
+        <label>Source/Chips/Rom32.cpp</label>
+      </node>
+      <node id="2143">
         <label>Source/Computer/RuntimeInterface.h</label>
-        <childnode refid="2173" relation="include">
+        <childnode refid="2144" relation="include">
         </childnode>
-        <childnode refid="2174" relation="include">
+        <childnode refid="2145" relation="include">
         </childnode>
-        <childnode refid="2175" relation="include">
+        <childnode refid="2146" relation="include">
         </childnode>
       </node>
-      <node id="2173">
+      <node id="2144">
         <label>Source/Computer/CommandRuntime.h</label>
-        <childnode refid="2169" relation="include">
+        <childnode refid="2140" relation="include">
         </childnode>
-        <childnode refid="2170" relation="include">
+        <childnode refid="2141" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
-    <innernamespace refid="a00908">Hack::Chips</innernamespace>
+    <innerclass refid="a01133" prot="public">Hack::Chips::Rom32</innerclass>
+    <innernamespace refid="a00911">Hack::Chips</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -209,14 +179,44 @@
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/DefaultMemorySegment.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Chip.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00908" kindref="compound">Hack::Chips</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00911" kindref="compound">Hack::Chips</ref></highlight></codeline>
 <codeline lineno="26"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="27" refid="a00908_1a205aa97050ad01560145252139c81057" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="a01050" kindref="compound">IMemorySegment&lt;0x6000, 0x4000&gt;</ref><sp/><ref refid="a00908_1a205aa97050ad01560145252139c81057" kindref="member">Screen</ref>;</highlight></codeline>
-<codeline lineno="28" refid="a00908_1a40609e493601249c692ffb4b5d2d31a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="a01022" kindref="compound">ScreenSegment</ref><sp/>=<sp/><ref refid="a01022" kindref="compound">DefaultMemorySegment&lt;0x6000, 0x4000&gt;</ref>;</highlight></codeline>
-<codeline lineno="29"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="a01133" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01133" kindref="compound">Rom32</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="a01005" kindref="compound" tooltip="Chip is the base class for all chips defined in this system. It uses a template integer for the _bits...">Chip</ref>&lt;uint8_t,<sp/>8&gt;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>evaluate();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isDirty()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01373" kindref="compound">uint16_t</ref><sp/><sp/>_in,<sp/>_out,<sp/>_size;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01373" kindref="compound">uint16_t</ref>*<sp/>_r;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01133_1a94b3cb4d07d1645ed3e61566809a1fd3" kindref="member">Rom32</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01133_1ac41d7ab3330bcc9055ac8b47285ec47a" kindref="member">~Rom32</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01133_1ae7bd95475bee92dfd9c9992da8fba511" kindref="member">setIn</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01373" kindref="compound">uint16_t</ref>&amp;<sp/>v);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01373" kindref="compound">uint16_t</ref><sp/><ref refid="a01133_1ac4786f98ecaa6c91a1cd31e438c29aab" kindref="member">getOut</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01373" kindref="compound">uint16_t</ref><sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>i)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01373" kindref="compound">uint16_t</ref><sp/><ref refid="a01133_1aca05d80f8b7c52b5c17e0465fe2aeb7c" kindref="member">size</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01133_1a767e0cee036509120d2a6436b7be26f4" kindref="member">lock</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01133_1ac604efafb3c2bec9d439d7d33f551b2a" kindref="member">load</ref>(<ref refid="a00909_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>file);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01133_1ac604efafb3c2bec9d439d7d33f551b2a" kindref="member">load</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01373" kindref="compound">uint16_t</ref>*<sp/>data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="a01133_1aca05d80f8b7c52b5c17e0465fe2aeb7c" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="a01133_1aca05d80f8b7c52b5c17e0465fe2aeb7c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="a01373" kindref="compound">uint16_t</ref><sp/><ref refid="a01133_1aca05d80f8b7c52b5c17e0465fe2aeb7c" kindref="member">Rom32::size</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="56"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_size;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Chips/Screen.h"/>
+    <location file="Source/Chips/Rom32.h"/>
   </compounddef>
 </doxygen>

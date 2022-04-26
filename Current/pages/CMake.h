@@ -3,12 +3,15 @@
 
 \brief It uses \ref Hc00 for its build system.
 
-\br
-It has been tested using the `Unix Makefiles` and `Visual Studio 2019` generators.
+\h1 Generators 
 
+The build system was written using CMake's `Unix Makefiles` and `Visual Studio 2019` generators.
+Other generators will most likely work. The project is not referencing external sources beyond SDL (which is compiled in).
+
+\h1 Options
+
+It provides the following options to control compilation.
 \br
-It provides the following options to control the build.
-\n
 - Hack_BUILD_TEST | OFF
  - Enables building the unit test program.
 - Hack_AUTO_RUN_TEST | OFF

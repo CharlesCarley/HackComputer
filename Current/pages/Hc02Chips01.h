@@ -1,7 +1,10 @@
 /*!
 \page Hc0201 Implemented Chips
 
-\section Hc0201Standalone Standalone Chips
+\h1 Standalone Chips
+
+The following classes provide the foundation for more complex chips.
+\br
 
 - \ref Hack::Chips::And
 - \ref Hack::Chips::Clock
@@ -14,7 +17,11 @@
 - \ref Hack::Chips::NOr
 
 
-\section Hc0201Combination Combination Chips
+\h1 Combination Chips
+
+The following classes are composed of one or more standalone chips. They allow
+the move from operating on a single binary value to multiple binary values.
+\br
 
 - \ref Hack::Chips::Computer
 - \ref Hack::Chips::Add16

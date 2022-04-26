@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01033" kind="class" language="C++" prot="public" final="yes">
-    <compoundname>Hack::Chips::FullAdder</compoundname>
-    <basecompoundref refid="a00993" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; uint8_t, 8 &gt;</basecompoundref>
-    <includes local="no">Source/Chips/FullAdder.h</includes>
+    <compoundname>Hack::Chips::DMux</compoundname>
+    <basecompoundref refid="a01005" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; uint8_t, 8 &gt;</basecompoundref>
+    <includes local="no">Source/Chips/DMux.h</includes>
       <sectiondef kind="private-func">
-      <memberdef kind="function" id="a01033_1a9a030af0e029d5956b018dbf2c1bcca6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01033_1a2b4fc31b68011300f53e938c6ced7701" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::Chips::FullAdder::evaluate</definition>
+        <definition>void Hack::Chips::DMux::evaluate</definition>
         <argsstring>()</argsstring>
         <name>evaluate</name>
         <briefdescription>
@@ -16,60 +16,60 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/FullAdder.h" line="30" column="1" bodyfile="Source/Chips/FullAdder.cpp" bodystart="66" bodyend="88"/>
+        <location file="Source/Chips/DMux.h" line="30" column="1" bodyfile="Source/Chips/DMux.cpp" bodystart="43" bodyend="48"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01033_1aacdc3b474e0d525611f29516618f5b28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01033_1af19140f82b3df6ec048ca4d494cd2426" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>Hack::Chips::FullAdder::FullAdder</definition>
+        <definition>Hack::Chips::DMux::DMux</definition>
         <argsstring>()</argsstring>
-        <name>FullAdder</name>
+        <name>DMux</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/FullAdder.h" line="33" column="1" bodyfile="Source/Chips/FullAdder.cpp" bodystart="29" bodyend="32"/>
-        <references refid="a00993_1a5a604431fa35bc87e0d7f4328b4ad4a1" compoundref="a00476" startline="112" endline="115">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::assignBit</references>
+        <location file="Source/Chips/DMux.h" line="33" column="1" bodyfile="Source/Chips/DMux.cpp" bodystart="26" bodyend="29"/>
+        <references refid="a01005_1a5a604431fa35bc87e0d7f4328b4ad4a1" compoundref="a00488" startline="112" endline="115">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::assignBit</references>
       </memberdef>
-      <memberdef kind="function" id="a01033_1a58e6c589ca23ca70f631b584fb98c31c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01033_1acd8f216a1753a1f83b195c96cb9bc4ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
-        <definition>bool Hack::Chips::FullAdder::getCary</definition>
+        <definition>bool Hack::Chips::DMux::getA</definition>
         <argsstring>()</argsstring>
-        <name>getCary</name>
+        <name>getA</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/FullAdder.h" line="42" column="1" bodyfile="Source/Chips/FullAdder.cpp" bodystart="59" bodyend="64"/>
-        <references refid="a00993_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00476" startline="100" endline="103">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::getBit</references>
+        <location file="Source/Chips/DMux.h" line="39" column="1" bodyfile="Source/Chips/DMux.cpp" bodystart="50" bodyend="55"/>
+        <references refid="a01005_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00488" startline="100" endline="103">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::getBit</references>
       </memberdef>
-      <memberdef kind="function" id="a01033_1a1cbc633d0a2501de5094feeac597516c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01033_1a017e72e65d1525230e51cf38933d20ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
-        <definition>bool Hack::Chips::FullAdder::getSum</definition>
+        <definition>bool Hack::Chips::DMux::getB</definition>
         <argsstring>()</argsstring>
-        <name>getSum</name>
+        <name>getB</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/FullAdder.h" line="40" column="1" bodyfile="Source/Chips/FullAdder.cpp" bodystart="52" bodyend="57"/>
-        <references refid="a00993_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00476" startline="100" endline="103">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::getBit</references>
+        <location file="Source/Chips/DMux.h" line="41" column="1" bodyfile="Source/Chips/DMux.cpp" bodystart="57" bodyend="62"/>
+        <references refid="a01005_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="a00488" startline="100" endline="103">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::getBit</references>
       </memberdef>
-      <memberdef kind="function" id="a01033_1a64891928d2e7b30966aba6eeff53d273" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01033_1ab803075133ed0f465c23193a9155e132" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::Chips::FullAdder::setA</definition>
-        <argsstring>(bool a)</argsstring>
-        <name>setA</name>
+        <definition>void Hack::Chips::DMux::setIn</definition>
+        <argsstring>(bool input)</argsstring>
+        <name>setIn</name>
         <param>
           <type>bool</type>
-          <declname>a</declname>
+          <declname>input</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -77,18 +77,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/FullAdder.h" line="35" column="1" bodyfile="Source/Chips/FullAdder.cpp" bodystart="34" bodyend="38"/>
-        <references refid="a00993_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00476" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
-        <references refid="a00993_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="a00476" startline="106" endline="109">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::setBit</references>
+        <location file="Source/Chips/DMux.h" line="35" column="1" bodyfile="Source/Chips/DMux.cpp" bodystart="31" bodyend="35"/>
+        <references refid="a01005_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00488" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
+        <references refid="a01005_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="a00488" startline="106" endline="109">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::setBit</references>
       </memberdef>
-      <memberdef kind="function" id="a01033_1a6afaf79fb36b108b83d7ae78f5557d07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01033_1aabb021e632749441d4cb4b8c8924500f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::Chips::FullAdder::setB</definition>
-        <argsstring>(bool b)</argsstring>
-        <name>setB</name>
+        <definition>void Hack::Chips::DMux::setSel</definition>
+        <argsstring>(bool selection)</argsstring>
+        <name>setSel</name>
         <param>
           <type>bool</type>
-          <declname>b</declname>
+          <declname>selection</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -96,28 +96,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/FullAdder.h" line="36" column="1" bodyfile="Source/Chips/FullAdder.cpp" bodystart="40" bodyend="44"/>
-        <references refid="a00993_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00476" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
-        <references refid="a00993_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="a00476" startline="106" endline="109">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::setBit</references>
-      </memberdef>
-      <memberdef kind="function" id="a01033_1a45aedf6321833672440a6c45e26c0718" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::FullAdder::setCary</definition>
-        <argsstring>(bool cary)</argsstring>
-        <name>setCary</name>
-        <param>
-          <type>bool</type>
-          <declname>cary</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Chips/FullAdder.h" line="38" column="1" bodyfile="Source/Chips/FullAdder.cpp" bodystart="46" bodyend="50"/>
-        <references refid="a00993_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00476" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
-        <references refid="a00993_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="a00476" startline="106" endline="109">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::setBit</references>
+        <location file="Source/Chips/DMux.h" line="37" column="1" bodyfile="Source/Chips/DMux.cpp" bodystart="37" bodyend="41"/>
+        <references refid="a01005_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="a00488" startline="124" endline="127">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
+        <references refid="a01005_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="a00488" startline="106" endline="109">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::setBit</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -125,54 +106,53 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="143">
+      <node id="128">
         <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
-        <link refid="a00993"/>
+        <link refid="a01005"/>
       </node>
-      <node id="142">
-        <label>Hack::Chips::FullAdder</label>
+      <node id="127">
+        <label>Hack::Chips::DMux</label>
         <link refid="a01033"/>
-        <childnode refid="143" relation="public-inheritance">
+        <childnode refid="128" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="146">
+      <node id="131">
         <label>uint8_t</label>
-        <link refid="a01373"/>
+        <link refid="a01385"/>
       </node>
-      <node id="145">
+      <node id="130">
         <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
-        <link refid="a00993"/>
-        <childnode refid="146" relation="usage">
+        <link refid="a01005"/>
+        <childnode refid="131" relation="usage">
           <edgelabel>_bits</edgelabel>
         </childnode>
       </node>
-      <node id="144">
-        <label>Hack::Chips::FullAdder</label>
+      <node id="129">
+        <label>Hack::Chips::DMux</label>
         <link refid="a01033"/>
-        <childnode refid="145" relation="public-inheritance">
+        <childnode refid="130" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="Source/Chips/FullAdder.h" line="28" column="1" bodyfile="Source/Chips/FullAdder.h" bodystart="27" bodyend="43"/>
+    <location file="Source/Chips/DMux.h" line="28" column="1" bodyfile="Source/Chips/DMux.h" bodystart="27" bodyend="42"/>
     <listofallmembers>
-      <member refid="a00993_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>_bits</name></member>
-      <member refid="a00993_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>applyBit</name></member>
-      <member refid="a00993_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>assignBit</name></member>
-      <member refid="a00993_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>Chip</name></member>
-      <member refid="a00993_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>clearBit</name></member>
-      <member refid="a01033_1a9a030af0e029d5956b018dbf2c1bcca6" prot="private" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>evaluate</name></member>
-      <member refid="a01033_1aacdc3b474e0d525611f29516618f5b28" prot="public" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>FullAdder</name></member>
-      <member refid="a00993_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>getBit</name></member>
-      <member refid="a01033_1a58e6c589ca23ca70f631b584fb98c31c" prot="public" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>getCary</name></member>
-      <member refid="a01033_1a1cbc633d0a2501de5094feeac597516c" prot="public" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>getSum</name></member>
-      <member refid="a00993_1a63bb368bb0827830235759b33718d1b4" prot="protected" virt="virtual"><scope>Hack::Chips::FullAdder</scope><name>isDirty</name></member>
-      <member refid="a01033_1a64891928d2e7b30966aba6eeff53d273" prot="public" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>setA</name></member>
-      <member refid="a01033_1a6afaf79fb36b108b83d7ae78f5557d07" prot="public" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>setB</name></member>
-      <member refid="a00993_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>setBit</name></member>
-      <member refid="a01033_1a45aedf6321833672440a6c45e26c0718" prot="public" virt="non-virtual"><scope>Hack::Chips::FullAdder</scope><name>setCary</name></member>
-      <member refid="a00993_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::FullAdder</scope><name>~Chip</name></member>
+      <member refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::DMux</scope><name>_bits</name></member>
+      <member refid="a01005_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux</scope><name>applyBit</name></member>
+      <member refid="a01005_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux</scope><name>assignBit</name></member>
+      <member refid="a01005_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux</scope><name>Chip</name></member>
+      <member refid="a01005_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux</scope><name>clearBit</name></member>
+      <member refid="a01033_1af19140f82b3df6ec048ca4d494cd2426" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux</scope><name>DMux</name></member>
+      <member refid="a01033_1a2b4fc31b68011300f53e938c6ced7701" prot="private" virt="non-virtual"><scope>Hack::Chips::DMux</scope><name>evaluate</name></member>
+      <member refid="a01033_1acd8f216a1753a1f83b195c96cb9bc4ca" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux</scope><name>getA</name></member>
+      <member refid="a01033_1a017e72e65d1525230e51cf38933d20ea" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux</scope><name>getB</name></member>
+      <member refid="a01005_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux</scope><name>getBit</name></member>
+      <member refid="a01005_1a63bb368bb0827830235759b33718d1b4" prot="protected" virt="virtual"><scope>Hack::Chips::DMux</scope><name>isDirty</name></member>
+      <member refid="a01005_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux</scope><name>setBit</name></member>
+      <member refid="a01033_1ab803075133ed0f465c23193a9155e132" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux</scope><name>setIn</name></member>
+      <member refid="a01033_1aabb021e632749441d4cb4b8c8924500f" prot="public" virt="non-virtual"><scope>Hack::Chips::DMux</scope><name>setSel</name></member>
+      <member refid="a01005_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::DMux</scope><name>~Chip</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

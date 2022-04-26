@@ -1,279 +1,179 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
-  <compounddef id="a01013" kind="class" language="C++" prot="public" final="yes">
-    <compoundname>Hack::Chips::DefaultMemorySegment</compoundname>
-    <basecompoundref refid="a01041" prot="public" virt="non-virtual">Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;</basecompoundref>
-    <includes local="no">Source/Chips/DefaultMemorySegment.h</includes>
-    <templateparamlist>
-      <param>
-        <type><ref refid="a01361" kindref="compound">uint16_t</ref></type>
-        <declname>High</declname>
-        <defname>High</defname>
-      </param>
-      <param>
-        <type><ref refid="a01361" kindref="compound">uint16_t</ref></type>
-        <declname>ElementCount</declname>
-        <defname>ElementCount</defname>
-      </param>
-    </templateparamlist>
-      <sectiondef kind="public-type">
-      <memberdef kind="typedef" id="a01013_1aa04cb9e6857a0b613e33e7f27f18efc8" prot="public" static="no">
-        <type><ref refid="a01041" kindref="compound">IMemorySegment</ref>&lt; High, ElementCount &gt;</type>
-        <definition>typedef IMemorySegment&lt;High, ElementCount&gt; Hack::Chips::DefaultMemorySegment&lt; High, ElementCount &gt;::BaseType</definition>
+  <compounddef id="a01013" kind="struct" language="C++" prot="public">
+    <compoundname>Hack::Chips::CpuState</compoundname>
+    <includes local="no">Source/Chips/Computer.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="a01013_1a7b6ea40228d9e23b00fd2ee43133a6f3" prot="public" static="no" mutable="no">
+        <type><ref refid="a01373" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::CpuState::addrM</definition>
         <argsstring></argsstring>
-        <name>BaseType</name>
+        <name>addrM</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/DefaultMemorySegment.h" line="31" column="1" bodyfile="Source/Chips/DefaultMemorySegment.h" bodystart="31" bodyend="-1"/>
+        <location file="Source/Chips/Computer.h" line="34" column="1" bodyfile="Source/Chips/Computer.h" bodystart="34" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="a01013_1a6a3ecc941dd9816a58336d5f3a057b6a" prot="private" static="no" mutable="no">
-        <type><ref refid="a01361" kindref="compound">uint16_t</ref> *</type>
-        <definition>uint16_t* Hack::Chips::DefaultMemorySegment&lt; High, ElementCount &gt;::_ram</definition>
+      <memberdef kind="variable" id="a01013_1a5606ebaf9ae4d826b421dce343c223f9" prot="public" static="no" mutable="no">
+        <type><ref refid="a01373" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::CpuState::clock</definition>
         <argsstring></argsstring>
-        <name>_ram</name>
+        <name>clock</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/DefaultMemorySegment.h" line="34" column="1" bodyfile="Source/Chips/DefaultMemorySegment.h" bodystart="34" bodyend="-1"/>
+        <location file="Source/Chips/Computer.h" line="37" column="1" bodyfile="Source/Chips/Computer.h" bodystart="37" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01013_1ac20cd1025034ccde9abbd06b8a30b9b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Hack::Chips::DefaultMemorySegment&lt; High, ElementCount &gt;::DefaultMemorySegment</definition>
-        <argsstring>()</argsstring>
-        <name>DefaultMemorySegment</name>
+      <memberdef kind="variable" id="a01013_1a3bdae3da64a41fd9b98171cea0f1b1c1" prot="public" static="no" mutable="no">
+        <type><ref refid="a01373" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::CpuState::inst</definition>
+        <argsstring></argsstring>
+        <name>inst</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/DefaultMemorySegment.h" line="37" column="1" bodyfile="Source/Chips/DefaultMemorySegment.h" bodystart="56" bodyend="60"/>
-        <references refid="a01013_1af6db3804cc8555a3a302e9264885d5b4" compoundref="a00497" startline="97" endline="100">Hack::Chips::DefaultMemorySegment&lt; High, ElementCount &gt;::zero</references>
+        <location file="Source/Chips/Computer.h" line="38" column="1" bodyfile="Source/Chips/Computer.h" bodystart="38" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a01013_1ab86f5452f2831b2f439f0a3984d3effe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Hack::Chips::DefaultMemorySegment&lt; High, ElementCount &gt;::~DefaultMemorySegment</definition>
-        <argsstring>() override</argsstring>
-        <name>~DefaultMemorySegment</name>
+      <memberdef kind="variable" id="a01013_1a4898fb8aa66f45e0e07d4b754b8d93ba" prot="public" static="no" mutable="no">
+        <type><ref refid="a01373" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::CpuState::outM</definition>
+        <argsstring></argsstring>
+        <name>outM</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/DefaultMemorySegment.h" line="39" column="1" bodyfile="Source/Chips/DefaultMemorySegment.h" bodystart="63" bodyend="66"/>
+        <location file="Source/Chips/Computer.h" line="33" column="1" bodyfile="Source/Chips/Computer.h" bodystart="33" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a01013_1a94ef78fc28470abbd4b024e2b6d44510" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
-        <type><ref refid="a01361" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::DefaultMemorySegment&lt; High, ElementCount &gt;::get</definition>
-        <argsstring>(const size_t &amp;index) const override</argsstring>
-        <name>get</name>
-        <reimplements refid="a01041_1abd9da88a0da67c4ea4cebb492cef6b78">get</reimplements>
-        <param>
-          <type>const size_t &amp;</type>
-          <declname>index</declname>
-        </param>
+      <memberdef kind="variable" id="a01013_1a8ff12fb359df46f8c2b7bb4536b03bd2" prot="public" static="no" mutable="no">
+        <type><ref refid="a01373" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::CpuState::pc</definition>
+        <argsstring></argsstring>
+        <name>pc</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/DefaultMemorySegment.h" line="41" column="1" bodyfile="Source/Chips/DefaultMemorySegment.h" bodystart="69" bodyend="78"/>
+        <location file="Source/Chips/Computer.h" line="32" column="1" bodyfile="Source/Chips/Computer.h" bodystart="32" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a01013_1a111146260aff6fd6a3c98ecbbfa14d26" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type><ref refid="a01361" kindref="compound">uint16_t</ref></type>
-        <definition>uint16_t Hack::Chips::DefaultMemorySegment&lt; High, ElementCount &gt;::getOut</definition>
-        <argsstring>() override</argsstring>
-        <name>getOut</name>
-        <reimplements refid="a01041_1a8886f1e112e29f9f4ba7ec1d6550cb7b">getOut</reimplements>
+      <memberdef kind="variable" id="a01013_1ae932a7489f8bdecf33ffd43c9410130f" prot="public" static="no" mutable="no">
+        <type><ref refid="a01373" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::CpuState::ram</definition>
+        <argsstring></argsstring>
+        <name>ram</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/DefaultMemorySegment.h" line="49" column="1" bodyfile="Source/Chips/DefaultMemorySegment.h" bodystart="138" bodyend="143"/>
-        <references refid="a00899_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00473" startline="40">Hack::Chips::Bit7</references>
-        <references refid="a00899_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" compoundref="a00473" startline="39">Hack::Chips::Bit6</references>
+        <location file="Source/Chips/Computer.h" line="40" column="1" bodyfile="Source/Chips/Computer.h" bodystart="40" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a01013_1ad4b862a78421101fef5afc7ad76cd942" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
-        <type><ref refid="a01361" kindref="compound">uint16_t</ref> *</type>
-        <definition>uint16_t * Hack::Chips::DefaultMemorySegment&lt; High, ElementCount &gt;::pointer</definition>
-        <argsstring>(const size_t &amp;address) const override</argsstring>
-        <name>pointer</name>
-        <reimplements refid="a01041_1a928606841d9d6b0130aa7dbdbe7d294e">pointer</reimplements>
-        <param>
-          <type>const size_t &amp;</type>
-          <declname>address</declname>
-        </param>
+      <memberdef kind="variable" id="a01013_1a764dbb644ba5bb323c97e09cb26ae122" prot="public" static="no" mutable="no">
+        <type><ref refid="a01373" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::CpuState::regA</definition>
+        <argsstring></argsstring>
+        <name>regA</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/DefaultMemorySegment.h" line="43" column="1" bodyfile="Source/Chips/DefaultMemorySegment.h" bodystart="81" bodyend="86"/>
+        <location file="Source/Chips/Computer.h" line="36" column="1" bodyfile="Source/Chips/Computer.h" bodystart="36" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a01013_1ac10efeb1855e75c99717840b6bca98d7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::DefaultMemorySegment&lt; High, ElementCount &gt;::setValue</definition>
-        <argsstring>(const size_t &amp;address, const uint16_t &amp;value) const override</argsstring>
-        <name>setValue</name>
-        <reimplements refid="a01041_1a2fe4fb4ddf831109accb6c95f6dbf990">setValue</reimplements>
-        <param>
-          <type>const size_t &amp;</type>
-          <declname>address</declname>
-        </param>
-        <param>
-          <type>const <ref refid="a01361" kindref="compound">uint16_t</ref> &amp;</type>
-          <declname>value</declname>
-        </param>
+      <memberdef kind="variable" id="a01013_1a918ad89614f75599104e9c1a8123c916" prot="public" static="no" mutable="no">
+        <type><ref refid="a01373" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::CpuState::regD</definition>
+        <argsstring></argsstring>
+        <name>regD</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/DefaultMemorySegment.h" line="45" column="1" bodyfile="Source/Chips/DefaultMemorySegment.h" bodystart="89" bodyend="94"/>
+        <location file="Source/Chips/Computer.h" line="35" column="1" bodyfile="Source/Chips/Computer.h" bodystart="35" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a01013_1af6db3804cc8555a3a302e9264885d5b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::DefaultMemorySegment&lt; High, ElementCount &gt;::zero</definition>
-        <argsstring>() const override</argsstring>
-        <name>zero</name>
-        <reimplements refid="a01041_1aae4cff10f3ec39ef2c6b08c42fcc937c">zero</reimplements>
+      <memberdef kind="variable" id="a01013_1af9c11b4b51b6cd89cdfdcccdf52341db" prot="public" static="no" mutable="no">
+        <type><ref refid="a01373" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::CpuState::reset</definition>
+        <argsstring></argsstring>
+        <name>reset</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/DefaultMemorySegment.h" line="47" column="1" bodyfile="Source/Chips/DefaultMemorySegment.h" bodystart="97" bodyend="100"/>
+        <location file="Source/Chips/Computer.h" line="41" column="1" bodyfile="Source/Chips/Computer.h" bodystart="41" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="protected-func">
-      <memberdef kind="function" id="a01013_1a8dda4aef718d10a18e206aa105b85e3c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::DefaultMemorySegment&lt; High, ElementCount &gt;::evaluate</definition>
-        <argsstring>()</argsstring>
-        <name>evaluate</name>
+      <memberdef kind="variable" id="a01013_1af1398587a09d5722d1d794f87d427a35" prot="public" static="no" mutable="no">
+        <type><ref refid="a01373" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::CpuState::writeM</definition>
+        <argsstring></argsstring>
+        <name>writeM</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/DefaultMemorySegment.h" line="52" column="1" bodyfile="Source/Chips/DefaultMemorySegment.h" bodystart="103" bodyend="135"/>
-        <references refid="a00899_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" compoundref="a00473" startline="33">Hack::Chips::Bit0</references>
-        <references refid="a00899_1a89719f49d745047f03bca80bfff48bd2a8487c63d5dca7d87b359feca1a2c2ac8" compoundref="a00473" startline="34">Hack::Chips::Bit1</references>
+        <location file="Source/Chips/Computer.h" line="39" column="1" bodyfile="Source/Chips/Computer.h" bodystart="39" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <inheritancegraph>
-      <node id="115">
-        <label>Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;</label>
-        <link refid="a01041"/>
-        <childnode refid="116" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="116">
-        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
-        <link refid="a00993"/>
-      </node>
-      <node id="114">
-        <label>Hack::Chips::DefaultMemorySegment&lt; High, ElementCount &gt;</label>
-        <link refid="a01013"/>
-        <childnode refid="115" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
     <collaborationgraph>
-      <node id="118">
-        <label>Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;</label>
-        <link refid="a01041"/>
-        <childnode refid="119" relation="public-inheritance">
-        </childnode>
-        <childnode refid="121" relation="usage">
-          <edgelabel>HighAddress</edgelabel>
-          <edgelabel>_address</edgelabel>
-          <edgelabel>_out</edgelabel>
-          <edgelabel>_in</edgelabel>
-          <edgelabel>Max</edgelabel>
-        </childnode>
-      </node>
-      <node id="121">
+      <node id="113">
         <label>uint16_t</label>
-        <link refid="a01361"/>
-      </node>
-      <node id="120">
-        <label>uint8_t</label>
         <link refid="a01373"/>
       </node>
-      <node id="119">
-        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
-        <link refid="a00993"/>
-        <childnode refid="120" relation="usage">
-          <edgelabel>_bits</edgelabel>
-        </childnode>
-      </node>
-      <node id="117">
-        <label>Hack::Chips::DefaultMemorySegment&lt; High, ElementCount &gt;</label>
+      <node id="112">
+        <label>Hack::Chips::CpuState</label>
         <link refid="a01013"/>
-        <childnode refid="118" relation="public-inheritance">
+        <childnode refid="113" relation="usage">
+          <edgelabel>regA</edgelabel>
+          <edgelabel>outM</edgelabel>
+          <edgelabel>regD</edgelabel>
+          <edgelabel>pc</edgelabel>
+          <edgelabel>inst</edgelabel>
+          <edgelabel>reset</edgelabel>
+          <edgelabel>ram</edgelabel>
+          <edgelabel>clock</edgelabel>
+          <edgelabel>addrM</edgelabel>
+          <edgelabel>writeM</edgelabel>
+          <edgelabel>...</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="Source/Chips/DefaultMemorySegment.h" line="29" column="1" bodyfile="Source/Chips/DefaultMemorySegment.h" bodystart="28" bodyend="53"/>
+    <location file="Source/Chips/Computer.h" line="31" column="1" bodyfile="Source/Chips/Computer.h" bodystart="30" bodyend="42"/>
     <listofallmembers>
-      <member refid="a01041_1a9683f3a1be07724bee0f2adfe59d90de" prot="protected" virt="non-virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>_address</name></member>
-      <member refid="a00993_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>_bits</name></member>
-      <member refid="a01041_1af4867aa2cec1454452363f1850fe39e6" prot="protected" virt="non-virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>_in</name></member>
-      <member refid="a01041_1abee2969f70c7cad9ae4fc48c95b4ee34" prot="protected" virt="non-virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>_out</name></member>
-      <member refid="a01013_1a6a3ecc941dd9816a58336d5f3a057b6a" prot="private" virt="non-virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>_ram</name></member>
-      <member refid="a00993_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>applyBit</name></member>
-      <member refid="a00993_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>assignBit</name></member>
-      <member refid="a01013_1aa04cb9e6857a0b613e33e7f27f18efc8" prot="public" virt="non-virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>BaseType</name></member>
-      <member refid="a00993_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>Chip</name></member>
-      <member refid="a00993_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>clearBit</name></member>
-      <member refid="a01013_1ac20cd1025034ccde9abbd06b8a30b9b1" prot="public" virt="non-virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>DefaultMemorySegment</name></member>
-      <member refid="a01013_1a8dda4aef718d10a18e206aa105b85e3c" prot="protected" virt="non-virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>evaluate</name></member>
-      <member refid="a01013_1a94ef78fc28470abbd4b024e2b6d44510" prot="public" virt="virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>get</name></member>
-      <member refid="a00993_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>getBit</name></member>
-      <member refid="a01013_1a111146260aff6fd6a3c98ecbbfa14d26" prot="public" virt="virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>getOut</name></member>
-      <member refid="a01041_1aaf6fabe5db913367af8e124cd5ef30e1" prot="public" virt="non-virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>HighAddress</name></member>
-      <member refid="a01041_1a3f938d0e6ba15d79fedeece254327efe" prot="public" virt="non-virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>IMemorySegment</name></member>
-      <member refid="a01041_1a0adcc77581ef7d16475c343df92db060" prot="protected" virt="virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>isDirty</name></member>
-      <member refid="a01041_1adb872ebbc96cf2a449721f1a40754353" prot="public" virt="non-virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>lock</name></member>
-      <member refid="a01041_1a50ee5c87fba14eaaaa5c564c55d1f757" prot="public" virt="virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>lockScreen</name></member>
-      <member refid="a01041_1a28c590cc3f546ec6938c5742dd8c7467" prot="protected" virt="non-virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>markDirty</name></member>
-      <member refid="a01041_1aa48a78ccd8824a135002ef01092a2f92" prot="public" virt="non-virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>Max</name></member>
-      <member refid="a01013_1ad4b862a78421101fef5afc7ad76cd942" prot="public" virt="virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>pointer</name></member>
-      <member refid="a01041_1a9dcf0c5af1012d1d54492f216eb85a61" prot="public" virt="non-virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>setAddress</name></member>
-      <member refid="a00993_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>setBit</name></member>
-      <member refid="a01041_1a8ad357587c581db496ef05f4fcd5c292" prot="public" virt="non-virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>setClock</name></member>
-      <member refid="a01041_1a105e374a106c298b3a0426b8387260d3" prot="public" virt="non-virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>setIn</name></member>
-      <member refid="a01041_1a053f5b47a681f7e04ec9b8039f68363f" prot="public" virt="non-virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>setLoad</name></member>
-      <member refid="a01013_1ac10efeb1855e75c99717840b6bca98d7" prot="public" virt="virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>setValue</name></member>
-      <member refid="a01041_1a6556e06d0b5c14d72336a25f67e2b217" prot="public" virt="virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>sync</name></member>
-      <member refid="a01041_1a09442f604ad85fdd0b02c8bdf2ca729d" prot="public" virt="virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>unlockScreen</name></member>
-      <member refid="a01013_1af6db3804cc8555a3a302e9264885d5b4" prot="public" virt="virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>zero</name></member>
-      <member refid="a00993_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>~Chip</name></member>
-      <member refid="a01013_1ab86f5452f2831b2f439f0a3984d3effe" prot="public" virt="non-virtual"><scope>Hack::Chips::DefaultMemorySegment</scope><name>~DefaultMemorySegment</name></member>
+      <member refid="a01013_1a7b6ea40228d9e23b00fd2ee43133a6f3" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>addrM</name></member>
+      <member refid="a01013_1a5606ebaf9ae4d826b421dce343c223f9" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>clock</name></member>
+      <member refid="a01013_1a3bdae3da64a41fd9b98171cea0f1b1c1" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>inst</name></member>
+      <member refid="a01013_1a4898fb8aa66f45e0e07d4b754b8d93ba" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>outM</name></member>
+      <member refid="a01013_1a8ff12fb359df46f8c2b7bb4536b03bd2" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>pc</name></member>
+      <member refid="a01013_1ae932a7489f8bdecf33ffd43c9410130f" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>ram</name></member>
+      <member refid="a01013_1a764dbb644ba5bb323c97e09cb26ae122" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>regA</name></member>
+      <member refid="a01013_1a918ad89614f75599104e9c1a8123c916" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>regD</name></member>
+      <member refid="a01013_1af9c11b4b51b6cd89cdfdcccdf52341db" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>reset</name></member>
+      <member refid="a01013_1af1398587a09d5722d1d794f87d427a35" prot="public" virt="non-virtual"><scope>Hack::Chips::CpuState</scope><name>writeM</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

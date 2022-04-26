@@ -6,11 +6,10 @@
     <briefdescription>
 <para>It uses <ref refid="a01575" kindref="compound">CMake</ref> for its build system. </para>    </briefdescription>
     <detaileddescription>
-<para>It uses <ref refid="a01575" kindref="compound">CMake</ref> for its build system.</para><para><linebreak/>
+<para>It uses <ref refid="a01575" kindref="compound">CMake</ref> for its build system.</para><para><heading level="2">Generators</heading>
+</para><para>The build system was written using CMake&apos;s <computeroutput>Unix Makefiles</computeroutput> and <computeroutput>Visual Studio 2019</computeroutput> generators. Other generators will most likely work. The project is not referencing external sources beyond SDL (which is compiled in).</para><para><heading level="2">Options</heading>
+</para><para>It provides the following options to control compilation. <linebreak/>
 <linebreak/>
-It has been tested using the <computeroutput>Unix Makefiles</computeroutput> and <computeroutput>Visual Studio 2019</computeroutput> generators.</para><para><linebreak/>
-<linebreak/>
-It provides the following options to control the build. <linebreak/>
 <itemizedlist>
 <listitem><para>Hack_BUILD_TEST | OFF<itemizedlist>
 <listitem><para>Enables building the unit test program.</para></listitem></itemizedlist>

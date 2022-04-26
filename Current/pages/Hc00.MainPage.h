@@ -11,7 +11,8 @@ in the course materials were written from scratch.
 
 \n
 \copybrief Hc00
-\section HC001 Project Structure
+
+\h1 Project Structure
 
 - \ref_brief{Hc01}
 - \ref_brief{Hc02}
@@ -22,5 +23,5 @@ in the course materials were written from scratch.
 - \ref_brief{Hc07}
 - \ref_brief{Hc08}
 
-\section HC002 Documentation Index
+\h1 Source Index
 */

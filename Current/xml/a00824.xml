@@ -1,116 +1,45 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00824" kind="file" language="C++">
-    <compoundname>FileSystem.h</compoundname>
-    <includes local="no">filesystem</includes>
-    <includes refid="a00854" local="yes">Utils/String.h</includes>
-    <includedby refid="a01589" local="yes">Source/Compiler/Analyzer/Main.cpp</includedby>
-    <includedby refid="a00728" local="yes">Source/Compiler/Common/XmlWriter.cpp</includedby>
-    <includedby refid="a00740" local="yes">Source/Compiler/Generator/Generator.cpp</includedby>
-    <includedby refid="a01595" local="yes">Source/Compiler/Generator/Main.cpp</includedby>
-    <includedby refid="a00770" local="yes">Source/Computer/Application.cpp</includedby>
-    <includedby refid="a01622" local="yes">Source/Utils/CommandLine/Parser.h</includedby>
-    <includedby refid="a00821" local="yes">Source/Utils/FileSystem.cpp</includedby>
+    <compoundname>FileSystem.cpp</compoundname>
+    <includes refid="a00827" local="yes">Utils/FileSystem.h</includes>
     <incdepgraph>
-      <node id="3288">
+      <node id="3281">
         <label>filesystem</label>
       </node>
-      <node id="3291">
+      <node id="3284">
         <label>string</label>
       </node>
-      <node id="3292">
+      <node id="3279">
+        <label>Source/Utils/FileSystem.cpp</label>
+        <link refid="a00824"/>
+        <childnode refid="3280" relation="include">
+        </childnode>
+      </node>
+      <node id="3285">
         <label>vector</label>
       </node>
-      <node id="3290">
+      <node id="3283">
         <label>sstream</label>
       </node>
-      <node id="3289">
+      <node id="3282">
         <label>Utils/String.h</label>
-        <childnode refid="3290" relation="include">
+        <childnode refid="3283" relation="include">
         </childnode>
-        <childnode refid="3291" relation="include">
+        <childnode refid="3284" relation="include">
         </childnode>
-        <childnode refid="3292" relation="include">
+        <childnode refid="3285" relation="include">
         </childnode>
       </node>
-      <node id="3287">
-        <label>Source/Utils/FileSystem.h</label>
-        <link refid="a00824"/>
-        <childnode refid="3288" relation="include">
+      <node id="3280">
+        <label>Utils/FileSystem.h</label>
+        <childnode refid="3281" relation="include">
         </childnode>
-        <childnode refid="3289" relation="include">
+        <childnode refid="3282" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <invincdepgraph>
-      <node id="3299">
-        <label>Source/Utils/CommandLine/Parser.h</label>
-        <childnode refid="3300" relation="include">
-        </childnode>
-        <childnode refid="3294" relation="include">
-        </childnode>
-        <childnode refid="3301" relation="include">
-        </childnode>
-        <childnode refid="3297" relation="include">
-        </childnode>
-        <childnode refid="3298" relation="include">
-        </childnode>
-        <childnode refid="3302" relation="include">
-        </childnode>
-        <childnode refid="3303" relation="include">
-        </childnode>
-      </node>
-      <node id="3303">
-        <label>Source/VirtualMachine/Main.cpp</label>
-      </node>
-      <node id="3300">
-        <label>Source/Assembler/Main.cpp</label>
-      </node>
-      <node id="3301">
-        <label>Source/Compiler/Compiler/Main.cpp</label>
-      </node>
-      <node id="3302">
-        <label>Source/Utils/CommandLine/Parser.cpp</label>
-      </node>
-      <node id="3304">
-        <label>Source/Utils/FileSystem.cpp</label>
-      </node>
-      <node id="3296">
-        <label>Source/Compiler/Generator/Generator.cpp</label>
-      </node>
-      <node id="3295">
-        <label>Source/Compiler/Common/XmlWriter.cpp</label>
-      </node>
-      <node id="3294">
-        <label>Source/Compiler/Analyzer/Main.cpp</label>
-      </node>
-      <node id="3298">
-        <label>Source/Computer/Application.cpp</label>
-      </node>
-      <node id="3297">
-        <label>Source/Compiler/Generator/Main.cpp</label>
-      </node>
-      <node id="3293">
-        <label>Source/Utils/FileSystem.h</label>
-        <link refid="a00824"/>
-        <childnode refid="3294" relation="include">
-        </childnode>
-        <childnode refid="3295" relation="include">
-        </childnode>
-        <childnode refid="3296" relation="include">
-        </childnode>
-        <childnode refid="3297" relation="include">
-        </childnode>
-        <childnode refid="3298" relation="include">
-        </childnode>
-        <childnode refid="3299" relation="include">
-        </childnode>
-        <childnode refid="3304" relation="include">
-        </childnode>
-      </node>
-    </invincdepgraph>
-    <innerclass refid="a01270" prot="public">Hack::FileSystem</innerclass>
-    <innernamespace refid="a00906">Hack</innernamespace>
+    <innernamespace refid="a00909">Hack</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -137,24 +66,41 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/FileSystem.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;filesystem&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/String.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00906" kindref="compound">Hack</ref></highlight></codeline>
-<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="29" refid="a00906_1a95e191d8af73e79ac197701ac6a6c9a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="a00906_1a95e191d8af73e79ac197701ac6a6c9a6" kindref="member">Path</ref><sp/>=<sp/>std::filesystem::path;</highlight></codeline>
-<codeline lineno="30" refid="a00906_1a7c50e21fc90ae27988ef26dd0b40a118" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="a00906_1a7c50e21fc90ae27988ef26dd0b40a118" kindref="member">PathArray</ref><sp/>=<sp/>std::vector&lt;Path&gt;;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00909" kindref="compound">Hack</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26" refid="a00909_1a8babd9628a6940a2d49cd7fb5993819d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="a00909_1a8babd9628a6940a2d49cd7fb5993819d" kindref="member">Directory</ref><sp/>=<sp/>std::filesystem::directory_entry;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="a01273_1ab965af65d819708b115b5501d81335fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01273_1ab965af65d819708b115b5501d81335fc" kindref="member">FileSystem::glob</ref>(<ref refid="a00909_1a7c50e21fc90ae27988ef26dd0b40a118" kindref="member">PathArray</ref>&amp;<sp/>dest,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00909_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dir,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00909_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>ext)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00909_1a95e191d8af73e79ac197701ac6a6c9a6" kindref="member">Path</ref><sp/>pth<sp/>=<sp/>dir;</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32" refid="a01270" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01270" kindref="compound">FileSystem</ref></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01270_1ab965af65d819708b115b5501d81335fc" kindref="member">glob</ref>(<ref refid="a00906_1a7c50e21fc90ae27988ef26dd0b40a118" kindref="member">PathArray</ref>&amp;<sp/>dest,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>dir,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>ext);</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="a00906_1a95e191d8af73e79ac197701ac6a6c9a6" kindref="member">Path</ref><sp/><ref refid="a01270_1abb591b7efcd5e7fa2d7cf15730f7d26e" kindref="member">absolute</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>input);</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="38"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::filesystem::directory_iterator<sp/>dirIt(pth);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00909_1a8babd9628a6940a2d49cd7fb5993819d" kindref="member">Directory</ref>&amp;<sp/>element<sp/>:<sp/>dirIt)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(element.is_regular_file()<sp/>&amp;&amp;<sp/>element.path().extension()<sp/>==<sp/>ext)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest.push_back(std::filesystem::absolute(element.path()));</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="a01273_1abb591b7efcd5e7fa2d7cf15730f7d26e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00909_1a95e191d8af73e79ac197701ac6a6c9a6" kindref="member">Path</ref><sp/><ref refid="a01273_1abb591b7efcd5e7fa2d7cf15730f7d26e" kindref="member">FileSystem::absolute</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00909_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>input)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00909_1a95e191d8af73e79ac197701ac6a6c9a6" kindref="member">Path</ref><sp/>value(input);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!value.has_root_directory())</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00909_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>combined<sp/>=<sp/><ref refid="a00909_1a0022073c844c619a094704ae6c9b14bf" kindref="member">StringCombine</ref>(</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::filesystem::current_path().</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">(),</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value<sp/>=<sp/>std::filesystem::absolute(combined);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Utils/FileSystem.h"/>
+    <location file="Source/Utils/FileSystem.cpp"/>
   </compounddef>
 </doxygen>

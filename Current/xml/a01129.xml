@@ -1,63 +1,237 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
-  <compounddef id="a01129" kind="class" language="C++" prot="public">
-    <compoundname>Hack::Chips::Timer</compoundname>
-    <includes local="no">Source/Chips/Timer.h</includes>
-      <sectiondef kind="private-static-attrib">
-      <memberdef kind="variable" id="a01129_1ad2da0265b5d319d10513842c02b4b76e" prot="private" static="yes" mutable="no">
-        <type><ref refid="a00997" kindref="compound">Clock</ref></type>
-        <definition>Clock Hack::Chips::Timer::_clock</definition>
-        <argsstring></argsstring>
-        <name>_clock</name>
-        <initializer>= <ref refid="a00997" kindref="compound">Clock</ref>()</initializer>
+  <compounddef id="a01129" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>Hack::Chips::Register</compoundname>
+    <basecompoundref refid="a01005" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; bit64_t, 64 &gt;</basecompoundref>
+    <includes local="no">Source/Chips/Register.h</includes>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="a01129_1a47e225daa9d3228b4be36ed0dc69199e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Register::evaluate</definition>
+        <argsstring>()</argsstring>
+        <name>evaluate</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Timer.h" line="30" column="1" bodyfile="Source/Chips/Timer.h" bodystart="30" bodyend="-1"/>
+        <location file="Source/Chips/Register.h" line="33" column="1" bodyfile="Source/Chips/Register.cpp" bodystart="88" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="a01129_1aaf75c488721fd4f6ec9c50dd23c31291" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::Register::isDirty</definition>
+        <argsstring>() override</argsstring>
+        <name>isDirty</name>
+        <reimplements refid="a01005_1a63bb368bb0827830235759b33718d1b4">isDirty</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Register.h" line="34" column="1" bodyfile="Source/Chips/Register.cpp" bodystart="83" bodyend="86"/>
       </memberdef>
       </sectiondef>
-      <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="a01129_1a7570f5f591474c56e6f96ab6d3f77044" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Chips::Timer::reset</definition>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a01129_1a57427a269e1416331bc95974c3d8acee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Chips::Register::Register</definition>
         <argsstring>()</argsstring>
-        <name>reset</name>
+        <name>Register</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Timer.h" line="34" column="1" bodyfile="Source/Chips/Timer.cpp" bodystart="34" bodyend="37"/>
-        <references refid="a00997_1abb454609d9a6416ea16f15f9b7c78957" compoundref="a00479" startline="42" endline="45">Hack::Chips::Clock::setReset</references>
+        <location file="Source/Chips/Register.h" line="40" column="1" bodyfile="Source/Chips/Register.cpp" bodystart="26" bodyend="30"/>
+        <references refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00488" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00997_1a741dc95ddcf042b70e2747571d95cd82" compoundref="a00485" startline="76">Hack::Chips::bit64_t::ll</references>
+        <references refid="a00997_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00485" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="a00911_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00485" startline="40">Hack::Chips::Bit7</references>
       </memberdef>
-      <memberdef kind="function" id="a01129_1a06197be547ad70f903d23120252cf044" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool Hack::Chips::Timer::tick</definition>
+      <memberdef kind="function" id="a01129_1adac71e249b6e499425aac50f34eac07b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a01373" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::Register::getOut</definition>
         <argsstring>()</argsstring>
-        <name>tick</name>
+        <name>getOut</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Timer.h" line="33" column="1" bodyfile="Source/Chips/Timer.cpp" bodystart="29" bodyend="32"/>
-        <references refid="a00997_1acb81d1eb95bf01d4fe203701562da7d0" compoundref="a00479" startline="47" endline="75">Hack::Chips::Clock::getOut</references>
+        <location file="Source/Chips/Register.h" line="46" column="1" bodyfile="Source/Chips/Register.cpp" bodystart="68" bodyend="73"/>
+        <references refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00488" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00997_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00485" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="a00911_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00485" startline="40">Hack::Chips::Bit7</references>
+        <references refid="a00911_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" compoundref="a00485" startline="39">Hack::Chips::Bit6</references>
+        <references refid="a00997_1af415893333942f41fb4c4ad619083a16" compoundref="a00485" startline="78">Hack::Chips::bit64_t::s</references>
+      </memberdef>
+      <memberdef kind="function" id="a01129_1abf268bf9204e6b0661e639078499694e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Register::lock</definition>
+        <argsstring>(bool v)</argsstring>
+        <name>lock</name>
+        <param>
+          <type>bool</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Register.h" line="48" column="1" bodyfile="Source/Chips/Register.cpp" bodystart="75" bodyend="81"/>
+        <references refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00488" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00997_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00485" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="a00911_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" compoundref="a00485" startline="39">Hack::Chips::Bit6</references>
+      </memberdef>
+      <memberdef kind="function" id="a01129_1a9ed7e9ef8e47088db81077b5711e153f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Register::setClock</definition>
+        <argsstring>(bool tick)</argsstring>
+        <name>setClock</name>
+        <param>
+          <type>bool</type>
+          <declname>tick</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Register.h" line="44" column="1" bodyfile="Source/Chips/Register.cpp" bodystart="54" bodyend="66"/>
+        <references refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00488" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00997_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00485" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="a00911_1a89719f49d745047f03bca80bfff48bd2a8487c63d5dca7d87b359feca1a2c2ac8" compoundref="a00485" startline="34">Hack::Chips::Bit1</references>
+        <references refid="a00911_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00485" startline="40">Hack::Chips::Bit7</references>
+      </memberdef>
+      <memberdef kind="function" id="a01129_1a2547034bc01798cc02dcd141a6a25b43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Register::setIn</definition>
+        <argsstring>(const uint16_t &amp;v)</argsstring>
+        <name>setIn</name>
+        <param>
+          <type>const <ref refid="a01373" kindref="compound">uint16_t</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Register.h" line="42" column="1" bodyfile="Source/Chips/Register.cpp" bodystart="32" bodyend="39"/>
+        <references refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00488" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00997_1af415893333942f41fb4c4ad619083a16" compoundref="a00485" startline="78">Hack::Chips::bit64_t::s</references>
+        <references refid="a00997_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00485" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="a00911_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00485" startline="40">Hack::Chips::Bit7</references>
+      </memberdef>
+      <memberdef kind="function" id="a01129_1aae6a1ef0fe5e583d92de6cb9da89f480" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Register::setLoad</definition>
+        <argsstring>(bool write)</argsstring>
+        <name>setLoad</name>
+        <param>
+          <type>bool</type>
+          <declname>write</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Register.h" line="43" column="1" bodyfile="Source/Chips/Register.cpp" bodystart="41" bodyend="52"/>
+        <references refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00488" startline="52">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00997_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00485" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="a00911_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" compoundref="a00485" startline="33">Hack::Chips::Bit0</references>
+        <references refid="a00911_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00485" startline="40">Hack::Chips::Bit7</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Chips/Timer.h" line="28" column="1" bodyfile="Source/Chips/Timer.h" bodystart="27" bodyend="35"/>
+    <inheritancegraph>
+      <node id="274">
+        <label>Hack::Chips::Register</label>
+        <link refid="a01129"/>
+        <childnode refid="275" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="275">
+        <label>Hack::Chips::Chip&lt; bit64_t, 64 &gt;</label>
+        <link refid="a01005"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="276">
+        <label>Hack::Chips::Register</label>
+        <link refid="a01129"/>
+        <childnode refid="277" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="279">
+        <label>uint64_t</label>
+      </node>
+      <node id="280">
+        <label>uint16_t</label>
+        <link refid="a01373"/>
+      </node>
+      <node id="281">
+        <label>uint32_t</label>
+      </node>
+      <node id="282">
+        <label>uint8_t</label>
+        <link refid="a01385"/>
+      </node>
+      <node id="278">
+        <label>Hack::Chips::bit64_t</label>
+        <link refid="a00997"/>
+        <childnode refid="279" relation="usage">
+          <edgelabel>ll</edgelabel>
+        </childnode>
+        <childnode refid="280" relation="usage">
+          <edgelabel>s</edgelabel>
+        </childnode>
+        <childnode refid="281" relation="usage">
+          <edgelabel>i</edgelabel>
+        </childnode>
+        <childnode refid="282" relation="usage">
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="277">
+        <label>Hack::Chips::Chip&lt; bit64_t, 64 &gt;</label>
+        <link refid="a01005"/>
+        <childnode refid="278" relation="usage">
+          <edgelabel>_bits</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Chips/Register.h" line="31" column="1" bodyfile="Source/Chips/Register.h" bodystart="30" bodyend="49"/>
     <listofallmembers>
-      <member refid="a01129_1ad2da0265b5d319d10513842c02b4b76e" prot="private" virt="non-virtual"><scope>Hack::Chips::Timer</scope><name>_clock</name></member>
-      <member refid="a01129_1a7570f5f591474c56e6f96ab6d3f77044" prot="public" virt="non-virtual"><scope>Hack::Chips::Timer</scope><name>reset</name></member>
-      <member refid="a01129_1a06197be547ad70f903d23120252cf044" prot="public" virt="non-virtual"><scope>Hack::Chips::Timer</scope><name>tick</name></member>
+      <member refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Register</scope><name>_bits</name></member>
+      <member refid="a01005_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::Register</scope><name>applyBit</name></member>
+      <member refid="a01005_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::Register</scope><name>assignBit</name></member>
+      <member refid="a01005_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::Register</scope><name>Chip</name></member>
+      <member refid="a01005_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::Register</scope><name>clearBit</name></member>
+      <member refid="a01129_1a47e225daa9d3228b4be36ed0dc69199e" prot="private" virt="non-virtual"><scope>Hack::Chips::Register</scope><name>evaluate</name></member>
+      <member refid="a01005_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::Register</scope><name>getBit</name></member>
+      <member refid="a01129_1adac71e249b6e499425aac50f34eac07b" prot="public" virt="non-virtual"><scope>Hack::Chips::Register</scope><name>getOut</name></member>
+      <member refid="a01129_1aaf75c488721fd4f6ec9c50dd23c31291" prot="private" virt="virtual"><scope>Hack::Chips::Register</scope><name>isDirty</name></member>
+      <member refid="a01129_1abf268bf9204e6b0661e639078499694e" prot="public" virt="non-virtual"><scope>Hack::Chips::Register</scope><name>lock</name></member>
+      <member refid="a01129_1a57427a269e1416331bc95974c3d8acee" prot="public" virt="non-virtual"><scope>Hack::Chips::Register</scope><name>Register</name></member>
+      <member refid="a01005_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::Register</scope><name>setBit</name></member>
+      <member refid="a01129_1a9ed7e9ef8e47088db81077b5711e153f" prot="public" virt="non-virtual"><scope>Hack::Chips::Register</scope><name>setClock</name></member>
+      <member refid="a01129_1a2547034bc01798cc02dcd141a6a25b43" prot="public" virt="non-virtual"><scope>Hack::Chips::Register</scope><name>setIn</name></member>
+      <member refid="a01129_1aae6a1ef0fe5e583d92de6cb9da89f480" prot="public" virt="non-virtual"><scope>Hack::Chips::Register</scope><name>setLoad</name></member>
+      <member refid="a01005_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::Register</scope><name>~Chip</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

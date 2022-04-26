@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01169" kind="class" language="C++" prot="public">
-    <compoundname>Hack::Compiler::Tree</compoundname>
-    <includes local="no">Source/Compiler/Common/Tree.h</includes>
+    <compoundname>Hack::Compiler::DotWriter</compoundname>
+    <includes local="no">Source/Compiler/Common/DotWriter.h</includes>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="a01169_1a71af1e32842d01a8cb34947b582ead35" prot="private" static="no" mutable="no">
-        <type><ref refid="a01161" kindref="compound">Node</ref> *</type>
-        <definition>Node* Hack::Compiler::Tree::_root</definition>
+      <memberdef kind="variable" id="a01169_1acfdc97fddf26635d00cb799d482415b9" prot="private" static="no" mutable="no">
+        <type><ref refid="a01173" kindref="compound">Node</ref> *</type>
+        <definition>Node* Hack::Compiler::DotWriter::_root</definition>
         <argsstring></argsstring>
         <name>_root</name>
         <briefdescription>
@@ -15,44 +15,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Common/Tree.h" line="32" column="1" bodyfile="Source/Compiler/Common/Tree.h" bodystart="32" bodyend="-1"/>
+        <location file="Source/Compiler/Common/DotWriter.h" line="32" column="1" bodyfile="Source/Compiler/Common/DotWriter.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01169_1a23c525c96dd46a4b7982949318112499" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01169_1a1c2b9abbedc66bec1440fd028d434c44" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
         <type></type>
-        <definition>Hack::Compiler::Tree::Tree</definition>
-        <argsstring>()</argsstring>
-        <name>Tree</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Common/Tree.h" line="35" column="1" bodyfile="Source/Compiler/Common/Tree.cpp" bodystart="30" bodyend="33"/>
-      </memberdef>
-      <memberdef kind="function" id="a01169_1a45358a8d6576f798c84aa599d3c8968e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Hack::Compiler::Tree::~Tree</definition>
-        <argsstring>()</argsstring>
-        <name>~Tree</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Source/Compiler/Common/Tree.h" line="36" column="1" bodyfile="Source/Compiler/Common/Tree.cpp" bodystart="35" bodyend="39"/>
-      </memberdef>
-      <memberdef kind="function" id="a01169_1ab00b92685755429ac933b3507a79bcd0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Hack::Compiler::Tree::filename</definition>
-        <argsstring>(const String &amp;fileName) const</argsstring>
-        <name>filename</name>
+        <definition>Hack::Compiler::DotWriter::DotWriter</definition>
+        <argsstring>(Node *root)</argsstring>
+        <name>DotWriter</name>
         <param>
-          <type>const <ref refid="a00897_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
-          <declname>fileName</declname>
+          <type><ref refid="a01173" kindref="compound">Node</ref> *</type>
+          <declname>root</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -60,34 +34,29 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Common/Tree.h" line="42" column="1" bodyfile="Source/Compiler/Common/Tree.cpp" bodystart="42" bodyend="45"/>
-        <references refid="a01161_1a7159b0a48fe5e2fff5ffe0472666a016" compoundref="a00704" startline="206" endline="209">Hack::Compiler::Node::filename</references>
+        <location file="Source/Compiler/Common/DotWriter.h" line="35" column="1" bodyfile="Source/Compiler/Common/DotWriter.cpp" bodystart="126" bodyend="129"/>
       </memberdef>
-      <memberdef kind="function" id="a01169_1a58e4ebbe1e9af83ed2d9ceb8843f90e4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="a01161" kindref="compound">Node</ref> *</type>
-        <definition>Node * Hack::Compiler::Tree::getRoot</definition>
-        <argsstring>() const</argsstring>
-        <name>getRoot</name>
+      <memberdef kind="function" id="a01169_1a779b98218c0979beb471fe308c35eb61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Compiler::DotWriter::~DotWriter</definition>
+        <argsstring>()=default</argsstring>
+        <name>~DotWriter</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Common/Tree.h" line="38" column="1" bodyfile="Source/Compiler/Common/Tree.h" bodystart="45" bodyend="48"/>
+        <location file="Source/Compiler/Common/DotWriter.h" line="37" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="a01169_1a6a896a5aa2081ea5b7acbb59c82b9b69" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01169_1a3c42eaf7c27647c3e266d5c02fc62e48" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Hack::Compiler::Tree::write</definition>
-        <argsstring>(OStream &amp;out, int format) const</argsstring>
+        <definition>void Hack::Compiler::DotWriter::write</definition>
+        <argsstring>(OStream &amp;out) const</argsstring>
         <name>write</name>
         <param>
-          <type><ref refid="a00897_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref> &amp;</type>
+          <type><ref refid="a00909_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref> &amp;</type>
           <declname>out</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>format</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -95,23 +64,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Common/Tree.h" line="40" column="1" bodyfile="Source/Compiler/Common/Tree.cpp" bodystart="47" bodyend="59"/>
-        <references refid="a01177_1a3cda3976be2f39380491275e681cdde9" compoundref="a00719" startline="149" endline="153">Hack::Compiler::XmlWriter::write</references>
-        <references refid="a01157_1a3c42eaf7c27647c3e266d5c02fc62e48" compoundref="a00695" startline="131" endline="135">Hack::Compiler::DotWriter::write</references>
+        <location file="Source/Compiler/Common/DotWriter.h" line="39" column="1" bodyfile="Source/Compiler/Common/DotWriter.cpp" bodystart="131" bodyend="135"/>
+        <references refid="a01165_1a1546d87f7f5aec756e4ffa173195afca" compoundref="a00707" startline="108" endline="123">Hack::Compiler::DotWriterImpl::write</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Compiler/Common/Tree.h" line="30" column="1" bodyfile="Source/Compiler/Common/Tree.h" bodystart="29" bodyend="43"/>
+    <location file="Source/Compiler/Common/DotWriter.h" line="30" column="1" bodyfile="Source/Compiler/Common/DotWriter.h" bodystart="29" bodyend="40"/>
     <listofallmembers>
-      <member refid="a01169_1a71af1e32842d01a8cb34947b582ead35" prot="private" virt="non-virtual"><scope>Hack::Compiler::Tree</scope><name>_root</name></member>
-      <member refid="a01169_1ab00b92685755429ac933b3507a79bcd0" prot="public" virt="non-virtual"><scope>Hack::Compiler::Tree</scope><name>filename</name></member>
-      <member refid="a01169_1a58e4ebbe1e9af83ed2d9ceb8843f90e4" prot="public" virt="non-virtual"><scope>Hack::Compiler::Tree</scope><name>getRoot</name></member>
-      <member refid="a01169_1a23c525c96dd46a4b7982949318112499" prot="public" virt="non-virtual"><scope>Hack::Compiler::Tree</scope><name>Tree</name></member>
-      <member refid="a01169_1a6a896a5aa2081ea5b7acbb59c82b9b69" prot="public" virt="non-virtual"><scope>Hack::Compiler::Tree</scope><name>write</name></member>
-      <member refid="a01169_1a45358a8d6576f798c84aa599d3c8968e" prot="public" virt="non-virtual"><scope>Hack::Compiler::Tree</scope><name>~Tree</name></member>
+      <member refid="a01169_1acfdc97fddf26635d00cb799d482415b9" prot="private" virt="non-virtual"><scope>Hack::Compiler::DotWriter</scope><name>_root</name></member>
+      <member refid="a01169_1a1c2b9abbedc66bec1440fd028d434c44" prot="public" virt="non-virtual"><scope>Hack::Compiler::DotWriter</scope><name>DotWriter</name></member>
+      <member refid="a01169_1a3c42eaf7c27647c3e266d5c02fc62e48" prot="public" virt="non-virtual"><scope>Hack::Compiler::DotWriter</scope><name>write</name></member>
+      <member refid="a01169_1a779b98218c0979beb471fe308c35eb61" prot="public" virt="non-virtual"><scope>Hack::Compiler::DotWriter</scope><name>~DotWriter</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

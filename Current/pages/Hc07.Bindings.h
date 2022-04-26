@@ -10,7 +10,10 @@ It is currently on the back-burner until primary functionality is complete.
 A proof of concept Flutter application can be found in the flutter branch.
 It makes use of this interface to communicate with dart to replicate the command line debugger in Flutter.
 
-\n
+\br
+\image html Debugger1.png
+
+
 \defined{Hc07Defined}
 \defined_in{Source/Bindings}
 
