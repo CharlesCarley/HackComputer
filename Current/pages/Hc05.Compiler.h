@@ -122,7 +122,7 @@ Is a static library which implements the conversion from parse tree to <tt>.vm</
 \h1 Compiler
 
 The current state of this project does not implement a standalone compiler.
-Instead, compilation happens in the \ref Hc07 "Computer" executable.
+Instead, compilation happens in the \ref Hc06 "Computer" executable.
  
 
 \defined{Hc05Defined}

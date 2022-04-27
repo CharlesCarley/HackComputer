@@ -51,13 +51,11 @@ It uses </span>
 <a id="source-index"></a>
 <h2>Source Index</h2>
 <ul>
-<li><a href="page_index.md#page-index">Page Index</a>
-</li>
-<li><a href="directory_index.md#directory-index">Directory Index</a>
-</li>
 <li><a href="namespace_index.md#namespace-index">Namespace Index</a>
 </li>
 <li><a href="class_index.md#class-index">Class Index</a>
+</li>
+<li><a href="directory_index.md#directory-index">Directory Index</a>
 </li>
 </ul>
 </div>
