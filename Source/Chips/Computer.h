@@ -53,7 +53,7 @@ namespace Hack::Chips
         bool     _reset;
         CpuState _cpuState;
 
-        void clear();
+        void clearState();
 
 
     public:

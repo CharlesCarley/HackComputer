@@ -26,19 +26,23 @@ include(FindVSEmscripten)
 set_static_runtime()
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
-option(Hack_BUILD_TEST           "Build the unit test program." ON)
-option(Hack_AUTO_RUN_TEST        "Automatically run the test program." OFF)
-option(Hack_CHECK_INT_BOUNDS     "Throw an exception on overflow ." ON)
-option(Hack_IMPLEMENT_BLACK_BOX  "If this is true all chips will be implemented with logic gates." OFF)
-option(Hack_VM_ZERO_RAM          "Emits extra instructions to remove RAM values that are no longer in use" OFF)
-option(Hack_VM_GUARD_PUSH        "Emits conditional instructions to prevent pushing to segments when its out of context." OFF)
-option(Hack_USE_SDL              "Enables or disables SDL" OFF)
-option(Hack_TEST_REGEN_CMP       "Regenerate the compare files" OFF)
+# This needs to be synced with Current/pages/CMake.h
+
+option(Hack_BUILD_TEST           "Enables building the unit test program." ON)
+option(Hack_BUILD_DOCS           "Builds the current version of the manual." OFF)
+option(Hack_AUTO_RUN_TEST        "Automatically run the unit test program." OFF)
+option(Hack_CHECK_INT_BOUNDS     "Enables throwing an overflow exception when manipulating individual bits." ON)
+option(Hack_IMPLEMENT_BLACK_BOX  "If this is true most chips will be implemented with computed logic gates." OFF)
+option(Hack_VM_ZERO_RAM          "Emits extra instructions to zero RAM values that are no longer in use." OFF)
+option(Hack_VM_GUARD_PUSH        "Emits conditional instructions to prevent pushing ram segments when its out of context." OFF)
+option(Hack_USE_SDL              "Enables or disables the SDL runtime." OFF)
+option(Hack_TEST_REGEN_CMP       "Regenerates a output snapshot of the generated test compare files." OFF)
+
+# back end specific 
 option(Hack_JUST_MY_CODE         "Enable the /JMC flag" ON)
 
-set(Hack_INSTALL_PATH "" 
-	CACHE PATH
-	"Specify installation directory")
+
+set(Hack_INSTALL_PATH "" CACHE PATH "Specify installation directory")
 
 set(BUILD_GMOCK   OFF CACHE BOOL "" FORCE)
 set(INSTALL_GTEST OFF CACHE BOOL "" FORCE)

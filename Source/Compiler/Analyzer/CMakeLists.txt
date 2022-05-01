@@ -53,8 +53,6 @@ if (BuildType STREQUAL "CPP")
 
     # The command line application
     set(TargetName Jack2XML)
-    set(TargetGroup Executables)
-
 
     unset(Target_HDR)
     unset(Target_SRC)
@@ -75,5 +73,14 @@ if (BuildType STREQUAL "CPP")
     if (TargetFolders)
         set_target_properties(${TargetName} PROPERTIES FOLDER "${TargetGroup}")
     endif()
+    if (MSVC)
+
+    set_target_properties(
+        ${TargetName} 
+        PROPERTIES 
+        VS_DEBUGGER_WORKING_DIRECTORY  
+        "${CMAKE_SOURCE_DIR}/Test"
+    )
+endif()
 
 endif()

@@ -6,12 +6,13 @@
 \h1 Generators 
 
 The build system was written using CMake's `Unix Makefiles` and `Visual Studio 2019` generators.
-Other generators will most likely work. The project is not referencing external sources beyond SDL (which is compiled in).
 
 \h1 Options
 
 It provides the following options to control compilation.
 \br
+- Hack_BUILD_DOCS | OFF
+ - Builds the current version of the manual.
 - Hack_BUILD_TEST | OFF
  - Enables building the unit test program.
 - Hack_AUTO_RUN_TEST | OFF
@@ -28,6 +29,8 @@ It provides the following options to control compilation.
  - Emits conditional instructions to prevent pushing ram segments when its out of context.
 - Hack_USE_SDL | OFF
  - Enables or disables the SDL runtime.
-
+- Hack_TEST_REGEN_CMP | OFF
+ - Regenerates a output snapshot of the generated test compare files.
+ 
  */
 #pragma once

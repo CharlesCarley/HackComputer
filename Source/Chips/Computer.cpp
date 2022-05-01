@@ -48,6 +48,7 @@ namespace Hack::Chips
     void Computer::load(const uint16_t* data, const size_t size)
     {
         _rom->load(data, size);
+
         _reset = true;
         update(false);
     }
@@ -66,7 +67,7 @@ namespace Hack::Chips
         captureState();
     }
 
-    void Computer::clear()
+    void Computer::clearState()
     {
         _cpu->clear();
         _ram->zero();
@@ -105,7 +106,7 @@ namespace Hack::Chips
     {
         _cpuState.clock = Timer::tick() ? 1 : 0;
         if (_reset)
-            clear();
+            clearState();
 
         if (saveState)
             captureState();
