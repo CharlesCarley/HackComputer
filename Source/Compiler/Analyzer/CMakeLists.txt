@@ -18,7 +18,7 @@
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
 set(TargetName ParseTreeBuilder)
-set(TargetGroup P4.Compiler)
+set(TargetGroup Intern)
 
 set(Target_HDR
    Token.h
@@ -57,6 +57,7 @@ if (BuildType STREQUAL "CPP")
     unset(Target_HDR)
     unset(Target_SRC)
     set(Target_SRC Main.cpp)
+    set(TargetGroup Executables)
 
     include_directories(${Hack_SOURCE_DIR}/Source)
 

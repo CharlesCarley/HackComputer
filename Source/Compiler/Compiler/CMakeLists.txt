@@ -18,13 +18,13 @@
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
 set(TargetName Compiler)
-set(TargetGroup P7.Compiler)
 
 if (BuildType STREQUAL "CPP")
 
     unset(Target_HDR)
     unset(Target_SRC)
     set(Target_SRC Main.cpp)
+    set(TargetGroup "")
 
     include_directories(${Hack_SOURCE_DIR}/Source)
 

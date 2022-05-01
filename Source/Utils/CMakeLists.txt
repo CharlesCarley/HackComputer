@@ -18,7 +18,7 @@
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
 set(TargetName Utils )
-set(TargetGroup P0.Common )
+set(TargetGroup Intern)
 
 
 set(Utils_UI_HDR

@@ -18,7 +18,7 @@
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
 set(TargetName OS )
-set(TargetGroup P8.OperatingSystem )
+set(TargetGroup Intern)
 
 
 set(OS_HLC Memory.jack)

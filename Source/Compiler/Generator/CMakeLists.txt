@@ -18,7 +18,7 @@
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
 set(TargetName  CodeGenerator)
-set(TargetGroup P5.Compiler)
+set(TargetGroup Intern)
 
 set(Target_HDR
     Expression.h

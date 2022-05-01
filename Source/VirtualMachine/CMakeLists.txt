@@ -18,7 +18,7 @@
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
 set(TargetName VirtualMachine)
-set(TargetGroup P3.VirtualMachine)
+set(TargetGroup Intern)
 
 
 set(Target_HDR

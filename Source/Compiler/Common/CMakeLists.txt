@@ -18,7 +18,7 @@
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
 set(TargetName ParseTree)
-set(TargetGroup P4.Compiler)
+set(TargetGroup Intern)
 
 set(Target_HDR
    Tree.h

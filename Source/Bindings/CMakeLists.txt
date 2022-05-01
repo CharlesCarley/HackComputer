@@ -18,7 +18,7 @@
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
 set(TargetName bindings)
-set(TargetGroup P9.Bindings)
+set(TargetGroup Extern)
 include (VSEmscripten)
 set(Target_SRC 
    Bindings.cpp
