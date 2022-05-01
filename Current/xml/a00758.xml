@@ -8,154 +8,159 @@
     <includedby refid="a00764" local="yes">Source/Compiler/Generator/SymbolTable.h</includedby>
     <includedby refid="a00770" local="yes">Source/Compiler/Generator/VmEmitter.h</includedby>
     <incdepgraph>
-      <node id="2643">
-        <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="2644" relation="include">
+      <node id="2670">
+        <label>Utils/Exception.h</label>
+        <childnode refid="2671" relation="include">
+        </childnode>
+        <childnode refid="2672" relation="include">
+        </childnode>
+        <childnode refid="2673" relation="include">
+        </childnode>
+        <childnode refid="2674" relation="include">
+        </childnode>
+        <childnode refid="2675" relation="include">
         </childnode>
       </node>
-      <node id="2629">
-        <label>Source/Compiler/Generator/Symbol.h</label>
-        <link refid="a00758"/>
-        <childnode refid="2630" relation="include">
-        </childnode>
-      </node>
-      <node id="2644">
+      <node id="2681">
         <label>cstdint</label>
       </node>
-      <node id="2635">
+      <node id="2679">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="2675" relation="include">
+        </childnode>
+        <childnode refid="2680" relation="include">
+        </childnode>
+        <childnode refid="2682" relation="include">
+        </childnode>
+      </node>
+      <node id="2672">
         <label>stdexcept</label>
       </node>
-      <node id="2640">
+      <node id="2677">
         <label>string</label>
       </node>
-      <node id="2632">
+      <node id="2669">
         <label>unordered_set</label>
       </node>
-      <node id="2634">
+      <node id="2666">
+        <label>Source/Compiler/Generator/Symbol.h</label>
+        <link refid="a00758"/>
+        <childnode refid="2667" relation="include">
+        </childnode>
+      </node>
+      <node id="2671">
         <label>exception</label>
       </node>
-      <node id="2642">
-        <label>UserInterface/Context.h</label>
-        <childnode refid="2638" relation="include">
-        </childnode>
-        <childnode refid="2643" relation="include">
-        </childnode>
-        <childnode refid="2645" relation="include">
+      <node id="2680">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="2681" relation="include">
         </childnode>
       </node>
-      <node id="2645">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="2644" relation="include">
+      <node id="2675">
+        <label>String.h</label>
+        <childnode refid="2676" relation="include">
         </childnode>
-        <childnode refid="2641" relation="include">
+        <childnode refid="2677" relation="include">
         </childnode>
-        <childnode refid="2643" relation="include">
+        <childnode refid="2678" relation="include">
         </childnode>
       </node>
-      <node id="2630">
+      <node id="2667">
         <label>Utils/IndexCache.h</label>
-        <childnode refid="2631" relation="include">
+        <childnode refid="2668" relation="include">
         </childnode>
-        <childnode refid="2632" relation="include">
+        <childnode refid="2669" relation="include">
         </childnode>
-        <childnode refid="2633" relation="include">
-        </childnode>
-      </node>
-      <node id="2637">
-        <label>Utils/Console.h</label>
-        <childnode refid="2638" relation="include">
-        </childnode>
-        <childnode refid="2642" relation="include">
+        <childnode refid="2670" relation="include">
         </childnode>
       </node>
-      <node id="2641">
+      <node id="2678">
         <label>vector</label>
       </node>
-      <node id="2636">
+      <node id="2673">
         <label>utility</label>
       </node>
-      <node id="2639">
+      <node id="2676">
         <label>sstream</label>
       </node>
-      <node id="2633">
-        <label>Utils/Exception.h</label>
-        <childnode refid="2634" relation="include">
-        </childnode>
-        <childnode refid="2635" relation="include">
-        </childnode>
-        <childnode refid="2636" relation="include">
-        </childnode>
-        <childnode refid="2637" relation="include">
-        </childnode>
-        <childnode refid="2638" relation="include">
-        </childnode>
-      </node>
-      <node id="2631">
+      <node id="2668">
         <label>unordered_map</label>
       </node>
-      <node id="2638">
-        <label>String.h</label>
-        <childnode refid="2639" relation="include">
+      <node id="2682">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="2681" relation="include">
         </childnode>
-        <childnode refid="2640" relation="include">
+        <childnode refid="2678" relation="include">
         </childnode>
-        <childnode refid="2641" relation="include">
+        <childnode refid="2680" relation="include">
+        </childnode>
+      </node>
+      <node id="2674">
+        <label>Utils/Console.h</label>
+        <childnode refid="2675" relation="include">
+        </childnode>
+        <childnode refid="2679" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2646">
-        <label>Source/Compiler/Generator/Symbol.h</label>
-        <link refid="a00758"/>
-        <childnode refid="2647" relation="include">
-        </childnode>
-        <childnode refid="2651" relation="include">
-        </childnode>
-        <childnode refid="2652" relation="include">
-        </childnode>
-        <childnode refid="2654" relation="include">
-        </childnode>
-      </node>
-      <node id="2653">
-        <label>Source/Compiler/Generator/SymbolTable.cpp</label>
-      </node>
-      <node id="2648">
-        <label>Source/Compiler/Generator/Generator.cpp</label>
-      </node>
-      <node id="2652">
-        <label>Source/Compiler/Generator/SymbolTable.h</label>
-        <childnode refid="2648" relation="include">
-        </childnode>
-        <childnode refid="2653" relation="include">
-        </childnode>
-      </node>
-      <node id="2654">
-        <label>Source/Compiler/Generator/VmEmitter.h</label>
-        <childnode refid="2648" relation="include">
-        </childnode>
-        <childnode refid="2655" relation="include">
-        </childnode>
-      </node>
-      <node id="2655">
-        <label>Source/Compiler/Generator/VmEmitter.cpp</label>
-      </node>
-      <node id="2650">
+      <node id="2688">
         <label>Source/Computer/Application.cpp</label>
       </node>
-      <node id="2647">
-        <label>Source/Compiler/Generator/Generator.h</label>
-        <childnode refid="2648" relation="include">
+      <node id="2692">
+        <label>Source/Compiler/Generator/VmEmitter.h</label>
+        <childnode refid="2686" relation="include">
         </childnode>
-        <childnode refid="2649" relation="include">
-        </childnode>
-        <childnode refid="2650" relation="include">
+        <childnode refid="2693" relation="include">
         </childnode>
       </node>
-      <node id="2649">
+      <node id="2691">
+        <label>Source/Compiler/Generator/SymbolTable.cpp</label>
+      </node>
+      <node id="2684">
+        <label>Source/Compiler/Generator/Generator.h</label>
+        <childnode refid="2685" relation="include">
+        </childnode>
+        <childnode refid="2686" relation="include">
+        </childnode>
+        <childnode refid="2687" relation="include">
+        </childnode>
+        <childnode refid="2688" relation="include">
+        </childnode>
+      </node>
+      <node id="2686">
+        <label>Source/Compiler/Generator/Generator.cpp</label>
+      </node>
+      <node id="2683">
+        <label>Source/Compiler/Generator/Symbol.h</label>
+        <link refid="a00758"/>
+        <childnode refid="2684" relation="include">
+        </childnode>
+        <childnode refid="2689" relation="include">
+        </childnode>
+        <childnode refid="2690" relation="include">
+        </childnode>
+        <childnode refid="2692" relation="include">
+        </childnode>
+      </node>
+      <node id="2685">
+        <label>Source/Compiler/Compiler/Main.cpp</label>
+      </node>
+      <node id="2693">
+        <label>Source/Compiler/Generator/VmEmitter.cpp</label>
+      </node>
+      <node id="2689">
+        <label>Source/Compiler/Generator/Symbol.cpp</label>
+      </node>
+      <node id="2687">
         <label>Source/Compiler/Generator/Main.cpp</label>
       </node>
-      <node id="2651">
-        <label>Source/Compiler/Generator/Symbol.cpp</label>
+      <node id="2690">
+        <label>Source/Compiler/Generator/SymbolTable.h</label>
+        <childnode refid="2686" relation="include">
+        </childnode>
+        <childnode refid="2691" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="a01201" prot="public">Hack::Compiler::CodeGenerator::Symbol</innerclass>

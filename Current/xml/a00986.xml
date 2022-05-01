@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a00986" kind="union" language="C++" prot="public">
+    <compoundname>Hack::Chips::bit16_t</compoundname>
+    <includes local="no">Source/Chips/BitUtils.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="a00986_1ad572825821646ad93481854ef8e6dcd7" prot="public" static="no" mutable="no">
+        <type><ref refid="a01382" kindref="compound">uint8_t</ref></type>
+        <definition>uint8_t Hack::Chips::bit16_t::b[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/BitUtils.h" line="54" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00986_1af97e65eb3fc9302737f3fa2d46df9943" prot="public" static="no" mutable="no">
+        <type><ref refid="a01370" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::bit16_t::s</definition>
+        <argsstring></argsstring>
+        <name>s</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/BitUtils.h" line="53" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a00986_1a0b55fad3b0e70d5191e9069494c4c2f1" prot="public" static="no" const="yes" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Chips::bit16_t::operator size_t</definition>
+        <argsstring>() const</argsstring>
+        <name>operator size_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/BitUtils.h" line="56" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="56" bodyend="59"/>
+        <references refid="a00986_1af97e65eb3fc9302737f3fa2d46df9943" compoundref="a00482" startline="53">s</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="79">
+        <label>uint16_t</label>
+        <link refid="a01370"/>
+      </node>
+      <node id="80">
+        <label>uint8_t</label>
+        <link refid="a01382"/>
+      </node>
+      <node id="78">
+        <label>Hack::Chips::bit16_t</label>
+        <link refid="a00986"/>
+        <childnode refid="79" relation="usage">
+          <edgelabel>s</edgelabel>
+        </childnode>
+        <childnode refid="80" relation="usage">
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Chips/BitUtils.h" line="52" column="1" bodyfile="Source/Chips/BitUtils.h" bodystart="51" bodyend="60"/>
+    <listofallmembers>
+      <member refid="a00986_1ad572825821646ad93481854ef8e6dcd7" prot="public" virt="non-virtual"><scope>Hack::Chips::bit16_t</scope><name>b</name></member>
+      <member refid="a00986_1a0b55fad3b0e70d5191e9069494c4c2f1" prot="public" virt="non-virtual"><scope>Hack::Chips::bit16_t</scope><name>operator size_t</name></member>
+      <member refid="a00986_1af97e65eb3fc9302737f3fa2d46df9943" prot="public" virt="non-virtual"><scope>Hack::Chips::bit16_t</scope><name>s</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

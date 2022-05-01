@@ -1,119 +1,74 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01667" kind="file" language="C++">
-    <compoundname>Memory.cpp</compoundname>
-    <includes refid="a01673" local="yes">Chips/Memory.h</includes>
+    <compoundname>Token.h</compoundname>
+    <includes refid="a00851" local="yes">Utils/ParserBase/TokenBase.h</includes>
+    <includedby refid="a01619" local="yes">Source/Compiler/Analyzer/Parser.cpp</includedby>
+    <includedby refid="a00701" local="yes">Source/Compiler/Analyzer/ParseUtils.cpp</includedby>
+    <includedby refid="a01643" local="yes">Source/Compiler/Analyzer/Scanner.cpp</includedby>
+    <includedby refid="a01655" local="yes">Source/Compiler/Analyzer/Scanner.h</includedby>
     <incdepgraph>
-      <node id="1492">
-        <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="1493" relation="include">
+      <node id="640">
+        <label>Utils/ParserBase/TokenBase.h</label>
+        <childnode refid="641" relation="include">
         </childnode>
       </node>
-      <node id="1484">
-        <label>Chips/BitUtils.h</label>
-        <childnode refid="1485" relation="include">
-        </childnode>
-        <childnode refid="1486" relation="include">
-        </childnode>
-      </node>
-      <node id="1493">
-        <label>cstdint</label>
-      </node>
-      <node id="1482">
-        <label>Chips/Memory.h</label>
-        <childnode refid="1483" relation="include">
-        </childnode>
-        <childnode refid="1495" relation="include">
-        </childnode>
-        <childnode refid="1499" relation="include">
-        </childnode>
-      </node>
-      <node id="1489">
+      <node id="643">
         <label>string</label>
       </node>
-      <node id="1491">
-        <label>UserInterface/Context.h</label>
-        <childnode refid="1487" relation="include">
+      <node id="641">
+        <label>Utils/String.h</label>
+        <childnode refid="642" relation="include">
         </childnode>
-        <childnode refid="1492" relation="include">
+        <childnode refid="643" relation="include">
         </childnode>
-        <childnode refid="1494" relation="include">
-        </childnode>
-      </node>
-      <node id="1494">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="1493" relation="include">
-        </childnode>
-        <childnode refid="1490" relation="include">
-        </childnode>
-        <childnode refid="1492" relation="include">
+        <childnode refid="644" relation="include">
         </childnode>
       </node>
-      <node id="1486">
-        <label>Utils/Console.h</label>
-        <childnode refid="1487" relation="include">
-        </childnode>
-        <childnode refid="1491" relation="include">
-        </childnode>
-      </node>
-      <node id="1485">
-        <label>bitset</label>
-      </node>
-      <node id="1490">
+      <node id="644">
         <label>vector</label>
       </node>
-      <node id="1488">
+      <node id="642">
         <label>sstream</label>
       </node>
-      <node id="1481">
-        <label>Source/Chips/Memory.cpp</label>
+      <node id="639">
+        <label>Source/Compiler/Analyzer/Token.h</label>
         <link refid="a01667"/>
-        <childnode refid="1482" relation="include">
-        </childnode>
-      </node>
-      <node id="1483">
-        <label>Chips/Chip.h</label>
-        <childnode refid="1484" relation="include">
-        </childnode>
-        <childnode refid="1486" relation="include">
-        </childnode>
-      </node>
-      <node id="1496">
-        <label>Chips/DefaultMemorySegment.h</label>
-        <childnode refid="1497" relation="include">
-        </childnode>
-      </node>
-      <node id="1497">
-        <label>Chips/IMemorySegment.h</label>
-        <childnode refid="1498" relation="include">
-        </childnode>
-        <childnode refid="1483" relation="include">
-        </childnode>
-      </node>
-      <node id="1495">
-        <label>Chips/Ram16k.h</label>
-        <childnode refid="1496" relation="include">
-        </childnode>
-      </node>
-      <node id="1499">
-        <label>Chips/Screen.h</label>
-        <childnode refid="1496" relation="include">
-        </childnode>
-      </node>
-      <node id="1498">
-        <label>cstring</label>
-      </node>
-      <node id="1487">
-        <label>String.h</label>
-        <childnode refid="1488" relation="include">
-        </childnode>
-        <childnode refid="1489" relation="include">
-        </childnode>
-        <childnode refid="1490" relation="include">
+        <childnode refid="640" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <innernamespace refid="a00911">Hack::Chips</innernamespace>
+    <invincdepgraph>
+      <node id="649">
+        <label>Source/Compiler/Analyzer/Scanner.h</label>
+        <childnode refid="646" relation="include">
+        </childnode>
+        <childnode refid="648" relation="include">
+        </childnode>
+      </node>
+      <node id="646">
+        <label>Source/Compiler/Analyzer/Parser.cpp</label>
+      </node>
+      <node id="647">
+        <label>Source/Compiler/Analyzer/ParseUtils.cpp</label>
+      </node>
+      <node id="648">
+        <label>Source/Compiler/Analyzer/Scanner.cpp</label>
+      </node>
+      <node id="645">
+        <label>Source/Compiler/Analyzer/Token.h</label>
+        <link refid="a01667"/>
+        <childnode refid="646" relation="include">
+        </childnode>
+        <childnode refid="647" relation="include">
+        </childnode>
+        <childnode refid="648" relation="include">
+        </childnode>
+        <childnode refid="649" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="a00914">Hack::Compiler::Analyzer</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -140,167 +95,68 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Memory.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00911" kindref="compound">Hack::Chips</ref></highlight></codeline>
-<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01373" kindref="compound">uint16_t</ref><sp/><ref refid="a01061_1aeacf9b833a7fde722f19829077675b60" kindref="member">Memory::MaxAddress</ref><sp/><sp/><sp/><sp/>=<sp/>0x6000;</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01373" kindref="compound">uint16_t</ref><sp/><ref refid="a01061_1a5e6ec45243f237084d377b6aefb6981b" kindref="member">Memory::ScreenAddress</ref><sp/>=<sp/>0x4000;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01373" kindref="compound">uint16_t</ref><sp/><ref refid="a01061_1af6c812b43306431812791769cc63a7f1" kindref="member">Memory::StackAddress</ref><sp/><sp/>=<sp/>0x0100;</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01373" kindref="compound">uint16_t</ref><sp/><ref refid="a01061_1a0185f63e7f6bde6f829142ba97800c73" kindref="member">Memory::HeapAddress</ref><sp/><sp/><sp/>=<sp/>0x0800;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31" refid="a01061_1a8b1121ef63c4984ff65de8bf52132e0e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01061_1a8b1121ef63c4984ff65de8bf52132e0e" kindref="member">Memory::Memory</ref>()<sp/>:</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_in(0),</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out(0),</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_address(0),</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ram16(new<sp/><ref refid="a01025" kindref="compound">Ram16k</ref>()),</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_screen(new<sp/><ref refid="a01025" kindref="compound">ScreenSegment</ref>())</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40" refid="a01061_1ab977922882f28388d828482d2bba497d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01061_1ab977922882f28388d828482d2bba497d" kindref="member">Memory::~Memory</ref>()</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>_ram16;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>_screen;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46" refid="a01061_1aa7afb1c4ee2a01723002472bcabbc728" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01053" kindref="compound">Screen</ref>*<sp/><ref refid="a01061_1aa7afb1c4ee2a01723002472bcabbc728" kindref="member">Memory::getScreen</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="47"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_screen;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51" refid="a01061_1a3eeff5b61f578ed990745b0b1ce96d9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01061_1a3eeff5b61f578ed990745b0b1ce96d9b" kindref="member">Memory::initializeScreen</ref>(<ref refid="a01053" kindref="compound">Screen</ref>*<sp/>screen)</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(screen)</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>_screen;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_screen<sp/>=<sp/>screen;</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>InvalidPointer();</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62" refid="a01061_1a2543b6659fa9ecce5b9f72076a6dc4f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01061_1a2543b6659fa9ecce5b9f72076a6dc4f9" kindref="member">Memory::setIn</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01373" kindref="compound">uint16_t</ref>&amp;<sp/>v)</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_in<sp/>!=<sp/>v)</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_in<sp/>=<sp/>v;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>|=<sp/><ref refid="a00911_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" kindref="member">Bit7</ref>;</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71" refid="a01061_1a5baffcb2b03efd29620483621723b412" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01061_1a5baffcb2b03efd29620483621723b412" kindref="member">Memory::setAddress</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01373" kindref="compound">uint16_t</ref>&amp;<sp/>v)</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(v<sp/>&lt;<sp/><ref refid="a01061_1aeacf9b833a7fde722f19829077675b60" kindref="member">MaxAddress</ref>)</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_address<sp/>=<sp/>v;</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77" refid="a01061_1a5b672deb1ea7feca8dc1b2edd6970e08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01061_1a5b672deb1ea7feca8dc1b2edd6970e08" kindref="member">Memory::setValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>index,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01373" kindref="compound">uint16_t</ref>&amp;<sp/>v)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="78"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>&lt;<sp/><ref refid="a01061_1aeacf9b833a7fde722f19829077675b60" kindref="member">MaxAddress</ref>)</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>&lt;<sp/><ref refid="a01061_1a5e6ec45243f237084d377b6aefb6981b" kindref="member">ScreenAddress</ref>)</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ram16-&gt;<ref refid="a01025_1ac10efeb1855e75c99717840b6bca98d7" kindref="member">setValue</ref>(index,<sp/>v);</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_screen-&gt;<ref refid="a01053_1a2fe4fb4ddf831109accb6c95f6dbf990" kindref="member">setValue</ref>(index<sp/>-<sp/><ref refid="a01061_1a5e6ec45243f237084d377b6aefb6981b" kindref="member">ScreenAddress</ref>,<sp/>v);</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88" refid="a01061_1a1e0256353b44cb5742b01d569e004aa3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01061_1a1e0256353b44cb5742b01d569e004aa3" kindref="member">Memory::setLoad</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v)</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(v)</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>|=<sp/><ref refid="a00911_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" kindref="member">Bit0</ref>;</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;=<sp/>~<ref refid="a00911_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" kindref="member">Bit0</ref>;</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>|=<sp/><ref refid="a00911_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" kindref="member">Bit7</ref>;</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97" refid="a01061_1aff5964e2c12b9d9d2df86251852f7667" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01061_1aff5964e2c12b9d9d2df86251852f7667" kindref="member">Memory::setClock</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v)</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(v)</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>|=<sp/><ref refid="a00911_1a89719f49d745047f03bca80bfff48bd2a8487c63d5dca7d87b359feca1a2c2ac8" kindref="member">Bit1</ref>;</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;=<sp/>~<ref refid="a00911_1a89719f49d745047f03bca80bfff48bd2a8487c63d5dca7d87b359feca1a2c2ac8" kindref="member">Bit1</ref>;</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>|=<sp/><ref refid="a00911_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" kindref="member">Bit7</ref>;</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"></highlight></codeline>
-<codeline lineno="106" refid="a01061_1a5d32929ad9a9abf8f0634549462e7f0b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01061_1a5d32929ad9a9abf8f0634549462e7f0b" kindref="member">Memory::lock</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v)</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(v)</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>|=<sp/><ref refid="a00911_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" kindref="member">Bit6</ref>;</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;=<sp/>~<ref refid="a00911_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" kindref="member">Bit6</ref>;</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"></highlight></codeline>
-<codeline lineno="114" refid="a01061_1a9c799940a43fb1588ec230cd4d799ed3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01373" kindref="compound">uint16_t</ref><sp/><ref refid="a01061_1a9c799940a43fb1588ec230cd4d799ed3" kindref="member">Memory::getOut</ref>()</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;<sp/><ref refid="a00911_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" kindref="member">Bit7</ref>)<sp/>!=<sp/>0<sp/>&amp;&amp;<sp/>(<ref refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;<sp/><ref refid="a00911_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" kindref="member">Bit6</ref>)<sp/>==<sp/>0)</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_out;</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"></highlight></codeline>
-<codeline lineno="121" refid="a01061_1a7f5b5e64aa1b441be1bc547e27602559" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01373" kindref="compound">uint16_t</ref><sp/><ref refid="a01061_1a7f5b5e64aa1b441be1bc547e27602559" kindref="member">Memory::get</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>i)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="122"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>&lt;<sp/><ref refid="a01061_1aeacf9b833a7fde722f19829077675b60" kindref="member">MaxAddress</ref>)</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>&lt;<sp/><ref refid="a01061_1a5e6ec45243f237084d377b6aefb6981b" kindref="member">ScreenAddress</ref>)</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_ram16-&gt;<ref refid="a01025_1a94ef78fc28470abbd4b024e2b6d44510" kindref="member">get</ref>(i);</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_screen-&gt;<ref refid="a01053_1abd9da88a0da67c4ea4cebb492cef6b78" kindref="member">get</ref>(i<sp/>-<sp/><ref refid="a01061_1a5e6ec45243f237084d377b6aefb6981b" kindref="member">ScreenAddress</ref>);</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"></highlight></codeline>
-<codeline lineno="132" refid="a01061_1a33e18b325ababb24a8f50de7dcf03fd0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01373" kindref="compound">uint16_t</ref>*<sp/><ref refid="a01061_1a33e18b325ababb24a8f50de7dcf03fd0" kindref="member">Memory::pointer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>address)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="133"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(address<sp/>&lt;<sp/><ref refid="a01061_1a5e6ec45243f237084d377b6aefb6981b" kindref="member">ScreenAddress</ref>)</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_ram16-&gt;<ref refid="a01025_1ad4b862a78421101fef5afc7ad76cd942" kindref="member">pointer</ref>(address);</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_screen-&gt;<ref refid="a01053_1a928606841d9d6b0130aa7dbdbe7d294e" kindref="member">pointer</ref>(address<sp/>-<sp/><ref refid="a01061_1a5e6ec45243f237084d377b6aefb6981b" kindref="member">ScreenAddress</ref>);</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"></highlight></codeline>
-<codeline lineno="139" refid="a01061_1a0f261c4cfff3ae3fcd99537d2588a180" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01061_1a0f261c4cfff3ae3fcd99537d2588a180" kindref="member">Memory::zero</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="140"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ram16-&gt;<ref refid="a01025_1af6db3804cc8555a3a302e9264885d5b4" kindref="member">zero</ref>();</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_screen-&gt;<ref refid="a01053_1aae4cff10f3ec39ef2c6b08c42fcc937c" kindref="member">zero</ref>();</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"></highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Memory::isDirty()</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a01005_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(7)<sp/>&amp;&amp;<sp/>!<ref refid="a01005_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(6);</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"></highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Memory::markDirty()</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01005_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"></highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Memory::evaluate()</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_address<sp/>&lt;<sp/><ref refid="a01061_1aeacf9b833a7fde722f19829077675b60" kindref="member">MaxAddress</ref>)</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_address<sp/>&lt;<sp/><ref refid="a01061_1a5e6ec45243f237084d377b6aefb6981b" kindref="member">ScreenAddress</ref>)</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ram16-&gt;<ref refid="a01053_1a9dcf0c5af1012d1d54492f216eb85a61" kindref="member">setAddress</ref>(_address);</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ram16-&gt;<ref refid="a01053_1a053f5b47a681f7e04ec9b8039f68363f" kindref="member">setLoad</ref>((<ref refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;<sp/><ref refid="a00911_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" kindref="member">Bit0</ref>)<sp/>!=<sp/>0);</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ram16-&gt;<ref refid="a01053_1a8ad357587c581db496ef05f4fcd5c292" kindref="member">setClock</ref>((<ref refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;<sp/><ref refid="a00911_1a89719f49d745047f03bca80bfff48bd2a8487c63d5dca7d87b359feca1a2c2ac8" kindref="member">Bit1</ref>)<sp/>!=<sp/>0);</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ram16-&gt;<ref refid="a01053_1a105e374a106c298b3a0426b8387260d3" kindref="member">setIn</ref>(_in);</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>=<sp/>_ram16-&gt;<ref refid="a01025_1a111146260aff6fd6a3c98ecbbfa14d26" kindref="member">getOut</ref>();</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_screen-&gt;<ref refid="a01053_1a9dcf0c5af1012d1d54492f216eb85a61" kindref="member">setAddress</ref>(_address<sp/>-<sp/><ref refid="a01061_1a5e6ec45243f237084d377b6aefb6981b" kindref="member">ScreenAddress</ref>);</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_screen-&gt;<ref refid="a01053_1a053f5b47a681f7e04ec9b8039f68363f" kindref="member">setLoad</ref>((<ref refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;<sp/><ref refid="a00911_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" kindref="member">Bit0</ref>)<sp/>!=<sp/>0);</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_screen-&gt;<ref refid="a01053_1a8ad357587c581db496ef05f4fcd5c292" kindref="member">setClock</ref>((<ref refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;<sp/><ref refid="a00911_1a89719f49d745047f03bca80bfff48bd2a8487c63d5dca7d87b359feca1a2c2ac8" kindref="member">Bit1</ref>)<sp/>!=<sp/>0);</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_screen-&gt;<ref refid="a01053_1a105e374a106c298b3a0426b8387260d3" kindref="member">setIn</ref>(_in);</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_out<sp/>=<sp/>_screen-&gt;<ref refid="a01053_1a8886f1e112e29f9f4ba7ec1d6550cb7b" kindref="member">getOut</ref>();</highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"></highlight></codeline>
-<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01005_1a301128353dd4d1c24a1a0ad7b933ceda" kindref="member">_bits</ref><sp/>&amp;=<sp/>0b01111100;</highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>IndexOutOfBounds();</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="181"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/ParserBase/TokenBase.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00914" kindref="compound">Hack::Compiler::Analyzer</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213e" kindref="member">TokenType</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea6b35e077d6922de3009e3b220254c978" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea6b35e077d6922de3009e3b220254c978" kindref="member">TokError</ref><sp/>=<sp/>-2,</highlight></codeline>
+<codeline lineno="30" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea1ba4f9d692cc431d36fb140c844a9aaa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea1ba4f9d692cc431d36fb140c844a9aaa" kindref="member">TokEof</ref>,</highlight></codeline>
+<codeline lineno="31" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea4fdcf1312581f32a2b868e5d8887b130" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea4fdcf1312581f32a2b868e5d8887b130" kindref="member">TokNull</ref>,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eaa145d7ff1b1544932f018e4c7416e3f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eaa145d7ff1b1544932f018e4c7416e3f0" kindref="member">TokInt</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;A&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="34" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea891b4734b63678b1e02b1b8b9f13f9b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea891b4734b63678b1e02b1b8b9f13f9b2" kindref="member">TokId</ref>,</highlight></codeline>
+<codeline lineno="35" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea5ed57746b9abdc5453a78be28262d994" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea5ed57746b9abdc5453a78be28262d994" kindref="member">TokString</ref>,</highlight></codeline>
+<codeline lineno="36" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea3683a4a8d9bdc7b0b2464d047b288dcf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea3683a4a8d9bdc7b0b2464d047b288dcf" kindref="member">TokKwClass</ref>,</highlight></codeline>
+<codeline lineno="37" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eafb1fb17048d6b03064d3ff99ab8d541d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eafb1fb17048d6b03064d3ff99ab8d541d" kindref="member">TokKwConstructor</ref>,</highlight></codeline>
+<codeline lineno="38" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea8378aa98bd996b1a1c8c8d7613d5d381" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea8378aa98bd996b1a1c8c8d7613d5d381" kindref="member">TokKwFunction</ref>,</highlight></codeline>
+<codeline lineno="39" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eafdb4aa87958bd43b2b033989acf334ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eafdb4aa87958bd43b2b033989acf334ce" kindref="member">TokKwMethod</ref>,</highlight></codeline>
+<codeline lineno="40" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eaac16f1f376e1c88c29e36c61541ed6ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eaac16f1f376e1c88c29e36c61541ed6ed" kindref="member">TokKwField</ref>,</highlight></codeline>
+<codeline lineno="41" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea41ff45e379695623a95dc6ae81ba184a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea41ff45e379695623a95dc6ae81ba184a" kindref="member">TokKwStatic</ref>,</highlight></codeline>
+<codeline lineno="42" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eabee3fe36ff107d8c12098b56a6dfd3be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eabee3fe36ff107d8c12098b56a6dfd3be" kindref="member">TokKwVar</ref>,</highlight></codeline>
+<codeline lineno="43" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea00c5a3bd7d23d99702b1e4a468d703eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea00c5a3bd7d23d99702b1e4a468d703eb" kindref="member">TokKwInt</ref>,</highlight></codeline>
+<codeline lineno="44" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea69ed9ded5c7bc79c1f9f605af67db523" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea69ed9ded5c7bc79c1f9f605af67db523" kindref="member">TokKwChar</ref>,</highlight></codeline>
+<codeline lineno="45" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ead3accc88d83f2804a36fb69c3a69efc5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ead3accc88d83f2804a36fb69c3a69efc5" kindref="member">TokKwBool</ref>,</highlight></codeline>
+<codeline lineno="46" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eaa943f9dd346815c158a3b016ce8b529d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eaa943f9dd346815c158a3b016ce8b529d" kindref="member">TokKwVoid</ref>,</highlight></codeline>
+<codeline lineno="47" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eaeeac2f18a174d237cf037b611f8fdfe5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eaeeac2f18a174d237cf037b611f8fdfe5" kindref="member">TokKwLet</ref>,</highlight></codeline>
+<codeline lineno="48" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea0a7f0a131aeb14c0fa31a04334f8a346" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea0a7f0a131aeb14c0fa31a04334f8a346" kindref="member">TokKwDo</ref>,</highlight></codeline>
+<codeline lineno="49" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea7fe7d6fd910001a9f951e25c694ba7b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea7fe7d6fd910001a9f951e25c694ba7b4" kindref="member">TokKwIf</ref>,</highlight></codeline>
+<codeline lineno="50" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea46582649acdbceba292a221af2333715" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea46582649acdbceba292a221af2333715" kindref="member">TokKwElse</ref>,</highlight></codeline>
+<codeline lineno="51" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eaa71bf47574690cb47f749bafef229864" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eaa71bf47574690cb47f749bafef229864" kindref="member">TokKwWhile</ref>,</highlight></codeline>
+<codeline lineno="52" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eacc7bf307a84d19b1d06537181b6e4318" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eacc7bf307a84d19b1d06537181b6e4318" kindref="member">TokKwReturn</ref>,</highlight></codeline>
+<codeline lineno="53" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea691d340728bd1c0633eb4956e30214bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea691d340728bd1c0633eb4956e30214bd" kindref="member">TokKwTrue</ref>,</highlight></codeline>
+<codeline lineno="54" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eaea87287587de0856df0952777164bc59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eaea87287587de0856df0952777164bc59" kindref="member">TokKwFalse</ref>,</highlight></codeline>
+<codeline lineno="55" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea2fb9ed390da565ed30445e486683fd12" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea2fb9ed390da565ed30445e486683fd12" kindref="member">TokKwNull</ref>,</highlight></codeline>
+<codeline lineno="56" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eabed8d290ba00a9c4a2f05ebed54483bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eabed8d290ba00a9c4a2f05ebed54483bd" kindref="member">TokKwThis</ref>,</highlight></codeline>
+<codeline lineno="57" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eaaf652b4a06fb74f6dc211693e2e769a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eaaf652b4a06fb74f6dc211693e2e769a3" kindref="member">TokKwInlineVm</ref>,</highlight></codeline>
+<codeline lineno="58" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eadcf7897b3f892f5487862015ab078438" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eadcf7897b3f892f5487862015ab078438" kindref="member">TokKwInlineAsm</ref>,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea7137a22e01a5be5107a978261d9e516c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea7137a22e01a5be5107a978261d9e516c" kindref="member">TokOpPlus</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;+&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="61" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea43ad123222961ed0ba51292c5477456e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea43ad123222961ed0ba51292c5477456e" kindref="member">TokOpMinus</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;-&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="62" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea0b94377eace5b63712399ac9217a16f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea0b94377eace5b63712399ac9217a16f3" kindref="member">TokOpMultiply</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="63" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eafb37aafcf316cd19f283b70185a6c7db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eafb37aafcf316cd19f283b70185a6c7db" kindref="member">TokOpDivide</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="64" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eae145e1948582f41d8142b03f672577e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eae145e1948582f41d8142b03f672577e0" kindref="member">TokOpAnd</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;&amp;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="65" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea9e7478436d156c0c3a1db85422186218" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea9e7478436d156c0c3a1db85422186218" kindref="member">TokOpOr</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;|&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="66" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea6d8bef72aaef7e066efde4ac33be78b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea6d8bef72aaef7e066efde4ac33be78b7" kindref="member">TokOpNot</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;!&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="67" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eafb2ee9a2e649e7cca8fae5a74f4150ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eafb2ee9a2e649e7cca8fae5a74f4150ea" kindref="member">TokOpGt</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;&gt;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="68" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea35aaca16e06f074aac288a35ea1fb334" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea35aaca16e06f074aac288a35ea1fb334" kindref="member">TokOpLt</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;&lt;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="69" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea59302097276b3efce9d00a1b56260b53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea59302097276b3efce9d00a1b56260b53" kindref="member">TokOpEq</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;=&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="70" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eafb944d2a0e4ad0c586816d56c1029078" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eafb944d2a0e4ad0c586816d56c1029078" kindref="member">TokSymLBracket</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;[&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="71" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eaaf7e383183280f916f91b4cc577b6666" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eaaf7e383183280f916f91b4cc577b6666" kindref="member">TokSymRBracket</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;]&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="72" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea75b99e6336f6b1f0c48e8b0152258abe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea75b99e6336f6b1f0c48e8b0152258abe" kindref="member">TokSymLBrace</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;{&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="73" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea74d79d469720fac9d5dd69b4875a1b84" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea74d79d469720fac9d5dd69b4875a1b84" kindref="member">TokSymRBrace</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;}&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="74" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea3e31bd9b170ad514bb5a76e879112bf4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea3e31bd9b170ad514bb5a76e879112bf4" kindref="member">TokSymLPar</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;(&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="75" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea832c288ebb3bb5101fcf65fe48ef307d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea832c288ebb3bb5101fcf65fe48ef307d" kindref="member">TokSymRPar</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;)&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="76" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea3f40c46f83b01cd10c2f0e44f488b7a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea3f40c46f83b01cd10c2f0e44f488b7a0" kindref="member">TokSymPeriod</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="77" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea17c04349dc66747e992f5f8fe52c61bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213ea17c04349dc66747e992f5f8fe52c61bb" kindref="member">TokSymComma</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;,&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="78" refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eafbeba2a07000ac4e4118f1b8f2a9ea20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1af2b20fa0841330bfd08bb1cbae04213eafbeba2a07000ac4e4118f1b8f2a9ea20" kindref="member">TokSymSemicolon</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="a00914_1a365a4ba8e3278740601f02b8d6c45910" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="a01301" kindref="compound">Token</ref><sp/>=<sp/><ref refid="a01301" kindref="compound">TokenBase</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler::Analyzer</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Chips/Memory.cpp"/>
+    <location file="Source/Compiler/Analyzer/Token.h"/>
   </compounddef>
 </doxygen>

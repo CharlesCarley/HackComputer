@@ -17,7 +17,7 @@
 #    misrepresented as being the original software.
 # 3. This notice may not be removed or altered from any source distribution.
 # ------------------------------------------------------------------------------
-set(TargetName SyntaxAnalyzer)
+set(TargetName ParseTreeBuilder)
 set(TargetGroup P4.Compiler)
 
 set(Target_HDR
@@ -62,7 +62,7 @@ if (BuildType STREQUAL "CPP")
 
     add_executable(${TargetName}  ${Target_SRC})
 
-    target_link_libraries(${TargetName} SyntaxAnalyzer Utils CompileUtils)
+    target_link_libraries(${TargetName} ParseTreeBuilder Utils ParseTree)
 
     copy_target(${TargetName} ${Hack_BINARY_DIR}/build_files) 
 

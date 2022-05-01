@@ -21,12 +21,16 @@
 */
 #pragma once
 
+#include <fstream>
 #include <filesystem>
 #include "Utils/String.h"
 
 namespace Hack
 {
-    using Path = std::filesystem::path;
+    using InputFileStream  = std::ifstream;
+    using OutputFileStream = std::ofstream;
+
+    using Path      = std::filesystem::path;
     using PathArray = std::vector<Path>;
 
     class FileSystem
@@ -35,4 +39,4 @@ namespace Hack
         static void glob(PathArray& dest, const String& dir, const String& ext);
         static Path absolute(const String& input);
     };
-} // namespace Hack
+}  // namespace Hack

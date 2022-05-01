@@ -106,32 +106,32 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="145">
+        <label>Hack::Chips::HalfAdder</label>
+        <link refid="a01049"/>
+        <childnode refid="146" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="146">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="a01005"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
       <node id="147">
         <label>Hack::Chips::HalfAdder</label>
         <link refid="a01049"/>
         <childnode refid="148" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="148">
-        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
-        <link refid="a01005"/>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="149">
-        <label>Hack::Chips::HalfAdder</label>
-        <link refid="a01049"/>
-        <childnode refid="150" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="151">
         <label>uint8_t</label>
         <link refid="a01385"/>
       </node>
-      <node id="150">
+      <node id="148">
         <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
         <link refid="a01005"/>
-        <childnode refid="151" relation="usage">
+        <childnode refid="149" relation="usage">
           <edgelabel>_bits</edgelabel>
         </childnode>
       </node>

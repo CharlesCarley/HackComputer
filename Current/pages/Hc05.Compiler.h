@@ -8,9 +8,9 @@
 The primary job of the compiler is to take the high-level jack language
 and translate it from, <tt>.jack,</tt> to <tt>.vm,</tt> then <tt>.asm,</tt> and finally to machine code.
 
-\h1 SyntaxAnalyzer
+\h1 ParseTreeBuilder
 
-The SyntaxAnalyzer project provides a static library that compiles the jack code
+The ParseTreeBuilder project provides a static library that compiles the jack code
 into an intermediate parse tree.
 \br
 The definition for the jack grammar can be found
@@ -19,7 +19,7 @@ The primary difference in syntax between this implementation and the course
 is that the not operator `!` is implemented both as '~' and '!'.
 
 
-\h1 CompileUtils
+\h1 ParseTree
 
 Provides an intermediate static library that implements the parse tree structure.
 The tree structure is meant to be shared between multiple projects. This library provides
@@ -121,8 +121,11 @@ Is a static library which implements the conversion from parse tree to <tt>.vm</
 
 \h1 Compiler
 
-The current state of this project does not implement a standalone compiler.
-Instead, compilation happens in the \ref Hc06 "Computer" executable.
+A standalone compiler can be found in the \dir_link{Source/Compiler/Compiler/} directory.
+It allows the code to be reduced to any stage in the process of reducing to machine code.
+
+Its primary purpose is for testing only at the moment.
+Any execution happens in the \ref Hc06 "Computer" executable.
  
 
 \defined{Hc05Defined}

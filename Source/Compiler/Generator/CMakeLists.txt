@@ -63,7 +63,7 @@ if (BuildType STREQUAL "CPP")
 
     add_executable(${TargetName}  ${Target_SRC})
 
-    target_link_libraries(${TargetName} CodeGenerator SyntaxAnalyzer Utils CompileUtils)
+    target_link_libraries(${TargetName} CodeGenerator ParseTreeBuilder Utils ParseTree)
 
     copy_target(${TargetName} ${Hack_BINARY_DIR}/build_files) 
 

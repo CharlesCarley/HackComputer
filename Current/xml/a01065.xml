@@ -111,32 +111,32 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="168">
+        <label>Hack::Chips::Mux</label>
+        <link refid="a01065"/>
+        <childnode refid="169" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="169">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="a01005"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
       <node id="170">
         <label>Hack::Chips::Mux</label>
         <link refid="a01065"/>
         <childnode refid="171" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="171">
-        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
-        <link refid="a01005"/>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="172">
-        <label>Hack::Chips::Mux</label>
-        <link refid="a01065"/>
-        <childnode refid="173" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="174">
         <label>uint8_t</label>
         <link refid="a01385"/>
       </node>
-      <node id="173">
+      <node id="171">
         <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
         <link refid="a01005"/>
-        <childnode refid="174" relation="usage">
+        <childnode refid="172" relation="usage">
           <edgelabel>_bits</edgelabel>
         </childnode>
       </node>

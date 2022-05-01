@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a00759" kind="namespace" language="C++">
+    <compoundname>Hack::Programs</compoundname>
+    <innerclass refid="a01038" prot="public">Hack::Programs::VmGeneratorApplication</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="a00759_1abf03186f32cf652a3130af11201ad075" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Options</name>
+        <enumvalue id="a00759_1abf03186f32cf652a3130af11201ad075a885204b76dba92eaf23aca08ee5807b8" prot="public">
+          <name>OP_OUTPUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="a00759_1abf03186f32cf652a3130af11201ad075aaccd1ba868a2f5d31c1788dc25318016" prot="public">
+          <name>OP_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Generator/Main.cpp" line="35" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="34" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="a00759_1a13ebb77912ec0bfaffec05c6825a7f9b" prot="public" static="no">
+        <type><ref refid="a01094" kindref="compound">CommandLine::Parser</ref></type>
+        <definition>using Hack::Programs::CmdLine = typedef CommandLine::Parser</definition>
+        <argsstring></argsstring>
+        <name>CmdLine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Generator/Main.cpp" line="40" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="a00759_1ae8e8d238d0cc49784639419312e6ac31" prot="public" static="no">
+        <type><ref refid="a01086" kindref="compound">CommandLine::Switch</ref></type>
+        <definition>using Hack::Programs::CmdSwitch = typedef CommandLine::Switch</definition>
+        <argsstring></argsstring>
+        <name>CmdSwitch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Generator/Main.cpp" line="41" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="a00759_1abaf8ca10fec17b26f9d1fb59c924ef58" prot="public" static="no" mutable="no">
+        <type>constexpr <ref refid="a00759_1ae8e8d238d0cc49784639419312e6ac31" kindref="member">CmdSwitch</ref></type>
+        <definition>constexpr CmdSwitch Hack::Programs::Switches[OP_MAX]</definition>
+        <argsstring>[OP_MAX]</argsstring>
+        <name>Switches</name>
+        <initializer>= {
+        {
+            <ref refid="a00759_1abf03186f32cf652a3130af11201ad075a885204b76dba92eaf23aca08ee5807b8" kindref="member">OP_OUTPUT</ref>,
+            &apos;o&apos;,
+            &quot;output&quot;,
+            &quot;Specify an output file&quot;,
+            true,
+            1,
+        },
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Generator/Main.cpp" line="43" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/Compiler/Generator/Main.cpp" line="33" column="1"/>
+  </compounddef>
+</doxygen>

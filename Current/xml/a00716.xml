@@ -7,7 +7,7 @@
     <includes refid="a00722" local="yes">Compiler/Common/NodeUtils.h</includes>
     <includes refid="a00830" local="yes">Utils/IndexCache.h</includes>
     <includes refid="a00857" local="yes">Utils/String.h</includes>
-    <includedby refid="a01610" local="yes">Source/Compiler/Analyzer/Parser.cpp</includedby>
+    <includedby refid="a01615" local="yes">Source/Compiler/Analyzer/Parser.cpp</includedby>
     <includedby refid="a00701" local="yes">Source/Compiler/Analyzer/ParseUtils.cpp</includedby>
     <includedby refid="a00707" local="yes">Source/Compiler/Common/DotWriter.cpp</includedby>
     <includedby refid="a00713" local="yes">Source/Compiler/Common/Node.cpp</includedby>
@@ -18,190 +18,195 @@
     <includedby refid="a00746" local="yes">Source/Compiler/Generator/Generator.h</includedby>
     <includedby refid="a00770" local="yes">Source/Compiler/Generator/VmEmitter.h</includedby>
     <incdepgraph>
-      <node id="2382">
-        <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="2383" relation="include">
-        </childnode>
-      </node>
-      <node id="2367">
+      <node id="2398">
         <label>functional</label>
       </node>
-      <node id="2383">
+      <node id="2407">
+        <label>Utils/Exception.h</label>
+        <childnode refid="2408" relation="include">
+        </childnode>
+        <childnode refid="2409" relation="include">
+        </childnode>
+        <childnode refid="2410" relation="include">
+        </childnode>
+        <childnode refid="2411" relation="include">
+        </childnode>
+        <childnode refid="2401" relation="include">
+        </childnode>
+      </node>
+      <node id="2414">
         <label>cstdint</label>
       </node>
-      <node id="2369">
-        <label>Compiler/Common/NodeUtils.h</label>
-        <childnode refid="2370" relation="include">
-        </childnode>
-      </node>
-      <node id="2378">
-        <label>stdexcept</label>
-      </node>
-      <node id="2372">
-        <label>string</label>
-      </node>
-      <node id="2375">
-        <label>unordered_set</label>
-      </node>
-      <node id="2377">
-        <label>exception</label>
-      </node>
-      <node id="2381">
-        <label>UserInterface/Context.h</label>
-        <childnode refid="2370" relation="include">
-        </childnode>
-        <childnode refid="2382" relation="include">
-        </childnode>
-        <childnode refid="2384" relation="include">
-        </childnode>
-      </node>
-      <node id="2384">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="2383" relation="include">
-        </childnode>
-        <childnode refid="2368" relation="include">
-        </childnode>
-        <childnode refid="2382" relation="include">
-        </childnode>
-      </node>
-      <node id="2373">
-        <label>Utils/IndexCache.h</label>
-        <childnode refid="2374" relation="include">
-        </childnode>
-        <childnode refid="2375" relation="include">
-        </childnode>
-        <childnode refid="2376" relation="include">
-        </childnode>
-      </node>
-      <node id="2380">
-        <label>Utils/Console.h</label>
-        <childnode refid="2370" relation="include">
-        </childnode>
-        <childnode refid="2381" relation="include">
-        </childnode>
-      </node>
-      <node id="2368">
-        <label>vector</label>
-      </node>
-      <node id="2379">
-        <label>utility</label>
-      </node>
-      <node id="2371">
-        <label>sstream</label>
-      </node>
-      <node id="2376">
-        <label>Utils/Exception.h</label>
-        <childnode refid="2377" relation="include">
-        </childnode>
-        <childnode refid="2378" relation="include">
-        </childnode>
-        <childnode refid="2379" relation="include">
-        </childnode>
-        <childnode refid="2380" relation="include">
-        </childnode>
-        <childnode refid="2370" relation="include">
-        </childnode>
-      </node>
-      <node id="2374">
-        <label>unordered_map</label>
-      </node>
-      <node id="2366">
+      <node id="2397">
         <label>Source/Compiler/Common/Node.h</label>
         <link refid="a00716"/>
-        <childnode refid="2367" relation="include">
+        <childnode refid="2398" relation="include">
         </childnode>
-        <childnode refid="2368" relation="include">
+        <childnode refid="2399" relation="include">
         </childnode>
-        <childnode refid="2369" relation="include">
+        <childnode refid="2400" relation="include">
         </childnode>
-        <childnode refid="2373" relation="include">
+        <childnode refid="2404" relation="include">
         </childnode>
-        <childnode refid="2370" relation="include">
+        <childnode refid="2401" relation="include">
         </childnode>
       </node>
-      <node id="2370">
+      <node id="2412">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="2401" relation="include">
+        </childnode>
+        <childnode refid="2413" relation="include">
+        </childnode>
+        <childnode refid="2415" relation="include">
+        </childnode>
+      </node>
+      <node id="2409">
+        <label>stdexcept</label>
+      </node>
+      <node id="2403">
+        <label>string</label>
+      </node>
+      <node id="2406">
+        <label>unordered_set</label>
+      </node>
+      <node id="2408">
+        <label>exception</label>
+      </node>
+      <node id="2413">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="2414" relation="include">
+        </childnode>
+      </node>
+      <node id="2401">
         <label>Utils/String.h</label>
-        <childnode refid="2371" relation="include">
+        <childnode refid="2402" relation="include">
         </childnode>
-        <childnode refid="2372" relation="include">
+        <childnode refid="2403" relation="include">
         </childnode>
-        <childnode refid="2368" relation="include">
+        <childnode refid="2399" relation="include">
+        </childnode>
+      </node>
+      <node id="2404">
+        <label>Utils/IndexCache.h</label>
+        <childnode refid="2405" relation="include">
+        </childnode>
+        <childnode refid="2406" relation="include">
+        </childnode>
+        <childnode refid="2407" relation="include">
+        </childnode>
+      </node>
+      <node id="2399">
+        <label>vector</label>
+      </node>
+      <node id="2410">
+        <label>utility</label>
+      </node>
+      <node id="2402">
+        <label>sstream</label>
+      </node>
+      <node id="2405">
+        <label>unordered_map</label>
+      </node>
+      <node id="2415">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="2414" relation="include">
+        </childnode>
+        <childnode refid="2399" relation="include">
+        </childnode>
+        <childnode refid="2413" relation="include">
+        </childnode>
+      </node>
+      <node id="2400">
+        <label>Compiler/Common/NodeUtils.h</label>
+        <childnode refid="2401" relation="include">
+        </childnode>
+      </node>
+      <node id="2411">
+        <label>Utils/Console.h</label>
+        <childnode refid="2401" relation="include">
+        </childnode>
+        <childnode refid="2412" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2393">
-        <label>Source/Compiler/Generator/Generator.cpp</label>
-      </node>
-      <node id="2397">
-        <label>Source/Compiler/Generator/VmEmitter.h</label>
-        <childnode refid="2393" relation="include">
-        </childnode>
-        <childnode refid="2398" relation="include">
-        </childnode>
-      </node>
-      <node id="2389">
-        <label>Source/Compiler/Common/Node.cpp</label>
-      </node>
-      <node id="2398">
-        <label>Source/Compiler/Generator/VmEmitter.cpp</label>
-      </node>
-      <node id="2391">
-        <label>Source/Compiler/Common/Tree.cpp</label>
-      </node>
-      <node id="2392">
-        <label>Source/Compiler/Common/XmlWriter.cpp</label>
-      </node>
-      <node id="2386">
-        <label>Source/Compiler/Analyzer/Parser.cpp</label>
-      </node>
-      <node id="2388">
-        <label>Source/Compiler/Common/DotWriter.cpp</label>
-      </node>
-      <node id="2396">
+      <node id="2428">
         <label>Source/Computer/Application.cpp</label>
       </node>
-      <node id="2394">
+      <node id="2429">
+        <label>Source/Compiler/Generator/VmEmitter.h</label>
+        <childnode refid="2424" relation="include">
+        </childnode>
+        <childnode refid="2430" relation="include">
+        </childnode>
+      </node>
+      <node id="2425">
         <label>Source/Compiler/Generator/Generator.h</label>
-        <childnode refid="2393" relation="include">
+        <childnode refid="2426" relation="include">
         </childnode>
-        <childnode refid="2395" relation="include">
+        <childnode refid="2424" relation="include">
         </childnode>
-        <childnode refid="2396" relation="include">
+        <childnode refid="2427" relation="include">
+        </childnode>
+        <childnode refid="2428" relation="include">
         </childnode>
       </node>
-      <node id="2387">
-        <label>Source/Compiler/Analyzer/ParseUtils.cpp</label>
-      </node>
-      <node id="2395">
-        <label>Source/Compiler/Generator/Main.cpp</label>
-      </node>
-      <node id="2390">
+      <node id="2421">
         <label>Source/Compiler/Common/NodeUtils.cpp</label>
       </node>
-      <node id="2385">
+      <node id="2417">
+        <label>Source/Compiler/Analyzer/Parser.cpp</label>
+      </node>
+      <node id="2416">
         <label>Source/Compiler/Common/Node.h</label>
         <link refid="a00716"/>
-        <childnode refid="2386" relation="include">
+        <childnode refid="2417" relation="include">
         </childnode>
-        <childnode refid="2387" relation="include">
+        <childnode refid="2418" relation="include">
         </childnode>
-        <childnode refid="2388" relation="include">
+        <childnode refid="2419" relation="include">
         </childnode>
-        <childnode refid="2389" relation="include">
+        <childnode refid="2420" relation="include">
         </childnode>
-        <childnode refid="2390" relation="include">
+        <childnode refid="2421" relation="include">
         </childnode>
-        <childnode refid="2391" relation="include">
+        <childnode refid="2422" relation="include">
         </childnode>
-        <childnode refid="2392" relation="include">
+        <childnode refid="2423" relation="include">
         </childnode>
-        <childnode refid="2393" relation="include">
+        <childnode refid="2424" relation="include">
         </childnode>
-        <childnode refid="2394" relation="include">
+        <childnode refid="2425" relation="include">
         </childnode>
-        <childnode refid="2397" relation="include">
+        <childnode refid="2429" relation="include">
         </childnode>
+      </node>
+      <node id="2423">
+        <label>Source/Compiler/Common/XmlWriter.cpp</label>
+      </node>
+      <node id="2420">
+        <label>Source/Compiler/Common/Node.cpp</label>
+      </node>
+      <node id="2424">
+        <label>Source/Compiler/Generator/Generator.cpp</label>
+      </node>
+      <node id="2422">
+        <label>Source/Compiler/Common/Tree.cpp</label>
+      </node>
+      <node id="2419">
+        <label>Source/Compiler/Common/DotWriter.cpp</label>
+      </node>
+      <node id="2426">
+        <label>Source/Compiler/Compiler/Main.cpp</label>
+      </node>
+      <node id="2430">
+        <label>Source/Compiler/Generator/VmEmitter.cpp</label>
+      </node>
+      <node id="2418">
+        <label>Source/Compiler/Analyzer/ParseUtils.cpp</label>
+      </node>
+      <node id="2427">
+        <label>Source/Compiler/Generator/Main.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="a01173" prot="public">Hack::Compiler::Node</innerclass>

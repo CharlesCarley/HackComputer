@@ -4,38 +4,38 @@
     <compoundname>Scope.cpp</compoundname>
     <includes refid="a00752" local="yes">Compiler/Generator/Scope.h</includes>
     <incdepgraph>
-      <node id="2599">
+      <node id="2633">
+        <label>Compiler/Common/Tree.h</label>
+        <childnode refid="2634" relation="include">
+        </childnode>
+      </node>
+      <node id="2636">
         <label>string</label>
       </node>
-      <node id="2600">
+      <node id="2634">
+        <label>Utils/String.h</label>
+        <childnode refid="2635" relation="include">
+        </childnode>
+        <childnode refid="2636" relation="include">
+        </childnode>
+        <childnode refid="2637" relation="include">
+        </childnode>
+      </node>
+      <node id="2632">
+        <label>Compiler/Generator/Scope.h</label>
+        <childnode refid="2633" relation="include">
+        </childnode>
+      </node>
+      <node id="2637">
         <label>vector</label>
       </node>
-      <node id="2598">
+      <node id="2635">
         <label>sstream</label>
       </node>
-      <node id="2595">
-        <label>Compiler/Generator/Scope.h</label>
-        <childnode refid="2596" relation="include">
-        </childnode>
-      </node>
-      <node id="2594">
+      <node id="2631">
         <label>Source/Compiler/Generator/Scope.cpp</label>
         <link refid="a00749"/>
-        <childnode refid="2595" relation="include">
-        </childnode>
-      </node>
-      <node id="2596">
-        <label>Compiler/Common/Tree.h</label>
-        <childnode refid="2597" relation="include">
-        </childnode>
-      </node>
-      <node id="2597">
-        <label>Utils/String.h</label>
-        <childnode refid="2598" relation="include">
-        </childnode>
-        <childnode refid="2599" relation="include">
-        </childnode>
-        <childnode refid="2600" relation="include">
+        <childnode refid="2632" relation="include">
         </childnode>
       </node>
     </incdepgraph>

@@ -7,8 +7,6 @@
 <br/>
 <br/>
 <ul>
-<li><a href="a00933.md#application">Application</a>
-</li>
 <li><a href="a00929.md#instruction">Hack::Assembler::Instruction</a>
 </li>
 <li><a href="a00941.md#keywordtable">Hack::Assembler::KeywordTable</a>
@@ -224,6 +222,8 @@
 <li><a href="a01357.md#parser">Hack::VirtualMachine::Parser</a>
 </li>
 <li><a href="a01365.md#scanner">Hack::VirtualMachine::Scanner</a>
+</li>
+<li><a href="a00933.md#hackcompiler">HackCompiler</a>
 </li>
 <li><a href="a00953.md#handletype">HandleType</a>
 </li>

@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01306" kind="class" language="C++" prot="public">
+    <compoundname>Hack::Ui::ColorCacheItem</compoundname>
+    <includes local="no">Source/Utils/UserInterface/ColorCache.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="a01306_1a413ff8f44079e59076eabdcefb7de39e" prot="private" static="no" mutable="no">
+        <type><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
+        <definition>String Hack::Ui::ColorCacheItem::_bg</definition>
+        <argsstring></argsstring>
+        <name>_bg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/ColorCache.h" line="32" column="1" bodyfile="Source/Utils/UserInterface/ColorCache.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01306_1ac78a0e7f7ef1bd7e282a391c11a5e470" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Hack::Ui::ColorCacheItem::_color</definition>
+        <argsstring></argsstring>
+        <name>_color</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/ColorCache.h" line="33" column="1" bodyfile="Source/Utils/UserInterface/ColorCache.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01306_1a630973c8e455d3a4ed51b9af806ec0eb" prot="private" static="no" mutable="no">
+        <type><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
+        <definition>String Hack::Ui::ColorCacheItem::_fg</definition>
+        <argsstring></argsstring>
+        <name>_fg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/ColorCache.h" line="31" column="1" bodyfile="Source/Utils/UserInterface/ColorCache.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a01306_1a04350776fd6cc3d65ef7626e589768fb" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Ui::ColorCacheItem::ColorCacheItem</definition>
+        <argsstring>(uint32_t color)</argsstring>
+        <name>ColorCacheItem</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/ColorCache.h" line="36" column="1" bodyfile="Source/Utils/UserInterface/ColorCache.cpp" bodystart="27" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="a01306_1a1a5210b986d9ff0617c203130ef00920" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Ui::ColorCacheItem::~ColorCacheItem</definition>
+        <argsstring>()</argsstring>
+        <name>~ColorCacheItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/ColorCache.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a01306_1abf01becdb6124b1d41193946579e8b04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * Hack::Ui::ColorCacheItem::background</definition>
+        <argsstring>()</argsstring>
+        <name>background</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/ColorCache.h" line="40" column="1" bodyfile="Source/Utils/UserInterface/ColorCache.cpp" bodystart="41" bodyend="46"/>
+        <references refid="a01330_1a2c11ad765cd58a32fc3d588f8d8f1cb3" compoundref="a00875" startline="184" endline="187">Hack::Ui::Color::background</references>
+      </memberdef>
+      <memberdef kind="function" id="a01306_1a4a1c504a633ab80a0a3a70dc0731e810" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * Hack::Ui::ColorCacheItem::foreground</definition>
+        <argsstring>()</argsstring>
+        <name>foreground</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/ColorCache.h" line="39" column="1" bodyfile="Source/Utils/UserInterface/ColorCache.cpp" bodystart="34" bodyend="39"/>
+        <references refid="a01330_1a7df5afa30dd84cb9566b5122a7636d17" compoundref="a00875" startline="179" endline="182">Hack::Ui::Color::foreground</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/Utils/UserInterface/ColorCache.h" line="29" column="1" bodyfile="Source/Utils/UserInterface/ColorCache.h" bodystart="28" bodyend="41"/>
+    <listofallmembers>
+      <member refid="a01306_1a413ff8f44079e59076eabdcefb7de39e" prot="private" virt="non-virtual"><scope>Hack::Ui::ColorCacheItem</scope><name>_bg</name></member>
+      <member refid="a01306_1ac78a0e7f7ef1bd7e282a391c11a5e470" prot="private" virt="non-virtual"><scope>Hack::Ui::ColorCacheItem</scope><name>_color</name></member>
+      <member refid="a01306_1a630973c8e455d3a4ed51b9af806ec0eb" prot="private" virt="non-virtual"><scope>Hack::Ui::ColorCacheItem</scope><name>_fg</name></member>
+      <member refid="a01306_1abf01becdb6124b1d41193946579e8b04" prot="public" virt="non-virtual"><scope>Hack::Ui::ColorCacheItem</scope><name>background</name></member>
+      <member refid="a01306_1a04350776fd6cc3d65ef7626e589768fb" prot="public" virt="non-virtual"><scope>Hack::Ui::ColorCacheItem</scope><name>ColorCacheItem</name></member>
+      <member refid="a01306_1a4a1c504a633ab80a0a3a70dc0731e810" prot="public" virt="non-virtual"><scope>Hack::Ui::ColorCacheItem</scope><name>foreground</name></member>
+      <member refid="a01306_1a1a5210b986d9ff0617c203130ef00920" prot="public" virt="non-virtual"><scope>Hack::Ui::ColorCacheItem</scope><name>~ColorCacheItem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

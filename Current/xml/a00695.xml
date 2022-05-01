@@ -4,83 +4,83 @@
     <compoundname>XOr.cpp</compoundname>
     <includes refid="a00698" local="yes">Chips/XOr.h</includes>
     <incdepgraph>
-      <node id="2252">
-        <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="2253" relation="include">
-        </childnode>
-      </node>
-      <node id="2244">
-        <label>Chips/BitUtils.h</label>
-        <childnode refid="2245" relation="include">
-        </childnode>
-        <childnode refid="2246" relation="include">
-        </childnode>
-      </node>
-      <node id="2253">
-        <label>cstdint</label>
-      </node>
-      <node id="2249">
-        <label>string</label>
-      </node>
-      <node id="2241">
+      <node id="2271">
         <label>Source/Chips/XOr.cpp</label>
         <link refid="a00695"/>
-        <childnode refid="2242" relation="include">
+        <childnode refid="2272" relation="include">
         </childnode>
       </node>
-      <node id="2251">
+      <node id="2272">
+        <label>Chips/XOr.h</label>
+        <childnode refid="2273" relation="include">
+        </childnode>
+      </node>
+      <node id="2283">
+        <label>cstdint</label>
+      </node>
+      <node id="2274">
+        <label>Chips/BitUtils.h</label>
+        <childnode refid="2275" relation="include">
+        </childnode>
+        <childnode refid="2276" relation="include">
+        </childnode>
+      </node>
+      <node id="2281">
         <label>UserInterface/Context.h</label>
-        <childnode refid="2247" relation="include">
+        <childnode refid="2277" relation="include">
         </childnode>
-        <childnode refid="2252" relation="include">
+        <childnode refid="2282" relation="include">
         </childnode>
-        <childnode refid="2254" relation="include">
-        </childnode>
-      </node>
-      <node id="2254">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="2253" relation="include">
-        </childnode>
-        <childnode refid="2250" relation="include">
-        </childnode>
-        <childnode refid="2252" relation="include">
+        <childnode refid="2284" relation="include">
         </childnode>
       </node>
-      <node id="2246">
-        <label>Utils/Console.h</label>
-        <childnode refid="2247" relation="include">
-        </childnode>
-        <childnode refid="2251" relation="include">
+      <node id="2279">
+        <label>string</label>
+      </node>
+      <node id="2282">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="2283" relation="include">
         </childnode>
       </node>
-      <node id="2245">
+      <node id="2277">
+        <label>String.h</label>
+        <childnode refid="2278" relation="include">
+        </childnode>
+        <childnode refid="2279" relation="include">
+        </childnode>
+        <childnode refid="2280" relation="include">
+        </childnode>
+      </node>
+      <node id="2275">
         <label>bitset</label>
       </node>
-      <node id="2250">
+      <node id="2280">
         <label>vector</label>
       </node>
-      <node id="2248">
+      <node id="2278">
         <label>sstream</label>
       </node>
-      <node id="2243">
+      <node id="2284">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="2283" relation="include">
+        </childnode>
+        <childnode refid="2280" relation="include">
+        </childnode>
+        <childnode refid="2282" relation="include">
+        </childnode>
+      </node>
+      <node id="2273">
         <label>Chips/Chip.h</label>
-        <childnode refid="2244" relation="include">
+        <childnode refid="2274" relation="include">
         </childnode>
-        <childnode refid="2246" relation="include">
-        </childnode>
-      </node>
-      <node id="2242">
-        <label>Chips/XOr.h</label>
-        <childnode refid="2243" relation="include">
+        <childnode refid="2276" relation="include">
         </childnode>
       </node>
-      <node id="2247">
-        <label>String.h</label>
-        <childnode refid="2248" relation="include">
+      <node id="2276">
+        <label>Utils/Console.h</label>
+        <childnode refid="2277" relation="include">
         </childnode>
-        <childnode refid="2249" relation="include">
-        </childnode>
-        <childnode refid="2250" relation="include">
+        <childnode refid="2281" relation="include">
         </childnode>
       </node>
     </incdepgraph>

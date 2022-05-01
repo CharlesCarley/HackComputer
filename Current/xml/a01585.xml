@@ -1,39 +1,21 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01585" kind="page">
-    <compoundname>Hc06</compoundname>
-    <title>Computer</title>
+    <compoundname>Hc0201</compoundname>
+    <title>Implemented Chips</title>
     <briefdescription>
-<para>Implements the primary program that ties the project&apos;s components together. </para>    </briefdescription>
+    </briefdescription>
     <detaileddescription>
-<para>Implements the primary program that ties the project&apos;s components together.</para><para><heading level="2">Computer</heading>
-</para><para>The computer executable accepts any of the source file formats that are defined in this project as its input. It then reduces the input into an array of 16-bit integers, and passes it to the <ref refid="a00919" kindref="compound">Computer</ref> class, and finally to the <ref refid="a01133" kindref="compound">Rom32</ref> class. The <ref refid="a01233" kindref="compound">RuntimeInterface</ref> is used to execute the code in various ways. <linebreak/>
+<para><ref refid="a01005" kindref="compound">Chip</ref> is the base class for all chips defined in this system.</para><para><heading level="2">Standalone Chips</heading>
+</para><para>The following classes provide the foundation for more complex chips. <linebreak/>
 <linebreak/>
 <itemizedlist>
-<listitem><para>Command Line - Runs the file until completion.</para></listitem><listitem><para>Command Line Debugger - Debugs the state of execution.</para></listitem><listitem><para>SDL Runtime - Displays only the screen memory.</para></listitem></itemizedlist>
-</para><para>If SDL is enabled, the default runtime will be SDL otherwise, the default runtime is the command line debugger.</para><para><linebreak/>
-<linebreak/>
-<programlisting filename=".txt"><codeline><highlight class="normal">Usage:<sp/>computer<sp/>&lt;options&gt;<sp/>&lt;arg[0]<sp/>..<sp/>arg[n]&gt;</highlight></codeline>
-<codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-h,<sp/>--help<sp/><sp/><sp/><sp/><sp/><sp/>Display<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>help<sp/>message</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-c<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Use<sp/>the<sp/>command<sp/>line<sp/>runtime</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-d<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Debug<sp/>the<sp/>supplied<sp/>file</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-r,<sp/>--run-end<sp/><sp/><sp/>Run<sp/>the<sp/>supplied<sp/>file<sp/>until<sp/>it<sp/>exits</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-t,<sp/>--trace<sp/><sp/><sp/><sp/><sp/>Output<sp/>a<sp/>dump<sp/>of<sp/>the<sp/>non-zero<sp/>portions<sp/>of<sp/>ram</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--show-vm<sp/><sp/><sp/>Output<sp/>the<sp/>emitted<sp/>VM<sp/>code<sp/>from<sp/>the<sp/>supplied<sp/>file</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--show-</highlight><highlight class="keyword">asm</highlight><highlight class="normal"><sp/><sp/>Output<sp/>the<sp/>emitted<sp/>assembly<sp/>code<sp/>from<sp/>the<sp/>supplied<sp/>file</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--show-mc<sp/><sp/><sp/>Output<sp/>the<sp/>emitted<sp/>machine<sp/>code<sp/>from<sp/>the<sp/>supplied<sp/>file</highlight></codeline>
-</programlisting></para><para><linebreak/>
-<heading level="3">Command Line Debugger.</heading>
-</para><para>The debugger will execute one instruction and refresh the console display with the current state of the chips. <linebreak/>
+<listitem><para><ref refid="a00977" kindref="compound">And</ref></para></listitem><listitem><para><ref refid="a01009" kindref="compound">Clock</ref></para></listitem><listitem><para><ref refid="a01033" kindref="compound">DMux</ref></para></listitem><listitem><para><ref refid="a01065" kindref="compound">Mux</ref></para></listitem><listitem><para><ref refid="a01145" kindref="compound">XOr</ref></para></listitem><listitem><para><ref refid="a01097" kindref="compound">Or</ref></para></listitem><listitem><para><ref refid="a01089" kindref="compound">Not</ref></para></listitem><listitem><para><ref refid="a01081" kindref="compound">NAnd</ref></para></listitem><listitem><para><ref refid="a01085" kindref="compound">NOr</ref></para></listitem></itemizedlist>
+</para><para><heading level="2">Combination Chips</heading>
+</para><para>The following classes are composed of one or more standalone chips. They allow the move from operating on a single binary value to multiple binary values. <linebreak/>
 <linebreak/>
 <itemizedlist>
-<listitem><para>The up-arrow key will initiate a tick.</para></listitem><listitem><para>The r key will reset execution.</para></listitem><listitem><para>The c key will loop execution.</para></listitem></itemizedlist>
-</para><para><image type="html" name="Debugger.png"></image>
-</para><sect1 id="a01585_1Hc06Defined">
-<title>Defined in</title>
-<para>The source is defined in <ulink url="../../Source/Computer">Source/Computer</ulink><linebreak/>
-</para></sect1>
-    </detaileddescription>
+<listitem><para><ref refid="a01017" kindref="compound">Computer</ref></para></listitem><listitem><para><ref refid="a00969" kindref="compound">Add16</ref></para></listitem><listitem><para><ref refid="a00973" kindref="compound">Alu</ref></para></listitem><listitem><para><ref refid="a00981" kindref="compound">And16</ref></para></listitem><listitem><para><ref refid="a00985" kindref="compound">Bit</ref></para></listitem><listitem><para><ref refid="a01021" kindref="compound">Cpu</ref></para></listitem><listitem><para><ref refid="a01029" kindref="compound">DFlipFlop</ref></para></listitem><listitem><para><ref refid="a01037" kindref="compound">DMux4Way</ref></para></listitem><listitem><para><ref refid="a01041" kindref="compound">DMux8Way</ref></para></listitem><listitem><para><ref refid="a01045" kindref="compound">FullAdder</ref></para></listitem><listitem><para><ref refid="a01049" kindref="compound">HalfAdder</ref></para></listitem><listitem><para><ref refid="a01057" kindref="compound">Inc16</ref></para></listitem><listitem><para><ref refid="a01061" kindref="compound">Memory</ref></para></listitem><listitem><para><ref refid="a01069" kindref="compound">Mux16</ref></para></listitem><listitem><para><ref refid="a01073" kindref="compound">Mux4Way16</ref></para></listitem><listitem><para><ref refid="a01077" kindref="compound">Mux8Way16</ref></para></listitem><listitem><para><ref refid="a01093" kindref="compound">Not16</ref></para></listitem><listitem><para><ref refid="a01101" kindref="compound">Or16</ref></para></listitem><listitem><para><ref refid="a01105" kindref="compound">Or8Way</ref></para></listitem><listitem><para><ref refid="a01109" kindref="compound">ProgramCounter</ref></para></listitem><listitem><para><ref refid="a00911_1a34177040653a4658b7c74d3846e164e1" kindref="member">Ram16k</ref></para></listitem><listitem><para><ref refid="a01113" kindref="compound">Ram4k</ref></para></listitem><listitem><para><ref refid="a01117" kindref="compound">Ram512</ref></para></listitem><listitem><para><ref refid="a01121" kindref="compound">Ram64</ref></para></listitem><listitem><para><ref refid="a01125" kindref="compound">Ram8</ref></para></listitem><listitem><para><ref refid="a01129" kindref="compound">Register</ref></para></listitem><listitem><para><ref refid="a01133" kindref="compound">Rom32</ref></para></listitem><listitem><para><ref refid="a00911_1a205aa97050ad01560145252139c81057" kindref="member">Screen</ref></para></listitem><listitem><para><ref refid="a01137" kindref="compound">SRLatch</ref></para></listitem><listitem><para><ref refid="a01141" kindref="compound">Timer</ref> </para></listitem></itemizedlist>
+</para>    </detaileddescription>
   </compounddef>
 </doxygen>

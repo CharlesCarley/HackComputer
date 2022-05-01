@@ -162,6 +162,18 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="364">
+        <label>Hack::Computer::RuntimeInterface</label>
+        <link refid="a01233"/>
+      </node>
+      <node id="363">
+        <label>Hack::Computer::CommandRuntime</label>
+        <link refid="a01221"/>
+        <childnode refid="364" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
       <node id="366">
         <label>Hack::Computer::RuntimeInterface</label>
         <link refid="a01233"/>
@@ -170,18 +182,6 @@
         <label>Hack::Computer::CommandRuntime</label>
         <link refid="a01221"/>
         <childnode refid="366" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="368">
-        <label>Hack::Computer::RuntimeInterface</label>
-        <link refid="a01233"/>
-      </node>
-      <node id="367">
-        <label>Hack::Computer::CommandRuntime</label>
-        <link refid="a01221"/>
-        <childnode refid="368" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

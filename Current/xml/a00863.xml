@@ -7,70 +7,70 @@
     <includedby refid="a00860" local="yes">Source/Utils/UserInterface/ColorCache.cpp</includedby>
     <includedby refid="a00884" local="yes">Source/Utils/UserInterface/Platform.h</includedby>
     <incdepgraph>
-      <node id="3753">
-        <label>Source/Utils/UserInterface/ColorCache.h</label>
-        <link refid="a00863"/>
-        <childnode refid="3754" relation="include">
-        </childnode>
-        <childnode refid="3755" relation="include">
-        </childnode>
-      </node>
-      <node id="3754">
+      <node id="3800">
         <label>cstdint</label>
       </node>
-      <node id="3757">
+      <node id="3803">
         <label>string</label>
       </node>
-      <node id="3758">
+      <node id="3801">
+        <label>Utils/String.h</label>
+        <childnode refid="3802" relation="include">
+        </childnode>
+        <childnode refid="3803" relation="include">
+        </childnode>
+        <childnode refid="3804" relation="include">
+        </childnode>
+      </node>
+      <node id="3804">
         <label>vector</label>
       </node>
-      <node id="3756">
+      <node id="3802">
         <label>sstream</label>
       </node>
-      <node id="3755">
-        <label>Utils/String.h</label>
-        <childnode refid="3756" relation="include">
+      <node id="3799">
+        <label>Source/Utils/UserInterface/ColorCache.h</label>
+        <link refid="a00863"/>
+        <childnode refid="3800" relation="include">
         </childnode>
-        <childnode refid="3757" relation="include">
-        </childnode>
-        <childnode refid="3758" relation="include">
+        <childnode refid="3801" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="3761">
-        <label>Source/Utils/UserInterface/Platform.h</label>
-        <childnode refid="3762" relation="include">
-        </childnode>
-        <childnode refid="3763" relation="include">
-        </childnode>
-      </node>
-      <node id="3759">
-        <label>Source/Utils/UserInterface/ColorCache.h</label>
-        <link refid="a00863"/>
-        <childnode refid="3760" relation="include">
-        </childnode>
-        <childnode refid="3761" relation="include">
-        </childnode>
-      </node>
-      <node id="3760">
+      <node id="3806">
         <label>Source/Utils/UserInterface/ColorCache.cpp</label>
       </node>
-      <node id="3764">
+      <node id="3807">
+        <label>Source/Utils/UserInterface/Platform.h</label>
+        <childnode refid="3808" relation="include">
+        </childnode>
+        <childnode refid="3809" relation="include">
+        </childnode>
+      </node>
+      <node id="3808">
+        <label>Source/Utils/UserInterface/Platform.cpp</label>
+      </node>
+      <node id="3810">
         <label>Source/Utils/UserInterface/Context.cpp</label>
       </node>
-      <node id="3765">
-        <label>Source/Utils/UserInterface/PlatformUnix.cpp</label>
-      </node>
-      <node id="3763">
+      <node id="3809">
         <label>Source/Utils/UserInterface/PlatformUnix.h</label>
-        <childnode refid="3764" relation="include">
+        <childnode refid="3810" relation="include">
         </childnode>
-        <childnode refid="3765" relation="include">
+        <childnode refid="3811" relation="include">
         </childnode>
       </node>
-      <node id="3762">
-        <label>Source/Utils/UserInterface/Platform.cpp</label>
+      <node id="3805">
+        <label>Source/Utils/UserInterface/ColorCache.h</label>
+        <link refid="a00863"/>
+        <childnode refid="3806" relation="include">
+        </childnode>
+        <childnode refid="3807" relation="include">
+        </childnode>
+      </node>
+      <node id="3811">
+        <label>Source/Utils/UserInterface/PlatformUnix.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="a01309" prot="public">Hack::Ui::ColorCacheItem</innerclass>

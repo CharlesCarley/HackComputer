@@ -29,8 +29,8 @@ It provides the following options to control compilation.
  - Emits conditional instructions to prevent pushing ram segments when its out of context.
 - Hack_USE_SDL | OFF
  - Enables or disables the SDL runtime.
-- Hack_TEST_REGEN_CMP | OFF
- - Regenerates a output snapshot of the generated test compare files.
+- Hack_GEN_SVG_PARSE_TREES | OFF
+ - Regenerates SVG files off of the .jack files in the \dir_link{Test/Jack} directory.
  
  */
 #pragma once

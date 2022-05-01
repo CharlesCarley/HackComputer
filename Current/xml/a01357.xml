@@ -214,80 +214,80 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="467">
+        <label>Hack::VirtualMachine::Parser</label>
+        <link refid="a01357"/>
+        <childnode refid="468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="468">
+        <label>Hack::ParserBase</label>
+        <link refid="a01293"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="475">
+        <label>size_t</label>
+      </node>
+      <node id="473">
+        <label>Hack::IndexCache&lt; String &gt;</label>
+        <link refid="a01277"/>
+      </node>
+      <node id="477">
+        <label>IStream *</label>
+      </node>
+      <node id="478">
+        <label>int32_t</label>
+      </node>
       <node id="469">
         <label>Hack::VirtualMachine::Parser</label>
         <link refid="a01357"/>
         <childnode refid="470" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="476">
+        <label>string</label>
+      </node>
+      <node id="471">
+        <label>vector&lt; TokenBase &gt;</label>
+      </node>
       <node id="470">
         <label>Hack::ParserBase</label>
         <link refid="a01293"/>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="477">
-        <label>size_t</label>
-      </node>
-      <node id="475">
-        <label>Hack::IndexCache&lt; String &gt;</label>
-        <link refid="a01277"/>
-      </node>
-      <node id="479">
-        <label>IStream *</label>
-      </node>
-      <node id="480">
-        <label>int32_t</label>
-      </node>
-      <node id="471">
-        <label>Hack::VirtualMachine::Parser</label>
-        <link refid="a01357"/>
-        <childnode refid="472" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="478">
-        <label>string</label>
-      </node>
-      <node id="473">
-        <label>vector&lt; TokenBase &gt;</label>
-      </node>
-      <node id="472">
-        <label>Hack::ParserBase</label>
-        <link refid="a01293"/>
-        <childnode refid="473" relation="usage">
+        <childnode refid="471" relation="usage">
           <edgelabel>_tokens</edgelabel>
         </childnode>
-        <childnode refid="474" relation="usage">
+        <childnode refid="472" relation="usage">
           <edgelabel>_scanner</edgelabel>
         </childnode>
-        <childnode refid="480" relation="usage">
+        <childnode refid="478" relation="usage">
           <edgelabel>_cursor</edgelabel>
         </childnode>
-        <childnode refid="478" relation="usage">
+        <childnode refid="476" relation="usage">
           <edgelabel>_filePath</edgelabel>
           <edgelabel>_file</edgelabel>
         </childnode>
       </node>
-      <node id="474">
+      <node id="472">
         <label>Hack::ScannerBase</label>
         <link refid="a01297"/>
-        <childnode refid="475" relation="usage">
+        <childnode refid="473" relation="usage">
           <edgelabel>_stringTable</edgelabel>
         </childnode>
-        <childnode refid="476" relation="usage">
+        <childnode refid="474" relation="usage">
           <edgelabel>_intTable</edgelabel>
         </childnode>
-        <childnode refid="477" relation="usage">
+        <childnode refid="475" relation="usage">
           <edgelabel>_line</edgelabel>
         </childnode>
-        <childnode refid="478" relation="usage">
+        <childnode refid="476" relation="usage">
           <edgelabel>_file</edgelabel>
         </childnode>
-        <childnode refid="479" relation="usage">
+        <childnode refid="477" relation="usage">
           <edgelabel>_stream</edgelabel>
         </childnode>
       </node>
-      <node id="476">
+      <node id="474">
         <label>Hack::IndexCache&lt; int &gt;</label>
         <link refid="a01277"/>
       </node>

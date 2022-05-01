@@ -204,9 +204,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="136">
+        <label>Hack::Chips::Chip&lt; uint16_t, 16 &gt;</label>
+        <link refid="a01005"/>
+      </node>
+      <node id="135">
+        <label>Hack::Chips::DMux8Way</label>
+        <link refid="a01041"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
       <node id="138">
         <label>Hack::Chips::Chip&lt; uint16_t, 16 &gt;</label>
         <link refid="a01005"/>
+        <childnode refid="139" relation="usage">
+          <edgelabel>_bits</edgelabel>
+        </childnode>
       </node>
       <node id="137">
         <label>Hack::Chips::DMux8Way</label>
@@ -214,22 +229,7 @@
         <childnode refid="138" relation="public-inheritance">
         </childnode>
       </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="140">
-        <label>Hack::Chips::Chip&lt; uint16_t, 16 &gt;</label>
-        <link refid="a01005"/>
-        <childnode refid="141" relation="usage">
-          <edgelabel>_bits</edgelabel>
-        </childnode>
-      </node>
       <node id="139">
-        <label>Hack::Chips::DMux8Way</label>
-        <link refid="a01041"/>
-        <childnode refid="140" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="141">
         <label>uint16_t</label>
         <link refid="a01373"/>
       </node>

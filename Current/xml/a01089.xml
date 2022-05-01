@@ -73,33 +73,33 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="207">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="a01005"/>
+      </node>
+      <node id="206">
+        <label>Hack::Chips::Not</label>
+        <link refid="a01089"/>
+        <childnode refid="207" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="210">
+        <label>uint8_t</label>
+        <link refid="a01385"/>
+      </node>
       <node id="209">
         <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
         <link refid="a01005"/>
+        <childnode refid="210" relation="usage">
+          <edgelabel>_bits</edgelabel>
+        </childnode>
       </node>
       <node id="208">
         <label>Hack::Chips::Not</label>
         <link refid="a01089"/>
         <childnode refid="209" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="212">
-        <label>uint8_t</label>
-        <link refid="a01385"/>
-      </node>
-      <node id="211">
-        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
-        <link refid="a01005"/>
-        <childnode refid="212" relation="usage">
-          <edgelabel>_bits</edgelabel>
-        </childnode>
-      </node>
-      <node id="210">
-        <label>Hack::Chips::Not</label>
-        <link refid="a01089"/>
-        <childnode refid="211" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

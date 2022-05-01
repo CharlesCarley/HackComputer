@@ -4,103 +4,103 @@
     <compoundname>Symbol.cpp</compoundname>
     <includes refid="a00758" local="yes">Compiler/Generator/Symbol.h</includes>
     <incdepgraph>
-      <node id="2625">
-        <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="2626" relation="include">
+      <node id="2652">
+        <label>Utils/Exception.h</label>
+        <childnode refid="2653" relation="include">
+        </childnode>
+        <childnode refid="2654" relation="include">
+        </childnode>
+        <childnode refid="2655" relation="include">
+        </childnode>
+        <childnode refid="2656" relation="include">
+        </childnode>
+        <childnode refid="2657" relation="include">
         </childnode>
       </node>
-      <node id="2611">
-        <label>Compiler/Generator/Symbol.h</label>
-        <childnode refid="2612" relation="include">
-        </childnode>
-      </node>
-      <node id="2626">
+      <node id="2663">
         <label>cstdint</label>
       </node>
-      <node id="2617">
+      <node id="2661">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="2657" relation="include">
+        </childnode>
+        <childnode refid="2662" relation="include">
+        </childnode>
+        <childnode refid="2664" relation="include">
+        </childnode>
+      </node>
+      <node id="2654">
         <label>stdexcept</label>
       </node>
-      <node id="2622">
+      <node id="2659">
         <label>string</label>
       </node>
-      <node id="2614">
+      <node id="2651">
         <label>unordered_set</label>
       </node>
-      <node id="2616">
+      <node id="2648">
+        <label>Compiler/Generator/Symbol.h</label>
+        <childnode refid="2649" relation="include">
+        </childnode>
+      </node>
+      <node id="2653">
         <label>exception</label>
       </node>
-      <node id="2624">
-        <label>UserInterface/Context.h</label>
-        <childnode refid="2620" relation="include">
-        </childnode>
-        <childnode refid="2625" relation="include">
-        </childnode>
-        <childnode refid="2627" relation="include">
+      <node id="2662">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="2663" relation="include">
         </childnode>
       </node>
-      <node id="2627">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="2626" relation="include">
+      <node id="2657">
+        <label>String.h</label>
+        <childnode refid="2658" relation="include">
         </childnode>
-        <childnode refid="2623" relation="include">
+        <childnode refid="2659" relation="include">
         </childnode>
-        <childnode refid="2625" relation="include">
+        <childnode refid="2660" relation="include">
         </childnode>
       </node>
-      <node id="2612">
+      <node id="2649">
         <label>Utils/IndexCache.h</label>
-        <childnode refid="2613" relation="include">
+        <childnode refid="2650" relation="include">
         </childnode>
-        <childnode refid="2614" relation="include">
+        <childnode refid="2651" relation="include">
         </childnode>
-        <childnode refid="2615" relation="include">
-        </childnode>
-      </node>
-      <node id="2619">
-        <label>Utils/Console.h</label>
-        <childnode refid="2620" relation="include">
-        </childnode>
-        <childnode refid="2624" relation="include">
+        <childnode refid="2652" relation="include">
         </childnode>
       </node>
-      <node id="2623">
+      <node id="2660">
         <label>vector</label>
       </node>
-      <node id="2618">
+      <node id="2655">
         <label>utility</label>
       </node>
-      <node id="2621">
+      <node id="2658">
         <label>sstream</label>
       </node>
-      <node id="2615">
-        <label>Utils/Exception.h</label>
-        <childnode refid="2616" relation="include">
-        </childnode>
-        <childnode refid="2617" relation="include">
-        </childnode>
-        <childnode refid="2618" relation="include">
-        </childnode>
-        <childnode refid="2619" relation="include">
-        </childnode>
-        <childnode refid="2620" relation="include">
-        </childnode>
-      </node>
-      <node id="2613">
-        <label>unordered_map</label>
-      </node>
-      <node id="2610">
+      <node id="2647">
         <label>Source/Compiler/Generator/Symbol.cpp</label>
         <link refid="a00755"/>
-        <childnode refid="2611" relation="include">
+        <childnode refid="2648" relation="include">
         </childnode>
       </node>
-      <node id="2620">
-        <label>String.h</label>
-        <childnode refid="2621" relation="include">
+      <node id="2650">
+        <label>unordered_map</label>
+      </node>
+      <node id="2664">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="2663" relation="include">
         </childnode>
-        <childnode refid="2622" relation="include">
+        <childnode refid="2660" relation="include">
         </childnode>
-        <childnode refid="2623" relation="include">
+        <childnode refid="2662" relation="include">
+        </childnode>
+      </node>
+      <node id="2656">
+        <label>Utils/Console.h</label>
+        <childnode refid="2657" relation="include">
+        </childnode>
+        <childnode refid="2661" relation="include">
         </childnode>
       </node>
     </incdepgraph>

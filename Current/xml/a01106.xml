@@ -1,0 +1,301 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01106" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>Hack::Chips::ProgramCounter</compoundname>
+    <basecompoundref refid="a01002" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; bit64_t, 64 &gt;</basecompoundref>
+    <includes local="no">Source/Chips/ProgramCounter.h</includes>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="a01106_1ad10bb5b0aa0dbeed66d38443525594b3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::ProgramCounter::evaluate</definition>
+        <argsstring>()</argsstring>
+        <name>evaluate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/ProgramCounter.h" line="41" column="1" bodyfile="Source/Chips/ProgramCounter.cpp" bodystart="106" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="a01106_1a0f47b8a836ccfabed9c7fe3ffa6532bc" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::ProgramCounter::isDirty</definition>
+        <argsstring>() override</argsstring>
+        <name>isDirty</name>
+        <reimplements refid="a01002_1a63bb368bb0827830235759b33718d1b4">isDirty</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/ProgramCounter.h" line="43" column="1" bodyfile="Source/Chips/ProgramCounter.cpp" bodystart="101" bodyend="104"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a01106_1a911b6b86abccb32bb7f58b7f118d6cd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Chips::ProgramCounter::ProgramCounter</definition>
+        <argsstring>()</argsstring>
+        <name>ProgramCounter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/ProgramCounter.h" line="50" column="1" bodyfile="Source/Chips/ProgramCounter.cpp" bodystart="32" bodyend="36"/>
+        <references refid="a01002_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00485" startline="49">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00994_1a741dc95ddcf042b70e2747571d95cd82" compoundref="a00482" startline="76">Hack::Chips::bit64_t::ll</references>
+        <references refid="a00994_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00482" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="a00908_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00482" startline="40">Hack::Chips::Bit7</references>
+      </memberdef>
+      <memberdef kind="function" id="a01106_1a1fb936fe940e54330e4f2616c123fafd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a01370" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::ProgramCounter::getOut</definition>
+        <argsstring>()</argsstring>
+        <name>getOut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/ProgramCounter.h" line="66" column="1" bodyfile="Source/Chips/ProgramCounter.cpp" bodystart="94" bodyend="99"/>
+        <references refid="a01002_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00485" startline="49">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00994_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00482" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="a00908_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00482" startline="40">Hack::Chips::Bit7</references>
+        <references refid="a00908_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" compoundref="a00482" startline="39">Hack::Chips::Bit6</references>
+        <references refid="a00994_1af415893333942f41fb4c4ad619083a16" compoundref="a00482" startline="78">Hack::Chips::bit64_t::s</references>
+      </memberdef>
+      <memberdef kind="function" id="a01106_1a29da0fadf3fa09aaf42825d04338ffc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::ProgramCounter::lock</definition>
+        <argsstring>(bool v)</argsstring>
+        <name>lock</name>
+        <param>
+          <type>bool</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/ProgramCounter.h" line="52" column="1" bodyfile="Source/Chips/ProgramCounter.cpp" bodystart="50" bodyend="56"/>
+        <references refid="a01002_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00485" startline="49">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00994_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00482" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="a00908_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" compoundref="a00482" startline="39">Hack::Chips::Bit6</references>
+      </memberdef>
+      <memberdef kind="function" id="a01106_1a3621404b49cf9b287f3e1357bce37052" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::ProgramCounter::setClock</definition>
+        <argsstring>(bool v)</argsstring>
+        <name>setClock</name>
+        <param>
+          <type>bool</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/ProgramCounter.h" line="64" column="1" bodyfile="Source/Chips/ProgramCounter.cpp" bodystart="88" bodyend="92"/>
+        <references refid="a01002_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00485" startline="49">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00994_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00482" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="a00908_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00482" startline="40">Hack::Chips::Bit7</references>
+      </memberdef>
+      <memberdef kind="function" id="a01106_1a9c5e06a871048c0c5cce9e366bee05e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::ProgramCounter::setFlags</definition>
+        <argsstring>(const uint8_t &amp;v)</argsstring>
+        <name>setFlags</name>
+        <param>
+          <type>const <ref refid="a01382" kindref="compound">uint8_t</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/ProgramCounter.h" line="56" column="1" bodyfile="Source/Chips/ProgramCounter.cpp" bodystart="44" bodyend="48"/>
+        <references refid="a01002_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00485" startline="49">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00994_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00482" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="a00908_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00482" startline="40">Hack::Chips::Bit7</references>
+      </memberdef>
+      <memberdef kind="function" id="a01106_1a609ef4c3189b3cc5a3ab835c5be8510d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::ProgramCounter::setIn</definition>
+        <argsstring>(const uint16_t &amp;v)</argsstring>
+        <name>setIn</name>
+        <param>
+          <type>const <ref refid="a01370" kindref="compound">uint16_t</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/ProgramCounter.h" line="54" column="1" bodyfile="Source/Chips/ProgramCounter.cpp" bodystart="38" bodyend="42"/>
+        <references refid="a01002_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00485" startline="49">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00994_1af415893333942f41fb4c4ad619083a16" compoundref="a00482" startline="78">Hack::Chips::bit64_t::s</references>
+        <references refid="a00994_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00482" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="a00908_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00482" startline="40">Hack::Chips::Bit7</references>
+      </memberdef>
+      <memberdef kind="function" id="a01106_1a6cb44c6579a58a94a3f30e22e1b4856c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::ProgramCounter::setInc</definition>
+        <argsstring>(bool v)</argsstring>
+        <name>setInc</name>
+        <param>
+          <type>bool</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/ProgramCounter.h" line="62" column="1" bodyfile="Source/Chips/ProgramCounter.cpp" bodystart="58" bodyend="66"/>
+        <references refid="a01002_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00485" startline="49">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00994_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00482" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="a00908_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" compoundref="a00482" startline="33">Hack::Chips::Bit0</references>
+        <references refid="a00908_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00482" startline="40">Hack::Chips::Bit7</references>
+      </memberdef>
+      <memberdef kind="function" id="a01106_1a0fcf49248686a2473db97c221f3689a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::ProgramCounter::setLoad</definition>
+        <argsstring>(bool v)</argsstring>
+        <name>setLoad</name>
+        <param>
+          <type>bool</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/ProgramCounter.h" line="58" column="1" bodyfile="Source/Chips/ProgramCounter.cpp" bodystart="78" bodyend="86"/>
+        <references refid="a01002_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00485" startline="49">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00994_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00482" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="a00908_1a89719f49d745047f03bca80bfff48bd2a8a09deb894b81cd01eb5ea4d9f1f1cf5" compoundref="a00482" startline="35">Hack::Chips::Bit2</references>
+        <references refid="a00908_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00482" startline="40">Hack::Chips::Bit7</references>
+      </memberdef>
+      <memberdef kind="function" id="a01106_1accd1e5521922b6ad8b829e2b12d5bc1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::ProgramCounter::setReset</definition>
+        <argsstring>(bool v)</argsstring>
+        <name>setReset</name>
+        <param>
+          <type>bool</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/ProgramCounter.h" line="60" column="1" bodyfile="Source/Chips/ProgramCounter.cpp" bodystart="68" bodyend="76"/>
+        <references refid="a01002_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="a00485" startline="49">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
+        <references refid="a00994_1a768ed5502c17271b965e340e048ae5c5" compoundref="a00482" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="a00908_1a89719f49d745047f03bca80bfff48bd2a8487c63d5dca7d87b359feca1a2c2ac8" compoundref="a00482" startline="34">Hack::Chips::Bit1</references>
+        <references refid="a00908_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="a00482" startline="40">Hack::Chips::Bit7</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="237">
+        <label>Hack::Chips::ProgramCounter</label>
+        <link refid="a01106"/>
+        <childnode refid="238" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="238">
+        <label>Hack::Chips::Chip&lt; bit64_t, 64 &gt;</label>
+        <link refid="a01002"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="239">
+        <label>Hack::Chips::ProgramCounter</label>
+        <link refid="a01106"/>
+        <childnode refid="240" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="242">
+        <label>uint64_t</label>
+      </node>
+      <node id="243">
+        <label>uint16_t</label>
+        <link refid="a01370"/>
+      </node>
+      <node id="244">
+        <label>uint32_t</label>
+      </node>
+      <node id="245">
+        <label>uint8_t</label>
+        <link refid="a01382"/>
+      </node>
+      <node id="241">
+        <label>Hack::Chips::bit64_t</label>
+        <link refid="a00994"/>
+        <childnode refid="242" relation="usage">
+          <edgelabel>ll</edgelabel>
+        </childnode>
+        <childnode refid="243" relation="usage">
+          <edgelabel>s</edgelabel>
+        </childnode>
+        <childnode refid="244" relation="usage">
+          <edgelabel>i</edgelabel>
+        </childnode>
+        <childnode refid="245" relation="usage">
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="240">
+        <label>Hack::Chips::Chip&lt; bit64_t, 64 &gt;</label>
+        <link refid="a01002"/>
+        <childnode refid="241" relation="usage">
+          <edgelabel>_bits</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Chips/ProgramCounter.h" line="39" column="1" bodyfile="Source/Chips/ProgramCounter.h" bodystart="38" bodyend="67"/>
+    <listofallmembers>
+      <member refid="a01002_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::ProgramCounter</scope><name>_bits</name></member>
+      <member refid="a01002_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::ProgramCounter</scope><name>applyBit</name></member>
+      <member refid="a01002_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::ProgramCounter</scope><name>assignBit</name></member>
+      <member refid="a01002_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::ProgramCounter</scope><name>Chip</name></member>
+      <member refid="a01002_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::ProgramCounter</scope><name>clearBit</name></member>
+      <member refid="a01106_1ad10bb5b0aa0dbeed66d38443525594b3" prot="private" virt="non-virtual"><scope>Hack::Chips::ProgramCounter</scope><name>evaluate</name></member>
+      <member refid="a01002_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::ProgramCounter</scope><name>getBit</name></member>
+      <member refid="a01106_1a1fb936fe940e54330e4f2616c123fafd" prot="public" virt="non-virtual"><scope>Hack::Chips::ProgramCounter</scope><name>getOut</name></member>
+      <member refid="a01106_1a0f47b8a836ccfabed9c7fe3ffa6532bc" prot="private" virt="virtual"><scope>Hack::Chips::ProgramCounter</scope><name>isDirty</name></member>
+      <member refid="a01106_1a29da0fadf3fa09aaf42825d04338ffc7" prot="public" virt="non-virtual"><scope>Hack::Chips::ProgramCounter</scope><name>lock</name></member>
+      <member refid="a01106_1a911b6b86abccb32bb7f58b7f118d6cd0" prot="public" virt="non-virtual"><scope>Hack::Chips::ProgramCounter</scope><name>ProgramCounter</name></member>
+      <member refid="a01002_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::ProgramCounter</scope><name>setBit</name></member>
+      <member refid="a01106_1a3621404b49cf9b287f3e1357bce37052" prot="public" virt="non-virtual"><scope>Hack::Chips::ProgramCounter</scope><name>setClock</name></member>
+      <member refid="a01106_1a9c5e06a871048c0c5cce9e366bee05e9" prot="public" virt="non-virtual"><scope>Hack::Chips::ProgramCounter</scope><name>setFlags</name></member>
+      <member refid="a01106_1a609ef4c3189b3cc5a3ab835c5be8510d" prot="public" virt="non-virtual"><scope>Hack::Chips::ProgramCounter</scope><name>setIn</name></member>
+      <member refid="a01106_1a6cb44c6579a58a94a3f30e22e1b4856c" prot="public" virt="non-virtual"><scope>Hack::Chips::ProgramCounter</scope><name>setInc</name></member>
+      <member refid="a01106_1a0fcf49248686a2473db97c221f3689a7" prot="public" virt="non-virtual"><scope>Hack::Chips::ProgramCounter</scope><name>setLoad</name></member>
+      <member refid="a01106_1accd1e5521922b6ad8b829e2b12d5bc1c" prot="public" virt="non-virtual"><scope>Hack::Chips::ProgramCounter</scope><name>setReset</name></member>
+      <member refid="a01002_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::ProgramCounter</scope><name>~Chip</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

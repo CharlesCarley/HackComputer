@@ -20,7 +20,7 @@
     <includedby refid="a00545" local="yes">Source/Chips/HalfAdder.h</includedby>
     <includedby refid="a00548" local="yes">Source/Chips/IMemorySegment.h</includedby>
     <includedby refid="a00554" local="yes">Source/Chips/Inc16.h</includedby>
-    <includedby refid="a01673" local="yes">Source/Chips/Memory.h</includedby>
+    <includedby refid="a01678" local="yes">Source/Chips/Memory.h</includedby>
     <includedby refid="a00572" local="yes">Source/Chips/Mux.h</includedby>
     <includedby refid="a00578" local="yes">Source/Chips/Mux16.h</includedby>
     <includedby refid="a00584" local="yes">Source/Chips/Mux4Way16.h</includedby>
@@ -42,563 +42,563 @@
     <includedby refid="a00686" local="yes">Source/Chips/SRLatch.h</includedby>
     <includedby refid="a00698" local="yes">Source/Chips/XOr.h</includedby>
     <incdepgraph>
-      <node id="960">
-        <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="961" relation="include">
-        </childnode>
-      </node>
-      <node id="952">
-        <label>Chips/BitUtils.h</label>
-        <childnode refid="953" relation="include">
-        </childnode>
-        <childnode refid="954" relation="include">
-        </childnode>
-      </node>
-      <node id="961">
+      <node id="991">
         <label>cstdint</label>
       </node>
-      <node id="957">
-        <label>string</label>
-      </node>
-      <node id="959">
-        <label>UserInterface/Context.h</label>
-        <childnode refid="955" relation="include">
+      <node id="982">
+        <label>Chips/BitUtils.h</label>
+        <childnode refid="983" relation="include">
         </childnode>
-        <childnode refid="960" relation="include">
-        </childnode>
-        <childnode refid="962" relation="include">
-        </childnode>
-      </node>
-      <node id="962">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="961" relation="include">
-        </childnode>
-        <childnode refid="958" relation="include">
-        </childnode>
-        <childnode refid="960" relation="include">
-        </childnode>
-      </node>
-      <node id="954">
-        <label>Utils/Console.h</label>
-        <childnode refid="955" relation="include">
-        </childnode>
-        <childnode refid="959" relation="include">
-        </childnode>
-      </node>
-      <node id="953">
-        <label>bitset</label>
-      </node>
-      <node id="958">
-        <label>vector</label>
-      </node>
-      <node id="956">
-        <label>sstream</label>
-      </node>
-      <node id="951">
-        <label>Source/Chips/Chip.h</label>
-        <link refid="a00488"/>
-        <childnode refid="952" relation="include">
-        </childnode>
-        <childnode refid="954" relation="include">
-        </childnode>
-      </node>
-      <node id="955">
-        <label>String.h</label>
-        <childnode refid="956" relation="include">
-        </childnode>
-        <childnode refid="957" relation="include">
-        </childnode>
-        <childnode refid="958" relation="include">
-        </childnode>
-      </node>
-    </incdepgraph>
-    <invincdepgraph>
-      <node id="1021">
-        <label>Source/Chips/NOr.cpp</label>
-      </node>
-      <node id="965">
-        <label>Source/Chips/Add16.cpp</label>
-      </node>
-      <node id="1015">
-        <label>Source/Chips/Mux4Way16.h</label>
-        <childnode refid="1014" relation="include">
-        </childnode>
-      </node>
-      <node id="979">
-        <label>Source/Computer/RuntimeSDL.h</label>
-      </node>
-      <node id="1013">
-        <label>Source/Chips/Mux16.cpp</label>
-      </node>
-      <node id="998">
-        <label>Source/Chips/DMux8Way.cpp</label>
-      </node>
-      <node id="980">
-        <label>Source/Chips/And.h</label>
-        <childnode refid="981" relation="include">
-        </childnode>
-        <childnode refid="982" relation="include">
-        </childnode>
-      </node>
-      <node id="1016">
-        <label>Source/Chips/Mux8Way16.h</label>
-        <childnode refid="1017" relation="include">
-        </childnode>
-      </node>
-      <node id="978">
-        <label>Source/Computer/DebugRuntime.h</label>
-        <childnode refid="973" relation="include">
-        </childnode>
-        <childnode refid="975" relation="include">
-        </childnode>
-      </node>
-      <node id="1028">
-        <label>Source/Chips/Or16.h</label>
-        <childnode refid="1029" relation="include">
-        </childnode>
-      </node>
-      <node id="992">
-        <label>Source/Chips/DFlipFlop.cpp</label>
-      </node>
-      <node id="1031">
-        <label>Source/Chips/Or8Way.cpp</label>
-      </node>
-      <node id="996">
-        <label>Source/Chips/DMux4Way.cpp</label>
-      </node>
-      <node id="1022">
-        <label>Source/Chips/Not.h</label>
-        <childnode refid="1023" relation="include">
-        </childnode>
-      </node>
-      <node id="984">
-        <label>Source/Chips/And16.cpp</label>
-      </node>
-      <node id="990">
-        <label>Source/Chips/Timer.cpp</label>
-      </node>
-      <node id="964">
-        <label>Source/Chips/Add16.h</label>
-        <childnode refid="965" relation="include">
-        </childnode>
-      </node>
-      <node id="970">
-        <label>Source/Chips/Computer.h</label>
-        <childnode refid="971" relation="include">
-        </childnode>
-        <childnode refid="972" relation="include">
-        </childnode>
-        <childnode refid="973" relation="include">
-        </childnode>
-        <childnode refid="974" relation="include">
-        </childnode>
-        <childnode refid="975" relation="include">
-        </childnode>
-        <childnode refid="976" relation="include">
-        </childnode>
-      </node>
-      <node id="1034">
-        <label>Source/Chips/Ram4k.h</label>
-        <childnode refid="1035" relation="include">
-        </childnode>
-      </node>
-      <node id="1047">
-        <label>Source/Chips/SRLatch.cpp</label>
-      </node>
-      <node id="1037">
-        <label>Source/Chips/Ram512.cpp</label>
-      </node>
-      <node id="968">
-        <label>Source/Chips/CPU.cpp</label>
-      </node>
-      <node id="1014">
-        <label>Source/Chips/Mux4Way16.cpp</label>
-      </node>
-      <node id="1005">
-        <label>Source/Chips/Memory.h</label>
-        <childnode refid="970" relation="include">
-        </childnode>
-        <childnode refid="1006" relation="include">
-        </childnode>
-      </node>
-      <node id="1049">
-        <label>Source/Chips/XOr.cpp</label>
-      </node>
-      <node id="1027">
-        <label>Source/Chips/Or.cpp</label>
-      </node>
-      <node id="1035">
-        <label>Source/Chips/Ram4K.cpp</label>
-      </node>
-      <node id="993">
-        <label>Source/Chips/DMux.h</label>
-        <childnode refid="994" relation="include">
-        </childnode>
-      </node>
-      <node id="971">
-        <label>Source/Bindings/Bindings.cpp</label>
-      </node>
-      <node id="999">
-        <label>Source/Chips/FullAdder.h</label>
-        <childnode refid="982" relation="include">
-        </childnode>
-      </node>
-      <node id="1019">
-        <label>Source/Chips/Nand.cpp</label>
-      </node>
-      <node id="1026">
-        <label>Source/Chips/Or.h</label>
-        <childnode refid="982" relation="include">
-        </childnode>
-        <childnode refid="1027" relation="include">
-        </childnode>
-      </node>
-      <node id="1036">
-        <label>Source/Chips/Ram512.h</label>
-        <childnode refid="1037" relation="include">
-        </childnode>
-      </node>
-      <node id="1032">
-        <label>Source/Chips/ProgramCounter.h</label>
-        <childnode refid="968" relation="include">
-        </childnode>
-        <childnode refid="969" relation="include">
-        </childnode>
-        <childnode refid="1033" relation="include">
-        </childnode>
-      </node>
-      <node id="985">
-        <label>Source/Chips/Bit.h</label>
-        <childnode refid="986" relation="include">
-        </childnode>
-      </node>
-      <node id="1017">
-        <label>Source/Chips/Mux8Way16.cpp</label>
-      </node>
-      <node id="1029">
-        <label>Source/Chips/Or16.cpp</label>
-      </node>
-      <node id="1025">
-        <label>Source/Chips/Not16.cpp</label>
-      </node>
-      <node id="1012">
-        <label>Source/Chips/Mux16.h</label>
-        <childnode refid="1013" relation="include">
-        </childnode>
-        <childnode refid="1014" relation="include">
-        </childnode>
-      </node>
-      <node id="983">
-        <label>Source/Chips/And16.h</label>
         <childnode refid="984" relation="include">
         </childnode>
       </node>
-      <node id="997">
-        <label>Source/Chips/DMux8Way.h</label>
-        <childnode refid="998" relation="include">
+      <node id="989">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="985" relation="include">
         </childnode>
-      </node>
-      <node id="1040">
-        <label>Source/Chips/Ram8.cpp</label>
-      </node>
-      <node id="1018">
-        <label>Source/Chips/NAnd.h</label>
-        <childnode refid="1019" relation="include">
+        <childnode refid="990" relation="include">
         </childnode>
-      </node>
-      <node id="966">
-        <label>Source/Chips/ALU.cpp</label>
-      </node>
-      <node id="1039">
-        <label>Source/Chips/Ram64.cpp</label>
-      </node>
-      <node id="1030">
-        <label>Source/Chips/Or8Way.h</label>
-        <childnode refid="1031" relation="include">
-        </childnode>
-      </node>
-      <node id="1020">
-        <label>Source/Chips/NOr.h</label>
-        <childnode refid="1021" relation="include">
+        <childnode refid="992" relation="include">
         </childnode>
       </node>
       <node id="987">
-        <label>Source/Chips/Clock.h</label>
+        <label>string</label>
+      </node>
+      <node id="990">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="991" relation="include">
+        </childnode>
+      </node>
+      <node id="985">
+        <label>String.h</label>
+        <childnode refid="986" relation="include">
+        </childnode>
+        <childnode refid="987" relation="include">
+        </childnode>
         <childnode refid="988" relation="include">
+        </childnode>
+      </node>
+      <node id="983">
+        <label>bitset</label>
+      </node>
+      <node id="988">
+        <label>vector</label>
+      </node>
+      <node id="986">
+        <label>sstream</label>
+      </node>
+      <node id="992">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="991" relation="include">
+        </childnode>
+        <childnode refid="988" relation="include">
+        </childnode>
+        <childnode refid="990" relation="include">
+        </childnode>
+      </node>
+      <node id="981">
+        <label>Source/Chips/Chip.h</label>
+        <link refid="a00488"/>
+        <childnode refid="982" relation="include">
+        </childnode>
+        <childnode refid="984" relation="include">
+        </childnode>
+      </node>
+      <node id="984">
+        <label>Utils/Console.h</label>
+        <childnode refid="985" relation="include">
         </childnode>
         <childnode refid="989" relation="include">
         </childnode>
       </node>
-      <node id="1046">
-        <label>Source/Chips/SRLatch.h</label>
-        <childnode refid="1047" relation="include">
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1066">
+        <label>Source/Chips/Ram512.h</label>
+        <childnode refid="1067" relation="include">
         </childnode>
       </node>
-      <node id="982">
-        <label>Source/Chips/FullAdder.cpp</label>
+      <node id="1079">
+        <label>Source/Chips/XOr.cpp</label>
       </node>
-      <node id="972">
-        <label>Source/Chips/Computer.cpp</label>
+      <node id="1003">
+        <label>Source/Computer/Application.cpp</label>
       </node>
-      <node id="995">
-        <label>Source/Chips/DMux4Way.h</label>
-        <childnode refid="996" relation="include">
-        </childnode>
+      <node id="1044">
+        <label>Source/Chips/Mux4Way16.cpp</label>
       </node>
-      <node id="974">
-        <label>Source/Computer/CommandRuntime.cpp</label>
+      <node id="1061">
+        <label>Source/Chips/Or8Way.cpp</label>
       </node>
-      <node id="1011">
-        <label>Source/Chips/Mux.cpp</label>
-      </node>
-      <node id="1024">
-        <label>Source/Chips/Not16.h</label>
-        <childnode refid="1025" relation="include">
+      <node id="1045">
+        <label>Source/Chips/Mux4Way16.h</label>
+        <childnode refid="1044" relation="include">
         </childnode>
       </node>
-      <node id="1006">
-        <label>Source/Chips/Memory.cpp</label>
+      <node id="1078">
+        <label>Source/Chips/XOr.h</label>
+        <childnode refid="1012" relation="include">
+        </childnode>
+        <childnode refid="1079" relation="include">
+        </childnode>
       </node>
-      <node id="963">
-        <label>Source/Chips/Chip.h</label>
-        <link refid="a00488"/>
-        <childnode refid="964" relation="include">
+      <node id="1023">
+        <label>Source/Chips/DMux.h</label>
+        <childnode refid="1024" relation="include">
         </childnode>
-        <childnode refid="966" relation="include">
+      </node>
+      <node id="1015">
+        <label>Source/Chips/Bit.h</label>
+        <childnode refid="1016" relation="include">
         </childnode>
-        <childnode refid="967" relation="include">
+      </node>
+      <node id="1067">
+        <label>Source/Chips/Ram512.cpp</label>
+      </node>
+      <node id="1057">
+        <label>Source/Chips/Or.cpp</label>
+      </node>
+      <node id="1031">
+        <label>Source/Chips/HalfAdder.cpp</label>
+      </node>
+      <node id="1077">
+        <label>Source/Chips/SRLatch.cpp</label>
+      </node>
+      <node id="1050">
+        <label>Source/Chips/NOr.h</label>
+        <childnode refid="1051" relation="include">
         </childnode>
-        <childnode refid="980" relation="include">
+      </node>
+      <node id="1064">
+        <label>Source/Chips/Ram4k.h</label>
+        <childnode refid="1065" relation="include">
         </childnode>
-        <childnode refid="983" relation="include">
-        </childnode>
-        <childnode refid="985" relation="include">
-        </childnode>
-        <childnode refid="987" relation="include">
-        </childnode>
-        <childnode refid="969" relation="include">
-        </childnode>
-        <childnode refid="991" relation="include">
-        </childnode>
-        <childnode refid="993" relation="include">
-        </childnode>
-        <childnode refid="995" relation="include">
-        </childnode>
-        <childnode refid="997" relation="include">
+      </node>
+      <node id="1072">
+        <label>Source/Chips/Register.h</label>
+        <childnode refid="998" relation="include">
         </childnode>
         <childnode refid="999" relation="include">
         </childnode>
-        <childnode refid="1000" relation="include">
+        <childnode refid="1073" relation="include">
         </childnode>
-        <childnode refid="1002" relation="include">
+      </node>
+      <node id="1073">
+        <label>Source/Chips/Register.cpp</label>
+      </node>
+      <node id="1037">
+        <label>Source/Chips/Screen.h</label>
+        <childnode refid="1035" relation="include">
+        </childnode>
+        <childnode refid="1007" relation="include">
         </childnode>
         <childnode refid="1008" relation="include">
         </childnode>
-        <childnode refid="1005" relation="include">
+        <childnode refid="1006" relation="include">
         </childnode>
-        <childnode refid="1010" relation="include">
+        <childnode refid="1009" relation="include">
         </childnode>
-        <childnode refid="1012" relation="include">
+      </node>
+      <node id="1001">
+        <label>Source/Bindings/Bindings.cpp</label>
+      </node>
+      <node id="996">
+        <label>Source/Chips/ALU.cpp</label>
+      </node>
+      <node id="1019">
+        <label>Source/Chips/Timer.h</label>
+        <childnode refid="1002" relation="include">
         </childnode>
-        <childnode refid="1015" relation="include">
-        </childnode>
-        <childnode refid="1016" relation="include">
-        </childnode>
-        <childnode refid="1018" relation="include">
+        <childnode refid="998" relation="include">
         </childnode>
         <childnode refid="1020" relation="include">
         </childnode>
+      </node>
+      <node id="1049">
+        <label>Source/Chips/Nand.cpp</label>
+      </node>
+      <node id="1013">
+        <label>Source/Chips/And16.h</label>
+        <childnode refid="1014" relation="include">
+        </childnode>
+      </node>
+      <node id="1075">
+        <label>Source/Chips/Rom32.cpp</label>
+      </node>
+      <node id="1070">
+        <label>Source/Chips/Ram8.cpp</label>
+      </node>
+      <node id="1042">
+        <label>Source/Chips/Mux16.h</label>
+        <childnode refid="1043" relation="include">
+        </childnode>
+        <childnode refid="1044" relation="include">
+        </childnode>
+      </node>
+      <node id="1024">
+        <label>Source/Chips/DMux.cpp</label>
+      </node>
+      <node id="1008">
+        <label>Source/Computer/DebugRuntime.h</label>
+        <childnode refid="1003" relation="include">
+        </childnode>
+        <childnode refid="1005" relation="include">
+        </childnode>
+      </node>
+      <node id="1056">
+        <label>Source/Chips/Or.h</label>
+        <childnode refid="1012" relation="include">
+        </childnode>
+        <childnode refid="1057" relation="include">
+        </childnode>
+      </node>
+      <node id="1059">
+        <label>Source/Chips/Or16.cpp</label>
+      </node>
+      <node id="1014">
+        <label>Source/Chips/And16.cpp</label>
+      </node>
+      <node id="994">
+        <label>Source/Chips/Add16.h</label>
+        <childnode refid="995" relation="include">
+        </childnode>
+      </node>
+      <node id="1065">
+        <label>Source/Chips/Ram4K.cpp</label>
+      </node>
+      <node id="1004">
+        <label>Source/Computer/CommandRuntime.cpp</label>
+      </node>
+      <node id="1012">
+        <label>Source/Chips/FullAdder.cpp</label>
+      </node>
+      <node id="1017">
+        <label>Source/Chips/Clock.h</label>
+        <childnode refid="1018" relation="include">
+        </childnode>
+        <childnode refid="1019" relation="include">
+        </childnode>
+      </node>
+      <node id="1007">
+        <label>Source/Computer/CommandRuntime.h</label>
+        <childnode refid="1003" relation="include">
+        </childnode>
+        <childnode refid="1004" relation="include">
+        </childnode>
+      </node>
+      <node id="1011">
+        <label>Source/Chips/And.cpp</label>
+      </node>
+      <node id="1054">
+        <label>Source/Chips/Not16.h</label>
+        <childnode refid="1055" relation="include">
+        </childnode>
+      </node>
+      <node id="1041">
+        <label>Source/Chips/Mux.cpp</label>
+      </node>
+      <node id="1022">
+        <label>Source/Chips/DFlipFlop.cpp</label>
+      </node>
+      <node id="1048">
+        <label>Source/Chips/NAnd.h</label>
+        <childnode refid="1049" relation="include">
+        </childnode>
+      </node>
+      <node id="1071">
+        <label>Source/Chips/Ram64.h</label>
+        <childnode refid="1069" relation="include">
+        </childnode>
+      </node>
+      <node id="1040">
+        <label>Source/Chips/Mux.h</label>
+        <childnode refid="1041" relation="include">
+        </childnode>
+      </node>
+      <node id="1069">
+        <label>Source/Chips/Ram64.cpp</label>
+      </node>
+      <node id="1053">
+        <label>Source/Chips/Not.cpp</label>
+      </node>
+      <node id="1062">
+        <label>Source/Chips/ProgramCounter.h</label>
+        <childnode refid="998" relation="include">
+        </childnode>
+        <childnode refid="999" relation="include">
+        </childnode>
+        <childnode refid="1063" relation="include">
+        </childnode>
+      </node>
+      <node id="1032">
+        <label>Source/Chips/IMemorySegment.h</label>
+        <childnode refid="1033" relation="include">
+        </childnode>
+      </node>
+      <node id="997">
+        <label>Source/Chips/ALU.h</label>
+        <childnode refid="996" relation="include">
+        </childnode>
+        <childnode refid="998" relation="include">
+        </childnode>
+        <childnode refid="999" relation="include">
+        </childnode>
+      </node>
+      <node id="1028">
+        <label>Source/Chips/DMux8Way.cpp</label>
+      </node>
+      <node id="1018">
+        <label>Source/Chips/Clock.cpp</label>
+      </node>
+      <node id="1043">
+        <label>Source/Chips/Mux16.cpp</label>
+      </node>
+      <node id="999">
+        <label>Source/Chips/CPU.h</label>
+        <childnode refid="1000" relation="include">
+        </childnode>
+        <childnode refid="998" relation="include">
+        </childnode>
+      </node>
+      <node id="1026">
+        <label>Source/Chips/DMux4Way.cpp</label>
+      </node>
+      <node id="1016">
+        <label>Source/Chips/Bit.cpp</label>
+      </node>
+      <node id="1074">
+        <label>Source/Chips/Rom32.h</label>
+        <childnode refid="1000" relation="include">
+        </childnode>
+        <childnode refid="1075" relation="include">
+        </childnode>
+      </node>
+      <node id="1029">
+        <label>Source/Chips/FullAdder.h</label>
+        <childnode refid="1012" relation="include">
+        </childnode>
+      </node>
+      <node id="1033">
+        <label>Source/Chips/DefaultMemorySegment.h</label>
+        <childnode refid="1034" relation="include">
+        </childnode>
+        <childnode refid="1037" relation="include">
+        </childnode>
+      </node>
+      <node id="1034">
+        <label>Source/Chips/Ram16k.h</label>
+        <childnode refid="1035" relation="include">
+        </childnode>
+      </node>
+      <node id="1020">
+        <label>Source/Chips/Timer.cpp</label>
+      </node>
+      <node id="1076">
+        <label>Source/Chips/SRLatch.h</label>
+        <childnode refid="1077" relation="include">
+        </childnode>
+      </node>
+      <node id="1038">
+        <label>Source/Chips/Inc16.h</label>
+        <childnode refid="1039" relation="include">
+        </childnode>
+      </node>
+      <node id="1010">
+        <label>Source/Chips/And.h</label>
+        <childnode refid="1011" relation="include">
+        </childnode>
+        <childnode refid="1012" relation="include">
+        </childnode>
+      </node>
+      <node id="1055">
+        <label>Source/Chips/Not16.cpp</label>
+      </node>
+      <node id="1051">
+        <label>Source/Chips/NOr.cpp</label>
+      </node>
+      <node id="1009">
+        <label>Source/Computer/RuntimeSDL.h</label>
+      </node>
+      <node id="1006">
+        <label>Source/Computer/RuntimeInterface.h</label>
+        <childnode refid="1007" relation="include">
+        </childnode>
+        <childnode refid="1008" relation="include">
+        </childnode>
+        <childnode refid="1009" relation="include">
+        </childnode>
+      </node>
+      <node id="1052">
+        <label>Source/Chips/Not.h</label>
+        <childnode refid="1053" relation="include">
+        </childnode>
+      </node>
+      <node id="1021">
+        <label>Source/Chips/DFlipFlop.h</label>
+        <childnode refid="1015" relation="include">
+        </childnode>
         <childnode refid="1022" relation="include">
         </childnode>
-        <childnode refid="1024" relation="include">
+      </node>
+      <node id="1036">
+        <label>Source/Chips/Memory.cpp</label>
+      </node>
+      <node id="1047">
+        <label>Source/Chips/Mux8Way16.cpp</label>
+      </node>
+      <node id="993">
+        <label>Source/Chips/Chip.h</label>
+        <link refid="a00488"/>
+        <childnode refid="994" relation="include">
         </childnode>
-        <childnode refid="1026" relation="include">
+        <childnode refid="996" relation="include">
         </childnode>
-        <childnode refid="1028" relation="include">
+        <childnode refid="997" relation="include">
+        </childnode>
+        <childnode refid="1010" relation="include">
+        </childnode>
+        <childnode refid="1013" relation="include">
+        </childnode>
+        <childnode refid="1015" relation="include">
+        </childnode>
+        <childnode refid="1017" relation="include">
+        </childnode>
+        <childnode refid="999" relation="include">
+        </childnode>
+        <childnode refid="1021" relation="include">
+        </childnode>
+        <childnode refid="1023" relation="include">
+        </childnode>
+        <childnode refid="1025" relation="include">
+        </childnode>
+        <childnode refid="1027" relation="include">
+        </childnode>
+        <childnode refid="1029" relation="include">
         </childnode>
         <childnode refid="1030" relation="include">
         </childnode>
         <childnode refid="1032" relation="include">
         </childnode>
-        <childnode refid="1034" relation="include">
-        </childnode>
-        <childnode refid="1036" relation="include">
-        </childnode>
         <childnode refid="1038" relation="include">
         </childnode>
-        <childnode refid="1041" relation="include">
+        <childnode refid="1035" relation="include">
+        </childnode>
+        <childnode refid="1040" relation="include">
         </childnode>
         <childnode refid="1042" relation="include">
         </childnode>
-        <childnode refid="1044" relation="include">
+        <childnode refid="1045" relation="include">
         </childnode>
         <childnode refid="1046" relation="include">
         </childnode>
         <childnode refid="1048" relation="include">
         </childnode>
-      </node>
-      <node id="1003">
-        <label>Source/Chips/DefaultMemorySegment.h</label>
-        <childnode refid="1004" relation="include">
+        <childnode refid="1050" relation="include">
         </childnode>
-        <childnode refid="1007" relation="include">
+        <childnode refid="1052" relation="include">
         </childnode>
-      </node>
-      <node id="981">
-        <label>Source/Chips/And.cpp</label>
-      </node>
-      <node id="991">
-        <label>Source/Chips/DFlipFlop.h</label>
-        <childnode refid="985" relation="include">
+        <childnode refid="1054" relation="include">
         </childnode>
-        <childnode refid="992" relation="include">
+        <childnode refid="1056" relation="include">
         </childnode>
-      </node>
-      <node id="975">
-        <label>Source/Computer/DebugRuntime.cpp</label>
-      </node>
-      <node id="994">
-        <label>Source/Chips/DMux.cpp</label>
-      </node>
-      <node id="989">
-        <label>Source/Chips/Timer.h</label>
-        <childnode refid="972" relation="include">
+        <childnode refid="1058" relation="include">
         </childnode>
-        <childnode refid="968" relation="include">
+        <childnode refid="1060" relation="include">
         </childnode>
-        <childnode refid="990" relation="include">
+        <childnode refid="1062" relation="include">
         </childnode>
-      </node>
-      <node id="1038">
-        <label>Source/Chips/Ram8.h</label>
-        <childnode refid="1039" relation="include">
+        <childnode refid="1064" relation="include">
         </childnode>
-        <childnode refid="1040" relation="include">
+        <childnode refid="1066" relation="include">
         </childnode>
-      </node>
-      <node id="1009">
-        <label>Source/Chips/Inc16.cpp</label>
-      </node>
-      <node id="1043">
-        <label>Source/Chips/Register.cpp</label>
-      </node>
-      <node id="1010">
-        <label>Source/Chips/Mux.h</label>
-        <childnode refid="1011" relation="include">
+        <childnode refid="1068" relation="include">
         </childnode>
-      </node>
-      <node id="1044">
-        <label>Source/Chips/Rom32.h</label>
-        <childnode refid="970" relation="include">
+        <childnode refid="1071" relation="include">
         </childnode>
-        <childnode refid="1045" relation="include">
+        <childnode refid="1072" relation="include">
         </childnode>
-      </node>
-      <node id="1023">
-        <label>Source/Chips/Not.cpp</label>
-      </node>
-      <node id="988">
-        <label>Source/Chips/Clock.cpp</label>
-      </node>
-      <node id="1004">
-        <label>Source/Chips/Ram16k.h</label>
-        <childnode refid="1005" relation="include">
+        <childnode refid="1074" relation="include">
         </childnode>
-      </node>
-      <node id="1002">
-        <label>Source/Chips/IMemorySegment.h</label>
-        <childnode refid="1003" relation="include">
+        <childnode refid="1076" relation="include">
         </childnode>
-      </node>
-      <node id="1033">
-        <label>Source/Chips/ProgramCounter.cpp</label>
-      </node>
-      <node id="1041">
-        <label>Source/Chips/Ram64.h</label>
-        <childnode refid="1039" relation="include">
-        </childnode>
-      </node>
-      <node id="1007">
-        <label>Source/Chips/Screen.h</label>
-        <childnode refid="1005" relation="include">
-        </childnode>
-        <childnode refid="977" relation="include">
-        </childnode>
-        <childnode refid="978" relation="include">
-        </childnode>
-        <childnode refid="976" relation="include">
-        </childnode>
-        <childnode refid="979" relation="include">
-        </childnode>
-      </node>
-      <node id="973">
-        <label>Source/Computer/Application.cpp</label>
-      </node>
-      <node id="1045">
-        <label>Source/Chips/Rom32.cpp</label>
-      </node>
-      <node id="1001">
-        <label>Source/Chips/HalfAdder.cpp</label>
-      </node>
-      <node id="976">
-        <label>Source/Computer/RuntimeInterface.h</label>
-        <childnode refid="977" relation="include">
-        </childnode>
-        <childnode refid="978" relation="include">
-        </childnode>
-        <childnode refid="979" relation="include">
-        </childnode>
-      </node>
-      <node id="986">
-        <label>Source/Chips/Bit.cpp</label>
-      </node>
-      <node id="1042">
-        <label>Source/Chips/Register.h</label>
-        <childnode refid="968" relation="include">
-        </childnode>
-        <childnode refid="969" relation="include">
-        </childnode>
-        <childnode refid="1043" relation="include">
+        <childnode refid="1078" relation="include">
         </childnode>
       </node>
       <node id="1000">
-        <label>Source/Chips/HalfAdder.h</label>
+        <label>Source/Chips/Computer.h</label>
         <childnode refid="1001" relation="include">
         </childnode>
-      </node>
-      <node id="967">
-        <label>Source/Chips/ALU.h</label>
-        <childnode refid="966" relation="include">
+        <childnode refid="1002" relation="include">
         </childnode>
-        <childnode refid="968" relation="include">
+        <childnode refid="1003" relation="include">
         </childnode>
-        <childnode refid="969" relation="include">
+        <childnode refid="1004" relation="include">
         </childnode>
-      </node>
-      <node id="1048">
-        <label>Source/Chips/XOr.h</label>
-        <childnode refid="982" relation="include">
+        <childnode refid="1005" relation="include">
         </childnode>
-        <childnode refid="1049" relation="include">
+        <childnode refid="1006" relation="include">
         </childnode>
       </node>
-      <node id="1008">
-        <label>Source/Chips/Inc16.h</label>
-        <childnode refid="1009" relation="include">
+      <node id="1035">
+        <label>Source/Chips/Memory.h</label>
+        <childnode refid="1000" relation="include">
+        </childnode>
+        <childnode refid="1036" relation="include">
         </childnode>
       </node>
-      <node id="977">
-        <label>Source/Computer/CommandRuntime.h</label>
-        <childnode refid="973" relation="include">
-        </childnode>
-        <childnode refid="974" relation="include">
+      <node id="1027">
+        <label>Source/Chips/DMux8Way.h</label>
+        <childnode refid="1028" relation="include">
         </childnode>
       </node>
-      <node id="969">
-        <label>Source/Chips/CPU.h</label>
-        <childnode refid="970" relation="include">
+      <node id="1002">
+        <label>Source/Chips/Computer.cpp</label>
+      </node>
+      <node id="1005">
+        <label>Source/Computer/DebugRuntime.cpp</label>
+      </node>
+      <node id="1063">
+        <label>Source/Chips/ProgramCounter.cpp</label>
+      </node>
+      <node id="1030">
+        <label>Source/Chips/HalfAdder.h</label>
+        <childnode refid="1031" relation="include">
         </childnode>
-        <childnode refid="968" relation="include">
+      </node>
+      <node id="1068">
+        <label>Source/Chips/Ram8.h</label>
+        <childnode refid="1069" relation="include">
+        </childnode>
+        <childnode refid="1070" relation="include">
+        </childnode>
+      </node>
+      <node id="1058">
+        <label>Source/Chips/Or16.h</label>
+        <childnode refid="1059" relation="include">
+        </childnode>
+      </node>
+      <node id="998">
+        <label>Source/Chips/CPU.cpp</label>
+      </node>
+      <node id="1039">
+        <label>Source/Chips/Inc16.cpp</label>
+      </node>
+      <node id="995">
+        <label>Source/Chips/Add16.cpp</label>
+      </node>
+      <node id="1025">
+        <label>Source/Chips/DMux4Way.h</label>
+        <childnode refid="1026" relation="include">
+        </childnode>
+      </node>
+      <node id="1046">
+        <label>Source/Chips/Mux8Way16.h</label>
+        <childnode refid="1047" relation="include">
+        </childnode>
+      </node>
+      <node id="1060">
+        <label>Source/Chips/Or8Way.h</label>
+        <childnode refid="1061" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

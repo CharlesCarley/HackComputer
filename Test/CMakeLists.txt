@@ -33,8 +33,7 @@ set_group(TestTarget_Data
     TestFiles/Jack/Jack:Jack/*.jack
 )
 
-if (Hack_TEST_REGEN_CMP)
-
+if (Hack_GEN_SVG_PARSE_TREES)
     include(Jack2Svg)
 
     set(Jack_FILES 
@@ -53,13 +52,19 @@ if (Hack_TEST_REGEN_CMP)
         Jack/Test13.jack
     )
 
+
+    if (EXISTS "Jack/Stub.jack")
+        list(APPEND ${Jack_FILES} "Jack/Stub.jack") 
+    endif()
+		
+
     if (Jack2Svg_ENABLED)
-        jack_to_svg(Parse_Trees ${Jack_FILES})
+        jack_to_svg(SvgContent ${Jack_FILES})
     endif()
 
 else()
 
-    set(Parse_Trees 
+    set(SvgContent 
         Jack/Test01.svg
         Jack/Test02.svg
         Jack/Test03.svg
@@ -76,7 +81,7 @@ else()
     )
 endif()
 
-source_group("Reference\\SVG" FILES  ${Parse_Trees})
+source_group("Reference\\Generated" FILES  ${SvgContent})
 
 set(TestTarget_SOURCE
     FileCmp.h
@@ -86,7 +91,7 @@ set(TestTarget_SOURCE
     Test2.cpp
     Test4.cpp
     Test5.cpp
-    ${Parse_Trees}
+    ${SvgContent}
     ${TestTarget_Data}
 )
 
@@ -115,8 +120,8 @@ target_link_libraries(${TestTargetName}
     Assembler
     VirtualMachine
     Utils
-    SyntaxAnalyzer
-    CompileUtils
+    ParseTreeBuilder
+    ParseTree
     CodeGenerator
  )
 

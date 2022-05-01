@@ -4,13 +4,13 @@
     <compoundname>Char.h</compoundname>
     <includes local="no">cstdint</includes>
     <includes refid="a00857" local="yes">Utils/String.h</includes>
-    <includedby refid="a01607" local="yes">Source/Assembler/Parser.cpp</includedby>
-    <includedby refid="a01631" local="yes">Source/Assembler/Scanner.cpp</includedby>
+    <includedby refid="a01612" local="yes">Source/Assembler/Parser.cpp</includedby>
+    <includedby refid="a01636" local="yes">Source/Assembler/Scanner.cpp</includedby>
     <includedby refid="a00461" local="yes">Source/Chips/ALU.cpp</includedby>
     <includedby refid="a00497" local="yes">Source/Chips/Computer.cpp</includedby>
-    <includedby refid="a01610" local="yes">Source/Compiler/Analyzer/Parser.cpp</includedby>
+    <includedby refid="a01615" local="yes">Source/Compiler/Analyzer/Parser.cpp</includedby>
     <includedby refid="a00701" local="yes">Source/Compiler/Analyzer/ParseUtils.cpp</includedby>
-    <includedby refid="a01634" local="yes">Source/Compiler/Analyzer/Scanner.cpp</includedby>
+    <includedby refid="a01639" local="yes">Source/Compiler/Analyzer/Scanner.cpp</includedby>
     <includedby refid="a00767" local="yes">Source/Compiler/Generator/VmEmitter.cpp</includedby>
     <includedby refid="a00779" local="yes">Source/Computer/CommandRuntime.cpp</includedby>
     <includedby refid="a00785" local="yes">Source/Computer/DebugRuntime.cpp</includedby>
@@ -20,173 +20,173 @@
     <includedby refid="a00845" local="yes">Source/Utils/ParserBase/ScannerBase.cpp</includedby>
     <includedby refid="a00854" local="yes">Source/Utils/String.cpp</includedby>
     <includedby refid="a00902" local="yes">Source/VirtualMachine/Emitter.cpp</includedby>
-    <includedby refid="a01616" local="yes">Source/VirtualMachine/Parser.cpp</includedby>
-    <includedby refid="a01640" local="yes">Source/VirtualMachine/Scanner.cpp</includedby>
+    <includedby refid="a01621" local="yes">Source/VirtualMachine/Parser.cpp</includedby>
+    <includedby refid="a01645" local="yes">Source/VirtualMachine/Scanner.cpp</includedby>
     <incdepgraph>
-      <node id="3014">
+      <node id="3053">
         <label>cstdint</label>
       </node>
-      <node id="3017">
-        <label>string</label>
-      </node>
-      <node id="3018">
-        <label>vector</label>
-      </node>
-      <node id="3016">
-        <label>sstream</label>
-      </node>
-      <node id="3013">
+      <node id="3052">
         <label>Source/Utils/Char.h</label>
         <link refid="a00809"/>
-        <childnode refid="3014" relation="include">
+        <childnode refid="3053" relation="include">
         </childnode>
-        <childnode refid="3015" relation="include">
+        <childnode refid="3054" relation="include">
         </childnode>
       </node>
-      <node id="3015">
+      <node id="3056">
+        <label>string</label>
+      </node>
+      <node id="3054">
         <label>Utils/String.h</label>
-        <childnode refid="3016" relation="include">
+        <childnode refid="3055" relation="include">
         </childnode>
-        <childnode refid="3017" relation="include">
+        <childnode refid="3056" relation="include">
         </childnode>
-        <childnode refid="3018" relation="include">
+        <childnode refid="3057" relation="include">
         </childnode>
+      </node>
+      <node id="3057">
+        <label>vector</label>
+      </node>
+      <node id="3055">
+        <label>sstream</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="3032">
-        <label>Source/Utils/CommandLine/Parser.h</label>
-        <childnode refid="3033" relation="include">
-        </childnode>
-        <childnode refid="3034" relation="include">
-        </childnode>
-        <childnode refid="3035" relation="include">
-        </childnode>
-        <childnode refid="3036" relation="include">
-        </childnode>
-        <childnode refid="3037" relation="include">
-        </childnode>
-        <childnode refid="3038" relation="include">
-        </childnode>
-        <childnode refid="3039" relation="include">
-        </childnode>
-      </node>
-      <node id="3039">
-        <label>Source/VirtualMachine/Main.cpp</label>
-      </node>
-      <node id="3033">
-        <label>Source/Assembler/Main.cpp</label>
-      </node>
-      <node id="3042">
-        <label>Source/Utils/String.cpp</label>
-      </node>
-      <node id="3035">
-        <label>Source/Compiler/Compiler/Main.cpp</label>
-      </node>
-      <node id="3038">
-        <label>Source/Utils/CommandLine/Parser.cpp</label>
-      </node>
-      <node id="3020">
-        <label>Source/Assembler/Parser.cpp</label>
-      </node>
-      <node id="3022">
-        <label>Source/Chips/ALU.cpp</label>
-      </node>
-      <node id="3043">
-        <label>Source/VirtualMachine/Emitter.cpp</label>
-      </node>
-      <node id="3027">
-        <label>Source/Compiler/Generator/VmEmitter.cpp</label>
-      </node>
-      <node id="3045">
-        <label>Source/VirtualMachine/Scanner.cpp</label>
-      </node>
-      <node id="3023">
-        <label>Source/Chips/Computer.cpp</label>
-      </node>
-      <node id="3026">
-        <label>Source/Compiler/Analyzer/Scanner.cpp</label>
-      </node>
-      <node id="3041">
-        <label>Source/Utils/ParserBase/ScannerBase.cpp</label>
-      </node>
-      <node id="3028">
-        <label>Source/Computer/CommandRuntime.cpp</label>
-      </node>
-      <node id="3019">
-        <label>Source/Utils/Char.h</label>
-        <link refid="a00809"/>
-        <childnode refid="3020" relation="include">
-        </childnode>
-        <childnode refid="3021" relation="include">
-        </childnode>
-        <childnode refid="3022" relation="include">
-        </childnode>
-        <childnode refid="3023" relation="include">
-        </childnode>
-        <childnode refid="3024" relation="include">
-        </childnode>
-        <childnode refid="3025" relation="include">
-        </childnode>
-        <childnode refid="3026" relation="include">
-        </childnode>
-        <childnode refid="3027" relation="include">
-        </childnode>
-        <childnode refid="3028" relation="include">
-        </childnode>
-        <childnode refid="3029" relation="include">
-        </childnode>
-        <childnode refid="3030" relation="include">
-        </childnode>
-        <childnode refid="3031" relation="include">
-        </childnode>
-        <childnode refid="3040" relation="include">
-        </childnode>
-        <childnode refid="3041" relation="include">
-        </childnode>
-        <childnode refid="3042" relation="include">
-        </childnode>
-        <childnode refid="3043" relation="include">
-        </childnode>
-        <childnode refid="3044" relation="include">
-        </childnode>
-        <childnode refid="3045" relation="include">
-        </childnode>
-      </node>
-      <node id="3024">
-        <label>Source/Compiler/Analyzer/Parser.cpp</label>
-      </node>
-      <node id="3029">
-        <label>Source/Computer/DebugRuntime.cpp</label>
-      </node>
-      <node id="3044">
-        <label>Source/VirtualMachine/Parser.cpp</label>
-      </node>
-      <node id="3040">
-        <label>Source/Utils/ParserBase/ParserBase.cpp</label>
-      </node>
-      <node id="3034">
-        <label>Source/Compiler/Analyzer/Main.cpp</label>
-      </node>
-      <node id="3031">
-        <label>Source/Utils/CommandLine/Option.h</label>
-        <childnode refid="3032" relation="include">
-        </childnode>
-      </node>
-      <node id="3037">
+      <node id="3076">
         <label>Source/Computer/Application.cpp</label>
       </node>
-      <node id="3025">
-        <label>Source/Compiler/Analyzer/ParseUtils.cpp</label>
+      <node id="3059">
+        <label>Source/Assembler/Parser.cpp</label>
       </node>
-      <node id="3030">
+      <node id="3082">
+        <label>Source/VirtualMachine/Emitter.cpp</label>
+      </node>
+      <node id="3063">
+        <label>Source/Compiler/Analyzer/Parser.cpp</label>
+      </node>
+      <node id="3070">
+        <label>Source/Utils/CommandLine/Option.h</label>
+        <childnode refid="3071" relation="include">
+        </childnode>
+      </node>
+      <node id="3058">
+        <label>Source/Utils/Char.h</label>
+        <link refid="a00809"/>
+        <childnode refid="3059" relation="include">
+        </childnode>
+        <childnode refid="3060" relation="include">
+        </childnode>
+        <childnode refid="3061" relation="include">
+        </childnode>
+        <childnode refid="3062" relation="include">
+        </childnode>
+        <childnode refid="3063" relation="include">
+        </childnode>
+        <childnode refid="3064" relation="include">
+        </childnode>
+        <childnode refid="3065" relation="include">
+        </childnode>
+        <childnode refid="3066" relation="include">
+        </childnode>
+        <childnode refid="3067" relation="include">
+        </childnode>
+        <childnode refid="3068" relation="include">
+        </childnode>
+        <childnode refid="3069" relation="include">
+        </childnode>
+        <childnode refid="3070" relation="include">
+        </childnode>
+        <childnode refid="3079" relation="include">
+        </childnode>
+        <childnode refid="3080" relation="include">
+        </childnode>
+        <childnode refid="3081" relation="include">
+        </childnode>
+        <childnode refid="3082" relation="include">
+        </childnode>
+        <childnode refid="3083" relation="include">
+        </childnode>
+        <childnode refid="3084" relation="include">
+        </childnode>
+      </node>
+      <node id="3061">
+        <label>Source/Chips/ALU.cpp</label>
+      </node>
+      <node id="3084">
+        <label>Source/VirtualMachine/Scanner.cpp</label>
+      </node>
+      <node id="3077">
+        <label>Source/Utils/CommandLine/Parser.cpp</label>
+      </node>
+      <node id="3078">
+        <label>Source/VirtualMachine/Main.cpp</label>
+      </node>
+      <node id="3069">
         <label>Source/Utils/Char.cpp</label>
       </node>
-      <node id="3021">
+      <node id="3081">
+        <label>Source/Utils/String.cpp</label>
+      </node>
+      <node id="3073">
+        <label>Source/Compiler/Analyzer/Main.cpp</label>
+      </node>
+      <node id="3067">
+        <label>Source/Computer/CommandRuntime.cpp</label>
+      </node>
+      <node id="3071">
+        <label>Source/Utils/CommandLine/Parser.h</label>
+        <childnode refid="3072" relation="include">
+        </childnode>
+        <childnode refid="3073" relation="include">
+        </childnode>
+        <childnode refid="3074" relation="include">
+        </childnode>
+        <childnode refid="3075" relation="include">
+        </childnode>
+        <childnode refid="3076" relation="include">
+        </childnode>
+        <childnode refid="3077" relation="include">
+        </childnode>
+        <childnode refid="3078" relation="include">
+        </childnode>
+      </node>
+      <node id="3060">
         <label>Source/Assembler/Scanner.cpp</label>
       </node>
-      <node id="3036">
+      <node id="3083">
+        <label>Source/VirtualMachine/Parser.cpp</label>
+      </node>
+      <node id="3079">
+        <label>Source/Utils/ParserBase/ParserBase.cpp</label>
+      </node>
+      <node id="3074">
+        <label>Source/Compiler/Compiler/Main.cpp</label>
+      </node>
+      <node id="3072">
+        <label>Source/Assembler/Main.cpp</label>
+      </node>
+      <node id="3066">
+        <label>Source/Compiler/Generator/VmEmitter.cpp</label>
+      </node>
+      <node id="3080">
+        <label>Source/Utils/ParserBase/ScannerBase.cpp</label>
+      </node>
+      <node id="3064">
+        <label>Source/Compiler/Analyzer/ParseUtils.cpp</label>
+      </node>
+      <node id="3065">
+        <label>Source/Compiler/Analyzer/Scanner.cpp</label>
+      </node>
+      <node id="3075">
         <label>Source/Compiler/Generator/Main.cpp</label>
+      </node>
+      <node id="3062">
+        <label>Source/Chips/Computer.cpp</label>
+      </node>
+      <node id="3068">
+        <label>Source/Computer/DebugRuntime.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="a01241" prot="public">Hack::Char</innerclass>

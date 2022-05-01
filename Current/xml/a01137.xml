@@ -139,33 +139,33 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="287">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="a01005"/>
+      </node>
+      <node id="286">
+        <label>Hack::Chips::SRLatch</label>
+        <link refid="a01137"/>
+        <childnode refid="287" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="290">
+        <label>uint8_t</label>
+        <link refid="a01385"/>
+      </node>
       <node id="289">
         <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
         <link refid="a01005"/>
+        <childnode refid="290" relation="usage">
+          <edgelabel>_bits</edgelabel>
+        </childnode>
       </node>
       <node id="288">
         <label>Hack::Chips::SRLatch</label>
         <link refid="a01137"/>
         <childnode refid="289" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="292">
-        <label>uint8_t</label>
-        <link refid="a01385"/>
-      </node>
-      <node id="291">
-        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
-        <link refid="a01005"/>
-        <childnode refid="292" relation="usage">
-          <edgelabel>_bits</edgelabel>
-        </childnode>
-      </node>
-      <node id="290">
-        <label>Hack::Chips::SRLatch</label>
-        <link refid="a01137"/>
-        <childnode refid="291" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

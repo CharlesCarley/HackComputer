@@ -2,65 +2,65 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00428" kind="file" language="C++">
     <compoundname>Instruction.h</compoundname>
-    <includes refid="a01655" local="yes">Assembler/Token.h</includes>
+    <includes refid="a01660" local="yes">Assembler/Token.h</includes>
     <includedby refid="a00425" local="yes">Source/Assembler/Instruction.cpp</includedby>
     <includedby refid="a00452" local="yes">Source/Bindings/Bindings.cpp</includedby>
     <includedby refid="a00785" local="yes">Source/Computer/DebugRuntime.cpp</includedby>
     <incdepgraph>
-      <node id="45">
+      <node id="44">
+        <label>Utils/ParserBase/TokenBase.h</label>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
         <label>string</label>
       </node>
+      <node id="45">
+        <label>Utils/String.h</label>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>vector</label>
+      </node>
+      <node id="46">
+        <label>sstream</label>
+      </node>
       <node id="42">
-        <label>Utils/ParserBase/TokenBase.h</label>
+        <label>Source/Assembler/Instruction.h</label>
+        <link refid="a00428"/>
         <childnode refid="43" relation="include">
         </childnode>
       </node>
-      <node id="40">
-        <label>Source/Assembler/Instruction.h</label>
-        <link refid="a00428"/>
-        <childnode refid="41" relation="include">
-        </childnode>
-      </node>
-      <node id="46">
-        <label>vector</label>
-      </node>
-      <node id="41">
-        <label>Assembler/Token.h</label>
-        <childnode refid="42" relation="include">
-        </childnode>
-      </node>
-      <node id="44">
-        <label>sstream</label>
-      </node>
       <node id="43">
-        <label>Utils/String.h</label>
+        <label>Assembler/Token.h</label>
         <childnode refid="44" relation="include">
-        </childnode>
-        <childnode refid="45" relation="include">
-        </childnode>
-        <childnode refid="46" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="49">
+      <node id="51">
         <label>Source/Bindings/Bindings.cpp</label>
       </node>
-      <node id="47">
+      <node id="50">
+        <label>Source/Assembler/Instruction.cpp</label>
+      </node>
+      <node id="49">
         <label>Source/Assembler/Instruction.h</label>
         <link refid="a00428"/>
-        <childnode refid="48" relation="include">
-        </childnode>
-        <childnode refid="49" relation="include">
-        </childnode>
         <childnode refid="50" relation="include">
         </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
       </node>
-      <node id="50">
+      <node id="52">
         <label>Source/Computer/DebugRuntime.cpp</label>
-      </node>
-      <node id="48">
-        <label>Source/Assembler/Instruction.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="a00929" prot="public">Hack::Assembler::Instruction</innerclass>

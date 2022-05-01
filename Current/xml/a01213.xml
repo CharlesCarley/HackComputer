@@ -135,9 +135,9 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
-      <memberdef kind="function" id="a01213_1a70baf0120ac06c41dcf876a86b2295ea" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01213_1a2fd419136634e239d40c6e4a16ae95e4" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Application::assemble</definition>
+        <definition>void Hack::Computer::Application::assemble</definition>
         <argsstring>(AsmParser &amp;assembler) const</argsstring>
         <name>assemble</name>
         <param>
@@ -152,9 +152,9 @@
         </inbodydescription>
         <location file="Source/Computer/Application.cpp" line="160" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="271" bodyend="279"/>
       </memberdef>
-      <memberdef kind="function" id="a01213_1a1d4038756689e703b48882306795b6ca" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01213_1a40b4c1c1c57e43d9e57fdb555c29900a" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Application::compile</definition>
+        <definition>void Hack::Computer::Application::compile</definition>
         <argsstring>(CodeGen &amp;compiler) const</argsstring>
         <name>compile</name>
         <param>
@@ -169,9 +169,9 @@
         </inbodydescription>
         <location file="Source/Computer/Application.cpp" line="164" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="295" bodyend="310"/>
       </memberdef>
-      <memberdef kind="function" id="a01213_1a1419d8fec9fea1ee5825dc616fa8e311" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01213_1af90ed27e692e6cddf896f96e090ce6b7" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Application::generate</definition>
+        <definition>void Hack::Computer::Application::generate</definition>
         <argsstring>(VmParser &amp;emitter) const</argsstring>
         <name>generate</name>
         <param>
@@ -186,9 +186,9 @@
         </inbodydescription>
         <location file="Source/Computer/Application.cpp" line="162" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="281" bodyend="293"/>
       </memberdef>
-      <memberdef kind="function" id="a01213_1ac64b5e75c0584552eb7d6247ef63cef0" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01213_1a0b4d0adbd35c2e6cdb25ef76df0ca900" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Application::load</definition>
+        <definition>void Hack::Computer::Application::load</definition>
         <argsstring>() const</argsstring>
         <name>load</name>
         <briefdescription>
@@ -199,9 +199,9 @@
         </inbodydescription>
         <location file="Source/Computer/Application.cpp" line="156" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="312" bodyend="353"/>
       </memberdef>
-      <memberdef kind="function" id="a01213_1ab19ce99d4d99ea0be886755aadff42a6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01213_1a4a67667d1805c6066a04cc44864b8965" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Application::setupScreen</definition>
+        <definition>void Hack::Computer::Application::setupScreen</definition>
         <argsstring>()</argsstring>
         <name>setupScreen</name>
         <briefdescription>
@@ -214,9 +214,9 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-static-func">
-      <memberdef kind="function" id="a01213_1ad60059877ed85dd617d13a3f8713e6f1" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01213_1a627ae3b4847f503809c08855fe157a5d" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Application::trace</definition>
+        <definition>void Hack::Computer::Application::trace</definition>
         <argsstring>(Chips::Computer *computer)</argsstring>
         <name>trace</name>
         <param>
@@ -233,9 +233,9 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="a01213_1afa8cc05ce6b6092be5ecdfdae44e05f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01213_1a381b83429b23dbe84ee08def74a46801" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>Application::Application</definition>
+        <definition>Hack::Computer::Application::Application</definition>
         <argsstring>()</argsstring>
         <name>Application</name>
         <briefdescription>
@@ -246,9 +246,9 @@
         </inbodydescription>
         <location file="Source/Computer/Application.cpp" line="169" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="177" bodyend="188"/>
       </memberdef>
-      <memberdef kind="function" id="a01213_1a748bca84fefb9c12661cfaa2f623748d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01213_1ab7a5ed17f20cbc2e1c150a03adaf87da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>Application::~Application</definition>
+        <definition>Hack::Computer::Application::~Application</definition>
         <argsstring>()</argsstring>
         <name>~Application</name>
         <briefdescription>
@@ -259,9 +259,9 @@
         </inbodydescription>
         <location file="Source/Computer/Application.cpp" line="170" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="190" bodyend="197"/>
       </memberdef>
-      <memberdef kind="function" id="a01213_1ab90f4f0a3af39cdc69bf69c013d64f7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01213_1ae31b7fee953e4e1c89f437cf4d589a5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
-        <definition>int Application::go</definition>
+        <definition>int Hack::Computer::Application::go</definition>
         <argsstring>()</argsstring>
         <name>go</name>
         <briefdescription>
@@ -278,9 +278,9 @@
         <references refid="a01233_1a5fe5dfa099bbf6ded85b29028440466d">Hack::Computer::RuntimeInterface::update</references>
         <references refid="a01233_1af845999e44531fc6282d028402131fa9">Hack::Computer::RuntimeInterface::flushMemory</references>
       </memberdef>
-      <memberdef kind="function" id="a01213_1ac86dd9ec39462319a65b782e377247c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a01213_1a3e6a0e7fe388171b4afc7a4b9816ee22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
-        <definition>bool Application::parse</definition>
+        <definition>bool Hack::Computer::Application::parse</definition>
         <argsstring>(int argc, char **argv)</argsstring>
         <name>parse</name>
         <param>
@@ -298,12 +298,12 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Source/Computer/Application.cpp" line="172" column="1" bodyfile="Source/Computer/Application.cpp" bodystart="199" bodyend="237"/>
-        <references refid="a01253_1a304e3e2f4af07df0fb6c9cde37040e27" compoundref="a01613" startline="52" endline="176">Hack::CommandLine::Parser::parse</references>
+        <references refid="a01253_1a304e3e2f4af07df0fb6c9cde37040e27" compoundref="a01618" startline="52" endline="176">Hack::CommandLine::Parser::parse</references>
         <references refid="a00919_1a1a5d69e12118b3a2c1fd1aec69e262fc" compoundref="a00773" startline="67">Hack::Computer::Switches</references>
         <references refid="a00919_1a5ead6eecb040356778165b52450fac0fa395bf60d8da91644da7f1a7d65f9bc1b" compoundref="a00773" startline="64">Hack::Computer::OP_MAX</references>
-        <references refid="a01253_1ac7bc3f3c9e8b89b4a39b8dd9a36b713f" compoundref="a01625" startline="88" endline="91">Hack::CommandLine::Parser::arguments</references>
-        <references refid="a01253_1afd63d6cb40243606fe5d6c944754eb5b" compoundref="a01613" startline="257" endline="262">Hack::CommandLine::Parser::usage</references>
-        <references refid="a01253_1adbd749e0938e2b359ee7f719864d1451" compoundref="a01613" startline="205" endline="210">Hack::CommandLine::Parser::isPresent</references>
+        <references refid="a01253_1ac7bc3f3c9e8b89b4a39b8dd9a36b713f" compoundref="a01630" startline="88" endline="91">Hack::CommandLine::Parser::arguments</references>
+        <references refid="a01253_1afd63d6cb40243606fe5d6c944754eb5b" compoundref="a01618" startline="257" endline="262">Hack::CommandLine::Parser::usage</references>
+        <references refid="a01253_1adbd749e0938e2b359ee7f719864d1451" compoundref="a01618" startline="205" endline="210">Hack::CommandLine::Parser::isPresent</references>
         <references refid="a00919_1a5ead6eecb040356778165b52450fac0fa5ccb26246212b9bdc557ac4aca6ef740" compoundref="a00773" startline="56">Hack::Computer::OP_DEBUG</references>
         <references refid="a00919_1a5ead6eecb040356778165b52450fac0fa0e2329db25c9227ee69e8336b3f982a8" compoundref="a00773" startline="55">Hack::Computer::OP_CMD</references>
         <references refid="a00919_1a5ead6eecb040356778165b52450fac0fa1fb6c22b6bdc59404f77be8cfd8ee59a" compoundref="a00773" startline="58">Hack::Computer::OP_TRACE_MEM</references>
@@ -330,16 +330,16 @@
       <member refid="a01213_1a1d87eb44c92bc694f72cf0d4b620b75d" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>_showVm</name></member>
       <member refid="a01213_1a15e35cededa094ad6119675584607dc4" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>_showXml</name></member>
       <member refid="a01213_1aa066b87d13a73873800c3d323f1539b6" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>_trace</name></member>
-      <member refid="a01213_1afa8cc05ce6b6092be5ecdfdae44e05f8" prot="public" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>Application</name></member>
-      <member refid="a01213_1a70baf0120ac06c41dcf876a86b2295ea" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>assemble</name></member>
-      <member refid="a01213_1a1d4038756689e703b48882306795b6ca" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>compile</name></member>
-      <member refid="a01213_1a1419d8fec9fea1ee5825dc616fa8e311" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>generate</name></member>
-      <member refid="a01213_1ab90f4f0a3af39cdc69bf69c013d64f7d" prot="public" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>go</name></member>
-      <member refid="a01213_1ac64b5e75c0584552eb7d6247ef63cef0" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>load</name></member>
-      <member refid="a01213_1ac86dd9ec39462319a65b782e377247c2" prot="public" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>parse</name></member>
-      <member refid="a01213_1ab19ce99d4d99ea0be886755aadff42a6" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>setupScreen</name></member>
-      <member refid="a01213_1ad60059877ed85dd617d13a3f8713e6f1" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>trace</name></member>
-      <member refid="a01213_1a748bca84fefb9c12661cfaa2f623748d" prot="public" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>~Application</name></member>
+      <member refid="a01213_1a381b83429b23dbe84ee08def74a46801" prot="public" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>Application</name></member>
+      <member refid="a01213_1a2fd419136634e239d40c6e4a16ae95e4" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>assemble</name></member>
+      <member refid="a01213_1a40b4c1c1c57e43d9e57fdb555c29900a" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>compile</name></member>
+      <member refid="a01213_1af90ed27e692e6cddf896f96e090ce6b7" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>generate</name></member>
+      <member refid="a01213_1ae31b7fee953e4e1c89f437cf4d589a5f" prot="public" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>go</name></member>
+      <member refid="a01213_1a0b4d0adbd35c2e6cdb25ef76df0ca900" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>load</name></member>
+      <member refid="a01213_1a3e6a0e7fe388171b4afc7a4b9816ee22" prot="public" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>parse</name></member>
+      <member refid="a01213_1a4a67667d1805c6066a04cc44864b8965" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>setupScreen</name></member>
+      <member refid="a01213_1a627ae3b4847f503809c08855fe157a5d" prot="private" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>trace</name></member>
+      <member refid="a01213_1ab7a5ed17f20cbc2e1c150a03adaf87da" prot="public" virt="non-virtual"><scope>Hack::Computer::Application</scope><name>~Application</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

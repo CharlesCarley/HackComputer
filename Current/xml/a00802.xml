@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a00802" kind="class" language="C++" prot="public">
+    <compoundname>Hack::Binding::RamWrapper</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="a00802_1aec58e3f4d8650bbf02398a12208be7df" prot="private" static="no" mutable="no">
+        <type><ref refid="a00902" kindref="compound">Memory</ref> *</type>
+        <definition>Memory* Hack::Binding::RamWrapper::_memory</definition>
+        <argsstring></argsstring>
+        <name>_memory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="101" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00802_1a8f53cb859689b4d6223611ccb9cf0b0b" prot="private" static="no" mutable="no">
+        <type>const uint64_t</type>
+        <definition>const uint64_t Hack::Binding::RamWrapper::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <initializer>= <ref refid="a00751_1afa6a47600d4368c4198b7292deb32747" kindref="member">RamType</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="99" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a00802_1a1b5b1caf9f894916102fb72f44b26c97" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Binding::RamWrapper::RamWrapper</definition>
+        <argsstring>(Memory *mem)</argsstring>
+        <name>RamWrapper</name>
+        <param>
+          <type><ref refid="a00902" kindref="compound">Memory</ref> *</type>
+          <declname>mem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="104" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="a00802_1a65d06a289f5f265e71f03473f86f5ae1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Hack::Binding::RamWrapper::get</definition>
+        <argsstring>(const int idx) const</argsstring>
+        <name>get</name>
+        <param>
+          <type>const int</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="109" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="109" bodyend="114"/>
+        <references refid="a00751_1afa6a47600d4368c4198b7292deb32747" compoundref="a00293" startline="46">Hack::Binding::RamType</references>
+        <references refid="a00902_1a7f5b5e64aa1b441be1bc547e27602559" compoundref="a01508" startline="121" endline="130">Hack::Chips::Memory::get</references>
+      </memberdef>
+      <memberdef kind="function" id="a00802_1a761fe5370d34e73b261692cc622ea7af" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Binding::RamWrapper::zeroMemory</definition>
+        <argsstring>() const</argsstring>
+        <name>zeroMemory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="116" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="116" bodyend="120"/>
+        <references refid="a00751_1afa6a47600d4368c4198b7292deb32747" compoundref="a00293" startline="46">Hack::Binding::RamType</references>
+        <references refid="a00902_1a0f261c4cfff3ae3fcd99537d2588a180" compoundref="a01508" startline="139" endline="143">Hack::Chips::Memory::zero</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="a00802_1a3a20c0f0773900ddb9d76d1ed0ff120f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="a00802" kindref="compound">RamWrapper</ref> *</type>
+        <definition>static const RamWrapper* Hack::Binding::RamWrapper::cast</definition>
+        <argsstring>(const Handle handle)</argsstring>
+        <name>cast</name>
+        <param>
+          <type>const <ref refid="a00794" kindref="compound">Handle</ref></type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Bindings/Bindings.cpp" line="122" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="122" bodyend="131"/>
+        <references refid="a00751_1afa6a47600d4368c4198b7292deb32747" compoundref="a00293" startline="46">Hack::Binding::RamType</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/Bindings/Bindings.cpp" line="97" column="1" bodyfile="Source/Bindings/Bindings.cpp" bodystart="96" bodyend="132"/>
+    <listofallmembers>
+      <member refid="a00802_1aec58e3f4d8650bbf02398a12208be7df" prot="private" virt="non-virtual"><scope>Hack::Binding::RamWrapper</scope><name>_memory</name></member>
+      <member refid="a00802_1a3a20c0f0773900ddb9d76d1ed0ff120f" prot="public" virt="non-virtual"><scope>Hack::Binding::RamWrapper</scope><name>cast</name></member>
+      <member refid="a00802_1a65d06a289f5f265e71f03473f86f5ae1" prot="public" virt="non-virtual"><scope>Hack::Binding::RamWrapper</scope><name>get</name></member>
+      <member refid="a00802_1a1b5b1caf9f894916102fb72f44b26c97" prot="public" virt="non-virtual"><scope>Hack::Binding::RamWrapper</scope><name>RamWrapper</name></member>
+      <member refid="a00802_1a8f53cb859689b4d6223611ccb9cf0b0b" prot="private" virt="non-virtual"><scope>Hack::Binding::RamWrapper</scope><name>type</name></member>
+      <member refid="a00802_1a761fe5370d34e73b261692cc622ea7af" prot="public" virt="non-virtual"><scope>Hack::Binding::RamWrapper</scope><name>zeroMemory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

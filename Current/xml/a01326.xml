@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01326" kind="union" language="C++" prot="public">
+    <compoundname>Hack::Ui::ColorBuffer</compoundname>
+    <includes local="no">Source/Utils/UserInterface/Math.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="a01326_1a15c30d909a6fb366461c0539d423bc8b" prot="public" static="no" mutable="no">
+        <type><ref refid="a01382" kindref="compound">uint8_t</ref></type>
+        <definition>uint8_t Hack::Ui::ColorBuffer::b[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Math.h" line="151" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a01326_1a463d0ac8e2d5ab0b7938e0b9a81b3e86" prot="public" static="no" mutable="no">
+        <type><ref refid="a01370" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Ui::ColorBuffer::s</definition>
+        <argsstring></argsstring>
+        <name>s</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Math.h" line="150" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="436">
+        <label>uint16_t</label>
+        <link refid="a01370"/>
+      </node>
+      <node id="437">
+        <label>uint8_t</label>
+        <link refid="a01382"/>
+      </node>
+      <node id="435">
+        <label>Hack::Ui::ColorBuffer</label>
+        <link refid="a01326"/>
+        <childnode refid="436" relation="usage">
+          <edgelabel>s</edgelabel>
+        </childnode>
+        <childnode refid="437" relation="usage">
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Utils/UserInterface/Math.h" line="149" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="148" bodyend="152"/>
+    <listofallmembers>
+      <member refid="a01326_1a15c30d909a6fb366461c0539d423bc8b" prot="public" virt="non-virtual"><scope>Hack::Ui::ColorBuffer</scope><name>b</name></member>
+      <member refid="a01326_1a463d0ac8e2d5ab0b7938e0b9a81b3e86" prot="public" virt="non-virtual"><scope>Hack::Ui::ColorBuffer</scope><name>s</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -36,11 +36,10 @@ option(Hack_IMPLEMENT_BLACK_BOX  "If this is true most chips will be implemented
 option(Hack_VM_ZERO_RAM          "Emits extra instructions to zero RAM values that are no longer in use." OFF)
 option(Hack_VM_GUARD_PUSH        "Emits conditional instructions to prevent pushing ram segments when its out of context." OFF)
 option(Hack_USE_SDL              "Enables or disables the SDL runtime." OFF)
-option(Hack_TEST_REGEN_CMP       "Regenerates a output snapshot of the generated test compare files." OFF)
+option(Hack_GEN_SVG_PARSE_TREES  "Regenerates SVG files off of the test .jack files." OFF)
 
 # back end specific 
 option(Hack_JUST_MY_CODE         "Enable the /JMC flag" ON)
-
 
 set(Hack_INSTALL_PATH "" CACHE PATH "Specify installation directory")
 

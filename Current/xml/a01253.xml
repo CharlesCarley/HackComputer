@@ -383,7 +383,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Source/Utils/CommandLine/Parser.h" line="83" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="183" bodyend="188"/>
-        <references refid="a01257_1ae8cbee55ad5f4cd3dda81e0cff2a07b5" compoundref="a01649" startline="45" endline="48">Hack::CommandLine::Scanner::getValue</references>
+        <references refid="a01257_1ae8cbee55ad5f4cd3dda81e0cff2a07b5" compoundref="a01654" startline="45" endline="48">Hack::CommandLine::Scanner::getValue</references>
         <references refid="a01265_1aa75558c74eafde74be9d33818a79a3fe" compoundref="a00815" startline="199" endline="204">Hack::Console::writeLine</references>
       </memberdef>
       <memberdef kind="function" id="a01253_1ab5d11dfcdacd8b91069814891ef7f20c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -470,23 +470,23 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Source/Utils/CommandLine/Parser.h" line="73" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="52" bodyend="176"/>
-        <references refid="a01257_1a1974539a58027b0ba339b019d8fcddf9" compoundref="a01637" startline="57" endline="60">Hack::CommandLine::Scanner::clear</references>
-        <references refid="a01257_1af65558f33766054df253ab6efb378fd9" compoundref="a01637" startline="62" endline="66">Hack::CommandLine::Scanner::append</references>
-        <references refid="a01261_1a1752c109f1e2547e133eb0e991eab9bc" compoundref="a01661" startline="60" endline="63">Hack::CommandLine::Token::getType</references>
-        <references refid="a00922_1a7bf8cf020e39f88d39725c1ec763cd86a728a7b175a948d4e4390726507f087b8" compoundref="a01661" startline="43">Hack::CommandLine::TOK_EOS</references>
-        <references refid="a01257_1af56e25fc560f1b2fb71e93ab5d2599c5" compoundref="a01637" startline="68" endline="142">Hack::CommandLine::Scanner::lex</references>
-        <references refid="a00922_1a7bf8cf020e39f88d39725c1ec763cd86af499719b721526aa16a9b57e252fde89" compoundref="a01661" startline="44">Hack::CommandLine::TOK_ERROR</references>
-        <references refid="a01261_1a0394cc885ec75f298d503580570a3b25" compoundref="a01661" startline="70" endline="73">Hack::CommandLine::Token::getValue</references>
-        <references refid="a01253_1afd63d6cb40243606fe5d6c944754eb5b" compoundref="a01613" startline="257" endline="262">usage</references>
-        <references refid="a00922_1a7bf8cf020e39f88d39725c1ec763cd86a55849c5d51bca86446e7f7ac620d7d23" compoundref="a01661" startline="31">Hack::CommandLine::TOK_SWITCH_SHORT</references>
-        <references refid="a00922_1a7bf8cf020e39f88d39725c1ec763cd86adf0cf175e182315d7ed141f8f08120e5" compoundref="a01661" startline="32">Hack::CommandLine::TOK_SWITCH_LONG</references>
-        <references refid="a00922_1a7bf8cf020e39f88d39725c1ec763cd86af245704ac1981ba509a2bf36c9f974de" compoundref="a01661" startline="33">Hack::CommandLine::TOK_NEXT</references>
+        <references refid="a01257_1a1974539a58027b0ba339b019d8fcddf9" compoundref="a01642" startline="57" endline="60">Hack::CommandLine::Scanner::clear</references>
+        <references refid="a01257_1af65558f33766054df253ab6efb378fd9" compoundref="a01642" startline="62" endline="66">Hack::CommandLine::Scanner::append</references>
+        <references refid="a01261_1a1752c109f1e2547e133eb0e991eab9bc" compoundref="a01666" startline="60" endline="63">Hack::CommandLine::Token::getType</references>
+        <references refid="a00922_1a7bf8cf020e39f88d39725c1ec763cd86a728a7b175a948d4e4390726507f087b8" compoundref="a01666" startline="43">Hack::CommandLine::TOK_EOS</references>
+        <references refid="a01257_1af56e25fc560f1b2fb71e93ab5d2599c5" compoundref="a01642" startline="68" endline="142">Hack::CommandLine::Scanner::lex</references>
+        <references refid="a00922_1a7bf8cf020e39f88d39725c1ec763cd86af499719b721526aa16a9b57e252fde89" compoundref="a01666" startline="44">Hack::CommandLine::TOK_ERROR</references>
+        <references refid="a01261_1a0394cc885ec75f298d503580570a3b25" compoundref="a01666" startline="70" endline="73">Hack::CommandLine::Token::getValue</references>
+        <references refid="a01253_1afd63d6cb40243606fe5d6c944754eb5b" compoundref="a01618" startline="257" endline="262">usage</references>
+        <references refid="a00922_1a7bf8cf020e39f88d39725c1ec763cd86a55849c5d51bca86446e7f7ac620d7d23" compoundref="a01666" startline="31">Hack::CommandLine::TOK_SWITCH_SHORT</references>
+        <references refid="a00922_1a7bf8cf020e39f88d39725c1ec763cd86adf0cf175e182315d7ed141f8f08120e5" compoundref="a01666" startline="32">Hack::CommandLine::TOK_SWITCH_LONG</references>
+        <references refid="a00922_1a7bf8cf020e39f88d39725c1ec763cd86af245704ac1981ba509a2bf36c9f974de" compoundref="a01666" startline="33">Hack::CommandLine::TOK_NEXT</references>
         <references refid="a01249_1a3947a9d6cb146aa14cc72f51b04a85bb" compoundref="a00812" startline="123" endline="126">Hack::CommandLine::ParseOption::makePresent</references>
         <references refid="a01249_1a55cc1ccc8cbd5e96b2af48e86d0d6324" compoundref="a00812" startline="108" endline="111">Hack::CommandLine::ParseOption::isOptional</references>
         <references refid="a01249_1a3e4adbad4b5893ad3b7369ff60fcaf79" compoundref="a00812" startline="118" endline="121">Hack::CommandLine::ParseOption::getArgCount</references>
-        <references refid="a00922_1a7bf8cf020e39f88d39725c1ec763cd86ad10952ab16deb1fdfc37ce82f5cb52e5" compoundref="a01661" startline="40">Hack::CommandLine::TOK_IDENTIFIER</references>
+        <references refid="a00922_1a7bf8cf020e39f88d39725c1ec763cd86ad10952ab16deb1fdfc37ce82f5cb52e5" compoundref="a01666" startline="40">Hack::CommandLine::TOK_IDENTIFIER</references>
         <references refid="a01249_1a256c761eeb80fa36003c935bc5706a44" compoundref="a00812" startline="144" endline="148">Hack::CommandLine::ParseOption::setValue</references>
-        <references refid="a00922_1a7bf8cf020e39f88d39725c1ec763cd86a1ec616246244f6453a7f66b5fb826ad3" compoundref="a01661" startline="34">Hack::CommandLine::TOK_OPTION</references>
+        <references refid="a00922_1a7bf8cf020e39f88d39725c1ec763cd86a1ec616246244f6453a7f66b5fb826ad3" compoundref="a01666" startline="34">Hack::CommandLine::TOK_OPTION</references>
       </memberdef>
       <memberdef kind="function" id="a01253_1a81a0d1863ce4cf9de5fe2a49bdac010c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="a00909_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
@@ -602,7 +602,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Source/Utils/CommandLine/Parser.h" line="142" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="264" bodyend="323"/>
-        <references refid="a01253_1a8024c6934e384f16819773b2e71a99af" compoundref="a01613" startline="190" endline="193">programName</references>
+        <references refid="a01253_1a8024c6934e384f16819773b2e71a99af" compoundref="a01618" startline="190" endline="193">programName</references>
         <references refid="a01245_1ad725d98dbe8d12706bd7851f5d3d905c" compoundref="a00812" startline="41">Hack::CommandLine::Switch::shortSwitch</references>
         <references refid="a01245_1a2fcdf7ee4ff6df3990cf86d1b5470a83" compoundref="a00812" startline="45">Hack::CommandLine::Switch::longSwitch</references>
         <references refid="a01241_1aec2f1d7549e6794e9f1b12e18d12602a" compoundref="a00806" startline="35" endline="38">Hack::Char::length</references>

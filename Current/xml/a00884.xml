@@ -9,88 +9,88 @@
     <includedby refid="a00881" local="yes">Source/Utils/UserInterface/Platform.cpp</includedby>
     <includedby refid="a00890" local="yes">Source/Utils/UserInterface/PlatformUnix.h</includedby>
     <incdepgraph>
-      <node id="4255">
-        <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="4247" relation="include">
-        </childnode>
-      </node>
-      <node id="4246">
-        <label>Source/Utils/UserInterface/Platform.h</label>
-        <link refid="a00884"/>
-        <childnode refid="4247" relation="include">
-        </childnode>
-        <childnode refid="4248" relation="include">
-        </childnode>
-        <childnode refid="4249" relation="include">
-        </childnode>
-        <childnode refid="4254" relation="include">
-        </childnode>
-      </node>
-      <node id="4249">
-        <label>Utils/UserInterface/ColorCache.h</label>
-        <childnode refid="4247" relation="include">
-        </childnode>
-        <childnode refid="4250" relation="include">
-        </childnode>
-      </node>
-      <node id="4247">
+      <node id="4293">
         <label>cstdint</label>
       </node>
-      <node id="4252">
+      <node id="4298">
         <label>string</label>
       </node>
-      <node id="4254">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="4247" relation="include">
-        </childnode>
-        <childnode refid="4253" relation="include">
-        </childnode>
-        <childnode refid="4255" relation="include">
+      <node id="4301">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="4293" relation="include">
         </childnode>
       </node>
-      <node id="4253">
+      <node id="4296">
+        <label>Utils/String.h</label>
+        <childnode refid="4297" relation="include">
+        </childnode>
+        <childnode refid="4298" relation="include">
+        </childnode>
+        <childnode refid="4299" relation="include">
+        </childnode>
+      </node>
+      <node id="4292">
+        <label>Source/Utils/UserInterface/Platform.h</label>
+        <link refid="a00884"/>
+        <childnode refid="4293" relation="include">
+        </childnode>
+        <childnode refid="4294" relation="include">
+        </childnode>
+        <childnode refid="4295" relation="include">
+        </childnode>
+        <childnode refid="4300" relation="include">
+        </childnode>
+      </node>
+      <node id="4299">
         <label>vector</label>
       </node>
-      <node id="4251">
+      <node id="4297">
         <label>sstream</label>
       </node>
-      <node id="4248">
+      <node id="4295">
+        <label>Utils/UserInterface/ColorCache.h</label>
+        <childnode refid="4293" relation="include">
+        </childnode>
+        <childnode refid="4296" relation="include">
+        </childnode>
+      </node>
+      <node id="4294">
         <label>unordered_map</label>
       </node>
-      <node id="4250">
-        <label>Utils/String.h</label>
-        <childnode refid="4251" relation="include">
+      <node id="4300">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="4293" relation="include">
         </childnode>
-        <childnode refid="4252" relation="include">
+        <childnode refid="4299" relation="include">
         </childnode>
-        <childnode refid="4253" relation="include">
+        <childnode refid="4301" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="4256">
+      <node id="4302">
         <label>Source/Utils/UserInterface/Platform.h</label>
         <link refid="a00884"/>
-        <childnode refid="4257" relation="include">
+        <childnode refid="4303" relation="include">
         </childnode>
-        <childnode refid="4258" relation="include">
+        <childnode refid="4304" relation="include">
         </childnode>
       </node>
-      <node id="4259">
+      <node id="4303">
+        <label>Source/Utils/UserInterface/Platform.cpp</label>
+      </node>
+      <node id="4305">
         <label>Source/Utils/UserInterface/Context.cpp</label>
       </node>
-      <node id="4260">
-        <label>Source/Utils/UserInterface/PlatformUnix.cpp</label>
-      </node>
-      <node id="4258">
+      <node id="4304">
         <label>Source/Utils/UserInterface/PlatformUnix.h</label>
-        <childnode refid="4259" relation="include">
+        <childnode refid="4305" relation="include">
         </childnode>
-        <childnode refid="4260" relation="include">
+        <childnode refid="4306" relation="include">
         </childnode>
       </node>
-      <node id="4257">
-        <label>Source/Utils/UserInterface/Platform.cpp</label>
+      <node id="4306">
+        <label>Source/Utils/UserInterface/PlatformUnix.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="a01337" prot="public">Hack::Ui::Platform</innerclass>

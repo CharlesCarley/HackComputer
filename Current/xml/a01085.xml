@@ -92,32 +92,32 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="201">
+        <label>Hack::Chips::NOr</label>
+        <link refid="a01085"/>
+        <childnode refid="202" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="202">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="a01005"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
       <node id="203">
         <label>Hack::Chips::NOr</label>
         <link refid="a01085"/>
         <childnode refid="204" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="204">
-        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
-        <link refid="a01005"/>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="205">
-        <label>Hack::Chips::NOr</label>
-        <link refid="a01085"/>
-        <childnode refid="206" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="207">
         <label>uint8_t</label>
         <link refid="a01385"/>
       </node>
-      <node id="206">
+      <node id="204">
         <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
         <link refid="a01005"/>
-        <childnode refid="207" relation="usage">
+        <childnode refid="205" relation="usage">
           <edgelabel>_bits</edgelabel>
         </childnode>
       </node>

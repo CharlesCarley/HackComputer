@@ -3,66 +3,87 @@
   <compounddef id="a01664" kind="file" language="C++">
     <compoundname>Token.h</compoundname>
     <includes refid="a00851" local="yes">Utils/ParserBase/TokenBase.h</includes>
-    <includedby refid="a01616" local="yes">Source/VirtualMachine/Parser.cpp</includedby>
-    <includedby refid="a01640" local="yes">Source/VirtualMachine/Scanner.cpp</includedby>
-    <includedby refid="a01652" local="yes">Source/VirtualMachine/Scanner.h</includedby>
+    <includedby refid="a00428" local="yes">Source/Assembler/Instruction.h</includedby>
+    <includedby refid="a01652" local="yes">Source/Assembler/Scanner.h</includedby>
+    <includedby refid="a00446" local="yes">Source/Assembler/Token.cpp</includedby>
     <incdepgraph>
-      <node id="640">
+      <node id="625">
+        <label>Utils/ParserBase/TokenBase.h</label>
+        <childnode refid="626" relation="include">
+        </childnode>
+      </node>
+      <node id="628">
         <label>string</label>
       </node>
-      <node id="637">
-        <label>Utils/ParserBase/TokenBase.h</label>
-        <childnode refid="638" relation="include">
+      <node id="626">
+        <label>Utils/String.h</label>
+        <childnode refid="627" relation="include">
+        </childnode>
+        <childnode refid="628" relation="include">
+        </childnode>
+        <childnode refid="629" relation="include">
         </childnode>
       </node>
-      <node id="636">
-        <label>Source/VirtualMachine/Token.h</label>
-        <link refid="a01664"/>
-        <childnode refid="637" relation="include">
-        </childnode>
-      </node>
-      <node id="641">
+      <node id="629">
         <label>vector</label>
       </node>
-      <node id="639">
+      <node id="627">
         <label>sstream</label>
       </node>
-      <node id="638">
-        <label>Utils/String.h</label>
-        <childnode refid="639" relation="include">
-        </childnode>
-        <childnode refid="640" relation="include">
-        </childnode>
-        <childnode refid="641" relation="include">
+      <node id="624">
+        <label>Source/Assembler/Token.h</label>
+        <link refid="a01664"/>
+        <childnode refid="625" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="645">
-        <label>Source/VirtualMachine/Scanner.h</label>
-        <childnode refid="643" relation="include">
+      <node id="636">
+        <label>Source/Assembler/Parser.cpp</label>
+      </node>
+      <node id="633">
+        <label>Source/Bindings/Bindings.cpp</label>
+      </node>
+      <node id="637">
+        <label>Source/Assembler/Scanner.cpp</label>
+      </node>
+      <node id="638">
+        <label>Source/Assembler/Token.cpp</label>
+      </node>
+      <node id="632">
+        <label>Source/Assembler/Instruction.cpp</label>
+      </node>
+      <node id="631">
+        <label>Source/Assembler/Instruction.h</label>
+        <childnode refid="632" relation="include">
         </childnode>
-        <childnode refid="644" relation="include">
+        <childnode refid="633" relation="include">
+        </childnode>
+        <childnode refid="634" relation="include">
         </childnode>
       </node>
-      <node id="642">
-        <label>Source/VirtualMachine/Token.h</label>
+      <node id="634">
+        <label>Source/Computer/DebugRuntime.cpp</label>
+      </node>
+      <node id="635">
+        <label>Source/Assembler/Scanner.h</label>
+        <childnode refid="636" relation="include">
+        </childnode>
+        <childnode refid="637" relation="include">
+        </childnode>
+      </node>
+      <node id="630">
+        <label>Source/Assembler/Token.h</label>
         <link refid="a01664"/>
-        <childnode refid="643" relation="include">
+        <childnode refid="631" relation="include">
         </childnode>
-        <childnode refid="644" relation="include">
+        <childnode refid="635" relation="include">
         </childnode>
-        <childnode refid="645" relation="include">
+        <childnode refid="638" relation="include">
         </childnode>
-      </node>
-      <node id="644">
-        <label>Source/VirtualMachine/Scanner.cpp</label>
-      </node>
-      <node id="643">
-        <label>Source/VirtualMachine/Parser.cpp</label>
       </node>
     </invincdepgraph>
-    <innernamespace refid="a00917">Hack::VirtualMachine</innernamespace>
+    <innernamespace refid="a00908">Hack::Assembler</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -92,50 +113,52 @@
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/ParserBase/TokenBase.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00917" kindref="compound">Hack::VirtualMachine</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00908" kindref="compound">Hack::Assembler</ref></highlight></codeline>
 <codeline lineno="26"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="27" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8" kindref="member">TokenType</ref></highlight></codeline>
+<codeline lineno="27" refid="a00908_1ab52345149881cbf184ed8dbc45774908" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908" kindref="member">TokenType</ref></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="29" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a71e915ab635f656148cf8990f77e5171" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a71e915ab635f656148cf8990f77e5171" kindref="member">TOK_ERROR</ref><sp/>=<sp/>-2,</highlight></codeline>
-<codeline lineno="30" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8aa3110406fa7d6ce5c6dba8fd3594d633" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8aa3110406fa7d6ce5c6dba8fd3594d633" kindref="member">TOK_EOF</ref>,</highlight></codeline>
-<codeline lineno="31" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8abe92c0e4ce7a4c0b26df409cab3cd1a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8abe92c0e4ce7a4c0b26df409cab3cd1a7" kindref="member">TOK_NULL</ref>,</highlight></codeline>
-<codeline lineno="32" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8af65d8765d7554151c22a5de2475e4a04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8af65d8765d7554151c22a5de2475e4a04" kindref="member">TOK_INTEGER</ref>,</highlight></codeline>
-<codeline lineno="33" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a79fe4d72ec11f5d2ba06c0f0818bc383" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a79fe4d72ec11f5d2ba06c0f0818bc383" kindref="member">TOK_IDENTIFIER</ref>,</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a15637fa7561d27e7ec3767c1234f30c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a15637fa7561d27e7ec3767c1234f30c8" kindref="member">TOK_PUSH</ref>,</highlight></codeline>
-<codeline lineno="36" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8acc1f94b8928811b09124734ee1597a55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8acc1f94b8928811b09124734ee1597a55" kindref="member">TOK_POP</ref>,</highlight></codeline>
-<codeline lineno="37" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8ac1c79b33295900ce5fb9b7388f9d3774" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8ac1c79b33295900ce5fb9b7388f9d3774" kindref="member">TOK_ARGUMENT</ref>,</highlight></codeline>
-<codeline lineno="38" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a884782019d67a9034800b2e52853285f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a884782019d67a9034800b2e52853285f" kindref="member">TOK_LOCAL</ref>,</highlight></codeline>
-<codeline lineno="39" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a34c8a308ae07cccf0911f5beedf966b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a34c8a308ae07cccf0911f5beedf966b1" kindref="member">TOK_STATIC</ref>,</highlight></codeline>
-<codeline lineno="40" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a1b5933cb66c94f5d52f4b26aa5d21687" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a1b5933cb66c94f5d52f4b26aa5d21687" kindref="member">TOK_CONSTANT</ref>,</highlight></codeline>
-<codeline lineno="41" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a336b66142cf793364a1852264a54363e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a336b66142cf793364a1852264a54363e" kindref="member">TOK_THIS</ref>,</highlight></codeline>
-<codeline lineno="42" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a4a6f04837563a657059418583b193f6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a4a6f04837563a657059418583b193f6d" kindref="member">TOK_THAT</ref>,</highlight></codeline>
-<codeline lineno="43" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a1ff62250b7cc15cf5232385336a43faa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a1ff62250b7cc15cf5232385336a43faa" kindref="member">TOK_POINTER</ref>,</highlight></codeline>
-<codeline lineno="44" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a9a81b7232eec35bfa052a1127102ef88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a9a81b7232eec35bfa052a1127102ef88" kindref="member">TOK_TEMP</ref>,</highlight></codeline>
-<codeline lineno="45" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a4e509ea02cf3295cfb974cbef858a2a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a4e509ea02cf3295cfb974cbef858a2a0" kindref="member">TOK_IF_GOTO</ref>,</highlight></codeline>
-<codeline lineno="46" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8adefb15a333279ec39429629d72c7247b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8adefb15a333279ec39429629d72c7247b" kindref="member">TOK_GOTO</ref>,</highlight></codeline>
-<codeline lineno="47" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8adea00dd7260945f628607920c28f4f88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8adea00dd7260945f628607920c28f4f88" kindref="member">TOK_LABEL</ref>,</highlight></codeline>
-<codeline lineno="48" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a8fe88815a953aa99c8e5c8d5ee61977b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a8fe88815a953aa99c8e5c8d5ee61977b" kindref="member">TOK_FUNCTION</ref>,</highlight></codeline>
-<codeline lineno="49" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8aba05bfde3b583f0f57670db082435502" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8aba05bfde3b583f0f57670db082435502" kindref="member">TOK_CALL</ref>,</highlight></codeline>
-<codeline lineno="50" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8aab8d542c9b300e713566c31fd04978b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8aab8d542c9b300e713566c31fd04978b2" kindref="member">TOK_RETURN</ref>,</highlight></codeline>
-<codeline lineno="51" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a93c0f222ca3e14bf194e2ada515f6231" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a93c0f222ca3e14bf194e2ada515f6231" kindref="member">TOK_EQ</ref>,</highlight></codeline>
-<codeline lineno="52" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8afa3234091b8747a25c81465bbc76356e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8afa3234091b8747a25c81465bbc76356e" kindref="member">TOK_GT</ref>,</highlight></codeline>
-<codeline lineno="53" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a34d01c2b796f4fba92dbbdba6829b4de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a34d01c2b796f4fba92dbbdba6829b4de" kindref="member">TOK_LT</ref>,</highlight></codeline>
-<codeline lineno="54" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8ad252188e8cc229f0e37a62bc2a6effbb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8ad252188e8cc229f0e37a62bc2a6effbb" kindref="member">TOK_ADD</ref>,</highlight></codeline>
-<codeline lineno="55" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a44c80f603918c4ec0059e90c6aec5da0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a44c80f603918c4ec0059e90c6aec5da0" kindref="member">TOK_SUB</ref>,</highlight></codeline>
-<codeline lineno="56" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a090fd2880780efacb459ca5a0f9108b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a090fd2880780efacb459ca5a0f9108b2" kindref="member">TOK_AND</ref>,</highlight></codeline>
-<codeline lineno="57" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8afc9b5bec56f03be602419b704b93791e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8afc9b5bec56f03be602419b704b93791e" kindref="member">TOK_OR</ref>,</highlight></codeline>
-<codeline lineno="58" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8ab3a17c6fa237215d3cbd4ef2147917c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8ab3a17c6fa237215d3cbd4ef2147917c5" kindref="member">TOK_NOT</ref>,</highlight></codeline>
-<codeline lineno="59" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a3528eed46cd82da594149f52de5580f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a3528eed46cd82da594149f52de5580f0" kindref="member">TOK_NEG</ref>,</highlight></codeline>
-<codeline lineno="60" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a3fa291fa8690f5c7571b54b2fa681b08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a3fa291fa8690f5c7571b54b2fa681b08" kindref="member">TOK_SET</ref>,</highlight></codeline>
-<codeline lineno="61" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a066351ce777c87e213b2dc4daf40e599" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a066351ce777c87e213b2dc4daf40e599" kindref="member">TOK_RESET</ref>,</highlight></codeline>
-<codeline lineno="62" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a8ecc09af794ba08a877a741036883409" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a8ecc09af794ba08a877a741036883409" kindref="member">TOK_HALT</ref>,</highlight></codeline>
-<codeline lineno="63" refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a4ab563e860977220dd359e7df2a3db53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00917_1a091fad0d0b4814af2f1f3f51d62033c8a4ab563e860977220dd359e7df2a3db53" kindref="member">TOK_ASM</ref>,</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66" refid="a00917_1a1256a43300d83510604c7b9755796e01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="a01301" kindref="compound">Token</ref><sp/>=<sp/><ref refid="a01301" kindref="compound">TokenBase</ref>;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::VirtualMachine</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="a00908_1ab52345149881cbf184ed8dbc45774908aaa80392be0382d077bae11ca09cec3ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908aaa80392be0382d077bae11ca09cec3ca" kindref="member">TOK_ERROR</ref><sp/>=<sp/>-2,</highlight></codeline>
+<codeline lineno="30" refid="a00908_1ab52345149881cbf184ed8dbc45774908a0b04f0c4d57271cb40554de353dc604a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a0b04f0c4d57271cb40554de353dc604a" kindref="member">TOK_EOF</ref>,</highlight></codeline>
+<codeline lineno="31" refid="a00908_1ab52345149881cbf184ed8dbc45774908a8d9967af0244b14438091db8babef208" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a8d9967af0244b14438091db8babef208" kindref="member">TOK_NULL</ref>,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Destination</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="a00908_1ab52345149881cbf184ed8dbc45774908a5f2e8b1da23246a6ef8f73752b64730e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a5f2e8b1da23246a6ef8f73752b64730e" kindref="member">TOK_D_START</ref>,</highlight></codeline>
+<codeline lineno="34" refid="a00908_1ab52345149881cbf184ed8dbc45774908ab581a0e588797e0c6496e87b6811d588" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908ab581a0e588797e0c6496e87b6811d588" kindref="member">TOK_M</ref>,</highlight></codeline>
+<codeline lineno="35" refid="a00908_1ab52345149881cbf184ed8dbc45774908a56a0c3c5c2e60c4815989d806ad4cf7c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a56a0c3c5c2e60c4815989d806ad4cf7c" kindref="member">TOK_D</ref>,</highlight></codeline>
+<codeline lineno="36" refid="a00908_1ab52345149881cbf184ed8dbc45774908a9d157b6a03086be0fd1de4d86472d080" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a9d157b6a03086be0fd1de4d86472d080" kindref="member">TOK_MD</ref>,</highlight></codeline>
+<codeline lineno="37" refid="a00908_1ab52345149881cbf184ed8dbc45774908a0537cef36a1e6265be68356ab5cdead0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a0537cef36a1e6265be68356ab5cdead0" kindref="member">TOK_A</ref>,</highlight></codeline>
+<codeline lineno="38" refid="a00908_1ab52345149881cbf184ed8dbc45774908a088bd7f385e2a4096728599e6bebc7b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a088bd7f385e2a4096728599e6bebc7b7" kindref="member">TOK_AM</ref>,</highlight></codeline>
+<codeline lineno="39" refid="a00908_1ab52345149881cbf184ed8dbc45774908abcc84dac310829c9a62148765a8a250e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908abcc84dac310829c9a62148765a8a250e" kindref="member">TOK_AD</ref>,</highlight></codeline>
+<codeline lineno="40" refid="a00908_1ab52345149881cbf184ed8dbc45774908af5554f8bc380b1604f24c2dd78373880" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908af5554f8bc380b1604f24c2dd78373880" kindref="member">TOK_AMD</ref>,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Jump</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="a00908_1ab52345149881cbf184ed8dbc45774908a8705e27aeefb1cafd4bb5fbdd48cbe53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a8705e27aeefb1cafd4bb5fbdd48cbe53" kindref="member">TOK_J_START</ref>,</highlight></codeline>
+<codeline lineno="43" refid="a00908_1ab52345149881cbf184ed8dbc45774908a00a5e4936b8f21d85966bc510b9cf90d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a00a5e4936b8f21d85966bc510b9cf90d" kindref="member">TOK_JGT</ref>,</highlight></codeline>
+<codeline lineno="44" refid="a00908_1ab52345149881cbf184ed8dbc45774908a8aa5db527baacc19c6b5b6b01e2491fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a8aa5db527baacc19c6b5b6b01e2491fd" kindref="member">TOK_JEQ</ref>,</highlight></codeline>
+<codeline lineno="45" refid="a00908_1ab52345149881cbf184ed8dbc45774908a1f0d06a89639748e3a8b75c113d5d06d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a1f0d06a89639748e3a8b75c113d5d06d" kindref="member">TOK_JGE</ref>,</highlight></codeline>
+<codeline lineno="46" refid="a00908_1ab52345149881cbf184ed8dbc45774908aa02bae4eda01057babd2b906433a4cb1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908aa02bae4eda01057babd2b906433a4cb1" kindref="member">TOK_JLT</ref>,</highlight></codeline>
+<codeline lineno="47" refid="a00908_1ab52345149881cbf184ed8dbc45774908a4cb282cdab169fa23a83251051d08834" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a4cb282cdab169fa23a83251051d08834" kindref="member">TOK_JNE</ref>,</highlight></codeline>
+<codeline lineno="48" refid="a00908_1ab52345149881cbf184ed8dbc45774908ae8772c050e0a8b9141a92741af54fe15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908ae8772c050e0a8b9141a92741af54fe15" kindref="member">TOK_JLE</ref>,</highlight></codeline>
+<codeline lineno="49" refid="a00908_1ab52345149881cbf184ed8dbc45774908abbbee45b0a8f7973ea9c97ba81bbfab1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908abbbee45b0a8f7973ea9c97ba81bbfab1" kindref="member">TOK_JMP</ref>,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Comp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="a00908_1ab52345149881cbf184ed8dbc45774908a8d150987e2f8f89304456e401c7de979" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a8d150987e2f8f89304456e401c7de979" kindref="member">TOK_ZERO</ref>,</highlight></codeline>
+<codeline lineno="52" refid="a00908_1ab52345149881cbf184ed8dbc45774908a4ff9eb9fe01140f2790d23262aee15b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a4ff9eb9fe01140f2790d23262aee15b9" kindref="member">TOK_MINUS</ref>,</highlight></codeline>
+<codeline lineno="53" refid="a00908_1ab52345149881cbf184ed8dbc45774908aa40c60bb7f9740a9bf55e8483a17b2cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908aa40c60bb7f9740a9bf55e8483a17b2cf" kindref="member">TOK_NOT</ref>,</highlight></codeline>
+<codeline lineno="54" refid="a00908_1ab52345149881cbf184ed8dbc45774908aa25dfa8318505862372dc7e5ab7a1105" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908aa25dfa8318505862372dc7e5ab7a1105" kindref="member">TOK_PLUS</ref>,</highlight></codeline>
+<codeline lineno="55" refid="a00908_1ab52345149881cbf184ed8dbc45774908a57fc3c8374e06e1a4aad4dd701ddfc14" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a57fc3c8374e06e1a4aad4dd701ddfc14" kindref="member">TOK_AND</ref>,</highlight></codeline>
+<codeline lineno="56" refid="a00908_1ab52345149881cbf184ed8dbc45774908a4d7b6070721cbd12a68714ef366b7710" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a4d7b6070721cbd12a68714ef366b7710" kindref="member">TOK_OR</ref>,</highlight></codeline>
+<codeline lineno="57" refid="a00908_1ab52345149881cbf184ed8dbc45774908a6e216370a7594ccc1bba1c215c1aea55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a6e216370a7594ccc1bba1c215c1aea55" kindref="member">TOK_AT</ref>,</highlight></codeline>
+<codeline lineno="58" refid="a00908_1ab52345149881cbf184ed8dbc45774908a5a07d14bb9d7796ce1fd76da13d97329" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a5a07d14bb9d7796ce1fd76da13d97329" kindref="member">TOK_SEMI_COLON</ref>,</highlight></codeline>
+<codeline lineno="59" refid="a00908_1ab52345149881cbf184ed8dbc45774908a9f29e07041ce4ada94e31fc4188ff8eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a9f29e07041ce4ada94e31fc4188ff8eb" kindref="member">TOK_EQUAL</ref>,</highlight></codeline>
+<codeline lineno="60" refid="a00908_1ab52345149881cbf184ed8dbc45774908a1d63c313df724c7f5becbc7061c98233" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a1d63c313df724c7f5becbc7061c98233" kindref="member">TOK_L_PAREN</ref>,</highlight></codeline>
+<codeline lineno="61" refid="a00908_1ab52345149881cbf184ed8dbc45774908af9015f131c8e3d89a5c90de1f2c71c12" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908af9015f131c8e3d89a5c90de1f2c71c12" kindref="member">TOK_R_PAREN</ref>,</highlight></codeline>
+<codeline lineno="62" refid="a00908_1ab52345149881cbf184ed8dbc45774908a30c6aba6b3c729e7150c79e60a4fc6f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a30c6aba6b3c729e7150c79e60a4fc6f9" kindref="member">TOK_COMMA</ref>,</highlight></codeline>
+<codeline lineno="63" refid="a00908_1ab52345149881cbf184ed8dbc45774908a4a3cce8834d15a4d16c2a53273864549" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908a4a3cce8834d15a4d16c2a53273864549" kindref="member">TOK_ONE</ref>,</highlight></codeline>
+<codeline lineno="64" refid="a00908_1ab52345149881cbf184ed8dbc45774908ad0f4584c48727b093746e2500d3e315c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908ad0f4584c48727b093746e2500d3e315c" kindref="member">TOK_INTEGER</ref>,</highlight></codeline>
+<codeline lineno="65" refid="a00908_1ab52345149881cbf184ed8dbc45774908abf7077806b8936246ac762409fdbcc19" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00908_1ab52345149881cbf184ed8dbc45774908abf7077806b8936246ac762409fdbcc19" kindref="member">TOK_LABEL</ref></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="a00908_1a9a9dde9280f429162b9c9d91279c7f26" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="a01301" kindref="compound">Token</ref><sp/>=<sp/><ref refid="a01301" kindref="compound">TokenBase</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Assembler</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/VirtualMachine/Token.h"/>
+    <location file="Source/Assembler/Token.h"/>
   </compounddef>
 </doxygen>

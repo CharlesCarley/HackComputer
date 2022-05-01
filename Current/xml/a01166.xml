@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="a01166" kind="class" language="C++" prot="public">
+    <compoundname>Hack::Compiler::DotWriter</compoundname>
+    <includes local="no">Source/Compiler/Common/DotWriter.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="a01166_1acfdc97fddf26635d00cb799d482415b9" prot="private" static="no" mutable="no">
+        <type><ref refid="a01170" kindref="compound">Node</ref> *</type>
+        <definition>Node* Hack::Compiler::DotWriter::_root</definition>
+        <argsstring></argsstring>
+        <name>_root</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Common/DotWriter.h" line="32" column="1" bodyfile="Source/Compiler/Common/DotWriter.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a01166_1a1c2b9abbedc66bec1440fd028d434c44" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Compiler::DotWriter::DotWriter</definition>
+        <argsstring>(Node *root)</argsstring>
+        <name>DotWriter</name>
+        <param>
+          <type><ref refid="a01170" kindref="compound">Node</ref> *</type>
+          <declname>root</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Common/DotWriter.h" line="35" column="1" bodyfile="Source/Compiler/Common/DotWriter.cpp" bodystart="126" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="a01166_1a779b98218c0979beb471fe308c35eb61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Compiler::DotWriter::~DotWriter</definition>
+        <argsstring>()=default</argsstring>
+        <name>~DotWriter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Common/DotWriter.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a01166_1a3c42eaf7c27647c3e266d5c02fc62e48" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Compiler::DotWriter::write</definition>
+        <argsstring>(OStream &amp;out) const</argsstring>
+        <name>write</name>
+        <param>
+          <type><ref refid="a00906_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Common/DotWriter.h" line="39" column="1" bodyfile="Source/Compiler/Common/DotWriter.cpp" bodystart="131" bodyend="135"/>
+        <references refid="a01162_1a1546d87f7f5aec756e4ffa173195afca" compoundref="a00704" startline="108" endline="123">Hack::Compiler::DotWriterImpl::write</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/Compiler/Common/DotWriter.h" line="30" column="1" bodyfile="Source/Compiler/Common/DotWriter.h" bodystart="29" bodyend="40"/>
+    <listofallmembers>
+      <member refid="a01166_1acfdc97fddf26635d00cb799d482415b9" prot="private" virt="non-virtual"><scope>Hack::Compiler::DotWriter</scope><name>_root</name></member>
+      <member refid="a01166_1a1c2b9abbedc66bec1440fd028d434c44" prot="public" virt="non-virtual"><scope>Hack::Compiler::DotWriter</scope><name>DotWriter</name></member>
+      <member refid="a01166_1a3c42eaf7c27647c3e266d5c02fc62e48" prot="public" virt="non-virtual"><scope>Hack::Compiler::DotWriter</scope><name>write</name></member>
+      <member refid="a01166_1a779b98218c0979beb471fe308c35eb61" prot="public" virt="non-virtual"><scope>Hack::Compiler::DotWriter</scope><name>~DotWriter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

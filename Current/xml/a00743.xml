@@ -4,234 +4,236 @@
     <compoundname>Generator.cpp</compoundname>
     <includes refid="a00746" local="yes">Compiler/Generator/Generator.h</includes>
     <includes local="no">fstream</includes>
-    <includes refid="a01622" local="yes">Compiler/Analyzer/Parser.h</includes>
+    <includes refid="a01627" local="yes">Compiler/Analyzer/Parser.h</includes>
     <includes refid="a00716" local="yes">Compiler/Common/Node.h</includes>
     <includes refid="a00764" local="yes">Compiler/Generator/SymbolTable.h</includes>
     <includes refid="a00770" local="yes">Compiler/Generator/VmEmitter.h</includes>
     <includes refid="a00821" local="yes">Utils/Exception.h</includes>
     <includes refid="a00827" local="yes">Utils/FileSystem.h</includes>
     <incdepgraph>
-      <node id="2548">
-        <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="2549" relation="include">
+      <node id="2593">
+        <label>Compiler/Analyzer/Parser.h</label>
+        <childnode refid="2594" relation="include">
+        </childnode>
+        <childnode refid="2590" relation="include">
+        </childnode>
+        <childnode refid="2574" relation="include">
+        </childnode>
+        <childnode refid="2595" relation="include">
+        </childnode>
+        <childnode refid="2579" relation="include">
         </childnode>
       </node>
-      <node id="2552">
+      <node id="2599">
+        <label>Compiler/Generator/VmEmitter.h</label>
+        <childnode refid="2587" relation="include">
+        </childnode>
+        <childnode refid="2570" relation="include">
+        </childnode>
+        <childnode refid="2579" relation="include">
+        </childnode>
+      </node>
+      <node id="2588">
         <label>functional</label>
       </node>
-      <node id="2565">
+      <node id="2597">
+        <label>Utils/ParserBase/TokenBase.h</label>
+        <childnode refid="2579" relation="include">
+        </childnode>
+      </node>
+      <node id="2601">
         <label>filesystem</label>
       </node>
-      <node id="2534">
-        <label>Symbol.h</label>
-        <childnode refid="2535" relation="include">
+      <node id="2600">
+        <label>Utils/FileSystem.h</label>
+        <childnode refid="2592" relation="include">
+        </childnode>
+        <childnode refid="2601" relation="include">
+        </childnode>
+        <childnode refid="2579" relation="include">
         </childnode>
       </node>
-      <node id="2549">
+      <node id="2569">
+        <label>Compiler/Generator/Generator.h</label>
+        <childnode refid="2570" relation="include">
+        </childnode>
+        <childnode refid="2587" relation="include">
+        </childnode>
+        <childnode refid="2590" relation="include">
+        </childnode>
+        <childnode refid="2574" relation="include">
+        </childnode>
+        <childnode refid="2591" relation="include">
+        </childnode>
+      </node>
+      <node id="2574">
+        <label>Utils/Exception.h</label>
+        <childnode refid="2575" relation="include">
+        </childnode>
+        <childnode refid="2576" relation="include">
+        </childnode>
+        <childnode refid="2577" relation="include">
+        </childnode>
+        <childnode refid="2578" relation="include">
+        </childnode>
+        <childnode refid="2579" relation="include">
+        </childnode>
+      </node>
+      <node id="2596">
+        <label>ScannerBase.h</label>
+        <childnode refid="2571" relation="include">
+        </childnode>
+        <childnode refid="2597" relation="include">
+        </childnode>
+      </node>
+      <node id="2585">
         <label>cstdint</label>
       </node>
-      <node id="2553">
-        <label>Compiler/Common/NodeUtils.h</label>
-        <childnode refid="2543" relation="include">
+      <node id="2587">
+        <label>Compiler/Common/Node.h</label>
+        <childnode refid="2588" relation="include">
+        </childnode>
+        <childnode refid="2582" relation="include">
+        </childnode>
+        <childnode refid="2589" relation="include">
+        </childnode>
+        <childnode refid="2571" relation="include">
+        </childnode>
+        <childnode refid="2579" relation="include">
         </childnode>
       </node>
-      <node id="2540">
+      <node id="2590">
+        <label>Compiler/Common/Tree.h</label>
+        <childnode refid="2579" relation="include">
+        </childnode>
+      </node>
+      <node id="2583">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="2579" relation="include">
+        </childnode>
+        <childnode refid="2584" relation="include">
+        </childnode>
+        <childnode refid="2586" relation="include">
+        </childnode>
+      </node>
+      <node id="2576">
         <label>stdexcept</label>
       </node>
-      <node id="2545">
+      <node id="2581">
         <label>string</label>
       </node>
-      <node id="2537">
-        <label>unordered_set</label>
-      </node>
-      <node id="2539">
-        <label>exception</label>
-      </node>
-      <node id="2556">
-        <label>fstream</label>
-      </node>
-      <node id="2560">
-        <label>ScannerBase.h</label>
-        <childnode refid="2535" relation="include">
-        </childnode>
-        <childnode refid="2561" relation="include">
-        </childnode>
-      </node>
-      <node id="2555">
-        <label>Utils/ParserBase/ParseError.h</label>
-        <childnode refid="2538" relation="include">
-        </childnode>
-      </node>
-      <node id="2561">
-        <label>Utils/ParserBase/TokenBase.h</label>
-        <childnode refid="2543" relation="include">
-        </childnode>
-      </node>
-      <node id="2547">
-        <label>UserInterface/Context.h</label>
-        <childnode refid="2543" relation="include">
-        </childnode>
-        <childnode refid="2548" relation="include">
-        </childnode>
-        <childnode refid="2550" relation="include">
-        </childnode>
-      </node>
-      <node id="2550">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="2549" relation="include">
-        </childnode>
-        <childnode refid="2546" relation="include">
-        </childnode>
-        <childnode refid="2548" relation="include">
-        </childnode>
-      </node>
-      <node id="2535">
-        <label>Utils/IndexCache.h</label>
-        <childnode refid="2536" relation="include">
-        </childnode>
-        <childnode refid="2537" relation="include">
-        </childnode>
-        <childnode refid="2538" relation="include">
-        </childnode>
-      </node>
-      <node id="2542">
-        <label>Utils/Console.h</label>
-        <childnode refid="2543" relation="include">
-        </childnode>
-        <childnode refid="2547" relation="include">
-        </childnode>
-      </node>
-      <node id="2532">
+      <node id="2568">
         <label>Source/Compiler/Generator/Generator.cpp</label>
         <link refid="a00743"/>
-        <childnode refid="2533" relation="include">
+        <childnode refid="2569" relation="include">
         </childnode>
-        <childnode refid="2556" relation="include">
+        <childnode refid="2592" relation="include">
         </childnode>
-        <childnode refid="2557" relation="include">
+        <childnode refid="2593" relation="include">
         </childnode>
-        <childnode refid="2551" relation="include">
+        <childnode refid="2587" relation="include">
         </childnode>
-        <childnode refid="2562" relation="include">
+        <childnode refid="2598" relation="include">
         </childnode>
-        <childnode refid="2563" relation="include">
+        <childnode refid="2599" relation="include">
         </childnode>
-        <childnode refid="2538" relation="include">
+        <childnode refid="2574" relation="include">
         </childnode>
-        <childnode refid="2564" relation="include">
-        </childnode>
-      </node>
-      <node id="2562">
-        <label>Compiler/Generator/SymbolTable.h</label>
-        <childnode refid="2534" relation="include">
-        </childnode>
-        <childnode refid="2535" relation="include">
+        <childnode refid="2600" relation="include">
         </childnode>
       </node>
-      <node id="2563">
-        <label>Compiler/Generator/VmEmitter.h</label>
-        <childnode refid="2551" relation="include">
-        </childnode>
-        <childnode refid="2534" relation="include">
-        </childnode>
-        <childnode refid="2543" relation="include">
+      <node id="2573">
+        <label>unordered_set</label>
+      </node>
+      <node id="2570">
+        <label>Symbol.h</label>
+        <childnode refid="2571" relation="include">
         </childnode>
       </node>
-      <node id="2558">
+      <node id="2575">
+        <label>exception</label>
+      </node>
+      <node id="2592">
+        <label>fstream</label>
+      </node>
+      <node id="2584">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="2585" relation="include">
+        </childnode>
+      </node>
+      <node id="2579">
+        <label>String.h</label>
+        <childnode refid="2580" relation="include">
+        </childnode>
+        <childnode refid="2581" relation="include">
+        </childnode>
+        <childnode refid="2582" relation="include">
+        </childnode>
+      </node>
+      <node id="2595">
+        <label>Utils/ParserBase/ParserBase.h</label>
+        <childnode refid="2582" relation="include">
+        </childnode>
+        <childnode refid="2596" relation="include">
+        </childnode>
+        <childnode refid="2597" relation="include">
+        </childnode>
+      </node>
+      <node id="2571">
+        <label>Utils/IndexCache.h</label>
+        <childnode refid="2572" relation="include">
+        </childnode>
+        <childnode refid="2573" relation="include">
+        </childnode>
+        <childnode refid="2574" relation="include">
+        </childnode>
+      </node>
+      <node id="2594">
         <label>stack</label>
       </node>
-      <node id="2546">
+      <node id="2582">
         <label>vector</label>
       </node>
-      <node id="2541">
+      <node id="2577">
         <label>utility</label>
       </node>
-      <node id="2544">
+      <node id="2580">
         <label>sstream</label>
       </node>
-      <node id="2557">
-        <label>Compiler/Analyzer/Parser.h</label>
-        <childnode refid="2558" relation="include">
-        </childnode>
-        <childnode refid="2554" relation="include">
-        </childnode>
-        <childnode refid="2538" relation="include">
-        </childnode>
-        <childnode refid="2559" relation="include">
-        </childnode>
-        <childnode refid="2543" relation="include">
-        </childnode>
-      </node>
-      <node id="2538">
-        <label>Utils/Exception.h</label>
-        <childnode refid="2539" relation="include">
-        </childnode>
-        <childnode refid="2540" relation="include">
-        </childnode>
-        <childnode refid="2541" relation="include">
-        </childnode>
-        <childnode refid="2542" relation="include">
-        </childnode>
-        <childnode refid="2543" relation="include">
-        </childnode>
-      </node>
-      <node id="2536">
+      <node id="2572">
         <label>unordered_map</label>
       </node>
-      <node id="2559">
-        <label>Utils/ParserBase/ParserBase.h</label>
-        <childnode refid="2546" relation="include">
+      <node id="2586">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="2585" relation="include">
         </childnode>
-        <childnode refid="2560" relation="include">
+        <childnode refid="2582" relation="include">
         </childnode>
-        <childnode refid="2561" relation="include">
-        </childnode>
-      </node>
-      <node id="2533">
-        <label>Compiler/Generator/Generator.h</label>
-        <childnode refid="2534" relation="include">
-        </childnode>
-        <childnode refid="2551" relation="include">
-        </childnode>
-        <childnode refid="2554" relation="include">
-        </childnode>
-        <childnode refid="2538" relation="include">
-        </childnode>
-        <childnode refid="2555" relation="include">
+        <childnode refid="2584" relation="include">
         </childnode>
       </node>
-      <node id="2554">
-        <label>Compiler/Common/Tree.h</label>
-        <childnode refid="2543" relation="include">
+      <node id="2589">
+        <label>Compiler/Common/NodeUtils.h</label>
+        <childnode refid="2579" relation="include">
         </childnode>
       </node>
-      <node id="2551">
-        <label>Compiler/Common/Node.h</label>
-        <childnode refid="2552" relation="include">
+      <node id="2578">
+        <label>Utils/Console.h</label>
+        <childnode refid="2579" relation="include">
         </childnode>
-        <childnode refid="2546" relation="include">
-        </childnode>
-        <childnode refid="2553" relation="include">
-        </childnode>
-        <childnode refid="2535" relation="include">
-        </childnode>
-        <childnode refid="2543" relation="include">
+        <childnode refid="2583" relation="include">
         </childnode>
       </node>
-      <node id="2543">
-        <label>String.h</label>
-        <childnode refid="2544" relation="include">
-        </childnode>
-        <childnode refid="2545" relation="include">
-        </childnode>
-        <childnode refid="2546" relation="include">
+      <node id="2591">
+        <label>Utils/ParserBase/ParseError.h</label>
+        <childnode refid="2574" relation="include">
         </childnode>
       </node>
-      <node id="2564">
-        <label>Utils/FileSystem.h</label>
-        <childnode refid="2565" relation="include">
+      <node id="2598">
+        <label>Compiler/Generator/SymbolTable.h</label>
+        <childnode refid="2570" relation="include">
         </childnode>
-        <childnode refid="2543" relation="include">
+        <childnode refid="2571" relation="include">
         </childnode>
       </node>
     </incdepgraph>

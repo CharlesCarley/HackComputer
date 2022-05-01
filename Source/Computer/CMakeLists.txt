@@ -61,8 +61,8 @@ add_executable(${TargetName}
 
 target_link_libraries(${TargetName} 
     CodeGenerator
-    SyntaxAnalyzer
-    CompileUtils
+    ParseTreeBuilder
+    ParseTree
     Utils 
     Chips 
     Assembler

@@ -208,59 +208,59 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="255">
+        <label>Hack::Chips::Chip&lt; bit64_t, 64 &gt;</label>
+        <link refid="a01005"/>
+      </node>
+      <node id="254">
+        <label>Hack::Chips::Ram64</label>
+        <link refid="a01121"/>
+        <childnode refid="255" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="259">
+        <label>uint64_t</label>
+      </node>
+      <node id="260">
+        <label>uint16_t</label>
+        <link refid="a01373"/>
+      </node>
+      <node id="261">
+        <label>uint32_t</label>
+      </node>
+      <node id="262">
+        <label>uint8_t</label>
+        <link refid="a01385"/>
+      </node>
+      <node id="258">
+        <label>Hack::Chips::bit64_t</label>
+        <link refid="a00997"/>
+        <childnode refid="259" relation="usage">
+          <edgelabel>ll</edgelabel>
+        </childnode>
+        <childnode refid="260" relation="usage">
+          <edgelabel>s</edgelabel>
+        </childnode>
+        <childnode refid="261" relation="usage">
+          <edgelabel>i</edgelabel>
+        </childnode>
+        <childnode refid="262" relation="usage">
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
       <node id="257">
         <label>Hack::Chips::Chip&lt; bit64_t, 64 &gt;</label>
         <link refid="a01005"/>
+        <childnode refid="258" relation="usage">
+          <edgelabel>_bits</edgelabel>
+        </childnode>
       </node>
       <node id="256">
         <label>Hack::Chips::Ram64</label>
         <link refid="a01121"/>
         <childnode refid="257" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="261">
-        <label>uint64_t</label>
-      </node>
-      <node id="262">
-        <label>uint16_t</label>
-        <link refid="a01373"/>
-      </node>
-      <node id="263">
-        <label>uint32_t</label>
-      </node>
-      <node id="264">
-        <label>uint8_t</label>
-        <link refid="a01385"/>
-      </node>
-      <node id="260">
-        <label>Hack::Chips::bit64_t</label>
-        <link refid="a00997"/>
-        <childnode refid="261" relation="usage">
-          <edgelabel>ll</edgelabel>
-        </childnode>
-        <childnode refid="262" relation="usage">
-          <edgelabel>s</edgelabel>
-        </childnode>
-        <childnode refid="263" relation="usage">
-          <edgelabel>i</edgelabel>
-        </childnode>
-        <childnode refid="264" relation="usage">
-          <edgelabel>b</edgelabel>
-        </childnode>
-      </node>
-      <node id="259">
-        <label>Hack::Chips::Chip&lt; bit64_t, 64 &gt;</label>
-        <link refid="a01005"/>
-        <childnode refid="260" relation="usage">
-          <edgelabel>_bits</edgelabel>
-        </childnode>
-      </node>
-      <node id="258">
-        <label>Hack::Chips::Ram64</label>
-        <link refid="a01121"/>
-        <childnode refid="259" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

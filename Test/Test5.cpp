@@ -77,7 +77,7 @@ GTEST_TEST(Generator, TestAdd)
     EXPECT_EQ(code, 8);
 }
 
-GTEST_TEST(Generator, While)
+GTEST_TEST(Generator, Multiply)
 {
     Chips::Computer computer;
     GeneratorTestFile(computer, "Test11");
@@ -87,7 +87,7 @@ GTEST_TEST(Generator, While)
     EXPECT_EQ(code, 257);
 
     code = memory->get(256);
-    EXPECT_EQ(code, 20);
+    EXPECT_EQ(code, 100);
 }
 
 GTEST_TEST(Generator, StaticFields)

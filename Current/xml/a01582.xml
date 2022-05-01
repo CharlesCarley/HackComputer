@@ -1,48 +1,37 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01582" kind="page">
-    <compoundname>Hc03</compoundname>
-    <title>Assembler</title>
+    <compoundname>Hc00</compoundname>
+    <title>CMake</title>
     <briefdescription>
-<para>Implements the machine code compiler. </para>    </briefdescription>
+<para>It uses <ref refid="a01582" kindref="compound">CMake</ref> for its build system. </para>    </briefdescription>
     <detaileddescription>
-<para>Implements the machine code compiler.</para><para><linebreak/>
+<para>It uses <ref refid="a01582" kindref="compound">CMake</ref> for its build system.</para><para><heading level="2">Generators</heading>
+</para><para>The build system was written using CMake&apos;s <computeroutput>Unix Makefiles</computeroutput> and <computeroutput>Visual Studio 2019</computeroutput> generators.</para><para><heading level="2">Options</heading>
+</para><para>It provides the following options to control compilation. <linebreak/>
 <linebreak/>
-The primary job of the assembler is to convert the input assembly into 16 bit binary codes so that they can be handed to the CPU.</para><para><heading level="2">Asm2Mc</heading>
-</para><para>Is the executable that implements this conversion.</para><para><heading level="3">Usage</heading>
-</para><para><programlisting filename=".txt"><codeline><highlight class="normal">Usage:<sp/>asm2mc<sp/>&lt;options&gt;<sp/>&lt;arg[0]<sp/>..<sp/>arg[n]&gt;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/>where<sp/>arg[0]<sp/>is<sp/>the<sp/>input<sp/>file</highlight></codeline>
-<codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-h,<sp/>--help<sp/><sp/><sp/><sp/>Display<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>help<sp/>message</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-o,<sp/>--output<sp/><sp/>Specify<sp/>an<sp/>output<sp/>file.</highlight></codeline>
-</programlisting></para><para><heading level="4">Example</heading>
-</para><para>The following code illustrates the output of Asm2Mc from assembly to machine code. <linebreak/>
-<linebreak/>
-<programlisting filename=".txt"><codeline><highlight class="normal">@123</highlight></codeline>
-<codeline><highlight class="normal">D=A</highlight></codeline>
-<codeline><highlight class="normal">@0</highlight></codeline>
-<codeline><highlight class="normal">M=D</highlight></codeline>
-<codeline><highlight class="normal">@1</highlight></codeline>
-<codeline><highlight class="normal">M=D</highlight></codeline>
-<codeline><highlight class="normal">@2</highlight></codeline>
-<codeline><highlight class="normal">M=D</highlight></codeline>
-<codeline><highlight class="normal">@32766<sp/>D=A;JMP</highlight></codeline>
-</programlisting></para><para><programlisting filename=".txt"><codeline><highlight class="normal">0000000001111011</highlight></codeline>
-<codeline><highlight class="normal">1110110000010000</highlight></codeline>
-<codeline><highlight class="normal">0000000000000000</highlight></codeline>
-<codeline><highlight class="normal">1110001100001000</highlight></codeline>
-<codeline><highlight class="normal">0000000000000001</highlight></codeline>
-<codeline><highlight class="normal">1110001100001000</highlight></codeline>
-<codeline><highlight class="normal">0000000000000010</highlight></codeline>
-<codeline><highlight class="normal">1110001100001000</highlight></codeline>
-<codeline><highlight class="normal">0111111111111110</highlight></codeline>
-<codeline><highlight class="normal">1110110000010111</highlight></codeline>
-</programlisting></para><para><heading level="3">Grammar</heading>
-</para><para>The grammar for the assembly syntax can be found <ulink url="../../Source/Assembler/ASM.grm">here.</ulink></para><sect1 id="a01582_1Hc03Defined">
-<title>Defined in</title>
-<para>The source is defined in <ulink url="../../Source/Assembler">Source/Assembler</ulink><linebreak/>
-</para></sect1>
-    </detaileddescription>
+<itemizedlist>
+<listitem><para>Hack_BUILD_DOCS | OFF<itemizedlist>
+<listitem><para>Builds the current version of the manual.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_BUILD_TEST | OFF<itemizedlist>
+<listitem><para>Enables building the unit test program.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_AUTO_RUN_TEST | OFF<itemizedlist>
+<listitem><para>Automatically runs the unit test program after each build.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_CHECK_INT_BOUNDS | ON<itemizedlist>
+<listitem><para>Enables throwing an overflow exception when manipulating individual bits.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_IMPLEMENT_BLACK_BOX | ON<itemizedlist>
+<listitem><para>If this is true most chips will be implemented with computed logic gates.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_PRINT_CHIP_STATE | OFF<itemizedlist>
+<listitem><para>Enables the print method defined in the Hack::Chip base class.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_VM_ZERO_RAM | OFF<itemizedlist>
+<listitem><para>Emits extra instructions to zero RAM values that are no longer in use.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_BLOCK_PUSH | OFF<itemizedlist>
+<listitem><para>Emits conditional instructions to prevent pushing ram segments when its out of context.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_USE_SDL | OFF<itemizedlist>
+<listitem><para>Enables or disables the SDL runtime.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_GEN_SVG_PARSE_TREES | OFF<itemizedlist>
+<listitem><para>Regenerates SVG files off of the .jack files in the <ulink url="../../Test/Jack">Test/Jack</ulink> directory. </para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
+</para>    </detaileddescription>
   </compounddef>
 </doxygen>

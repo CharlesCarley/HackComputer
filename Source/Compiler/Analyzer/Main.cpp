@@ -69,7 +69,7 @@ constexpr CommandLine::Switch Switches[OP_MAX] = {
     },
 };
 
-class Application
+class HackCompiler
 {
 private:
     string _input;
@@ -78,7 +78,7 @@ private:
     String _dir;
 
 public:
-    Application() :
+    HackCompiler() :
         _dot(false)
     {
     }
@@ -160,7 +160,7 @@ int main(int argc, char** argv)
 {
     try
     {
-        Application app;
+        HackCompiler app;
         if (app.parse(argc, argv))
             return app.go();
     }
