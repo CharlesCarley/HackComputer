@@ -1,156 +1,120 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00725" kind="file" language="C++">
-    <compoundname>Tree.cpp</compoundname>
-    <includes refid="a00728" local="yes">Compiler/Common/Tree.h</includes>
-    <includes local="no">fstream</includes>
-    <includes refid="a00716" local="yes">Compiler/Common/Node.h</includes>
-    <includes refid="a00734" local="yes">Compiler/Common/XmlWriter.h</includes>
-    <includes refid="a00710" local="yes">Compiler/Common/DotWriter.h</includes>
+    <compoundname>Tree.h</compoundname>
+    <includes refid="a00854" local="yes">Utils/String.h</includes>
+    <includedby refid="a01623" local="yes">Source/Compiler/Analyzer/Parser.h</includedby>
+    <includedby refid="a00722" local="yes">Source/Compiler/Common/Tree.cpp</includedby>
+    <includedby refid="a00737" local="yes">Source/Compiler/Generator/Expression.h</includedby>
+    <includedby refid="a00743" local="yes">Source/Compiler/Generator/Generator.h</includedby>
+    <includedby refid="a00749" local="yes">Source/Compiler/Generator/Scope.h</includedby>
     <incdepgraph>
-      <node id="2481">
-        <label>functional</label>
-      </node>
-      <node id="2486">
-        <label>Utils/Exception.h</label>
-        <childnode refid="2487" relation="include">
-        </childnode>
-        <childnode refid="2488" relation="include">
-        </childnode>
-        <childnode refid="2489" relation="include">
-        </childnode>
-        <childnode refid="2490" relation="include">
-        </childnode>
-        <childnode refid="2475" relation="include">
+      <node id="2496">
+        <label>Source/Compiler/Common/Tree.h</label>
+        <link refid="a00725"/>
+        <childnode refid="2497" relation="include">
         </childnode>
       </node>
-      <node id="2493">
-        <label>cstdint</label>
-      </node>
-      <node id="2480">
-        <label>Compiler/Common/Node.h</label>
-        <childnode refid="2481" relation="include">
-        </childnode>
-        <childnode refid="2478" relation="include">
-        </childnode>
-        <childnode refid="2482" relation="include">
-        </childnode>
-        <childnode refid="2483" relation="include">
-        </childnode>
-        <childnode refid="2475" relation="include">
-        </childnode>
-      </node>
-      <node id="2474">
-        <label>Compiler/Common/Tree.h</label>
-        <childnode refid="2475" relation="include">
-        </childnode>
-      </node>
-      <node id="2491">
-        <label>UserInterface/Context.h</label>
-        <childnode refid="2475" relation="include">
-        </childnode>
-        <childnode refid="2492" relation="include">
-        </childnode>
-        <childnode refid="2494" relation="include">
-        </childnode>
-      </node>
-      <node id="2488">
-        <label>stdexcept</label>
-      </node>
-      <node id="2477">
+      <node id="2499">
         <label>string</label>
       </node>
-      <node id="2485">
-        <label>unordered_set</label>
-      </node>
-      <node id="2473">
-        <label>Source/Compiler/Common/Tree.cpp</label>
-        <link refid="a00725"/>
-        <childnode refid="2474" relation="include">
-        </childnode>
-        <childnode refid="2479" relation="include">
-        </childnode>
-        <childnode refid="2480" relation="include">
-        </childnode>
-        <childnode refid="2495" relation="include">
-        </childnode>
-        <childnode refid="2496" relation="include">
-        </childnode>
-      </node>
-      <node id="2487">
-        <label>exception</label>
-      </node>
-      <node id="2479">
-        <label>fstream</label>
-      </node>
-      <node id="2492">
-        <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="2493" relation="include">
-        </childnode>
-      </node>
-      <node id="2475">
+      <node id="2497">
         <label>Utils/String.h</label>
-        <childnode refid="2476" relation="include">
+        <childnode refid="2498" relation="include">
         </childnode>
-        <childnode refid="2477" relation="include">
+        <childnode refid="2499" relation="include">
         </childnode>
-        <childnode refid="2478" relation="include">
-        </childnode>
-      </node>
-      <node id="2495">
-        <label>Compiler/Common/XmlWriter.h</label>
-        <childnode refid="2475" relation="include">
+        <childnode refid="2500" relation="include">
         </childnode>
       </node>
-      <node id="2483">
-        <label>Utils/IndexCache.h</label>
-        <childnode refid="2484" relation="include">
-        </childnode>
-        <childnode refid="2485" relation="include">
-        </childnode>
-        <childnode refid="2486" relation="include">
-        </childnode>
-      </node>
-      <node id="2496">
-        <label>Compiler/Common/DotWriter.h</label>
-        <childnode refid="2475" relation="include">
-        </childnode>
-      </node>
-      <node id="2478">
+      <node id="2500">
         <label>vector</label>
       </node>
-      <node id="2489">
-        <label>utility</label>
-      </node>
-      <node id="2476">
+      <node id="2498">
         <label>sstream</label>
       </node>
-      <node id="2484">
-        <label>unordered_map</label>
-      </node>
-      <node id="2494">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="2493" relation="include">
-        </childnode>
-        <childnode refid="2478" relation="include">
-        </childnode>
-        <childnode refid="2492" relation="include">
-        </childnode>
-      </node>
-      <node id="2482">
-        <label>Compiler/Common/NodeUtils.h</label>
-        <childnode refid="2475" relation="include">
-        </childnode>
-      </node>
-      <node id="2490">
-        <label>Utils/Console.h</label>
-        <childnode refid="2475" relation="include">
-        </childnode>
-        <childnode refid="2491" relation="include">
-        </childnode>
-      </node>
     </incdepgraph>
-    <innernamespace refid="a00915">Hack::Compiler</innernamespace>
+    <invincdepgraph>
+      <node id="2508">
+        <label>Source/Computer/Application.cpp</label>
+      </node>
+      <node id="2502">
+        <label>Source/Compiler/Analyzer/Parser.h</label>
+        <childnode refid="2503" relation="include">
+        </childnode>
+        <childnode refid="2504" relation="include">
+        </childnode>
+        <childnode refid="2505" relation="include">
+        </childnode>
+        <childnode refid="2506" relation="include">
+        </childnode>
+        <childnode refid="2507" relation="include">
+        </childnode>
+        <childnode refid="2508" relation="include">
+        </childnode>
+      </node>
+      <node id="2510">
+        <label>Source/Compiler/Generator/Expression.h</label>
+        <childnode refid="2511" relation="include">
+        </childnode>
+      </node>
+      <node id="2512">
+        <label>Source/Compiler/Generator/Generator.h</label>
+        <childnode refid="2505" relation="include">
+        </childnode>
+        <childnode refid="2506" relation="include">
+        </childnode>
+        <childnode refid="2507" relation="include">
+        </childnode>
+        <childnode refid="2508" relation="include">
+        </childnode>
+      </node>
+      <node id="2504">
+        <label>Source/Compiler/Analyzer/Parser.cpp</label>
+      </node>
+      <node id="2501">
+        <label>Source/Compiler/Common/Tree.h</label>
+        <link refid="a00725"/>
+        <childnode refid="2502" relation="include">
+        </childnode>
+        <childnode refid="2509" relation="include">
+        </childnode>
+        <childnode refid="2510" relation="include">
+        </childnode>
+        <childnode refid="2512" relation="include">
+        </childnode>
+        <childnode refid="2513" relation="include">
+        </childnode>
+      </node>
+      <node id="2506">
+        <label>Source/Compiler/Generator/Generator.cpp</label>
+      </node>
+      <node id="2509">
+        <label>Source/Compiler/Common/Tree.cpp</label>
+      </node>
+      <node id="2511">
+        <label>Source/Compiler/Generator/Expression.cpp</label>
+      </node>
+      <node id="2503">
+        <label>Source/Compiler/Analyzer/Main.cpp</label>
+      </node>
+      <node id="2513">
+        <label>Source/Compiler/Generator/Scope.h</label>
+        <childnode refid="2514" relation="include">
+        </childnode>
+      </node>
+      <node id="2505">
+        <label>Source/Compiler/Compiler/Main.cpp</label>
+      </node>
+      <node id="2507">
+        <label>Source/Compiler/Generator/Main.cpp</label>
+      </node>
+      <node id="2514">
+        <label>Source/Compiler/Generator/Scope.cpp</label>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="a01178" prot="public">Hack::Compiler::Tree</innerclass>
+    <innernamespace refid="a00912">Hack::Compiler</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -177,46 +141,35 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Compiler/Common/Tree.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Compiler/Common/Node.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Compiler/Common/XmlWriter.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Compiler/Common/DotWriter.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00915" kindref="compound">Hack::Compiler</ref></highlight></codeline>
-<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="30" refid="a01181_1a23c525c96dd46a4b7982949318112499" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01181_1a23c525c96dd46a4b7982949318112499" kindref="member">Tree::Tree</ref>()<sp/>:</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_root(new<sp/><ref refid="a01173" kindref="compound">Node</ref>())</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35" refid="a01181_1a45358a8d6576f798c84aa599d3c8968e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01181_1a45358a8d6576f798c84aa599d3c8968e" kindref="member">Tree::~Tree</ref>()</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>_root;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_root<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/String.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00912" kindref="compound">Hack::Compiler</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Node;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="a01178" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01178" kindref="compound">Tree</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01170" kindref="compound">Node</ref>*<sp/>_root;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01178_1a23c525c96dd46a4b7982949318112499" kindref="member">Tree</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01178_1a45358a8d6576f798c84aa599d3c8968e" kindref="member">~Tree</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01170" kindref="compound">Node</ref>*<sp/><ref refid="a01178_1a58e4ebbe1e9af83ed2d9ceb8843f90e4" kindref="member">getRoot</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01178_1a6a896a5aa2081ea5b7acbb59c82b9b69" kindref="member">write</ref>(<ref refid="a00906_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref>&amp;<sp/>out,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>format)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42" refid="a01181_1ab00b92685755429ac933b3507a79bcd0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01181_1ab00b92685755429ac933b3507a79bcd0" kindref="member">Tree::filename</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00909_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>fileName)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="43"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_root-&gt;<ref refid="a01173_1a7159b0a48fe5e2fff5ffe0472666a016" kindref="member">filename</ref>(fileName);</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47" refid="a01181_1a6a896a5aa2081ea5b7acbb59c82b9b69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01181_1a6a896a5aa2081ea5b7acbb59c82b9b69" kindref="member">Tree::write</ref>(<ref refid="a00909_1a404ae4dff97be2fec362955db83690da" kindref="member">OStream</ref>&amp;<sp/>out,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>format)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="48"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(format<sp/>==<sp/>0)</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01189" kindref="compound">XmlWriter</ref><sp/>writer(_root);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>writer.<ref refid="a01189_1a3cda3976be2f39380491275e681cdde9" kindref="member">write</ref>(out);</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01169" kindref="compound">DotWriter</ref><sp/>writer(_root);</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>writer.<ref refid="a01169_1a3c42eaf7c27647c3e266d5c02fc62e48" kindref="member">write</ref>(out);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="60"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01178_1ab00b92685755429ac933b3507a79bcd0" kindref="member">filename</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>fileName)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="a01178_1a58e4ebbe1e9af83ed2d9ceb8843f90e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="a01170" kindref="compound">Node</ref>*<sp/><ref refid="a01178_1a58e4ebbe1e9af83ed2d9ceb8843f90e4" kindref="member">Tree::getRoot</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="46"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_root;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Compiler/Common/Tree.cpp"/>
+    <location file="Source/Compiler/Common/Tree.h"/>
   </compounddef>
 </doxygen>

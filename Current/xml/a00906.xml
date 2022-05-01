@@ -164,6 +164,19 @@
         </inbodydescription>
         <location file="Source/Utils/FileSystem.cpp" line="26" column="1" bodyfile="Source/Utils/FileSystem.cpp" bodystart="26" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="typedef" id="a00906_1a069b2b49d9f6855f21d1077654021188" prot="public" static="no">
+        <type>std::ifstream</type>
+        <definition>using Hack::InputFileStream = typedef std::ifstream</definition>
+        <argsstring></argsstring>
+        <name>InputFileStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/FileSystem.h" line="30" column="1" bodyfile="Source/Utils/FileSystem.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="typedef" id="a00906_1ab983b76961e0322ec2ffdfd7d0e17a6c" prot="public" static="no">
         <type>std::istringstream</type>
         <definition>using Hack::InputStringStream = typedef std::istringstream</definition>
@@ -216,6 +229,19 @@
         </inbodydescription>
         <location file="Source/Utils/String.h" line="36" column="1" bodyfile="Source/Utils/String.h" bodystart="36" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="typedef" id="a00906_1a068aa148c32623cf89bbf84e2ece8ed1" prot="public" static="no">
+        <type>std::ofstream</type>
+        <definition>using Hack::OutputFileStream = typedef std::ofstream</definition>
+        <argsstring></argsstring>
+        <name>OutputFileStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/FileSystem.h" line="31" column="1" bodyfile="Source/Utils/FileSystem.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="typedef" id="a00906_1ae3a6ca87ce783b824591a2858b2409a1" prot="public" static="no">
         <type>std::ostringstream</type>
         <definition>using Hack::OutputStringStream = typedef std::ostringstream</definition>
@@ -240,7 +266,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/FileSystem.h" line="29" column="1" bodyfile="Source/Utils/FileSystem.h" bodystart="29" bodyend="-1"/>
+        <location file="Source/Utils/FileSystem.h" line="33" column="1" bodyfile="Source/Utils/FileSystem.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="a00906_1a7c50e21fc90ae27988ef26dd0b40a118" prot="public" static="no">
         <type>std::vector&lt; <ref refid="a00906_1a95e191d8af73e79ac197701ac6a6c9a6" kindref="member">Path</ref> &gt;</type>
@@ -253,7 +279,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/FileSystem.h" line="30" column="1" bodyfile="Source/Utils/FileSystem.h" bodystart="30" bodyend="-1"/>
+        <location file="Source/Utils/FileSystem.h" line="34" column="1" bodyfile="Source/Utils/FileSystem.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="a00906_1af578ea8fc214989b8ebeece788fa787d" prot="public" static="no">
         <type>std::string</type>

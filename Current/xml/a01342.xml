@@ -206,6 +206,18 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="448">
+        <label>Hack::Ui::Platform</label>
+        <link refid="a01334"/>
+      </node>
+      <node id="447">
+        <label>Hack::Ui::PlatformUnix</label>
+        <link refid="a01342"/>
+        <childnode refid="448" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
       <node id="450">
         <label>Hack::Ui::Platform</label>
         <link refid="a01334"/>
@@ -214,18 +226,6 @@
         <label>Hack::Ui::PlatformUnix</label>
         <link refid="a01342"/>
         <childnode refid="450" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="452">
-        <label>Hack::Ui::Platform</label>
-        <link refid="a01334"/>
-      </node>
-      <node id="451">
-        <label>Hack::Ui::PlatformUnix</label>
-        <link refid="a01342"/>
-        <childnode refid="452" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

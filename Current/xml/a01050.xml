@@ -358,30 +358,30 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="152">
+      <node id="150">
         <label>Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;</label>
         <link refid="a01050"/>
-        <childnode refid="153" relation="public-inheritance">
+        <childnode refid="151" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="153">
+      <node id="151">
         <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
         <link refid="a01002"/>
       </node>
-      <node id="154">
+      <node id="152">
         <label>Hack::Chips::DefaultMemorySegment&lt; High, ElementCount &gt;</label>
         <link refid="a01022"/>
-        <childnode refid="152" relation="public-inheritance">
+        <childnode refid="150" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="155">
+      <node id="153">
         <label>Hack::Chips::IMemorySegment&lt; High, ElementCount &gt;</label>
         <link refid="a01050"/>
-        <childnode refid="156" relation="public-inheritance">
+        <childnode refid="154" relation="public-inheritance">
         </childnode>
-        <childnode refid="158" relation="usage">
+        <childnode refid="156" relation="usage">
           <edgelabel>HighAddress</edgelabel>
           <edgelabel>_address</edgelabel>
           <edgelabel>_out</edgelabel>
@@ -389,18 +389,18 @@
           <edgelabel>Max</edgelabel>
         </childnode>
       </node>
-      <node id="158">
+      <node id="156">
         <label>uint16_t</label>
         <link refid="a01370"/>
       </node>
-      <node id="157">
+      <node id="155">
         <label>uint8_t</label>
         <link refid="a01382"/>
       </node>
-      <node id="156">
+      <node id="154">
         <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
         <link refid="a01002"/>
-        <childnode refid="157" relation="usage">
+        <childnode refid="155" relation="usage">
           <edgelabel>_bits</edgelabel>
         </childnode>
       </node>

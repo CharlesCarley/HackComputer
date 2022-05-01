@@ -78,33 +78,33 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="88">
+      <node id="86">
         <label>uint64_t</label>
       </node>
-      <node id="89">
+      <node id="87">
         <label>uint16_t</label>
         <link refid="a01370"/>
       </node>
-      <node id="90">
+      <node id="88">
         <label>uint32_t</label>
       </node>
-      <node id="91">
+      <node id="89">
         <label>uint8_t</label>
         <link refid="a01382"/>
       </node>
-      <node id="87">
+      <node id="85">
         <label>Hack::Chips::bit64_t</label>
         <link refid="a00994"/>
-        <childnode refid="88" relation="usage">
+        <childnode refid="86" relation="usage">
           <edgelabel>ll</edgelabel>
         </childnode>
-        <childnode refid="89" relation="usage">
+        <childnode refid="87" relation="usage">
           <edgelabel>s</edgelabel>
         </childnode>
-        <childnode refid="90" relation="usage">
+        <childnode refid="88" relation="usage">
           <edgelabel>i</edgelabel>
         </childnode>
-        <childnode refid="91" relation="usage">
+        <childnode refid="89" relation="usage">
           <edgelabel>b</edgelabel>
         </childnode>
       </node>

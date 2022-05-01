@@ -127,33 +127,33 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="121">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="a01002"/>
+      </node>
+      <node id="120">
+        <label>Hack::Chips::DFlipFlop</label>
+        <link refid="a01026"/>
+        <childnode refid="121" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="124">
+        <label>uint8_t</label>
+        <link refid="a01382"/>
+      </node>
       <node id="123">
         <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
         <link refid="a01002"/>
+        <childnode refid="124" relation="usage">
+          <edgelabel>_bits</edgelabel>
+        </childnode>
       </node>
       <node id="122">
         <label>Hack::Chips::DFlipFlop</label>
         <link refid="a01026"/>
         <childnode refid="123" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="126">
-        <label>uint8_t</label>
-        <link refid="a01382"/>
-      </node>
-      <node id="125">
-        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
-        <link refid="a01002"/>
-        <childnode refid="126" relation="usage">
-          <edgelabel>_bits</edgelabel>
-        </childnode>
-      </node>
-      <node id="124">
-        <label>Hack::Chips::DFlipFlop</label>
-        <link refid="a01026"/>
-        <childnode refid="125" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

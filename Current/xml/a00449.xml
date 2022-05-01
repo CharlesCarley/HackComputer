@@ -3,239 +3,239 @@
   <compounddef id="a00449" kind="file" language="C++">
     <compoundname>Bindings.cpp</compoundname>
     <includes refid="a00425" local="yes">Assembler/Instruction.h</includes>
-    <includes refid="a01616" local="yes">Assembler/Parser.h</includes>
+    <includes refid="a01620" local="yes">Assembler/Parser.h</includes>
     <includes refid="a00497" local="yes">Chips/Computer.h</includes>
     <includes refid="a00818" local="yes">Utils/Exception.h</includes>
     <incdepgraph>
-      <node id="649">
-        <label>Utils/ParserBase/TokenBase.h</label>
-        <childnode refid="650" relation="include">
-        </childnode>
-      </node>
-      <node id="660">
-        <label>Utils/Exception.h</label>
-        <childnode refid="661" relation="include">
-        </childnode>
-        <childnode refid="662" relation="include">
-        </childnode>
-        <childnode refid="663" relation="include">
-        </childnode>
-        <childnode refid="664" relation="include">
-        </childnode>
-        <childnode refid="650" relation="include">
-        </childnode>
-      </node>
-      <node id="654">
-        <label>Assembler/Parser.h</label>
-        <childnode refid="655" relation="include">
-        </childnode>
-        <childnode refid="653" relation="include">
-        </childnode>
-        <childnode refid="656" relation="include">
-        </childnode>
-      </node>
-      <node id="657">
-        <label>ScannerBase.h</label>
-        <childnode refid="658" relation="include">
-        </childnode>
-        <childnode refid="649" relation="include">
-        </childnode>
-      </node>
-      <node id="667">
-        <label>cstdint</label>
-      </node>
-      <node id="676">
-        <label>Chips/Register.h</label>
-        <childnode refid="672" relation="include">
-        </childnode>
-      </node>
-      <node id="673">
-        <label>Chips/BitUtils.h</label>
-        <childnode refid="674" relation="include">
-        </childnode>
-        <childnode refid="664" relation="include">
-        </childnode>
-      </node>
-      <node id="682">
-        <label>Chips/Screen.h</label>
-        <childnode refid="679" relation="include">
-        </childnode>
-      </node>
-      <node id="646">
-        <label>Source/Bindings/Bindings.cpp</label>
-        <link refid="a00449"/>
-        <childnode refid="647" relation="include">
-        </childnode>
-        <childnode refid="654" relation="include">
-        </childnode>
-        <childnode refid="669" relation="include">
-        </childnode>
-        <childnode refid="660" relation="include">
-        </childnode>
-      </node>
-      <node id="665">
-        <label>UserInterface/Context.h</label>
-        <childnode refid="650" relation="include">
-        </childnode>
-        <childnode refid="666" relation="include">
-        </childnode>
-        <childnode refid="668" relation="include">
-        </childnode>
-      </node>
-      <node id="662">
-        <label>stdexcept</label>
-      </node>
-      <node id="652">
-        <label>string</label>
-      </node>
-      <node id="659">
-        <label>unordered_set</label>
-      </node>
-      <node id="661">
-        <label>exception</label>
-      </node>
-      <node id="666">
-        <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="667" relation="include">
-        </childnode>
-      </node>
-      <node id="650">
-        <label>Utils/String.h</label>
-        <childnode refid="651" relation="include">
-        </childnode>
-        <childnode refid="652" relation="include">
-        </childnode>
-        <childnode refid="653" relation="include">
-        </childnode>
-      </node>
-      <node id="656">
-        <label>Utils/ParserBase/ParserBase.h</label>
-        <childnode refid="653" relation="include">
-        </childnode>
-        <childnode refid="657" relation="include">
-        </childnode>
-        <childnode refid="649" relation="include">
-        </childnode>
-      </node>
-      <node id="658">
-        <label>Utils/IndexCache.h</label>
-        <childnode refid="655" relation="include">
-        </childnode>
-        <childnode refid="659" relation="include">
-        </childnode>
-        <childnode refid="660" relation="include">
-        </childnode>
-      </node>
-      <node id="675">
-        <label>Chips/ProgramCounter.h</label>
-        <childnode refid="672" relation="include">
-        </childnode>
-      </node>
-      <node id="680">
-        <label>Chips/IMemorySegment.h</label>
-        <childnode refid="681" relation="include">
-        </childnode>
-        <childnode refid="672" relation="include">
-        </childnode>
-      </node>
-      <node id="671">
-        <label>ALU.h</label>
-        <childnode refid="672" relation="include">
-        </childnode>
-      </node>
-      <node id="674">
-        <label>bitset</label>
-      </node>
-      <node id="670">
-        <label>Chips/CPU.h</label>
-        <childnode refid="671" relation="include">
-        </childnode>
-        <childnode refid="672" relation="include">
-        </childnode>
-        <childnode refid="675" relation="include">
-        </childnode>
-        <childnode refid="676" relation="include">
-        </childnode>
-      </node>
-      <node id="683">
-        <label>Chips/Rom32.h</label>
-        <childnode refid="672" relation="include">
-        </childnode>
-      </node>
-      <node id="679">
-        <label>Chips/DefaultMemorySegment.h</label>
-        <childnode refid="680" relation="include">
-        </childnode>
-      </node>
-      <node id="653">
-        <label>vector</label>
-      </node>
-      <node id="678">
-        <label>Chips/Ram16k.h</label>
-        <childnode refid="679" relation="include">
-        </childnode>
-      </node>
-      <node id="663">
-        <label>utility</label>
-      </node>
-      <node id="651">
-        <label>sstream</label>
-      </node>
-      <node id="655">
-        <label>unordered_map</label>
-      </node>
-      <node id="668">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="667" relation="include">
-        </childnode>
-        <childnode refid="653" relation="include">
-        </childnode>
-        <childnode refid="666" relation="include">
-        </childnode>
-      </node>
-      <node id="672">
-        <label>Chips/Chip.h</label>
-        <childnode refid="673" relation="include">
-        </childnode>
-        <childnode refid="664" relation="include">
-        </childnode>
-      </node>
-      <node id="669">
-        <label>Chips/Computer.h</label>
-        <childnode refid="670" relation="include">
-        </childnode>
-        <childnode refid="677" relation="include">
-        </childnode>
-        <childnode refid="683" relation="include">
-        </childnode>
-      </node>
       <node id="677">
-        <label>Chips/Memory.h</label>
-        <childnode refid="672" relation="include">
+        <label>Utils/ParserBase/TokenBase.h</label>
+        <childnode refid="678" relation="include">
+        </childnode>
+      </node>
+      <node id="688">
+        <label>Utils/Exception.h</label>
+        <childnode refid="689" relation="include">
+        </childnode>
+        <childnode refid="690" relation="include">
+        </childnode>
+        <childnode refid="691" relation="include">
+        </childnode>
+        <childnode refid="692" relation="include">
         </childnode>
         <childnode refid="678" relation="include">
         </childnode>
+      </node>
+      <node id="682">
+        <label>Assembler/Parser.h</label>
+        <childnode refid="683" relation="include">
+        </childnode>
+        <childnode refid="681" relation="include">
+        </childnode>
+        <childnode refid="684" relation="include">
+        </childnode>
+      </node>
+      <node id="685">
+        <label>ScannerBase.h</label>
+        <childnode refid="686" relation="include">
+        </childnode>
+        <childnode refid="677" relation="include">
+        </childnode>
+      </node>
+      <node id="695">
+        <label>cstdint</label>
+      </node>
+      <node id="704">
+        <label>Chips/Register.h</label>
+        <childnode refid="700" relation="include">
+        </childnode>
+      </node>
+      <node id="701">
+        <label>Chips/BitUtils.h</label>
+        <childnode refid="702" relation="include">
+        </childnode>
+        <childnode refid="692" relation="include">
+        </childnode>
+      </node>
+      <node id="710">
+        <label>Chips/Screen.h</label>
+        <childnode refid="707" relation="include">
+        </childnode>
+      </node>
+      <node id="674">
+        <label>Source/Bindings/Bindings.cpp</label>
+        <link refid="a00449"/>
+        <childnode refid="675" relation="include">
+        </childnode>
         <childnode refid="682" relation="include">
         </childnode>
-      </node>
-      <node id="647">
-        <label>Assembler/Instruction.h</label>
-        <childnode refid="648" relation="include">
+        <childnode refid="697" relation="include">
+        </childnode>
+        <childnode refid="688" relation="include">
         </childnode>
       </node>
-      <node id="664">
-        <label>Utils/Console.h</label>
-        <childnode refid="650" relation="include">
+      <node id="693">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="678" relation="include">
         </childnode>
-        <childnode refid="665" relation="include">
+        <childnode refid="694" relation="include">
+        </childnode>
+        <childnode refid="696" relation="include">
+        </childnode>
+      </node>
+      <node id="690">
+        <label>stdexcept</label>
+      </node>
+      <node id="680">
+        <label>string</label>
+      </node>
+      <node id="687">
+        <label>unordered_set</label>
+      </node>
+      <node id="689">
+        <label>exception</label>
+      </node>
+      <node id="694">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="695" relation="include">
+        </childnode>
+      </node>
+      <node id="678">
+        <label>Utils/String.h</label>
+        <childnode refid="679" relation="include">
+        </childnode>
+        <childnode refid="680" relation="include">
+        </childnode>
+        <childnode refid="681" relation="include">
+        </childnode>
+      </node>
+      <node id="684">
+        <label>Utils/ParserBase/ParserBase.h</label>
+        <childnode refid="681" relation="include">
+        </childnode>
+        <childnode refid="685" relation="include">
+        </childnode>
+        <childnode refid="677" relation="include">
+        </childnode>
+      </node>
+      <node id="686">
+        <label>Utils/IndexCache.h</label>
+        <childnode refid="683" relation="include">
+        </childnode>
+        <childnode refid="687" relation="include">
+        </childnode>
+        <childnode refid="688" relation="include">
+        </childnode>
+      </node>
+      <node id="703">
+        <label>Chips/ProgramCounter.h</label>
+        <childnode refid="700" relation="include">
+        </childnode>
+      </node>
+      <node id="708">
+        <label>Chips/IMemorySegment.h</label>
+        <childnode refid="709" relation="include">
+        </childnode>
+        <childnode refid="700" relation="include">
+        </childnode>
+      </node>
+      <node id="699">
+        <label>ALU.h</label>
+        <childnode refid="700" relation="include">
+        </childnode>
+      </node>
+      <node id="702">
+        <label>bitset</label>
+      </node>
+      <node id="698">
+        <label>Chips/CPU.h</label>
+        <childnode refid="699" relation="include">
+        </childnode>
+        <childnode refid="700" relation="include">
+        </childnode>
+        <childnode refid="703" relation="include">
+        </childnode>
+        <childnode refid="704" relation="include">
+        </childnode>
+      </node>
+      <node id="711">
+        <label>Chips/Rom32.h</label>
+        <childnode refid="700" relation="include">
+        </childnode>
+      </node>
+      <node id="707">
+        <label>Chips/DefaultMemorySegment.h</label>
+        <childnode refid="708" relation="include">
         </childnode>
       </node>
       <node id="681">
+        <label>vector</label>
+      </node>
+      <node id="706">
+        <label>Chips/Ram16k.h</label>
+        <childnode refid="707" relation="include">
+        </childnode>
+      </node>
+      <node id="691">
+        <label>utility</label>
+      </node>
+      <node id="679">
+        <label>sstream</label>
+      </node>
+      <node id="683">
+        <label>unordered_map</label>
+      </node>
+      <node id="696">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="695" relation="include">
+        </childnode>
+        <childnode refid="681" relation="include">
+        </childnode>
+        <childnode refid="694" relation="include">
+        </childnode>
+      </node>
+      <node id="700">
+        <label>Chips/Chip.h</label>
+        <childnode refid="701" relation="include">
+        </childnode>
+        <childnode refid="692" relation="include">
+        </childnode>
+      </node>
+      <node id="697">
+        <label>Chips/Computer.h</label>
+        <childnode refid="698" relation="include">
+        </childnode>
+        <childnode refid="705" relation="include">
+        </childnode>
+        <childnode refid="711" relation="include">
+        </childnode>
+      </node>
+      <node id="705">
+        <label>Chips/Memory.h</label>
+        <childnode refid="700" relation="include">
+        </childnode>
+        <childnode refid="706" relation="include">
+        </childnode>
+        <childnode refid="710" relation="include">
+        </childnode>
+      </node>
+      <node id="675">
+        <label>Assembler/Instruction.h</label>
+        <childnode refid="676" relation="include">
+        </childnode>
+      </node>
+      <node id="692">
+        <label>Utils/Console.h</label>
+        <childnode refid="678" relation="include">
+        </childnode>
+        <childnode refid="693" relation="include">
+        </childnode>
+      </node>
+      <node id="709">
         <label>cstring</label>
       </node>
-      <node id="648">
+      <node id="676">
         <label>Assembler/Token.h</label>
-        <childnode refid="649" relation="include">
+        <childnode refid="677" relation="include">
         </childnode>
       </node>
     </incdepgraph>

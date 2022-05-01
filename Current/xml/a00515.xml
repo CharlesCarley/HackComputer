@@ -1,109 +1,90 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00515" kind="file" language="C++">
-    <compoundname>DFlipFlop.h</compoundname>
-    <includes refid="a00488" local="yes">Chips/Chip.h</includes>
-    <includedby refid="a00482" local="yes">Source/Chips/Bit.h</includedby>
-    <includedby refid="a00512" local="yes">Source/Chips/DFlipFlop.cpp</includedby>
+    <compoundname>DMux.cpp</compoundname>
+    <includes refid="a00518" local="yes">Chips/DMux.h</includes>
     <incdepgraph>
-      <node id="1287">
+      <node id="1292">
+        <label>Chips/DMux.h</label>
+        <childnode refid="1293" relation="include">
+        </childnode>
+      </node>
+      <node id="1303">
         <label>cstdint</label>
       </node>
-      <node id="1278">
+      <node id="1294">
         <label>Chips/BitUtils.h</label>
-        <childnode refid="1279" relation="include">
+        <childnode refid="1295" relation="include">
         </childnode>
-        <childnode refid="1280" relation="include">
+        <childnode refid="1296" relation="include">
         </childnode>
       </node>
-      <node id="1285">
+      <node id="1301">
         <label>UserInterface/Context.h</label>
-        <childnode refid="1281" relation="include">
+        <childnode refid="1297" relation="include">
         </childnode>
-        <childnode refid="1286" relation="include">
+        <childnode refid="1302" relation="include">
         </childnode>
-        <childnode refid="1288" relation="include">
+        <childnode refid="1304" relation="include">
         </childnode>
       </node>
-      <node id="1283">
+      <node id="1299">
         <label>string</label>
       </node>
-      <node id="1286">
-        <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="1287" relation="include">
-        </childnode>
-      </node>
-      <node id="1281">
-        <label>String.h</label>
-        <childnode refid="1282" relation="include">
-        </childnode>
-        <childnode refid="1283" relation="include">
-        </childnode>
-        <childnode refid="1284" relation="include">
-        </childnode>
-      </node>
-      <node id="1279">
-        <label>bitset</label>
-      </node>
-      <node id="1284">
-        <label>vector</label>
-      </node>
-      <node id="1282">
-        <label>sstream</label>
-      </node>
-      <node id="1276">
-        <label>Source/Chips/DFlipFlop.h</label>
-        <link refid="a00515"/>
-        <childnode refid="1277" relation="include">
-        </childnode>
-      </node>
-      <node id="1288">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="1287" relation="include">
-        </childnode>
-        <childnode refid="1284" relation="include">
-        </childnode>
-        <childnode refid="1286" relation="include">
-        </childnode>
-      </node>
-      <node id="1277">
-        <label>Chips/Chip.h</label>
-        <childnode refid="1278" relation="include">
-        </childnode>
-        <childnode refid="1280" relation="include">
-        </childnode>
-      </node>
-      <node id="1280">
-        <label>Utils/Console.h</label>
-        <childnode refid="1281" relation="include">
-        </childnode>
-        <childnode refid="1285" relation="include">
-        </childnode>
-      </node>
-    </incdepgraph>
-    <invincdepgraph>
-      <node id="1290">
-        <label>Source/Chips/Bit.h</label>
-        <childnode refid="1291" relation="include">
-        </childnode>
-      </node>
-      <node id="1292">
-        <label>Source/Chips/DFlipFlop.cpp</label>
-      </node>
       <node id="1291">
-        <label>Source/Chips/Bit.cpp</label>
-      </node>
-      <node id="1289">
-        <label>Source/Chips/DFlipFlop.h</label>
+        <label>Source/Chips/DMux.cpp</label>
         <link refid="a00515"/>
-        <childnode refid="1290" relation="include">
-        </childnode>
         <childnode refid="1292" relation="include">
         </childnode>
       </node>
-    </invincdepgraph>
-    <innerclass refid="a01029" prot="public">Hack::Chips::DFlipFlop</innerclass>
-    <innernamespace refid="a00911">Hack::Chips</innernamespace>
+      <node id="1302">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="1303" relation="include">
+        </childnode>
+      </node>
+      <node id="1297">
+        <label>String.h</label>
+        <childnode refid="1298" relation="include">
+        </childnode>
+        <childnode refid="1299" relation="include">
+        </childnode>
+        <childnode refid="1300" relation="include">
+        </childnode>
+      </node>
+      <node id="1295">
+        <label>bitset</label>
+      </node>
+      <node id="1300">
+        <label>vector</label>
+      </node>
+      <node id="1298">
+        <label>sstream</label>
+      </node>
+      <node id="1304">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="1303" relation="include">
+        </childnode>
+        <childnode refid="1300" relation="include">
+        </childnode>
+        <childnode refid="1302" relation="include">
+        </childnode>
+      </node>
+      <node id="1293">
+        <label>Chips/Chip.h</label>
+        <childnode refid="1294" relation="include">
+        </childnode>
+        <childnode refid="1296" relation="include">
+        </childnode>
+      </node>
+      <node id="1296">
+        <label>Utils/Console.h</label>
+        <childnode refid="1297" relation="include">
+        </childnode>
+        <childnode refid="1301" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="a00908">Hack::Chips</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -130,31 +111,49 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Chip.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00911" kindref="compound">Hack::Chips</ref></highlight></codeline>
-<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="27" refid="a01029" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01029" kindref="compound">DFlipFlop</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="a01005" kindref="compound" tooltip="Chip is the base class for all chips defined in this system. ">Chip</ref>&lt;uint8_t,<sp/>8&gt;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>evaluate();</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01029_1a504a17e25d0b715e4163a5fe68c406bf" kindref="member">DFlipFlop</ref>();</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01029_1ab27bf000cec95c98a91a9810a5b56be2" kindref="member">setD</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>d);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/DMux.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00908" kindref="compound">Hack::Chips</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26" refid="a01030_1af19140f82b3df6ec048ca4d494cd2426" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01030_1af19140f82b3df6ec048ca4d494cd2426" kindref="member">DMux::DMux</ref>()</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01002_1a5a604431fa35bc87e0d7f4328b4ad4a1" kindref="member" tooltip="Zeros all bits except for the bit at the supplied index. ">assignBit</ref>(7);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="a01030_1ab803075133ed0f465c23193a9155e132" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01030_1ab803075133ed0f465c23193a9155e132" kindref="member">DMux::setIn</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>input)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01002_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(0,<sp/>input);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01002_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01029_1aa1096ebaad4ebbcc976f48ec9a835732" kindref="member">setG</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>g);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01029_1a23b698493da3fedf5d51f429803e1b91" kindref="member">setQn</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>qn);</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01029_1a0274009b26b5ad3ed9feae2fd21d8373" kindref="member">getQ</ref>();</highlight></codeline>
+<codeline lineno="37" refid="a01030_1aabb021e632749441d4cb4b8c8924500f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01030_1aabb021e632749441d4cb4b8c8924500f" kindref="member">DMux::setSel</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>selection)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01002_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(1,<sp/>selection);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01002_1a1240a9c5045e3dfcb5595700b6c474d6" kindref="member" tooltip="Sets the bit at the supplied index. ">setBit</ref>(7);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01029_1afb916037f8a778cef3063ed839c33ff3" kindref="member">getQPlus</ref>();</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="45"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DMux::evaluate()</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01002_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(6,<sp/><ref refid="a00909_1ae497dca5e03287bf0b47755e4727966c" kindref="member">Gates::And</ref>(<ref refid="a01002_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(0),<sp/><ref refid="a00909_1a47f1937b5e8e2f1f55c52ece2e236d9a" kindref="member">Gates::Not</ref>(<ref refid="a01002_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(1))));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01002_1a1971f958edb5fa83790baa14c9d39ee8" kindref="member" tooltip="Clears or sets the bit at the supplied index. ">applyBit</ref>(5,<sp/><ref refid="a00909_1ae497dca5e03287bf0b47755e4727966c" kindref="member">Gates::And</ref>(<ref refid="a01002_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(0),<sp/><ref refid="a01002_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(1)));</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01002_1a21ec8cfbaba9e08deb3607c7eff9ad63" kindref="member" tooltip="Clears the bit at the supplied index. ">clearBit</ref>(7);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="a01030_1acd8f216a1753a1f83b195c96cb9bc4ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01030_1acd8f216a1753a1f83b195c96cb9bc4ca" kindref="member">DMux::getA</ref>()</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a01002_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(7))</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a01002_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(6);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="a01030_1a017e72e65d1525230e51cf38933d20ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01030_1a017e72e65d1525230e51cf38933d20ea" kindref="member">DMux::getB</ref>()</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="a01002_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(7))</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluate();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="a01002_1aef5a1c7bf3e9b65a35b55a008b5463ac" kindref="member" tooltip="Returns the state of the bit at the supplied index. ">getBit</ref>(5);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Chips/DFlipFlop.h"/>
+    <location file="Source/Chips/DMux.cpp"/>
   </compounddef>
 </doxygen>

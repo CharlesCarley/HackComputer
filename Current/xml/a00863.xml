@@ -1,80 +1,906 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00863" kind="file" language="C++">
-    <compoundname>ColorCache.h</compoundname>
+    <compoundname>Common.h</compoundname>
     <includes local="no">cstdint</includes>
-    <includes refid="a00857" local="yes">Utils/String.h</includes>
-    <includedby refid="a00860" local="yes">Source/Utils/UserInterface/ColorCache.cpp</includedby>
-    <includedby refid="a00884" local="yes">Source/Utils/UserInterface/Platform.h</includedby>
+    <includedby refid="a00869" local="yes">Source/Utils/UserInterface/Context.h</includedby>
+    <includedby refid="a00875" local="yes">Source/Utils/UserInterface/Math.h</includedby>
     <incdepgraph>
-      <node id="3800">
+      <node id="3811">
         <label>cstdint</label>
       </node>
-      <node id="3803">
-        <label>string</label>
-      </node>
-      <node id="3801">
-        <label>Utils/String.h</label>
-        <childnode refid="3802" relation="include">
-        </childnode>
-        <childnode refid="3803" relation="include">
-        </childnode>
-        <childnode refid="3804" relation="include">
-        </childnode>
-      </node>
-      <node id="3804">
-        <label>vector</label>
-      </node>
-      <node id="3802">
-        <label>sstream</label>
-      </node>
-      <node id="3799">
-        <label>Source/Utils/UserInterface/ColorCache.h</label>
+      <node id="3810">
+        <label>Source/Utils/UserInterface/Common.h</label>
         <link refid="a00863"/>
-        <childnode refid="3800" relation="include">
-        </childnode>
-        <childnode refid="3801" relation="include">
+        <childnode refid="3811" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="3806">
+      <node id="3891">
+        <label>Source/Chips/Ram512.h</label>
+        <childnode refid="3892" relation="include">
+        </childnode>
+      </node>
+      <node id="3904">
+        <label>Source/Chips/XOr.cpp</label>
+      </node>
+      <node id="3830">
+        <label>Source/Computer/Application.cpp</label>
+      </node>
+      <node id="3869">
+        <label>Source/Chips/Mux4Way16.cpp</label>
+      </node>
+      <node id="3886">
+        <label>Source/Chips/Or8Way.cpp</label>
+      </node>
+      <node id="3911">
+        <label>Source/Compiler/Analyzer/Parser.h</label>
+        <childnode refid="3905" relation="include">
+        </childnode>
+        <childnode refid="3912" relation="include">
+        </childnode>
+        <childnode refid="3906" relation="include">
+        </childnode>
+        <childnode refid="3913" relation="include">
+        </childnode>
+        <childnode refid="3907" relation="include">
+        </childnode>
+        <childnode refid="3830" relation="include">
+        </childnode>
+      </node>
+      <node id="3870">
+        <label>Source/Chips/Mux4Way16.h</label>
+        <childnode refid="3869" relation="include">
+        </childnode>
+      </node>
+      <node id="3925">
+        <label>Source/Compiler/Generator/VmEmitter.h</label>
+        <childnode refid="3913" relation="include">
+        </childnode>
+        <childnode refid="3926" relation="include">
+        </childnode>
+      </node>
+      <node id="3933">
+        <label>Source/Assembler/Parser.cpp</label>
+      </node>
+      <node id="3903">
+        <label>Source/Chips/XOr.h</label>
+        <childnode refid="3837" relation="include">
+        </childnode>
+        <childnode refid="3904" relation="include">
+        </childnode>
+      </node>
+      <node id="3848">
+        <label>Source/Chips/DMux.h</label>
+        <childnode refid="3849" relation="include">
+        </childnode>
+      </node>
+      <node id="3840">
+        <label>Source/Chips/Bit.h</label>
+        <childnode refid="3841" relation="include">
+        </childnode>
+      </node>
+      <node id="3935">
+        <label>Source/Compiler/Analyzer/Scanner.h</label>
+        <childnode refid="3912" relation="include">
+        </childnode>
+        <childnode refid="3916" relation="include">
+        </childnode>
+      </node>
+      <node id="3944">
+        <label>Source/VirtualMachine/Emitter.cpp</label>
+      </node>
+      <node id="3930">
+        <label>Source/Compiler/Generator/SymbolTable.cpp</label>
+      </node>
+      <node id="3892">
+        <label>Source/Chips/Ram512.cpp</label>
+      </node>
+      <node id="3918">
+        <label>Source/Compiler/Generator/Generator.h</label>
+        <childnode refid="3906" relation="include">
+        </childnode>
+        <childnode refid="3913" relation="include">
+        </childnode>
+        <childnode refid="3907" relation="include">
+        </childnode>
+        <childnode refid="3830" relation="include">
+        </childnode>
+      </node>
+      <node id="3882">
+        <label>Source/Chips/Or.cpp</label>
+      </node>
+      <node id="3856">
+        <label>Source/Chips/HalfAdder.cpp</label>
+      </node>
+      <node id="3910">
+        <label>Source/Utils/Exception.h</label>
+        <childnode refid="3817" relation="include">
+        </childnode>
+        <childnode refid="3828" relation="include">
+        </childnode>
+        <childnode refid="3825" relation="include">
+        </childnode>
+        <childnode refid="3905" relation="include">
+        </childnode>
+        <childnode refid="3911" relation="include">
+        </childnode>
+        <childnode refid="3914" relation="include">
+        </childnode>
+        <childnode refid="3916" relation="include">
+        </childnode>
+        <childnode refid="3917" relation="include">
+        </childnode>
+        <childnode refid="3906" relation="include">
+        </childnode>
+        <childnode refid="3913" relation="include">
+        </childnode>
+        <childnode refid="3918" relation="include">
+        </childnode>
+        <childnode refid="3907" relation="include">
+        </childnode>
+        <childnode refid="3830" relation="include">
+        </childnode>
+        <childnode refid="3815" relation="include">
+        </childnode>
+        <childnode refid="3919" relation="include">
+        </childnode>
+        <childnode refid="3947" relation="include">
+        </childnode>
+        <childnode refid="3940" relation="include">
+        </childnode>
+      </node>
+      <node id="3938">
+        <label>Source/Assembler/Parser.h</label>
+        <childnode refid="3817" relation="include">
+        </childnode>
+        <childnode refid="3933" relation="include">
+        </childnode>
+        <childnode refid="3828" relation="include">
+        </childnode>
+        <childnode refid="3906" relation="include">
+        </childnode>
+        <childnode refid="3830" relation="include">
+        </childnode>
+      </node>
+      <node id="3922">
+        <label>Source/Compiler/Common/NodeUtils.cpp</label>
+      </node>
+      <node id="3931">
+        <label>Source/Utils/ParserBase/ScannerBase.h</label>
+        <childnode refid="3932" relation="include">
+        </childnode>
+        <childnode refid="3935" relation="include">
+        </childnode>
+        <childnode refid="3936" relation="include">
+        </childnode>
+        <childnode refid="3937" relation="include">
+        </childnode>
+        <childnode refid="3942" relation="include">
+        </childnode>
+        <childnode refid="3943" relation="include">
+        </childnode>
+        <childnode refid="3945" relation="include">
+        </childnode>
+      </node>
+      <node id="3902">
+        <label>Source/Chips/SRLatch.cpp</label>
+      </node>
+      <node id="3952">
+        <label>Source/Utils/UserInterface/Math.cpp</label>
+      </node>
+      <node id="3875">
+        <label>Source/Chips/NOr.h</label>
+        <childnode refid="3876" relation="include">
+        </childnode>
+      </node>
+      <node id="3889">
+        <label>Source/Chips/Ram4k.h</label>
+        <childnode refid="3890" relation="include">
+        </childnode>
+      </node>
+      <node id="3939">
+        <label>Source/VirtualMachine/Parser.h</label>
+        <childnode refid="3906" relation="include">
+        </childnode>
+        <childnode refid="3830" relation="include">
+        </childnode>
+        <childnode refid="3940" relation="include">
+        </childnode>
+        <childnode refid="3941" relation="include">
+        </childnode>
+      </node>
+      <node id="3897">
+        <label>Source/Chips/Register.h</label>
+        <childnode refid="3825" relation="include">
+        </childnode>
+        <childnode refid="3826" relation="include">
+        </childnode>
+        <childnode refid="3898" relation="include">
+        </childnode>
+      </node>
+      <node id="3818">
+        <label>Source/Chips/BitUtils.h</label>
+        <childnode refid="3819" relation="include">
+        </childnode>
+        <childnode refid="3820" relation="include">
+        </childnode>
+        <childnode refid="3821" relation="include">
+        </childnode>
+      </node>
+      <node id="3912">
+        <label>Source/Compiler/Analyzer/Parser.cpp</label>
+      </node>
+      <node id="3898">
+        <label>Source/Chips/Register.cpp</label>
+      </node>
+      <node id="3951">
         <label>Source/Utils/UserInterface/ColorCache.cpp</label>
       </node>
-      <node id="3807">
-        <label>Source/Utils/UserInterface/Platform.h</label>
-        <childnode refid="3808" relation="include">
+      <node id="3862">
+        <label>Source/Chips/Screen.h</label>
+        <childnode refid="3860" relation="include">
         </childnode>
-        <childnode refid="3809" relation="include">
+        <childnode refid="3832" relation="include">
+        </childnode>
+        <childnode refid="3833" relation="include">
+        </childnode>
+        <childnode refid="3831" relation="include">
+        </childnode>
+        <childnode refid="3834" relation="include">
         </childnode>
       </node>
-      <node id="3808">
+      <node id="3920">
+        <label>Source/Compiler/Common/Node.h</label>
+        <childnode refid="3912" relation="include">
+        </childnode>
+        <childnode refid="3915" relation="include">
+        </childnode>
+        <childnode refid="3921" relation="include">
+        </childnode>
+        <childnode refid="3917" relation="include">
+        </childnode>
+        <childnode refid="3922" relation="include">
+        </childnode>
+        <childnode refid="3923" relation="include">
+        </childnode>
+        <childnode refid="3924" relation="include">
+        </childnode>
+        <childnode refid="3913" relation="include">
+        </childnode>
+        <childnode refid="3918" relation="include">
+        </childnode>
+        <childnode refid="3925" relation="include">
+        </childnode>
+      </node>
+      <node id="3828">
+        <label>Source/Bindings/Bindings.cpp</label>
+      </node>
+      <node id="3813">
+        <label>Source/Utils/UserInterface/Context.h</label>
+        <childnode refid="3814" relation="include">
+        </childnode>
+        <childnode refid="3815" relation="include">
+        </childnode>
+        <childnode refid="3816" relation="include">
+        </childnode>
+        <childnode refid="3949" relation="include">
+        </childnode>
+      </node>
+      <node id="3820">
+        <label>Source/Chips/ALU.cpp</label>
+      </node>
+      <node id="3844">
+        <label>Source/Chips/Timer.h</label>
+        <childnode refid="3829" relation="include">
+        </childnode>
+        <childnode refid="3825" relation="include">
+        </childnode>
+        <childnode refid="3845" relation="include">
+        </childnode>
+      </node>
+      <node id="3874">
+        <label>Source/Chips/Nand.cpp</label>
+      </node>
+      <node id="3838">
+        <label>Source/Chips/And16.h</label>
+        <childnode refid="3839" relation="include">
+        </childnode>
+      </node>
+      <node id="3900">
+        <label>Source/Chips/Rom32.cpp</label>
+      </node>
+      <node id="3924">
+        <label>Source/Compiler/Common/XmlWriter.cpp</label>
+      </node>
+      <node id="3895">
+        <label>Source/Chips/Ram8.cpp</label>
+      </node>
+      <node id="3946">
+        <label>Source/VirtualMachine/Scanner.cpp</label>
+      </node>
+      <node id="3917">
+        <label>Source/Compiler/Common/Node.cpp</label>
+      </node>
+      <node id="3867">
+        <label>Source/Chips/Mux16.h</label>
+        <childnode refid="3868" relation="include">
+        </childnode>
+        <childnode refid="3869" relation="include">
+        </childnode>
+      </node>
+      <node id="3849">
+        <label>Source/Chips/DMux.cpp</label>
+      </node>
+      <node id="3833">
+        <label>Source/Computer/DebugRuntime.h</label>
+        <childnode refid="3830" relation="include">
+        </childnode>
+        <childnode refid="3815" relation="include">
+        </childnode>
+      </node>
+      <node id="3908">
+        <label>Source/Utils/CommandLine/Parser.cpp</label>
+      </node>
+      <node id="3940">
+        <label>Source/VirtualMachine/Main.cpp</label>
+      </node>
+      <node id="3913">
+        <label>Source/Compiler/Generator/Generator.cpp</label>
+      </node>
+      <node id="3881">
+        <label>Source/Chips/Or.h</label>
+        <childnode refid="3837" relation="include">
+        </childnode>
+        <childnode refid="3882" relation="include">
+        </childnode>
+      </node>
+      <node id="3884">
+        <label>Source/Chips/Or16.cpp</label>
+      </node>
+      <node id="3839">
+        <label>Source/Chips/And16.cpp</label>
+      </node>
+      <node id="3822">
+        <label>Source/Chips/Add16.h</label>
+        <childnode refid="3823" relation="include">
+        </childnode>
+      </node>
+      <node id="3923">
+        <label>Source/Compiler/Common/Tree.cpp</label>
+      </node>
+      <node id="3927">
+        <label>Source/Compiler/Generator/Symbol.h</label>
+        <childnode refid="3918" relation="include">
+        </childnode>
+        <childnode refid="3928" relation="include">
+        </childnode>
+        <childnode refid="3929" relation="include">
+        </childnode>
+        <childnode refid="3925" relation="include">
+        </childnode>
+      </node>
+      <node id="3921">
+        <label>Source/Compiler/Common/DotWriter.cpp</label>
+      </node>
+      <node id="3890">
+        <label>Source/Chips/Ram4K.cpp</label>
+      </node>
+      <node id="3905">
+        <label>Source/Compiler/Analyzer/Main.cpp</label>
+      </node>
+      <node id="3814">
+        <label>Source/Computer/CommandRuntime.cpp</label>
+      </node>
+      <node id="3837">
+        <label>Source/Chips/FullAdder.cpp</label>
+      </node>
+      <node id="3842">
+        <label>Source/Chips/Clock.h</label>
+        <childnode refid="3843" relation="include">
+        </childnode>
+        <childnode refid="3844" relation="include">
+        </childnode>
+      </node>
+      <node id="3832">
+        <label>Source/Computer/CommandRuntime.h</label>
+        <childnode refid="3830" relation="include">
+        </childnode>
+        <childnode refid="3814" relation="include">
+        </childnode>
+      </node>
+      <node id="3836">
+        <label>Source/Chips/And.cpp</label>
+      </node>
+      <node id="3879">
+        <label>Source/Chips/Not16.h</label>
+        <childnode refid="3880" relation="include">
+        </childnode>
+      </node>
+      <node id="3866">
+        <label>Source/Chips/Mux.cpp</label>
+      </node>
+      <node id="3847">
+        <label>Source/Chips/DFlipFlop.cpp</label>
+      </node>
+      <node id="3812">
+        <label>Source/Utils/UserInterface/Common.h</label>
+        <link refid="a00863"/>
+        <childnode refid="3813" relation="include">
+        </childnode>
+        <childnode refid="3950" relation="include">
+        </childnode>
+      </node>
+      <node id="3873">
+        <label>Source/Chips/NAnd.h</label>
+        <childnode refid="3874" relation="include">
+        </childnode>
+      </node>
+      <node id="3896">
+        <label>Source/Chips/Ram64.h</label>
+        <childnode refid="3894" relation="include">
+        </childnode>
+      </node>
+      <node id="3937">
+        <label>Source/Utils/ParserBase/ParserBase.h</label>
+        <childnode refid="3938" relation="include">
+        </childnode>
+        <childnode refid="3911" relation="include">
+        </childnode>
+        <childnode refid="3936" relation="include">
+        </childnode>
+        <childnode refid="3939" relation="include">
+        </childnode>
+      </node>
+      <node id="3934">
+        <label>Source/Assembler/Scanner.cpp</label>
+      </node>
+      <node id="3945">
+        <label>Source/VirtualMachine/Scanner.h</label>
+        <childnode refid="3941" relation="include">
+        </childnode>
+        <childnode refid="3946" relation="include">
+        </childnode>
+      </node>
+      <node id="3941">
+        <label>Source/VirtualMachine/Parser.cpp</label>
+      </node>
+      <node id="3919">
+        <label>Source/Utils/IndexCache.h</label>
+        <childnode refid="3920" relation="include">
+        </childnode>
+        <childnode refid="3927" relation="include">
+        </childnode>
+        <childnode refid="3929" relation="include">
+        </childnode>
+        <childnode refid="3931" relation="include">
+        </childnode>
+      </node>
+      <node id="3865">
+        <label>Source/Chips/Mux.h</label>
+        <childnode refid="3866" relation="include">
+        </childnode>
+      </node>
+      <node id="3819">
+        <label>Source/Assembler/Instruction.cpp</label>
+      </node>
+      <node id="3894">
+        <label>Source/Chips/Ram64.cpp</label>
+      </node>
+      <node id="3878">
+        <label>Source/Chips/Not.cpp</label>
+      </node>
+      <node id="3887">
+        <label>Source/Chips/ProgramCounter.h</label>
+        <childnode refid="3825" relation="include">
+        </childnode>
+        <childnode refid="3826" relation="include">
+        </childnode>
+        <childnode refid="3888" relation="include">
+        </childnode>
+      </node>
+      <node id="3857">
+        <label>Source/Chips/IMemorySegment.h</label>
+        <childnode refid="3858" relation="include">
+        </childnode>
+      </node>
+      <node id="3824">
+        <label>Source/Chips/ALU.h</label>
+        <childnode refid="3820" relation="include">
+        </childnode>
+        <childnode refid="3825" relation="include">
+        </childnode>
+        <childnode refid="3826" relation="include">
+        </childnode>
+      </node>
+      <node id="3853">
+        <label>Source/Chips/DMux8Way.cpp</label>
+      </node>
+      <node id="3843">
+        <label>Source/Chips/Clock.cpp</label>
+      </node>
+      <node id="3868">
+        <label>Source/Chips/Mux16.cpp</label>
+      </node>
+      <node id="3953">
+        <label>Source/Utils/UserInterface/Platform.h</label>
+        <childnode refid="3954" relation="include">
+        </childnode>
+        <childnode refid="3955" relation="include">
+        </childnode>
+      </node>
+      <node id="3954">
         <label>Source/Utils/UserInterface/Platform.cpp</label>
       </node>
-      <node id="3810">
+      <node id="3826">
+        <label>Source/Chips/CPU.h</label>
+        <childnode refid="3827" relation="include">
+        </childnode>
+        <childnode refid="3825" relation="include">
+        </childnode>
+      </node>
+      <node id="3949">
         <label>Source/Utils/UserInterface/Context.cpp</label>
       </node>
-      <node id="3809">
+      <node id="3851">
+        <label>Source/Chips/DMux4Way.cpp</label>
+      </node>
+      <node id="3841">
+        <label>Source/Chips/Bit.cpp</label>
+      </node>
+      <node id="3899">
+        <label>Source/Chips/Rom32.h</label>
+        <childnode refid="3827" relation="include">
+        </childnode>
+        <childnode refid="3900" relation="include">
+        </childnode>
+      </node>
+      <node id="3854">
+        <label>Source/Chips/FullAdder.h</label>
+        <childnode refid="3837" relation="include">
+        </childnode>
+      </node>
+      <node id="3858">
+        <label>Source/Chips/DefaultMemorySegment.h</label>
+        <childnode refid="3859" relation="include">
+        </childnode>
+        <childnode refid="3862" relation="include">
+        </childnode>
+      </node>
+      <node id="3859">
+        <label>Source/Chips/Ram16k.h</label>
+        <childnode refid="3860" relation="include">
+        </childnode>
+      </node>
+      <node id="3845">
+        <label>Source/Chips/Timer.cpp</label>
+      </node>
+      <node id="3955">
         <label>Source/Utils/UserInterface/PlatformUnix.h</label>
-        <childnode refid="3810" relation="include">
+        <childnode refid="3949" relation="include">
         </childnode>
-        <childnode refid="3811" relation="include">
-        </childnode>
-      </node>
-      <node id="3805">
-        <label>Source/Utils/UserInterface/ColorCache.h</label>
-        <link refid="a00863"/>
-        <childnode refid="3806" relation="include">
-        </childnode>
-        <childnode refid="3807" relation="include">
+        <childnode refid="3956" relation="include">
         </childnode>
       </node>
-      <node id="3811">
+      <node id="3901">
+        <label>Source/Chips/SRLatch.h</label>
+        <childnode refid="3902" relation="include">
+        </childnode>
+      </node>
+      <node id="3863">
+        <label>Source/Chips/Inc16.h</label>
+        <childnode refid="3864" relation="include">
+        </childnode>
+      </node>
+      <node id="3936">
+        <label>Source/Utils/ParserBase/ParserBase.cpp</label>
+      </node>
+      <node id="3906">
+        <label>Source/Compiler/Compiler/Main.cpp</label>
+      </node>
+      <node id="3835">
+        <label>Source/Chips/And.h</label>
+        <childnode refid="3836" relation="include">
+        </childnode>
+        <childnode refid="3837" relation="include">
+        </childnode>
+      </node>
+      <node id="3880">
+        <label>Source/Chips/Not16.cpp</label>
+      </node>
+      <node id="3817">
+        <label>Source/Assembler/Main.cpp</label>
+      </node>
+      <node id="3876">
+        <label>Source/Chips/NOr.cpp</label>
+      </node>
+      <node id="3834">
+        <label>Source/Computer/RuntimeSDL.h</label>
+      </node>
+      <node id="3926">
+        <label>Source/Compiler/Generator/VmEmitter.cpp</label>
+      </node>
+      <node id="3831">
+        <label>Source/Computer/RuntimeInterface.h</label>
+        <childnode refid="3832" relation="include">
+        </childnode>
+        <childnode refid="3833" relation="include">
+        </childnode>
+        <childnode refid="3834" relation="include">
+        </childnode>
+      </node>
+      <node id="3877">
+        <label>Source/Chips/Not.h</label>
+        <childnode refid="3878" relation="include">
+        </childnode>
+      </node>
+      <node id="3846">
+        <label>Source/Chips/DFlipFlop.h</label>
+        <childnode refid="3840" relation="include">
+        </childnode>
+        <childnode refid="3847" relation="include">
+        </childnode>
+      </node>
+      <node id="3861">
+        <label>Source/Chips/Memory.cpp</label>
+      </node>
+      <node id="3928">
+        <label>Source/Compiler/Generator/Symbol.cpp</label>
+      </node>
+      <node id="3942">
+        <label>Source/Utils/ParserBase/ScannerBase.cpp</label>
+      </node>
+      <node id="3956">
         <label>Source/Utils/UserInterface/PlatformUnix.cpp</label>
       </node>
+      <node id="3915">
+        <label>Source/Compiler/Analyzer/ParseUtils.cpp</label>
+      </node>
+      <node id="3916">
+        <label>Source/Compiler/Analyzer/Scanner.cpp</label>
+      </node>
+      <node id="3872">
+        <label>Source/Chips/Mux8Way16.cpp</label>
+      </node>
+      <node id="3943">
+        <label>Source/VirtualMachine/Emitter.h</label>
+        <childnode refid="3944" relation="include">
+        </childnode>
+        <childnode refid="3939" relation="include">
+        </childnode>
+      </node>
+      <node id="3909">
+        <label>Source/Utils/Console.cpp</label>
+      </node>
+      <node id="3950">
+        <label>Source/Utils/UserInterface/Math.h</label>
+        <childnode refid="3813" relation="include">
+        </childnode>
+        <childnode refid="3951" relation="include">
+        </childnode>
+        <childnode refid="3952" relation="include">
+        </childnode>
+        <childnode refid="3953" relation="include">
+        </childnode>
+      </node>
+      <node id="3821">
+        <label>Source/Chips/Chip.h</label>
+        <childnode refid="3822" relation="include">
+        </childnode>
+        <childnode refid="3820" relation="include">
+        </childnode>
+        <childnode refid="3824" relation="include">
+        </childnode>
+        <childnode refid="3835" relation="include">
+        </childnode>
+        <childnode refid="3838" relation="include">
+        </childnode>
+        <childnode refid="3840" relation="include">
+        </childnode>
+        <childnode refid="3842" relation="include">
+        </childnode>
+        <childnode refid="3826" relation="include">
+        </childnode>
+        <childnode refid="3846" relation="include">
+        </childnode>
+        <childnode refid="3848" relation="include">
+        </childnode>
+        <childnode refid="3850" relation="include">
+        </childnode>
+        <childnode refid="3852" relation="include">
+        </childnode>
+        <childnode refid="3854" relation="include">
+        </childnode>
+        <childnode refid="3855" relation="include">
+        </childnode>
+        <childnode refid="3857" relation="include">
+        </childnode>
+        <childnode refid="3863" relation="include">
+        </childnode>
+        <childnode refid="3860" relation="include">
+        </childnode>
+        <childnode refid="3865" relation="include">
+        </childnode>
+        <childnode refid="3867" relation="include">
+        </childnode>
+        <childnode refid="3870" relation="include">
+        </childnode>
+        <childnode refid="3871" relation="include">
+        </childnode>
+        <childnode refid="3873" relation="include">
+        </childnode>
+        <childnode refid="3875" relation="include">
+        </childnode>
+        <childnode refid="3877" relation="include">
+        </childnode>
+        <childnode refid="3879" relation="include">
+        </childnode>
+        <childnode refid="3881" relation="include">
+        </childnode>
+        <childnode refid="3883" relation="include">
+        </childnode>
+        <childnode refid="3885" relation="include">
+        </childnode>
+        <childnode refid="3887" relation="include">
+        </childnode>
+        <childnode refid="3889" relation="include">
+        </childnode>
+        <childnode refid="3891" relation="include">
+        </childnode>
+        <childnode refid="3893" relation="include">
+        </childnode>
+        <childnode refid="3896" relation="include">
+        </childnode>
+        <childnode refid="3897" relation="include">
+        </childnode>
+        <childnode refid="3899" relation="include">
+        </childnode>
+        <childnode refid="3901" relation="include">
+        </childnode>
+        <childnode refid="3903" relation="include">
+        </childnode>
+      </node>
+      <node id="3827">
+        <label>Source/Chips/Computer.h</label>
+        <childnode refid="3828" relation="include">
+        </childnode>
+        <childnode refid="3829" relation="include">
+        </childnode>
+        <childnode refid="3830" relation="include">
+        </childnode>
+        <childnode refid="3814" relation="include">
+        </childnode>
+        <childnode refid="3815" relation="include">
+        </childnode>
+        <childnode refid="3831" relation="include">
+        </childnode>
+      </node>
+      <node id="3860">
+        <label>Source/Chips/Memory.h</label>
+        <childnode refid="3827" relation="include">
+        </childnode>
+        <childnode refid="3861" relation="include">
+        </childnode>
+      </node>
+      <node id="3907">
+        <label>Source/Compiler/Generator/Main.cpp</label>
+      </node>
+      <node id="3852">
+        <label>Source/Chips/DMux8Way.h</label>
+        <childnode refid="3853" relation="include">
+        </childnode>
+      </node>
+      <node id="3829">
+        <label>Source/Chips/Computer.cpp</label>
+      </node>
+      <node id="3815">
+        <label>Source/Computer/DebugRuntime.cpp</label>
+      </node>
+      <node id="3948">
+        <label>Source/Utils/ParserBase/ParseError.cpp</label>
+      </node>
+      <node id="3932">
+        <label>Source/Assembler/Scanner.h</label>
+        <childnode refid="3933" relation="include">
+        </childnode>
+        <childnode refid="3934" relation="include">
+        </childnode>
+      </node>
+      <node id="3888">
+        <label>Source/Chips/ProgramCounter.cpp</label>
+      </node>
+      <node id="3855">
+        <label>Source/Chips/HalfAdder.h</label>
+        <childnode refid="3856" relation="include">
+        </childnode>
+      </node>
+      <node id="3893">
+        <label>Source/Chips/Ram8.h</label>
+        <childnode refid="3894" relation="include">
+        </childnode>
+        <childnode refid="3895" relation="include">
+        </childnode>
+      </node>
+      <node id="3816">
+        <label>Source/Utils/Console.h</label>
+        <childnode refid="3817" relation="include">
+        </childnode>
+        <childnode refid="3818" relation="include">
+        </childnode>
+        <childnode refid="3821" relation="include">
+        </childnode>
+        <childnode refid="3905" relation="include">
+        </childnode>
+        <childnode refid="3906" relation="include">
+        </childnode>
+        <childnode refid="3907" relation="include">
+        </childnode>
+        <childnode refid="3908" relation="include">
+        </childnode>
+        <childnode refid="3909" relation="include">
+        </childnode>
+        <childnode refid="3910" relation="include">
+        </childnode>
+        <childnode refid="3940" relation="include">
+        </childnode>
+      </node>
+      <node id="3883">
+        <label>Source/Chips/Or16.h</label>
+        <childnode refid="3884" relation="include">
+        </childnode>
+      </node>
+      <node id="3825">
+        <label>Source/Chips/CPU.cpp</label>
+      </node>
+      <node id="3864">
+        <label>Source/Chips/Inc16.cpp</label>
+      </node>
+      <node id="3823">
+        <label>Source/Chips/Add16.cpp</label>
+      </node>
+      <node id="3947">
+        <label>Source/Utils/ParserBase/ParseError.h</label>
+        <childnode refid="3918" relation="include">
+        </childnode>
+        <childnode refid="3948" relation="include">
+        </childnode>
+        <childnode refid="3936" relation="include">
+        </childnode>
+        <childnode refid="3942" relation="include">
+        </childnode>
+      </node>
+      <node id="3914">
+        <label>Source/Compiler/Analyzer/ParseUtils.h</label>
+        <childnode refid="3912" relation="include">
+        </childnode>
+        <childnode refid="3915" relation="include">
+        </childnode>
+      </node>
+      <node id="3850">
+        <label>Source/Chips/DMux4Way.h</label>
+        <childnode refid="3851" relation="include">
+        </childnode>
+      </node>
+      <node id="3871">
+        <label>Source/Chips/Mux8Way16.h</label>
+        <childnode refid="3872" relation="include">
+        </childnode>
+      </node>
+      <node id="3929">
+        <label>Source/Compiler/Generator/SymbolTable.h</label>
+        <childnode refid="3913" relation="include">
+        </childnode>
+        <childnode refid="3930" relation="include">
+        </childnode>
+      </node>
+      <node id="3885">
+        <label>Source/Chips/Or8Way.h</label>
+        <childnode refid="3886" relation="include">
+        </childnode>
+      </node>
     </invincdepgraph>
-    <innerclass refid="a01309" prot="public">Hack::Ui::ColorCacheItem</innerclass>
-    <innernamespace refid="a00923">Hack::Ui</innernamespace>
+    <innernamespace refid="a00920">Hack::Ui</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -103,26 +929,125 @@
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/String.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00923" kindref="compound">Hack::Ui</ref></highlight></codeline>
-<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="28" refid="a01309" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01309" kindref="compound">ColorCacheItem</ref></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00909_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><sp/><sp/>_fg;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00909_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><sp/><sp/>_bg;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>_color;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="a01309_1a04350776fd6cc3d65ef7626e589768fb" kindref="member">ColorCacheItem</ref>(uint32_t<sp/>color);</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01309_1a1a5210b986d9ff0617c203130ef00920" kindref="member">~ColorCacheItem</ref>();</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="a01309_1a4a1c504a633ab80a0a3a70dc0731e810" kindref="member">foreground</ref>();</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="a01309_1abf01becdb6124b1d41193946579e8b04" kindref="member">background</ref>();</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="42"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Ui</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00920" kindref="compound">Hack::Ui</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Platform;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="a00920_1aec02730284fab877bca263a7af111eda" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/><ref refid="a01382" kindref="compound">uint8_t</ref><sp/><ref refid="a00920_1aec02730284fab877bca263a7af111eda" kindref="member">AByte</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="30" refid="a00920_1a32af7f12bf8096a6c71bd1e45ac6b9b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/><ref refid="a01382" kindref="compound">uint8_t</ref><sp/><ref refid="a00920_1a32af7f12bf8096a6c71bd1e45ac6b9b1" kindref="member">RByte</ref><sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="31" refid="a00920_1a0ea3206f4a2713ef362fdf3f98c85f69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/><ref refid="a01382" kindref="compound">uint8_t</ref><sp/><ref refid="a00920_1a0ea3206f4a2713ef362fdf3f98c85f69" kindref="member">GByte</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="32" refid="a00920_1a606e644506be4ad6f6cdbb42ce408826" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/><ref refid="a01382" kindref="compound">uint8_t</ref><sp/><ref refid="a00920_1a606e644506be4ad6f6cdbb42ce408826" kindref="member">BByte</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="a00920_1aefd7f2d50548723bc913d2c3289e31c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="a00920_1aefd7f2d50548723bc913d2c3289e31c1" kindref="member">RgbFormatFg</ref>[]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\x1b[38;2;%d;%d;%dm&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35" refid="a00920_1afa04eb3bbd4814431ab8fce1f562166f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="a00920_1afa04eb3bbd4814431ab8fce1f562166f" kindref="member">RgbFormatBg</ref>[]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\x1b[48;2;%d;%d;%dm&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0" kindref="member">CharacterSet</ref></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39" refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0ad03378ac2b6b4c1118d5cdda7e793da9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0ad03378ac2b6b4c1118d5cdda7e793da9" kindref="member">CS_SEQ_START</ref><sp/>=<sp/>-1,</highlight></codeline>
+<codeline lineno="40" refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0ac9e5831d71a26cab7a3a4a8d374f8560" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0ac9e5831d71a26cab7a3a4a8d374f8560" kindref="member">CS_NONE</ref>,</highlight></codeline>
+<codeline lineno="41" refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0a998b2d1dfa04163699d0ada53e82f922" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0a998b2d1dfa04163699d0ada53e82f922" kindref="member">CS_RECT_RB</ref>,</highlight></codeline>
+<codeline lineno="42" refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0a753412f679e04e3ba44c25dbb93d6131" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0a753412f679e04e3ba44c25dbb93d6131" kindref="member">CS_RECT_RT</ref>,</highlight></codeline>
+<codeline lineno="43" refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0a5d03c84a5b72b5dbe74459bf33791a08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0a5d03c84a5b72b5dbe74459bf33791a08" kindref="member">CS_RECT_LT</ref>,</highlight></codeline>
+<codeline lineno="44" refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0a073a22d37e6a995b7c17ddfc65661e7d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0a073a22d37e6a995b7c17ddfc65661e7d" kindref="member">CS_RECT_LB</ref>,</highlight></codeline>
+<codeline lineno="45" refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0a8803333d960baf039bb860468988d16d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0a8803333d960baf039bb860468988d16d" kindref="member">CS_RECT_CS</ref>,</highlight></codeline>
+<codeline lineno="46" refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0a5cc1590a1227299f2d57e30c9c354748" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0a5cc1590a1227299f2d57e30c9c354748" kindref="member">CS_RECT_HZ</ref>,</highlight></codeline>
+<codeline lineno="47" refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0a9b1d4bb7b028bce971009f4742e28e8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0a9b1d4bb7b028bce971009f4742e28e8b" kindref="member">CS_RECT_LCS</ref>,</highlight></codeline>
+<codeline lineno="48" refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0a6f020960e91251129ffbaa5a9514eb9e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0a6f020960e91251129ffbaa5a9514eb9e" kindref="member">CS_RECT_RCS</ref>,</highlight></codeline>
+<codeline lineno="49" refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0a5da6a4a3faaa0f29c7774f447c0fba74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0a5da6a4a3faaa0f29c7774f447c0fba74" kindref="member">CS_RECT_BCS</ref>,</highlight></codeline>
+<codeline lineno="50" refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0aab50306728780dd9c7cc010ddf09556b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0aab50306728780dd9c7cc010ddf09556b" kindref="member">CS_RECT_TCS</ref>,</highlight></codeline>
+<codeline lineno="51" refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0a4354d780f39ce363e5a3834343c3aa50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0a4354d780f39ce363e5a3834343c3aa50" kindref="member">CS_RECT_VT</ref>,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0ae51b178c3675d1c5b33fd92346227bc4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0ae51b178c3675d1c5b33fd92346227bc4" kindref="member">CS_START</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="55" refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0a41af7adc01eb6945b60a1bfd8fef6c41" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a1d16939595474e3adb96cc6d05ed7aa0a41af7adc01eb6945b60a1bfd8fef6c41" kindref="member">CS_END</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;~&apos;</highlight><highlight class="normal"><sp/>+<sp/>1,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3" kindref="member">ColorPalette</ref></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="60" refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3a414c02028042fe450a6e6e6a25dd2140" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3a414c02028042fe450a6e6e6a25dd2140" kindref="member">CP_TRANSPARENT</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="61" refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3a7edf6936440ce71b8690beb0af6d9f5f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3a7edf6936440ce71b8690beb0af6d9f5f" kindref="member">CP_BLACK</ref>,</highlight></codeline>
+<codeline lineno="62" refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3ad45b227d2ca0298b705625e4db00d705" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3ad45b227d2ca0298b705625e4db00d705" kindref="member">CP_DARK_BLUE</ref>,</highlight></codeline>
+<codeline lineno="63" refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3aa63f39e1018b572b2c8427607a61378b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3aa63f39e1018b572b2c8427607a61378b" kindref="member">CP_DARK_GREEN</ref>,</highlight></codeline>
+<codeline lineno="64" refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3ad8af3766c39ba526c346d92946426320" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3ad8af3766c39ba526c346d92946426320" kindref="member">CP_DARK_CYAN</ref>,</highlight></codeline>
+<codeline lineno="65" refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3abefc1fbd3ccfa1da37ab41bbd92b1046" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3abefc1fbd3ccfa1da37ab41bbd92b1046" kindref="member">CP_DARK_RED</ref>,</highlight></codeline>
+<codeline lineno="66" refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3af1683a4d2ce91e3679fcc914ee8f9ff4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3af1683a4d2ce91e3679fcc914ee8f9ff4" kindref="member">CP_DARK_MAGENTA</ref>,</highlight></codeline>
+<codeline lineno="67" refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3af06a23afaf2fde0bb7f31fdb1fe735e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3af06a23afaf2fde0bb7f31fdb1fe735e1" kindref="member">CP_DARK_YELLOW</ref>,</highlight></codeline>
+<codeline lineno="68" refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3a6c8c1be9e493ae7545a7f36337ece440" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3a6c8c1be9e493ae7545a7f36337ece440" kindref="member">CP_GREY</ref>,</highlight></codeline>
+<codeline lineno="69" refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3a3327799852a4d471716f61a7f333a11e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3a3327799852a4d471716f61a7f333a11e" kindref="member">CP_LIGHT_GREY</ref>,</highlight></codeline>
+<codeline lineno="70" refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3a350e74faa3f4ff1cee29035e4b05b848" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3a350e74faa3f4ff1cee29035e4b05b848" kindref="member">CP_BLUE</ref>,</highlight></codeline>
+<codeline lineno="71" refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3a8f2d06886cb3b1e469dc0eb3b9ae5c2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3a8f2d06886cb3b1e469dc0eb3b9ae5c2c" kindref="member">CP_GREEN</ref>,</highlight></codeline>
+<codeline lineno="72" refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3aabf8678b03996715d5b75053d944374f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3aabf8678b03996715d5b75053d944374f" kindref="member">CP_CYAN</ref>,</highlight></codeline>
+<codeline lineno="73" refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3ab275556ce0259162bc23c9bb315ab603" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3ab275556ce0259162bc23c9bb315ab603" kindref="member">CP_RED</ref>,</highlight></codeline>
+<codeline lineno="74" refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3a04e27d16749cab380a2074f251f638ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3a04e27d16749cab380a2074f251f638ff" kindref="member">CP_MAGENTA</ref>,</highlight></codeline>
+<codeline lineno="75" refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3ae1c3347c8ed074263a78b53f105a26c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3ae1c3347c8ed074263a78b53f105a26c5" kindref="member">CP_YELLOW</ref>,</highlight></codeline>
+<codeline lineno="76" refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3a84e0441414a4ff41753e4c259f4b559c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3a84e0441414a4ff41753e4c259f4b559c" kindref="member">CP_WHITE</ref>,</highlight></codeline>
+<codeline lineno="77" refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3a5bad76b91aaadc4b8e6d1084be6be564" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3a5bad76b91aaadc4b8e6d1084be6be564" kindref="member">CP_USER</ref>,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>custom<sp/>range<sp/>[CP_USER<sp/>..<sp/>256]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3a170742463623504b34e60c30094ef901" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1ae1fedfb1c7fe15d04561a77c09b20bc3a170742463623504b34e60c30094ef901" kindref="member">CP_MAX</ref><sp/>=<sp/>256,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="a00920_1a52a9537a5cb72fb438de8f7331ffd9a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="a00920_1a52a9537a5cb72fb438de8f7331ffd9a2" kindref="member">Orientation</ref></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84" refid="a00920_1a52a9537a5cb72fb438de8f7331ffd9a2a271c30a3b0460f8419bd335556d6a496" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a52a9537a5cb72fb438de8f7331ffd9a2a271c30a3b0460f8419bd335556d6a496" kindref="member">OR_HORIZONTAL</ref>,</highlight></codeline>
+<codeline lineno="85" refid="a00920_1a52a9537a5cb72fb438de8f7331ffd9a2a447f7e8d33ccc8b1edc5aa00e8f5202f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a52a9537a5cb72fb438de8f7331ffd9a2a447f7e8d33ccc8b1edc5aa00e8f5202f" kindref="member">OR_VERTICAL</ref>,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="a00920_1a7553833a41980e8c2bae00177d41129e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129e" kindref="member">PollResult</ref></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90" refid="a00920_1a7553833a41980e8c2bae00177d41129ead7a3bc54fb41225d6588c6fb307f0bcf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ead7a3bc54fb41225d6588c6fb307f0bcf" kindref="member">PR_EXIT</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="91" refid="a00920_1a7553833a41980e8c2bae00177d41129ea628e6c1cd2f76b3b8b8346aaa4dfecf1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea628e6c1cd2f76b3b8b8346aaa4dfecf1" kindref="member">PR_NO_INPUT</ref>,</highlight></codeline>
+<codeline lineno="92" refid="a00920_1a7553833a41980e8c2bae00177d41129ea3dde91a4939857995c340109342db15b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea3dde91a4939857995c340109342db15b" kindref="member">PR_RESIZE</ref>,</highlight></codeline>
+<codeline lineno="93" refid="a00920_1a7553833a41980e8c2bae00177d41129ea312b0a8f38ea0bb8efd0aab28979ede1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea312b0a8f38ea0bb8efd0aab28979ede1" kindref="member">PR_0</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;0&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="94" refid="a00920_1a7553833a41980e8c2bae00177d41129ea9a8a91789ebb52f8166f7a8d2407057c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea9a8a91789ebb52f8166f7a8d2407057c" kindref="member">PR_1</ref>,</highlight></codeline>
+<codeline lineno="95" refid="a00920_1a7553833a41980e8c2bae00177d41129ea5d6a27ad614058c15c679f4a7fe99d48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea5d6a27ad614058c15c679f4a7fe99d48" kindref="member">PR_2</ref>,</highlight></codeline>
+<codeline lineno="96" refid="a00920_1a7553833a41980e8c2bae00177d41129ea33335fa899c442d134eb40ce5c993426" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea33335fa899c442d134eb40ce5c993426" kindref="member">PR_3</ref>,</highlight></codeline>
+<codeline lineno="97" refid="a00920_1a7553833a41980e8c2bae00177d41129ea79877e014f1a2ad5cf2568728d4cb866" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea79877e014f1a2ad5cf2568728d4cb866" kindref="member">PR_4</ref>,</highlight></codeline>
+<codeline lineno="98" refid="a00920_1a7553833a41980e8c2bae00177d41129eaa24d438ee4351597701da9911ccdab36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129eaa24d438ee4351597701da9911ccdab36" kindref="member">PR_5</ref>,</highlight></codeline>
+<codeline lineno="99" refid="a00920_1a7553833a41980e8c2bae00177d41129eaaa9bd05ee2d18e6ca9cd753922bac771" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129eaaa9bd05ee2d18e6ca9cd753922bac771" kindref="member">PR_6</ref>,</highlight></codeline>
+<codeline lineno="100" refid="a00920_1a7553833a41980e8c2bae00177d41129ea9a43ed3a898c79796908fe26f7108957" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea9a43ed3a898c79796908fe26f7108957" kindref="member">PR_7</ref>,</highlight></codeline>
+<codeline lineno="101" refid="a00920_1a7553833a41980e8c2bae00177d41129eaa61eee33219bf701c43eef34a220b2f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129eaa61eee33219bf701c43eef34a220b2f6" kindref="member">PR_8</ref>,</highlight></codeline>
+<codeline lineno="102" refid="a00920_1a7553833a41980e8c2bae00177d41129eac5278fe7cf3a9ab21e7762082b5b5ef6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129eac5278fe7cf3a9ab21e7762082b5b5ef6" kindref="member">PR_9</ref>,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="a00920_1a7553833a41980e8c2bae00177d41129ea2627c1de742b4d08526efd3e20d70eea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea2627c1de742b4d08526efd3e20d70eea" kindref="member">PR_A</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="105" refid="a00920_1a7553833a41980e8c2bae00177d41129ea56955bfa3e61dcda326bb5705d8b0b08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea56955bfa3e61dcda326bb5705d8b0b08" kindref="member">PR_B</ref>,</highlight></codeline>
+<codeline lineno="106" refid="a00920_1a7553833a41980e8c2bae00177d41129eac5bfa9b08ea8636eb07cf284d5307f20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129eac5bfa9b08ea8636eb07cf284d5307f20" kindref="member">PR_C</ref>,</highlight></codeline>
+<codeline lineno="107" refid="a00920_1a7553833a41980e8c2bae00177d41129ea9a2c70635383e3b23c167d887a867ec4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea9a2c70635383e3b23c167d887a867ec4" kindref="member">PR_D</ref>,</highlight></codeline>
+<codeline lineno="108" refid="a00920_1a7553833a41980e8c2bae00177d41129eaeca4d3710469b65a521f52f648f9d453" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129eaeca4d3710469b65a521f52f648f9d453" kindref="member">PR_E</ref>,</highlight></codeline>
+<codeline lineno="109" refid="a00920_1a7553833a41980e8c2bae00177d41129ea5a373100d7d678d8f1db646c3106d710" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea5a373100d7d678d8f1db646c3106d710" kindref="member">PR_F</ref>,</highlight></codeline>
+<codeline lineno="110" refid="a00920_1a7553833a41980e8c2bae00177d41129eafc725582557ab4116696b422ce70002c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129eafc725582557ab4116696b422ce70002c" kindref="member">PR_G</ref>,</highlight></codeline>
+<codeline lineno="111" refid="a00920_1a7553833a41980e8c2bae00177d41129ea228362349dccf8097cdc731e9933c97f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea228362349dccf8097cdc731e9933c97f" kindref="member">PR_H</ref>,</highlight></codeline>
+<codeline lineno="112" refid="a00920_1a7553833a41980e8c2bae00177d41129ea4c050883f463c7194fc23506e0bd3804" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea4c050883f463c7194fc23506e0bd3804" kindref="member">PR_I</ref>,</highlight></codeline>
+<codeline lineno="113" refid="a00920_1a7553833a41980e8c2bae00177d41129ea0a5764199b1b7d6a875bf14c05a92c3f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea0a5764199b1b7d6a875bf14c05a92c3f" kindref="member">PR_J</ref>,</highlight></codeline>
+<codeline lineno="114" refid="a00920_1a7553833a41980e8c2bae00177d41129ead97778b9a49df986057a346ab6c2faf6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ead97778b9a49df986057a346ab6c2faf6" kindref="member">PR_K</ref>,</highlight></codeline>
+<codeline lineno="115" refid="a00920_1a7553833a41980e8c2bae00177d41129ea71ba4e8ba6d2f0b6ff43241f39d84065" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea71ba4e8ba6d2f0b6ff43241f39d84065" kindref="member">PR_L</ref>,</highlight></codeline>
+<codeline lineno="116" refid="a00920_1a7553833a41980e8c2bae00177d41129eab51a41d00259b4e1946618dfeabe70f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129eab51a41d00259b4e1946618dfeabe70f9" kindref="member">PR_M</ref>,</highlight></codeline>
+<codeline lineno="117" refid="a00920_1a7553833a41980e8c2bae00177d41129ead4c3ea861e60eb67e9891aaa4c3cff92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ead4c3ea861e60eb67e9891aaa4c3cff92" kindref="member">PR_N</ref>,</highlight></codeline>
+<codeline lineno="118" refid="a00920_1a7553833a41980e8c2bae00177d41129eabeb57b5bdcea1ff48b857b2016b27097" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129eabeb57b5bdcea1ff48b857b2016b27097" kindref="member">PR_O</ref>,</highlight></codeline>
+<codeline lineno="119" refid="a00920_1a7553833a41980e8c2bae00177d41129ea94e718444a7fa856ff1522b809bfdd66" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea94e718444a7fa856ff1522b809bfdd66" kindref="member">PR_P</ref>,</highlight></codeline>
+<codeline lineno="120" refid="a00920_1a7553833a41980e8c2bae00177d41129eaac096e4ab5b9bda727f54b4e076086da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129eaac096e4ab5b9bda727f54b4e076086da" kindref="member">PR_Q</ref>,</highlight></codeline>
+<codeline lineno="121" refid="a00920_1a7553833a41980e8c2bae00177d41129eadce783d1df91b3fd26fd5817f0ff07c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129eadce783d1df91b3fd26fd5817f0ff07c6" kindref="member">PR_R</ref>,</highlight></codeline>
+<codeline lineno="122" refid="a00920_1a7553833a41980e8c2bae00177d41129eac0f91de647a0b16eb41d0f7ca451b033" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129eac0f91de647a0b16eb41d0f7ca451b033" kindref="member">PR_S</ref>,</highlight></codeline>
+<codeline lineno="123" refid="a00920_1a7553833a41980e8c2bae00177d41129eaa696bdfb3daf4cdf617281b29943b107" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129eaa696bdfb3daf4cdf617281b29943b107" kindref="member">PR_T</ref>,</highlight></codeline>
+<codeline lineno="124" refid="a00920_1a7553833a41980e8c2bae00177d41129ea9285423542bdaadf9eab8e14b50f3633" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea9285423542bdaadf9eab8e14b50f3633" kindref="member">PR_U</ref>,</highlight></codeline>
+<codeline lineno="125" refid="a00920_1a7553833a41980e8c2bae00177d41129ea22f2d6a843672a83b82bd11fd7318fb5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea22f2d6a843672a83b82bd11fd7318fb5" kindref="member">PR_V</ref>,</highlight></codeline>
+<codeline lineno="126" refid="a00920_1a7553833a41980e8c2bae00177d41129eadbb94a03fa4dad97cdfa6559dd29639b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129eadbb94a03fa4dad97cdfa6559dd29639b" kindref="member">PR_W</ref>,</highlight></codeline>
+<codeline lineno="127" refid="a00920_1a7553833a41980e8c2bae00177d41129eae6c3839fc23b67d3fb0a67fe97030fb4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129eae6c3839fc23b67d3fb0a67fe97030fb4" kindref="member">PR_X</ref>,</highlight></codeline>
+<codeline lineno="128" refid="a00920_1a7553833a41980e8c2bae00177d41129ea3bc32ea5a0e65d84b122bc87b9fd518b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea3bc32ea5a0e65d84b122bc87b9fd518b" kindref="member">PR_Y</ref>,</highlight></codeline>
+<codeline lineno="129" refid="a00920_1a7553833a41980e8c2bae00177d41129ea9eac26a84b6afb0fdedfce24daaa5791" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea9eac26a84b6afb0fdedfce24daaa5791" kindref="member">PR_Z</ref>,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="a00920_1a7553833a41980e8c2bae00177d41129ea35bf1e881e438245e59ccdf1cd1d0774" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea35bf1e881e438245e59ccdf1cd1d0774" kindref="member">PR_UP_ARROW</ref>,</highlight></codeline>
+<codeline lineno="132" refid="a00920_1a7553833a41980e8c2bae00177d41129ea3c5a3820b4f7ada22ec68576968bd89d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea3c5a3820b4f7ada22ec68576968bd89d" kindref="member">PR_DOWN_ARROW</ref>,</highlight></codeline>
+<codeline lineno="133" refid="a00920_1a7553833a41980e8c2bae00177d41129ea930343c4a28078ebe2a6b9cfeb4ba56e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea930343c4a28078ebe2a6b9cfeb4ba56e" kindref="member">PR_RIGHT_ARROW</ref>,</highlight></codeline>
+<codeline lineno="134" refid="a00920_1a7553833a41980e8c2bae00177d41129ead791c01c4f98f1dccf5b6bd16ff003bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ead791c01c4f98f1dccf5b6bd16ff003bf" kindref="member">PR_LEFT_ARROW</ref>,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="a00920_1a7553833a41980e8c2bae00177d41129ea89c5fae3ba9dbf20538adec915496de2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea89c5fae3ba9dbf20538adec915496de2" kindref="member">PR_CTRL</ref>,</highlight></codeline>
+<codeline lineno="137" refid="a00920_1a7553833a41980e8c2bae00177d41129ea6bda70105ae10d19db8b9170dddecf76" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea6bda70105ae10d19db8b9170dddecf76" kindref="member">PR_SHIFT</ref>,</highlight></codeline>
+<codeline lineno="138" refid="a00920_1a7553833a41980e8c2bae00177d41129ea403265cd9f8c17461bb349be5dcc1d35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea403265cd9f8c17461bb349be5dcc1d35" kindref="member">PR_ALT</ref>,</highlight></codeline>
+<codeline lineno="139" refid="a00920_1a7553833a41980e8c2bae00177d41129ea7d0aa57d06151d917be3d0a2a61a475f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00920_1a7553833a41980e8c2bae00177d41129ea7d0aa57d06151d917be3d0a2a61a475f" kindref="member">PR_ESC</ref>,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Ui</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Utils/UserInterface/ColorCache.h"/>
+    <location file="Source/Utils/UserInterface/Common.h"/>
   </compounddef>
 </doxygen>

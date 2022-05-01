@@ -1,27 +1,21 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01587" kind="page">
-    <compoundname>Hc04</compoundname>
-    <title>Virtual Machine</title>
+    <compoundname>Hc07</compoundname>
+    <title>Bindings</title>
     <briefdescription>
-<para>Implements the virtual machine compiler. </para>    </briefdescription>
+<para>Provides a script language interface. </para>    </briefdescription>
     <detaileddescription>
-<para>Implements the virtual machine compiler.</para><para><heading level="2">Vm2Asm</heading>
-</para><para>The primary job of this compiler is to switch abstractions from a stack based virtual machine to assembly code. <linebreak/>
+<para>Provides a script language interface.</para><para><linebreak/>
 <linebreak/>
- <programlisting filename=".txt"><codeline><highlight class="normal">Usage:<sp/>vm2mc<sp/>&lt;options&gt;<sp/>&lt;arg[0]<sp/>..<sp/>arg[n]&gt;</highlight></codeline>
-<codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/>where<sp/>arg[0]<sp/>is<sp/>the<sp/>input<sp/>file</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-h,<sp/>--help<sp/><sp/><sp/><sp/>Display<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>help<sp/>message</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-o,<sp/>--output<sp/><sp/>Specify<sp/>an<sp/>output<sp/>file</highlight></codeline>
-</programlisting></para><para><heading level="3">Grammar</heading>
-</para><para>The grammar for the VM syntax can be found <ulink url="../../Source/VirtualMachine/VM.grm">here.</ulink> <linebreak/>
-It uses the following extra keywords that are not in the course specification.<itemizedlist>
-<listitem><para><bold>set</bold> <computeroutput>set &lt;int&gt; &lt;int&gt;</computeroutput> Allows directly setting RAM values</para></listitem><listitem><para><bold>reset</bold> <computeroutput>reset</computeroutput> Forces a CPU reset by jumping to the end of ROM <computeroutput>@32766 D=A;JMP</computeroutput></para></listitem><listitem><para><bold>halt</bold> <computeroutput>halt</computeroutput> Will emit code that enters into an infinite loop</para></listitem></itemizedlist>
-</para><sect1 id="a01587_1Hc04Defined">
+It is currently on the back-burner until primary functionality is complete.</para><para><linebreak/>
+<linebreak/>
+A proof of concept Flutter application can be found in the flutter branch. It makes use of this interface to communicate with dart to replicate the command line debugger in Flutter.</para><para><linebreak/>
+<linebreak/>
+<image type="html" name="Debugger1.png"></image>
+</para><sect1 id="a01587_1Hc07Defined">
 <title>Defined in</title>
-<para>The source is defined in <ulink url="../../Source/VirtualMachine">Source/VirtualMachine</ulink><linebreak/>
+<para>The source is defined in <ulink url="../../Source/Bindings">Source/Bindings</ulink><linebreak/>
 </para></sect1>
     </detaileddescription>
   </compounddef>

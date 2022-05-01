@@ -1,7 +1,20 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00896" kind="file" language="C++">
-    <compoundname>PlatformWin32.h</compoundname>
+    <compoundname>Constants.h</compoundname>
+    <includedby refid="a00899" local="yes">Source/VirtualMachine/Emitter.cpp</includedby>
+    <invincdepgraph>
+      <node id="4347">
+        <label>Source/VirtualMachine/Emitter.cpp</label>
+      </node>
+      <node id="4346">
+        <label>Source/VirtualMachine/Constants.h</label>
+        <link refid="a00896"/>
+        <childnode refid="4347" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="a00914">Hack::VirtualMachine</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -29,36 +42,24 @@
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WIN32</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/UserInterface/Platform.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00923" kindref="compound">Hack::Ui</ref></highlight></codeline>
-<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">PlatformWin32<sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Platform</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HANDLE<sp/>_stdout;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HANDLE<sp/>_stdin;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DWORD<sp/><sp/>_outputMode;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DWORD<sp/><sp/>_inputMode;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>saveState();</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>restoreState();</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PlatformWin32();</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>~PlatformWin32()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getScreenSize(Point&amp;<sp/>sz)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>poll(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>block)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="50"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Ui</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00914" kindref="compound">Hack::VirtualMachine</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26" refid="a00914_1ab2a36ae607c4ab166da225c1f6f71827" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="a00914_1ab2a36ae607c4ab166da225c1f6f71827" kindref="member">RamIndices</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28" refid="a00914_1ab2a36ae607c4ab166da225c1f6f71827a863abda83f7c8925cceaf04098e3cb34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1ab2a36ae607c4ab166da225c1f6f71827a863abda83f7c8925cceaf04098e3cb34" kindref="member">STP</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="29" refid="a00914_1ab2a36ae607c4ab166da225c1f6f71827acf4f05429d20255bf7128cebaf158e72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1ab2a36ae607c4ab166da225c1f6f71827acf4f05429d20255bf7128cebaf158e72" kindref="member">LCL</ref>,</highlight></codeline>
+<codeline lineno="30" refid="a00914_1ab2a36ae607c4ab166da225c1f6f71827a8ca2cf3937e5c6f1e63ee3b602fdf814" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1ab2a36ae607c4ab166da225c1f6f71827a8ca2cf3937e5c6f1e63ee3b602fdf814" kindref="member">ARG</ref>,</highlight></codeline>
+<codeline lineno="31" refid="a00914_1ab2a36ae607c4ab166da225c1f6f71827a0edd4176219c47bc38b154d7319b2b0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1ab2a36ae607c4ab166da225c1f6f71827a0edd4176219c47bc38b154d7319b2b0c" kindref="member">THS</ref>,</highlight></codeline>
+<codeline lineno="32" refid="a00914_1ab2a36ae607c4ab166da225c1f6f71827a892ac688cf8f49defc936c85521c630b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1ab2a36ae607c4ab166da225c1f6f71827a892ac688cf8f49defc936c85521c630b" kindref="member">THT</ref>,</highlight></codeline>
+<codeline lineno="33" refid="a00914_1ab2a36ae607c4ab166da225c1f6f71827a7257ce4a14d1f26d6858febfad59e371" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1ab2a36ae607c4ab166da225c1f6f71827a7257ce4a14d1f26d6858febfad59e371" kindref="member">TMP</ref>,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>8<sp/>entries</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="a00914_1ab2a36ae607c4ab166da225c1f6f71827ac877118ac6aa475e26bcdc4dd5952f52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1ab2a36ae607c4ab166da225c1f6f71827ac877118ac6aa475e26bcdc4dd5952f52" kindref="member">SW0</ref><sp/>=<sp/>13,</highlight></codeline>
+<codeline lineno="36" refid="a00914_1ab2a36ae607c4ab166da225c1f6f71827ac160ec799f9773ab331ad17427c85d75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1ab2a36ae607c4ab166da225c1f6f71827ac160ec799f9773ab331ad17427c85d75" kindref="member">SW1</ref>,</highlight></codeline>
+<codeline lineno="37" refid="a00914_1ab2a36ae607c4ab166da225c1f6f71827ae6201d4edf7d9066f2245e0d75ac1805" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00914_1ab2a36ae607c4ab166da225c1f6f71827ae6201d4edf7d9066f2245e0d75ac1805" kindref="member">SW2</ref></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::VirtualMachine</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Utils/UserInterface/PlatformWin32.h"/>
+    <location file="Source/VirtualMachine/Constants.h"/>
   </compounddef>
 </doxygen>

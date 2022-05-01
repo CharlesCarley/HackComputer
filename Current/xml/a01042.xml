@@ -125,33 +125,33 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="141">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="a01002"/>
+      </node>
+      <node id="140">
+        <label>Hack::Chips::FullAdder</label>
+        <link refid="a01042"/>
+        <childnode refid="141" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="144">
+        <label>uint8_t</label>
+        <link refid="a01382"/>
+      </node>
       <node id="143">
         <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
         <link refid="a01002"/>
+        <childnode refid="144" relation="usage">
+          <edgelabel>_bits</edgelabel>
+        </childnode>
       </node>
       <node id="142">
         <label>Hack::Chips::FullAdder</label>
         <link refid="a01042"/>
         <childnode refid="143" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="146">
-        <label>uint8_t</label>
-        <link refid="a01382"/>
-      </node>
-      <node id="145">
-        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
-        <link refid="a01002"/>
-        <childnode refid="146" relation="usage">
-          <edgelabel>_bits</edgelabel>
-        </childnode>
-      </node>
-      <node id="144">
-        <label>Hack::Chips::FullAdder</label>
-        <link refid="a01042"/>
-        <childnode refid="145" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

@@ -88,33 +88,33 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="309">
+      <node id="307">
         <label>size_t</label>
       </node>
-      <node id="310">
+      <node id="308">
         <label>uint32_t</label>
       </node>
-      <node id="311">
+      <node id="309">
         <label>bool</label>
       </node>
-      <node id="308">
+      <node id="306">
         <label>char</label>
       </node>
-      <node id="307">
+      <node id="305">
         <label>Hack::CommandLine::Switch</label>
         <link refid="a01242"/>
-        <childnode refid="308" relation="usage">
+        <childnode refid="306" relation="usage">
           <edgelabel>longSwitch</edgelabel>
           <edgelabel>shortSwitch</edgelabel>
           <edgelabel>description</edgelabel>
         </childnode>
-        <childnode refid="309" relation="usage">
+        <childnode refid="307" relation="usage">
           <edgelabel>argCount</edgelabel>
         </childnode>
-        <childnode refid="310" relation="usage">
+        <childnode refid="308" relation="usage">
           <edgelabel>id</edgelabel>
         </childnode>
-        <childnode refid="311" relation="usage">
+        <childnode refid="309" relation="usage">
           <edgelabel>optional</edgelabel>
         </childnode>
       </node>

@@ -114,58 +114,58 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="173">
+        <label>Hack::Chips::Mux16</label>
+        <link refid="a01066"/>
+        <childnode refid="174" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="174">
+        <label>Hack::Chips::Chip&lt; bit64_t, 64 &gt;</label>
+        <link refid="a01002"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="178">
+        <label>uint64_t</label>
+      </node>
+      <node id="179">
+        <label>uint16_t</label>
+        <link refid="a01370"/>
+      </node>
+      <node id="180">
+        <label>uint32_t</label>
+      </node>
+      <node id="181">
+        <label>uint8_t</label>
+        <link refid="a01382"/>
+      </node>
       <node id="175">
         <label>Hack::Chips::Mux16</label>
         <link refid="a01066"/>
         <childnode refid="176" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="176">
-        <label>Hack::Chips::Chip&lt; bit64_t, 64 &gt;</label>
-        <link refid="a01002"/>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="180">
-        <label>uint64_t</label>
-      </node>
-      <node id="181">
-        <label>uint16_t</label>
-        <link refid="a01370"/>
-      </node>
-      <node id="182">
-        <label>uint32_t</label>
-      </node>
-      <node id="183">
-        <label>uint8_t</label>
-        <link refid="a01382"/>
-      </node>
       <node id="177">
-        <label>Hack::Chips::Mux16</label>
-        <link refid="a01066"/>
-        <childnode refid="178" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="179">
         <label>Hack::Chips::bit64_t</label>
         <link refid="a00994"/>
-        <childnode refid="180" relation="usage">
+        <childnode refid="178" relation="usage">
           <edgelabel>ll</edgelabel>
         </childnode>
-        <childnode refid="181" relation="usage">
+        <childnode refid="179" relation="usage">
           <edgelabel>s</edgelabel>
         </childnode>
-        <childnode refid="182" relation="usage">
+        <childnode refid="180" relation="usage">
           <edgelabel>i</edgelabel>
         </childnode>
-        <childnode refid="183" relation="usage">
+        <childnode refid="181" relation="usage">
           <edgelabel>b</edgelabel>
         </childnode>
       </node>
-      <node id="178">
+      <node id="176">
         <label>Hack::Chips::Chip&lt; bit64_t, 64 &gt;</label>
         <link refid="a01002"/>
-        <childnode refid="179" relation="usage">
+        <childnode refid="177" relation="usage">
           <edgelabel>_bits</edgelabel>
         </childnode>
       </node>

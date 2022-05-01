@@ -1,110 +1,170 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00755" kind="file" language="C++">
-    <compoundname>Symbol.cpp</compoundname>
-    <includes refid="a00758" local="yes">Compiler/Generator/Symbol.h</includes>
+    <compoundname>Symbol.h</compoundname>
+    <includes refid="a00827" local="yes">Utils/IndexCache.h</includes>
+    <includedby refid="a00743" local="yes">Source/Compiler/Generator/Generator.h</includedby>
+    <includedby refid="a00752" local="yes">Source/Compiler/Generator/Symbol.cpp</includedby>
+    <includedby refid="a00761" local="yes">Source/Compiler/Generator/SymbolTable.h</includedby>
+    <includedby refid="a00767" local="yes">Source/Compiler/Generator/VmEmitter.h</includedby>
     <incdepgraph>
-      <node id="2652">
+      <node id="2668">
         <label>Utils/Exception.h</label>
-        <childnode refid="2653" relation="include">
+        <childnode refid="2669" relation="include">
         </childnode>
-        <childnode refid="2654" relation="include">
+        <childnode refid="2670" relation="include">
         </childnode>
-        <childnode refid="2655" relation="include">
+        <childnode refid="2671" relation="include">
         </childnode>
-        <childnode refid="2656" relation="include">
+        <childnode refid="2672" relation="include">
         </childnode>
-        <childnode refid="2657" relation="include">
+        <childnode refid="2673" relation="include">
         </childnode>
       </node>
-      <node id="2663">
+      <node id="2679">
         <label>cstdint</label>
       </node>
-      <node id="2661">
+      <node id="2677">
         <label>UserInterface/Context.h</label>
-        <childnode refid="2657" relation="include">
+        <childnode refid="2673" relation="include">
         </childnode>
-        <childnode refid="2662" relation="include">
+        <childnode refid="2678" relation="include">
         </childnode>
-        <childnode refid="2664" relation="include">
+        <childnode refid="2680" relation="include">
         </childnode>
       </node>
-      <node id="2654">
+      <node id="2670">
         <label>stdexcept</label>
       </node>
-      <node id="2659">
+      <node id="2675">
         <label>string</label>
       </node>
-      <node id="2651">
+      <node id="2667">
         <label>unordered_set</label>
       </node>
-      <node id="2648">
-        <label>Compiler/Generator/Symbol.h</label>
-        <childnode refid="2649" relation="include">
+      <node id="2664">
+        <label>Source/Compiler/Generator/Symbol.h</label>
+        <link refid="a00755"/>
+        <childnode refid="2665" relation="include">
         </childnode>
       </node>
-      <node id="2653">
+      <node id="2669">
         <label>exception</label>
       </node>
-      <node id="2662">
+      <node id="2678">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="2663" relation="include">
+        <childnode refid="2679" relation="include">
         </childnode>
       </node>
-      <node id="2657">
+      <node id="2673">
         <label>String.h</label>
-        <childnode refid="2658" relation="include">
+        <childnode refid="2674" relation="include">
         </childnode>
-        <childnode refid="2659" relation="include">
+        <childnode refid="2675" relation="include">
         </childnode>
-        <childnode refid="2660" relation="include">
+        <childnode refid="2676" relation="include">
         </childnode>
       </node>
-      <node id="2649">
+      <node id="2665">
         <label>Utils/IndexCache.h</label>
-        <childnode refid="2650" relation="include">
+        <childnode refid="2666" relation="include">
         </childnode>
-        <childnode refid="2651" relation="include">
+        <childnode refid="2667" relation="include">
         </childnode>
-        <childnode refid="2652" relation="include">
+        <childnode refid="2668" relation="include">
         </childnode>
       </node>
-      <node id="2660">
+      <node id="2676">
         <label>vector</label>
       </node>
-      <node id="2655">
+      <node id="2671">
         <label>utility</label>
       </node>
-      <node id="2658">
+      <node id="2674">
         <label>sstream</label>
       </node>
-      <node id="2647">
-        <label>Source/Compiler/Generator/Symbol.cpp</label>
-        <link refid="a00755"/>
-        <childnode refid="2648" relation="include">
-        </childnode>
-      </node>
-      <node id="2650">
+      <node id="2666">
         <label>unordered_map</label>
       </node>
-      <node id="2664">
+      <node id="2680">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="2663" relation="include">
+        <childnode refid="2679" relation="include">
         </childnode>
-        <childnode refid="2660" relation="include">
+        <childnode refid="2676" relation="include">
         </childnode>
-        <childnode refid="2662" relation="include">
+        <childnode refid="2678" relation="include">
         </childnode>
       </node>
-      <node id="2656">
+      <node id="2672">
         <label>Utils/Console.h</label>
-        <childnode refid="2657" relation="include">
+        <childnode refid="2673" relation="include">
         </childnode>
-        <childnode refid="2661" relation="include">
+        <childnode refid="2677" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <innernamespace refid="a00916">Hack::Compiler::CodeGenerator</innernamespace>
+    <invincdepgraph>
+      <node id="2686">
+        <label>Source/Computer/Application.cpp</label>
+      </node>
+      <node id="2690">
+        <label>Source/Compiler/Generator/VmEmitter.h</label>
+        <childnode refid="2684" relation="include">
+        </childnode>
+        <childnode refid="2691" relation="include">
+        </childnode>
+      </node>
+      <node id="2689">
+        <label>Source/Compiler/Generator/SymbolTable.cpp</label>
+      </node>
+      <node id="2682">
+        <label>Source/Compiler/Generator/Generator.h</label>
+        <childnode refid="2683" relation="include">
+        </childnode>
+        <childnode refid="2684" relation="include">
+        </childnode>
+        <childnode refid="2685" relation="include">
+        </childnode>
+        <childnode refid="2686" relation="include">
+        </childnode>
+      </node>
+      <node id="2684">
+        <label>Source/Compiler/Generator/Generator.cpp</label>
+      </node>
+      <node id="2681">
+        <label>Source/Compiler/Generator/Symbol.h</label>
+        <link refid="a00755"/>
+        <childnode refid="2682" relation="include">
+        </childnode>
+        <childnode refid="2687" relation="include">
+        </childnode>
+        <childnode refid="2688" relation="include">
+        </childnode>
+        <childnode refid="2690" relation="include">
+        </childnode>
+      </node>
+      <node id="2683">
+        <label>Source/Compiler/Compiler/Main.cpp</label>
+      </node>
+      <node id="2691">
+        <label>Source/Compiler/Generator/VmEmitter.cpp</label>
+      </node>
+      <node id="2687">
+        <label>Source/Compiler/Generator/Symbol.cpp</label>
+      </node>
+      <node id="2685">
+        <label>Source/Compiler/Generator/Main.cpp</label>
+      </node>
+      <node id="2688">
+        <label>Source/Compiler/Generator/SymbolTable.h</label>
+        <childnode refid="2684" relation="include">
+        </childnode>
+        <childnode refid="2689" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="a01198" prot="public">Hack::Compiler::CodeGenerator::Symbol</innerclass>
+    <innernamespace refid="a00913">Hack::Compiler::CodeGenerator</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -131,26 +191,100 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Compiler/Generator/Symbol.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00916" kindref="compound">Hack::Compiler::CodeGenerator</ref></highlight></codeline>
-<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="26" refid="a01201_1a4aaf0b7b3e7f348677d6e987a0345bb5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01201_1a4aaf0b7b3e7f348677d6e987a0345bb5" kindref="member">Symbol::Symbol</ref>()<sp/>:</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_type(-1),</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_kind(<ref refid="a00916_1ac08293c0a6cadd380abba4ce7069b7bca33eb8724d1cfb37808fb1dd2a3c24812" kindref="member">None</ref>),</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_entry(-1)</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33" refid="a01201_1a42a37a3aa91720ae15a7abd248997911" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a01201_1a4aaf0b7b3e7f348677d6e987a0345bb5" kindref="member">Symbol::Symbol</ref>(<ref refid="a00909_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int8_t<sp/>type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int8_t<sp/>kind,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>entry)<sp/>:</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_name(<ref refid="a00925" kindref="compound">std</ref>::move(name)),</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_type(type),</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_kind(kind),</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_entry(entry)</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="40"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler::CodeGenerator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/IndexCache.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00913" kindref="compound">Hack::Compiler::CodeGenerator</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27" refid="a00913_1ac08293c0a6cadd380abba4ce7069b7bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="a00913_1ac08293c0a6cadd380abba4ce7069b7bc" kindref="member">SymbolKind</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29" refid="a00913_1ac08293c0a6cadd380abba4ce7069b7bca33eb8724d1cfb37808fb1dd2a3c24812" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00913_1ac08293c0a6cadd380abba4ce7069b7bca33eb8724d1cfb37808fb1dd2a3c24812" kindref="member">None</ref>=-1,</highlight></codeline>
+<codeline lineno="30" refid="a00913_1ac08293c0a6cadd380abba4ce7069b7bca758124b318712f1ca6e7abfcceb26517" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00913_1ac08293c0a6cadd380abba4ce7069b7bca758124b318712f1ca6e7abfcceb26517" kindref="member">Field</ref>,</highlight></codeline>
+<codeline lineno="31" refid="a00913_1ac08293c0a6cadd380abba4ce7069b7bca4e24ef81cf7ed83a94dc616bb8b510a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00913_1ac08293c0a6cadd380abba4ce7069b7bca4e24ef81cf7ed83a94dc616bb8b510a8" kindref="member">Static</ref>,</highlight></codeline>
+<codeline lineno="32" refid="a00913_1ac08293c0a6cadd380abba4ce7069b7bcac16d59cf9aa39e37737b703b8d21a9ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00913_1ac08293c0a6cadd380abba4ce7069b7bcac16d59cf9aa39e37737b703b8d21a9ee" kindref="member">Local</ref>,</highlight></codeline>
+<codeline lineno="33" refid="a00913_1ac08293c0a6cadd380abba4ce7069b7bcac846b86715799a34e6b35cfef36ea1bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00913_1ac08293c0a6cadd380abba4ce7069b7bcac846b86715799a34e6b35cfef36ea1bb" kindref="member">Argument</ref>,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="a01198" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a01198" kindref="compound">Symbol</ref></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>_name;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int8_t<sp/>_type;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int8_t<sp/>_kind;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>_entry;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01198_1a4aaf0b7b3e7f348677d6e987a0345bb5" kindref="member">Symbol</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01198_1a4aaf0b7b3e7f348677d6e987a0345bb5" kindref="member">Symbol</ref>(<ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><ref refid="a01198_1aec2a51113f849ac614b9dac44f7682bd" kindref="member">name</ref>,<sp/>int8_t<sp/><ref refid="a01198_1a070a1880926f761a3a6e8eb6f5af1f6e" kindref="member">type</ref>,<sp/>int8_t<sp/><ref refid="a01198_1a41df95e5acf1eb60728abd89b14eba02" kindref="member">kind</ref>,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="a01198_1ab608d0a405d8de2551e2317acded64e5" kindref="member">entry</ref>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a01198_1a4aaf0b7b3e7f348677d6e987a0345bb5" kindref="member">Symbol</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a01198" kindref="compound">Symbol</ref>&amp;<sp/>oth)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/><ref refid="a01198_1aec2a51113f849ac614b9dac44f7682bd" kindref="member">name</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int8_t&amp;<sp/><ref refid="a01198_1a070a1880926f761a3a6e8eb6f5af1f6e" kindref="member">type</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int8_t&amp;<sp/><ref refid="a01198_1a41df95e5acf1eb60728abd89b14eba02" kindref="member">kind</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/><ref refid="a01198_1ab608d0a405d8de2551e2317acded64e5" kindref="member">entry</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01198_1aec2a51113f849ac614b9dac44f7682bd" kindref="member">name</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01198_1a070a1880926f761a3a6e8eb6f5af1f6e" kindref="member">type</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int8_t&amp;);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01198_1a41df95e5acf1eb60728abd89b14eba02" kindref="member">kind</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int8_t&amp;);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01198_1ab608d0a405d8de2551e2317acded64e5" kindref="member">entry</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01198_1ac8801b52cf9e944a99ed53aba8b77629" kindref="member">isValid</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="a01198_1aec2a51113f849ac614b9dac44f7682bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/><ref refid="a01198_1aec2a51113f849ac614b9dac44f7682bd" kindref="member">Symbol::name</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="71"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_name;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="a01198_1a070a1880926f761a3a6e8eb6f5af1f6e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int8_t&amp;<sp/><ref refid="a01198_1a070a1880926f761a3a6e8eb6f5af1f6e" kindref="member">Symbol::type</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="76"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_type;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="a01198_1a41df95e5acf1eb60728abd89b14eba02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int8_t&amp;<sp/><ref refid="a01198_1a41df95e5acf1eb60728abd89b14eba02" kindref="member">Symbol::kind</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="81"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_kind;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="a01198_1ab608d0a405d8de2551e2317acded64e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/><ref refid="a01198_1ab608d0a405d8de2551e2317acded64e5" kindref="member">Symbol::entry</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="86"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_entry;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="a01198_1a9cdf3a6824886d218bef477c1b59f132" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01198_1aec2a51113f849ac614b9dac44f7682bd" kindref="member">Symbol::name</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="a00906_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>name)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_name<sp/>=<sp/><ref refid="a01198_1aec2a51113f849ac614b9dac44f7682bd" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="a01198_1af912a46b1712b169b74f61611f830014" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01198_1a070a1880926f761a3a6e8eb6f5af1f6e" kindref="member">Symbol::type</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int8_t&amp;<sp/>value)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_type<sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="a01198_1acb0b61f4e01dee44f66645b2e4a35e8f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01198_1a41df95e5acf1eb60728abd89b14eba02" kindref="member">Symbol::kind</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int8_t&amp;<sp/>value)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_kind<sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="a01198_1aef20074306837af050b175e9479a799b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a01198_1ab608d0a405d8de2551e2317acded64e5" kindref="member">Symbol::entry</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>value)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_entry<sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="a01198_1ac8801b52cf9e944a99ed53aba8b77629" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a01198_1ac8801b52cf9e944a99ed53aba8b77629" kindref="member">Symbol::isValid</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="111"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_type<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>_kind<sp/>!=<sp/><ref refid="a00913_1ac08293c0a6cadd380abba4ce7069b7bca33eb8724d1cfb37808fb1dd2a3c24812" kindref="member">None</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler::CodeGenerator</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Compiler/Generator/Symbol.cpp"/>
+    <location file="Source/Compiler/Generator/Symbol.h"/>
   </compounddef>
 </doxygen>

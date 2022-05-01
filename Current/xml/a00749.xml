@@ -1,45 +1,52 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a00749" kind="file" language="C++">
-    <compoundname>Scope.cpp</compoundname>
-    <includes refid="a00752" local="yes">Compiler/Generator/Scope.h</includes>
+    <compoundname>Scope.h</compoundname>
+    <includes refid="a00725" local="yes">Compiler/Common/Tree.h</includes>
+    <includedby refid="a00746" local="yes">Source/Compiler/Generator/Scope.cpp</includedby>
     <incdepgraph>
-      <node id="2633">
+      <node id="2638">
         <label>Compiler/Common/Tree.h</label>
-        <childnode refid="2634" relation="include">
+        <childnode refid="2639" relation="include">
         </childnode>
       </node>
-      <node id="2636">
+      <node id="2641">
         <label>string</label>
       </node>
-      <node id="2634">
+      <node id="2639">
         <label>Utils/String.h</label>
-        <childnode refid="2635" relation="include">
+        <childnode refid="2640" relation="include">
         </childnode>
-        <childnode refid="2636" relation="include">
+        <childnode refid="2641" relation="include">
         </childnode>
-        <childnode refid="2637" relation="include">
-        </childnode>
-      </node>
-      <node id="2632">
-        <label>Compiler/Generator/Scope.h</label>
-        <childnode refid="2633" relation="include">
+        <childnode refid="2642" relation="include">
         </childnode>
       </node>
       <node id="2637">
-        <label>vector</label>
-      </node>
-      <node id="2635">
-        <label>sstream</label>
-      </node>
-      <node id="2631">
-        <label>Source/Compiler/Generator/Scope.cpp</label>
+        <label>Source/Compiler/Generator/Scope.h</label>
         <link refid="a00749"/>
-        <childnode refid="2632" relation="include">
+        <childnode refid="2638" relation="include">
         </childnode>
       </node>
+      <node id="2642">
+        <label>vector</label>
+      </node>
+      <node id="2640">
+        <label>sstream</label>
+      </node>
     </incdepgraph>
-    <innernamespace refid="a00916">Hack::Compiler::CodeGenerator</innernamespace>
+    <invincdepgraph>
+      <node id="2643">
+        <label>Source/Compiler/Generator/Scope.h</label>
+        <link refid="a00749"/>
+        <childnode refid="2644" relation="include">
+        </childnode>
+      </node>
+      <node id="2644">
+        <label>Source/Compiler/Generator/Scope.cpp</label>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="a00913">Hack::Compiler::CodeGenerator</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -66,12 +73,13 @@
 <codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
 <codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Compiler/Generator/Scope.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00916" kindref="compound">Hack::Compiler::CodeGenerator</ref></highlight></codeline>
-<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="26"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler::CodeGenerator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Compiler/Common/Tree.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="a00913" kindref="compound">Hack::Compiler::CodeGenerator</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler::CodeGenerator</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Compiler/Generator/Scope.cpp"/>
+    <location file="Source/Compiler/Generator/Scope.h"/>
   </compounddef>
 </doxygen>

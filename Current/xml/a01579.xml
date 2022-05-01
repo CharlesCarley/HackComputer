@@ -1,19 +1,37 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="a01579" kind="page">
-    <compoundname>Hc01</compoundname>
-    <title>Utils</title>
+    <compoundname>Hc00</compoundname>
+    <title>CMake</title>
     <briefdescription>
-<para>Implements general functionality that is used project wide. </para>    </briefdescription>
+<para>It uses <ref refid="a01579" kindref="compound">CMake</ref> for its build system. </para>    </briefdescription>
     <detaileddescription>
-<para>Implements general functionality that is used project wide.</para><para><linebreak/>
+<para>It uses <ref refid="a01579" kindref="compound">CMake</ref> for its build system.</para><para><heading level="2">Generators</heading>
+</para><para>The build system was written using CMake&apos;s <computeroutput>Unix Makefiles</computeroutput> and <computeroutput>Visual Studio 2019</computeroutput> generators.</para><para><heading level="2">Options</heading>
+</para><para>It provides the following options to control compilation. <linebreak/>
 <linebreak/>
 <itemizedlist>
-<listitem><para><ulink url="../../Source/Utils/">Source/Utils/</ulink> provides string conversion and console output utilities.</para></listitem><listitem><para><ulink url="../../Source/Utils/CommandLine/">Source/Utils/CommandLine/</ulink> implements a command line argument parser.</para></listitem><listitem><para><ulink url="../../Source/Utils/UserInterface/">Source/Utils/UserInterface/</ulink> provides a terminal drawing context.</para></listitem></itemizedlist>
-</para><sect1 id="a01579_1Hc01Defined">
-<title>Defined in</title>
-<para>The source is defined in <ulink url="../../Source/Utils">Source/Utils</ulink><linebreak/>
-</para></sect1>
-    </detaileddescription>
+<listitem><para>Hack_BUILD_DOCS | OFF<itemizedlist>
+<listitem><para>Builds the current version of the manual.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_BUILD_TEST | OFF<itemizedlist>
+<listitem><para>Enables building the unit test program.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_AUTO_RUN_TEST | OFF<itemizedlist>
+<listitem><para>Automatically runs the unit test program after each build.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_CHECK_INT_BOUNDS | ON<itemizedlist>
+<listitem><para>Enables throwing an overflow exception when manipulating individual bits.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_IMPLEMENT_BLACK_BOX | ON<itemizedlist>
+<listitem><para>If this is true most chips will be implemented with computed logic gates.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_PRINT_CHIP_STATE | OFF<itemizedlist>
+<listitem><para>Enables the print method defined in the Hack::Chip base class.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_VM_ZERO_RAM | OFF<itemizedlist>
+<listitem><para>Emits extra instructions to zero RAM values that are no longer in use.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_BLOCK_PUSH | OFF<itemizedlist>
+<listitem><para>Emits conditional instructions to prevent pushing ram segments when its out of context.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_USE_SDL | OFF<itemizedlist>
+<listitem><para>Enables or disables the SDL runtime.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Hack_GEN_SVG_PARSE_TREES | OFF<itemizedlist>
+<listitem><para>Regenerates SVG files off of the .jack files in the <ulink url="../../Test/Jack">Test/Jack</ulink> directory. </para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
+</para>    </detaileddescription>
   </compounddef>
 </doxygen>

@@ -48,27 +48,27 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="24">
+      <node id="22">
         <label>size_t</label>
       </node>
-      <node id="21">
+      <node id="19">
         <label>Hack::Assembler::ReservedWordTable</label>
         <link refid="a00942"/>
-        <childnode refid="22" relation="usage">
+        <childnode refid="20" relation="usage">
           <edgelabel>address</edgelabel>
         </childnode>
-        <childnode refid="23" relation="usage">
+        <childnode refid="21" relation="usage">
           <edgelabel>val</edgelabel>
         </childnode>
-        <childnode refid="24" relation="usage">
+        <childnode refid="22" relation="usage">
           <edgelabel>len</edgelabel>
         </childnode>
       </node>
-      <node id="22">
+      <node id="20">
         <label>uint16_t</label>
         <link refid="a01370"/>
       </node>
-      <node id="23">
+      <node id="21">
         <label>char</label>
       </node>
     </collaborationgraph>

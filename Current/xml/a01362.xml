@@ -134,7 +134,7 @@
         <references refid="a01294_1af515b00a44514c004aaefa7da2944674" compoundref="a00842" startline="78">Hack::ScannerBase::scanMultiLineComment</references>
         <references refid="a01294_1a4b419e3a4f91e1f4f136ead8941b7c5e">Hack::ScannerBase::scanWhiteSpace</references>
         <references refid="a01298_1aa299ccac72d52b74f3ebc2ce2dcf96a1" compoundref="a00443" startline="38" endline="41">Hack::TokenBase::setType</references>
-        <references refid="a00914_1a091fad0d0b4814af2f1f3f51d62033c8aa3110406fa7d6ce5c6dba8fd3594d633" compoundref="a01661" startline="30">Hack::VirtualMachine::TOK_EOF</references>
+        <references refid="a00914_1a091fad0d0b4814af2f1f3f51d62033c8aa3110406fa7d6ce5c6dba8fd3594d633" compoundref="a01665" startline="30">Hack::VirtualMachine::TOK_EOF</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -142,6 +142,31 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="479">
+        <label>Hack::VirtualMachine::Scanner</label>
+        <link refid="a01362"/>
+        <childnode refid="480" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="480">
+        <label>Hack::ScannerBase</label>
+        <link refid="a01294"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="485">
+        <label>size_t</label>
+      </node>
+      <node id="483">
+        <label>Hack::IndexCache&lt; String &gt;</label>
+        <link refid="a01274"/>
+      </node>
+      <node id="487">
+        <label>IStream *</label>
+      </node>
+      <node id="486">
+        <label>string</label>
+      </node>
       <node id="481">
         <label>Hack::VirtualMachine::Scanner</label>
         <link refid="a01362"/>
@@ -151,48 +176,23 @@
       <node id="482">
         <label>Hack::ScannerBase</label>
         <link refid="a01294"/>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="487">
-        <label>size_t</label>
-      </node>
-      <node id="485">
-        <label>Hack::IndexCache&lt; String &gt;</label>
-        <link refid="a01274"/>
-      </node>
-      <node id="489">
-        <label>IStream *</label>
-      </node>
-      <node id="488">
-        <label>string</label>
-      </node>
-      <node id="483">
-        <label>Hack::VirtualMachine::Scanner</label>
-        <link refid="a01362"/>
-        <childnode refid="484" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="484">
-        <label>Hack::ScannerBase</label>
-        <link refid="a01294"/>
-        <childnode refid="485" relation="usage">
+        <childnode refid="483" relation="usage">
           <edgelabel>_stringTable</edgelabel>
         </childnode>
-        <childnode refid="486" relation="usage">
+        <childnode refid="484" relation="usage">
           <edgelabel>_intTable</edgelabel>
         </childnode>
-        <childnode refid="487" relation="usage">
+        <childnode refid="485" relation="usage">
           <edgelabel>_line</edgelabel>
         </childnode>
-        <childnode refid="488" relation="usage">
+        <childnode refid="486" relation="usage">
           <edgelabel>_file</edgelabel>
         </childnode>
-        <childnode refid="489" relation="usage">
+        <childnode refid="487" relation="usage">
           <edgelabel>_stream</edgelabel>
         </childnode>
       </node>
-      <node id="486">
+      <node id="484">
         <label>Hack::IndexCache&lt; int &gt;</label>
         <link refid="a01274"/>
       </node>

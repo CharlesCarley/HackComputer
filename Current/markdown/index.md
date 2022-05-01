@@ -7,7 +7,7 @@
 <br/>
 <br/>
 <span class="inline-text">This repository is my implementation of the </span>
-<a href="a00909.md#hack">Hack</a>
+<a href="a00906.md#hack">Hack</a>
 <span class="inline-text"> computer in C++ from the </span>
 <a href="https://www.coursera.org/learn/build-a-computer#nand2tetris-course.">NAnd2Tetris course.</a>
 <br/>
@@ -18,33 +18,33 @@ I wanted to explore a more in-depth perspective, so it does not strictly adhere 
 <br/>
 <span class="inline-text">
 It uses </span>
-<a href="a01582.md#hc00">CMake</a>
+<a href="a01579.md#hc00">CMake</a>
 <span class="inline-text"> for its build system.</span>
 <a id="project-structure"></a>
 <h2>Project Structure</h2>
 <ul>
-<li><a href="a01583.md#hc01">Utils</a>
+<li><a href="a01580.md#hc01">Utils</a>
 <span class="inline-text"> Implements general functionality that is used project wide.</span>
 </li>
-<li><a href="a01584.md#hc02">Chips</a>
+<li><a href="a01581.md#hc02">Chips</a>
 <span class="inline-text"> Implements the circuit class library.</span>
 </li>
-<li><a href="a01586.md#hc03">Assembler</a>
+<li><a href="a01583.md#hc03">Assembler</a>
 <span class="inline-text"> Implements the machine code compiler.</span>
 </li>
-<li><a href="a01587.md#hc04">Virtual Machine</a>
+<li><a href="a01584.md#hc04">Virtual Machine</a>
 <span class="inline-text"> Implements the virtual machine compiler.</span>
 </li>
-<li><a href="a01588.md#hc05">Compiler</a>
+<li><a href="a01585.md#hc05">Compiler</a>
 <span class="inline-text"> Implements the compiler for the .jack source file.</span>
 </li>
-<li><a href="a01590.md#hc06">Computer</a>
+<li><a href="a01586.md#hc06">Computer</a>
 <span class="inline-text"> Implements the primary program that ties the project&apos;s components together.</span>
 </li>
-<li><a href="a01591.md#hc07">Bindings</a>
+<li><a href="a01587.md#hc07">Bindings</a>
 <span class="inline-text"> Provides a script language interface.</span>
 </li>
-<li><a href="a01592.md#hc08">Extra Tools</a>
+<li><a href="a01588.md#hc08">Extra Tools</a>
 <span class="inline-text"> Describes extra tools that were used that are not part of the source.</span>
 </li>
 </ul>

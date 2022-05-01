@@ -156,7 +156,7 @@
         </inbodydescription>
         <location file="Source/Chips/Computer.h" line="79" column="1" bodyfile="Source/Chips/Computer.cpp" bodystart="81" bodyend="102"/>
         <references refid="a01018_1ae5b1d8f46e76e589ca99c6dee2fd7390" compoundref="a00500" startline="61" endline="71">Hack::Chips::Cpu::lock</references>
-        <references refid="a01058_1a5d32929ad9a9abf8f0634549462e7f0b" compoundref="a01664" startline="106" endline="112">Hack::Chips::Memory::lock</references>
+        <references refid="a01058_1a5d32929ad9a9abf8f0634549462e7f0b" compoundref="a01668" startline="106" endline="112">Hack::Chips::Memory::lock</references>
         <references refid="a01130_1a767e0cee036509120d2a6436b7be26f4" compoundref="a00671" startline="57" endline="63">Hack::Chips::Rom32::lock</references>
         <references refid="a01010_1a918ad89614f75599104e9c1a8123c916" compoundref="a00497" startline="35">Hack::Chips::CpuState::regD</references>
         <references refid="a01018_1a91db924b7a0e4fe6b99999402b00336b" compoundref="a00500" startline="137" endline="142">Hack::Chips::Cpu::getDRegister</references>
@@ -167,7 +167,7 @@
         <references refid="a01010_1a3bdae3da64a41fd9b98171cea0f1b1c1" compoundref="a00497" startline="38">Hack::Chips::CpuState::inst</references>
         <references refid="a01130_1ac4786f98ecaa6c91a1cd31e438c29aab" compoundref="a00671" startline="65" endline="70">Hack::Chips::Rom32::getOut</references>
         <references refid="a01010_1ae932a7489f8bdecf33ffd43c9410130f" compoundref="a00497" startline="40">Hack::Chips::CpuState::ram</references>
-        <references refid="a01058_1a9c799940a43fb1588ec230cd4d799ed3" compoundref="a01664" startline="114" endline="119">Hack::Chips::Memory::getOut</references>
+        <references refid="a01058_1a9c799940a43fb1588ec230cd4d799ed3" compoundref="a01668" startline="114" endline="119">Hack::Chips::Memory::getOut</references>
         <references refid="a01010_1af1398587a09d5722d1d794f87d427a35" compoundref="a00497" startline="39">Hack::Chips::CpuState::writeM</references>
         <references refid="a01018_1a09ccfdbe1ebceb25ef9964834cee904f" compoundref="a00500" startline="116" endline="121">Hack::Chips::Cpu::getWrite</references>
         <references refid="a01010_1a7b6ea40228d9e23b00fd2ee43133a6f3" compoundref="a00497" startline="34">Hack::Chips::CpuState::addrM</references>
@@ -297,13 +297,13 @@
         <references refid="a01018_1ad12d07395a9bb6a137027a086bad44d3" compoundref="a00500" startline="82" endline="95">Hack::Chips::Cpu::setClock</references>
         <references refid="a01018_1ac14c3298730fc31946de0c05ee2c7a2b" compoundref="a00500" startline="97" endline="108">Hack::Chips::Cpu::setReset</references>
         <references refid="a01018_1a79cecbb18e73a58f32d84d8a4da53dc8" compoundref="a00500" startline="73" endline="80">Hack::Chips::Cpu::setInMemory</references>
-        <references refid="a01058_1a9c799940a43fb1588ec230cd4d799ed3" compoundref="a01664" startline="114" endline="119">Hack::Chips::Memory::getOut</references>
-        <references refid="a01058_1aff5964e2c12b9d9d2df86251852f7667" compoundref="a01664" startline="97" endline="104">Hack::Chips::Memory::setClock</references>
-        <references refid="a01058_1a1e0256353b44cb5742b01d569e004aa3" compoundref="a01664" startline="88" endline="95">Hack::Chips::Memory::setLoad</references>
+        <references refid="a01058_1a9c799940a43fb1588ec230cd4d799ed3" compoundref="a01668" startline="114" endline="119">Hack::Chips::Memory::getOut</references>
+        <references refid="a01058_1aff5964e2c12b9d9d2df86251852f7667" compoundref="a01668" startline="97" endline="104">Hack::Chips::Memory::setClock</references>
+        <references refid="a01058_1a1e0256353b44cb5742b01d569e004aa3" compoundref="a01668" startline="88" endline="95">Hack::Chips::Memory::setLoad</references>
         <references refid="a01018_1a09ccfdbe1ebceb25ef9964834cee904f" compoundref="a00500" startline="116" endline="121">Hack::Chips::Cpu::getWrite</references>
-        <references refid="a01058_1a5baffcb2b03efd29620483621723b412" compoundref="a01664" startline="71" endline="75">Hack::Chips::Memory::setAddress</references>
+        <references refid="a01058_1a5baffcb2b03efd29620483621723b412" compoundref="a01668" startline="71" endline="75">Hack::Chips::Memory::setAddress</references>
         <references refid="a01018_1a5af96f7c73c15c4f0fff860481dc83bf" compoundref="a00500" startline="130" endline="135">Hack::Chips::Cpu::getAddress</references>
-        <references refid="a01058_1a2543b6659fa9ecce5b9f72076a6dc4f9" compoundref="a01664" startline="62" endline="69">Hack::Chips::Memory::setIn</references>
+        <references refid="a01058_1a2543b6659fa9ecce5b9f72076a6dc4f9" compoundref="a01668" startline="62" endline="69">Hack::Chips::Memory::setIn</references>
         <references refid="a01018_1a1f9a2cb8f03f3196c82d0fca242c6903" compoundref="a00500" startline="123" endline="128">Hack::Chips::Cpu::getOut</references>
       </memberdef>
       </sectiondef>
@@ -312,21 +312,21 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="103">
+      <node id="101">
         <label>Hack::Chips::Computer</label>
         <link refid="a01014"/>
-        <childnode refid="104" relation="usage">
+        <childnode refid="102" relation="usage">
           <edgelabel>NullState</edgelabel>
         </childnode>
       </node>
-      <node id="105">
+      <node id="103">
         <label>uint16_t</label>
         <link refid="a01370"/>
       </node>
-      <node id="104">
+      <node id="102">
         <label>Hack::Chips::CpuState</label>
         <link refid="a01010"/>
-        <childnode refid="105" relation="usage">
+        <childnode refid="103" relation="usage">
           <edgelabel>regA</edgelabel>
           <edgelabel>outM</edgelabel>
           <edgelabel>regD</edgelabel>
