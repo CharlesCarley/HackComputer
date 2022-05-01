@@ -7,225 +7,225 @@
 <br/>
 <br/>
 <ul>
-<li><a href="a00926.md#instruction">Hack::Assembler::Instruction</a>
+<li><a href="classHack_1_1Assembler_1_1Instruction.md#instruction">Hack::Assembler::Instruction</a>
 </li>
-<li><a href="a00938.md#keywordtable">Hack::Assembler::KeywordTable</a>
+<li><a href="structHack_1_1Assembler_1_1KeywordTable.md#keywordtable">Hack::Assembler::KeywordTable</a>
 </li>
-<li><a href="a00934.md#parser">Hack::Assembler::Parser</a>
+<li><a href="classHack_1_1Assembler_1_1Parser.md#parser">Hack::Assembler::Parser</a>
 </li>
-<li><a href="a00942.md#reservedwordtable">Hack::Assembler::ReservedWordTable</a>
+<li><a href="structHack_1_1Assembler_1_1ReservedWordTable.md#reservedwordtable">Hack::Assembler::ReservedWordTable</a>
 </li>
-<li><a href="a00946.md#scanner">Hack::Assembler::Scanner</a>
+<li><a href="classHack_1_1Assembler_1_1Scanner.md#scanner">Hack::Assembler::Scanner</a>
 </li>
-<li><a href="a00962.md#computerwrapper">Hack::Binding::ComputerWrapper</a>
+<li><a href="classHack_1_1Binding_1_1ComputerWrapper.md#computerwrapper">Hack::Binding::ComputerWrapper</a>
 </li>
-<li><a href="a00958.md#ramwrapper">Hack::Binding::RamWrapper</a>
+<li><a href="classHack_1_1Binding_1_1RamWrapper.md#ramwrapper">Hack::Binding::RamWrapper</a>
 </li>
-<li><a href="a00954.md#romwrapper">Hack::Binding::RomWrapper</a>
+<li><a href="classHack_1_1Binding_1_1RomWrapper.md#romwrapper">Hack::Binding::RomWrapper</a>
 </li>
-<li><a href="a01278.md#cache">Hack::Cache</a>
+<li><a href="classHack_1_1Cache.md#cache">Hack::Cache</a>
 </li>
-<li><a href="a01238.md#char">Hack::Char</a>
+<li><a href="classHack_1_1Char.md#char">Hack::Char</a>
 </li>
-<li><a href="a00966.md#add16">Hack::Chips::Add16</a>
+<li><a href="classHack_1_1Chips_1_1Add16.md#add16">Hack::Chips::Add16</a>
 </li>
-<li><a href="a00970.md#alu">Hack::Chips::Alu</a>
+<li><a href="classHack_1_1Chips_1_1Alu.md#alu">Hack::Chips::Alu</a>
 </li>
-<li><a href="a00974.md#and">Hack::Chips::And</a>
+<li><a href="classHack_1_1Chips_1_1And.md#and">Hack::Chips::And</a>
 </li>
-<li><a href="a00978.md#and16">Hack::Chips::And16</a>
+<li><a href="classHack_1_1Chips_1_1And16.md#and16">Hack::Chips::And16</a>
 </li>
-<li><a href="a00982.md#bit">Hack::Chips::Bit</a>
+<li><a href="classHack_1_1Chips_1_1Bit.md#bit">Hack::Chips::Bit</a>
 </li>
-<li><a href="a00986.md#bit16_t">Hack::Chips::bit16_t</a>
+<li><a href="unionHack_1_1Chips_1_1bit16__t.md#bit16_t">Hack::Chips::bit16_t</a>
 </li>
-<li><a href="a00990.md#bit32_t">Hack::Chips::bit32_t</a>
+<li><a href="unionHack_1_1Chips_1_1bit32__t.md#bit32_t">Hack::Chips::bit32_t</a>
 </li>
-<li><a href="a00994.md#bit64_t">Hack::Chips::bit64_t</a>
+<li><a href="unionHack_1_1Chips_1_1bit64__t.md#bit64_t">Hack::Chips::bit64_t</a>
 </li>
-<li><a href="a00998.md#bitutils">Hack::Chips::BitUtils</a>
+<li><a href="classHack_1_1Chips_1_1BitUtils.md#bitutils">Hack::Chips::BitUtils</a>
 </li>
-<li><a href="a01002.md#chip">Hack::Chips::Chip</a>
+<li><a href="classHack_1_1Chips_1_1Chip.md#chip">Hack::Chips::Chip</a>
 </li>
-<li><a href="a01006.md#clock">Hack::Chips::Clock</a>
+<li><a href="classHack_1_1Chips_1_1Clock.md#clock">Hack::Chips::Clock</a>
 </li>
-<li><a href="a01014.md#computer">Hack::Chips::Computer</a>
+<li><a href="classHack_1_1Chips_1_1Computer.md#computer">Hack::Chips::Computer</a>
 </li>
-<li><a href="a01018.md#cpu">Hack::Chips::Cpu</a>
+<li><a href="classHack_1_1Chips_1_1Cpu.md#cpu">Hack::Chips::Cpu</a>
 </li>
-<li><a href="a01010.md#cpustate">Hack::Chips::CpuState</a>
+<li><a href="structHack_1_1Chips_1_1CpuState.md#cpustate">Hack::Chips::CpuState</a>
 </li>
-<li><a href="a01022.md#defaultmemorysegment">Hack::Chips::DefaultMemorySegment</a>
+<li><a href="classHack_1_1Chips_1_1DefaultMemorySegment.md#defaultmemorysegment">Hack::Chips::DefaultMemorySegment</a>
 </li>
-<li><a href="a01026.md#dflipflop">Hack::Chips::DFlipFlop</a>
+<li><a href="classHack_1_1Chips_1_1DFlipFlop.md#dflipflop">Hack::Chips::DFlipFlop</a>
 </li>
-<li><a href="a01030.md#dmux">Hack::Chips::DMux</a>
+<li><a href="classHack_1_1Chips_1_1DMux.md#dmux">Hack::Chips::DMux</a>
 </li>
-<li><a href="a01034.md#dmux4way">Hack::Chips::DMux4Way</a>
+<li><a href="classHack_1_1Chips_1_1DMux4Way.md#dmux4way">Hack::Chips::DMux4Way</a>
 </li>
-<li><a href="a01038.md#dmux8way">Hack::Chips::DMux8Way</a>
+<li><a href="classHack_1_1Chips_1_1DMux8Way.md#dmux8way">Hack::Chips::DMux8Way</a>
 </li>
-<li><a href="a01042.md#fulladder">Hack::Chips::FullAdder</a>
+<li><a href="classHack_1_1Chips_1_1FullAdder.md#fulladder">Hack::Chips::FullAdder</a>
 </li>
-<li><a href="a01046.md#halfadder">Hack::Chips::HalfAdder</a>
+<li><a href="classHack_1_1Chips_1_1HalfAdder.md#halfadder">Hack::Chips::HalfAdder</a>
 </li>
-<li><a href="a01050.md#imemorysegment">Hack::Chips::IMemorySegment</a>
+<li><a href="classHack_1_1Chips_1_1IMemorySegment.md#imemorysegment">Hack::Chips::IMemorySegment</a>
 </li>
-<li><a href="a01054.md#inc16">Hack::Chips::Inc16</a>
+<li><a href="classHack_1_1Chips_1_1Inc16.md#inc16">Hack::Chips::Inc16</a>
 </li>
-<li><a href="a01058.md#memory">Hack::Chips::Memory</a>
+<li><a href="classHack_1_1Chips_1_1Memory.md#memory">Hack::Chips::Memory</a>
 </li>
-<li><a href="a01062.md#mux">Hack::Chips::Mux</a>
+<li><a href="classHack_1_1Chips_1_1Mux.md#mux">Hack::Chips::Mux</a>
 </li>
-<li><a href="a01066.md#mux16">Hack::Chips::Mux16</a>
+<li><a href="classHack_1_1Chips_1_1Mux16.md#mux16">Hack::Chips::Mux16</a>
 </li>
-<li><a href="a01070.md#mux4way16">Hack::Chips::Mux4Way16</a>
+<li><a href="classHack_1_1Chips_1_1Mux4Way16.md#mux4way16">Hack::Chips::Mux4Way16</a>
 </li>
-<li><a href="a01074.md#mux8way16">Hack::Chips::Mux8Way16</a>
+<li><a href="classHack_1_1Chips_1_1Mux8Way16.md#mux8way16">Hack::Chips::Mux8Way16</a>
 </li>
-<li><a href="a01078.md#nand">Hack::Chips::NAnd</a>
+<li><a href="classHack_1_1Chips_1_1NAnd.md#nand">Hack::Chips::NAnd</a>
 </li>
-<li><a href="a01082.md#nor">Hack::Chips::NOr</a>
+<li><a href="classHack_1_1Chips_1_1NOr.md#nor">Hack::Chips::NOr</a>
 </li>
-<li><a href="a01086.md#not">Hack::Chips::Not</a>
+<li><a href="classHack_1_1Chips_1_1Not.md#not">Hack::Chips::Not</a>
 </li>
-<li><a href="a01090.md#not16">Hack::Chips::Not16</a>
+<li><a href="classHack_1_1Chips_1_1Not16.md#not16">Hack::Chips::Not16</a>
 </li>
-<li><a href="a01094.md#or">Hack::Chips::Or</a>
+<li><a href="classHack_1_1Chips_1_1Or.md#or">Hack::Chips::Or</a>
 </li>
-<li><a href="a01098.md#or16">Hack::Chips::Or16</a>
+<li><a href="classHack_1_1Chips_1_1Or16.md#or16">Hack::Chips::Or16</a>
 </li>
-<li><a href="a01102.md#or8way">Hack::Chips::Or8Way</a>
+<li><a href="classHack_1_1Chips_1_1Or8Way.md#or8way">Hack::Chips::Or8Way</a>
 </li>
-<li><a href="a01106.md#programcounter">Hack::Chips::ProgramCounter</a>
+<li><a href="classHack_1_1Chips_1_1ProgramCounter.md#programcounter">Hack::Chips::ProgramCounter</a>
 </li>
-<li><a href="a01110.md#ram4k">Hack::Chips::Ram4k</a>
+<li><a href="classHack_1_1Chips_1_1Ram4k.md#ram4k">Hack::Chips::Ram4k</a>
 </li>
-<li><a href="a01114.md#ram512">Hack::Chips::Ram512</a>
+<li><a href="classHack_1_1Chips_1_1Ram512.md#ram512">Hack::Chips::Ram512</a>
 </li>
-<li><a href="a01118.md#ram64">Hack::Chips::Ram64</a>
+<li><a href="classHack_1_1Chips_1_1Ram64.md#ram64">Hack::Chips::Ram64</a>
 </li>
-<li><a href="a01122.md#ram8">Hack::Chips::Ram8</a>
+<li><a href="classHack_1_1Chips_1_1Ram8.md#ram8">Hack::Chips::Ram8</a>
 </li>
-<li><a href="a01126.md#register">Hack::Chips::Register</a>
+<li><a href="classHack_1_1Chips_1_1Register.md#register">Hack::Chips::Register</a>
 </li>
-<li><a href="a01130.md#rom32">Hack::Chips::Rom32</a>
+<li><a href="classHack_1_1Chips_1_1Rom32.md#rom32">Hack::Chips::Rom32</a>
 </li>
-<li><a href="a01134.md#srlatch">Hack::Chips::SRLatch</a>
+<li><a href="classHack_1_1Chips_1_1SRLatch.md#srlatch">Hack::Chips::SRLatch</a>
 </li>
-<li><a href="a01138.md#timer">Hack::Chips::Timer</a>
+<li><a href="classHack_1_1Chips_1_1Timer.md#timer">Hack::Chips::Timer</a>
 </li>
-<li><a href="a01142.md#xor">Hack::Chips::XOr</a>
+<li><a href="classHack_1_1Chips_1_1XOr.md#xor">Hack::Chips::XOr</a>
 </li>
-<li><a href="a01246.md#parseoption">Hack::CommandLine::ParseOption</a>
+<li><a href="classHack_1_1CommandLine_1_1ParseOption.md#parseoption">Hack::CommandLine::ParseOption</a>
 </li>
-<li><a href="a01250.md#parser">Hack::CommandLine::Parser</a>
+<li><a href="classHack_1_1CommandLine_1_1Parser.md#parser">Hack::CommandLine::Parser</a>
 </li>
-<li><a href="a01254.md#scanner">Hack::CommandLine::Scanner</a>
+<li><a href="classHack_1_1CommandLine_1_1Scanner.md#scanner">Hack::CommandLine::Scanner</a>
 </li>
-<li><a href="a01242.md#switch">Hack::CommandLine::Switch</a>
+<li><a href="structHack_1_1CommandLine_1_1Switch.md#switch">Hack::CommandLine::Switch</a>
 </li>
-<li><a href="a01258.md#token">Hack::CommandLine::Token</a>
+<li><a href="classHack_1_1CommandLine_1_1Token.md#token">Hack::CommandLine::Token</a>
 </li>
-<li><a href="a01154.md#keywordtable">Hack::Compiler::Analyzer::KeywordTable</a>
+<li><a href="structHack_1_1Compiler_1_1Analyzer_1_1KeywordTable.md#keywordtable">Hack::Compiler::Analyzer::KeywordTable</a>
 </li>
-<li><a href="a01146.md#parser">Hack::Compiler::Analyzer::Parser</a>
+<li><a href="classHack_1_1Compiler_1_1Analyzer_1_1Parser.md#parser">Hack::Compiler::Analyzer::Parser</a>
 </li>
-<li><a href="a01150.md#parseutils">Hack::Compiler::Analyzer::ParseUtils</a>
+<li><a href="classHack_1_1Compiler_1_1Analyzer_1_1ParseUtils.md#parseutils">Hack::Compiler::Analyzer::ParseUtils</a>
 </li>
-<li><a href="a01158.md#scanner">Hack::Compiler::Analyzer::Scanner</a>
+<li><a href="classHack_1_1Compiler_1_1Analyzer_1_1Scanner.md#scanner">Hack::Compiler::Analyzer::Scanner</a>
 </li>
-<li><a href="a01190.md#generator">Hack::Compiler::CodeGenerator::Generator</a>
+<li><a href="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator.md#generator">Hack::Compiler::CodeGenerator::Generator</a>
 </li>
-<li><a href="a01198.md#symbol">Hack::Compiler::CodeGenerator::Symbol</a>
+<li><a href="classHack_1_1Compiler_1_1CodeGenerator_1_1Symbol.md#symbol">Hack::Compiler::CodeGenerator::Symbol</a>
 </li>
-<li><a href="a01202.md#symboltable">Hack::Compiler::CodeGenerator::SymbolTable</a>
+<li><a href="classHack_1_1Compiler_1_1CodeGenerator_1_1SymbolTable.md#symboltable">Hack::Compiler::CodeGenerator::SymbolTable</a>
 </li>
-<li><a href="a01206.md#vmemitter">Hack::Compiler::CodeGenerator::VmEmitter</a>
+<li><a href="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter.md#vmemitter">Hack::Compiler::CodeGenerator::VmEmitter</a>
 </li>
-<li><a href="a01166.md#dotwriter">Hack::Compiler::DotWriter</a>
+<li><a href="classHack_1_1Compiler_1_1DotWriter.md#dotwriter">Hack::Compiler::DotWriter</a>
 </li>
-<li><a href="a01162.md#dotwriterimpl">Hack::Compiler::DotWriterImpl</a>
+<li><a href="classHack_1_1Compiler_1_1DotWriterImpl.md#dotwriterimpl">Hack::Compiler::DotWriterImpl</a>
 </li>
-<li><a href="a01170.md#node">Hack::Compiler::Node</a>
+<li><a href="classHack_1_1Compiler_1_1Node.md#node">Hack::Compiler::Node</a>
 </li>
-<li><a href="a01174.md#nodeutils">Hack::Compiler::NodeUtils</a>
+<li><a href="classHack_1_1Compiler_1_1NodeUtils.md#nodeutils">Hack::Compiler::NodeUtils</a>
 </li>
-<li><a href="a01178.md#tree">Hack::Compiler::Tree</a>
+<li><a href="classHack_1_1Compiler_1_1Tree.md#tree">Hack::Compiler::Tree</a>
 </li>
-<li><a href="a01186.md#xmlwriter">Hack::Compiler::XmlWriter</a>
+<li><a href="classHack_1_1Compiler_1_1XmlWriter.md#xmlwriter">Hack::Compiler::XmlWriter</a>
 </li>
-<li><a href="a01182.md#xmlwriterimpl">Hack::Compiler::XmlWriterImpl</a>
+<li><a href="classHack_1_1Compiler_1_1XmlWriterImpl.md#xmlwriterimpl">Hack::Compiler::XmlWriterImpl</a>
 </li>
-<li><a href="a01210.md#application">Hack::Computer::Application</a>
+<li><a href="classHack_1_1Computer_1_1Application.md#application">Hack::Computer::Application</a>
 </li>
-<li><a href="a01218.md#commandruntime">Hack::Computer::CommandRuntime</a>
+<li><a href="classHack_1_1Computer_1_1CommandRuntime.md#commandruntime">Hack::Computer::CommandRuntime</a>
 </li>
-<li><a href="a01214.md#commandruntimeprivate">Hack::Computer::CommandRuntimePrivate</a>
+<li><a href="classHack_1_1Computer_1_1CommandRuntimePrivate.md#commandruntimeprivate">Hack::Computer::CommandRuntimePrivate</a>
 </li>
-<li><a href="a01226.md#debugruntime">Hack::Computer::DebugRuntime</a>
+<li><a href="classHack_1_1Computer_1_1DebugRuntime.md#debugruntime">Hack::Computer::DebugRuntime</a>
 </li>
-<li><a href="a01222.md#debugruntimeprivate">Hack::Computer::DebugRuntimePrivate</a>
+<li><a href="classHack_1_1Computer_1_1DebugRuntimePrivate.md#debugruntimeprivate">Hack::Computer::DebugRuntimePrivate</a>
 </li>
-<li><a href="a01230.md#runtimeinterface">Hack::Computer::RuntimeInterface</a>
+<li><a href="classHack_1_1Computer_1_1RuntimeInterface.md#runtimeinterface">Hack::Computer::RuntimeInterface</a>
 </li>
-<li><a href="a01262.md#console">Hack::Console</a>
+<li><a href="classHack_1_1Console.md#console">Hack::Console</a>
 </li>
-<li><a href="a01266.md#exception">Hack::Exception</a>
+<li><a href="classHack_1_1Exception.md#exception">Hack::Exception</a>
 </li>
-<li><a href="a01270.md#filesystem">Hack::FileSystem</a>
+<li><a href="classHack_1_1FileSystem.md#filesystem">Hack::FileSystem</a>
 </li>
-<li><a href="a01274.md#indexcache">Hack::IndexCache</a>
+<li><a href="classHack_1_1IndexCache.md#indexcache">Hack::IndexCache</a>
 </li>
-<li><a href="a01282.md#keyindexcache">Hack::KeyIndexCache</a>
+<li><a href="classHack_1_1KeyIndexCache.md#keyindexcache">Hack::KeyIndexCache</a>
 </li>
-<li><a href="a01234.md#memory">Hack::OperatingSystem::Memory</a>
+<li><a href="classHack_1_1OperatingSystem_1_1Memory.md#memory">Hack::OperatingSystem::Memory</a>
 </li>
-<li><a href="a01286.md#parseerror">Hack::ParseError</a>
+<li><a href="classHack_1_1ParseError.md#parseerror">Hack::ParseError</a>
 </li>
-<li><a href="a01290.md#parserbase">Hack::ParserBase</a>
+<li><a href="classHack_1_1ParserBase.md#parserbase">Hack::ParserBase</a>
 </li>
-<li><a href="a01194.md#vmgeneratorapplication">Hack::Programs::VmGeneratorApplication</a>
+<li><a href="classHack_1_1Programs_1_1VmGeneratorApplication.md#vmgeneratorapplication">Hack::Programs::VmGeneratorApplication</a>
 </li>
-<li><a href="a01294.md#scannerbase">Hack::ScannerBase</a>
+<li><a href="classHack_1_1ScannerBase.md#scannerbase">Hack::ScannerBase</a>
 </li>
-<li><a href="a01302.md#stringutils">Hack::StringUtils</a>
+<li><a href="classHack_1_1StringUtils.md#stringutils">Hack::StringUtils</a>
 </li>
-<li><a href="a01298.md#tokenbase">Hack::TokenBase</a>
+<li><a href="classHack_1_1TokenBase.md#tokenbase">Hack::TokenBase</a>
 </li>
-<li><a href="a01330.md#color">Hack::Ui::Color</a>
+<li><a href="classHack_1_1Ui_1_1Color.md#color">Hack::Ui::Color</a>
 </li>
-<li><a href="a01326.md#colorbuffer">Hack::Ui::ColorBuffer</a>
+<li><a href="unionHack_1_1Ui_1_1ColorBuffer.md#colorbuffer">Hack::Ui::ColorBuffer</a>
 </li>
-<li><a href="a01306.md#colorcacheitem">Hack::Ui::ColorCacheItem</a>
+<li><a href="classHack_1_1Ui_1_1ColorCacheItem.md#colorcacheitem">Hack::Ui::ColorCacheItem</a>
 </li>
-<li><a href="a01322.md#coloru">Hack::Ui::ColorU</a>
+<li><a href="unionHack_1_1Ui_1_1ColorU.md#coloru">Hack::Ui::ColorU</a>
 </li>
-<li><a href="a01310.md#context">Hack::Ui::Context</a>
+<li><a href="classHack_1_1Ui_1_1Context.md#context">Hack::Ui::Context</a>
 </li>
-<li><a href="a01334.md#platform">Hack::Ui::Platform</a>
+<li><a href="classHack_1_1Ui_1_1Platform.md#platform">Hack::Ui::Platform</a>
 </li>
-<li><a href="a01342.md#platformunix">Hack::Ui::PlatformUnix</a>
+<li><a href="classHack_1_1Ui_1_1PlatformUnix.md#platformunix">Hack::Ui::PlatformUnix</a>
 </li>
-<li><a href="a01314.md#point">Hack::Ui::Point</a>
+<li><a href="classHack_1_1Ui_1_1Point.md#point">Hack::Ui::Point</a>
 </li>
-<li><a href="a01318.md#rectangle">Hack::Ui::Rectangle</a>
+<li><a href="classHack_1_1Ui_1_1Rectangle.md#rectangle">Hack::Ui::Rectangle</a>
 </li>
-<li><a href="a01338.md#terminal">Hack::Ui::Terminal</a>
+<li><a href="classHack_1_1Ui_1_1Terminal.md#terminal">Hack::Ui::Terminal</a>
 </li>
-<li><a href="a01346.md#codestream">Hack::VirtualMachine::CodeStream</a>
+<li><a href="classHack_1_1VirtualMachine_1_1CodeStream.md#codestream">Hack::VirtualMachine::CodeStream</a>
 </li>
-<li><a href="a01350.md#emitter">Hack::VirtualMachine::Emitter</a>
+<li><a href="classHack_1_1VirtualMachine_1_1Emitter.md#emitter">Hack::VirtualMachine::Emitter</a>
 </li>
-<li><a href="a01358.md#keywordtable">Hack::VirtualMachine::KeywordTable</a>
+<li><a href="structHack_1_1VirtualMachine_1_1KeywordTable.md#keywordtable">Hack::VirtualMachine::KeywordTable</a>
 </li>
-<li><a href="a01354.md#parser">Hack::VirtualMachine::Parser</a>
+<li><a href="classHack_1_1VirtualMachine_1_1Parser.md#parser">Hack::VirtualMachine::Parser</a>
 </li>
-<li><a href="a01362.md#scanner">Hack::VirtualMachine::Scanner</a>
+<li><a href="classHack_1_1VirtualMachine_1_1Scanner.md#scanner">Hack::VirtualMachine::Scanner</a>
 </li>
-<li><a href="a00930.md#hackcompiler">HackCompiler</a>
+<li><a href="classHackCompiler.md#hackcompiler">HackCompiler</a>
 </li>
-<li><a href="a00950.md#handletype">HandleType</a>
+<li><a href="structHandleType.md#handletype">HandleType</a>
 </li>
 </ul>
 </div>

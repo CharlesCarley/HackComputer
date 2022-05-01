@@ -126,7 +126,7 @@ It allows the code to be reduced to any stage in the process of reducing to mach
 
 Its primary purpose is for testing only at the moment.
 Any execution happens in the \ref Hc06 "Computer" executable.
- 
+
 
 \defined{Hc05Defined}
 \defined_in{Source/Compiler}

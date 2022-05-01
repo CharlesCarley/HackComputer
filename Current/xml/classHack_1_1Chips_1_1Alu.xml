@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classHack_1_1Chips_1_1Alu" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>Hack::Chips::Alu</compoundname>
+    <basecompoundref refid="classHack_1_1Chips_1_1Chip" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; uint8_t, 8 &gt;</basecompoundref>
+    <includes local="no">Source/Chips/ALU.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classHack_1_1Chips_1_1Alu_1ae8dd1ef437ddbd7103c40a8cc47754de" prot="private" static="no" mutable="no">
+        <type><ref refid="unionHack_1_1Chips_1_1bit64__t" kindref="compound">bit64_t</ref></type>
+        <definition>bit64_t Hack::Chips::Alu::_io</definition>
+        <argsstring></argsstring>
+        <name>_io</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/ALU.h" line="66" column="1" bodyfile="Source/Chips/ALU.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classHack_1_1Chips_1_1Alu_1a875ff59790e59b7330e35475d4070205" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Alu::evaluate</definition>
+        <argsstring>()</argsstring>
+        <name>evaluate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/ALU.h" line="64" column="1" bodyfile="Source/Chips/ALU.cpp" bodystart="110" bodyend="264"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classHack_1_1Chips_1_1Alu_1af17c289dd1252a047f2bf651707603d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Chips::Alu::Alu</definition>
+        <argsstring>()</argsstring>
+        <name>Alu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/ALU.h" line="69" column="1" bodyfile="Source/Chips/ALU.cpp" bodystart="47" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Chips_1_1Alu_1aabd92bfe8970447e25ccd70f0a951530" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuint8__t" kindref="compound">uint8_t</ref></type>
+        <definition>uint8_t Hack::Chips::Alu::getFlags</definition>
+        <argsstring>()</argsstring>
+        <name>getFlags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/ALU.h" line="73" column="1" bodyfile="Source/Chips/ALU.cpp" bodystart="64" bodyend="69"/>
+        <references refid="unionHack_1_1Chips_1_1bit64__t_1a768ed5502c17271b965e340e048ae5c5" compoundref="BitUtils_8h" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="namespaceHack_1_1Chips_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" compoundref="BitUtils_8h" startline="33">Hack::Chips::Bit0</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Chips_1_1Alu_1a85ae2abb1cd2db9cbc00d2d7131dc819" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::Alu::getNe</definition>
+        <argsstring>()</argsstring>
+        <name>getNe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/ALU.h" line="83" column="1" bodyfile="Source/Chips/ALU.cpp" bodystart="96" bodyend="101"/>
+        <references refid="unionHack_1_1Chips_1_1bit64__t_1a768ed5502c17271b965e340e048ae5c5" compoundref="BitUtils_8h" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="namespaceHack_1_1Chips_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" compoundref="BitUtils_8h" startline="33">Hack::Chips::Bit0</references>
+        <references refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a1630ccda3ce240ba49b84d1111d0adb8" compoundref="ALU_8h" startline="35">Hack::Chips::Ne</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Chips_1_1Alu_1a0a6f75d46a2d234c77033a30fef51326" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuint16__t" kindref="compound">uint16_t</ref></type>
+        <definition>uint16_t Hack::Chips::Alu::getOut</definition>
+        <argsstring>()</argsstring>
+        <name>getOut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/ALU.h" line="79" column="1" bodyfile="Source/Chips/ALU.cpp" bodystart="103" bodyend="108"/>
+        <references refid="unionHack_1_1Chips_1_1bit64__t_1a768ed5502c17271b965e340e048ae5c5" compoundref="BitUtils_8h" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="namespaceHack_1_1Chips_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" compoundref="BitUtils_8h" startline="33">Hack::Chips::Bit0</references>
+        <references refid="unionHack_1_1Chips_1_1bit64__t_1af415893333942f41fb4c4ad619083a16" compoundref="BitUtils_8h" startline="78">Hack::Chips::bit64_t::s</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Chips_1_1Alu_1a2f8ef9292d754e3b65079a0bae64076b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::Alu::getZr</definition>
+        <argsstring>()</argsstring>
+        <name>getZr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/ALU.h" line="81" column="1" bodyfile="Source/Chips/ALU.cpp" bodystart="89" bodyend="94"/>
+        <references refid="unionHack_1_1Chips_1_1bit64__t_1a768ed5502c17271b965e340e048ae5c5" compoundref="BitUtils_8h" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="namespaceHack_1_1Chips_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" compoundref="BitUtils_8h" startline="33">Hack::Chips::Bit0</references>
+        <references refid="namespaceHack_1_1Chips_1acabb309d3c28ba3a5f469d25dff4f144a315f157d7e9917bcfe8a0dcfa133f6fb" compoundref="ALU_8h" startline="36">Hack::Chips::Zr</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Chips_1_1Alu_1ab78360af9a64fb57b2144516bf03de8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Alu::setFlags</definition>
+        <argsstring>(const uint8_t &amp;flags)</argsstring>
+        <name>setFlags</name>
+        <param>
+          <type>const <ref refid="classuint8__t" kindref="compound">uint8_t</ref> &amp;</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/ALU.h" line="71" column="1" bodyfile="Source/Chips/ALU.cpp" bodystart="53" bodyend="62"/>
+        <references refid="unionHack_1_1Chips_1_1bit64__t_1a768ed5502c17271b965e340e048ae5c5" compoundref="BitUtils_8h" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="namespaceHack_1_1Chips_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" compoundref="BitUtils_8h" startline="33">Hack::Chips::Bit0</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Chips_1_1Alu_1af3082e0b359aebd367e56457b1d8ef52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Alu::setX</definition>
+        <argsstring>(const uint16_t &amp;x)</argsstring>
+        <name>setX</name>
+        <param>
+          <type>const <ref refid="classuint16__t" kindref="compound">uint16_t</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/ALU.h" line="75" column="1" bodyfile="Source/Chips/ALU.cpp" bodystart="71" bodyend="78"/>
+        <references refid="unionHack_1_1Chips_1_1bit64__t_1af415893333942f41fb4c4ad619083a16" compoundref="BitUtils_8h" startline="78">Hack::Chips::bit64_t::s</references>
+        <references refid="unionHack_1_1Chips_1_1bit64__t_1a768ed5502c17271b965e340e048ae5c5" compoundref="BitUtils_8h" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="namespaceHack_1_1Chips_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" compoundref="BitUtils_8h" startline="33">Hack::Chips::Bit0</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Chips_1_1Alu_1aa777e90d3af236329d8c7f9340a21a78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Alu::setY</definition>
+        <argsstring>(const uint16_t &amp;y)</argsstring>
+        <name>setY</name>
+        <param>
+          <type>const <ref refid="classuint16__t" kindref="compound">uint16_t</ref> &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/ALU.h" line="77" column="1" bodyfile="Source/Chips/ALU.cpp" bodystart="80" bodyend="87"/>
+        <references refid="unionHack_1_1Chips_1_1bit64__t_1af415893333942f41fb4c4ad619083a16" compoundref="BitUtils_8h" startline="78">Hack::Chips::bit64_t::s</references>
+        <references refid="unionHack_1_1Chips_1_1bit64__t_1a768ed5502c17271b965e340e048ae5c5" compoundref="BitUtils_8h" startline="79">Hack::Chips::bit64_t::b</references>
+        <references refid="namespaceHack_1_1Chips_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" compoundref="BitUtils_8h" startline="33">Hack::Chips::Bit0</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="51">
+        <label>Hack::Chips::Alu</label>
+        <link refid="classHack_1_1Chips_1_1Alu"/>
+        <childnode refid="52" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="classHack_1_1Chips_1_1Chip"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="53">
+        <label>Hack::Chips::Alu</label>
+        <link refid="classHack_1_1Chips_1_1Alu"/>
+        <childnode refid="54" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>uint8_t</label>
+        <link refid="classuint8__t"/>
+      </node>
+      <node id="54">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="classHack_1_1Chips_1_1Chip"/>
+        <childnode refid="55" relation="usage">
+          <edgelabel>_bits</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Chips/ALU.h" line="62" column="1" bodyfile="Source/Chips/ALU.h" bodystart="61" bodyend="84"/>
+    <listofallmembers>
+      <member refid="classHack_1_1Chips_1_1Chip_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>_bits</name></member>
+      <member refid="classHack_1_1Chips_1_1Alu_1ae8dd1ef437ddbd7103c40a8cc47754de" prot="private" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>_io</name></member>
+      <member refid="classHack_1_1Chips_1_1Alu_1af17c289dd1252a047f2bf651707603d4" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>Alu</name></member>
+      <member refid="classHack_1_1Chips_1_1Chip_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>applyBit</name></member>
+      <member refid="classHack_1_1Chips_1_1Chip_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>assignBit</name></member>
+      <member refid="classHack_1_1Chips_1_1Chip_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>Chip</name></member>
+      <member refid="classHack_1_1Chips_1_1Chip_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>clearBit</name></member>
+      <member refid="classHack_1_1Chips_1_1Alu_1a875ff59790e59b7330e35475d4070205" prot="private" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>evaluate</name></member>
+      <member refid="classHack_1_1Chips_1_1Chip_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>getBit</name></member>
+      <member refid="classHack_1_1Chips_1_1Alu_1aabd92bfe8970447e25ccd70f0a951530" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>getFlags</name></member>
+      <member refid="classHack_1_1Chips_1_1Alu_1a85ae2abb1cd2db9cbc00d2d7131dc819" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>getNe</name></member>
+      <member refid="classHack_1_1Chips_1_1Alu_1a0a6f75d46a2d234c77033a30fef51326" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>getOut</name></member>
+      <member refid="classHack_1_1Chips_1_1Alu_1a2f8ef9292d754e3b65079a0bae64076b" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>getZr</name></member>
+      <member refid="classHack_1_1Chips_1_1Chip_1a63bb368bb0827830235759b33718d1b4" prot="protected" virt="virtual"><scope>Hack::Chips::Alu</scope><name>isDirty</name></member>
+      <member refid="classHack_1_1Chips_1_1Chip_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>setBit</name></member>
+      <member refid="classHack_1_1Chips_1_1Alu_1ab78360af9a64fb57b2144516bf03de8a" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>setFlags</name></member>
+      <member refid="classHack_1_1Chips_1_1Alu_1af3082e0b359aebd367e56457b1d8ef52" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>setX</name></member>
+      <member refid="classHack_1_1Chips_1_1Alu_1aa777e90d3af236329d8c7f9340a21a78" prot="public" virt="non-virtual"><scope>Hack::Chips::Alu</scope><name>setY</name></member>
+      <member refid="classHack_1_1Chips_1_1Chip_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::Alu</scope><name>~Chip</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

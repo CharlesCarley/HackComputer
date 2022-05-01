@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="Screen_8h" kind="file" language="C++">
+    <compoundname>Screen.h</compoundname>
+    <includes refid="DefaultMemorySegment_8h" local="yes">Chips/DefaultMemorySegment.h</includes>
+    <includedby refid="Chips_2Memory_8h" local="yes">Source/Chips/Memory.h</includedby>
+    <includedby refid="CommandRuntime_8h" local="yes">Source/Computer/CommandRuntime.h</includedby>
+    <includedby refid="DebugRuntime_8h" local="yes">Source/Computer/DebugRuntime.h</includedby>
+    <includedby refid="RuntimeInterface_8h" local="yes">Source/Computer/RuntimeInterface.h</includedby>
+    <includedby refid="RuntimeSDL_8h" local="yes">Source/Computer/RuntimeSDL.h</includedby>
+    <incdepgraph>
+      <node id="2190">
+        <label>cstdint</label>
+      </node>
+      <node id="2181">
+        <label>Chips/BitUtils.h</label>
+        <childnode refid="2182" relation="include">
+        </childnode>
+        <childnode refid="2183" relation="include">
+        </childnode>
+      </node>
+      <node id="2176">
+        <label>Source/Chips/Screen.h</label>
+        <link refid="Screen_8h"/>
+        <childnode refid="2177" relation="include">
+        </childnode>
+      </node>
+      <node id="2188">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="2184" relation="include">
+        </childnode>
+        <childnode refid="2189" relation="include">
+        </childnode>
+        <childnode refid="2191" relation="include">
+        </childnode>
+      </node>
+      <node id="2186">
+        <label>string</label>
+      </node>
+      <node id="2189">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="2190" relation="include">
+        </childnode>
+      </node>
+      <node id="2184">
+        <label>String.h</label>
+        <childnode refid="2185" relation="include">
+        </childnode>
+        <childnode refid="2186" relation="include">
+        </childnode>
+        <childnode refid="2187" relation="include">
+        </childnode>
+      </node>
+      <node id="2178">
+        <label>Chips/IMemorySegment.h</label>
+        <childnode refid="2179" relation="include">
+        </childnode>
+        <childnode refid="2180" relation="include">
+        </childnode>
+      </node>
+      <node id="2182">
+        <label>bitset</label>
+      </node>
+      <node id="2177">
+        <label>Chips/DefaultMemorySegment.h</label>
+        <childnode refid="2178" relation="include">
+        </childnode>
+      </node>
+      <node id="2187">
+        <label>vector</label>
+      </node>
+      <node id="2185">
+        <label>sstream</label>
+      </node>
+      <node id="2191">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="2190" relation="include">
+        </childnode>
+        <childnode refid="2187" relation="include">
+        </childnode>
+        <childnode refid="2189" relation="include">
+        </childnode>
+      </node>
+      <node id="2180">
+        <label>Chips/Chip.h</label>
+        <childnode refid="2181" relation="include">
+        </childnode>
+        <childnode refid="2183" relation="include">
+        </childnode>
+      </node>
+      <node id="2183">
+        <label>Utils/Console.h</label>
+        <childnode refid="2184" relation="include">
+        </childnode>
+        <childnode refid="2188" relation="include">
+        </childnode>
+      </node>
+      <node id="2179">
+        <label>cstring</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2197">
+        <label>Source/Computer/Application.cpp</label>
+      </node>
+      <node id="2192">
+        <label>Source/Chips/Screen.h</label>
+        <link refid="Screen_8h"/>
+        <childnode refid="2193" relation="include">
+        </childnode>
+        <childnode refid="2201" relation="include">
+        </childnode>
+        <childnode refid="2202" relation="include">
+        </childnode>
+        <childnode refid="2200" relation="include">
+        </childnode>
+        <childnode refid="2203" relation="include">
+        </childnode>
+      </node>
+      <node id="2195">
+        <label>Source/Bindings/Bindings.cpp</label>
+      </node>
+      <node id="2202">
+        <label>Source/Computer/DebugRuntime.h</label>
+        <childnode refid="2197" relation="include">
+        </childnode>
+        <childnode refid="2199" relation="include">
+        </childnode>
+      </node>
+      <node id="2198">
+        <label>Source/Computer/CommandRuntime.cpp</label>
+      </node>
+      <node id="2201">
+        <label>Source/Computer/CommandRuntime.h</label>
+        <childnode refid="2197" relation="include">
+        </childnode>
+        <childnode refid="2198" relation="include">
+        </childnode>
+      </node>
+      <node id="2203">
+        <label>Source/Computer/RuntimeSDL.h</label>
+      </node>
+      <node id="2200">
+        <label>Source/Computer/RuntimeInterface.h</label>
+        <childnode refid="2201" relation="include">
+        </childnode>
+        <childnode refid="2202" relation="include">
+        </childnode>
+        <childnode refid="2203" relation="include">
+        </childnode>
+      </node>
+      <node id="2204">
+        <label>Source/Chips/Memory.cpp</label>
+      </node>
+      <node id="2194">
+        <label>Source/Chips/Computer.h</label>
+        <childnode refid="2195" relation="include">
+        </childnode>
+        <childnode refid="2196" relation="include">
+        </childnode>
+        <childnode refid="2197" relation="include">
+        </childnode>
+        <childnode refid="2198" relation="include">
+        </childnode>
+        <childnode refid="2199" relation="include">
+        </childnode>
+        <childnode refid="2200" relation="include">
+        </childnode>
+      </node>
+      <node id="2193">
+        <label>Source/Chips/Memory.h</label>
+        <childnode refid="2194" relation="include">
+        </childnode>
+        <childnode refid="2204" relation="include">
+        </childnode>
+      </node>
+      <node id="2196">
+        <label>Source/Chips/Computer.cpp</label>
+      </node>
+      <node id="2199">
+        <label>Source/Computer/DebugRuntime.cpp</label>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespaceHack_1_1Chips">Hack::Chips</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>Charles<sp/>Carley.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>software<sp/>is<sp/>provided<sp/>&apos;as-is&apos;,<sp/>without<sp/>any<sp/>express<sp/>or<sp/>implied</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/>warranty.<sp/>In<sp/>no<sp/>event<sp/>will<sp/>the<sp/>authors<sp/>be<sp/>held<sp/>liable<sp/>for<sp/>any<sp/>damages</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>arising<sp/>from<sp/>the<sp/>use<sp/>of<sp/>this<sp/>software.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>Permission<sp/>is<sp/>granted<sp/>to<sp/>anyone<sp/>to<sp/>use<sp/>this<sp/>software<sp/>for<sp/>any<sp/>purpose,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>including<sp/>commercial<sp/>applications,<sp/>and<sp/>to<sp/>alter<sp/>it<sp/>and<sp/>redistribute<sp/>it</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/>freely,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>restrictions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>1.<sp/>The<sp/>origin<sp/>of<sp/>this<sp/>software<sp/>must<sp/>not<sp/>be<sp/>misrepresented;<sp/>you<sp/>must<sp/>not</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>claim<sp/>that<sp/>you<sp/>wrote<sp/>the<sp/>original<sp/>software.<sp/>If<sp/>you<sp/>use<sp/>this<sp/>software</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>in<sp/>a<sp/>product,<sp/>an<sp/>acknowledgment<sp/>in<sp/>the<sp/>product<sp/>documentation<sp/>would<sp/>be</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>appreciated<sp/>but<sp/>is<sp/>not<sp/>required.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>2.<sp/>Altered<sp/>source<sp/>versions<sp/>must<sp/>be<sp/>plainly<sp/>marked<sp/>as<sp/>such,<sp/>and<sp/>must<sp/>not<sp/>be</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>misrepresented<sp/>as<sp/>being<sp/>the<sp/>original<sp/>software.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/DefaultMemorySegment.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceHack_1_1Chips" kindref="compound">Hack::Chips</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27" refid="namespaceHack_1_1Chips_1a205aa97050ad01560145252139c81057" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Chips_1_1IMemorySegment" kindref="compound">IMemorySegment&lt;0x6000, 0x4000&gt;</ref><sp/><ref refid="namespaceHack_1_1Chips_1a205aa97050ad01560145252139c81057" kindref="member">Screen</ref>;</highlight></codeline>
+<codeline lineno="28" refid="namespaceHack_1_1Chips_1a40609e493601249c692ffb4b5d2d31a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Chips_1_1DefaultMemorySegment" kindref="compound">ScreenSegment</ref><sp/>=<sp/><ref refid="classHack_1_1Chips_1_1DefaultMemorySegment" kindref="compound">DefaultMemorySegment&lt;0x6000, 0x4000&gt;</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Source/Chips/Screen.h"/>
+  </compounddef>
+</doxygen>

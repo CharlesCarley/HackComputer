@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classHack_1_1Cache" kind="class" language="C++" prot="public">
+    <compoundname>Hack::Cache</compoundname>
+    <includes local="no">Source/Utils/IndexCache.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classHack_1_1Cache_1a3b2040bc6de6c1e487280462fa8400d1" prot="public" static="no">
+        <type>std::unordered_set&lt; T &gt;</type>
+        <definition>typedef std::unordered_set&lt;T&gt; Hack::Cache&lt; T &gt;::Table</definition>
+        <argsstring></argsstring>
+        <name>Table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/IndexCache.h" line="121" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classHack_1_1Cache_1a090f3d35ee7b3b05e432004a19152072" prot="private" static="no" mutable="no">
+        <type><ref refid="classHack_1_1Cache_1a3b2040bc6de6c1e487280462fa8400d1" kindref="member">Table</ref></type>
+        <definition>Table Hack::Cache&lt; T &gt;::_elements</definition>
+        <argsstring></argsstring>
+        <name>_elements</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/IndexCache.h" line="124" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classHack_1_1Cache_1ac27cbcca1412f7d4e02e51c68d154f64" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Cache&lt; T &gt;::exists</definition>
+        <argsstring>(const T &amp;value) const</argsstring>
+        <name>exists</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/IndexCache.h" line="135" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="135" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Cache_1af5110a76c5d7beba01cd77b726689afe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Cache&lt; T &gt;::save</definition>
+        <argsstring>(const T &amp;value)</argsstring>
+        <name>save</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/IndexCache.h" line="127" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="127" bodyend="133"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/Utils/IndexCache.h" line="119" column="1" bodyfile="Source/Utils/IndexCache.h" bodystart="118" bodyend="140"/>
+    <listofallmembers>
+      <member refid="classHack_1_1Cache_1a090f3d35ee7b3b05e432004a19152072" prot="private" virt="non-virtual"><scope>Hack::Cache</scope><name>_elements</name></member>
+      <member refid="classHack_1_1Cache_1ac27cbcca1412f7d4e02e51c68d154f64" prot="public" virt="non-virtual"><scope>Hack::Cache</scope><name>exists</name></member>
+      <member refid="classHack_1_1Cache_1af5110a76c5d7beba01cd77b726689afe" prot="public" virt="non-virtual"><scope>Hack::Cache</scope><name>save</name></member>
+      <member refid="classHack_1_1Cache_1a3b2040bc6de6c1e487280462fa8400d1" prot="public" virt="non-virtual"><scope>Hack::Cache</scope><name>Table</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

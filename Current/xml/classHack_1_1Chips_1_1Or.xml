@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classHack_1_1Chips_1_1Or" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>Hack::Chips::Or</compoundname>
+    <basecompoundref refid="classHack_1_1Chips_1_1Chip" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; uint8_t, 8 &gt;</basecompoundref>
+    <includes local="no">Source/Chips/Or.h</includes>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classHack_1_1Chips_1_1Or_1a42818e1220b7c937a523446e20a8bade" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Or::evaluate</definition>
+        <argsstring>()</argsstring>
+        <name>evaluate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Or.h" line="30" column="1" bodyfile="Source/Chips/Or.cpp" bodystart="43" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classHack_1_1Chips_1_1Or_1a6403b9034a94042a87e3eb23888ae8d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Chips::Or::Or</definition>
+        <argsstring>()</argsstring>
+        <name>Or</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Or.h" line="33" column="1" bodyfile="Source/Chips/Or.cpp" bodystart="26" bodyend="29"/>
+        <references refid="classHack_1_1Chips_1_1Chip_1a5a604431fa35bc87e0d7f4328b4ad4a1" compoundref="Chip_8h" startline="109" endline="112">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::assignBit</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Chips_1_1Or_1a8623bc37bda7b709a5c750f67a9d28c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Chips::Or::getOut</definition>
+        <argsstring>()</argsstring>
+        <name>getOut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Or.h" line="37" column="1" bodyfile="Source/Chips/Or.cpp" bodystart="49" bodyend="54"/>
+        <references refid="classHack_1_1Chips_1_1Chip_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="Chip_8h" startline="97" endline="100">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::getBit</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Chips_1_1Or_1ad564d4175209d9e1acb2b3500f3d10b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Or::setA</definition>
+        <argsstring>(bool v)</argsstring>
+        <name>setA</name>
+        <param>
+          <type>bool</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Or.h" line="35" column="1" bodyfile="Source/Chips/Or.cpp" bodystart="31" bodyend="35"/>
+        <references refid="classHack_1_1Chips_1_1Chip_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="Chip_8h" startline="121" endline="124">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
+        <references refid="classHack_1_1Chips_1_1Chip_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="Chip_8h" startline="103" endline="106">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::setBit</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Chips_1_1Or_1a2757aa09d39124e39e48148d549fcfb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Chips::Or::setB</definition>
+        <argsstring>(bool v)</argsstring>
+        <name>setB</name>
+        <param>
+          <type>bool</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Chips/Or.h" line="36" column="1" bodyfile="Source/Chips/Or.cpp" bodystart="37" bodyend="41"/>
+        <references refid="classHack_1_1Chips_1_1Chip_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="Chip_8h" startline="121" endline="124">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
+        <references refid="classHack_1_1Chips_1_1Chip_1a1240a9c5045e3dfcb5595700b6c474d6" compoundref="Chip_8h" startline="103" endline="106">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::setBit</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="217">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="classHack_1_1Chips_1_1Chip"/>
+      </node>
+      <node id="216">
+        <label>Hack::Chips::Or</label>
+        <link refid="classHack_1_1Chips_1_1Or"/>
+        <childnode refid="217" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="220">
+        <label>uint8_t</label>
+        <link refid="classuint8__t"/>
+      </node>
+      <node id="219">
+        <label>Hack::Chips::Chip&lt; uint8_t, 8 &gt;</label>
+        <link refid="classHack_1_1Chips_1_1Chip"/>
+        <childnode refid="220" relation="usage">
+          <edgelabel>_bits</edgelabel>
+        </childnode>
+      </node>
+      <node id="218">
+        <label>Hack::Chips::Or</label>
+        <link refid="classHack_1_1Chips_1_1Or"/>
+        <childnode refid="219" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Chips/Or.h" line="28" column="1" bodyfile="Source/Chips/Or.h" bodystart="27" bodyend="38"/>
+    <listofallmembers>
+      <member refid="classHack_1_1Chips_1_1Chip_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Or</scope><name>_bits</name></member>
+      <member refid="classHack_1_1Chips_1_1Chip_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::Or</scope><name>applyBit</name></member>
+      <member refid="classHack_1_1Chips_1_1Chip_1a5a604431fa35bc87e0d7f4328b4ad4a1" prot="public" virt="non-virtual"><scope>Hack::Chips::Or</scope><name>assignBit</name></member>
+      <member refid="classHack_1_1Chips_1_1Chip_1a485588367ebaefcaaec8847faffe8870" prot="public" virt="non-virtual"><scope>Hack::Chips::Or</scope><name>Chip</name></member>
+      <member refid="classHack_1_1Chips_1_1Chip_1a21ec8cfbaba9e08deb3607c7eff9ad63" prot="public" virt="non-virtual"><scope>Hack::Chips::Or</scope><name>clearBit</name></member>
+      <member refid="classHack_1_1Chips_1_1Or_1a42818e1220b7c937a523446e20a8bade" prot="private" virt="non-virtual"><scope>Hack::Chips::Or</scope><name>evaluate</name></member>
+      <member refid="classHack_1_1Chips_1_1Chip_1aef5a1c7bf3e9b65a35b55a008b5463ac" prot="public" virt="non-virtual"><scope>Hack::Chips::Or</scope><name>getBit</name></member>
+      <member refid="classHack_1_1Chips_1_1Or_1a8623bc37bda7b709a5c750f67a9d28c8" prot="public" virt="non-virtual"><scope>Hack::Chips::Or</scope><name>getOut</name></member>
+      <member refid="classHack_1_1Chips_1_1Chip_1a63bb368bb0827830235759b33718d1b4" prot="protected" virt="virtual"><scope>Hack::Chips::Or</scope><name>isDirty</name></member>
+      <member refid="classHack_1_1Chips_1_1Or_1a6403b9034a94042a87e3eb23888ae8d3" prot="public" virt="non-virtual"><scope>Hack::Chips::Or</scope><name>Or</name></member>
+      <member refid="classHack_1_1Chips_1_1Or_1ad564d4175209d9e1acb2b3500f3d10b6" prot="public" virt="non-virtual"><scope>Hack::Chips::Or</scope><name>setA</name></member>
+      <member refid="classHack_1_1Chips_1_1Or_1a2757aa09d39124e39e48148d549fcfb7" prot="public" virt="non-virtual"><scope>Hack::Chips::Or</scope><name>setB</name></member>
+      <member refid="classHack_1_1Chips_1_1Chip_1a1240a9c5045e3dfcb5595700b6c474d6" prot="public" virt="non-virtual"><scope>Hack::Chips::Or</scope><name>setBit</name></member>
+      <member refid="classHack_1_1Chips_1_1Chip_1a512ea103436d620cad8b3fc80ca9c06c" prot="public" virt="virtual"><scope>Hack::Chips::Or</scope><name>~Chip</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

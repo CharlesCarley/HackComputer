@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="unionHack_1_1Ui_1_1ColorU" kind="union" language="C++" prot="public">
+    <compoundname>Hack::Ui::ColorU</compoundname>
+    <includes local="no">Source/Utils/UserInterface/Math.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="unionHack_1_1Ui_1_1ColorU_1a6aff8d54d6ddb0b9e125401d4d9e72f2" prot="public" static="no" mutable="no">
+        <type><ref refid="classuint8__t" kindref="compound">uint8_t</ref></type>
+        <definition>uint8_t Hack::Ui::ColorU::b[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Math.h" line="127" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionHack_1_1Ui_1_1ColorU_1a2e3c918e51b53ee649b58b357bfb31c8" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Hack::Ui::ColorU::i</definition>
+        <argsstring></argsstring>
+        <name>i</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Math.h" line="126" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="unionHack_1_1Ui_1_1ColorU_1a26783de60e400bd4d9bd02dffc7064dc" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Ui::ColorU::ColorU</definition>
+        <argsstring>(const uint32_t v)</argsstring>
+        <name>ColorU</name>
+        <param>
+          <type>const uint32_t</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Math.h" line="129" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="129" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="unionHack_1_1Ui_1_1ColorU_1a46389f66533c11d15482aa42dc2c233f" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Ui::ColorU::ColorU</definition>
+        <argsstring>(const uint8_t r, const uint8_t g, const uint8_t b)</argsstring>
+        <name>ColorU</name>
+        <param>
+          <type>const <ref refid="classuint8__t" kindref="compound">uint8_t</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuint8__t" kindref="compound">uint8_t</ref></type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuint8__t" kindref="compound">uint8_t</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Math.h" line="135" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="135" bodyend="140"/>
+        <references refid="unionHack_1_1Ui_1_1ColorU_1a6aff8d54d6ddb0b9e125401d4d9e72f2" compoundref="Math_8h" startline="127">b</references>
+      </memberdef>
+      <memberdef kind="function" id="unionHack_1_1Ui_1_1ColorU_1a48a0588323da8fd71858be57e0b2c07b" prot="public" static="no" const="yes" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Ui::ColorU::operator int</definition>
+        <argsstring>() const</argsstring>
+        <name>operator int</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Utils/UserInterface/Math.h" line="142" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="142" bodyend="145"/>
+        <references refid="unionHack_1_1Ui_1_1ColorU_1a2e3c918e51b53ee649b58b357bfb31c8" compoundref="Math_8h" startline="126">i</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="439">
+        <label>Hack::Ui::ColorU</label>
+        <link refid="unionHack_1_1Ui_1_1ColorU"/>
+        <childnode refid="440" relation="usage">
+          <edgelabel>i</edgelabel>
+        </childnode>
+        <childnode refid="441" relation="usage">
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="440">
+        <label>uint32_t</label>
+      </node>
+      <node id="441">
+        <label>uint8_t</label>
+        <link refid="classuint8__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Utils/UserInterface/Math.h" line="125" column="1" bodyfile="Source/Utils/UserInterface/Math.h" bodystart="124" bodyend="146"/>
+    <listofallmembers>
+      <member refid="unionHack_1_1Ui_1_1ColorU_1a6aff8d54d6ddb0b9e125401d4d9e72f2" prot="public" virt="non-virtual"><scope>Hack::Ui::ColorU</scope><name>b</name></member>
+      <member refid="unionHack_1_1Ui_1_1ColorU_1a26783de60e400bd4d9bd02dffc7064dc" prot="public" virt="non-virtual"><scope>Hack::Ui::ColorU</scope><name>ColorU</name></member>
+      <member refid="unionHack_1_1Ui_1_1ColorU_1a46389f66533c11d15482aa42dc2c233f" prot="public" virt="non-virtual"><scope>Hack::Ui::ColorU</scope><name>ColorU</name></member>
+      <member refid="unionHack_1_1Ui_1_1ColorU_1a2e3c918e51b53ee649b58b357bfb31c8" prot="public" virt="non-virtual"><scope>Hack::Ui::ColorU</scope><name>i</name></member>
+      <member refid="unionHack_1_1Ui_1_1ColorU_1a48a0588323da8fd71858be57e0b2c07b" prot="public" virt="non-virtual"><scope>Hack::Ui::ColorU</scope><name>operator int</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

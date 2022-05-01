@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="CommandRuntime_8cpp" kind="file" language="C++">
+    <compoundname>CommandRuntime.cpp</compoundname>
+    <includes refid="CommandRuntime_8h" local="yes">Computer/CommandRuntime.h</includes>
+    <includes refid="Computer_8h" local="yes">Chips/Computer.h</includes>
+    <includes refid="Char_8h" local="yes">Utils/Char.h</includes>
+    <includes refid="Context_8h" local="yes">Utils/UserInterface/Context.h</includes>
+    <incdepgraph>
+      <node id="2864">
+        <label>cstdint</label>
+      </node>
+      <node id="2871">
+        <label>Chips/Register.h</label>
+        <childnode refid="2854" relation="include">
+        </childnode>
+      </node>
+      <node id="2855">
+        <label>Chips/BitUtils.h</label>
+        <childnode refid="2856" relation="include">
+        </childnode>
+        <childnode refid="2857" relation="include">
+        </childnode>
+      </node>
+      <node id="2875">
+        <label>Utils/Char.h</label>
+        <childnode refid="2864" relation="include">
+        </childnode>
+        <childnode refid="2858" relation="include">
+        </childnode>
+      </node>
+      <node id="2850">
+        <label>Chips/Screen.h</label>
+        <childnode refid="2851" relation="include">
+        </childnode>
+      </node>
+      <node id="2862">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="2858" relation="include">
+        </childnode>
+        <childnode refid="2863" relation="include">
+        </childnode>
+        <childnode refid="2865" relation="include">
+        </childnode>
+      </node>
+      <node id="2860">
+        <label>string</label>
+      </node>
+      <node id="2848">
+        <label>Source/Computer/CommandRuntime.cpp</label>
+        <link refid="CommandRuntime_8cpp"/>
+        <childnode refid="2849" relation="include">
+        </childnode>
+        <childnode refid="2867" relation="include">
+        </childnode>
+        <childnode refid="2875" relation="include">
+        </childnode>
+        <childnode refid="2862" relation="include">
+        </childnode>
+      </node>
+      <node id="2849">
+        <label>Computer/CommandRuntime.h</label>
+        <childnode refid="2850" relation="include">
+        </childnode>
+        <childnode refid="2866" relation="include">
+        </childnode>
+      </node>
+      <node id="2863">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="2864" relation="include">
+        </childnode>
+      </node>
+      <node id="2858">
+        <label>String.h</label>
+        <childnode refid="2859" relation="include">
+        </childnode>
+        <childnode refid="2860" relation="include">
+        </childnode>
+        <childnode refid="2861" relation="include">
+        </childnode>
+      </node>
+      <node id="2870">
+        <label>Chips/ProgramCounter.h</label>
+        <childnode refid="2854" relation="include">
+        </childnode>
+      </node>
+      <node id="2852">
+        <label>Chips/IMemorySegment.h</label>
+        <childnode refid="2853" relation="include">
+        </childnode>
+        <childnode refid="2854" relation="include">
+        </childnode>
+      </node>
+      <node id="2869">
+        <label>ALU.h</label>
+        <childnode refid="2854" relation="include">
+        </childnode>
+      </node>
+      <node id="2856">
+        <label>bitset</label>
+      </node>
+      <node id="2868">
+        <label>Chips/CPU.h</label>
+        <childnode refid="2869" relation="include">
+        </childnode>
+        <childnode refid="2854" relation="include">
+        </childnode>
+        <childnode refid="2870" relation="include">
+        </childnode>
+        <childnode refid="2871" relation="include">
+        </childnode>
+      </node>
+      <node id="2874">
+        <label>Chips/Rom32.h</label>
+        <childnode refid="2854" relation="include">
+        </childnode>
+      </node>
+      <node id="2851">
+        <label>Chips/DefaultMemorySegment.h</label>
+        <childnode refid="2852" relation="include">
+        </childnode>
+      </node>
+      <node id="2861">
+        <label>vector</label>
+      </node>
+      <node id="2873">
+        <label>Chips/Ram16k.h</label>
+        <childnode refid="2851" relation="include">
+        </childnode>
+      </node>
+      <node id="2859">
+        <label>sstream</label>
+      </node>
+      <node id="2866">
+        <label>Computer/RuntimeInterface.h</label>
+        <childnode refid="2850" relation="include">
+        </childnode>
+        <childnode refid="2867" relation="include">
+        </childnode>
+      </node>
+      <node id="2865">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="2864" relation="include">
+        </childnode>
+        <childnode refid="2861" relation="include">
+        </childnode>
+        <childnode refid="2863" relation="include">
+        </childnode>
+      </node>
+      <node id="2854">
+        <label>Chips/Chip.h</label>
+        <childnode refid="2855" relation="include">
+        </childnode>
+        <childnode refid="2857" relation="include">
+        </childnode>
+      </node>
+      <node id="2867">
+        <label>Chips/Computer.h</label>
+        <childnode refid="2868" relation="include">
+        </childnode>
+        <childnode refid="2872" relation="include">
+        </childnode>
+        <childnode refid="2874" relation="include">
+        </childnode>
+      </node>
+      <node id="2872">
+        <label>Chips/Memory.h</label>
+        <childnode refid="2854" relation="include">
+        </childnode>
+        <childnode refid="2873" relation="include">
+        </childnode>
+        <childnode refid="2850" relation="include">
+        </childnode>
+      </node>
+      <node id="2857">
+        <label>Utils/Console.h</label>
+        <childnode refid="2858" relation="include">
+        </childnode>
+        <childnode refid="2862" relation="include">
+        </childnode>
+      </node>
+      <node id="2853">
+        <label>cstring</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classHack_1_1Computer_1_1CommandRuntimePrivate" prot="public">Hack::Computer::CommandRuntimePrivate</innerclass>
+    <innernamespace refid="namespaceHack_1_1Computer">Hack::Computer</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>Charles<sp/>Carley.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>software<sp/>is<sp/>provided<sp/>&apos;as-is&apos;,<sp/>without<sp/>any<sp/>express<sp/>or<sp/>implied</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/>warranty.<sp/>In<sp/>no<sp/>event<sp/>will<sp/>the<sp/>authors<sp/>be<sp/>held<sp/>liable<sp/>for<sp/>any<sp/>damages</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>arising<sp/>from<sp/>the<sp/>use<sp/>of<sp/>this<sp/>software.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>Permission<sp/>is<sp/>granted<sp/>to<sp/>anyone<sp/>to<sp/>use<sp/>this<sp/>software<sp/>for<sp/>any<sp/>purpose,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>including<sp/>commercial<sp/>applications,<sp/>and<sp/>to<sp/>alter<sp/>it<sp/>and<sp/>redistribute<sp/>it</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/>freely,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>restrictions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>1.<sp/>The<sp/>origin<sp/>of<sp/>this<sp/>software<sp/>must<sp/>not<sp/>be<sp/>misrepresented;<sp/>you<sp/>must<sp/>not</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>claim<sp/>that<sp/>you<sp/>wrote<sp/>the<sp/>original<sp/>software.<sp/>If<sp/>you<sp/>use<sp/>this<sp/>software</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>in<sp/>a<sp/>product,<sp/>an<sp/>acknowledgment<sp/>in<sp/>the<sp/>product<sp/>documentation<sp/>would<sp/>be</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>appreciated<sp/>but<sp/>is<sp/>not<sp/>required.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>2.<sp/>Altered<sp/>source<sp/>versions<sp/>must<sp/>be<sp/>plainly<sp/>marked<sp/>as<sp/>such,<sp/>and<sp/>must<sp/>not<sp/>be</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>misrepresented<sp/>as<sp/>being<sp/>the<sp/>original<sp/>software.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Computer/CommandRuntime.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Computer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/Char.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/UserInterface/Context.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceHack_1_1Chips" kindref="compound">Hack::Chips</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceHack_1_1Ui" kindref="compound">Hack::Ui</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceHack_1_1Computer" kindref="compound">Hack::Computer</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32" refid="classHack_1_1Computer_1_1CommandRuntimePrivate" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classHack_1_1Computer_1_1CommandRuntimePrivate" kindref="compound">CommandRuntimePrivate</ref></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_input;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Chips_1_1Memory" kindref="compound">Memory</ref>*<sp/><sp/>_ram;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Chips_1_1Rom32" kindref="compound">Rom32</ref>*<sp/><sp/><sp/>_rom;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structHack_1_1Chips_1_1CpuState" kindref="compound">CpuState</ref><sp/>_cpuState;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="41" refid="classHack_1_1Computer_1_1CommandRuntimePrivate_1ae4ee5101b4b4c516dc780bd7e4f3dd23" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Computer_1_1CommandRuntimePrivate_1ae4ee5101b4b4c516dc780bd7e4f3dd23" kindref="member">CommandRuntimePrivate</ref>()<sp/>:</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_input(<ref refid="namespaceHack_1_1Ui_1a7553833a41980e8c2bae00177d41129ea628e6c1cd2f76b3b8b8346aaa4dfecf1" kindref="member">PR_NO_INPUT</ref>),</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ram(nullptr),</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_rom(nullptr),</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_cpuState{}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>~CommandRuntimePrivate()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classHack_1_1Computer_1_1CommandRuntimePrivate_1a94165bc7ad5907a5fc3b02b580f8cb74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Computer_1_1CommandRuntimePrivate_1a94165bc7ad5907a5fc3b02b580f8cb74" kindref="member">initialize</ref>(<ref refid="classHack_1_1Chips_1_1Computer" kindref="compound">Chips::Computer</ref>*<sp/>computer)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_rom<sp/>=<sp/>computer-&gt;<ref refid="classHack_1_1Chips_1_1Computer_1aa88d19943c50711fbe12d82e901fb21a" kindref="member">rom</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_ram<sp/>=<sp/>computer-&gt;<ref refid="classHack_1_1Chips_1_1Computer_1abf924e51c33908fd52168a0c29228d1c" kindref="member">memory</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="classHack_1_1Computer_1_1CommandRuntimePrivate_1a808b4969f1087a0cd2145a08b0193f59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Computer_1_1CommandRuntimePrivate_1a808b4969f1087a0cd2145a08b0193f59" kindref="member">input</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="58"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_input;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classHack_1_1Computer_1_1CommandRuntimePrivate_1a9dcb89dd3e849351355169fb8fd40647" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Computer_1_1CommandRuntimePrivate_1a9dcb89dd3e849351355169fb8fd40647" kindref="member">processEvents</ref>()</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_cpuState.<ref refid="structHack_1_1Chips_1_1CpuState_1a8ff12fb359df46f8c2b7bb4536b03bd2" kindref="member">pc</ref><sp/>&gt;<sp/>_rom-&gt;<ref refid="classHack_1_1Chips_1_1Rom32_1aca05d80f8b7c52b5c17e0465fe2aeb7c" kindref="member">size</ref>())</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_input<sp/>=<sp/><ref refid="namespaceHack_1_1Ui_1a7553833a41980e8c2bae00177d41129ead7a3bc54fb41225d6588c6fb307f0bcf" kindref="member">PR_EXIT</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="classHack_1_1Computer_1_1CommandRuntimePrivate_1a572a300abaacd09ef1a7e26be6b768e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Computer_1_1CommandRuntimePrivate_1a572a300abaacd09ef1a7e26be6b768e7" kindref="member">update</ref>(<ref refid="classHack_1_1Chips_1_1Computer" kindref="compound">Chips::Computer</ref>*<sp/>computer)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_cpuState<sp/>=<sp/>computer-&gt;<ref refid="classHack_1_1Chips_1_1Computer_1a90309c49a06a3585499693ca005aa643" kindref="member">state</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="classHack_1_1Computer_1_1CommandRuntime_1a2ef4a5b62fbcd614cf689013810a8c34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CommandRuntime::CommandRuntime()<sp/>:</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_private(new<sp/><ref refid="classHack_1_1Computer_1_1CommandRuntimePrivate" kindref="compound">CommandRuntimePrivate</ref>())</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classHack_1_1Computer_1_1CommandRuntime_1afda931b75420785bad498f1b1141d938" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Computer_1_1CommandRuntime_1afda931b75420785bad498f1b1141d938" kindref="member">CommandRuntime::~CommandRuntime</ref>()</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>_private;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_private<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classHack_1_1Computer_1_1CommandRuntime_1aa9aa0a0efed236c2371afb8f6b31e030" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Computer_1_1CommandRuntime_1aa9aa0a0efed236c2371afb8f6b31e030" kindref="member">CommandRuntime::shouldUpdate</ref>()</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="classHack_1_1Computer_1_1CommandRuntime_1acccc797c5a77cf71015778c0a48a49c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Computer_1_1CommandRuntime_1acccc797c5a77cf71015778c0a48a49c8" kindref="member">CommandRuntime::initialize</ref>(<ref refid="classHack_1_1Chips_1_1Computer" kindref="compound">Chips::Computer</ref>*<sp/>computer,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Chips_1_1IMemorySegment" kindref="compound">Chips::Screen</ref>*<sp/><sp/><sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="92"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_private-&gt;<ref refid="classHack_1_1Computer_1_1CommandRuntimePrivate_1a94165bc7ad5907a5fc3b02b580f8cb74" kindref="member">initialize</ref>(computer);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="classHack_1_1Computer_1_1CommandRuntime_1acb3795487cd6907dfc21fd6afbe7826c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Computer_1_1CommandRuntime_1acb3795487cd6907dfc21fd6afbe7826c" kindref="member">CommandRuntime::exitRequest</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="97"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_private-&gt;<ref refid="classHack_1_1Computer_1_1CommandRuntimePrivate_1a808b4969f1087a0cd2145a08b0193f59" kindref="member">input</ref>()<sp/>==<sp/><ref refid="namespaceHack_1_1Ui_1a7553833a41980e8c2bae00177d41129ead7a3bc54fb41225d6588c6fb307f0bcf" kindref="member">PR_EXIT</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="classHack_1_1Computer_1_1CommandRuntime_1ab48b3746adc94551350da3c9f065577d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Computer_1_1CommandRuntime_1ab48b3746adc94551350da3c9f065577d" kindref="member">CommandRuntime::processEvents</ref>(<ref refid="classHack_1_1Chips_1_1Computer" kindref="compound">Chips::Computer</ref>*<sp/>computer)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="102"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_private-&gt;<ref refid="classHack_1_1Computer_1_1CommandRuntimePrivate_1a9dcb89dd3e849351355169fb8fd40647" kindref="member">processEvents</ref>();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="classHack_1_1Computer_1_1CommandRuntime_1aad566a5bee2b92a128e0e30739748c1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Computer_1_1CommandRuntime_1aad566a5bee2b92a128e0e30739748c1e" kindref="member">CommandRuntime::flushMemory</ref>(<ref refid="classHack_1_1Chips_1_1Computer" kindref="compound">Chips::Computer</ref>*)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="107"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="classHack_1_1Computer_1_1CommandRuntime_1ab738d56db4537f88d9141c7ae64aee5b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Computer_1_1CommandRuntime_1ab738d56db4537f88d9141c7ae64aee5b" kindref="member">CommandRuntime::update</ref>(<ref refid="classHack_1_1Chips_1_1Computer" kindref="compound">Chips::Computer</ref>*<sp/>computer)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="111"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int16_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classHack_1_1Computer_1_1RuntimeInterface_1a0f5eca7470888a3c5190dd9c1ddc3f67" kindref="member">getRate</ref>();<sp/>++i)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>computer-&gt;<ref refid="classHack_1_1Chips_1_1Computer_1aa44e98396b5191c503bd5255fe0ffa1f" kindref="member">update</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>computer-&gt;<ref refid="classHack_1_1Chips_1_1Computer_1aa44e98396b5191c503bd5255fe0ffa1f" kindref="member">update</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_private-&gt;<ref refid="classHack_1_1Computer_1_1CommandRuntimePrivate_1a572a300abaacd09ef1a7e26be6b768e7" kindref="member">update</ref>(computer);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Computer</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Source/Computer/CommandRuntime.cpp"/>
+  </compounddef>
+</doxygen>

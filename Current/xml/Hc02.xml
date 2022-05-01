@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="Hc02" kind="page">
+    <compoundname>Hc02</compoundname>
+    <title>Chips</title>
+    <briefdescription>
+<para>Implements the circuit class library. </para>    </briefdescription>
+    <detaileddescription>
+<para>Implements the circuit class library.</para><para><heading level="2">Implementation</heading>
+</para><para>It uses two separate implementations to compute the circuit logic.<linebreak/>
+<linebreak/>
+ The first implementation is written to compute the value of each circuit. This version links the circuits together in code and computes the value of each bit programatically. <linebreak/>
+<linebreak/>
+ The second implementation is with the circuit behavior abstracted away. This version replaces the circuit logic with a C++ implementation of the chips operation. <linebreak/>
+<linebreak/>
+ The build option that toggles this behavior is <computeroutput>Hack_IMPLEMENT_BLACK_BOX</computeroutput>.</para><para><heading level="3">Example</heading>
+</para><para>Regardless of the underlying implementation, class usage is constant.<linebreak/>
+<linebreak/>
+ For example, The <ref refid="classHack_1_1Chips_1_1Or16" kindref="compound">Or16</ref> chip contains two inputs A and B, and one output. Evaluation of the chip works from a cached state of its inputs. Meaning, every time an input value changes, the next call to an output function will recompute the state of the chip. Otherwise, the previous evaluation state will be returned. <linebreak/>
+<linebreak/>
+Since evaluation happens internally, all regular usage is through its inputs and outputs.</para><para><programlisting filename=".cpp"><codeline><highlight class="normal">Or16<sp/>or;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">or.setA(0b1010101010101010);</highlight></codeline>
+<codeline><highlight class="normal">or.setB(0b0101010101010101);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="classuint16__t" kindref="compound">uint16_t</ref><sp/>out<sp/>=<sp/>or.getOut();</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">cout<sp/>&lt;&lt;<sp/>out<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>1111111111111111</highlight></codeline>
+</programlisting></para><para>See the <ref refid="Hc0201" kindref="compound">Implemented Chips</ref> document for a complete list.</para><sect1 id="Hc02_1Hc02Defined">
+<title>Defined in</title>
+<para>The source is defined in <ulink url="../../Source/Chips">Source/Chips</ulink><linebreak/>
+</para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>
