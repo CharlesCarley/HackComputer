@@ -28,7 +28,7 @@ namespace Hack::VirtualMachine
 {
     class Scanner;
     using StringCache = Cache<String>;
-
+    
     class Parser final : public ParserBase
     {
     private:
@@ -41,6 +41,8 @@ namespace Hack::VirtualMachine
         void writeImpl(OStream& os, int format = 0) override;
 
         void expression();
+
+        void inlineAsm();
 
         void pushExpression();
 

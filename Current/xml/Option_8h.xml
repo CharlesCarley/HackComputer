@@ -7,91 +7,91 @@
     <includes refid="String_8h" local="yes">Utils/String.h</includes>
     <includedby refid="Utils_2CommandLine_2Parser_8h" local="yes">Source/Utils/CommandLine/Parser.h</includedby>
     <incdepgraph>
-      <node id="3086">
+      <node id="3544">
         <label>cstdint</label>
       </node>
-      <node id="3083">
-        <label>Source/Utils/CommandLine/Option.h</label>
-        <link refid="Option_8h"/>
-        <childnode refid="3084" relation="include">
-        </childnode>
-        <childnode refid="3085" relation="include">
-        </childnode>
-        <childnode refid="3087" relation="include">
-        </childnode>
-      </node>
-      <node id="3085">
-        <label>Utils/Char.h</label>
-        <childnode refid="3086" relation="include">
-        </childnode>
-        <childnode refid="3087" relation="include">
-        </childnode>
-      </node>
-      <node id="3084">
+      <node id="3542">
         <label>cassert</label>
       </node>
-      <node id="3089">
+      <node id="3547">
         <label>string</label>
       </node>
-      <node id="3087">
-        <label>Utils/String.h</label>
-        <childnode refid="3088" relation="include">
+      <node id="3543">
+        <label>Utils/Char.h</label>
+        <childnode refid="3544" relation="include">
         </childnode>
-        <childnode refid="3089" relation="include">
-        </childnode>
-        <childnode refid="3090" relation="include">
+        <childnode refid="3545" relation="include">
         </childnode>
       </node>
-      <node id="3090">
+      <node id="3548">
         <label>vector</label>
       </node>
-      <node id="3088">
+      <node id="3546">
         <label>sstream</label>
+      </node>
+      <node id="3541">
+        <label>Source/Utils/CommandLine/Option.h</label>
+        <link refid="Option_8h"/>
+        <childnode refid="3542" relation="include">
+        </childnode>
+        <childnode refid="3543" relation="include">
+        </childnode>
+        <childnode refid="3545" relation="include">
+        </childnode>
+      </node>
+      <node id="3545">
+        <label>Utils/String.h</label>
+        <childnode refid="3546" relation="include">
+        </childnode>
+        <childnode refid="3547" relation="include">
+        </childnode>
+        <childnode refid="3548" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="3097">
-        <label>Source/Computer/Application.cpp</label>
-      </node>
-      <node id="3091">
-        <label>Source/Utils/CommandLine/Option.h</label>
-        <link refid="Option_8h"/>
-        <childnode refid="3092" relation="include">
-        </childnode>
-      </node>
-      <node id="3098">
-        <label>Source/Utils/CommandLine/Parser.cpp</label>
-      </node>
-      <node id="3099">
-        <label>Source/VirtualMachine/Main.cpp</label>
-      </node>
-      <node id="3094">
-        <label>Source/Compiler/Analyzer/Main.cpp</label>
-      </node>
-      <node id="3092">
-        <label>Source/Utils/CommandLine/Parser.h</label>
-        <childnode refid="3093" relation="include">
-        </childnode>
-        <childnode refid="3094" relation="include">
-        </childnode>
-        <childnode refid="3095" relation="include">
-        </childnode>
-        <childnode refid="3096" relation="include">
-        </childnode>
-        <childnode refid="3097" relation="include">
-        </childnode>
-        <childnode refid="3098" relation="include">
-        </childnode>
-        <childnode refid="3099" relation="include">
-        </childnode>
-      </node>
-      <node id="3095">
-        <label>Source/Compiler/Compiler/Main.cpp</label>
-      </node>
-      <node id="3093">
+      <node id="3551">
         <label>Source/Assembler/Main.cpp</label>
       </node>
-      <node id="3096">
+      <node id="3556">
+        <label>Source/Utils/CommandLine/Parser.cpp</label>
+      </node>
+      <node id="3557">
+        <label>Source/VirtualMachine/Main.cpp</label>
+      </node>
+      <node id="3550">
+        <label>Source/Utils/CommandLine/Parser.h</label>
+        <childnode refid="3551" relation="include">
+        </childnode>
+        <childnode refid="3552" relation="include">
+        </childnode>
+        <childnode refid="3553" relation="include">
+        </childnode>
+        <childnode refid="3554" relation="include">
+        </childnode>
+        <childnode refid="3555" relation="include">
+        </childnode>
+        <childnode refid="3556" relation="include">
+        </childnode>
+        <childnode refid="3557" relation="include">
+        </childnode>
+      </node>
+      <node id="3552">
+        <label>Source/Compiler/Analyzer/Main.cpp</label>
+      </node>
+      <node id="3555">
+        <label>Source/Computer/Executable.cpp</label>
+      </node>
+      <node id="3553">
+        <label>Source/Compiler/Compiler/Main.cpp</label>
+      </node>
+      <node id="3549">
+        <label>Source/Utils/CommandLine/Option.h</label>
+        <link refid="Option_8h"/>
+        <childnode refid="3550" relation="include">
+        </childnode>
+      </node>
+      <node id="3554">
         <label>Source/Compiler/Generator/Main.cpp</label>
       </node>
     </invincdepgraph>
@@ -130,7 +130,7 @@
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/Char.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/String.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28" refid="namespaceHack_1_1CommandLine" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceHack_1_1CommandLine" kindref="compound">Hack::CommandLine</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceHack_1_1CommandLine" kindref="compound">Hack::CommandLine</ref></highlight></codeline>
 <codeline lineno="29"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="33" refid="structHack_1_1CommandLine_1_1Switch" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structHack_1_1CommandLine_1_1Switch" kindref="compound" tooltip="Represents a command line switch ">Switch</ref></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>

@@ -4,90 +4,90 @@
     <compoundname>Bit.cpp</compoundname>
     <includes refid="Bit_8h" local="yes">Chips/Bit.h</includes>
     <incdepgraph>
-      <node id="848">
-        <label>Chips/Bit.h</label>
-        <childnode refid="849" relation="include">
-        </childnode>
-        <childnode refid="861" relation="include">
-        </childnode>
-      </node>
-      <node id="859">
+      <node id="877">
         <label>cstdint</label>
       </node>
-      <node id="850">
+      <node id="868">
         <label>Chips/BitUtils.h</label>
-        <childnode refid="851" relation="include">
+        <childnode refid="869" relation="include">
         </childnode>
-        <childnode refid="852" relation="include">
-        </childnode>
-      </node>
-      <node id="857">
-        <label>UserInterface/Context.h</label>
-        <childnode refid="853" relation="include">
-        </childnode>
-        <childnode refid="858" relation="include">
-        </childnode>
-        <childnode refid="860" relation="include">
+        <childnode refid="870" relation="include">
         </childnode>
       </node>
-      <node id="855">
+      <node id="873">
         <label>string</label>
       </node>
-      <node id="858">
+      <node id="866">
+        <label>Chips/Bit.h</label>
+        <childnode refid="867" relation="include">
+        </childnode>
+        <childnode refid="879" relation="include">
+        </childnode>
+      </node>
+      <node id="875">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="871" relation="include">
+        </childnode>
+        <childnode refid="876" relation="include">
+        </childnode>
+        <childnode refid="878" relation="include">
+        </childnode>
+      </node>
+      <node id="876">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="859" relation="include">
+        <childnode refid="877" relation="include">
         </childnode>
       </node>
-      <node id="853">
-        <label>String.h</label>
-        <childnode refid="854" relation="include">
+      <node id="870">
+        <label>Utils/Console.h</label>
+        <childnode refid="871" relation="include">
         </childnode>
-        <childnode refid="855" relation="include">
-        </childnode>
-        <childnode refid="856" relation="include">
+        <childnode refid="875" relation="include">
         </childnode>
       </node>
-      <node id="851">
+      <node id="869">
         <label>bitset</label>
       </node>
-      <node id="847">
-        <label>Source/Chips/Bit.cpp</label>
-        <link refid="Bit_8cpp"/>
-        <childnode refid="848" relation="include">
-        </childnode>
-      </node>
-      <node id="856">
+      <node id="874">
         <label>vector</label>
       </node>
-      <node id="854">
+      <node id="878">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="877" relation="include">
+        </childnode>
+        <childnode refid="874" relation="include">
+        </childnode>
+        <childnode refid="876" relation="include">
+        </childnode>
+      </node>
+      <node id="872">
         <label>sstream</label>
       </node>
-      <node id="861">
+      <node id="879">
         <label>Chips/DFlipFlop.h</label>
-        <childnode refid="849" relation="include">
+        <childnode refid="867" relation="include">
         </childnode>
       </node>
-      <node id="860">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="859" relation="include">
-        </childnode>
-        <childnode refid="856" relation="include">
-        </childnode>
-        <childnode refid="858" relation="include">
+      <node id="865">
+        <label>Source/Chips/Bit.cpp</label>
+        <link refid="Bit_8cpp"/>
+        <childnode refid="866" relation="include">
         </childnode>
       </node>
-      <node id="849">
+      <node id="871">
+        <label>String.h</label>
+        <childnode refid="872" relation="include">
+        </childnode>
+        <childnode refid="873" relation="include">
+        </childnode>
+        <childnode refid="874" relation="include">
+        </childnode>
+      </node>
+      <node id="867">
         <label>Chips/Chip.h</label>
-        <childnode refid="850" relation="include">
+        <childnode refid="868" relation="include">
         </childnode>
-        <childnode refid="852" relation="include">
-        </childnode>
-      </node>
-      <node id="852">
-        <label>Utils/Console.h</label>
-        <childnode refid="853" relation="include">
-        </childnode>
-        <childnode refid="857" relation="include">
+        <childnode refid="870" relation="include">
         </childnode>
       </node>
     </incdepgraph>

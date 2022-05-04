@@ -7,134 +7,134 @@
     <includedby refid="VirtualMachine_2Parser_8cpp" local="yes">Source/VirtualMachine/Parser.cpp</includedby>
     <includedby refid="VirtualMachine_2Scanner_8cpp" local="yes">Source/VirtualMachine/Scanner.cpp</includedby>
     <incdepgraph>
-      <node id="609">
-        <label>Utils/ParserBase/TokenBase.h</label>
-        <childnode refid="601" relation="include">
-        </childnode>
-      </node>
-      <node id="596">
-        <label>Utils/Exception.h</label>
-        <childnode refid="597" relation="include">
-        </childnode>
-        <childnode refid="598" relation="include">
-        </childnode>
-        <childnode refid="599" relation="include">
-        </childnode>
-        <childnode refid="600" relation="include">
-        </childnode>
-        <childnode refid="601" relation="include">
-        </childnode>
-      </node>
-      <node id="592">
-        <label>Utils/ParserBase/ScannerBase.h</label>
-        <childnode refid="593" relation="include">
-        </childnode>
-        <childnode refid="609" relation="include">
-        </childnode>
-      </node>
       <node id="607">
-        <label>cstdint</label>
-      </node>
-      <node id="605">
-        <label>UserInterface/Context.h</label>
-        <childnode refid="601" relation="include">
-        </childnode>
-        <childnode refid="606" relation="include">
-        </childnode>
+        <label>Utils/IndexCache.h</label>
         <childnode refid="608" relation="include">
         </childnode>
-      </node>
-      <node id="598">
-        <label>stdexcept</label>
-      </node>
-      <node id="603">
-        <label>string</label>
-      </node>
-      <node id="595">
-        <label>unordered_set</label>
-      </node>
-      <node id="597">
-        <label>exception</label>
-      </node>
-      <node id="606">
-        <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="607" relation="include">
-        </childnode>
-      </node>
-      <node id="601">
-        <label>String.h</label>
-        <childnode refid="602" relation="include">
-        </childnode>
-        <childnode refid="603" relation="include">
-        </childnode>
-        <childnode refid="604" relation="include">
-        </childnode>
-      </node>
-      <node id="591">
-        <label>Source/VirtualMachine/Scanner.h</label>
-        <link refid="VirtualMachine_2Scanner_8h"/>
-        <childnode refid="592" relation="include">
+        <childnode refid="609" relation="include">
         </childnode>
         <childnode refid="610" relation="include">
         </childnode>
       </node>
-      <node id="593">
-        <label>Utils/IndexCache.h</label>
-        <childnode refid="594" relation="include">
-        </childnode>
-        <childnode refid="595" relation="include">
-        </childnode>
-        <childnode refid="596" relation="include">
-        </childnode>
+      <node id="621">
+        <label>cstdint</label>
       </node>
-      <node id="610">
-        <label>VirtualMachine/Token.h</label>
-        <childnode refid="609" relation="include">
+      <node id="612">
+        <label>stdexcept</label>
+      </node>
+      <node id="617">
+        <label>string</label>
+      </node>
+      <node id="609">
+        <label>unordered_set</label>
+      </node>
+      <node id="619">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="615" relation="include">
         </childnode>
-      </node>
-      <node id="604">
-        <label>vector</label>
-      </node>
-      <node id="599">
-        <label>utility</label>
-      </node>
-      <node id="602">
-        <label>sstream</label>
-      </node>
-      <node id="594">
-        <label>unordered_map</label>
-      </node>
-      <node id="608">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="607" relation="include">
+        <childnode refid="620" relation="include">
         </childnode>
-        <childnode refid="604" relation="include">
+        <childnode refid="622" relation="include">
         </childnode>
-        <childnode refid="606" relation="include">
-        </childnode>
-      </node>
-      <node id="600">
-        <label>Utils/Console.h</label>
-        <childnode refid="601" relation="include">
-        </childnode>
-        <childnode refid="605" relation="include">
-        </childnode>
-      </node>
-    </incdepgraph>
-    <invincdepgraph>
-      <node id="613">
-        <label>Source/VirtualMachine/Scanner.cpp</label>
       </node>
       <node id="611">
+        <label>exception</label>
+      </node>
+      <node id="620">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="621" relation="include">
+        </childnode>
+      </node>
+      <node id="605">
         <label>Source/VirtualMachine/Scanner.h</label>
         <link refid="VirtualMachine_2Scanner_8h"/>
+        <childnode refid="606" relation="include">
+        </childnode>
+        <childnode refid="624" relation="include">
+        </childnode>
+      </node>
+      <node id="614">
+        <label>Utils/Console.h</label>
+        <childnode refid="615" relation="include">
+        </childnode>
+        <childnode refid="619" relation="include">
+        </childnode>
+      </node>
+      <node id="618">
+        <label>vector</label>
+      </node>
+      <node id="622">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="621" relation="include">
+        </childnode>
+        <childnode refid="618" relation="include">
+        </childnode>
+        <childnode refid="620" relation="include">
+        </childnode>
+      </node>
+      <node id="613">
+        <label>utility</label>
+      </node>
+      <node id="616">
+        <label>sstream</label>
+      </node>
+      <node id="610">
+        <label>Utils/Exception.h</label>
+        <childnode refid="611" relation="include">
+        </childnode>
         <childnode refid="612" relation="include">
         </childnode>
         <childnode refid="613" relation="include">
         </childnode>
+        <childnode refid="614" relation="include">
+        </childnode>
+        <childnode refid="615" relation="include">
+        </childnode>
       </node>
-      <node id="612">
+      <node id="606">
+        <label>Utils/ParserBase/ScannerBase.h</label>
+        <childnode refid="607" relation="include">
+        </childnode>
+        <childnode refid="623" relation="include">
+        </childnode>
+      </node>
+      <node id="608">
+        <label>unordered_map</label>
+      </node>
+      <node id="615">
+        <label>String.h</label>
+        <childnode refid="616" relation="include">
+        </childnode>
+        <childnode refid="617" relation="include">
+        </childnode>
+        <childnode refid="618" relation="include">
+        </childnode>
+      </node>
+      <node id="624">
+        <label>VirtualMachine/Token.h</label>
+        <childnode refid="623" relation="include">
+        </childnode>
+      </node>
+      <node id="623">
+        <label>Utils/ParserBase/TokenBase.h</label>
+        <childnode refid="615" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="625">
+        <label>Source/VirtualMachine/Scanner.h</label>
+        <link refid="VirtualMachine_2Scanner_8h"/>
+        <childnode refid="626" relation="include">
+        </childnode>
+        <childnode refid="627" relation="include">
+        </childnode>
+      </node>
+      <node id="626">
         <label>Source/VirtualMachine/Parser.cpp</label>
+      </node>
+      <node id="627">
+        <label>Source/VirtualMachine/Scanner.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1VirtualMachine_1_1Scanner" prot="public">Hack::VirtualMachine::Scanner</innerclass>

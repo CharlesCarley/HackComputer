@@ -60,10 +60,15 @@ namespace Hack::Ui
 
     void Platform::put(const char ch)
     {
-        if (ch >= CS_SEQ_START && ch < CS_START)
+        if (ch >= CS_START && ch < CS_END)
+            putchar(ch);
+        else if (ch > CS_SEQ_START && ch < CS_SEQ_END)
         {
             switch (ch)
             {
+            case CS_NONE:
+                put(' ');
+                break;
             case CS_RECT_HZ:
                 put(Detail::LineHz);
                 break;
@@ -82,11 +87,17 @@ namespace Hack::Ui
             case CS_RECT_LB:
                 put(Detail::LineLb);
                 break;
-            case CS_RECT_LCS:
-                put(Detail::LineVertL);
+            case CS_RECT_CL:
+                put(Detail::LineCl);
                 break;
-            case CS_RECT_RCS:
-                put(Detail::LineVertR);
+            case CS_RECT_CR:
+                put(Detail::LineCr);
+                break;
+            case CS_RECT_CT:
+                put(Detail::LineCt);
+                break;
+            case CS_RECT_CB:
+                put(Detail::LineCb);
                 break;
             default:
                 putchar('?');
@@ -94,7 +105,7 @@ namespace Hack::Ui
             }
         }
         else
-            putchar(ch);
+            putchar('?');
     }
 
     void Platform::put(const char* ch)
@@ -164,4 +175,4 @@ namespace Hack::Ui
         usleep(ms * 1000);
 #endif
     }
-} // namespace Hack::Ui
+}  // namespace Hack::Ui

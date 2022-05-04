@@ -271,22 +271,24 @@ namespace Hack::VirtualMachine
         _emitter.setRam(idx, val);
     }
 
+    void Parser::inlineAsm()
+    {
+        String   code;
+        Scanner* scn = (Scanner*)_scanner;
+        scn->getCode(code, getToken(0).getIndex());
+
+        _emitter.writeCode(code);
+        advanceCursor();
+    }
+
     void Parser::expression()
     {
         const int8_t t0 = getToken(0).getType();
         switch (t0)
         {
         case TOK_ASM:
-        {
-            String   code;
-            Scanner* scn = (Scanner*)_scanner;
-            scn->getCode(code, getToken(0).getIndex());
-
-            _emitter.writeCode(code);
-            advanceCursor();
-        }
-        break;
-
+            inlineAsm();
+            break;
         case TOK_PUSH:
             pushExpression();
             advanceCursor(3);
@@ -401,4 +403,4 @@ namespace Hack::VirtualMachine
         const String str = _emitter.stream().str();
         os.write(str.c_str(), str.size());
     }
-} // namespace Hack::VirtualMachine
+}  // namespace Hack::VirtualMachine

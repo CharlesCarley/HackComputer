@@ -1,21 +1,22 @@
+class Main {
 
-class Main
-{
-	method void main()
-	{
-		var int x, y, s, i;
-		let x = 10;
-		let y = 10;
+	method int mul(int a, int b) {
+		var int v, s, i;
+		let v = a;
 		let s = 0;
 		let i = 0;
-
-		while (i < y)
-		{
-			 let s = s + x;
+		while (i < b) {
+			 let s = s + v;
 			 let i = i + 1;
 		}
 		return s;
 	}
+
+	method void main() {
+		var int x, y;
+		let y = 90;
+		let x = Main.mul(y, y);
+		let x = x - 100;
+		return Main.mul(x, 2); 
+	}
 }
-
-

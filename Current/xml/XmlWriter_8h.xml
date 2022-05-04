@@ -7,50 +7,50 @@
     <includedby refid="XmlWriter_8cpp" local="yes">Source/Compiler/Common/XmlWriter.cpp</includedby>
     <includedby refid="Compiler_2Compiler_2Main_8cpp" local="yes">Source/Compiler/Compiler/Main.cpp</includedby>
     <incdepgraph>
-      <node id="2544">
+      <node id="2610">
         <label>string</label>
       </node>
-      <node id="2542">
-        <label>Utils/String.h</label>
-        <childnode refid="2543" relation="include">
-        </childnode>
-        <childnode refid="2544" relation="include">
-        </childnode>
-        <childnode refid="2545" relation="include">
-        </childnode>
-      </node>
-      <node id="2541">
+      <node id="2607">
         <label>Source/Compiler/Common/XmlWriter.h</label>
         <link refid="XmlWriter_8h"/>
-        <childnode refid="2542" relation="include">
+        <childnode refid="2608" relation="include">
         </childnode>
       </node>
-      <node id="2545">
+      <node id="2611">
         <label>vector</label>
       </node>
-      <node id="2543">
+      <node id="2609">
         <label>sstream</label>
+      </node>
+      <node id="2608">
+        <label>Utils/String.h</label>
+        <childnode refid="2609" relation="include">
+        </childnode>
+        <childnode refid="2610" relation="include">
+        </childnode>
+        <childnode refid="2611" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2548">
-        <label>Source/Compiler/Common/XmlWriter.cpp</label>
-      </node>
-      <node id="2547">
-        <label>Source/Compiler/Common/Tree.cpp</label>
-      </node>
-      <node id="2546">
+      <node id="2612">
         <label>Source/Compiler/Common/XmlWriter.h</label>
         <link refid="XmlWriter_8h"/>
-        <childnode refid="2547" relation="include">
+        <childnode refid="2613" relation="include">
         </childnode>
-        <childnode refid="2548" relation="include">
+        <childnode refid="2614" relation="include">
         </childnode>
-        <childnode refid="2549" relation="include">
+        <childnode refid="2615" relation="include">
         </childnode>
       </node>
-      <node id="2549">
+      <node id="2614">
+        <label>Source/Compiler/Common/XmlWriter.cpp</label>
+      </node>
+      <node id="2615">
         <label>Source/Compiler/Compiler/Main.cpp</label>
+      </node>
+      <node id="2613">
+        <label>Source/Compiler/Common/Tree.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1Compiler_1_1XmlWriter" prot="public">Hack::Compiler::XmlWriter</innerclass>

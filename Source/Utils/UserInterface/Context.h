@@ -76,6 +76,8 @@ namespace Hack::Ui
 
         void string(const String& str, const Point& pt) const;
 
+        void integer(const uint32_t& val, int x, int y, int width=-1) const;
+
         void line(int x, int y, int length, int orientation) const;
 
         void line(const Point& pt, int length, int orientation) const;
@@ -91,6 +93,8 @@ namespace Hack::Ui
         void foreground(const uint8_t& idx);
 
         void background(const uint8_t& idx);
+
+        void color(const uint8_t& fg, const uint8_t& bg);
 
         uint8_t createColor(const Color& col);
 

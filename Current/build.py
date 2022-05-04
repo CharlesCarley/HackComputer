@@ -27,11 +27,8 @@ def run(cmd):
 
 
 def main():
-
-
     if (not os.path.isdir("markdown")):
         os.mkdir("markdown")
-
     if (not os.path.isdir("html")):
         os.mkdir("html")
 

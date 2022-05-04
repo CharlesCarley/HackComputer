@@ -17,19 +17,19 @@
 <a id="classes"></a>
 <h2>Classes</h2>
 <div class="icon-link">
-<img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1Application.md#application">Application</a>
+<img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1AssemblyDebugger.md#assemblydebugger">AssemblyDebugger</a>
 </div>
 <div class="icon-link">
-<img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1CommandRuntime.md#commandruntime">CommandRuntime</a>
+<img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1AssemblyDebuggerPrivate.md#assemblydebuggerprivate">AssemblyDebuggerPrivate</a>
 </div>
 <div class="icon-link">
-<img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1CommandRuntimePrivate.md#commandruntimeprivate">CommandRuntimePrivate</a>
+<img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1ConsoleRuntime.md#consoleruntime">ConsoleRuntime</a>
 </div>
 <div class="icon-link">
-<img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1DebugRuntime.md#debugruntime">DebugRuntime</a>
+<img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1ConsoleRuntimePrivate.md#consoleruntimeprivate">ConsoleRuntimePrivate</a>
 </div>
 <div class="icon-link">
-<img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1DebugRuntimePrivate.md#debugruntimeprivate">DebugRuntimePrivate</a>
+<img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1Executable.md#executable">Executable</a>
 </div>
 <div class="icon-link">
 <img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1RuntimeInterface.md#runtimeinterface">RuntimeInterface</a>
@@ -50,10 +50,6 @@
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="#clock" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Clock</span>
-</a>
-</span>
-<br/>
 <span class="icon-list-item"><a href="#cmd" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Cmd</span>
 </a>
 </span>
@@ -62,15 +58,15 @@
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="#codegen" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">CodeGen</span>
-</a>
-</span>
-<br/>
 <span class="icon-list-item"><a href="#instructions" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Instructions</span>
 </a>
 </span>
 <br/>
-<span class="icon-list-item"><a href="#time" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">Time</span>
+<span class="icon-list-item"><a href="#jackparser" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">JackParser</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#vmgenerator" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">VmGenerator</span>
 </a>
 </span>
 <br/>
@@ -86,7 +82,7 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/Application.cpp#L42" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Application.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp#L35" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">AssemblyDebuggerPrivate.cpp</span>
 </a>
 </span>
 <br/>
@@ -153,7 +149,7 @@
 <a id="wirelight"></a>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/DebugRuntime.cpp#L35" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">DebugRuntime.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/Common.h#L59" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Common.h</span>
 </a>
 </span>
 <br/>
@@ -227,7 +223,7 @@
 <a id="op_max"></a>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/Application.cpp#L54" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Application.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/Executable.cpp#L47" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Executable.cpp</span>
 </a>
 </span>
 <br/>
@@ -242,22 +238,7 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/Application.cpp#L49" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Application.cpp</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="#computer" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
-</a>
-</span>
-<br/>
-<a id="clock"></a>
-<h2>Clock</h2>
-<span class="inline-text">std::chrono::high_resolution_clock</span>
-<span class="bold-text"><b>Clock</b></span>
-<br/>
-<a id="defined-in"></a>
-<h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/Application.cpp#L43" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Application.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/Common.h#L75" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Common.h</span>
 </a>
 </span>
 <br/>
@@ -272,7 +253,7 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/Application.cpp#L47" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Application.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/Common.h#L72" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Common.h</span>
 </a>
 </span>
 <br/>
@@ -287,22 +268,7 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/Application.cpp#L48" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Application.cpp</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="#computer" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
-</a>
-</span>
-<br/>
-<a id="codegen"></a>
-<h2>CodeGen</h2>
-<a href="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator.md#generator">Compiler::CodeGenerator::Generator</a>
-<span class="bold-text"><b>CodeGen</b></span>
-<br/>
-<a id="defined-in"></a>
-<h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/Application.cpp#L51" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Application.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/Common.h#L73" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Common.h</span>
 </a>
 </span>
 <br/>
@@ -317,7 +283,7 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/Application.cpp#L46" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Application.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/Common.h#L71" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Common.h</span>
 </a>
 </span>
 <br/>
@@ -325,16 +291,29 @@
 </a>
 </span>
 <br/>
-<a id="time"></a>
-<h2>Time</h2>
-<span class="inline-text">std::chrono::time_point&lt; </span>
-<a href="namespaceHack_1_1Computer.md#clock">Clock</a>
-<span class="inline-text">, Clock::duration &gt;</span>
-<span class="bold-text"><b>Time</b></span>
+<a id="jackparser"></a>
+<h2>JackParser</h2>
+<a href="classHack_1_1Compiler_1_1Analyzer_1_1Parser.md#parser">Compiler::Analyzer::Parser</a>
+<span class="bold-text"><b>JackParser</b></span>
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/Application.cpp#L44" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Application.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/Common.h#L78" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Common.h</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#computer" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+<br/>
+<a id="vmgenerator"></a>
+<h2>VmGenerator</h2>
+<a href="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator.md#generator">Compiler::CodeGenerator::Generator</a>
+<span class="bold-text"><b>VmGenerator</b></span>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/Common.h#L77" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Common.h</span>
 </a>
 </span>
 <br/>
@@ -349,7 +328,7 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/Application.cpp#L50" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Application.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/Common.h#L76" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Common.h</span>
 </a>
 </span>
 <br/>
@@ -365,7 +344,7 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/Application.cpp#L67" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Application.cpp</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/Executable.cpp#L60" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Executable.cpp</span>
 </a>
 </span>
 <br/>

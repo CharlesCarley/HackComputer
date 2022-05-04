@@ -26,12 +26,13 @@
 #include "Utils/Console.h"
 #include "Utils/Exception.h"
 #include "Utils/FileSystem.h"
+#include "Utils/Win32/CrtUtils.h"
 
 using namespace std;
 
 namespace Hack::Programs
 {
-    enum Options
+    enum Jack2VmOptions
     {
         OP_OUTPUT,
         OP_MAX,
@@ -51,14 +52,14 @@ namespace Hack::Programs
         },
     };
 
-    class VmGeneratorApplication
+    class Jack2Vm
     {
     private:
         Path   _input;
         string _output;
 
     public:
-        VmGeneratorApplication() :
+        Jack2Vm() :
             _input("")
         {
         }
@@ -90,7 +91,7 @@ namespace Hack::Programs
             parser.parse(_input.string());
 
             Compiler::CodeGenerator::Generator generator;
-            generator.compile(parser.getTree().getRoot());
+            generator.compileToVm(parser.getTree().getRoot());
 
             if (!_output.empty())
                 generator.write(_output);
@@ -104,9 +105,10 @@ namespace Hack::Programs
 
 int main(const int argc, char** argv)
 {
+    Hack::CrtTestMemory();
     try
     {
-        Hack::Programs::VmGeneratorApplication app;
+        Hack::Programs::Jack2Vm app;
         if (app.parse(argc, argv))
             return app.go();
     }
@@ -114,5 +116,6 @@ int main(const int argc, char** argv)
     {
         Hack::Console::writeError(ex.what());
     }
+    Hack::CrtDump();
     return 1;
 }

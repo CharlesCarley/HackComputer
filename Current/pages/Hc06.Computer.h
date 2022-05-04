@@ -48,6 +48,7 @@ The debugger will execute one instruction and refresh the console display with t
 
 \image html Debugger.png
 
+
 \defined{Hc06Defined}
 \defined_in{Source/Computer}
 

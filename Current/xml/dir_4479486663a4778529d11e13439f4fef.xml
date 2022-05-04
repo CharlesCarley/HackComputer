@@ -2,18 +2,18 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="dir_4479486663a4778529d11e13439f4fef" kind="dir">
     <compoundname>Source/Computer</compoundname>
-    <innerfile refid="Application_8cpp">Application.cpp</innerfile>
-    <innerfile refid="Application_8h">Application.h</innerfile>
-    <innerfile refid="CommandRuntime_8cpp">CommandRuntime.cpp</innerfile>
-    <innerfile refid="CommandRuntime_8h">CommandRuntime.h</innerfile>
-    <innerfile refid="DebugRuntime_8cpp">DebugRuntime.cpp</innerfile>
-    <innerfile refid="DebugRuntime_8h">DebugRuntime.h</innerfile>
-    <innerfile refid="Computer_2Main_8cpp">Main.cpp</innerfile>
+    <innerdir refid="dir_1a1e975d6b218ee83e2a22c2d429e3f2">Source/Computer/AssemblyDebugger</innerdir>
+    <innerdir refid="dir_c1ac6377a592712386db1fff90246135">Source/Computer/ConsoleRuntime</innerdir>
+    <innerdir refid="dir_527dece33baca601de1a6d32fca252e0">Source/Computer/WindowedRuntime</innerdir>
+    <innerfile refid="AssemblyDebugger_8cpp">AssemblyDebugger.cpp</innerfile>
+    <innerfile refid="AssemblyDebugger_8h">AssemblyDebugger.h</innerfile>
+    <innerfile refid="Computer_2Common_8h">Common.h</innerfile>
+    <innerfile refid="ConsoleRuntime_8cpp">ConsoleRuntime.cpp</innerfile>
+    <innerfile refid="ConsoleRuntime_8h">ConsoleRuntime.h</innerfile>
+    <innerfile refid="Executable_8cpp">Executable.cpp</innerfile>
     <innerfile refid="RuntimeInterface_8h">RuntimeInterface.h</innerfile>
-    <innerfile refid="RuntimeSDL_8cpp">RuntimeSDL.cpp</innerfile>
-    <innerfile refid="RuntimeSDL_8h">RuntimeSDL.h</innerfile>
-    <innerfile refid="ScreenSDL_8cpp">ScreenSDL.cpp</innerfile>
-    <innerfile refid="ScreenSDL_8h">ScreenSDL.h</innerfile>
+    <innerfile refid="WindowedRuntime_8cpp">WindowedRuntime.cpp</innerfile>
+    <innerfile refid="WindowedRuntime_8h">WindowedRuntime.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

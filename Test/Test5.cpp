@@ -44,7 +44,7 @@ void GeneratorTestFile(Chips::Computer& comp, const String& baseName)
     ana.parse(fNameSrc);
 
     Compiler::CodeGenerator::Generator cmp;
-    cmp.compile(ana.getTree().getRoot());
+    cmp.compileToVm(ana.getTree().getRoot());
 
     StringStream vmCode, asmCode;
     cmp.write(vmCode);
@@ -87,7 +87,7 @@ GTEST_TEST(Generator, Multiply)
     EXPECT_EQ(code, 257);
 
     code = memory->get(256);
-    EXPECT_EQ(code, 100);
+    EXPECT_EQ(code, 56088);
 }
 
 GTEST_TEST(Generator, StaticFields)

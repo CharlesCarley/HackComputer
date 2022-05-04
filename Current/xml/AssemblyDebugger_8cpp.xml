@@ -1,0 +1,352 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="AssemblyDebugger_8cpp" kind="file" language="C++">
+    <compoundname>AssemblyDebugger.cpp</compoundname>
+    <includes refid="AssemblyDebugger_8h" local="yes">Computer/AssemblyDebugger.h</includes>
+    <includes refid="AssemblyDebuggerPrivate_8h" local="yes">AssemblyDebugger/AssemblyDebuggerPrivate.h</includes>
+    <includes refid="Computer_8h" local="yes">Chips/Computer.h</includes>
+    <includes refid="Context_8h" local="yes">Utils/UserInterface/Context.h</includes>
+    <incdepgraph>
+      <node id="2874">
+        <label>Utils/ParserBase/ParserBase.h</label>
+        <childnode refid="2866" relation="include">
+        </childnode>
+        <childnode refid="2875" relation="include">
+        </childnode>
+        <childnode refid="2882" relation="include">
+        </childnode>
+      </node>
+      <node id="2888">
+        <label>Chips/Memory.h</label>
+        <childnode refid="2859" relation="include">
+        </childnode>
+        <childnode refid="2889" relation="include">
+        </childnode>
+        <childnode refid="2855" relation="include">
+        </childnode>
+      </node>
+      <node id="2856">
+        <label>Chips/DefaultMemorySegment.h</label>
+        <childnode refid="2857" relation="include">
+        </childnode>
+      </node>
+      <node id="2886">
+        <label>Chips/ProgramCounter.h</label>
+        <childnode refid="2859" relation="include">
+        </childnode>
+      </node>
+      <node id="2876">
+        <label>Utils/IndexCache.h</label>
+        <childnode refid="2873" relation="include">
+        </childnode>
+        <childnode refid="2877" relation="include">
+        </childnode>
+        <childnode refid="2878" relation="include">
+        </childnode>
+      </node>
+      <node id="2869">
+        <label>cstdint</label>
+      </node>
+      <node id="2871">
+        <label>Computer/RuntimeInterface.h</label>
+        <childnode refid="2872" relation="include">
+        </childnode>
+        <childnode refid="2883" relation="include">
+        </childnode>
+        <childnode refid="2855" relation="include">
+        </childnode>
+      </node>
+      <node id="2891">
+        <label>AssemblyDebugger/AssemblyDebuggerPrivate.h</label>
+        <childnode refid="2883" relation="include">
+        </childnode>
+        <childnode refid="2854" relation="include">
+        </childnode>
+        <childnode refid="2892" relation="include">
+        </childnode>
+        <childnode refid="2867" relation="include">
+        </childnode>
+      </node>
+      <node id="2860">
+        <label>Chips/BitUtils.h</label>
+        <childnode refid="2861" relation="include">
+        </childnode>
+        <childnode refid="2862" relation="include">
+        </childnode>
+      </node>
+      <node id="2880">
+        <label>stdexcept</label>
+      </node>
+      <node id="2865">
+        <label>string</label>
+      </node>
+      <node id="2884">
+        <label>Chips/CPU.h</label>
+        <childnode refid="2885" relation="include">
+        </childnode>
+        <childnode refid="2859" relation="include">
+        </childnode>
+        <childnode refid="2886" relation="include">
+        </childnode>
+        <childnode refid="2887" relation="include">
+        </childnode>
+      </node>
+      <node id="2854">
+        <label>Computer/AssemblyDebugger.h</label>
+        <childnode refid="2855" relation="include">
+        </childnode>
+        <childnode refid="2871" relation="include">
+        </childnode>
+      </node>
+      <node id="2877">
+        <label>unordered_set</label>
+      </node>
+      <node id="2867">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="2863" relation="include">
+        </childnode>
+        <childnode refid="2868" relation="include">
+        </childnode>
+        <childnode refid="2870" relation="include">
+        </childnode>
+      </node>
+      <node id="2879">
+        <label>exception</label>
+      </node>
+      <node id="2857">
+        <label>Chips/IMemorySegment.h</label>
+        <childnode refid="2858" relation="include">
+        </childnode>
+        <childnode refid="2859" relation="include">
+        </childnode>
+      </node>
+      <node id="2868">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="2869" relation="include">
+        </childnode>
+      </node>
+      <node id="2892">
+        <label>Utils/Char.h</label>
+        <childnode refid="2869" relation="include">
+        </childnode>
+        <childnode refid="2863" relation="include">
+        </childnode>
+      </node>
+      <node id="2883">
+        <label>Chips/Computer.h</label>
+        <childnode refid="2884" relation="include">
+        </childnode>
+        <childnode refid="2888" relation="include">
+        </childnode>
+        <childnode refid="2890" relation="include">
+        </childnode>
+      </node>
+      <node id="2855">
+        <label>Chips/Screen.h</label>
+        <childnode refid="2856" relation="include">
+        </childnode>
+      </node>
+      <node id="2872">
+        <label>Assembler/Parser.h</label>
+        <childnode refid="2873" relation="include">
+        </childnode>
+        <childnode refid="2866" relation="include">
+        </childnode>
+        <childnode refid="2874" relation="include">
+        </childnode>
+      </node>
+      <node id="2862">
+        <label>Utils/Console.h</label>
+        <childnode refid="2863" relation="include">
+        </childnode>
+        <childnode refid="2867" relation="include">
+        </childnode>
+      </node>
+      <node id="2861">
+        <label>bitset</label>
+      </node>
+      <node id="2853">
+        <label>Source/Computer/AssemblyDebugger.cpp</label>
+        <link refid="AssemblyDebugger_8cpp"/>
+        <childnode refid="2854" relation="include">
+        </childnode>
+        <childnode refid="2891" relation="include">
+        </childnode>
+        <childnode refid="2883" relation="include">
+        </childnode>
+        <childnode refid="2867" relation="include">
+        </childnode>
+      </node>
+      <node id="2887">
+        <label>Chips/Register.h</label>
+        <childnode refid="2859" relation="include">
+        </childnode>
+      </node>
+      <node id="2866">
+        <label>vector</label>
+      </node>
+      <node id="2889">
+        <label>Chips/Ram16k.h</label>
+        <childnode refid="2856" relation="include">
+        </childnode>
+      </node>
+      <node id="2870">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="2869" relation="include">
+        </childnode>
+        <childnode refid="2866" relation="include">
+        </childnode>
+        <childnode refid="2868" relation="include">
+        </childnode>
+      </node>
+      <node id="2881">
+        <label>utility</label>
+      </node>
+      <node id="2864">
+        <label>sstream</label>
+      </node>
+      <node id="2878">
+        <label>Utils/Exception.h</label>
+        <childnode refid="2879" relation="include">
+        </childnode>
+        <childnode refid="2880" relation="include">
+        </childnode>
+        <childnode refid="2881" relation="include">
+        </childnode>
+        <childnode refid="2862" relation="include">
+        </childnode>
+        <childnode refid="2863" relation="include">
+        </childnode>
+      </node>
+      <node id="2875">
+        <label>ScannerBase.h</label>
+        <childnode refid="2876" relation="include">
+        </childnode>
+        <childnode refid="2882" relation="include">
+        </childnode>
+      </node>
+      <node id="2873">
+        <label>unordered_map</label>
+      </node>
+      <node id="2885">
+        <label>ALU.h</label>
+        <childnode refid="2859" relation="include">
+        </childnode>
+      </node>
+      <node id="2890">
+        <label>Chips/Rom32.h</label>
+        <childnode refid="2859" relation="include">
+        </childnode>
+      </node>
+      <node id="2863">
+        <label>String.h</label>
+        <childnode refid="2864" relation="include">
+        </childnode>
+        <childnode refid="2865" relation="include">
+        </childnode>
+        <childnode refid="2866" relation="include">
+        </childnode>
+      </node>
+      <node id="2882">
+        <label>Utils/ParserBase/TokenBase.h</label>
+        <childnode refid="2863" relation="include">
+        </childnode>
+      </node>
+      <node id="2858">
+        <label>cstring</label>
+      </node>
+      <node id="2859">
+        <label>Chips/Chip.h</label>
+        <childnode refid="2860" relation="include">
+        </childnode>
+        <childnode refid="2862" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceHack_1_1Computer">Hack::Computer</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>Charles<sp/>Carley.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>software<sp/>is<sp/>provided<sp/>&apos;as-is&apos;,<sp/>without<sp/>any<sp/>express<sp/>or<sp/>implied</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/>warranty.<sp/>In<sp/>no<sp/>event<sp/>will<sp/>the<sp/>authors<sp/>be<sp/>held<sp/>liable<sp/>for<sp/>any<sp/>damages</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>arising<sp/>from<sp/>the<sp/>use<sp/>of<sp/>this<sp/>software.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>Permission<sp/>is<sp/>granted<sp/>to<sp/>anyone<sp/>to<sp/>use<sp/>this<sp/>software<sp/>for<sp/>any<sp/>purpose,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>including<sp/>commercial<sp/>applications,<sp/>and<sp/>to<sp/>alter<sp/>it<sp/>and<sp/>redistribute<sp/>it</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/>freely,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>restrictions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>1.<sp/>The<sp/>origin<sp/>of<sp/>this<sp/>software<sp/>must<sp/>not<sp/>be<sp/>misrepresented;<sp/>you<sp/>must<sp/>not</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>claim<sp/>that<sp/>you<sp/>wrote<sp/>the<sp/>original<sp/>software.<sp/>If<sp/>you<sp/>use<sp/>this<sp/>software</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>in<sp/>a<sp/>product,<sp/>an<sp/>acknowledgment<sp/>in<sp/>the<sp/>product<sp/>documentation<sp/>would<sp/>be</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>appreciated<sp/>but<sp/>is<sp/>not<sp/>required.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>2.<sp/>Altered<sp/>source<sp/>versions<sp/>must<sp/>be<sp/>plainly<sp/>marked<sp/>as<sp/>such,<sp/>and<sp/>must<sp/>not<sp/>be</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>misrepresented<sp/>as<sp/>being<sp/>the<sp/>original<sp/>software.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Computer/AssemblyDebugger.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;AssemblyDebugger/AssemblyDebuggerPrivate.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Chips/Computer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/UserInterface/Context.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceHack_1_1Computer" kindref="compound">Hack::Computer</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29" refid="classHack_1_1Computer_1_1AssemblyDebugger_1a7d5d7b1c609590b7a669b7c8c35285d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Computer_1_1AssemblyDebugger_1a7d5d7b1c609590b7a669b7c8c35285d4" kindref="member">AssemblyDebugger::AssemblyDebugger</ref>()<sp/>:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_private(new<sp/><ref refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate" kindref="compound">AssemblyDebuggerPrivate</ref>())</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classHack_1_1Computer_1_1AssemblyDebugger_1a2634e743ce914932fc43574f58847f0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Computer_1_1AssemblyDebugger_1a2634e743ce914932fc43574f58847f0c" kindref="member">AssemblyDebugger::~AssemblyDebugger</ref>()</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>_private;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_private<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="classHack_1_1Computer_1_1AssemblyDebugger_1afbe000a9ca7d078daa06b945fa116195" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Computer_1_1AssemblyDebugger_1afbe000a9ca7d078daa06b945fa116195" kindref="member">AssemblyDebugger::shouldUpdate</ref>()</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_private-&gt;<ref refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1afb51eb65e5f8087dc737b3911254bce4" kindref="member">input</ref>()<sp/>==<sp/><ref refid="namespaceHack_1_1Ui_1a7553833a41980e8c2bae00177d41129ea35bf1e881e438245e59ccdf1cd1d0774" kindref="member">Ui::PR_UP_ARROW</ref><sp/>||</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_private-&gt;<ref refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1afb51eb65e5f8087dc737b3911254bce4" kindref="member">input</ref>()<sp/>==<sp/><ref refid="namespaceHack_1_1Ui_1a7553833a41980e8c2bae00177d41129eadce783d1df91b3fd26fd5817f0ff07c6" kindref="member">Ui::PR_R</ref><sp/>||</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!_private-&gt;<ref refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a27c3ae2ed36e248c6e739255a84eded1" kindref="member">block</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="classHack_1_1Computer_1_1AssemblyDebugger_1a769998f026df9081f6b17b001bac8511" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Computer_1_1AssemblyDebugger_1a769998f026df9081f6b17b001bac8511" kindref="member">AssemblyDebugger::initialize</ref>(<ref refid="classHack_1_1Chips_1_1Computer" kindref="compound">Chips::Computer</ref>*<sp/>computer,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Chips_1_1IMemorySegment" kindref="compound">Chips::Screen</ref>*)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="49"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_private-&gt;<ref refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a6cdaa048556604ceb27738899706efe0" kindref="member">initialize</ref>(computer);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_private-&gt;<ref refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a27803ed3d2856b0f50920127200df914" kindref="member">flushMemory</ref>(computer);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="classHack_1_1Computer_1_1AssemblyDebugger_1a42c2b7ccf57e4dba73dc1b2c61f9bc33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Computer_1_1AssemblyDebugger_1a42c2b7ccf57e4dba73dc1b2c61f9bc33" kindref="member">AssemblyDebugger::exitRequest</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="55"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_private-&gt;<ref refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1afb51eb65e5f8087dc737b3911254bce4" kindref="member">input</ref>()<sp/>==<sp/><ref refid="namespaceHack_1_1Ui_1a7553833a41980e8c2bae00177d41129ead7a3bc54fb41225d6588c6fb307f0bcf" kindref="member">Ui::PR_EXIT</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classHack_1_1Computer_1_1AssemblyDebugger_1a80da5b23022b1ee96518ab4ea6d98d8e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Computer_1_1AssemblyDebugger_1a80da5b23022b1ee96518ab4ea6d98d8e" kindref="member">AssemblyDebugger::processEvents</ref>(<ref refid="classHack_1_1Chips_1_1Computer" kindref="compound">Chips::Computer</ref>*<sp/>computer)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="60"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_private-&gt;<ref refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1afcab84b5572bf7e963fcd26daf00c3b6" kindref="member">processEvents</ref>(computer);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classHack_1_1Computer_1_1AssemblyDebugger_1aa1022c0781d5554e9c05f4189c0e1b0d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Computer_1_1AssemblyDebugger_1aa1022c0781d5554e9c05f4189c0e1b0d" kindref="member">AssemblyDebugger::flushMemory</ref>(<ref refid="classHack_1_1Chips_1_1Computer" kindref="compound">Chips::Computer</ref>*<sp/>computer)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="65"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(computer)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>computer-&gt;<ref refid="classHack_1_1Chips_1_1Computer_1a2dbfa6b9bb02786f4e91770527d8624b" kindref="member">captureState</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_private-&gt;<ref refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a27803ed3d2856b0f50920127200df914" kindref="member">flushMemory</ref>(computer);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classHack_1_1Computer_1_1AssemblyDebugger_1aaaeff2c78bffc2af719fbae9239a5edd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Computer_1_1AssemblyDebugger_1aaaeff2c78bffc2af719fbae9239a5edd" kindref="member">AssemblyDebugger::update</ref>(<ref refid="classHack_1_1Chips_1_1Computer" kindref="compound">Chips::Computer</ref>*<sp/>computer)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="72"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(computer)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>computer-&gt;<ref refid="classHack_1_1Chips_1_1Computer_1aa44e98396b5191c503bd5255fe0ffa1f" kindref="member">update</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Computer</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Source/Computer/AssemblyDebugger.cpp"/>
+  </compounddef>
+</doxygen>

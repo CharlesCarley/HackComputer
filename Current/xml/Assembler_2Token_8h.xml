@@ -7,79 +7,79 @@
     <includedby refid="Assembler_2Scanner_8h" local="yes">Source/Assembler/Scanner.h</includedby>
     <includedby refid="Token_8cpp" local="yes">Source/Assembler/Token.cpp</includedby>
     <incdepgraph>
-      <node id="623">
-        <label>Utils/ParserBase/TokenBase.h</label>
-        <childnode refid="624" relation="include">
-        </childnode>
-      </node>
-      <node id="626">
+      <node id="640">
         <label>string</label>
       </node>
-      <node id="624">
-        <label>Utils/String.h</label>
-        <childnode refid="625" relation="include">
-        </childnode>
-        <childnode refid="626" relation="include">
-        </childnode>
-        <childnode refid="627" relation="include">
-        </childnode>
-      </node>
-      <node id="627">
+      <node id="641">
         <label>vector</label>
       </node>
-      <node id="625">
+      <node id="639">
         <label>sstream</label>
       </node>
-      <node id="622">
+      <node id="636">
         <label>Source/Assembler/Token.h</label>
         <link refid="Assembler_2Token_8h"/>
-        <childnode refid="623" relation="include">
+        <childnode refid="637" relation="include">
+        </childnode>
+      </node>
+      <node id="638">
+        <label>Utils/String.h</label>
+        <childnode refid="639" relation="include">
+        </childnode>
+        <childnode refid="640" relation="include">
+        </childnode>
+        <childnode refid="641" relation="include">
+        </childnode>
+      </node>
+      <node id="637">
+        <label>Utils/ParserBase/TokenBase.h</label>
+        <childnode refid="638" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="634">
-        <label>Source/Assembler/Parser.cpp</label>
-      </node>
-      <node id="631">
-        <label>Source/Bindings/Bindings.cpp</label>
-      </node>
-      <node id="635">
-        <label>Source/Assembler/Scanner.cpp</label>
-      </node>
-      <node id="636">
+      <node id="650">
         <label>Source/Assembler/Token.cpp</label>
       </node>
-      <node id="630">
+      <node id="644">
         <label>Source/Assembler/Instruction.cpp</label>
       </node>
-      <node id="629">
-        <label>Source/Assembler/Instruction.h</label>
-        <childnode refid="630" relation="include">
-        </childnode>
-        <childnode refid="631" relation="include">
-        </childnode>
-        <childnode refid="632" relation="include">
-        </childnode>
+      <node id="645">
+        <label>Source/Bindings/Bindings.cpp</label>
       </node>
-      <node id="632">
-        <label>Source/Computer/DebugRuntime.cpp</label>
-      </node>
-      <node id="633">
+      <node id="647">
         <label>Source/Assembler/Scanner.h</label>
-        <childnode refid="634" relation="include">
+        <childnode refid="648" relation="include">
         </childnode>
-        <childnode refid="635" relation="include">
+        <childnode refid="649" relation="include">
         </childnode>
       </node>
-      <node id="628">
+      <node id="642">
         <label>Source/Assembler/Token.h</label>
         <link refid="Assembler_2Token_8h"/>
-        <childnode refid="629" relation="include">
+        <childnode refid="643" relation="include">
         </childnode>
-        <childnode refid="633" relation="include">
+        <childnode refid="647" relation="include">
         </childnode>
-        <childnode refid="636" relation="include">
+        <childnode refid="650" relation="include">
+        </childnode>
+      </node>
+      <node id="648">
+        <label>Source/Assembler/Parser.cpp</label>
+      </node>
+      <node id="649">
+        <label>Source/Assembler/Scanner.cpp</label>
+      </node>
+      <node id="646">
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</label>
+      </node>
+      <node id="643">
+        <label>Source/Assembler/Instruction.h</label>
+        <childnode refid="644" relation="include">
+        </childnode>
+        <childnode refid="645" relation="include">
+        </childnode>
+        <childnode refid="646" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

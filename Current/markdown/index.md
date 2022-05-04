@@ -55,8 +55,6 @@ It uses </span>
 </li>
 <li><a href="class_index.md#class-index">Class Index</a>
 </li>
-<li><a href="directory_index.md#directory-index">Directory Index</a>
-</li>
 </ul>
 </div>
 </div>

@@ -21,21 +21,22 @@
 */
 #include <fstream>
 #include <iostream>
-#include "VirtualMachine/Parser.h"
 #include "Utils/CommandLine/Parser.h"
 #include "Utils/Console.h"
 #include "Utils/Exception.h"
+#include "Utils/Win32/CrtUtils.h"
+#include "VirtualMachine/Parser.h"
 
 using namespace std;
-using namespace Hack;
-
-enum Options
+namespace Hack::Programs
 {
-    OP_OUTPUT,
-    OP_MAX,
-};
+    enum Vm2AsmOptions
+    {
+        OP_OUTPUT,
+        OP_MAX,
+    };
 
-constexpr CommandLine::Switch Switches[OP_MAX] = {{
+    constexpr CommandLine::Switch Switches[OP_MAX] = {{
         OP_OUTPUT,
         'o',
         "output",
@@ -45,71 +46,74 @@ constexpr CommandLine::Switch Switches[OP_MAX] = {{
         1,
     }
 
-};
+    };
 
-class HackCompiler
-{
-private:
-    string _input;
-    string _output;
-
-public:
-    HackCompiler() = default;
-
-    bool parse(const int argc, char** argv)
+    class Vm2Asm
     {
-        CommandLine::Parser p;
-        p.setHelpText("where arg[0] is the input file");
+    private:
+        string _input;
+        string _output;
 
-        if (p.parse(argc, argv, Switches, OP_MAX) < 0)
-            return false;
+    public:
+        Vm2Asm() = default;
 
-        _output = p.string(OP_OUTPUT, 0);
-
-        StringArray& args = p.arguments();
-        if (args.empty())
+        bool parse(const int argc, char** argv)
         {
-            String usage;
-            p.usage(usage);
-            throw Exception(usage, "Missing input file");
+            CommandLine::Parser p;
+            p.setHelpText("where arg[0] is the input file");
+
+            if (p.parse(argc, argv, Switches, OP_MAX) < 0)
+                return false;
+
+            _output = p.string(OP_OUTPUT, 0);
+
+            StringArray& args = p.arguments();
+            if (args.empty())
+            {
+                String usage;
+                p.usage(usage);
+                throw Exception(usage, "Missing input file");
+            }
+
+            _input = args[0];
+            return true;
         }
 
-        _input = args[0];
-        return true;
-    }
-
-    int go() const
-    {
-        VirtualMachine::Parser vmp;
-        vmp.parse(_input);
-        if (_output.empty())
-            vmp.write(cout);
-        else
+        int go() const
         {
-            std::ofstream out(_output.c_str());
-            if (out.is_open())
-                vmp.write(out);
+            VirtualMachine::Parser vmp;
+            vmp.parse(_input);
+            if (_output.empty())
+                vmp.write(cout);
             else
-                throw Exception(
-                    "Failed to open the supplied output file '",
-                    _output,
-                    "'");
+            {
+                std::ofstream out(_output.c_str());
+                if (out.is_open())
+                    vmp.write(out);
+                else
+                    throw Exception(
+                        "Failed to open the supplied output file '",
+                        _output,
+                        "'");
+            }
+            return 0;
         }
-        return 0;
-    }
-};
+    };
+}  // namespace Hack::Programs
 
 int main(int argc, char** argv)
 {
+    Hack::CrtTestMemory();
     try
     {
-        HackCompiler app;
+        Hack::Programs::Vm2Asm app;
         if (app.parse(argc, argv))
             return app.go();
     }
     catch (std::exception& ex)
     {
-        Console::writeError(ex.what());
+        Hack::Console::writeError(ex.what());
     }
+    Hack::CrtDump();
     return 1;
 }

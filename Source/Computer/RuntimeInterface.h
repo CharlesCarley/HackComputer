@@ -20,8 +20,9 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#include "Chips/Screen.h"
+#include "Assembler/Parser.h"
 #include "Chips/Computer.h"
+#include "Chips/Screen.h"
 
 namespace Hack::Computer
 {
@@ -45,6 +46,10 @@ namespace Hack::Computer
         virtual void flushMemory(Chips::Computer* computer) const = 0;
 
         virtual void update(Chips::Computer* computer) const = 0;
+
+        virtual void setInstructions(const Assembler::Parser::Instructions& is)
+        {
+        }
     };
 
     inline bool RuntimeInterface::shouldUpdate()
@@ -60,4 +65,5 @@ namespace Hack::Computer
     inline void RuntimeInterface::setRate(int16_t v)
     {
     }
-} // namespace Hack::Computer
+
+}  // namespace Hack::Computer

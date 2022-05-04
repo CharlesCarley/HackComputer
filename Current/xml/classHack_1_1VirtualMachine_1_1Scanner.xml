@@ -142,57 +142,57 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="479">
+      <node id="487">
         <label>Hack::VirtualMachine::Scanner</label>
         <link refid="classHack_1_1VirtualMachine_1_1Scanner"/>
-        <childnode refid="480" relation="public-inheritance">
+        <childnode refid="488" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="480">
+      <node id="488">
         <label>Hack::ScannerBase</label>
         <link refid="classHack_1_1ScannerBase"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="485">
+      <node id="493">
         <label>size_t</label>
       </node>
-      <node id="483">
+      <node id="491">
         <label>Hack::IndexCache&lt; String &gt;</label>
         <link refid="classHack_1_1IndexCache"/>
       </node>
-      <node id="487">
+      <node id="495">
         <label>IStream *</label>
       </node>
-      <node id="486">
+      <node id="494">
         <label>string</label>
       </node>
-      <node id="481">
+      <node id="489">
         <label>Hack::VirtualMachine::Scanner</label>
         <link refid="classHack_1_1VirtualMachine_1_1Scanner"/>
-        <childnode refid="482" relation="public-inheritance">
+        <childnode refid="490" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="482">
+      <node id="490">
         <label>Hack::ScannerBase</label>
         <link refid="classHack_1_1ScannerBase"/>
-        <childnode refid="483" relation="usage">
+        <childnode refid="491" relation="usage">
           <edgelabel>_stringTable</edgelabel>
         </childnode>
-        <childnode refid="484" relation="usage">
+        <childnode refid="492" relation="usage">
           <edgelabel>_intTable</edgelabel>
         </childnode>
-        <childnode refid="485" relation="usage">
+        <childnode refid="493" relation="usage">
           <edgelabel>_line</edgelabel>
         </childnode>
-        <childnode refid="486" relation="usage">
+        <childnode refid="494" relation="usage">
           <edgelabel>_file</edgelabel>
         </childnode>
-        <childnode refid="487" relation="usage">
+        <childnode refid="495" relation="usage">
           <edgelabel>_stream</edgelabel>
         </childnode>
       </node>
-      <node id="484">
+      <node id="492">
         <label>Hack::IndexCache&lt; int &gt;</label>
         <link refid="classHack_1_1IndexCache"/>
       </node>

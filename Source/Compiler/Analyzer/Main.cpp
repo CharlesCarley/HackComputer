@@ -27,146 +27,151 @@
 #include "Utils/Console.h"
 #include "Utils/Exception.h"
 #include "Utils/FileSystem.h"
+#include "Utils/Win32/CrtUtils.h"
 
 using namespace std;
-using namespace Hack;
 
-enum Options
+namespace Hack::Programs
 {
-    OP_FMT,
-    OP_DIR,
-    OP_OUTPUT,
-    OP_MAX,
-};
-
-constexpr CommandLine::Switch Switches[OP_MAX] = {
+    enum Jack2XmlOptions
     {
         OP_FMT,
-        'f',
-        "format",
-        "Specify an output file format\n"
-        " - xml, format as XML (default)\n"
-        " - dot, format as DOT",
-        true,
-        1,
-    },
-    {
         OP_DIR,
-        'd',
-        "directory",
-        "Converts all .jack files in the current directory to .xml\n",
-        true,
-        1,
-    },
-    {
         OP_OUTPUT,
-        'o',
-        "output",
-        "Specify an output file\n"
-        "  - the directory option takes precedence",
-        true,
-        1,
-    },
-};
+        OP_MAX,
+    };
 
-class HackCompiler
-{
-private:
-    string _input;
-    string _output;
-    bool   _dot;
-    String _dir;
-
-public:
-    HackCompiler() :
-        _dot(false)
-    {
-    }
-
-    bool parse(const int argc, char** argv)
-    {
-        CommandLine::Parser cmd;
-        if (cmd.parse(argc, argv, Switches, OP_MAX) < 0)
-            return false;
-
-        _output = cmd.string(OP_OUTPUT);
-
-        if (cmd.isPresent(OP_DIR))
-            _dir = cmd.string(OP_DIR);
-
-        const StringArray& args = cmd.arguments();
-        if (args.empty() && _dir.empty())
+    constexpr CommandLine::Switch Switches[OP_MAX] = {
         {
-            String usage;
-            cmd.usage(usage);
-            throw Exception(usage, "Missing input file or directory");
+            OP_FMT,
+            'f',
+            "format",
+            "Specify an output file format\n"
+            " - xml, format as XML (default)\n"
+            " - dot, format as DOT",
+            true,
+            1,
+        },
+        {
+            OP_DIR,
+            'd',
+            "directory",
+            "Converts all .jack files in the current directory to .xml\n",
+            true,
+            1,
+        },
+        {
+            OP_OUTPUT,
+            'o',
+            "output",
+            "Specify an output file\n"
+            "  - the directory option takes precedence",
+            true,
+            1,
+        },
+    };
+
+    class Jack2Xml
+    {
+    private:
+        string _input;
+        string _output;
+        bool   _dot;
+        String _dir;
+
+    public:
+        Jack2Xml() :
+            _dot(false)
+        {
         }
-        if (!args.empty())
-            _input = args[0];
 
-        if (cmd.isPresent(OP_FMT))
-            _dot = cmd.string(OP_FMT) == "dot";
-        return true;
-    }
-
-    int go() const
-    {
-        if (!_dir.empty())
+        bool parse(const int argc, char** argv)
         {
-            PathArray jackFiles;
-            FileSystem::glob(jackFiles, _dir, ".jack");
+            CommandLine::Parser cmd;
+            if (cmd.parse(argc, argv, Switches, OP_MAX) < 0)
+                return false;
 
-            for (Path& jackFile : jackFiles)
+            _output = cmd.string(OP_OUTPUT);
+
+            if (cmd.isPresent(OP_DIR))
+                _dir = cmd.string(OP_DIR);
+
+            const StringArray& args = cmd.arguments();
+            if (args.empty() && _dir.empty())
             {
-                try
-                {
-                    String inFile  = jackFile.string();
-                    String outFile = inFile
-                                     .substr(0, inFile.size() - 5)
-                                     .append(".xml");
-
-                    Compiler::Analyzer::Parser psr;
-                    Console::write("parsing ", jackFile.filename().string());
-                    psr.parse(inFile);
-
-                    Console::writeLine(" -> ", Path(outFile).filename().string());
-                    psr.write(outFile, _dot ? 1 : 0);
-                }
-                catch (Exception& ex)
-                {
-                    Console::writeLine(ex.what());
-                }
+                String usage;
+                cmd.usage(usage);
+                throw Exception(usage, "Missing input file or directory");
             }
-        }
-        else
-        {
-            Compiler::Analyzer::Parser psr;
-            psr.parse(_input);
+            if (!args.empty())
+                _input = args[0];
 
-            if (!_output.empty())
+            if (cmd.isPresent(OP_FMT))
+                _dot = cmd.string(OP_FMT) == "dot";
+            return true;
+        }
+
+        int go() const
+        {
+            if (!_dir.empty())
             {
-                std::ofstream fs(_output);
-                psr.write(fs, _dot ? 1 : 0);
+                PathArray jackFiles;
+                FileSystem::glob(jackFiles, _dir, ".jack");
+
+                for (Path& jackFile : jackFiles)
+                {
+                    try
+                    {
+                        String inFile  = jackFile.string();
+                        String outFile = inFile
+                                             .substr(0, inFile.size() - 5)
+                                             .append(".xml");
+
+                        Compiler::Analyzer::Parser psr;
+                        Console::write("parsing ", jackFile.filename().string());
+                        psr.parse(inFile);
+
+                        Console::writeLine(" -> ", Path(outFile).filename().string());
+                        psr.write(outFile, _dot ? 1 : 0);
+                    }
+                    catch (Exception& ex)
+                    {
+                        Console::writeLine(ex.what());
+                    }
+                }
             }
             else
-                psr.write(cout, _dot ? 1 : 0);
-        }
+            {
+                Compiler::Analyzer::Parser psr;
+                psr.parse(_input);
 
-        return 0;
-    }
-};
+                if (!_output.empty())
+                {
+                    std::ofstream fs(_output);
+                    psr.write(fs, _dot ? 1 : 0);
+                }
+                else
+                    psr.write(cout, _dot ? 1 : 0);
+            }
+
+            return 0;
+        }
+    };
+}  // namespace Hack::Programs
 
 int main(int argc, char** argv)
 {
+    Hack::CrtTestMemory();
     try
     {
-        HackCompiler app;
+        Hack::Programs::Jack2Xml app;
         if (app.parse(argc, argv))
             return app.go();
     }
     catch (std::exception& ex)
     {
-        Console::writeError(ex.what());
+        Hack::Console::writeError(ex.what());
     }
+    Hack::CrtDump();
     return 1;
 }

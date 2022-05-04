@@ -39,15 +39,19 @@ namespace Hack::Ui
         constexpr const char* SetCursor      = "\x1b[%d;%dH";
 
         // line drawing
-        constexpr const char* LineHz    = "\x1b(0q";
-        constexpr const char* LineVt    = "\x1b(0x";
-        constexpr const char* LineLt    = "\x1b(0l";
-        constexpr const char* LineRt    = "\x1b(0k";
-        constexpr const char* LineRb    = "\x1b(0j";
-        constexpr const char* LineLb    = "\x1b(0m";
-        constexpr const char* LineVertR = "\x1b(0t";
-        constexpr const char* LineVertL = "\x1b(0w";
-    } // namespace Detail
+        constexpr const char* LineHz = "\x1b(0q";
+        constexpr const char* LineVt = "\x1b(0x";
+
+        constexpr const char* LineLt = "\x1b(0l";
+        constexpr const char* LineRt = "\x1b(0k";
+        constexpr const char* LineRb = "\x1b(0j";
+        constexpr const char* LineLb = "\x1b(0m";
+
+        constexpr const char* LineCr = "\x1b(0u";
+        constexpr const char* LineCl = "\x1b(0t";
+        constexpr const char* LineCt = "\x1b(0w";
+        constexpr const char* LineCb = "\x1b(0v";
+    }  // namespace Detail
 
     class Platform
     {
@@ -87,4 +91,4 @@ namespace Hack::Ui
 
         static void sleep(const uint32_t& ms);
     };
-} // namespace Hack::Ui
+}  // namespace Hack::Ui

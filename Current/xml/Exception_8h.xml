@@ -19,395 +19,445 @@
     <includedby refid="Generator_8cpp" local="yes">Source/Compiler/Generator/Generator.cpp</includedby>
     <includedby refid="Generator_8h" local="yes">Source/Compiler/Generator/Generator.h</includedby>
     <includedby refid="Compiler_2Generator_2Main_8cpp" local="yes">Source/Compiler/Generator/Main.cpp</includedby>
-    <includedby refid="Application_8cpp" local="yes">Source/Computer/Application.cpp</includedby>
-    <includedby refid="DebugRuntime_8cpp" local="yes">Source/Computer/DebugRuntime.cpp</includedby>
+    <includedby refid="AssemblyDebuggerPrivate_8cpp" local="yes">Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</includedby>
+    <includedby refid="Executable_8cpp" local="yes">Source/Computer/Executable.cpp</includedby>
     <includedby refid="IndexCache_8h" local="yes">Source/Utils/IndexCache.h</includedby>
     <includedby refid="ParseError_8h" local="yes">Source/Utils/ParserBase/ParseError.h</includedby>
+    <includedby refid="Emitter_8cpp" local="yes">Source/VirtualMachine/Emitter.cpp</includedby>
     <includedby refid="VirtualMachine_2Main_8cpp" local="yes">Source/VirtualMachine/Main.cpp</includedby>
     <incdepgraph>
-      <node id="3256">
-        <label>Source/Utils/Exception.h</label>
-        <link refid="Exception_8h"/>
-        <childnode refid="3257" relation="include">
-        </childnode>
-        <childnode refid="3258" relation="include">
-        </childnode>
-        <childnode refid="3259" relation="include">
-        </childnode>
-        <childnode refid="3260" relation="include">
-        </childnode>
-        <childnode refid="3261" relation="include">
-        </childnode>
-      </node>
-      <node id="3267">
+      <node id="3729">
         <label>cstdint</label>
       </node>
-      <node id="3265">
-        <label>UserInterface/Context.h</label>
-        <childnode refid="3261" relation="include">
-        </childnode>
-        <childnode refid="3266" relation="include">
-        </childnode>
-        <childnode refid="3268" relation="include">
-        </childnode>
-      </node>
-      <node id="3258">
+      <node id="3720">
         <label>stdexcept</label>
       </node>
-      <node id="3263">
+      <node id="3725">
         <label>string</label>
       </node>
-      <node id="3257">
+      <node id="3727">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="3723" relation="include">
+        </childnode>
+        <childnode refid="3728" relation="include">
+        </childnode>
+        <childnode refid="3730" relation="include">
+        </childnode>
+      </node>
+      <node id="3719">
         <label>exception</label>
       </node>
-      <node id="3266">
+      <node id="3728">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="3267" relation="include">
+        <childnode refid="3729" relation="include">
         </childnode>
       </node>
-      <node id="3261">
-        <label>String.h</label>
-        <childnode refid="3262" relation="include">
+      <node id="3722">
+        <label>Utils/Console.h</label>
+        <childnode refid="3723" relation="include">
         </childnode>
-        <childnode refid="3263" relation="include">
-        </childnode>
-        <childnode refid="3264" relation="include">
+        <childnode refid="3727" relation="include">
         </childnode>
       </node>
-      <node id="3264">
+      <node id="3726">
         <label>vector</label>
       </node>
-      <node id="3259">
+      <node id="3730">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="3729" relation="include">
+        </childnode>
+        <childnode refid="3726" relation="include">
+        </childnode>
+        <childnode refid="3728" relation="include">
+        </childnode>
+      </node>
+      <node id="3721">
         <label>utility</label>
       </node>
-      <node id="3262">
+      <node id="3724">
         <label>sstream</label>
       </node>
-      <node id="3268">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="3267" relation="include">
+      <node id="3718">
+        <label>Source/Utils/Exception.h</label>
+        <link refid="Exception_8h"/>
+        <childnode refid="3719" relation="include">
         </childnode>
-        <childnode refid="3264" relation="include">
+        <childnode refid="3720" relation="include">
         </childnode>
-        <childnode refid="3266" relation="include">
+        <childnode refid="3721" relation="include">
+        </childnode>
+        <childnode refid="3722" relation="include">
+        </childnode>
+        <childnode refid="3723" relation="include">
         </childnode>
       </node>
-      <node id="3260">
-        <label>Utils/Console.h</label>
-        <childnode refid="3261" relation="include">
+      <node id="3723">
+        <label>String.h</label>
+        <childnode refid="3724" relation="include">
         </childnode>
-        <childnode refid="3265" relation="include">
+        <childnode refid="3725" relation="include">
+        </childnode>
+        <childnode refid="3726" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="3279">
-        <label>Source/Computer/Application.cpp</label>
-      </node>
-      <node id="3274">
-        <label>Source/Compiler/Analyzer/Parser.h</label>
-        <childnode refid="3273" relation="include">
-        </childnode>
-        <childnode refid="3275" relation="include">
-        </childnode>
-        <childnode refid="3276" relation="include">
-        </childnode>
-        <childnode refid="3277" relation="include">
-        </childnode>
-        <childnode refid="3278" relation="include">
-        </childnode>
-        <childnode refid="3279" relation="include">
-        </childnode>
-      </node>
-      <node id="3292">
-        <label>Source/Compiler/Generator/VmEmitter.h</label>
-        <childnode refid="3277" relation="include">
-        </childnode>
-        <childnode refid="3293" relation="include">
-        </childnode>
-      </node>
-      <node id="3300">
-        <label>Source/Assembler/Parser.cpp</label>
-      </node>
-      <node id="3302">
-        <label>Source/Compiler/Analyzer/Scanner.h</label>
-        <childnode refid="3275" relation="include">
-        </childnode>
-        <childnode refid="3282" relation="include">
-        </childnode>
-      </node>
-      <node id="3311">
-        <label>Source/VirtualMachine/Emitter.cpp</label>
-      </node>
-      <node id="3297">
-        <label>Source/Compiler/Generator/SymbolTable.cpp</label>
-      </node>
-      <node id="3284">
-        <label>Source/Compiler/Generator/Generator.h</label>
-        <childnode refid="3276" relation="include">
-        </childnode>
-        <childnode refid="3277" relation="include">
-        </childnode>
-        <childnode refid="3278" relation="include">
-        </childnode>
-        <childnode refid="3279" relation="include">
-        </childnode>
-      </node>
-      <node id="3269">
-        <label>Source/Utils/Exception.h</label>
-        <link refid="Exception_8h"/>
-        <childnode refid="3270" relation="include">
-        </childnode>
-        <childnode refid="3271" relation="include">
-        </childnode>
-        <childnode refid="3272" relation="include">
-        </childnode>
-        <childnode refid="3273" relation="include">
-        </childnode>
-        <childnode refid="3274" relation="include">
-        </childnode>
-        <childnode refid="3280" relation="include">
-        </childnode>
-        <childnode refid="3282" relation="include">
-        </childnode>
-        <childnode refid="3283" relation="include">
-        </childnode>
-        <childnode refid="3276" relation="include">
-        </childnode>
-        <childnode refid="3277" relation="include">
-        </childnode>
-        <childnode refid="3284" relation="include">
-        </childnode>
-        <childnode refid="3278" relation="include">
-        </childnode>
-        <childnode refid="3279" relation="include">
-        </childnode>
-        <childnode refid="3285" relation="include">
-        </childnode>
-        <childnode refid="3286" relation="include">
-        </childnode>
-        <childnode refid="3314" relation="include">
-        </childnode>
-        <childnode refid="3307" relation="include">
-        </childnode>
-      </node>
-      <node id="3305">
-        <label>Source/Assembler/Parser.h</label>
-        <childnode refid="3270" relation="include">
-        </childnode>
-        <childnode refid="3300" relation="include">
-        </childnode>
-        <childnode refid="3271" relation="include">
-        </childnode>
-        <childnode refid="3276" relation="include">
-        </childnode>
-        <childnode refid="3279" relation="include">
-        </childnode>
-      </node>
-      <node id="3289">
-        <label>Source/Compiler/Common/NodeUtils.cpp</label>
-      </node>
-      <node id="3298">
-        <label>Source/Utils/ParserBase/ScannerBase.h</label>
-        <childnode refid="3299" relation="include">
-        </childnode>
-        <childnode refid="3302" relation="include">
-        </childnode>
-        <childnode refid="3303" relation="include">
-        </childnode>
-        <childnode refid="3304" relation="include">
-        </childnode>
-        <childnode refid="3309" relation="include">
-        </childnode>
-        <childnode refid="3310" relation="include">
-        </childnode>
-        <childnode refid="3312" relation="include">
-        </childnode>
-      </node>
-      <node id="3306">
-        <label>Source/VirtualMachine/Parser.h</label>
-        <childnode refid="3276" relation="include">
-        </childnode>
-        <childnode refid="3279" relation="include">
-        </childnode>
-        <childnode refid="3307" relation="include">
-        </childnode>
-        <childnode refid="3308" relation="include">
-        </childnode>
-      </node>
-      <node id="3275">
-        <label>Source/Compiler/Analyzer/Parser.cpp</label>
-      </node>
-      <node id="3287">
-        <label>Source/Compiler/Common/Node.h</label>
-        <childnode refid="3275" relation="include">
-        </childnode>
-        <childnode refid="3281" relation="include">
-        </childnode>
-        <childnode refid="3288" relation="include">
-        </childnode>
-        <childnode refid="3283" relation="include">
-        </childnode>
-        <childnode refid="3289" relation="include">
-        </childnode>
-        <childnode refid="3290" relation="include">
-        </childnode>
-        <childnode refid="3291" relation="include">
-        </childnode>
-        <childnode refid="3277" relation="include">
-        </childnode>
-        <childnode refid="3284" relation="include">
-        </childnode>
-        <childnode refid="3292" relation="include">
-        </childnode>
-      </node>
-      <node id="3271">
-        <label>Source/Bindings/Bindings.cpp</label>
-      </node>
-      <node id="3291">
-        <label>Source/Compiler/Common/XmlWriter.cpp</label>
-      </node>
-      <node id="3313">
-        <label>Source/VirtualMachine/Scanner.cpp</label>
-      </node>
-      <node id="3283">
-        <label>Source/Compiler/Common/Node.cpp</label>
-      </node>
-      <node id="3307">
-        <label>Source/VirtualMachine/Main.cpp</label>
-      </node>
-      <node id="3277">
-        <label>Source/Compiler/Generator/Generator.cpp</label>
-      </node>
-      <node id="3290">
-        <label>Source/Compiler/Common/Tree.cpp</label>
-      </node>
-      <node id="3294">
-        <label>Source/Compiler/Generator/Symbol.h</label>
-        <childnode refid="3284" relation="include">
-        </childnode>
-        <childnode refid="3295" relation="include">
-        </childnode>
-        <childnode refid="3296" relation="include">
-        </childnode>
-        <childnode refid="3292" relation="include">
-        </childnode>
-      </node>
-      <node id="3288">
-        <label>Source/Compiler/Common/DotWriter.cpp</label>
-      </node>
-      <node id="3273">
-        <label>Source/Compiler/Analyzer/Main.cpp</label>
-      </node>
-      <node id="3304">
+      <node id="3766">
         <label>Source/Utils/ParserBase/ParserBase.h</label>
-        <childnode refid="3305" relation="include">
+        <childnode refid="3767" relation="include">
         </childnode>
-        <childnode refid="3274" relation="include">
+        <childnode refid="3736" relation="include">
         </childnode>
-        <childnode refid="3303" relation="include">
+        <childnode refid="3765" relation="include">
         </childnode>
-        <childnode refid="3306" relation="include">
-        </childnode>
-      </node>
-      <node id="3301">
-        <label>Source/Assembler/Scanner.cpp</label>
-      </node>
-      <node id="3312">
-        <label>Source/VirtualMachine/Scanner.h</label>
-        <childnode refid="3308" relation="include">
-        </childnode>
-        <childnode refid="3313" relation="include">
+        <childnode refid="3776" relation="include">
         </childnode>
       </node>
-      <node id="3308">
-        <label>Source/VirtualMachine/Parser.cpp</label>
-      </node>
-      <node id="3286">
-        <label>Source/Utils/IndexCache.h</label>
-        <childnode refid="3287" relation="include">
-        </childnode>
-        <childnode refid="3294" relation="include">
-        </childnode>
-        <childnode refid="3296" relation="include">
-        </childnode>
-        <childnode refid="3298" relation="include">
-        </childnode>
-      </node>
-      <node id="3303">
-        <label>Source/Utils/ParserBase/ParserBase.cpp</label>
-      </node>
-      <node id="3276">
-        <label>Source/Compiler/Compiler/Main.cpp</label>
-      </node>
-      <node id="3270">
-        <label>Source/Assembler/Main.cpp</label>
-      </node>
-      <node id="3293">
-        <label>Source/Compiler/Generator/VmEmitter.cpp</label>
-      </node>
-      <node id="3295">
-        <label>Source/Compiler/Generator/Symbol.cpp</label>
-      </node>
-      <node id="3309">
-        <label>Source/Utils/ParserBase/ScannerBase.cpp</label>
-      </node>
-      <node id="3281">
-        <label>Source/Compiler/Analyzer/ParseUtils.cpp</label>
-      </node>
-      <node id="3282">
-        <label>Source/Compiler/Analyzer/Scanner.cpp</label>
-      </node>
-      <node id="3310">
-        <label>Source/VirtualMachine/Emitter.h</label>
-        <childnode refid="3311" relation="include">
-        </childnode>
-        <childnode refid="3306" relation="include">
-        </childnode>
-      </node>
-      <node id="3278">
-        <label>Source/Compiler/Generator/Main.cpp</label>
-      </node>
-      <node id="3285">
-        <label>Source/Computer/DebugRuntime.cpp</label>
-      </node>
-      <node id="3315">
-        <label>Source/Utils/ParserBase/ParseError.cpp</label>
-      </node>
-      <node id="3299">
-        <label>Source/Assembler/Scanner.h</label>
-        <childnode refid="3300" relation="include">
-        </childnode>
-        <childnode refid="3301" relation="include">
-        </childnode>
-      </node>
-      <node id="3272">
+      <node id="3734">
         <label>Source/Chips/CPU.cpp</label>
       </node>
-      <node id="3314">
+      <node id="3732">
+        <label>Source/Assembler/Main.cpp</label>
+      </node>
+      <node id="3756">
+        <label>Source/Compiler/Generator/Symbol.h</label>
+        <childnode refid="3746" relation="include">
+        </childnode>
+        <childnode refid="3754" relation="include">
+        </childnode>
+        <childnode refid="3757" relation="include">
+        </childnode>
+        <childnode refid="3758" relation="include">
+        </childnode>
+      </node>
+      <node id="3782">
         <label>Source/Utils/ParserBase/ParseError.h</label>
-        <childnode refid="3284" relation="include">
+        <childnode refid="3746" relation="include">
         </childnode>
-        <childnode refid="3315" relation="include">
+        <childnode refid="3783" relation="include">
         </childnode>
-        <childnode refid="3303" relation="include">
+        <childnode refid="3765" relation="include">
         </childnode>
-        <childnode refid="3309" relation="include">
-        </childnode>
-      </node>
-      <node id="3280">
-        <label>Source/Compiler/Analyzer/ParseUtils.h</label>
-        <childnode refid="3275" relation="include">
-        </childnode>
-        <childnode refid="3281" relation="include">
+        <childnode refid="3779" relation="include">
         </childnode>
       </node>
-      <node id="3296">
+      <node id="3750">
+        <label>Source/Compiler/Common/DotWriter.cpp</label>
+      </node>
+      <node id="3748">
+        <label>Source/Utils/IndexCache.h</label>
+        <childnode refid="3749" relation="include">
+        </childnode>
+        <childnode refid="3756" relation="include">
+        </childnode>
+        <childnode refid="3758" relation="include">
+        </childnode>
+        <childnode refid="3760" relation="include">
+        </childnode>
+      </node>
+      <node id="3776">
+        <label>Source/VirtualMachine/Parser.h</label>
+        <childnode refid="3738" relation="include">
+        </childnode>
+        <childnode refid="3741" relation="include">
+        </childnode>
+        <childnode refid="3777" relation="include">
+        </childnode>
+        <childnode refid="3778" relation="include">
+        </childnode>
+      </node>
+      <node id="3769">
+        <label>Source/Computer/RuntimeInterface.h</label>
+        <childnode refid="3770" relation="include">
+        </childnode>
+        <childnode refid="3773" relation="include">
+        </childnode>
+        <childnode refid="3775" relation="include">
+        </childnode>
+      </node>
+      <node id="3771">
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</label>
+        <childnode refid="3747" relation="include">
+        </childnode>
+        <childnode refid="3772" relation="include">
+        </childnode>
+      </node>
+      <node id="3784">
+        <label>Source/VirtualMachine/Emitter.cpp</label>
+      </node>
+      <node id="3743">
+        <label>Source/Compiler/Analyzer/ParseUtils.cpp</label>
+      </node>
+      <node id="3777">
+        <label>Source/VirtualMachine/Main.cpp</label>
+      </node>
+      <node id="3751">
+        <label>Source/Compiler/Common/NodeUtils.cpp</label>
+      </node>
+      <node id="3774">
+        <label>Source/Computer/ConsoleRuntime.cpp</label>
+      </node>
+      <node id="3764">
+        <label>Source/Compiler/Analyzer/Scanner.h</label>
+        <childnode refid="3737" relation="include">
+        </childnode>
+        <childnode refid="3744" relation="include">
+        </childnode>
+      </node>
+      <node id="3775">
+        <label>Source/Computer/WindowedRuntime.h</label>
+      </node>
+      <node id="3770">
+        <label>Source/Computer/AssemblyDebugger.h</label>
+        <childnode refid="3747" relation="include">
+        </childnode>
+        <childnode refid="3771" relation="include">
+        </childnode>
+        <childnode refid="3772" relation="include">
+        </childnode>
+        <childnode refid="3741" relation="include">
+        </childnode>
+      </node>
+      <node id="3754">
+        <label>Source/Compiler/Generator/VmEmitter.h</label>
+        <childnode refid="3739" relation="include">
+        </childnode>
+        <childnode refid="3746" relation="include">
+        </childnode>
+        <childnode refid="3755" relation="include">
+        </childnode>
+      </node>
+      <node id="3737">
+        <label>Source/Compiler/Analyzer/Parser.cpp</label>
+      </node>
+      <node id="3746">
+        <label>Source/Compiler/Generator/Generator.h</label>
+        <childnode refid="3738" relation="include">
+        </childnode>
+        <childnode refid="3739" relation="include">
+        </childnode>
+        <childnode refid="3740" relation="include">
+        </childnode>
+        <childnode refid="3741" relation="include">
+        </childnode>
+      </node>
+      <node id="3735">
+        <label>Source/Compiler/Analyzer/Main.cpp</label>
+      </node>
+      <node id="3780">
+        <label>Source/VirtualMachine/Scanner.h</label>
+        <childnode refid="3778" relation="include">
+        </childnode>
+        <childnode refid="3781" relation="include">
+        </childnode>
+      </node>
+      <node id="3758">
         <label>Source/Compiler/Generator/SymbolTable.h</label>
-        <childnode refid="3277" relation="include">
+        <childnode refid="3739" relation="include">
         </childnode>
-        <childnode refid="3297" relation="include">
+        <childnode refid="3759" relation="include">
         </childnode>
+      </node>
+      <node id="3753">
+        <label>Source/Compiler/Common/XmlWriter.cpp</label>
+      </node>
+      <node id="3741">
+        <label>Source/Computer/Executable.cpp</label>
+      </node>
+      <node id="3778">
+        <label>Source/VirtualMachine/Parser.cpp</label>
+      </node>
+      <node id="3736">
+        <label>Source/Compiler/Analyzer/Parser.h</label>
+        <childnode refid="3735" relation="include">
+        </childnode>
+        <childnode refid="3737" relation="include">
+        </childnode>
+        <childnode refid="3738" relation="include">
+        </childnode>
+        <childnode refid="3739" relation="include">
+        </childnode>
+        <childnode refid="3740" relation="include">
+        </childnode>
+        <childnode refid="3741" relation="include">
+        </childnode>
+      </node>
+      <node id="3768">
+        <label>Source/Computer/Common.h</label>
+        <childnode refid="3747" relation="include">
+        </childnode>
+        <childnode refid="3741" relation="include">
+        </childnode>
+      </node>
+      <node id="3767">
+        <label>Source/Assembler/Parser.h</label>
+        <childnode refid="3732" relation="include">
+        </childnode>
+        <childnode refid="3762" relation="include">
+        </childnode>
+        <childnode refid="3733" relation="include">
+        </childnode>
+        <childnode refid="3738" relation="include">
+        </childnode>
+        <childnode refid="3768" relation="include">
+        </childnode>
+        <childnode refid="3741" relation="include">
+        </childnode>
+        <childnode refid="3769" relation="include">
+        </childnode>
+      </node>
+      <node id="3738">
+        <label>Source/Compiler/Compiler/Main.cpp</label>
+      </node>
+      <node id="3755">
+        <label>Source/Compiler/Generator/VmEmitter.cpp</label>
+      </node>
+      <node id="3742">
+        <label>Source/Compiler/Analyzer/ParseUtils.h</label>
+        <childnode refid="3737" relation="include">
+        </childnode>
+        <childnode refid="3743" relation="include">
+        </childnode>
+      </node>
+      <node id="3772">
+        <label>Source/Computer/AssemblyDebugger.cpp</label>
+      </node>
+      <node id="3773">
+        <label>Source/Computer/ConsoleRuntime.h</label>
+        <childnode refid="3774" relation="include">
+        </childnode>
+        <childnode refid="3741" relation="include">
+        </childnode>
+      </node>
+      <node id="3765">
+        <label>Source/Utils/ParserBase/ParserBase.cpp</label>
+      </node>
+      <node id="3733">
+        <label>Source/Bindings/Bindings.cpp</label>
+      </node>
+      <node id="3749">
+        <label>Source/Compiler/Common/Node.h</label>
+        <childnode refid="3737" relation="include">
+        </childnode>
+        <childnode refid="3743" relation="include">
+        </childnode>
+        <childnode refid="3750" relation="include">
+        </childnode>
+        <childnode refid="3745" relation="include">
+        </childnode>
+        <childnode refid="3751" relation="include">
+        </childnode>
+        <childnode refid="3752" relation="include">
+        </childnode>
+        <childnode refid="3753" relation="include">
+        </childnode>
+        <childnode refid="3739" relation="include">
+        </childnode>
+        <childnode refid="3746" relation="include">
+        </childnode>
+        <childnode refid="3754" relation="include">
+        </childnode>
+      </node>
+      <node id="3781">
+        <label>Source/VirtualMachine/Scanner.cpp</label>
+      </node>
+      <node id="3731">
+        <label>Source/Utils/Exception.h</label>
+        <link refid="Exception_8h"/>
+        <childnode refid="3732" relation="include">
+        </childnode>
+        <childnode refid="3733" relation="include">
+        </childnode>
+        <childnode refid="3734" relation="include">
+        </childnode>
+        <childnode refid="3735" relation="include">
+        </childnode>
+        <childnode refid="3736" relation="include">
+        </childnode>
+        <childnode refid="3742" relation="include">
+        </childnode>
+        <childnode refid="3744" relation="include">
+        </childnode>
+        <childnode refid="3745" relation="include">
+        </childnode>
+        <childnode refid="3738" relation="include">
+        </childnode>
+        <childnode refid="3739" relation="include">
+        </childnode>
+        <childnode refid="3746" relation="include">
+        </childnode>
+        <childnode refid="3740" relation="include">
+        </childnode>
+        <childnode refid="3747" relation="include">
+        </childnode>
+        <childnode refid="3741" relation="include">
+        </childnode>
+        <childnode refid="3748" relation="include">
+        </childnode>
+        <childnode refid="3782" relation="include">
+        </childnode>
+        <childnode refid="3784" relation="include">
+        </childnode>
+        <childnode refid="3777" relation="include">
+        </childnode>
+      </node>
+      <node id="3760">
+        <label>Source/Utils/ParserBase/ScannerBase.h</label>
+        <childnode refid="3761" relation="include">
+        </childnode>
+        <childnode refid="3764" relation="include">
+        </childnode>
+        <childnode refid="3765" relation="include">
+        </childnode>
+        <childnode refid="3766" relation="include">
+        </childnode>
+        <childnode refid="3779" relation="include">
+        </childnode>
+        <childnode refid="3780" relation="include">
+        </childnode>
+      </node>
+      <node id="3761">
+        <label>Source/Assembler/Scanner.h</label>
+        <childnode refid="3762" relation="include">
+        </childnode>
+        <childnode refid="3763" relation="include">
+        </childnode>
+      </node>
+      <node id="3740">
+        <label>Source/Compiler/Generator/Main.cpp</label>
+      </node>
+      <node id="3759">
+        <label>Source/Compiler/Generator/SymbolTable.cpp</label>
+      </node>
+      <node id="3757">
+        <label>Source/Compiler/Generator/Symbol.cpp</label>
+      </node>
+      <node id="3752">
+        <label>Source/Compiler/Common/Tree.cpp</label>
+      </node>
+      <node id="3783">
+        <label>Source/Utils/ParserBase/ParseError.cpp</label>
+      </node>
+      <node id="3744">
+        <label>Source/Compiler/Analyzer/Scanner.cpp</label>
+      </node>
+      <node id="3762">
+        <label>Source/Assembler/Parser.cpp</label>
+      </node>
+      <node id="3739">
+        <label>Source/Compiler/Generator/Generator.cpp</label>
+      </node>
+      <node id="3745">
+        <label>Source/Compiler/Common/Node.cpp</label>
+      </node>
+      <node id="3779">
+        <label>Source/Utils/ParserBase/ScannerBase.cpp</label>
+      </node>
+      <node id="3763">
+        <label>Source/Assembler/Scanner.cpp</label>
+      </node>
+      <node id="3747">
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1Exception" prot="public">Hack::Exception</innerclass>

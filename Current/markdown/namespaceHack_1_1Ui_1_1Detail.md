@@ -21,6 +21,22 @@
 </a>
 </span>
 <br/>
+<span class="icon-list-item"><a href="#linecb" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">LineCb</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#linecl" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">LineCl</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#linecr" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">LineCr</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#linect" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">LineCt</span>
+</a>
+</span>
+<br/>
 <span class="icon-list-item"><a href="#linehz" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">LineHz</span>
 </a>
 </span>
@@ -38,14 +54,6 @@
 </span>
 <br/>
 <span class="icon-list-item"><a href="#linert" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">LineRt</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="#linevertl" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">LineVertL</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="#linevertr" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">LineVertR</span>
 </a>
 </span>
 <br/>
@@ -116,6 +124,66 @@
 </a>
 </span>
 <br/>
+<a id="linecb"></a>
+<h2>LineCb</h2>
+<span class="inline-text">constexpr const char *</span>
+<span class="bold-text"><b>LineCb</b></span>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/UserInterface/Platform.h#L53" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Platform.h</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#detail" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+<br/>
+<a id="linecl"></a>
+<h2>LineCl</h2>
+<span class="inline-text">constexpr const char *</span>
+<span class="bold-text"><b>LineCl</b></span>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/UserInterface/Platform.h#L51" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Platform.h</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#detail" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+<br/>
+<a id="linecr"></a>
+<h2>LineCr</h2>
+<span class="inline-text">constexpr const char *</span>
+<span class="bold-text"><b>LineCr</b></span>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/UserInterface/Platform.h#L50" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Platform.h</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#detail" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+<br/>
+<a id="linect"></a>
+<h2>LineCt</h2>
+<span class="inline-text">constexpr const char *</span>
+<span class="bold-text"><b>LineCt</b></span>
+<br/>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/UserInterface/Platform.h#L52" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Platform.h</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#detail" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+<br/>
 <a id="linehz"></a>
 <h2>LineHz</h2>
 <span class="inline-text">constexpr const char *</span>
@@ -138,7 +206,7 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/UserInterface/Platform.h#L47" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Platform.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/UserInterface/Platform.h#L48" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Platform.h</span>
 </a>
 </span>
 <br/>
@@ -153,7 +221,7 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/UserInterface/Platform.h#L44" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Platform.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/UserInterface/Platform.h#L45" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Platform.h</span>
 </a>
 </span>
 <br/>
@@ -168,7 +236,7 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/UserInterface/Platform.h#L46" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Platform.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/UserInterface/Platform.h#L47" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Platform.h</span>
 </a>
 </span>
 <br/>
@@ -183,37 +251,7 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/UserInterface/Platform.h#L45" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Platform.h</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="#detail" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
-</a>
-</span>
-<br/>
-<a id="linevertl"></a>
-<h2>LineVertL</h2>
-<span class="inline-text">constexpr const char *</span>
-<span class="bold-text"><b>LineVertL</b></span>
-<br/>
-<a id="defined-in"></a>
-<h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/UserInterface/Platform.h#L49" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Platform.h</span>
-</a>
-</span>
-<br/>
-<span class="icon-list-item"><a href="#detail" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
-</a>
-</span>
-<br/>
-<a id="linevertr"></a>
-<h2>LineVertR</h2>
-<span class="inline-text">constexpr const char *</span>
-<span class="bold-text"><b>LineVertR</b></span>
-<br/>
-<a id="defined-in"></a>
-<h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/UserInterface/Platform.h#L48" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Platform.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/UserInterface/Platform.h#L46" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Platform.h</span>
 </a>
 </span>
 <br/>

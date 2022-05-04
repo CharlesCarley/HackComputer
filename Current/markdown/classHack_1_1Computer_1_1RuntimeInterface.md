@@ -14,10 +14,10 @@
 <a id="derived-by"></a>
 <h4>Derived By</h4>
 <div class="icon-link">
-<img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1CommandRuntime.md#commandruntime">Hack::Computer::CommandRuntime</a>
+<img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1AssemblyDebugger.md#assemblydebugger">Hack::Computer::AssemblyDebugger</a>
 </div>
 <div class="icon-link">
-<img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1DebugRuntime.md#debugruntime">Hack::Computer::DebugRuntime</a>
+<img src="../images/class.svg"/><a href="classHack_1_1Computer_1_1ConsoleRuntime.md#consoleruntime">Hack::Computer::ConsoleRuntime</a>
 </div>
 <img src="../images/dot/internal-diagram-44.dot.svg"/><br/>
 <a id="public-methods"></a>
@@ -46,6 +46,10 @@
 </a>
 </span>
 <br/>
+<span class="icon-list-item"><a href="#setinstructions" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">setInstructions</span>
+</a>
+</span>
+<br/>
 <span class="icon-list-item"><a href="#setrate" class="icon-list-item"><img src="../images/class.svg" class="icon-list-item"/><span class="icon-list-item">setRate</span>
 </a>
 </span>
@@ -60,7 +64,7 @@
 <br/>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L29" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L30" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
 </a>
 </span>
 <br/>
@@ -74,7 +78,7 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L31" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L32" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
 </a>
 </span>
 <br/>
@@ -90,7 +94,7 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L41" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L42" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
 </a>
 </span>
 <br/>
@@ -112,7 +116,7 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L45" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L46" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
 </a>
 </span>
 <br/>
@@ -128,7 +132,7 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L35" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L36" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
 </a>
 </span>
 <br/>
@@ -156,7 +160,7 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L39" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L40" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
 </a>
 </span>
 <br/>
@@ -178,7 +182,30 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L43" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L44" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
+</a>
+</span>
+<br/>
+<span class="icon-list-item"><a href="#runtimeinterface" class="icon-list-item"><img src="../images/jumpToTop.svg" class="icon-list-item"/><span class="icon-list-item">top</span>
+</a>
+</span>
+<br/>
+<a id="setinstructions"></a>
+<h2>setInstructions</h2>
+<span class="inline-text">void</span>
+<span class="bold-text"><b>setInstructions</b></span>
+<span class="italic-text"><i>(</i></span>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/horSpace24px.svg"/><span class="inline-text">const </span>
+<a href="classHack_1_1Assembler_1_1Parser.md#instructions">Assembler::Parser::Instructions</a>
+<span class="inline-text"> &amp;</span>
+<span class="inline-text">is</span>
+</span>
+</div>
+<span class="italic-text"><i>)</i></span>
+<a id="defined-in"></a>
+<h4>Defined in</h4>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L50" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
 </a>
 </span>
 <br/>
@@ -199,7 +226,7 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L37" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L38" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
 </a>
 </span>
 <br/>
@@ -215,7 +242,7 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L33" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L34" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
 </a>
 </span>
 <br/>
@@ -237,7 +264,7 @@
 <span class="italic-text"><i>)</i></span>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L47" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Computer/RuntimeInterface.h#L48" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">RuntimeInterface.h</span>
 </a>
 </span>
 <br/>

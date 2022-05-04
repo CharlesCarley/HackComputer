@@ -9,259 +9,276 @@
     <includes refid="Console_8h" local="yes">Utils/Console.h</includes>
     <includes refid="Exception_8h" local="yes">Utils/Exception.h</includes>
     <includes refid="FileSystem_8h" local="yes">Utils/FileSystem.h</includes>
+    <includes refid="CrtUtils_8h" local="yes">Utils/Win32/CrtUtils.h</includes>
     <incdepgraph>
-      <node id="164">
-        <label>Compiler/Analyzer/Parser.h</label>
-        <childnode refid="165" relation="include">
+      <node id="184">
+        <label>Utils/ParserBase/ParserBase.h</label>
+        <childnode refid="174" relation="include">
         </childnode>
-        <childnode refid="166" relation="include">
+        <childnode refid="185" relation="include">
         </childnode>
-        <childnode refid="171" relation="include">
-        </childnode>
-        <childnode refid="180" relation="include">
-        </childnode>
-        <childnode refid="167" relation="include">
+        <childnode refid="189" relation="include">
         </childnode>
       </node>
-      <node id="189">
+      <node id="192">
         <label>functional</label>
       </node>
-      <node id="185">
-        <label>Utils/ParserBase/TokenBase.h</label>
-        <childnode refid="167" relation="include">
+      <node id="194">
+        <label>Symbol.h</label>
+        <childnode refid="186" relation="include">
         </childnode>
       </node>
-      <node id="200">
+      <node id="205">
         <label>filesystem</label>
       </node>
-      <node id="198">
-        <label>Utils/FileSystem.h</label>
-        <childnode refid="199" relation="include">
-        </childnode>
-        <childnode refid="200" relation="include">
-        </childnode>
-        <childnode refid="167" relation="include">
+      <node id="195">
+        <label>Utils/ParserBase/ParseError.h</label>
+        <childnode refid="175" relation="include">
         </childnode>
       </node>
       <node id="186">
-        <label>Compiler/Generator/Generator.h</label>
+        <label>Utils/IndexCache.h</label>
         <childnode refid="187" relation="include">
         </childnode>
         <childnode refid="188" relation="include">
         </childnode>
-        <childnode refid="166" relation="include">
-        </childnode>
-        <childnode refid="171" relation="include">
-        </childnode>
-        <childnode refid="191" relation="include">
-        </childnode>
-      </node>
-      <node id="171">
-        <label>Utils/Exception.h</label>
-        <childnode refid="172" relation="include">
-        </childnode>
-        <childnode refid="173" relation="include">
-        </childnode>
-        <childnode refid="174" relation="include">
-        </childnode>
         <childnode refid="175" relation="include">
         </childnode>
-        <childnode refid="167" relation="include">
-        </childnode>
       </node>
-      <node id="181">
-        <label>ScannerBase.h</label>
-        <childnode refid="182" relation="include">
-        </childnode>
-        <childnode refid="185" relation="include">
-        </childnode>
-      </node>
-      <node id="178">
+      <node id="182">
         <label>cstdint</label>
       </node>
-      <node id="193">
-        <label>Utils/CommandLine/Option.h</label>
-        <childnode refid="194" relation="include">
-        </childnode>
-        <childnode refid="195" relation="include">
-        </childnode>
-        <childnode refid="167" relation="include">
-        </childnode>
-      </node>
-      <node id="195">
-        <label>Utils/Char.h</label>
-        <childnode refid="178" relation="include">
-        </childnode>
-        <childnode refid="167" relation="include">
-        </childnode>
-      </node>
-      <node id="188">
-        <label>Compiler/Common/Node.h</label>
-        <childnode refid="189" relation="include">
-        </childnode>
-        <childnode refid="170" relation="include">
-        </childnode>
-        <childnode refid="190" relation="include">
-        </childnode>
-        <childnode refid="182" relation="include">
-        </childnode>
-        <childnode refid="167" relation="include">
-        </childnode>
-      </node>
-      <node id="166">
-        <label>Compiler/Common/Tree.h</label>
-        <childnode refid="167" relation="include">
-        </childnode>
-      </node>
-      <node id="176">
-        <label>UserInterface/Context.h</label>
-        <childnode refid="167" relation="include">
-        </childnode>
-        <childnode refid="177" relation="include">
-        </childnode>
-        <childnode refid="179" relation="include">
-        </childnode>
-      </node>
-      <node id="194">
-        <label>cassert</label>
-      </node>
-      <node id="173">
-        <label>stdexcept</label>
-      </node>
-      <node id="169">
-        <label>string</label>
-      </node>
-      <node id="184">
-        <label>unordered_set</label>
-      </node>
-      <node id="196">
+      <node id="201">
         <label>Utils/CommandLine/Scanner.h</label>
-        <childnode refid="197" relation="include">
+        <childnode refid="202" relation="include">
         </childnode>
-      </node>
-      <node id="187">
-        <label>Symbol.h</label>
-        <childnode refid="182" relation="include">
-        </childnode>
-      </node>
-      <node id="172">
-        <label>exception</label>
       </node>
       <node id="199">
-        <label>fstream</label>
+        <label>cassert</label>
       </node>
       <node id="177">
-        <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="178" relation="include">
-        </childnode>
+        <label>stdexcept</label>
       </node>
-      <node id="192">
+      <node id="173">
+        <label>string</label>
+      </node>
+      <node id="188">
+        <label>unordered_set</label>
+      </node>
+      <node id="197">
         <label>Utils/CommandLine/Parser.h</label>
-        <childnode refid="183" relation="include">
-        </childnode>
-        <childnode refid="193" relation="include">
-        </childnode>
-        <childnode refid="196" relation="include">
+        <childnode refid="187" relation="include">
         </childnode>
         <childnode refid="198" relation="include">
         </childnode>
-      </node>
-      <node id="167">
-        <label>Utils/String.h</label>
-        <childnode refid="168" relation="include">
+        <childnode refid="201" relation="include">
         </childnode>
+        <childnode refid="203" relation="include">
+        </childnode>
+      </node>
+      <node id="196">
+        <label>VmEmitter.h</label>
+        <childnode refid="191" relation="include">
+        </childnode>
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="171" relation="include">
+        </childnode>
+      </node>
+      <node id="180">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="171" relation="include">
+        </childnode>
+        <childnode refid="181" relation="include">
+        </childnode>
+        <childnode refid="183" relation="include">
+        </childnode>
+      </node>
+      <node id="176">
+        <label>exception</label>
+      </node>
+      <node id="190">
+        <label>Compiler/Generator/Generator.h</label>
+        <childnode refid="191" relation="include">
+        </childnode>
+        <childnode refid="170" relation="include">
+        </childnode>
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="175" relation="include">
+        </childnode>
+        <childnode refid="195" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+      </node>
+      <node id="204">
+        <label>fstream</label>
+      </node>
+      <node id="181">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="182" relation="include">
+        </childnode>
+      </node>
+      <node id="200">
+        <label>Utils/Char.h</label>
+        <childnode refid="182" relation="include">
+        </childnode>
+        <childnode refid="171" relation="include">
+        </childnode>
+      </node>
+      <node id="168">
+        <label>Compiler/Analyzer/Parser.h</label>
         <childnode refid="169" relation="include">
         </childnode>
         <childnode refid="170" relation="include">
         </childnode>
-      </node>
-      <node id="180">
-        <label>Utils/ParserBase/ParserBase.h</label>
-        <childnode refid="170" relation="include">
-        </childnode>
-        <childnode refid="181" relation="include">
-        </childnode>
-        <childnode refid="185" relation="include">
-        </childnode>
-      </node>
-      <node id="182">
-        <label>Utils/IndexCache.h</label>
-        <childnode refid="183" relation="include">
+        <childnode refid="175" relation="include">
         </childnode>
         <childnode refid="184" relation="include">
         </childnode>
         <childnode refid="171" relation="include">
         </childnode>
       </node>
-      <node id="170">
-        <label>vector</label>
-      </node>
-      <node id="165">
-        <label>stack</label>
+      <node id="179">
+        <label>Utils/Console.h</label>
+        <childnode refid="171" relation="include">
+        </childnode>
+        <childnode refid="180" relation="include">
+        </childnode>
       </node>
       <node id="174">
-        <label>utility</label>
+        <label>vector</label>
       </node>
-      <node id="168">
-        <label>sstream</label>
-      </node>
-      <node id="163">
-        <label>iostream</label>
+      <node id="169">
+        <label>stack</label>
       </node>
       <node id="183">
-        <label>unordered_map</label>
-      </node>
-      <node id="179">
         <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="178" relation="include">
+        <childnode refid="182" relation="include">
         </childnode>
-        <childnode refid="170" relation="include">
+        <childnode refid="174" relation="include">
         </childnode>
-        <childnode refid="177" relation="include">
-        </childnode>
-      </node>
-      <node id="197">
-        <label>Utils/CommandLine/Token.h</label>
-        <childnode refid="167" relation="include">
+        <childnode refid="181" relation="include">
         </childnode>
       </node>
-      <node id="190">
-        <label>Compiler/Common/NodeUtils.h</label>
-        <childnode refid="167" relation="include">
-        </childnode>
+      <node id="178">
+        <label>utility</label>
       </node>
-      <node id="162">
-        <label>Source/Compiler/Generator/Main.cpp</label>
-        <link refid="Compiler_2Generator_2Main_8cpp"/>
-        <childnode refid="163" relation="include">
+      <node id="172">
+        <label>sstream</label>
+      </node>
+      <node id="191">
+        <label>Compiler/Common/Node.h</label>
+        <childnode refid="192" relation="include">
         </childnode>
-        <childnode refid="164" relation="include">
+        <childnode refid="174" relation="include">
+        </childnode>
+        <childnode refid="193" relation="include">
         </childnode>
         <childnode refid="186" relation="include">
         </childnode>
-        <childnode refid="192" relation="include">
-        </childnode>
-        <childnode refid="175" relation="include">
-        </childnode>
         <childnode refid="171" relation="include">
-        </childnode>
-        <childnode refid="198" relation="include">
         </childnode>
       </node>
       <node id="175">
-        <label>Utils/Console.h</label>
-        <childnode refid="167" relation="include">
-        </childnode>
+        <label>Utils/Exception.h</label>
         <childnode refid="176" relation="include">
         </childnode>
-      </node>
-      <node id="191">
-        <label>Utils/ParserBase/ParseError.h</label>
+        <childnode refid="177" relation="include">
+        </childnode>
+        <childnode refid="178" relation="include">
+        </childnode>
+        <childnode refid="179" relation="include">
+        </childnode>
         <childnode refid="171" relation="include">
         </childnode>
       </node>
+      <node id="202">
+        <label>Utils/CommandLine/Token.h</label>
+        <childnode refid="171" relation="include">
+        </childnode>
+      </node>
+      <node id="185">
+        <label>ScannerBase.h</label>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="189" relation="include">
+        </childnode>
+      </node>
+      <node id="167">
+        <label>iostream</label>
+      </node>
+      <node id="187">
+        <label>unordered_map</label>
+      </node>
+      <node id="193">
+        <label>Compiler/Common/NodeUtils.h</label>
+        <childnode refid="171" relation="include">
+        </childnode>
+      </node>
+      <node id="198">
+        <label>Utils/CommandLine/Option.h</label>
+        <childnode refid="199" relation="include">
+        </childnode>
+        <childnode refid="200" relation="include">
+        </childnode>
+        <childnode refid="171" relation="include">
+        </childnode>
+      </node>
+      <node id="203">
+        <label>Utils/FileSystem.h</label>
+        <childnode refid="204" relation="include">
+        </childnode>
+        <childnode refid="205" relation="include">
+        </childnode>
+        <childnode refid="171" relation="include">
+        </childnode>
+      </node>
+      <node id="166">
+        <label>Source/Compiler/Generator/Main.cpp</label>
+        <link refid="Compiler_2Generator_2Main_8cpp"/>
+        <childnode refid="167" relation="include">
+        </childnode>
+        <childnode refid="168" relation="include">
+        </childnode>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+        <childnode refid="179" relation="include">
+        </childnode>
+        <childnode refid="175" relation="include">
+        </childnode>
+        <childnode refid="203" relation="include">
+        </childnode>
+        <childnode refid="206" relation="include">
+        </childnode>
+      </node>
+      <node id="170">
+        <label>Compiler/Common/Tree.h</label>
+        <childnode refid="171" relation="include">
+        </childnode>
+      </node>
+      <node id="171">
+        <label>Utils/String.h</label>
+        <childnode refid="172" relation="include">
+        </childnode>
+        <childnode refid="173" relation="include">
+        </childnode>
+        <childnode refid="174" relation="include">
+        </childnode>
+      </node>
+      <node id="189">
+        <label>Utils/ParserBase/TokenBase.h</label>
+        <childnode refid="171" relation="include">
+        </childnode>
+      </node>
+      <node id="206">
+        <label>Utils/Win32/CrtUtils.h</label>
+      </node>
     </incdepgraph>
-    <innerclass refid="classHack_1_1Programs_1_1VmGeneratorApplication" prot="public">Hack::Programs::VmGeneratorApplication</innerclass>
+    <innerclass refid="classHack_1_1Programs_1_1Jack2Vm" prot="public">Hack::Programs::Jack2Vm</innerclass>
     <innernamespace refid="namespaceHack_1_1Programs">Hack::Programs</innernamespace>
       <sectiondef kind="func">
       <memberdef kind="function" id="Compiler_2Generator_2Main_8cpp_1aa06f5fbe915d0bf149dcf793acea47a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -283,7 +300,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Generator/Main.cpp" line="105" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="105" bodyend="118"/>
+        <location file="Source/Compiler/Generator/Main.cpp" line="106" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="106" bodyend="121"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -319,96 +336,99 @@
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/Console.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/Exception.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/FileSystem.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32" refid="namespaceHack_1_1Programs" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceHack_1_1Programs" kindref="compound">Hack::Programs</ref></highlight></codeline>
-<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="34" refid="namespaceHack_1_1Programs_1abf03186f32cf652a3130af11201ad075" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Programs_1abf03186f32cf652a3130af11201ad075" kindref="member">Options</ref></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="36" refid="namespaceHack_1_1Programs_1abf03186f32cf652a3130af11201ad075a885204b76dba92eaf23aca08ee5807b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OP_OUTPUT,</highlight></codeline>
-<codeline lineno="37" refid="namespaceHack_1_1Programs_1abf03186f32cf652a3130af11201ad075aaccd1ba868a2f5d31c1788dc25318016" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OP_MAX,</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40" refid="namespaceHack_1_1Programs_1a13ebb77912ec0bfaffec05c6825a7f9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1CommandLine_1_1Parser" kindref="compound" tooltip="Simple command line parser ">CmdLine</ref><sp/>=<sp/><ref refid="classHack_1_1CommandLine_1_1Parser" kindref="compound" tooltip="Simple command line parser ">CommandLine::Parser</ref>;</highlight></codeline>
-<codeline lineno="41" refid="namespaceHack_1_1Programs_1ae8e8d238d0cc49784639419312e6ac31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structHack_1_1CommandLine_1_1Switch" kindref="compound" tooltip="Represents a command line switch ">CmdSwitch</ref><sp/>=<sp/><ref refid="structHack_1_1CommandLine_1_1Switch" kindref="compound" tooltip="Represents a command line switch ">CommandLine::Switch</ref>;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43" refid="namespaceHack_1_1Programs_1abaf8ca10fec17b26f9d1fb59c924ef58" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/><ref refid="structHack_1_1CommandLine_1_1Switch" kindref="compound" tooltip="Represents a command line switch ">CmdSwitch</ref><sp/>Switches[OP_MAX]<sp/>=<sp/>{</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OP_OUTPUT,</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;o&apos;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;output&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Specify<sp/>an<sp/>output<sp/>file&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54" refid="classHack_1_1Programs_1_1VmGeneratorApplication" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classHack_1_1Programs_1_1VmGeneratorApplication" kindref="compound">VmGeneratorApplication</ref></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1a95e191d8af73e79ac197701ac6a6c9a6" kindref="member">Path</ref><sp/><sp/><sp/>_input;</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>_output;</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="61" refid="classHack_1_1Programs_1_1VmGeneratorApplication_1a7871748e4ae624afa7e499c4a59fe5c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Programs_1_1VmGeneratorApplication_1a7871748e4ae624afa7e499c4a59fe5c8" kindref="member">VmGeneratorApplication</ref>()<sp/>:</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_input(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66" refid="classHack_1_1Programs_1_1VmGeneratorApplication_1a416a282d953f159c301c3614ec855482" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Programs_1_1VmGeneratorApplication_1a416a282d953f159c301c3614ec855482" kindref="member">parse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv)</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1CommandLine_1_1Parser" kindref="compound" tooltip="Simple command line parser ">CmdLine</ref><sp/>parser;</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(parser.<ref refid="classHack_1_1CommandLine_1_1Parser_1a304e3e2f4af07df0fb6c9cde37040e27" kindref="member" tooltip="Parses the command line. Any switches that are needed must be initialized via initializeSwitches. Arguments that have no switch are placed into an array and accessed via arguments ">parse</ref>(argc,<sp/>argv,<sp/>Switches,<sp/>OP_MAX)<sp/>&lt;<sp/>0)</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_output<sp/>=<sp/>parser.<ref refid="classHack_1_1CommandLine_1_1Parser_1a9da3aa8c56bad342c3a7c30eb98d9c17" kindref="member">string</ref>(OP_OUTPUT);</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1a02a62f0f81901a275e5e91f45798b2de" kindref="member">StringArray</ref>&amp;<sp/>arguments<sp/>=<sp/>parser.<ref refid="classHack_1_1CommandLine_1_1Parser_1ac7bc3f3c9e8b89b4a39b8dd9a36b713f" kindref="member" tooltip="Returns the list of arguments that were not handled with switches. ">arguments</ref>();</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(arguments.empty())</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>usage;</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parser.<ref refid="classHack_1_1CommandLine_1_1Parser_1afd63d6cb40243606fe5d6c944754eb5b" kindref="member">usage</ref>(usage);</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>InputException(usage,<sp/></highlight><highlight class="stringliteral">&quot;Missing<sp/>file<sp/>input&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_input<sp/>=<sp/>filesystem::absolute(arguments[0]);</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87" refid="classHack_1_1Programs_1_1VmGeneratorApplication_1a5b92f6570aa68ee0ac9ef75c0eb65196" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Programs_1_1VmGeneratorApplication_1a5b92f6570aa68ee0ac9ef75c0eb65196" kindref="member">go</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="88"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser" kindref="compound">Compiler::Analyzer::Parser</ref><sp/>parser;</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parser.<ref refid="classHack_1_1ParserBase_1a4668ec9b913931ce518de6d7f92fb4e0" kindref="member">parse</ref>(_input.string());</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator" kindref="compound">Compiler::CodeGenerator::Generator</ref><sp/>generator;</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>generator.<ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1a56124ee10cf34c6d9fa38b9be1ebeeb7" kindref="member">compile</ref>(parser.<ref refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a19917dd91094e5a227a90d6cfaadb150" kindref="member">getTree</ref>().<ref refid="classHack_1_1Compiler_1_1Tree_1a58e4ebbe1e9af83ed2d9ceb8843f90e4" kindref="member">getRoot</ref>());</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!_output.empty())</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>generator.<ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1a698f9cac52d1b90feb9fc06b77ce649b" kindref="member">write</ref>(_output);</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>generator.<ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1a698f9cac52d1b90feb9fc06b77ce649b" kindref="member">write</ref>(std::cout);</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="103"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Programs</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv)</highlight></codeline>
-<codeline lineno="106"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Programs_1_1VmGeneratorApplication" kindref="compound">Hack::Programs::VmGeneratorApplication</ref><sp/>app;</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(app.<ref refid="classHack_1_1Programs_1_1VmGeneratorApplication_1a416a282d953f159c301c3614ec855482" kindref="member">parse</ref>(argc,<sp/>argv))</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>app.<ref refid="classHack_1_1Programs_1_1VmGeneratorApplication_1a5b92f6570aa68ee0ac9ef75c0eb65196" kindref="member">go</ref>();</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(std::exception&amp;<sp/>ex)</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Console_1aa1c8c889b2c89af6dc65a0973380f59c" kindref="member">Hack::Console::writeError</ref>(ex.what());</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
-<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/Win32/CrtUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceHack_1_1Programs" kindref="compound">Hack::Programs</ref></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35" refid="namespaceHack_1_1Programs_1ac88e6fa9cbddb241e5b038d61be6ae78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Programs_1ac88e6fa9cbddb241e5b038d61be6ae78" kindref="member">Jack2VmOptions</ref></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26ac45c95b5ada136a111376bbf6dc33465" kindref="member">OP_OUTPUT</ref>,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26aba0214c85564537166862690304333d3" kindref="member">OP_MAX</ref>,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="namespaceHack_1_1Programs_1a13ebb77912ec0bfaffec05c6825a7f9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1CommandLine_1_1Parser" kindref="compound" tooltip="Simple command line parser ">CmdLine</ref><sp/>=<sp/><ref refid="classHack_1_1CommandLine_1_1Parser" kindref="compound" tooltip="Simple command line parser ">CommandLine::Parser</ref>;</highlight></codeline>
+<codeline lineno="42" refid="namespaceHack_1_1Programs_1ae8e8d238d0cc49784639419312e6ac31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structHack_1_1CommandLine_1_1Switch" kindref="compound" tooltip="Represents a command line switch ">CmdSwitch</ref><sp/>=<sp/><ref refid="structHack_1_1CommandLine_1_1Switch" kindref="compound" tooltip="Represents a command line switch ">CommandLine::Switch</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/><ref refid="structHack_1_1CommandLine_1_1Switch" kindref="compound" tooltip="Represents a command line switch ">CmdSwitch</ref><sp/><ref refid="namespaceHack_1_1Programs_1addef1058a4b0a225cf643d1c5eca457b" kindref="member">Switches</ref>[<ref refid="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26aba0214c85564537166862690304333d3" kindref="member">OP_MAX</ref>]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26ac45c95b5ada136a111376bbf6dc33465" kindref="member">OP_OUTPUT</ref>,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;o&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;output&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Specify<sp/>an<sp/>output<sp/>file&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classHack_1_1Programs_1_1Jack2Vm" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classHack_1_1Programs_1_1Jack2Vm" kindref="compound">Jack2Vm</ref></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1a95e191d8af73e79ac197701ac6a6c9a6" kindref="member">Path</ref><sp/><sp/><sp/>_input;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>_output;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="62" refid="classHack_1_1Programs_1_1Jack2Vm_1a1fd66e38d3c6be4537eb4746df158475" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Programs_1_1Jack2Vm_1a1fd66e38d3c6be4537eb4746df158475" kindref="member">Jack2Vm</ref>()<sp/>:</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_input(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="classHack_1_1Programs_1_1Jack2Vm_1a52b0c35c9ebac3894375a544dd49137d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Programs_1_1Jack2Vm_1a52b0c35c9ebac3894375a544dd49137d" kindref="member">parse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1CommandLine_1_1Parser" kindref="compound" tooltip="Simple command line parser ">CmdLine</ref><sp/>parser;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(parser.<ref refid="classHack_1_1CommandLine_1_1Parser_1a304e3e2f4af07df0fb6c9cde37040e27" kindref="member" tooltip="Parses the command line. Any switches that are needed must be initialized via initializeSwitches. Arguments that have no switch are placed into an array and accessed via arguments ">parse</ref>(argc,<sp/>argv,<sp/><ref refid="namespaceHack_1_1Programs_1addef1058a4b0a225cf643d1c5eca457b" kindref="member">Switches</ref>,<sp/><ref refid="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26aba0214c85564537166862690304333d3" kindref="member">OP_MAX</ref>)<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_output<sp/>=<sp/>parser.<ref refid="classHack_1_1CommandLine_1_1Parser_1a9da3aa8c56bad342c3a7c30eb98d9c17" kindref="member">string</ref>(<ref refid="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26ac45c95b5ada136a111376bbf6dc33465" kindref="member">OP_OUTPUT</ref>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1a02a62f0f81901a275e5e91f45798b2de" kindref="member">StringArray</ref>&amp;<sp/>arguments<sp/>=<sp/>parser.<ref refid="classHack_1_1CommandLine_1_1Parser_1ac7bc3f3c9e8b89b4a39b8dd9a36b713f" kindref="member" tooltip="Returns the list of arguments that were not handled with switches. ">arguments</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(arguments.empty())</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>usage;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parser.<ref refid="classHack_1_1CommandLine_1_1Parser_1afd63d6cb40243606fe5d6c944754eb5b" kindref="member">usage</ref>(usage);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>InputException(usage,<sp/></highlight><highlight class="stringliteral">&quot;Missing<sp/>file<sp/>input&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_input<sp/>=<sp/>filesystem::absolute(arguments[0]);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="classHack_1_1Programs_1_1Jack2Vm_1ae0148bb382e7eda28b5cd8855ab158ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Programs_1_1Jack2Vm_1ae0148bb382e7eda28b5cd8855ab158ff" kindref="member">go</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="89"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser" kindref="compound">Compiler::Analyzer::Parser</ref><sp/>parser;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parser.<ref refid="classHack_1_1ParserBase_1a4668ec9b913931ce518de6d7f92fb4e0" kindref="member">parse</ref>(_input.string());</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator" kindref="compound">Compiler::CodeGenerator::Generator</ref><sp/>generator;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>generator.<ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1a682fe2bf83b13010fdf9f38527c4d552" kindref="member">compileToVm</ref>(parser.<ref refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a19917dd91094e5a227a90d6cfaadb150" kindref="member">getTree</ref>().<ref refid="classHack_1_1Compiler_1_1Tree_1a58e4ebbe1e9af83ed2d9ceb8843f90e4" kindref="member">getRoot</ref>());</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!_output.empty())</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>generator.<ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1a698f9cac52d1b90feb9fc06b77ce649b" kindref="member">write</ref>(_output);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>generator.<ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1a698f9cac52d1b90feb9fc06b77ce649b" kindref="member">write</ref>(std::cout);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Programs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1a8ab6304471ef372d768f7c50db9432b1" kindref="member">Hack::CrtTestMemory</ref>();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Programs_1_1Jack2Vm" kindref="compound">Hack::Programs::Jack2Vm</ref><sp/>app;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(app.<ref refid="classHack_1_1Programs_1_1Jack2Vm_1a52b0c35c9ebac3894375a544dd49137d" kindref="member">parse</ref>(argc,<sp/>argv))</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>app.<ref refid="classHack_1_1Programs_1_1Jack2Vm_1ae0148bb382e7eda28b5cd8855ab158ff" kindref="member">go</ref>();</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(std::exception&amp;<sp/>ex)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Console_1aa1c8c889b2c89af6dc65a0973380f59c" kindref="member">Hack::Console::writeError</ref>(ex.what());</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1acedcdb10c14663034876ff1f2d01c86c" kindref="member">Hack::CrtDump</ref>();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="Source/Compiler/Generator/Main.cpp"/>
   </compounddef>

@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classHack_1_1Programs_1_1Vm2Asm" kind="class" language="C++" prot="public">
+    <compoundname>Hack::Programs::Vm2Asm</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classHack_1_1Programs_1_1Vm2Asm_1a2cbd99bda65609bd3dcfc3d5e29973d5" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Hack::Programs::Vm2Asm::_input</definition>
+        <argsstring></argsstring>
+        <name>_input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Main.cpp" line="54" column="1" bodyfile="Source/VirtualMachine/Main.cpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHack_1_1Programs_1_1Vm2Asm_1a336048364d6cc199c4d56162a7e48f03" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Hack::Programs::Vm2Asm::_output</definition>
+        <argsstring></argsstring>
+        <name>_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Main.cpp" line="55" column="1" bodyfile="Source/VirtualMachine/Main.cpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classHack_1_1Programs_1_1Vm2Asm_1ab465971e8ba4affb7b19f8db4054b157" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Programs::Vm2Asm::Vm2Asm</definition>
+        <argsstring>()=default</argsstring>
+        <name>Vm2Asm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Main.cpp" line="58" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Programs_1_1Vm2Asm_1a843d179362df22afbb561d86342a65dd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Hack::Programs::Vm2Asm::go</definition>
+        <argsstring>() const</argsstring>
+        <name>go</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Main.cpp" line="82" column="1" bodyfile="Source/VirtualMachine/Main.cpp" bodystart="82" bodyend="100"/>
+        <references refid="classHack_1_1ParserBase_1a4668ec9b913931ce518de6d7f92fb4e0" compoundref="ParserBase_8cpp" startline="76" endline="89">Hack::ParserBase::parse</references>
+        <references refid="classHack_1_1ParserBase_1a4560ce70fee098d7508b053b409c1d19" compoundref="ParserBase_8cpp" startline="107" endline="114">Hack::ParserBase::write</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Programs_1_1Vm2Asm_1ac8dd1a8a4cbe582bddb59ae6953adbf2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Programs::Vm2Asm::parse</definition>
+        <argsstring>(const int argc, char **argv)</argsstring>
+        <name>parse</name>
+        <param>
+          <type>const int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Main.cpp" line="60" column="1" bodyfile="Source/VirtualMachine/Main.cpp" bodystart="60" bodyend="80"/>
+        <references refid="classHack_1_1CommandLine_1_1Parser_1aaaa3cc28de66e1e9b2f64cd1e51f2fe1" compoundref="Utils_2CommandLine_2Parser_8cpp" startline="178" endline="181">Hack::CommandLine::Parser::setHelpText</references>
+        <references refid="classHack_1_1CommandLine_1_1Parser_1a304e3e2f4af07df0fb6c9cde37040e27" compoundref="Utils_2CommandLine_2Parser_8cpp" startline="52" endline="176">Hack::CommandLine::Parser::parse</references>
+        <references refid="namespaceHack_1_1Programs_1addef1058a4b0a225cf643d1c5eca457b" compoundref="Assembler_2Main_8cpp" startline="39">Hack::Programs::Switches</references>
+        <references refid="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26aba0214c85564537166862690304333d3" compoundref="Assembler_2Main_8cpp" startline="36">Hack::Programs::OP_MAX</references>
+        <references refid="classHack_1_1CommandLine_1_1Parser_1a9da3aa8c56bad342c3a7c30eb98d9c17" compoundref="Utils_2CommandLine_2Parser_8cpp" startline="245" endline="255">Hack::CommandLine::Parser::string</references>
+        <references refid="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26ac45c95b5ada136a111376bbf6dc33465" compoundref="Assembler_2Main_8cpp" startline="35">Hack::Programs::OP_OUTPUT</references>
+        <references refid="classHack_1_1CommandLine_1_1Parser_1ac7bc3f3c9e8b89b4a39b8dd9a36b713f" compoundref="Utils_2CommandLine_2Parser_8h" startline="88" endline="91">Hack::CommandLine::Parser::arguments</references>
+        <references refid="classHack_1_1CommandLine_1_1Parser_1afd63d6cb40243606fe5d6c944754eb5b" compoundref="Utils_2CommandLine_2Parser_8cpp" startline="257" endline="262">Hack::CommandLine::Parser::usage</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/VirtualMachine/Main.cpp" line="52" column="1" bodyfile="Source/VirtualMachine/Main.cpp" bodystart="51" bodyend="101"/>
+    <listofallmembers>
+      <member refid="classHack_1_1Programs_1_1Vm2Asm_1a2cbd99bda65609bd3dcfc3d5e29973d5" prot="private" virt="non-virtual"><scope>Hack::Programs::Vm2Asm</scope><name>_input</name></member>
+      <member refid="classHack_1_1Programs_1_1Vm2Asm_1a336048364d6cc199c4d56162a7e48f03" prot="private" virt="non-virtual"><scope>Hack::Programs::Vm2Asm</scope><name>_output</name></member>
+      <member refid="classHack_1_1Programs_1_1Vm2Asm_1a843d179362df22afbb561d86342a65dd" prot="public" virt="non-virtual"><scope>Hack::Programs::Vm2Asm</scope><name>go</name></member>
+      <member refid="classHack_1_1Programs_1_1Vm2Asm_1ac8dd1a8a4cbe582bddb59ae6953adbf2" prot="public" virt="non-virtual"><scope>Hack::Programs::Vm2Asm</scope><name>parse</name></member>
+      <member refid="classHack_1_1Programs_1_1Vm2Asm_1ab465971e8ba4affb7b19f8db4054b157" prot="public" virt="non-virtual"><scope>Hack::Programs::Vm2Asm</scope><name>Vm2Asm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

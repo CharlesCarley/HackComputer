@@ -116,6 +116,8 @@ namespace Hack
 
         static void toBinaryString(String& dest, uint8_t v);
 
+        static void toHexString(String& dest, uint8_t v);
+
         static void toString(String& dest, int16_t v);
 
         static void toString(String& dest, int32_t v);
@@ -151,6 +153,8 @@ namespace Hack
         static String toString(int64_t v);
 
         static String toString(uint16_t v);
+
+        static String toHexString(uint8_t v);
 
         static String toHexString(uint16_t v);
 

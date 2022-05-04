@@ -20,11 +20,12 @@
 -------------------------------------------------------------------------------
 */
 #pragma once
-#include "Symbol.h"
 #include "Compiler/Common/Node.h"
 #include "Compiler/Common/Tree.h"
+#include "Symbol.h"
 #include "Utils/Exception.h"
 #include "Utils/ParserBase/ParseError.h"
+#include "VmEmitter.h"
 
 namespace Hack
 {
@@ -39,8 +40,8 @@ namespace Hack
         {
             class Parser;
         }
-    } // namespace Compiler
-}     // namespace Hack
+    }  // namespace Compiler
+}  // namespace Hack
 
 namespace Hack::Compiler::CodeGenerator
 {
@@ -50,6 +51,8 @@ namespace Hack::Compiler::CodeGenerator
     class Generator
     {
     private:
+        mutable OutputStringStream _countBuffer;
+
         SymbolTable*   _globals;
         SymbolTable*   _locals;
         VmEmitter*     _emitter;
@@ -108,7 +111,9 @@ namespace Hack::Compiler::CodeGenerator
         void parseImpl(const Node* root) const;
 
         template <typename... Args>
-        [[noreturn]] void compileError(const Node& node, const String& what, Args&&...args) const
+        [[noreturn]] void compileError(const Node&   node,
+                                       const String& what,
+                                       Args&&... args) const
         {
             OutputStringStream oss;
             oss << what;
@@ -124,6 +129,6 @@ namespace Hack::Compiler::CodeGenerator
 
         void write(OStream& stream) const;
 
-        void compile(const Node* tree);
+        void compileToVm(const Node* tree);
     };
-} // namespace Hack::Compiler::CodeGenerator
+}  // namespace Hack::Compiler::CodeGenerator

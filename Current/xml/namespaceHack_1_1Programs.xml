@@ -2,19 +2,23 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="namespaceHack_1_1Programs" kind="namespace" language="C++">
     <compoundname>Hack::Programs</compoundname>
-    <innerclass refid="classHack_1_1Programs_1_1VmGeneratorApplication" prot="public">Hack::Programs::VmGeneratorApplication</innerclass>
+    <innerclass refid="classHack_1_1Programs_1_1Asm2Mc" prot="public">Hack::Programs::Asm2Mc</innerclass>
+    <innerclass refid="classHack_1_1Programs_1_1FileCompiler" prot="public">Hack::Programs::FileCompiler</innerclass>
+    <innerclass refid="classHack_1_1Programs_1_1Jack2Vm" prot="public">Hack::Programs::Jack2Vm</innerclass>
+    <innerclass refid="classHack_1_1Programs_1_1Jack2Xml" prot="public">Hack::Programs::Jack2Xml</innerclass>
+    <innerclass refid="classHack_1_1Programs_1_1Vm2Asm" prot="public">Hack::Programs::Vm2Asm</innerclass>
       <sectiondef kind="enum">
-      <memberdef kind="enum" id="namespaceHack_1_1Programs_1abf03186f32cf652a3130af11201ad075" prot="public" static="no" strong="no">
+      <memberdef kind="enum" id="namespaceHack_1_1Programs_1ac17b8c1b8094fb1100c4a5097bb2b15a" prot="public" static="no" strong="no">
         <type></type>
-        <name>Options</name>
-        <enumvalue id="namespaceHack_1_1Programs_1abf03186f32cf652a3130af11201ad075a885204b76dba92eaf23aca08ee5807b8" prot="public">
+        <name>Asm2McOptions</name>
+        <enumvalue id="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26ac45c95b5ada136a111376bbf6dc33465" prot="public">
           <name>OP_OUTPUT</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="namespaceHack_1_1Programs_1abf03186f32cf652a3130af11201ad075aaccd1ba868a2f5d31c1788dc25318016" prot="public">
+        <enumvalue id="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26aba0214c85564537166862690304333d3" prot="public">
           <name>OP_MAX</name>
           <briefdescription>
           </briefdescription>
@@ -27,10 +31,236 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Generator/Main.cpp" line="35" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="34" bodyend="38"/>
+        <location file="Source/Assembler/Main.cpp" line="34" column="1" bodyfile="Source/Assembler/Main.cpp" bodystart="33" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceHack_1_1Programs_1a6b059a0132d158f313345ebadbbf9aa0" prot="public" static="no" strong="no">
+        <type></type>
+        <name>CompilerOptions</name>
+        <enumvalue id="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26ac45c95b5ada136a111376bbf6dc33465" prot="public">
+          <name>OP_OUTPUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Programs_1a6b059a0132d158f313345ebadbbf9aa0aa3e38b518e68f59f9239ecc774c3f969" prot="public">
+          <name>OP_OUT_FMT_ARG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Programs_1a6b059a0132d158f313345ebadbbf9aa0a047f60a3454009e27fa1731097dfe336" prot="public">
+          <name>OP_IN_FMT_ARG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26aba0214c85564537166862690304333d3" prot="public">
+          <name>OP_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Compiler/Main.cpp" line="56" column="1" bodyfile="Source/Compiler/Compiler/Main.cpp" bodystart="55" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceHack_1_1Programs_1a4d4882d34bd3b0b7a7597b475ffb2390" prot="public" static="no" strong="no">
+        <type></type>
+        <name>InputFormat</name>
+        <enumvalue id="namespaceHack_1_1Programs_1a4d4882d34bd3b0b7a7597b475ffb2390a65f8f763ca5ed705f31d9e9340ba4e7e" prot="public">
+          <name>IN_FMT_JACK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Programs_1a4d4882d34bd3b0b7a7597b475ffb2390a0d1878fda24ef775572c3940cc1f219b" prot="public">
+          <name>IN_FMT_VM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Programs_1a4d4882d34bd3b0b7a7597b475ffb2390a9c9cc7d1aa576bee878b4b20da35f61f" prot="public">
+          <name>IN_FMT_ASM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Compiler/Main.cpp" line="39" column="1" bodyfile="Source/Compiler/Compiler/Main.cpp" bodystart="38" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceHack_1_1Programs_1ac88e6fa9cbddb241e5b038d61be6ae78" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Jack2VmOptions</name>
+        <enumvalue id="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26ac45c95b5ada136a111376bbf6dc33465" prot="public">
+          <name>OP_OUTPUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26aba0214c85564537166862690304333d3" prot="public">
+          <name>OP_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Generator/Main.cpp" line="36" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="35" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceHack_1_1Programs_1ab2ef2913b19b77944b67c68f613d4735" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Jack2XmlOptions</name>
+        <enumvalue id="namespaceHack_1_1Programs_1ab2ef2913b19b77944b67c68f613d4735a7ddc2f0d1c6b4181313581b737e37825" prot="public">
+          <name>OP_FMT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Programs_1ab2ef2913b19b77944b67c68f613d4735a545886736861bbb7323377d0d060091d" prot="public">
+          <name>OP_DIR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26ac45c95b5ada136a111376bbf6dc33465" prot="public">
+          <name>OP_OUTPUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26aba0214c85564537166862690304333d3" prot="public">
+          <name>OP_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Main.cpp" line="37" column="1" bodyfile="Source/Compiler/Analyzer/Main.cpp" bodystart="36" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceHack_1_1Programs_1a24193db1c6ced0c8150d1446bb5e0314" prot="public" static="no" strong="no">
+        <type></type>
+        <name>OutputFormat</name>
+        <enumvalue id="namespaceHack_1_1Programs_1a24193db1c6ced0c8150d1446bb5e0314a2be6c9eb8142d85d052ac5d71dbb8dfe" prot="public">
+          <name>OUT_FMT_VM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Programs_1a24193db1c6ced0c8150d1446bb5e0314abfd32d95666910c2b7ed1a9620a3e96c" prot="public">
+          <name>OUT_FMT_XML</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Programs_1a24193db1c6ced0c8150d1446bb5e0314ad07aebddb72072879da0672890916889" prot="public">
+          <name>OUT_FMT_DOT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Programs_1a24193db1c6ced0c8150d1446bb5e0314a34748d4082250cd65d6916a42b005fb9" prot="public">
+          <name>OUT_FMT_ASM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Programs_1a24193db1c6ced0c8150d1446bb5e0314a1f548c10005d5fa22ab7d406d3109bbe" prot="public">
+          <name>OUT_FMT_MC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Programs_1a24193db1c6ced0c8150d1446bb5e0314a05f7e13aa2e75edf875460581acb589d" prot="public">
+          <name>OUT_FMT_DBG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Compiler/Main.cpp" line="46" column="1" bodyfile="Source/Compiler/Compiler/Main.cpp" bodystart="45" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Vm2AsmOptions</name>
+        <enumvalue id="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26ac45c95b5ada136a111376bbf6dc33465" prot="public">
+          <name>OP_OUTPUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26aba0214c85564537166862690304333d3" prot="public">
+          <name>OP_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Main.cpp" line="34" column="1" bodyfile="Source/VirtualMachine/Main.cpp" bodystart="33" bodyend="37"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceHack_1_1Programs_1a7e1112978bb5fdfd3ae121763b13e7b0" prot="public" static="no">
+        <type><ref refid="classHack_1_1Assembler_1_1Parser" kindref="compound">Assembler::Parser</ref></type>
+        <definition>using Hack::Programs::AsmParser = typedef Assembler::Parser</definition>
+        <argsstring></argsstring>
+        <name>AsmParser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Compiler/Main.cpp" line="94" column="1" bodyfile="Source/Compiler/Compiler/Main.cpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="typedef" id="namespaceHack_1_1Programs_1a13ebb77912ec0bfaffec05c6825a7f9b" prot="public" static="no">
         <type><ref refid="classHack_1_1CommandLine_1_1Parser" kindref="compound">CommandLine::Parser</ref></type>
         <definition>using Hack::Programs::CmdLine = typedef CommandLine::Parser</definition>
@@ -42,7 +272,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Generator/Main.cpp" line="40" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="40" bodyend="-1"/>
+        <location file="Source/Compiler/Generator/Main.cpp" line="41" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceHack_1_1Programs_1ae8e8d238d0cc49784639419312e6ac31" prot="public" static="no">
         <type><ref refid="structHack_1_1CommandLine_1_1Switch" kindref="compound">CommandLine::Switch</ref></type>
@@ -55,18 +285,44 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Generator/Main.cpp" line="41" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="41" bodyend="-1"/>
+        <location file="Source/Compiler/Generator/Main.cpp" line="42" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceHack_1_1Programs_1a97b2fb3803c8da400739086d8dd76223" prot="public" static="no">
+        <type><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator" kindref="compound">Compiler::CodeGenerator::Generator</ref></type>
+        <definition>using Hack::Programs::CodeGen = typedef Compiler::CodeGenerator::Generator</definition>
+        <argsstring></argsstring>
+        <name>CodeGen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Compiler/Main.cpp" line="96" column="1" bodyfile="Source/Compiler/Compiler/Main.cpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceHack_1_1Programs_1ae7da8b523cd93ce51ff85a28673e4aeb" prot="public" static="no">
+        <type><ref refid="classHack_1_1VirtualMachine_1_1Parser" kindref="compound">VirtualMachine::Parser</ref></type>
+        <definition>using Hack::Programs::VmParser = typedef VirtualMachine::Parser</definition>
+        <argsstring></argsstring>
+        <name>VmParser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Compiler/Main.cpp" line="95" column="1" bodyfile="Source/Compiler/Compiler/Main.cpp" bodystart="95" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="namespaceHack_1_1Programs_1abaf8ca10fec17b26f9d1fb59c924ef58" prot="public" static="no" mutable="no">
-        <type>constexpr <ref refid="namespaceHack_1_1Programs_1ae8e8d238d0cc49784639419312e6ac31" kindref="member">CmdSwitch</ref></type>
-        <definition>constexpr CmdSwitch Hack::Programs::Switches[OP_MAX]</definition>
+      <memberdef kind="variable" id="namespaceHack_1_1Programs_1addef1058a4b0a225cf643d1c5eca457b" prot="public" static="no" mutable="no">
+        <type>constexpr <ref refid="structHack_1_1CommandLine_1_1Switch" kindref="compound">CommandLine::Switch</ref></type>
+        <definition>constexpr CommandLine::Switch Hack::Programs::Switches</definition>
         <argsstring>[OP_MAX]</argsstring>
         <name>Switches</name>
         <initializer>= {
         {
-            <ref refid="namespaceHack_1_1Programs_1abf03186f32cf652a3130af11201ad075a885204b76dba92eaf23aca08ee5807b8" kindref="member">OP_OUTPUT</ref>,
+            <ref refid="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26ac45c95b5ada136a111376bbf6dc33465" kindref="member">OP_OUTPUT</ref>,
             &apos;o&apos;,
             &quot;output&quot;,
             &quot;Specify an output file&quot;,
@@ -80,13 +336,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Compiler/Generator/Main.cpp" line="43" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="43" bodyend="-1"/>
+        <location file="Source/Assembler/Main.cpp" line="39" column="1" bodyfile="Source/Assembler/Main.cpp" bodystart="39" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Compiler/Generator/Main.cpp" line="33" column="1"/>
+    <location file="Source/Assembler/Main.cpp" line="32" column="1"/>
   </compounddef>
 </doxygen>

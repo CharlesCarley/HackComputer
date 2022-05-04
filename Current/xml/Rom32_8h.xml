@@ -6,148 +6,180 @@
     <includedby refid="Computer_8h" local="yes">Source/Chips/Computer.h</includedby>
     <includedby refid="Rom32_8cpp" local="yes">Source/Chips/Rom32.cpp</includedby>
     <incdepgraph>
-      <node id="2162">
+      <node id="2220">
         <label>cstdint</label>
       </node>
-      <node id="2153">
+      <node id="2211">
         <label>Chips/BitUtils.h</label>
-        <childnode refid="2154" relation="include">
+        <childnode refid="2212" relation="include">
         </childnode>
-        <childnode refid="2155" relation="include">
-        </childnode>
-      </node>
-      <node id="2160">
-        <label>UserInterface/Context.h</label>
-        <childnode refid="2156" relation="include">
-        </childnode>
-        <childnode refid="2161" relation="include">
-        </childnode>
-        <childnode refid="2163" relation="include">
+        <childnode refid="2213" relation="include">
         </childnode>
       </node>
-      <node id="2158">
+      <node id="2216">
         <label>string</label>
       </node>
-      <node id="2161">
+      <node id="2218">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="2214" relation="include">
+        </childnode>
+        <childnode refid="2219" relation="include">
+        </childnode>
+        <childnode refid="2221" relation="include">
+        </childnode>
+      </node>
+      <node id="2219">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="2162" relation="include">
+        <childnode refid="2220" relation="include">
         </childnode>
       </node>
-      <node id="2156">
-        <label>String.h</label>
-        <childnode refid="2157" relation="include">
+      <node id="2213">
+        <label>Utils/Console.h</label>
+        <childnode refid="2214" relation="include">
         </childnode>
-        <childnode refid="2158" relation="include">
-        </childnode>
-        <childnode refid="2159" relation="include">
+        <childnode refid="2218" relation="include">
         </childnode>
       </node>
-      <node id="2154">
+      <node id="2212">
         <label>bitset</label>
       </node>
-      <node id="2151">
-        <label>Source/Chips/Rom32.h</label>
-        <link refid="Rom32_8h"/>
-        <childnode refid="2152" relation="include">
-        </childnode>
-      </node>
-      <node id="2159">
+      <node id="2217">
         <label>vector</label>
       </node>
-      <node id="2157">
+      <node id="2221">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="2220" relation="include">
+        </childnode>
+        <childnode refid="2217" relation="include">
+        </childnode>
+        <childnode refid="2219" relation="include">
+        </childnode>
+      </node>
+      <node id="2215">
         <label>sstream</label>
       </node>
-      <node id="2163">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="2162" relation="include">
-        </childnode>
-        <childnode refid="2159" relation="include">
-        </childnode>
-        <childnode refid="2161" relation="include">
+      <node id="2209">
+        <label>Source/Chips/Rom32.h</label>
+        <link refid="Rom32_8h"/>
+        <childnode refid="2210" relation="include">
         </childnode>
       </node>
-      <node id="2152">
+      <node id="2214">
+        <label>String.h</label>
+        <childnode refid="2215" relation="include">
+        </childnode>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2217" relation="include">
+        </childnode>
+      </node>
+      <node id="2210">
         <label>Chips/Chip.h</label>
-        <childnode refid="2153" relation="include">
+        <childnode refid="2211" relation="include">
         </childnode>
-        <childnode refid="2155" relation="include">
-        </childnode>
-      </node>
-      <node id="2155">
-        <label>Utils/Console.h</label>
-        <childnode refid="2156" relation="include">
-        </childnode>
-        <childnode refid="2160" relation="include">
+        <childnode refid="2213" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2168">
-        <label>Source/Computer/Application.cpp</label>
-      </node>
-      <node id="2166">
-        <label>Source/Bindings/Bindings.cpp</label>
-      </node>
-      <node id="2175">
-        <label>Source/Chips/Rom32.cpp</label>
-      </node>
-      <node id="2173">
-        <label>Source/Computer/DebugRuntime.h</label>
-        <childnode refid="2168" relation="include">
-        </childnode>
-        <childnode refid="2170" relation="include">
-        </childnode>
-      </node>
-      <node id="2169">
-        <label>Source/Computer/CommandRuntime.cpp</label>
-      </node>
-      <node id="2172">
-        <label>Source/Computer/CommandRuntime.h</label>
-        <childnode refid="2168" relation="include">
-        </childnode>
-        <childnode refid="2169" relation="include">
-        </childnode>
-      </node>
-      <node id="2164">
-        <label>Source/Chips/Rom32.h</label>
-        <link refid="Rom32_8h"/>
-        <childnode refid="2165" relation="include">
-        </childnode>
-        <childnode refid="2175" relation="include">
-        </childnode>
-      </node>
-      <node id="2174">
-        <label>Source/Computer/RuntimeSDL.h</label>
-      </node>
-      <node id="2171">
-        <label>Source/Computer/RuntimeInterface.h</label>
-        <childnode refid="2172" relation="include">
-        </childnode>
-        <childnode refid="2173" relation="include">
-        </childnode>
-        <childnode refid="2174" relation="include">
-        </childnode>
-      </node>
-      <node id="2165">
-        <label>Source/Chips/Computer.h</label>
-        <childnode refid="2166" relation="include">
-        </childnode>
-        <childnode refid="2167" relation="include">
-        </childnode>
-        <childnode refid="2168" relation="include">
-        </childnode>
-        <childnode refid="2169" relation="include">
-        </childnode>
-        <childnode refid="2170" relation="include">
-        </childnode>
-        <childnode refid="2171" relation="include">
-        </childnode>
-      </node>
-      <node id="2167">
+      <node id="2225">
         <label>Source/Chips/Computer.cpp</label>
       </node>
-      <node id="2170">
-        <label>Source/Computer/DebugRuntime.cpp</label>
+      <node id="2230">
+        <label>Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.h</label>
+        <childnode refid="2229" relation="include">
+        </childnode>
+        <childnode refid="2231" relation="include">
+        </childnode>
+      </node>
+      <node id="2233">
+        <label>Source/Computer/RuntimeInterface.h</label>
+        <childnode refid="2234" relation="include">
+        </childnode>
+        <childnode refid="2235" relation="include">
+        </childnode>
+        <childnode refid="2236" relation="include">
+        </childnode>
+      </node>
+      <node id="2227">
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</label>
+        <childnode refid="2226" relation="include">
+        </childnode>
+        <childnode refid="2228" relation="include">
+        </childnode>
+      </node>
+      <node id="2231">
+        <label>Source/Computer/ConsoleRuntime.cpp</label>
+      </node>
+      <node id="2236">
+        <label>Source/Computer/WindowedRuntime.h</label>
+      </node>
+      <node id="2234">
+        <label>Source/Computer/AssemblyDebugger.h</label>
+        <childnode refid="2226" relation="include">
+        </childnode>
+        <childnode refid="2227" relation="include">
+        </childnode>
+        <childnode refid="2228" relation="include">
+        </childnode>
+        <childnode refid="2232" relation="include">
+        </childnode>
+      </node>
+      <node id="2223">
+        <label>Source/Chips/Computer.h</label>
+        <childnode refid="2224" relation="include">
+        </childnode>
+        <childnode refid="2225" relation="include">
+        </childnode>
+        <childnode refid="2226" relation="include">
+        </childnode>
+        <childnode refid="2227" relation="include">
+        </childnode>
+        <childnode refid="2228" relation="include">
+        </childnode>
+        <childnode refid="2229" relation="include">
+        </childnode>
+        <childnode refid="2230" relation="include">
+        </childnode>
+        <childnode refid="2231" relation="include">
+        </childnode>
+        <childnode refid="2232" relation="include">
+        </childnode>
+        <childnode refid="2233" relation="include">
+        </childnode>
+      </node>
+      <node id="2232">
+        <label>Source/Computer/Executable.cpp</label>
+      </node>
+      <node id="2228">
+        <label>Source/Computer/AssemblyDebugger.cpp</label>
+      </node>
+      <node id="2235">
+        <label>Source/Computer/ConsoleRuntime.h</label>
+        <childnode refid="2231" relation="include">
+        </childnode>
+        <childnode refid="2232" relation="include">
+        </childnode>
+      </node>
+      <node id="2224">
+        <label>Source/Bindings/Bindings.cpp</label>
+      </node>
+      <node id="2229">
+        <label>Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.cpp</label>
+      </node>
+      <node id="2222">
+        <label>Source/Chips/Rom32.h</label>
+        <link refid="Rom32_8h"/>
+        <childnode refid="2223" relation="include">
+        </childnode>
+        <childnode refid="2237" relation="include">
+        </childnode>
+      </node>
+      <node id="2226">
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</label>
+      </node>
+      <node id="2237">
+        <label>Source/Chips/Rom32.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1Chips_1_1Rom32" prot="public">Hack::Chips::Rom32</innerclass>

@@ -28,6 +28,7 @@
 #include <unistd.h>
 #include "Utils/UserInterface/PlatformUnix.h"
 #endif
+#include <iomanip>
 #include "Utils/UserInterface/Context.h"
 
 namespace Hack::Ui
@@ -95,6 +96,12 @@ namespace Hack::Ui
         _colorMap[CP_YELLOW]       = 0xFFFF00;
     }
 
+    void Context::color(const uint8_t& fg, const uint8_t& bg)
+    {
+        foreground(fg);
+        background(bg);
+    }
+
     uint8_t Context::createColor(const Color& col)
     {
         if (_cbSize + 1 < 256)
@@ -139,13 +146,13 @@ namespace Hack::Ui
 
         _size     = {newSize.x, newSize.y};
         _pitch    = _size.x;
-        _capacity = (size_t)_pitch * _size.y;
+        _capacity = (size_t)newSize.x * (size_t)_size.y;
 
         if (_capacity == 0)
             return;
 
-        _frameBuffer = new char[_capacity + 1];
-        _colorBuffer = new ColorBuffer[_capacity + 1];
+        _frameBuffer = new char[_capacity + 2];
+        _colorBuffer = new ColorBuffer[_capacity + 2];
 
         clear();
         std::setvbuf(stdout, nullptr, _IOFBF, _capacity);
@@ -153,16 +160,15 @@ namespace Hack::Ui
 
     void Context::insertCharacter(const char ch, int x, int y) const
     {
-        x = Clamp(x, 0, _size.x - 1);
-        y = Clamp(y, 0, _size.y - 1);
-
-        const size_t loc = (size_t)y * (size_t)_pitch + (size_t)x;
-
-        if (loc < _capacity)
+        if (x < _size.x && y < _size.y)
         {
-            _frameBuffer[loc]      = ch;
-            _colorBuffer[loc].b[0] = (uint8_t)_color.x;
-            _colorBuffer[loc].b[1] = (uint8_t)_color.y;
+            const size_t loc = (size_t)y * (size_t)_pitch + (size_t)x;
+            if (loc < _capacity)
+            {
+                _frameBuffer[loc]      = ch;
+                _colorBuffer[loc].b[0] = (uint8_t)_color.x;
+                _colorBuffer[loc].b[1] = (uint8_t)_color.y;
+            }
         }
     }
 
@@ -183,12 +189,29 @@ namespace Hack::Ui
                          int           y) const
     {
         for (char ch : str)
-            insertCharacter(ch, x++, y);
+        {
+            if (ch == '\t')
+                x += 4;
+            else if (ch == '\n' || ch == '\r')
+                y++;
+            else
+                insertCharacter(ch, x++, y);
+        }
     }
 
     void Context::string(const String& str, const Point& pt) const
     {
         string(str, pt.x, pt.y);
+    }
+
+    void Context::integer(const uint32_t& val, int x, int y, int width) const
+    {
+        OutputStringStream ss;
+        if (width != -1)
+            ss << std::setw(width) << std::right << val;
+        else
+            ss << val;
+        string(ss.str(), x, y);
     }
 
     void Context::line(int x,
@@ -292,7 +315,6 @@ namespace Hack::Ui
         Platform::sleep(ms);
     }
 
-
     int Context::poll(const bool block)
     {
         const int result = _platform->poll(block);
@@ -312,6 +334,14 @@ namespace Hack::Ui
         {
             switch (ch)
             {
+            case CS_NONE:
+                _platform->put(' ');
+                break;
+            case CS_RECT_CS:
+            case CS_RECT_CL:
+            case CS_RECT_CR:
+            case CS_RECT_CB:
+            case CS_RECT_CT:
             case CS_RECT_HZ:
             case CS_RECT_VT:
             case CS_RECT_LT:
@@ -322,6 +352,7 @@ namespace Hack::Ui
                 _platform->put("\x1b(B");
                 break;
             default:
+                _platform->put('?');
                 break;
             }
         }
@@ -329,6 +360,16 @@ namespace Hack::Ui
         {
             switch (ch)
             {
+            case CS_NONE:
+                _platform->put('\0');
+                break;
+            case CS_RECT_CS:
+            case CS_RECT_CL:
+            case CS_RECT_CR:
+            case CS_RECT_CB:
+            case CS_RECT_CT:
+                _platform->put(' ');
+                break;
             case CS_RECT_HZ:
                 _platform->put('-');
                 break;
@@ -342,6 +383,7 @@ namespace Hack::Ui
                 _platform->put('+');
                 break;
             default:
+                _platform->put('?');
                 break;
             }
         }
@@ -352,7 +394,7 @@ namespace Hack::Ui
         if (_capacity > 0)
         {
             memset(_frameBuffer, ch, _capacity);
-            _frameBuffer[_capacity] = 0;
+            _frameBuffer[_capacity + 1] = 0;
 
             if (_color.x == CP_TRANSPARENT && _color.y == CP_TRANSPARENT)
                 memset(_colorBuffer, 0, _capacity * sizeof(ColorBuffer));
@@ -386,31 +428,32 @@ namespace Hack::Ui
 
             for (size_t x = 0; x < w; ++x)
             {
-                const size_t l = stride + x;
+                const size_t loc = stride + x;
 
-                const bool hasColor = _colorBuffer[l].s != 0;
+                const bool hasColor = _colorBuffer[loc].s != 0;
                 if (hasColor)
                 {
-                    uint8_t col = _colorBuffer[l].b[0];
+                    uint8_t col = _colorBuffer[loc].b[0];
                     if (col != CP_TRANSPARENT && col < _cbSize)
                         _platform->color(col, _colorMap[col], false);
 
-                    col = _colorBuffer[l].b[1];
+                    col = _colorBuffer[loc].b[1];
                     if (col != CP_TRANSPARENT && col < _cbSize)
                         _platform->color(col, _colorMap[col], true);
                 }
 
-                const char ch = _frameBuffer[l];
+                const char ch = _frameBuffer[loc];
                 if (ch > CS_SEQ_START && ch < CS_START)
                     putExtended(ch);
-                else if (ch < CS_END)
+                else if (ch > CS_START && ch < CS_END)
                     _platform->put(ch);
+                else
+                    _platform->put(' ');
 
                 if (hasColor)
                     _platform->resetColor();
             }
         }
-
         _platform->flush();
     }
-} // namespace Hack::Ui
+}  // namespace Hack::Ui

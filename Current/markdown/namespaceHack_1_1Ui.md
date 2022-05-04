@@ -163,29 +163,34 @@
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_RECT_HZ</span>
 </span>
 </div>
-<a id="cs_rect_lcs"></a>
+<a id="cs_rect_cl"></a>
 <div class="paragraph">
-<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_RECT_LCS</span>
+<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_RECT_CL</span>
 </span>
 </div>
-<a id="cs_rect_rcs"></a>
+<a id="cs_rect_cr"></a>
 <div class="paragraph">
-<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_RECT_RCS</span>
+<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_RECT_CR</span>
 </span>
 </div>
-<a id="cs_rect_bcs"></a>
+<a id="cs_rect_cb"></a>
 <div class="paragraph">
-<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_RECT_BCS</span>
+<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_RECT_CB</span>
 </span>
 </div>
-<a id="cs_rect_tcs"></a>
+<a id="cs_rect_ct"></a>
 <div class="paragraph">
-<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_RECT_TCS</span>
+<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_RECT_CT</span>
 </span>
 </div>
 <a id="cs_rect_vt"></a>
 <div class="paragraph">
 <span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_RECT_VT</span>
+</span>
+</div>
+<a id="cs_seq_end"></a>
+<div class="paragraph">
+<span class="paragraph"><img src="../images/enum.svg"/><span class="inline-text">CS_SEQ_END</span>
 </span>
 </div>
 <a id="cs_start"></a>
@@ -206,11 +211,12 @@
 <a id="cs_rect_lb"></a>
 <a id="cs_rect_cs"></a>
 <a id="cs_rect_hz"></a>
-<a id="cs_rect_lcs"></a>
-<a id="cs_rect_rcs"></a>
-<a id="cs_rect_bcs"></a>
-<a id="cs_rect_tcs"></a>
+<a id="cs_rect_cl"></a>
+<a id="cs_rect_cr"></a>
+<a id="cs_rect_cb"></a>
+<a id="cs_rect_ct"></a>
 <a id="cs_rect_vt"></a>
+<a id="cs_seq_end"></a>
 <a id="cs_start"></a>
 <a id="cs_end"></a>
 <a id="defined-in"></a>
@@ -343,7 +349,7 @@
 <a id="cp_max"></a>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/UserInterface/Common.h#L59" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Common.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/UserInterface/Common.h#L60" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Common.h</span>
 </a>
 </span>
 <br/>
@@ -369,7 +375,7 @@
 <a id="or_vertical"></a>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/UserInterface/Common.h#L83" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Common.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/UserInterface/Common.h#L84" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Common.h</span>
 </a>
 </span>
 <br/>
@@ -665,7 +671,7 @@
 <a id="pr_esc"></a>
 <a id="defined-in"></a>
 <h4>Defined in</h4>
-<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/UserInterface/Common.h#L89" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Common.h</span>
+<span class="icon-list-item"><a href="https://github.com/CharlesCarley/HackComputer/blob/master/Source/Utils/UserInterface/Common.h#L90" class="icon-list-item"><img src="../images/file.svg" class="icon-list-item"/><span class="icon-list-item">Common.h</span>
 </a>
 </span>
 <br/>

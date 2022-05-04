@@ -11,229 +11,231 @@
     <includes refid="Exception_8h" local="yes">Utils/Exception.h</includes>
     <includes refid="FileSystem_8h" local="yes">Utils/FileSystem.h</includes>
     <incdepgraph>
-      <node id="2591">
-        <label>Compiler/Analyzer/Parser.h</label>
-        <childnode refid="2592" relation="include">
+      <node id="2660">
+        <label>Utils/ParserBase/ParserBase.h</label>
+        <childnode refid="2636" relation="include">
         </childnode>
-        <childnode refid="2588" relation="include">
+        <childnode refid="2661" relation="include">
         </childnode>
-        <childnode refid="2572" relation="include">
-        </childnode>
-        <childnode refid="2593" relation="include">
-        </childnode>
-        <childnode refid="2577" relation="include">
+        <childnode refid="2662" relation="include">
         </childnode>
       </node>
-      <node id="2597">
-        <label>Compiler/Generator/VmEmitter.h</label>
-        <childnode refid="2585" relation="include">
-        </childnode>
-        <childnode refid="2568" relation="include">
-        </childnode>
-        <childnode refid="2577" relation="include">
-        </childnode>
-      </node>
-      <node id="2586">
+      <node id="2635">
         <label>functional</label>
       </node>
-      <node id="2595">
-        <label>Utils/ParserBase/TokenBase.h</label>
-        <childnode refid="2577" relation="include">
+      <node id="2654">
+        <label>Symbol.h</label>
+        <childnode refid="2641" relation="include">
         </childnode>
       </node>
-      <node id="2599">
+      <node id="2665">
         <label>filesystem</label>
       </node>
-      <node id="2598">
-        <label>Utils/FileSystem.h</label>
-        <childnode refid="2590" relation="include">
-        </childnode>
-        <childnode refid="2599" relation="include">
-        </childnode>
-        <childnode refid="2577" relation="include">
+      <node id="2655">
+        <label>Utils/ParserBase/ParseError.h</label>
+        <childnode refid="2644" relation="include">
         </childnode>
       </node>
-      <node id="2567">
-        <label>Compiler/Generator/Generator.h</label>
-        <childnode refid="2568" relation="include">
+      <node id="2641">
+        <label>Utils/IndexCache.h</label>
+        <childnode refid="2642" relation="include">
         </childnode>
-        <childnode refid="2585" relation="include">
+        <childnode refid="2643" relation="include">
         </childnode>
-        <childnode refid="2588" relation="include">
-        </childnode>
-        <childnode refid="2572" relation="include">
-        </childnode>
-        <childnode refid="2589" relation="include">
+        <childnode refid="2644" relation="include">
         </childnode>
       </node>
-      <node id="2572">
-        <label>Utils/Exception.h</label>
-        <childnode refid="2573" relation="include">
-        </childnode>
-        <childnode refid="2574" relation="include">
-        </childnode>
-        <childnode refid="2575" relation="include">
-        </childnode>
-        <childnode refid="2576" relation="include">
-        </childnode>
-        <childnode refid="2577" relation="include">
-        </childnode>
-      </node>
-      <node id="2594">
-        <label>ScannerBase.h</label>
-        <childnode refid="2569" relation="include">
-        </childnode>
-        <childnode refid="2595" relation="include">
-        </childnode>
-      </node>
-      <node id="2583">
+      <node id="2651">
         <label>cstdint</label>
       </node>
-      <node id="2585">
-        <label>Compiler/Common/Node.h</label>
-        <childnode refid="2586" relation="include">
-        </childnode>
-        <childnode refid="2580" relation="include">
-        </childnode>
-        <childnode refid="2587" relation="include">
-        </childnode>
-        <childnode refid="2569" relation="include">
-        </childnode>
-        <childnode refid="2577" relation="include">
-        </childnode>
-      </node>
-      <node id="2588">
-        <label>Compiler/Common/Tree.h</label>
-        <childnode refid="2577" relation="include">
-        </childnode>
-      </node>
-      <node id="2581">
-        <label>UserInterface/Context.h</label>
-        <childnode refid="2577" relation="include">
-        </childnode>
-        <childnode refid="2582" relation="include">
-        </childnode>
-        <childnode refid="2584" relation="include">
-        </childnode>
-      </node>
-      <node id="2574">
+      <node id="2646">
         <label>stdexcept</label>
       </node>
-      <node id="2579">
+      <node id="2640">
         <label>string</label>
       </node>
-      <node id="2566">
-        <label>Source/Compiler/Generator/Generator.cpp</label>
-        <link refid="Generator_8cpp"/>
-        <childnode refid="2567" relation="include">
-        </childnode>
-        <childnode refid="2590" relation="include">
-        </childnode>
-        <childnode refid="2591" relation="include">
-        </childnode>
-        <childnode refid="2585" relation="include">
-        </childnode>
-        <childnode refid="2596" relation="include">
-        </childnode>
-        <childnode refid="2597" relation="include">
-        </childnode>
-        <childnode refid="2572" relation="include">
-        </childnode>
-        <childnode refid="2598" relation="include">
-        </childnode>
-      </node>
-      <node id="2571">
+      <node id="2643">
         <label>unordered_set</label>
       </node>
-      <node id="2568">
-        <label>Symbol.h</label>
-        <childnode refid="2569" relation="include">
+      <node id="2656">
+        <label>VmEmitter.h</label>
+        <childnode refid="2634" relation="include">
+        </childnode>
+        <childnode refid="2654" relation="include">
+        </childnode>
+        <childnode refid="2638" relation="include">
         </childnode>
       </node>
-      <node id="2573">
+      <node id="2649">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="2638" relation="include">
+        </childnode>
+        <childnode refid="2650" relation="include">
+        </childnode>
+        <childnode refid="2652" relation="include">
+        </childnode>
+      </node>
+      <node id="2645">
         <label>exception</label>
       </node>
-      <node id="2590">
+      <node id="2633">
+        <label>Compiler/Generator/Generator.h</label>
+        <childnode refid="2634" relation="include">
+        </childnode>
+        <childnode refid="2653" relation="include">
+        </childnode>
+        <childnode refid="2654" relation="include">
+        </childnode>
+        <childnode refid="2644" relation="include">
+        </childnode>
+        <childnode refid="2655" relation="include">
+        </childnode>
+        <childnode refid="2656" relation="include">
+        </childnode>
+      </node>
+      <node id="2657">
         <label>fstream</label>
       </node>
-      <node id="2582">
+      <node id="2650">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="2583" relation="include">
+        <childnode refid="2651" relation="include">
         </childnode>
       </node>
-      <node id="2577">
-        <label>String.h</label>
-        <childnode refid="2578" relation="include">
+      <node id="2663">
+        <label>Compiler/Generator/SymbolTable.h</label>
+        <childnode refid="2654" relation="include">
         </childnode>
-        <childnode refid="2579" relation="include">
-        </childnode>
-        <childnode refid="2580" relation="include">
+        <childnode refid="2641" relation="include">
         </childnode>
       </node>
-      <node id="2593">
-        <label>Utils/ParserBase/ParserBase.h</label>
-        <childnode refid="2580" relation="include">
+      <node id="2658">
+        <label>Compiler/Analyzer/Parser.h</label>
+        <childnode refid="2659" relation="include">
         </childnode>
-        <childnode refid="2594" relation="include">
+        <childnode refid="2653" relation="include">
         </childnode>
-        <childnode refid="2595" relation="include">
+        <childnode refid="2644" relation="include">
         </childnode>
-      </node>
-      <node id="2569">
-        <label>Utils/IndexCache.h</label>
-        <childnode refid="2570" relation="include">
+        <childnode refid="2660" relation="include">
         </childnode>
-        <childnode refid="2571" relation="include">
-        </childnode>
-        <childnode refid="2572" relation="include">
+        <childnode refid="2638" relation="include">
         </childnode>
       </node>
-      <node id="2592">
+      <node id="2648">
+        <label>Utils/Console.h</label>
+        <childnode refid="2638" relation="include">
+        </childnode>
+        <childnode refid="2649" relation="include">
+        </childnode>
+      </node>
+      <node id="2659">
         <label>stack</label>
       </node>
-      <node id="2580">
+      <node id="2636">
         <label>vector</label>
       </node>
-      <node id="2575">
+      <node id="2652">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="2651" relation="include">
+        </childnode>
+        <childnode refid="2636" relation="include">
+        </childnode>
+        <childnode refid="2650" relation="include">
+        </childnode>
+      </node>
+      <node id="2647">
         <label>utility</label>
       </node>
-      <node id="2578">
+      <node id="2639">
         <label>sstream</label>
       </node>
-      <node id="2570">
+      <node id="2634">
+        <label>Compiler/Common/Node.h</label>
+        <childnode refid="2635" relation="include">
+        </childnode>
+        <childnode refid="2636" relation="include">
+        </childnode>
+        <childnode refid="2637" relation="include">
+        </childnode>
+        <childnode refid="2641" relation="include">
+        </childnode>
+        <childnode refid="2638" relation="include">
+        </childnode>
+      </node>
+      <node id="2644">
+        <label>Utils/Exception.h</label>
+        <childnode refid="2645" relation="include">
+        </childnode>
+        <childnode refid="2646" relation="include">
+        </childnode>
+        <childnode refid="2647" relation="include">
+        </childnode>
+        <childnode refid="2648" relation="include">
+        </childnode>
+        <childnode refid="2638" relation="include">
+        </childnode>
+      </node>
+      <node id="2661">
+        <label>ScannerBase.h</label>
+        <childnode refid="2641" relation="include">
+        </childnode>
+        <childnode refid="2662" relation="include">
+        </childnode>
+      </node>
+      <node id="2642">
         <label>unordered_map</label>
       </node>
-      <node id="2584">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="2583" relation="include">
-        </childnode>
-        <childnode refid="2580" relation="include">
-        </childnode>
-        <childnode refid="2582" relation="include">
-        </childnode>
-      </node>
-      <node id="2587">
+      <node id="2637">
         <label>Compiler/Common/NodeUtils.h</label>
-        <childnode refid="2577" relation="include">
+        <childnode refid="2638" relation="include">
         </childnode>
       </node>
-      <node id="2576">
-        <label>Utils/Console.h</label>
-        <childnode refid="2577" relation="include">
+      <node id="2664">
+        <label>Utils/FileSystem.h</label>
+        <childnode refid="2657" relation="include">
         </childnode>
-        <childnode refid="2581" relation="include">
+        <childnode refid="2665" relation="include">
         </childnode>
-      </node>
-      <node id="2589">
-        <label>Utils/ParserBase/ParseError.h</label>
-        <childnode refid="2572" relation="include">
+        <childnode refid="2638" relation="include">
         </childnode>
       </node>
-      <node id="2596">
-        <label>Compiler/Generator/SymbolTable.h</label>
-        <childnode refid="2568" relation="include">
+      <node id="2653">
+        <label>Compiler/Common/Tree.h</label>
+        <childnode refid="2638" relation="include">
         </childnode>
-        <childnode refid="2569" relation="include">
+      </node>
+      <node id="2632">
+        <label>Source/Compiler/Generator/Generator.cpp</label>
+        <link refid="Generator_8cpp"/>
+        <childnode refid="2633" relation="include">
+        </childnode>
+        <childnode refid="2657" relation="include">
+        </childnode>
+        <childnode refid="2658" relation="include">
+        </childnode>
+        <childnode refid="2634" relation="include">
+        </childnode>
+        <childnode refid="2663" relation="include">
+        </childnode>
+        <childnode refid="2656" relation="include">
+        </childnode>
+        <childnode refid="2644" relation="include">
+        </childnode>
+        <childnode refid="2664" relation="include">
+        </childnode>
+      </node>
+      <node id="2638">
+        <label>Utils/String.h</label>
+        <childnode refid="2639" relation="include">
+        </childnode>
+        <childnode refid="2640" relation="include">
+        </childnode>
+        <childnode refid="2636" relation="include">
+        </childnode>
+      </node>
+      <node id="2662">
+        <label>Utils/ParserBase/TokenBase.h</label>
+        <childnode refid="2638" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -461,8 +463,8 @@
 <codeline lineno="249"><highlight class="normal"></highlight></codeline>
 <codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Node&amp;<sp/>arrayExpr<sp/>=<sp/>statement.rule(3,<sp/><ref refid="namespaceHack_1_1Compiler_1a661f20cd8ee85e44fdd5e021df7c42b6a46ca516f5cbcd46c3029be456b9f500d" kindref="member">RuleExpression</ref>);</highlight></codeline>
 <codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buildExpression(arrayExpr);</highlight></codeline>
-<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_emitter-&gt;<ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a30ba6c2cb9ef29b543cf2775f545585e" kindref="member">symbolAdd</ref>();<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>base<sp/>address<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_emitter-&gt;<ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1aee9961cdadf9ad79486cd97bff824e5e" kindref="member">popPointer</ref>(1);<sp/></highlight><highlight class="comment">//<sp/>move<sp/>the<sp/>base<sp/>address<sp/>into<sp/>the<sp/>current<sp/>pointer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_emitter-&gt;<ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a30ba6c2cb9ef29b543cf2775f545585e" kindref="member">symbolAdd</ref>();<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>base<sp/>address<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_emitter-&gt;<ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1aee9961cdadf9ad79486cd97bff824e5e" kindref="member">popPointer</ref>(1);<sp/><sp/></highlight><highlight class="comment">//<sp/>move<sp/>the<sp/>base<sp/>address<sp/>into<sp/>the<sp/>current<sp/>pointer</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="254"><highlight class="normal"></highlight></codeline>
 <codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Node&amp;<sp/>assign<sp/>=<sp/>statement.rule(6,<sp/><ref refid="namespaceHack_1_1Compiler_1a661f20cd8ee85e44fdd5e021df7c42b6a46ca516f5cbcd46c3029be456b9f500d" kindref="member">RuleExpression</ref>);</highlight></codeline>
 <codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buildExpression(assign);</highlight></codeline>
@@ -754,8 +756,8 @@
 <codeline lineno="619"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="620"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Node&amp;<sp/>method<sp/>=<sp/>*child;</highlight></codeline>
 <codeline lineno="621"><highlight class="normal"></highlight></codeline>
-<codeline lineno="622"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Node&amp;<sp/>methodSpec<sp/><sp/><sp/><sp/>=<sp/>method.rule(0).child(0);</highlight></codeline>
-<codeline lineno="623"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Node&amp;<sp/>returnType<sp/><sp/><sp/><sp/>=<sp/>method.rule(1).child(0);</highlight></codeline>
+<codeline lineno="622"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>const<sp/>Node&amp;<sp/>methodSpec<sp/><sp/><sp/><sp/>=<sp/>method.rule(0).child(0);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="623"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>const<sp/>Node&amp;<sp/>returnType<sp/><sp/><sp/><sp/>=<sp/>method.rule(1).child(0);</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="624"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Node&amp;<sp/>methodName<sp/><sp/><sp/><sp/>=<sp/>method.rule(2);</highlight></codeline>
 <codeline lineno="625"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Node&amp;<sp/>parameterList<sp/>=<sp/>method.rule(4);</highlight></codeline>
 <codeline lineno="626"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Node&amp;<sp/>body<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>method.rule(6).rule(1);</highlight></codeline>
@@ -828,7 +830,7 @@
 <codeline lineno="699"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_emitter-&gt;<ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a1a2ae5d924f71804513cd5488a9a86bd" kindref="member">finalize</ref>();</highlight></codeline>
 <codeline lineno="700"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="701"><highlight class="normal"></highlight></codeline>
-<codeline lineno="702" refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1a56124ee10cf34c6d9fa38b9be1ebeeb7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1a56124ee10cf34c6d9fa38b9be1ebeeb7" kindref="member">Generator::compile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1Node" kindref="compound">Node</ref>*<sp/>tree)</highlight></codeline>
+<codeline lineno="702" refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1a682fe2bf83b13010fdf9f38527c4d552" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1a682fe2bf83b13010fdf9f38527c4d552" kindref="member">Generator::compileToVm</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1Node" kindref="compound">Node</ref>*<sp/>tree)</highlight></codeline>
 <codeline lineno="703"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="704"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!tree)</highlight></codeline>
 <codeline lineno="705"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>InvalidPointer();</highlight></codeline>
@@ -858,7 +860,7 @@
 <codeline lineno="729"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/>buffer<sp/>=<sp/>_emitter-&gt;<ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a437cd42d4486dc6d1072f58b0517a187" kindref="member">stream</ref>().str();</highlight></codeline>
 <codeline lineno="730"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stream.write(buffer.c_str(),<sp/>buffer.size());</highlight></codeline>
 <codeline lineno="731"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="732"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler::CodeGenerator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="732"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler::CodeGenerator</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="Source/Compiler/Generator/Generator.cpp"/>
   </compounddef>

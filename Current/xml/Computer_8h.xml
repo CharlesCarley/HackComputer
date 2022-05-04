@@ -7,212 +7,248 @@
     <includes refid="Rom32_8h" local="yes">Chips/Rom32.h</includes>
     <includedby refid="Bindings_8cpp" local="yes">Source/Bindings/Bindings.cpp</includedby>
     <includedby refid="Computer_8cpp" local="yes">Source/Chips/Computer.cpp</includedby>
-    <includedby refid="Application_8cpp" local="yes">Source/Computer/Application.cpp</includedby>
-    <includedby refid="CommandRuntime_8cpp" local="yes">Source/Computer/CommandRuntime.cpp</includedby>
-    <includedby refid="DebugRuntime_8cpp" local="yes">Source/Computer/DebugRuntime.cpp</includedby>
+    <includedby refid="AssemblyDebuggerPrivate_8cpp" local="yes">Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</includedby>
+    <includedby refid="AssemblyDebuggerPrivate_8h" local="yes">Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</includedby>
+    <includedby refid="AssemblyDebugger_8cpp" local="yes">Source/Computer/AssemblyDebugger.cpp</includedby>
+    <includedby refid="ConsoleRuntimePrivate_8cpp" local="yes">Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.cpp</includedby>
+    <includedby refid="ConsoleRuntimePrivate_8h" local="yes">Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.h</includedby>
+    <includedby refid="ConsoleRuntime_8cpp" local="yes">Source/Computer/ConsoleRuntime.cpp</includedby>
+    <includedby refid="Executable_8cpp" local="yes">Source/Computer/Executable.cpp</includedby>
     <includedby refid="RuntimeInterface_8h" local="yes">Source/Computer/RuntimeInterface.h</includedby>
     <incdepgraph>
-      <node id="1156">
-        <label>cstdint</label>
-      </node>
-      <node id="1159">
-        <label>Chips/Register.h</label>
-        <childnode refid="1146" relation="include">
-        </childnode>
-      </node>
-      <node id="1147">
-        <label>Chips/BitUtils.h</label>
-        <childnode refid="1148" relation="include">
-        </childnode>
-        <childnode refid="1149" relation="include">
-        </childnode>
-      </node>
-      <node id="1165">
-        <label>Chips/Screen.h</label>
-        <childnode refid="1162" relation="include">
-        </childnode>
-      </node>
-      <node id="1154">
-        <label>UserInterface/Context.h</label>
-        <childnode refid="1150" relation="include">
-        </childnode>
-        <childnode refid="1155" relation="include">
-        </childnode>
-        <childnode refid="1157" relation="include">
-        </childnode>
-      </node>
-      <node id="1152">
-        <label>string</label>
-      </node>
-      <node id="1155">
-        <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="1156" relation="include">
-        </childnode>
-      </node>
-      <node id="1150">
-        <label>String.h</label>
-        <childnode refid="1151" relation="include">
-        </childnode>
-        <childnode refid="1152" relation="include">
-        </childnode>
-        <childnode refid="1153" relation="include">
-        </childnode>
-      </node>
-      <node id="1158">
-        <label>Chips/ProgramCounter.h</label>
-        <childnode refid="1146" relation="include">
-        </childnode>
-      </node>
-      <node id="1163">
-        <label>Chips/IMemorySegment.h</label>
-        <childnode refid="1164" relation="include">
-        </childnode>
-        <childnode refid="1146" relation="include">
-        </childnode>
-      </node>
-      <node id="1145">
-        <label>ALU.h</label>
-        <childnode refid="1146" relation="include">
-        </childnode>
-      </node>
-      <node id="1148">
-        <label>bitset</label>
-      </node>
-      <node id="1144">
-        <label>Chips/CPU.h</label>
-        <childnode refid="1145" relation="include">
-        </childnode>
-        <childnode refid="1146" relation="include">
-        </childnode>
-        <childnode refid="1158" relation="include">
-        </childnode>
-        <childnode refid="1159" relation="include">
-        </childnode>
-      </node>
-      <node id="1166">
-        <label>Chips/Rom32.h</label>
-        <childnode refid="1146" relation="include">
-        </childnode>
-      </node>
-      <node id="1162">
-        <label>Chips/DefaultMemorySegment.h</label>
-        <childnode refid="1163" relation="include">
-        </childnode>
-      </node>
-      <node id="1153">
-        <label>vector</label>
-      </node>
-      <node id="1161">
-        <label>Chips/Ram16k.h</label>
-        <childnode refid="1162" relation="include">
-        </childnode>
-      </node>
-      <node id="1151">
-        <label>sstream</label>
-      </node>
-      <node id="1157">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="1156" relation="include">
-        </childnode>
-        <childnode refid="1153" relation="include">
-        </childnode>
-        <childnode refid="1155" relation="include">
-        </childnode>
-      </node>
-      <node id="1146">
-        <label>Chips/Chip.h</label>
-        <childnode refid="1147" relation="include">
-        </childnode>
-        <childnode refid="1149" relation="include">
-        </childnode>
-      </node>
-      <node id="1143">
-        <label>Source/Chips/Computer.h</label>
-        <link refid="Computer_8h"/>
-        <childnode refid="1144" relation="include">
-        </childnode>
-        <childnode refid="1160" relation="include">
-        </childnode>
-        <childnode refid="1166" relation="include">
-        </childnode>
-      </node>
-      <node id="1160">
+      <node id="1186">
         <label>Chips/Memory.h</label>
-        <childnode refid="1146" relation="include">
+        <childnode refid="1172" relation="include">
         </childnode>
-        <childnode refid="1161" relation="include">
+        <childnode refid="1187" relation="include">
         </childnode>
-        <childnode refid="1165" relation="include">
-        </childnode>
-      </node>
-      <node id="1149">
-        <label>Utils/Console.h</label>
-        <childnode refid="1150" relation="include">
-        </childnode>
-        <childnode refid="1154" relation="include">
+        <childnode refid="1191" relation="include">
         </childnode>
       </node>
-      <node id="1164">
-        <label>cstring</label>
-      </node>
-    </incdepgraph>
-    <invincdepgraph>
-      <node id="1170">
-        <label>Source/Computer/Application.cpp</label>
-      </node>
-      <node id="1168">
-        <label>Source/Bindings/Bindings.cpp</label>
-      </node>
-      <node id="1175">
-        <label>Source/Computer/DebugRuntime.h</label>
-        <childnode refid="1170" relation="include">
+      <node id="1188">
+        <label>Chips/DefaultMemorySegment.h</label>
+        <childnode refid="1189" relation="include">
         </childnode>
+      </node>
+      <node id="1184">
+        <label>Chips/ProgramCounter.h</label>
         <childnode refid="1172" relation="include">
         </childnode>
       </node>
-      <node id="1171">
-        <label>Source/Computer/CommandRuntime.cpp</label>
-      </node>
-      <node id="1174">
-        <label>Source/Computer/CommandRuntime.h</label>
-        <childnode refid="1170" relation="include">
-        </childnode>
-        <childnode refid="1171" relation="include">
-        </childnode>
-      </node>
-      <node id="1176">
-        <label>Source/Computer/RuntimeSDL.h</label>
+      <node id="1182">
+        <label>cstdint</label>
       </node>
       <node id="1173">
-        <label>Source/Computer/RuntimeInterface.h</label>
+        <label>Chips/BitUtils.h</label>
         <childnode refid="1174" relation="include">
         </childnode>
         <childnode refid="1175" relation="include">
         </childnode>
-        <childnode refid="1176" relation="include">
-        </childnode>
       </node>
-      <node id="1167">
-        <label>Source/Chips/Computer.h</label>
-        <link refid="Computer_8h"/>
-        <childnode refid="1168" relation="include">
-        </childnode>
-        <childnode refid="1169" relation="include">
-        </childnode>
-        <childnode refid="1170" relation="include">
-        </childnode>
+      <node id="1178">
+        <label>string</label>
+      </node>
+      <node id="1170">
+        <label>Chips/CPU.h</label>
         <childnode refid="1171" relation="include">
         </childnode>
         <childnode refid="1172" relation="include">
         </childnode>
-        <childnode refid="1173" relation="include">
+        <childnode refid="1184" relation="include">
+        </childnode>
+        <childnode refid="1185" relation="include">
+        </childnode>
+      </node>
+      <node id="1180">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="1176" relation="include">
+        </childnode>
+        <childnode refid="1181" relation="include">
+        </childnode>
+        <childnode refid="1183" relation="include">
+        </childnode>
+      </node>
+      <node id="1189">
+        <label>Chips/IMemorySegment.h</label>
+        <childnode refid="1190" relation="include">
+        </childnode>
+        <childnode refid="1172" relation="include">
+        </childnode>
+      </node>
+      <node id="1181">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="1182" relation="include">
         </childnode>
       </node>
       <node id="1169">
-        <label>Source/Chips/Computer.cpp</label>
+        <label>Source/Chips/Computer.h</label>
+        <link refid="Computer_8h"/>
+        <childnode refid="1170" relation="include">
+        </childnode>
+        <childnode refid="1186" relation="include">
+        </childnode>
+        <childnode refid="1192" relation="include">
+        </childnode>
+      </node>
+      <node id="1191">
+        <label>Chips/Screen.h</label>
+        <childnode refid="1188" relation="include">
+        </childnode>
+      </node>
+      <node id="1175">
+        <label>Utils/Console.h</label>
+        <childnode refid="1176" relation="include">
+        </childnode>
+        <childnode refid="1180" relation="include">
+        </childnode>
+      </node>
+      <node id="1174">
+        <label>bitset</label>
+      </node>
+      <node id="1185">
+        <label>Chips/Register.h</label>
+        <childnode refid="1172" relation="include">
+        </childnode>
+      </node>
+      <node id="1179">
+        <label>vector</label>
+      </node>
+      <node id="1187">
+        <label>Chips/Ram16k.h</label>
+        <childnode refid="1188" relation="include">
+        </childnode>
+      </node>
+      <node id="1183">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="1182" relation="include">
+        </childnode>
+        <childnode refid="1179" relation="include">
+        </childnode>
+        <childnode refid="1181" relation="include">
+        </childnode>
+      </node>
+      <node id="1177">
+        <label>sstream</label>
+      </node>
+      <node id="1171">
+        <label>ALU.h</label>
+        <childnode refid="1172" relation="include">
+        </childnode>
+      </node>
+      <node id="1192">
+        <label>Chips/Rom32.h</label>
+        <childnode refid="1172" relation="include">
+        </childnode>
+      </node>
+      <node id="1176">
+        <label>String.h</label>
+        <childnode refid="1177" relation="include">
+        </childnode>
+        <childnode refid="1178" relation="include">
+        </childnode>
+        <childnode refid="1179" relation="include">
+        </childnode>
+      </node>
+      <node id="1190">
+        <label>cstring</label>
       </node>
       <node id="1172">
-        <label>Source/Computer/DebugRuntime.cpp</label>
+        <label>Chips/Chip.h</label>
+        <childnode refid="1173" relation="include">
+        </childnode>
+        <childnode refid="1175" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1195">
+        <label>Source/Chips/Computer.cpp</label>
+      </node>
+      <node id="1200">
+        <label>Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.h</label>
+        <childnode refid="1199" relation="include">
+        </childnode>
+        <childnode refid="1201" relation="include">
+        </childnode>
+      </node>
+      <node id="1203">
+        <label>Source/Computer/RuntimeInterface.h</label>
+        <childnode refid="1204" relation="include">
+        </childnode>
+        <childnode refid="1205" relation="include">
+        </childnode>
+        <childnode refid="1206" relation="include">
+        </childnode>
+      </node>
+      <node id="1197">
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</label>
+        <childnode refid="1196" relation="include">
+        </childnode>
+        <childnode refid="1198" relation="include">
+        </childnode>
+      </node>
+      <node id="1201">
+        <label>Source/Computer/ConsoleRuntime.cpp</label>
+      </node>
+      <node id="1206">
+        <label>Source/Computer/WindowedRuntime.h</label>
+      </node>
+      <node id="1204">
+        <label>Source/Computer/AssemblyDebugger.h</label>
+        <childnode refid="1196" relation="include">
+        </childnode>
+        <childnode refid="1197" relation="include">
+        </childnode>
+        <childnode refid="1198" relation="include">
+        </childnode>
+        <childnode refid="1202" relation="include">
+        </childnode>
+      </node>
+      <node id="1193">
+        <label>Source/Chips/Computer.h</label>
+        <link refid="Computer_8h"/>
+        <childnode refid="1194" relation="include">
+        </childnode>
+        <childnode refid="1195" relation="include">
+        </childnode>
+        <childnode refid="1196" relation="include">
+        </childnode>
+        <childnode refid="1197" relation="include">
+        </childnode>
+        <childnode refid="1198" relation="include">
+        </childnode>
+        <childnode refid="1199" relation="include">
+        </childnode>
+        <childnode refid="1200" relation="include">
+        </childnode>
+        <childnode refid="1201" relation="include">
+        </childnode>
+        <childnode refid="1202" relation="include">
+        </childnode>
+        <childnode refid="1203" relation="include">
+        </childnode>
+      </node>
+      <node id="1202">
+        <label>Source/Computer/Executable.cpp</label>
+      </node>
+      <node id="1198">
+        <label>Source/Computer/AssemblyDebugger.cpp</label>
+      </node>
+      <node id="1205">
+        <label>Source/Computer/ConsoleRuntime.h</label>
+        <childnode refid="1201" relation="include">
+        </childnode>
+        <childnode refid="1202" relation="include">
+        </childnode>
+      </node>
+      <node id="1194">
+        <label>Source/Bindings/Bindings.cpp</label>
+      </node>
+      <node id="1199">
+        <label>Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.cpp</label>
+      </node>
+      <node id="1196">
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1Chips_1_1Computer" prot="public">Hack::Chips::Computer</innerclass>

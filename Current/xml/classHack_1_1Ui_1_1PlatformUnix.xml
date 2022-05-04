@@ -195,10 +195,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Source/Utils/UserInterface/PlatformUnix.h" line="56" column="1" bodyfile="Source/Utils/UserInterface/PlatformUnix.cpp" bodystart="298" bodyend="314"/>
-        <references refid="namespaceHack_1_1Ui_1a7553833a41980e8c2bae00177d41129ea628e6c1cd2f76b3b8b8346aaa4dfecf1" compoundref="Common_8h" startline="91">Hack::Ui::PR_NO_INPUT</references>
+        <references refid="namespaceHack_1_1Ui_1a7553833a41980e8c2bae00177d41129ea628e6c1cd2f76b3b8b8346aaa4dfecf1" compoundref="Utils_2UserInterface_2Common_8h" startline="92">Hack::Ui::PR_NO_INPUT</references>
         <references refid="classHack_1_1Ui_1_1Terminal_1a2507298f9de6d97fa2d224f91ade9e5f" compoundref="PlatformUnix_8cpp" startline="89" endline="111">Hack::Ui::Terminal::update</references>
-        <references refid="namespaceHack_1_1Ui_1a7553833a41980e8c2bae00177d41129ead7a3bc54fb41225d6588c6fb307f0bcf" compoundref="Common_8h" startline="90">Hack::Ui::PR_EXIT</references>
-        <references refid="namespaceHack_1_1Ui_1a7553833a41980e8c2bae00177d41129ea3dde91a4939857995c340109342db15b" compoundref="Common_8h" startline="92">Hack::Ui::PR_RESIZE</references>
+        <references refid="namespaceHack_1_1Ui_1a7553833a41980e8c2bae00177d41129ead7a3bc54fb41225d6588c6fb307f0bcf" compoundref="Utils_2UserInterface_2Common_8h" startline="91">Hack::Ui::PR_EXIT</references>
+        <references refid="namespaceHack_1_1Ui_1a7553833a41980e8c2bae00177d41129ea3dde91a4939857995c340109342db15b" compoundref="Utils_2UserInterface_2Common_8h" startline="93">Hack::Ui::PR_RESIZE</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -206,26 +206,26 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="448">
+      <node id="456">
         <label>Hack::Ui::Platform</label>
         <link refid="classHack_1_1Ui_1_1Platform"/>
       </node>
-      <node id="447">
+      <node id="455">
         <label>Hack::Ui::PlatformUnix</label>
         <link refid="classHack_1_1Ui_1_1PlatformUnix"/>
-        <childnode refid="448" relation="public-inheritance">
+        <childnode refid="456" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="450">
+      <node id="458">
         <label>Hack::Ui::Platform</label>
         <link refid="classHack_1_1Ui_1_1Platform"/>
       </node>
-      <node id="449">
+      <node id="457">
         <label>Hack::Ui::PlatformUnix</label>
         <link refid="classHack_1_1Ui_1_1PlatformUnix"/>
-        <childnode refid="450" relation="public-inheritance">
+        <childnode refid="458" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

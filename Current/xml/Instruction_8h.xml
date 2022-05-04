@@ -5,15 +5,21 @@
     <includes refid="Assembler_2Token_8h" local="yes">Assembler/Token.h</includes>
     <includedby refid="Instruction_8cpp" local="yes">Source/Assembler/Instruction.cpp</includedby>
     <includedby refid="Bindings_8cpp" local="yes">Source/Bindings/Bindings.cpp</includedby>
-    <includedby refid="DebugRuntime_8cpp" local="yes">Source/Computer/DebugRuntime.cpp</includedby>
+    <includedby refid="AssemblyDebuggerPrivate_8cpp" local="yes">Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</includedby>
     <incdepgraph>
-      <node id="42">
-        <label>Utils/ParserBase/TokenBase.h</label>
-        <childnode refid="43" relation="include">
-        </childnode>
-      </node>
       <node id="45">
         <label>string</label>
+      </node>
+      <node id="46">
+        <label>vector</label>
+      </node>
+      <node id="44">
+        <label>sstream</label>
+      </node>
+      <node id="41">
+        <label>Assembler/Token.h</label>
+        <childnode refid="42" relation="include">
+        </childnode>
       </node>
       <node id="43">
         <label>Utils/String.h</label>
@@ -24,11 +30,10 @@
         <childnode refid="46" relation="include">
         </childnode>
       </node>
-      <node id="46">
-        <label>vector</label>
-      </node>
-      <node id="44">
-        <label>sstream</label>
+      <node id="42">
+        <label>Utils/ParserBase/TokenBase.h</label>
+        <childnode refid="43" relation="include">
+        </childnode>
       </node>
       <node id="40">
         <label>Source/Assembler/Instruction.h</label>
@@ -36,18 +41,16 @@
         <childnode refid="41" relation="include">
         </childnode>
       </node>
-      <node id="41">
-        <label>Assembler/Token.h</label>
-        <childnode refid="42" relation="include">
-        </childnode>
-      </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="48">
+        <label>Source/Assembler/Instruction.cpp</label>
+      </node>
       <node id="49">
         <label>Source/Bindings/Bindings.cpp</label>
       </node>
-      <node id="48">
-        <label>Source/Assembler/Instruction.cpp</label>
+      <node id="50">
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</label>
       </node>
       <node id="47">
         <label>Source/Assembler/Instruction.h</label>
@@ -58,9 +61,6 @@
         </childnode>
         <childnode refid="50" relation="include">
         </childnode>
-      </node>
-      <node id="50">
-        <label>Source/Computer/DebugRuntime.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1Assembler_1_1Instruction" prot="public">Hack::Assembler::Instruction</innerclass>

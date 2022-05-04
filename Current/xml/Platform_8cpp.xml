@@ -6,76 +6,76 @@
     <includes local="no">cstdio</includes>
     <includes refid="Platform_8h" local="yes">Utils/UserInterface/Platform.h</includes>
     <incdepgraph>
-      <node id="4280">
+      <node id="4645">
         <label>cstdint</label>
       </node>
-      <node id="4285">
+      <node id="4650">
         <label>string</label>
       </node>
-      <node id="4288">
+      <node id="4647">
+        <label>Utils/UserInterface/ColorCache.h</label>
+        <childnode refid="4645" relation="include">
+        </childnode>
+        <childnode refid="4648" relation="include">
+        </childnode>
+      </node>
+      <node id="4653">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="4280" relation="include">
+        <childnode refid="4645" relation="include">
         </childnode>
       </node>
-      <node id="4283">
-        <label>Utils/String.h</label>
-        <childnode refid="4284" relation="include">
+      <node id="4644">
+        <label>Utils/UserInterface/Platform.h</label>
+        <childnode refid="4645" relation="include">
         </childnode>
-        <childnode refid="4285" relation="include">
+        <childnode refid="4646" relation="include">
         </childnode>
-        <childnode refid="4286" relation="include">
+        <childnode refid="4647" relation="include">
+        </childnode>
+        <childnode refid="4652" relation="include">
         </childnode>
       </node>
-      <node id="4278">
+      <node id="4643">
         <label>cstdio</label>
       </node>
-      <node id="4279">
-        <label>Utils/UserInterface/Platform.h</label>
-        <childnode refid="4280" relation="include">
-        </childnode>
-        <childnode refid="4281" relation="include">
-        </childnode>
-        <childnode refid="4282" relation="include">
-        </childnode>
-        <childnode refid="4287" relation="include">
-        </childnode>
-      </node>
-      <node id="4276">
-        <label>Source/Utils/UserInterface/Platform.cpp</label>
-        <link refid="Platform_8cpp"/>
-        <childnode refid="4277" relation="include">
-        </childnode>
-        <childnode refid="4278" relation="include">
-        </childnode>
-        <childnode refid="4279" relation="include">
-        </childnode>
-      </node>
-      <node id="4277">
+      <node id="4642">
         <label>unistd.h</label>
       </node>
-      <node id="4286">
+      <node id="4651">
         <label>vector</label>
       </node>
-      <node id="4284">
+      <node id="4652">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="4645" relation="include">
+        </childnode>
+        <childnode refid="4651" relation="include">
+        </childnode>
+        <childnode refid="4653" relation="include">
+        </childnode>
+      </node>
+      <node id="4649">
         <label>sstream</label>
       </node>
-      <node id="4282">
-        <label>Utils/UserInterface/ColorCache.h</label>
-        <childnode refid="4280" relation="include">
-        </childnode>
-        <childnode refid="4283" relation="include">
-        </childnode>
-      </node>
-      <node id="4281">
+      <node id="4646">
         <label>unordered_map</label>
       </node>
-      <node id="4287">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="4280" relation="include">
+      <node id="4641">
+        <label>Source/Utils/UserInterface/Platform.cpp</label>
+        <link refid="Platform_8cpp"/>
+        <childnode refid="4642" relation="include">
         </childnode>
-        <childnode refid="4286" relation="include">
+        <childnode refid="4643" relation="include">
         </childnode>
-        <childnode refid="4288" relation="include">
+        <childnode refid="4644" relation="include">
+        </childnode>
+      </node>
+      <node id="4648">
+        <label>Utils/String.h</label>
+        <childnode refid="4649" relation="include">
+        </childnode>
+        <childnode refid="4650" relation="include">
+        </childnode>
+        <childnode refid="4651" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -147,111 +147,122 @@
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
 <codeline lineno="61" refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">Platform::put</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>ch)</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ch<sp/>&gt;=<sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0ad03378ac2b6b4c1118d5cdda7e793da9" kindref="member">CS_SEQ_START</ref><sp/>&amp;&amp;<sp/>ch<sp/>&lt;<sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0ae51b178c3675d1c5b33fd92346227bc4" kindref="member">CS_START</ref>)</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(ch)</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a5cc1590a1227299f2d57e30c9c354748" kindref="member">CS_RECT_HZ</ref>:</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1ae4506309ad509d4d28ac113620edd6ab" kindref="member">Detail::LineHz</ref>);</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a4354d780f39ce363e5a3834343c3aa50" kindref="member">CS_RECT_VT</ref>:</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a4ed8c1169133a213bf99ffad6fb30a86" kindref="member">Detail::LineVt</ref>);</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a5d03c84a5b72b5dbe74459bf33791a08" kindref="member">CS_RECT_LT</ref>:</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a7e344cdf5463e56c211659e2a21af4f8" kindref="member">Detail::LineLt</ref>);</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a753412f679e04e3ba44c25dbb93d6131" kindref="member">CS_RECT_RT</ref>:</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a1151cd1c5a9ec7be5f775dee0ea61465" kindref="member">Detail::LineRt</ref>);</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a998b2d1dfa04163699d0ada53e82f922" kindref="member">CS_RECT_RB</ref>:</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a13d36030f4ce00dbd082a7b63f0f7e93" kindref="member">Detail::LineRb</ref>);</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a073a22d37e6a995b7c17ddfc65661e7d" kindref="member">CS_RECT_LB</ref>:</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a44554fef2e43a64304c62333d3f7415e" kindref="member">Detail::LineLb</ref>);</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a9b1d4bb7b028bce971009f4742e28e8b" kindref="member">CS_RECT_LCS</ref>:</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1af5e7cd1af04685b1a1514b38541e8a81" kindref="member">Detail::LineVertL</ref>);</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a6f020960e91251129ffbaa5a9514eb9e" kindref="member">CS_RECT_RCS</ref>:</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a2d75a0a649a37f46deb916f800a48e81" kindref="member">Detail::LineVertR</ref>);</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>putchar(</highlight><highlight class="charliteral">&apos;?&apos;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>putchar(ch);</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="100" refid="classHack_1_1Ui_1_1Platform_1aa74beaf8e59c3c525aa9592fc6af6211" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">Platform::put</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>ch)</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/>ch);</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105" refid="classHack_1_1Ui_1_1Platform_1a86fcdb4fbf68b809d3572c1867920679" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a86fcdb4fbf68b809d3572c1867920679" kindref="member">Platform::setCursor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int16_t<sp/>x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int16_t<sp/>y)</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a3576cc7ce9181a354daff9ded81c1b45" kindref="member">Detail::SetCursor</ref>,<sp/>x,<sp/>y);</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight></codeline>
-<codeline lineno="110" refid="classHack_1_1Ui_1_1Platform_1a8248f8b05e4e341bc274d8a87f198590" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a8248f8b05e4e341bc274d8a87f198590" kindref="member">Platform::showCursor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>show)</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(show)</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a8bcc07654099d413e79fdbd087c37151" kindref="member">Detail::ShowCursor</ref>);</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1afe86bd2942c9eef87a316c286d47f510" kindref="member">Detail::HideCursor</ref>);</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"></highlight></codeline>
-<codeline lineno="118" refid="classHack_1_1Ui_1_1Platform_1adde1b619c1d73187a0e1d3f9f0ca01e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Ui_1_1Platform_1adde1b619c1d73187a0e1d3f9f0ca01e5" kindref="member">Platform::resetCursor</ref>()</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a127458bf42d95ddbb1004704935d8bcc" kindref="member">Detail::ZeroCursor</ref>);</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"></highlight></codeline>
-<codeline lineno="123" refid="classHack_1_1Ui_1_1Platform_1a3c654cae3feb0c3134a4164e72666144" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a3c654cae3feb0c3134a4164e72666144" kindref="member">Platform::resetColor</ref>()</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1aad13e43e04b9b3f5dd1366514a7926ce" kindref="member">Detail::ResetColor</ref>);</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"></highlight></codeline>
-<codeline lineno="128" refid="classHack_1_1Ui_1_1Platform_1aa24be0702916597fc5143dca16e369a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Ui_1_1Platform_1aa24be0702916597fc5143dca16e369a6" kindref="member">Platform::clear</ref>()</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a33853f4a5a76638722e1febde2cee328" kindref="member">Detail::Clear</ref>);</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"></highlight></codeline>
-<codeline lineno="133" refid="classHack_1_1Ui_1_1Platform_1aecbdaddb564da342d970727a7475b360" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Ui_1_1Platform_1aecbdaddb564da342d970727a7475b360" kindref="member">Platform::useBackBuffer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>use)</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(use)</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a33853f4a5a76638722e1febde2cee328" kindref="member">Detail::Clear</ref>);</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1afe86bd2942c9eef87a316c286d47f510" kindref="member">Detail::HideCursor</ref>);</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a127458bf42d95ddbb1004704935d8bcc" kindref="member">Detail::ZeroCursor</ref>);</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a86b05e3b4b571723251f84b66c5c7d9c" kindref="member">Detail::UseBackBuffer</ref>);</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1aa3054a397921f0b3b33f7b70d8fb45d8" kindref="member">flush</ref>();</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a33853f4a5a76638722e1febde2cee328" kindref="member">Detail::Clear</ref>);</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a8bcc07654099d413e79fdbd087c37151" kindref="member">Detail::ShowCursor</ref>);</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a127458bf42d95ddbb1004704935d8bcc" kindref="member">Detail::ZeroCursor</ref>);</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1afc2cfd341bffbc28a0829607f3bb4838" kindref="member">Detail::UseFrontBuffer</ref>);</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1aa3054a397921f0b3b33f7b70d8fb45d8" kindref="member">flush</ref>();</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"></highlight></codeline>
-<codeline lineno="153" refid="classHack_1_1Ui_1_1Platform_1aa3054a397921f0b3b33f7b70d8fb45d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Ui_1_1Platform_1aa3054a397921f0b3b33f7b70d8fb45d8" kindref="member">Platform::flush</ref>()</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>putchar(</highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fflush(stdout);</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"></highlight></codeline>
-<codeline lineno="159" refid="classHack_1_1Ui_1_1Platform_1ad3ce58985cbdf1e835fabf88e32a64c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Ui_1_1Platform_1ad3ce58985cbdf1e835fabf88e32a64c8" kindref="member">Platform::sleep</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t&amp;<sp/>ms)</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WIN32</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Sleep(ms);</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>usleep(ms<sp/>*<sp/>1000);</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="167"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Ui</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ch<sp/>&gt;=<sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0ae51b178c3675d1c5b33fd92346227bc4" kindref="member">CS_START</ref><sp/>&amp;&amp;<sp/>ch<sp/>&lt;<sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a41af7adc01eb6945b60a1bfd8fef6c41" kindref="member">CS_END</ref>)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>putchar(ch);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ch<sp/>&gt;<sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0ad03378ac2b6b4c1118d5cdda7e793da9" kindref="member">CS_SEQ_START</ref><sp/>&amp;&amp;<sp/>ch<sp/>&lt;<sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a8956bd77e0fbc9c3fe78aa42fb78e072" kindref="member">CS_SEQ_END</ref>)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(ch)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0ac9e5831d71a26cab7a3a4a8d374f8560" kindref="member">CS_NONE</ref>:</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a5cc1590a1227299f2d57e30c9c354748" kindref="member">CS_RECT_HZ</ref>:</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1ae4506309ad509d4d28ac113620edd6ab" kindref="member">Detail::LineHz</ref>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a4354d780f39ce363e5a3834343c3aa50" kindref="member">CS_RECT_VT</ref>:</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a4ed8c1169133a213bf99ffad6fb30a86" kindref="member">Detail::LineVt</ref>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a5d03c84a5b72b5dbe74459bf33791a08" kindref="member">CS_RECT_LT</ref>:</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a7e344cdf5463e56c211659e2a21af4f8" kindref="member">Detail::LineLt</ref>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a753412f679e04e3ba44c25dbb93d6131" kindref="member">CS_RECT_RT</ref>:</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a1151cd1c5a9ec7be5f775dee0ea61465" kindref="member">Detail::LineRt</ref>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a998b2d1dfa04163699d0ada53e82f922" kindref="member">CS_RECT_RB</ref>:</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a13d36030f4ce00dbd082a7b63f0f7e93" kindref="member">Detail::LineRb</ref>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a073a22d37e6a995b7c17ddfc65661e7d" kindref="member">CS_RECT_LB</ref>:</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a44554fef2e43a64304c62333d3f7415e" kindref="member">Detail::LineLb</ref>);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a1c2e1081d139fd2d5a71bc64a8fea82b" kindref="member">CS_RECT_CL</ref>:</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a8c26aa0af22a768ebbb2def7b7e41db4" kindref="member">Detail::LineCl</ref>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a98bf7eb077d9c44a7107e3688a3ec516" kindref="member">CS_RECT_CR</ref>:</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a5047855c92fecdfb8f41adeea1122e80" kindref="member">Detail::LineCr</ref>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0ab31c58ec57f7d95ab6faa268db393142" kindref="member">CS_RECT_CT</ref>:</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a294648c403ff0f10680c2f85dc994829" kindref="member">Detail::LineCt</ref>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a3b627a1484fb30d5fb994e3562984dc1" kindref="member">CS_RECT_CB</ref>:</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a886803654308ff739306adb23b15e654" kindref="member">Detail::LineCb</ref>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>putchar(</highlight><highlight class="charliteral">&apos;?&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>putchar(</highlight><highlight class="charliteral">&apos;?&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="classHack_1_1Ui_1_1Platform_1aa74beaf8e59c3c525aa9592fc6af6211" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">Platform::put</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>ch)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/>ch);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="classHack_1_1Ui_1_1Platform_1a86fcdb4fbf68b809d3572c1867920679" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a86fcdb4fbf68b809d3572c1867920679" kindref="member">Platform::setCursor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int16_t<sp/>x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int16_t<sp/>y)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a3576cc7ce9181a354daff9ded81c1b45" kindref="member">Detail::SetCursor</ref>,<sp/>x,<sp/>y);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="classHack_1_1Ui_1_1Platform_1a8248f8b05e4e341bc274d8a87f198590" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a8248f8b05e4e341bc274d8a87f198590" kindref="member">Platform::showCursor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>show)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(show)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a8bcc07654099d413e79fdbd087c37151" kindref="member">Detail::ShowCursor</ref>);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1afe86bd2942c9eef87a316c286d47f510" kindref="member">Detail::HideCursor</ref>);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="classHack_1_1Ui_1_1Platform_1adde1b619c1d73187a0e1d3f9f0ca01e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Ui_1_1Platform_1adde1b619c1d73187a0e1d3f9f0ca01e5" kindref="member">Platform::resetCursor</ref>()</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a127458bf42d95ddbb1004704935d8bcc" kindref="member">Detail::ZeroCursor</ref>);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="classHack_1_1Ui_1_1Platform_1a3c654cae3feb0c3134a4164e72666144" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a3c654cae3feb0c3134a4164e72666144" kindref="member">Platform::resetColor</ref>()</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1aad13e43e04b9b3f5dd1366514a7926ce" kindref="member">Detail::ResetColor</ref>);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="classHack_1_1Ui_1_1Platform_1aa24be0702916597fc5143dca16e369a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Ui_1_1Platform_1aa24be0702916597fc5143dca16e369a6" kindref="member">Platform::clear</ref>()</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a33853f4a5a76638722e1febde2cee328" kindref="member">Detail::Clear</ref>);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="classHack_1_1Ui_1_1Platform_1aecbdaddb564da342d970727a7475b360" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Ui_1_1Platform_1aecbdaddb564da342d970727a7475b360" kindref="member">Platform::useBackBuffer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>use)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(use)</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a33853f4a5a76638722e1febde2cee328" kindref="member">Detail::Clear</ref>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1afe86bd2942c9eef87a316c286d47f510" kindref="member">Detail::HideCursor</ref>);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a127458bf42d95ddbb1004704935d8bcc" kindref="member">Detail::ZeroCursor</ref>);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a86b05e3b4b571723251f84b66c5c7d9c" kindref="member">Detail::UseBackBuffer</ref>);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1aa3054a397921f0b3b33f7b70d8fb45d8" kindref="member">flush</ref>();</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a33853f4a5a76638722e1febde2cee328" kindref="member">Detail::Clear</ref>);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a8bcc07654099d413e79fdbd087c37151" kindref="member">Detail::ShowCursor</ref>);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1a127458bf42d95ddbb1004704935d8bcc" kindref="member">Detail::ZeroCursor</ref>);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" kindref="member">put</ref>(<ref refid="namespaceHack_1_1Ui_1_1Detail_1afc2cfd341bffbc28a0829607f3bb4838" kindref="member">Detail::UseFrontBuffer</ref>);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHack_1_1Ui_1_1Platform_1aa3054a397921f0b3b33f7b70d8fb45d8" kindref="member">flush</ref>();</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="classHack_1_1Ui_1_1Platform_1aa3054a397921f0b3b33f7b70d8fb45d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Ui_1_1Platform_1aa3054a397921f0b3b33f7b70d8fb45d8" kindref="member">Platform::flush</ref>()</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>putchar(</highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fflush(stdout);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="classHack_1_1Ui_1_1Platform_1ad3ce58985cbdf1e835fabf88e32a64c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Ui_1_1Platform_1ad3ce58985cbdf1e835fabf88e32a64c8" kindref="member">Platform::sleep</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t&amp;<sp/>ms)</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Sleep(ms);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>usleep(ms<sp/>*<sp/>1000);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Ui</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="Source/Utils/UserInterface/Platform.cpp"/>
   </compounddef>

@@ -151,7 +151,6 @@ namespace Hack::Compiler::CodeGenerator
     {
         if (idx > 2)
             throw Exception("push pointer can be 0 or 1");
-
         write("push pointer ", idx);
     }
 
@@ -236,12 +235,18 @@ namespace Hack::Compiler::CodeGenerator
         write("label ", label);
     }
 
-
     void VmEmitter::writeCode(int type, const String& code)
     {
         if (type == RuleInlineVm)
             write(code);
         else if (type == RuleInlineAsm)
+        {
             write("asm [\n", code, "\n]");
+
+            StringArray sa;
+            StringUtils::splitLine(sa, code);
+            // Note: comments do need handled!
+        }
     }
-} // namespace Hack::Compiler::CodeGenerator
+
+}  // namespace Hack::Compiler::CodeGenerator

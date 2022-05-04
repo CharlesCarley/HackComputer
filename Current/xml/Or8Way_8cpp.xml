@@ -4,83 +4,83 @@
     <compoundname>Or8Way.cpp</compoundname>
     <includes refid="Or8Way_8h" local="yes">Chips/Or8Way.h</includes>
     <incdepgraph>
-      <node id="1866">
-        <label>Source/Chips/Or8Way.cpp</label>
-        <link refid="Or8Way_8cpp"/>
-        <childnode refid="1867" relation="include">
-        </childnode>
-      </node>
-      <node id="1878">
+      <node id="1924">
         <label>cstdint</label>
       </node>
-      <node id="1869">
+      <node id="1915">
         <label>Chips/BitUtils.h</label>
-        <childnode refid="1870" relation="include">
+        <childnode refid="1916" relation="include">
         </childnode>
-        <childnode refid="1871" relation="include">
-        </childnode>
-      </node>
-      <node id="1876">
-        <label>UserInterface/Context.h</label>
-        <childnode refid="1872" relation="include">
-        </childnode>
-        <childnode refid="1877" relation="include">
-        </childnode>
-        <childnode refid="1879" relation="include">
+        <childnode refid="1917" relation="include">
         </childnode>
       </node>
-      <node id="1874">
+      <node id="1913">
+        <label>Chips/Or8Way.h</label>
+        <childnode refid="1914" relation="include">
+        </childnode>
+      </node>
+      <node id="1920">
         <label>string</label>
       </node>
-      <node id="1877">
+      <node id="1922">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="1918" relation="include">
+        </childnode>
+        <childnode refid="1923" relation="include">
+        </childnode>
+        <childnode refid="1925" relation="include">
+        </childnode>
+      </node>
+      <node id="1923">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="1878" relation="include">
+        <childnode refid="1924" relation="include">
         </childnode>
       </node>
-      <node id="1872">
-        <label>String.h</label>
-        <childnode refid="1873" relation="include">
+      <node id="1917">
+        <label>Utils/Console.h</label>
+        <childnode refid="1918" relation="include">
         </childnode>
-        <childnode refid="1874" relation="include">
-        </childnode>
-        <childnode refid="1875" relation="include">
+        <childnode refid="1922" relation="include">
         </childnode>
       </node>
-      <node id="1870">
+      <node id="1916">
         <label>bitset</label>
       </node>
-      <node id="1875">
+      <node id="1921">
         <label>vector</label>
       </node>
-      <node id="1873">
+      <node id="1925">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="1924" relation="include">
+        </childnode>
+        <childnode refid="1921" relation="include">
+        </childnode>
+        <childnode refid="1923" relation="include">
+        </childnode>
+      </node>
+      <node id="1919">
         <label>sstream</label>
       </node>
-      <node id="1879">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="1878" relation="include">
+      <node id="1918">
+        <label>String.h</label>
+        <childnode refid="1919" relation="include">
         </childnode>
-        <childnode refid="1875" relation="include">
+        <childnode refid="1920" relation="include">
         </childnode>
-        <childnode refid="1877" relation="include">
+        <childnode refid="1921" relation="include">
         </childnode>
       </node>
-      <node id="1868">
+      <node id="1912">
+        <label>Source/Chips/Or8Way.cpp</label>
+        <link refid="Or8Way_8cpp"/>
+        <childnode refid="1913" relation="include">
+        </childnode>
+      </node>
+      <node id="1914">
         <label>Chips/Chip.h</label>
-        <childnode refid="1869" relation="include">
+        <childnode refid="1915" relation="include">
         </childnode>
-        <childnode refid="1871" relation="include">
-        </childnode>
-      </node>
-      <node id="1871">
-        <label>Utils/Console.h</label>
-        <childnode refid="1872" relation="include">
-        </childnode>
-        <childnode refid="1876" relation="include">
-        </childnode>
-      </node>
-      <node id="1867">
-        <label>Chips/Or8Way.h</label>
-        <childnode refid="1868" relation="include">
+        <childnode refid="1917" relation="include">
         </childnode>
       </node>
     </incdepgraph>

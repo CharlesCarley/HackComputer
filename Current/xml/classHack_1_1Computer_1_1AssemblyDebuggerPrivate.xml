@@ -1,0 +1,453 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classHack_1_1Computer_1_1AssemblyDebuggerPrivate" kind="class" language="C++" prot="public">
+    <compoundname>Hack::Computer::AssemblyDebuggerPrivate</compoundname>
+    <includes local="no">Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a7bad4fca0eb315893dd9ae52077ecee1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Hack::Computer::AssemblyDebuggerPrivate::_block</definition>
+        <argsstring></argsstring>
+        <name>_block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" line="35" column="1" bodyfile="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a1792e1eb1facc61cca5be293880a271c" prot="private" static="no" mutable="no">
+        <type><ref refid="structHack_1_1Chips_1_1CpuState" kindref="compound">Chips::CpuState</ref></type>
+        <definition>Chips::CpuState Hack::Computer::AssemblyDebuggerPrivate::_cpuState</definition>
+        <argsstring></argsstring>
+        <name>_cpuState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" line="39" column="1" bodyfile="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a9da8dfa2f610fd974231b87259c02691" prot="private" static="no" mutable="no">
+        <type><ref refid="classHack_1_1Ui_1_1Context" kindref="compound">Ui::Context</ref> *</type>
+        <definition>Ui::Context* Hack::Computer::AssemblyDebuggerPrivate::_ctx</definition>
+        <argsstring></argsstring>
+        <name>_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" line="36" column="1" bodyfile="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a86b44f84fe990b3161f34fc89d9b9a5e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Hack::Computer::AssemblyDebuggerPrivate::_input</definition>
+        <argsstring></argsstring>
+        <name>_input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" line="33" column="1" bodyfile="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a6c5a9a48c6ede0d8575e4103daa5303e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Hack::Computer::AssemblyDebuggerPrivate::_mode</definition>
+        <argsstring></argsstring>
+        <name>_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" line="34" column="1" bodyfile="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1acb8e2d475cf689ba576b640aaaf43815" prot="private" static="no" mutable="no">
+        <type><ref refid="structHack_1_1Chips_1_1CpuState" kindref="compound">Chips::CpuState</ref></type>
+        <definition>Chips::CpuState Hack::Computer::AssemblyDebuggerPrivate::_prevCpuState</definition>
+        <argsstring></argsstring>
+        <name>_prevCpuState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" line="40" column="1" bodyfile="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1af35580bcbbc55e1dac5cc43101c9d34f" prot="private" static="no" mutable="no">
+        <type><ref refid="classHack_1_1Chips_1_1Memory" kindref="compound">Chips::Memory</ref> *</type>
+        <definition>Chips::Memory* Hack::Computer::AssemblyDebuggerPrivate::_ram</definition>
+        <argsstring></argsstring>
+        <name>_ram</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" line="37" column="1" bodyfile="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a6db36a696045e91743b44f68ebaaac50" prot="private" static="no" mutable="no">
+        <type><ref refid="classHack_1_1Chips_1_1Rom32" kindref="compound">Chips::Rom32</ref> *</type>
+        <definition>Chips::Rom32* Hack::Computer::AssemblyDebuggerPrivate::_rom</definition>
+        <argsstring></argsstring>
+        <name>_rom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" line="38" column="1" bodyfile="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a50c7bede71cd0b578b1fa274cf92e6d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Computer::AssemblyDebuggerPrivate::AssemblyDebuggerPrivate</definition>
+        <argsstring>()</argsstring>
+        <name>AssemblyDebuggerPrivate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" line="43" column="1" bodyfile="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp" bodystart="49" bodyend="59"/>
+        <references refid="namespaceHack_1_1Ui_1a7553833a41980e8c2bae00177d41129ea628e6c1cd2f76b3b8b8346aaa4dfecf1" compoundref="Utils_2UserInterface_2Common_8h" startline="92">Hack::Ui::PR_NO_INPUT</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a0feb84a09a37f1b4c11738a3550d0e22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Computer::AssemblyDebuggerPrivate::~AssemblyDebuggerPrivate</definition>
+        <argsstring>()</argsstring>
+        <name>~AssemblyDebuggerPrivate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" line="45" column="1" bodyfile="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp" bodystart="61" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a27c3ae2ed36e248c6e739255a84eded1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Computer::AssemblyDebuggerPrivate::block</definition>
+        <argsstring>() const</argsstring>
+        <name>block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" line="51" column="1" bodyfile="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp" bodystart="89" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1ab245cab0a5673b142fcf58b7fc22e136" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Computer::AssemblyDebuggerPrivate::displayCpu</definition>
+        <argsstring>(Ui::Context &amp;ctx) const</argsstring>
+        <name>displayCpu</name>
+        <param>
+          <type><ref refid="classHack_1_1Ui_1_1Context" kindref="compound">Ui::Context</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" line="68" column="1" bodyfile="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp" bodystart="266" bodyend="485"/>
+        <references refid="classHack_1_1Ui_1_1Context_1aac7c82f9a0deee33d34432b8a25b24e4" compoundref="Context_8h" startline="127" endline="130">Hack::Ui::Context::height</references>
+        <references refid="classHack_1_1Ui_1_1Context_1adc3528448341074f5406246ca00200a9" compoundref="Context_8h" startline="122" endline="125">Hack::Ui::Context::width</references>
+        <references refid="classHack_1_1Ui_1_1Rectangle_1a7e62fda117e61b5591988b2ff84fc9cf" compoundref="Math_8h" startline="93" endline="96">Hack::Ui::Rectangle::midX</references>
+        <references refid="classHack_1_1Ui_1_1Rectangle_1a89f58c9760e2d297f618df18f761ccd0" compoundref="Math_8h" startline="108" endline="111">Hack::Ui::Rectangle::midY</references>
+        <references refid="classHack_1_1Ui_1_1Context_1a9b10579d2510a8592129535be1623f89" compoundref="Context_8cpp" startline="307" endline="311">Hack::Ui::Context::reset</references>
+        <references refid="classHack_1_1Ui_1_1Context_1a4a5c359b8eed0171acb0c472104394d3" compoundref="Context_8h" startline="132" endline="135">Hack::Ui::Context::foreground</references>
+        <references refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bbaa486485fc55b5cc36bd0f71b07d3ccbe" compoundref="Computer_2Common_8h" startline="65">Hack::Computer::Wire</references>
+        <references refid="classHack_1_1Ui_1_1Context_1a2a058cd4692db657acbc90a431247bb2" compoundref="Context_8cpp" startline="242" endline="258">Hack::Ui::Context::rectangle</references>
+        <references refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bba18e2c54dbcfb73c3aa981698f4a62d4c" compoundref="Computer_2Common_8h" startline="66">Hack::Computer::Title</references>
+        <references refid="classHack_1_1Ui_1_1Context_1a2db02147c02dee479e0417490377d77e" compoundref="Context_8cpp" startline="187" endline="200">Hack::Ui::Context::string</references>
+        <references refid="classHack_1_1Ui_1_1Rectangle_1a34fe79574ec8879d9454c1778a68cd20" compoundref="Math_8h" startline="83" endline="86">Hack::Ui::Rectangle::left</references>
+        <references refid="classHack_1_1Ui_1_1Rectangle_1aa1822657968c6b8394c5173342f43411" compoundref="Math_8h" startline="98" endline="101">Hack::Ui::Rectangle::top</references>
+        <references refid="classHack_1_1Ui_1_1Rectangle_1a812fb622a1abb08efd76b30dd904b9ae" compoundref="Math_8h" startline="66">Hack::Ui::Rectangle::w</references>
+        <references refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bbaa743894e7b4ca3f69492d489e09b6013" compoundref="Computer_2Common_8h" startline="68">Hack::Computer::WireLight</references>
+        <references refid="classHack_1_1Ui_1_1Context_1a15e60c63d8971ce688651c63e89f80d5" compoundref="Context_8cpp" startline="217" endline="235">Hack::Ui::Context::line</references>
+        <references refid="classHack_1_1Ui_1_1Rectangle_1ae8393bc46e735d03ee4bbd28d3b29bf6" compoundref="Math_8h" startline="88" endline="91">Hack::Ui::Rectangle::right</references>
+        <references refid="namespaceHack_1_1Ui_1a52a9537a5cb72fb438de8f7331ffd9a2a271c30a3b0460f8419bd335556d6a496" compoundref="Utils_2UserInterface_2Common_8h" startline="85">Hack::Ui::OR_HORIZONTAL</references>
+        <references refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bba1395267cd84975a8d8c1e054512ecd10" compoundref="Computer_2Common_8h" startline="62">Hack::Computer::WireTitle</references>
+        <references refid="classHack_1_1Ui_1_1Context_1a54867790cdaae0780975e76d6ed99000" compoundref="Context_8cpp" startline="265" endline="269">Hack::Ui::Context::moveTo</references>
+        <references refid="classHack_1_1Ui_1_1Rectangle_1a687b3128d595a84fa9cf0ba1a84b3c50" compoundref="Math_8h" startline="103" endline="106">Hack::Ui::Rectangle::bottom</references>
+        <references refid="classHack_1_1Ui_1_1Context_1ab340b1cb2b0bf4f3b27cbe2999235147" compoundref="Context_8cpp" startline="271" endline="291">Hack::Ui::Context::lineTo</references>
+        <references refid="namespaceHack_1_1Ui_1a52a9537a5cb72fb438de8f7331ffd9a2a447f7e8d33ccc8b1edc5aa00e8f5202f" compoundref="Utils_2UserInterface_2Common_8h" startline="86">Hack::Ui::OR_VERTICAL</references>
+        <references refid="classHack_1_1Ui_1_1Context_1ad62d5e8c10bc606c482cb24f42f5d241" compoundref="Context_8cpp" startline="175" endline="180">Hack::Ui::Context::character</references>
+        <references refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a753412f679e04e3ba44c25dbb93d6131" compoundref="Utils_2UserInterface_2Common_8h" startline="42">Hack::Ui::CS_RECT_RT</references>
+        <references refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a073a22d37e6a995b7c17ddfc65661e7d" compoundref="Utils_2UserInterface_2Common_8h" startline="44">Hack::Ui::CS_RECT_LB</references>
+        <references refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a998b2d1dfa04163699d0ada53e82f922" compoundref="Utils_2UserInterface_2Common_8h" startline="41">Hack::Ui::CS_RECT_RB</references>
+        <references refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bbaf6a6ac45348d5f3cd60894f729d9b618" compoundref="Computer_2Common_8h" startline="63">Hack::Computer::Action</references>
+        <references refid="classHack_1_1Char_1a3a5e5db497a735c1cec92d748b513c9d" compoundref="Char_8cpp" startline="205" endline="210">Hack::Char::toString</references>
+        <references refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a5d03c84a5b72b5dbe74459bf33791a08" compoundref="Utils_2UserInterface_2Common_8h" startline="43">Hack::Ui::CS_RECT_LT</references>
+        <references refid="classHack_1_1Assembler_1_1Instruction_1ade81360d9e9ec9bdfedc8af1d0252a73" compoundref="Instruction_8cpp" startline="32" endline="37">Hack::Assembler::Instruction::string</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a69c675c19294c721451b7332521e64be" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Computer::AssemblyDebuggerPrivate::displayMemoryContents</definition>
+        <argsstring>(Ui::Context &amp;ctx, const Ui::Rectangle &amp;bounds, const String &amp;value, int index, int offset, bool highlight) const</argsstring>
+        <name>displayMemoryContents</name>
+        <param>
+          <type><ref refid="classHack_1_1Ui_1_1Context" kindref="compound">Ui::Context</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classHack_1_1Ui_1_1Rectangle" kindref="compound">Ui::Rectangle</ref> &amp;</type>
+          <declname>bounds</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>highlight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" line="57" column="1" bodyfile="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp" bodystart="129" bodyend="173"/>
+        <references refid="classHack_1_1Ui_1_1Context_1a911b798e01c75e90a47a67722549d12e" compoundref="Context_8h" startline="137" endline="140">Hack::Ui::Context::background</references>
+        <references refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bbab6c91e70d12f0fb5a6fd8a5bf49a8dd3" compoundref="Computer_2Common_8h" startline="67">Hack::Computer::WireShadow</references>
+        <references refid="classHack_1_1Ui_1_1Context_1a4a5c359b8eed0171acb0c472104394d3" compoundref="Context_8h" startline="132" endline="135">Hack::Ui::Context::foreground</references>
+        <references refid="classHack_1_1Ui_1_1Context_1a15e60c63d8971ce688651c63e89f80d5" compoundref="Context_8cpp" startline="217" endline="235">Hack::Ui::Context::line</references>
+        <references refid="classHack_1_1Ui_1_1Rectangle_1a94211dbb4e2c23d85c1cd9570e53f94f" compoundref="Math_8h" startline="66">Hack::Ui::Rectangle::x</references>
+        <references refid="classHack_1_1Ui_1_1Rectangle_1a89f58c9760e2d297f618df18f761ccd0" compoundref="Math_8h" startline="108" endline="111">Hack::Ui::Rectangle::midY</references>
+        <references refid="classHack_1_1Ui_1_1Rectangle_1a812fb622a1abb08efd76b30dd904b9ae" compoundref="Math_8h" startline="66">Hack::Ui::Rectangle::w</references>
+        <references refid="namespaceHack_1_1Ui_1a52a9537a5cb72fb438de8f7331ffd9a2a271c30a3b0460f8419bd335556d6a496" compoundref="Utils_2UserInterface_2Common_8h" startline="85">Hack::Ui::OR_HORIZONTAL</references>
+        <references refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bba523f19de5aed5dbd2040373dba07824f" compoundref="Computer_2Common_8h" startline="61">Hack::Computer::Highlight</references>
+        <references refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bbad75fff1f9779ab03efb0978a8eb03ff9" compoundref="Computer_2Common_8h" startline="64">Hack::Computer::Action2</references>
+        <references refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bba7e22e0614cab05eee2406a31b577c1cb" compoundref="Computer_2Common_8h" startline="60">Hack::Computer::Grey</references>
+        <references refid="classHack_1_1Ui_1_1Context_1a2db02147c02dee479e0417490377d77e" compoundref="Context_8cpp" startline="187" endline="200">Hack::Ui::Context::string</references>
+        <references refid="classHack_1_1Ui_1_1Rectangle_1ae8393bc46e735d03ee4bbd28d3b29bf6" compoundref="Math_8h" startline="88" endline="91">Hack::Ui::Rectangle::right</references>
+        <references refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bbaf6a6ac45348d5f3cd60894f729d9b618" compoundref="Computer_2Common_8h" startline="63">Hack::Computer::Action</references>
+        <references refid="classHack_1_1Char_1a3a5e5db497a735c1cec92d748b513c9d" compoundref="Char_8cpp" startline="205" endline="210">Hack::Char::toString</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a6b49f29b6994f5e3cc4d93e269622c17" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Computer::AssemblyDebuggerPrivate::displayRam</definition>
+        <argsstring>(Ui::Context &amp;ctx) const</argsstring>
+        <name>displayRam</name>
+        <param>
+          <type><ref refid="classHack_1_1Ui_1_1Context" kindref="compound">Ui::Context</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" line="66" column="1" bodyfile="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp" bodystart="212" bodyend="264"/>
+        <references refid="classHack_1_1Ui_1_1Context_1aac7c82f9a0deee33d34432b8a25b24e4" compoundref="Context_8h" startline="127" endline="130">Hack::Ui::Context::height</references>
+        <references refid="classHack_1_1Ui_1_1Context_1adc3528448341074f5406246ca00200a9" compoundref="Context_8h" startline="122" endline="125">Hack::Ui::Context::width</references>
+        <references refid="classHack_1_1Ui_1_1Context_1a9b10579d2510a8592129535be1623f89" compoundref="Context_8cpp" startline="307" endline="311">Hack::Ui::Context::reset</references>
+        <references refid="classHack_1_1Ui_1_1Context_1a4a5c359b8eed0171acb0c472104394d3" compoundref="Context_8h" startline="132" endline="135">Hack::Ui::Context::foreground</references>
+        <references refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bbaa486485fc55b5cc36bd0f71b07d3ccbe" compoundref="Computer_2Common_8h" startline="65">Hack::Computer::Wire</references>
+        <references refid="classHack_1_1Ui_1_1Context_1a2a058cd4692db657acbc90a431247bb2" compoundref="Context_8cpp" startline="242" endline="258">Hack::Ui::Context::rectangle</references>
+        <references refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bba18e2c54dbcfb73c3aa981698f4a62d4c" compoundref="Computer_2Common_8h" startline="66">Hack::Computer::Title</references>
+        <references refid="classHack_1_1Ui_1_1Context_1a2db02147c02dee479e0417490377d77e" compoundref="Context_8cpp" startline="187" endline="200">Hack::Ui::Context::string</references>
+        <references refid="classHack_1_1Ui_1_1Rectangle_1a34fe79574ec8879d9454c1778a68cd20" compoundref="Math_8h" startline="83" endline="86">Hack::Ui::Rectangle::left</references>
+        <references refid="classHack_1_1Ui_1_1Rectangle_1aa1822657968c6b8394c5173342f43411" compoundref="Math_8h" startline="98" endline="101">Hack::Ui::Rectangle::top</references>
+        <references refid="classHack_1_1Ui_1_1Rectangle_1a1333d6a207e65bbce26b489376a6911e" compoundref="Math_8h" startline="66">Hack::Ui::Rectangle::h</references>
+        <references refid="classHack_1_1Char_1a3a5e5db497a735c1cec92d748b513c9d" compoundref="Char_8cpp" startline="205" endline="210">Hack::Char::toString</references>
+        <references refid="classHack_1_1Char_1a3534fb343cb723d19448c04b547d9d2f" compoundref="Char_8cpp" startline="235" endline="240">Hack::Char::toHexString</references>
+        <references refid="classHack_1_1Char_1a2e634e86f642f657dd42a2e967d99764" compoundref="Char_8cpp" startline="229" endline="233">Hack::Char::toBinaryString</references>
+        <references refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a69c675c19294c721451b7332521e64be" compoundref="AssemblyDebuggerPrivate_8cpp" startline="129" endline="173">displayMemoryContents</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1ada9dd6b512a465765242d7edd45ce067" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Computer::AssemblyDebuggerPrivate::displayRom</definition>
+        <argsstring>(Ui::Context &amp;ctx) const</argsstring>
+        <name>displayRom</name>
+        <param>
+          <type><ref refid="classHack_1_1Ui_1_1Context" kindref="compound">Ui::Context</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" line="64" column="1" bodyfile="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp" bodystart="175" bodyend="210"/>
+        <references refid="classHack_1_1Ui_1_1Context_1aac7c82f9a0deee33d34432b8a25b24e4" compoundref="Context_8h" startline="127" endline="130">Hack::Ui::Context::height</references>
+        <references refid="classHack_1_1Ui_1_1Context_1a9b10579d2510a8592129535be1623f89" compoundref="Context_8cpp" startline="307" endline="311">Hack::Ui::Context::reset</references>
+        <references refid="classHack_1_1Ui_1_1Context_1a4a5c359b8eed0171acb0c472104394d3" compoundref="Context_8h" startline="132" endline="135">Hack::Ui::Context::foreground</references>
+        <references refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bbaa486485fc55b5cc36bd0f71b07d3ccbe" compoundref="Computer_2Common_8h" startline="65">Hack::Computer::Wire</references>
+        <references refid="classHack_1_1Ui_1_1Context_1a2a058cd4692db657acbc90a431247bb2" compoundref="Context_8cpp" startline="242" endline="258">Hack::Ui::Context::rectangle</references>
+        <references refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bba18e2c54dbcfb73c3aa981698f4a62d4c" compoundref="Computer_2Common_8h" startline="66">Hack::Computer::Title</references>
+        <references refid="classHack_1_1Ui_1_1Context_1a2db02147c02dee479e0417490377d77e" compoundref="Context_8cpp" startline="187" endline="200">Hack::Ui::Context::string</references>
+        <references refid="classHack_1_1Ui_1_1Rectangle_1a94211dbb4e2c23d85c1cd9570e53f94f" compoundref="Math_8h" startline="66">Hack::Ui::Rectangle::x</references>
+        <references refid="classHack_1_1Ui_1_1Rectangle_1a380058068595421366abc3a96ea717f0" compoundref="Math_8h" startline="66">Hack::Ui::Rectangle::y</references>
+        <references refid="classHack_1_1Ui_1_1Rectangle_1a1333d6a207e65bbce26b489376a6911e" compoundref="Math_8h" startline="66">Hack::Ui::Rectangle::h</references>
+        <references refid="classHack_1_1Assembler_1_1Instruction_1ade81360d9e9ec9bdfedc8af1d0252a73" compoundref="Instruction_8cpp" startline="32" endline="37">Hack::Assembler::Instruction::string</references>
+        <references refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a69c675c19294c721451b7332521e64be" compoundref="AssemblyDebuggerPrivate_8cpp" startline="129" endline="173">displayMemoryContents</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a27803ed3d2856b0f50920127200df914" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Computer::AssemblyDebuggerPrivate::flushMemory</definition>
+        <argsstring>(Chips::Computer *computer)</argsstring>
+        <name>flushMemory</name>
+        <param>
+          <type><ref refid="classHack_1_1Chips_1_1Computer" kindref="compound">Chips::Computer</ref> *</type>
+          <declname>computer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" line="55" column="1" bodyfile="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp" bodystart="117" bodyend="127"/>
+        <references refid="classHack_1_1Ui_1_1Context_1a2b4afce9f2834f80209250eaad2254fb" compoundref="Context_8cpp" startline="392" endline="412">Hack::Ui::Context::clear</references>
+        <references refid="classHack_1_1Chips_1_1Computer_1a90309c49a06a3585499693ca005aa643" compoundref="Computer_8h" startline="92" endline="95">Hack::Chips::Computer::state</references>
+        <references refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a23c8afd80c284ce88b39254ce5b5c281" compoundref="AssemblyDebuggerPrivate_8cpp" startline="487" endline="508">render</references>
+        <references refid="classHack_1_1Ui_1_1Context_1a386ce2479241e71caf86ef94618a8a6f" compoundref="Context_8cpp" startline="414" endline="458">Hack::Ui::Context::flush</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a6cdaa048556604ceb27738899706efe0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Computer::AssemblyDebuggerPrivate::initialize</definition>
+        <argsstring>(Chips::Computer *computer)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type><ref refid="classHack_1_1Chips_1_1Computer" kindref="compound">Chips::Computer</ref> *</type>
+          <declname>computer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" line="47" column="1" bodyfile="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp" bodystart="67" bodyend="82"/>
+        <references refid="classHack_1_1Chips_1_1Computer_1aa88d19943c50711fbe12d82e901fb21a" compoundref="Computer_8h" startline="87" endline="90">Hack::Chips::Computer::rom</references>
+        <references refid="classHack_1_1Chips_1_1Computer_1abf924e51c33908fd52168a0c29228d1c" compoundref="Computer_8h" startline="82" endline="85">Hack::Chips::Computer::memory</references>
+        <references refid="classHack_1_1Ui_1_1Context_1a88771b1f87caffb79b45d560e0a9201a" compoundref="Context_8cpp" startline="105" endline="123">Hack::Ui::Context::createColor</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1afb51eb65e5f8087dc737b3911254bce4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Hack::Computer::AssemblyDebuggerPrivate::input</definition>
+        <argsstring>() const</argsstring>
+        <name>input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" line="49" column="1" bodyfile="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp" bodystart="84" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1afcab84b5572bf7e963fcd26daf00c3b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Computer::AssemblyDebuggerPrivate::processEvents</definition>
+        <argsstring>(Chips::Computer *computer)</argsstring>
+        <name>processEvents</name>
+        <param>
+          <type><ref refid="classHack_1_1Chips_1_1Computer" kindref="compound">Chips::Computer</ref> *</type>
+          <declname>computer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" line="53" column="1" bodyfile="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp" bodystart="94" bodyend="115"/>
+        <references refid="classHack_1_1Ui_1_1Context_1a5d996403bde1288eb419f7a4beec0167" compoundref="Context_8cpp" startline="318" endline="329">Hack::Ui::Context::poll</references>
+        <references refid="namespaceHack_1_1Ui_1a7553833a41980e8c2bae00177d41129eac5bfa9b08ea8636eb07cf284d5307f20" compoundref="Utils_2UserInterface_2Common_8h" startline="107">Hack::Ui::PR_C</references>
+        <references refid="namespaceHack_1_1Ui_1a7553833a41980e8c2bae00177d41129eadce783d1df91b3fd26fd5817f0ff07c6" compoundref="Utils_2UserInterface_2Common_8h" startline="122">Hack::Ui::PR_R</references>
+        <references refid="classHack_1_1Chips_1_1Computer_1a5e2ff33095c4f19eecdfdbfdba101b52" compoundref="Computer_8cpp" startline="140" endline="143">Hack::Chips::Computer::reset</references>
+        <references refid="namespaceHack_1_1Ui_1a7553833a41980e8c2bae00177d41129ea9a8a91789ebb52f8166f7a8d2407057c" compoundref="Utils_2UserInterface_2Common_8h" startline="95">Hack::Ui::PR_1</references>
+        <references refid="namespaceHack_1_1Ui_1a7553833a41980e8c2bae00177d41129ea5d6a27ad614058c15c679f4a7fe99d48" compoundref="Utils_2UserInterface_2Common_8h" startline="96">Hack::Ui::PR_2</references>
+        <references refid="namespaceHack_1_1Ui_1a7553833a41980e8c2bae00177d41129ea33335fa899c442d134eb40ce5c993426" compoundref="Utils_2UserInterface_2Common_8h" startline="97">Hack::Ui::PR_3</references>
+        <references refid="namespaceHack_1_1Ui_1a7553833a41980e8c2bae00177d41129ea79877e014f1a2ad5cf2568728d4cb866" compoundref="Utils_2UserInterface_2Common_8h" startline="98">Hack::Ui::PR_4</references>
+        <references refid="namespaceHack_1_1Ui_1a7553833a41980e8c2bae00177d41129ea7d0aa57d06151d917be3d0a2a61a475f" compoundref="Utils_2UserInterface_2Common_8h" startline="140">Hack::Ui::PR_ESC</references>
+        <references refid="namespaceHack_1_1Ui_1a7553833a41980e8c2bae00177d41129ead7a3bc54fb41225d6588c6fb307f0bcf" compoundref="Utils_2UserInterface_2Common_8h" startline="91">Hack::Ui::PR_EXIT</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a23c8afd80c284ce88b39254ce5b5c281" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hack::Computer::AssemblyDebuggerPrivate::render</definition>
+        <argsstring>(Ui::Context &amp;ctx) const</argsstring>
+        <name>render</name>
+        <param>
+          <type><ref refid="classHack_1_1Ui_1_1Context" kindref="compound">Ui::Context</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" line="70" column="1" bodyfile="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp" bodystart="487" bodyend="508"/>
+        <references refid="classHack_1_1Ui_1_1Context_1a9b10579d2510a8592129535be1623f89" compoundref="Context_8cpp" startline="307" endline="311">Hack::Ui::Context::reset</references>
+        <references refid="classHack_1_1Ui_1_1Context_1adc3528448341074f5406246ca00200a9" compoundref="Context_8h" startline="122" endline="125">Hack::Ui::Context::width</references>
+        <references refid="classHack_1_1Ui_1_1Context_1a911b798e01c75e90a47a67722549d12e" compoundref="Context_8h" startline="137" endline="140">Hack::Ui::Context::background</references>
+        <references refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bbab6c91e70d12f0fb5a6fd8a5bf49a8dd3" compoundref="Computer_2Common_8h" startline="67">Hack::Computer::WireShadow</references>
+        <references refid="classHack_1_1Ui_1_1Context_1a4a5c359b8eed0171acb0c472104394d3" compoundref="Context_8h" startline="132" endline="135">Hack::Ui::Context::foreground</references>
+        <references refid="classHack_1_1Ui_1_1Context_1a15e60c63d8971ce688651c63e89f80d5" compoundref="Context_8cpp" startline="217" endline="235">Hack::Ui::Context::line</references>
+        <references refid="namespaceHack_1_1Ui_1a52a9537a5cb72fb438de8f7331ffd9a2a271c30a3b0460f8419bd335556d6a496" compoundref="Utils_2UserInterface_2Common_8h" startline="85">Hack::Ui::OR_HORIZONTAL</references>
+        <references refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bba523f19de5aed5dbd2040373dba07824f" compoundref="Computer_2Common_8h" startline="61">Hack::Computer::Highlight</references>
+        <references refid="classHack_1_1Ui_1_1Context_1a2db02147c02dee479e0417490377d77e" compoundref="Context_8cpp" startline="187" endline="200">Hack::Ui::Context::string</references>
+        <references refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1ab245cab0a5673b142fcf58b7fc22e136" compoundref="AssemblyDebuggerPrivate_8cpp" startline="266" endline="485">displayCpu</references>
+        <references refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1ada9dd6b512a465765242d7edd45ce067" compoundref="AssemblyDebuggerPrivate_8cpp" startline="175" endline="210">displayRom</references>
+        <references refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a6b49f29b6994f5e3cc4d93e269622c17" compoundref="AssemblyDebuggerPrivate_8cpp" startline="212" endline="264">displayRam</references>
+        <references refid="classHack_1_1Ui_1_1Context_1aa866af5f45565c383b6ea38594631df6" compoundref="Context_8h" startline="112" endline="115">Hack::Ui::Context::useExtended</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" line="31" column="1" bodyfile="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h" bodystart="30" bodyend="71"/>
+    <listofallmembers>
+      <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a7bad4fca0eb315893dd9ae52077ecee1" prot="private" virt="non-virtual"><scope>Hack::Computer::AssemblyDebuggerPrivate</scope><name>_block</name></member>
+      <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a1792e1eb1facc61cca5be293880a271c" prot="private" virt="non-virtual"><scope>Hack::Computer::AssemblyDebuggerPrivate</scope><name>_cpuState</name></member>
+      <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a9da8dfa2f610fd974231b87259c02691" prot="private" virt="non-virtual"><scope>Hack::Computer::AssemblyDebuggerPrivate</scope><name>_ctx</name></member>
+      <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a86b44f84fe990b3161f34fc89d9b9a5e" prot="private" virt="non-virtual"><scope>Hack::Computer::AssemblyDebuggerPrivate</scope><name>_input</name></member>
+      <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a6c5a9a48c6ede0d8575e4103daa5303e" prot="private" virt="non-virtual"><scope>Hack::Computer::AssemblyDebuggerPrivate</scope><name>_mode</name></member>
+      <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1acb8e2d475cf689ba576b640aaaf43815" prot="private" virt="non-virtual"><scope>Hack::Computer::AssemblyDebuggerPrivate</scope><name>_prevCpuState</name></member>
+      <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1af35580bcbbc55e1dac5cc43101c9d34f" prot="private" virt="non-virtual"><scope>Hack::Computer::AssemblyDebuggerPrivate</scope><name>_ram</name></member>
+      <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a6db36a696045e91743b44f68ebaaac50" prot="private" virt="non-virtual"><scope>Hack::Computer::AssemblyDebuggerPrivate</scope><name>_rom</name></member>
+      <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a50c7bede71cd0b578b1fa274cf92e6d6" prot="public" virt="non-virtual"><scope>Hack::Computer::AssemblyDebuggerPrivate</scope><name>AssemblyDebuggerPrivate</name></member>
+      <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a27c3ae2ed36e248c6e739255a84eded1" prot="public" virt="non-virtual"><scope>Hack::Computer::AssemblyDebuggerPrivate</scope><name>block</name></member>
+      <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1ab245cab0a5673b142fcf58b7fc22e136" prot="public" virt="non-virtual"><scope>Hack::Computer::AssemblyDebuggerPrivate</scope><name>displayCpu</name></member>
+      <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a69c675c19294c721451b7332521e64be" prot="public" virt="non-virtual"><scope>Hack::Computer::AssemblyDebuggerPrivate</scope><name>displayMemoryContents</name></member>
+      <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a6b49f29b6994f5e3cc4d93e269622c17" prot="public" virt="non-virtual"><scope>Hack::Computer::AssemblyDebuggerPrivate</scope><name>displayRam</name></member>
+      <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1ada9dd6b512a465765242d7edd45ce067" prot="public" virt="non-virtual"><scope>Hack::Computer::AssemblyDebuggerPrivate</scope><name>displayRom</name></member>
+      <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a27803ed3d2856b0f50920127200df914" prot="public" virt="non-virtual"><scope>Hack::Computer::AssemblyDebuggerPrivate</scope><name>flushMemory</name></member>
+      <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a6cdaa048556604ceb27738899706efe0" prot="public" virt="non-virtual"><scope>Hack::Computer::AssemblyDebuggerPrivate</scope><name>initialize</name></member>
+      <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1afb51eb65e5f8087dc737b3911254bce4" prot="public" virt="non-virtual"><scope>Hack::Computer::AssemblyDebuggerPrivate</scope><name>input</name></member>
+      <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1afcab84b5572bf7e963fcd26daf00c3b6" prot="public" virt="non-virtual"><scope>Hack::Computer::AssemblyDebuggerPrivate</scope><name>processEvents</name></member>
+      <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a23c8afd80c284ce88b39254ce5b5c281" prot="public" virt="non-virtual"><scope>Hack::Computer::AssemblyDebuggerPrivate</scope><name>render</name></member>
+      <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a0feb84a09a37f1b4c11738a3550d0e22" prot="public" virt="non-virtual"><scope>Hack::Computer::AssemblyDebuggerPrivate</scope><name>~AssemblyDebuggerPrivate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

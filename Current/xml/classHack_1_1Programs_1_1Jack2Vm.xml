@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classHack_1_1Programs_1_1Jack2Vm" kind="class" language="C++" prot="public">
+    <compoundname>Hack::Programs::Jack2Vm</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classHack_1_1Programs_1_1Jack2Vm_1ad5e1fa95fda60a565bf2a91fff3bf89b" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceHack_1a95e191d8af73e79ac197701ac6a6c9a6" kindref="member">Path</ref></type>
+        <definition>Path Hack::Programs::Jack2Vm::_input</definition>
+        <argsstring></argsstring>
+        <name>_input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Generator/Main.cpp" line="58" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHack_1_1Programs_1_1Jack2Vm_1a6642f4baa1458eda69e534791b628171" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Hack::Programs::Jack2Vm::_output</definition>
+        <argsstring></argsstring>
+        <name>_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Generator/Main.cpp" line="59" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classHack_1_1Programs_1_1Jack2Vm_1a1fd66e38d3c6be4537eb4746df158475" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Programs::Jack2Vm::Jack2Vm</definition>
+        <argsstring>()</argsstring>
+        <name>Jack2Vm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Generator/Main.cpp" line="62" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Programs_1_1Jack2Vm_1ae0148bb382e7eda28b5cd8855ab158ff" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Hack::Programs::Jack2Vm::go</definition>
+        <argsstring>() const</argsstring>
+        <name>go</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Generator/Main.cpp" line="88" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="88" bodyend="102"/>
+        <references refid="classHack_1_1ParserBase_1a4668ec9b913931ce518de6d7f92fb4e0" compoundref="ParserBase_8cpp" startline="76" endline="89">Hack::ParserBase::parse</references>
+        <references refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1a682fe2bf83b13010fdf9f38527c4d552" compoundref="Generator_8cpp" startline="702" endline="709">Hack::Compiler::CodeGenerator::Generator::compileToVm</references>
+        <references refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser_1a19917dd91094e5a227a90d6cfaadb150" compoundref="Compiler_2Analyzer_2Parser_8h" startline="143" endline="148">Hack::Compiler::Analyzer::Parser::getTree</references>
+        <references refid="classHack_1_1Compiler_1_1Tree_1a58e4ebbe1e9af83ed2d9ceb8843f90e4" compoundref="Tree_8h" startline="45" endline="48">Hack::Compiler::Tree::getRoot</references>
+        <references refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1a698f9cac52d1b90feb9fc06b77ce649b" compoundref="Generator_8cpp" startline="711" endline="725">Hack::Compiler::CodeGenerator::Generator::write</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Programs_1_1Jack2Vm_1a52b0c35c9ebac3894375a544dd49137d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Programs::Jack2Vm::parse</definition>
+        <argsstring>(const int argc, char **argv)</argsstring>
+        <name>parse</name>
+        <param>
+          <type>const int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Generator/Main.cpp" line="67" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="67" bodyend="86"/>
+        <references refid="classHack_1_1CommandLine_1_1Parser_1a304e3e2f4af07df0fb6c9cde37040e27" compoundref="Utils_2CommandLine_2Parser_8cpp" startline="52" endline="176">Hack::CommandLine::Parser::parse</references>
+        <references refid="namespaceHack_1_1Programs_1addef1058a4b0a225cf643d1c5eca457b" compoundref="Assembler_2Main_8cpp" startline="39">Hack::Programs::Switches</references>
+        <references refid="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26aba0214c85564537166862690304333d3" compoundref="Assembler_2Main_8cpp" startline="36">Hack::Programs::OP_MAX</references>
+        <references refid="classHack_1_1CommandLine_1_1Parser_1a9da3aa8c56bad342c3a7c30eb98d9c17" compoundref="Utils_2CommandLine_2Parser_8cpp" startline="245" endline="255">Hack::CommandLine::Parser::string</references>
+        <references refid="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26ac45c95b5ada136a111376bbf6dc33465" compoundref="Assembler_2Main_8cpp" startline="35">Hack::Programs::OP_OUTPUT</references>
+        <references refid="classHack_1_1CommandLine_1_1Parser_1ac7bc3f3c9e8b89b4a39b8dd9a36b713f" compoundref="Utils_2CommandLine_2Parser_8h" startline="88" endline="91">Hack::CommandLine::Parser::arguments</references>
+        <references refid="classHack_1_1CommandLine_1_1Parser_1afd63d6cb40243606fe5d6c944754eb5b" compoundref="Utils_2CommandLine_2Parser_8cpp" startline="257" endline="262">Hack::CommandLine::Parser::usage</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/Compiler/Generator/Main.cpp" line="56" column="1" bodyfile="Source/Compiler/Generator/Main.cpp" bodystart="55" bodyend="103"/>
+    <listofallmembers>
+      <member refid="classHack_1_1Programs_1_1Jack2Vm_1ad5e1fa95fda60a565bf2a91fff3bf89b" prot="private" virt="non-virtual"><scope>Hack::Programs::Jack2Vm</scope><name>_input</name></member>
+      <member refid="classHack_1_1Programs_1_1Jack2Vm_1a6642f4baa1458eda69e534791b628171" prot="private" virt="non-virtual"><scope>Hack::Programs::Jack2Vm</scope><name>_output</name></member>
+      <member refid="classHack_1_1Programs_1_1Jack2Vm_1ae0148bb382e7eda28b5cd8855ab158ff" prot="public" virt="non-virtual"><scope>Hack::Programs::Jack2Vm</scope><name>go</name></member>
+      <member refid="classHack_1_1Programs_1_1Jack2Vm_1a1fd66e38d3c6be4537eb4746df158475" prot="public" virt="non-virtual"><scope>Hack::Programs::Jack2Vm</scope><name>Jack2Vm</name></member>
+      <member refid="classHack_1_1Programs_1_1Jack2Vm_1a52b0c35c9ebac3894375a544dd49137d" prot="public" virt="non-virtual"><scope>Hack::Programs::Jack2Vm</scope><name>parse</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

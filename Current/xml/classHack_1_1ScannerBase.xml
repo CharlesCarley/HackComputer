@@ -424,63 +424,63 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="416">
+      <node id="424">
         <label>Hack::Assembler::Scanner</label>
         <link refid="classHack_1_1Assembler_1_1Scanner"/>
-        <childnode refid="415" relation="public-inheritance">
+        <childnode refid="423" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="417">
+      <node id="425">
         <label>Hack::Compiler::Analyzer::Scanner</label>
         <link refid="classHack_1_1Compiler_1_1Analyzer_1_1Scanner"/>
-        <childnode refid="415" relation="public-inheritance">
+        <childnode refid="423" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="418">
+      <node id="426">
         <label>Hack::VirtualMachine::Scanner</label>
         <link refid="classHack_1_1VirtualMachine_1_1Scanner"/>
-        <childnode refid="415" relation="public-inheritance">
+        <childnode refid="423" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="415">
+      <node id="423">
         <label>Hack::ScannerBase</label>
         <link refid="classHack_1_1ScannerBase"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="422">
+      <node id="430">
         <label>size_t</label>
       </node>
-      <node id="420">
+      <node id="428">
         <label>Hack::IndexCache&lt; String &gt;</label>
         <link refid="classHack_1_1IndexCache"/>
       </node>
-      <node id="424">
+      <node id="432">
         <label>IStream *</label>
       </node>
-      <node id="423">
+      <node id="431">
         <label>string</label>
       </node>
-      <node id="419">
+      <node id="427">
         <label>Hack::ScannerBase</label>
         <link refid="classHack_1_1ScannerBase"/>
-        <childnode refid="420" relation="usage">
+        <childnode refid="428" relation="usage">
           <edgelabel>_stringTable</edgelabel>
         </childnode>
-        <childnode refid="421" relation="usage">
+        <childnode refid="429" relation="usage">
           <edgelabel>_intTable</edgelabel>
         </childnode>
-        <childnode refid="422" relation="usage">
+        <childnode refid="430" relation="usage">
           <edgelabel>_line</edgelabel>
         </childnode>
-        <childnode refid="423" relation="usage">
+        <childnode refid="431" relation="usage">
           <edgelabel>_file</edgelabel>
         </childnode>
-        <childnode refid="424" relation="usage">
+        <childnode refid="432" relation="usage">
           <edgelabel>_stream</edgelabel>
         </childnode>
       </node>
-      <node id="421">
+      <node id="429">
         <label>Hack::IndexCache&lt; int &gt;</label>
         <link refid="classHack_1_1IndexCache"/>
       </node>

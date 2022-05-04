@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="Computer_2Common_8h" kind="file" language="C++">
+    <compoundname>Common.h</compoundname>
+    <includes refid="Assembler_2Parser_8h" local="yes">Assembler/Parser.h</includes>
+    <includes refid="Utils_2UserInterface_2Common_8h" local="yes">Utils/UserInterface/Common.h</includes>
+    <includedby refid="AssemblyDebuggerPrivate_8cpp" local="yes">Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</includedby>
+    <includedby refid="Executable_8cpp" local="yes">Source/Computer/Executable.cpp</includedby>
+    <incdepgraph>
+      <node id="3026">
+        <label>Utils/ParserBase/ParserBase.h</label>
+        <childnode refid="3025" relation="include">
+        </childnode>
+        <childnode refid="3027" relation="include">
+        </childnode>
+        <childnode refid="3042" relation="include">
+        </childnode>
+      </node>
+      <node id="3028">
+        <label>Utils/IndexCache.h</label>
+        <childnode refid="3024" relation="include">
+        </childnode>
+        <childnode refid="3029" relation="include">
+        </childnode>
+        <childnode refid="3030" relation="include">
+        </childnode>
+      </node>
+      <node id="3040">
+        <label>cstdint</label>
+      </node>
+      <node id="3032">
+        <label>stdexcept</label>
+      </node>
+      <node id="3037">
+        <label>string</label>
+      </node>
+      <node id="3029">
+        <label>unordered_set</label>
+      </node>
+      <node id="3038">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="3035" relation="include">
+        </childnode>
+        <childnode refid="3039" relation="include">
+        </childnode>
+        <childnode refid="3041" relation="include">
+        </childnode>
+      </node>
+      <node id="3031">
+        <label>exception</label>
+      </node>
+      <node id="3039">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="3040" relation="include">
+        </childnode>
+      </node>
+      <node id="3022">
+        <label>Source/Computer/Common.h</label>
+        <link refid="Computer_2Common_8h"/>
+        <childnode refid="3023" relation="include">
+        </childnode>
+        <childnode refid="3039" relation="include">
+        </childnode>
+      </node>
+      <node id="3023">
+        <label>Assembler/Parser.h</label>
+        <childnode refid="3024" relation="include">
+        </childnode>
+        <childnode refid="3025" relation="include">
+        </childnode>
+        <childnode refid="3026" relation="include">
+        </childnode>
+      </node>
+      <node id="3034">
+        <label>Utils/Console.h</label>
+        <childnode refid="3035" relation="include">
+        </childnode>
+        <childnode refid="3038" relation="include">
+        </childnode>
+      </node>
+      <node id="3025">
+        <label>vector</label>
+      </node>
+      <node id="3041">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="3040" relation="include">
+        </childnode>
+        <childnode refid="3025" relation="include">
+        </childnode>
+        <childnode refid="3039" relation="include">
+        </childnode>
+      </node>
+      <node id="3033">
+        <label>utility</label>
+      </node>
+      <node id="3036">
+        <label>sstream</label>
+      </node>
+      <node id="3030">
+        <label>Utils/Exception.h</label>
+        <childnode refid="3031" relation="include">
+        </childnode>
+        <childnode refid="3032" relation="include">
+        </childnode>
+        <childnode refid="3033" relation="include">
+        </childnode>
+        <childnode refid="3034" relation="include">
+        </childnode>
+        <childnode refid="3035" relation="include">
+        </childnode>
+      </node>
+      <node id="3027">
+        <label>ScannerBase.h</label>
+        <childnode refid="3028" relation="include">
+        </childnode>
+        <childnode refid="3042" relation="include">
+        </childnode>
+      </node>
+      <node id="3024">
+        <label>unordered_map</label>
+      </node>
+      <node id="3035">
+        <label>String.h</label>
+        <childnode refid="3036" relation="include">
+        </childnode>
+        <childnode refid="3037" relation="include">
+        </childnode>
+        <childnode refid="3025" relation="include">
+        </childnode>
+      </node>
+      <node id="3042">
+        <label>Utils/ParserBase/TokenBase.h</label>
+        <childnode refid="3035" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3045">
+        <label>Source/Computer/Executable.cpp</label>
+      </node>
+      <node id="3043">
+        <label>Source/Computer/Common.h</label>
+        <link refid="Computer_2Common_8h"/>
+        <childnode refid="3044" relation="include">
+        </childnode>
+        <childnode refid="3045" relation="include">
+        </childnode>
+      </node>
+      <node id="3044">
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</label>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespaceHack">Hack</innernamespace>
+    <innernamespace refid="namespaceHack_1_1Assembler">Hack::Assembler</innernamespace>
+    <innernamespace refid="namespaceHack_1_1CommandLine">Hack::CommandLine</innernamespace>
+    <innernamespace refid="namespaceHack_1_1Compiler">Hack::Compiler</innernamespace>
+    <innernamespace refid="namespaceHack_1_1Compiler_1_1Analyzer">Hack::Compiler::Analyzer</innernamespace>
+    <innernamespace refid="namespaceHack_1_1Compiler_1_1CodeGenerator">Hack::Compiler::CodeGenerator</innernamespace>
+    <innernamespace refid="namespaceHack_1_1Computer">Hack::Computer</innernamespace>
+    <innernamespace refid="namespaceHack_1_1VirtualMachine">Hack::VirtualMachine</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>Charles<sp/>Carley.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>software<sp/>is<sp/>provided<sp/>&apos;as-is&apos;,<sp/>without<sp/>any<sp/>express<sp/>or<sp/>implied</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/>warranty.<sp/>In<sp/>no<sp/>event<sp/>will<sp/>the<sp/>authors<sp/>be<sp/>held<sp/>liable<sp/>for<sp/>any<sp/>damages</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>arising<sp/>from<sp/>the<sp/>use<sp/>of<sp/>this<sp/>software.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>Permission<sp/>is<sp/>granted<sp/>to<sp/>anyone<sp/>to<sp/>use<sp/>this<sp/>software<sp/>for<sp/>any<sp/>purpose,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>including<sp/>commercial<sp/>applications,<sp/>and<sp/>to<sp/>alter<sp/>it<sp/>and<sp/>redistribute<sp/>it</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/>freely,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>restrictions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>1.<sp/>The<sp/>origin<sp/>of<sp/>this<sp/>software<sp/>must<sp/>not<sp/>be<sp/>misrepresented;<sp/>you<sp/>must<sp/>not</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>claim<sp/>that<sp/>you<sp/>wrote<sp/>the<sp/>original<sp/>software.<sp/>If<sp/>you<sp/>use<sp/>this<sp/>software</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>in<sp/>a<sp/>product,<sp/>an<sp/>acknowledgment<sp/>in<sp/>the<sp/>product<sp/>documentation<sp/>would<sp/>be</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>appreciated<sp/>but<sp/>is<sp/>not<sp/>required.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>2.<sp/>Altered<sp/>source<sp/>versions<sp/>must<sp/>be<sp/>plainly<sp/>marked<sp/>as<sp/>such,<sp/>and<sp/>must<sp/>not<sp/>be</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>misrepresented<sp/>as<sp/>being<sp/>the<sp/>original<sp/>software.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">-------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Assembler/Parser.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils/UserInterface/Common.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceHack" kindref="compound">Hack</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Assembler</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Parser;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Compiler</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Analyzer</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Parser;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">CodeGenerator</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Generator;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">VirtualMachine</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Parser;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="namespaceHack_1_1CommandLine" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">CommandLine</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structHack_1_1CommandLine_1_1Switch" kindref="compound" tooltip="Represents a command line switch ">Switch</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classHack_1_1CommandLine_1_1Parser" kindref="compound" tooltip="Simple command line parser ">Parser</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Computer</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58" refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bb" kindref="member">Colors</ref></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="60" refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bba7e22e0614cab05eee2406a31b577c1cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bba7e22e0614cab05eee2406a31b577c1cb" kindref="member">Grey</ref><sp/>=<sp/><ref refid="namespaceHack_1_1Ui_1ae1fedfb1c7fe15d04561a77c09b20bc3a5bad76b91aaadc4b8e6d1084be6be564" kindref="member">Ui::CP_USER</ref>,</highlight></codeline>
+<codeline lineno="61" refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bba523f19de5aed5dbd2040373dba07824f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bba523f19de5aed5dbd2040373dba07824f" kindref="member">Highlight</ref>,</highlight></codeline>
+<codeline lineno="62" refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bba1395267cd84975a8d8c1e054512ecd10" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bba1395267cd84975a8d8c1e054512ecd10" kindref="member">WireTitle</ref>,</highlight></codeline>
+<codeline lineno="63" refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bbaf6a6ac45348d5f3cd60894f729d9b618" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bbaf6a6ac45348d5f3cd60894f729d9b618" kindref="member">Action</ref>,</highlight></codeline>
+<codeline lineno="64" refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bbad75fff1f9779ab03efb0978a8eb03ff9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bbad75fff1f9779ab03efb0978a8eb03ff9" kindref="member">Action2</ref>,</highlight></codeline>
+<codeline lineno="65" refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bbaa486485fc55b5cc36bd0f71b07d3ccbe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bbaa486485fc55b5cc36bd0f71b07d3ccbe" kindref="member">Wire</ref>,</highlight></codeline>
+<codeline lineno="66" refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bba18e2c54dbcfb73c3aa981698f4a62d4c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bba18e2c54dbcfb73c3aa981698f4a62d4c" kindref="member">Title</ref>,</highlight></codeline>
+<codeline lineno="67" refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bbab6c91e70d12f0fb5a6fd8a5bf49a8dd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bbab6c91e70d12f0fb5a6fd8a5bf49a8dd3" kindref="member">WireShadow</ref>,</highlight></codeline>
+<codeline lineno="68" refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bbaa743894e7b4ca3f69492d489e09b6013" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1_1Computer_1a6ee97e54ce2758fcfe70e172c882b9bbaa743894e7b4ca3f69492d489e09b6013" kindref="member">WireLight</ref></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="namespaceHack_1_1Computer_1a44afbb15c2b5cb28f39f19bfcdde74de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1_1Computer_1a44afbb15c2b5cb28f39f19bfcdde74de" kindref="member">Instructions</ref><sp/>=<sp/><ref refid="classHack_1_1Assembler_1_1Parser_1a9e0e8293fb5dfb34d2669b83ee4e7a61" kindref="member">Assembler::Parser::Instructions</ref>;</highlight></codeline>
+<codeline lineno="72" refid="namespaceHack_1_1Computer_1a7adfa2a3953171ba9904ffbd0c285bcc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1CommandLine_1_1Parser" kindref="compound" tooltip="Simple command line parser ">Cmd</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="classHack_1_1CommandLine_1_1Parser" kindref="compound" tooltip="Simple command line parser ">CommandLine::Parser</ref>;</highlight></codeline>
+<codeline lineno="73" refid="namespaceHack_1_1Computer_1a4895802d0916e2b1cd7de7a2c2721789" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structHack_1_1CommandLine_1_1Switch" kindref="compound" tooltip="Represents a command line switch ">CmdSwitch</ref><sp/><sp/><sp/><sp/>=<sp/><ref refid="structHack_1_1CommandLine_1_1Switch" kindref="compound" tooltip="Represents a command line switch ">CommandLine::Switch</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="namespaceHack_1_1Computer_1aba32ded0cec6b006c47567a0e1882e10" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Assembler_1_1Parser" kindref="compound">AsmParser</ref><sp/><sp/><sp/>=<sp/><ref refid="classHack_1_1Assembler_1_1Parser" kindref="compound">Assembler::Parser</ref>;</highlight></codeline>
+<codeline lineno="76" refid="namespaceHack_1_1Computer_1ae7e2f73e4f04af1c84f92348e8d432a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1VirtualMachine_1_1Parser" kindref="compound">VmParser</ref><sp/><sp/><sp/><sp/>=<sp/><ref refid="classHack_1_1VirtualMachine_1_1Parser" kindref="compound">VirtualMachine::Parser</ref>;</highlight></codeline>
+<codeline lineno="77" refid="namespaceHack_1_1Computer_1a839f273fc69d51b41afa231c251e86d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator" kindref="compound">VmGenerator</ref><sp/>=<sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator" kindref="compound">Compiler::CodeGenerator::Generator</ref>;</highlight></codeline>
+<codeline lineno="78" refid="namespaceHack_1_1Computer_1a4d3a61b7bdee1da9f307059b558d1c9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser" kindref="compound">JackParser</ref><sp/><sp/>=<sp/><ref refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser" kindref="compound">Compiler::Analyzer::Parser</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Computer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Source/Computer/Common.h"/>
+  </compounddef>
+</doxygen>

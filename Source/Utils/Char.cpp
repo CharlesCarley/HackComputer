@@ -232,6 +232,13 @@ namespace Hack
         dest = bs.to_string();
     }
 
+    void Char::toHexString(String& dest, uint8_t v)
+    {
+        std::stringstream stream;
+        stream << std::hex << v;
+        dest = stream.str();
+    }
+
     void Char::toString(String& dest, const int16_t v)
     {
         std::stringstream stream;
@@ -354,6 +361,13 @@ namespace Hack
     {
         String copyOnReturn;
         toString(copyOnReturn, v);
+        return copyOnReturn;
+    }
+
+    String Char::toHexString(const uint8_t v)
+    {
+        String copyOnReturn;
+        toHexString(copyOnReturn, v);
         return copyOnReturn;
     }
 

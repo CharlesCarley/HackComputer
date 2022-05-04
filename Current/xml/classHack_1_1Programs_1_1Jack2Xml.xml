@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classHack_1_1Programs_1_1Jack2Xml" kind="class" language="C++" prot="public">
+    <compoundname>Hack::Programs::Jack2Xml</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classHack_1_1Programs_1_1Jack2Xml_1af3ac3d5544da576d1678fb712f948c87" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
+        <definition>String Hack::Programs::Jack2Xml::_dir</definition>
+        <argsstring></argsstring>
+        <name>_dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Main.cpp" line="80" column="1" bodyfile="Source/Compiler/Analyzer/Main.cpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHack_1_1Programs_1_1Jack2Xml_1ac6a4fadc1647c8c81bb9f3576d626937" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Hack::Programs::Jack2Xml::_dot</definition>
+        <argsstring></argsstring>
+        <name>_dot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Main.cpp" line="79" column="1" bodyfile="Source/Compiler/Analyzer/Main.cpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHack_1_1Programs_1_1Jack2Xml_1a17763564da6c9331e555421c07461676" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Hack::Programs::Jack2Xml::_input</definition>
+        <argsstring></argsstring>
+        <name>_input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Main.cpp" line="77" column="1" bodyfile="Source/Compiler/Analyzer/Main.cpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHack_1_1Programs_1_1Jack2Xml_1a6f63b52889068584b1f8237fa75c4692" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Hack::Programs::Jack2Xml::_output</definition>
+        <argsstring></argsstring>
+        <name>_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Main.cpp" line="78" column="1" bodyfile="Source/Compiler/Analyzer/Main.cpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classHack_1_1Programs_1_1Jack2Xml_1a649834d1f8a072f693454210bf5d5f88" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Programs::Jack2Xml::Jack2Xml</definition>
+        <argsstring>()</argsstring>
+        <name>Jack2Xml</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Main.cpp" line="83" column="1" bodyfile="Source/Compiler/Analyzer/Main.cpp" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Programs_1_1Jack2Xml_1aa77e1a9ad4c531fb91dd29f08b33d98b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Hack::Programs::Jack2Xml::go</definition>
+        <argsstring>() const</argsstring>
+        <name>go</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Main.cpp" line="114" column="1" bodyfile="Source/Compiler/Analyzer/Main.cpp" bodystart="114" bodyend="158"/>
+        <references refid="classHack_1_1ParserBase_1a4668ec9b913931ce518de6d7f92fb4e0" compoundref="ParserBase_8cpp" startline="76" endline="89">Hack::ParserBase::parse</references>
+        <references refid="classHack_1_1ParserBase_1a4560ce70fee098d7508b053b409c1d19" compoundref="ParserBase_8cpp" startline="107" endline="114">Hack::ParserBase::write</references>
+        <references refid="classHack_1_1Exception_1ad552d982f58950c324eaebd2dfbd1fe2" compoundref="Exception_8h" startline="64" endline="67">Hack::Exception::what</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Programs_1_1Jack2Xml_1ab9678bf5b969299162c77ef8e276cabe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hack::Programs::Jack2Xml::parse</definition>
+        <argsstring>(const int argc, char **argv)</argsstring>
+        <name>parse</name>
+        <param>
+          <type>const int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Compiler/Analyzer/Main.cpp" line="88" column="1" bodyfile="Source/Compiler/Analyzer/Main.cpp" bodystart="88" bodyend="112"/>
+        <references refid="classHack_1_1CommandLine_1_1Parser_1a304e3e2f4af07df0fb6c9cde37040e27" compoundref="Utils_2CommandLine_2Parser_8cpp" startline="52" endline="176">Hack::CommandLine::Parser::parse</references>
+        <references refid="namespaceHack_1_1Programs_1addef1058a4b0a225cf643d1c5eca457b" compoundref="Assembler_2Main_8cpp" startline="39">Hack::Programs::Switches</references>
+        <references refid="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26aba0214c85564537166862690304333d3" compoundref="Assembler_2Main_8cpp" startline="36">Hack::Programs::OP_MAX</references>
+        <references refid="classHack_1_1CommandLine_1_1Parser_1a9da3aa8c56bad342c3a7c30eb98d9c17" compoundref="Utils_2CommandLine_2Parser_8cpp" startline="245" endline="255">Hack::CommandLine::Parser::string</references>
+        <references refid="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26ac45c95b5ada136a111376bbf6dc33465" compoundref="Assembler_2Main_8cpp" startline="35">Hack::Programs::OP_OUTPUT</references>
+        <references refid="classHack_1_1CommandLine_1_1Parser_1adbd749e0938e2b359ee7f719864d1451" compoundref="Utils_2CommandLine_2Parser_8cpp" startline="205" endline="210">Hack::CommandLine::Parser::isPresent</references>
+        <references refid="namespaceHack_1_1Programs_1ab2ef2913b19b77944b67c68f613d4735a545886736861bbb7323377d0d060091d" compoundref="Compiler_2Analyzer_2Main_8cpp" startline="39">Hack::Programs::OP_DIR</references>
+        <references refid="classHack_1_1CommandLine_1_1Parser_1ac7bc3f3c9e8b89b4a39b8dd9a36b713f" compoundref="Utils_2CommandLine_2Parser_8h" startline="88" endline="91">Hack::CommandLine::Parser::arguments</references>
+        <references refid="classHack_1_1CommandLine_1_1Parser_1afd63d6cb40243606fe5d6c944754eb5b" compoundref="Utils_2CommandLine_2Parser_8cpp" startline="257" endline="262">Hack::CommandLine::Parser::usage</references>
+        <references refid="namespaceHack_1_1Programs_1ab2ef2913b19b77944b67c68f613d4735a7ddc2f0d1c6b4181313581b737e37825" compoundref="Compiler_2Analyzer_2Main_8cpp" startline="38">Hack::Programs::OP_FMT</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/Compiler/Analyzer/Main.cpp" line="75" column="1" bodyfile="Source/Compiler/Analyzer/Main.cpp" bodystart="74" bodyend="159"/>
+    <listofallmembers>
+      <member refid="classHack_1_1Programs_1_1Jack2Xml_1af3ac3d5544da576d1678fb712f948c87" prot="private" virt="non-virtual"><scope>Hack::Programs::Jack2Xml</scope><name>_dir</name></member>
+      <member refid="classHack_1_1Programs_1_1Jack2Xml_1ac6a4fadc1647c8c81bb9f3576d626937" prot="private" virt="non-virtual"><scope>Hack::Programs::Jack2Xml</scope><name>_dot</name></member>
+      <member refid="classHack_1_1Programs_1_1Jack2Xml_1a17763564da6c9331e555421c07461676" prot="private" virt="non-virtual"><scope>Hack::Programs::Jack2Xml</scope><name>_input</name></member>
+      <member refid="classHack_1_1Programs_1_1Jack2Xml_1a6f63b52889068584b1f8237fa75c4692" prot="private" virt="non-virtual"><scope>Hack::Programs::Jack2Xml</scope><name>_output</name></member>
+      <member refid="classHack_1_1Programs_1_1Jack2Xml_1aa77e1a9ad4c531fb91dd29f08b33d98b" prot="public" virt="non-virtual"><scope>Hack::Programs::Jack2Xml</scope><name>go</name></member>
+      <member refid="classHack_1_1Programs_1_1Jack2Xml_1a649834d1f8a072f693454210bf5d5f88" prot="public" virt="non-virtual"><scope>Hack::Programs::Jack2Xml</scope><name>Jack2Xml</name></member>
+      <member refid="classHack_1_1Programs_1_1Jack2Xml_1ab9678bf5b969299162c77ef8e276cabe" prot="public" virt="non-virtual"><scope>Hack::Programs::Jack2Xml</scope><name>parse</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

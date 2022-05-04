@@ -31,6 +31,7 @@ namespace Hack::Chips
         // clocked D-flip-flops to work.
         // 6 = reset
         // 1 = input
+        // 0 = value
         _bits = 0b01000000;
     }
 

@@ -37,7 +37,7 @@ namespace Hack::Compiler::CodeGenerator
         String             _eof;
 
         template <typename... Args>
-        void write(Args&&...args)
+        void write(Args&&... args)
         {
             OutputStringStream oss;
             ((oss << std::forward<Args>(args)), ...);
@@ -85,11 +85,9 @@ namespace Hack::Compiler::CodeGenerator
 
         void popTemp(const size_t& idx);
 
-
         void pushLocal(const size_t& idx);
 
         void pushArgument(const size_t& idx);
-
 
         void pushThis(const size_t& idx);
 
@@ -100,7 +98,6 @@ namespace Hack::Compiler::CodeGenerator
         void pushStatic(const size_t& idx);
 
         void pushTemp(const size_t& idx);
-
 
         void writeReturn();
 
@@ -137,4 +134,4 @@ namespace Hack::Compiler::CodeGenerator
     {
         return _stream;
     }
-} // namespace Hack::Compiler::CodeGenerator
+}  // namespace Hack::Compiler::CodeGenerator

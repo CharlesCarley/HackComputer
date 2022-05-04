@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classHack_1_1Computer_1_1ConsoleRuntime" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>Hack::Computer::ConsoleRuntime</compoundname>
+    <basecompoundref refid="classHack_1_1Computer_1_1RuntimeInterface" prot="public" virt="non-virtual">Hack::Computer::RuntimeInterface</basecompoundref>
+    <includes local="no">Source/Computer/ConsoleRuntime.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classHack_1_1Computer_1_1ConsoleRuntime_1a70357536ed71a897831f8f0b8464a995" prot="private" static="no" mutable="no">
+        <type><ref refid="classHack_1_1Computer_1_1ConsoleRuntimePrivate" kindref="compound">ConsoleRuntimePrivate</ref> *</type>
+        <definition>ConsoleRuntimePrivate* Hack::Computer::ConsoleRuntime::_private</definition>
+        <argsstring></argsstring>
+        <name>_private</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/ConsoleRuntime.h" line="33" column="1" bodyfile="Source/Computer/ConsoleRuntime.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classHack_1_1Computer_1_1ConsoleRuntime_1aa527a98e2483ea54dac3acdd064c7c22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Computer::ConsoleRuntime::ConsoleRuntime</definition>
+        <argsstring>()</argsstring>
+        <name>ConsoleRuntime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/ConsoleRuntime.h" line="36" column="1" bodyfile="Source/Computer/ConsoleRuntime.cpp" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Computer_1_1ConsoleRuntime_1ab8bb0ada0529b19172deeabf2c145c74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hack::Computer::ConsoleRuntime::~ConsoleRuntime</definition>
+        <argsstring>() override</argsstring>
+        <name>~ConsoleRuntime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/ConsoleRuntime.h" line="38" column="1" bodyfile="Source/Computer/ConsoleRuntime.cpp" bodystart="35" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Computer_1_1ConsoleRuntime_1ad2d8d382f6a77bfb8aa21043385d1e47" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Hack::Computer::ConsoleRuntime::exitRequest</definition>
+        <argsstring>() const override</argsstring>
+        <name>exitRequest</name>
+        <reimplements refid="classHack_1_1Computer_1_1RuntimeInterface_1ae4fb11811510339381b65be887827dfc">exitRequest</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/ConsoleRuntime.h" line="44" column="1" bodyfile="Source/Computer/ConsoleRuntime.cpp" bodystart="52" bodyend="55"/>
+        <references refid="classHack_1_1Computer_1_1ConsoleRuntimePrivate_1a20d00d73869eed088ce65b33e43190c6" compoundref="ConsoleRuntimePrivate_8cpp" startline="47" endline="50">Hack::Computer::ConsoleRuntimePrivate::input</references>
+        <references refid="namespaceHack_1_1Ui_1a7553833a41980e8c2bae00177d41129ead7a3bc54fb41225d6588c6fb307f0bcf" compoundref="Utils_2UserInterface_2Common_8h" startline="91">Hack::Ui::PR_EXIT</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Computer_1_1ConsoleRuntime_1aff3235a2b246b61903b8965490743507" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Hack::Computer::ConsoleRuntime::flushMemory</definition>
+        <argsstring>(Chips::Computer *computer) const override</argsstring>
+        <name>flushMemory</name>
+        <reimplements refid="classHack_1_1Computer_1_1RuntimeInterface_1af845999e44531fc6282d028402131fa9">flushMemory</reimplements>
+        <param>
+          <type><ref refid="classHack_1_1Chips_1_1Computer" kindref="compound">Chips::Computer</ref> *</type>
+          <declname>computer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/ConsoleRuntime.h" line="48" column="1" bodyfile="Source/Computer/ConsoleRuntime.cpp" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Computer_1_1ConsoleRuntime_1a8bffb9cef063a2d349513bc3e9ad0028" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Hack::Computer::ConsoleRuntime::initialize</definition>
+        <argsstring>(Chips::Computer *computer, Chips::Screen *) const override</argsstring>
+        <name>initialize</name>
+        <reimplements refid="classHack_1_1Computer_1_1RuntimeInterface_1acfdf1e97cbbcc9a9f13ad26e6062b8d0">initialize</reimplements>
+        <param>
+          <type><ref refid="classHack_1_1Chips_1_1Computer" kindref="compound">Chips::Computer</ref> *</type>
+          <declname>computer</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceHack_1_1Chips_1a205aa97050ad01560145252139c81057" kindref="member">Chips::Screen</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/ConsoleRuntime.h" line="42" column="1" bodyfile="Source/Computer/ConsoleRuntime.cpp" bodystart="46" bodyend="50"/>
+        <references refid="classHack_1_1Computer_1_1ConsoleRuntimePrivate_1aa6a9057b42d977fc9e4b060deebcbc28" compoundref="ConsoleRuntimePrivate_8cpp" startline="41" endline="45">Hack::Computer::ConsoleRuntimePrivate::initialize</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Computer_1_1ConsoleRuntime_1a129307bdd39e3f6f1d09c55d40a1b7a9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Hack::Computer::ConsoleRuntime::processEvents</definition>
+        <argsstring>(Chips::Computer *computer) const override</argsstring>
+        <name>processEvents</name>
+        <reimplements refid="classHack_1_1Computer_1_1RuntimeInterface_1a3cb1ab52903aaedabb0c9d49b013aab4">processEvents</reimplements>
+        <param>
+          <type><ref refid="classHack_1_1Chips_1_1Computer" kindref="compound">Chips::Computer</ref> *</type>
+          <declname>computer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/ConsoleRuntime.h" line="46" column="1" bodyfile="Source/Computer/ConsoleRuntime.cpp" bodystart="57" bodyend="60"/>
+        <references refid="classHack_1_1Computer_1_1ConsoleRuntimePrivate_1acdd528af8a7bbb377d264a160ba7fdf9" compoundref="ConsoleRuntimePrivate_8cpp" startline="52" endline="56">Hack::Computer::ConsoleRuntimePrivate::processEvents</references>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Computer_1_1ConsoleRuntime_1aa20357adbf0b4e45cdb73da172a744cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Hack::Computer::ConsoleRuntime::shouldUpdate</definition>
+        <argsstring>() override</argsstring>
+        <name>shouldUpdate</name>
+        <reimplements refid="classHack_1_1Computer_1_1RuntimeInterface_1a44e6d9da00af26f22941e1a0a540e797">shouldUpdate</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/ConsoleRuntime.h" line="40" column="1" bodyfile="Source/Computer/ConsoleRuntime.cpp" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classHack_1_1Computer_1_1ConsoleRuntime_1ae804dca77617617963857ef5337628dc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Hack::Computer::ConsoleRuntime::update</definition>
+        <argsstring>(Chips::Computer *computer) const override</argsstring>
+        <name>update</name>
+        <reimplements refid="classHack_1_1Computer_1_1RuntimeInterface_1a5fe5dfa099bbf6ded85b29028440466d">update</reimplements>
+        <param>
+          <type><ref refid="classHack_1_1Chips_1_1Computer" kindref="compound">Chips::Computer</ref> *</type>
+          <declname>computer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Computer/ConsoleRuntime.h" line="50" column="1" bodyfile="Source/Computer/ConsoleRuntime.cpp" bodystart="66" bodyend="72"/>
+        <references refid="classHack_1_1Computer_1_1RuntimeInterface_1a0f5eca7470888a3c5190dd9c1ddc3f67" compoundref="RuntimeInterface_8h" startline="60" endline="63">Hack::Computer::RuntimeInterface::getRate</references>
+        <references refid="classHack_1_1Chips_1_1Computer_1aa44e98396b5191c503bd5255fe0ffa1f" compoundref="Computer_8cpp" startline="105" endline="138">Hack::Chips::Computer::update</references>
+        <references refid="classHack_1_1Computer_1_1ConsoleRuntimePrivate_1a304c95b27168a6645def608a424a8a70" compoundref="ConsoleRuntimePrivate_8cpp" startline="58" endline="61">Hack::Computer::ConsoleRuntimePrivate::update</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="367">
+        <label>Hack::Computer::ConsoleRuntime</label>
+        <link refid="classHack_1_1Computer_1_1ConsoleRuntime"/>
+        <childnode refid="368" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="368">
+        <label>Hack::Computer::RuntimeInterface</label>
+        <link refid="classHack_1_1Computer_1_1RuntimeInterface"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="369">
+        <label>Hack::Computer::ConsoleRuntime</label>
+        <link refid="classHack_1_1Computer_1_1ConsoleRuntime"/>
+        <childnode refid="370" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="370">
+        <label>Hack::Computer::RuntimeInterface</label>
+        <link refid="classHack_1_1Computer_1_1RuntimeInterface"/>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Computer/ConsoleRuntime.h" line="31" column="1" bodyfile="Source/Computer/ConsoleRuntime.h" bodystart="30" bodyend="51"/>
+    <listofallmembers>
+      <member refid="classHack_1_1Computer_1_1ConsoleRuntime_1a70357536ed71a897831f8f0b8464a995" prot="private" virt="non-virtual"><scope>Hack::Computer::ConsoleRuntime</scope><name>_private</name></member>
+      <member refid="classHack_1_1Computer_1_1ConsoleRuntime_1aa527a98e2483ea54dac3acdd064c7c22" prot="public" virt="non-virtual"><scope>Hack::Computer::ConsoleRuntime</scope><name>ConsoleRuntime</name></member>
+      <member refid="classHack_1_1Computer_1_1ConsoleRuntime_1ad2d8d382f6a77bfb8aa21043385d1e47" prot="public" virt="virtual"><scope>Hack::Computer::ConsoleRuntime</scope><name>exitRequest</name></member>
+      <member refid="classHack_1_1Computer_1_1ConsoleRuntime_1aff3235a2b246b61903b8965490743507" prot="public" virt="virtual"><scope>Hack::Computer::ConsoleRuntime</scope><name>flushMemory</name></member>
+      <member refid="classHack_1_1Computer_1_1RuntimeInterface_1a0f5eca7470888a3c5190dd9c1ddc3f67" prot="public" virt="virtual"><scope>Hack::Computer::ConsoleRuntime</scope><name>getRate</name></member>
+      <member refid="classHack_1_1Computer_1_1ConsoleRuntime_1a8bffb9cef063a2d349513bc3e9ad0028" prot="public" virt="virtual"><scope>Hack::Computer::ConsoleRuntime</scope><name>initialize</name></member>
+      <member refid="classHack_1_1Computer_1_1ConsoleRuntime_1a129307bdd39e3f6f1d09c55d40a1b7a9" prot="public" virt="virtual"><scope>Hack::Computer::ConsoleRuntime</scope><name>processEvents</name></member>
+      <member refid="classHack_1_1Computer_1_1RuntimeInterface_1abcf9f603a7a55918f648318629fc07f7" prot="public" virt="virtual"><scope>Hack::Computer::ConsoleRuntime</scope><name>setInstructions</name></member>
+      <member refid="classHack_1_1Computer_1_1RuntimeInterface_1afac6241dfa4f6de4ca3353819786e5e3" prot="public" virt="virtual"><scope>Hack::Computer::ConsoleRuntime</scope><name>setRate</name></member>
+      <member refid="classHack_1_1Computer_1_1ConsoleRuntime_1aa20357adbf0b4e45cdb73da172a744cf" prot="public" virt="virtual"><scope>Hack::Computer::ConsoleRuntime</scope><name>shouldUpdate</name></member>
+      <member refid="classHack_1_1Computer_1_1ConsoleRuntime_1ae804dca77617617963857ef5337628dc" prot="public" virt="virtual"><scope>Hack::Computer::ConsoleRuntime</scope><name>update</name></member>
+      <member refid="classHack_1_1Computer_1_1ConsoleRuntime_1ab8bb0ada0529b19172deeabf2c145c74" prot="public" virt="non-virtual"><scope>Hack::Computer::ConsoleRuntime</scope><name>~ConsoleRuntime</name></member>
+      <member refid="classHack_1_1Computer_1_1RuntimeInterface_1a3e09aeb7e6d6907b58f7a2a40636ac37" prot="public" virt="virtual"><scope>Hack::Computer::ConsoleRuntime</scope><name>~RuntimeInterface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

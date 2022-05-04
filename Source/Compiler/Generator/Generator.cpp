@@ -249,8 +249,8 @@ namespace Hack::Compiler::CodeGenerator
 
             const Node& arrayExpr = statement.rule(3, RuleExpression);
             buildExpression(arrayExpr);
-            _emitter->symbolAdd();   // base address offset
-            _emitter->popPointer(1); // move the base address into the current pointer
+            _emitter->symbolAdd();    // base address offset
+            _emitter->popPointer(1);  // move the base address into the current pointer
 
             const Node& assign = statement.rule(6, RuleExpression);
             buildExpression(assign);
@@ -619,8 +619,8 @@ namespace Hack::Compiler::CodeGenerator
         {
             const Node& method = *child;
 
-            const Node& methodSpec    = method.rule(0).child(0);
-            const Node& returnType    = method.rule(1).child(0);
+            // const Node& methodSpec    = method.rule(0).child(0);
+            // const Node& returnType    = method.rule(1).child(0);
             const Node& methodName    = method.rule(2);
             const Node& parameterList = method.rule(4);
             const Node& body          = method.rule(6).rule(1);
@@ -699,7 +699,7 @@ namespace Hack::Compiler::CodeGenerator
         _emitter->finalize();
     }
 
-    void Generator::compile(const Node* tree)
+    void Generator::compileToVm(const Node* tree)
     {
         if (!tree)
             throw InvalidPointer();
@@ -729,4 +729,4 @@ namespace Hack::Compiler::CodeGenerator
         const String buffer = _emitter->stream().str();
         stream.write(buffer.c_str(), buffer.size());
     }
-} // namespace Hack::Compiler::CodeGenerator
+}  // namespace Hack::Compiler::CodeGenerator

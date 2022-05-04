@@ -7,133 +7,133 @@
     <includedby refid="Compiler_2Analyzer_2Parser_8cpp" local="yes">Source/Compiler/Analyzer/Parser.cpp</includedby>
     <includedby refid="Compiler_2Analyzer_2Scanner_8cpp" local="yes">Source/Compiler/Analyzer/Scanner.cpp</includedby>
     <incdepgraph>
-      <node id="570">
-        <label>Utils/ParserBase/TokenBase.h</label>
-        <childnode refid="562" relation="include">
+      <node id="568">
+        <label>Utils/IndexCache.h</label>
+        <childnode refid="569" relation="include">
         </childnode>
-      </node>
-      <node id="552">
-        <label>Source/Compiler/Analyzer/Scanner.h</label>
-        <link refid="Compiler_2Analyzer_2Scanner_8h"/>
-        <childnode refid="553" relation="include">
+        <childnode refid="570" relation="include">
         </childnode>
         <childnode refid="571" relation="include">
         </childnode>
       </node>
-      <node id="557">
-        <label>Utils/Exception.h</label>
-        <childnode refid="558" relation="include">
-        </childnode>
-        <childnode refid="559" relation="include">
-        </childnode>
-        <childnode refid="560" relation="include">
-        </childnode>
-        <childnode refid="561" relation="include">
-        </childnode>
-        <childnode refid="562" relation="include">
-        </childnode>
-      </node>
-      <node id="553">
-        <label>Utils/ParserBase/ScannerBase.h</label>
-        <childnode refid="554" relation="include">
-        </childnode>
-        <childnode refid="570" relation="include">
-        </childnode>
-      </node>
-      <node id="568">
+      <node id="582">
         <label>cstdint</label>
       </node>
-      <node id="566">
-        <label>UserInterface/Context.h</label>
-        <childnode refid="562" relation="include">
-        </childnode>
-        <childnode refid="567" relation="include">
-        </childnode>
-        <childnode refid="569" relation="include">
-        </childnode>
-      </node>
-      <node id="559">
+      <node id="573">
         <label>stdexcept</label>
       </node>
-      <node id="564">
+      <node id="578">
         <label>string</label>
       </node>
-      <node id="556">
-        <label>unordered_set</label>
-      </node>
-      <node id="558">
-        <label>exception</label>
-      </node>
-      <node id="567">
-        <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="568" relation="include">
-        </childnode>
-      </node>
-      <node id="562">
-        <label>String.h</label>
-        <childnode refid="563" relation="include">
-        </childnode>
-        <childnode refid="564" relation="include">
-        </childnode>
-        <childnode refid="565" relation="include">
-        </childnode>
-      </node>
-      <node id="554">
-        <label>Utils/IndexCache.h</label>
-        <childnode refid="555" relation="include">
-        </childnode>
-        <childnode refid="556" relation="include">
-        </childnode>
-        <childnode refid="557" relation="include">
-        </childnode>
-      </node>
-      <node id="565">
-        <label>vector</label>
-      </node>
-      <node id="560">
-        <label>utility</label>
-      </node>
-      <node id="563">
-        <label>sstream</label>
-      </node>
-      <node id="555">
-        <label>unordered_map</label>
-      </node>
-      <node id="569">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="568" relation="include">
-        </childnode>
-        <childnode refid="565" relation="include">
-        </childnode>
-        <childnode refid="567" relation="include">
-        </childnode>
-      </node>
-      <node id="571">
-        <label>Compiler/Analyzer/Token.h</label>
-        <childnode refid="570" relation="include">
-        </childnode>
-      </node>
-      <node id="561">
-        <label>Utils/Console.h</label>
-        <childnode refid="562" relation="include">
-        </childnode>
-        <childnode refid="566" relation="include">
-        </childnode>
-      </node>
-    </incdepgraph>
-    <invincdepgraph>
-      <node id="572">
+      <node id="566">
         <label>Source/Compiler/Analyzer/Scanner.h</label>
         <link refid="Compiler_2Analyzer_2Scanner_8h"/>
+        <childnode refid="567" relation="include">
+        </childnode>
+        <childnode refid="585" relation="include">
+        </childnode>
+      </node>
+      <node id="570">
+        <label>unordered_set</label>
+      </node>
+      <node id="580">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="576" relation="include">
+        </childnode>
+        <childnode refid="581" relation="include">
+        </childnode>
+        <childnode refid="583" relation="include">
+        </childnode>
+      </node>
+      <node id="572">
+        <label>exception</label>
+      </node>
+      <node id="581">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="582" relation="include">
+        </childnode>
+      </node>
+      <node id="575">
+        <label>Utils/Console.h</label>
+        <childnode refid="576" relation="include">
+        </childnode>
+        <childnode refid="580" relation="include">
+        </childnode>
+      </node>
+      <node id="579">
+        <label>vector</label>
+      </node>
+      <node id="583">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="582" relation="include">
+        </childnode>
+        <childnode refid="579" relation="include">
+        </childnode>
+        <childnode refid="581" relation="include">
+        </childnode>
+      </node>
+      <node id="574">
+        <label>utility</label>
+      </node>
+      <node id="577">
+        <label>sstream</label>
+      </node>
+      <node id="571">
+        <label>Utils/Exception.h</label>
+        <childnode refid="572" relation="include">
+        </childnode>
         <childnode refid="573" relation="include">
         </childnode>
         <childnode refid="574" relation="include">
         </childnode>
+        <childnode refid="575" relation="include">
+        </childnode>
+        <childnode refid="576" relation="include">
+        </childnode>
       </node>
-      <node id="573">
+      <node id="585">
+        <label>Compiler/Analyzer/Token.h</label>
+        <childnode refid="584" relation="include">
+        </childnode>
+      </node>
+      <node id="567">
+        <label>Utils/ParserBase/ScannerBase.h</label>
+        <childnode refid="568" relation="include">
+        </childnode>
+        <childnode refid="584" relation="include">
+        </childnode>
+      </node>
+      <node id="569">
+        <label>unordered_map</label>
+      </node>
+      <node id="576">
+        <label>String.h</label>
+        <childnode refid="577" relation="include">
+        </childnode>
+        <childnode refid="578" relation="include">
+        </childnode>
+        <childnode refid="579" relation="include">
+        </childnode>
+      </node>
+      <node id="584">
+        <label>Utils/ParserBase/TokenBase.h</label>
+        <childnode refid="576" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="586">
+        <label>Source/Compiler/Analyzer/Scanner.h</label>
+        <link refid="Compiler_2Analyzer_2Scanner_8h"/>
+        <childnode refid="587" relation="include">
+        </childnode>
+        <childnode refid="588" relation="include">
+        </childnode>
+      </node>
+      <node id="587">
         <label>Source/Compiler/Analyzer/Parser.cpp</label>
       </node>
-      <node id="574">
+      <node id="588">
         <label>Source/Compiler/Analyzer/Scanner.cpp</label>
       </node>
     </invincdepgraph>

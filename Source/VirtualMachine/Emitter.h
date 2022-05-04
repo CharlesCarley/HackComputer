@@ -21,12 +21,12 @@
 */
 #pragma once
 #include <stack>
-#include "Utils/ParserBase/ScannerBase.h"
 #include "Utils/String.h"
 
 namespace Hack::VirtualMachine
 {
     class CodeStream;
+    using IntList = std::vector<int>;
 
     class Emitter
     {
@@ -37,7 +37,6 @@ namespace Hack::VirtualMachine
         OutputStringStream _stream;
         int                _cmp;
         StringStack        _functions;
-
 
         void getJumpLabels(String& valTrue, String& valDone);
 
@@ -121,4 +120,4 @@ namespace Hack::VirtualMachine
 
         void writeCode(const String& cs);
     };
-} // namespace Hack::VirtualMachine
+}  // namespace Hack::VirtualMachine

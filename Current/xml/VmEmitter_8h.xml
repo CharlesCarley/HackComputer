@@ -6,147 +6,170 @@
     <includes refid="Symbol_8h" local="yes">Compiler/Generator/Symbol.h</includes>
     <includes refid="String_8h" local="yes">Utils/String.h</includes>
     <includedby refid="Generator_8cpp" local="yes">Source/Compiler/Generator/Generator.cpp</includedby>
+    <includedby refid="Generator_8h" local="yes">Source/Compiler/Generator/Generator.h</includedby>
     <includedby refid="VmEmitter_8cpp" local="yes">Source/Compiler/Generator/VmEmitter.cpp</includedby>
     <incdepgraph>
-      <node id="2758">
-        <label>Source/Compiler/Generator/VmEmitter.h</label>
-        <link refid="VmEmitter_8h"/>
-        <childnode refid="2759" relation="include">
-        </childnode>
-        <childnode refid="2778" relation="include">
-        </childnode>
-        <childnode refid="2763" relation="include">
-        </childnode>
-      </node>
-      <node id="2760">
+      <node id="2827">
         <label>functional</label>
       </node>
-      <node id="2769">
-        <label>Utils/Exception.h</label>
-        <childnode refid="2770" relation="include">
-        </childnode>
-        <childnode refid="2771" relation="include">
-        </childnode>
-        <childnode refid="2772" relation="include">
-        </childnode>
-        <childnode refid="2773" relation="include">
-        </childnode>
-        <childnode refid="2763" relation="include">
+      <node id="2845">
+        <label>Compiler/Generator/Symbol.h</label>
+        <childnode refid="2833" relation="include">
         </childnode>
       </node>
-      <node id="2776">
+      <node id="2833">
+        <label>Utils/IndexCache.h</label>
+        <childnode refid="2834" relation="include">
+        </childnode>
+        <childnode refid="2835" relation="include">
+        </childnode>
+        <childnode refid="2836" relation="include">
+        </childnode>
+      </node>
+      <node id="2843">
         <label>cstdint</label>
       </node>
-      <node id="2759">
-        <label>Compiler/Common/Node.h</label>
-        <childnode refid="2760" relation="include">
-        </childnode>
-        <childnode refid="2761" relation="include">
-        </childnode>
-        <childnode refid="2762" relation="include">
-        </childnode>
-        <childnode refid="2766" relation="include">
-        </childnode>
-        <childnode refid="2763" relation="include">
-        </childnode>
-      </node>
-      <node id="2774">
-        <label>UserInterface/Context.h</label>
-        <childnode refid="2763" relation="include">
-        </childnode>
-        <childnode refid="2775" relation="include">
-        </childnode>
-        <childnode refid="2777" relation="include">
-        </childnode>
-      </node>
-      <node id="2771">
+      <node id="2838">
         <label>stdexcept</label>
       </node>
-      <node id="2765">
+      <node id="2832">
         <label>string</label>
       </node>
-      <node id="2768">
+      <node id="2835">
         <label>unordered_set</label>
       </node>
-      <node id="2778">
-        <label>Compiler/Generator/Symbol.h</label>
-        <childnode refid="2766" relation="include">
+      <node id="2841">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="2830" relation="include">
+        </childnode>
+        <childnode refid="2842" relation="include">
+        </childnode>
+        <childnode refid="2844" relation="include">
         </childnode>
       </node>
-      <node id="2770">
+      <node id="2825">
+        <label>Source/Compiler/Generator/VmEmitter.h</label>
+        <link refid="VmEmitter_8h"/>
+        <childnode refid="2826" relation="include">
+        </childnode>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2830" relation="include">
+        </childnode>
+      </node>
+      <node id="2837">
         <label>exception</label>
       </node>
-      <node id="2775">
+      <node id="2842">
         <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="2776" relation="include">
+        <childnode refid="2843" relation="include">
         </childnode>
       </node>
-      <node id="2763">
-        <label>Utils/String.h</label>
-        <childnode refid="2764" relation="include">
+      <node id="2840">
+        <label>Utils/Console.h</label>
+        <childnode refid="2830" relation="include">
         </childnode>
-        <childnode refid="2765" relation="include">
-        </childnode>
-        <childnode refid="2761" relation="include">
+        <childnode refid="2841" relation="include">
         </childnode>
       </node>
-      <node id="2766">
-        <label>Utils/IndexCache.h</label>
-        <childnode refid="2767" relation="include">
-        </childnode>
-        <childnode refid="2768" relation="include">
-        </childnode>
-        <childnode refid="2769" relation="include">
-        </childnode>
-      </node>
-      <node id="2761">
+      <node id="2828">
         <label>vector</label>
       </node>
-      <node id="2772">
+      <node id="2844">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="2843" relation="include">
+        </childnode>
+        <childnode refid="2828" relation="include">
+        </childnode>
+        <childnode refid="2842" relation="include">
+        </childnode>
+      </node>
+      <node id="2839">
         <label>utility</label>
       </node>
-      <node id="2764">
+      <node id="2831">
         <label>sstream</label>
       </node>
-      <node id="2767">
+      <node id="2826">
+        <label>Compiler/Common/Node.h</label>
+        <childnode refid="2827" relation="include">
+        </childnode>
+        <childnode refid="2828" relation="include">
+        </childnode>
+        <childnode refid="2829" relation="include">
+        </childnode>
+        <childnode refid="2833" relation="include">
+        </childnode>
+        <childnode refid="2830" relation="include">
+        </childnode>
+      </node>
+      <node id="2836">
+        <label>Utils/Exception.h</label>
+        <childnode refid="2837" relation="include">
+        </childnode>
+        <childnode refid="2838" relation="include">
+        </childnode>
+        <childnode refid="2839" relation="include">
+        </childnode>
+        <childnode refid="2840" relation="include">
+        </childnode>
+        <childnode refid="2830" relation="include">
+        </childnode>
+      </node>
+      <node id="2834">
         <label>unordered_map</label>
       </node>
-      <node id="2777">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="2776" relation="include">
-        </childnode>
-        <childnode refid="2761" relation="include">
-        </childnode>
-        <childnode refid="2775" relation="include">
-        </childnode>
-      </node>
-      <node id="2762">
+      <node id="2829">
         <label>Compiler/Common/NodeUtils.h</label>
-        <childnode refid="2763" relation="include">
+        <childnode refid="2830" relation="include">
         </childnode>
       </node>
-      <node id="2773">
-        <label>Utils/Console.h</label>
-        <childnode refid="2763" relation="include">
+      <node id="2830">
+        <label>Utils/String.h</label>
+        <childnode refid="2831" relation="include">
         </childnode>
-        <childnode refid="2774" relation="include">
+        <childnode refid="2832" relation="include">
+        </childnode>
+        <childnode refid="2828" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2779">
+      <node id="2846">
         <label>Source/Compiler/Generator/VmEmitter.h</label>
         <link refid="VmEmitter_8h"/>
-        <childnode refid="2780" relation="include">
+        <childnode refid="2847" relation="include">
         </childnode>
-        <childnode refid="2781" relation="include">
+        <childnode refid="2848" relation="include">
+        </childnode>
+        <childnode refid="2852" relation="include">
         </childnode>
       </node>
-      <node id="2780">
-        <label>Source/Compiler/Generator/Generator.cpp</label>
+      <node id="2848">
+        <label>Source/Compiler/Generator/Generator.h</label>
+        <childnode refid="2849" relation="include">
+        </childnode>
+        <childnode refid="2847" relation="include">
+        </childnode>
+        <childnode refid="2850" relation="include">
+        </childnode>
+        <childnode refid="2851" relation="include">
+        </childnode>
       </node>
-      <node id="2781">
+      <node id="2851">
+        <label>Source/Computer/Executable.cpp</label>
+      </node>
+      <node id="2849">
+        <label>Source/Compiler/Compiler/Main.cpp</label>
+      </node>
+      <node id="2852">
         <label>Source/Compiler/Generator/VmEmitter.cpp</label>
+      </node>
+      <node id="2850">
+        <label>Source/Compiler/Generator/Main.cpp</label>
+      </node>
+      <node id="2847">
+        <label>Source/Compiler/Generator/Generator.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter" prot="public">Hack::Compiler::CodeGenerator::VmEmitter</innerclass>
@@ -195,7 +218,7 @@
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_eof;</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Args&gt;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>write(Args&amp;&amp;...args)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>write(Args&amp;&amp;...<sp/>args)</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceHack_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref><sp/>oss;</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((oss<sp/>&lt;&lt;<sp/>std::forward&lt;Args&gt;(args)),<sp/>...);</highlight></codeline>
@@ -243,59 +266,56 @@
 <codeline lineno="85"><highlight class="normal"></highlight></codeline>
 <codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a2652e4e6db16de81ef7d16af2785bb70" kindref="member">popTemp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a0352121340e64201fad464781466d61d" kindref="member">pushLocal</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1ac60bf44248b01087aa83065bf0436e69" kindref="member">pushArgument</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a0352121340e64201fad464781466d61d" kindref="member">pushLocal</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1ac60bf44248b01087aa83065bf0436e69" kindref="member">pushArgument</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a8155e92dc619c5c9409975e9e5f72c9e" kindref="member">pushThis</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
 <codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a8155e92dc619c5c9409975e9e5f72c9e" kindref="member">pushThis</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a13ece2eb3d3e4748ba3ae5c3a9e3de57" kindref="member">pushThat</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a13ece2eb3d3e4748ba3ae5c3a9e3de57" kindref="member">pushThat</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1aaed7c39531e5e0ed0a3ee4a9891b2311" kindref="member">pushPointer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
 <codeline lineno="97"><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1aaed7c39531e5e0ed0a3ee4a9891b2311" kindref="member">pushPointer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1aaaf443d634df5a3cb6e4bc27a18b9519" kindref="member">pushStatic</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
 <codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1aaaf443d634df5a3cb6e4bc27a18b9519" kindref="member">pushStatic</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a22f463158a009f4c334bd5d12e50104e" kindref="member">pushTemp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
 <codeline lineno="101"><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a22f463158a009f4c334bd5d12e50104e" kindref="member">pushTemp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>idx);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1ad7ff8af91267d5b1186c65c3ecd3d7dc" kindref="member">writeReturn</ref>();</highlight></codeline>
 <codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1ad7ff8af91267d5b1186c65c3ecd3d7dc" kindref="member">writeReturn</ref>();</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a30ba6c2cb9ef29b543cf2775f545585e" kindref="member">symbolAdd</ref>();</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a560f45eb8128f049e4ca6302a57fed2c" kindref="member">symbolSub</ref>();</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a0a12058ec6bda2214f6aad7e237d59a1" kindref="member">symbolAnd</ref>();</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1af33855ee64ca59ebd56e93f8fe19bcff" kindref="member">symbolOr</ref>();</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a91cd27f4346df0cfd645307773f6fb29" kindref="member">symbolNot</ref>();</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a9531a75d95a32efffadf3bc150a0c143" kindref="member">symbolGreater</ref>();</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a74f60676e9b7ec9f3ac9702f0d9966e7" kindref="member">symbolLess</ref>();</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1afd32c76b785edf6226409b78909951bb" kindref="member">symbolEquals</ref>();</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"></highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a19929a0f9b56879cd0fa600f420bcfe4" kindref="member">symbolNeg</ref>();</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"></highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a76cc1bcc19df9d0cfe8d05a381ee65ce" kindref="member">writeCall</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"></highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a9e0b5844f56ca139dfd64d60b77ff041" kindref="member">writeIfStart</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>label);</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"></highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a34e09683eb7f0e1166e83f16187da273" kindref="member">writeGoto</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>label);</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"></highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a8487ee1fe886564bacaa66801f944500" kindref="member">writeLabel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>label);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a30ba6c2cb9ef29b543cf2775f545585e" kindref="member">symbolAdd</ref>();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a560f45eb8128f049e4ca6302a57fed2c" kindref="member">symbolSub</ref>();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a0a12058ec6bda2214f6aad7e237d59a1" kindref="member">symbolAnd</ref>();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1af33855ee64ca59ebd56e93f8fe19bcff" kindref="member">symbolOr</ref>();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a91cd27f4346df0cfd645307773f6fb29" kindref="member">symbolNot</ref>();</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a9531a75d95a32efffadf3bc150a0c143" kindref="member">symbolGreater</ref>();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a74f60676e9b7ec9f3ac9702f0d9966e7" kindref="member">symbolLess</ref>();</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1afd32c76b785edf6226409b78909951bb" kindref="member">symbolEquals</ref>();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a19929a0f9b56879cd0fa600f420bcfe4" kindref="member">symbolNeg</ref>();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a76cc1bcc19df9d0cfe8d05a381ee65ce" kindref="member">writeCall</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a9e0b5844f56ca139dfd64d60b77ff041" kindref="member">writeIfStart</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>label);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a34e09683eb7f0e1166e83f16187da273" kindref="member">writeGoto</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>label);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a8487ee1fe886564bacaa66801f944500" kindref="member">writeLabel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>label);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a3266aebe118a737f3d69ce51d725c8ca" kindref="member">writeCode</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>code);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="132"><highlight class="normal"></highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a3266aebe118a737f3d69ce51d725c8ca" kindref="member">writeCode</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>&amp;<sp/>code);</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"></highlight></codeline>
-<codeline lineno="136" refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a437cd42d4486dc6d1072f58b0517a187" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref>&amp;<sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a437cd42d4486dc6d1072f58b0517a187" kindref="member">VmEmitter::stream</ref>()</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_stream;</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="140"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler::CodeGenerator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a437cd42d4486dc6d1072f58b0517a187" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref>&amp;<sp/><ref refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a437cd42d4486dc6d1072f58b0517a187" kindref="member">VmEmitter::stream</ref>()</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_stream;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler::CodeGenerator</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="Source/Compiler/Generator/VmEmitter.h"/>
   </compounddef>

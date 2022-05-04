@@ -120,9 +120,11 @@
     <member refid="classHack_1_1Char_1a23040a5aaccecd64f3432ff1d1388a3e" kind="function"><name>toDouble</name></member>
     <member refid="classHack_1_1Char_1a9706e2040a6912a05cb39486930ba5a5" kind="function"><name>toFloat</name></member>
     <member refid="classHack_1_1Char_1a3ea30b82aea1fe96651b4ff7f1b6541f" kind="function"><name>toFloat</name></member>
+    <member refid="classHack_1_1Char_1a3534fb343cb723d19448c04b547d9d2f" kind="function"><name>toHexString</name></member>
     <member refid="classHack_1_1Char_1ad54d719cdd63fa3f265ade5ca54ec679" kind="function"><name>toHexString</name></member>
     <member refid="classHack_1_1Char_1a218d64307f0a0c4c129e7e07cf3a5e24" kind="function"><name>toHexString</name></member>
     <member refid="classHack_1_1Char_1a2f5b041019556c2552ad7c76d40323d0" kind="function"><name>toHexString</name></member>
+    <member refid="classHack_1_1Char_1aa71a984b44d0ee4dc5c646140fd261a3" kind="function"><name>toHexString</name></member>
     <member refid="classHack_1_1Char_1ab16c60f5441a1fba11356d908046fec2" kind="function"><name>toHexString</name></member>
     <member refid="classHack_1_1Char_1ac7c18ba28e074214a77bc406b0a20b6c" kind="function"><name>toHexString</name></member>
     <member refid="classHack_1_1Char_1ac01d0bd168317ae2f1247a67e0b9032b" kind="function"><name>toHexString</name></member>
@@ -808,6 +810,7 @@
     <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Scanner_1af357c61090b712e7cfcc4cbaeaa68a3f" kind="function"><name>scan</name></member>
   </compound>
   <compound refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator" kind="class"><name>Hack::Compiler::CodeGenerator::Generator</name>
+    <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1a134e21d529d8a074ab0f21a7c662653a" kind="variable"><name>_countBuffer</name></member>
     <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1a919582829bf53223821fa1b32ebd5f0a" kind="variable"><name>_elseEnd</name></member>
     <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1aa475fd5cdb9e40a59fb639983c810d86" kind="variable"><name>_emitter</name></member>
     <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1a7aac7ad14da5f8dc568862f0a5df1637" kind="variable"><name>_fileName</name></member>
@@ -835,14 +838,14 @@
     <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1a4172744950fa46889929ecc6fd0ca6ab" kind="function"><name>buildTerm</name></member>
     <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1abf41a405179f690b4b1ed59947e91af7" kind="function"><name>buildUnaryOperation</name></member>
     <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1ae90c7df57df9d660b6f775fd97f8ecce" kind="function"><name>buildWhileStatement</name></member>
-    <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1af8eb3c005cf81e98d1dd1fcf74795d0e" kind="function"><name>compileError</name></member>
+    <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1a4a7b491f4ecd3d6c1295fca04047c72f" kind="function"><name>compileError</name></member>
     <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1a73527bbc1d81ce0571628d3c61065410" kind="function"><name>lookup</name></member>
     <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1a2c29d6924758038c2b78fd2db3b9348e" kind="function"><name>parseImpl</name></member>
     <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1ae05d574b477a31565911b2881e62eafc" kind="function"><name>popSymbol</name></member>
     <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1ae3da2b18abec548ee4777002d810abeb" kind="function"><name>pushIdentifier</name></member>
     <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1aa715d55887bafd9366a846a71a221237" kind="function"><name>Generator</name></member>
     <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1ac9dbc82f77eb95c9c63157f9408743cc" kind="function"><name>~Generator</name></member>
-    <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1a56124ee10cf34c6d9fa38b9be1ebeeb7" kind="function"><name>compile</name></member>
+    <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1a682fe2bf83b13010fdf9f38527c4d552" kind="function"><name>compileToVm</name></member>
     <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1a698f9cac52d1b90feb9fc06b77ce649b" kind="function"><name>write</name></member>
     <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1Generator_1a98632e09cf5573e9ca1f043a4f5366a0" kind="function"><name>write</name></member>
   </compound>
@@ -890,7 +893,7 @@
     <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1acca2d2302cddbfdbc618e257b90660a8" kind="variable"><name>_eof</name></member>
     <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1acad116dff117c890dee71d50c4747bd2" kind="variable"><name>_stream</name></member>
     <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1aec573cb3bb118b14d68071204f07c46d" kind="variable"><name>_uid</name></member>
-    <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a15e06de96963b93089f91707d846bab2" kind="function"><name>write</name></member>
+    <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a727e4ba64842efcefce580ae927278cc" kind="function"><name>write</name></member>
     <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1aca147d001b3cffe9a53464181459cad1" kind="function"><name>VmEmitter</name></member>
     <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a3b96b5d03aa066616d8aef4d72b0db47" kind="function"><name>clear</name></member>
     <member refid="classHack_1_1Compiler_1_1CodeGenerator_1_1VmEmitter_1a1a2ae5d924f71804513cd5488a9a86bd" kind="function"><name>finalize</name></member>
@@ -1034,84 +1037,85 @@
     <member refid="classHack_1_1Compiler_1_1XmlWriterImpl_1a91d64e648b81c030dd10c2d77f204c43" kind="function"><name>writeHeader</name></member>
     <member refid="classHack_1_1Compiler_1_1XmlWriterImpl_1a8f7135b7a89487bb2bf0a209cca495b8" kind="function"><name>writeRule</name></member>
   </compound>
-  <compound refid="classHack_1_1Computer_1_1Application" kind="class"><name>Hack::Computer::Application</name>
-    <member refid="classHack_1_1Computer_1_1Application_1a02bd37095de7616d554393403fc365c7" kind="variable"><name>_computer</name></member>
-    <member refid="classHack_1_1Computer_1_1Application_1a42ca4cb86830b738538070f96d345b61" kind="variable"><name>_input</name></member>
-    <member refid="classHack_1_1Computer_1_1Application_1a6f7bd40e552996845a091884588fa47f" kind="variable"><name>_runtime</name></member>
-    <member refid="classHack_1_1Computer_1_1Application_1a44b1ea59de5c2e7ae4a0cb5ff2069836" kind="variable"><name>_screen</name></member>
-    <member refid="classHack_1_1Computer_1_1Application_1aaca32e9473028f2822acf59e50a5f7e2" kind="variable"><name>_showAsm</name></member>
-    <member refid="classHack_1_1Computer_1_1Application_1ac10a91de722dac52cc3b5e9d936aa938" kind="variable"><name>_showDot</name></member>
-    <member refid="classHack_1_1Computer_1_1Application_1ace703ad729b7bae16f51d5e7cff74eba" kind="variable"><name>_showMc</name></member>
-    <member refid="classHack_1_1Computer_1_1Application_1a1d87eb44c92bc694f72cf0d4b620b75d" kind="variable"><name>_showVm</name></member>
-    <member refid="classHack_1_1Computer_1_1Application_1a15e35cededa094ad6119675584607dc4" kind="variable"><name>_showXml</name></member>
-    <member refid="classHack_1_1Computer_1_1Application_1aa066b87d13a73873800c3d323f1539b6" kind="variable"><name>_trace</name></member>
-    <member refid="classHack_1_1Computer_1_1Application_1a2fd419136634e239d40c6e4a16ae95e4" kind="function"><name>assemble</name></member>
-    <member refid="classHack_1_1Computer_1_1Application_1a40b4c1c1c57e43d9e57fdb555c29900a" kind="function"><name>compile</name></member>
-    <member refid="classHack_1_1Computer_1_1Application_1af90ed27e692e6cddf896f96e090ce6b7" kind="function"><name>generate</name></member>
-    <member refid="classHack_1_1Computer_1_1Application_1a0b4d0adbd35c2e6cdb25ef76df0ca900" kind="function"><name>load</name></member>
-    <member refid="classHack_1_1Computer_1_1Application_1a4a67667d1805c6066a04cc44864b8965" kind="function"><name>setupScreen</name></member>
-    <member refid="classHack_1_1Computer_1_1Application_1a627ae3b4847f503809c08855fe157a5d" kind="function"><name>trace</name></member>
-    <member refid="classHack_1_1Computer_1_1Application_1a381b83429b23dbe84ee08def74a46801" kind="function"><name>Application</name></member>
-    <member refid="classHack_1_1Computer_1_1Application_1ab7a5ed17f20cbc2e1c150a03adaf87da" kind="function"><name>~Application</name></member>
-    <member refid="classHack_1_1Computer_1_1Application_1ae31b7fee953e4e1c89f437cf4d589a5f" kind="function"><name>go</name></member>
-    <member refid="classHack_1_1Computer_1_1Application_1a3e6a0e7fe388171b4afc7a4b9816ee22" kind="function"><name>parse</name></member>
+  <compound refid="classHack_1_1Computer_1_1AssemblyDebugger" kind="class"><name>Hack::Computer::AssemblyDebugger</name>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebugger_1ad6e4ff6d51218bb39cd86b21baa5d97a" kind="variable"><name>_private</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebugger_1a567a623c6ae11ed52a278df52adf8b2a" kind="function"><name>getRate</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebugger_1a7d5d7b1c609590b7a669b7c8c35285d4" kind="function"><name>AssemblyDebugger</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebugger_1a2634e743ce914932fc43574f58847f0c" kind="function"><name>~AssemblyDebugger</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebugger_1a42c2b7ccf57e4dba73dc1b2c61f9bc33" kind="function"><name>exitRequest</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebugger_1aa1022c0781d5554e9c05f4189c0e1b0d" kind="function"><name>flushMemory</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebugger_1a769998f026df9081f6b17b001bac8511" kind="function"><name>initialize</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebugger_1a80da5b23022b1ee96518ab4ea6d98d8e" kind="function"><name>processEvents</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebugger_1afbe000a9ca7d078daa06b945fa116195" kind="function"><name>shouldUpdate</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebugger_1aaaeff2c78bffc2af719fbae9239a5edd" kind="function"><name>update</name></member>
   </compound>
-  <compound refid="classHack_1_1Computer_1_1CommandRuntime" kind="class"><name>Hack::Computer::CommandRuntime</name>
-    <member refid="classHack_1_1Computer_1_1CommandRuntime_1a31f6edcba67151b5b75ae8a62fb63a9f" kind="variable"><name>_private</name></member>
-    <member refid="classHack_1_1Computer_1_1CommandRuntime_1a2ef4a5b62fbcd614cf689013810a8c34" kind="function"><name>CommandRuntime</name></member>
-    <member refid="classHack_1_1Computer_1_1CommandRuntime_1afda931b75420785bad498f1b1141d938" kind="function"><name>~CommandRuntime</name></member>
-    <member refid="classHack_1_1Computer_1_1CommandRuntime_1acb3795487cd6907dfc21fd6afbe7826c" kind="function"><name>exitRequest</name></member>
-    <member refid="classHack_1_1Computer_1_1CommandRuntime_1aad566a5bee2b92a128e0e30739748c1e" kind="function"><name>flushMemory</name></member>
-    <member refid="classHack_1_1Computer_1_1CommandRuntime_1acccc797c5a77cf71015778c0a48a49c8" kind="function"><name>initialize</name></member>
-    <member refid="classHack_1_1Computer_1_1CommandRuntime_1ab48b3746adc94551350da3c9f065577d" kind="function"><name>processEvents</name></member>
-    <member refid="classHack_1_1Computer_1_1CommandRuntime_1aa9aa0a0efed236c2371afb8f6b31e030" kind="function"><name>shouldUpdate</name></member>
-    <member refid="classHack_1_1Computer_1_1CommandRuntime_1ab738d56db4537f88d9141c7ae64aee5b" kind="function"><name>update</name></member>
+  <compound refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate" kind="class"><name>Hack::Computer::AssemblyDebuggerPrivate</name>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a7bad4fca0eb315893dd9ae52077ecee1" kind="variable"><name>_block</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a1792e1eb1facc61cca5be293880a271c" kind="variable"><name>_cpuState</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a9da8dfa2f610fd974231b87259c02691" kind="variable"><name>_ctx</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a86b44f84fe990b3161f34fc89d9b9a5e" kind="variable"><name>_input</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a6c5a9a48c6ede0d8575e4103daa5303e" kind="variable"><name>_mode</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1acb8e2d475cf689ba576b640aaaf43815" kind="variable"><name>_prevCpuState</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1af35580bcbbc55e1dac5cc43101c9d34f" kind="variable"><name>_ram</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a6db36a696045e91743b44f68ebaaac50" kind="variable"><name>_rom</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a50c7bede71cd0b578b1fa274cf92e6d6" kind="function"><name>AssemblyDebuggerPrivate</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a0feb84a09a37f1b4c11738a3550d0e22" kind="function"><name>~AssemblyDebuggerPrivate</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a27c3ae2ed36e248c6e739255a84eded1" kind="function"><name>block</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1ab245cab0a5673b142fcf58b7fc22e136" kind="function"><name>displayCpu</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a69c675c19294c721451b7332521e64be" kind="function"><name>displayMemoryContents</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a6b49f29b6994f5e3cc4d93e269622c17" kind="function"><name>displayRam</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1ada9dd6b512a465765242d7edd45ce067" kind="function"><name>displayRom</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a27803ed3d2856b0f50920127200df914" kind="function"><name>flushMemory</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a6cdaa048556604ceb27738899706efe0" kind="function"><name>initialize</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1afb51eb65e5f8087dc737b3911254bce4" kind="function"><name>input</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1afcab84b5572bf7e963fcd26daf00c3b6" kind="function"><name>processEvents</name></member>
+    <member refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate_1a23c8afd80c284ce88b39254ce5b5c281" kind="function"><name>render</name></member>
   </compound>
-  <compound refid="classHack_1_1Computer_1_1CommandRuntimePrivate" kind="class"><name>Hack::Computer::CommandRuntimePrivate</name>
-    <member refid="classHack_1_1Computer_1_1CommandRuntimePrivate_1a2711d2abfd041f5a8236c9d74b15a56a" kind="variable"><name>_cpuState</name></member>
-    <member refid="classHack_1_1Computer_1_1CommandRuntimePrivate_1a489fced83a973780623acfb976f00bdb" kind="variable"><name>_input</name></member>
-    <member refid="classHack_1_1Computer_1_1CommandRuntimePrivate_1a19fbd95ce30c06c4bfcee63744fb3f8e" kind="variable"><name>_ram</name></member>
-    <member refid="classHack_1_1Computer_1_1CommandRuntimePrivate_1a10c4b8a2a7bd03f96d667b429ee3341b" kind="variable"><name>_rom</name></member>
-    <member refid="classHack_1_1Computer_1_1CommandRuntimePrivate_1ae4ee5101b4b4c516dc780bd7e4f3dd23" kind="function"><name>CommandRuntimePrivate</name></member>
-    <member refid="classHack_1_1Computer_1_1CommandRuntimePrivate_1a38d6ff4338338df892f1efb3aaa3ba32" kind="function"><name>~CommandRuntimePrivate</name></member>
-    <member refid="classHack_1_1Computer_1_1CommandRuntimePrivate_1a94165bc7ad5907a5fc3b02b580f8cb74" kind="function"><name>initialize</name></member>
-    <member refid="classHack_1_1Computer_1_1CommandRuntimePrivate_1a808b4969f1087a0cd2145a08b0193f59" kind="function"><name>input</name></member>
-    <member refid="classHack_1_1Computer_1_1CommandRuntimePrivate_1a9dcb89dd3e849351355169fb8fd40647" kind="function"><name>processEvents</name></member>
-    <member refid="classHack_1_1Computer_1_1CommandRuntimePrivate_1a572a300abaacd09ef1a7e26be6b768e7" kind="function"><name>update</name></member>
+  <compound refid="classHack_1_1Computer_1_1ConsoleRuntime" kind="class"><name>Hack::Computer::ConsoleRuntime</name>
+    <member refid="classHack_1_1Computer_1_1ConsoleRuntime_1a70357536ed71a897831f8f0b8464a995" kind="variable"><name>_private</name></member>
+    <member refid="classHack_1_1Computer_1_1ConsoleRuntime_1aa527a98e2483ea54dac3acdd064c7c22" kind="function"><name>ConsoleRuntime</name></member>
+    <member refid="classHack_1_1Computer_1_1ConsoleRuntime_1ab8bb0ada0529b19172deeabf2c145c74" kind="function"><name>~ConsoleRuntime</name></member>
+    <member refid="classHack_1_1Computer_1_1ConsoleRuntime_1ad2d8d382f6a77bfb8aa21043385d1e47" kind="function"><name>exitRequest</name></member>
+    <member refid="classHack_1_1Computer_1_1ConsoleRuntime_1aff3235a2b246b61903b8965490743507" kind="function"><name>flushMemory</name></member>
+    <member refid="classHack_1_1Computer_1_1ConsoleRuntime_1a8bffb9cef063a2d349513bc3e9ad0028" kind="function"><name>initialize</name></member>
+    <member refid="classHack_1_1Computer_1_1ConsoleRuntime_1a129307bdd39e3f6f1d09c55d40a1b7a9" kind="function"><name>processEvents</name></member>
+    <member refid="classHack_1_1Computer_1_1ConsoleRuntime_1aa20357adbf0b4e45cdb73da172a744cf" kind="function"><name>shouldUpdate</name></member>
+    <member refid="classHack_1_1Computer_1_1ConsoleRuntime_1ae804dca77617617963857ef5337628dc" kind="function"><name>update</name></member>
   </compound>
-  <compound refid="classHack_1_1Computer_1_1DebugRuntime" kind="class"><name>Hack::Computer::DebugRuntime</name>
-    <member refid="classHack_1_1Computer_1_1DebugRuntime_1a76670657c1725ecef554d76bb46d597b" kind="variable"><name>_private</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntime_1ace069a8cbf49c271f047e62868763c2e" kind="function"><name>getRate</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntime_1a0e32a9d599cd72cea3b394d325c1f6cf" kind="function"><name>DebugRuntime</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntime_1a651c25202fe8c26358f7be25c3fb5536" kind="function"><name>~DebugRuntime</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntime_1acce22e29456976ba86f505c06b5fff81" kind="function"><name>exitRequest</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntime_1aee00ac57512447b7655ed7cdc54b025d" kind="function"><name>flushMemory</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntime_1a8514e728f96721d941711bf25d74517a" kind="function"><name>initialize</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntime_1a4811a14fcdfa33479b429ecd07bbc9d1" kind="function"><name>processEvents</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntime_1ab171edd61256c2eac08cdc2528a551f2" kind="function"><name>shouldUpdate</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntime_1a3bd47a61275e31af0bf9056a6097712c" kind="function"><name>update</name></member>
+  <compound refid="classHack_1_1Computer_1_1ConsoleRuntimePrivate" kind="class"><name>Hack::Computer::ConsoleRuntimePrivate</name>
+    <member refid="classHack_1_1Computer_1_1ConsoleRuntimePrivate_1ae19d15c61cfae3748b040d1ed845bf0d" kind="variable"><name>_cpuState</name></member>
+    <member refid="classHack_1_1Computer_1_1ConsoleRuntimePrivate_1a56055a3820f9f8c3197ced238162daaa" kind="variable"><name>_input</name></member>
+    <member refid="classHack_1_1Computer_1_1ConsoleRuntimePrivate_1a5309967a6f4682f687818f12061d0643" kind="variable"><name>_ram</name></member>
+    <member refid="classHack_1_1Computer_1_1ConsoleRuntimePrivate_1ab335a0170b43c333447fb7e0159afe1f" kind="variable"><name>_rom</name></member>
+    <member refid="classHack_1_1Computer_1_1ConsoleRuntimePrivate_1affef9161bc8cfc7edbe4b53dbaf9b80d" kind="function"><name>ConsoleRuntimePrivate</name></member>
+    <member refid="classHack_1_1Computer_1_1ConsoleRuntimePrivate_1a575e80216a95ccebf5e22f0e0389a7fa" kind="function"><name>~ConsoleRuntimePrivate</name></member>
+    <member refid="classHack_1_1Computer_1_1ConsoleRuntimePrivate_1aa6a9057b42d977fc9e4b060deebcbc28" kind="function"><name>initialize</name></member>
+    <member refid="classHack_1_1Computer_1_1ConsoleRuntimePrivate_1a20d00d73869eed088ce65b33e43190c6" kind="function"><name>input</name></member>
+    <member refid="classHack_1_1Computer_1_1ConsoleRuntimePrivate_1acdd528af8a7bbb377d264a160ba7fdf9" kind="function"><name>processEvents</name></member>
+    <member refid="classHack_1_1Computer_1_1ConsoleRuntimePrivate_1a304c95b27168a6645def608a424a8a70" kind="function"><name>update</name></member>
   </compound>
-  <compound refid="classHack_1_1Computer_1_1DebugRuntimePrivate" kind="class"><name>Hack::Computer::DebugRuntimePrivate</name>
-    <member refid="classHack_1_1Computer_1_1DebugRuntimePrivate_1ab7fc4706051a56fc12099bc290a14210" kind="variable"><name>_block</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntimePrivate_1a376661284058c712af4d8fc090095c84" kind="variable"><name>_cpuState</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntimePrivate_1a87692081907fe47d271e0b94cc430f63" kind="variable"><name>_ctx</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntimePrivate_1a6c36e0247accc9533b80c6f40414e567" kind="variable"><name>_input</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntimePrivate_1ad0fdaee3a30e830c5fc67894bdc71593" kind="variable"><name>_mode</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntimePrivate_1a21e8bbbeff8f96c268f06e5f5d8c06ef" kind="variable"><name>_prevCpuState</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntimePrivate_1aa549b9fc0c844b204d2ed815191207b2" kind="variable"><name>_ram</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntimePrivate_1a10120905b044dbbe875f41758004a134" kind="variable"><name>_rom</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntimePrivate_1afc8fa9c26c028b31f6770dfc8a97cb8d" kind="function"><name>DebugRuntimePrivate</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntimePrivate_1ae47c52343361332fc549a8e39412e029" kind="function"><name>~DebugRuntimePrivate</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntimePrivate_1a74f4ddc2111c8b2112b70775dfc7df71" kind="function"><name>block</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntimePrivate_1ac62ec8ded54ce104106cd3078cd08a03" kind="function"><name>displayCpu</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntimePrivate_1a693057de2cf2142c3841a94acc5ec8e0" kind="function"><name>displayMemoryContents</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntimePrivate_1a12771136bae9d060b0b3e44ebe496948" kind="function"><name>displayRam</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntimePrivate_1a3c44032383ab1d4841e5bf47796599d2" kind="function"><name>displayRom</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntimePrivate_1a05e86f865706ec018a5856b2cae527fe" kind="function"><name>flushMemory</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntimePrivate_1ab39c71410b1af25c8910ddef0a653ebe" kind="function"><name>initialize</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntimePrivate_1a8e827619e3caeeed369299fe5228b7ff" kind="function"><name>input</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntimePrivate_1afb2e833f6eb3a365f1d734b51e9ee359" kind="function"><name>processEvents</name></member>
-    <member refid="classHack_1_1Computer_1_1DebugRuntimePrivate_1ab37ea24b505951a022ca9beba2be7d37" kind="function"><name>render</name></member>
+  <compound refid="classHack_1_1Computer_1_1Executable" kind="class"><name>Hack::Computer::Executable</name>
+    <member refid="classHack_1_1Computer_1_1Executable_1afb31c34d9b289e8eb80d49fa47fb9223" kind="variable"><name>_computer</name></member>
+    <member refid="classHack_1_1Computer_1_1Executable_1a7f1e171cc43bd4573107cd0cbce290dd" kind="variable"><name>_input</name></member>
+    <member refid="classHack_1_1Computer_1_1Executable_1a1da045a3e005e9cd59fb7b59385a22d4" kind="variable"><name>_instructions</name></member>
+    <member refid="classHack_1_1Computer_1_1Executable_1afc810f892536ea46b7e17d0eb7771476" kind="variable"><name>_runtime</name></member>
+    <member refid="classHack_1_1Computer_1_1Executable_1a9a165e7b9a77d5129d4eebe0107870ab" kind="variable"><name>_screen</name></member>
+    <member refid="classHack_1_1Computer_1_1Executable_1a5eadbba7de15acf97d46de3a14d5d68d" kind="variable"><name>_showAsm</name></member>
+    <member refid="classHack_1_1Computer_1_1Executable_1ab23458f986decfdb5c3d8e15bf9eeae4" kind="variable"><name>_showDot</name></member>
+    <member refid="classHack_1_1Computer_1_1Executable_1a23b6d8303c47396519e4c870a5276801" kind="variable"><name>_showMc</name></member>
+    <member refid="classHack_1_1Computer_1_1Executable_1af395895f09c87abc165161d9f2b222bb" kind="variable"><name>_showVm</name></member>
+    <member refid="classHack_1_1Computer_1_1Executable_1a7635926bd912505f91d8ca52646d81cc" kind="variable"><name>_showXml</name></member>
+    <member refid="classHack_1_1Computer_1_1Executable_1a02795ad452d1a922992f6889d7fc1f59" kind="variable"><name>_trace</name></member>
+    <member refid="classHack_1_1Computer_1_1Executable_1a5d5710dad9c56e17cdf09942d79c85bc" kind="function"><name>assemble</name></member>
+    <member refid="classHack_1_1Computer_1_1Executable_1afe19ebd0c1f7ef52030ed49bdaa31a85" kind="function"><name>compile</name></member>
+    <member refid="classHack_1_1Computer_1_1Executable_1ab4c3e98e4d54d525cf6e8c87d2ff7436" kind="function"><name>generate</name></member>
+    <member refid="classHack_1_1Computer_1_1Executable_1a3729cde2889585805f7049dfb5ea9fb0" kind="function"><name>load</name></member>
+    <member refid="classHack_1_1Computer_1_1Executable_1a9afaaafd6fa341b552ce5149844affdf" kind="function"><name>setupScreen</name></member>
+    <member refid="classHack_1_1Computer_1_1Executable_1ad9203dc92a4df1e252fbe8d17549fc8e" kind="function"><name>trace</name></member>
+    <member refid="classHack_1_1Computer_1_1Executable_1a3d22113b9647df040e61c2c3280766de" kind="function"><name>Executable</name></member>
+    <member refid="classHack_1_1Computer_1_1Executable_1aeb64ef358bd259c8669e992a49a81320" kind="function"><name>~Executable</name></member>
+    <member refid="classHack_1_1Computer_1_1Executable_1a1cdae50d55557b9a2703f12c96781462" kind="function"><name>go</name></member>
+    <member refid="classHack_1_1Computer_1_1Executable_1ad0bd64d06fec1239be53950d81981642" kind="function"><name>parse</name></member>
   </compound>
   <compound refid="classHack_1_1Computer_1_1RuntimeInterface" kind="class"><name>Hack::Computer::RuntimeInterface</name>
     <member refid="classHack_1_1Computer_1_1RuntimeInterface_1a3e09aeb7e6d6907b58f7a2a40636ac37" kind="function"><name>~RuntimeInterface</name></member>
@@ -1120,6 +1124,7 @@
     <member refid="classHack_1_1Computer_1_1RuntimeInterface_1a0f5eca7470888a3c5190dd9c1ddc3f67" kind="function"><name>getRate</name></member>
     <member refid="classHack_1_1Computer_1_1RuntimeInterface_1acfdf1e97cbbcc9a9f13ad26e6062b8d0" kind="function"><name>initialize</name></member>
     <member refid="classHack_1_1Computer_1_1RuntimeInterface_1a3cb1ab52903aaedabb0c9d49b013aab4" kind="function"><name>processEvents</name></member>
+    <member refid="classHack_1_1Computer_1_1RuntimeInterface_1abcf9f603a7a55918f648318629fc07f7" kind="function"><name>setInstructions</name></member>
     <member refid="classHack_1_1Computer_1_1RuntimeInterface_1afac6241dfa4f6de4ca3353819786e5e3" kind="function"><name>setRate</name></member>
     <member refid="classHack_1_1Computer_1_1RuntimeInterface_1a44e6d9da00af26f22941e1a0a540e797" kind="function"><name>shouldUpdate</name></member>
     <member refid="classHack_1_1Computer_1_1RuntimeInterface_1a5fe5dfa099bbf6ded85b29028440466d" kind="function"><name>update</name></member>
@@ -1225,12 +1230,55 @@
     <member refid="classHack_1_1ParserBase_1a4560ce70fee098d7508b053b409c1d19" kind="function"><name>write</name></member>
     <member refid="classHack_1_1ParserBase_1a644c6667a785050f490a4ee24a98e2e7" kind="function"><name>write</name></member>
   </compound>
-  <compound refid="classHack_1_1Programs_1_1VmGeneratorApplication" kind="class"><name>Hack::Programs::VmGeneratorApplication</name>
-    <member refid="classHack_1_1Programs_1_1VmGeneratorApplication_1a3dc349440a2e7338e63a0e0d16aa2c49" kind="variable"><name>_input</name></member>
-    <member refid="classHack_1_1Programs_1_1VmGeneratorApplication_1a79b2d6266ff56283ca934da047267932" kind="variable"><name>_output</name></member>
-    <member refid="classHack_1_1Programs_1_1VmGeneratorApplication_1a7871748e4ae624afa7e499c4a59fe5c8" kind="function"><name>VmGeneratorApplication</name></member>
-    <member refid="classHack_1_1Programs_1_1VmGeneratorApplication_1a5b92f6570aa68ee0ac9ef75c0eb65196" kind="function"><name>go</name></member>
-    <member refid="classHack_1_1Programs_1_1VmGeneratorApplication_1a416a282d953f159c301c3614ec855482" kind="function"><name>parse</name></member>
+  <compound refid="classHack_1_1Programs_1_1Asm2Mc" kind="class"><name>Hack::Programs::Asm2Mc</name>
+    <member refid="classHack_1_1Programs_1_1Asm2Mc_1af2e8a52b8b5f2d9aa25d1d331675e335" kind="variable"><name>_input</name></member>
+    <member refid="classHack_1_1Programs_1_1Asm2Mc_1ae7622e1d990aaa0fc8031dfe4fb64a4c" kind="variable"><name>_output</name></member>
+    <member refid="classHack_1_1Programs_1_1Asm2Mc_1afda53614d5c374c3e9b23668f5c3eb19" kind="function"><name>Asm2Mc</name></member>
+    <member refid="classHack_1_1Programs_1_1Asm2Mc_1a3b23db777872ea66b2dc38146f03ce24" kind="function"><name>go</name></member>
+    <member refid="classHack_1_1Programs_1_1Asm2Mc_1a0eef9198e8b2987e24cd33775486a00b" kind="function"><name>parse</name></member>
+  </compound>
+  <compound refid="classHack_1_1Programs_1_1FileCompiler" kind="class"><name>Hack::Programs::FileCompiler</name>
+    <member refid="classHack_1_1Programs_1_1FileCompiler_1a994ae52ddefdb04d84486eaffa18f827" kind="variable"><name>_deleteStream</name></member>
+    <member refid="classHack_1_1Programs_1_1FileCompiler_1add9ca2b2fd7b645e994cd18f371a7d98" kind="variable"><name>_inFormat</name></member>
+    <member refid="classHack_1_1Programs_1_1FileCompiler_1ad0a0f751e4719e9b1aebc0a2fd038dbc" kind="variable"><name>_input</name></member>
+    <member refid="classHack_1_1Programs_1_1FileCompiler_1af50bfac7d4749adabef420e81b2508d4" kind="variable"><name>_outFormat</name></member>
+    <member refid="classHack_1_1Programs_1_1FileCompiler_1ae81f91b0f2cd1a5c38c0792e4873f315" kind="variable"><name>_output</name></member>
+    <member refid="classHack_1_1Programs_1_1FileCompiler_1aa8a527f2383a0ad9221f54f9c225fd67" kind="function"><name>assemble</name></member>
+    <member refid="classHack_1_1Programs_1_1FileCompiler_1add9e4197612ecbc6b9635b79086635cf" kind="function"><name>compile</name></member>
+    <member refid="classHack_1_1Programs_1_1FileCompiler_1aa675bcff01e69fe892f311a0a53ee824" kind="function"><name>generate</name></member>
+    <member refid="classHack_1_1Programs_1_1FileCompiler_1a8668c9f0e025347f277b192c35bbe955" kind="function"><name>setInputFormat</name></member>
+    <member refid="classHack_1_1Programs_1_1FileCompiler_1a64b7d822cb2a46db7d4bd9886a80f2d9" kind="function"><name>setOutputFormat</name></member>
+    <member refid="classHack_1_1Programs_1_1FileCompiler_1ac1232ea394912904327103585e4f2d22" kind="function"><name>unknownOutput</name></member>
+    <member refid="classHack_1_1Programs_1_1FileCompiler_1a5109f71094099375b012005b167de537" kind="function"><name>FileCompiler</name></member>
+    <member refid="classHack_1_1Programs_1_1FileCompiler_1a85a3e399e00ac2de44418446f694f156" kind="function"><name>~FileCompiler</name></member>
+    <member refid="classHack_1_1Programs_1_1FileCompiler_1aecd6d5ac58662ddd51b5bdf237a4b048" kind="function"><name>compileAssemblySource</name></member>
+    <member refid="classHack_1_1Programs_1_1FileCompiler_1abed602c0573bff971cf9d101eab3dbcc" kind="function"><name>compileJackSource</name></member>
+    <member refid="classHack_1_1Programs_1_1FileCompiler_1a01c39e3829dd3a7de0d9c56dd6d53034" kind="function"><name>compileVmSource</name></member>
+    <member refid="classHack_1_1Programs_1_1FileCompiler_1ab38b94cd336129393da353168225d490" kind="function"><name>go</name></member>
+    <member refid="classHack_1_1Programs_1_1FileCompiler_1a5c6f0e9c4e39ea8d8411ed6da16fe07e" kind="function"><name>parse</name></member>
+  </compound>
+  <compound refid="classHack_1_1Programs_1_1Jack2Vm" kind="class"><name>Hack::Programs::Jack2Vm</name>
+    <member refid="classHack_1_1Programs_1_1Jack2Vm_1ad5e1fa95fda60a565bf2a91fff3bf89b" kind="variable"><name>_input</name></member>
+    <member refid="classHack_1_1Programs_1_1Jack2Vm_1a6642f4baa1458eda69e534791b628171" kind="variable"><name>_output</name></member>
+    <member refid="classHack_1_1Programs_1_1Jack2Vm_1a1fd66e38d3c6be4537eb4746df158475" kind="function"><name>Jack2Vm</name></member>
+    <member refid="classHack_1_1Programs_1_1Jack2Vm_1ae0148bb382e7eda28b5cd8855ab158ff" kind="function"><name>go</name></member>
+    <member refid="classHack_1_1Programs_1_1Jack2Vm_1a52b0c35c9ebac3894375a544dd49137d" kind="function"><name>parse</name></member>
+  </compound>
+  <compound refid="classHack_1_1Programs_1_1Jack2Xml" kind="class"><name>Hack::Programs::Jack2Xml</name>
+    <member refid="classHack_1_1Programs_1_1Jack2Xml_1af3ac3d5544da576d1678fb712f948c87" kind="variable"><name>_dir</name></member>
+    <member refid="classHack_1_1Programs_1_1Jack2Xml_1ac6a4fadc1647c8c81bb9f3576d626937" kind="variable"><name>_dot</name></member>
+    <member refid="classHack_1_1Programs_1_1Jack2Xml_1a17763564da6c9331e555421c07461676" kind="variable"><name>_input</name></member>
+    <member refid="classHack_1_1Programs_1_1Jack2Xml_1a6f63b52889068584b1f8237fa75c4692" kind="variable"><name>_output</name></member>
+    <member refid="classHack_1_1Programs_1_1Jack2Xml_1a649834d1f8a072f693454210bf5d5f88" kind="function"><name>Jack2Xml</name></member>
+    <member refid="classHack_1_1Programs_1_1Jack2Xml_1aa77e1a9ad4c531fb91dd29f08b33d98b" kind="function"><name>go</name></member>
+    <member refid="classHack_1_1Programs_1_1Jack2Xml_1ab9678bf5b969299162c77ef8e276cabe" kind="function"><name>parse</name></member>
+  </compound>
+  <compound refid="classHack_1_1Programs_1_1Vm2Asm" kind="class"><name>Hack::Programs::Vm2Asm</name>
+    <member refid="classHack_1_1Programs_1_1Vm2Asm_1a2cbd99bda65609bd3dcfc3d5e29973d5" kind="variable"><name>_input</name></member>
+    <member refid="classHack_1_1Programs_1_1Vm2Asm_1a336048364d6cc199c4d56162a7e48f03" kind="variable"><name>_output</name></member>
+    <member refid="classHack_1_1Programs_1_1Vm2Asm_1ab465971e8ba4affb7b19f8db4054b157" kind="function"><name>Vm2Asm</name></member>
+    <member refid="classHack_1_1Programs_1_1Vm2Asm_1a843d179362df22afbb561d86342a65dd" kind="function"><name>go</name></member>
+    <member refid="classHack_1_1Programs_1_1Vm2Asm_1ac8dd1a8a4cbe582bddb59ae6953adbf2" kind="function"><name>parse</name></member>
   </compound>
   <compound refid="classHack_1_1ScannerBase" kind="class"><name>Hack::ScannerBase</name>
     <member refid="classHack_1_1ScannerBase_1aee2410ff35c9642a4addab5377339b99" kind="variable"><name>_file</name></member>
@@ -1339,11 +1387,13 @@
     <member refid="classHack_1_1Ui_1_1Context_1a0e9a3bc45fdd913958c336621519ae63" kind="function"><name>character</name></member>
     <member refid="classHack_1_1Ui_1_1Context_1a2b4afce9f2834f80209250eaad2254fb" kind="function"><name>clear</name></member>
     <member refid="classHack_1_1Ui_1_1Context_1a6694bf438697b7f92706d10afae0e253" kind="function"><name>clearPath</name></member>
+    <member refid="classHack_1_1Ui_1_1Context_1a602382dc0b8d396a2c7e1fb89f6397f1" kind="function"><name>color</name></member>
     <member refid="classHack_1_1Ui_1_1Context_1a88771b1f87caffb79b45d560e0a9201a" kind="function"><name>createColor</name></member>
     <member refid="classHack_1_1Ui_1_1Context_1a386ce2479241e71caf86ef94618a8a6f" kind="function"><name>flush</name></member>
     <member refid="classHack_1_1Ui_1_1Context_1a4a5c359b8eed0171acb0c472104394d3" kind="function"><name>foreground</name></member>
     <member refid="classHack_1_1Ui_1_1Context_1aac7c82f9a0deee33d34432b8a25b24e4" kind="function"><name>height</name></member>
     <member refid="classHack_1_1Ui_1_1Context_1aa92dcfe72aaee96da6e72c9f2d3075db" kind="function"><name>initialize</name></member>
+    <member refid="classHack_1_1Ui_1_1Context_1aef1efc7ed46282179084ab24ca18d74d" kind="function"><name>integer</name></member>
     <member refid="classHack_1_1Ui_1_1Context_1a15e60c63d8971ce688651c63e89f80d5" kind="function"><name>line</name></member>
     <member refid="classHack_1_1Ui_1_1Context_1ab50aa0819a2a5776c17092dcbd518408" kind="function"><name>line</name></member>
     <member refid="classHack_1_1Ui_1_1Context_1ab340b1cb2b0bf4f3b27cbe2999235147" kind="function"><name>lineTo</name></member>
@@ -1491,7 +1541,7 @@
     <member refid="classHack_1_1VirtualMachine_1_1CodeStream_1a881189b74424125c63a8424483775ae3" kind="function"><name>subMdIntoM</name></member>
     <member refid="classHack_1_1VirtualMachine_1_1CodeStream_1ac4984684a04d2f0c08b8d3ccd914c3ee" kind="function"><name>subMoveDmIntoD</name></member>
     <member refid="classHack_1_1VirtualMachine_1_1CodeStream_1a8e21be8722f05faaf98bf330cc90cdb3" kind="function"><name>subXFromD</name></member>
-    <member refid="classHack_1_1VirtualMachine_1_1CodeStream_1a5a6c6aa70bf459a3ab1ac0e3c3f5e309" kind="function"><name>write</name></member>
+    <member refid="classHack_1_1VirtualMachine_1_1CodeStream_1aa24d8232152dbeb130978b871402e41b" kind="function"><name>write</name></member>
   </compound>
   <compound refid="classHack_1_1VirtualMachine_1_1Emitter" kind="class"><name>Hack::VirtualMachine::Emitter</name>
     <member refid="classHack_1_1VirtualMachine_1_1Emitter_1aa8ce88c353ba6d22e7540662e1df2a8a" kind="typedef"><name>StringStack</name></member>
@@ -1549,6 +1599,7 @@
     <member refid="classHack_1_1VirtualMachine_1_1Parser_1a3055c1a9b49a5d6c60a2e2aeab083ca0" kind="function"><name>expression</name></member>
     <member refid="classHack_1_1VirtualMachine_1_1Parser_1a155771f46199422a961012ad64c81351" kind="function"><name>functionExpression</name></member>
     <member refid="classHack_1_1VirtualMachine_1_1Parser_1adec2438941d6f4f953dd7ee0868d62a5" kind="function"><name>gotoExpression</name></member>
+    <member refid="classHack_1_1VirtualMachine_1_1Parser_1a58f9d46d48cd83efcb2b8b2305ebc680" kind="function"><name>inlineAsm</name></member>
     <member refid="classHack_1_1VirtualMachine_1_1Parser_1aa34e3ff9365d53d7e24f155c27a728da" kind="function"><name>labelExpression</name></member>
     <member refid="classHack_1_1VirtualMachine_1_1Parser_1a589fd449e99792f382a6ae6836782385" kind="function"><name>parseImpl</name></member>
     <member refid="classHack_1_1VirtualMachine_1_1Parser_1aba7d94d54c0c7abf94939367b760df26" kind="function"><name>popExpression</name></member>
@@ -1566,39 +1617,6 @@
     <member refid="classHack_1_1VirtualMachine_1_1Scanner_1a492f69304cf8afa9a9c08db6aea3858d" kind="function"><name>Scanner</name></member>
     <member refid="classHack_1_1VirtualMachine_1_1Scanner_1aecf5a1159531823bd1e53aac834e9f73" kind="function"><name>getCode</name></member>
     <member refid="classHack_1_1VirtualMachine_1_1Scanner_1a4997cadc71378e0fd99ba4309507442c" kind="function"><name>scan</name></member>
-  </compound>
-  <compound refid="classHackCompiler" kind="class"><name>HackCompiler</name>
-    <member refid="classHackCompiler_1abfc8625955dc025f96840c9020d57409" kind="variable"><name>_deleteStream</name></member>
-    <member refid="classHackCompiler_1a65c207e94352e2c5f3ee58da428b3792" kind="variable"><name>_dir</name></member>
-    <member refid="classHackCompiler_1a634622915a1891ad73ee82c686564662" kind="variable"><name>_dot</name></member>
-    <member refid="classHackCompiler_1a43975adcf76b1276f3a1f8e95624e1b8" kind="variable"><name>_inFormat</name></member>
-    <member refid="classHackCompiler_1aa9b86572f062f83769bda5ee71756975" kind="variable"><name>_input</name></member>
-    <member refid="classHackCompiler_1ad30ff67f2fa80ca7329d469cdc7aaae6" kind="variable"><name>_input</name></member>
-    <member refid="classHackCompiler_1a989a39e61bcba9869b970d165eb7ab8c" kind="variable"><name>_outFormat</name></member>
-    <member refid="classHackCompiler_1ad7f46df018180824bb7f05603488c86c" kind="variable"><name>_output</name></member>
-    <member refid="classHackCompiler_1a1adf6ea766d61fb743e4add9de74e39a" kind="variable"><name>_output</name></member>
-    <member refid="classHackCompiler_1ae9f2083c1c708c20168ce54a5c5093df" kind="function"><name>HackCompiler</name></member>
-    <member refid="classHackCompiler_1ae9f2083c1c708c20168ce54a5c5093df" kind="function"><name>HackCompiler</name></member>
-    <member refid="classHackCompiler_1a0cd61c4a9da3f3b1369f79b47cee8dbe" kind="function"><name>HackCompiler</name></member>
-    <member refid="classHackCompiler_1a0cd61c4a9da3f3b1369f79b47cee8dbe" kind="function"><name>HackCompiler</name></member>
-    <member refid="classHackCompiler_1ad78c2aa7ae6395a716717305314245bf" kind="function"><name>~HackCompiler</name></member>
-    <member refid="classHackCompiler_1a8f86c504a19e1eb3cd19c72b7d530161" kind="function"><name>compileAssemblySource</name></member>
-    <member refid="classHackCompiler_1ad0f8f3c3d32dc224fbdf7913c251441a" kind="function"><name>compileJackSource</name></member>
-    <member refid="classHackCompiler_1a62740882d6d03d8356f3457377bc18a9" kind="function"><name>compileVmSource</name></member>
-    <member refid="classHackCompiler_1a9d1fc868e8a874f5327f01d3a6c93893" kind="function"><name>go</name></member>
-    <member refid="classHackCompiler_1a9d1fc868e8a874f5327f01d3a6c93893" kind="function"><name>go</name></member>
-    <member refid="classHackCompiler_1a9d1fc868e8a874f5327f01d3a6c93893" kind="function"><name>go</name></member>
-    <member refid="classHackCompiler_1a7ddcd2b46bd2a6478d0231f48dc3c4d2" kind="function"><name>go</name></member>
-    <member refid="classHackCompiler_1aceee5ebb13d80d2a4d0b58596e9b7988" kind="function"><name>parse</name></member>
-    <member refid="classHackCompiler_1aceee5ebb13d80d2a4d0b58596e9b7988" kind="function"><name>parse</name></member>
-    <member refid="classHackCompiler_1aceee5ebb13d80d2a4d0b58596e9b7988" kind="function"><name>parse</name></member>
-    <member refid="classHackCompiler_1aceee5ebb13d80d2a4d0b58596e9b7988" kind="function"><name>parse</name></member>
-    <member refid="classHackCompiler_1a145366b6a33af8b0890679a251548507" kind="function"><name>assemble</name></member>
-    <member refid="classHackCompiler_1a0dc538438bab0f5738792eb1759b8d63" kind="function"><name>compile</name></member>
-    <member refid="classHackCompiler_1a5ad7fcf652f0cf1f6c48b70e9b46acd5" kind="function"><name>generate</name></member>
-    <member refid="classHackCompiler_1a66024ec31e42109f6ad5cf638027e27a" kind="function"><name>setInputFormat</name></member>
-    <member refid="classHackCompiler_1a4551f344007aa287c3ca248660b01e85" kind="function"><name>setOutputFormat</name></member>
-    <member refid="classHackCompiler_1af3d6ebc5090948d91f265091a79bac54" kind="function"><name>unknownOutput</name></member>
   </compound>
   <compound refid="structHandleType" kind="struct"><name>HandleType</name>
     <member refid="structHandleType_1abbb566befc5791ac90d23564b5d9939d" kind="variable"><name>ptr</name></member>
@@ -1640,6 +1658,8 @@
     <member refid="namespaceHack_1a31eb56db00653252b73a1d6f1aef8fb1" kind="variable"><name>__gForeground</name></member>
     <member refid="namespaceHack_1ae7e3e66ba861ebc2a81c74fab64eca4a" kind="variable"><name>BaseChars</name></member>
     <member refid="namespaceHack_1ab2f01cb6501d226bff7dec88849a0f23" kind="variable"><name>BaseCharsSize</name></member>
+    <member refid="namespaceHack_1acedcdb10c14663034876ff1f2d01c86c" kind="function"><name>CrtDump</name></member>
+    <member refid="namespaceHack_1a8ab6304471ef372d768f7c50db9432b1" kind="function"><name>CrtTestMemory</name></member>
     <member refid="namespaceHack_1a3072f15c6cc44192ad127f00ab7430cd" kind="function"><name>isDecimal</name></member>
     <member refid="namespaceHack_1a3b7e26319acf069b65ddb8e0f3f34812" kind="function"><name>isLetter</name></member>
     <member refid="namespaceHack_1a997ba9c78deb35bd113a03a3da54f8cd" kind="function"><name>isNewLine</name></member>
@@ -1993,12 +2013,11 @@
     <member refid="namespaceHack_1_1Computer_1a5ead6eecb040356778165b52450fac0fabf65c654b7921c6f8247d6de80763985" kind="enumvalue"><name>OP_SHOW_MC</name></member>
     <member refid="namespaceHack_1_1Computer_1a5ead6eecb040356778165b52450fac0fa395bf60d8da91644da7f1a7d65f9bc1b" kind="enumvalue"><name>OP_MAX</name></member>
     <member refid="namespaceHack_1_1Computer_1aba32ded0cec6b006c47567a0e1882e10" kind="typedef"><name>AsmParser</name></member>
-    <member refid="namespaceHack_1_1Computer_1a9a8e3139231dc9b3e84768479987047a" kind="typedef"><name>Clock</name></member>
     <member refid="namespaceHack_1_1Computer_1a7adfa2a3953171ba9904ffbd0c285bcc" kind="typedef"><name>Cmd</name></member>
     <member refid="namespaceHack_1_1Computer_1a4895802d0916e2b1cd7de7a2c2721789" kind="typedef"><name>CmdSwitch</name></member>
-    <member refid="namespaceHack_1_1Computer_1aac63dd835bedf1d4c3c8b26f777db86d" kind="typedef"><name>CodeGen</name></member>
     <member refid="namespaceHack_1_1Computer_1a44afbb15c2b5cb28f39f19bfcdde74de" kind="typedef"><name>Instructions</name></member>
-    <member refid="namespaceHack_1_1Computer_1a43395a16792cd3a3073302e6e3c90ff4" kind="typedef"><name>Time</name></member>
+    <member refid="namespaceHack_1_1Computer_1a4d3a61b7bdee1da9f307059b558d1c9f" kind="typedef"><name>JackParser</name></member>
+    <member refid="namespaceHack_1_1Computer_1a839f273fc69d51b41afa231c251e86d4" kind="typedef"><name>VmGenerator</name></member>
     <member refid="namespaceHack_1_1Computer_1ae7e2f73e4f04af1c84f92348e8d432a1" kind="typedef"><name>VmParser</name></member>
     <member refid="namespaceHack_1_1Computer_1a1a5d69e12118b3a2c1fd1aec69e262fc" kind="variable"><name>Switches</name></member>
   </compound>
@@ -2015,12 +2034,42 @@
   <compound refid="namespaceHack_1_1OperatingSystem" kind="namespace"><name>Hack::OperatingSystem</name>
   </compound>
   <compound refid="namespaceHack_1_1Programs" kind="namespace"><name>Hack::Programs</name>
-    <member refid="namespaceHack_1_1Programs_1abf03186f32cf652a3130af11201ad075" kind="enum"><name>Options</name></member>
-    <member refid="namespaceHack_1_1Programs_1abf03186f32cf652a3130af11201ad075a885204b76dba92eaf23aca08ee5807b8" kind="enumvalue"><name>OP_OUTPUT</name></member>
-    <member refid="namespaceHack_1_1Programs_1abf03186f32cf652a3130af11201ad075aaccd1ba868a2f5d31c1788dc25318016" kind="enumvalue"><name>OP_MAX</name></member>
+    <member refid="namespaceHack_1_1Programs_1ac17b8c1b8094fb1100c4a5097bb2b15a" kind="enum"><name>Asm2McOptions</name></member>
+    <member refid="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26ac45c95b5ada136a111376bbf6dc33465" kind="enumvalue"><name>OP_OUTPUT</name></member>
+    <member refid="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26aba0214c85564537166862690304333d3" kind="enumvalue"><name>OP_MAX</name></member>
+    <member refid="namespaceHack_1_1Programs_1a6b059a0132d158f313345ebadbbf9aa0" kind="enum"><name>CompilerOptions</name></member>
+    <member refid="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26ac45c95b5ada136a111376bbf6dc33465" kind="enumvalue"><name>OP_OUTPUT</name></member>
+    <member refid="namespaceHack_1_1Programs_1a6b059a0132d158f313345ebadbbf9aa0aa3e38b518e68f59f9239ecc774c3f969" kind="enumvalue"><name>OP_OUT_FMT_ARG</name></member>
+    <member refid="namespaceHack_1_1Programs_1a6b059a0132d158f313345ebadbbf9aa0a047f60a3454009e27fa1731097dfe336" kind="enumvalue"><name>OP_IN_FMT_ARG</name></member>
+    <member refid="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26aba0214c85564537166862690304333d3" kind="enumvalue"><name>OP_MAX</name></member>
+    <member refid="namespaceHack_1_1Programs_1a4d4882d34bd3b0b7a7597b475ffb2390" kind="enum"><name>InputFormat</name></member>
+    <member refid="namespaceHack_1_1Programs_1a4d4882d34bd3b0b7a7597b475ffb2390a65f8f763ca5ed705f31d9e9340ba4e7e" kind="enumvalue"><name>IN_FMT_JACK</name></member>
+    <member refid="namespaceHack_1_1Programs_1a4d4882d34bd3b0b7a7597b475ffb2390a0d1878fda24ef775572c3940cc1f219b" kind="enumvalue"><name>IN_FMT_VM</name></member>
+    <member refid="namespaceHack_1_1Programs_1a4d4882d34bd3b0b7a7597b475ffb2390a9c9cc7d1aa576bee878b4b20da35f61f" kind="enumvalue"><name>IN_FMT_ASM</name></member>
+    <member refid="namespaceHack_1_1Programs_1ac88e6fa9cbddb241e5b038d61be6ae78" kind="enum"><name>Jack2VmOptions</name></member>
+    <member refid="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26ac45c95b5ada136a111376bbf6dc33465" kind="enumvalue"><name>OP_OUTPUT</name></member>
+    <member refid="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26aba0214c85564537166862690304333d3" kind="enumvalue"><name>OP_MAX</name></member>
+    <member refid="namespaceHack_1_1Programs_1ab2ef2913b19b77944b67c68f613d4735" kind="enum"><name>Jack2XmlOptions</name></member>
+    <member refid="namespaceHack_1_1Programs_1ab2ef2913b19b77944b67c68f613d4735a7ddc2f0d1c6b4181313581b737e37825" kind="enumvalue"><name>OP_FMT</name></member>
+    <member refid="namespaceHack_1_1Programs_1ab2ef2913b19b77944b67c68f613d4735a545886736861bbb7323377d0d060091d" kind="enumvalue"><name>OP_DIR</name></member>
+    <member refid="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26ac45c95b5ada136a111376bbf6dc33465" kind="enumvalue"><name>OP_OUTPUT</name></member>
+    <member refid="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26aba0214c85564537166862690304333d3" kind="enumvalue"><name>OP_MAX</name></member>
+    <member refid="namespaceHack_1_1Programs_1a24193db1c6ced0c8150d1446bb5e0314" kind="enum"><name>OutputFormat</name></member>
+    <member refid="namespaceHack_1_1Programs_1a24193db1c6ced0c8150d1446bb5e0314a2be6c9eb8142d85d052ac5d71dbb8dfe" kind="enumvalue"><name>OUT_FMT_VM</name></member>
+    <member refid="namespaceHack_1_1Programs_1a24193db1c6ced0c8150d1446bb5e0314abfd32d95666910c2b7ed1a9620a3e96c" kind="enumvalue"><name>OUT_FMT_XML</name></member>
+    <member refid="namespaceHack_1_1Programs_1a24193db1c6ced0c8150d1446bb5e0314ad07aebddb72072879da0672890916889" kind="enumvalue"><name>OUT_FMT_DOT</name></member>
+    <member refid="namespaceHack_1_1Programs_1a24193db1c6ced0c8150d1446bb5e0314a34748d4082250cd65d6916a42b005fb9" kind="enumvalue"><name>OUT_FMT_ASM</name></member>
+    <member refid="namespaceHack_1_1Programs_1a24193db1c6ced0c8150d1446bb5e0314a1f548c10005d5fa22ab7d406d3109bbe" kind="enumvalue"><name>OUT_FMT_MC</name></member>
+    <member refid="namespaceHack_1_1Programs_1a24193db1c6ced0c8150d1446bb5e0314a05f7e13aa2e75edf875460581acb589d" kind="enumvalue"><name>OUT_FMT_DBG</name></member>
+    <member refid="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26" kind="enum"><name>Vm2AsmOptions</name></member>
+    <member refid="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26ac45c95b5ada136a111376bbf6dc33465" kind="enumvalue"><name>OP_OUTPUT</name></member>
+    <member refid="namespaceHack_1_1Programs_1aa9973224a08706922f1af23f47a2fa26aba0214c85564537166862690304333d3" kind="enumvalue"><name>OP_MAX</name></member>
+    <member refid="namespaceHack_1_1Programs_1a7e1112978bb5fdfd3ae121763b13e7b0" kind="typedef"><name>AsmParser</name></member>
     <member refid="namespaceHack_1_1Programs_1a13ebb77912ec0bfaffec05c6825a7f9b" kind="typedef"><name>CmdLine</name></member>
     <member refid="namespaceHack_1_1Programs_1ae8e8d238d0cc49784639419312e6ac31" kind="typedef"><name>CmdSwitch</name></member>
-    <member refid="namespaceHack_1_1Programs_1abaf8ca10fec17b26f9d1fb59c924ef58" kind="variable"><name>Switches</name></member>
+    <member refid="namespaceHack_1_1Programs_1a97b2fb3803c8da400739086d8dd76223" kind="typedef"><name>CodeGen</name></member>
+    <member refid="namespaceHack_1_1Programs_1ae7da8b523cd93ce51ff85a28673e4aeb" kind="typedef"><name>VmParser</name></member>
+    <member refid="namespaceHack_1_1Programs_1addef1058a4b0a225cf643d1c5eca457b" kind="variable"><name>Switches</name></member>
   </compound>
   <compound refid="namespaceHack_1_1Ui" kind="namespace"><name>Hack::Ui</name>
     <member refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0" kind="enum"><name>CharacterSet</name></member>
@@ -2032,11 +2081,12 @@
     <member refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a073a22d37e6a995b7c17ddfc65661e7d" kind="enumvalue"><name>CS_RECT_LB</name></member>
     <member refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a8803333d960baf039bb860468988d16d" kind="enumvalue"><name>CS_RECT_CS</name></member>
     <member refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a5cc1590a1227299f2d57e30c9c354748" kind="enumvalue"><name>CS_RECT_HZ</name></member>
-    <member refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a9b1d4bb7b028bce971009f4742e28e8b" kind="enumvalue"><name>CS_RECT_LCS</name></member>
-    <member refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a6f020960e91251129ffbaa5a9514eb9e" kind="enumvalue"><name>CS_RECT_RCS</name></member>
-    <member refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a5da6a4a3faaa0f29c7774f447c0fba74" kind="enumvalue"><name>CS_RECT_BCS</name></member>
-    <member refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0aab50306728780dd9c7cc010ddf09556b" kind="enumvalue"><name>CS_RECT_TCS</name></member>
+    <member refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a1c2e1081d139fd2d5a71bc64a8fea82b" kind="enumvalue"><name>CS_RECT_CL</name></member>
+    <member refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a98bf7eb077d9c44a7107e3688a3ec516" kind="enumvalue"><name>CS_RECT_CR</name></member>
+    <member refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a3b627a1484fb30d5fb994e3562984dc1" kind="enumvalue"><name>CS_RECT_CB</name></member>
+    <member refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0ab31c58ec57f7d95ab6faa268db393142" kind="enumvalue"><name>CS_RECT_CT</name></member>
     <member refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a4354d780f39ce363e5a3834343c3aa50" kind="enumvalue"><name>CS_RECT_VT</name></member>
+    <member refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a8956bd77e0fbc9c3fe78aa42fb78e072" kind="enumvalue"><name>CS_SEQ_END</name></member>
     <member refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0ae51b178c3675d1c5b33fd92346227bc4" kind="enumvalue"><name>CS_START</name></member>
     <member refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a41af7adc01eb6945b60a1bfd8fef6c41" kind="enumvalue"><name>CS_END</name></member>
     <member refid="namespaceHack_1_1Ui_1ae1fedfb1c7fe15d04561a77c09b20bc3" kind="enum"><name>ColorPalette</name></member>
@@ -2124,13 +2174,15 @@
   <compound refid="namespaceHack_1_1Ui_1_1Detail" kind="namespace"><name>Hack::Ui::Detail</name>
     <member refid="namespaceHack_1_1Ui_1_1Detail_1a33853f4a5a76638722e1febde2cee328" kind="variable"><name>Clear</name></member>
     <member refid="namespaceHack_1_1Ui_1_1Detail_1afe86bd2942c9eef87a316c286d47f510" kind="variable"><name>HideCursor</name></member>
+    <member refid="namespaceHack_1_1Ui_1_1Detail_1a886803654308ff739306adb23b15e654" kind="variable"><name>LineCb</name></member>
+    <member refid="namespaceHack_1_1Ui_1_1Detail_1a8c26aa0af22a768ebbb2def7b7e41db4" kind="variable"><name>LineCl</name></member>
+    <member refid="namespaceHack_1_1Ui_1_1Detail_1a5047855c92fecdfb8f41adeea1122e80" kind="variable"><name>LineCr</name></member>
+    <member refid="namespaceHack_1_1Ui_1_1Detail_1a294648c403ff0f10680c2f85dc994829" kind="variable"><name>LineCt</name></member>
     <member refid="namespaceHack_1_1Ui_1_1Detail_1ae4506309ad509d4d28ac113620edd6ab" kind="variable"><name>LineHz</name></member>
     <member refid="namespaceHack_1_1Ui_1_1Detail_1a44554fef2e43a64304c62333d3f7415e" kind="variable"><name>LineLb</name></member>
     <member refid="namespaceHack_1_1Ui_1_1Detail_1a7e344cdf5463e56c211659e2a21af4f8" kind="variable"><name>LineLt</name></member>
     <member refid="namespaceHack_1_1Ui_1_1Detail_1a13d36030f4ce00dbd082a7b63f0f7e93" kind="variable"><name>LineRb</name></member>
     <member refid="namespaceHack_1_1Ui_1_1Detail_1a1151cd1c5a9ec7be5f775dee0ea61465" kind="variable"><name>LineRt</name></member>
-    <member refid="namespaceHack_1_1Ui_1_1Detail_1af5e7cd1af04685b1a1514b38541e8a81" kind="variable"><name>LineVertL</name></member>
-    <member refid="namespaceHack_1_1Ui_1_1Detail_1a2d75a0a649a37f46deb916f800a48e81" kind="variable"><name>LineVertR</name></member>
     <member refid="namespaceHack_1_1Ui_1_1Detail_1a4ed8c1169133a213bf99ffad6fb30a86" kind="variable"><name>LineVt</name></member>
     <member refid="namespaceHack_1_1Ui_1_1Detail_1aad13e43e04b9b3f5dd1366514a7926ce" kind="variable"><name>ResetColor</name></member>
     <member refid="namespaceHack_1_1Ui_1_1Detail_1a3576cc7ce9181a354daff9ded81c1b45" kind="variable"><name>SetCursor</name></member>
@@ -2186,6 +2238,7 @@
     <member refid="namespaceHack_1_1VirtualMachine_1a091fad0d0b4814af2f1f3f51d62033c8a8ecc09af794ba08a877a741036883409" kind="enumvalue"><name>TOK_HALT</name></member>
     <member refid="namespaceHack_1_1VirtualMachine_1a091fad0d0b4814af2f1f3f51d62033c8a4ab563e860977220dd359e7df2a3db53" kind="enumvalue"><name>TOK_ASM</name></member>
     <member refid="namespaceHack_1_1VirtualMachine_1a08484157b85b2bda07ff1e0c32072f10" kind="typedef"><name>CodeCache</name></member>
+    <member refid="namespaceHack_1_1VirtualMachine_1adb19531abaa10516e5b5132f88b47f25" kind="typedef"><name>IntList</name></member>
     <member refid="namespaceHack_1_1VirtualMachine_1a02186d1a9c875e3583ff775f46ad7c0a" kind="typedef"><name>StringCache</name></member>
     <member refid="namespaceHack_1_1VirtualMachine_1a1256a43300d83510604c7b9755796e01" kind="typedef"><name>Token</name></member>
     <member refid="namespaceHack_1_1VirtualMachine_1a30e923dda3e21a2da18e80be744949c7" kind="variable"><name>Reserved</name></member>
@@ -2220,90 +2273,18 @@
   <compound refid="Instruction_8h" kind="file"><name>Instruction.h</name>
   </compound>
   <compound refid="Assembler_2Main_8cpp" kind="file"><name>Main.cpp</name>
-    <member refid="Assembler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99" kind="enum"><name>Options</name></member>
-    <member refid="Assembler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a754e75f91ab2276abfbed3267a2a0930" kind="enumvalue"><name>OP_OUTPUT</name></member>
-    <member refid="Assembler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a5c270cf3e25cfa83f27b787be93b99f9" kind="enumvalue"><name>OP_MAX</name></member>
-    <member refid="Compiler_2Analyzer_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a4affdc447c94e0a37bfd812674866426" kind="enumvalue"><name>OP_FMT</name></member>
-    <member refid="Compiler_2Analyzer_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99ad0cf9bb97c9c3845ca0d4daed8372bca" kind="enumvalue"><name>OP_DIR</name></member>
-    <member refid="Compiler_2Analyzer_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a754e75f91ab2276abfbed3267a2a0930" kind="enumvalue"><name>OP_OUTPUT</name></member>
-    <member refid="Compiler_2Analyzer_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a5c270cf3e25cfa83f27b787be93b99f9" kind="enumvalue"><name>OP_MAX</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a754e75f91ab2276abfbed3267a2a0930" kind="enumvalue"><name>OP_OUTPUT</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a0b8dec5a0566aef173caf8d61b7e2bd7" kind="enumvalue"><name>OP_OUT_FMT_ARG</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a4f2720e8cafeaa5fe3f8f02500d612de" kind="enumvalue"><name>OP_IN_FMT_ARG</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a5c270cf3e25cfa83f27b787be93b99f9" kind="enumvalue"><name>OP_MAX</name></member>
-    <member refid="VirtualMachine_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a754e75f91ab2276abfbed3267a2a0930" kind="enumvalue"><name>OP_OUTPUT</name></member>
-    <member refid="VirtualMachine_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a5c270cf3e25cfa83f27b787be93b99f9" kind="enumvalue"><name>OP_MAX</name></member>
-    <member refid="Assembler_2Main_8cpp_1ad7c5254e1705c59aa9bf4c16d149187e" kind="variable"><name>Switches</name></member>
     <member refid="Assembler_2Main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
   </compound>
   <compound refid="Compiler_2Analyzer_2Main_8cpp" kind="file"><name>Main.cpp</name>
-    <member refid="Compiler_2Analyzer_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99" kind="enum"><name>Options</name></member>
-    <member refid="Assembler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a754e75f91ab2276abfbed3267a2a0930" kind="enumvalue"><name>OP_OUTPUT</name></member>
-    <member refid="Assembler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a5c270cf3e25cfa83f27b787be93b99f9" kind="enumvalue"><name>OP_MAX</name></member>
-    <member refid="Compiler_2Analyzer_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a4affdc447c94e0a37bfd812674866426" kind="enumvalue"><name>OP_FMT</name></member>
-    <member refid="Compiler_2Analyzer_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99ad0cf9bb97c9c3845ca0d4daed8372bca" kind="enumvalue"><name>OP_DIR</name></member>
-    <member refid="Compiler_2Analyzer_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a754e75f91ab2276abfbed3267a2a0930" kind="enumvalue"><name>OP_OUTPUT</name></member>
-    <member refid="Compiler_2Analyzer_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a5c270cf3e25cfa83f27b787be93b99f9" kind="enumvalue"><name>OP_MAX</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a754e75f91ab2276abfbed3267a2a0930" kind="enumvalue"><name>OP_OUTPUT</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a0b8dec5a0566aef173caf8d61b7e2bd7" kind="enumvalue"><name>OP_OUT_FMT_ARG</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a4f2720e8cafeaa5fe3f8f02500d612de" kind="enumvalue"><name>OP_IN_FMT_ARG</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a5c270cf3e25cfa83f27b787be93b99f9" kind="enumvalue"><name>OP_MAX</name></member>
-    <member refid="VirtualMachine_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a754e75f91ab2276abfbed3267a2a0930" kind="enumvalue"><name>OP_OUTPUT</name></member>
-    <member refid="VirtualMachine_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a5c270cf3e25cfa83f27b787be93b99f9" kind="enumvalue"><name>OP_MAX</name></member>
-    <member refid="Compiler_2Analyzer_2Main_8cpp_1ad7c5254e1705c59aa9bf4c16d149187e" kind="variable"><name>Switches</name></member>
     <member refid="Compiler_2Analyzer_2Main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
   </compound>
   <compound refid="Compiler_2Compiler_2Main_8cpp" kind="file"><name>Main.cpp</name>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1a7a1886da996cfe677c935435eff2adeb" kind="enum"><name>InputFormat</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1a7a1886da996cfe677c935435eff2adeba7d51f7240bdb727e5e3a43b68a4b129d" kind="enumvalue"><name>IN_FMT_JACK</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1a7a1886da996cfe677c935435eff2adeba03dcb74d1ecaacbb34977b1a779838d4" kind="enumvalue"><name>IN_FMT_VM</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1a7a1886da996cfe677c935435eff2adeba1f9c3e2b18f082d6182501024e5f7df9" kind="enumvalue"><name>IN_FMT_ASM</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99" kind="enum"><name>Options</name></member>
-    <member refid="Assembler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a754e75f91ab2276abfbed3267a2a0930" kind="enumvalue"><name>OP_OUTPUT</name></member>
-    <member refid="Assembler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a5c270cf3e25cfa83f27b787be93b99f9" kind="enumvalue"><name>OP_MAX</name></member>
-    <member refid="Compiler_2Analyzer_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a4affdc447c94e0a37bfd812674866426" kind="enumvalue"><name>OP_FMT</name></member>
-    <member refid="Compiler_2Analyzer_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99ad0cf9bb97c9c3845ca0d4daed8372bca" kind="enumvalue"><name>OP_DIR</name></member>
-    <member refid="Compiler_2Analyzer_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a754e75f91ab2276abfbed3267a2a0930" kind="enumvalue"><name>OP_OUTPUT</name></member>
-    <member refid="Compiler_2Analyzer_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a5c270cf3e25cfa83f27b787be93b99f9" kind="enumvalue"><name>OP_MAX</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a754e75f91ab2276abfbed3267a2a0930" kind="enumvalue"><name>OP_OUTPUT</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a0b8dec5a0566aef173caf8d61b7e2bd7" kind="enumvalue"><name>OP_OUT_FMT_ARG</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a4f2720e8cafeaa5fe3f8f02500d612de" kind="enumvalue"><name>OP_IN_FMT_ARG</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a5c270cf3e25cfa83f27b787be93b99f9" kind="enumvalue"><name>OP_MAX</name></member>
-    <member refid="VirtualMachine_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a754e75f91ab2276abfbed3267a2a0930" kind="enumvalue"><name>OP_OUTPUT</name></member>
-    <member refid="VirtualMachine_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a5c270cf3e25cfa83f27b787be93b99f9" kind="enumvalue"><name>OP_MAX</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1aeb712c6c6c0a8af0dfd79f451ecb9277" kind="enum"><name>OutputFormat</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1aeb712c6c6c0a8af0dfd79f451ecb9277aaf7c77fd44e7e25583fd146a4d2095d2" kind="enumvalue"><name>OUT_FMT_VM</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1aeb712c6c6c0a8af0dfd79f451ecb9277a9078ec21879079a66cf27c8578ccf600" kind="enumvalue"><name>OUT_FMT_XML</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1aeb712c6c6c0a8af0dfd79f451ecb9277a7650fbf84599b106220251c3c9d6a898" kind="enumvalue"><name>OUT_FMT_DOT</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1aeb712c6c6c0a8af0dfd79f451ecb9277a62b84883c9315a4851ed64c53fac6a94" kind="enumvalue"><name>OUT_FMT_ASM</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1aeb712c6c6c0a8af0dfd79f451ecb9277a6f32b0a35b37b3ff773c210f44b21001" kind="enumvalue"><name>OUT_FMT_MC</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1aeb712c6c6c0a8af0dfd79f451ecb9277a5ca0e9045f987127ea5869d137cf1bb6" kind="enumvalue"><name>OUT_FMT_DBG</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1ad40a321f2777e968e6afcec5cf45cdfa" kind="typedef"><name>AsmParser</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1a11571854255be36b3ceaf325120d2697" kind="typedef"><name>CodeGen</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1a6b7ca47051f4ed2fe797421f67456ed1" kind="typedef"><name>VmParser</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1ad7c5254e1705c59aa9bf4c16d149187e" kind="variable"><name>Switches</name></member>
     <member refid="Compiler_2Compiler_2Main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
   </compound>
   <compound refid="Compiler_2Generator_2Main_8cpp" kind="file"><name>Main.cpp</name>
     <member refid="Compiler_2Generator_2Main_8cpp_1aa06f5fbe915d0bf149dcf793acea47a1" kind="function"><name>main</name></member>
   </compound>
-  <compound refid="Computer_2Main_8cpp" kind="file"><name>Main.cpp</name>
-  </compound>
   <compound refid="VirtualMachine_2Main_8cpp" kind="file"><name>Main.cpp</name>
-    <member refid="VirtualMachine_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99" kind="enum"><name>Options</name></member>
-    <member refid="Assembler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a754e75f91ab2276abfbed3267a2a0930" kind="enumvalue"><name>OP_OUTPUT</name></member>
-    <member refid="Assembler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a5c270cf3e25cfa83f27b787be93b99f9" kind="enumvalue"><name>OP_MAX</name></member>
-    <member refid="Compiler_2Analyzer_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a4affdc447c94e0a37bfd812674866426" kind="enumvalue"><name>OP_FMT</name></member>
-    <member refid="Compiler_2Analyzer_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99ad0cf9bb97c9c3845ca0d4daed8372bca" kind="enumvalue"><name>OP_DIR</name></member>
-    <member refid="Compiler_2Analyzer_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a754e75f91ab2276abfbed3267a2a0930" kind="enumvalue"><name>OP_OUTPUT</name></member>
-    <member refid="Compiler_2Analyzer_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a5c270cf3e25cfa83f27b787be93b99f9" kind="enumvalue"><name>OP_MAX</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a754e75f91ab2276abfbed3267a2a0930" kind="enumvalue"><name>OP_OUTPUT</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a0b8dec5a0566aef173caf8d61b7e2bd7" kind="enumvalue"><name>OP_OUT_FMT_ARG</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a4f2720e8cafeaa5fe3f8f02500d612de" kind="enumvalue"><name>OP_IN_FMT_ARG</name></member>
-    <member refid="Compiler_2Compiler_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a5c270cf3e25cfa83f27b787be93b99f9" kind="enumvalue"><name>OP_MAX</name></member>
-    <member refid="VirtualMachine_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a754e75f91ab2276abfbed3267a2a0930" kind="enumvalue"><name>OP_OUTPUT</name></member>
-    <member refid="VirtualMachine_2Main_8cpp_1adf7c3ac791f996a56160a12f379cbd99a5c270cf3e25cfa83f27b787be93b99f9" kind="enumvalue"><name>OP_MAX</name></member>
-    <member refid="VirtualMachine_2Main_8cpp_1ad7c5254e1705c59aa9bf4c16d149187e" kind="variable"><name>Switches</name></member>
     <member refid="VirtualMachine_2Main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
   </compound>
   <compound refid="Assembler_2Parser_8cpp" kind="file"><name>Parser.cpp</name>
@@ -2609,28 +2590,42 @@
   </compound>
   <compound refid="VmEmitter_8h" kind="file"><name>VmEmitter.h</name>
   </compound>
-  <compound refid="Application_8cpp" kind="file"><name>Application.cpp</name>
-    <member refid="Application_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  <compound refid="AssemblyDebugger_8cpp" kind="file"><name>AssemblyDebugger.cpp</name>
   </compound>
-  <compound refid="Application_8h" kind="file"><name>Application.h</name>
+  <compound refid="AssemblyDebugger_8h" kind="file"><name>AssemblyDebugger.h</name>
   </compound>
-  <compound refid="CommandRuntime_8cpp" kind="file"><name>CommandRuntime.cpp</name>
+  <compound refid="AssemblyDebuggerPrivate_8cpp" kind="file"><name>AssemblyDebuggerPrivate.cpp</name>
   </compound>
-  <compound refid="CommandRuntime_8h" kind="file"><name>CommandRuntime.h</name>
+  <compound refid="AssemblyDebuggerPrivate_8h" kind="file"><name>AssemblyDebuggerPrivate.h</name>
   </compound>
-  <compound refid="DebugRuntime_8cpp" kind="file"><name>DebugRuntime.cpp</name>
+  <compound refid="Computer_2Common_8h" kind="file"><name>Common.h</name>
   </compound>
-  <compound refid="DebugRuntime_8h" kind="file"><name>DebugRuntime.h</name>
+  <compound refid="Utils_2UserInterface_2Common_8h" kind="file"><name>Common.h</name>
+  </compound>
+  <compound refid="ConsoleRuntime_8cpp" kind="file"><name>ConsoleRuntime.cpp</name>
+  </compound>
+  <compound refid="ConsoleRuntime_8h" kind="file"><name>ConsoleRuntime.h</name>
+  </compound>
+  <compound refid="ConsoleRuntimePrivate_8cpp" kind="file"><name>ConsoleRuntimePrivate.cpp</name>
+  </compound>
+  <compound refid="ConsoleRuntimePrivate_8h" kind="file"><name>ConsoleRuntimePrivate.h</name>
+  </compound>
+  <compound refid="Executable_8cpp" kind="file"><name>Executable.cpp</name>
+    <member refid="Executable_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
   </compound>
   <compound refid="RuntimeInterface_8h" kind="file"><name>RuntimeInterface.h</name>
   </compound>
-  <compound refid="RuntimeSDL_8cpp" kind="file"><name>RuntimeSDL.cpp</name>
+  <compound refid="WindowedRuntime_8cpp" kind="file"><name>WindowedRuntime.cpp</name>
   </compound>
-  <compound refid="RuntimeSDL_8h" kind="file"><name>RuntimeSDL.h</name>
+  <compound refid="WindowedRuntime_8h" kind="file"><name>WindowedRuntime.h</name>
   </compound>
-  <compound refid="ScreenSDL_8cpp" kind="file"><name>ScreenSDL.cpp</name>
+  <compound refid="ScreenMemory_8cpp" kind="file"><name>ScreenMemory.cpp</name>
   </compound>
-  <compound refid="ScreenSDL_8h" kind="file"><name>ScreenSDL.h</name>
+  <compound refid="ScreenMemory_8h" kind="file"><name>ScreenMemory.h</name>
+  </compound>
+  <compound refid="WindowedRuntimePrivate_8cpp" kind="file"><name>WindowedRuntimePrivate.cpp</name>
+  </compound>
+  <compound refid="WindowedRuntimePrivate_8h" kind="file"><name>WindowedRuntimePrivate.h</name>
   </compound>
   <compound refid="Char_8cpp" kind="file"><name>Char.cpp</name>
     <member refid="Char_8cpp_1af08ec37a8c99d747fb60fa15bc28678b" kind="define"><name>_CRT_SECURE_NO_WARNINGS</name></member>
@@ -2684,8 +2679,6 @@
   </compound>
   <compound refid="ColorCache_8h" kind="file"><name>ColorCache.h</name>
   </compound>
-  <compound refid="Common_8h" kind="file"><name>Common.h</name>
-  </compound>
   <compound refid="Context_8cpp" kind="file"><name>Context.cpp</name>
   </compound>
   <compound refid="Context_8h" kind="file"><name>Context.h</name>
@@ -2705,6 +2698,10 @@
   <compound refid="PlatformWin32_8cpp" kind="file"><name>PlatformWin32.cpp</name>
   </compound>
   <compound refid="PlatformWin32_8h" kind="file"><name>PlatformWin32.h</name>
+  </compound>
+  <compound refid="CrtUtils_8cpp" kind="file"><name>CrtUtils.cpp</name>
+  </compound>
+  <compound refid="CrtUtils_8h" kind="file"><name>CrtUtils.h</name>
   </compound>
   <compound refid="Constants_8h" kind="file"><name>Constants.h</name>
   </compound>
@@ -2736,6 +2733,8 @@
   </compound>
   <compound refid="dir_b4ae306ad6cf73ddcf215c0aa9d9fdc5" kind="dir"><name>Source/Assembler</name>
   </compound>
+  <compound refid="dir_1a1e975d6b218ee83e2a22c2d429e3f2" kind="dir"><name>Source/Computer/AssemblyDebugger</name>
+  </compound>
   <compound refid="dir_0eb9837468dbcdecc402520e3917039e" kind="dir"><name>Source/Bindings</name>
   </compound>
   <compound refid="dir_4bba3c32f23a860e704e285590d27b16" kind="dir"><name>Source/Chips</name>
@@ -2749,6 +2748,8 @@
   <compound refid="dir_768d78c81847aa2ae2d8207c5bdf6e8b" kind="dir"><name>Source/Compiler/Compiler</name>
   </compound>
   <compound refid="dir_4479486663a4778529d11e13439f4fef" kind="dir"><name>Source/Computer</name>
+  </compound>
+  <compound refid="dir_c1ac6377a592712386db1fff90246135" kind="dir"><name>Source/Computer/ConsoleRuntime</name>
   </compound>
   <compound refid="dir_f19befb0a20a037054255eb425fb4872" kind="dir"><name>Current</name>
   </compound>
@@ -2767,6 +2768,10 @@
   <compound refid="dir_5c09e96eccedf512ae411d636afd2712" kind="dir"><name>Source/Utils</name>
   </compound>
   <compound refid="dir_eade16f70f9354ff5a554874ce935604" kind="dir"><name>Source/VirtualMachine</name>
+  </compound>
+  <compound refid="dir_df7f76837457d332ed2eae6561f124cc" kind="dir"><name>Source/Utils/Win32</name>
+  </compound>
+  <compound refid="dir_527dece33baca601de1a6d32fca252e0" kind="dir"><name>Source/Computer/WindowedRuntime</name>
   </compound>
   <compound refid="indexpage" kind="page"><name>index</name>
   </compound>

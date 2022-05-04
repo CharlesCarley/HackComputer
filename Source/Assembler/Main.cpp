@@ -24,81 +24,86 @@
 #include "Utils/CommandLine/Parser.h"
 #include "Utils/Console.h"
 #include "Utils/Exception.h"
+#include "Utils/Win32/CrtUtils.h"
 
 using namespace std;
-using namespace Hack;
 
-enum Options
+namespace Hack::Programs
 {
-    OP_OUTPUT,
-    OP_MAX,
-};
-
-constexpr CommandLine::Switch Switches[OP_MAX] = {
+    enum Asm2McOptions
     {
         OP_OUTPUT,
-        'o',
-        "output",
-        "Specify an output file",
-        true,
-        1,
-    },
-};
+        OP_MAX,
+    };
 
-class HackCompiler
-{
-private:
-    string _input;
-    string _output;
-
-public:
-    HackCompiler() = default;
-
-    bool parse(const int argc, char** argv)
-    {
-        CommandLine::Parser p;
-        p.setHelpText("where arg[0] is the input file");
-
-        if (p.parse(argc, argv, Switches, OP_MAX) < 0)
-            return false;
-
-        _output = p.string(OP_OUTPUT, 0);
-
-        StringArray& args = p.arguments();
-        if (args.empty())
+    constexpr CommandLine::Switch Switches[OP_MAX] = {
         {
-            String usage;
-            p.usage(usage);
-            throw Exception(usage, "Missing input file");
+            OP_OUTPUT,
+            'o',
+            "output",
+            "Specify an output file",
+            true,
+            1,
+        },
+    };
+
+    class Asm2Mc
+    {
+    private:
+        string _input;
+        string _output;
+
+    public:
+        Asm2Mc() = default;
+
+        bool parse(const int argc, char** argv)
+        {
+            CommandLine::Parser p;
+            p.setHelpText("where arg[0] is the input file");
+
+            if (p.parse(argc, argv, Switches, OP_MAX) < 0)
+                return false;
+
+            _output = p.string(OP_OUTPUT, 0);
+
+            StringArray& args = p.arguments();
+            if (args.empty())
+            {
+                String usage;
+                p.usage(usage);
+                throw Exception(usage, "Missing input file");
+            }
+
+            _input = args[0];
+            return true;
         }
 
-        _input = args[0];
-        return true;
-    }
-
-    int go() const
-    {
-        Assembler::Parser psr;
-        psr.parse(_input);
-        if (_output.empty())
-            psr.write(cout);
-        else
-            psr.write(_output);
-        return 0;
-    }
-};
+        int go() const
+        {
+            Assembler::Parser psr;
+            psr.parse(_input);
+            if (_output.empty())
+                psr.write(cout);
+            else
+                psr.write(_output);
+            return 0;
+        }
+    };
+}  // namespace Hack::Programs
 
 int main(int argc, char** argv)
 {
+    Hack::CrtTestMemory();
     try
     {
-        HackCompiler app;
+        Hack::Programs::Asm2Mc app;
         if (app.parse(argc, argv))
             return app.go();
     }
     catch (std::exception& ex)
     {
-        Console::writeError(ex.what());
+        Hack::Console::writeError(ex.what());
     }
+    Hack::CrtDump();
     return 1;
 }

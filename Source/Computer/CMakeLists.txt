@@ -25,29 +25,32 @@ set(TargetName_DAT
 )
 source_group("Content" FILES ${TargetName_DAT})
 
-
 set(TargetName_HDR 
-    CommandRuntime.h
-    DebugRuntime.h
+    AssemblyDebugger.h
+    Common.h
+    ConsoleRuntime.h
     RuntimeInterface.h
-    RuntimeSDL.h
-    ScreenSDL.h
+    WindowedRuntime.h
+
+    AssemblyDebugger/AssemblyDebuggerPrivate.h
+    ConsoleRuntime/ConsoleRuntimePrivate.h
+    WindowedRuntime/ScreenMemory.h
+    WindowedRuntime/WindowedRuntimePrivate.h
 )
 
     
 set(TargetName_SRC 
-    Application.cpp
-    CommandRuntime.cpp
-    DebugRuntime.cpp
-    RuntimeSDL.cpp
-    ScreenSDL.cpp
+    AssemblyDebugger.cpp
+    ConsoleRuntime.cpp
+    Executable.cpp
+    WindowedRuntime.cpp
+    AssemblyDebugger/AssemblyDebuggerPrivate.cpp
+    ConsoleRuntime/ConsoleRuntimePrivate.cpp
+    WindowedRuntime/ScreenMemory.cpp
+    WindowedRuntime/WindowedRuntimePrivate.cpp
 )
 
-include_directories(    
-    ..
-)
-
-
+include_directories(..)
 if (USE_SDL)
     add_definitions(-DUSE_SDL)
     include_directories(${SDL_INCLUDE})
@@ -74,7 +77,6 @@ if (USE_SDL)
 endif()
 
 copy_target(${TargetName} ${Hack_BINARY_DIR}/build_files) 
-
 if (NOT Hack_INSTALL_PATH STREQUAL  "")
     copy_target(${TargetName} ${Hack_INSTALL_PATH}) 
 endif()

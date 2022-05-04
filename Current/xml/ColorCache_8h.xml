@@ -7,70 +7,70 @@
     <includedby refid="ColorCache_8cpp" local="yes">Source/Utils/UserInterface/ColorCache.cpp</includedby>
     <includedby refid="Platform_8h" local="yes">Source/Utils/UserInterface/Platform.h</includedby>
     <incdepgraph>
-      <node id="3798">
+      <node id="4301">
         <label>cstdint</label>
       </node>
-      <node id="3801">
+      <node id="4304">
         <label>string</label>
       </node>
-      <node id="3799">
-        <label>Utils/String.h</label>
-        <childnode refid="3800" relation="include">
-        </childnode>
-        <childnode refid="3801" relation="include">
-        </childnode>
-        <childnode refid="3802" relation="include">
-        </childnode>
-      </node>
-      <node id="3802">
-        <label>vector</label>
-      </node>
-      <node id="3800">
-        <label>sstream</label>
-      </node>
-      <node id="3797">
+      <node id="4300">
         <label>Source/Utils/UserInterface/ColorCache.h</label>
         <link refid="ColorCache_8h"/>
-        <childnode refid="3798" relation="include">
+        <childnode refid="4301" relation="include">
         </childnode>
-        <childnode refid="3799" relation="include">
+        <childnode refid="4302" relation="include">
+        </childnode>
+      </node>
+      <node id="4305">
+        <label>vector</label>
+      </node>
+      <node id="4303">
+        <label>sstream</label>
+      </node>
+      <node id="4302">
+        <label>Utils/String.h</label>
+        <childnode refid="4303" relation="include">
+        </childnode>
+        <childnode refid="4304" relation="include">
+        </childnode>
+        <childnode refid="4305" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="3804">
-        <label>Source/Utils/UserInterface/ColorCache.cpp</label>
+      <node id="4312">
+        <label>Source/Utils/UserInterface/PlatformUnix.cpp</label>
       </node>
-      <node id="3805">
-        <label>Source/Utils/UserInterface/Platform.h</label>
-        <childnode refid="3806" relation="include">
-        </childnode>
-        <childnode refid="3807" relation="include">
-        </childnode>
-      </node>
-      <node id="3806">
-        <label>Source/Utils/UserInterface/Platform.cpp</label>
-      </node>
-      <node id="3808">
-        <label>Source/Utils/UserInterface/Context.cpp</label>
-      </node>
-      <node id="3807">
-        <label>Source/Utils/UserInterface/PlatformUnix.h</label>
-        <childnode refid="3808" relation="include">
-        </childnode>
-        <childnode refid="3809" relation="include">
-        </childnode>
-      </node>
-      <node id="3803">
+      <node id="4306">
         <label>Source/Utils/UserInterface/ColorCache.h</label>
         <link refid="ColorCache_8h"/>
-        <childnode refid="3804" relation="include">
+        <childnode refid="4307" relation="include">
         </childnode>
-        <childnode refid="3805" relation="include">
+        <childnode refid="4308" relation="include">
         </childnode>
       </node>
-      <node id="3809">
-        <label>Source/Utils/UserInterface/PlatformUnix.cpp</label>
+      <node id="4311">
+        <label>Source/Utils/UserInterface/Context.cpp</label>
+      </node>
+      <node id="4308">
+        <label>Source/Utils/UserInterface/Platform.h</label>
+        <childnode refid="4309" relation="include">
+        </childnode>
+        <childnode refid="4310" relation="include">
+        </childnode>
+      </node>
+      <node id="4309">
+        <label>Source/Utils/UserInterface/Platform.cpp</label>
+      </node>
+      <node id="4307">
+        <label>Source/Utils/UserInterface/ColorCache.cpp</label>
+      </node>
+      <node id="4310">
+        <label>Source/Utils/UserInterface/PlatformUnix.h</label>
+        <childnode refid="4311" relation="include">
+        </childnode>
+        <childnode refid="4312" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1Ui_1_1ColorCacheItem" prot="public">Hack::Ui::ColorCacheItem</innerclass>

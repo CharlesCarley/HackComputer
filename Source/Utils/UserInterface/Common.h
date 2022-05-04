@@ -44,11 +44,12 @@ namespace Hack::Ui
         CS_RECT_LB,
         CS_RECT_CS,
         CS_RECT_HZ,
-        CS_RECT_LCS,
-        CS_RECT_RCS,
-        CS_RECT_BCS,
-        CS_RECT_TCS,
+        CS_RECT_CL,
+        CS_RECT_CR,
+        CS_RECT_CB,
+        CS_RECT_CT,
         CS_RECT_VT,
+        CS_SEQ_END, //< CS_START
 
         // printable
         CS_START = ' ',

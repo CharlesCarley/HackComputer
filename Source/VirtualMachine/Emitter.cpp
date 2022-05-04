@@ -22,6 +22,7 @@
 #include "VirtualMachine/Emitter.h"
 #include <iomanip>
 #include "Utils/Char.h"
+#include "Utils/Exception.h"
 #include "VirtualMachine/Constants.h"
 
 namespace Hack::VirtualMachine
@@ -38,7 +39,7 @@ namespace Hack::VirtualMachine
         }
 
         template <typename... Args>
-        void write(Args&&...args) const
+        void write(Args&&... args) const
         {
             OutputStringStream oss;
             ((oss << std::forward<Args>(args)), ...);
@@ -94,7 +95,6 @@ namespace Hack::VirtualMachine
         }
 
 #ifdef ZERO_M
-
 
         void clearSwap() const
         {
@@ -154,8 +154,10 @@ namespace Hack::VirtualMachine
         void moveMIntoD() const
         {
             write("D=M");
+
 #ifdef ZERO_M
             write("M=0");  // DEBUG
+
 #endif
         }
 
@@ -223,6 +225,7 @@ namespace Hack::VirtualMachine
         {
 #ifdef ZERO_M
             write("D=M-D\nM=0");
+
 #else
             write("D=M-D");
 #endif
@@ -412,6 +415,7 @@ namespace Hack::VirtualMachine
     void Emitter::setRam(const int index, const int value)
     {
         const CodeStream w(&_stream);
+
         w.move(index, (uint16_t)value);
     }
 
@@ -484,7 +488,7 @@ namespace Hack::VirtualMachine
     {
         const CodeStream w(&_stream);
         w.offsetTo(TMP, idx);
-        w.moveMIntoD(); // Note: move not copy
+        w.moveMIntoD();  // Note: move not copy
         w.pushD();
     }
 
@@ -804,7 +808,7 @@ namespace Hack::VirtualMachine
         String retAddr;
         genLabel(retAddr);
 
-        if (args == 0) // allocate the return
+        if (args == 0)  // allocate the return
         {
             w.setD(false);
             w.pushD();
@@ -835,7 +839,7 @@ namespace Hack::VirtualMachine
         w.atAddressOf(STP);
         w.subDmIntoD();
 
-        if (args == 0) // allocate the return
+        if (args == 0)  // allocate the return
             w.subXFromD(1);
 
         w.atAddressOf(ARG);
@@ -857,14 +861,14 @@ namespace Hack::VirtualMachine
         const CodeStream w(&_stream);
 
         w.copyMIntoDAt(LCL);
-        w.moveDIntoX(SW0); // Save the Frame
+        w.moveDIntoX(SW0);  // Save the Frame
 
         // extract the return code
         w.jumpStackTop();
         w.moveMIntoD();
         w.decrement();
         w.atDeReferencedAddressOf(ARG);
-        w.moveDIntoM(); // place the return
+        w.moveDIntoM();  // place the return
 
         w.copyMIntoDAt(ARG);
         w.addXToD(1);
@@ -877,20 +881,20 @@ namespace Hack::VirtualMachine
         w.popStackFrame(SW0, LCL, 4);
 
         // return address
-        w.moveMIntoDAt(SW0); // clobber the frame
+        w.moveMIntoDAt(SW0);  // clobber the frame
         w.subXFromD(5);
         w.dereferenceD();
-        w.moveMIntoD();    // move the return address to SW2
-        w.moveDIntoX(SW2); // return address in
+        w.moveMIntoD();     // move the return address to SW2
+        w.moveDIntoX(SW2);  // return address in
 
         w.moveMIntoDAt(SW2);
         w.jumpToD();
     }
-
 
     void Emitter::writeCode(const String& cs)
     {
         const CodeStream w(&_stream);
         w.write(cs);
     }
-} // namespace Hack::VirtualMachine
+
+}  // namespace Hack::VirtualMachine

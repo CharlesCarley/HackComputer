@@ -157,15 +157,15 @@
 </li>
 <li><a href="classHack_1_1Compiler_1_1XmlWriterImpl.md#xmlwriterimpl">Hack::Compiler::XmlWriterImpl</a>
 </li>
-<li><a href="classHack_1_1Computer_1_1Application.md#application">Hack::Computer::Application</a>
+<li><a href="classHack_1_1Computer_1_1AssemblyDebugger.md#assemblydebugger">Hack::Computer::AssemblyDebugger</a>
 </li>
-<li><a href="classHack_1_1Computer_1_1CommandRuntime.md#commandruntime">Hack::Computer::CommandRuntime</a>
+<li><a href="classHack_1_1Computer_1_1AssemblyDebuggerPrivate.md#assemblydebuggerprivate">Hack::Computer::AssemblyDebuggerPrivate</a>
 </li>
-<li><a href="classHack_1_1Computer_1_1CommandRuntimePrivate.md#commandruntimeprivate">Hack::Computer::CommandRuntimePrivate</a>
+<li><a href="classHack_1_1Computer_1_1ConsoleRuntime.md#consoleruntime">Hack::Computer::ConsoleRuntime</a>
 </li>
-<li><a href="classHack_1_1Computer_1_1DebugRuntime.md#debugruntime">Hack::Computer::DebugRuntime</a>
+<li><a href="classHack_1_1Computer_1_1ConsoleRuntimePrivate.md#consoleruntimeprivate">Hack::Computer::ConsoleRuntimePrivate</a>
 </li>
-<li><a href="classHack_1_1Computer_1_1DebugRuntimePrivate.md#debugruntimeprivate">Hack::Computer::DebugRuntimePrivate</a>
+<li><a href="classHack_1_1Computer_1_1Executable.md#executable">Hack::Computer::Executable</a>
 </li>
 <li><a href="classHack_1_1Computer_1_1RuntimeInterface.md#runtimeinterface">Hack::Computer::RuntimeInterface</a>
 </li>
@@ -185,7 +185,15 @@
 </li>
 <li><a href="classHack_1_1ParserBase.md#parserbase">Hack::ParserBase</a>
 </li>
-<li><a href="classHack_1_1Programs_1_1VmGeneratorApplication.md#vmgeneratorapplication">Hack::Programs::VmGeneratorApplication</a>
+<li><a href="classHack_1_1Programs_1_1Asm2Mc.md#asm2mc">Hack::Programs::Asm2Mc</a>
+</li>
+<li><a href="classHack_1_1Programs_1_1FileCompiler.md#filecompiler">Hack::Programs::FileCompiler</a>
+</li>
+<li><a href="classHack_1_1Programs_1_1Jack2Vm.md#jack2vm">Hack::Programs::Jack2Vm</a>
+</li>
+<li><a href="classHack_1_1Programs_1_1Jack2Xml.md#jack2xml">Hack::Programs::Jack2Xml</a>
+</li>
+<li><a href="classHack_1_1Programs_1_1Vm2Asm.md#vm2asm">Hack::Programs::Vm2Asm</a>
 </li>
 <li><a href="classHack_1_1ScannerBase.md#scannerbase">Hack::ScannerBase</a>
 </li>
@@ -222,8 +230,6 @@
 <li><a href="classHack_1_1VirtualMachine_1_1Parser.md#parser">Hack::VirtualMachine::Parser</a>
 </li>
 <li><a href="classHack_1_1VirtualMachine_1_1Scanner.md#scanner">Hack::VirtualMachine::Scanner</a>
-</li>
-<li><a href="classHackCompiler.md#hackcompiler">HackCompiler</a>
 </li>
 <li><a href="structHandleType.md#handletype">HandleType</a>
 </li>

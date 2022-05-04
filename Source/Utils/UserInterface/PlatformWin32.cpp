@@ -95,8 +95,9 @@ namespace Hack::Ui
         sz = {0, 0};
 
         CONSOLE_SCREEN_BUFFER_INFO info{};
+
         if (GetConsoleScreenBufferInfo(_stdout, &info) != FALSE)
-            sz = {info.srWindow.Right + 1, info.srWindow.Bottom + 1};
+            sz = {info.dwSize.X, info.dwSize.Y};
     }
 
     int PlatformWin32::poll(const bool block)

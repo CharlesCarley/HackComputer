@@ -349,6 +349,19 @@
         </inbodydescription>
         <location file="Source/VirtualMachine/Scanner.h" line="28" column="1" bodyfile="Source/VirtualMachine/Scanner.h" bodystart="28" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="typedef" id="namespaceHack_1_1VirtualMachine_1adb19531abaa10516e5b5132f88b47f25" prot="public" static="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>using Hack::VirtualMachine::IntList = typedef std::vector&lt;int&gt;</definition>
+        <argsstring></argsstring>
+        <name>IntList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/VirtualMachine/Emitter.h" line="29" column="1" bodyfile="Source/VirtualMachine/Emitter.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="typedef" id="namespaceHack_1_1VirtualMachine_1a02186d1a9c875e3583ff775f46ad7c0a" prot="public" static="no">
         <type><ref refid="classHack_1_1Cache" kindref="compound">Cache</ref>&lt; <ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &gt;</type>
         <definition>using Hack::VirtualMachine::StringCache = typedef Cache&lt;String&gt;</definition>
@@ -408,14 +421,14 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Source/VirtualMachine/Scanner.cpp" line="70" column="1" bodyfile="Source/VirtualMachine/Scanner.cpp" bodystart="70" bodyend="73"/>
-        <references refid="namespaceHack_1a3b7e26319acf069b65ddb8e0f3f34812" compoundref="Char_8h" startline="193" endline="196">Hack::isLetter</references>
-        <references refid="namespaceHack_1a3072f15c6cc44192ad127f00ab7430cd" compoundref="Char_8h" startline="187" endline="190">Hack::isDecimal</references>
+        <references refid="namespaceHack_1a3b7e26319acf069b65ddb8e0f3f34812" compoundref="Char_8h" startline="197" endline="200">Hack::isLetter</references>
+        <references refid="namespaceHack_1a3072f15c6cc44192ad127f00ab7430cd" compoundref="Char_8h" startline="191" endline="194">Hack::isDecimal</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/Compiler/Generator/Generator.h" line="32" column="1"/>
+    <location file="Source/Compiler/Generator/Generator.h" line="33" column="1"/>
   </compounddef>
 </doxygen>

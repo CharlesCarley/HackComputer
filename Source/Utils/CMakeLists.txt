@@ -86,6 +86,7 @@ set(Utils_HDR
     FileSystem.h
     String.h
     Exception.h
+    Win32/CrtUtils.h
 )
 
 set(Utils_SRC
@@ -93,7 +94,9 @@ set(Utils_SRC
     Console.cpp
     String.cpp
     FileSystem.cpp
+    Win32/CrtUtils.cpp
 )
+
 
 source_group("Header" FILES ${Utils_HDR})
 source_group("Source" FILES ${Utils_SRC})
