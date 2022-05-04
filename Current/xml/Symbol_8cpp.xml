@@ -4,74 +4,6 @@
     <compoundname>Symbol.cpp</compoundname>
     <includes refid="Symbol_8h" local="yes">Compiler/Generator/Symbol.h</includes>
     <incdepgraph>
-      <node id="2713">
-        <label>Compiler/Generator/Symbol.h</label>
-        <childnode refid="2714" relation="include">
-        </childnode>
-      </node>
-      <node id="2714">
-        <label>Utils/IndexCache.h</label>
-        <childnode refid="2715" relation="include">
-        </childnode>
-        <childnode refid="2716" relation="include">
-        </childnode>
-        <childnode refid="2717" relation="include">
-        </childnode>
-      </node>
-      <node id="2728">
-        <label>cstdint</label>
-      </node>
-      <node id="2719">
-        <label>stdexcept</label>
-      </node>
-      <node id="2724">
-        <label>string</label>
-      </node>
-      <node id="2716">
-        <label>unordered_set</label>
-      </node>
-      <node id="2726">
-        <label>UserInterface/Context.h</label>
-        <childnode refid="2722" relation="include">
-        </childnode>
-        <childnode refid="2727" relation="include">
-        </childnode>
-        <childnode refid="2729" relation="include">
-        </childnode>
-      </node>
-      <node id="2718">
-        <label>exception</label>
-      </node>
-      <node id="2727">
-        <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="2728" relation="include">
-        </childnode>
-      </node>
-      <node id="2721">
-        <label>Utils/Console.h</label>
-        <childnode refid="2722" relation="include">
-        </childnode>
-        <childnode refid="2726" relation="include">
-        </childnode>
-      </node>
-      <node id="2725">
-        <label>vector</label>
-      </node>
-      <node id="2729">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="2728" relation="include">
-        </childnode>
-        <childnode refid="2725" relation="include">
-        </childnode>
-        <childnode refid="2727" relation="include">
-        </childnode>
-      </node>
-      <node id="2720">
-        <label>utility</label>
-      </node>
-      <node id="2723">
-        <label>sstream</label>
-      </node>
       <node id="2717">
         <label>Utils/Exception.h</label>
         <childnode refid="2718" relation="include">
@@ -85,13 +17,38 @@
         <childnode refid="2722" relation="include">
         </childnode>
       </node>
-      <node id="2715">
-        <label>unordered_map</label>
+      <node id="2728">
+        <label>cstdint</label>
       </node>
-      <node id="2712">
-        <label>Source/Compiler/Generator/Symbol.cpp</label>
-        <link refid="Symbol_8cpp"/>
-        <childnode refid="2713" relation="include">
+      <node id="2726">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="2722" relation="include">
+        </childnode>
+        <childnode refid="2727" relation="include">
+        </childnode>
+        <childnode refid="2729" relation="include">
+        </childnode>
+      </node>
+      <node id="2719">
+        <label>stdexcept</label>
+      </node>
+      <node id="2724">
+        <label>string</label>
+      </node>
+      <node id="2716">
+        <label>unordered_set</label>
+      </node>
+      <node id="2713">
+        <label>Compiler/Generator/Symbol.h</label>
+        <childnode refid="2714" relation="include">
+        </childnode>
+      </node>
+      <node id="2718">
+        <label>exception</label>
+      </node>
+      <node id="2727">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="2728" relation="include">
         </childnode>
       </node>
       <node id="2722">
@@ -101,6 +58,49 @@
         <childnode refid="2724" relation="include">
         </childnode>
         <childnode refid="2725" relation="include">
+        </childnode>
+      </node>
+      <node id="2714">
+        <label>Utils/IndexCache.h</label>
+        <childnode refid="2715" relation="include">
+        </childnode>
+        <childnode refid="2716" relation="include">
+        </childnode>
+        <childnode refid="2717" relation="include">
+        </childnode>
+      </node>
+      <node id="2725">
+        <label>vector</label>
+      </node>
+      <node id="2720">
+        <label>utility</label>
+      </node>
+      <node id="2723">
+        <label>sstream</label>
+      </node>
+      <node id="2712">
+        <label>F:/HackComputer/Source/Compiler/Generator/Symbol.cpp</label>
+        <link refid="Symbol_8cpp"/>
+        <childnode refid="2713" relation="include">
+        </childnode>
+      </node>
+      <node id="2715">
+        <label>unordered_map</label>
+      </node>
+      <node id="2729">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="2728" relation="include">
+        </childnode>
+        <childnode refid="2725" relation="include">
+        </childnode>
+        <childnode refid="2727" relation="include">
+        </childnode>
+      </node>
+      <node id="2721">
+        <label>Utils/Console.h</label>
+        <childnode refid="2722" relation="include">
+        </childnode>
+        <childnode refid="2726" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -151,6 +151,6 @@
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="40"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler::CodeGenerator</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Compiler/Generator/Symbol.cpp"/>
+    <location file="F:/HackComputer/Source/Compiler/Generator/Symbol.cpp"/>
   </compounddef>
 </doxygen>

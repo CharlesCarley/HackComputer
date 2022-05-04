@@ -3,7 +3,7 @@
   <compounddef id="classHack_1_1Chips_1_1Register" kind="class" language="C++" prot="public" final="yes">
     <compoundname>Hack::Chips::Register</compoundname>
     <basecompoundref refid="classHack_1_1Chips_1_1Chip" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; bit64_t, 64 &gt;</basecompoundref>
-    <includes local="no">Source/Chips/Register.h</includes>
+    <includes local="no">Register.h</includes>
       <sectiondef kind="private-func">
       <memberdef kind="function" id="classHack_1_1Chips_1_1Register_1a47e225daa9d3228b4be36ed0dc69199e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Register.h" line="33" column="1" bodyfile="Source/Chips/Register.cpp" bodystart="88" bodyend="124"/>
+        <location file="F:/HackComputer/Source/Chips/Register.h" line="33" column="1" bodyfile="F:/HackComputer/Source/Chips/Register.cpp" bodystart="88" bodyend="124"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Chips_1_1Register_1aaf75c488721fd4f6ec9c50dd23c31291" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Register.h" line="34" column="1" bodyfile="Source/Chips/Register.cpp" bodystart="83" bodyend="86"/>
+        <location file="F:/HackComputer/Source/Chips/Register.h" line="34" column="1" bodyfile="F:/HackComputer/Source/Chips/Register.cpp" bodystart="83" bodyend="86"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Register.h" line="40" column="1" bodyfile="Source/Chips/Register.cpp" bodystart="26" bodyend="30"/>
+        <location file="F:/HackComputer/Source/Chips/Register.h" line="40" column="1" bodyfile="F:/HackComputer/Source/Chips/Register.cpp" bodystart="26" bodyend="30"/>
         <references refid="classHack_1_1Chips_1_1Chip_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="Chip_8h" startline="49">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
         <references refid="unionHack_1_1Chips_1_1bit64__t_1a741dc95ddcf042b70e2747571d95cd82" compoundref="BitUtils_8h" startline="76">Hack::Chips::bit64_t::ll</references>
         <references refid="unionHack_1_1Chips_1_1bit64__t_1a768ed5502c17271b965e340e048ae5c5" compoundref="BitUtils_8h" startline="79">Hack::Chips::bit64_t::b</references>
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Register.h" line="46" column="1" bodyfile="Source/Chips/Register.cpp" bodystart="68" bodyend="73"/>
+        <location file="F:/HackComputer/Source/Chips/Register.h" line="46" column="1" bodyfile="F:/HackComputer/Source/Chips/Register.cpp" bodystart="68" bodyend="73"/>
         <references refid="classHack_1_1Chips_1_1Chip_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="Chip_8h" startline="49">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
         <references refid="unionHack_1_1Chips_1_1bit64__t_1a768ed5502c17271b965e340e048ae5c5" compoundref="BitUtils_8h" startline="79">Hack::Chips::bit64_t::b</references>
         <references refid="namespaceHack_1_1Chips_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="BitUtils_8h" startline="40">Hack::Chips::Bit7</references>
@@ -84,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Register.h" line="48" column="1" bodyfile="Source/Chips/Register.cpp" bodystart="75" bodyend="81"/>
+        <location file="F:/HackComputer/Source/Chips/Register.h" line="48" column="1" bodyfile="F:/HackComputer/Source/Chips/Register.cpp" bodystart="75" bodyend="81"/>
         <references refid="classHack_1_1Chips_1_1Chip_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="Chip_8h" startline="49">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
         <references refid="unionHack_1_1Chips_1_1bit64__t_1a768ed5502c17271b965e340e048ae5c5" compoundref="BitUtils_8h" startline="79">Hack::Chips::bit64_t::b</references>
         <references refid="namespaceHack_1_1Chips_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" compoundref="BitUtils_8h" startline="39">Hack::Chips::Bit6</references>
@@ -104,7 +104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Register.h" line="44" column="1" bodyfile="Source/Chips/Register.cpp" bodystart="54" bodyend="66"/>
+        <location file="F:/HackComputer/Source/Chips/Register.h" line="44" column="1" bodyfile="F:/HackComputer/Source/Chips/Register.cpp" bodystart="54" bodyend="66"/>
         <references refid="classHack_1_1Chips_1_1Chip_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="Chip_8h" startline="49">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
         <references refid="unionHack_1_1Chips_1_1bit64__t_1a768ed5502c17271b965e340e048ae5c5" compoundref="BitUtils_8h" startline="79">Hack::Chips::bit64_t::b</references>
         <references refid="namespaceHack_1_1Chips_1a89719f49d745047f03bca80bfff48bd2a8487c63d5dca7d87b359feca1a2c2ac8" compoundref="BitUtils_8h" startline="34">Hack::Chips::Bit1</references>
@@ -125,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Register.h" line="42" column="1" bodyfile="Source/Chips/Register.cpp" bodystart="32" bodyend="39"/>
+        <location file="F:/HackComputer/Source/Chips/Register.h" line="42" column="1" bodyfile="F:/HackComputer/Source/Chips/Register.cpp" bodystart="32" bodyend="39"/>
         <references refid="classHack_1_1Chips_1_1Chip_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="Chip_8h" startline="49">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
         <references refid="unionHack_1_1Chips_1_1bit64__t_1af415893333942f41fb4c4ad619083a16" compoundref="BitUtils_8h" startline="78">Hack::Chips::bit64_t::s</references>
         <references refid="unionHack_1_1Chips_1_1bit64__t_1a768ed5502c17271b965e340e048ae5c5" compoundref="BitUtils_8h" startline="79">Hack::Chips::bit64_t::b</references>
@@ -146,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/Register.h" line="43" column="1" bodyfile="Source/Chips/Register.cpp" bodystart="41" bodyend="52"/>
+        <location file="F:/HackComputer/Source/Chips/Register.h" line="43" column="1" bodyfile="F:/HackComputer/Source/Chips/Register.cpp" bodystart="41" bodyend="52"/>
         <references refid="classHack_1_1Chips_1_1Chip_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="Chip_8h" startline="49">Hack::Chips::Chip&lt; bit64_t, 64 &gt;::_bits</references>
         <references refid="unionHack_1_1Chips_1_1bit64__t_1a768ed5502c17271b965e340e048ae5c5" compoundref="BitUtils_8h" startline="79">Hack::Chips::bit64_t::b</references>
         <references refid="namespaceHack_1_1Chips_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" compoundref="BitUtils_8h" startline="33">Hack::Chips::Bit0</references>
@@ -214,7 +214,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="Source/Chips/Register.h" line="31" column="1" bodyfile="Source/Chips/Register.h" bodystart="30" bodyend="49"/>
+    <location file="F:/HackComputer/Source/Chips/Register.h" line="31" column="1" bodyfile="F:/HackComputer/Source/Chips/Register.h" bodystart="30" bodyend="49"/>
     <listofallmembers>
       <member refid="classHack_1_1Chips_1_1Chip_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Register</scope><name>_bits</name></member>
       <member refid="classHack_1_1Chips_1_1Chip_1a1971f958edb5fa83790baa14c9d39ee8" prot="public" virt="non-virtual"><scope>Hack::Chips::Register</scope><name>applyBit</name></member>

@@ -5,95 +5,15 @@
     <includes refid="ParserBase_8h" local="yes">Utils/ParserBase/ParserBase.h</includes>
     <includes refid="String_8h" local="yes">Utils/String.h</includes>
     <includes refid="Emitter_8h" local="yes">VirtualMachine/Emitter.h</includes>
-    <includedby refid="Compiler_2Compiler_2Main_8cpp" local="yes">Source/Compiler/Compiler/Main.cpp</includedby>
-    <includedby refid="Executable_8cpp" local="yes">Source/Computer/Executable.cpp</includedby>
-    <includedby refid="VirtualMachine_2Main_8cpp" local="yes">Source/VirtualMachine/Main.cpp</includedby>
-    <includedby refid="VirtualMachine_2Parser_8cpp" local="yes">Source/VirtualMachine/Parser.cpp</includedby>
+    <includedby refid="Compiler_2Compiler_2Main_8cpp" local="yes">F:/HackComputer/Source/Compiler/Compiler/Main.cpp</includedby>
+    <includedby refid="Executable_8cpp" local="yes">F:/HackComputer/Source/Computer/Executable.cpp</includedby>
+    <includedby refid="VirtualMachine_2Main_8cpp" local="yes">F:/HackComputer/Source/VirtualMachine/Main.cpp</includedby>
+    <includedby refid="VirtualMachine_2Parser_8cpp" local="yes">F:/HackComputer/Source/VirtualMachine/Parser.cpp</includedby>
     <incdepgraph>
-      <node id="440">
-        <label>Utils/ParserBase/ParserBase.h</label>
-        <childnode refid="441" relation="include">
-        </childnode>
-        <childnode refid="442" relation="include">
-        </childnode>
-        <childnode refid="458" relation="include">
-        </childnode>
-      </node>
-      <node id="443">
-        <label>Utils/IndexCache.h</label>
-        <childnode refid="444" relation="include">
-        </childnode>
-        <childnode refid="445" relation="include">
-        </childnode>
-        <childnode refid="446" relation="include">
-        </childnode>
-      </node>
-      <node id="439">
-        <label>Source/VirtualMachine/Parser.h</label>
-        <link refid="VirtualMachine_2Parser_8h"/>
-        <childnode refid="440" relation="include">
-        </childnode>
+      <node id="458">
+        <label>Utils/ParserBase/TokenBase.h</label>
         <childnode refid="451" relation="include">
         </childnode>
-        <childnode refid="459" relation="include">
-        </childnode>
-      </node>
-      <node id="456">
-        <label>cstdint</label>
-      </node>
-      <node id="448">
-        <label>stdexcept</label>
-      </node>
-      <node id="453">
-        <label>string</label>
-      </node>
-      <node id="445">
-        <label>unordered_set</label>
-      </node>
-      <node id="454">
-        <label>UserInterface/Context.h</label>
-        <childnode refid="451" relation="include">
-        </childnode>
-        <childnode refid="455" relation="include">
-        </childnode>
-        <childnode refid="457" relation="include">
-        </childnode>
-      </node>
-      <node id="447">
-        <label>exception</label>
-      </node>
-      <node id="455">
-        <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="456" relation="include">
-        </childnode>
-      </node>
-      <node id="450">
-        <label>Utils/Console.h</label>
-        <childnode refid="451" relation="include">
-        </childnode>
-        <childnode refid="454" relation="include">
-        </childnode>
-      </node>
-      <node id="460">
-        <label>stack</label>
-      </node>
-      <node id="441">
-        <label>vector</label>
-      </node>
-      <node id="457">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="456" relation="include">
-        </childnode>
-        <childnode refid="441" relation="include">
-        </childnode>
-        <childnode refid="455" relation="include">
-        </childnode>
-      </node>
-      <node id="449">
-        <label>utility</label>
-      </node>
-      <node id="452">
-        <label>sstream</label>
       </node>
       <node id="446">
         <label>Utils/Exception.h</label>
@@ -115,8 +35,44 @@
         <childnode refid="458" relation="include">
         </childnode>
       </node>
-      <node id="444">
-        <label>unordered_map</label>
+      <node id="456">
+        <label>cstdint</label>
+      </node>
+      <node id="439">
+        <label>F:/HackComputer/Source/VirtualMachine/Parser.h</label>
+        <link refid="VirtualMachine_2Parser_8h"/>
+        <childnode refid="440" relation="include">
+        </childnode>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+      </node>
+      <node id="454">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="455" relation="include">
+        </childnode>
+        <childnode refid="457" relation="include">
+        </childnode>
+      </node>
+      <node id="448">
+        <label>stdexcept</label>
+      </node>
+      <node id="453">
+        <label>string</label>
+      </node>
+      <node id="445">
+        <label>unordered_set</label>
+      </node>
+      <node id="447">
+        <label>exception</label>
+      </node>
+      <node id="455">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="456" relation="include">
+        </childnode>
       </node>
       <node id="451">
         <label>String.h</label>
@@ -127,10 +83,38 @@
         <childnode refid="441" relation="include">
         </childnode>
       </node>
-      <node id="458">
-        <label>Utils/ParserBase/TokenBase.h</label>
-        <childnode refid="451" relation="include">
+      <node id="440">
+        <label>Utils/ParserBase/ParserBase.h</label>
+        <childnode refid="441" relation="include">
         </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="458" relation="include">
+        </childnode>
+      </node>
+      <node id="443">
+        <label>Utils/IndexCache.h</label>
+        <childnode refid="444" relation="include">
+        </childnode>
+        <childnode refid="445" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+      </node>
+      <node id="460">
+        <label>stack</label>
+      </node>
+      <node id="441">
+        <label>vector</label>
+      </node>
+      <node id="449">
+        <label>utility</label>
+      </node>
+      <node id="452">
+        <label>sstream</label>
+      </node>
+      <node id="444">
+        <label>unordered_map</label>
       </node>
       <node id="459">
         <label>VirtualMachine/Emitter.h</label>
@@ -139,10 +123,26 @@
         <childnode refid="451" relation="include">
         </childnode>
       </node>
+      <node id="457">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="456" relation="include">
+        </childnode>
+        <childnode refid="441" relation="include">
+        </childnode>
+        <childnode refid="455" relation="include">
+        </childnode>
+      </node>
+      <node id="450">
+        <label>Utils/Console.h</label>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+      </node>
     </incdepgraph>
     <invincdepgraph>
       <node id="461">
-        <label>Source/VirtualMachine/Parser.h</label>
+        <label>F:/HackComputer/Source/VirtualMachine/Parser.h</label>
         <link refid="VirtualMachine_2Parser_8h"/>
         <childnode refid="462" relation="include">
         </childnode>
@@ -154,16 +154,16 @@
         </childnode>
       </node>
       <node id="464">
-        <label>Source/VirtualMachine/Main.cpp</label>
+        <label>F:/HackComputer/Source/VirtualMachine/Main.cpp</label>
       </node>
       <node id="463">
-        <label>Source/Computer/Executable.cpp</label>
+        <label>F:/HackComputer/Source/Computer/Executable.cpp</label>
       </node>
       <node id="465">
-        <label>Source/VirtualMachine/Parser.cpp</label>
+        <label>F:/HackComputer/Source/VirtualMachine/Parser.cpp</label>
       </node>
       <node id="462">
-        <label>Source/Compiler/Compiler/Main.cpp</label>
+        <label>F:/HackComputer/Source/Compiler/Compiler/Main.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1VirtualMachine_1_1Parser" prot="public">Hack::VirtualMachine::Parser</innerclass>
@@ -240,6 +240,6 @@
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="66"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::VirtualMachine</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/VirtualMachine/Parser.h"/>
+    <location file="F:/HackComputer/Source/VirtualMachine/Parser.h"/>
   </compounddef>
 </doxygen>

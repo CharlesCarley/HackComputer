@@ -4,28 +4,14 @@
     <compoundname>ColorCache.h</compoundname>
     <includes local="no">cstdint</includes>
     <includes refid="String_8h" local="yes">Utils/String.h</includes>
-    <includedby refid="ColorCache_8cpp" local="yes">Source/Utils/UserInterface/ColorCache.cpp</includedby>
-    <includedby refid="Platform_8h" local="yes">Source/Utils/UserInterface/Platform.h</includedby>
+    <includedby refid="ColorCache_8cpp" local="yes">F:/HackComputer/Source/Utils/UserInterface/ColorCache.cpp</includedby>
+    <includedby refid="Platform_8h" local="yes">F:/HackComputer/Source/Utils/UserInterface/Platform.h</includedby>
     <incdepgraph>
       <node id="4301">
         <label>cstdint</label>
       </node>
       <node id="4304">
         <label>string</label>
-      </node>
-      <node id="4300">
-        <label>Source/Utils/UserInterface/ColorCache.h</label>
-        <link refid="ColorCache_8h"/>
-        <childnode refid="4301" relation="include">
-        </childnode>
-        <childnode refid="4302" relation="include">
-        </childnode>
-      </node>
-      <node id="4305">
-        <label>vector</label>
-      </node>
-      <node id="4303">
-        <label>sstream</label>
       </node>
       <node id="4302">
         <label>Utils/String.h</label>
@@ -36,41 +22,55 @@
         <childnode refid="4305" relation="include">
         </childnode>
       </node>
+      <node id="4305">
+        <label>vector</label>
+      </node>
+      <node id="4303">
+        <label>sstream</label>
+      </node>
+      <node id="4300">
+        <label>F:/HackComputer/Source/Utils/UserInterface/ColorCache.h</label>
+        <link refid="ColorCache_8h"/>
+        <childnode refid="4301" relation="include">
+        </childnode>
+        <childnode refid="4302" relation="include">
+        </childnode>
+      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="4312">
-        <label>Source/Utils/UserInterface/PlatformUnix.cpp</label>
-      </node>
-      <node id="4306">
-        <label>Source/Utils/UserInterface/ColorCache.h</label>
-        <link refid="ColorCache_8h"/>
-        <childnode refid="4307" relation="include">
-        </childnode>
-        <childnode refid="4308" relation="include">
-        </childnode>
-      </node>
-      <node id="4311">
-        <label>Source/Utils/UserInterface/Context.cpp</label>
+      <node id="4307">
+        <label>F:/HackComputer/Source/Utils/UserInterface/ColorCache.cpp</label>
       </node>
       <node id="4308">
-        <label>Source/Utils/UserInterface/Platform.h</label>
+        <label>F:/HackComputer/Source/Utils/UserInterface/Platform.h</label>
         <childnode refid="4309" relation="include">
         </childnode>
         <childnode refid="4310" relation="include">
         </childnode>
       </node>
       <node id="4309">
-        <label>Source/Utils/UserInterface/Platform.cpp</label>
+        <label>F:/HackComputer/Source/Utils/UserInterface/Platform.cpp</label>
       </node>
-      <node id="4307">
-        <label>Source/Utils/UserInterface/ColorCache.cpp</label>
+      <node id="4311">
+        <label>F:/HackComputer/Source/Utils/UserInterface/Context.cpp</label>
       </node>
       <node id="4310">
-        <label>Source/Utils/UserInterface/PlatformUnix.h</label>
+        <label>F:/HackComputer/Source/Utils/UserInterface/PlatformUnix.h</label>
         <childnode refid="4311" relation="include">
         </childnode>
         <childnode refid="4312" relation="include">
         </childnode>
+      </node>
+      <node id="4306">
+        <label>F:/HackComputer/Source/Utils/UserInterface/ColorCache.h</label>
+        <link refid="ColorCache_8h"/>
+        <childnode refid="4307" relation="include">
+        </childnode>
+        <childnode refid="4308" relation="include">
+        </childnode>
+      </node>
+      <node id="4312">
+        <label>F:/HackComputer/Source/Utils/UserInterface/PlatformUnix.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1Ui_1_1ColorCacheItem" prot="public">Hack::Ui::ColorCacheItem</innerclass>
@@ -123,6 +123,6 @@
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="42"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Ui</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Utils/UserInterface/ColorCache.h"/>
+    <location file="F:/HackComputer/Source/Utils/UserInterface/ColorCache.h"/>
   </compounddef>
 </doxygen>

@@ -7,6 +7,11 @@
       <node id="2158">
         <label>cstdint</label>
       </node>
+      <node id="2147">
+        <label>Chips/Register.h</label>
+        <childnode refid="2148" relation="include">
+        </childnode>
+      </node>
       <node id="2149">
         <label>Chips/BitUtils.h</label>
         <childnode refid="2150" relation="include">
@@ -14,8 +19,11 @@
         <childnode refid="2151" relation="include">
         </childnode>
       </node>
-      <node id="2154">
-        <label>string</label>
+      <node id="2146">
+        <label>F:/HackComputer/Source/Chips/Register.cpp</label>
+        <link refid="Register_8cpp"/>
+        <childnode refid="2147" relation="include">
+        </childnode>
       </node>
       <node id="2156">
         <label>UserInterface/Context.h</label>
@@ -26,45 +34,12 @@
         <childnode refid="2159" relation="include">
         </childnode>
       </node>
+      <node id="2154">
+        <label>string</label>
+      </node>
       <node id="2157">
         <label>Utils/UserInterface/Common.h</label>
         <childnode refid="2158" relation="include">
-        </childnode>
-      </node>
-      <node id="2151">
-        <label>Utils/Console.h</label>
-        <childnode refid="2152" relation="include">
-        </childnode>
-        <childnode refid="2156" relation="include">
-        </childnode>
-      </node>
-      <node id="2150">
-        <label>bitset</label>
-      </node>
-      <node id="2147">
-        <label>Chips/Register.h</label>
-        <childnode refid="2148" relation="include">
-        </childnode>
-      </node>
-      <node id="2155">
-        <label>vector</label>
-      </node>
-      <node id="2159">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="2158" relation="include">
-        </childnode>
-        <childnode refid="2155" relation="include">
-        </childnode>
-        <childnode refid="2157" relation="include">
-        </childnode>
-      </node>
-      <node id="2153">
-        <label>sstream</label>
-      </node>
-      <node id="2146">
-        <label>Source/Chips/Register.cpp</label>
-        <link refid="Register_8cpp"/>
-        <childnode refid="2147" relation="include">
         </childnode>
       </node>
       <node id="2152">
@@ -76,11 +51,36 @@
         <childnode refid="2155" relation="include">
         </childnode>
       </node>
+      <node id="2150">
+        <label>bitset</label>
+      </node>
+      <node id="2155">
+        <label>vector</label>
+      </node>
+      <node id="2153">
+        <label>sstream</label>
+      </node>
+      <node id="2159">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="2158" relation="include">
+        </childnode>
+        <childnode refid="2155" relation="include">
+        </childnode>
+        <childnode refid="2157" relation="include">
+        </childnode>
+      </node>
       <node id="2148">
         <label>Chips/Chip.h</label>
         <childnode refid="2149" relation="include">
         </childnode>
         <childnode refid="2151" relation="include">
+        </childnode>
+      </node>
+      <node id="2151">
+        <label>Utils/Console.h</label>
+        <childnode refid="2152" relation="include">
+        </childnode>
+        <childnode refid="2156" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -216,6 +216,6 @@
 <codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="125"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Chips/Register.cpp"/>
+    <location file="F:/HackComputer/Source/Chips/Register.cpp"/>
   </compounddef>
 </doxygen>

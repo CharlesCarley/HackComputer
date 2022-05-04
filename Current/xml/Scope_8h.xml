@@ -3,27 +3,15 @@
   <compounddef id="Scope_8h" kind="file" language="C++">
     <compoundname>Scope.h</compoundname>
     <includes refid="Tree_8h" local="yes">Compiler/Common/Tree.h</includes>
-    <includedby refid="Scope_8cpp" local="yes">Source/Compiler/Generator/Scope.cpp</includedby>
+    <includedby refid="Scope_8cpp" local="yes">F:/HackComputer/Source/Compiler/Generator/Scope.cpp</includedby>
     <incdepgraph>
-      <node id="2704">
-        <label>Source/Compiler/Generator/Scope.h</label>
-        <link refid="Scope_8h"/>
-        <childnode refid="2705" relation="include">
-        </childnode>
-      </node>
-      <node id="2708">
-        <label>string</label>
-      </node>
-      <node id="2709">
-        <label>vector</label>
-      </node>
-      <node id="2707">
-        <label>sstream</label>
-      </node>
       <node id="2705">
         <label>Compiler/Common/Tree.h</label>
         <childnode refid="2706" relation="include">
         </childnode>
+      </node>
+      <node id="2708">
+        <label>string</label>
       </node>
       <node id="2706">
         <label>Utils/String.h</label>
@@ -34,16 +22,28 @@
         <childnode refid="2709" relation="include">
         </childnode>
       </node>
+      <node id="2704">
+        <label>F:/HackComputer/Source/Compiler/Generator/Scope.h</label>
+        <link refid="Scope_8h"/>
+        <childnode refid="2705" relation="include">
+        </childnode>
+      </node>
+      <node id="2709">
+        <label>vector</label>
+      </node>
+      <node id="2707">
+        <label>sstream</label>
+      </node>
     </incdepgraph>
     <invincdepgraph>
       <node id="2710">
-        <label>Source/Compiler/Generator/Scope.h</label>
+        <label>F:/HackComputer/Source/Compiler/Generator/Scope.h</label>
         <link refid="Scope_8h"/>
         <childnode refid="2711" relation="include">
         </childnode>
       </node>
       <node id="2711">
-        <label>Source/Compiler/Generator/Scope.cpp</label>
+        <label>F:/HackComputer/Source/Compiler/Generator/Scope.cpp</label>
       </node>
     </invincdepgraph>
     <innernamespace refid="namespaceHack_1_1Compiler_1_1CodeGenerator">Hack::Compiler::CodeGenerator</innernamespace>
@@ -80,6 +80,6 @@
 <codeline lineno="26"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="27"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler::CodeGenerator</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Compiler/Generator/Scope.h"/>
+    <location file="F:/HackComputer/Source/Compiler/Generator/Scope.h"/>
   </compounddef>
 </doxygen>

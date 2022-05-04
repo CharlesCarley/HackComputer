@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="classHack_1_1VirtualMachine_1_1Emitter" kind="class" language="C++" prot="public">
     <compoundname>Hack::VirtualMachine::Emitter</compoundname>
-    <includes local="no">Source/VirtualMachine/Emitter.h</includes>
+    <includes local="no">Emitter.h</includes>
       <sectiondef kind="public-type">
       <memberdef kind="typedef" id="classHack_1_1VirtualMachine_1_1Emitter_1aa8ce88c353ba6d22e7540662e1df2a8a" prot="public" static="no">
         <type>std::stack&lt; <ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &gt;</type>
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="34" column="1" bodyfile="Source/VirtualMachine/Emitter.h" bodystart="34" bodyend="-1"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="34" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="38" column="1" bodyfile="Source/VirtualMachine/Emitter.h" bodystart="38" bodyend="-1"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="38" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHack_1_1VirtualMachine_1_1Emitter_1a2a92e3c12f741967213cc4c6b461716b" prot="private" static="no" mutable="no">
         <type><ref refid="classHack_1_1VirtualMachine_1_1Emitter_1aa8ce88c353ba6d22e7540662e1df2a8a" kindref="member">StringStack</ref></type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="39" column="1" bodyfile="Source/VirtualMachine/Emitter.h" bodystart="39" bodyend="-1"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="39" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.h" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHack_1_1VirtualMachine_1_1Emitter_1affa86d2748d6dd7e7ea5afac5cb9b2c4" prot="private" static="no" mutable="no">
         <type><ref refid="namespaceHack_1ae3a6ca87ce783b824591a2858b2409a1" kindref="member">OutputStringStream</ref></type>
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="37" column="1" bodyfile="Source/VirtualMachine/Emitter.h" bodystart="37" bodyend="-1"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="37" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -75,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="43" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="409" bodyend="413"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="43" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="409" bodyend="413"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Emitter_1a80a58b11a57fdcbd4f0a4ea91ddf029f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="41" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="401" bodyend="407"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="41" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="401" bodyend="407"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -111,7 +111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="46" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="391" bodyend="394"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="46" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="391" bodyend="394"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Emitter_1af262bc1ecd8d3450375f9f4e450a7c19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -124,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="48" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="396" bodyend="399"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="48" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="396" bodyend="399"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Emitter_1abc0dabd1997693d70d9703aa4c861abd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -141,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="83" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="559" bodyend="563"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="83" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="559" bodyend="563"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1ada6099787eff578a9980ab4f38e27eb1" compoundref="Emitter_8cpp" startline="364" endline="377">Hack::VirtualMachine::CodeStream::popSegment</references>
         <references refid="namespaceHack_1_1VirtualMachine_1ab2a36ae607c4ab166da225c1f6f71827a8ca2cf3937e5c6f1e63ee3b602fdf814" compoundref="Constants_8h" startline="30">Hack::VirtualMachine::ARG</references>
       </memberdef>
@@ -160,7 +160,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="73" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="553" bodyend="557"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="73" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="553" bodyend="557"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1ada6099787eff578a9980ab4f38e27eb1" compoundref="Emitter_8cpp" startline="364" endline="377">Hack::VirtualMachine::CodeStream::popSegment</references>
         <references refid="namespaceHack_1_1VirtualMachine_1ab2a36ae607c4ab166da225c1f6f71827acf4f05429d20255bf7128cebaf158e72" compoundref="Constants_8h" startline="29">Hack::VirtualMachine::LCL</references>
       </memberdef>
@@ -179,7 +179,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="81" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="612" bodyend="627"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="81" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="612" bodyend="627"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="Emitter_8cpp" startline="301" endline="305">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a6224864f8951a6763574738729682f4b" compoundref="Emitter_8cpp" startline="154" endline="162">Hack::VirtualMachine::CodeStream::moveMIntoD</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a90a38165d26c1c452fdff88b0a83a928" compoundref="Emitter_8cpp" startline="169" endline="173">Hack::VirtualMachine::CodeStream::moveDIntoX</references>
@@ -206,7 +206,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="85" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="565" bodyend="575"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="85" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="565" bodyend="575"/>
         <references refid="namespaceHack_1a0022073c844c619a094704ae6c9b14bf" compoundref="String_8h" startline="71" endline="76">Hack::StringCombine</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="Emitter_8cpp" startline="301" endline="305">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a6224864f8951a6763574738729682f4b" compoundref="Emitter_8cpp" startline="154" endline="162">Hack::VirtualMachine::CodeStream::moveMIntoD</references>
@@ -228,7 +228,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="79" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="589" bodyend="610"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="79" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="589" bodyend="610"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1aefd34367173992dca2ece0c2166786c4" compoundref="Emitter_8cpp" startline="146" endline="152">Hack::VirtualMachine::CodeStream::offsetTo</references>
         <references refid="namespaceHack_1_1VirtualMachine_1ab2a36ae607c4ab166da225c1f6f71827a7257ce4a14d1f26d6858febfad59e371" compoundref="Constants_8h" startline="33">Hack::VirtualMachine::TMP</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a90a38165d26c1c452fdff88b0a83a928" compoundref="Emitter_8cpp" startline="169" endline="173">Hack::VirtualMachine::CodeStream::moveDIntoX</references>
@@ -255,7 +255,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="77" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="583" bodyend="587"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="77" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="583" bodyend="587"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1ada6099787eff578a9980ab4f38e27eb1" compoundref="Emitter_8cpp" startline="364" endline="377">Hack::VirtualMachine::CodeStream::popSegment</references>
         <references refid="namespaceHack_1_1VirtualMachine_1ab2a36ae607c4ab166da225c1f6f71827a892ac688cf8f49defc936c85521c630b" compoundref="Constants_8h" startline="32">Hack::VirtualMachine::THT</references>
       </memberdef>
@@ -274,7 +274,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="75" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="577" bodyend="581"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="75" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="577" bodyend="581"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1ada6099787eff578a9980ab4f38e27eb1" compoundref="Emitter_8cpp" startline="364" endline="377">Hack::VirtualMachine::CodeStream::popSegment</references>
         <references refid="namespaceHack_1_1VirtualMachine_1ab2a36ae607c4ab166da225c1f6f71827a0edd4176219c47bc38b154d7319b2b0c" compoundref="Constants_8h" startline="31">Hack::VirtualMachine::THS</references>
       </memberdef>
@@ -293,7 +293,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="61" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="495" bodyend="512"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="61" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="495" bodyend="512"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1abbbfef8a14e762f28b7b2be672a4e658" compoundref="Emitter_8cpp" startline="379" endline="388">Hack::VirtualMachine::CodeStream::compareDIntoX</references>
         <references refid="namespaceHack_1_1VirtualMachine_1ab2a36ae607c4ab166da225c1f6f71827ae6201d4edf7d9066f2245e0d75ac1805" compoundref="Constants_8h" startline="37">Hack::VirtualMachine::SW2</references>
         <references refid="namespaceHack_1_1VirtualMachine_1ab2a36ae607c4ab166da225c1f6f71827a8ca2cf3937e5c6f1e63ee3b602fdf814" compoundref="Constants_8h" startline="30">Hack::VirtualMachine::ARG</references>
@@ -318,7 +318,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="57" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="422" bodyend="426"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="57" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="422" bodyend="426"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a34acb94db32ce9546ba3b32e11043fd4" compoundref="Emitter_8cpp" startline="271" endline="277">Hack::VirtualMachine::CodeStream::push</references>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Emitter_1a8f6a6b66be4690f4b9aeb6eddfff713f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -336,7 +336,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="59" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="428" bodyend="447"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="59" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="428" bodyend="447"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1abbbfef8a14e762f28b7b2be672a4e658" compoundref="Emitter_8cpp" startline="379" endline="388">Hack::VirtualMachine::CodeStream::compareDIntoX</references>
         <references refid="namespaceHack_1_1VirtualMachine_1ab2a36ae607c4ab166da225c1f6f71827ae6201d4edf7d9066f2245e0d75ac1805" compoundref="Constants_8h" startline="37">Hack::VirtualMachine::SW2</references>
         <references refid="namespaceHack_1_1VirtualMachine_1ab2a36ae607c4ab166da225c1f6f71827acf4f05429d20255bf7128cebaf158e72" compoundref="Constants_8h" startline="29">Hack::VirtualMachine::LCL</references>
@@ -361,7 +361,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="71" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="514" bodyend="540"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="71" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="514" bodyend="540"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1abbbfef8a14e762f28b7b2be672a4e658" compoundref="Emitter_8cpp" startline="379" endline="388">Hack::VirtualMachine::CodeStream::compareDIntoX</references>
         <references refid="namespaceHack_1_1VirtualMachine_1ab2a36ae607c4ab166da225c1f6f71827ae6201d4edf7d9066f2245e0d75ac1805" compoundref="Constants_8h" startline="37">Hack::VirtualMachine::SW2</references>
         <references refid="namespaceHack_1_1VirtualMachine_1ab2a36ae607c4ab166da225c1f6f71827a8ca2cf3937e5c6f1e63ee3b602fdf814" compoundref="Constants_8h" startline="30">Hack::VirtualMachine::ARG</references>
@@ -391,7 +391,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="67" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="542" bodyend="551"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="67" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="542" bodyend="551"/>
         <references refid="namespaceHack_1a0022073c844c619a094704ae6c9b14bf" compoundref="String_8h" startline="71" endline="76">Hack::StringCombine</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a175bf06345174fcce65d1191e39a3003" compoundref="Emitter_8cpp" startline="49" endline="52">Hack::VirtualMachine::CodeStream::atAddressOf</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a8fe8623ebe79e65925e9be23d07750ae" compoundref="Emitter_8cpp" startline="164" endline="167">Hack::VirtualMachine::CodeStream::copyMIntoD</references>
@@ -413,7 +413,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="69" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="487" bodyend="493"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="69" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="487" bodyend="493"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1aefd34367173992dca2ece0c2166786c4" compoundref="Emitter_8cpp" startline="146" endline="152">Hack::VirtualMachine::CodeStream::offsetTo</references>
         <references refid="namespaceHack_1_1VirtualMachine_1ab2a36ae607c4ab166da225c1f6f71827a7257ce4a14d1f26d6858febfad59e371" compoundref="Constants_8h" startline="33">Hack::VirtualMachine::TMP</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a6224864f8951a6763574738729682f4b" compoundref="Emitter_8cpp" startline="154" endline="162">Hack::VirtualMachine::CodeStream::moveMIntoD</references>
@@ -434,7 +434,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="65" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="468" bodyend="485"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="65" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="468" bodyend="485"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1abbbfef8a14e762f28b7b2be672a4e658" compoundref="Emitter_8cpp" startline="379" endline="388">Hack::VirtualMachine::CodeStream::compareDIntoX</references>
         <references refid="namespaceHack_1_1VirtualMachine_1ab2a36ae607c4ab166da225c1f6f71827ae6201d4edf7d9066f2245e0d75ac1805" compoundref="Constants_8h" startline="37">Hack::VirtualMachine::SW2</references>
         <references refid="namespaceHack_1_1VirtualMachine_1ab2a36ae607c4ab166da225c1f6f71827a892ac688cf8f49defc936c85521c630b" compoundref="Constants_8h" startline="32">Hack::VirtualMachine::THT</references>
@@ -459,7 +459,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="63" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="449" bodyend="466"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="63" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="449" bodyend="466"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1abbbfef8a14e762f28b7b2be672a4e658" compoundref="Emitter_8cpp" startline="379" endline="388">Hack::VirtualMachine::CodeStream::compareDIntoX</references>
         <references refid="namespaceHack_1_1VirtualMachine_1ab2a36ae607c4ab166da225c1f6f71827ae6201d4edf7d9066f2245e0d75ac1805" compoundref="Constants_8h" startline="37">Hack::VirtualMachine::SW2</references>
         <references refid="namespaceHack_1_1VirtualMachine_1ab2a36ae607c4ab166da225c1f6f71827a0edd4176219c47bc38b154d7319b2b0c" compoundref="Constants_8h" startline="31">Hack::VirtualMachine::THS</references>
@@ -488,7 +488,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="55" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="415" bodyend="420"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="55" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="415" bodyend="420"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1aa1d9895c4a583e36a7b7767bce78384f" compoundref="Emitter_8cpp" startline="191" endline="197">Hack::VirtualMachine::CodeStream::move</references>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Emitter_1a3944cc6bbc9993953d7b4543af940128" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -502,7 +502,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="50" column="1" bodyfile="Source/VirtualMachine/Emitter.h" bodystart="50" bodyend="53"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="50" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.h" bodystart="50" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Emitter_1aaace24f338366621d97233f0a0505e38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -515,7 +515,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="93" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="659" bodyend="667"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="93" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="659" bodyend="667"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="Emitter_8cpp" startline="301" endline="305">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a6224864f8951a6763574738729682f4b" compoundref="Emitter_8cpp" startline="154" endline="162">Hack::VirtualMachine::CodeStream::moveMIntoD</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a63f901cea27d2aea7ce908221a7dcd29" compoundref="Emitter_8cpp" startline="116" endline="119">Hack::VirtualMachine::CodeStream::decrementA</references>
@@ -533,7 +533,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="89" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="639" bodyend="647"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="89" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="639" bodyend="647"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="Emitter_8cpp" startline="301" endline="305">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a6224864f8951a6763574738729682f4b" compoundref="Emitter_8cpp" startline="154" endline="162">Hack::VirtualMachine::CodeStream::moveMIntoD</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a63f901cea27d2aea7ce908221a7dcd29" compoundref="Emitter_8cpp" startline="116" endline="119">Hack::VirtualMachine::CodeStream::decrementA</references>
@@ -559,7 +559,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="117" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="804" bodyend="857"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="117" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="804" bodyend="857"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1ae92290ff5aa525f4872f52c11ecfba2f" compoundref="Emitter_8cpp" startline="293" endline="299">Hack::VirtualMachine::CodeStream::setD</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1aa312694a897020b8a667fc0140a7de43" compoundref="Emitter_8cpp" startline="279" endline="283">Hack::VirtualMachine::CodeStream::pushD</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a175bf06345174fcce65d1191e39a3003" compoundref="Emitter_8cpp" startline="49" endline="52">Hack::VirtualMachine::CodeStream::atAddressOf</references>
@@ -592,7 +592,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="121" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="894" bodyend="898"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="121" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="894" bodyend="898"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1aa24d8232152dbeb130978b871402e41b" compoundref="Emitter_8cpp" startline="42" endline="47">Hack::VirtualMachine::CodeStream::write</references>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Emitter_1ab7130849685d66f3dbfdb66516a6666b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -606,7 +606,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="99" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="683" bodyend="704"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="99" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="683" bodyend="704"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="Emitter_8cpp" startline="301" endline="305">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a8fe8623ebe79e65925e9be23d07750ae" compoundref="Emitter_8cpp" startline="164" endline="167">Hack::VirtualMachine::CodeStream::copyMIntoD</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a63f901cea27d2aea7ce908221a7dcd29" compoundref="Emitter_8cpp" startline="116" endline="119">Hack::VirtualMachine::CodeStream::decrementA</references>
@@ -637,7 +637,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="115" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="787" bodyend="802"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="115" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="787" bodyend="802"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a3d6772c8a20f7028ddd70a4da12cc520" compoundref="Emitter_8cpp" startline="74" endline="77">Hack::VirtualMachine::CodeStream::label</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a59e701f5c538e3641f8605cf4b4b87a4" compoundref="Emitter_8cpp" startline="137" endline="144">Hack::VirtualMachine::CodeStream::dereferenceOffset</references>
         <references refid="namespaceHack_1_1VirtualMachine_1ab2a36ae607c4ab166da225c1f6f71827acf4f05429d20255bf7128cebaf158e72" compoundref="Constants_8h" startline="29">Hack::VirtualMachine::LCL</references>
@@ -655,7 +655,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="103" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="728" bodyend="748"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="103" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="728" bodyend="748"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="Emitter_8cpp" startline="301" endline="305">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a8fe8623ebe79e65925e9be23d07750ae" compoundref="Emitter_8cpp" startline="164" endline="167">Hack::VirtualMachine::CodeStream::copyMIntoD</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a63f901cea27d2aea7ce908221a7dcd29" compoundref="Emitter_8cpp" startline="116" endline="119">Hack::VirtualMachine::CodeStream::decrementA</references>
@@ -678,7 +678,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="107" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="756" bodyend="764"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="107" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="756" bodyend="764"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a3d6772c8a20f7028ddd70a4da12cc520" compoundref="Emitter_8cpp" startline="74" endline="77">Hack::VirtualMachine::CodeStream::label</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a4fea9b6b37191464b43ba65b5a5e5685" compoundref="Emitter_8cpp" startline="85" endline="89">Hack::VirtualMachine::CodeStream::jumpToRomAddress</references>
       </memberdef>
@@ -697,7 +697,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="113" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="781" bodyend="785"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="113" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="781" bodyend="785"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a3d6772c8a20f7028ddd70a4da12cc520" compoundref="Emitter_8cpp" startline="74" endline="77">Hack::VirtualMachine::CodeStream::label</references>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Emitter_1a1628ba2540e176473ece7714482fd895" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -711,7 +711,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="101" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="706" bodyend="726"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="101" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="706" bodyend="726"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="Emitter_8cpp" startline="301" endline="305">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a8fe8623ebe79e65925e9be23d07750ae" compoundref="Emitter_8cpp" startline="164" endline="167">Hack::VirtualMachine::CodeStream::copyMIntoD</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a63f901cea27d2aea7ce908221a7dcd29" compoundref="Emitter_8cpp" startline="116" endline="119">Hack::VirtualMachine::CodeStream::decrementA</references>
@@ -734,7 +734,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="97" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="676" bodyend="681"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="97" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="676" bodyend="681"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="Emitter_8cpp" startline="301" endline="305">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1ab42de1bc627a17990d40b6871d4a2041" compoundref="Emitter_8cpp" startline="249" endline="252">Hack::VirtualMachine::CodeStream::negMIntoM</references>
       </memberdef>
@@ -749,7 +749,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="95" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="669" bodyend="674"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="95" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="669" bodyend="674"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="Emitter_8cpp" startline="301" endline="305">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a7b1173a77edb1d1791096d55dbee2ee4" compoundref="Emitter_8cpp" startline="244" endline="247">Hack::VirtualMachine::CodeStream::notMIntoM</references>
       </memberdef>
@@ -764,7 +764,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="87" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="629" bodyend="637"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="87" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="629" bodyend="637"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="Emitter_8cpp" startline="301" endline="305">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a6224864f8951a6763574738729682f4b" compoundref="Emitter_8cpp" startline="154" endline="162">Hack::VirtualMachine::CodeStream::moveMIntoD</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a63f901cea27d2aea7ce908221a7dcd29" compoundref="Emitter_8cpp" startline="116" endline="119">Hack::VirtualMachine::CodeStream::decrementA</references>
@@ -782,7 +782,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="105" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="750" bodyend="754"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="105" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="750" bodyend="754"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a4fea9b6b37191464b43ba65b5a5e5685" compoundref="Emitter_8cpp" startline="85" endline="89">Hack::VirtualMachine::CodeStream::jumpToRomAddress</references>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Emitter_1a02fbd64d23b39a2a5b4bc631d94aedae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -796,7 +796,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="119" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="859" bodyend="892"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="119" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="859" bodyend="892"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1aa64fee49965171d8b1977dbb310fa314" compoundref="Emitter_8cpp" startline="337" endline="341">Hack::VirtualMachine::CodeStream::copyMIntoDAt</references>
         <references refid="namespaceHack_1_1VirtualMachine_1ab2a36ae607c4ab166da225c1f6f71827acf4f05429d20255bf7128cebaf158e72" compoundref="Constants_8h" startline="29">Hack::VirtualMachine::LCL</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a90a38165d26c1c452fdff88b0a83a928" compoundref="Emitter_8cpp" startline="169" endline="173">Hack::VirtualMachine::CodeStream::moveDIntoX</references>
@@ -830,7 +830,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="91" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="649" bodyend="657"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="91" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="649" bodyend="657"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="Emitter_8cpp" startline="301" endline="305">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a6224864f8951a6763574738729682f4b" compoundref="Emitter_8cpp" startline="154" endline="162">Hack::VirtualMachine::CodeStream::moveMIntoD</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a63f901cea27d2aea7ce908221a7dcd29" compoundref="Emitter_8cpp" startline="116" endline="119">Hack::VirtualMachine::CodeStream::decrementA</references>
@@ -852,7 +852,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="109" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="766" bodyend="770"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="109" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="766" bodyend="770"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a4fea9b6b37191464b43ba65b5a5e5685" compoundref="Emitter_8cpp" startline="85" endline="89">Hack::VirtualMachine::CodeStream::jumpToRomAddress</references>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Emitter_1a838a57865474ad8fed8f0d872ade28e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -870,7 +870,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Emitter.h" line="111" column="1" bodyfile="Source/VirtualMachine/Emitter.cpp" bodystart="772" bodyend="779"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="111" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.cpp" bodystart="772" bodyend="779"/>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a1700f7a828c0dbe664195c31b8189f9e" compoundref="Emitter_8cpp" startline="301" endline="305">Hack::VirtualMachine::CodeStream::jumpStackTop</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1a6224864f8951a6763574738729682f4b" compoundref="Emitter_8cpp" startline="154" endline="162">Hack::VirtualMachine::CodeStream::moveMIntoD</references>
         <references refid="classHack_1_1VirtualMachine_1_1CodeStream_1ab437fc0874dd768e6cad8960e446f870" compoundref="Emitter_8cpp" startline="121" endline="129">Hack::VirtualMachine::CodeStream::decrement</references>
@@ -881,7 +881,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Source/VirtualMachine/Emitter.h" line="32" column="1" bodyfile="Source/VirtualMachine/Emitter.h" bodystart="31" bodyend="122"/>
+    <location file="F:/HackComputer/Source/VirtualMachine/Emitter.h" line="32" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Emitter.h" bodystart="31" bodyend="122"/>
     <listofallmembers>
       <member refid="classHack_1_1VirtualMachine_1_1Emitter_1aa6b5ac5c97bec2417d1dfa1c439a0280" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>_cmp</name></member>
       <member refid="classHack_1_1VirtualMachine_1_1Emitter_1a2a92e3c12f741967213cc4c6b461716b" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Emitter</scope><name>_functions</name></member>

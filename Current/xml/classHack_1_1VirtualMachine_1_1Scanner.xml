@@ -3,7 +3,7 @@
   <compounddef id="classHack_1_1VirtualMachine_1_1Scanner" kind="class" language="C++" prot="public" final="yes">
     <compoundname>Hack::VirtualMachine::Scanner</compoundname>
     <basecompoundref refid="classHack_1_1ScannerBase" prot="public" virt="non-virtual">Hack::ScannerBase</basecompoundref>
-    <includes local="no">Source/VirtualMachine/Scanner.h</includes>
+    <includes local="no">Scanner.h</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classHack_1_1VirtualMachine_1_1Scanner_1ad98d5bb5dbb1e17960467e679de5bdec" prot="private" static="no" mutable="no">
         <type><ref refid="namespaceHack_1_1VirtualMachine_1a08484157b85b2bda07ff1e0c32072f10" kindref="member">CodeCache</ref></type>
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Scanner.h" line="33" column="1" bodyfile="Source/VirtualMachine/Scanner.h" bodystart="33" bodyend="-1"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Scanner.h" line="33" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Scanner.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Scanner.h" line="35" column="1" bodyfile="Source/VirtualMachine/Scanner.cpp" bodystart="75" bodyend="82"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Scanner.h" line="35" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Scanner.cpp" bodystart="75" bodyend="82"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Scanner_1a7e287d18444a38ca51bedd81f0aa78cc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Scanner.h" line="39" column="1" bodyfile="Source/VirtualMachine/Scanner.cpp" bodystart="127" bodyend="143"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Scanner.h" line="39" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Scanner.cpp" bodystart="127" bodyend="143"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Scanner_1a6c303071aff73d2a8bc5d680a2f98f5c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Scanner.h" line="37" column="1" bodyfile="Source/VirtualMachine/Scanner.cpp" bodystart="92" bodyend="125"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Scanner.h" line="37" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Scanner.cpp" bodystart="92" bodyend="125"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -84,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Scanner.h" line="42" column="1"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Scanner.h" line="42" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Scanner_1aecf5a1159531823bd1e53aac834e9f73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -105,7 +105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Scanner.h" line="46" column="1" bodyfile="Source/VirtualMachine/Scanner.cpp" bodystart="84" bodyend="90"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Scanner.h" line="46" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Scanner.cpp" bodystart="84" bodyend="90"/>
         <references refid="classHack_1_1ScannerBase_1a0aa5a628913e1c8f04db54201f97e1a7" compoundref="ScannerBase_8h" startline="51" endline="57">Hack::ScannerBase::syntaxError</references>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Scanner_1a4997cadc71378e0fd99ba4309507442c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
@@ -124,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/VirtualMachine/Scanner.h" line="44" column="1" bodyfile="Source/VirtualMachine/Scanner.cpp" bodystart="145" bodyend="195"/>
+        <location file="F:/HackComputer/Source/VirtualMachine/Scanner.h" line="44" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Scanner.cpp" bodystart="145" bodyend="195"/>
         <references refid="classHack_1_1ScannerBase_1a553484b098225d77804ffcfbf0382922" compoundref="ScannerBase_8h" startline="34">Hack::ScannerBase::_stream</references>
         <references refid="classHack_1_1ScannerBase_1a0aa5a628913e1c8f04db54201f97e1a7" compoundref="ScannerBase_8h" startline="51" endline="57">Hack::ScannerBase::syntaxError</references>
         <references refid="classHack_1_1TokenBase_1a30cd135b1d593a583b727309323138ad" compoundref="TokenBase_8h" startline="47" endline="56">Hack::TokenBase::clear</references>
@@ -197,7 +197,7 @@
         <link refid="classHack_1_1IndexCache"/>
       </node>
     </collaborationgraph>
-    <location file="Source/VirtualMachine/Scanner.h" line="31" column="1" bodyfile="Source/VirtualMachine/Scanner.h" bodystart="30" bodyend="47"/>
+    <location file="F:/HackComputer/Source/VirtualMachine/Scanner.h" line="31" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Scanner.h" bodystart="30" bodyend="47"/>
     <listofallmembers>
       <member refid="classHack_1_1VirtualMachine_1_1Scanner_1ad98d5bb5dbb1e17960467e679de5bdec" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>_code</name></member>
       <member refid="classHack_1_1ScannerBase_1aee2410ff35c9642a4addab5377339b99" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Scanner</scope><name>_file</name></member>

@@ -4,7 +4,7 @@
     <compoundname>Hack::Chips::IMemorySegment</compoundname>
     <basecompoundref refid="classHack_1_1Chips_1_1Chip" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; uint8_t, 8 &gt;</basecompoundref>
     <derivedcompoundref refid="classHack_1_1Chips_1_1DefaultMemorySegment" prot="public" virt="non-virtual">Hack::Chips::DefaultMemorySegment&lt; High, ElementCount &gt;</derivedcompoundref>
-    <includes local="no">Source/Chips/IMemorySegment.h</includes>
+    <includes local="no">IMemorySegment.h</includes>
     <templateparamlist>
       <param>
         <type><ref refid="classuint16__t" kindref="compound">uint16_t</ref></type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="32" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="32" bodyend="-1"/>
+        <location file="F:/HackComputer/Source/Chips/IMemorySegment.h" line="32" column="1" bodyfile="F:/HackComputer/Source/Chips/IMemorySegment.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHack_1_1Chips_1_1IMemorySegment_1aa48a78ccd8824a135002ef01092a2f92" prot="public" static="yes" mutable="no">
         <type>const <ref refid="classuint16__t" kindref="compound">uint16_t</ref></type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="33" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="33" bodyend="-1"/>
+        <location file="F:/HackComputer/Source/Chips/IMemorySegment.h" line="33" column="1" bodyfile="F:/HackComputer/Source/Chips/IMemorySegment.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-attrib">
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="38" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="38" bodyend="-1"/>
+        <location file="F:/HackComputer/Source/Chips/IMemorySegment.h" line="38" column="1" bodyfile="F:/HackComputer/Source/Chips/IMemorySegment.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHack_1_1Chips_1_1IMemorySegment_1af4867aa2cec1454452363f1850fe39e6" prot="protected" static="no" mutable="no">
         <type><ref refid="classuint16__t" kindref="compound">uint16_t</ref></type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="36" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="36" bodyend="-1"/>
+        <location file="F:/HackComputer/Source/Chips/IMemorySegment.h" line="36" column="1" bodyfile="F:/HackComputer/Source/Chips/IMemorySegment.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHack_1_1Chips_1_1IMemorySegment_1abee2969f70c7cad9ae4fc48c95b4ee34" prot="protected" static="no" mutable="no">
         <type><ref refid="classuint16__t" kindref="compound">uint16_t</ref></type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="37" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="37" bodyend="-1"/>
+        <location file="F:/HackComputer/Source/Chips/IMemorySegment.h" line="37" column="1" bodyfile="F:/HackComputer/Source/Chips/IMemorySegment.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="41" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="78" bodyend="84"/>
+        <location file="F:/HackComputer/Source/Chips/IMemorySegment.h" line="41" column="1" bodyfile="F:/HackComputer/Source/Chips/IMemorySegment.h" bodystart="78" bodyend="84"/>
         <references refid="classHack_1_1Chips_1_1Chip_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="Chip_8h" startline="49">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
         <references refid="namespaceHack_1_1Chips_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="BitUtils_8h" startline="40">Hack::Chips::Bit7</references>
       </memberdef>
@@ -120,7 +120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="55" column="1"/>
+        <location file="F:/HackComputer/Source/Chips/IMemorySegment.h" line="55" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Chips_1_1IMemorySegment_1a8886f1e112e29f9f4ba7ec1d6550cb7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classuint16__t" kindref="compound">uint16_t</ref></type>
@@ -134,7 +134,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="53" column="1"/>
+        <location file="F:/HackComputer/Source/Chips/IMemorySegment.h" line="53" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Chips_1_1IMemorySegment_1adb872ebbc96cf2a449721f1a40754353" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -151,7 +151,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="51" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="125" bodyend="131"/>
+        <location file="F:/HackComputer/Source/Chips/IMemorySegment.h" line="51" column="1" bodyfile="F:/HackComputer/Source/Chips/IMemorySegment.h" bodystart="125" bodyend="131"/>
         <references refid="namespaceHack_1_1Chips_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" compoundref="BitUtils_8h" startline="39">Hack::Chips::Bit6</references>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Chips_1_1IMemorySegment_1a50ee5c87fba14eaaaa5c564c55d1f757" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
@@ -165,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="63" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="134" bodyend="136"/>
+        <location file="F:/HackComputer/Source/Chips/IMemorySegment.h" line="63" column="1" bodyfile="F:/HackComputer/Source/Chips/IMemorySegment.h" bodystart="134" bodyend="136"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Chips_1_1IMemorySegment_1a928606841d9d6b0130aa7dbdbe7d294e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classuint16__t" kindref="compound">uint16_t</ref> *</type>
@@ -183,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="57" column="1"/>
+        <location file="F:/HackComputer/Source/Chips/IMemorySegment.h" line="57" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Chips_1_1IMemorySegment_1a9dcf0c5af1012d1d54492f216eb85a61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -200,7 +200,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="45" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="94" bodyend="102"/>
+        <location file="F:/HackComputer/Source/Chips/IMemorySegment.h" line="45" column="1" bodyfile="F:/HackComputer/Source/Chips/IMemorySegment.h" bodystart="94" bodyend="102"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Chips_1_1IMemorySegment_1a8ad357587c581db496ef05f4fcd5c292" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -217,7 +217,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="49" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="115" bodyend="122"/>
+        <location file="F:/HackComputer/Source/Chips/IMemorySegment.h" line="49" column="1" bodyfile="F:/HackComputer/Source/Chips/IMemorySegment.h" bodystart="115" bodyend="122"/>
         <references refid="namespaceHack_1_1Chips_1a89719f49d745047f03bca80bfff48bd2a8487c63d5dca7d87b359feca1a2c2ac8" compoundref="BitUtils_8h" startline="34">Hack::Chips::Bit1</references>
         <references refid="namespaceHack_1_1Chips_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="BitUtils_8h" startline="40">Hack::Chips::Bit7</references>
       </memberdef>
@@ -236,7 +236,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="43" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="87" bodyend="91"/>
+        <location file="F:/HackComputer/Source/Chips/IMemorySegment.h" line="43" column="1" bodyfile="F:/HackComputer/Source/Chips/IMemorySegment.h" bodystart="87" bodyend="91"/>
         <references refid="namespaceHack_1_1Chips_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="BitUtils_8h" startline="40">Hack::Chips::Bit7</references>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Chips_1_1IMemorySegment_1a053f5b47a681f7e04ec9b8039f68363f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -254,7 +254,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="47" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="105" bodyend="112"/>
+        <location file="F:/HackComputer/Source/Chips/IMemorySegment.h" line="47" column="1" bodyfile="F:/HackComputer/Source/Chips/IMemorySegment.h" bodystart="105" bodyend="112"/>
         <references refid="namespaceHack_1_1Chips_1a89719f49d745047f03bca80bfff48bd2a3c93b3dc9ed5f470c6f86f10b05b2386" compoundref="BitUtils_8h" startline="33">Hack::Chips::Bit0</references>
         <references refid="namespaceHack_1_1Chips_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="BitUtils_8h" startline="40">Hack::Chips::Bit7</references>
       </memberdef>
@@ -278,7 +278,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="59" column="1"/>
+        <location file="F:/HackComputer/Source/Chips/IMemorySegment.h" line="59" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Chips_1_1IMemorySegment_1a6556e06d0b5c14d72336a25f67e2b217" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -291,7 +291,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="65" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="65" bodyend="67"/>
+        <location file="F:/HackComputer/Source/Chips/IMemorySegment.h" line="65" column="1" bodyfile="F:/HackComputer/Source/Chips/IMemorySegment.h" bodystart="65" bodyend="67"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Chips_1_1IMemorySegment_1a09442f604ad85fdd0b02c8bdf2ca729d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -304,7 +304,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="69" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="139" bodyend="141"/>
+        <location file="F:/HackComputer/Source/Chips/IMemorySegment.h" line="69" column="1" bodyfile="F:/HackComputer/Source/Chips/IMemorySegment.h" bodystart="139" bodyend="141"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Chips_1_1IMemorySegment_1aae4cff10f3ec39ef2c6b08c42fcc937c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -318,7 +318,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="61" column="1"/>
+        <location file="F:/HackComputer/Source/Chips/IMemorySegment.h" line="61" column="1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -334,7 +334,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="72" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="144" bodyend="147"/>
+        <location file="F:/HackComputer/Source/Chips/IMemorySegment.h" line="72" column="1" bodyfile="F:/HackComputer/Source/Chips/IMemorySegment.h" bodystart="144" bodyend="147"/>
         <references refid="namespaceHack_1_1Chips_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="BitUtils_8h" startline="40">Hack::Chips::Bit7</references>
         <references refid="namespaceHack_1_1Chips_1a89719f49d745047f03bca80bfff48bd2a558a82390f139f886fdec62375e5209e" compoundref="BitUtils_8h" startline="39">Hack::Chips::Bit6</references>
       </memberdef>
@@ -349,7 +349,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Chips/IMemorySegment.h" line="74" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="150" bodyend="153"/>
+        <location file="F:/HackComputer/Source/Chips/IMemorySegment.h" line="74" column="1" bodyfile="F:/HackComputer/Source/Chips/IMemorySegment.h" bodystart="150" bodyend="153"/>
         <references refid="namespaceHack_1_1Chips_1a89719f49d745047f03bca80bfff48bd2ad8bde3cde810be7fb777c966f997edd9" compoundref="BitUtils_8h" startline="40">Hack::Chips::Bit7</references>
       </memberdef>
       </sectiondef>
@@ -405,7 +405,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="Source/Chips/IMemorySegment.h" line="30" column="1" bodyfile="Source/Chips/IMemorySegment.h" bodystart="29" bodyend="75"/>
+    <location file="F:/HackComputer/Source/Chips/IMemorySegment.h" line="30" column="1" bodyfile="F:/HackComputer/Source/Chips/IMemorySegment.h" bodystart="29" bodyend="75"/>
     <listofallmembers>
       <member refid="classHack_1_1Chips_1_1IMemorySegment_1a9683f3a1be07724bee0f2adfe59d90de" prot="protected" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>_address</name></member>
       <member refid="classHack_1_1Chips_1_1Chip_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::IMemorySegment</scope><name>_bits</name></member>

@@ -113,16 +113,10 @@ WARN_LOGFILE           =
 # Configuration options related to the input files
 #---------------------------------------------------------------------------
 INPUT                  = pages \
-                         ../Source/ \
-                         ../Tools/
+                         ../Source/
 INPUT_ENCODING         = UTF-8
 FILE_PATTERNS          = *.cpp \
-                         *.h \
-                         *.inl \
-                         *.dot \
-                         *.md \
-                         *.py \
-                         .cmake
+                         *.h
 RECURSIVE              = YES
 EXCLUDE                = 
 EXCLUDE_SYMLINKS       = NO
@@ -344,3 +338,27 @@ DOT_TRANSPARENT        = YES
 DOT_MULTI_TARGETS      = NO
 GENERATE_LEGEND        = NO
 DOT_CLEANUP            = YES
+
+
+
+ALIASES += dir_link{1}="[\1](../../\1)"
+ALIASES += file_ref{2}="[\1](../../\2)"
+ALIASES += defined_in{1}="The source is defined in \dir_link{\1}\n"
+ALIASES += ref_brief{1}="\ref \1 \copybrief \1"
+ALIASES += defined{1}="\section \1 Defined in"
+ALIASES += br="\n\n"
+ALIASES += sec{1}="\n\b \1\n\n"
+ALIASES += isec{1}="\n\em \1\n\n"
+
+ALIASES += class_icon="\image html class.svg \"...\" width=24px "
+
+# Links to chip classes
+ALIASES += chip{1}="\ref Hack::Chips::\1 \"\1\""
+
+
+
+# Sections
+ALIASES += h1="##"
+ALIASES += h2="###"
+ALIASES += h3="####"
+ALIASES += h4="#####"

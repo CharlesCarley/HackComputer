@@ -4,75 +4,17 @@
     <compoundname>ScannerBase.h</compoundname>
     <includes refid="IndexCache_8h" local="yes">Utils/IndexCache.h</includes>
     <includes refid="TokenBase_8h" local="yes">Utils/ParserBase/TokenBase.h</includes>
-    <includedby refid="Assembler_2Scanner_8h" local="yes">Source/Assembler/Scanner.h</includedby>
-    <includedby refid="Compiler_2Analyzer_2Scanner_8h" local="yes">Source/Compiler/Analyzer/Scanner.h</includedby>
-    <includedby refid="ParserBase_8cpp" local="yes">Source/Utils/ParserBase/ParserBase.cpp</includedby>
-    <includedby refid="ParserBase_8h" local="yes">Source/Utils/ParserBase/ParserBase.h</includedby>
-    <includedby refid="ScannerBase_8cpp" local="yes">Source/Utils/ParserBase/ScannerBase.cpp</includedby>
-    <includedby refid="VirtualMachine_2Scanner_8h" local="yes">Source/VirtualMachine/Scanner.h</includedby>
+    <includedby refid="Assembler_2Scanner_8h" local="yes">F:/HackComputer/Source/Assembler/Scanner.h</includedby>
+    <includedby refid="Compiler_2Analyzer_2Scanner_8h" local="yes">F:/HackComputer/Source/Compiler/Analyzer/Scanner.h</includedby>
+    <includedby refid="ParserBase_8cpp" local="yes">F:/HackComputer/Source/Utils/ParserBase/ParserBase.cpp</includedby>
+    <includedby refid="ParserBase_8h" local="yes">F:/HackComputer/Source/Utils/ParserBase/ParserBase.h</includedby>
+    <includedby refid="ScannerBase_8cpp" local="yes">F:/HackComputer/Source/Utils/ParserBase/ScannerBase.cpp</includedby>
+    <includedby refid="VirtualMachine_2Scanner_8h" local="yes">F:/HackComputer/Source/VirtualMachine/Scanner.h</includedby>
     <incdepgraph>
-      <node id="4008">
-        <label>Utils/IndexCache.h</label>
-        <childnode refid="4009" relation="include">
-        </childnode>
-        <childnode refid="4010" relation="include">
-        </childnode>
-        <childnode refid="4011" relation="include">
-        </childnode>
-      </node>
-      <node id="4022">
-        <label>cstdint</label>
-      </node>
-      <node id="4013">
-        <label>stdexcept</label>
-      </node>
-      <node id="4018">
-        <label>string</label>
-      </node>
-      <node id="4010">
-        <label>unordered_set</label>
-      </node>
-      <node id="4020">
-        <label>UserInterface/Context.h</label>
+      <node id="4024">
+        <label>Utils/ParserBase/TokenBase.h</label>
         <childnode refid="4016" relation="include">
         </childnode>
-        <childnode refid="4021" relation="include">
-        </childnode>
-        <childnode refid="4023" relation="include">
-        </childnode>
-      </node>
-      <node id="4012">
-        <label>exception</label>
-      </node>
-      <node id="4021">
-        <label>Utils/UserInterface/Common.h</label>
-        <childnode refid="4022" relation="include">
-        </childnode>
-      </node>
-      <node id="4015">
-        <label>Utils/Console.h</label>
-        <childnode refid="4016" relation="include">
-        </childnode>
-        <childnode refid="4020" relation="include">
-        </childnode>
-      </node>
-      <node id="4019">
-        <label>vector</label>
-      </node>
-      <node id="4023">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="4022" relation="include">
-        </childnode>
-        <childnode refid="4019" relation="include">
-        </childnode>
-        <childnode refid="4021" relation="include">
-        </childnode>
-      </node>
-      <node id="4014">
-        <label>utility</label>
-      </node>
-      <node id="4017">
-        <label>sstream</label>
       </node>
       <node id="4011">
         <label>Utils/Exception.h</label>
@@ -88,15 +30,41 @@
         </childnode>
       </node>
       <node id="4007">
-        <label>Source/Utils/ParserBase/ScannerBase.h</label>
+        <label>F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h</label>
         <link refid="ScannerBase_8h"/>
         <childnode refid="4008" relation="include">
         </childnode>
         <childnode refid="4024" relation="include">
         </childnode>
       </node>
-      <node id="4009">
-        <label>unordered_map</label>
+      <node id="4022">
+        <label>cstdint</label>
+      </node>
+      <node id="4020">
+        <label>UserInterface/Context.h</label>
+        <childnode refid="4016" relation="include">
+        </childnode>
+        <childnode refid="4021" relation="include">
+        </childnode>
+        <childnode refid="4023" relation="include">
+        </childnode>
+      </node>
+      <node id="4013">
+        <label>stdexcept</label>
+      </node>
+      <node id="4018">
+        <label>string</label>
+      </node>
+      <node id="4010">
+        <label>unordered_set</label>
+      </node>
+      <node id="4012">
+        <label>exception</label>
+      </node>
+      <node id="4021">
+        <label>Utils/UserInterface/Common.h</label>
+        <childnode refid="4022" relation="include">
+        </childnode>
       </node>
       <node id="4016">
         <label>String.h</label>
@@ -107,102 +75,47 @@
         <childnode refid="4019" relation="include">
         </childnode>
       </node>
-      <node id="4024">
-        <label>Utils/ParserBase/TokenBase.h</label>
+      <node id="4008">
+        <label>Utils/IndexCache.h</label>
+        <childnode refid="4009" relation="include">
+        </childnode>
+        <childnode refid="4010" relation="include">
+        </childnode>
+        <childnode refid="4011" relation="include">
+        </childnode>
+      </node>
+      <node id="4019">
+        <label>vector</label>
+      </node>
+      <node id="4014">
+        <label>utility</label>
+      </node>
+      <node id="4017">
+        <label>sstream</label>
+      </node>
+      <node id="4009">
+        <label>unordered_map</label>
+      </node>
+      <node id="4023">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="4022" relation="include">
+        </childnode>
+        <childnode refid="4019" relation="include">
+        </childnode>
+        <childnode refid="4021" relation="include">
+        </childnode>
+      </node>
+      <node id="4015">
+        <label>Utils/Console.h</label>
         <childnode refid="4016" relation="include">
+        </childnode>
+        <childnode refid="4020" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="4033">
-        <label>Source/Utils/ParserBase/ParserBase.h</label>
-        <childnode refid="4034" relation="include">
-        </childnode>
-        <childnode refid="4048" relation="include">
-        </childnode>
-        <childnode refid="4032" relation="include">
-        </childnode>
-        <childnode refid="4052" relation="include">
-        </childnode>
-      </node>
-      <node id="4035">
-        <label>Source/Assembler/Main.cpp</label>
-      </node>
-      <node id="4052">
-        <label>Source/VirtualMachine/Parser.h</label>
-        <childnode refid="4037" relation="include">
-        </childnode>
-        <childnode refid="4040" relation="include">
-        </childnode>
-        <childnode refid="4053" relation="include">
-        </childnode>
-        <childnode refid="4054" relation="include">
-        </childnode>
-      </node>
-      <node id="4041">
-        <label>Source/Computer/RuntimeInterface.h</label>
-        <childnode refid="4042" relation="include">
-        </childnode>
-        <childnode refid="4045" relation="include">
-        </childnode>
-        <childnode refid="4047" relation="include">
-        </childnode>
-      </node>
-      <node id="4043">
-        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</label>
-        <childnode refid="4039" relation="include">
-        </childnode>
-        <childnode refid="4044" relation="include">
-        </childnode>
-      </node>
-      <node id="4053">
-        <label>Source/VirtualMachine/Main.cpp</label>
-      </node>
-      <node id="4046">
-        <label>Source/Computer/ConsoleRuntime.cpp</label>
-      </node>
-      <node id="4029">
-        <label>Source/Compiler/Analyzer/Scanner.h</label>
-        <childnode refid="4030" relation="include">
-        </childnode>
-        <childnode refid="4031" relation="include">
-        </childnode>
-      </node>
-      <node id="4047">
-        <label>Source/Computer/WindowedRuntime.h</label>
-      </node>
-      <node id="4042">
-        <label>Source/Computer/AssemblyDebugger.h</label>
-        <childnode refid="4039" relation="include">
-        </childnode>
-        <childnode refid="4043" relation="include">
-        </childnode>
-        <childnode refid="4044" relation="include">
-        </childnode>
-        <childnode refid="4040" relation="include">
-        </childnode>
-      </node>
-      <node id="4030">
-        <label>Source/Compiler/Analyzer/Parser.cpp</label>
-      </node>
-      <node id="4049">
-        <label>Source/Compiler/Analyzer/Main.cpp</label>
-      </node>
-      <node id="4056">
-        <label>Source/VirtualMachine/Scanner.h</label>
-        <childnode refid="4054" relation="include">
-        </childnode>
-        <childnode refid="4057" relation="include">
-        </childnode>
-      </node>
-      <node id="4040">
-        <label>Source/Computer/Executable.cpp</label>
-      </node>
-      <node id="4054">
-        <label>Source/VirtualMachine/Parser.cpp</label>
-      </node>
       <node id="4048">
-        <label>Source/Compiler/Analyzer/Parser.h</label>
+        <label>F:/HackComputer/Source/Compiler/Analyzer/Parser.h</label>
         <childnode refid="4049" relation="include">
         </childnode>
         <childnode refid="4030" relation="include">
@@ -216,15 +129,29 @@
         <childnode refid="4040" relation="include">
         </childnode>
       </node>
-      <node id="4038">
-        <label>Source/Computer/Common.h</label>
+      <node id="4027">
+        <label>F:/HackComputer/Source/Assembler/Parser.cpp</label>
+      </node>
+      <node id="4042">
+        <label>F:/HackComputer/Source/Computer/AssemblyDebugger.h</label>
         <childnode refid="4039" relation="include">
+        </childnode>
+        <childnode refid="4043" relation="include">
+        </childnode>
+        <childnode refid="4044" relation="include">
         </childnode>
         <childnode refid="4040" relation="include">
         </childnode>
       </node>
+      <node id="4029">
+        <label>F:/HackComputer/Source/Compiler/Analyzer/Scanner.h</label>
+        <childnode refid="4030" relation="include">
+        </childnode>
+        <childnode refid="4031" relation="include">
+        </childnode>
+      </node>
       <node id="4034">
-        <label>Source/Assembler/Parser.h</label>
+        <label>F:/HackComputer/Source/Assembler/Parser.h</label>
         <childnode refid="4035" relation="include">
         </childnode>
         <childnode refid="4027" relation="include">
@@ -240,30 +167,8 @@
         <childnode refid="4041" relation="include">
         </childnode>
       </node>
-      <node id="4037">
-        <label>Source/Compiler/Compiler/Main.cpp</label>
-      </node>
-      <node id="4044">
-        <label>Source/Computer/AssemblyDebugger.cpp</label>
-      </node>
-      <node id="4045">
-        <label>Source/Computer/ConsoleRuntime.h</label>
-        <childnode refid="4046" relation="include">
-        </childnode>
-        <childnode refid="4040" relation="include">
-        </childnode>
-      </node>
-      <node id="4032">
-        <label>Source/Utils/ParserBase/ParserBase.cpp</label>
-      </node>
-      <node id="4036">
-        <label>Source/Bindings/Bindings.cpp</label>
-      </node>
-      <node id="4057">
-        <label>Source/VirtualMachine/Scanner.cpp</label>
-      </node>
       <node id="4025">
-        <label>Source/Utils/ParserBase/ScannerBase.h</label>
+        <label>F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h</label>
         <link refid="ScannerBase_8h"/>
         <childnode refid="4026" relation="include">
         </childnode>
@@ -278,33 +183,128 @@
         <childnode refid="4056" relation="include">
         </childnode>
       </node>
+      <node id="4052">
+        <label>F:/HackComputer/Source/VirtualMachine/Parser.h</label>
+        <childnode refid="4037" relation="include">
+        </childnode>
+        <childnode refid="4040" relation="include">
+        </childnode>
+        <childnode refid="4053" relation="include">
+        </childnode>
+        <childnode refid="4054" relation="include">
+        </childnode>
+      </node>
+      <node id="4030">
+        <label>F:/HackComputer/Source/Compiler/Analyzer/Parser.cpp</label>
+      </node>
+      <node id="4036">
+        <label>F:/HackComputer/Source/Bindings/Bindings.cpp</label>
+      </node>
+      <node id="4039">
+        <label>F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</label>
+      </node>
+      <node id="4057">
+        <label>F:/HackComputer/Source/VirtualMachine/Scanner.cpp</label>
+      </node>
+      <node id="4053">
+        <label>F:/HackComputer/Source/VirtualMachine/Main.cpp</label>
+      </node>
+      <node id="4050">
+        <label>F:/HackComputer/Source/Compiler/Generator/Generator.cpp</label>
+      </node>
+      <node id="4043">
+        <label>F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</label>
+        <childnode refid="4039" relation="include">
+        </childnode>
+        <childnode refid="4044" relation="include">
+        </childnode>
+      </node>
+      <node id="4040">
+        <label>F:/HackComputer/Source/Computer/Executable.cpp</label>
+      </node>
+      <node id="4049">
+        <label>F:/HackComputer/Source/Compiler/Analyzer/Main.cpp</label>
+      </node>
+      <node id="4033">
+        <label>F:/HackComputer/Source/Utils/ParserBase/ParserBase.h</label>
+        <childnode refid="4034" relation="include">
+        </childnode>
+        <childnode refid="4048" relation="include">
+        </childnode>
+        <childnode refid="4032" relation="include">
+        </childnode>
+        <childnode refid="4052" relation="include">
+        </childnode>
+      </node>
+      <node id="4028">
+        <label>F:/HackComputer/Source/Assembler/Scanner.cpp</label>
+      </node>
+      <node id="4056">
+        <label>F:/HackComputer/Source/VirtualMachine/Scanner.h</label>
+        <childnode refid="4054" relation="include">
+        </childnode>
+        <childnode refid="4057" relation="include">
+        </childnode>
+      </node>
+      <node id="4054">
+        <label>F:/HackComputer/Source/VirtualMachine/Parser.cpp</label>
+      </node>
+      <node id="4038">
+        <label>F:/HackComputer/Source/Computer/Common.h</label>
+        <childnode refid="4039" relation="include">
+        </childnode>
+        <childnode refid="4040" relation="include">
+        </childnode>
+      </node>
+      <node id="4044">
+        <label>F:/HackComputer/Source/Computer/AssemblyDebugger.cpp</label>
+      </node>
+      <node id="4032">
+        <label>F:/HackComputer/Source/Utils/ParserBase/ParserBase.cpp</label>
+      </node>
+      <node id="4037">
+        <label>F:/HackComputer/Source/Compiler/Compiler/Main.cpp</label>
+      </node>
+      <node id="4035">
+        <label>F:/HackComputer/Source/Assembler/Main.cpp</label>
+      </node>
+      <node id="4041">
+        <label>F:/HackComputer/Source/Computer/RuntimeInterface.h</label>
+        <childnode refid="4042" relation="include">
+        </childnode>
+        <childnode refid="4045" relation="include">
+        </childnode>
+        <childnode refid="4047" relation="include">
+        </childnode>
+      </node>
+      <node id="4055">
+        <label>F:/HackComputer/Source/Utils/ParserBase/ScannerBase.cpp</label>
+      </node>
+      <node id="4031">
+        <label>F:/HackComputer/Source/Compiler/Analyzer/Scanner.cpp</label>
+      </node>
+      <node id="4047">
+        <label>F:/HackComputer/Source/Computer/WindowedRuntime.h</label>
+      </node>
+      <node id="4051">
+        <label>F:/HackComputer/Source/Compiler/Generator/Main.cpp</label>
+      </node>
       <node id="4026">
-        <label>Source/Assembler/Scanner.h</label>
+        <label>F:/HackComputer/Source/Assembler/Scanner.h</label>
         <childnode refid="4027" relation="include">
         </childnode>
         <childnode refid="4028" relation="include">
         </childnode>
       </node>
-      <node id="4051">
-        <label>Source/Compiler/Generator/Main.cpp</label>
+      <node id="4046">
+        <label>F:/HackComputer/Source/Computer/ConsoleRuntime.cpp</label>
       </node>
-      <node id="4031">
-        <label>Source/Compiler/Analyzer/Scanner.cpp</label>
-      </node>
-      <node id="4027">
-        <label>Source/Assembler/Parser.cpp</label>
-      </node>
-      <node id="4050">
-        <label>Source/Compiler/Generator/Generator.cpp</label>
-      </node>
-      <node id="4055">
-        <label>Source/Utils/ParserBase/ScannerBase.cpp</label>
-      </node>
-      <node id="4028">
-        <label>Source/Assembler/Scanner.cpp</label>
-      </node>
-      <node id="4039">
-        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</label>
+      <node id="4045">
+        <label>F:/HackComputer/Source/Computer/ConsoleRuntime.h</label>
+        <childnode refid="4046" relation="include">
+        </childnode>
+        <childnode refid="4040" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1ScannerBase" prot="public">Hack::ScannerBase</innerclass>
@@ -320,7 +320,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/ParserBase/ScannerBase.h" line="114" column="9" bodyfile="Source/Utils/ParserBase/ScannerBase.h" bodystart="114" bodyend="-1"/>
+        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="114" column="9" bodyfile="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" bodystart="114" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ScannerBase_8h_1ac3cd1b079ed7176efca57b086b4efc0d" prot="public" static="no">
         <name>LowerCaseAz</name>
@@ -335,7 +335,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/ParserBase/ScannerBase.h" line="100" column="9" bodyfile="Source/Utils/ParserBase/ScannerBase.h" bodystart="100" bodyend="-1"/>
+        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="100" column="9" bodyfile="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" bodystart="100" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ScannerBase_8h_1aa883c9593fad7ae7cf64210b4aeb5810" prot="public" static="no">
         <name>UpperCaseAz</name>
@@ -350,7 +350,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Utils/ParserBase/ScannerBase.h" line="107" column="9" bodyfile="Source/Utils/ParserBase/ScannerBase.h" bodystart="107" bodyend="-1"/>
+        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="107" column="9" bodyfile="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" bodystart="107" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -478,6 +478,6 @@
 <codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>clang-format<sp/>on</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="119"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Utils/ParserBase/ScannerBase.h"/>
+    <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h"/>
   </compounddef>
 </doxygen>

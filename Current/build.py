@@ -20,11 +20,8 @@
 # ------------------------------------------------------------------------------
 import subprocess, os
 
-
 def run(cmd):
     subprocess.run(cmd, shell=True)
-
-
 
 def main():
     if (not os.path.isdir("markdown")):
@@ -38,7 +35,7 @@ def main():
     run("MdDox -i index.xml -c ../MdDox.cfg")
     os.chdir("../images/dot/")
 
-    run("python ../../invokeDot.py")
+    run("python ../../../CMake/Modules/invokeDot.py")
 
 if __name__ =='__main__':
     main()

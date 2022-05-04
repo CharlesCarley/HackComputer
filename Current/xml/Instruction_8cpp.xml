@@ -5,6 +5,11 @@
     <includes refid="Instruction_8h" local="yes">Assembler/Instruction.h</includes>
     <includes refid="BitUtils_8h" local="yes">Chips/BitUtils.h</includes>
     <incdepgraph>
+      <node id="27">
+        <label>Utils/ParserBase/TokenBase.h</label>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
       <node id="37">
         <label>cstdint</label>
       </node>
@@ -15,9 +20,6 @@
         <childnode refid="34" relation="include">
         </childnode>
       </node>
-      <node id="30">
-        <label>string</label>
-      </node>
       <node id="35">
         <label>UserInterface/Context.h</label>
         <childnode refid="28" relation="include">
@@ -27,47 +29,12 @@
         <childnode refid="38" relation="include">
         </childnode>
       </node>
+      <node id="30">
+        <label>string</label>
+      </node>
       <node id="36">
         <label>Utils/UserInterface/Common.h</label>
         <childnode refid="37" relation="include">
-        </childnode>
-      </node>
-      <node id="24">
-        <label>Source/Assembler/Instruction.cpp</label>
-        <link refid="Instruction_8cpp"/>
-        <childnode refid="25" relation="include">
-        </childnode>
-        <childnode refid="32" relation="include">
-        </childnode>
-      </node>
-      <node id="34">
-        <label>Utils/Console.h</label>
-        <childnode refid="28" relation="include">
-        </childnode>
-        <childnode refid="35" relation="include">
-        </childnode>
-      </node>
-      <node id="33">
-        <label>bitset</label>
-      </node>
-      <node id="31">
-        <label>vector</label>
-      </node>
-      <node id="38">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="37" relation="include">
-        </childnode>
-        <childnode refid="31" relation="include">
-        </childnode>
-        <childnode refid="36" relation="include">
-        </childnode>
-      </node>
-      <node id="29">
-        <label>sstream</label>
-      </node>
-      <node id="26">
-        <label>Assembler/Token.h</label>
-        <childnode refid="27" relation="include">
         </childnode>
       </node>
       <node id="28">
@@ -79,14 +46,47 @@
         <childnode refid="31" relation="include">
         </childnode>
       </node>
-      <node id="27">
-        <label>Utils/ParserBase/TokenBase.h</label>
-        <childnode refid="28" relation="include">
+      <node id="24">
+        <label>F:/HackComputer/Source/Assembler/Instruction.cpp</label>
+        <link refid="Instruction_8cpp"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>bitset</label>
+      </node>
+      <node id="31">
+        <label>vector</label>
+      </node>
+      <node id="29">
+        <label>sstream</label>
+      </node>
+      <node id="38">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
         </childnode>
       </node>
       <node id="25">
         <label>Assembler/Instruction.h</label>
         <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>Utils/Console.h</label>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>Assembler/Token.h</label>
+        <childnode refid="27" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -319,6 +319,6 @@
 <codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="222"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Assembler</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Assembler/Instruction.cpp"/>
+    <location file="F:/HackComputer/Source/Assembler/Instruction.cpp"/>
   </compounddef>
 </doxygen>

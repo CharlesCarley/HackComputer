@@ -4,8 +4,16 @@
     <compoundname>Bit.h</compoundname>
     <includes refid="Chip_8h" local="yes">Chips/Chip.h</includes>
     <includes refid="DFlipFlop_8h" local="yes">Chips/DFlipFlop.h</includes>
-    <includedby refid="Bit_8cpp" local="yes">Source/Chips/Bit.cpp</includedby>
+    <includedby refid="Bit_8cpp" local="yes">F:/HackComputer/Source/Chips/Bit.cpp</includedby>
     <incdepgraph>
+      <node id="881">
+        <label>F:/HackComputer/Source/Chips/Bit.h</label>
+        <link refid="Bit_8h"/>
+        <childnode refid="882" relation="include">
+        </childnode>
+        <childnode refid="894" relation="include">
+        </childnode>
+      </node>
       <node id="892">
         <label>cstdint</label>
       </node>
@@ -14,17 +22,6 @@
         <childnode refid="884" relation="include">
         </childnode>
         <childnode refid="885" relation="include">
-        </childnode>
-      </node>
-      <node id="888">
-        <label>string</label>
-      </node>
-      <node id="881">
-        <label>Source/Chips/Bit.h</label>
-        <link refid="Bit_8h"/>
-        <childnode refid="882" relation="include">
-        </childnode>
-        <childnode refid="894" relation="include">
         </childnode>
       </node>
       <node id="890">
@@ -36,39 +33,12 @@
         <childnode refid="893" relation="include">
         </childnode>
       </node>
+      <node id="888">
+        <label>string</label>
+      </node>
       <node id="891">
         <label>Utils/UserInterface/Common.h</label>
         <childnode refid="892" relation="include">
-        </childnode>
-      </node>
-      <node id="885">
-        <label>Utils/Console.h</label>
-        <childnode refid="886" relation="include">
-        </childnode>
-        <childnode refid="890" relation="include">
-        </childnode>
-      </node>
-      <node id="884">
-        <label>bitset</label>
-      </node>
-      <node id="889">
-        <label>vector</label>
-      </node>
-      <node id="893">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="892" relation="include">
-        </childnode>
-        <childnode refid="889" relation="include">
-        </childnode>
-        <childnode refid="891" relation="include">
-        </childnode>
-      </node>
-      <node id="887">
-        <label>sstream</label>
-      </node>
-      <node id="894">
-        <label>Chips/DFlipFlop.h</label>
-        <childnode refid="882" relation="include">
         </childnode>
       </node>
       <node id="886">
@@ -80,6 +50,29 @@
         <childnode refid="889" relation="include">
         </childnode>
       </node>
+      <node id="884">
+        <label>bitset</label>
+      </node>
+      <node id="889">
+        <label>vector</label>
+      </node>
+      <node id="887">
+        <label>sstream</label>
+      </node>
+      <node id="894">
+        <label>Chips/DFlipFlop.h</label>
+        <childnode refid="882" relation="include">
+        </childnode>
+      </node>
+      <node id="893">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="892" relation="include">
+        </childnode>
+        <childnode refid="889" relation="include">
+        </childnode>
+        <childnode refid="891" relation="include">
+        </childnode>
+      </node>
       <node id="882">
         <label>Chips/Chip.h</label>
         <childnode refid="883" relation="include">
@@ -87,16 +80,23 @@
         <childnode refid="885" relation="include">
         </childnode>
       </node>
+      <node id="885">
+        <label>Utils/Console.h</label>
+        <childnode refid="886" relation="include">
+        </childnode>
+        <childnode refid="890" relation="include">
+        </childnode>
+      </node>
     </incdepgraph>
     <invincdepgraph>
       <node id="895">
-        <label>Source/Chips/Bit.h</label>
+        <label>F:/HackComputer/Source/Chips/Bit.h</label>
         <link refid="Bit_8h"/>
         <childnode refid="896" relation="include">
         </childnode>
       </node>
       <node id="896">
-        <label>Source/Chips/Bit.cpp</label>
+        <label>F:/HackComputer/Source/Chips/Bit.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1Chips_1_1Bit" prot="public">Hack::Chips::Bit</innerclass>
@@ -154,6 +154,6 @@
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="47"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Chips/Bit.h"/>
+    <location file="F:/HackComputer/Source/Chips/Bit.h"/>
   </compounddef>
 </doxygen>

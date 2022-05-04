@@ -15,20 +15,6 @@
         <childnode refid="1364" relation="include">
         </childnode>
       </node>
-      <node id="1359">
-        <label>Source/Chips/DMux4Way.cpp</label>
-        <link refid="DMux4Way_8cpp"/>
-        <childnode refid="1360" relation="include">
-        </childnode>
-        <childnode refid="1373" relation="include">
-        </childnode>
-      </node>
-      <node id="1373">
-        <label>cmath</label>
-      </node>
-      <node id="1367">
-        <label>string</label>
-      </node>
       <node id="1369">
         <label>UserInterface/Context.h</label>
         <childnode refid="1365" relation="include">
@@ -38,40 +24,16 @@
         <childnode refid="1372" relation="include">
         </childnode>
       </node>
+      <node id="1373">
+        <label>cmath</label>
+      </node>
+      <node id="1367">
+        <label>string</label>
+      </node>
       <node id="1370">
         <label>Utils/UserInterface/Common.h</label>
         <childnode refid="1371" relation="include">
         </childnode>
-      </node>
-      <node id="1360">
-        <label>Chips/DMux4Way.h</label>
-        <childnode refid="1361" relation="include">
-        </childnode>
-      </node>
-      <node id="1364">
-        <label>Utils/Console.h</label>
-        <childnode refid="1365" relation="include">
-        </childnode>
-        <childnode refid="1369" relation="include">
-        </childnode>
-      </node>
-      <node id="1363">
-        <label>bitset</label>
-      </node>
-      <node id="1368">
-        <label>vector</label>
-      </node>
-      <node id="1372">
-        <label>Utils/UserInterface/Math.h</label>
-        <childnode refid="1371" relation="include">
-        </childnode>
-        <childnode refid="1368" relation="include">
-        </childnode>
-        <childnode refid="1370" relation="include">
-        </childnode>
-      </node>
-      <node id="1366">
-        <label>sstream</label>
       </node>
       <node id="1365">
         <label>String.h</label>
@@ -82,11 +44,49 @@
         <childnode refid="1368" relation="include">
         </childnode>
       </node>
+      <node id="1363">
+        <label>bitset</label>
+      </node>
+      <node id="1359">
+        <label>F:/HackComputer/Source/Chips/DMux4Way.cpp</label>
+        <link refid="DMux4Way_8cpp"/>
+        <childnode refid="1360" relation="include">
+        </childnode>
+        <childnode refid="1373" relation="include">
+        </childnode>
+      </node>
+      <node id="1368">
+        <label>vector</label>
+      </node>
+      <node id="1366">
+        <label>sstream</label>
+      </node>
+      <node id="1372">
+        <label>Utils/UserInterface/Math.h</label>
+        <childnode refid="1371" relation="include">
+        </childnode>
+        <childnode refid="1368" relation="include">
+        </childnode>
+        <childnode refid="1370" relation="include">
+        </childnode>
+      </node>
       <node id="1361">
         <label>Chips/Chip.h</label>
         <childnode refid="1362" relation="include">
         </childnode>
         <childnode refid="1364" relation="include">
+        </childnode>
+      </node>
+      <node id="1364">
+        <label>Utils/Console.h</label>
+        <childnode refid="1365" relation="include">
+        </childnode>
+        <childnode refid="1369" relation="include">
+        </childnode>
+      </node>
+      <node id="1360">
+        <label>Chips/DMux4Way.h</label>
+        <childnode refid="1361" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -222,6 +222,6 @@
 <codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="125"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/Chips/DMux4Way.cpp"/>
+    <location file="F:/HackComputer/Source/Chips/DMux4Way.cpp"/>
   </compounddef>
 </doxygen>
