@@ -87,7 +87,7 @@ GTEST_TEST(Generator, Multiply)
     EXPECT_EQ(code, 257);
 
     code = memory->get(256);
-    EXPECT_EQ(code, 56088);
+    EXPECT_EQ(code, 16000);
 }
 
 GTEST_TEST(Generator, StaticFields)
