@@ -2,25 +2,25 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="CrtUtils_8h" kind="file" language="C++">
     <compoundname>CrtUtils.h</compoundname>
-    <includedby refid="Assembler_2Main_8cpp" local="yes">F:/HackComputer/Source/Assembler/Main.cpp</includedby>
-    <includedby refid="Compiler_2Analyzer_2Main_8cpp" local="yes">F:/HackComputer/Source/Compiler/Analyzer/Main.cpp</includedby>
-    <includedby refid="Compiler_2Compiler_2Main_8cpp" local="yes">F:/HackComputer/Source/Compiler/Compiler/Main.cpp</includedby>
-    <includedby refid="Compiler_2Generator_2Main_8cpp" local="yes">F:/HackComputer/Source/Compiler/Generator/Main.cpp</includedby>
-    <includedby refid="Executable_8cpp" local="yes">F:/HackComputer/Source/Computer/Executable.cpp</includedby>
-    <includedby refid="CrtUtils_8cpp" local="yes">F:/HackComputer/Source/Utils/Win32/CrtUtils.cpp</includedby>
-    <includedby refid="VirtualMachine_2Main_8cpp" local="yes">F:/HackComputer/Source/VirtualMachine/Main.cpp</includedby>
+    <includedby refid="Assembler_2Main_8cpp" local="yes">Source/Assembler/Main.cpp</includedby>
+    <includedby refid="Compiler_2Analyzer_2Main_8cpp" local="yes">Source/Compiler/Analyzer/Main.cpp</includedby>
+    <includedby refid="Compiler_2Compiler_2Main_8cpp" local="yes">Source/Compiler/Compiler/Main.cpp</includedby>
+    <includedby refid="Compiler_2Generator_2Main_8cpp" local="yes">Source/Compiler/Generator/Main.cpp</includedby>
+    <includedby refid="Executable_8cpp" local="yes">Source/Computer/Executable.cpp</includedby>
+    <includedby refid="CrtUtils_8cpp" local="yes">Source/Utils/Win32/CrtUtils.cpp</includedby>
+    <includedby refid="VirtualMachine_2Main_8cpp" local="yes">Source/VirtualMachine/Main.cpp</includedby>
     <invincdepgraph>
       <node id="4721">
-        <label>F:/HackComputer/Source/VirtualMachine/Main.cpp</label>
+        <label>Source/VirtualMachine/Main.cpp</label>
       </node>
       <node id="4719">
-        <label>F:/HackComputer/Source/Computer/Executable.cpp</label>
+        <label>Source/Computer/Executable.cpp</label>
       </node>
       <node id="4716">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Main.cpp</label>
+        <label>Source/Compiler/Analyzer/Main.cpp</label>
       </node>
       <node id="4714">
-        <label>F:/HackComputer/Source/Utils/Win32/CrtUtils.h</label>
+        <label>Source/Utils/Win32/CrtUtils.h</label>
         <link refid="CrtUtils_8h"/>
         <childnode refid="4715" relation="include">
         </childnode>
@@ -38,16 +38,16 @@
         </childnode>
       </node>
       <node id="4717">
-        <label>F:/HackComputer/Source/Compiler/Compiler/Main.cpp</label>
+        <label>Source/Compiler/Compiler/Main.cpp</label>
       </node>
       <node id="4715">
-        <label>F:/HackComputer/Source/Assembler/Main.cpp</label>
+        <label>Source/Assembler/Main.cpp</label>
       </node>
       <node id="4718">
-        <label>F:/HackComputer/Source/Compiler/Generator/Main.cpp</label>
+        <label>Source/Compiler/Generator/Main.cpp</label>
       </node>
       <node id="4720">
-        <label>F:/HackComputer/Source/Utils/Win32/CrtUtils.cpp</label>
+        <label>Source/Utils/Win32/CrtUtils.cpp</label>
       </node>
     </invincdepgraph>
     <innernamespace refid="namespaceHack">Hack</innernamespace>
@@ -85,6 +85,6 @@
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceHack_1acedcdb10c14663034876ff1f2d01c86c" kindref="member">CrtDump</ref>();</highlight></codeline>
 <codeline lineno="28"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>MdDox</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Utils/Win32/CrtUtils.h"/>
+    <location file="Source/Utils/Win32/CrtUtils.h"/>
   </compounddef>
 </doxygen>

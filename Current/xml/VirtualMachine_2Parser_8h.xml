@@ -5,10 +5,10 @@
     <includes refid="ParserBase_8h" local="yes">Utils/ParserBase/ParserBase.h</includes>
     <includes refid="String_8h" local="yes">Utils/String.h</includes>
     <includes refid="Emitter_8h" local="yes">VirtualMachine/Emitter.h</includes>
-    <includedby refid="Compiler_2Compiler_2Main_8cpp" local="yes">F:/HackComputer/Source/Compiler/Compiler/Main.cpp</includedby>
-    <includedby refid="Executable_8cpp" local="yes">F:/HackComputer/Source/Computer/Executable.cpp</includedby>
-    <includedby refid="VirtualMachine_2Main_8cpp" local="yes">F:/HackComputer/Source/VirtualMachine/Main.cpp</includedby>
-    <includedby refid="VirtualMachine_2Parser_8cpp" local="yes">F:/HackComputer/Source/VirtualMachine/Parser.cpp</includedby>
+    <includedby refid="Compiler_2Compiler_2Main_8cpp" local="yes">Source/Compiler/Compiler/Main.cpp</includedby>
+    <includedby refid="Executable_8cpp" local="yes">Source/Computer/Executable.cpp</includedby>
+    <includedby refid="VirtualMachine_2Main_8cpp" local="yes">Source/VirtualMachine/Main.cpp</includedby>
+    <includedby refid="VirtualMachine_2Parser_8cpp" local="yes">Source/VirtualMachine/Parser.cpp</includedby>
     <incdepgraph>
       <node id="458">
         <label>Utils/ParserBase/TokenBase.h</label>
@@ -39,7 +39,7 @@
         <label>cstdint</label>
       </node>
       <node id="439">
-        <label>F:/HackComputer/Source/VirtualMachine/Parser.h</label>
+        <label>Source/VirtualMachine/Parser.h</label>
         <link refid="VirtualMachine_2Parser_8h"/>
         <childnode refid="440" relation="include">
         </childnode>
@@ -142,7 +142,7 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="461">
-        <label>F:/HackComputer/Source/VirtualMachine/Parser.h</label>
+        <label>Source/VirtualMachine/Parser.h</label>
         <link refid="VirtualMachine_2Parser_8h"/>
         <childnode refid="462" relation="include">
         </childnode>
@@ -154,16 +154,16 @@
         </childnode>
       </node>
       <node id="464">
-        <label>F:/HackComputer/Source/VirtualMachine/Main.cpp</label>
+        <label>Source/VirtualMachine/Main.cpp</label>
       </node>
       <node id="463">
-        <label>F:/HackComputer/Source/Computer/Executable.cpp</label>
+        <label>Source/Computer/Executable.cpp</label>
       </node>
       <node id="465">
-        <label>F:/HackComputer/Source/VirtualMachine/Parser.cpp</label>
+        <label>Source/VirtualMachine/Parser.cpp</label>
       </node>
       <node id="462">
-        <label>F:/HackComputer/Source/Compiler/Compiler/Main.cpp</label>
+        <label>Source/Compiler/Compiler/Main.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1VirtualMachine_1_1Parser" prot="public">Hack::VirtualMachine::Parser</innerclass>
@@ -240,6 +240,6 @@
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="66"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::VirtualMachine</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/VirtualMachine/Parser.h"/>
+    <location file="Source/VirtualMachine/Parser.h"/>
   </compounddef>
 </doxygen>

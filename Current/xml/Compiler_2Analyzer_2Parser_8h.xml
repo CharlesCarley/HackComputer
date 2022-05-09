@@ -7,15 +7,15 @@
     <includes refid="Exception_8h" local="yes">Utils/Exception.h</includes>
     <includes refid="ParserBase_8h" local="yes">Utils/ParserBase/ParserBase.h</includes>
     <includes refid="String_8h" local="yes">Utils/String.h</includes>
-    <includedby refid="Compiler_2Analyzer_2Main_8cpp" local="yes">F:/HackComputer/Source/Compiler/Analyzer/Main.cpp</includedby>
-    <includedby refid="Compiler_2Analyzer_2Parser_8cpp" local="yes">F:/HackComputer/Source/Compiler/Analyzer/Parser.cpp</includedby>
-    <includedby refid="Compiler_2Compiler_2Main_8cpp" local="yes">F:/HackComputer/Source/Compiler/Compiler/Main.cpp</includedby>
-    <includedby refid="Generator_8cpp" local="yes">F:/HackComputer/Source/Compiler/Generator/Generator.cpp</includedby>
-    <includedby refid="Compiler_2Generator_2Main_8cpp" local="yes">F:/HackComputer/Source/Compiler/Generator/Main.cpp</includedby>
-    <includedby refid="Executable_8cpp" local="yes">F:/HackComputer/Source/Computer/Executable.cpp</includedby>
+    <includedby refid="Compiler_2Analyzer_2Main_8cpp" local="yes">Source/Compiler/Analyzer/Main.cpp</includedby>
+    <includedby refid="Compiler_2Analyzer_2Parser_8cpp" local="yes">Source/Compiler/Analyzer/Parser.cpp</includedby>
+    <includedby refid="Compiler_2Compiler_2Main_8cpp" local="yes">Source/Compiler/Compiler/Main.cpp</includedby>
+    <includedby refid="Generator_8cpp" local="yes">Source/Compiler/Generator/Generator.cpp</includedby>
+    <includedby refid="Compiler_2Generator_2Main_8cpp" local="yes">Source/Compiler/Generator/Main.cpp</includedby>
+    <includedby refid="Executable_8cpp" local="yes">Source/Computer/Executable.cpp</includedby>
     <incdepgraph>
       <node id="387">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Parser.h</label>
+        <label>Source/Compiler/Analyzer/Parser.h</label>
         <link refid="Compiler_2Analyzer_2Parser_8h"/>
         <childnode refid="388" relation="include">
         </childnode>
@@ -148,7 +148,7 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="409">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Parser.h</label>
+        <label>Source/Compiler/Analyzer/Parser.h</label>
         <link refid="Compiler_2Analyzer_2Parser_8h"/>
         <childnode refid="410" relation="include">
         </childnode>
@@ -164,22 +164,22 @@
         </childnode>
       </node>
       <node id="411">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Parser.cpp</label>
+        <label>Source/Compiler/Analyzer/Parser.cpp</label>
       </node>
       <node id="413">
-        <label>F:/HackComputer/Source/Compiler/Generator/Generator.cpp</label>
+        <label>Source/Compiler/Generator/Generator.cpp</label>
       </node>
       <node id="415">
-        <label>F:/HackComputer/Source/Computer/Executable.cpp</label>
+        <label>Source/Computer/Executable.cpp</label>
       </node>
       <node id="410">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Main.cpp</label>
+        <label>Source/Compiler/Analyzer/Main.cpp</label>
       </node>
       <node id="412">
-        <label>F:/HackComputer/Source/Compiler/Compiler/Main.cpp</label>
+        <label>Source/Compiler/Compiler/Main.cpp</label>
       </node>
       <node id="414">
-        <label>F:/HackComputer/Source/Compiler/Generator/Main.cpp</label>
+        <label>Source/Compiler/Generator/Main.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1Compiler_1_1Analyzer_1_1Parser" prot="public">Hack::Compiler::Analyzer::Parser</innerclass>
@@ -339,6 +339,6 @@
 <codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="149"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler::Analyzer</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Compiler/Analyzer/Parser.h"/>
+    <location file="Source/Compiler/Analyzer/Parser.h"/>
   </compounddef>
 </doxygen>

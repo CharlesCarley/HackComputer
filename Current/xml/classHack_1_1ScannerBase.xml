@@ -5,7 +5,7 @@
     <derivedcompoundref refid="classHack_1_1Assembler_1_1Scanner" prot="public" virt="non-virtual">Hack::Assembler::Scanner</derivedcompoundref>
     <derivedcompoundref refid="classHack_1_1Compiler_1_1Analyzer_1_1Scanner" prot="public" virt="non-virtual">Hack::Compiler::Analyzer::Scanner</derivedcompoundref>
     <derivedcompoundref refid="classHack_1_1VirtualMachine_1_1Scanner" prot="public" virt="non-virtual">Hack::VirtualMachine::Scanner</derivedcompoundref>
-    <includes local="no">ScannerBase.h</includes>
+    <includes local="no">Source/Utils/ParserBase/ScannerBase.h</includes>
       <sectiondef kind="protected-attrib">
       <memberdef kind="variable" id="classHack_1_1ScannerBase_1aee2410ff35c9642a4addab5377339b99" prot="protected" static="no" mutable="no">
         <type><ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="37" column="1" bodyfile="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" bodystart="37" bodyend="-1"/>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="37" column="1" bodyfile="Source/Utils/ParserBase/ScannerBase.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHack_1_1ScannerBase_1aa2fe138fe481c6a129d048ed4d58bab8" prot="protected" static="no" mutable="no">
         <type><ref refid="namespaceHack_1a0fe26662b7931e1996129243b3461d14" kindref="member">IntTable</ref></type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="36" column="1" bodyfile="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" bodystart="36" bodyend="-1"/>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="36" column="1" bodyfile="Source/Utils/ParserBase/ScannerBase.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHack_1_1ScannerBase_1ac7ff4bb59d95de6dcd83f827794086f2" prot="protected" static="no" mutable="no">
         <type>size_t</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="38" column="1" bodyfile="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" bodystart="38" bodyend="-1"/>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="38" column="1" bodyfile="Source/Utils/ParserBase/ScannerBase.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHack_1_1ScannerBase_1a553484b098225d77804ffcfbf0382922" prot="protected" static="no" mutable="no">
         <type><ref refid="namespaceHack_1a830c8eb3c005ef2fbc470e0b141b93c5" kindref="member">IStream</ref> *</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="34" column="1" bodyfile="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" bodystart="34" bodyend="-1"/>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="34" column="1" bodyfile="Source/Utils/ParserBase/ScannerBase.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHack_1_1ScannerBase_1a414a40b1cf631e4125e828c2607ee137" prot="protected" static="no" mutable="no">
         <type><ref refid="namespaceHack_1ae83ea09a8716690d1b9e9e8b462e5960" kindref="member">StringTable</ref></type>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="35" column="1" bodyfile="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" bodystart="35" bodyend="-1"/>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="35" column="1" bodyfile="Source/Utils/ParserBase/ScannerBase.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="69" column="1"/>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="69" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1ScannerBase_1ac95ab910b82639657337e5a3f6b634ed" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>size_t</type>
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="40" column="1" bodyfile="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" bodystart="40" bodyend="43"/>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="40" column="1" bodyfile="Source/Utils/ParserBase/ScannerBase.h" bodystart="40" bodyend="43"/>
         <references refid="classHack_1_1ScannerBase_1a414a40b1cf631e4125e828c2607ee137" compoundref="ScannerBase_8h" startline="35">_stringTable</references>
         <references refid="classHack_1_1IndexCache_1a049a43563b3a4a2b23e47a4da2425c3f" compoundref="IndexCache_8h" startline="41" endline="57">Hack::IndexCache&lt; T &gt;::insert</references>
       </memberdef>
@@ -133,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="45" column="1" bodyfile="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" bodystart="45" bodyend="48"/>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="45" column="1" bodyfile="Source/Utils/ParserBase/ScannerBase.h" bodystart="45" bodyend="48"/>
         <references refid="classHack_1_1ScannerBase_1aa2fe138fe481c6a129d048ed4d58bab8" compoundref="ScannerBase_8h" startline="36">_intTable</references>
         <references refid="classHack_1_1IndexCache_1a049a43563b3a4a2b23e47a4da2425c3f" compoundref="IndexCache_8h" startline="41" endline="57">Hack::IndexCache&lt; T &gt;::insert</references>
       </memberdef>
@@ -160,7 +160,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="66" column="1"/>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="66" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1ScannerBase_1a16d67c5310c35106dd5caed204460adb" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -173,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="61" column="1" bodyfile="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.cpp" bodystart="66" bodyend="76"/>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="61" column="1" bodyfile="Source/Utils/ParserBase/ScannerBase.cpp" bodystart="66" bodyend="76"/>
         <references refid="classHack_1_1ScannerBase_1a553484b098225d77804ffcfbf0382922" compoundref="ScannerBase_8h" startline="34">_stream</references>
         <references refid="classHack_1_1ScannerBase_1ac7ff4bb59d95de6dcd83f827794086f2" compoundref="ScannerBase_8h" startline="38">_line</references>
       </memberdef>
@@ -188,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="63" column="1" bodyfile="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.cpp" bodystart="78" bodyend="-1"/>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="63" column="1" bodyfile="Source/Utils/ParserBase/ScannerBase.cpp" bodystart="78" bodyend="-1"/>
         <references refid="classHack_1_1ScannerBase_1a553484b098225d77804ffcfbf0382922" compoundref="ScannerBase_8h" startline="34">_stream</references>
         <references refid="classHack_1_1ScannerBase_1ac7ff4bb59d95de6dcd83f827794086f2" compoundref="ScannerBase_8h" startline="38">_line</references>
       </memberdef>
@@ -203,7 +203,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="59" column="1"/>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="59" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1ScannerBase_1a0aa5a628913e1c8f04db54201f97e1a7" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -231,7 +231,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="51" column="1" bodyfile="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" bodystart="51" bodyend="57"/>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="51" column="1" bodyfile="Source/Utils/ParserBase/ScannerBase.h" bodystart="51" bodyend="57"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -250,7 +250,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="72" column="1" bodyfile="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.cpp" bodystart="61" bodyend="64"/>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="72" column="1" bodyfile="Source/Utils/ParserBase/ScannerBase.cpp" bodystart="61" bodyend="64"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -265,7 +265,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="75" column="1" bodyfile="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.cpp" bodystart="28" bodyend="32"/>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="75" column="1" bodyfile="Source/Utils/ParserBase/ScannerBase.cpp" bodystart="28" bodyend="32"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1ScannerBase_1a3ed512a25958a785d2ca050c254d113e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -278,7 +278,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="77" column="1"/>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="77" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1ScannerBase_1a2412fd20aba2fc636877f3ac8db780d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -299,7 +299,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="81" column="1" bodyfile="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.cpp" bodystart="34" bodyend="39"/>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="81" column="1" bodyfile="Source/Utils/ParserBase/ScannerBase.cpp" bodystart="34" bodyend="39"/>
         <references refid="classHack_1_1ScannerBase_1a553484b098225d77804ffcfbf0382922" compoundref="ScannerBase_8h" startline="34">_stream</references>
         <references refid="classHack_1_1ScannerBase_1aee2410ff35c9642a4addab5377339b99" compoundref="ScannerBase_8h" startline="37">_file</references>
         <references refid="classHack_1_1ScannerBase_1ac7ff4bb59d95de6dcd83f827794086f2" compoundref="ScannerBase_8h" startline="38">_line</references>
@@ -319,7 +319,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="91" column="1" bodyfile="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.cpp" bodystart="56" bodyend="59"/>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="91" column="1" bodyfile="Source/Utils/ParserBase/ScannerBase.cpp" bodystart="56" bodyend="59"/>
         <references refid="classHack_1_1ScannerBase_1a414a40b1cf631e4125e828c2607ee137" compoundref="ScannerBase_8h" startline="35">_stringTable</references>
         <references refid="classHack_1_1IndexCache_1a677054e7114594776d14288e2a7fb6f4" compoundref="IndexCache_8h" startline="75" endline="78">Hack::IndexCache&lt; T &gt;::contains</references>
       </memberdef>
@@ -338,7 +338,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="87" column="1" bodyfile="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.cpp" bodystart="51" bodyend="54"/>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="87" column="1" bodyfile="Source/Utils/ParserBase/ScannerBase.cpp" bodystart="51" bodyend="54"/>
         <references refid="classHack_1_1ScannerBase_1aa2fe138fe481c6a129d048ed4d58bab8" compoundref="ScannerBase_8h" startline="36">_intTable</references>
         <references refid="classHack_1_1IndexCache_1ab01608c27db3ac4be90bf52ce1d4c0c3" compoundref="IndexCache_8h" startline="59" endline="65">Hack::IndexCache&lt; T &gt;::at</references>
       </memberdef>
@@ -353,7 +353,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="89" column="1" bodyfile="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" bodystart="94" bodyend="97"/>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="89" column="1" bodyfile="Source/Utils/ParserBase/ScannerBase.h" bodystart="94" bodyend="97"/>
         <references refid="classHack_1_1ScannerBase_1ac7ff4bb59d95de6dcd83f827794086f2" compoundref="ScannerBase_8h" startline="38">_line</references>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1ScannerBase_1ac24b88935d8f5463217aacbfa9b87e9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
@@ -374,7 +374,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="79" column="1"/>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="79" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1ScannerBase_1aa7dc42bcd86a806dffaf235aed8efeb6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
@@ -391,7 +391,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="83" column="1" bodyfile="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.cpp" bodystart="41" bodyend="44"/>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="83" column="1" bodyfile="Source/Utils/ParserBase/ScannerBase.cpp" bodystart="41" bodyend="44"/>
         <references refid="classHack_1_1ScannerBase_1a414a40b1cf631e4125e828c2607ee137" compoundref="ScannerBase_8h" startline="35">_stringTable</references>
         <references refid="classHack_1_1IndexCache_1ab01608c27db3ac4be90bf52ce1d4c0c3" compoundref="IndexCache_8h" startline="59" endline="65">Hack::IndexCache&lt; T &gt;::at</references>
       </memberdef>
@@ -414,7 +414,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="85" column="1" bodyfile="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.cpp" bodystart="46" bodyend="49"/>
+        <location file="Source/Utils/ParserBase/ScannerBase.h" line="85" column="1" bodyfile="Source/Utils/ParserBase/ScannerBase.cpp" bodystart="46" bodyend="49"/>
         <references refid="classHack_1_1ScannerBase_1a414a40b1cf631e4125e828c2607ee137" compoundref="ScannerBase_8h" startline="35">_stringTable</references>
         <references refid="classHack_1_1IndexCache_1ab01608c27db3ac4be90bf52ce1d4c0c3" compoundref="IndexCache_8h" startline="59" endline="65">Hack::IndexCache&lt; T &gt;::at</references>
       </memberdef>
@@ -485,7 +485,7 @@
         <link refid="classHack_1_1IndexCache"/>
       </node>
     </collaborationgraph>
-    <location file="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" line="32" column="1" bodyfile="F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h" bodystart="31" bodyend="92"/>
+    <location file="Source/Utils/ParserBase/ScannerBase.h" line="32" column="1" bodyfile="Source/Utils/ParserBase/ScannerBase.h" bodystart="31" bodyend="92"/>
     <listofallmembers>
       <member refid="classHack_1_1ScannerBase_1aee2410ff35c9642a4addab5377339b99" prot="protected" virt="non-virtual"><scope>Hack::ScannerBase</scope><name>_file</name></member>
       <member refid="classHack_1_1ScannerBase_1aa2fe138fe481c6a129d048ed4d58bab8" prot="protected" virt="non-virtual"><scope>Hack::ScannerBase</scope><name>_intTable</name></member>

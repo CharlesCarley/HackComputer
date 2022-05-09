@@ -3,7 +3,7 @@
   <compounddef id="NAnd_8h" kind="file" language="C++">
     <compoundname>NAnd.h</compoundname>
     <includes refid="Chip_8h" local="yes">Chips/Chip.h</includes>
-    <includedby refid="Nand_8cpp" local="yes">F:/HackComputer/Source/Chips/Nand.cpp</includedby>
+    <includedby refid="Nand_8cpp" local="yes">Source/Chips/Nand.cpp</includedby>
     <incdepgraph>
       <node id="1757">
         <label>cstdint</label>
@@ -33,7 +33,7 @@
         </childnode>
       </node>
       <node id="1746">
-        <label>F:/HackComputer/Source/Chips/NAnd.h</label>
+        <label>Source/Chips/NAnd.h</label>
         <link refid="NAnd_8h"/>
         <childnode refid="1747" relation="include">
         </childnode>
@@ -82,10 +82,10 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="1760">
-        <label>F:/HackComputer/Source/Chips/Nand.cpp</label>
+        <label>Source/Chips/Nand.cpp</label>
       </node>
       <node id="1759">
-        <label>F:/HackComputer/Source/Chips/NAnd.h</label>
+        <label>Source/Chips/NAnd.h</label>
         <link refid="NAnd_8h"/>
         <childnode refid="1760" relation="include">
         </childnode>
@@ -138,6 +138,6 @@
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="39"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Chips/NAnd.h"/>
+    <location file="Source/Chips/NAnd.h"/>
   </compounddef>
 </doxygen>

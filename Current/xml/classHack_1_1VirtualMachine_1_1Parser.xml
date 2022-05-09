@@ -3,7 +3,7 @@
   <compounddef id="classHack_1_1VirtualMachine_1_1Parser" kind="class" language="C++" prot="public" final="yes">
     <compoundname>Hack::VirtualMachine::Parser</compoundname>
     <basecompoundref refid="classHack_1_1ParserBase" prot="public" virt="non-virtual">Hack::ParserBase</basecompoundref>
-    <includes local="no">Parser.h</includes>
+    <includes local="no">Source/VirtualMachine/Parser.h</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classHack_1_1VirtualMachine_1_1Parser_1a40e6dd5914c34a4bd5346ad5ba92a9e5" prot="private" static="no" mutable="no">
         <type><ref refid="classHack_1_1VirtualMachine_1_1Emitter" kindref="compound">Emitter</ref></type>
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/VirtualMachine/Parser.h" line="35" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Parser.h" bodystart="35" bodyend="-1"/>
+        <location file="Source/VirtualMachine/Parser.h" line="35" column="1" bodyfile="Source/VirtualMachine/Parser.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHack_1_1VirtualMachine_1_1Parser_1a9cc376383e4999bb0a93edac61766007" prot="private" static="no" mutable="no">
         <type><ref refid="namespaceHack_1_1VirtualMachine_1a02186d1a9c875e3583ff775f46ad7c0a" kindref="member">StringCache</ref></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/VirtualMachine/Parser.h" line="36" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Parser.h" bodystart="36" bodyend="-1"/>
+        <location file="Source/VirtualMachine/Parser.h" line="36" column="1" bodyfile="Source/VirtualMachine/Parser.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/VirtualMachine/Parser.h" line="57" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Parser.cpp" bodystart="217" bodyend="245"/>
+        <location file="Source/VirtualMachine/Parser.h" line="57" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="217" bodyend="245"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Parser_1a3055c1a9b49a5d6c60a2e2aeab083ca0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/VirtualMachine/Parser.h" line="43" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Parser.cpp" bodystart="284" bodyend="372"/>
+        <location file="Source/VirtualMachine/Parser.h" line="43" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="284" bodyend="372"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Parser_1a155771f46199422a961012ad64c81351" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/VirtualMachine/Parser.h" line="55" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Parser.cpp" bodystart="187" bodyend="215"/>
+        <location file="Source/VirtualMachine/Parser.h" line="55" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="187" bodyend="215"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Parser_1adec2438941d6f4f953dd7ee0868d62a5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/VirtualMachine/Parser.h" line="51" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Parser.cpp" bodystart="161" bodyend="185"/>
+        <location file="Source/VirtualMachine/Parser.h" line="51" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="161" bodyend="185"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Parser_1a58f9d46d48cd83efcb2b8b2305ebc680" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/VirtualMachine/Parser.h" line="45" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Parser.cpp" bodystart="274" bodyend="282"/>
+        <location file="Source/VirtualMachine/Parser.h" line="45" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="274" bodyend="282"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Parser_1aa34e3ff9365d53d7e24f155c27a728da" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -109,7 +109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/VirtualMachine/Parser.h" line="53" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Parser.cpp" bodystart="139" bodyend="159"/>
+        <location file="Source/VirtualMachine/Parser.h" line="53" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="139" bodyend="159"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Parser_1a589fd449e99792f382a6ae6836782385" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -127,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/VirtualMachine/Parser.h" line="39" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Parser.cpp" bodystart="374" bodyend="399"/>
+        <location file="Source/VirtualMachine/Parser.h" line="39" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="374" bodyend="399"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Parser_1aba7d94d54c0c7abf94939367b760df26" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -140,7 +140,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/VirtualMachine/Parser.h" line="49" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Parser.cpp" bodystart="91" bodyend="137"/>
+        <location file="Source/VirtualMachine/Parser.h" line="49" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="91" bodyend="137"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Parser_1a71789d26d09a60a2acf04a0079aa2781" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -153,7 +153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/VirtualMachine/Parser.h" line="47" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Parser.cpp" bodystart="41" bodyend="89"/>
+        <location file="Source/VirtualMachine/Parser.h" line="47" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="41" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Parser_1ab701dd10cd0d609f6be1e706e7a76596" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -166,7 +166,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/VirtualMachine/Parser.h" line="59" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Parser.cpp" bodystart="247" bodyend="272"/>
+        <location file="Source/VirtualMachine/Parser.h" line="59" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="247" bodyend="272"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Parser_1ac42ce84084f3fd298399c330867c8697" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -189,7 +189,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/VirtualMachine/Parser.h" line="41" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Parser.cpp" bodystart="401" bodyend="405"/>
+        <location file="Source/VirtualMachine/Parser.h" line="41" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="401" bodyend="405"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -204,7 +204,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/VirtualMachine/Parser.h" line="62" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Parser.cpp" bodystart="30" bodyend="33"/>
+        <location file="Source/VirtualMachine/Parser.h" line="62" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="30" bodyend="33"/>
         <references refid="classHack_1_1ParserBase_1aec27fb418bd286a67e449bbf42ddb4e7" compoundref="ParserBase_8h" startline="40">Hack::ParserBase::_scanner</references>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1VirtualMachine_1_1Parser_1ab3752f6d45ebb84a3fcd9f46a7a35d9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -218,7 +218,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/VirtualMachine/Parser.h" line="64" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Parser.cpp" bodystart="35" bodyend="39"/>
+        <location file="Source/VirtualMachine/Parser.h" line="64" column="1" bodyfile="Source/VirtualMachine/Parser.cpp" bodystart="35" bodyend="39"/>
         <references refid="classHack_1_1ParserBase_1aec27fb418bd286a67e449bbf42ddb4e7" compoundref="ParserBase_8h" startline="40">Hack::ParserBase::_scanner</references>
       </memberdef>
       </sectiondef>
@@ -305,7 +305,7 @@
         <link refid="classHack_1_1IndexCache"/>
       </node>
     </collaborationgraph>
-    <location file="F:/HackComputer/Source/VirtualMachine/Parser.h" line="33" column="1" bodyfile="F:/HackComputer/Source/VirtualMachine/Parser.h" bodystart="32" bodyend="65"/>
+    <location file="Source/VirtualMachine/Parser.h" line="33" column="1" bodyfile="Source/VirtualMachine/Parser.h" bodystart="32" bodyend="65"/>
     <listofallmembers>
       <member refid="classHack_1_1ParserBase_1a050b6fa7aa7a8a0ad9e6dc769c5fe1ab" prot="protected" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>_cursor</name></member>
       <member refid="classHack_1_1VirtualMachine_1_1Parser_1a40e6dd5914c34a4bd5346ad5ba92a9e5" prot="private" virt="non-virtual"><scope>Hack::VirtualMachine::Parser</scope><name>_emitter</name></member>

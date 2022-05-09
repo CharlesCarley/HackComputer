@@ -5,10 +5,10 @@
     <includes local="no">cstdint</includes>
     <includes local="no">vector</includes>
     <includes refid="Utils_2UserInterface_2Common_8h" local="yes">Utils/UserInterface/Common.h</includes>
-    <includedby refid="Context_8h" local="yes">F:/HackComputer/Source/Utils/UserInterface/Context.h</includedby>
-    <includedby refid="ColorCache_8cpp" local="yes">F:/HackComputer/Source/Utils/UserInterface/ColorCache.cpp</includedby>
-    <includedby refid="Math_8cpp" local="yes">F:/HackComputer/Source/Utils/UserInterface/Math.cpp</includedby>
-    <includedby refid="Platform_8h" local="yes">F:/HackComputer/Source/Utils/UserInterface/Platform.h</includedby>
+    <includedby refid="Context_8h" local="yes">Source/Utils/UserInterface/Context.h</includedby>
+    <includedby refid="ColorCache_8cpp" local="yes">Source/Utils/UserInterface/ColorCache.cpp</includedby>
+    <includedby refid="Math_8cpp" local="yes">Source/Utils/UserInterface/Math.cpp</includedby>
+    <includedby refid="Platform_8h" local="yes">Source/Utils/UserInterface/Platform.h</includedby>
     <incdepgraph>
       <node id="4490">
         <label>cstdint</label>
@@ -22,7 +22,7 @@
         <label>vector</label>
       </node>
       <node id="4489">
-        <label>F:/HackComputer/Source/Utils/UserInterface/Math.h</label>
+        <label>Source/Utils/UserInterface/Math.h</label>
         <link refid="Math_8h"/>
         <childnode refid="4490" relation="include">
         </childnode>
@@ -34,21 +34,21 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="4576">
-        <label>F:/HackComputer/Source/Chips/Ram512.h</label>
+        <label>Source/Chips/Ram512.h</label>
         <childnode refid="4577" relation="include">
         </childnode>
       </node>
       <node id="4589">
-        <label>F:/HackComputer/Source/Chips/XOr.cpp</label>
+        <label>Source/Chips/XOr.cpp</label>
       </node>
       <node id="4554">
-        <label>F:/HackComputer/Source/Chips/Mux4Way16.cpp</label>
+        <label>Source/Chips/Mux4Way16.cpp</label>
       </node>
       <node id="4571">
-        <label>F:/HackComputer/Source/Chips/Or8Way.cpp</label>
+        <label>Source/Chips/Or8Way.cpp</label>
       </node>
       <node id="4596">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Parser.h</label>
+        <label>Source/Compiler/Analyzer/Parser.h</label>
         <childnode refid="4590" relation="include">
         </childnode>
         <childnode refid="4597" relation="include">
@@ -63,12 +63,12 @@
         </childnode>
       </node>
       <node id="4555">
-        <label>F:/HackComputer/Source/Chips/Mux4Way16.h</label>
+        <label>Source/Chips/Mux4Way16.h</label>
         <childnode refid="4554" relation="include">
         </childnode>
       </node>
       <node id="4610">
-        <label>F:/HackComputer/Source/Compiler/Generator/VmEmitter.h</label>
+        <label>Source/Compiler/Generator/VmEmitter.h</label>
         <childnode refid="4598" relation="include">
         </childnode>
         <childnode refid="4603" relation="include">
@@ -77,27 +77,27 @@
         </childnode>
       </node>
       <node id="4618">
-        <label>F:/HackComputer/Source/Assembler/Parser.cpp</label>
+        <label>Source/Assembler/Parser.cpp</label>
       </node>
       <node id="4588">
-        <label>F:/HackComputer/Source/Chips/XOr.h</label>
+        <label>Source/Chips/XOr.h</label>
         <childnode refid="4522" relation="include">
         </childnode>
         <childnode refid="4589" relation="include">
         </childnode>
       </node>
       <node id="4533">
-        <label>F:/HackComputer/Source/Chips/DMux.h</label>
+        <label>Source/Chips/DMux.h</label>
         <childnode refid="4534" relation="include">
         </childnode>
       </node>
       <node id="4525">
-        <label>F:/HackComputer/Source/Chips/Bit.h</label>
+        <label>Source/Chips/Bit.h</label>
         <childnode refid="4526" relation="include">
         </childnode>
       </node>
       <node id="4517">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger.h</label>
+        <label>Source/Computer/AssemblyDebugger.h</label>
         <childnode refid="4495" relation="include">
         </childnode>
         <childnode refid="4496" relation="include">
@@ -108,23 +108,23 @@
         </childnode>
       </node>
       <node id="4620">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Scanner.h</label>
+        <label>Source/Compiler/Analyzer/Scanner.h</label>
         <childnode refid="4597" relation="include">
         </childnode>
         <childnode refid="4601" relation="include">
         </childnode>
       </node>
       <node id="4633">
-        <label>F:/HackComputer/Source/VirtualMachine/Emitter.cpp</label>
+        <label>Source/VirtualMachine/Emitter.cpp</label>
       </node>
       <node id="4615">
-        <label>F:/HackComputer/Source/Compiler/Generator/SymbolTable.cpp</label>
+        <label>Source/Compiler/Generator/SymbolTable.cpp</label>
       </node>
       <node id="4577">
-        <label>F:/HackComputer/Source/Chips/Ram512.cpp</label>
+        <label>Source/Chips/Ram512.cpp</label>
       </node>
       <node id="4603">
-        <label>F:/HackComputer/Source/Compiler/Generator/Generator.h</label>
+        <label>Source/Compiler/Generator/Generator.h</label>
         <childnode refid="4591" relation="include">
         </childnode>
         <childnode refid="4598" relation="include">
@@ -135,13 +135,13 @@
         </childnode>
       </node>
       <node id="4567">
-        <label>F:/HackComputer/Source/Chips/Or.cpp</label>
+        <label>Source/Chips/Or.cpp</label>
       </node>
       <node id="4541">
-        <label>F:/HackComputer/Source/Chips/HalfAdder.cpp</label>
+        <label>Source/Chips/HalfAdder.cpp</label>
       </node>
       <node id="4595">
-        <label>F:/HackComputer/Source/Utils/Exception.h</label>
+        <label>Source/Utils/Exception.h</label>
         <childnode refid="4501" relation="include">
         </childnode>
         <childnode refid="4512" relation="include">
@@ -180,7 +180,7 @@
         </childnode>
       </node>
       <node id="4623">
-        <label>F:/HackComputer/Source/Assembler/Parser.h</label>
+        <label>Source/Assembler/Parser.h</label>
         <childnode refid="4501" relation="include">
         </childnode>
         <childnode refid="4618" relation="include">
@@ -197,10 +197,10 @@
         </childnode>
       </node>
       <node id="4607">
-        <label>F:/HackComputer/Source/Compiler/Common/NodeUtils.cpp</label>
+        <label>Source/Compiler/Common/NodeUtils.cpp</label>
       </node>
       <node id="4616">
-        <label>F:/HackComputer/Source/Utils/ParserBase/ScannerBase.h</label>
+        <label>Source/Utils/ParserBase/ScannerBase.h</label>
         <childnode refid="4617" relation="include">
         </childnode>
         <childnode refid="4620" relation="include">
@@ -215,23 +215,23 @@
         </childnode>
       </node>
       <node id="4587">
-        <label>F:/HackComputer/Source/Chips/SRLatch.cpp</label>
+        <label>Source/Chips/SRLatch.cpp</label>
       </node>
       <node id="4636">
-        <label>F:/HackComputer/Source/Utils/UserInterface/Math.cpp</label>
+        <label>Source/Utils/UserInterface/Math.cpp</label>
       </node>
       <node id="4560">
-        <label>F:/HackComputer/Source/Chips/NOr.h</label>
+        <label>Source/Chips/NOr.h</label>
         <childnode refid="4561" relation="include">
         </childnode>
       </node>
       <node id="4574">
-        <label>F:/HackComputer/Source/Chips/Ram4k.h</label>
+        <label>Source/Chips/Ram4k.h</label>
         <childnode refid="4575" relation="include">
         </childnode>
       </node>
       <node id="4625">
-        <label>F:/HackComputer/Source/VirtualMachine/Parser.h</label>
+        <label>Source/VirtualMachine/Parser.h</label>
         <childnode refid="4591" relation="include">
         </childnode>
         <childnode refid="4515" relation="include">
@@ -242,7 +242,7 @@
         </childnode>
       </node>
       <node id="4582">
-        <label>F:/HackComputer/Source/Chips/Register.h</label>
+        <label>Source/Chips/Register.h</label>
         <childnode refid="4509" relation="include">
         </childnode>
         <childnode refid="4510" relation="include">
@@ -251,7 +251,7 @@
         </childnode>
       </node>
       <node id="4502">
-        <label>F:/HackComputer/Source/Chips/BitUtils.h</label>
+        <label>Source/Chips/BitUtils.h</label>
         <childnode refid="4503" relation="include">
         </childnode>
         <childnode refid="4504" relation="include">
@@ -260,16 +260,16 @@
         </childnode>
       </node>
       <node id="4597">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Parser.cpp</label>
+        <label>Source/Compiler/Analyzer/Parser.cpp</label>
       </node>
       <node id="4583">
-        <label>F:/HackComputer/Source/Chips/Register.cpp</label>
+        <label>Source/Chips/Register.cpp</label>
       </node>
       <node id="4635">
-        <label>F:/HackComputer/Source/Utils/UserInterface/ColorCache.cpp</label>
+        <label>Source/Utils/UserInterface/ColorCache.cpp</label>
       </node>
       <node id="4547">
-        <label>F:/HackComputer/Source/Chips/Screen.h</label>
+        <label>Source/Chips/Screen.h</label>
         <childnode refid="4545" relation="include">
         </childnode>
         <childnode refid="4517" relation="include">
@@ -282,7 +282,7 @@
         </childnode>
       </node>
       <node id="4605">
-        <label>F:/HackComputer/Source/Compiler/Common/Node.h</label>
+        <label>Source/Compiler/Common/Node.h</label>
         <childnode refid="4597" relation="include">
         </childnode>
         <childnode refid="4600" relation="include">
@@ -305,10 +305,10 @@
         </childnode>
       </node>
       <node id="4512">
-        <label>F:/HackComputer/Source/Bindings/Bindings.cpp</label>
+        <label>Source/Bindings/Bindings.cpp</label>
       </node>
       <node id="4494">
-        <label>F:/HackComputer/Source/Utils/UserInterface/Context.h</label>
+        <label>Source/Utils/UserInterface/Context.h</label>
         <childnode refid="4495" relation="include">
         </childnode>
         <childnode refid="4496" relation="include">
@@ -325,13 +325,13 @@
         </childnode>
       </node>
       <node id="4495">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</label>
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</label>
       </node>
       <node id="4504">
-        <label>F:/HackComputer/Source/Chips/ALU.cpp</label>
+        <label>Source/Chips/ALU.cpp</label>
       </node>
       <node id="4529">
-        <label>F:/HackComputer/Source/Chips/Timer.h</label>
+        <label>Source/Chips/Timer.h</label>
         <childnode refid="4513" relation="include">
         </childnode>
         <childnode refid="4509" relation="include">
@@ -340,80 +340,80 @@
         </childnode>
       </node>
       <node id="4559">
-        <label>F:/HackComputer/Source/Chips/Nand.cpp</label>
+        <label>Source/Chips/Nand.cpp</label>
       </node>
       <node id="4523">
-        <label>F:/HackComputer/Source/Chips/And16.h</label>
+        <label>Source/Chips/And16.h</label>
         <childnode refid="4524" relation="include">
         </childnode>
       </node>
       <node id="4585">
-        <label>F:/HackComputer/Source/Chips/Rom32.cpp</label>
+        <label>Source/Chips/Rom32.cpp</label>
       </node>
       <node id="4609">
-        <label>F:/HackComputer/Source/Compiler/Common/XmlWriter.cpp</label>
+        <label>Source/Compiler/Common/XmlWriter.cpp</label>
       </node>
       <node id="4580">
-        <label>F:/HackComputer/Source/Chips/Ram8.cpp</label>
+        <label>Source/Chips/Ram8.cpp</label>
       </node>
       <node id="4630">
-        <label>F:/HackComputer/Source/VirtualMachine/Scanner.cpp</label>
+        <label>Source/VirtualMachine/Scanner.cpp</label>
       </node>
       <node id="4602">
-        <label>F:/HackComputer/Source/Compiler/Common/Node.cpp</label>
+        <label>Source/Compiler/Common/Node.cpp</label>
       </node>
       <node id="4552">
-        <label>F:/HackComputer/Source/Chips/Mux16.h</label>
+        <label>Source/Chips/Mux16.h</label>
         <childnode refid="4553" relation="include">
         </childnode>
         <childnode refid="4554" relation="include">
         </childnode>
       </node>
       <node id="4534">
-        <label>F:/HackComputer/Source/Chips/DMux.cpp</label>
+        <label>Source/Chips/DMux.cpp</label>
       </node>
       <node id="4593">
-        <label>F:/HackComputer/Source/Utils/CommandLine/Parser.cpp</label>
+        <label>Source/Utils/CommandLine/Parser.cpp</label>
       </node>
       <node id="4626">
-        <label>F:/HackComputer/Source/VirtualMachine/Main.cpp</label>
+        <label>Source/VirtualMachine/Main.cpp</label>
       </node>
       <node id="4598">
-        <label>F:/HackComputer/Source/Compiler/Generator/Generator.cpp</label>
+        <label>Source/Compiler/Generator/Generator.cpp</label>
       </node>
       <node id="4496">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</label>
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</label>
         <childnode refid="4495" relation="include">
         </childnode>
         <childnode refid="4497" relation="include">
         </childnode>
       </node>
       <node id="4566">
-        <label>F:/HackComputer/Source/Chips/Or.h</label>
+        <label>Source/Chips/Or.h</label>
         <childnode refid="4522" relation="include">
         </childnode>
         <childnode refid="4567" relation="include">
         </childnode>
       </node>
       <node id="4569">
-        <label>F:/HackComputer/Source/Chips/Or16.cpp</label>
+        <label>Source/Chips/Or16.cpp</label>
       </node>
       <node id="4524">
-        <label>F:/HackComputer/Source/Chips/And16.cpp</label>
+        <label>Source/Chips/And16.cpp</label>
       </node>
       <node id="4506">
-        <label>F:/HackComputer/Source/Chips/Add16.h</label>
+        <label>Source/Chips/Add16.h</label>
         <childnode refid="4507" relation="include">
         </childnode>
       </node>
       <node id="4515">
-        <label>F:/HackComputer/Source/Computer/Executable.cpp</label>
+        <label>Source/Computer/Executable.cpp</label>
       </node>
       <node id="4608">
-        <label>F:/HackComputer/Source/Compiler/Common/Tree.cpp</label>
+        <label>Source/Compiler/Common/Tree.cpp</label>
       </node>
       <node id="4612">
-        <label>F:/HackComputer/Source/Compiler/Generator/Symbol.h</label>
+        <label>Source/Compiler/Generator/Symbol.h</label>
         <childnode refid="4603" relation="include">
         </childnode>
         <childnode refid="4610" relation="include">
@@ -424,50 +424,50 @@
         </childnode>
       </node>
       <node id="4606">
-        <label>F:/HackComputer/Source/Compiler/Common/DotWriter.cpp</label>
+        <label>Source/Compiler/Common/DotWriter.cpp</label>
       </node>
       <node id="4575">
-        <label>F:/HackComputer/Source/Chips/Ram4K.cpp</label>
+        <label>Source/Chips/Ram4K.cpp</label>
       </node>
       <node id="4590">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Main.cpp</label>
+        <label>Source/Compiler/Analyzer/Main.cpp</label>
       </node>
       <node id="4522">
-        <label>F:/HackComputer/Source/Chips/FullAdder.cpp</label>
+        <label>Source/Chips/FullAdder.cpp</label>
       </node>
       <node id="4527">
-        <label>F:/HackComputer/Source/Chips/Clock.h</label>
+        <label>Source/Chips/Clock.h</label>
         <childnode refid="4528" relation="include">
         </childnode>
         <childnode refid="4529" relation="include">
         </childnode>
       </node>
       <node id="4521">
-        <label>F:/HackComputer/Source/Chips/And.cpp</label>
+        <label>Source/Chips/And.cpp</label>
       </node>
       <node id="4564">
-        <label>F:/HackComputer/Source/Chips/Not16.h</label>
+        <label>Source/Chips/Not16.h</label>
         <childnode refid="4565" relation="include">
         </childnode>
       </node>
       <node id="4551">
-        <label>F:/HackComputer/Source/Chips/Mux.cpp</label>
+        <label>Source/Chips/Mux.cpp</label>
       </node>
       <node id="4532">
-        <label>F:/HackComputer/Source/Chips/DFlipFlop.cpp</label>
+        <label>Source/Chips/DFlipFlop.cpp</label>
       </node>
       <node id="4558">
-        <label>F:/HackComputer/Source/Chips/NAnd.h</label>
+        <label>Source/Chips/NAnd.h</label>
         <childnode refid="4559" relation="include">
         </childnode>
       </node>
       <node id="4581">
-        <label>F:/HackComputer/Source/Chips/Ram64.h</label>
+        <label>Source/Chips/Ram64.h</label>
         <childnode refid="4579" relation="include">
         </childnode>
       </node>
       <node id="4622">
-        <label>F:/HackComputer/Source/Utils/ParserBase/ParserBase.h</label>
+        <label>Source/Utils/ParserBase/ParserBase.h</label>
         <childnode refid="4623" relation="include">
         </childnode>
         <childnode refid="4596" relation="include">
@@ -478,20 +478,20 @@
         </childnode>
       </node>
       <node id="4619">
-        <label>F:/HackComputer/Source/Assembler/Scanner.cpp</label>
+        <label>Source/Assembler/Scanner.cpp</label>
       </node>
       <node id="4629">
-        <label>F:/HackComputer/Source/VirtualMachine/Scanner.h</label>
+        <label>Source/VirtualMachine/Scanner.h</label>
         <childnode refid="4627" relation="include">
         </childnode>
         <childnode refid="4630" relation="include">
         </childnode>
       </node>
       <node id="4627">
-        <label>F:/HackComputer/Source/VirtualMachine/Parser.cpp</label>
+        <label>Source/VirtualMachine/Parser.cpp</label>
       </node>
       <node id="4604">
-        <label>F:/HackComputer/Source/Utils/IndexCache.h</label>
+        <label>Source/Utils/IndexCache.h</label>
         <childnode refid="4605" relation="include">
         </childnode>
         <childnode refid="4612" relation="include">
@@ -502,21 +502,21 @@
         </childnode>
       </node>
       <node id="4550">
-        <label>F:/HackComputer/Source/Chips/Mux.h</label>
+        <label>Source/Chips/Mux.h</label>
         <childnode refid="4551" relation="include">
         </childnode>
       </node>
       <node id="4503">
-        <label>F:/HackComputer/Source/Assembler/Instruction.cpp</label>
+        <label>Source/Assembler/Instruction.cpp</label>
       </node>
       <node id="4579">
-        <label>F:/HackComputer/Source/Chips/Ram64.cpp</label>
+        <label>Source/Chips/Ram64.cpp</label>
       </node>
       <node id="4563">
-        <label>F:/HackComputer/Source/Chips/Not.cpp</label>
+        <label>Source/Chips/Not.cpp</label>
       </node>
       <node id="4572">
-        <label>F:/HackComputer/Source/Chips/ProgramCounter.h</label>
+        <label>Source/Chips/ProgramCounter.h</label>
         <childnode refid="4509" relation="include">
         </childnode>
         <childnode refid="4510" relation="include">
@@ -525,12 +525,12 @@
         </childnode>
       </node>
       <node id="4542">
-        <label>F:/HackComputer/Source/Chips/IMemorySegment.h</label>
+        <label>Source/Chips/IMemorySegment.h</label>
         <childnode refid="4543" relation="include">
         </childnode>
       </node>
       <node id="4508">
-        <label>F:/HackComputer/Source/Chips/ALU.h</label>
+        <label>Source/Chips/ALU.h</label>
         <childnode refid="4504" relation="include">
         </childnode>
         <childnode refid="4509" relation="include">
@@ -539,131 +539,131 @@
         </childnode>
       </node>
       <node id="4538">
-        <label>F:/HackComputer/Source/Chips/DMux8Way.cpp</label>
+        <label>Source/Chips/DMux8Way.cpp</label>
       </node>
       <node id="4528">
-        <label>F:/HackComputer/Source/Chips/Clock.cpp</label>
+        <label>Source/Chips/Clock.cpp</label>
       </node>
       <node id="4514">
-        <label>F:/HackComputer/Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.h</label>
+        <label>Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.h</label>
         <childnode refid="4498" relation="include">
         </childnode>
         <childnode refid="4499" relation="include">
         </childnode>
       </node>
       <node id="4553">
-        <label>F:/HackComputer/Source/Chips/Mux16.cpp</label>
+        <label>Source/Chips/Mux16.cpp</label>
       </node>
       <node id="4637">
-        <label>F:/HackComputer/Source/Utils/UserInterface/Platform.h</label>
+        <label>Source/Utils/UserInterface/Platform.h</label>
         <childnode refid="4638" relation="include">
         </childnode>
         <childnode refid="4639" relation="include">
         </childnode>
       </node>
       <node id="4638">
-        <label>F:/HackComputer/Source/Utils/UserInterface/Platform.cpp</label>
+        <label>Source/Utils/UserInterface/Platform.cpp</label>
       </node>
       <node id="4510">
-        <label>F:/HackComputer/Source/Chips/CPU.h</label>
+        <label>Source/Chips/CPU.h</label>
         <childnode refid="4511" relation="include">
         </childnode>
         <childnode refid="4509" relation="include">
         </childnode>
       </node>
       <node id="4634">
-        <label>F:/HackComputer/Source/Utils/UserInterface/Context.cpp</label>
+        <label>Source/Utils/UserInterface/Context.cpp</label>
       </node>
       <node id="4536">
-        <label>F:/HackComputer/Source/Chips/DMux4Way.cpp</label>
+        <label>Source/Chips/DMux4Way.cpp</label>
       </node>
       <node id="4526">
-        <label>F:/HackComputer/Source/Chips/Bit.cpp</label>
+        <label>Source/Chips/Bit.cpp</label>
       </node>
       <node id="4584">
-        <label>F:/HackComputer/Source/Chips/Rom32.h</label>
+        <label>Source/Chips/Rom32.h</label>
         <childnode refid="4511" relation="include">
         </childnode>
         <childnode refid="4585" relation="include">
         </childnode>
       </node>
       <node id="4539">
-        <label>F:/HackComputer/Source/Chips/FullAdder.h</label>
+        <label>Source/Chips/FullAdder.h</label>
         <childnode refid="4522" relation="include">
         </childnode>
       </node>
       <node id="4543">
-        <label>F:/HackComputer/Source/Chips/DefaultMemorySegment.h</label>
+        <label>Source/Chips/DefaultMemorySegment.h</label>
         <childnode refid="4544" relation="include">
         </childnode>
         <childnode refid="4547" relation="include">
         </childnode>
       </node>
       <node id="4544">
-        <label>F:/HackComputer/Source/Chips/Ram16k.h</label>
+        <label>Source/Chips/Ram16k.h</label>
         <childnode refid="4545" relation="include">
         </childnode>
       </node>
       <node id="4530">
-        <label>F:/HackComputer/Source/Chips/Timer.cpp</label>
+        <label>Source/Chips/Timer.cpp</label>
       </node>
       <node id="4639">
-        <label>F:/HackComputer/Source/Utils/UserInterface/PlatformUnix.h</label>
+        <label>Source/Utils/UserInterface/PlatformUnix.h</label>
         <childnode refid="4634" relation="include">
         </childnode>
         <childnode refid="4640" relation="include">
         </childnode>
       </node>
       <node id="4624">
-        <label>F:/HackComputer/Source/Computer/Common.h</label>
+        <label>Source/Computer/Common.h</label>
         <childnode refid="4495" relation="include">
         </childnode>
         <childnode refid="4515" relation="include">
         </childnode>
       </node>
       <node id="4497">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger.cpp</label>
+        <label>Source/Computer/AssemblyDebugger.cpp</label>
       </node>
       <node id="4586">
-        <label>F:/HackComputer/Source/Chips/SRLatch.h</label>
+        <label>Source/Chips/SRLatch.h</label>
         <childnode refid="4587" relation="include">
         </childnode>
       </node>
       <node id="4548">
-        <label>F:/HackComputer/Source/Chips/Inc16.h</label>
+        <label>Source/Chips/Inc16.h</label>
         <childnode refid="4549" relation="include">
         </childnode>
       </node>
       <node id="4498">
-        <label>F:/HackComputer/Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.cpp</label>
+        <label>Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.cpp</label>
       </node>
       <node id="4621">
-        <label>F:/HackComputer/Source/Utils/ParserBase/ParserBase.cpp</label>
+        <label>Source/Utils/ParserBase/ParserBase.cpp</label>
       </node>
       <node id="4591">
-        <label>F:/HackComputer/Source/Compiler/Compiler/Main.cpp</label>
+        <label>Source/Compiler/Compiler/Main.cpp</label>
       </node>
       <node id="4520">
-        <label>F:/HackComputer/Source/Chips/And.h</label>
+        <label>Source/Chips/And.h</label>
         <childnode refid="4521" relation="include">
         </childnode>
         <childnode refid="4522" relation="include">
         </childnode>
       </node>
       <node id="4565">
-        <label>F:/HackComputer/Source/Chips/Not16.cpp</label>
+        <label>Source/Chips/Not16.cpp</label>
       </node>
       <node id="4501">
-        <label>F:/HackComputer/Source/Assembler/Main.cpp</label>
+        <label>Source/Assembler/Main.cpp</label>
       </node>
       <node id="4561">
-        <label>F:/HackComputer/Source/Chips/NOr.cpp</label>
+        <label>Source/Chips/NOr.cpp</label>
       </node>
       <node id="4611">
-        <label>F:/HackComputer/Source/Compiler/Generator/VmEmitter.cpp</label>
+        <label>Source/Compiler/Generator/VmEmitter.cpp</label>
       </node>
       <node id="4516">
-        <label>F:/HackComputer/Source/Computer/RuntimeInterface.h</label>
+        <label>Source/Computer/RuntimeInterface.h</label>
         <childnode refid="4517" relation="include">
         </childnode>
         <childnode refid="4518" relation="include">
@@ -672,46 +672,46 @@
         </childnode>
       </node>
       <node id="4562">
-        <label>F:/HackComputer/Source/Chips/Not.h</label>
+        <label>Source/Chips/Not.h</label>
         <childnode refid="4563" relation="include">
         </childnode>
       </node>
       <node id="4531">
-        <label>F:/HackComputer/Source/Chips/DFlipFlop.h</label>
+        <label>Source/Chips/DFlipFlop.h</label>
         <childnode refid="4525" relation="include">
         </childnode>
         <childnode refid="4532" relation="include">
         </childnode>
       </node>
       <node id="4546">
-        <label>F:/HackComputer/Source/Chips/Memory.cpp</label>
+        <label>Source/Chips/Memory.cpp</label>
       </node>
       <node id="4613">
-        <label>F:/HackComputer/Source/Compiler/Generator/Symbol.cpp</label>
+        <label>Source/Compiler/Generator/Symbol.cpp</label>
       </node>
       <node id="4628">
-        <label>F:/HackComputer/Source/Utils/ParserBase/ScannerBase.cpp</label>
+        <label>Source/Utils/ParserBase/ScannerBase.cpp</label>
       </node>
       <node id="4640">
-        <label>F:/HackComputer/Source/Utils/UserInterface/PlatformUnix.cpp</label>
+        <label>Source/Utils/UserInterface/PlatformUnix.cpp</label>
       </node>
       <node id="4600">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/ParseUtils.cpp</label>
+        <label>Source/Compiler/Analyzer/ParseUtils.cpp</label>
       </node>
       <node id="4601">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Scanner.cpp</label>
+        <label>Source/Compiler/Analyzer/Scanner.cpp</label>
       </node>
       <node id="4557">
-        <label>F:/HackComputer/Source/Chips/Mux8Way16.cpp</label>
+        <label>Source/Chips/Mux8Way16.cpp</label>
       </node>
       <node id="4519">
-        <label>F:/HackComputer/Source/Computer/WindowedRuntime.h</label>
+        <label>Source/Computer/WindowedRuntime.h</label>
       </node>
       <node id="4594">
-        <label>F:/HackComputer/Source/Utils/Console.cpp</label>
+        <label>Source/Utils/Console.cpp</label>
       </node>
       <node id="4493">
-        <label>F:/HackComputer/Source/Utils/UserInterface/Math.h</label>
+        <label>Source/Utils/UserInterface/Math.h</label>
         <link refid="Math_8h"/>
         <childnode refid="4494" relation="include">
         </childnode>
@@ -723,7 +723,7 @@
         </childnode>
       </node>
       <node id="4505">
-        <label>F:/HackComputer/Source/Chips/Chip.h</label>
+        <label>Source/Chips/Chip.h</label>
         <childnode refid="4506" relation="include">
         </childnode>
         <childnode refid="4504" relation="include">
@@ -800,7 +800,7 @@
         </childnode>
       </node>
       <node id="4511">
-        <label>F:/HackComputer/Source/Chips/Computer.h</label>
+        <label>Source/Chips/Computer.h</label>
         <childnode refid="4512" relation="include">
         </childnode>
         <childnode refid="4513" relation="include">
@@ -823,50 +823,50 @@
         </childnode>
       </node>
       <node id="4545">
-        <label>F:/HackComputer/Source/Chips/Memory.h</label>
+        <label>Source/Chips/Memory.h</label>
         <childnode refid="4511" relation="include">
         </childnode>
         <childnode refid="4546" relation="include">
         </childnode>
       </node>
       <node id="4592">
-        <label>F:/HackComputer/Source/Compiler/Generator/Main.cpp</label>
+        <label>Source/Compiler/Generator/Main.cpp</label>
       </node>
       <node id="4537">
-        <label>F:/HackComputer/Source/Chips/DMux8Way.h</label>
+        <label>Source/Chips/DMux8Way.h</label>
         <childnode refid="4538" relation="include">
         </childnode>
       </node>
       <node id="4513">
-        <label>F:/HackComputer/Source/Chips/Computer.cpp</label>
+        <label>Source/Chips/Computer.cpp</label>
       </node>
       <node id="4632">
-        <label>F:/HackComputer/Source/Utils/ParserBase/ParseError.cpp</label>
+        <label>Source/Utils/ParserBase/ParseError.cpp</label>
       </node>
       <node id="4617">
-        <label>F:/HackComputer/Source/Assembler/Scanner.h</label>
+        <label>Source/Assembler/Scanner.h</label>
         <childnode refid="4618" relation="include">
         </childnode>
         <childnode refid="4619" relation="include">
         </childnode>
       </node>
       <node id="4573">
-        <label>F:/HackComputer/Source/Chips/ProgramCounter.cpp</label>
+        <label>Source/Chips/ProgramCounter.cpp</label>
       </node>
       <node id="4540">
-        <label>F:/HackComputer/Source/Chips/HalfAdder.h</label>
+        <label>Source/Chips/HalfAdder.h</label>
         <childnode refid="4541" relation="include">
         </childnode>
       </node>
       <node id="4578">
-        <label>F:/HackComputer/Source/Chips/Ram8.h</label>
+        <label>Source/Chips/Ram8.h</label>
         <childnode refid="4579" relation="include">
         </childnode>
         <childnode refid="4580" relation="include">
         </childnode>
       </node>
       <node id="4500">
-        <label>F:/HackComputer/Source/Utils/Console.h</label>
+        <label>Source/Utils/Console.h</label>
         <childnode refid="4501" relation="include">
         </childnode>
         <childnode refid="4502" relation="include">
@@ -889,24 +889,24 @@
         </childnode>
       </node>
       <node id="4568">
-        <label>F:/HackComputer/Source/Chips/Or16.h</label>
+        <label>Source/Chips/Or16.h</label>
         <childnode refid="4569" relation="include">
         </childnode>
       </node>
       <node id="4509">
-        <label>F:/HackComputer/Source/Chips/CPU.cpp</label>
+        <label>Source/Chips/CPU.cpp</label>
       </node>
       <node id="4549">
-        <label>F:/HackComputer/Source/Chips/Inc16.cpp</label>
+        <label>Source/Chips/Inc16.cpp</label>
       </node>
       <node id="4507">
-        <label>F:/HackComputer/Source/Chips/Add16.cpp</label>
+        <label>Source/Chips/Add16.cpp</label>
       </node>
       <node id="4499">
-        <label>F:/HackComputer/Source/Computer/ConsoleRuntime.cpp</label>
+        <label>Source/Computer/ConsoleRuntime.cpp</label>
       </node>
       <node id="4631">
-        <label>F:/HackComputer/Source/Utils/ParserBase/ParseError.h</label>
+        <label>Source/Utils/ParserBase/ParseError.h</label>
         <childnode refid="4603" relation="include">
         </childnode>
         <childnode refid="4632" relation="include">
@@ -917,36 +917,36 @@
         </childnode>
       </node>
       <node id="4599">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/ParseUtils.h</label>
+        <label>Source/Compiler/Analyzer/ParseUtils.h</label>
         <childnode refid="4597" relation="include">
         </childnode>
         <childnode refid="4600" relation="include">
         </childnode>
       </node>
       <node id="4535">
-        <label>F:/HackComputer/Source/Chips/DMux4Way.h</label>
+        <label>Source/Chips/DMux4Way.h</label>
         <childnode refid="4536" relation="include">
         </childnode>
       </node>
       <node id="4556">
-        <label>F:/HackComputer/Source/Chips/Mux8Way16.h</label>
+        <label>Source/Chips/Mux8Way16.h</label>
         <childnode refid="4557" relation="include">
         </childnode>
       </node>
       <node id="4614">
-        <label>F:/HackComputer/Source/Compiler/Generator/SymbolTable.h</label>
+        <label>Source/Compiler/Generator/SymbolTable.h</label>
         <childnode refid="4598" relation="include">
         </childnode>
         <childnode refid="4615" relation="include">
         </childnode>
       </node>
       <node id="4570">
-        <label>F:/HackComputer/Source/Chips/Or8Way.h</label>
+        <label>Source/Chips/Or8Way.h</label>
         <childnode refid="4571" relation="include">
         </childnode>
       </node>
       <node id="4518">
-        <label>F:/HackComputer/Source/Computer/ConsoleRuntime.h</label>
+        <label>Source/Computer/ConsoleRuntime.h</label>
         <childnode refid="4499" relation="include">
         </childnode>
         <childnode refid="4515" relation="include">
@@ -1165,6 +1165,6 @@
 <codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="200"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Ui</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Utils/UserInterface/Math.h"/>
+    <location file="Source/Utils/UserInterface/Math.h"/>
   </compounddef>
 </doxygen>

@@ -5,13 +5,13 @@
     <includes local="no">unordered_map</includes>
     <includes local="no">vector</includes>
     <includes refid="ParserBase_8h" local="yes">Utils/ParserBase/ParserBase.h</includes>
-    <includedby refid="Assembler_2Main_8cpp" local="yes">F:/HackComputer/Source/Assembler/Main.cpp</includedby>
-    <includedby refid="Assembler_2Parser_8cpp" local="yes">F:/HackComputer/Source/Assembler/Parser.cpp</includedby>
-    <includedby refid="Bindings_8cpp" local="yes">F:/HackComputer/Source/Bindings/Bindings.cpp</includedby>
-    <includedby refid="Compiler_2Compiler_2Main_8cpp" local="yes">F:/HackComputer/Source/Compiler/Compiler/Main.cpp</includedby>
-    <includedby refid="Computer_2Common_8h" local="yes">F:/HackComputer/Source/Computer/Common.h</includedby>
-    <includedby refid="Executable_8cpp" local="yes">F:/HackComputer/Source/Computer/Executable.cpp</includedby>
-    <includedby refid="RuntimeInterface_8h" local="yes">F:/HackComputer/Source/Computer/RuntimeInterface.h</includedby>
+    <includedby refid="Assembler_2Main_8cpp" local="yes">Source/Assembler/Main.cpp</includedby>
+    <includedby refid="Assembler_2Parser_8cpp" local="yes">Source/Assembler/Parser.cpp</includedby>
+    <includedby refid="Bindings_8cpp" local="yes">Source/Bindings/Bindings.cpp</includedby>
+    <includedby refid="Compiler_2Compiler_2Main_8cpp" local="yes">Source/Compiler/Compiler/Main.cpp</includedby>
+    <includedby refid="Computer_2Common_8h" local="yes">Source/Computer/Common.h</includedby>
+    <includedby refid="Executable_8cpp" local="yes">Source/Computer/Executable.cpp</includedby>
+    <includedby refid="RuntimeInterface_8h" local="yes">Source/Computer/RuntimeInterface.h</includedby>
     <incdepgraph>
       <node id="371">
         <label>Utils/ParserBase/TokenBase.h</label>
@@ -32,7 +32,7 @@
         </childnode>
       </node>
       <node id="352">
-        <label>F:/HackComputer/Source/Assembler/Parser.h</label>
+        <label>Source/Assembler/Parser.h</label>
         <link refid="Assembler_2Parser_8h"/>
         <childnode refid="353" relation="include">
         </childnode>
@@ -135,10 +135,10 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="374">
-        <label>F:/HackComputer/Source/Assembler/Parser.cpp</label>
+        <label>Source/Assembler/Parser.cpp</label>
       </node>
       <node id="381">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger.h</label>
+        <label>Source/Computer/AssemblyDebugger.h</label>
         <childnode refid="378" relation="include">
         </childnode>
         <childnode refid="382" relation="include">
@@ -149,7 +149,7 @@
         </childnode>
       </node>
       <node id="372">
-        <label>F:/HackComputer/Source/Assembler/Parser.h</label>
+        <label>Source/Assembler/Parser.h</label>
         <link refid="Assembler_2Parser_8h"/>
         <childnode refid="373" relation="include">
         </childnode>
@@ -167,39 +167,39 @@
         </childnode>
       </node>
       <node id="375">
-        <label>F:/HackComputer/Source/Bindings/Bindings.cpp</label>
+        <label>Source/Bindings/Bindings.cpp</label>
       </node>
       <node id="378">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</label>
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</label>
       </node>
       <node id="382">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</label>
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</label>
         <childnode refid="378" relation="include">
         </childnode>
         <childnode refid="383" relation="include">
         </childnode>
       </node>
       <node id="379">
-        <label>F:/HackComputer/Source/Computer/Executable.cpp</label>
+        <label>Source/Computer/Executable.cpp</label>
       </node>
       <node id="377">
-        <label>F:/HackComputer/Source/Computer/Common.h</label>
+        <label>Source/Computer/Common.h</label>
         <childnode refid="378" relation="include">
         </childnode>
         <childnode refid="379" relation="include">
         </childnode>
       </node>
       <node id="383">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger.cpp</label>
+        <label>Source/Computer/AssemblyDebugger.cpp</label>
       </node>
       <node id="376">
-        <label>F:/HackComputer/Source/Compiler/Compiler/Main.cpp</label>
+        <label>Source/Compiler/Compiler/Main.cpp</label>
       </node>
       <node id="373">
-        <label>F:/HackComputer/Source/Assembler/Main.cpp</label>
+        <label>Source/Assembler/Main.cpp</label>
       </node>
       <node id="380">
-        <label>F:/HackComputer/Source/Computer/RuntimeInterface.h</label>
+        <label>Source/Computer/RuntimeInterface.h</label>
         <childnode refid="381" relation="include">
         </childnode>
         <childnode refid="384" relation="include">
@@ -208,13 +208,13 @@
         </childnode>
       </node>
       <node id="386">
-        <label>F:/HackComputer/Source/Computer/WindowedRuntime.h</label>
+        <label>Source/Computer/WindowedRuntime.h</label>
       </node>
       <node id="385">
-        <label>F:/HackComputer/Source/Computer/ConsoleRuntime.cpp</label>
+        <label>Source/Computer/ConsoleRuntime.cpp</label>
       </node>
       <node id="384">
-        <label>F:/HackComputer/Source/Computer/ConsoleRuntime.h</label>
+        <label>Source/Computer/ConsoleRuntime.h</label>
         <childnode refid="385" relation="include">
         </childnode>
         <childnode refid="379" relation="include">
@@ -313,6 +313,6 @@
 <codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="84"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Assembler</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Assembler/Parser.h"/>
+    <location file="Source/Assembler/Parser.h"/>
   </compounddef>
 </doxygen>

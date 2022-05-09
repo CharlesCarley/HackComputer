@@ -3,7 +3,7 @@
   <compounddef id="Utils_2CommandLine_2Token_8h" kind="file" language="C++">
     <compoundname>Token.h</compoundname>
     <includes refid="String_8h" local="yes">Utils/String.h</includes>
-    <includedby refid="Utils_2CommandLine_2Scanner_8h" local="yes">F:/HackComputer/Source/Utils/CommandLine/Scanner.h</includedby>
+    <includedby refid="Utils_2CommandLine_2Scanner_8h" local="yes">Source/Utils/CommandLine/Scanner.h</includedby>
     <incdepgraph>
       <node id="665">
         <label>string</label>
@@ -24,7 +24,7 @@
         <label>sstream</label>
       </node>
       <node id="662">
-        <label>F:/HackComputer/Source/Utils/CommandLine/Token.h</label>
+        <label>Source/Utils/CommandLine/Token.h</label>
         <link refid="Utils_2CommandLine_2Token_8h"/>
         <childnode refid="663" relation="include">
         </childnode>
@@ -32,29 +32,29 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="677">
-        <label>F:/HackComputer/Source/Utils/CommandLine/Scanner.cpp</label>
+        <label>Source/Utils/CommandLine/Scanner.cpp</label>
       </node>
       <node id="675">
-        <label>F:/HackComputer/Source/Utils/CommandLine/Parser.cpp</label>
+        <label>Source/Utils/CommandLine/Parser.cpp</label>
       </node>
       <node id="676">
-        <label>F:/HackComputer/Source/VirtualMachine/Main.cpp</label>
+        <label>Source/VirtualMachine/Main.cpp</label>
       </node>
       <node id="668">
-        <label>F:/HackComputer/Source/Utils/CommandLine/Scanner.h</label>
+        <label>Source/Utils/CommandLine/Scanner.h</label>
         <childnode refid="669" relation="include">
         </childnode>
         <childnode refid="677" relation="include">
         </childnode>
       </node>
       <node id="674">
-        <label>F:/HackComputer/Source/Computer/Executable.cpp</label>
+        <label>Source/Computer/Executable.cpp</label>
       </node>
       <node id="671">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Main.cpp</label>
+        <label>Source/Compiler/Analyzer/Main.cpp</label>
       </node>
       <node id="669">
-        <label>F:/HackComputer/Source/Utils/CommandLine/Parser.h</label>
+        <label>Source/Utils/CommandLine/Parser.h</label>
         <childnode refid="670" relation="include">
         </childnode>
         <childnode refid="671" relation="include">
@@ -71,19 +71,19 @@
         </childnode>
       </node>
       <node id="672">
-        <label>F:/HackComputer/Source/Compiler/Compiler/Main.cpp</label>
+        <label>Source/Compiler/Compiler/Main.cpp</label>
       </node>
       <node id="670">
-        <label>F:/HackComputer/Source/Assembler/Main.cpp</label>
+        <label>Source/Assembler/Main.cpp</label>
       </node>
       <node id="667">
-        <label>F:/HackComputer/Source/Utils/CommandLine/Token.h</label>
+        <label>Source/Utils/CommandLine/Token.h</label>
         <link refid="Utils_2CommandLine_2Token_8h"/>
         <childnode refid="668" relation="include">
         </childnode>
       </node>
       <node id="673">
-        <label>F:/HackComputer/Source/Compiler/Generator/Main.cpp</label>
+        <label>Source/Compiler/Generator/Main.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1CommandLine_1_1Token" prot="public">Hack::CommandLine::Token</innerclass>
@@ -185,6 +185,6 @@
 <codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="91"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Utils::CommandLine</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Utils/CommandLine/Token.h"/>
+    <location file="Source/Utils/CommandLine/Token.h"/>
   </compounddef>
 </doxygen>

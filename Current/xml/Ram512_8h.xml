@@ -3,10 +3,10 @@
   <compounddef id="Ram512_8h" kind="file" language="C++">
     <compoundname>Ram512.h</compoundname>
     <includes refid="Chip_8h" local="yes">Chips/Chip.h</includes>
-    <includedby refid="Ram512_8cpp" local="yes">F:/HackComputer/Source/Chips/Ram512.cpp</includedby>
+    <includedby refid="Ram512_8cpp" local="yes">Source/Chips/Ram512.cpp</includedby>
     <incdepgraph>
       <node id="2068">
-        <label>F:/HackComputer/Source/Chips/Ram512.h</label>
+        <label>Source/Chips/Ram512.h</label>
         <link refid="Ram512_8h"/>
         <childnode refid="2069" relation="include">
         </childnode>
@@ -82,13 +82,13 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2081">
-        <label>F:/HackComputer/Source/Chips/Ram512.h</label>
+        <label>Source/Chips/Ram512.h</label>
         <link refid="Ram512_8h"/>
         <childnode refid="2082" relation="include">
         </childnode>
       </node>
       <node id="2082">
-        <label>F:/HackComputer/Source/Chips/Ram512.cpp</label>
+        <label>Source/Chips/Ram512.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1Chips_1_1Ram512" prot="public">Hack::Chips::Ram512</innerclass>
@@ -164,6 +164,6 @@
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="65"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Chips/Ram512.h"/>
+    <location file="Source/Chips/Ram512.h"/>
   </compounddef>
 </doxygen>

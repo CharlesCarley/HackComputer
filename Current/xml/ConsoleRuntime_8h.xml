@@ -4,8 +4,8 @@
     <compoundname>ConsoleRuntime.h</compoundname>
     <includes refid="Screen_8h" local="yes">Chips/Screen.h</includes>
     <includes refid="RuntimeInterface_8h" local="yes">Computer/RuntimeInterface.h</includes>
-    <includedby refid="ConsoleRuntime_8cpp" local="yes">F:/HackComputer/Source/Computer/ConsoleRuntime.cpp</includedby>
-    <includedby refid="Executable_8cpp" local="yes">F:/HackComputer/Source/Computer/Executable.cpp</includedby>
+    <includedby refid="ConsoleRuntime_8cpp" local="yes">Source/Computer/ConsoleRuntime.cpp</includedby>
+    <includedby refid="Executable_8cpp" local="yes">Source/Computer/Executable.cpp</includedby>
     <incdepgraph>
       <node id="3266">
         <label>Utils/ParserBase/TokenBase.h</label>
@@ -226,7 +226,7 @@
         <label>cstring</label>
       </node>
       <node id="3238">
-        <label>F:/HackComputer/Source/Computer/ConsoleRuntime.h</label>
+        <label>Source/Computer/ConsoleRuntime.h</label>
         <link refid="ConsoleRuntime_8h"/>
         <childnode refid="3239" relation="include">
         </childnode>
@@ -236,13 +236,13 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="3277">
-        <label>F:/HackComputer/Source/Computer/Executable.cpp</label>
+        <label>Source/Computer/Executable.cpp</label>
       </node>
       <node id="3276">
-        <label>F:/HackComputer/Source/Computer/ConsoleRuntime.cpp</label>
+        <label>Source/Computer/ConsoleRuntime.cpp</label>
       </node>
       <node id="3275">
-        <label>F:/HackComputer/Source/Computer/ConsoleRuntime.h</label>
+        <label>Source/Computer/ConsoleRuntime.h</label>
         <link refid="ConsoleRuntime_8h"/>
         <childnode refid="3276" relation="include">
         </childnode>
@@ -310,6 +310,6 @@
 <codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="52"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Computer</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Computer/ConsoleRuntime.h"/>
+    <location file="Source/Computer/ConsoleRuntime.h"/>
   </compounddef>
 </doxygen>

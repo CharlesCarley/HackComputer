@@ -3,9 +3,9 @@
   <compounddef id="Timer_8h" kind="file" language="C++">
     <compoundname>Timer.h</compoundname>
     <includes refid="Clock_8h" local="yes">Chips/Clock.h</includes>
-    <includedby refid="Computer_8cpp" local="yes">F:/HackComputer/Source/Chips/Computer.cpp</includedby>
-    <includedby refid="CPU_8cpp" local="yes">F:/HackComputer/Source/Chips/CPU.cpp</includedby>
-    <includedby refid="Timer_8cpp" local="yes">F:/HackComputer/Source/Chips/Timer.cpp</includedby>
+    <includedby refid="Computer_8cpp" local="yes">Source/Chips/Computer.cpp</includedby>
+    <includedby refid="CPU_8cpp" local="yes">Source/Chips/CPU.cpp</includedby>
+    <includedby refid="Timer_8cpp" local="yes">Source/Chips/Timer.cpp</includedby>
     <incdepgraph>
       <node id="2329">
         <label>cstdint</label>
@@ -27,7 +27,7 @@
         </childnode>
       </node>
       <node id="2317">
-        <label>F:/HackComputer/Source/Chips/Timer.h</label>
+        <label>Source/Chips/Timer.h</label>
         <link refid="Timer_8h"/>
         <childnode refid="2318" relation="include">
         </childnode>
@@ -89,7 +89,7 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2331">
-        <label>F:/HackComputer/Source/Chips/Timer.h</label>
+        <label>Source/Chips/Timer.h</label>
         <link refid="Timer_8h"/>
         <childnode refid="2332" relation="include">
         </childnode>
@@ -99,13 +99,13 @@
         </childnode>
       </node>
       <node id="2334">
-        <label>F:/HackComputer/Source/Chips/Timer.cpp</label>
+        <label>Source/Chips/Timer.cpp</label>
       </node>
       <node id="2332">
-        <label>F:/HackComputer/Source/Chips/Computer.cpp</label>
+        <label>Source/Chips/Computer.cpp</label>
       </node>
       <node id="2333">
-        <label>F:/HackComputer/Source/Chips/CPU.cpp</label>
+        <label>Source/Chips/CPU.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1Chips_1_1Timer" prot="public">Hack::Chips::Timer</innerclass>
@@ -152,6 +152,6 @@
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="36"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Chips/Timer.h"/>
+    <location file="Source/Chips/Timer.h"/>
   </compounddef>
 </doxygen>

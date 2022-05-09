@@ -4,10 +4,10 @@
     <compoundname>Bit.h</compoundname>
     <includes refid="Chip_8h" local="yes">Chips/Chip.h</includes>
     <includes refid="DFlipFlop_8h" local="yes">Chips/DFlipFlop.h</includes>
-    <includedby refid="Bit_8cpp" local="yes">F:/HackComputer/Source/Chips/Bit.cpp</includedby>
+    <includedby refid="Bit_8cpp" local="yes">Source/Chips/Bit.cpp</includedby>
     <incdepgraph>
       <node id="881">
-        <label>F:/HackComputer/Source/Chips/Bit.h</label>
+        <label>Source/Chips/Bit.h</label>
         <link refid="Bit_8h"/>
         <childnode refid="882" relation="include">
         </childnode>
@@ -90,13 +90,13 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="895">
-        <label>F:/HackComputer/Source/Chips/Bit.h</label>
+        <label>Source/Chips/Bit.h</label>
         <link refid="Bit_8h"/>
         <childnode refid="896" relation="include">
         </childnode>
       </node>
       <node id="896">
-        <label>F:/HackComputer/Source/Chips/Bit.cpp</label>
+        <label>Source/Chips/Bit.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1Chips_1_1Bit" prot="public">Hack::Chips::Bit</innerclass>
@@ -154,6 +154,6 @@
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="47"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Chips/Bit.h"/>
+    <location file="Source/Chips/Bit.h"/>
   </compounddef>
 </doxygen>

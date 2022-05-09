@@ -57,7 +57,6 @@ if (BuildType STREQUAL "CPP")
 endif()
 
 add_subdirectory(Source)
-add_subdirectory(Current)
 
 if (Hack_BUILD_TEST)
     if (BuildType STREQUAL "CPP")
@@ -69,4 +68,9 @@ if (Hack_BUILD_TEST)
         endif()
         add_subdirectory(Test)
     endif()
+endif()
+
+if (Hack_BUILD_DOCS)
+    set(TargetGroup Documentation)
+    add_subdirectory(Current)
 endif()

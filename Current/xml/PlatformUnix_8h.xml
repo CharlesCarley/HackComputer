@@ -4,8 +4,8 @@
     <compoundname>PlatformUnix.h</compoundname>
     <includes local="no">termios.h</includes>
     <includes refid="Platform_8h" local="yes">Utils/UserInterface/Platform.h</includes>
-    <includedby refid="Context_8cpp" local="yes">F:/HackComputer/Source/Utils/UserInterface/Context.cpp</includedby>
-    <includedby refid="PlatformUnix_8cpp" local="yes">F:/HackComputer/Source/Utils/UserInterface/PlatformUnix.cpp</includedby>
+    <includedby refid="Context_8cpp" local="yes">Source/Utils/UserInterface/Context.cpp</includedby>
+    <includedby refid="PlatformUnix_8cpp" local="yes">Source/Utils/UserInterface/PlatformUnix.cpp</includedby>
     <incdepgraph>
       <node id="4694">
         <label>cstdint</label>
@@ -45,7 +45,7 @@
         <label>vector</label>
       </node>
       <node id="4691">
-        <label>F:/HackComputer/Source/Utils/UserInterface/PlatformUnix.h</label>
+        <label>Source/Utils/UserInterface/PlatformUnix.h</label>
         <link refid="PlatformUnix_8h"/>
         <childnode refid="4692" relation="include">
         </childnode>
@@ -77,10 +77,10 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="4704">
-        <label>F:/HackComputer/Source/Utils/UserInterface/Context.cpp</label>
+        <label>Source/Utils/UserInterface/Context.cpp</label>
       </node>
       <node id="4703">
-        <label>F:/HackComputer/Source/Utils/UserInterface/PlatformUnix.h</label>
+        <label>Source/Utils/UserInterface/PlatformUnix.h</label>
         <link refid="PlatformUnix_8h"/>
         <childnode refid="4704" relation="include">
         </childnode>
@@ -88,7 +88,7 @@
         </childnode>
       </node>
       <node id="4705">
-        <label>F:/HackComputer/Source/Utils/UserInterface/PlatformUnix.cpp</label>
+        <label>Source/Utils/UserInterface/PlatformUnix.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1Ui_1_1PlatformUnix" prot="public">Hack::Ui::PlatformUnix</innerclass>
@@ -159,6 +159,6 @@
 <codeline lineno="59"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Ui</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Utils/UserInterface/PlatformUnix.h"/>
+    <location file="Source/Utils/UserInterface/PlatformUnix.h"/>
   </compounddef>
 </doxygen>

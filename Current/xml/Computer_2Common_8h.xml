@@ -4,8 +4,8 @@
     <compoundname>Common.h</compoundname>
     <includes refid="Assembler_2Parser_8h" local="yes">Assembler/Parser.h</includes>
     <includes refid="Utils_2UserInterface_2Common_8h" local="yes">Utils/UserInterface/Common.h</includes>
-    <includedby refid="AssemblyDebuggerPrivate_8cpp" local="yes">F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</includedby>
-    <includedby refid="Executable_8cpp" local="yes">F:/HackComputer/Source/Computer/Executable.cpp</includedby>
+    <includedby refid="AssemblyDebuggerPrivate_8cpp" local="yes">Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</includedby>
+    <includedby refid="Executable_8cpp" local="yes">Source/Computer/Executable.cpp</includedby>
     <incdepgraph>
       <node id="3042">
         <label>Utils/ParserBase/TokenBase.h</label>
@@ -104,7 +104,7 @@
         <label>utility</label>
       </node>
       <node id="3022">
-        <label>F:/HackComputer/Source/Computer/Common.h</label>
+        <label>Source/Computer/Common.h</label>
         <link refid="Computer_2Common_8h"/>
         <childnode refid="3023" relation="include">
         </childnode>
@@ -136,13 +136,13 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="3044">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</label>
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</label>
       </node>
       <node id="3045">
-        <label>F:/HackComputer/Source/Computer/Executable.cpp</label>
+        <label>Source/Computer/Executable.cpp</label>
       </node>
       <node id="3043">
-        <label>F:/HackComputer/Source/Computer/Common.h</label>
+        <label>Source/Computer/Common.h</label>
         <link refid="Computer_2Common_8h"/>
         <childnode refid="3044" relation="include">
         </childnode>
@@ -245,6 +245,6 @@
 <codeline lineno="80"><highlight class="normal"></highlight></codeline>
 <codeline lineno="81"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Computer/Common.h"/>
+    <location file="Source/Computer/Common.h"/>
   </compounddef>
 </doxygen>

@@ -6,13 +6,13 @@
     <includes refid="Option_8h" local="yes">Utils/CommandLine/Option.h</includes>
     <includes refid="Utils_2CommandLine_2Scanner_8h" local="yes">Utils/CommandLine/Scanner.h</includes>
     <includes refid="FileSystem_8h" local="yes">Utils/FileSystem.h</includes>
-    <includedby refid="Assembler_2Main_8cpp" local="yes">F:/HackComputer/Source/Assembler/Main.cpp</includedby>
-    <includedby refid="Compiler_2Analyzer_2Main_8cpp" local="yes">F:/HackComputer/Source/Compiler/Analyzer/Main.cpp</includedby>
-    <includedby refid="Compiler_2Compiler_2Main_8cpp" local="yes">F:/HackComputer/Source/Compiler/Compiler/Main.cpp</includedby>
-    <includedby refid="Compiler_2Generator_2Main_8cpp" local="yes">F:/HackComputer/Source/Compiler/Generator/Main.cpp</includedby>
-    <includedby refid="Executable_8cpp" local="yes">F:/HackComputer/Source/Computer/Executable.cpp</includedby>
-    <includedby refid="Utils_2CommandLine_2Parser_8cpp" local="yes">F:/HackComputer/Source/Utils/CommandLine/Parser.cpp</includedby>
-    <includedby refid="VirtualMachine_2Main_8cpp" local="yes">F:/HackComputer/Source/VirtualMachine/Main.cpp</includedby>
+    <includedby refid="Assembler_2Main_8cpp" local="yes">Source/Assembler/Main.cpp</includedby>
+    <includedby refid="Compiler_2Analyzer_2Main_8cpp" local="yes">Source/Compiler/Analyzer/Main.cpp</includedby>
+    <includedby refid="Compiler_2Compiler_2Main_8cpp" local="yes">Source/Compiler/Compiler/Main.cpp</includedby>
+    <includedby refid="Compiler_2Generator_2Main_8cpp" local="yes">Source/Compiler/Generator/Main.cpp</includedby>
+    <includedby refid="Executable_8cpp" local="yes">Source/Computer/Executable.cpp</includedby>
+    <includedby refid="Utils_2CommandLine_2Parser_8cpp" local="yes">Source/Utils/CommandLine/Parser.cpp</includedby>
+    <includedby refid="VirtualMachine_2Main_8cpp" local="yes">Source/VirtualMachine/Main.cpp</includedby>
     <incdepgraph>
       <node id="430">
         <label>filesystem</label>
@@ -60,7 +60,7 @@
         <label>fstream</label>
       </node>
       <node id="416">
-        <label>F:/HackComputer/Source/Utils/CommandLine/Parser.h</label>
+        <label>Source/Utils/CommandLine/Parser.h</label>
         <link refid="Utils_2CommandLine_2Parser_8h"/>
         <childnode refid="417" relation="include">
         </childnode>
@@ -97,19 +97,19 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="437">
-        <label>F:/HackComputer/Source/Utils/CommandLine/Parser.cpp</label>
+        <label>Source/Utils/CommandLine/Parser.cpp</label>
       </node>
       <node id="438">
-        <label>F:/HackComputer/Source/VirtualMachine/Main.cpp</label>
+        <label>Source/VirtualMachine/Main.cpp</label>
       </node>
       <node id="436">
-        <label>F:/HackComputer/Source/Computer/Executable.cpp</label>
+        <label>Source/Computer/Executable.cpp</label>
       </node>
       <node id="433">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Main.cpp</label>
+        <label>Source/Compiler/Analyzer/Main.cpp</label>
       </node>
       <node id="431">
-        <label>F:/HackComputer/Source/Utils/CommandLine/Parser.h</label>
+        <label>Source/Utils/CommandLine/Parser.h</label>
         <link refid="Utils_2CommandLine_2Parser_8h"/>
         <childnode refid="432" relation="include">
         </childnode>
@@ -127,13 +127,13 @@
         </childnode>
       </node>
       <node id="434">
-        <label>F:/HackComputer/Source/Compiler/Compiler/Main.cpp</label>
+        <label>Source/Compiler/Compiler/Main.cpp</label>
       </node>
       <node id="432">
-        <label>F:/HackComputer/Source/Assembler/Main.cpp</label>
+        <label>Source/Assembler/Main.cpp</label>
       </node>
       <node id="435">
-        <label>F:/HackComputer/Source/Compiler/Generator/Main.cpp</label>
+        <label>Source/Compiler/Generator/Main.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1CommandLine_1_1Parser" prot="public">Hack::CommandLine::Parser</innerclass>
@@ -251,6 +251,6 @@
 <codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="144"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::CommandLine</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h"/>
+    <location file="Source/Utils/CommandLine/Parser.h"/>
   </compounddef>
 </doxygen>

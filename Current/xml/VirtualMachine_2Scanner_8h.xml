@@ -4,8 +4,8 @@
     <compoundname>Scanner.h</compoundname>
     <includes refid="ScannerBase_8h" local="yes">Utils/ParserBase/ScannerBase.h</includes>
     <includes refid="VirtualMachine_2Token_8h" local="yes">VirtualMachine/Token.h</includes>
-    <includedby refid="VirtualMachine_2Parser_8cpp" local="yes">F:/HackComputer/Source/VirtualMachine/Parser.cpp</includedby>
-    <includedby refid="VirtualMachine_2Scanner_8cpp" local="yes">F:/HackComputer/Source/VirtualMachine/Scanner.cpp</includedby>
+    <includedby refid="VirtualMachine_2Parser_8cpp" local="yes">Source/VirtualMachine/Parser.cpp</includedby>
+    <includedby refid="VirtualMachine_2Scanner_8cpp" local="yes">Source/VirtualMachine/Scanner.cpp</includedby>
     <incdepgraph>
       <node id="623">
         <label>Utils/ParserBase/TokenBase.h</label>
@@ -71,7 +71,7 @@
         </childnode>
       </node>
       <node id="605">
-        <label>F:/HackComputer/Source/VirtualMachine/Scanner.h</label>
+        <label>Source/VirtualMachine/Scanner.h</label>
         <link refid="VirtualMachine_2Scanner_8h"/>
         <childnode refid="606" relation="include">
         </childnode>
@@ -123,10 +123,10 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="627">
-        <label>F:/HackComputer/Source/VirtualMachine/Scanner.cpp</label>
+        <label>Source/VirtualMachine/Scanner.cpp</label>
       </node>
       <node id="625">
-        <label>F:/HackComputer/Source/VirtualMachine/Scanner.h</label>
+        <label>Source/VirtualMachine/Scanner.h</label>
         <link refid="VirtualMachine_2Scanner_8h"/>
         <childnode refid="626" relation="include">
         </childnode>
@@ -134,7 +134,7 @@
         </childnode>
       </node>
       <node id="626">
-        <label>F:/HackComputer/Source/VirtualMachine/Parser.cpp</label>
+        <label>Source/VirtualMachine/Parser.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1VirtualMachine_1_1Scanner" prot="public">Hack::VirtualMachine::Scanner</innerclass>
@@ -193,6 +193,6 @@
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="48"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::VirtualMachine</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/VirtualMachine/Scanner.h"/>
+    <location file="Source/VirtualMachine/Scanner.h"/>
   </compounddef>
 </doxygen>

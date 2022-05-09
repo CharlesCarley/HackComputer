@@ -3,7 +3,7 @@
   <compounddef id="Mux_8h" kind="file" language="C++">
     <compoundname>Mux.h</compoundname>
     <includes refid="Chip_8h" local="yes">Chips/Chip.h</includes>
-    <includedby refid="Mux_8cpp" local="yes">F:/HackComputer/Source/Chips/Mux.cpp</includedby>
+    <includedby refid="Mux_8cpp" local="yes">Source/Chips/Mux.cpp</includedby>
     <incdepgraph>
       <node id="1635">
         <label>cstdint</label>
@@ -42,7 +42,7 @@
         </childnode>
       </node>
       <node id="1624">
-        <label>F:/HackComputer/Source/Chips/Mux.h</label>
+        <label>Source/Chips/Mux.h</label>
         <link refid="Mux_8h"/>
         <childnode refid="1625" relation="include">
         </childnode>
@@ -82,10 +82,10 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="1638">
-        <label>F:/HackComputer/Source/Chips/Mux.cpp</label>
+        <label>Source/Chips/Mux.cpp</label>
       </node>
       <node id="1637">
-        <label>F:/HackComputer/Source/Chips/Mux.h</label>
+        <label>Source/Chips/Mux.h</label>
         <link refid="Mux_8h"/>
         <childnode refid="1638" relation="include">
         </childnode>
@@ -139,6 +139,6 @@
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="40"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Chips/Mux.h"/>
+    <location file="Source/Chips/Mux.h"/>
   </compounddef>
 </doxygen>

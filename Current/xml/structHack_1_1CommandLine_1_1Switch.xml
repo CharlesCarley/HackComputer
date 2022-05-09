@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="structHack_1_1CommandLine_1_1Switch" kind="struct" language="C++" prot="public">
     <compoundname>Hack::CommandLine::Switch</compoundname>
-    <includes local="no">Option.h</includes>
+    <includes local="no">Source/Utils/CommandLine/Option.h</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structHack_1_1CommandLine_1_1Switch_1a002425f1bb1d230c56836920850857f4" prot="public" static="no" mutable="no">
         <type>size_t</type>
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Option.h" line="54" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Option.h" bodystart="54" bodyend="-1"/>
+        <location file="Source/Utils/CommandLine/Option.h" line="54" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="54" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structHack_1_1CommandLine_1_1Switch_1ab100a397f7937d57fd07818559cc4768" prot="public" static="no" mutable="no">
         <type>const char *</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Option.h" line="48" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Option.h" bodystart="48" bodyend="-1"/>
+        <location file="Source/Utils/CommandLine/Option.h" line="48" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structHack_1_1CommandLine_1_1Switch_1ab5eba3cf599eef4751ba4d5985e821ee" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -41,7 +41,7 @@
 <para>This needs to be it&apos;s index in the context of all defined switches </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Option.h" line="37" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Option.h" bodystart="37" bodyend="-1"/>
+        <location file="Source/Utils/CommandLine/Option.h" line="37" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structHack_1_1CommandLine_1_1Switch_1a2fcdf7ee4ff6df3990cf86d1b5470a83" prot="public" static="no" mutable="no">
         <type>const char *</type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Option.h" line="45" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Option.h" bodystart="45" bodyend="-1"/>
+        <location file="Source/Utils/CommandLine/Option.h" line="45" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structHack_1_1CommandLine_1_1Switch_1a584e5301f7bab584467a66879cc18c21" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Option.h" line="51" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Option.h" bodystart="51" bodyend="-1"/>
+        <location file="Source/Utils/CommandLine/Option.h" line="51" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="51" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structHack_1_1CommandLine_1_1Switch_1ad725d98dbe8d12706bd7851f5d3d905c" prot="public" static="no" mutable="no">
         <type>char</type>
@@ -80,7 +80,7 @@
 <para>Short switch (-[a-zA-Z]+) A value of 0 means unused </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Option.h" line="41" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Option.h" bodystart="41" bodyend="-1"/>
+        <location file="Source/Utils/CommandLine/Option.h" line="41" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -119,7 +119,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="F:/HackComputer/Source/Utils/CommandLine/Option.h" line="34" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Option.h" bodystart="33" bodyend="55"/>
+    <location file="Source/Utils/CommandLine/Option.h" line="34" column="1" bodyfile="Source/Utils/CommandLine/Option.h" bodystart="33" bodyend="55"/>
     <listofallmembers>
       <member refid="structHack_1_1CommandLine_1_1Switch_1a002425f1bb1d230c56836920850857f4" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Switch</scope><name>argCount</name></member>
       <member refid="structHack_1_1CommandLine_1_1Switch_1ab100a397f7937d57fd07818559cc4768" prot="public" virt="non-virtual"><scope>Hack::CommandLine::Switch</scope><name>description</name></member>

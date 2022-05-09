@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="classHack_1_1CommandLine_1_1Parser" kind="class" language="C++" prot="public">
     <compoundname>Hack::CommandLine::Parser</compoundname>
-    <includes local="no">Parser.h</includes>
+    <includes local="no">Source/Utils/CommandLine/Parser.h</includes>
       <sectiondef kind="public-type">
       <memberdef kind="typedef" id="classHack_1_1CommandLine_1_1Parser_1a002a0dbbd4e1272345eddde68276530a" prot="public" static="no">
         <type>std::vector&lt; <ref refid="classHack_1_1CommandLine_1_1ParseOption" kindref="compound">ParseOption</ref> * &gt;</type>
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="37" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.h" bodystart="37" bodyend="-1"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="37" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classHack_1_1CommandLine_1_1Parser_1aabea897d89f924f1ff868eedbd316f70" prot="public" static="no">
         <type>std::vector&lt; <ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &gt;</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="38" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.h" bodystart="38" bodyend="-1"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="38" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classHack_1_1CommandLine_1_1Parser_1a67bf8f3ad66b044129c002d49d9b9566" prot="public" static="no">
         <type>std::unordered_map&lt; <ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref>, <ref refid="classHack_1_1CommandLine_1_1ParseOption" kindref="compound">ParseOption</ref> * &gt;</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="36" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.h" bodystart="36" bodyend="-1"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="36" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="47" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.h" bodystart="47" bodyend="-1"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="47" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHack_1_1CommandLine_1_1Parser_1afc28d359bbd2f4402f71da533cd30ea7" prot="private" static="no" mutable="no">
         <type><ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="49" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.h" bodystart="49" bodyend="-1"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="49" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHack_1_1CommandLine_1_1Parser_1ae4280801677cbbada1c4fe9f09009489" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="42" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.h" bodystart="42" bodyend="-1"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="42" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHack_1_1CommandLine_1_1Parser_1a6c506b42c0db03ee80ee3a78f2c798de" prot="private" static="no" mutable="no">
         <type><ref refid="classHack_1_1CommandLine_1_1Parser_1a002a0dbbd4e1272345eddde68276530a" kindref="member">Options</ref></type>
@@ -95,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="48" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.h" bodystart="48" bodyend="-1"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="48" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHack_1_1CommandLine_1_1Parser_1ad6c2c875b579de915a057c4d1fcae94f" prot="private" static="no" mutable="no">
         <type><ref refid="namespaceHack_1a95e191d8af73e79ac197701ac6a6c9a6" kindref="member">Path</ref></type>
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="41" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.h" bodystart="41" bodyend="-1"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="41" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHack_1_1CommandLine_1_1Parser_1a664949c3062b0e9a97cc56c2d4885089" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -121,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="43" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.h" bodystart="43" bodyend="-1"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="43" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHack_1_1CommandLine_1_1Parser_1a5927563108b37e09ee3dac6d6dfe5e10" prot="private" static="no" mutable="no">
         <type><ref refid="classHack_1_1CommandLine_1_1Scanner" kindref="compound">Scanner</ref></type>
@@ -134,7 +134,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="45" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.h" bodystart="45" bodyend="-1"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="45" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHack_1_1CommandLine_1_1Parser_1a5c67da01c7032bf931506b1fe180bc3b" prot="private" static="no" mutable="no">
         <type><ref refid="classHack_1_1CommandLine_1_1Parser_1a67bf8f3ad66b044129c002d49d9b9566" kindref="member">Switches</ref></type>
@@ -147,7 +147,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="46" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.h" bodystart="46" bodyend="-1"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="46" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHack_1_1CommandLine_1_1Parser_1a7ac5a222206a94d4bdac63103a98011e" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -160,7 +160,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="44" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.h" bodystart="44" bodyend="-1"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="44" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -179,7 +179,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="51" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.cpp" bodystart="47" bodyend="50"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="51" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="47" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1CommandLine_1_1Parser_1a58b4de6ab5c36036424c05e122b22ad6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -200,7 +200,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="53" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.cpp" bodystart="325" bodyend="366"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="53" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="325" bodyend="366"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1CommandLine_1_1Parser_1a0c1d0d13f95b4276f53e6e08a083e1b9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -221,7 +221,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="55" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.cpp" bodystart="368" bodyend="396"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="55" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="368" bodyend="396"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1CommandLine_1_1Parser_1ab440adc6e5356b7e7df51d3cbdab4f8d" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -238,7 +238,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="57" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.cpp" bodystart="398" bodyend="403"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="57" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="398" bodyend="403"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -253,7 +253,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="60" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.cpp" bodystart="34" bodyend="39"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="60" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="34" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1CommandLine_1_1Parser_1a4aef7be4832a2db2e62f2b44617eff9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -266,7 +266,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="61" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.cpp" bodystart="41" bodyend="45"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="61" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="41" bodyend="45"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1CommandLine_1_1Parser_1ac7bc3f3c9e8b89b4a39b8dd9a36b713f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classHack_1_1CommandLine_1_1Parser_1aabea897d89f924f1ff868eedbd316f70" kindref="member">StringArray</ref> &amp;</type>
@@ -279,7 +279,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="88" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.h" bodystart="88" bodyend="91"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="88" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="88" bodyend="91"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1CommandLine_1_1Parser_1afde565b48fd1ed72c1732fd9be7b6f84" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int32_t</type>
@@ -311,7 +311,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="126" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.cpp" bodystart="219" bodyend="230"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="126" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="219" bodyend="230"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1CommandLine_1_1Parser_1a4613b666cccdbdf99dec16293c4ebba6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int64_t</type>
@@ -343,7 +343,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="131" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.cpp" bodystart="232" bodyend="243"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="131" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="232" bodyend="243"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1CommandLine_1_1Parser_1adbd749e0938e2b359ee7f719864d1451" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -369,7 +369,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="120" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.cpp" bodystart="205" bodyend="210"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="120" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="205" bodyend="210"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1CommandLine_1_1Parser_1a1fd715bf284528379a1440e2d8199aae" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -382,7 +382,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="83" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.cpp" bodystart="183" bodyend="188"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="83" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="183" bodyend="188"/>
         <references refid="classHack_1_1CommandLine_1_1Scanner_1ae8cbee55ad5f4cd3dda81e0cff2a07b5" compoundref="Utils_2CommandLine_2Scanner_8h" startline="45" endline="48">Hack::CommandLine::Scanner::getValue</references>
         <references refid="classHack_1_1Console_1aa75558c74eafde74be9d33818a79a3fe" compoundref="Console_8cpp" startline="199" endline="204">Hack::Console::writeLine</references>
       </memberdef>
@@ -410,7 +410,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="124" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.cpp" bodystart="212" bodyend="217"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="124" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="212" bodyend="217"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1CommandLine_1_1Parser_1a304e3e2f4af07df0fb6c9cde37040e27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -469,7 +469,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="73" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.cpp" bodystart="52" bodyend="176"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="73" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="52" bodyend="176"/>
         <references refid="classHack_1_1CommandLine_1_1Scanner_1a1974539a58027b0ba339b019d8fcddf9" compoundref="Utils_2CommandLine_2Scanner_8cpp" startline="57" endline="60">Hack::CommandLine::Scanner::clear</references>
         <references refid="classHack_1_1CommandLine_1_1Scanner_1af65558f33766054df253ab6efb378fd9" compoundref="Utils_2CommandLine_2Scanner_8cpp" startline="62" endline="66">Hack::CommandLine::Scanner::append</references>
         <references refid="classHack_1_1CommandLine_1_1Token_1a1752c109f1e2547e133eb0e991eab9bc" compoundref="Utils_2CommandLine_2Token_8h" startline="60" endline="63">Hack::CommandLine::Token::getType</references>
@@ -500,7 +500,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="110" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.cpp" bodystart="195" bodyend="198"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="110" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="195" bodyend="198"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1CommandLine_1_1Parser_1a8024c6934e384f16819773b2e71a99af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
@@ -513,7 +513,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="104" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.cpp" bodystart="190" bodyend="193"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="104" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="190" bodyend="193"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1CommandLine_1_1Parser_1a771cadb12127507b34252295025a2612" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
@@ -526,7 +526,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="96" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.h" bodystart="96" bodyend="99"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="96" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="96" bodyend="99"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1CommandLine_1_1Parser_1aaaa3cc28de66e1e9b2f64cd1e51f2fe1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -543,7 +543,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="78" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.cpp" bodystart="178" bodyend="181"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="78" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="178" bodyend="181"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1CommandLine_1_1Parser_1a9da3aa8c56bad342c3a7c30eb98d9c17" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
@@ -570,7 +570,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="136" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.cpp" bodystart="245" bodyend="255"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="136" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="245" bodyend="255"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1CommandLine_1_1Parser_1afd63d6cb40243606fe5d6c944754eb5b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -583,7 +583,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="140" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.cpp" bodystart="257" bodyend="262"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="140" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="257" bodyend="262"/>
         <references refid="classHack_1_1Console_1aa75558c74eafde74be9d33818a79a3fe" compoundref="Console_8cpp" startline="199" endline="204">Hack::Console::writeLine</references>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1CommandLine_1_1Parser_1a238f1d7d7475b6138f572ecb314c020b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -601,7 +601,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="142" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.cpp" bodystart="264" bodyend="323"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="142" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="264" bodyend="323"/>
         <references refid="classHack_1_1CommandLine_1_1Parser_1a8024c6934e384f16819773b2e71a99af" compoundref="Utils_2CommandLine_2Parser_8cpp" startline="190" endline="193">programName</references>
         <references refid="structHack_1_1CommandLine_1_1Switch_1ad725d98dbe8d12706bd7851f5d3d905c" compoundref="Option_8h" startline="41">Hack::CommandLine::Switch::shortSwitch</references>
         <references refid="structHack_1_1CommandLine_1_1Switch_1a2fcdf7ee4ff6df3990cf86d1b5470a83" compoundref="Option_8h" startline="45">Hack::CommandLine::Switch::longSwitch</references>
@@ -623,14 +623,14 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="116" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.cpp" bodystart="200" bodyend="203"/>
+        <location file="Source/Utils/CommandLine/Parser.h" line="116" column="1" bodyfile="Source/Utils/CommandLine/Parser.cpp" bodystart="200" bodyend="203"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Simple command line parser </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="F:/HackComputer/Source/Utils/CommandLine/Parser.h" line="34" column="1" bodyfile="F:/HackComputer/Source/Utils/CommandLine/Parser.h" bodystart="33" bodyend="143"/>
+    <location file="Source/Utils/CommandLine/Parser.h" line="34" column="1" bodyfile="Source/Utils/CommandLine/Parser.h" bodystart="33" bodyend="143"/>
     <listofallmembers>
       <member refid="classHack_1_1CommandLine_1_1Parser_1ac6eac96be035465d45566eb06f69d881" prot="private" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>_argumentList</name></member>
       <member refid="classHack_1_1CommandLine_1_1Parser_1afc28d359bbd2f4402f71da533cd30ea7" prot="private" virt="non-virtual"><scope>Hack::CommandLine::Parser</scope><name>_helpText</name></member>

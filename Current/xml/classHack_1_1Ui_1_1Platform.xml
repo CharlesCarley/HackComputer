@@ -3,7 +3,7 @@
   <compounddef id="classHack_1_1Ui_1_1Platform" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>Hack::Ui::Platform</compoundname>
     <derivedcompoundref refid="classHack_1_1Ui_1_1PlatformUnix" prot="public" virt="non-virtual">Hack::Ui::PlatformUnix</derivedcompoundref>
-    <includes local="no">Platform.h</includes>
+    <includes local="no">Source/Utils/UserInterface/Platform.h</includes>
       <sectiondef kind="public-type">
       <memberdef kind="typedef" id="classHack_1_1Ui_1_1Platform_1a4e3b5013683b0e76d9cf8a7fc393739b" prot="public" static="no">
         <type>std::unordered_map&lt; <ref refid="classuint8__t" kindref="compound">uint8_t</ref>, <ref refid="classHack_1_1Ui_1_1ColorCacheItem" kindref="compound">ColorCacheItem</ref> * &gt;</type>
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/UserInterface/Platform.h" line="59" column="1" bodyfile="F:/HackComputer/Source/Utils/UserInterface/Platform.h" bodystart="59" bodyend="-1"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="59" column="1" bodyfile="Source/Utils/UserInterface/Platform.h" bodystart="59" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/UserInterface/Platform.h" line="62" column="1" bodyfile="F:/HackComputer/Source/Utils/UserInterface/Platform.h" bodystart="62" bodyend="-1"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="62" column="1" bodyfile="Source/Utils/UserInterface/Platform.h" bodystart="62" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/UserInterface/Platform.h" line="65" column="1"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="65" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Ui_1_1Platform_1a52466ae630306e7f4f87b6797bcd4539" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/UserInterface/Platform.h" line="66" column="1" bodyfile="F:/HackComputer/Source/Utils/UserInterface/Platform.cpp" bodystart="34" bodyend="40"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="66" column="1" bodyfile="Source/Utils/UserInterface/Platform.cpp" bodystart="34" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Ui_1_1Platform_1aa24be0702916597fc5143dca16e369a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/UserInterface/Platform.h" line="80" column="1" bodyfile="F:/HackComputer/Source/Utils/UserInterface/Platform.cpp" bodystart="139" bodyend="142"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="80" column="1" bodyfile="Source/Utils/UserInterface/Platform.cpp" bodystart="139" bodyend="142"/>
         <references refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" compoundref="Platform_8cpp" startline="61" endline="109">put</references>
         <references refid="namespaceHack_1_1Ui_1_1Detail_1a33853f4a5a76638722e1febde2cee328" compoundref="Platform_8h" startline="36">Hack::Ui::Detail::Clear</references>
       </memberdef>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/UserInterface/Platform.h" line="74" column="1" bodyfile="F:/HackComputer/Source/Utils/UserInterface/Platform.cpp" bodystart="42" bodyend="59"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="74" column="1" bodyfile="Source/Utils/UserInterface/Platform.cpp" bodystart="42" bodyend="59"/>
         <references refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" compoundref="Platform_8cpp" startline="61" endline="109">put</references>
         <references refid="classHack_1_1Ui_1_1ColorCacheItem_1abf01becdb6124b1d41193946579e8b04" compoundref="ColorCache_8cpp" startline="41" endline="46">Hack::Ui::ColorCacheItem::background</references>
         <references refid="classHack_1_1Ui_1_1ColorCacheItem_1a4a1c504a633ab80a0a3a70dc0731e810" compoundref="ColorCache_8cpp" startline="34" endline="39">Hack::Ui::ColorCacheItem::foreground</references>
@@ -115,7 +115,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/UserInterface/Platform.h" line="90" column="1" bodyfile="F:/HackComputer/Source/Utils/UserInterface/Platform.cpp" bodystart="164" bodyend="168"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="90" column="1" bodyfile="Source/Utils/UserInterface/Platform.cpp" bodystart="164" bodyend="168"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Ui_1_1Platform_1a812312c281345be05294a3d99b909732" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -133,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/UserInterface/Platform.h" line="68" column="1"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="68" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Ui_1_1Platform_1a0b6f15d06279d86dc25a72cb4d49dbe9" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -151,7 +151,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/UserInterface/Platform.h" line="70" column="1"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="70" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -168,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/UserInterface/Platform.h" line="72" column="1" bodyfile="F:/HackComputer/Source/Utils/UserInterface/Platform.cpp" bodystart="61" bodyend="109"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="72" column="1" bodyfile="Source/Utils/UserInterface/Platform.cpp" bodystart="61" bodyend="109"/>
         <references refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0ae51b178c3675d1c5b33fd92346227bc4" compoundref="Utils_2UserInterface_2Common_8h" startline="55">Hack::Ui::CS_START</references>
         <references refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0a41af7adc01eb6945b60a1bfd8fef6c41" compoundref="Utils_2UserInterface_2Common_8h" startline="56">Hack::Ui::CS_END</references>
         <references refid="namespaceHack_1_1Ui_1a1d16939595474e3adb96cc6d05ed7aa0ad03378ac2b6b4c1118d5cdda7e793da9" compoundref="Utils_2UserInterface_2Common_8h" startline="39">Hack::Ui::CS_SEQ_START</references>
@@ -210,7 +210,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/UserInterface/Platform.h" line="76" column="1" bodyfile="F:/HackComputer/Source/Utils/UserInterface/Platform.cpp" bodystart="111" bodyend="114"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="76" column="1" bodyfile="Source/Utils/UserInterface/Platform.cpp" bodystart="111" bodyend="114"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Ui_1_1Platform_1a3c654cae3feb0c3134a4164e72666144" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -223,7 +223,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/UserInterface/Platform.h" line="84" column="1" bodyfile="F:/HackComputer/Source/Utils/UserInterface/Platform.cpp" bodystart="134" bodyend="137"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="84" column="1" bodyfile="Source/Utils/UserInterface/Platform.cpp" bodystart="134" bodyend="137"/>
         <references refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" compoundref="Platform_8cpp" startline="61" endline="109">put</references>
         <references refid="namespaceHack_1_1Ui_1_1Detail_1aad13e43e04b9b3f5dd1366514a7926ce" compoundref="Platform_8h" startline="38">Hack::Ui::Detail::ResetColor</references>
       </memberdef>
@@ -238,7 +238,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/UserInterface/Platform.h" line="82" column="1" bodyfile="F:/HackComputer/Source/Utils/UserInterface/Platform.cpp" bodystart="129" bodyend="132"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="82" column="1" bodyfile="Source/Utils/UserInterface/Platform.cpp" bodystart="129" bodyend="132"/>
         <references refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" compoundref="Platform_8cpp" startline="61" endline="109">put</references>
         <references refid="namespaceHack_1_1Ui_1_1Detail_1a127458bf42d95ddbb1004704935d8bcc" compoundref="Platform_8h" startline="37">Hack::Ui::Detail::ZeroCursor</references>
       </memberdef>
@@ -261,7 +261,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/UserInterface/Platform.h" line="78" column="1" bodyfile="F:/HackComputer/Source/Utils/UserInterface/Platform.cpp" bodystart="116" bodyend="119"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="78" column="1" bodyfile="Source/Utils/UserInterface/Platform.cpp" bodystart="116" bodyend="119"/>
         <references refid="namespaceHack_1_1Ui_1_1Detail_1a3576cc7ce9181a354daff9ded81c1b45" compoundref="Platform_8h" startline="39">Hack::Ui::Detail::SetCursor</references>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Ui_1_1Platform_1a8248f8b05e4e341bc274d8a87f198590" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
@@ -279,7 +279,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/UserInterface/Platform.h" line="86" column="1" bodyfile="F:/HackComputer/Source/Utils/UserInterface/Platform.cpp" bodystart="121" bodyend="127"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="86" column="1" bodyfile="Source/Utils/UserInterface/Platform.cpp" bodystart="121" bodyend="127"/>
         <references refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" compoundref="Platform_8cpp" startline="61" endline="109">put</references>
         <references refid="namespaceHack_1_1Ui_1_1Detail_1a8bcc07654099d413e79fdbd087c37151" compoundref="Platform_8h" startline="32">Hack::Ui::Detail::ShowCursor</references>
         <references refid="namespaceHack_1_1Ui_1_1Detail_1afe86bd2942c9eef87a316c286d47f510" compoundref="Platform_8h" startline="33">Hack::Ui::Detail::HideCursor</references>
@@ -299,7 +299,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/UserInterface/Platform.h" line="88" column="1" bodyfile="F:/HackComputer/Source/Utils/UserInterface/Platform.cpp" bodystart="144" bodyend="162"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="88" column="1" bodyfile="Source/Utils/UserInterface/Platform.cpp" bodystart="144" bodyend="162"/>
         <references refid="classHack_1_1Ui_1_1Platform_1a56a8aba33c5882abf0afc3a299353365" compoundref="Platform_8cpp" startline="61" endline="109">put</references>
         <references refid="namespaceHack_1_1Ui_1_1Detail_1a33853f4a5a76638722e1febde2cee328" compoundref="Platform_8h" startline="36">Hack::Ui::Detail::Clear</references>
         <references refid="namespaceHack_1_1Ui_1_1Detail_1afe86bd2942c9eef87a316c286d47f510" compoundref="Platform_8h" startline="33">Hack::Ui::Detail::HideCursor</references>
@@ -326,7 +326,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Utils/UserInterface/Platform.h" line="92" column="1" bodyfile="F:/HackComputer/Source/Utils/UserInterface/Platform.cpp" bodystart="170" bodyend="177"/>
+        <location file="Source/Utils/UserInterface/Platform.h" line="92" column="1" bodyfile="Source/Utils/UserInterface/Platform.cpp" bodystart="170" bodyend="177"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -345,7 +345,7 @@
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="F:/HackComputer/Source/Utils/UserInterface/Platform.h" line="57" column="1" bodyfile="F:/HackComputer/Source/Utils/UserInterface/Platform.h" bodystart="56" bodyend="93"/>
+    <location file="Source/Utils/UserInterface/Platform.h" line="57" column="1" bodyfile="Source/Utils/UserInterface/Platform.h" bodystart="56" bodyend="93"/>
     <listofallmembers>
       <member refid="classHack_1_1Ui_1_1Platform_1a71730201ef0299d9c054b3f0f5be2bef" prot="private" virt="non-virtual"><scope>Hack::Ui::Platform</scope><name>_cache</name></member>
       <member refid="classHack_1_1Ui_1_1Platform_1aa24be0702916597fc5143dca16e369a6" prot="public" virt="virtual"><scope>Hack::Ui::Platform</scope><name>clear</name></member>

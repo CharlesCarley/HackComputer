@@ -3,8 +3,8 @@
   <compounddef id="ConsoleRuntimePrivate_8h" kind="file" language="C++">
     <compoundname>ConsoleRuntimePrivate.h</compoundname>
     <includes refid="Computer_8h" local="yes">Chips/Computer.h</includes>
-    <includedby refid="ConsoleRuntimePrivate_8cpp" local="yes">F:/HackComputer/Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.cpp</includedby>
-    <includedby refid="ConsoleRuntime_8cpp" local="yes">F:/HackComputer/Source/Computer/ConsoleRuntime.cpp</includedby>
+    <includedby refid="ConsoleRuntimePrivate_8cpp" local="yes">Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.cpp</includedby>
+    <includedby refid="ConsoleRuntime_8cpp" local="yes">Source/Computer/ConsoleRuntime.cpp</includedby>
     <incdepgraph>
       <node id="3319">
         <label>cstdint</label>
@@ -70,7 +70,7 @@
         </childnode>
       </node>
       <node id="3305">
-        <label>F:/HackComputer/Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.h</label>
+        <label>Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.h</label>
         <link refid="ConsoleRuntimePrivate_8h"/>
         <childnode refid="3306" relation="include">
         </childnode>
@@ -157,7 +157,7 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="3330">
-        <label>F:/HackComputer/Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.h</label>
+        <label>Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.h</label>
         <link refid="ConsoleRuntimePrivate_8h"/>
         <childnode refid="3331" relation="include">
         </childnode>
@@ -165,10 +165,10 @@
         </childnode>
       </node>
       <node id="3331">
-        <label>F:/HackComputer/Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.cpp</label>
+        <label>Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.cpp</label>
       </node>
       <node id="3332">
-        <label>F:/HackComputer/Source/Computer/ConsoleRuntime.cpp</label>
+        <label>Source/Computer/ConsoleRuntime.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1Computer_1_1ConsoleRuntimePrivate" prot="public">Hack::Computer::ConsoleRuntimePrivate</innerclass>
@@ -227,6 +227,6 @@
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
 <codeline lineno="48"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Computer</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.h"/>
+    <location file="Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.h"/>
   </compounddef>
 </doxygen>

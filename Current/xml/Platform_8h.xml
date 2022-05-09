@@ -6,8 +6,8 @@
     <includes local="no">unordered_map</includes>
     <includes refid="ColorCache_8h" local="yes">Utils/UserInterface/ColorCache.h</includes>
     <includes refid="Math_8h" local="yes">Utils/UserInterface/Math.h</includes>
-    <includedby refid="Platform_8cpp" local="yes">F:/HackComputer/Source/Utils/UserInterface/Platform.cpp</includedby>
-    <includedby refid="PlatformUnix_8h" local="yes">F:/HackComputer/Source/Utils/UserInterface/PlatformUnix.h</includedby>
+    <includedby refid="Platform_8cpp" local="yes">Source/Utils/UserInterface/Platform.cpp</includedby>
+    <includedby refid="PlatformUnix_8h" local="yes">Source/Utils/UserInterface/PlatformUnix.h</includedby>
     <incdepgraph>
       <node id="4656">
         <label>cstdint</label>
@@ -30,7 +30,7 @@
         </childnode>
       </node>
       <node id="4655">
-        <label>F:/HackComputer/Source/Utils/UserInterface/Platform.h</label>
+        <label>Source/Utils/UserInterface/Platform.h</label>
         <link refid="Platform_8h"/>
         <childnode refid="4656" relation="include">
         </childnode>
@@ -69,7 +69,7 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="4665">
-        <label>F:/HackComputer/Source/Utils/UserInterface/Platform.h</label>
+        <label>Source/Utils/UserInterface/Platform.h</label>
         <link refid="Platform_8h"/>
         <childnode refid="4666" relation="include">
         </childnode>
@@ -77,20 +77,20 @@
         </childnode>
       </node>
       <node id="4666">
-        <label>F:/HackComputer/Source/Utils/UserInterface/Platform.cpp</label>
+        <label>Source/Utils/UserInterface/Platform.cpp</label>
       </node>
       <node id="4668">
-        <label>F:/HackComputer/Source/Utils/UserInterface/Context.cpp</label>
+        <label>Source/Utils/UserInterface/Context.cpp</label>
       </node>
       <node id="4667">
-        <label>F:/HackComputer/Source/Utils/UserInterface/PlatformUnix.h</label>
+        <label>Source/Utils/UserInterface/PlatformUnix.h</label>
         <childnode refid="4668" relation="include">
         </childnode>
         <childnode refid="4669" relation="include">
         </childnode>
       </node>
       <node id="4669">
-        <label>F:/HackComputer/Source/Utils/UserInterface/PlatformUnix.cpp</label>
+        <label>Source/Utils/UserInterface/PlatformUnix.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1Ui_1_1Platform" prot="public">Hack::Ui::Platform</innerclass>
@@ -196,6 +196,6 @@
 <codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="94"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Ui</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Utils/UserInterface/Platform.h"/>
+    <location file="Source/Utils/UserInterface/Platform.h"/>
   </compounddef>
 </doxygen>

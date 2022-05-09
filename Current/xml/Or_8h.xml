@@ -3,8 +3,8 @@
   <compounddef id="Or_8h" kind="file" language="C++">
     <compoundname>Or.h</compoundname>
     <includes refid="Chip_8h" local="yes">Chips/Chip.h</includes>
-    <includedby refid="FullAdder_8cpp" local="yes">F:/HackComputer/Source/Chips/FullAdder.cpp</includedby>
-    <includedby refid="Or_8cpp" local="yes">F:/HackComputer/Source/Chips/Or.cpp</includedby>
+    <includedby refid="FullAdder_8cpp" local="yes">Source/Chips/FullAdder.cpp</includedby>
+    <includedby refid="Or_8cpp" local="yes">Source/Chips/Or.cpp</includedby>
     <incdepgraph>
       <node id="1877">
         <label>cstdint</label>
@@ -29,7 +29,7 @@
         <label>string</label>
       </node>
       <node id="1866">
-        <label>F:/HackComputer/Source/Chips/Or.h</label>
+        <label>Source/Chips/Or.h</label>
         <link refid="Or_8h"/>
         <childnode refid="1867" relation="include">
         </childnode>
@@ -83,10 +83,10 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="1881">
-        <label>F:/HackComputer/Source/Chips/Or.cpp</label>
+        <label>Source/Chips/Or.cpp</label>
       </node>
       <node id="1879">
-        <label>F:/HackComputer/Source/Chips/Or.h</label>
+        <label>Source/Chips/Or.h</label>
         <link refid="Or_8h"/>
         <childnode refid="1880" relation="include">
         </childnode>
@@ -94,7 +94,7 @@
         </childnode>
       </node>
       <node id="1880">
-        <label>F:/HackComputer/Source/Chips/FullAdder.cpp</label>
+        <label>Source/Chips/FullAdder.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1Chips_1_1Or" prot="public">Hack::Chips::Or</innerclass>
@@ -144,6 +144,6 @@
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="39"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Chips/Or.h"/>
+    <location file="Source/Chips/Or.h"/>
   </compounddef>
 </doxygen>

@@ -6,8 +6,8 @@
     <includes refid="AssemblyDebugger_8h" local="yes">Computer/AssemblyDebugger.h</includes>
     <includes refid="Char_8h" local="yes">Utils/Char.h</includes>
     <includes refid="Context_8h" local="yes">Utils/UserInterface/Context.h</includes>
-    <includedby refid="AssemblyDebuggerPrivate_8cpp" local="yes">F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</includedby>
-    <includedby refid="AssemblyDebugger_8cpp" local="yes">F:/HackComputer/Source/Computer/AssemblyDebugger.cpp</includedby>
+    <includedby refid="AssemblyDebuggerPrivate_8cpp" local="yes">Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</includedby>
+    <includedby refid="AssemblyDebugger_8cpp" local="yes">Source/Computer/AssemblyDebugger.cpp</includedby>
     <incdepgraph>
       <node id="3005">
         <label>Computer/AssemblyDebugger.h</label>
@@ -93,7 +93,7 @@
         <label>string</label>
       </node>
       <node id="2980">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</label>
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</label>
         <link refid="AssemblyDebuggerPrivate_8h"/>
         <childnode refid="2981" relation="include">
         </childnode>
@@ -256,10 +256,10 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="3020">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</label>
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</label>
       </node>
       <node id="3019">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</label>
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</label>
         <link refid="AssemblyDebuggerPrivate_8h"/>
         <childnode refid="3020" relation="include">
         </childnode>
@@ -267,7 +267,7 @@
         </childnode>
       </node>
       <node id="3021">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger.cpp</label>
+        <label>Source/Computer/AssemblyDebugger.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1Computer_1_1AssemblyDebuggerPrivate" prot="public">Hack::Computer::AssemblyDebuggerPrivate</innerclass>
@@ -351,6 +351,6 @@
 <codeline lineno="72"><highlight class="normal"></highlight></codeline>
 <codeline lineno="73"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Computer</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h"/>
+    <location file="Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h"/>
   </compounddef>
 </doxygen>

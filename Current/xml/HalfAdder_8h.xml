@@ -3,7 +3,7 @@
   <compounddef id="HalfAdder_8h" kind="file" language="C++">
     <compoundname>HalfAdder.h</compoundname>
     <includes refid="Chip_8h" local="yes">Chips/Chip.h</includes>
-    <includedby refid="HalfAdder_8cpp" local="yes">F:/HackComputer/Source/Chips/HalfAdder.cpp</includedby>
+    <includedby refid="HalfAdder_8cpp" local="yes">Source/Chips/HalfAdder.cpp</includedby>
     <incdepgraph>
       <node id="1479">
         <label>cstdint</label>
@@ -67,7 +67,7 @@
         </childnode>
       </node>
       <node id="1468">
-        <label>F:/HackComputer/Source/Chips/HalfAdder.h</label>
+        <label>Source/Chips/HalfAdder.h</label>
         <link refid="HalfAdder_8h"/>
         <childnode refid="1469" relation="include">
         </childnode>
@@ -82,10 +82,10 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="1482">
-        <label>F:/HackComputer/Source/Chips/HalfAdder.cpp</label>
+        <label>Source/Chips/HalfAdder.cpp</label>
       </node>
       <node id="1481">
-        <label>F:/HackComputer/Source/Chips/HalfAdder.h</label>
+        <label>Source/Chips/HalfAdder.h</label>
         <link refid="HalfAdder_8h"/>
         <childnode refid="1482" relation="include">
         </childnode>
@@ -142,6 +142,6 @@
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="43"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Chips/HalfAdder.h"/>
+    <location file="Source/Chips/HalfAdder.h"/>
   </compounddef>
 </doxygen>

@@ -3,10 +3,10 @@
   <compounddef id="ParseError_8h" kind="file" language="C++">
     <compoundname>ParseError.h</compoundname>
     <includes refid="Exception_8h" local="yes">Utils/Exception.h</includes>
-    <includedby refid="Generator_8h" local="yes">F:/HackComputer/Source/Compiler/Generator/Generator.h</includedby>
-    <includedby refid="ParseError_8cpp" local="yes">F:/HackComputer/Source/Utils/ParserBase/ParseError.cpp</includedby>
-    <includedby refid="ParserBase_8cpp" local="yes">F:/HackComputer/Source/Utils/ParserBase/ParserBase.cpp</includedby>
-    <includedby refid="ScannerBase_8cpp" local="yes">F:/HackComputer/Source/Utils/ParserBase/ScannerBase.cpp</includedby>
+    <includedby refid="Generator_8h" local="yes">Source/Compiler/Generator/Generator.h</includedby>
+    <includedby refid="ParseError_8cpp" local="yes">Source/Utils/ParserBase/ParseError.cpp</includedby>
+    <includedby refid="ParserBase_8cpp" local="yes">Source/Utils/ParserBase/ParserBase.cpp</includedby>
+    <includedby refid="ScannerBase_8cpp" local="yes">Source/Utils/ParserBase/ScannerBase.cpp</includedby>
     <incdepgraph>
       <node id="3894">
         <label>Utils/Exception.h</label>
@@ -82,7 +82,7 @@
         </childnode>
       </node>
       <node id="3893">
-        <label>F:/HackComputer/Source/Utils/ParserBase/ParseError.h</label>
+        <label>Source/Utils/ParserBase/ParseError.h</label>
         <link refid="ParseError_8h"/>
         <childnode refid="3894" relation="include">
         </childnode>
@@ -90,7 +90,7 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="3908">
-        <label>F:/HackComputer/Source/Compiler/Generator/Generator.h</label>
+        <label>Source/Compiler/Generator/Generator.h</label>
         <childnode refid="3909" relation="include">
         </childnode>
         <childnode refid="3910" relation="include">
@@ -101,28 +101,28 @@
         </childnode>
       </node>
       <node id="3910">
-        <label>F:/HackComputer/Source/Compiler/Generator/Generator.cpp</label>
+        <label>Source/Compiler/Generator/Generator.cpp</label>
       </node>
       <node id="3912">
-        <label>F:/HackComputer/Source/Computer/Executable.cpp</label>
+        <label>Source/Computer/Executable.cpp</label>
       </node>
       <node id="3914">
-        <label>F:/HackComputer/Source/Utils/ParserBase/ParserBase.cpp</label>
+        <label>Source/Utils/ParserBase/ParserBase.cpp</label>
       </node>
       <node id="3909">
-        <label>F:/HackComputer/Source/Compiler/Compiler/Main.cpp</label>
+        <label>Source/Compiler/Compiler/Main.cpp</label>
       </node>
       <node id="3915">
-        <label>F:/HackComputer/Source/Utils/ParserBase/ScannerBase.cpp</label>
+        <label>Source/Utils/ParserBase/ScannerBase.cpp</label>
       </node>
       <node id="3911">
-        <label>F:/HackComputer/Source/Compiler/Generator/Main.cpp</label>
+        <label>Source/Compiler/Generator/Main.cpp</label>
       </node>
       <node id="3913">
-        <label>F:/HackComputer/Source/Utils/ParserBase/ParseError.cpp</label>
+        <label>Source/Utils/ParserBase/ParseError.cpp</label>
       </node>
       <node id="3907">
-        <label>F:/HackComputer/Source/Utils/ParserBase/ParseError.h</label>
+        <label>Source/Utils/ParserBase/ParseError.h</label>
         <link refid="ParseError_8h"/>
         <childnode refid="3908" relation="include">
         </childnode>
@@ -196,6 +196,6 @@
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="54"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Utils/ParserBase/ParseError.h"/>
+    <location file="Source/Utils/ParserBase/ParseError.h"/>
   </compounddef>
 </doxygen>

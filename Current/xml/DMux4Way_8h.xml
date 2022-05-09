@@ -3,7 +3,7 @@
   <compounddef id="DMux4Way_8h" kind="file" language="C++">
     <compoundname>DMux4Way.h</compoundname>
     <includes refid="Chip_8h" local="yes">Chips/Chip.h</includes>
-    <includedby refid="DMux4Way_8cpp" local="yes">F:/HackComputer/Source/Chips/DMux4Way.cpp</includedby>
+    <includedby refid="DMux4Way_8cpp" local="yes">Source/Chips/DMux4Way.cpp</includedby>
     <incdepgraph>
       <node id="1386">
         <label>cstdint</label>
@@ -74,7 +74,7 @@
         </childnode>
       </node>
       <node id="1375">
-        <label>F:/HackComputer/Source/Chips/DMux4Way.h</label>
+        <label>Source/Chips/DMux4Way.h</label>
         <link refid="DMux4Way_8h"/>
         <childnode refid="1376" relation="include">
         </childnode>
@@ -82,10 +82,10 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="1389">
-        <label>F:/HackComputer/Source/Chips/DMux4Way.cpp</label>
+        <label>Source/Chips/DMux4Way.cpp</label>
       </node>
       <node id="1388">
-        <label>F:/HackComputer/Source/Chips/DMux4Way.h</label>
+        <label>Source/Chips/DMux4Way.h</label>
         <link refid="DMux4Way_8h"/>
         <childnode refid="1389" relation="include">
         </childnode>
@@ -150,6 +150,6 @@
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="51"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Chips/DMux4Way.h"/>
+    <location file="Source/Chips/DMux4Way.h"/>
   </compounddef>
 </doxygen>

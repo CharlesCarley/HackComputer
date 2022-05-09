@@ -4,8 +4,8 @@
     <compoundname>Scanner.h</compoundname>
     <includes refid="ScannerBase_8h" local="yes">Utils/ParserBase/ScannerBase.h</includes>
     <includes refid="Compiler_2Analyzer_2Token_8h" local="yes">Compiler/Analyzer/Token.h</includes>
-    <includedby refid="Compiler_2Analyzer_2Parser_8cpp" local="yes">F:/HackComputer/Source/Compiler/Analyzer/Parser.cpp</includedby>
-    <includedby refid="Compiler_2Analyzer_2Scanner_8cpp" local="yes">F:/HackComputer/Source/Compiler/Analyzer/Scanner.cpp</includedby>
+    <includedby refid="Compiler_2Analyzer_2Parser_8cpp" local="yes">Source/Compiler/Analyzer/Parser.cpp</includedby>
+    <includedby refid="Compiler_2Analyzer_2Scanner_8cpp" local="yes">Source/Compiler/Analyzer/Scanner.cpp</includedby>
     <incdepgraph>
       <node id="584">
         <label>Utils/ParserBase/TokenBase.h</label>
@@ -13,7 +13,7 @@
         </childnode>
       </node>
       <node id="566">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Scanner.h</label>
+        <label>Source/Compiler/Analyzer/Scanner.h</label>
         <link refid="Compiler_2Analyzer_2Scanner_8h"/>
         <childnode refid="567" relation="include">
         </childnode>
@@ -123,7 +123,7 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="586">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Scanner.h</label>
+        <label>Source/Compiler/Analyzer/Scanner.h</label>
         <link refid="Compiler_2Analyzer_2Scanner_8h"/>
         <childnode refid="587" relation="include">
         </childnode>
@@ -131,10 +131,10 @@
         </childnode>
       </node>
       <node id="587">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Parser.cpp</label>
+        <label>Source/Compiler/Analyzer/Parser.cpp</label>
       </node>
       <node id="588">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Scanner.cpp</label>
+        <label>Source/Compiler/Analyzer/Scanner.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1Compiler_1_1Analyzer_1_1Scanner" prot="public">Hack::Compiler::Analyzer::Scanner</innerclass>
@@ -198,6 +198,6 @@
 <codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="53"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::VirtualMachine</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Compiler/Analyzer/Scanner.h"/>
+    <location file="Source/Compiler/Analyzer/Scanner.h"/>
   </compounddef>
 </doxygen>

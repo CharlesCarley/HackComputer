@@ -5,13 +5,13 @@
     <includes local="no">cassert</includes>
     <includes refid="Char_8h" local="yes">Utils/Char.h</includes>
     <includes refid="String_8h" local="yes">Utils/String.h</includes>
-    <includedby refid="Utils_2CommandLine_2Parser_8h" local="yes">F:/HackComputer/Source/Utils/CommandLine/Parser.h</includedby>
+    <includedby refid="Utils_2CommandLine_2Parser_8h" local="yes">Source/Utils/CommandLine/Parser.h</includedby>
     <incdepgraph>
       <node id="3544">
         <label>cstdint</label>
       </node>
       <node id="3541">
-        <label>F:/HackComputer/Source/Utils/CommandLine/Option.h</label>
+        <label>Source/Utils/CommandLine/Option.h</label>
         <link refid="Option_8h"/>
         <childnode refid="3542" relation="include">
         </childnode>
@@ -51,25 +51,25 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="3549">
-        <label>F:/HackComputer/Source/Utils/CommandLine/Option.h</label>
+        <label>Source/Utils/CommandLine/Option.h</label>
         <link refid="Option_8h"/>
         <childnode refid="3550" relation="include">
         </childnode>
       </node>
       <node id="3556">
-        <label>F:/HackComputer/Source/Utils/CommandLine/Parser.cpp</label>
+        <label>Source/Utils/CommandLine/Parser.cpp</label>
       </node>
       <node id="3557">
-        <label>F:/HackComputer/Source/VirtualMachine/Main.cpp</label>
+        <label>Source/VirtualMachine/Main.cpp</label>
       </node>
       <node id="3555">
-        <label>F:/HackComputer/Source/Computer/Executable.cpp</label>
+        <label>Source/Computer/Executable.cpp</label>
       </node>
       <node id="3552">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Main.cpp</label>
+        <label>Source/Compiler/Analyzer/Main.cpp</label>
       </node>
       <node id="3550">
-        <label>F:/HackComputer/Source/Utils/CommandLine/Parser.h</label>
+        <label>Source/Utils/CommandLine/Parser.h</label>
         <childnode refid="3551" relation="include">
         </childnode>
         <childnode refid="3552" relation="include">
@@ -86,13 +86,13 @@
         </childnode>
       </node>
       <node id="3553">
-        <label>F:/HackComputer/Source/Compiler/Compiler/Main.cpp</label>
+        <label>Source/Compiler/Compiler/Main.cpp</label>
       </node>
       <node id="3551">
-        <label>F:/HackComputer/Source/Assembler/Main.cpp</label>
+        <label>Source/Assembler/Main.cpp</label>
       </node>
       <node id="3554">
-        <label>F:/HackComputer/Source/Compiler/Generator/Main.cpp</label>
+        <label>Source/Compiler/Generator/Main.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1CommandLine_1_1ParseOption" prot="public">Hack::CommandLine::ParseOption</innerclass>
@@ -267,6 +267,6 @@
 <codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="173"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::CommandLine</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Utils/CommandLine/Option.h"/>
+    <location file="Source/Utils/CommandLine/Option.h"/>
   </compounddef>
 </doxygen>

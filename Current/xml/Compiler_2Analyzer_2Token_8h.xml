@@ -3,10 +3,10 @@
   <compounddef id="Compiler_2Analyzer_2Token_8h" kind="file" language="C++">
     <compoundname>Token.h</compoundname>
     <includes refid="TokenBase_8h" local="yes">Utils/ParserBase/TokenBase.h</includes>
-    <includedby refid="Compiler_2Analyzer_2Parser_8cpp" local="yes">F:/HackComputer/Source/Compiler/Analyzer/Parser.cpp</includedby>
-    <includedby refid="ParseUtils_8cpp" local="yes">F:/HackComputer/Source/Compiler/Analyzer/ParseUtils.cpp</includedby>
-    <includedby refid="Compiler_2Analyzer_2Scanner_8cpp" local="yes">F:/HackComputer/Source/Compiler/Analyzer/Scanner.cpp</includedby>
-    <includedby refid="Compiler_2Analyzer_2Scanner_8h" local="yes">F:/HackComputer/Source/Compiler/Analyzer/Scanner.h</includedby>
+    <includedby refid="Compiler_2Analyzer_2Parser_8cpp" local="yes">Source/Compiler/Analyzer/Parser.cpp</includedby>
+    <includedby refid="ParseUtils_8cpp" local="yes">Source/Compiler/Analyzer/ParseUtils.cpp</includedby>
+    <includedby refid="Compiler_2Analyzer_2Scanner_8cpp" local="yes">Source/Compiler/Analyzer/Scanner.cpp</includedby>
+    <includedby refid="Compiler_2Analyzer_2Scanner_8h" local="yes">Source/Compiler/Analyzer/Scanner.h</includedby>
     <incdepgraph>
       <node id="652">
         <label>Utils/ParserBase/TokenBase.h</label>
@@ -32,7 +32,7 @@
         <label>sstream</label>
       </node>
       <node id="651">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Token.h</label>
+        <label>Source/Compiler/Analyzer/Token.h</label>
         <link refid="Compiler_2Analyzer_2Token_8h"/>
         <childnode refid="652" relation="include">
         </childnode>
@@ -40,23 +40,23 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="661">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Scanner.h</label>
+        <label>Source/Compiler/Analyzer/Scanner.h</label>
         <childnode refid="658" relation="include">
         </childnode>
         <childnode refid="660" relation="include">
         </childnode>
       </node>
       <node id="658">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Parser.cpp</label>
+        <label>Source/Compiler/Analyzer/Parser.cpp</label>
       </node>
       <node id="659">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/ParseUtils.cpp</label>
+        <label>Source/Compiler/Analyzer/ParseUtils.cpp</label>
       </node>
       <node id="660">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Scanner.cpp</label>
+        <label>Source/Compiler/Analyzer/Scanner.cpp</label>
       </node>
       <node id="657">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Token.h</label>
+        <label>Source/Compiler/Analyzer/Token.h</label>
         <link refid="Compiler_2Analyzer_2Token_8h"/>
         <childnode refid="658" relation="include">
         </childnode>
@@ -157,6 +157,6 @@
 <codeline lineno="81" refid="namespaceHack_1_1Compiler_1_1Analyzer_1a365a4ba8e3278740601f02b8d6c45910" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classHack_1_1TokenBase" kindref="compound">Token</ref><sp/>=<sp/><ref refid="classHack_1_1TokenBase" kindref="compound">TokenBase</ref>;</highlight></codeline>
 <codeline lineno="82"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler::Analyzer</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Compiler/Analyzer/Token.h"/>
+    <location file="Source/Compiler/Analyzer/Token.h"/>
   </compounddef>
 </doxygen>

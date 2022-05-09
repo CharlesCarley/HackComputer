@@ -3,7 +3,7 @@
   <compounddef id="classHack_1_1Compiler_1_1Analyzer_1_1Scanner" kind="class" language="C++" prot="public" final="yes">
     <compoundname>Hack::Compiler::Analyzer::Scanner</compoundname>
     <basecompoundref refid="classHack_1_1ScannerBase" prot="public" virt="non-virtual">Hack::ScannerBase</basecompoundref>
-    <includes local="no">Scanner.h</includes>
+    <includes local="no">Source/Compiler/Analyzer/Scanner.h</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classHack_1_1Compiler_1_1Analyzer_1_1Scanner_1aa9e5c7254c10b4f09558081fa067bb91" prot="private" static="no" mutable="no">
         <type><ref refid="namespaceHack_1_1Compiler_1_1Analyzer_1a5d51cba76b1c9a4e05f7a36a0912c98e" kindref="member">CodeCache</ref></type>
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Analyzer/Scanner.h" line="35" column="1" bodyfile="F:/HackComputer/Source/Compiler/Analyzer/Scanner.h" bodystart="35" bodyend="-1"/>
+        <location file="Source/Compiler/Analyzer/Scanner.h" line="35" column="1" bodyfile="Source/Compiler/Analyzer/Scanner.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Analyzer/Scanner.h" line="37" column="1" bodyfile="F:/HackComputer/Source/Compiler/Analyzer/Scanner.cpp" bodystart="71" bodyend="78"/>
+        <location file="Source/Compiler/Analyzer/Scanner.h" line="37" column="1" bodyfile="Source/Compiler/Analyzer/Scanner.cpp" bodystart="71" bodyend="78"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Scanner_1a52f18445f470383be9ec8c8c783c3947" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Analyzer/Scanner.h" line="41" column="1" bodyfile="F:/HackComputer/Source/Compiler/Analyzer/Scanner.cpp" bodystart="115" bodyend="131"/>
+        <location file="Source/Compiler/Analyzer/Scanner.h" line="41" column="1" bodyfile="Source/Compiler/Analyzer/Scanner.cpp" bodystart="115" bodyend="131"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Scanner_1a209c3a160c60dfc3ffa4f0beaa397bb2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Analyzer/Scanner.h" line="43" column="1" bodyfile="F:/HackComputer/Source/Compiler/Analyzer/Scanner.cpp" bodystart="133" bodyend="187"/>
+        <location file="Source/Compiler/Analyzer/Scanner.h" line="43" column="1" bodyfile="Source/Compiler/Analyzer/Scanner.cpp" bodystart="133" bodyend="187"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Scanner_1a18bdc90143c60ef1fa30993dd9329fa5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Analyzer/Scanner.h" line="39" column="1" bodyfile="F:/HackComputer/Source/Compiler/Analyzer/Scanner.cpp" bodystart="81" bodyend="113"/>
+        <location file="Source/Compiler/Analyzer/Scanner.h" line="39" column="1" bodyfile="Source/Compiler/Analyzer/Scanner.cpp" bodystart="81" bodyend="113"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -101,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Analyzer/Scanner.h" line="47" column="1"/>
+        <location file="Source/Compiler/Analyzer/Scanner.h" line="47" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Scanner_1a719fc526a3ad0ea70ed7dbba71f0b686" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -122,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Analyzer/Scanner.h" line="51" column="1" bodyfile="F:/HackComputer/Source/Compiler/Analyzer/Scanner.cpp" bodystart="189" bodyend="195"/>
+        <location file="Source/Compiler/Analyzer/Scanner.h" line="51" column="1" bodyfile="Source/Compiler/Analyzer/Scanner.cpp" bodystart="189" bodyend="195"/>
         <references refid="classHack_1_1ScannerBase_1a0aa5a628913e1c8f04db54201f97e1a7" compoundref="ScannerBase_8h" startline="51" endline="57">Hack::ScannerBase::syntaxError</references>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Analyzer_1_1Scanner_1af357c61090b712e7cfcc4cbaeaa68a3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
@@ -141,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Analyzer/Scanner.h" line="49" column="1" bodyfile="F:/HackComputer/Source/Compiler/Analyzer/Scanner.cpp" bodystart="197" bodyend="307"/>
+        <location file="Source/Compiler/Analyzer/Scanner.h" line="49" column="1" bodyfile="Source/Compiler/Analyzer/Scanner.cpp" bodystart="197" bodyend="307"/>
         <references refid="classHack_1_1ScannerBase_1a553484b098225d77804ffcfbf0382922" compoundref="ScannerBase_8h" startline="34">Hack::ScannerBase::_stream</references>
         <references refid="classHack_1_1ScannerBase_1a0aa5a628913e1c8f04db54201f97e1a7" compoundref="ScannerBase_8h" startline="51" endline="57">Hack::ScannerBase::syntaxError</references>
         <references refid="classHack_1_1TokenBase_1a30cd135b1d593a583b727309323138ad" compoundref="TokenBase_8h" startline="47" endline="56">Hack::TokenBase::clear</references>
@@ -233,7 +233,7 @@
         <link refid="classHack_1_1IndexCache"/>
       </node>
     </collaborationgraph>
-    <location file="F:/HackComputer/Source/Compiler/Analyzer/Scanner.h" line="32" column="1" bodyfile="F:/HackComputer/Source/Compiler/Analyzer/Scanner.h" bodystart="31" bodyend="52"/>
+    <location file="Source/Compiler/Analyzer/Scanner.h" line="32" column="1" bodyfile="Source/Compiler/Analyzer/Scanner.h" bodystart="31" bodyend="52"/>
     <listofallmembers>
       <member refid="classHack_1_1Compiler_1_1Analyzer_1_1Scanner_1aa9e5c7254c10b4f09558081fa067bb91" prot="private" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Scanner</scope><name>_code</name></member>
       <member refid="classHack_1_1ScannerBase_1aee2410ff35c9642a4addab5377339b99" prot="protected" virt="non-virtual"><scope>Hack::Compiler::Analyzer::Scanner</scope><name>_file</name></member>

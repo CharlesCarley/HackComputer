@@ -3,7 +3,7 @@
   <compounddef id="classHack_1_1Chips_1_1Bit" kind="class" language="C++" prot="public" final="yes">
     <compoundname>Hack::Chips::Bit</compoundname>
     <basecompoundref refid="classHack_1_1Chips_1_1Chip" prot="public" virt="non-virtual">Hack::Chips::Chip&lt; uint8_t, 8 &gt;</basecompoundref>
-    <includes local="no">Bit.h</includes>
+    <includes local="no">Source/Chips/Bit.h</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classHack_1_1Chips_1_1Bit_1a171fcf84ce799cd02784d8fb4432ab94" prot="private" static="no" mutable="no">
         <type><ref refid="classHack_1_1Chips_1_1DFlipFlop" kindref="compound">DFlipFlop</ref></type>
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Chips/Bit.h" line="34" column="1" bodyfile="F:/HackComputer/Source/Chips/Bit.h" bodystart="34" bodyend="-1"/>
+        <location file="Source/Chips/Bit.h" line="34" column="1" bodyfile="Source/Chips/Bit.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Chips/Bit.h" line="32" column="1" bodyfile="F:/HackComputer/Source/Chips/Bit.cpp" bodystart="58" bodyend="79"/>
+        <location file="Source/Chips/Bit.h" line="32" column="1" bodyfile="Source/Chips/Bit.cpp" bodystart="58" bodyend="79"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Chips/Bit.h" line="37" column="1" bodyfile="F:/HackComputer/Source/Chips/Bit.cpp" bodystart="32" bodyend="35"/>
+        <location file="Source/Chips/Bit.h" line="37" column="1" bodyfile="Source/Chips/Bit.cpp" bodystart="32" bodyend="35"/>
         <references refid="classHack_1_1Chips_1_1Chip_1a301128353dd4d1c24a1a0ad7b933ceda" compoundref="Chip_8h" startline="49">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::_bits</references>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Chips_1_1Bit_1a74a55be20478dacf7da328d2bf7aa214" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Chips/Bit.h" line="45" column="1" bodyfile="F:/HackComputer/Source/Chips/Bit.cpp" bodystart="52" bodyend="56"/>
+        <location file="Source/Chips/Bit.h" line="45" column="1" bodyfile="Source/Chips/Bit.cpp" bodystart="52" bodyend="56"/>
         <references refid="classHack_1_1Chips_1_1Chip_1aef5a1c7bf3e9b65a35b55a008b5463ac" compoundref="Chip_8h" startline="97" endline="100">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::getBit</references>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Chips_1_1Bit_1a19452f2ad034d4fca589d1240ab6fe3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -78,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Chips/Bit.h" line="43" column="1" bodyfile="F:/HackComputer/Source/Chips/Bit.cpp" bodystart="47" bodyend="50"/>
+        <location file="Source/Chips/Bit.h" line="43" column="1" bodyfile="Source/Chips/Bit.cpp" bodystart="47" bodyend="50"/>
         <references refid="classHack_1_1Chips_1_1Chip_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="Chip_8h" startline="121" endline="124">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Chips_1_1Bit_1a16defb3ec91face653726fc91bc38f5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Chips/Bit.h" line="39" column="1" bodyfile="F:/HackComputer/Source/Chips/Bit.cpp" bodystart="37" bodyend="40"/>
+        <location file="Source/Chips/Bit.h" line="39" column="1" bodyfile="Source/Chips/Bit.cpp" bodystart="37" bodyend="40"/>
         <references refid="classHack_1_1Chips_1_1Chip_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="Chip_8h" startline="121" endline="124">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Chips_1_1Bit_1afc3484d908c45bef517b4582a2d6894c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Chips/Bit.h" line="41" column="1" bodyfile="F:/HackComputer/Source/Chips/Bit.cpp" bodystart="42" bodyend="45"/>
+        <location file="Source/Chips/Bit.h" line="41" column="1" bodyfile="Source/Chips/Bit.cpp" bodystart="42" bodyend="45"/>
         <references refid="classHack_1_1Chips_1_1Chip_1a1971f958edb5fa83790baa14c9d39ee8" compoundref="Chip_8h" startline="121" endline="124">Hack::Chips::Chip&lt; uint8_t, 8 &gt;::applyBit</references>
       </memberdef>
       </sectiondef>
@@ -153,7 +153,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="F:/HackComputer/Source/Chips/Bit.h" line="30" column="1" bodyfile="F:/HackComputer/Source/Chips/Bit.h" bodystart="29" bodyend="46"/>
+    <location file="Source/Chips/Bit.h" line="30" column="1" bodyfile="Source/Chips/Bit.h" bodystart="29" bodyend="46"/>
     <listofallmembers>
       <member refid="classHack_1_1Chips_1_1Chip_1a301128353dd4d1c24a1a0ad7b933ceda" prot="protected" virt="non-virtual"><scope>Hack::Chips::Bit</scope><name>_bits</name></member>
       <member refid="classHack_1_1Chips_1_1Bit_1a171fcf84ce799cd02784d8fb4432ab94" prot="private" virt="non-virtual"><scope>Hack::Chips::Bit</scope><name>_ff</name></member>

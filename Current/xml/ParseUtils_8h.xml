@@ -4,8 +4,8 @@
     <compoundname>ParseUtils.h</compoundname>
     <includes refid="Exception_8h" local="yes">Utils/Exception.h</includes>
     <includes refid="String_8h" local="yes">Utils/String.h</includes>
-    <includedby refid="Compiler_2Analyzer_2Parser_8cpp" local="yes">F:/HackComputer/Source/Compiler/Analyzer/Parser.cpp</includedby>
-    <includedby refid="ParseUtils_8cpp" local="yes">F:/HackComputer/Source/Compiler/Analyzer/ParseUtils.cpp</includedby>
+    <includedby refid="Compiler_2Analyzer_2Parser_8cpp" local="yes">Source/Compiler/Analyzer/Parser.cpp</includedby>
+    <includedby refid="ParseUtils_8cpp" local="yes">Source/Compiler/Analyzer/ParseUtils.cpp</includedby>
     <incdepgraph>
       <node id="2392">
         <label>Utils/Exception.h</label>
@@ -81,7 +81,7 @@
         </childnode>
       </node>
       <node id="2391">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/ParseUtils.h</label>
+        <label>Source/Compiler/Analyzer/ParseUtils.h</label>
         <link refid="ParseUtils_8h"/>
         <childnode refid="2392" relation="include">
         </childnode>
@@ -91,13 +91,13 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2406">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Parser.cpp</label>
+        <label>Source/Compiler/Analyzer/Parser.cpp</label>
       </node>
       <node id="2407">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/ParseUtils.cpp</label>
+        <label>Source/Compiler/Analyzer/ParseUtils.cpp</label>
       </node>
       <node id="2405">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/ParseUtils.h</label>
+        <label>Source/Compiler/Analyzer/ParseUtils.h</label>
         <link refid="ParseUtils_8h"/>
         <childnode refid="2406" relation="include">
         </childnode>
@@ -162,6 +162,6 @@
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="49"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Compiler::Analyzer</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Compiler/Analyzer/ParseUtils.h"/>
+    <location file="Source/Compiler/Analyzer/ParseUtils.h"/>
   </compounddef>
 </doxygen>

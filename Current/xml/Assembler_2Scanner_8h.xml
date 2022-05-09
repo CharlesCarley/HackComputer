@@ -4,8 +4,8 @@
     <compoundname>Scanner.h</compoundname>
     <includes refid="Assembler_2Token_8h" local="yes">Assembler/Token.h</includes>
     <includes refid="ScannerBase_8h" local="yes">Utils/ParserBase/ScannerBase.h</includes>
-    <includedby refid="Assembler_2Parser_8cpp" local="yes">F:/HackComputer/Source/Assembler/Parser.cpp</includedby>
-    <includedby refid="Assembler_2Scanner_8cpp" local="yes">F:/HackComputer/Source/Assembler/Scanner.cpp</includedby>
+    <includedby refid="Assembler_2Parser_8cpp" local="yes">Source/Assembler/Parser.cpp</includedby>
+    <includedby refid="Assembler_2Scanner_8cpp" local="yes">Source/Assembler/Scanner.cpp</includedby>
     <incdepgraph>
       <node id="545">
         <label>Utils/ParserBase/TokenBase.h</label>
@@ -101,7 +101,7 @@
         </childnode>
       </node>
       <node id="543">
-        <label>F:/HackComputer/Source/Assembler/Scanner.h</label>
+        <label>Source/Assembler/Scanner.h</label>
         <link refid="Assembler_2Scanner_8h"/>
         <childnode refid="544" relation="include">
         </childnode>
@@ -123,13 +123,13 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="564">
-        <label>F:/HackComputer/Source/Assembler/Parser.cpp</label>
+        <label>Source/Assembler/Parser.cpp</label>
       </node>
       <node id="565">
-        <label>F:/HackComputer/Source/Assembler/Scanner.cpp</label>
+        <label>Source/Assembler/Scanner.cpp</label>
       </node>
       <node id="563">
-        <label>F:/HackComputer/Source/Assembler/Scanner.h</label>
+        <label>Source/Assembler/Scanner.h</label>
         <link refid="Assembler_2Scanner_8h"/>
         <childnode refid="564" relation="include">
         </childnode>
@@ -203,6 +203,6 @@
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="58"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Assembler</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Assembler/Scanner.h"/>
+    <location file="Source/Assembler/Scanner.h"/>
   </compounddef>
 </doxygen>

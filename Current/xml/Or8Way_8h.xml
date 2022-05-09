@@ -3,7 +3,7 @@
   <compounddef id="Or8Way_8h" kind="file" language="C++">
     <compoundname>Or8Way.h</compoundname>
     <includes refid="Chip_8h" local="yes">Chips/Chip.h</includes>
-    <includedby refid="Or8Way_8cpp" local="yes">F:/HackComputer/Source/Chips/Or8Way.cpp</includedby>
+    <includedby refid="Or8Way_8cpp" local="yes">Source/Chips/Or8Way.cpp</includedby>
     <incdepgraph>
       <node id="1938">
         <label>cstdint</label>
@@ -74,7 +74,7 @@
         </childnode>
       </node>
       <node id="1927">
-        <label>F:/HackComputer/Source/Chips/Or8Way.h</label>
+        <label>Source/Chips/Or8Way.h</label>
         <link refid="Or8Way_8h"/>
         <childnode refid="1928" relation="include">
         </childnode>
@@ -82,10 +82,10 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="1941">
-        <label>F:/HackComputer/Source/Chips/Or8Way.cpp</label>
+        <label>Source/Chips/Or8Way.cpp</label>
       </node>
       <node id="1940">
-        <label>F:/HackComputer/Source/Chips/Or8Way.h</label>
+        <label>Source/Chips/Or8Way.h</label>
         <link refid="Or8Way_8h"/>
         <childnode refid="1941" relation="include">
         </childnode>
@@ -138,6 +138,6 @@
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="39"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Chips/Or8Way.h"/>
+    <location file="Source/Chips/Or8Way.h"/>
   </compounddef>
 </doxygen>

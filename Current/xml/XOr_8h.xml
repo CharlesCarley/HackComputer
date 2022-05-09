@@ -3,11 +3,11 @@
   <compounddef id="XOr_8h" kind="file" language="C++">
     <compoundname>XOr.h</compoundname>
     <includes refid="Chip_8h" local="yes">Chips/Chip.h</includes>
-    <includedby refid="FullAdder_8cpp" local="yes">F:/HackComputer/Source/Chips/FullAdder.cpp</includedby>
-    <includedby refid="XOr_8cpp" local="yes">F:/HackComputer/Source/Chips/XOr.cpp</includedby>
+    <includedby refid="FullAdder_8cpp" local="yes">Source/Chips/FullAdder.cpp</includedby>
+    <includedby refid="XOr_8cpp" local="yes">Source/Chips/XOr.cpp</includedby>
     <incdepgraph>
       <node id="2350">
-        <label>F:/HackComputer/Source/Chips/XOr.h</label>
+        <label>Source/Chips/XOr.h</label>
         <link refid="XOr_8h"/>
         <childnode refid="2351" relation="include">
         </childnode>
@@ -83,10 +83,10 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2365">
-        <label>F:/HackComputer/Source/Chips/XOr.cpp</label>
+        <label>Source/Chips/XOr.cpp</label>
       </node>
       <node id="2363">
-        <label>F:/HackComputer/Source/Chips/XOr.h</label>
+        <label>Source/Chips/XOr.h</label>
         <link refid="XOr_8h"/>
         <childnode refid="2364" relation="include">
         </childnode>
@@ -94,7 +94,7 @@
         </childnode>
       </node>
       <node id="2364">
-        <label>F:/HackComputer/Source/Chips/FullAdder.cpp</label>
+        <label>Source/Chips/FullAdder.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1Chips_1_1XOr" prot="public">Hack::Chips::XOr</innerclass>
@@ -144,6 +144,6 @@
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="39"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Chips/XOr.h"/>
+    <location file="Source/Chips/XOr.h"/>
   </compounddef>
 </doxygen>

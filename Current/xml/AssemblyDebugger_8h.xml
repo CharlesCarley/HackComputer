@@ -4,13 +4,13 @@
     <compoundname>AssemblyDebugger.h</compoundname>
     <includes refid="Screen_8h" local="yes">Chips/Screen.h</includes>
     <includes refid="RuntimeInterface_8h" local="yes">Computer/RuntimeInterface.h</includes>
-    <includedby refid="AssemblyDebuggerPrivate_8cpp" local="yes">F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</includedby>
-    <includedby refid="AssemblyDebuggerPrivate_8h" local="yes">F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</includedby>
-    <includedby refid="AssemblyDebugger_8cpp" local="yes">F:/HackComputer/Source/Computer/AssemblyDebugger.cpp</includedby>
-    <includedby refid="Executable_8cpp" local="yes">F:/HackComputer/Source/Computer/Executable.cpp</includedby>
+    <includedby refid="AssemblyDebuggerPrivate_8cpp" local="yes">Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</includedby>
+    <includedby refid="AssemblyDebuggerPrivate_8h" local="yes">Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</includedby>
+    <includedby refid="AssemblyDebugger_8cpp" local="yes">Source/Computer/AssemblyDebugger.cpp</includedby>
+    <includedby refid="Executable_8cpp" local="yes">Source/Computer/Executable.cpp</includedby>
     <incdepgraph>
       <node id="2894">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger.h</label>
+        <label>Source/Computer/AssemblyDebugger.h</label>
         <link refid="AssemblyDebugger_8h"/>
         <childnode refid="2895" relation="include">
         </childnode>
@@ -238,7 +238,7 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2931">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger.h</label>
+        <label>Source/Computer/AssemblyDebugger.h</label>
         <link refid="AssemblyDebugger_8h"/>
         <childnode refid="2932" relation="include">
         </childnode>
@@ -250,20 +250,20 @@
         </childnode>
       </node>
       <node id="2932">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</label>
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</label>
       </node>
       <node id="2933">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</label>
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</label>
         <childnode refid="2932" relation="include">
         </childnode>
         <childnode refid="2934" relation="include">
         </childnode>
       </node>
       <node id="2935">
-        <label>F:/HackComputer/Source/Computer/Executable.cpp</label>
+        <label>Source/Computer/Executable.cpp</label>
       </node>
       <node id="2934">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger.cpp</label>
+        <label>Source/Computer/AssemblyDebugger.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1Computer_1_1AssemblyDebugger" prot="public">Hack::Computer::AssemblyDebugger</innerclass>
@@ -331,6 +331,6 @@
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="57"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Computer</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Computer/AssemblyDebugger.h"/>
+    <location file="Source/Computer/AssemblyDebugger.h"/>
   </compounddef>
 </doxygen>

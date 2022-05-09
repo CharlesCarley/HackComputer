@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="classHack_1_1Compiler_1_1Node" kind="class" language="C++" prot="public">
     <compoundname>Hack::Compiler::Node</compoundname>
-    <includes local="no">Node.h</includes>
+    <includes local="no">Source/Compiler/Common/Node.h</includes>
       <sectiondef kind="public-type">
       <memberdef kind="typedef" id="classHack_1_1Compiler_1_1Node_1a28e5b40bf7de91b6898fb330f14bce26" prot="public" static="no">
         <type><ref refid="classHack_1_1IndexCache" kindref="compound">IndexCache</ref>&lt; <ref refid="classHack_1_1Compiler_1_1Node" kindref="compound">Node</ref> * &gt;</type>
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="34" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="34" bodyend="-1"/>
+        <location file="Source/Compiler/Common/Node.h" line="34" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classHack_1_1Compiler_1_1Node_1a56fdafee8fa58e43456a0a0d52f36753" prot="public" static="no">
         <type>Children::Array::const_iterator</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="36" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="36" bodyend="-1"/>
+        <location file="Source/Compiler/Common/Node.h" line="36" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classHack_1_1Compiler_1_1Node_1a331c811fe4cfc94fea950c3277f70706" prot="public" static="no">
         <type><ref refid="classHack_1_1IndexCache_1a35bba19b55830e0f1e0abbf57e4857eb" kindref="member">Children::Array</ref></type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="35" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="35" bodyend="-1"/>
+        <location file="Source/Compiler/Common/Node.h" line="35" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="40" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="40" bodyend="-1"/>
+        <location file="Source/Compiler/Common/Node.h" line="40" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHack_1_1Compiler_1_1Node_1a47f122fd73a395fa9118e200010206ce" prot="private" static="no" mutable="no">
         <type><ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="43" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="43" bodyend="-1"/>
+        <location file="Source/Compiler/Common/Node.h" line="43" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHack_1_1Compiler_1_1Node_1ad35846efc5ec13ee7cc6719d3b253ac6" prot="private" static="no" mutable="no">
         <type><ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref></type>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="44" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="44" bodyend="-1"/>
+        <location file="Source/Compiler/Common/Node.h" line="44" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHack_1_1Compiler_1_1Node_1af079cc77738fe1f74a9ee10861809dc8" prot="private" static="no" mutable="no">
         <type>size_t</type>
@@ -95,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="45" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="45" bodyend="-1"/>
+        <location file="Source/Compiler/Common/Node.h" line="45" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHack_1_1Compiler_1_1Node_1ac07e3b4468640240ea6fd518eceaaa56" prot="private" static="no" mutable="no">
         <type><ref refid="classHack_1_1Compiler_1_1Node" kindref="compound">Node</ref> *</type>
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="39" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="39" bodyend="-1"/>
+        <location file="Source/Compiler/Common/Node.h" line="39" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHack_1_1Compiler_1_1Node_1a8db4d9afad2acdd077a843ca89219ce7" prot="private" static="no" mutable="no">
         <type>int8_t</type>
@@ -121,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="42" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="42" bodyend="-1"/>
+        <location file="Source/Compiler/Common/Node.h" line="42" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classHack_1_1Compiler_1_1Node_1a3bf7e3b84b327b5f89e05cc204304463" prot="private" static="no" mutable="no">
         <type>int8_t</type>
@@ -134,7 +134,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="41" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="41" bodyend="-1"/>
+        <location file="Source/Compiler/Common/Node.h" line="41" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -161,7 +161,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="47" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.cpp" bodystart="63" bodyend="81"/>
+        <location file="Source/Compiler/Common/Node.h" line="47" column="1" bodyfile="Source/Compiler/Common/Node.cpp" bodystart="63" bodyend="81"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -176,7 +176,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="50" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.cpp" bodystart="28" bodyend="35"/>
+        <location file="Source/Compiler/Common/Node.h" line="50" column="1" bodyfile="Source/Compiler/Common/Node.cpp" bodystart="28" bodyend="35"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Node_1a3e4983decb4fbd2a20602e4105eca5a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -201,7 +201,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="52" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.cpp" bodystart="37" bodyend="44"/>
+        <location file="Source/Compiler/Common/Node.h" line="52" column="1" bodyfile="Source/Compiler/Common/Node.cpp" bodystart="37" bodyend="44"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Node_1a935a5dc66425f747a37e9cbb00a7e296" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -230,7 +230,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="54" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.cpp" bodystart="46" bodyend="54"/>
+        <location file="Source/Compiler/Common/Node.h" line="54" column="1" bodyfile="Source/Compiler/Common/Node.cpp" bodystart="46" bodyend="54"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Node_1a95688bc1ffe9d13b251dce7753c48789" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -243,7 +243,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="56" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.cpp" bodystart="56" bodyend="61"/>
+        <location file="Source/Compiler/Common/Node.h" line="56" column="1" bodyfile="Source/Compiler/Common/Node.cpp" bodystart="56" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Node_1a4bb11870ba0a870ecbe06b2a28798c33" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classHack_1_1Compiler_1_1Node_1a56fdafee8fa58e43456a0a0d52f36753" kindref="member">Iterator</ref></type>
@@ -256,7 +256,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="108" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="196" bodyend="199"/>
+        <location file="Source/Compiler/Common/Node.h" line="108" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="196" bodyend="199"/>
         <references refid="classHack_1_1IndexCache_1a937eb5cd44aa067611509f5559f09425" compoundref="IndexCache_8h" startline="106" endline="109">Hack::IndexCache&lt; T &gt;::begin</references>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Node_1a935305e1130db80fd4b0a0c212d332ea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -274,7 +274,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="100" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.cpp" bodystart="119" bodyend="131"/>
+        <location file="Source/Compiler/Common/Node.h" line="100" column="1" bodyfile="Source/Compiler/Common/Node.cpp" bodystart="119" bodyend="131"/>
         <references refid="classHack_1_1IndexCache_1a1c40fbac04597a5f4255de48cc2830c9" compoundref="IndexCache_8h" startline="95" endline="98">Hack::IndexCache&lt; T &gt;::size</references>
         <references refid="classHack_1_1IndexCache_1ab01608c27db3ac4be90bf52ce1d4c0c3" compoundref="IndexCache_8h" startline="59" endline="65">Hack::IndexCache&lt; T &gt;::at</references>
       </memberdef>
@@ -289,7 +289,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="96" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="184" bodyend="187"/>
+        <location file="Source/Compiler/Common/Node.h" line="96" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="184" bodyend="187"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Node_1ab8516a0d9eb149826a430421e93f5364" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classHack_1_1Compiler_1_1Node" kindref="compound">Node</ref> &amp;</type>
@@ -311,7 +311,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="78" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.cpp" bodystart="102" bodyend="112"/>
+        <location file="Source/Compiler/Common/Node.h" line="78" column="1" bodyfile="Source/Compiler/Common/Node.cpp" bodystart="102" bodyend="112"/>
         <references refid="classHack_1_1Compiler_1_1Node_1a935305e1130db80fd4b0a0c212d332ea" compoundref="Node_8cpp" startline="119" endline="131">child</references>
         <references refid="namespaceHack_1_1Compiler_1a661f20cd8ee85e44fdd5e021df7c42b6aa9315da8cb5f19dba0d77daddab7b0bd" compoundref="NodeUtils_8h" startline="109">Hack::Compiler::Constant</references>
         <references refid="classHack_1_1Compiler_1_1Node_1a65a7432b8abdb49bb61f7dada9fa4741" compoundref="Node_8h" startline="159" endline="162">isConstant</references>
@@ -328,7 +328,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="110" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="201" bodyend="204"/>
+        <location file="Source/Compiler/Common/Node.h" line="110" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="201" bodyend="204"/>
         <references refid="classHack_1_1IndexCache_1a061f94f9c3f4b68039a653a682424d4c" compoundref="IndexCache_8h" startline="111" endline="114">Hack::IndexCache&lt; T &gt;::end</references>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Node_1a7159b0a48fe5e2fff5ffe0472666a016" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
@@ -342,7 +342,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="112" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="206" bodyend="209"/>
+        <location file="Source/Compiler/Common/Node.h" line="112" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="206" bodyend="209"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Node_1aa49a1a40217890353d8faf580c902369" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -359,7 +359,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="114" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="211" bodyend="214"/>
+        <location file="Source/Compiler/Common/Node.h" line="114" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="211" bodyend="214"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Node_1af5cd8edbaaff484acb282eabbeb90c53" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -380,7 +380,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="70" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.cpp" bodystart="83" bodyend="90"/>
+        <location file="Source/Compiler/Common/Node.h" line="70" column="1" bodyfile="Source/Compiler/Common/Node.cpp" bodystart="83" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Node_1a3bf15a924bfe1a3181545310c60a9917" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -397,7 +397,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="102" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.cpp" bodystart="133" bodyend="140"/>
+        <location file="Source/Compiler/Common/Node.h" line="102" column="1" bodyfile="Source/Compiler/Common/Node.cpp" bodystart="133" bodyend="140"/>
         <references refid="classHack_1_1IndexCache_1a049a43563b3a4a2b23e47a4da2425c3f" compoundref="IndexCache_8h" startline="41" endline="57">Hack::IndexCache&lt; T &gt;::insert</references>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Node_1a123f0394f2e3cfe35346873df5240a20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -427,7 +427,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="104" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.cpp" bodystart="142" bodyend="148"/>
+        <location file="Source/Compiler/Common/Node.h" line="104" column="1" bodyfile="Source/Compiler/Common/Node.cpp" bodystart="142" bodyend="148"/>
         <references refid="classHack_1_1Compiler_1_1Node_1a3bf15a924bfe1a3181545310c60a9917" compoundref="Node_8cpp" startline="133" endline="140">insert</references>
         <references refid="classHack_1_1Compiler_1_1Node_1a3613110b95e1e69282708e785baf31ee" compoundref="Node_8cpp" startline="28" endline="35">Node</references>
         <references refid="classHack_1_1Compiler_1_1Node_1a3d9e9126f78fd88ef8c67457b4c0ebff" compoundref="Node_8h" startline="124" endline="127">type</references>
@@ -456,7 +456,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="106" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.cpp" bodystart="150" bodyend="155"/>
+        <location file="Source/Compiler/Common/Node.h" line="106" column="1" bodyfile="Source/Compiler/Common/Node.cpp" bodystart="150" bodyend="155"/>
         <references refid="classHack_1_1Compiler_1_1Node_1a3bf15a924bfe1a3181545310c60a9917" compoundref="Node_8cpp" startline="133" endline="140">insert</references>
         <references refid="classHack_1_1Compiler_1_1Node_1a3613110b95e1e69282708e785baf31ee" compoundref="Node_8cpp" startline="28" endline="35">Node</references>
         <references refid="classHack_1_1Compiler_1_1Node_1a3d9e9126f78fd88ef8c67457b4c0ebff" compoundref="Node_8h" startline="124" endline="127">type</references>
@@ -473,7 +473,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="84" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="159" bodyend="162"/>
+        <location file="Source/Compiler/Common/Node.h" line="84" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="159" bodyend="162"/>
         <references refid="namespaceHack_1_1Compiler_1a661f20cd8ee85e44fdd5e021df7c42b6aa9315da8cb5f19dba0d77daddab7b0bd" compoundref="NodeUtils_8h" startline="109">Hack::Compiler::Constant</references>
         <references refid="namespaceHack_1_1Compiler_1a661f20cd8ee85e44fdd5e021df7c42b6a3c41789e6326c83d485d3915fe44cb32" compoundref="NodeUtils_8h" startline="119">Hack::Compiler::ConstantEnd</references>
       </memberdef>
@@ -488,7 +488,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="82" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="154" bodyend="157"/>
+        <location file="Source/Compiler/Common/Node.h" line="82" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="154" bodyend="157"/>
         <references refid="namespaceHack_1_1Compiler_1a661f20cd8ee85e44fdd5e021df7c42b6ae20eb424b83e17c701a57261e73b9052" compoundref="NodeUtils_8h" startline="67">Hack::Compiler::Keyword</references>
         <references refid="namespaceHack_1_1Compiler_1a661f20cd8ee85e44fdd5e021df7c42b6a3efd6e34626ea06664a4e2bfbde6ac58" compoundref="NodeUtils_8h" startline="85">Hack::Compiler::KeywordEnd</references>
       </memberdef>
@@ -503,7 +503,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="86" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.cpp" bodystart="157" bodyend="177"/>
+        <location file="Source/Compiler/Common/Node.h" line="86" column="1" bodyfile="Source/Compiler/Common/Node.cpp" bodystart="157" bodyend="177"/>
         <references refid="namespaceHack_1_1Compiler_1a661f20cd8ee85e44fdd5e021df7c42b6a4bd47378515d925ac6426c0c397e5a27" compoundref="NodeUtils_8h" startline="59">Hack::Compiler::RuleOperator</references>
         <references refid="namespaceHack_1_1Compiler_1a661f20cd8ee85e44fdd5e021df7c42b6afe7e8673ff8860700e770e2afee945a2" compoundref="NodeUtils_8h" startline="60">Hack::Compiler::RuleUnaryOperator</references>
         <references refid="namespaceHack_1_1Compiler_1a661f20cd8ee85e44fdd5e021df7c42b6abb1b9f57f66f57725a1527e2f7acaedf" compoundref="NodeUtils_8h" startline="101">Hack::Compiler::SymbolAnd</references>
@@ -528,7 +528,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="80" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="149" bodyend="152"/>
+        <location file="Source/Compiler/Common/Node.h" line="80" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="149" bodyend="152"/>
         <references refid="namespaceHack_1_1Compiler_1a661f20cd8ee85e44fdd5e021df7c42b6a12d787097fb230c34304927acb58a558" compoundref="NodeUtils_8h" startline="31">Hack::Compiler::Rule</references>
         <references refid="namespaceHack_1_1Compiler_1a661f20cd8ee85e44fdd5e021df7c42b6a65ff4e8ff9a2f029c5724550f90d8431" compoundref="NodeUtils_8h" startline="65">Hack::Compiler::RuleEnd</references>
       </memberdef>
@@ -547,7 +547,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="68" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="144" bodyend="147"/>
+        <location file="Source/Compiler/Common/Node.h" line="68" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="144" bodyend="147"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Node_1a9133827ec5791d7df189dc0f54b6f7b5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -560,7 +560,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="88" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="164" bodyend="167"/>
+        <location file="Source/Compiler/Common/Node.h" line="88" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="164" bodyend="167"/>
         <references refid="namespaceHack_1_1Compiler_1a661f20cd8ee85e44fdd5e021df7c42b6aaf2cf666c2ba44b7ca371eb4b36991ce" compoundref="NodeUtils_8h" startline="87">Hack::Compiler::Symbol</references>
         <references refid="namespaceHack_1_1Compiler_1a661f20cd8ee85e44fdd5e021df7c42b6aac55360a9e63b95a0fe018110cee4891" compoundref="NodeUtils_8h" startline="107">Hack::Compiler::SymbolEnd</references>
       </memberdef>
@@ -579,7 +579,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="66" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="139" bodyend="142"/>
+        <location file="Source/Compiler/Common/Node.h" line="66" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="139" bodyend="142"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Node_1abfec6a8d042c927964a07f7d056e20b3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classHack_1_1Compiler_1_1Node" kindref="compound">Node</ref> &amp;</type>
@@ -601,7 +601,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="74" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.cpp" bodystart="97" bodyend="100"/>
+        <location file="Source/Compiler/Common/Node.h" line="74" column="1" bodyfile="Source/Compiler/Common/Node.cpp" bodystart="97" bodyend="100"/>
         <references refid="namespaceHack_1_1Compiler_1a661f20cd8ee85e44fdd5e021df7c42b6ae20eb424b83e17c701a57261e73b9052" compoundref="NodeUtils_8h" startline="67">Hack::Compiler::Keyword</references>
         <references refid="classHack_1_1Compiler_1_1Node_1a82524b6de28524b2592bb0c6ba321696" compoundref="Node_8h" startline="154" endline="157">isKeyword</references>
       </memberdef>
@@ -616,7 +616,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="116" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="216" bodyend="219"/>
+        <location file="Source/Compiler/Common/Node.h" line="116" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="216" bodyend="219"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Node_1a292863c5397bcb72f06c3d5b4cb0962a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="classHack_1_1Compiler_1_1Node" kindref="compound">Node</ref> &amp;</type>
@@ -629,7 +629,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="98" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="189" bodyend="194"/>
+        <location file="Source/Compiler/Common/Node.h" line="98" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="189" bodyend="194"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Node_1aa7c57338eea50c7abbb2a7a02e010ce7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classHack_1_1Compiler_1_1Node" kindref="compound">Node</ref> &amp;</type>
@@ -651,7 +651,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="72" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.cpp" bodystart="92" bodyend="95"/>
+        <location file="Source/Compiler/Common/Node.h" line="72" column="1" bodyfile="Source/Compiler/Common/Node.cpp" bodystart="92" bodyend="95"/>
         <references refid="namespaceHack_1_1Compiler_1a661f20cd8ee85e44fdd5e021df7c42b6a12d787097fb230c34304927acb58a558" compoundref="NodeUtils_8h" startline="31">Hack::Compiler::Rule</references>
         <references refid="classHack_1_1Compiler_1_1Node_1a5159a3ebec4faae76ddc4e1a14910bbc" compoundref="Node_8h" startline="149" endline="152">isRule</references>
       </memberdef>
@@ -666,7 +666,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="94" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="179" bodyend="182"/>
+        <location file="Source/Compiler/Common/Node.h" line="94" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="179" bodyend="182"/>
         <references refid="classHack_1_1IndexCache_1a1c40fbac04597a5f4255de48cc2830c9" compoundref="IndexCache_8h" startline="95" endline="98">Hack::IndexCache&lt; T &gt;::size</references>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Node_1a43701e9300a09cc248e5393993d9f95b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -684,7 +684,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="62" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="129" bodyend="132"/>
+        <location file="Source/Compiler/Common/Node.h" line="62" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="129" bodyend="132"/>
         <references refid="classHack_1_1Compiler_1_1Node_1a3d9e9126f78fd88ef8c67457b4c0ebff" compoundref="Node_8h" startline="124" endline="127">type</references>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Node_1a008817f6586761609c00039dbf099fde" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
@@ -698,7 +698,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="64" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="134" bodyend="137"/>
+        <location file="Source/Compiler/Common/Node.h" line="64" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="134" bodyend="137"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Node_1a4c71730d17d9a88977ef7e9d0f9797b2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classHack_1_1Compiler_1_1Node" kindref="compound">Node</ref> &amp;</type>
@@ -720,7 +720,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="76" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.cpp" bodystart="114" bodyend="117"/>
+        <location file="Source/Compiler/Common/Node.h" line="76" column="1" bodyfile="Source/Compiler/Common/Node.cpp" bodystart="114" bodyend="117"/>
         <references refid="namespaceHack_1_1Compiler_1a661f20cd8ee85e44fdd5e021df7c42b6aaf2cf666c2ba44b7ca371eb4b36991ce" compoundref="NodeUtils_8h" startline="87">Hack::Compiler::Symbol</references>
         <references refid="classHack_1_1Compiler_1_1Node_1a9133827ec5791d7df189dc0f54b6f7b5" compoundref="Node_8h" startline="164" endline="167">isSymbol</references>
       </memberdef>
@@ -739,7 +739,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="58" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="119" bodyend="122"/>
+        <location file="Source/Compiler/Common/Node.h" line="58" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="119" bodyend="122"/>
         <references refid="classHack_1_1Compiler_1_1Node_1a3d9e9126f78fd88ef8c67457b4c0ebff" compoundref="Node_8h" startline="124" endline="127">type</references>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Node_1a3d9e9126f78fd88ef8c67457b4c0ebff" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
@@ -753,7 +753,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="60" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="124" bodyend="127"/>
+        <location file="Source/Compiler/Common/Node.h" line="60" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="124" bodyend="127"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Node_1a20e6fa06ee899f50ac30e9dafa0acdfb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -770,7 +770,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="90" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="169" bodyend="172"/>
+        <location file="Source/Compiler/Common/Node.h" line="90" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="169" bodyend="172"/>
       </memberdef>
       <memberdef kind="function" id="classHack_1_1Compiler_1_1Node_1a3340ccdfdc9dbb66fbd0ccd9fc24345c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="namespaceHack_1af578ea8fc214989b8ebeece788fa787d" kindref="member">String</ref> &amp;</type>
@@ -783,14 +783,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="92" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="174" bodyend="177"/>
+        <location file="Source/Compiler/Common/Node.h" line="92" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="174" bodyend="177"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="F:/HackComputer/Source/Compiler/Common/Node.h" line="32" column="1" bodyfile="F:/HackComputer/Source/Compiler/Common/Node.h" bodystart="31" bodyend="117"/>
+    <location file="Source/Compiler/Common/Node.h" line="32" column="1" bodyfile="Source/Compiler/Common/Node.h" bodystart="31" bodyend="117"/>
     <listofallmembers>
       <member refid="classHack_1_1Compiler_1_1Node_1a824e7e7330fca64b2195a8fa8cd31576" prot="private" virt="non-virtual"><scope>Hack::Compiler::Node</scope><name>_children</name></member>
       <member refid="classHack_1_1Compiler_1_1Node_1a47f122fd73a395fa9118e200010206ce" prot="private" virt="non-virtual"><scope>Hack::Compiler::Node</scope><name>_data</name></member>

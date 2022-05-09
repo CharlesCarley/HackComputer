@@ -6,8 +6,8 @@
     <includes refid="Chip_8h" local="yes">Chips/Chip.h</includes>
     <includes refid="ProgramCounter_8h" local="yes">Chips/ProgramCounter.h</includes>
     <includes refid="Register_8h" local="yes">Chips/Register.h</includes>
-    <includedby refid="Computer_8h" local="yes">F:/HackComputer/Source/Chips/Computer.h</includedby>
-    <includedby refid="CPU_8cpp" local="yes">F:/HackComputer/Source/Chips/CPU.cpp</includedby>
+    <includedby refid="Computer_8h" local="yes">Source/Chips/Computer.h</includedby>
+    <includedby refid="CPU_8cpp" local="yes">Source/Chips/CPU.cpp</includedby>
     <incdepgraph>
       <node id="1243">
         <label>cstdint</label>
@@ -64,7 +64,7 @@
         <label>bitset</label>
       </node>
       <node id="1231">
-        <label>F:/HackComputer/Source/Chips/CPU.h</label>
+        <label>Source/Chips/CPU.h</label>
         <link refid="CPU_8h"/>
         <childnode refid="1232" relation="include">
         </childnode>
@@ -107,7 +107,7 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="1259">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger.h</label>
+        <label>Source/Computer/AssemblyDebugger.h</label>
         <childnode refid="1251" relation="include">
         </childnode>
         <childnode refid="1252" relation="include">
@@ -118,30 +118,30 @@
         </childnode>
       </node>
       <node id="1249">
-        <label>F:/HackComputer/Source/Bindings/Bindings.cpp</label>
+        <label>Source/Bindings/Bindings.cpp</label>
       </node>
       <node id="1251">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</label>
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</label>
       </node>
       <node id="1252">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</label>
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</label>
         <childnode refid="1251" relation="include">
         </childnode>
         <childnode refid="1253" relation="include">
         </childnode>
       </node>
       <node id="1257">
-        <label>F:/HackComputer/Source/Computer/Executable.cpp</label>
+        <label>Source/Computer/Executable.cpp</label>
       </node>
       <node id="1255">
-        <label>F:/HackComputer/Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.h</label>
+        <label>Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.h</label>
         <childnode refid="1254" relation="include">
         </childnode>
         <childnode refid="1256" relation="include">
         </childnode>
       </node>
       <node id="1247">
-        <label>F:/HackComputer/Source/Chips/CPU.h</label>
+        <label>Source/Chips/CPU.h</label>
         <link refid="CPU_8h"/>
         <childnode refid="1248" relation="include">
         </childnode>
@@ -149,13 +149,13 @@
         </childnode>
       </node>
       <node id="1253">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger.cpp</label>
+        <label>Source/Computer/AssemblyDebugger.cpp</label>
       </node>
       <node id="1254">
-        <label>F:/HackComputer/Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.cpp</label>
+        <label>Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.cpp</label>
       </node>
       <node id="1258">
-        <label>F:/HackComputer/Source/Computer/RuntimeInterface.h</label>
+        <label>Source/Computer/RuntimeInterface.h</label>
         <childnode refid="1259" relation="include">
         </childnode>
         <childnode refid="1260" relation="include">
@@ -164,10 +164,10 @@
         </childnode>
       </node>
       <node id="1261">
-        <label>F:/HackComputer/Source/Computer/WindowedRuntime.h</label>
+        <label>Source/Computer/WindowedRuntime.h</label>
       </node>
       <node id="1248">
-        <label>F:/HackComputer/Source/Chips/Computer.h</label>
+        <label>Source/Chips/Computer.h</label>
         <childnode refid="1249" relation="include">
         </childnode>
         <childnode refid="1250" relation="include">
@@ -190,16 +190,16 @@
         </childnode>
       </node>
       <node id="1250">
-        <label>F:/HackComputer/Source/Chips/Computer.cpp</label>
+        <label>Source/Chips/Computer.cpp</label>
       </node>
       <node id="1262">
-        <label>F:/HackComputer/Source/Chips/CPU.cpp</label>
+        <label>Source/Chips/CPU.cpp</label>
       </node>
       <node id="1256">
-        <label>F:/HackComputer/Source/Computer/ConsoleRuntime.cpp</label>
+        <label>Source/Computer/ConsoleRuntime.cpp</label>
       </node>
       <node id="1260">
-        <label>F:/HackComputer/Source/Computer/ConsoleRuntime.h</label>
+        <label>Source/Computer/ConsoleRuntime.h</label>
         <childnode refid="1256" relation="include">
         </childnode>
         <childnode refid="1257" relation="include">
@@ -286,6 +286,6 @@
 <codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="72"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Chips/CPU.h"/>
+    <location file="Source/Chips/CPU.h"/>
   </compounddef>
 </doxygen>

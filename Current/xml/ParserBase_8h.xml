@@ -5,10 +5,10 @@
     <includes local="no">vector</includes>
     <includes refid="ScannerBase_8h" local="yes">ScannerBase.h</includes>
     <includes refid="TokenBase_8h" local="yes">Utils/ParserBase/TokenBase.h</includes>
-    <includedby refid="Assembler_2Parser_8h" local="yes">F:/HackComputer/Source/Assembler/Parser.h</includedby>
-    <includedby refid="Compiler_2Analyzer_2Parser_8h" local="yes">F:/HackComputer/Source/Compiler/Analyzer/Parser.h</includedby>
-    <includedby refid="ParserBase_8cpp" local="yes">F:/HackComputer/Source/Utils/ParserBase/ParserBase.cpp</includedby>
-    <includedby refid="VirtualMachine_2Parser_8h" local="yes">F:/HackComputer/Source/VirtualMachine/Parser.h</includedby>
+    <includedby refid="Assembler_2Parser_8h" local="yes">Source/Assembler/Parser.h</includedby>
+    <includedby refid="Compiler_2Analyzer_2Parser_8h" local="yes">Source/Compiler/Analyzer/Parser.h</includedby>
+    <includedby refid="ParserBase_8cpp" local="yes">Source/Utils/ParserBase/ParserBase.cpp</includedby>
+    <includedby refid="VirtualMachine_2Parser_8h" local="yes">Source/VirtualMachine/Parser.h</includedby>
     <incdepgraph>
       <node id="3959">
         <label>Utils/ParserBase/TokenBase.h</label>
@@ -74,7 +74,7 @@
         </childnode>
       </node>
       <node id="3941">
-        <label>F:/HackComputer/Source/Utils/ParserBase/ParserBase.h</label>
+        <label>Source/Utils/ParserBase/ParserBase.h</label>
         <link refid="ParserBase_8h"/>
         <childnode refid="3942" relation="include">
         </childnode>
@@ -123,7 +123,7 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="3976">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Parser.h</label>
+        <label>Source/Compiler/Analyzer/Parser.h</label>
         <childnode refid="3977" relation="include">
         </childnode>
         <childnode refid="3978" relation="include">
@@ -138,10 +138,10 @@
         </childnode>
       </node>
       <node id="3963">
-        <label>F:/HackComputer/Source/Assembler/Parser.cpp</label>
+        <label>Source/Assembler/Parser.cpp</label>
       </node>
       <node id="3970">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger.h</label>
+        <label>Source/Computer/AssemblyDebugger.h</label>
         <childnode refid="3967" relation="include">
         </childnode>
         <childnode refid="3971" relation="include">
@@ -152,7 +152,7 @@
         </childnode>
       </node>
       <node id="3961">
-        <label>F:/HackComputer/Source/Assembler/Parser.h</label>
+        <label>Source/Assembler/Parser.h</label>
         <childnode refid="3962" relation="include">
         </childnode>
         <childnode refid="3963" relation="include">
@@ -169,7 +169,7 @@
         </childnode>
       </node>
       <node id="3982">
-        <label>F:/HackComputer/Source/VirtualMachine/Parser.h</label>
+        <label>Source/VirtualMachine/Parser.h</label>
         <childnode refid="3965" relation="include">
         </childnode>
         <childnode refid="3968" relation="include">
@@ -180,35 +180,35 @@
         </childnode>
       </node>
       <node id="3978">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Parser.cpp</label>
+        <label>Source/Compiler/Analyzer/Parser.cpp</label>
       </node>
       <node id="3964">
-        <label>F:/HackComputer/Source/Bindings/Bindings.cpp</label>
+        <label>Source/Bindings/Bindings.cpp</label>
       </node>
       <node id="3967">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</label>
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</label>
       </node>
       <node id="3983">
-        <label>F:/HackComputer/Source/VirtualMachine/Main.cpp</label>
+        <label>Source/VirtualMachine/Main.cpp</label>
       </node>
       <node id="3979">
-        <label>F:/HackComputer/Source/Compiler/Generator/Generator.cpp</label>
+        <label>Source/Compiler/Generator/Generator.cpp</label>
       </node>
       <node id="3971">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</label>
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</label>
         <childnode refid="3967" relation="include">
         </childnode>
         <childnode refid="3972" relation="include">
         </childnode>
       </node>
       <node id="3968">
-        <label>F:/HackComputer/Source/Computer/Executable.cpp</label>
+        <label>Source/Computer/Executable.cpp</label>
       </node>
       <node id="3977">
-        <label>F:/HackComputer/Source/Compiler/Analyzer/Main.cpp</label>
+        <label>Source/Compiler/Analyzer/Main.cpp</label>
       </node>
       <node id="3960">
-        <label>F:/HackComputer/Source/Utils/ParserBase/ParserBase.h</label>
+        <label>Source/Utils/ParserBase/ParserBase.h</label>
         <link refid="ParserBase_8h"/>
         <childnode refid="3961" relation="include">
         </childnode>
@@ -220,29 +220,29 @@
         </childnode>
       </node>
       <node id="3984">
-        <label>F:/HackComputer/Source/VirtualMachine/Parser.cpp</label>
+        <label>Source/VirtualMachine/Parser.cpp</label>
       </node>
       <node id="3966">
-        <label>F:/HackComputer/Source/Computer/Common.h</label>
+        <label>Source/Computer/Common.h</label>
         <childnode refid="3967" relation="include">
         </childnode>
         <childnode refid="3968" relation="include">
         </childnode>
       </node>
       <node id="3972">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger.cpp</label>
+        <label>Source/Computer/AssemblyDebugger.cpp</label>
       </node>
       <node id="3981">
-        <label>F:/HackComputer/Source/Utils/ParserBase/ParserBase.cpp</label>
+        <label>Source/Utils/ParserBase/ParserBase.cpp</label>
       </node>
       <node id="3965">
-        <label>F:/HackComputer/Source/Compiler/Compiler/Main.cpp</label>
+        <label>Source/Compiler/Compiler/Main.cpp</label>
       </node>
       <node id="3962">
-        <label>F:/HackComputer/Source/Assembler/Main.cpp</label>
+        <label>Source/Assembler/Main.cpp</label>
       </node>
       <node id="3969">
-        <label>F:/HackComputer/Source/Computer/RuntimeInterface.h</label>
+        <label>Source/Computer/RuntimeInterface.h</label>
         <childnode refid="3970" relation="include">
         </childnode>
         <childnode refid="3973" relation="include">
@@ -251,16 +251,16 @@
         </childnode>
       </node>
       <node id="3975">
-        <label>F:/HackComputer/Source/Computer/WindowedRuntime.h</label>
+        <label>Source/Computer/WindowedRuntime.h</label>
       </node>
       <node id="3980">
-        <label>F:/HackComputer/Source/Compiler/Generator/Main.cpp</label>
+        <label>Source/Compiler/Generator/Main.cpp</label>
       </node>
       <node id="3974">
-        <label>F:/HackComputer/Source/Computer/ConsoleRuntime.cpp</label>
+        <label>Source/Computer/ConsoleRuntime.cpp</label>
       </node>
       <node id="3973">
-        <label>F:/HackComputer/Source/Computer/ConsoleRuntime.h</label>
+        <label>Source/Computer/ConsoleRuntime.h</label>
         <childnode refid="3974" relation="include">
         </childnode>
         <childnode refid="3968" relation="include">
@@ -369,6 +369,6 @@
 <codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="94"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Utils/ParserBase/ParserBase.h"/>
+    <location file="Source/Utils/ParserBase/ParserBase.h"/>
   </compounddef>
 </doxygen>

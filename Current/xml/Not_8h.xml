@@ -3,7 +3,7 @@
   <compounddef id="Not_8h" kind="file" language="C++">
     <compoundname>Not.h</compoundname>
     <includes refid="Chip_8h" local="yes">Chips/Chip.h</includes>
-    <includedby refid="Not_8cpp" local="yes">F:/HackComputer/Source/Chips/Not.cpp</includedby>
+    <includedby refid="Not_8cpp" local="yes">Source/Chips/Not.cpp</includedby>
     <incdepgraph>
       <node id="1817">
         <label>cstdint</label>
@@ -51,7 +51,7 @@
         <label>sstream</label>
       </node>
       <node id="1806">
-        <label>F:/HackComputer/Source/Chips/Not.h</label>
+        <label>Source/Chips/Not.h</label>
         <link refid="Not_8h"/>
         <childnode refid="1807" relation="include">
         </childnode>
@@ -82,10 +82,10 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="1820">
-        <label>F:/HackComputer/Source/Chips/Not.cpp</label>
+        <label>Source/Chips/Not.cpp</label>
       </node>
       <node id="1819">
-        <label>F:/HackComputer/Source/Chips/Not.h</label>
+        <label>Source/Chips/Not.h</label>
         <link refid="Not_8h"/>
         <childnode refid="1820" relation="include">
         </childnode>
@@ -137,6 +137,6 @@
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="38"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Chips/Not.h"/>
+    <location file="Source/Chips/Not.h"/>
   </compounddef>
 </doxygen>

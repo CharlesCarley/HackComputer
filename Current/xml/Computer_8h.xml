@@ -5,16 +5,16 @@
     <includes refid="CPU_8h" local="yes">Chips/CPU.h</includes>
     <includes refid="Chips_2Memory_8h" local="yes">Chips/Memory.h</includes>
     <includes refid="Rom32_8h" local="yes">Chips/Rom32.h</includes>
-    <includedby refid="Bindings_8cpp" local="yes">F:/HackComputer/Source/Bindings/Bindings.cpp</includedby>
-    <includedby refid="Computer_8cpp" local="yes">F:/HackComputer/Source/Chips/Computer.cpp</includedby>
-    <includedby refid="AssemblyDebuggerPrivate_8cpp" local="yes">F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</includedby>
-    <includedby refid="AssemblyDebuggerPrivate_8h" local="yes">F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</includedby>
-    <includedby refid="AssemblyDebugger_8cpp" local="yes">F:/HackComputer/Source/Computer/AssemblyDebugger.cpp</includedby>
-    <includedby refid="ConsoleRuntimePrivate_8cpp" local="yes">F:/HackComputer/Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.cpp</includedby>
-    <includedby refid="ConsoleRuntimePrivate_8h" local="yes">F:/HackComputer/Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.h</includedby>
-    <includedby refid="ConsoleRuntime_8cpp" local="yes">F:/HackComputer/Source/Computer/ConsoleRuntime.cpp</includedby>
-    <includedby refid="Executable_8cpp" local="yes">F:/HackComputer/Source/Computer/Executable.cpp</includedby>
-    <includedby refid="RuntimeInterface_8h" local="yes">F:/HackComputer/Source/Computer/RuntimeInterface.h</includedby>
+    <includedby refid="Bindings_8cpp" local="yes">Source/Bindings/Bindings.cpp</includedby>
+    <includedby refid="Computer_8cpp" local="yes">Source/Chips/Computer.cpp</includedby>
+    <includedby refid="AssemblyDebuggerPrivate_8cpp" local="yes">Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</includedby>
+    <includedby refid="AssemblyDebuggerPrivate_8h" local="yes">Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</includedby>
+    <includedby refid="AssemblyDebugger_8cpp" local="yes">Source/Computer/AssemblyDebugger.cpp</includedby>
+    <includedby refid="ConsoleRuntimePrivate_8cpp" local="yes">Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.cpp</includedby>
+    <includedby refid="ConsoleRuntimePrivate_8h" local="yes">Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.h</includedby>
+    <includedby refid="ConsoleRuntime_8cpp" local="yes">Source/Computer/ConsoleRuntime.cpp</includedby>
+    <includedby refid="Executable_8cpp" local="yes">Source/Computer/Executable.cpp</includedby>
+    <includedby refid="RuntimeInterface_8h" local="yes">Source/Computer/RuntimeInterface.h</includedby>
     <incdepgraph>
       <node id="1182">
         <label>cstdint</label>
@@ -131,7 +131,7 @@
         </childnode>
       </node>
       <node id="1169">
-        <label>F:/HackComputer/Source/Chips/Computer.h</label>
+        <label>Source/Chips/Computer.h</label>
         <link refid="Computer_8h"/>
         <childnode refid="1170" relation="include">
         </childnode>
@@ -162,7 +162,7 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="1204">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger.h</label>
+        <label>Source/Computer/AssemblyDebugger.h</label>
         <childnode refid="1196" relation="include">
         </childnode>
         <childnode refid="1197" relation="include">
@@ -173,36 +173,36 @@
         </childnode>
       </node>
       <node id="1194">
-        <label>F:/HackComputer/Source/Bindings/Bindings.cpp</label>
+        <label>Source/Bindings/Bindings.cpp</label>
       </node>
       <node id="1196">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</label>
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.cpp</label>
       </node>
       <node id="1197">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</label>
+        <label>Source/Computer/AssemblyDebugger/AssemblyDebuggerPrivate.h</label>
         <childnode refid="1196" relation="include">
         </childnode>
         <childnode refid="1198" relation="include">
         </childnode>
       </node>
       <node id="1202">
-        <label>F:/HackComputer/Source/Computer/Executable.cpp</label>
+        <label>Source/Computer/Executable.cpp</label>
       </node>
       <node id="1200">
-        <label>F:/HackComputer/Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.h</label>
+        <label>Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.h</label>
         <childnode refid="1199" relation="include">
         </childnode>
         <childnode refid="1201" relation="include">
         </childnode>
       </node>
       <node id="1198">
-        <label>F:/HackComputer/Source/Computer/AssemblyDebugger.cpp</label>
+        <label>Source/Computer/AssemblyDebugger.cpp</label>
       </node>
       <node id="1199">
-        <label>F:/HackComputer/Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.cpp</label>
+        <label>Source/Computer/ConsoleRuntime/ConsoleRuntimePrivate.cpp</label>
       </node>
       <node id="1203">
-        <label>F:/HackComputer/Source/Computer/RuntimeInterface.h</label>
+        <label>Source/Computer/RuntimeInterface.h</label>
         <childnode refid="1204" relation="include">
         </childnode>
         <childnode refid="1205" relation="include">
@@ -211,10 +211,10 @@
         </childnode>
       </node>
       <node id="1206">
-        <label>F:/HackComputer/Source/Computer/WindowedRuntime.h</label>
+        <label>Source/Computer/WindowedRuntime.h</label>
       </node>
       <node id="1193">
-        <label>F:/HackComputer/Source/Chips/Computer.h</label>
+        <label>Source/Chips/Computer.h</label>
         <link refid="Computer_8h"/>
         <childnode refid="1194" relation="include">
         </childnode>
@@ -238,13 +238,13 @@
         </childnode>
       </node>
       <node id="1195">
-        <label>F:/HackComputer/Source/Chips/Computer.cpp</label>
+        <label>Source/Chips/Computer.cpp</label>
       </node>
       <node id="1201">
-        <label>F:/HackComputer/Source/Computer/ConsoleRuntime.cpp</label>
+        <label>Source/Computer/ConsoleRuntime.cpp</label>
       </node>
       <node id="1205">
-        <label>F:/HackComputer/Source/Computer/ConsoleRuntime.h</label>
+        <label>Source/Computer/ConsoleRuntime.h</label>
         <childnode refid="1201" relation="include">
         </childnode>
         <childnode refid="1202" relation="include">
@@ -356,6 +356,6 @@
 <codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="96"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Chips/Computer.h"/>
+    <location file="Source/Chips/Computer.h"/>
   </compounddef>
 </doxygen>

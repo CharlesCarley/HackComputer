@@ -3,10 +3,10 @@
   <compounddef id="NOr_8h" kind="file" language="C++">
     <compoundname>NOr.h</compoundname>
     <includes refid="Chip_8h" local="yes">Chips/Chip.h</includes>
-    <includedby refid="NOr_8cpp" local="yes">F:/HackComputer/Source/Chips/NOr.cpp</includedby>
+    <includedby refid="NOr_8cpp" local="yes">Source/Chips/NOr.cpp</includedby>
     <incdepgraph>
       <node id="1776">
-        <label>F:/HackComputer/Source/Chips/NOr.h</label>
+        <label>Source/Chips/NOr.h</label>
         <link refid="NOr_8h"/>
         <childnode refid="1777" relation="include">
         </childnode>
@@ -82,13 +82,13 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="1789">
-        <label>F:/HackComputer/Source/Chips/NOr.h</label>
+        <label>Source/Chips/NOr.h</label>
         <link refid="NOr_8h"/>
         <childnode refid="1790" relation="include">
         </childnode>
       </node>
       <node id="1790">
-        <label>F:/HackComputer/Source/Chips/NOr.cpp</label>
+        <label>Source/Chips/NOr.cpp</label>
       </node>
     </invincdepgraph>
     <innerclass refid="classHack_1_1Chips_1_1NOr" prot="public">Hack::Chips::NOr</innerclass>
@@ -138,6 +138,6 @@
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="39"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Hack::Chips</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="F:/HackComputer/Source/Chips/NOr.h"/>
+    <location file="Source/Chips/NOr.h"/>
   </compounddef>
 </doxygen>
